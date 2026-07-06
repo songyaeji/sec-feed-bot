@@ -102,7 +102,12 @@ def run_librarian(items: list[dict]) -> dict | None:
         return None
 
     if proc.returncode != 0:
-        print(f"[librarian] 비정상 종료 (code={proc.returncode}): {proc.stderr[:500]}", file=sys.stderr)
+        # 오류 본문이 stderr가 아니라 stdout(JSON)에 실리는 경우가 있어 둘 다 남긴다
+        print(
+            f"[librarian] 비정상 종료 (code={proc.returncode}) "
+            f"stderr: {proc.stderr[:300]} | stdout: {proc.stdout[:500]}",
+            file=sys.stderr,
+        )
         return None
 
     try:
