@@ -2562,5 +2562,316 @@
     "tags": [],
     "title": "Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations",
     "url": "https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-34038",
+    "published": "2026-07-06T21:16:55.370",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.469, an authenticated remote command injection vulnerability in application deployment handling allows users with application write permissions to achieve remote code execution and",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34038 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34038"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-57571",
+    "published": "2026-07-06T21:16:57.907",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crawl4AI is an open-source LLM-friendly web crawler and scraper. Prior to 0.9.0, when the crawler saves a downloaded file, the destination filename was taken from attacker-influenced input and joined to the downloads directory with no confinement. A filename containing an absolute path or traversal ",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-57571 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57571"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-57572",
+    "published": "2026-07-06T21:16:58.047",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crawl4AI is an open-source LLM-friendly web crawler and scraper. Prior to 0.9.0, the Docker API server accepted request-supplied browser_config.extra_args, which flowed into Chromium's launch arguments. An attacker could inject Chromium switches that replace a child-process launch command together w",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-57572 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57572"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-14471",
+    "published": "2026-07-06T21:16:53.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements in the metrics-service retention policy management component in Amazon mcp-gateway-registry before 1.0.13 might allow an authenticated remote user to execute arbitrary SQL queries via a crafted table_name value that is interpolated into SQL statements in i",
+    "tags": [],
+    "title": "CVE-2026-14471 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14471"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25268",
+    "published": "2026-07-06T21:16:54.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory Corruption when processing invalid HT40 channel layouts during dynamic channel switching operations.",
+    "tags": [],
+    "title": "CVE-2026-25268 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25268"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-54234",
+    "published": "2026-07-06T21:16:56.477",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is a high-throughput and memory-efficient inference and serving engine for LLMs. Prior to 0.24.0, a frontend-legal multi-request speculative decoding workload can cause the rejection sampler to produce a recovered token equal to the model vocabulary size boundary value, which is then converted ",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-54234 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54234"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-55514",
+    "published": "2026-07-06T21:16:57.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is a library for LLM inference and serving. From 0.12.0 to before 0.24.0, sending a pure prompt embeds payload in a /v1/completions request with a model using M-RoPE causes EngineCore to fail an assertion and fatally crash, shutting down the entire server application. Any remote user who is aut",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-55514 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55514"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-55574",
+    "published": "2026-07-06T21:16:57.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is a high-throughput and memory-efficient inference and serving engine for LLMs. Prior to 0.24.0, the structured_outputs.regex API parameter passes a user-supplied regular expression string directly to the grammar compiler backends with no compilation timeout; in the xgrammar backend the string",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-55574 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55574"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-57573",
+    "published": "2026-07-06T21:16:58.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crawl4AI is an open-source LLM-friendly web crawler and scraper. Prior to 0.9.0, the Docker API server applied its SSRF destination check on the non-streaming /crawl path but not on the streaming path. handle_stream_crawl_request passed seed URLs straight to the crawler with no destination validatio",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-57573 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57573"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-59712",
+    "published": "2026-07-06T21:16:58.793",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Leantime's Users::getUser method in the JSON-RPC API lacks proper authorization checks, allowing authenticated users to retrieve full user credential rows including password hashes, TOTP secrets, and session tokens. Attackers can exploit this by calling users.getUser with arbitrary user IDs to enume",
+    "tags": [],
+    "title": "CVE-2026-59712 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59712"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-59713",
+    "published": "2026-07-06T21:16:58.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Leantime contains an OIDC login CSRF vulnerability in the verifyState() method that unconditionally returns true without validating state parameters. Attackers can craft malicious callback URLs with attacker-controlled authorization codes to perform session fixation, logging victims in as the attack",
+    "tags": [],
+    "title": "CVE-2026-59713 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59713"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34153",
+    "published": "2026-07-06T22:16:48.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, LocalFileVolume::saveStorageOnServer builds shell commands using unescaped fs_path and parent_dir values before validation, and submitFileStorage does not validate the user-co",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34153 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34153"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34599",
+    "published": "2026-07-06T22:16:48.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.471, there is an authenticated command injection vulnerability in the GetLogs Livewire component which allows users with team membership (lowest privilege member role) to execute a",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34599 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34599"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-42153",
+    "published": "2026-07-06T22:16:49.383",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.474, PostgreSQL healthcheck command generation used attacker-controlled database settings (postgres_user and postgres_db) in shell-form commands, allowing an authenticated user to ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42153 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42153"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-42204",
+    "published": "2026-07-06T22:16:49.510",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. From 4.0.0-beta.471 through 4.0.0-beta.473, a regression in SHELL_SAFE_COMMAND_PATTERN allowed ampersands in custom Docker Compose build, start, and pre/post-deployment command fields, allowing an aut",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42204 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42204"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194837",
+    "published": "2026-07-06T19:53:10+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Attackers are exploiting the critical Adobe ColdFusion flaw CVE-2026-48282, which allows remote code execution on unpatched servers. Attackers have started exploiting CVE-2026-48282, a maximum-severity vulnerability in Adobe ColdFusion. The flaw is a path traversal issue that could result in arbitra",
+    "tags": [
+      "RCE",
+      "제로데이"
+    ],
+    "title": "Adobe ColdFusion flaw CVE-2026-48282 now exploited in the wild",
+    "url": "https://securityaffairs.com/194837/hacking/adobe-coldfusion-flaw-cve-2026-48282-now-exploited-in-the-wild.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194822",
+    "published": "2026-07-06T13:03:25+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Hidden prompts on malicious websites trick AI agents into making payments or trusting fake sites, exposing new risks for autonomous AI workflows. Zscaler ThreatLabz documented two active campaigns that embed hidden instructions in web pages to manipulate AI agents, not human users, though those get ",
+    "tags": [],
+    "title": "Hidden Web Prompts Trick AI Agents Into Sending Money",
+    "url": "https://securityaffairs.com/194822/ai/hidden-web-prompts-trick-ai-agents-into-sending-money.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194808",
+    "published": "2026-07-06T10:20:56+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "runZero found 7 flaws in FatFs, a filesystem used in IoT and embedded devices. Bugs can cause memory corruption, crashes, or data leaks via crafted storage. Cybersecurity firm runZero has disclosed seven vulnerabilities in FatFs, a compact open-source library that lets embedded devices read and writ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Seven Bugs in FatFs Put IoT and Embedded Devices at Risk",
+    "url": "https://securityaffairs.com/194808/security/seven-bugs-in-fatfs-put-iot-and-embedded-devices-at-risk.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194795",
+    "published": "2026-07-06T08:24:22+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Bad Epoll (CVE-2026-46242) lets local attackers gain root on Linux and Android. The flaw was missed by AI but found by a security researcher. A newly disclosed Linux kernel vulnerability, named&#160;Bad Epoll&#160;(CVE-2026-46242), allows a local attacker with no special privileges to gain full root",
+    "tags": [],
+    "title": "Bad Epoll Flaw Gives Attackers Root Access on Linux and Android",
+    "url": "https://securityaffairs.com/194795/hacking/bad-epoll-flaw-gives-attackers-root-access-on-linux-and-android.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194788",
+    "published": "2026-07-05T18:31:18+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Medtronic says a ShinyHunters attack exposed the personal and medical data of over 3.8 million people. Products and operations were unaffected. Medtronic is notifying 3,834,294 individuals after a cyberattack by the ShinyHunters extortion group exposed personal and medical information. In April 2026",
+    "tags": [],
+    "title": "Medtronic Notifies 3.8 Million After ShinyHunters Data Breach",
+    "url": "https://securityaffairs.com/194788/cyber-crime/medtronic-notifies-3-8-million-after-shinyhunters-data-breach.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194785",
+    "published": "2026-07-05T17:37:07+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Security Affairs Malware newsletter includes a collection of the best articles and research on malware in the international landscape Malware Newsletter Hijacked npm Packages Use Novel VSCode Autorun and Blockchain Dead Drops to Deploy a Credential/Crypto Stealer&#160;&#160; Building a CI/CD pipelin",
+    "tags": [],
+    "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 104",
+    "url": "https://securityaffairs.com/194785/uncategorized/security-affairs-malware-newsletter-round-104.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194772",
+    "published": "2026-07-05T05:07:31+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box. Enjoy a new round of the weekly SecurityAffairs newsletter, including the international press. U.S. Government Agency Paid $1M to Data Extortion",
+    "tags": [],
+    "title": "Security Affairs newsletter Round 584 by Pierluigi Paganini – INTERNATIONAL EDITION",
+    "url": "https://securityaffairs.com/194772/security/security-affairs-newsletter-round-584-by-pierluigi-paganini-international-edition.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194750",
+    "published": "2026-07-04T16:53:35+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A U.S. government agency paid $1M to Kairos, a group focused on data theft and extortion rather than ransomware, Ransom-ISAC reports. A new case study from Ransom-ISAC reconstructs a complete data-extortion incident involving a U.S. government body and a threat actor called Kairos, using a leaked ne",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "U.S. Government Agency Paid $1M to Data Extortion Group Kairos",
+    "url": "https://securityaffairs.com/194750/security/u-s-government-agency-paid-1m-to-data-extortion-group-kairos.html"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194728",
+    "published": "2026-07-03T20:18:32+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A former EU lawmaker was hacked with Pegasus spyware while investigating its use, according to Citizen Lab. The Citizen Lab published a report documenting one of the more darkly ironic findings in recent surveillance research: former Member of the European Parliament Stelios Kouloglou was repeatedly",
+    "tags": [],
+    "title": "Pegasus Used Against MEP Investigating Pegasus, Citizen Lab Finds",
+    "url": "https://securityaffairs.com/194728/malware/pegasus-used-against-mep-investigating-pegasus-citizen-lab-finds.html"
   }
 ]
