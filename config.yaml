@@ -1,0 +1,105 @@
+# URL은 2026-07-06 실제 fetch로 전건 검증됨
+# (knvd.krcert.or.kr RSS는 404 — 보호나라 rss.do가 KISA 보안공지 공식 피드)
+
+sources:
+  - name: "CISA KEV"
+    type: kev
+    url: "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+    category: "critical"
+    urgent: true
+
+  - name: "NVD"
+    type: nvd
+    url: "https://services.nvd.nist.gov/rest/json/cves/2.0"
+    category: "high"
+
+  - name: "Project Zero Blog"
+    type: rss
+    url: "https://googleprojectzero.blogspot.com/feeds/posts/default"
+    category: "research"
+
+  - name: "KISA 보안공지 (보호나라)"
+    type: rss
+    url: "https://www.boho.or.kr/kr/rss.do?bbsId=B0000133"
+    category: "critical"
+    urgent: true
+
+  - name: "보안뉴스"
+    type: rss
+    url: "http://www.boannews.com/media/news_rss.xml"
+    category: "news"
+
+  - name: "데일리시큐"
+    type: rss
+    url: "https://www.dailysecu.com/rss/allArticle.xml"
+    category: "news"
+
+  - name: "Unit 42"
+    type: rss
+    url: "https://unit42.paloaltonetworks.com/feed/"
+    category: "research"
+
+  - name: "OWASP GenAI Security"
+    type: rss
+    url: "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/releases.atom"
+    category: "ai"
+
+  - name: "Security Top-tier Papers"
+    type: dblp
+    category: "paper"
+    streams:
+      ccs: "ACM CCS"
+      sp: "IEEE S&P"
+      uss: "USENIX Security"
+      ndss: "NDSS"
+
+  - name: "Krebs on Security"
+    type: rss
+    url: "https://krebsonsecurity.com/feed/"
+    category: "research"
+
+  - name: "The Hacker News"
+    type: rss
+    url: "https://feeds.feedburner.com/TheHackersNews"
+    category: "high"
+
+# cap on individual cards (urgent items) per run; the digest embed is not
+# capped here since it already truncates itself per category. Overflow is
+# still recorded in seen.json so it is not re-sent next run
+# (env MAX_ITEMS_PER_RUN overrides this)
+max_items_per_run: 25
+
+discord:
+  # embed color mapping (hex ints)
+  colors:
+    critical: 0xE74C3C
+    high: 0xF1C40F
+    research: 0x3498DB
+    ai: 0x9B59B6
+    news: 0x95A5A6
+    paper: 0x2ECC71
+
+nvd_filter:
+  min_cvss: 8.0
+  keywords:
+    - "llm"
+    - "machine learning"
+    - "pytorch"
+    - "langchain"
+    - "openssl"
+    - "windows"
+    - "linux kernel"
+    - "artificial intelligence"
+    - "neural network"
+    - "tensorflow"
+    - "hugging face"
+    - "openai"
+
+tags:
+  금융: [금융, 은행, 뱅킹, 핀테크, 증권, 보험, 카드사, 결제, 페이, banking, fintech, financial, swift, atm]
+  AI: [llm, prompt injection, 생성형, 인공지능, machine learning, neural, deepfake, 딥페이크]
+  RCE: [remote code execution, rce, 원격 코드]
+  제로데이: [zero-day, 0-day, 제로데이, in the wild]
+  랜섬웨어: [ransomware, 랜섬웨어]
+  APT: [apt, 국가배후, state-sponsored, lazarus, kimsuky]
+  피싱: [phishing, 피싱, smishing, 스미싱]

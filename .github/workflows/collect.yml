@@ -1,0 +1,90 @@
+name: Collect security feeds
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'   # realtime: collect, urgent -> card, rest -> pending.json
+    - cron: '50 21 * * *'    # digest: KST 07:00 (UTC+9), 10 min early for Actions delay
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'run mode'
+        default: 'realtime'
+        type: choice
+        options: [realtime, digest]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine run mode
+        id: run_mode
+        run: |
+          # digest cron -> digest; workflow_dispatch -> the chosen input;
+          # anything else (the */20 realtime cron) -> realtime
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "50 21 * * *" ]; then
+            echo "mode=digest" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=realtime" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install Claude Code CLI (digest wiki librarian)
+        if: steps.run_mode.outputs.mode == 'digest'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run collector
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          RUN_MODE: ${{ steps.run_mode.outputs.mode }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: python main.py
+
+      - name: Commit updated state
+        run: |
+          # seen.json (dedup ledger), pending.json (queued non-urgent
+          # backlog), and wiki/ (librarian's topic pages -- possibly new,
+          # untracked files) all change run-to-run; stage first so new
+          # wiki pages are picked up, then skip the commit entirely when
+          # there's nothing staged, to avoid empty commits
+          git add state/seen.json state/pending.json wiki/
+          if git diff --cached --quiet; then
+            echo "No state changes, skipping commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update seen.json/pending.json/wiki [skip ci]"
+
+          # rebase onto latest main and retry once so an overlapping/delayed
+          # cron run doesn't fail outright on a non-fast-forward push
+          for attempt in 1 2; do
+            git pull --rebase origin main
+            if git push; then
+              break
+            fi
+            echo "push attempt $attempt failed"
+            if [ "$attempt" -eq 2 ]; then
+              exit 1
+            fi
+          done
