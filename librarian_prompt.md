@@ -24,9 +24,15 @@
 출력한다 (설명 텍스트, 코드블록 없이 JSON 그 자체):
 
 ```json
-{"verdicts": {"<item_id>": {"action": "new|update|skip_duplicate|no_wiki", "topic": "slug|null"}}}
+{
+  "briefing": "오늘 항목들을 관통하는 한국어 총평 2~3문장",
+  "verdicts": {"<item_id>": {"action": "new|update|skip_duplicate|no_wiki", "topic": "slug|null"}}
+}
 ```
 
+- `briefing`: 오늘 다이제스트 후보 항목 전체를 관통하는 한국어 총평
+  2~3문장. 가장 중요한 사건을 중심으로 쓰고, 금융·AI 관련 항목이 있으면
+  우선 언급한다.
 - `action`은 위 4가지 중 하나여야 한다.
 - `topic`은 해당 항목이 속하는 토픽 페이지의 slug이고, `no_wiki`인
   경우에는 `null`이다.

@@ -17,15 +17,30 @@ want the old category-based split in one call.
 """
 import os
 import time
+from datetime import datetime, timedelta, timezone
 
 import requests
 
 BATCH_SIZE = 10
 
+WEBHOOK_USERNAME = "보안동향 브리핑"
+
+KST = timezone(timedelta(hours=9))
+KOREAN_WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"]
+HEADER_COLOR = 0x5865F2
+
 INDIVIDUAL_SEVERITY_EMOJI = {
     "critical": "🔴",
     "high": "🟡",
 }
+
+# digest bullet-line emoji, checked in priority order (first tag match wins);
+# an item with no matching tag falls back to a plain bullet
+DIGEST_TAG_EMOJI = [
+    ("제로데이", "⚡"),
+    ("금융", "💰"),
+    ("AI", "🤖"),
+]
 
 # category -> digest embed title label. Used by send()/_build_embeds()'s
 # old category-based routing (membership here means "goes to digest"), and
@@ -41,7 +56,7 @@ DIGEST_LABELS = {
 }
 
 DIGEST_MAX_LINES = 15
-DIGEST_TITLE_MAX = 80
+DIGEST_TITLE_MAX = 70
 EMBED_DESCRIPTION_MAX = 4096
 
 
@@ -65,11 +80,21 @@ def send_cards(items: list[dict], discord_cfg: dict) -> None:
     _dispatch(embeds)
 
 
-def send_digest(items: list[dict], discord_cfg: dict) -> None:
+def send_digest(
+    items: list[dict],
+    discord_cfg: dict,
+    briefing: str | None = None,
+    stats: dict | None = None,
+) -> None:
     """Group every item into one digest embed per category, regardless of
     which categories normally get an individual card. Used for the
     non-urgent backlog (this run's non-urgent items + pending.json) in
-    digest mode."""
+    digest mode.
+
+    A header embed (see _build_header_embed) is prepended in front of the
+    per-category embeds carrying the librarian's briefing text (if any)
+    and a run-stats line built from `stats` (total/urgent/finance/wiki_new
+    -- any missing key is simply omitted from the line)."""
     if not items:
         return
     colors = discord_cfg.get("colors", {})
@@ -77,10 +102,11 @@ def send_digest(items: list[dict], discord_cfg: dict) -> None:
     for item in items:
         digest_groups.setdefault(item.get("category"), []).append(item)
 
-    embeds = [
+    embeds = [_build_header_embed(briefing, stats)]
+    embeds.extend(
         _build_digest_embed(category, group_items, colors)
         for category, group_items in digest_groups.items()
-    ]
+    )
     _dispatch(embeds)
 
 
@@ -93,7 +119,7 @@ def _dispatch(embeds: list[dict]) -> None:
 
     for i in range(0, len(embeds), BATCH_SIZE):
         batch = embeds[i:i + BATCH_SIZE]
-        _post_with_retry(webhook_url, {"embeds": batch})
+        _post_with_retry(webhook_url, {"embeds": batch, "username": WEBHOOK_USERNAME})
 
         # Discord rate-limits webhooks fairly aggressively; a fixed pause
         # between batches keeps us under the limit without needing to
@@ -160,6 +186,48 @@ def _build_individual_embed(item: dict, colors: dict) -> dict:
     }
 
 
+def _build_header_embed(briefing: str | None, stats: dict | None) -> dict:
+    """Leading embed for send_digest(): a dated title plus the librarian's
+    prose briefing (if the wiki librarian ran and produced one) followed by
+    a compact stats line. Any stats key that's absent is left out of the
+    line entirely rather than printed as 0, since e.g. wiki_new legitimately
+    has no meaning when the librarian failed open."""
+    now_kst = datetime.now(KST)
+    weekday = KOREAN_WEEKDAYS[now_kst.weekday()]
+    title = f"☀️ 오늘의 보안 브리핑 — {now_kst.month}/{now_kst.day} ({weekday})"
+
+    desc_lines = []
+    if briefing:
+        desc_lines.append(briefing)
+
+    stats = stats or {}
+    stat_parts = []
+    if stats.get("total") is not None:
+        stat_parts.append(f"총 {stats['total']}건")
+    if stats.get("urgent") is not None:
+        stat_parts.append(f"🔴 긴급 {stats['urgent']}")
+    if stats.get("finance") is not None:
+        stat_parts.append(f"💰 금융 {stats['finance']}")
+    if stats.get("wiki_new") is not None:
+        stat_parts.append(f"📚 위키 +{stats['wiki_new']}")
+    if stat_parts:
+        desc_lines.append(" · ".join(stat_parts))
+
+    return {
+        "title": title[:256],
+        "description": "\n".join(desc_lines)[:EMBED_DESCRIPTION_MAX],
+        "color": HEADER_COLOR,
+    }
+
+
+def _bullet_emoji(item: dict) -> str:
+    tags = item.get("tags") or []
+    for tag, emoji in DIGEST_TAG_EMOJI:
+        if tag in tags:
+            return emoji
+    return "•"
+
+
 def _build_digest_embed(category: str, group_items: list[dict], colors: dict) -> dict:
     # send_digest() can pass a category with no explicit label (e.g. a
     # non-urgent "critical" item, which shouldn't normally occur since KEV
@@ -171,11 +239,11 @@ def _build_digest_embed(category: str, group_items: list[dict], colors: dict) ->
 
     lines = []
     for item in group_items[:DIGEST_MAX_LINES]:
-        money = "💰 " if _has_tag(item, "금융") else ""
+        emoji = _bullet_emoji(item)
         title = item["title"]
         if len(title) > DIGEST_TITLE_MAX:
             title = title[:DIGEST_TITLE_MAX] + "…"
-        lines.append(f"{money}• [{title}]({item['url']})")
+        lines.append(f"{emoji} [**{title}**]({item['url']}) — {item['source']}")
 
     if total > DIGEST_MAX_LINES:
         lines.append(f"…외 {total - DIGEST_MAX_LINES}건")

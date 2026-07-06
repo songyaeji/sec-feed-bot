@@ -288,10 +288,13 @@ def main() -> None:
                 # send the full merged list; a wiki-sync problem must never
                 # suppress a real alert.
                 verdict = librarian.run_librarian(merged)
+                briefing = None
+                wiki_new = None
                 if verdict is None:
                     print("[main] 위키 사서 실패 — fail-open", file=sys.stderr)
                     to_send = merged
                 else:
+                    briefing = verdict.get("briefing")
                     action_counts = {"new": 0, "update": 0, "skip_duplicate": 0, "no_wiki": 0}
                     to_send = []
                     for item in merged:
@@ -301,12 +304,24 @@ def main() -> None:
                         if action == "skip_duplicate":
                             continue
                         to_send.append(item)
+                    wiki_new = action_counts["new"]
                     print(
                         f"[main] 위키 사서: 신규 {action_counts['new']}건, "
                         f"갱신 {action_counts['update']}건, "
                         f"중복스킵 {action_counts['skip_duplicate']}건"
                     )
-                notify.send_digest(to_send, discord_cfg)
+                # stats line on the digest header embed; wiki_new is left
+                # out entirely (not shown as 0) when the librarian failed
+                # open, since "no new wiki topics" and "wiki didn't run"
+                # are different facts
+                stats = {
+                    "total": len(to_send),
+                    "urgent": len(card_items),
+                    "finance": sum(1 for it in to_send if "금융" in (it.get("tags") or [])),
+                }
+                if wiki_new is not None:
+                    stats["wiki_new"] = wiki_new
+                notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
                 had_backlog = True
             save_pending([])
         else:

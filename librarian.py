@@ -64,9 +64,10 @@ def _extract_json_object(text: str):
 
 
 def run_librarian(items: list[dict]) -> dict | None:
-    """Returns {"verdicts": {item_id: {"action": ..., "topic": ...}}} on
-    success, or None on any failure (fail-open -- caller must send
-    everything when this returns None)."""
+    """Returns {"briefing": str | None, "verdicts": {item_id: {"action": ...,
+    "topic": ...}}} on success, or None on any failure (fail-open -- caller
+    must send everything when this returns None). "briefing" defaults to
+    None if the model's output omits it."""
     if not items:
         return None
 
@@ -115,5 +116,10 @@ def run_librarian(items: list[dict]) -> dict | None:
     if "verdicts" not in verdicts:
         print("[librarian] 응답에 'verdicts' 키 없음", file=sys.stderr)
         return None
+
+    # briefing is a nice-to-have on top of verdicts -- if the model omits
+    # it, default to None rather than failing the whole (already-successful)
+    # librarian run
+    verdicts.setdefault("briefing", None)
 
     return verdicts
