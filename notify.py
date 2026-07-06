@@ -15,6 +15,7 @@ send_cards() with urgent items and send_digest() with everything else,
 regardless of category. send()/_build_embeds() are kept for callers that
 want the old category-based split in one call.
 """
+import json
 import os
 import time
 from datetime import datetime, timedelta, timezone
@@ -28,6 +29,14 @@ WEBHOOK_USERNAME = "보안동향 브리핑"
 KST = timezone(timedelta(hours=9))
 KOREAN_WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"]
 HEADER_COLOR = 0x5865F2
+
+# Discord embed description supports `#`/`##` headers and `-#` subtext (both
+# are the same markdown parser as regular messages -- embed *title* fields
+# do not get this treatment, which is why v3 moved headers/dates out of
+# title and into description everywhere below). If this ever renders as
+# literal "#"/"-#" characters in a client, flip this to False to fall back
+# to bold+emoji / italic instead of touching every call site.
+USE_HEADER_MD = True
 
 INDIVIDUAL_SEVERITY_EMOJI = {
     "critical": "🔴",
@@ -55,9 +64,32 @@ DIGEST_LABELS = {
     "high": "🟡 주요 소식",
 }
 
-DIGEST_MAX_LINES = 15
+DIGEST_MAX_LINES = 8  # was 15; each entry is now 2 lines + a blank, so fewer fit
 DIGEST_TITLE_MAX = 70
+DIGEST_MAX_TAGS = 3
 EMBED_DESCRIPTION_MAX = 4096
+
+
+def _h1(text: str) -> str:
+    return f"# {text}" if USE_HEADER_MD else f"**{text}**"
+
+
+def _h2(text: str) -> str:
+    return f"## {text}" if USE_HEADER_MD else f"**{text}**"
+
+
+def _sub(text: str) -> str:
+    return f"-# {text}" if USE_HEADER_MD else f"*{text}*"
+
+
+def _chip_line(source: str, tags: list[str]) -> str:
+    """`-#`/italic subtext line: source name, then up to 3 tags as backtick
+    chips. Shared by individual cards and digest entries so the two layouts
+    read the same way."""
+    line = source
+    if tags:
+        line += " · " + " ".join(f"`{t}`" for t in tags[:DIGEST_MAX_TAGS])
+    return _sub(line)
 
 
 def send(items: list[dict], discord_cfg: dict) -> None:
@@ -110,6 +142,60 @@ def send_digest(
     _dispatch(embeds)
 
 
+MESSAGE_CONTENT_MAX = 2000  # Discord 일반 메시지 content 상한
+
+
+def send_card_news(pngs: list[bytes], link_lines: list[str]) -> None:
+    """digest 카드뉴스: PNG 첨부 메시지 1건 + 원문 링크 메시지(들).
+
+    이미지는 웹훅 multipart 업로드(files[0..9] + payload_json)로 한
+    메시지에 몰아넣는다 — 한 메시지여야 모바일에서 갤러리로 묶여
+    카드뉴스처럼 스와이프된다. 링크는 이미지에 넣을 수 없으니 직후
+    별도 content 메시지로 보내되, 카드 번호와 줄 번호가 1:1로 맞는다
+    (cardgen.build_link_lines가 그 순서를 보장)."""
+    webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
+    if not webhook_url:
+        raise RuntimeError("DISCORD_WEBHOOK_URL is not set")
+
+    if pngs:
+        files = {
+            f"files[{i}]": (f"card_{i:02d}.png", png, "image/png")
+            for i, png in enumerate(pngs)
+        }
+        _post_multipart_with_retry(
+            webhook_url, files,
+            {"payload_json": json.dumps({"username": WEBHOOK_USERNAME})},
+        )
+
+    if link_lines:
+        time.sleep(1)  # 이미지 메시지와 같은 rate-limit 버킷을 공유하므로
+        chunks = _chunk_lines(link_lines, MESSAGE_CONTENT_MAX)
+        for i, chunk in enumerate(chunks):
+            _post_with_retry(webhook_url, {"content": chunk, "username": WEBHOOK_USERNAME})
+            if i + 1 < len(chunks):
+                time.sleep(1)
+
+
+def _chunk_lines(lines: list[str], limit: int) -> list[str]:
+    """줄 목록을 limit자 이하 덩어리로 묶는다. 줄 중간을 자르면 마크다운
+    링크가 깨지므로 항상 줄 경계에서만 나눈다 (한 줄이 limit을 넘는
+    비정상 케이스만 예외적으로 절단)."""
+    chunks: list[str] = []
+    current = ""
+    for line in lines:
+        if len(line) > limit:
+            line = line[:limit]
+        candidate = f"{current}\n{line}" if current else line
+        if len(candidate) > limit:
+            chunks.append(current)
+            current = line
+        else:
+            current = candidate
+    if current:
+        chunks.append(current)
+    return chunks
+
+
 def _dispatch(embeds: list[dict]) -> None:
     if not embeds:
         return
@@ -160,23 +246,15 @@ def _build_individual_embed(item: dict, colors: dict) -> dict:
     prefix = " ".join(prefix_parts)
     title = f"{prefix} {item['title']}".strip() if prefix else item["title"]
 
-    desc_lines = []
-    tags = item.get("tags") or []
-    if tags:
-        desc_lines.append("🏷️ " + " · ".join(tags))
-
-    cvss = item.get("cvss")
-    if cvss is not None:
-        desc_lines.append(f"CVSS: {cvss}")
+    desc_lines = [_chip_line(item["source"], item.get("tags") or [])]
 
     if item.get("kev"):
         desc_lines.append("⚠️ 실제 악용 중")
 
-    if desc_lines:
-        desc_lines.append("")  # blank line before the summary body
+    desc_lines.append("")  # blank line before the summary body
     desc_lines.append(item.get("summary", ""))
 
-    return {
+    embed = {
         "title": title[:256],
         "url": item["url"],
         "description": "\n".join(desc_lines)[:EMBED_DESCRIPTION_MAX],
@@ -185,39 +263,51 @@ def _build_individual_embed(item: dict, colors: dict) -> dict:
         "timestamp": item["published"],
     }
 
+    # CVSS moves out of the description body into its own field (a small
+    # stat tile next to the title) instead of being one more text line
+    cvss = item.get("cvss")
+    if cvss is not None:
+        embed["fields"] = [{"name": "CVSS", "value": f"**{cvss}**", "inline": True}]
+
+    return embed
+
 
 def _build_header_embed(briefing: str | None, stats: dict | None) -> dict:
-    """Leading embed for send_digest(): a dated title plus the librarian's
-    prose briefing (if the wiki librarian ran and produced one) followed by
-    a compact stats line. Any stats key that's absent is left out of the
-    line entirely rather than printed as 0, since e.g. wiki_new legitimately
-    has no meaning when the librarian failed open."""
+    """Leading embed for send_digest(): a big header + a small gray dateline
+    in the description (embed *title* doesn't render `#` markdown, so both
+    live in description now -- see USE_HEADER_MD), the librarian's prose
+    briefing (if it ran and produced one), and 🔴/💰/📚 stat tiles as inline
+    fields. Any stats key that's absent is left out entirely rather than
+    shown as 0, since e.g. wiki_new legitimately has no meaning when the
+    librarian failed open."""
     now_kst = datetime.now(KST)
     weekday = KOREAN_WEEKDAYS[now_kst.weekday()]
-    title = f"☀️ 오늘의 보안 브리핑 — {now_kst.month}/{now_kst.day} ({weekday})"
+    stats = stats or {}
+    total = stats.get("total", 0)
 
-    desc_lines = []
+    desc_lines = [
+        _h1("☀️ 오늘의 보안 브리핑"),
+        _sub(f"{now_kst.month}월 {now_kst.day}일 {weekday}요일 · 총 {total}건"),
+    ]
     if briefing:
+        desc_lines.append("")
         desc_lines.append(briefing)
 
-    stats = stats or {}
-    stat_parts = []
-    if stats.get("total") is not None:
-        stat_parts.append(f"총 {stats['total']}건")
+    fields = []
     if stats.get("urgent") is not None:
-        stat_parts.append(f"🔴 긴급 {stats['urgent']}")
+        fields.append({"name": "🔴 긴급", "value": f"**{stats['urgent']}**", "inline": True})
     if stats.get("finance") is not None:
-        stat_parts.append(f"💰 금융 {stats['finance']}")
+        fields.append({"name": "💰 금융", "value": f"**{stats['finance']}**", "inline": True})
     if stats.get("wiki_new") is not None:
-        stat_parts.append(f"📚 위키 +{stats['wiki_new']}")
-    if stat_parts:
-        desc_lines.append(" · ".join(stat_parts))
+        fields.append({"name": "📚 위키", "value": f"**+{stats['wiki_new']}**", "inline": True})
 
-    return {
-        "title": title[:256],
+    embed = {
         "description": "\n".join(desc_lines)[:EMBED_DESCRIPTION_MAX],
         "color": HEADER_COLOR,
     }
+    if fields:
+        embed["fields"] = fields
+    return embed
 
 
 def _bullet_emoji(item: dict) -> str:
@@ -237,23 +327,28 @@ def _build_digest_embed(category: str, group_items: list[dict], colors: dict) ->
     total = len(group_items)
     color = colors.get(category, 0x95A5A6)
 
-    lines = []
+    # embed title doesn't render `##` markdown, so the section header lives
+    # in description too (see USE_HEADER_MD), same as the header embed
+    lines = [_h2(f"{label} {total}"), ""]
     for item in group_items[:DIGEST_MAX_LINES]:
         emoji = _bullet_emoji(item)
         title = item["title"]
         if len(title) > DIGEST_TITLE_MAX:
             title = title[:DIGEST_TITLE_MAX] + "…"
-        lines.append(f"{emoji} [**{title}**]({item['url']}) — {item['source']}")
+        lines.append(f"{emoji} **[{title}]({item['url']})**")
+        lines.append(_chip_line(item["source"], item.get("tags") or []))
+        lines.append("")  # blank line between items
 
     if total > DIGEST_MAX_LINES:
-        lines.append(f"…외 {total - DIGEST_MAX_LINES}건")
+        lines.append(_sub(f"…외 {total - DIGEST_MAX_LINES}건"))
+    elif lines[-1] == "":
+        lines.pop()  # no dangling blank line after the last item
 
     description = "\n".join(lines)
     if len(description) > EMBED_DESCRIPTION_MAX:
         description = description[:EMBED_DESCRIPTION_MAX - 1] + "…"
 
     return {
-        "title": f"{label} ({total}건)"[:256],
         "description": description,
         "color": color,
     }
@@ -275,4 +370,23 @@ def _post_with_retry(webhook_url: str, payload: dict) -> None:
     if not resp.ok:
         # deliberately omit webhook_url/payload details that could leak
         # the credential or flood logs; status code is enough to debug
+        raise RuntimeError(f"Discord webhook request failed with status {resp.status_code}")
+
+
+def _post_multipart_with_retry(webhook_url: str, files: dict, data: dict) -> None:
+    """_post_with_retry의 multipart 버전. PNG는 bytes라 재사용 가능하므로
+    429 시 단순 재전송이면 충분하다. 오류 메시지에 URL/본문을 넣지 않는
+    원칙도 동일하게 유지."""
+    # 이미지 10장(수 MB)은 json POST보다 업로드가 오래 걸리므로 타임아웃 상향
+    resp = requests.post(webhook_url, files=files, data=data, timeout=60)
+
+    if resp.status_code == 429:
+        try:
+            retry_after = resp.json().get("retry_after", 1)
+        except ValueError:
+            retry_after = 1
+        time.sleep(float(retry_after))
+        resp = requests.post(webhook_url, files=files, data=data, timeout=60)
+
+    if not resp.ok:
         raise RuntimeError(f"Discord webhook request failed with status {resp.status_code}")

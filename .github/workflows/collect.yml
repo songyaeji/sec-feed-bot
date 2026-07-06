@@ -52,6 +52,22 @@ jobs:
         if: steps.run_mode.outputs.mode == 'digest'
         run: npm install -g @anthropic-ai/claude-code
 
+      # 카드뉴스 렌더용 chromium은 digest에서만 필요. 브라우저 바이너리
+      # (~150MB) 매일 재다운로드를 피하려고 캐시 — playwright 버전이 바뀌면
+      # requirements.txt 해시도 바뀌어 캐시 키가 자연히 무효화된다
+      - name: Cache Playwright browsers (digest card news)
+        if: steps.run_mode.outputs.mode == 'digest'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ hashFiles('requirements.txt') }}
+
+      # --with-deps: 러너에 chromium 런타임 시스템 라이브러리까지 설치
+      # (캐시 히트여도 apt 의존성은 러너마다 새로 필요)
+      - name: Install Playwright chromium (digest card news)
+        if: steps.run_mode.outputs.mode == 'digest'
+        run: playwright install --with-deps chromium
+
       # CLI가 CLAUDE_CODE_OAUTH_TOKEN env를 직접 읽지 않아(2.1.201 실측)
       # setup-token 토큰을 credentials 파일로 구체화해야 구독 인증이 붙는다
       - name: Set up Claude auth (digest wiki librarian)

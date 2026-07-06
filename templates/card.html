@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+/* Pretendard 번들 폰트 (assets/fonts/, SIL OFL). CI 러너에는 한글 폰트가
+   없을 수 있으므로 시스템 폰트에 의존하지 않고 반드시 번들을 로드한다.
+   상대경로는 cardgen.py가 렌더 시 assets/ 절대 file:// URL로 치환한다
+   (조립된 HTML을 state/preview/에 쓰면 templates/ 기준 상대경로가 깨지므로). */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: url("../assets/fonts/Pretendard-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: url("../assets/fonts/Pretendard-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: url("../assets/fonts/Pretendard-ExtraBold.otf") format("opentype");
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #1B1F27; font-family: "Pretendard", sans-serif; }
+
+/* 카드 공통: 인스타 4:5 비율 고정 프레임. keep-all로 한글 어절 단위 줄바꿈,
+   overflow-wrap으로 긴 영문 토큰(URL·CVE id 등)이 프레임을 뚫지 않게 한다 */
+.card {
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* -webkit-line-clamp은 chromium 렌더 전용이라 안전 (Playwright chromium 고정) */
+.clamp-2 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.clamp-3 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+
+/* ---------- 표지 (다크 네이비) ---------- */
+.card--cover {
+  background: linear-gradient(165deg, #0E1526 0%, #131E3A 55%, #0C1220 100%);
+  color: #FFFFFF;
+  padding: 96px 88px 92px;
+}
+.cover-label {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: #7F8AA8;
+}
+.cover-center { margin: auto 0; }
+.cover-date {
+  font-size: 148px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #FFFFFF;
+}
+.cover-sub {
+  font-size: 52px;
+  font-weight: 600;
+  margin-top: 30px;
+  color: #DCE3F2;
+}
+.cover-weekday {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 18px;
+  color: #6B7694;
+}
+.cover-briefing {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #AEB9D4;
+  margin-bottom: 52px;
+}
+.stat-row { display: flex; flex-wrap: wrap; gap: 18px; }
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  padding: 18px 32px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #C2CBE0;
+  white-space: nowrap;
+}
+.stat-dot { width: 16px; height: 16px; border-radius: 50%; flex: none; }
+.stat-num { font-size: 34px; font-weight: 800; color: #FFFFFF; }
+
+/* ---------- 이슈 카드 (라이트) ---------- */
+.card--issue {
+  background: #FAFAFC;
+  color: #111318;
+  padding: 88px 84px 76px;
+}
+.issue-head { display: flex; align-items: baseline; gap: 26px; }
+.issue-num {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.issue-cat { display: inline-flex; align-items: center; gap: 12px; }
+.issue-cat-dot { width: 14px; height: 14px; border-radius: 50%; }
+.issue-cat-label { font-size: 32px; font-weight: 600; }
+.issue-title {
+  margin-top: 52px;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #111318;
+}
+.chip-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 46px; }
+.chip {
+  background: #ECEEF3;
+  color: #4B5261;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-size: 26px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge-row { display: flex; align-items: stretch; gap: 18px; margin-top: 38px; }
+.kev-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #FDECEA;
+  border: 1px solid #F5C6BF;
+  color: #C0392B;
+  border-radius: 18px;
+  padding: 20px 32px;
+  font-size: 30px;
+  font-weight: 800;
+}
+.kev-dot { width: 16px; height: 16px; border-radius: 50%; background: #E74C3C; flex: none; }
+.cvss-tile {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 16px;
+  background: #131A2C;
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 20px 32px;
+}
+.cvss-label { font-size: 24px; font-weight: 600; color: #8B95B3; letter-spacing: 0.08em; }
+.cvss-num { font-size: 42px; font-weight: 800; }
+.issue-summary {
+  margin-top: auto;
+  padding-top: 40px;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #555C68;
+}
+.issue-footer {
+  margin-top: 36px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #9AA1AD;
+}
+
+/* ---------- 목록 카드 (라이트) ---------- */
+.card--list {
+  background: #FAFAFC;
+  color: #111318;
+  padding: 88px 84px 76px;
+}
+.list-header {
+  font-size: 54px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #111318;
+}
+.list-count { color: #4A6CF7; }
+.list-rows { margin-top: 48px; display: flex; flex-direction: column; }
+.list-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 23px 0;
+  border-bottom: 1px solid #ECEEF2;
+}
+.row-dot { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+.row-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: #22252C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row-source {
+  flex: none;
+  max-width: 210px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #9AA1AD;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-more {
+  padding-top: 30px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #9AA1AD;
+}
+</style>
+</head>
+<body>
+<!-- CARDS -->
+</body>
+</html>
+<!-- TEMPLATES: 아래 조각들은 페이지 본문이 아니라 cardgen.py가 정규식으로
+     추출해 {{...}} 자리표시자를 치환한 뒤 CARDS 위치에 삽입하는 원본이다.
+     jinja2 없이 str.replace만으로 조립하기 위한 구조. -->
+
+<!-- BEGIN cover -->
+<div class="card card--cover" id="card-{{N}}">
+  <div class="cover-label">보안동향 브리핑 DAILY</div>
+  <div class="cover-center">
+    <div class="cover-date">{{DATE}}</div>
+    <div class="cover-sub">오늘의 보안 브리핑</div>
+    <div class="cover-weekday">{{WEEKDAY}}</div>
+  </div>
+  {{BRIEFING_BLOCK}}
+  <div class="stat-row">{{STAT_CHIPS}}</div>
+</div>
+<!-- END cover -->
+
+<!-- BEGIN briefing -->
+<div class="cover-briefing clamp-3">{{BRIEFING}}</div>
+<!-- END briefing -->
+
+<!-- BEGIN stat_chip -->
+<span class="stat-chip"><span class="stat-dot" style="background:{{DOT}}"></span>{{LABEL}}&nbsp;<span class="stat-num">{{VALUE}}</span></span>
+<!-- END stat_chip -->
+
+<!-- BEGIN issue -->
+<div class="card card--issue" id="card-{{N}}">
+  <div class="issue-head">
+    <span class="issue-num" style="color:{{ACCENT}}">{{NUM}}</span>
+    <span class="issue-cat">
+      <span class="issue-cat-dot" style="background:{{ACCENT}}"></span>
+      <span class="issue-cat-label" style="color:{{ACCENT}}">{{CATEGORY}}</span>
+    </span>
+  </div>
+  <div class="issue-title clamp-3">{{TITLE}}</div>
+  <div class="chip-row">{{CHIPS}}</div>
+  {{BADGES}}
+  <div class="issue-summary clamp-3">{{SUMMARY}}</div>
+  <div class="issue-footer">{{FOOTER}}</div>
+</div>
+<!-- END issue -->
+
+<!-- BEGIN chip -->
+<span class="chip">{{TEXT}}</span>
+<!-- END chip -->
+
+<!-- BEGIN badge_row -->
+<div class="badge-row">{{BADGES}}</div>
+<!-- END badge_row -->
+
+<!-- BEGIN kev_badge -->
+<span class="kev-badge"><span class="kev-dot"></span>실제 악용 중</span>
+<!-- END kev_badge -->
+
+<!-- BEGIN cvss_tile -->
+<span class="cvss-tile"><span class="cvss-label">CVSS</span><span class="cvss-num">{{CVSS}}</span></span>
+<!-- END cvss_tile -->
+
+<!-- BEGIN list -->
+<div class="card card--list" id="card-{{N}}">
+  <div class="list-header">그 밖의 소식 <span class="list-count">{{COUNT}}건</span></div>
+  <div class="list-rows">{{ROWS}}</div>
+</div>
+<!-- END list -->
+
+<!-- BEGIN list_row -->
+<div class="list-row"><span class="row-dot" style="background:{{DOT}}"></span><span class="row-title">{{TITLE}}</span><span class="row-source">{{SOURCE}}</span></div>
+<!-- END list_row -->
+
+<!-- BEGIN list_more -->
+<div class="list-more">…외 {{COUNT}}건</div>
+<!-- END list_more -->

@@ -12,6 +12,7 @@ from datetime import datetime, timedelta, timezone
 
 import yaml
 
+import cardgen
 import dedup as dedup_lib
 import librarian
 import notify
@@ -201,6 +202,32 @@ def _print_dry_run_stats(card_items: list[dict], non_urgent_items: list[dict]) -
         print(f"[main] non-urgent category '{category}': {count}건 -> digest")
 
 
+def _save_preview_cards(merged: list[dict], card_items: list[dict], discord_cfg: dict) -> None:
+    # DRY_RUN digest에서도 렌더 경로를 실제로 태워 PNG를 남긴다 —
+    # 전송 없이 로컬에서 카드 디자인을 눈으로 검수하기 위한 용도라서
+    # 렌더 실패(playwright 미설치 등)는 경고만 하고 run을 깨지 않는다.
+    # 사서(librarian)는 DRY_RUN에서 돌지 않으므로 briefing/wiki_new 없음.
+    if not merged:
+        return
+    try:
+        stats = {
+            "total": len(merged),
+            "urgent": len(card_items),
+            "finance": sum(1 for it in merged if "금융" in (it.get("tags") or [])),
+        }
+        pngs = cardgen.build_cards(
+            merged, briefing=None, stats=stats, colors=discord_cfg.get("colors", {})
+        )
+        preview_dir = os.path.join(STATE_DIR, "preview")
+        os.makedirs(preview_dir, exist_ok=True)
+        for i, png in enumerate(pngs, start=1):
+            with open(os.path.join(preview_dir, f"card_{i:02d}.png"), "wb") as f:
+                f.write(png)
+        print(f"[main] DRY_RUN: 카드뉴스 {len(pngs)}장 -> state/preview/ 저장")
+    except Exception as exc:
+        print(f"[main] DRY_RUN: 카드뉴스 렌더 실패(경고만): {_safe_exc_str(exc)}", file=sys.stderr)
+
+
 def main() -> None:
     config = load_config()
     state = load_state()
@@ -263,6 +290,7 @@ def main() -> None:
                 f"[main] DRY_RUN: pending.json 누적 {len(pending)}건 + 이번 비긴급 {len(non_urgent_items)}건 "
                 f"= 다이제스트 {len(pending) + len(non_urgent_items)}건 전송 후 pending.json 비움 (기록 생략)"
             )
+            _save_preview_cards(pending + non_urgent_items, card_items, discord_cfg)
         else:
             existing_ids = {it["id"] for it in pending}
             would_append = [it for it in non_urgent_items if it["id"] not in existing_ids]
@@ -321,7 +349,26 @@ def main() -> None:
                 }
                 if wiki_new is not None:
                     stats["wiki_new"] = wiki_new
-                notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
+                # 아침 다이제스트는 카드뉴스 이미지로 전송하고, 렌더/전송
+                # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
+                # 어떤 경우에도 아침 브리핑 자체가 사라지면 안 된다
+                try:
+                    top = cardgen.pick_top(to_send)
+                    top_ids = {it["id"] for it in top}
+                    rest = [it for it in to_send if it["id"] not in top_ids]
+                    pngs = cardgen.build_cards(
+                        to_send,
+                        briefing=briefing,
+                        stats=stats,
+                        colors=discord_cfg.get("colors", {}),
+                    )
+                    notify.send_card_news(pngs, cardgen.build_link_lines(top, rest))
+                except Exception as exc:
+                    print(
+                        f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",
+                        file=sys.stderr,
+                    )
+                    notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
                 had_backlog = True
             save_pending([])
         else:
