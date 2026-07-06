@@ -14,10 +14,11 @@ import yaml
 
 import cardgen
 import dedup as dedup_lib
+import judge
 import librarian
 import notify
 import tagger
-from sources import dblp, kev, nvd, rss
+from sources import dblp, hackernews, kev, nvd, rss
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
@@ -43,6 +44,7 @@ FETCHERS = {
     "nvd": nvd.fetch,
     "rss": rss.fetch,
     "dblp": dblp.fetch,
+    "hn": hackernews.fetch,
 }
 
 
@@ -134,9 +136,12 @@ def collect_all(config: dict, state: dict) -> list[dict]:
                 items = fetcher(source_cfg, state, config)
             else:
                 items = fetcher(source_cfg)
-            if source_cfg.get("urgent"):
+            # v8: 소스 단위 urgent 플래그 폐기 — 즉시 발송은 judge.py
+            # (대형 사건 판정)만 결정한다. breaking 소스(HN·레딧)는
+            # 판정 전용: 긴급 아니면 다이제스트에도 안 싣고 버린다
+            if source_cfg.get("breaking"):
                 for item in items:
-                    item["urgent_source"] = True
+                    item["breaking"] = True
             print(f"[main] {name}: fetched {len(items)} item(s)", file=sys.stderr)
             all_items.extend(items)
         except Exception as exc:
@@ -169,21 +174,6 @@ def dedup(items: list[dict], seen: dict) -> list[dict]:
     return new_items
 
 
-def is_urgent(item: dict) -> bool:
-    # urgent := source is flagged urgent in config.yaml (stamped onto the
-    # item as "urgent_source" in collect_all), or CVSS >= 9.0, or a
-    # known-exploited (KEV) flag -- any one of these skips the digest queue
-    # and goes out as an individual card immediately
-    if item.get("urgent_source"):
-        return True
-    cvss = item.get("cvss")
-    if cvss is not None and cvss >= 9.0:
-        return True
-    if item.get("kev") is True:
-        return True
-    return False
-
-
 def _print_dry_run_stats(card_items: list[dict], non_urgent_items: list[dict]) -> None:
     # DRY_RUN skips notify.send_cards()/send_digest() entirely, so this
     # mirrors the routing decision they would have made (individual card
@@ -202,7 +192,38 @@ def _print_dry_run_stats(card_items: list[dict], non_urgent_items: list[dict]) -
         print(f"[main] non-urgent category '{category}': {count}건 -> digest")
 
 
-def _save_preview_cards(merged: list[dict], card_items: list[dict], discord_cfg: dict) -> None:
+def _card_image_sources(config: dict) -> set[str]:
+    # 카드에 og:image를 실을 소스(config sources[].card_image: true).
+    # 국내 매체 og:image는 대부분 스톡 일러스트라 기본은 미포함
+    return {
+        s.get("name") for s in config.get("sources", []) if s.get("card_image")
+    }
+
+
+def _source_regions(config: dict) -> dict[str, str]:
+    # 카드 국내/해외 pill — config sources[].region ("국내"/"해외").
+    # 미지정 소스는 맵에서 빠져 카드에서 표기를 생략한다
+    return {
+        s.get("name"): s["region"]
+        for s in config.get("sources", [])
+        if s.get("region")
+    }
+
+
+def _fallback_keywords(items: list[dict], limit: int = 4) -> list[str]:
+    # 사서가 keywords를 못 준 날의 표지 해시태그 — 태그 빈도 상위로 대체
+    counts: dict[str, int] = {}
+    for item in items:
+        for tag in item.get("tags") or []:
+            counts[tag] = counts.get(tag, 0) + 1
+    return [t for t, _ in sorted(counts.items(), key=lambda x: -x[1])[:limit]]
+
+
+def _save_preview_cards(
+    merged: list[dict], card_items: list[dict], discord_cfg: dict,
+    issue_no: int | None = None, image_sources: set[str] | None = None,
+    regions: dict[str, str] | None = None,
+) -> None:
     # DRY_RUN digest에서도 렌더 경로를 실제로 태워 PNG를 남긴다 —
     # 전송 없이 로컬에서 카드 디자인을 눈으로 검수하기 위한 용도라서
     # 렌더 실패(playwright 미설치 등)는 경고만 하고 run을 깨지 않는다.
@@ -215,8 +236,15 @@ def _save_preview_cards(merged: list[dict], card_items: list[dict], discord_cfg:
             "urgent": len(card_items),
             "finance": sum(1 for it in merged if "금융" in (it.get("tags") or [])),
         }
+        # DRY_RUN은 회차를 증가시키지 않고 현재값(다음에 나갈 번호)만 표기
+        if issue_no is not None:
+            stats["issue_no"] = issue_no
+        stats["keywords"] = _fallback_keywords(merged)
         pngs = cardgen.build_cards(
-            merged, briefing=None, stats=stats, colors=discord_cfg.get("colors", {})
+            merged, briefing=None, stats=stats,
+            colors=discord_cfg.get("colors", {}),
+            image_sources=image_sources,
+            regions=regions,
         )
         preview_dir = os.path.join(STATE_DIR, "preview")
         os.makedirs(preview_dir, exist_ok=True)
@@ -264,8 +292,21 @@ def main() -> None:
 
     routable_items.sort(key=lambda it: SEVERITY_ORDER.get(it["severity"], 99))
 
-    urgent_items = [it for it in routable_items if is_urgent(it)]
-    non_urgent_items = [it for it in routable_items if not is_urgent(it)]
+    # v8: "긴급" = 대형 사건·사고만 (judge.py 하이브리드 판정 — 키워드
+    # 게이트 + haiku). 구 기준(KEV/CVSS≥9/긴급 소스)은 폐기: 그런 항목도
+    # 아침 다이제스트로 몰아 보낸다. DRY_RUN은 LLM 호출 없이 게이트만 로그.
+    dry_run = os.environ.get("DRY_RUN") == "1"
+    urgent_items = judge.select_urgent(routable_items, config, allow_llm=not dry_run)
+    urgent_ids = {it["id"] for it in urgent_items}
+    # breaking 소스(HN·레딧)는 즉시 발송 후보로만 쓴다 — 긴급이 아니면
+    # 다이제스트에 싣지 않고 버린다 (seen에는 남아 재등장하지 않는다)
+    non_urgent_items = [
+        it for it in routable_items
+        if it["id"] not in urgent_ids and not it.get("breaking")
+    ]
+    dropped_breaking = len(routable_items) - len(urgent_items) - len(non_urgent_items)
+    if dropped_breaking:
+        print(f"[main] breaking 소스 비긴급 {dropped_breaking}건 버림", file=sys.stderr)
 
     # cap what we send as individual cards, but still mark everything as
     # seen below so the overflow is not re-sent on the next run
@@ -277,7 +318,6 @@ def main() -> None:
 
     pending = load_pending()
     discord_cfg = config.get("discord", {})
-    dry_run = os.environ.get("DRY_RUN") == "1"
 
     if dry_run:
         print(
@@ -290,7 +330,12 @@ def main() -> None:
                 f"[main] DRY_RUN: pending.json 누적 {len(pending)}건 + 이번 비긴급 {len(non_urgent_items)}건 "
                 f"= 다이제스트 {len(pending) + len(non_urgent_items)}건 전송 후 pending.json 비움 (기록 생략)"
             )
-            _save_preview_cards(pending + non_urgent_items, card_items, discord_cfg)
+            _save_preview_cards(
+                pending + non_urgent_items, card_items, discord_cfg,
+                issue_no=state.get("issue_no", 1),
+                image_sources=_card_image_sources(config),
+                regions=_source_regions(config),
+            )
         else:
             existing_ids = {it["id"] for it in pending}
             would_append = [it for it in non_urgent_items if it["id"] not in existing_ids]
@@ -326,7 +371,14 @@ def main() -> None:
                     action_counts = {"new": 0, "update": 0, "skip_duplicate": 0, "no_wiki": 0}
                     to_send = []
                     for item in merged:
-                        action = verdict.get("verdicts", {}).get(item["id"], {}).get("action")
+                        item_verdict = verdict.get("verdicts", {}).get(item["id"], {})
+                        action = item_verdict.get("action")
+                        # 사서의 한국어 제목·요약 — 카드뉴스에 실린다(요약이 메인).
+                        # 누락 시 cardgen이 피드 원문으로 폴백
+                        for key in ("title_ko", "summary_ko"):
+                            value = item_verdict.get(key)
+                            if value:
+                                item[key] = value
                         if action in action_counts:
                             action_counts[action] += 1
                         if action == "skip_duplicate":
@@ -349,6 +401,14 @@ def main() -> None:
                 }
                 if wiki_new is not None:
                     stats["wiki_new"] = wiki_new
+                # 표지 해시태그: 사서가 뽑은 그날의 키워드, 실패 시 태그 빈도 상위
+                keywords = (verdict or {}).get("keywords") or _fallback_keywords(to_send)
+                stats["keywords"] = keywords
+                # 발행 회차: seen.json에 다음 회차 번호를 들고 다닌다(최초 1).
+                # 실제 전송(카드뉴스든 텍스트 폴백이든)에 성공해야 증가 —
+                # 전송 예외 시에는 그대로 남아 다음 시도에 같은 번호로 나간다
+                issue_no = state.get("issue_no", 1)
+                stats["issue_no"] = issue_no
                 # 아침 다이제스트는 카드뉴스 이미지로 전송하고, 렌더/전송
                 # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
                 # 어떤 경우에도 아침 브리핑 자체가 사라지면 안 된다
@@ -361,6 +421,8 @@ def main() -> None:
                         briefing=briefing,
                         stats=stats,
                         colors=discord_cfg.get("colors", {}),
+                        image_sources=_card_image_sources(config),
+                        regions=_source_regions(config),
                     )
                     notify.send_card_news(pngs, cardgen.build_link_lines(top, rest))
                 except Exception as exc:
@@ -369,6 +431,7 @@ def main() -> None:
                         file=sys.stderr,
                     )
                     notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
+                state["issue_no"] = issue_no + 1
                 had_backlog = True
             save_pending([])
         else:

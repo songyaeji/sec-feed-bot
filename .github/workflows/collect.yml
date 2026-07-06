@@ -48,8 +48,9 @@ jobs:
             echo "mode=realtime" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Install Claude Code CLI (digest wiki librarian)
-        if: steps.run_mode.outputs.mode == 'digest'
+      # v8: realtime에서도 필요 — judge.py(대형 사건 즉시 발송 판정)가
+      # 매 run 후보가 있을 때 haiku를 호출한다. digest는 사서(librarian)용.
+      - name: Install Claude Code CLI (judge + wiki librarian)
         run: npm install -g @anthropic-ai/claude-code
 
       # 카드뉴스 렌더용 chromium은 digest에서만 필요. 브라우저 바이너리
@@ -70,8 +71,7 @@ jobs:
 
       # CLI가 CLAUDE_CODE_OAUTH_TOKEN env를 직접 읽지 않아(2.1.201 실측)
       # setup-token 토큰을 credentials 파일로 구체화해야 구독 인증이 붙는다
-      - name: Set up Claude auth (digest wiki librarian)
-        if: steps.run_mode.outputs.mode == 'digest'
+      - name: Set up Claude auth (judge + wiki librarian)
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |

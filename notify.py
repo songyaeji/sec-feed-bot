@@ -8,8 +8,9 @@ card (one glance = one incident). Everything else (news/research/ai/paper)
 is high-volume and low-urgency, so those get folded into one digest embed
 per category instead of flooding the channel with an embed per item.
 
-main.py's hybrid realtime/digest mode decides urgency itself (see
-is_urgent() there) rather than relying on category, so send_cards() and
+main.py's hybrid realtime/digest mode decides urgency itself (v8:
+judge.select_urgent(), major-incident LLM judgment) rather than relying
+on category, so send_cards() and
 send_digest() below route purely on the list they're given -- call
 send_cards() with urgent items and send_digest() with everything else,
 regardless of category. send()/_build_embeds() are kept for callers that
@@ -103,8 +104,8 @@ def send(items: list[dict], discord_cfg: dict) -> None:
 
 def send_cards(items: list[dict], discord_cfg: dict) -> None:
     """Send every item as its own individual card, regardless of category.
-    Used for urgent items (see main.is_urgent) in the hybrid realtime/digest
-    flow."""
+    Used for urgent items (v8: judge.select_urgent major-incident verdicts)
+    in the hybrid realtime/digest flow."""
     if not items:
         return
     colors = discord_cfg.get("colors", {})
@@ -319,10 +320,8 @@ def _bullet_emoji(item: dict) -> str:
 
 
 def _build_digest_embed(category: str, group_items: list[dict], colors: dict) -> dict:
-    # send_digest() can pass a category with no explicit label (e.g. a
-    # non-urgent "critical" item, which shouldn't normally occur since KEV
-    # and KISA are both `urgent: true`, but this keeps it from KeyError'ing
-    # if that ever changes)
+    # send_digest() can pass a category with no explicit label — v8부터
+    # KEV/KISA(critical)도 다이제스트로 오므로 critical 라벨도 정상 경로다
     label = DIGEST_LABELS.get(category, f"🗂️ {category}")
     total = len(group_items)
     color = colors.get(category, 0x95A5A6)

@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <style>
-/* Pretendard 번들 폰트 (assets/fonts/, SIL OFL). CI 러너에는 한글 폰트가
-   없을 수 있으므로 시스템 폰트에 의존하지 않고 반드시 번들을 로드한다.
-   상대경로는 cardgen.py가 렌더 시 assets/ 절대 file:// URL로 치환한다
-   (조립된 HTML을 state/preview/에 쓰면 templates/ 기준 상대경로가 깨지므로). */
+/* 번들 폰트 (assets/fonts/, 전부 SIL OFL). CI 러너에는 한글 폰트가 없을 수
+   있으므로 시스템 폰트에 의존하지 않고 반드시 번들을 로드한다. 상대경로는
+   cardgen.py가 렌더 시 assets/ 절대 file:// URL로 치환한다 (조립된 HTML을
+   state/preview/에 쓰면 templates/ 기준 상대경로가 깨지므로).
+   시안 스펙: Pretendard 400/700/800 + IBM Plex Mono 400/600. */
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
@@ -14,20 +15,46 @@
 }
 @font-face {
   font-family: "Pretendard";
-  font-weight: 600;
+  font-weight: 500;
   src: url("../assets/fonts/Pretendard-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: url("../assets/fonts/Pretendard-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 800;
   src: url("../assets/fonts/Pretendard-ExtraBold.otf") format("opentype");
 }
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  src: url("../assets/fonts/IBMPlexMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+  src: url("../assets/fonts/IBMPlexMono-SemiBold.ttf") format("truetype");
+}
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #1B1F27; font-family: "Pretendard", sans-serif; }
+body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 
-/* 카드 공통: 인스타 4:5 비율 고정 프레임. keep-all로 한글 어절 단위 줄바꿈,
-   overflow-wrap으로 긴 영문 토큰(URL·CVE id 등)이 프레임을 뚫지 않게 한다 */
+/* v6 fit 규칙: 어떤 텍스트도 '…'로 중간 절단하지 않는다.
+   제목 = 폰트 축소, 본문·표지 서브 = 문장 경계 절단 (아래 fitAllCards) */
+
+/* ---- 디자인 토큰 (시안 1a "네온라임 그리드", hifi 확정값) ----
+   잉크 블랙 #0A0A0A / 네온 라임 #C6FF33 / 주 텍스트 #F2F2EF
+   본문 #C8C8C2 / 서브 #B8B8B2 / 뮤트 #8A8A84 / 플레이스홀더 #6A6A64
+   구분선 #2A2A26 / 도트·대시 #3A3A36 / 스트라이프 #141412·#101010 */
+
+/* mono 계열에 Pretendard 폴백: Plex Mono에 없는 한글(긴급·출처 등)이
+   시스템 글꼴로 새지 않게 한다 */
+.mono { font-family: "IBM Plex Mono", "Pretendard", monospace; }
+.lime { color: #C6FF33; }
+
 .card {
   width: 1080px;
   height: 1350px;
@@ -35,6 +62,8 @@ body { background: #1B1F27; font-family: "Pretendard", sans-serif; }
   position: relative;
   display: flex;
   flex-direction: column;
+  background: #0A0A0A;
+  color: #F2F2EF;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
@@ -42,186 +71,223 @@ body { background: #1B1F27; font-family: "Pretendard", sans-serif; }
 /* -webkit-line-clamp은 chromium 렌더 전용이라 안전 (Playwright chromium 고정) */
 .clamp-2 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
 .clamp-3 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.clamp-4 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
 
-/* ---------- 표지 (다크 네이비) ---------- */
-.card--cover {
-  background: linear-gradient(165deg, #0E1526 0%, #131E3A 55%, #0C1220 100%);
-  color: #FFFFFF;
-  padding: 96px 88px 92px;
-}
-.cover-label {
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: 0.32em;
-  color: #7F8AA8;
-}
-.cover-center { margin: auto 0; }
-.cover-date {
-  font-size: 148px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: #FFFFFF;
-}
-.cover-sub {
-  font-size: 52px;
-  font-weight: 600;
-  margin-top: 30px;
-  color: #DCE3F2;
-}
-.cover-weekday {
-  font-size: 30px;
-  font-weight: 400;
-  margin-top: 18px;
-  color: #6B7694;
-}
-.cover-briefing {
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 1.55;
-  color: #AEB9D4;
-  margin-bottom: 52px;
-}
-.stat-row { display: flex; flex-wrap: wrap; gap: 18px; }
-.stat-chip {
-  display: inline-flex;
+/* ---------- 공통 헤더/푸터 바 ---------- */
+.bar {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 14px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  border-radius: 999px;
-  padding: 18px 32px;
+  flex: none;
+}
+.bar-head { padding: 56px 64px; border-bottom: 2px solid #2A2A26; }
+.bar-foot { padding: 44px 64px; border-top: 2px solid #2A2A26; }
+.cover .bar-foot { padding: 48px 64px; }
+.f30 { font-size: 30px; }
+.f28 { font-size: 28px; }
+.meta { color: #8A8A84; }
+.brand { color: #C6FF33; letter-spacing: 0.05em; }
+
+/* ---------- 표지 ---------- */
+.cover-hero {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 64px;
+  gap: 40px;
+}
+.cover-eyebrow { font-size: 32px; color: #C6FF33; letter-spacing: 0.15em; }
+.cover-headline {
+  font-size: 110px;
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+}
+/* v7: 표지 줄글(briefing 서브) 폐기 — 해시태그 행이 표지 요약을 겸한다 */
+.cover-tags { display: flex; flex-wrap: wrap; gap: 20px 32px; }
+.cover-tag { font-size: 34px; font-weight: 600; color: #C6FF33; white-space: nowrap; }
+/* 회차 없는 날에도 도트가 정중앙을 지키도록 좌우 슬롯에 균등 flex */
+.foot-slot { flex: 1; }
+.foot-slot.right { text-align: right; }
+.dots { display: flex; gap: 12px; align-items: center; flex: none; }
+.dot { width: 12px; height: 12px; border-radius: 6px; background: #3A3A36; flex: none; }
+.dot.active { width: 48px; background: #C6FF33; }
+
+/* ---------- 뉴스 카드 ---------- */
+.news-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  gap: 44px;
+}
+.pill-row { display: flex; gap: 16px; flex: none; }
+.pill {
   font-size: 28px;
-  font-weight: 600;
-  color: #C2CBE0;
+  padding: 10px 22px;
+  border-radius: 100px;
   white-space: nowrap;
 }
-.stat-dot { width: 16px; height: 16px; border-radius: 50%; flex: none; }
-.stat-num { font-size: 34px; font-weight: 800; color: #FFFFFF; }
-
-/* ---------- 이슈 카드 (라이트) ---------- */
-.card--issue {
-  background: #FAFAFC;
-  color: #111318;
-  padding: 88px 84px 76px;
-}
-.issue-head { display: flex; align-items: baseline; gap: 26px; }
-.issue-num {
-  font-size: 96px;
+.pill-cat { background: #C6FF33; color: #0A0A0A; font-weight: 600; }
+.pill-urgent { border: 2px solid #C6FF33; color: #C6FF33; padding: 8px 20px; }
+.pill-tag { border: 2px solid #8A8A84; color: #8A8A84; padding: 8px 20px; }
+/* v6: 말줄임(…) 금지 — clamp 대신 줄 수 예산(max-height)만 걸고,
+   fit 스크립트가 제목은 폰트 축소로, 본문은 문장 경계 절단으로 맞춘다 */
+.news-headline {
+  font-size: 76px;
   font-weight: 800;
+  line-height: 1.22;
   letter-spacing: -0.02em;
-  line-height: 1;
+  text-wrap: pretty;
+  flex: none;
+  overflow: hidden;
 }
-.issue-cat { display: inline-flex; align-items: center; gap: 12px; }
-.issue-cat-dot { width: 14px; height: 14px; border-radius: 50%; }
-.issue-cat-label { font-size: 32px; font-weight: 600; }
-.issue-title {
-  margin-top: 52px;
-  font-size: 64px;
-  font-weight: 800;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-  color: #111318;
+.news-headline.lines-2 { max-height: 2.44em; }
+.news-headline.lines-3 { max-height: 3.66em; }
+/* v5: 이미지 슬롯은 기사 og:image를 실제로 가져왔을 때만 그린다 —
+   플레이스홀더(대시 보더) 슬롯은 폐기, 이미지 없으면 본문이 그 공간을 쓴다 */
+.img-slot {
+  height: 340px;
+  flex: none;
+  border-radius: 12px;
+  background: #141412;
+  overflow: hidden;
 }
-.chip-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 46px; }
-.chip {
-  background: #ECEEF3;
-  color: #4B5261;
-  border-radius: 999px;
-  padding: 12px 26px;
-  font-size: 26px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-.badge-row { display: flex; align-items: stretch; gap: 18px; margin-top: 38px; }
-.kev-badge {
-  display: inline-flex;
+.img-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* v9: 이미지 대체 인포패널 — CVE id + CVSS 게이지 (타이포만, 장식 금지) */
+.info-panel {
+  height: 340px;
+  flex: none;
+  border-radius: 12px;
+  background: #141412;
+  border: 2px solid #2A2A26;
+  display: flex;
   align-items: center;
-  gap: 14px;
-  background: #FDECEA;
-  border: 1px solid #F5C6BF;
-  color: #C0392B;
-  border-radius: 18px;
-  padding: 20px 32px;
-  font-size: 30px;
-  font-weight: 800;
+  justify-content: space-between;
+  padding: 0 60px;
+  gap: 48px;
 }
-.kev-dot { width: 16px; height: 16px; border-radius: 50%; background: #E74C3C; flex: none; }
-.cvss-tile {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 16px;
-  background: #131A2C;
-  color: #FFFFFF;
-  border-radius: 18px;
-  padding: 20px 32px;
+.ip-label { font-size: 26px; color: #8A8A84; letter-spacing: 0.12em; margin-bottom: 20px; }
+.ip-cve { font-size: 58px; font-weight: 600; color: #C6FF33; white-space: nowrap; }
+.ip-right { text-align: right; flex: none; }
+.ip-score { font-size: 96px; font-weight: 800; line-height: 1; color: #F2F2EF; }
+.ip-bar {
+  width: 280px;
+  height: 12px;
+  border-radius: 6px;
+  background: #2A2A26;
+  margin-top: 24px;
+  overflow: hidden;
 }
-.cvss-label { font-size: 24px; font-weight: 600; color: #8B95B3; letter-spacing: 0.08em; }
-.cvss-num { font-size: 42px; font-weight: 800; }
-.issue-summary {
-  margin-top: auto;
-  padding-top: 40px;
-  font-size: 27px;
-  font-weight: 400;
+.ip-fill { height: 100%; border-radius: 6px; background: #C6FF33; }
+/* v7: 오른쪽 래그(들쭉날쭉한 공백) 제거 — 양쪽 정렬 + 한글 음절 단위
+   줄바꿈 허용(word-break: normal; 라틴 단어는 안 쪼개진다). 카드 전역
+   keep-all을 본문에서만 푼다 */
+.news-text {
+  font-size: 38px;
   line-height: 1.6;
-  color: #555C68;
+  color: #C8C8C2;
+  text-align: justify;
+  word-break: normal;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
 }
-.issue-footer {
-  margin-top: 36px;
-  font-size: 22px;
-  font-weight: 400;
-  color: #9AA1AD;
-}
+/* v7: 본문 핵심 키워드 강조 — 사서가 summary_ko에 **키워드**로 표시 */
+.news-text .kw { color: #C6FF33; font-weight: 700; }
 
-/* ---------- 목록 카드 (라이트) ---------- */
-.card--list {
-  background: #FAFAFC;
-  color: #111318;
-  padding: 88px 84px 76px;
+/* ---------- 목록 카드 (시안에 없는 타입 — 같은 프레임·토큰으로 적응 설계) ---------- */
+.list-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  gap: 48px;
 }
-.list-header {
-  font-size: 54px;
+.list-headline {
+  font-size: 68px;
   font-weight: 800;
+  line-height: 1.2;
   letter-spacing: -0.02em;
-  color: #111318;
+  flex: none;
 }
-.list-count { color: #4A6CF7; }
-.list-rows { margin-top: 48px; display: flex; flex-direction: column; }
+.list-rows { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+/* 행 높이 예산: 본문 818px에 최대 10행(또는 9행+"…외 N건")이 들어가야
+   하므로 행당 81px 이하로 맞춘다 (패딩 18×2 + 제목 43 + 보더 2) */
 .list-row {
   display: flex;
   align-items: center;
-  gap: 22px;
-  padding: 23px 0;
-  border-bottom: 1px solid #ECEEF2;
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 2px solid #2A2A26;
 }
-.row-dot { width: 14px; height: 14px; border-radius: 50%; flex: none; }
+.row-bullet { width: 12px; height: 12px; border-radius: 6px; background: #C6FF33; flex: none; }
 .row-title {
   flex: 1;
   min-width: 0;
-  font-size: 30px;
-  font-weight: 600;
-  color: #22252C;
+  font-size: 33px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #F2F2EF;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .row-source {
   flex: none;
-  max-width: 210px;
-  font-size: 22px;
-  font-weight: 400;
-  color: #9AA1AD;
+  max-width: 240px;
+  font-size: 24px;
+  color: #8A8A84;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .list-more {
   padding-top: 30px;
-  font-size: 26px;
-  font-weight: 600;
-  color: #9AA1AD;
+  font-size: 28px;
+  color: #8A8A84;
 }
+
+/* v5: 마무리(라임 반전) 카드 폐기 — 10장 한도를 뉴스 8장에 쓰기 위해
+   목록 카드(그 밖의 소식)가 마지막 장을 겸한다 */
 </style>
+<script>
+/* cardgen._render가 폰트 로드 후 page.evaluate("fitAllCards()")로 호출.
+   말줄임 없이 카드 예산에 맞추는 두 가지 전략:
+   - 제목: 폰트를 4px씩 줄여 전문을 살린다 (하한 44px)
+   - 본문: 뒤 문장부터 통째로 덜어내 완결된 문장으로 끝낸다.
+     한 문장만 남아도 넘치면 그때만 폰트를 줄인다 (하한 30px)
+   본문은 innerHTML 단위로 다룬다 — 키워드 강조 <b class="kw">를 보존하기
+   위해서다. 문장 경계(종결어미+공백)는 태그 내부에 나타나지 않는다는
+   전제(키워드는 명사구, 태그 속성에 종결어미 없음). */
+function fitAllCards() {
+  const SENT = /(?<=[.!?다요함음됨임])\s+/;
+  document.querySelectorAll(".news-headline, .list-headline").forEach((el) => {
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollHeight > el.clientHeight + 2 && size > 44) {
+      size -= 4;
+      el.style.fontSize = size + "px";
+    }
+  });
+  document.querySelectorAll(".news-text").forEach((el) => {
+    const sentences = el.innerHTML.trim().split(SENT);
+    while (el.scrollHeight > el.clientHeight + 2 && sentences.length > 1) {
+      sentences.pop();
+      el.innerHTML = sentences.join(" ");
+    }
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollHeight > el.clientHeight + 2 && size > 30) {
+      size -= 2;
+      el.style.fontSize = size + "px";
+    }
+  });
+}
+</script>
 </head>
 <body>
 <!-- CARDS -->
@@ -232,70 +298,104 @@ body { background: #1B1F27; font-family: "Pretendard", sans-serif; }
      jinja2 없이 str.replace만으로 조립하기 위한 구조. -->
 
 <!-- BEGIN cover -->
-<div class="card card--cover" id="card-{{N}}">
-  <div class="cover-label">보안동향 브리핑 DAILY</div>
-  <div class="cover-center">
-    <div class="cover-date">{{DATE}}</div>
-    <div class="cover-sub">오늘의 보안 브리핑</div>
-    <div class="cover-weekday">{{WEEKDAY}}</div>
+<div class="card cover" id="card-{{N}}">
+  <div class="bar bar-head">
+    <div class="mono f30 brand">SEC.DAILY</div>
+    <div class="mono f30 meta">{{DATE_FULL}}</div>
   </div>
-  {{BRIEFING_BLOCK}}
-  <div class="stat-row">{{STAT_CHIPS}}</div>
+  <div class="cover-hero">
+    <div class="mono cover-eyebrow">MORNING SECURITY BRIEF</div>
+    <div class="cover-headline">{{DATE_HEAD}}<br>보안 이슈 <span class="lime">{{COUNT}}가지</span></div>
+    {{TAGS_BLOCK}}
+  </div>
+  <div class="bar bar-foot">
+    <div class="mono f28 meta foot-slot">{{ISSUE_NO}}</div>
+    <div class="dots">{{DOTS}}</div>
+    <div class="mono f28 lime foot-slot right">밀어서 시작 →</div>
+  </div>
 </div>
 <!-- END cover -->
 
-<!-- BEGIN briefing -->
-<div class="cover-briefing clamp-3">{{BRIEFING}}</div>
-<!-- END briefing -->
+<!-- BEGIN cover_tags -->
+<div class="cover-tags">{{TAGS}}</div>
+<!-- END cover_tags -->
 
-<!-- BEGIN stat_chip -->
-<span class="stat-chip"><span class="stat-dot" style="background:{{DOT}}"></span>{{LABEL}}&nbsp;<span class="stat-num">{{VALUE}}</span></span>
-<!-- END stat_chip -->
+<!-- BEGIN cover_tag -->
+<span class="mono cover-tag">#{{TEXT}}</span>
+<!-- END cover_tag -->
 
-<!-- BEGIN issue -->
-<div class="card card--issue" id="card-{{N}}">
-  <div class="issue-head">
-    <span class="issue-num" style="color:{{ACCENT}}">{{NUM}}</span>
-    <span class="issue-cat">
-      <span class="issue-cat-dot" style="background:{{ACCENT}}"></span>
-      <span class="issue-cat-label" style="color:{{ACCENT}}">{{CATEGORY}}</span>
-    </span>
+<!-- BEGIN dot_active -->
+<span class="dot active"></span>
+<!-- END dot_active -->
+
+<!-- BEGIN dot -->
+<span class="dot"></span>
+<!-- END dot -->
+
+<!-- BEGIN news -->
+<div class="card" id="card-{{N}}">
+  <div class="bar bar-head">
+    <div class="mono f30 meta">SEC.DAILY · {{DATE}}</div>
+    <div class="mono f30 lime">{{PAGE}}</div>
   </div>
-  <div class="issue-title clamp-3">{{TITLE}}</div>
-  <div class="chip-row">{{CHIPS}}</div>
-  {{BADGES}}
-  <div class="issue-summary clamp-3">{{SUMMARY}}</div>
-  <div class="issue-footer">{{FOOTER}}</div>
+  <div class="news-body">
+    <div class="pill-row">{{PILLS}}</div>
+    <div class="news-headline {{TITLE_LINES}}">{{TITLE}}</div>
+    {{IMG_BLOCK}}
+    <div class="news-text">{{SUMMARY}}</div>
+  </div>
+  <div class="bar bar-foot">
+    <div class="mono f28 meta">출처: {{SOURCE}}</div>
+    <div class="mono f28 lime">→</div>
+  </div>
 </div>
-<!-- END issue -->
+<!-- END news -->
 
-<!-- BEGIN chip -->
-<span class="chip">{{TEXT}}</span>
-<!-- END chip -->
+<!-- BEGIN img_photo -->
+<div class="img-slot"><img src="{{SRC}}"></div>
+<!-- END img_photo -->
 
-<!-- BEGIN badge_row -->
-<div class="badge-row">{{BADGES}}</div>
-<!-- END badge_row -->
+<!-- BEGIN info_panel -->
+<div class="info-panel"><div><div class="ip-label mono">관련 취약점</div><div class="ip-cve mono">{{CVE}}</div></div>{{RIGHT}}</div>
+<!-- END info_panel -->
 
-<!-- BEGIN kev_badge -->
-<span class="kev-badge"><span class="kev-dot"></span>실제 악용 중</span>
-<!-- END kev_badge -->
+<!-- BEGIN info_panel_score -->
+<div class="ip-right"><div class="ip-label mono">CVSS</div><div class="ip-score">{{SCORE}}</div><div class="ip-bar"><div class="ip-fill" style="width:{{PCT}}%"></div></div></div>
+<!-- END info_panel_score -->
 
-<!-- BEGIN cvss_tile -->
-<span class="cvss-tile"><span class="cvss-label">CVSS</span><span class="cvss-num">{{CVSS}}</span></span>
-<!-- END cvss_tile -->
+<!-- BEGIN pill_cat -->
+<span class="mono pill pill-cat">{{TEXT}}</span>
+<!-- END pill_cat -->
+
+<!-- BEGIN pill_urgent -->
+<span class="mono pill pill-urgent">실악용</span>
+<!-- END pill_urgent -->
+
+<!-- BEGIN pill_tag -->
+<span class="mono pill pill-tag">{{TEXT}}</span>
+<!-- END pill_tag -->
 
 <!-- BEGIN list -->
-<div class="card card--list" id="card-{{N}}">
-  <div class="list-header">그 밖의 소식 <span class="list-count">{{COUNT}}건</span></div>
-  <div class="list-rows">{{ROWS}}</div>
+<div class="card" id="card-{{N}}">
+  <div class="bar bar-head">
+    <div class="mono f30 meta">SEC.DAILY · {{DATE}}</div>
+    <div class="mono f30 lime">{{PAGE}}</div>
+  </div>
+  <div class="list-body">
+    <div class="list-headline">그 밖의 소식 <span class="lime">{{COUNT}}건</span></div>
+    <div class="list-rows">{{ROWS}}</div>
+  </div>
+  <div class="bar bar-foot">
+    <div class="mono f28 meta">원문 링크는 아래 메시지에</div>
+    <div class="mono f28 lime">→</div>
+  </div>
 </div>
 <!-- END list -->
 
 <!-- BEGIN list_row -->
-<div class="list-row"><span class="row-dot" style="background:{{DOT}}"></span><span class="row-title">{{TITLE}}</span><span class="row-source">{{SOURCE}}</span></div>
+<div class="list-row"><span class="row-bullet"></span><span class="row-title">{{TITLE}}</span><span class="mono row-source">{{SOURCE}}</span></div>
 <!-- END list_row -->
 
 <!-- BEGIN list_more -->
-<div class="list-more">…외 {{COUNT}}건</div>
+<div class="list-more mono">…외 {{COUNT}}건</div>
 <!-- END list_more -->

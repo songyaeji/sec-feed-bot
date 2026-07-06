@@ -1,10 +1,14 @@
-"""아침 다이제스트 카드뉴스 PNG 렌더러.
+"""아침 다이제스트 카드뉴스 PNG 렌더러 — 시안 1a "네온라임 그리드" (hifi).
 
 templates/card.html의 조각(fragment)들을 정규식으로 추출해 {{...}}
 자리표시자를 str.replace로 치환하는 방식 — 하루 1회, 카드 10장 이하라
 jinja2 같은 템플릿 엔진은 과하다. 아이템 제목/요약/출처는 전부
 html.escape를 거치므로 피드 본문에 섞인 마크업이 카드 레이아웃을
 깨뜨리지 못한다.
+
+카드 구성(v5): 표지 1 + 뉴스(pick_top 중요도순, 최대 8) + 목록 1(나머지
+있을 때) = 최대 10장 (Discord 웹훅 첨부 한도와 동일).
+뉴스 카드 이미지는 기사 og:image가 있을 때만 그린다 — 없으면 슬롯 생략.
 
 렌더는 Playwright(chromium) 스크린샷. import는 함수 안에서 지연 —
 realtime 모드(20분 cron)는 카드뉴스를 만들지 않으므로 playwright가
@@ -23,50 +27,89 @@ ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 PREVIEW_DIR = os.path.join(BASE_DIR, "state", "preview")
 
 KST = timezone(timedelta(hours=9))
-KOREAN_WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"]
+WEEKDAYS_EN = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 
 CARD_WIDTH = 1080
 CARD_HEIGHT = 1350
 
-MAX_ISSUE_CARDS = 6
-MAX_LIST_CARDS = 2      # 표지 1 + 이슈 6 + 목록 2 = 9장 (Discord 첨부 10장 한도 내)
-LIST_ROWS_PER_CARD = 12
-MAX_CHIP_TAGS = 3       # notify.DIGEST_MAX_TAGS와 같은 이유: 칩이 줄을 넘치지 않게
+MAX_ISSUE_CARDS = 7     # v6: 표지 1 + 뉴스 7 + 목록 1 = 9장
+LIST_ROWS = 10          # 목록 카드 1장의 행 상한 (넘치면 "…외 N건")
+MAX_TAG_PILLS = 2       # 카테고리·긴급 pill 외 태그 pill 상한 — 한 줄 유지
 
-# 이슈 카드 헤더의 카테고리 한글 라벨 (미등록 카테고리는 원문 그대로 표기)
+# 기사 og:image 다운로드 상한 — 렌더 한 번에 8장이라 과한 대기 금지
+IMG_TIMEOUT = 8
+IMG_MAX_BYTES = 8 * 1024 * 1024
+
+# v9 품질 게이트: 슬롯(952×340, cover 크롭)에서 볼만한 이미지만 통과.
+# 저해상도는 업스케일로 뭉개지고, 세로 사진은 크롭이 흉하다
+IMG_MIN_WIDTH = 600
+IMG_MIN_HEIGHT = 315
+IMG_MIN_ASPECT = 1.0   # 세로(portrait) 이미지 배제
+OG_IMAGE_RE = re.compile(
+    r'<meta[^>]+(?:property|name)=["\']og:image(?::url)?["\'][^>]+content=["\']([^"\']+)["\']'
+    r'|<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\']og:image(?::url)?["\']',
+    re.IGNORECASE,
+)
+
+# 뉴스 카드 카테고리 pill의 한글 라벨 (미등록 카테고리는 원문 그대로 표기)
+# v8: "긴급"은 즉시 발송(judge 판정)의 전유 라벨 — 다이제스트 카드의
+# critical 카테고리는 "중대"로 표기해 채널 의미와 충돌하지 않게 한다
 CATEGORY_LABELS = {
-    "critical": "긴급",
+    "critical": "중대",
     "high": "주요",
     "research": "리서치",
     "ai": "AI 보안",
     "news": "뉴스",
     "paper": "논문",
 }
-DEFAULT_ACCENT = 0x5865F2  # config colors에 없는 카테고리용 (Discord blurple)
 
-# 표지 스탯 칩: (stats 키, 라벨, 점 색, 값 포맷). 값이 None이거나 키가
-# 없으면 칩 자체를 그리지 않는다 — notify._build_header_embed와 같은
-# 원칙("wiki가 안 돈 것"과 "wiki 신규 0건"은 다른 사실).
-STAT_CHIP_DEFS = [
-    ("total", "총", "#4A6CF7", "{}건"),
-    ("urgent", "긴급", "#E74C3C", "{}"),
-    ("finance", "금융", "#F1C40F", "{}"),
-    ("wiki_new", "위키", "#2ECC71", "+{}"),
-]
+# 이미지 슬롯 중앙 라벨용: 텍스트 등장 순서 기준 첫 CVE id
+CVE_RE = re.compile(r"CVE-\d{4}-\d{4,7}", re.IGNORECASE)
+
+# 피드 제목에 섞여 오는 장식용 특수문자(딩벳·박스 등)는 번들 폰트에 글리프가
+# 없어 두부(□)로 렌더된다 — 한글·라틴·숫자·통용 문장부호만 남기고 걷어낸다
+_RENDERABLE_RE = re.compile(
+    r"[^0-9A-Za-z가-힣ㄱ-ㆎ\s.,·‘’“”'\"()\[\]%:;!?~&+/\-–—…→↗]"
+)
+
+
+def _clean_text(text: str) -> str:
+    return " ".join(_RENDERABLE_RE.sub("", text or "").split())
+
+
+# 국내 피드 제목의 분류 접두어([이슈칼럼], [단독], [긴급] 등) — 카드가 이미
+# 이슈를 다루는 매체라 중복 라벨(사용자 피드백 v7), 걷어낸다
+_TITLE_PREFIX_RE = re.compile(r"^\s*(?:\[[^\]]{1,14}\]\s*)+")
+
+# 사서가 summary_ko에 **키워드**로 표시한 강조 → <b class="kw">
+_KW_MD_RE = re.compile(r"\*\*(.+?)\*\*")
+
+
+def _card_title(item: dict) -> str:
+    # v5: 카드에는 전부 한국어 — 사서 번역 제목(title_ko) 우선, 없으면 원제
+    title = item.get("title_ko") or item.get("title", "")
+    return _clean_text(_TITLE_PREFIX_RE.sub("", title))
+
+
+def _summary_html(text: str) -> str:
+    """본문 요약 → HTML. escape 후에 **키워드** 마커만 강조 태그로 바꾸므로
+    피드/사서 출력에 섞인 마크업은 여전히 무력화된다. 홀수 개 ** 잔여물은
+    장식이 아니라 노이즈 — 지운다."""
+    escaped = html.escape(" ".join((text or "").split()))
+    marked = _KW_MD_RE.sub(r'<b class="kw">\1</b>', escaped)
+    return marked.replace("**", "")
 
 _FRAGMENT_RE = re.compile(r"<!-- BEGIN (\w+) -->\n(.*?)\n<!-- END \1 -->", re.S)
 
 
 def pick_top(items: list[dict], limit: int = MAX_ISSUE_CARDS) -> list[dict]:
-    """이슈 카드로 승격할 상위 아이템 선정. 가산점 방식(배타적 분기가
+    """뉴스 카드로 승격할 상위 아이템 선정. 가산점 방식(배타적 분기가
     아님)이라 'KEV이면서 금융' 같은 복합 이슈가 자연히 위로 올라온다.
     sorted는 안정 정렬이므로 동점은 입력 순서(=심각도 정렬 순)를 유지."""
     def score(item: dict) -> float:
         s = 0.0
         if item.get("kev"):
             s += 100
-        if item.get("urgent_source"):
-            s += 90
         tags = item.get("tags") or []
         if "제로데이" in tags:
             s += 80
@@ -88,7 +131,7 @@ def pick_top(items: list[dict], limit: int = MAX_ISSUE_CARDS) -> list[dict]:
 
 
 def build_link_lines(top_items: list[dict], rest_items: list[dict]) -> list[str]:
-    """카드 번호와 1:1로 매칭되는 원문 링크 목록(이슈 카드 순서 먼저).
+    """카드 번호와 1:1로 매칭되는 원문 링크 목록(뉴스 카드 순서 먼저).
     URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다."""
     lines = []
     for i, item in enumerate(top_items + rest_items, start=1):
@@ -102,11 +145,24 @@ def build_cards(
     briefing: str | None = None,
     stats: dict | None = None,
     colors: dict | None = None,
+    image_sources: set[str] | None = None,
+    regions: dict[str, str] | None = None,
 ) -> list[bytes]:
-    """표지 1장 + 이슈 카드(pick_top 상위, 최대 6장) + 목록 카드(나머지,
-    최대 2장) PNG 리스트를 돌려준다. 총 10장 이하 — Discord 웹훅 한 번에
-    첨부 가능한 상한."""
-    colors = colors or {}
+    """표지 1장 + 뉴스 카드(pick_top 중요도순, 최대 8장) + 목록 카드(나머지
+    있을 때 1장)의 PNG 리스트를 돌려준다. 총 10장 이하 — Discord 웹훅
+    한 번에 첨부 가능한 상한과 같다.
+
+    colors 인자는 구 디자인(카테고리별 액센트)의 호출부 호환용으로 받되
+    쓰지 않는다 — 시안 1a는 라임 단일 액센트.
+
+    image_sources: 기사 og:image를 카드에 실을 소스명 집합. 국내 매체의
+    og:image는 대부분 스톡 일러스트라 정보가 없고(사용자 피드백 v6),
+    THN·Unit42류는 공격 체인 다이어그램이 실려 유의미 — 소스 단위로
+    가른다. None이면 이미지 전면 생략.
+
+    regions: 소스명 → "국내"/"해외" 맵(사용자 피드백 v7) — 뉴스 카드
+    pill로 실린다. 맵에 없는 소스는 표기 생략."""
+    stats = stats or {}
 
     top = pick_top(items)
     # 동일 내용의 dict가 두 번 들어와도 안전하게 identity로 나머지를 가른다
@@ -117,16 +173,37 @@ def build_cards(
     shell = _load_shell()
 
     now_kst = datetime.now(KST)
-    card_htmls = [_build_cover(fragments, now_kst, briefing, stats, n=1)]
-    for i, item in enumerate(top):
+    date_full = _date_full(now_kst)     # "2026.07.06 MON"
+    date_short = date_full.split(" ")[0]  # "2026.07.06"
+
+    # 표지 도트는 전체 장수를 먼저 알아야 그릴 수 있다:
+    # v5 구성 = 표지 1 + 뉴스(중요도순 최대 8) + 목록(나머지 있을 때 1) — 마무리 카드 폐기
+    total = 1 + len(top) + (1 if rest else 0)
+
+    card_htmls = [
+        _build_cover(fragments, date_full, items, briefing, stats, total, n=1)
+    ]
+    for item in top:
         card_htmls.append(
-            _build_issue(fragments, item, num=i + 1, accent=_accent(item, colors),
-                         now_kst=now_kst, n=len(card_htmls) + 1)
+            _build_news(fragments, item, date_short, n=len(card_htmls) + 1,
+                        image_sources=image_sources or set(),
+                        regions=regions or {})
         )
-    card_htmls.extend(_build_lists(fragments, rest, colors, start_n=len(card_htmls) + 1))
+    if rest:
+        card_htmls.append(
+            _build_list(fragments, rest, date_short, n=len(card_htmls) + 1)
+        )
+    assert len(card_htmls) == total
+
+    # 페이지 표기("02 / 08")는 전체 장수를 알아야 채울 수 있어
+    # 카드 조립이 끝난 뒤 2차 치환으로 채운다 (표지에는 {{PAGE}} 없음)
+    card_htmls = [
+        h.replace("{{PAGE}}", f"{i:02d} / {total:02d}")
+        for i, h in enumerate(card_htmls, start=1)
+    ]
 
     page_html = shell.replace("<!-- CARDS -->", "\n".join(card_htmls))
-    return _render(page_html, card_count=len(card_htmls))
+    return _render(page_html, card_count=total)
 
 
 # ---------------------------------------------------------------- template
@@ -153,113 +230,217 @@ def _fill(fragment: str, **values: str) -> str:
     return fragment
 
 
-def _accent(item: dict, colors: dict) -> str:
-    """config.yaml discord.colors의 embed 색 정수(0xE74C3C)를 CSS hex로.
-    embed와 카드가 같은 카테고리 색을 쓰게 해 채널 전체 톤을 통일한다."""
-    value = colors.get(item.get("category"), DEFAULT_ACCENT)
-    if isinstance(value, int):
-        return f"#{value:06X}"
-    return str(value)
+def _date_full(now_kst: datetime) -> str:
+    return (
+        f"{now_kst.year}.{now_kst.month:02d}.{now_kst.day:02d} "
+        f"{WEEKDAYS_EN[now_kst.weekday()]}"
+    )
+
+
+def _fetch_article_image(item: dict, slot_index: int) -> str | None:
+    """기사 페이지의 og:image를 내려받아 로컬 파일 경로를 돌려준다.
+    v5: 이미지는 '기사 안의 그림'이 있을 때만 그린다 — og:image가 없거나
+    다운로드가 실패하면 None을 돌려주고 카드는 슬롯 없이 본문을 늘린다.
+    렌더 실패로 이어지면 안 되므로 모든 예외는 None으로 흡수(fail-open)."""
+    import requests  # 지연 import: cardgen import 자체는 의존성 없이 가능해야 함
+
+    url = item.get("url")
+    if not url:
+        return None
+    try:
+        resp = requests.get(url, timeout=IMG_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
+        if not resp.ok:
+            return None
+        m = OG_IMAGE_RE.search(resp.text)
+        if not m:
+            return None
+        img_url = html.unescape(m.group(1) or m.group(2))
+
+        img = requests.get(img_url, timeout=IMG_TIMEOUT, stream=True,
+                           headers={"User-Agent": "Mozilla/5.0"})
+        if not img.ok or "image" not in img.headers.get("Content-Type", ""):
+            return None
+        data = img.raw.read(IMG_MAX_BYTES + 1)
+        if not data or len(data) > IMG_MAX_BYTES:
+            return None
+        if not _image_quality_ok(data):
+            return None
+
+        os.makedirs(PREVIEW_DIR, exist_ok=True)
+        path = os.path.join(PREVIEW_DIR, f"_img_{slot_index:02d}")
+        with open(path, "wb") as f:
+            f.write(data)
+        return path
+    except Exception:
+        return None
+
+
+def _image_quality_ok(data: bytes) -> bool:
+    """v9 게이트: 저해상도/세로 이미지는 슬롯에서 뭉개지거나 흉하게
+    크롭되므로 탈락시킨다 (탈락 시 인포패널 또는 본문 확장으로 대체).
+    Pillow가 없거나 판독 실패면 통과 — 게이트는 개선이지 의존성이 아니다."""
+    try:
+        import io
+        from PIL import Image
+        with Image.open(io.BytesIO(data)) as im:
+            w, h = im.size
+        return (
+            w >= IMG_MIN_WIDTH
+            and h >= IMG_MIN_HEIGHT
+            and w / h >= IMG_MIN_ASPECT
+        )
+    except Exception:
+        return True
 
 
 # ------------------------------------------------------------------ cards
 
 def _build_cover(
-    fragments: dict, now_kst: datetime,
-    briefing: str | None, stats: dict | None, n: int,
+    fragments: dict, date_full: str, items: list[dict],
+    briefing: str | None, stats: dict, total: int, n: int,
 ) -> str:
-    stats = stats or {}
-    chips = []
-    for key, label, dot, fmt in STAT_CHIP_DEFS:
-        value = stats.get(key)
-        if value is None:
-            continue
-        chips.append(_fill(fragments["stat_chip"], DOT=dot,
-                           LABEL=html.escape(label), VALUE=html.escape(fmt.format(value))))
+    # 헤드라인의 "N가지"는 다이제스트 전체 건수 — stats.total이 정본이고
+    # (목록 카드에 못 실린 초과분 포함) 없으면 아이템 수로 폴백
+    count = stats.get("total") or len(items)
 
-    briefing_block = ""
-    if briefing:
-        briefing_block = _fill(fragments["briefing"], BRIEFING=html.escape(briefing))
+    # v7: 표지 줄글(briefing) 폐기 — 해시태그가 그날의 요약을 겸한다.
+    # briefing 인자는 호출부 호환용으로만 남는다.
+    # 키워드 해시태그 행 — 사서가 뽑은 keywords(stats 경유),
+    # 없으면 표지에서 행 자체를 생략
+    tags_block = ""
+    keywords = [k for k in (stats.get("keywords") or []) if k][:5]
+    if keywords:
+        tags = "".join(
+            _fill(fragments["cover_tag"], TEXT=html.escape(_clean_text(k).replace(" ", "")))
+            for k in keywords
+        )
+        tags_block = _fill(fragments["cover_tags"], TAGS=tags)
 
-    weekday = KOREAN_WEEKDAYS[now_kst.weekday()]
+    issue_no = stats.get("issue_no")
+    # 회차 카운터가 아직 없으면(구 state 등) 좌측 슬롯을 비워 우아하게 생략
+    issue_label = f"NO. {issue_no}" if issue_no is not None else ""
+
+    dots = fragments["dot_active"] + fragments["dot"] * (total - 1)
+
+    # v7: 헤드라인 날짜는 숫자 표기("2026.07.07") — date_full에서 요일만 뗀다
+    date_head = date_full.split(" ")[0]
+
     return _fill(
         fragments["cover"],
         N=str(n),
-        DATE=f"{now_kst.month}월 {now_kst.day}일",
-        WEEKDAY=f"{weekday}요일",
-        BRIEFING_BLOCK=briefing_block,
-        STAT_CHIPS="".join(chips),
+        DATE_FULL=html.escape(date_full),
+        DATE_HEAD=html.escape(date_head),
+        COUNT=str(count),
+        TAGS_BLOCK=tags_block,
+        ISSUE_NO=html.escape(issue_label),
+        DOTS=dots,
     )
 
 
-def _build_issue(
-    fragments: dict, item: dict, num: int, accent: str,
-    now_kst: datetime, n: int,
+def _build_news(
+    fragments: dict, item: dict, date_short: str, n: int,
+    image_sources: set[str], regions: dict[str, str],
 ) -> str:
     category = item.get("category") or ""
-    chips = [_fill(fragments["chip"], TEXT=html.escape(item.get("source", "")))]
-    for tag in (item.get("tags") or [])[:MAX_CHIP_TAGS]:
-        chips.append(_fill(fragments["chip"], TEXT=html.escape(tag)))
+    cat_label = CATEGORY_LABELS.get(category, category)
 
-    badges = []
+    pills = []
+    if cat_label:
+        pills.append(_fill(fragments["pill_cat"], TEXT=html.escape(cat_label)))
+    # v7: 국내/해외 표기 — 카테고리 바로 옆, 태그와 같은 아웃라인 pill
+    region = regions.get(item.get("source", ""))
+    if region:
+        pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(region)))
+    # v8: KEV(실악용 확인)만 아웃라인 pill — "긴급" 라벨은 즉시 발송
+    # 채널 전용이 됐으므로 사실 그대로 "실악용"으로 표기
     if item.get("kev"):
-        badges.append(fragments["kev_badge"])
-    cvss = item.get("cvss")
-    if cvss is not None:
-        badges.append(_fill(fragments["cvss_tile"], CVSS=html.escape(str(cvss))))
-    badge_row = _fill(fragments["badge_row"], BADGES="".join(badges)) if badges else ""
+        pills.append(fragments["pill_urgent"])
+    for tag in (item.get("tags") or [])[:MAX_TAG_PILLS]:
+        pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(tag)))
+
+    # v5: 기사 og:image가 실제로 있을 때만 이미지 슬롯을 그린다.
+    # 없으면 슬롯을 통째로 생략하고 본문 클램프를 4줄→7줄로 늘린다
+    # v6: 이미지는 유의미한 소스(image_sources)만. 세로 예산상 이미지
+    # 카드는 제목 2줄, 없으면 3줄 — 넘치는 본문은 fit 스크립트가 문장
+    # 경계로 줄여 '…' 없이 끝맺는다
+    # v9: 이미지 우선순위 — ① 소스 이미지(품질 게이트 통과 시)
+    # ② CVE/CVSS 인포패널(우리가 그리는 타이포 비주얼 — 렌더라 AI 티 없음)
+    # ③ 둘 다 없으면 슬롯 생략, 본문이 공간 사용
+    img_path = None
+    if item.get("source") in image_sources:
+        img_path = _fetch_article_image(item, slot_index=n)
+    if img_path:
+        img_block = _fill(fragments["img_photo"], SRC=Path(img_path).as_uri())
+        title_lines = "lines-2"
+    else:
+        img_block = _build_info_panel(fragments, item)
+        title_lines = "lines-2" if img_block else "lines-3"
 
     return _fill(
-        fragments["issue"],
+        fragments["news"],
         N=str(n),
-        NUM=f"{num:02d}",
-        ACCENT=accent,
-        CATEGORY=html.escape(CATEGORY_LABELS.get(category, category)),
-        TITLE=html.escape(item.get("title", "")),
-        CHIPS="".join(chips),
-        BADGES=badge_row,
-        SUMMARY=html.escape(item.get("summary", "") or ""),
-        FOOTER=f"보안동향 브리핑 · {now_kst.month}월 {now_kst.day}일",
+        DATE=html.escape(date_short),
+        PILLS="".join(pills),
+        TITLE=html.escape(_card_title(item)),
+        IMG_BLOCK=img_block,
+        TITLE_LINES=title_lines,
+        # 카드뉴스의 메인은 요약 — 사서(librarian)가 만든 한국어 요약
+        # summary_ko가 있으면 우선, 없으면(사서 실패 fail-open) 피드 원문 요약.
+        # v7: **키워드** 마커를 라임 강조로 변환
+        SUMMARY=_summary_html(item.get("summary_ko") or item.get("summary", "") or ""),
+        SOURCE=html.escape(item.get("source", "")),
     )
 
 
-def _build_lists(
-    fragments: dict, rest: list[dict], colors: dict, start_n: int,
-) -> list[str]:
-    if not rest:
-        return []
+def _build_info_panel(fragments: dict, item: dict) -> str:
+    """CVE가 있는 항목의 이미지 대체 비주얼 — CVE id + CVSS 게이지.
+    데이터가 없으면 빈 문자열(패널 없이 본문 확장). 억지로 채우는
+    장식은 가독성에 기여하지 않는다(사용자 v9 기준)."""
+    text = f"{item.get('id', '')} {item.get('title', '')} {item.get('summary', '')}"
+    m = CVE_RE.search(text)
+    if not m:
+        return ""
+    cve = m.group(0).upper()
 
-    # 카드 2장 × 12행 상한. 넘치면 마지막 행 자리를 "…외 N건"으로 쓴다 —
-    # 전체 목록은 어차피 링크 메시지(build_link_lines)에 전건 수록된다.
-    max_rows = MAX_LIST_CARDS * LIST_ROWS_PER_CARD
+    right = ""
+    cvss = item.get("cvss")
+    if cvss is not None:
+        pct = max(0, min(100, int(float(cvss) * 10)))
+        right = _fill(
+            fragments["info_panel_score"],
+            SCORE=f"{float(cvss):.1f}",
+            PCT=str(pct),
+        )
+    return _fill(fragments["info_panel"], CVE=html.escape(cve), RIGHT=right)
+
+
+def _build_list(fragments: dict, rest: list[dict], date_short: str, n: int) -> str:
+    # 행 상한을 넘치면 마지막 행 자리를 "…외 N건"으로 쓴다 — 전체 목록은
+    # 어차피 링크 메시지(build_link_lines)에 전건 수록된다.
     shown = rest
     more = 0
-    if len(rest) > max_rows:
-        shown = rest[:max_rows - 1]
+    if len(rest) > LIST_ROWS:
+        shown = rest[:LIST_ROWS - 1]
         more = len(rest) - len(shown)
 
-    cards = []
-    for start in range(0, len(shown), LIST_ROWS_PER_CARD):
-        chunk = shown[start:start + LIST_ROWS_PER_CARD]
-        rows = [
-            _fill(
-                fragments["list_row"],
-                DOT=_accent(item, colors),
-                TITLE=html.escape(item.get("title", "")),
-                SOURCE=html.escape(item.get("source", "")),
-            )
-            for item in chunk
-        ]
-        is_last = start + LIST_ROWS_PER_CARD >= len(shown)
-        if more and is_last:
-            rows.append(_fill(fragments["list_more"], COUNT=str(more)))
-        cards.append(_fill(
-            fragments["list"],
-            N=str(start_n + len(cards)),
-            COUNT=str(len(rest)),
-            ROWS="".join(rows),
-        ))
-    return cards
+    rows = [
+        _fill(
+            fragments["list_row"],
+            TITLE=html.escape(_card_title(item)),
+            SOURCE=html.escape(item.get("source", "")),
+        )
+        for item in shown
+    ]
+    if more:
+        rows.append(_fill(fragments["list_more"], COUNT=str(more)))
+
+    return _fill(
+        fragments["list"],
+        N=str(n),
+        DATE=html.escape(date_short),
+        COUNT=str(len(rest)),
+        ROWS="".join(rows),
+    )
 
 
 # ----------------------------------------------------------------- render
@@ -294,6 +475,8 @@ def _render(page_html: str, card_count: int) -> list[bytes]:
             page.goto(Path(render_path).as_uri())
             # 폰트 로드 전에 찍으면 fallback 글꼴로 렌더된 스크린샷이 나온다
             page.evaluate("() => document.fonts.ready")
+            # v6: 말줄임 금지 — 제목 폰트 축소·본문 문장 경계 절단 (템플릿 <script>)
+            page.evaluate("() => fitAllCards()")
             for i in range(1, card_count + 1):
                 pngs.append(page.locator(f"#card-{i}").screenshot())
         finally:

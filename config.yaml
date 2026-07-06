@@ -1,48 +1,59 @@
 # URL은 2026-07-06 실제 fetch로 전건 검증됨
 # (knvd.krcert.or.kr RSS는 404 — 보호나라 rss.do가 KISA 보안공지 공식 피드)
 
+# region: 카드뉴스에 국내/해외 표기로 실린다 (미지정 시 표기 생략)
 sources:
+  # v8: urgent(소스 단위 즉시 발송) 플래그 폐기 — 즉시 발송은 judge.py의
+  # 대형 사건 판정만 태운다. KEV·KISA 공지도 아침 다이제스트로 간다
   - name: "CISA KEV"
     type: kev
     url: "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
     category: "critical"
-    urgent: true
+    region: "해외"
 
   - name: "NVD"
     type: nvd
     url: "https://services.nvd.nist.gov/rest/json/cves/2.0"
     category: "high"
+    region: "해외"
 
   - name: "Project Zero Blog"
     type: rss
     url: "https://googleprojectzero.blogspot.com/feeds/posts/default"
     category: "research"
+    card_image: true
+    region: "해외"
 
   - name: "KISA 보안공지 (보호나라)"
     type: rss
     url: "https://www.boho.or.kr/kr/rss.do?bbsId=B0000133"
     category: "critical"
-    urgent: true
+    region: "국내"
 
   - name: "보안뉴스"
     type: rss
     url: "http://www.boannews.com/media/news_rss.xml"
     category: "news"
+    region: "국내"
 
   - name: "데일리시큐"
     type: rss
     url: "https://www.dailysecu.com/rss/allArticle.xml"
     category: "news"
+    region: "국내"
 
   - name: "Unit 42"
     type: rss
     url: "https://unit42.paloaltonetworks.com/feed/"
     category: "research"
+    card_image: true  # 공격 체인 다이어그램 등 유의미한 이미지가 실림
+    region: "해외"
 
   - name: "OWASP GenAI Security"
     type: rss
     url: "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/releases.atom"
     category: "ai"
+    region: "해외"
 
   - name: "Security Top-tier Papers"
     type: dblp
@@ -52,16 +63,73 @@ sources:
       sp: "IEEE S&P"
       uss: "USENIX Security"
       ndss: "NDSS"
+    region: "해외"
 
   - name: "Krebs on Security"
     type: rss
     url: "https://krebsonsecurity.com/feed/"
     category: "research"
+    card_image: true
+    region: "해외"
 
   - name: "The Hacker News"
     type: rss
     url: "https://feeds.feedburner.com/TheHackersNews"
     category: "high"
+    card_image: true
+    region: "해외"
+
+  # 2026-07-07 추가 (URL 실fetch 검증) — 해외 보안 뉴스 축 보강
+  - name: "GBHackers"
+    type: rss
+    url: "https://gbhackers.com/feed/"
+    category: "high"
+    region: "해외"
+
+  - name: "Security Affairs"
+    type: rss
+    url: "https://securityaffairs.com/feed"
+    category: "high"
+    region: "해외"
+
+  # ---- 속보 소스 (breaking: true) — 즉시 발송 판정(judge) 전용 ----
+  # 대형 사건은 언론 기사보다 HN/레딧에 먼저 뜬다. 이 소스들은 아침
+  # 다이제스트/카드뉴스에 실리지 않고, judge가 긴급 판정한 것만 즉시
+  # 발송된다 (비긴급 판정분은 버림 — 실제 사건이면 뉴스 소스로 후속
+  # 보도가 온다). 레딧 RSS는 데이터센터 IP를 간헐 차단할 수 있음 —
+  # 소스별 fail-open이라 run은 안 깨진다.
+  - name: "Hacker News"
+    type: hn
+    category: "news"
+    min_points: 150
+    breaking: true
+    region: "해외"
+
+  # 멀티레딧으로 한 요청에 — 서브레딧별 개별 요청은 레딧 rate limit(429)에 걸린다
+  - name: "Reddit 보안 커뮤니티"
+    type: rss
+    url: "https://www.reddit.com/r/cybersecurity+netsec/hot/.rss?limit=40"
+    category: "news"
+    breaking: true
+    region: "해외"
+
+# v8 즉시 발송 1차 게이트 — 이 키워드가 제목/요약에 있어야 haiku 판정
+# 후보가 된다 (사건·사고 어휘만; 최종 선별은 judge.py의 LLM이 한다)
+urgent_gate:
+  - 유출
+  - 해킹
+  - 침해
+  - 탈취
+  - 마비
+  - 피해
+  - breach
+  - leak
+  - hacked
+  - compromised
+  - stolen
+  - exfiltrat
+  - mass exploitation
+  - under active exploitation
 
 # cap on individual cards (urgent items) per run; the digest embed is not
 # capped here since it already truncates itself per category. Overflow is
