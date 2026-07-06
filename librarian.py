@@ -86,7 +86,8 @@ def run_librarian(items: list[dict]) -> dict | None:
     try:
         proc = subprocess.run(
             [
-                "claude", "--bare", "-p", prompt,
+                # --bare는 credentials 파일까지 스킵해 CI에서 "Not logged in"이 됨 (2.1.201 실측)
+                "claude", "-p", prompt,
                 "--model", MODEL,
                 "--allowedTools", "Read,Write,Edit,Glob,Grep",
                 "--permission-mode", "acceptEdits",
