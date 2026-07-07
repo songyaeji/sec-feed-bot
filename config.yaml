@@ -229,15 +229,6 @@ max_news_items: 7
 max_cve_items: 10
 digest_min_importance: 4
 
-# v18: figure 서브에이전트 — og:image 없는 뉴스 카드에 LLM(Sonnet)이
-# 논문풍 SVG 다이어그램을 그린다. 하루 0~3회 호출 예상. 실패·비활성 시
-# 키워드 흐름도(v17)로 폴백하므로 꺼도 카드는 항상 나간다
-figure_agent:
-  enabled: true
-  model: claude-sonnet-5
-  # 실측: Sonnet SVG 생성이 120초 언저리를 오간다(첫날 1/3 타임아웃) — 여유 확보
-  timeout: 180
-
 discord:
   # embed color mapping (hex ints)
   colors:

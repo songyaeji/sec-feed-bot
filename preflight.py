@@ -38,6 +38,20 @@ _EXPECTED_PNG_MAX = 10
 # 30%를 넘으면 사서(librarian) 자체가 오동작한 날로 본다
 _KO_MISSING_RATIO = 0.30
 
+_SENT_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
+
+
+def _noun_ending_count(text: str) -> int:
+    """완결형 종결어미('~다')로 끝나지 않는 문장 수 — 개조식 본문 감지.
+    librarian의 교정 게이트가 실패(fail-open)한 항목을 발송 전에 드러낸다."""
+    plain = (text or "").replace("**", "").strip()
+    n = 0
+    for sent in _SENT_SPLIT_RE.split(plain):
+        sent = sent.strip().rstrip('.!?"\')』」]')
+        if sent and not sent.endswith("다"):
+            n += 1
+    return n
+
 
 def check_card_news(
     pngs: list[bytes],
@@ -128,6 +142,17 @@ def check_card_news(
             warnings.append(
                 f"summary_ko 없는 항목 {no_summary_ko}/{total} — 요약 한국어화가 30% 넘게 누락"
             )
+
+    # --- WARNING: 개조식(명사형 종결) 요약 — 뉴스 카드 본문은 완결형 문장이어야 한다
+    bad_style_ids = [
+        it.get("id") for it in items
+        if not it.get("kev") and it.get("cvss") is None
+        and it.get("summary_ko") and _noun_ending_count(it["summary_ko"])
+    ]
+    if bad_style_ids:
+        warnings.append(
+            f"개조식 요약 {len(bad_style_ids)}건: {bad_style_ids}"
+        )
 
     # --- WARNING: 표지 브리핑 부재 --------------------------------------
     if not briefing:

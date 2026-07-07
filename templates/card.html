@@ -155,126 +155,51 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 }
 .news-headline.lines-2 { max-height: 2.44em; }
 .news-headline.lines-3 { max-height: 3.66em; }
-/* v5: 이미지 슬롯은 기사 og:image를 실제로 가져왔을 때만 그린다 —
-   플레이스홀더(대시 보더) 슬롯은 폐기, 이미지 없으면 본문이 그 공간을 쓴다 */
-.img-slot {
-  height: 340px;
-  flex: none;
-  border-radius: 12px;
-  background: #141412;
-  overflow: hidden;
-  position: relative;
-}
-/* v17: 이미지 비율 적응 — 렌더 시 JS(fitAllCards)가 이미지 실측 비율로 분기.
-   - 슬롯(~2.76:1)에 가까운 와이드 이미지 → .crop: cover 크롭(상하 손실 미미)
-   - 일반 og(1.9:1)·로고형 → .framed: 원본 비율 그대로, 프레임 없이
-   v14 블러 레터박스는 사이드가 지저분하다는 사용자 피드백으로 폐기.
-   무분별 cover 크롭은 이미지 속 텍스트를 자른 전력(v14 이전)이 있어 금지.
-   v18: framed의 슬롯 크기 테두리·패널 배경 폐기(사용자: "테두리 없애고
-   이미지만") — 이미지가 카드 배경 위에 그대로 뜬다 */
-.img-slot .img-fg {
-  width: 100%; height: 100%;
-  object-fit: contain; display: block;
-}
-.img-slot.crop .img-fg { object-fit: cover; }
-.img-slot.framed { background: transparent; }
-/* v9: 이미지 대체 인포패널 — CVE id + CVSS 게이지 (타이포만, 장식 금지) */
-/* v11: 좌우 블록을 space-around로 균등 배치해 게이지가 오른쪽 끝에
-   붙지 않게 하고, 우측 CVSS 게이지(라벨·점수·바)를 한 열로 가운데 정렬해
-   대칭을 맞춘다 */
-.info-panel {
-  height: 340px;
-  flex: none;
-  border-radius: 12px;
-  background: #141412;
-  border: 2px solid #2A2A26;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 48px;
-  gap: 48px;
-}
-.ip-label { font-size: 26px; color: #8A8A84; letter-spacing: 0.12em; margin-bottom: 20px; }
-.ip-cve { font-size: 58px; font-weight: 600; color: #C6FF33; white-space: nowrap; }
-.ip-right { text-align: center; flex: none; }
-.ip-score { font-size: 96px; font-weight: 800; line-height: 1; color: #F2F2EF; }
-.ip-bar {
-  width: 280px;
-  height: 12px;
-  border-radius: 6px;
-  background: #2A2A26;
-  margin: 24px auto 0;
-  overflow: hidden;
-}
-.ip-fill { height: 100%; border-radius: 6px; background: #C6FF33; }
-/* v18: figure 패널 — figure 서브에이전트(Sonnet)가 그린 논문풍 SVG 다이어그램.
-   테두리·배경 없음(frameless) — v18 프레임 제거 방침과 통일 */
-.fig-panel {
-  height: 340px;
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.fig-panel svg { width: 100%; height: 100%; display: block; }
-/* v17: 키워드 흐름도 — v13 칩 나열 폐기(사용자: "아이콘+키워드일 뿐 figure가
-   아니다"). 사서 키워드는 요약의 서사 순서(무슨 일 → 영향/기법)라, 노드를
-   화살표로 이어 사건 흐름 다이어그램으로 그린다. 아이콘은 헤더로 강등.
-   SVG 고정 이유 동일 — CI 러너에 이모지 폰트 없음 */
-.kw-panel {
-  height: 340px;
-  flex: none;
-  border-radius: 12px;
-  background: #141412;
-  border: 2px solid #2A2A26;
-  display: flex;
-  flex-direction: column;
-  padding: 28px 40px 0;
-}
-.kwf-head { display: flex; align-items: center; gap: 16px; }
-.kwf-head svg { width: 40px; height: 40px; flex: none; }
-.kwf-label { font-size: 24px; color: #8A8A84; letter-spacing: 0.14em; }
-.kwf-flow {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  padding-bottom: 30px;
-  min-width: 0;
-}
-/* 노드 말줄임은 안전판 — 사서 키워드는 명사구라 보통 짧다(v6 '…' 금지는
-   제목·본문 문장에 대한 규칙, 다이어그램 라벨은 예외) */
-.kwf-node {
-  font-size: 34px;
-  font-weight: 700;
-  color: #F2F2EF;
-  background: #1B1B18;
-  border: 2px solid #4A4A42;
-  border-radius: 12px;
-  padding: 22px 30px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 320px;
-  text-align: center;
-}
-/* 첫 노드 = 사건의 기점 — 라임 채움으로 시선 시작점을 고정 */
-.kwf-node.first { background: #C6FF33; border-color: #C6FF33; color: #0A0A0A; }
-.kwf-arrow { flex: none; display: block; }
-.kwf-arrow svg { width: 52px; height: 30px; display: block; }
+/* v20: 텍스트 온리 전환 — 이미지 슬롯·인포패널·figure 패널·키워드 흐름도
+   전부 폐기(사용자 결정: 이미지·diagram 없이 타이포만). 매거진식 문법으로
+   대체 — 헤드라인 아래 라임 rule, 본문 확대, 핵심 수치 pull-out */
+.head-rule { width: 120px; height: 6px; background: #C6FF33; flex: none; }
 /* v7: 오른쪽 래그(들쭉날쭉한 공백) 제거 — 양쪽 정렬 + 한글 음절 단위
    줄바꿈 허용(word-break: normal; 라틴 단어는 안 쪼개진다). 카드 전역
    keep-all을 본문에서만 푼다 */
 .news-text {
-  font-size: 38px;
-  line-height: 1.6;
+  font-size: 44px;
+  line-height: 1.65;
   color: #C8C8C2;
   text-align: justify;
   word-break: normal;
   flex: 1;
   min-height: 0;
   overflow: hidden;
+}
+/* v20: 핵심 수치 pull-out — 본문 속 수치구를 뽑아 카드 하단에 크게.
+   캡션은 원문 문장의 잔여부라 수치와 이어 읽힌다 ("100만 달러" + "를 요구") */
+.pullout {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  border-top: 2px solid #2A2A26;
+  padding-top: 40px;
+}
+.pullout-num {
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #C6FF33;
+  white-space: nowrap;
+}
+.pullout-cap { font-size: 34px; color: #8A8A84; min-width: 0; }
+/* v20: CVE 빈 상태 — 발행 기간에 신규 CVE가 없었음을 명시(생략 아님) */
+.cve-empty {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: #8A8A84;
 }
 /* v7: 본문 핵심 키워드 강조 — 사서가 summary_ko에 **키워드**로 표시 */
 .news-text .kw { color: #C6FF33; font-weight: 700; }
@@ -345,17 +270,6 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
    위해서다. 문장 경계(종결어미+공백)는 태그 내부에 나타나지 않는다는
    전제(키워드는 명사구, 태그 속성에 종결어미 없음). */
 function fitAllCards() {
-  /* v17: 이미지 실측 비율로 표시 모드 분기 — cardgen._render가 이미지
-     로드 완료를 기다린 뒤 호출하므로 naturalWidth를 믿을 수 있다.
-     슬롯 비율의 82% 이상(≈2.26:1)이면 cover 크롭해도 상하 손실이 작고,
-     그보다 좁으면(일반 og 1.9:1·로고) 크롭이 내용물을 자르므로 프레임 배치 */
-  document.querySelectorAll(".img-slot").forEach((slot) => {
-    const img = slot.querySelector(".img-fg");
-    if (!img || !img.naturalWidth || !img.naturalHeight) return;
-    const slotAspect = slot.clientWidth / slot.clientHeight;
-    const imgAspect = img.naturalWidth / img.naturalHeight;
-    slot.classList.add(imgAspect >= slotAspect * 0.82 ? "crop" : "framed");
-  });
   const SENT = /(?<=[.!?다요함음됨임])\s+/;
   document.querySelectorAll(".news-headline, .list-headline").forEach((el) => {
     let size = parseFloat(getComputedStyle(el).fontSize);
@@ -394,7 +308,7 @@ function fitAllCards() {
     <div class="mono f30 meta">{{DATE_FULL}}</div>
   </div>
   <div class="cover-hero">
-    <div class="mono cover-eyebrow">MORNING SECURITY BRIEF</div>
+    <div class="mono cover-eyebrow">MORNING ToS</div>
     <div class="cover-headline">{{DATE_HEAD}}<br>보안 이슈 <span class="lime">{{COUNT}}가지</span></div>
     {{TAGS_BLOCK}}
   </div>
@@ -430,8 +344,9 @@ function fitAllCards() {
   <div class="news-body">
     <div class="pill-row">{{PILLS}}</div>
     <div class="news-headline {{TITLE_LINES}}">{{TITLE}}</div>
-    {{IMG_BLOCK}}
+    <div class="head-rule"></div>
     <div class="news-text">{{SUMMARY}}</div>
+    {{PULLOUT}}
   </div>
   <div class="bar bar-foot">
     <div class="mono f28 meta">출처: {{SOURCE}}</div>
@@ -440,53 +355,6 @@ function fitAllCards() {
 </div>
 <!-- END news -->
 
-<!-- BEGIN img_photo -->
-<div class="img-slot"><img class="img-fg" src="{{SRC}}"></div>
-<!-- END img_photo -->
-
-<!-- BEGIN fig_panel -->
-<div class="fig-panel">{{SVG}}</div>
-<!-- END fig_panel -->
-
-<!-- BEGIN info_panel -->
-<div class="info-panel"><div><div class="ip-label mono">관련 취약점</div><div class="ip-cve mono">{{CVE}}</div></div>{{RIGHT}}</div>
-<!-- END info_panel -->
-
-<!-- BEGIN info_panel_score -->
-<div class="ip-right"><div class="ip-label mono">CVSS</div><div class="ip-score">{{SCORE}}</div><div class="ip-bar"><div class="ip-fill" style="width:{{PCT}}%"></div></div></div>
-<!-- END info_panel_score -->
-
-<!-- BEGIN kw_panel -->
-<div class="kw-panel"><div class="kwf-head">{{ICON}}<span class="kwf-label mono">{{LABEL}}</span></div><div class="kwf-flow">{{FLOW}}</div></div>
-<!-- END kw_panel -->
-
-<!-- BEGIN kw_node -->
-<span class="kwf-node{{FIRST}}">{{TEXT}}</span>
-<!-- END kw_node -->
-
-<!-- BEGIN kw_arrow -->
-<span class="kwf-arrow"><svg viewBox="0 0 52 30" fill="none" stroke="#C6FF33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15h38"/><path d="M31 5l10 10-10 10"/></svg></span>
-<!-- END kw_arrow -->
-
-<!-- BEGIN icon_ai -->
-<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><rect x="32" y="32" width="56" height="56" rx="8"/><rect x="50" y="50" width="20" height="20"/><path d="M46 32V16M60 32V16M74 32V16M46 104V88M60 104V88M74 104V88M32 46H16M32 60H16M32 74H16M104 46H88M104 60H88M104 74H88"/></svg>
-<!-- END icon_ai -->
-
-<!-- BEGIN icon_bank -->
-<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 44L60 18l44 26H16z"/><path d="M28 58v30M48 58v30M72 58v30M92 58v30"/><path d="M20 100h80"/></svg>
-<!-- END icon_bank -->
-
-<!-- BEGIN icon_shield -->
-<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M60 14l38 14v28c0 26-16 42-38 50-22-8-38-24-38-50V28z"/><path d="M60 32l-9 18 13 8-11 22"/></svg>
-<!-- END icon_shield -->
-
-<!-- BEGIN icon_doc -->
-<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M32 14h38l22 22v70H32z"/><path d="M70 14v22h22"/><path d="M44 58h32M44 72h32M44 86h22"/></svg>
-<!-- END icon_doc -->
-
-<!-- BEGIN icon_globe -->
-<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="60" r="44"/><ellipse cx="60" cy="60" rx="20" ry="44"/><path d="M18 60h84"/></svg>
-<!-- END icon_globe -->
 
 <!-- BEGIN pill_cat -->
 <span class="mono pill pill-cat">{{TEXT}}</span>
@@ -523,3 +391,23 @@ function fitAllCards() {
 <!-- BEGIN list_more -->
 <div class="list-more mono">…외 {{COUNT}}건</div>
 <!-- END list_more -->
+
+<!-- BEGIN pullout -->
+<div class="pullout"><span class="pullout-num">{{NUM}}</span><span class="pullout-cap">{{CAP}}</span></div>
+<!-- END pullout -->
+
+<!-- BEGIN cve_empty -->
+<div class="card" id="card-{{N}}">
+  <div class="bar bar-head">
+    <div class="mono f30 meta">ToS · {{DATE}}</div>
+  </div>
+  <div class="list-body">
+    <div class="list-headline">오늘의 CVE</div>
+    <div class="cve-empty mono">이번 호 기간에 등재된 신규 CVE가 없습니다.</div>
+  </div>
+  <div class="bar bar-foot">
+    <div class="mono f28 meta"></div>
+    <div class="mono f28 lime">→</div>
+  </div>
+</div>
+<!-- END cve_empty -->

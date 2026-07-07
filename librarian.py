@@ -12,6 +12,7 @@ heuristic top-N -- a wiki-sync problem must never suppress a real alert.
 """
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -49,6 +50,23 @@ def _write_input(items: list[dict]) -> None:
     with open(LIBRARIAN_INPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
         f.write("\n")
+
+
+_SENT_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
+
+
+def _style_ok(text: str) -> bool:
+    """summary_ko 문체 게이트 — 모든 문장이 완결형 종결어미('~다')로
+    끝나는지. 명사형(개조식) 종결("~플랫폼 분석.")은 카드 본문 품질
+    기준 미달(사용자 피드백 v20 — 프롬프트 규칙만으로는 안 지켜짐)."""
+    plain = text.replace("**", "").strip()
+    if not plain:
+        return True
+    for sent in _SENT_SPLIT_RE.split(plain):
+        sent = sent.strip().rstrip('.!?"\')』」]')
+        if sent and not sent.endswith("다"):
+            return False
+    return True
 
 
 def _extract_json_object(text: str):
@@ -119,6 +137,58 @@ def _run_chunk(chunk: list[dict], prompt: str) -> dict | None:
     return parsed["verdicts"]
 
 
+def _fix_styles(verdicts: dict, model: str, timeout: int) -> None:
+    """개조식 summary_ko를 완결형으로 고치는 교정 재호출 1회.
+    실패해도 원문 유지(fail-open) — verdicts를 제자리에서 고친다."""
+    bad = {
+        vid: v["summary_ko"]
+        for vid, v in verdicts.items()
+        if v.get("summary_ko") and not _style_ok(v["summary_ko"])
+    }
+    if not bad:
+        return
+
+    prompt = (
+        "아래 보안 뉴스 요약들은 명사형(개조식)으로 끝나는 문장이 있다. "
+        "각 요약의 뜻·키워드(**별표 마커** 포함)를 그대로 유지하면서, "
+        "모든 문장이 '~했다/~한다/~이다' 완결형 종결어미로 끝나게만 고쳐 써라. "
+        'JSON 하나만 출력: {"<id>": "<고친 요약>", ...}\n\n'
+        + json.dumps(bad, ensure_ascii=False)
+    )
+
+    fixed = None
+    try:
+        proc = subprocess.run(
+            [
+                "claude", "-p", prompt,
+                "--model", model,
+                "--output-format", "json",
+            ],
+            cwd=BASE_DIR,
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+        )
+        if proc.returncode == 0:
+            outer = json.loads(proc.stdout)
+            fixed = _extract_json_object(outer["result"])
+    except (subprocess.TimeoutExpired, OSError,
+            json.JSONDecodeError, KeyError, TypeError, ValueError):
+        fixed = None
+
+    if not isinstance(fixed, dict):
+        print(f"[librarian] 문체 교정 실패 — 원문 발송 {len(bad)}건", file=sys.stderr)
+        return
+
+    passed = 0
+    for vid in bad:
+        new_summary = fixed.get(vid)
+        if isinstance(new_summary, str) and new_summary.strip() and _style_ok(new_summary):
+            verdicts[vid]["summary_ko"] = new_summary
+            passed += 1
+    print(f"[librarian] 개조식 요약 {len(bad)}건 교정 → {passed}건 통과", file=sys.stderr)
+
+
 def run_librarian(items: list[dict]) -> dict | None:
     """Returns {"verdicts": {item_id: {"action": ..., "topic": ...,
     "importance": ...}}} on success, or None on total failure (fail-open --
@@ -175,6 +245,7 @@ def run_librarian(items: list[dict]) -> dict | None:
     if lost:
         print(f"[librarian] 재시도까지 실패 {lost}건 유실 — 부분 성공으로 계속", file=sys.stderr)
 
+    _fix_styles(merged_verdicts, MODEL, 120)
     return {"verdicts": merged_verdicts}
 
 
@@ -202,6 +273,8 @@ def summarize(items: list[dict]) -> dict | None:
         "너는 보안 카드뉴스 편집장이다. 아래 오늘의 항목들을 관통하는 "
         "한국어 총평 2~3문장(briefing)과 핵심 키워드 3~5개(keywords)를 "
         "JSON 하나로만 출력하라.\n\n"
+        "briefing 규칙: 모든 문장은 '~했다/~한다/~이다' 완결형 종결어미로 "
+        "끝낸다 — 명사형(개조식) 종결 금지.\n\n"
         "키워드 규칙: 한국어, 공백 없이 (표지에 #키워드 해시태그로 실린다. "
         "예: \"AI에이전트\", \"랜섬웨어\", \"공급망공격\"). 보안 통용 약어"
         "(APT·LLM)만 영문 허용, 그 외는 한국어로 쓴다. AI 관련 키워드가 "

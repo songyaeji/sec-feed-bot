@@ -14,7 +14,6 @@ import yaml
 
 import cardgen
 import dedup as dedup_lib
-import figure
 import judge
 import librarian
 import notify
@@ -196,18 +195,6 @@ def _print_dry_run_stats(card_items: list[dict], non_urgent_items: list[dict]) -
         print(f"[main] non-urgent category '{category}': {count}건 -> digest")
 
 
-def _card_image_sources(config: dict) -> set[str]:
-    # 카드에 og:image를 실을 소스. v12: opt-in → opt-out — 품질 게이트
-    # (≥600×315, fail-open)가 저품질을 걸러주므로 기본 켠다. 제외는
-    # (a) card_image: false 명시, (b) 구글뉴스 쿼리(링크가 리다이렉트라
-    # og:image를 못 얻음 — 요청 낭비 방지)
-    return {
-        s.get("name") for s in config.get("sources", [])
-        if s.get("card_image", True)
-        and "news.google.com" not in (s.get("url") or "")
-    }
-
-
 def _source_regions(config: dict) -> dict[str, str]:
     # 카드 국내/해외 pill — config sources[].region ("국내"/"해외").
     # 미지정 소스는 맵에서 빠져 카드에서 표기를 생략한다
@@ -229,7 +216,7 @@ def _fallback_keywords(items: list[dict], limit: int = 4) -> list[str]:
 
 def _save_preview_cards(
     merged: list[dict], card_items: list[dict], discord_cfg: dict,
-    issue_no: int | None = None, image_sources: set[str] | None = None,
+    issue_no: int | None = None,
     regions: dict[str, str] | None = None,
 ) -> None:
     # DRY_RUN digest에서도 렌더 경로를 실제로 태워 PNG를 남긴다 —
@@ -251,7 +238,6 @@ def _save_preview_cards(
         pngs = cardgen.build_cards(
             merged, briefing=None, stats=stats,
             colors=discord_cfg.get("colors", {}),
-            image_sources=image_sources,
             regions=regions,
         )
         preview_dir = os.path.join(STATE_DIR, "preview")
@@ -341,7 +327,6 @@ def main() -> None:
             _save_preview_cards(
                 pending + non_urgent_items, card_items, discord_cfg,
                 issue_no=state.get("issue_no", 1),
-                image_sources=_card_image_sources(config),
                 regions=_source_regions(config),
             )
         else:
@@ -434,10 +419,7 @@ def main() -> None:
                     brief = librarian.summarize(to_send)
                     if brief:
                         briefing = brief.get("briefing")
-                # v18: figure 서브에이전트 — og:image 없는 뉴스 카드에
-                # 논문풍 SVG 다이어그램을 붙인다 (fail-open, 실패 시
-                # cardgen이 키워드 흐름도로 폴백)
-                figure.attach_figures(to_send, config, _card_image_sources(config))
+                # v20: 텍스트 온리 전환 — og:image·figure(SVG) 단계 폐기(사용자 결정)
                 # stats line on the digest header embed; wiki_new is left
                 # out entirely (not shown as 0) when the librarian failed
                 # open, since "no new wiki topics" and "wiki didn't run"
@@ -469,7 +451,6 @@ def main() -> None:
                         briefing=briefing,
                         stats=stats,
                         colors=discord_cfg.get("colors", {}),
-                        image_sources=_card_image_sources(config),
                         regions=_source_regions(config),
                     )
                     link_lines = cardgen.build_link_lines(top, cve_rest, other_rest)
