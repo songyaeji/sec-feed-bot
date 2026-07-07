@@ -193,27 +193,8 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 }
 .news-text p { margin: 0 0 0.55em; }
 .news-text p:last-child { margin-bottom: 0; }
-/* v20: 핵심 수치 pull-out — 본문 속 수치구를 뽑아 카드 하단에 크게.
-   캡션은 원문 문장의 잔여부라 수치와 이어 읽힌다 ("100만 달러" + "를 요구") */
-.pullout {
-  flex: none;
-  display: flex;
-  align-items: baseline;
-  gap: 20px;
-  border-top: 2px solid #2A2A26;
-  padding-top: 40px;
-}
-.pullout-num {
-  font-size: 96px;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: #C6FF33;
-  white-space: nowrap;
-}
-.pullout-cap { font-size: 34px; color: #8A8A84; min-width: 0; }
-/* v21: WHY 블록 — 수치 pull-out이 없는 카드의 하단 슬롯. "왜 중요한가"
-   1문장(librarian why_ko). 리뷰 반려된 하단 공백·밀도 편차를 채우는 담당 */
+/* v21: WHY 블록 — 뉴스 카드 하단 슬롯. "왜 중요한가" 1문장(librarian
+   why_ko). 리뷰 반려된 하단 공백·밀도 편차를 채우는 담당 */
 .why {
   flex: none;
   display: flex;
@@ -489,10 +470,6 @@ function fitAllCards() {
 <!-- BEGIN list_more -->
 <div class="list-more mono">…외 {{COUNT}}건</div>
 <!-- END list_more -->
-
-<!-- BEGIN pullout -->
-<div class="pullout"><span class="pullout-num">{{NUM}}</span><span class="pullout-cap">{{CAP}}</span></div>
-<!-- END pullout -->
 
 <!-- BEGIN cve_empty -->
 <div class="card" id="card-{{N}}">

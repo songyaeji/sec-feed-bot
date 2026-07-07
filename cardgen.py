@@ -385,15 +385,10 @@ def _build_news(
         pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(tag)))
 
     # v20: 텍스트 온리 — 비주얼 슬롯 폐기(사용자 결정: 이미지·diagram 없이
-    # 타이포만). 본문 아래 핵심 수치 pull-out이 매거진식 시각 앵커를 대신한다.
-    # v21: pull-out 실패 시 WHY 블록(사서 why_ko)이 하단 슬롯을 물려받는다
-    # — 리뷰 반려된 하단 공백·밀도 편차 해소
+    # 타이포만). 수치 pull-out은 본문 문장 반복이라 폐기(사용자 결정,
+    # 재도입 금지) — 하단 슬롯은 WHY 블록(사서 why_ko) 전용
     bottom = ""
-    po = _extract_pullout(item.get("summary_ko") or "")
-    if po:
-        bottom = _fill(fragments["pullout"],
-                       NUM=html.escape(po[0]), CAP=html.escape(po[1]))
-    elif item.get("why_ko"):
+    if item.get("why_ko"):
         bottom = _fill(fragments["why"], TEXT=html.escape(
             " ".join(item["why_ko"].replace("**", "").split())))
 
@@ -420,32 +415,6 @@ def _build_news(
         SOURCE=html.escape(item.get("source", "")),
         DOTS=dots,
     )
-
-
-_PULLOUT_RE = re.compile(
-    r"(\d[\d,.]*\s*(?:만\s?명|만\s?달러|억\s?원|억\s?달러|만\s?건|%|명|달러|건))")
-
-def _extract_pullout(summary: str) -> tuple[str, str] | None:
-    """본문에서 핵심 수치 1개를 뽑아 (수치구, 뒤따르는 문장 잔여부)로.
-    매거진식 pull-out: 수치는 대형 라임, 잔여부("를 요구" 등)는 캡션으로
-    이어 읽힌다. 어색한 캡션이 나올 바엔 생략 — 잔여부가 없거나 24자를
-    넘으면 None(카드에는 여백만 남는다, fail-open)."""
-    text = summary.replace("**", "")
-    m = _PULLOUT_RE.search(text)
-    if not m:
-        return None
-    # v21: 수치구에 바로 붙은 조사까지 어절 끝으로 흡수("100만 달러를") —
-    # 캡션이 "를 받아냈다"처럼 조사로 시작해 어색하던 문제 수정
-    end = m.end()
-    while end < len(text) and not text[end].isspace():
-        end += 1
-    num = text[m.start():end].rstrip(".,!?·—-")
-    rest = text[end:]
-    # 수치가 속한 문장의 잔여부만 — 다음 문장 침범 금지
-    rest = re.split(r"[.!?]", rest, maxsplit=1)[0].strip().rstrip(",·—-")
-    if not (2 <= len(rest) <= 24):
-        return None
-    return num, rest
 
 
 def _list_card(fragments: dict, heading: str, rest: list[dict],
