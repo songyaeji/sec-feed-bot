@@ -413,9 +413,9 @@ def main() -> None:
                 # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
                 # 어떤 경우에도 아침 브리핑 자체가 사라지면 안 된다
                 try:
-                    top = cardgen.pick_top(to_send)
-                    top_ids = {it["id"] for it in top}
-                    rest = [it for it in to_send if it["id"] not in top_ids]
+                    # 링크 목록은 카드 표시 순서(뉴스→오늘의 CVE→그 외)와
+                    # 동일하게 맞춰야 번호가 카드와 1:1로 대응한다
+                    top, cve_rest, other_rest = cardgen.plan_cards(to_send)
                     pngs = cardgen.build_cards(
                         to_send,
                         briefing=briefing,
@@ -424,7 +424,8 @@ def main() -> None:
                         image_sources=_card_image_sources(config),
                         regions=_source_regions(config),
                     )
-                    notify.send_card_news(pngs, cardgen.build_link_lines(top, rest))
+                    notify.send_card_news(
+                        pngs, cardgen.build_link_lines(top, cve_rest, other_rest))
                 except Exception as exc:
                     print(
                         f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",
