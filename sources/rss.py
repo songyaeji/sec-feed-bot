@@ -1,8 +1,22 @@
 """Generic RSS/Atom source via feedparser."""
+import html
+import re
 from datetime import datetime, timedelta, timezone
 
 import feedparser
 import requests
+
+# 일부 피드(HubSpot 블로그 등)는 description에 이미지 래퍼 <div>까지 통째로
+# 실어 보낸다. 마크업을 남기면 카드 요약·사서 입력에 태그가 글자로 노출된다.
+# strip → unescape → strip 순서: 엔티티로 인코딩된 태그(&lt;div&gt;)까지 걷어낸다.
+# `<[^>]*$`: 원문이 잘려 닫는 >가 없는 미완결 태그 꼬리까지 지운다
+_TAG_RE = re.compile(r"<[^>]*>|<[^>]*$")
+
+
+def _strip_html(text: str) -> str:
+    text = _TAG_RE.sub(" ", text or "")
+    text = _TAG_RE.sub(" ", html.unescape(text))
+    return " ".join(text.split())
 
 
 def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list[dict]:
@@ -30,7 +44,7 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             continue
 
         title = entry.get("title", "")
-        summary = entry.get("summary", "")
+        summary = _strip_html(entry.get("summary", ""))
 
         if keywords:
             haystack = f"{title} {summary}".lower()

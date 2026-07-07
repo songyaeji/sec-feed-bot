@@ -163,8 +163,19 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   border-radius: 12px;
   background: #141412;
   overflow: hidden;
+  position: relative;
 }
-.img-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* v14: cover 크롭 폐기 — og:image(대개 1.9:1)를 와이드 슬롯(~2.7:1)에 cover로
+   채우면 상하가 잘려 이미지 속 텍스트가 절단된다(사용자 피드백). 전경은
+   contain으로 원본 비율 유지, 여백은 같은 이미지의 블러 확대본으로 채운다 */
+.img-slot .img-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; filter: blur(28px) brightness(0.4); transform: scale(1.2);
+}
+.img-slot .img-fg {
+  position: relative; width: 100%; height: 100%;
+  object-fit: contain; display: block;
+}
 /* v9: 이미지 대체 인포패널 — CVE id + CVSS 게이지 (타이포만, 장식 금지) */
 /* v11: 좌우 블록을 space-around로 균등 배치해 게이지가 오른쪽 끝에
    붙지 않게 하고, 우측 CVSS 게이지(라벨·점수·바)를 한 열로 가운데 정렬해
@@ -401,7 +412,7 @@ function fitAllCards() {
 <!-- END news -->
 
 <!-- BEGIN img_photo -->
-<div class="img-slot"><img src="{{SRC}}"></div>
+<div class="img-slot"><img class="img-bg" src="{{SRC}}"><img class="img-fg" src="{{SRC}}"></div>
 <!-- END img_photo -->
 
 <!-- BEGIN info_panel -->

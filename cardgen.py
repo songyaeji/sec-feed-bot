@@ -84,6 +84,15 @@ _TITLE_PREFIX_RE = re.compile(r"^\s*(?:\[[^\]]{1,14}\]\s*)+")
 # 사서가 summary_ko에 **키워드**로 표시한 강조 → <b class="kw">
 _KW_MD_RE = re.compile(r"\*\*(.+?)\*\*")
 
+# 피드 원문 summary 폴백용 태그 제거 — 인제스트(sources/rss.py)에서도 걷어내지만,
+# 이미 마크업이 실린 채 적재된 pending 항목이 카드에 오를 수 있어 렌더에서도 방어.
+# `<[^>]*$`: 인제스트가 300자 절단한 뒤라 닫는 >가 잘린 미완결 태그 꼬리도 지운다
+_TAG_RE = re.compile(r"<[^>]*>|<[^>]*$")
+
+
+def _strip_html(text: str) -> str:
+    return " ".join(_TAG_RE.sub(" ", text or "").split())
+
 
 def _card_title(item: dict) -> str:
     # v5: 카드에는 전부 한국어 — 사서 번역 제목(title_ko) 우선, 없으면 원제
@@ -428,7 +437,8 @@ def _build_news(
         # 카드뉴스의 메인은 요약 — 사서(librarian)가 만든 한국어 요약
         # summary_ko가 있으면 우선, 없으면(사서 실패 fail-open) 피드 원문 요약.
         # v7: **키워드** 마커를 라임 강조로 변환
-        SUMMARY=_summary_html(item.get("summary_ko") or item.get("summary", "") or ""),
+        SUMMARY=_summary_html(item.get("summary_ko")
+                              or _strip_html(item.get("summary", ""))),
         SOURCE=html.escape(item.get("source", "")),
     )
 
