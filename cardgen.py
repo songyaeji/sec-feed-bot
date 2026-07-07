@@ -158,20 +158,17 @@ def plan_cards(items: list[dict]):
     """카드 구성 순서를 한 곳에서 결정 — build_cards와 build_link_lines가
     같은 순서를 쓰게 한다. 반환: (news_top, cve_rest, other_rest).
 
-    v10: CVE는 가장 중요한 1건만 뉴스 카드로 승격하고, 나머지 CVE는
-    별도 '오늘의 CVE' 목록으로 뺀다(사용자 결정). 일반 뉴스의 초과분은
-    기존 '그 밖의 소식' 목록으로 간다."""
+    v15: CVE는 뉴스(보안 이슈) 카드에서 전면 제외 — v10의 '최상위 1건
+    승격'도 폐기(사용자 결정). 전부 '오늘의 CVE' 코너(맨 마지막 장)로
+    모으고, 표지 이슈 건수에서도 뺀다. 카드뉴스의 목적은 보안 '동향'
+    추적이고 CVE 엔트리는 그 부록이다."""
     cve_items = [it for it in items if _is_cve_item(it)]
     other_items = [it for it in items if not _is_cve_item(it)]
 
-    promoted = pick_top(cve_items, limit=1)   # 최상위 CVE 1건만 뉴스 후보
-    news_pool = other_items + promoted
-    top = pick_top(news_pool)
+    top = pick_top(other_items)
     top_ids = {id(it) for it in top}
 
-    # CVE 목록은 중요도순으로, 뉴스로 승격된 1건을 뺀 나머지
-    cve_rest = [it for it in pick_top(cve_items, limit=len(cve_items))
-                if id(it) not in top_ids]
+    cve_rest = pick_top(cve_items, limit=len(cve_items))  # 중요도순 정렬만
     other_rest = [it for it in other_items if id(it) not in top_ids]
     return top, cve_rest, other_rest
 
@@ -179,10 +176,10 @@ def plan_cards(items: list[dict]):
 def build_link_lines(top_items: list[dict], cve_rest: list[dict],
                      other_rest: list[dict]) -> list[str]:
     """카드 번호와 1:1로 매칭되는 원문 링크 목록. 카드 표시 순서와
-    동일하게 뉴스 → 오늘의 CVE → 그 밖의 소식 순으로 나열한다.
+    동일하게 뉴스 → 그 밖의 소식 → 오늘의 CVE(맨 마지막) 순으로 나열한다.
     URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다."""
     lines = []
-    for i, item in enumerate(top_items + cve_rest + other_rest, start=1):
+    for i, item in enumerate(top_items + other_rest + cve_rest, start=1):
         title = " ".join(item.get("title", "").split())  # 개행이 목록 줄을 깨지 않게
         lines.append(f"{i}. [{title}](<{item['url']}>)")
     return lines
@@ -212,8 +209,12 @@ def build_cards(
     pill로 실린다. 맵에 없는 소스는 표기 생략."""
     stats = stats or {}
 
-    # v10: 뉴스(CVE 1건 포함) / 오늘의 CVE / 그 밖의 소식으로 분리
+    # v15: 뉴스 / 그 밖의 소식 / 오늘의 CVE(맨 마지막 장) — CVE는 뉴스
+    # 카드·표지 이슈 건수에서 제외(부록 코너로만)
     top, cve_rest, other_rest = plan_cards(items)
+    # 표지 "N가지"는 보안 이슈(비CVE)만 센다 — main이 준 total(전체
+    # to_send 건수)을 카드 표시용으로만 덮어쓴다
+    stats = {**stats, "total": len(top) + len(other_rest)}
 
     fragments = _load_fragments()
     shell = _load_shell()
@@ -235,13 +236,14 @@ def build_cards(
                         image_sources=image_sources or set(),
                         regions=regions or {})
         )
-    if cve_rest:
-        card_htmls.append(
-            _build_cve_list(fragments, cve_rest, date_short, n=len(card_htmls) + 1)
-        )
     if other_rest:
         card_htmls.append(
             _build_list(fragments, other_rest, date_short, n=len(card_htmls) + 1)
+        )
+    # '오늘의 CVE'는 항상 맨 마지막 장 — 링크 목록(build_link_lines)도 같은 순서
+    if cve_rest:
+        card_htmls.append(
+            _build_cve_list(fragments, cve_rest, date_short, n=len(card_htmls) + 1)
         )
     assert len(card_htmls) == total
 
@@ -534,9 +536,9 @@ def _build_list(fragments: dict, rest: list[dict], date_short: str, n: int) -> s
 
 
 def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int) -> str:
-    """v10 '오늘의 CVE' 카드 — 뉴스로 승격되지 않은 CVE 항목을 한 장에
-    모은다. 행 제목은 'CVE-번호 · 한국어 제목', 우측은 CVSS 점수(없으면
-    실악용 표기). CVE 번호는 원문 유지(사용자 결정)."""
+    """'오늘의 CVE' 카드 — CVE 항목 전부를 맨 마지막 장 하나에 모은다
+    (v15: 뉴스 승격 폐지). 행 제목은 'CVE-번호 · 한국어 제목', 우측은
+    CVSS 점수(없으면 실악용 표기). CVE 번호는 원문 유지(사용자 결정)."""
     def row(item: dict) -> str:
         text = f"{item.get('id', '')} {item.get('title', '')} {item.get('summary', '')}"
         m = CVE_RE.search(text)

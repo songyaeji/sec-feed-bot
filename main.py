@@ -446,7 +446,7 @@ def main() -> None:
                 # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
                 # 어떤 경우에도 아침 브리핑 자체가 사라지면 안 된다
                 try:
-                    # 링크 목록은 카드 표시 순서(뉴스→오늘의 CVE→그 외)와
+                    # 링크 목록은 카드 표시 순서(뉴스→그 외→오늘의 CVE)와
                     # 동일하게 맞춰야 번호가 카드와 1:1로 대응한다
                     top, cve_rest, other_rest = cardgen.plan_cards(to_send)
                     pngs = cardgen.build_cards(
