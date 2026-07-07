@@ -399,5 +399,491 @@
     ],
     "title": "이찬진 금융감독원장, 모험자본 플랫폼 출범식 참석",
     "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219091&menuNo=200218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-43037",
+    "published": "2026-05-01T15:16:48.383",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nip6_tunnel: clear skb2->cb[] in ip4ip6_err()\n\nOskar Kjos reported the following problem.\n\nip4ip6_err() calls icmp_send() on a cloned skb whose cb[] was written\nby the IPv6 receive path as struct inet6_skb_parm. icmp_send() passes\nI",
+    "tags": [],
+    "title": "CVE-2026-43037 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43037"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-8450",
+    "published": "2026-05-27T05:16:23.067",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "HTTP::Daemon versions before 6.17 for Perl allow OS command injection via send_file().\n\nsend_file() opens its string argument with Perl's 2-arg open(). The 2-arg form interprets magic prefixes: '| cmd' and 'cmd |' open a pipe to a subprocess, '> path' and '>> path' open the path for write or append.",
+    "tags": [],
+    "title": "CVE-2026-8450 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8450"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-46244",
+    "published": "2026-06-03T18:16:24.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_inner: Fix IPv6 inner_thoff desync\n\nIn nft_inner_parse_l2l3(), when processing inner IPv6 packets,\nipv6_find_hdr() correctly computes the transport header offset\ntraversing all extension headers, but the result is im",
+    "tags": [],
+    "title": "CVE-2026-46244 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46244"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-10263",
+    "published": "2026-06-09T10:16:33.003",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Arm C1-Ultra, C1-Premium, Neoverse V3 & V3AE, Neoverse V2, Neoverse V1, Neoverse-N2, Neoverse-N1, Cortex-X925, Cortex-X4, Cortex-X3, Cortex-X2, Cortex-X1 & X1C, Cortex-A710, Cortex-A78, A78AE & A78C, Cortex-A77, Cortex-A76 & A76A may allow writes to resources owned by a higher exception level.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-10263 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10263"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-46316",
+    "published": "2026-06-09T13:16:36.887",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: arm64: vgic-its: Drop the translation cache reference only for the erased entry\n\nvgic_its_invalidate_cache() walks the per-ITS translation cache with\nxa_for_each() and drops the cache's reference on each entry with\nvgic_put_ir",
+    "tags": [],
+    "title": "CVE-2026-46316 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46316"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-12294",
+    "published": "2026-06-16T13:16:29.643",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sandbox escape in the DOM: Workers component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Firefox ESR 115.37, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12294 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12294"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-12295",
+    "published": "2026-06-16T13:16:29.737",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sandbox escape in the DOM: Navigation component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Firefox ESR 115.37, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12295 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12295"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-12296",
+    "published": "2026-06-16T13:16:29.833",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sandbox escape in the Security: Process Sandboxing component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12296 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12296"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-12297",
+    "published": "2026-06-16T13:16:29.927",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sandbox escape due to incorrect boundary conditions in the Networking component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Firefox ESR 115.37, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12297 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12297"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48746",
+    "published": "2026-06-22T23:16:30.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models (LLMs). From 0.3.0 until 0.22.0, a vulnerability in ASGI web servers and starlette's trust on those web servers enables an authentication bypass of the OpenAI API AuthenticationMiddleware. It allows to use the API without providing th",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-48746 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48746"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53913",
+    "published": "2026-07-06T09:16:38.753",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Authentication, Missing Authentication for Critical Function, Not Failing Securely ('Failing Open') vulnerability in Apache Camel Keycloak Component.\n\nThe KeycloakSecurityPolicy of camel-keycloak guards a route by running KeycloakSecurityProcessor.beforeProcess(), which performs three check",
+    "tags": [],
+    "title": "CVE-2026-53913 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53913"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53481",
+    "published": "2026-07-07T13:16:31.397",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an improper limitation of a pathname to a restricted directory ('Path Traversal",
+    "tags": [],
+    "title": "CVE-2026-53481 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53481"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53483",
+    "published": "2026-07-07T13:16:31.590",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.7, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 an improper authentication vulnerability. An unauthenticated attacker with remote acces",
+    "tags": [],
+    "title": "CVE-2026-53483 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53483"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-26740",
+    "published": "2026-03-18T18:16:26.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Buffer Overflow vulnerability in giflib v.5.2.2 allows a remote attacker to cause a denial of service via the EGifGCBToExtension overwriting an existing Graphic Control Extension block without validating its allocated size.",
+    "tags": [],
+    "title": "CVE-2026-26740 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26740"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-67030",
+    "published": "2026-03-25T18:16:25.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Directory Traversal vulnerability in the extractFile method of org.codehaus.plexus.util.Expand in plexus-utils before 6d780b3378829318ba5c2d29547e0012d5b29642. This allows an attacker to execute arbitrary code",
+    "tags": [],
+    "title": "CVE-2025-67030 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67030"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-34755",
+    "published": "2026-04-06T16:16:36.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models (LLMs). From 0.7.0 to before 0.19.0, the VideoMediaIO.load_base64() method at vllm/multimodal/media/video.py splits video/jpeg data URLs by comma to extract individual JPEG frames, but does not enforce a frame count limit. The num_fra",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-34755 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34755"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-34756",
+    "published": "2026-04-06T16:16:36.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models (LLMs). From 0.1.0 to before 0.19.0, a Denial of Service vulnerability exists in the vLLM OpenAI-compatible API server. Due to the lack of an upper bound validation on the n parameter in the ChatCompletionRequest and CompletionRequest",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-34756 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34756"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-34982",
+    "published": "2026-04-06T16:16:38.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vim is an open source, command line text editor. Prior to version 9.2.0276, a modeline sandbox bypass in Vim allows arbitrary OS command execution when a user opens a crafted file. The `complete`, `guitabtooltip` and `printheader` options are missing the `P_MLE` flag, allowing a modeline to be execu",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34982 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34982"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-43112",
+    "published": "2026-05-06T10:16:24.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/smb/client: fix out-of-bounds read in cifs_sanitize_prepath\n\nWhen cifs_sanitize_prepath is called with an empty string or a string\ncontaining only delimiters (e.g., \"/\"), the current logic attempts to\ncheck *(cursor2 - 1) before",
+    "tags": [],
+    "title": "CVE-2026-43112 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43112"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-45984",
+    "published": "2026-05-27T14:17:15.640",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ngfs2: Fix use-after-free in iomap inline data write path\n\nThe inline data buffer head (dibh) is being released prematurely in\ngfs2_iomap_begin() via release_metapath() while iomap->inline_data\nstill points to dibh->b_data. This cau",
+    "tags": [],
+    "title": "CVE-2026-45984 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45984"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46116",
+    "published": "2026-05-28T10:16:27.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: defensively unhash xfrm_state lists in __xfrm_state_delete\n\nKASAN reproduces a slab-use-after-free in __xfrm_state_delete()'s\nhlist_del_rcu calls under syzkaller load on linux-6.12.y stable\n(reproduced on 6.12.47, also reacha",
+    "tags": [],
+    "title": "CVE-2026-46116 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46116"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46189",
+    "published": "2026-05-28T10:16:34.540",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/vmw_pvrdma: Fix double free on pvrdma_alloc_ucontext() error path\n\nSashiko points out that pvrdma_uar_free() is already called within\npvrdma_dealloc_ucontext(), so calling it before triggers a double free.",
+    "tags": [],
+    "title": "CVE-2026-46189 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46189"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46227",
+    "published": "2026-05-28T10:16:38.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsctp: revalidate list cursor after sctp_sendmsg_to_asoc() in SCTP_SENDALL\n\nThe SCTP_SENDALL path in sctp_sendmsg() iterates ep->asocs with\nlist_for_each_entry_safe(), which caches the next entry in @tmp before\nthe loop body runs.  ",
+    "tags": [],
+    "title": "CVE-2026-46227 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46227"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46323",
+    "published": "2026-06-09T13:16:37.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: gro: don't merge zcopy skbs\n\nskb_gro_receive() can currently copy frags between the source and GRO\nskb, without checking the zerocopy status, and in particular the\nSKBFL_MANAGED_FRAG_REFS flag.\n\nWhen SKBFL_MANAGED_FRAG_REFS is",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46323 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46323"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-44492",
+    "published": "2026-06-11T17:16:33.167",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 0.32.0 and 1.16.0, Axios does not normalise IPv4-mapped IPv6 addresses. When NO_PROXY lists an IPv4 address such as 127.0.0.1 or 169.254.169.254, a request URL using the IPv4-mapped IPv6 form (::ffff:7f00:1, ::ffff:a9fe:a9fe)",
+    "tags": [],
+    "title": "CVE-2026-44492 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44492"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-44494",
+    "published": "2026-06-11T17:16:33.313",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.16.0, the Axios library is vulnerable to a Prototype Pollution \"Gadget\" attack that allows any Object.prototype pollution in the application's dependency tree to be escalated into a full Man-in-the-Middle (MITM)",
+    "tags": [],
+    "title": "CVE-2026-44494 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44494"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46331",
+    "published": "2026-06-16T08:16:23.993",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: fix pedit partial COW leading to page cache corruption\n\ntcf_pedit_act() computes the COW range for skb_ensure_writable()\nonce before the key loop using tcfp_off_max_hint, but the hint does\nnot account for the runtime hea",
+    "tags": [],
+    "title": "CVE-2026-46331 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46331"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12289",
+    "published": "2026-06-16T13:16:29.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Privilege escalation in the Graphics: WebRender component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Firefox ESR 115.37, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12289 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12289"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12290",
+    "published": "2026-06-16T13:16:29.267",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory safety bug fixed in Firefox 152. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Firefox ESR 115.37, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12290 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12290"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12291",
+    "published": "2026-06-16T13:16:29.363",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use-after-free in the Networking: HTTP component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Firefox ESR 115.37, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12291 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12291"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12292",
+    "published": "2026-06-16T13:16:29.457",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect boundary conditions in the Web Audio component. This vulnerability was fixed in Firefox 152, Firefox ESR 140.12, Thunderbird 152, and Thunderbird 140.12.",
+    "tags": [],
+    "title": "CVE-2026-12292 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12292"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12328",
+    "published": "2026-06-16T13:16:33.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox ESR 115.36, Firefox ESR 140.11, Thunderbird ESR 140.11, Firefox 151 and Thunderbird 151. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerabil",
+    "tags": [],
+    "title": "CVE-2026-12328 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12328"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-41523",
+    "published": "2026-06-22T23:16:30.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models (LLMs). Prior to 0.22.0, an assert-based security check in vLLM's activation function loading allows any unauthenticated attacker to achieve arbitrary code execution on the server by publishing a malicious HuggingFace model, when vLLM",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-41523 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41523"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34158",
+    "published": "2026-07-07T05:16:50.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.469, the executeInDocker() helper wraps user-controlled commands in single quotes without escaping embedded single quotes. Attackers who can edit application settings can inject a ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34158 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34158"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-11348",
+    "published": "2026-07-07T12:16:28.617",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper verification of cryptographic signature vulnerability in HAVELSAN Inc. Liman MYS allows Fake the Source of Data.\n\nThis issue affects Liman MYS: before release.Master.1107.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-11348 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11348"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-13696",
+    "published": "2026-07-07T12:16:32.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an LDAP query ('LDAP injection') vulnerability in HAVELSAN Inc. Liman MYS allows LDAP Injection.\n\nThis issue affects Liman MYS: before release.Master.1107.",
+    "tags": [],
+    "title": "CVE-2026-13696 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13696"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/court-filing-reveals-windows-device-id.html",
+    "published": "2026-07-07T13:27:20+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "U.S. prosecutors linked an alleged Scattered Spider hacker to a break-in at a luxury jewelry retailer using a persistent Windows device ID, according to a newly unsealed federal complaint. Microsoft records tied that ID first to the account the attackers used to keep access during the May 2025 intru",
+    "tags": [],
+    "title": "Court Filing Reveals Windows Device ID Helped FBI Trace Alleged Scattered Spider Hacker",
+    "url": "https://thehackernews.com/2026/07/court-filing-reveals-windows-device-id.html"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/writer-ai-flaw-could-let-agent-previews.html",
+    "published": "2026-07-07T13:27:09+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of a now-patched critical session isolation vulnerability in Writer, an enterprise generative artificial intelligence (AI) platform, that could result in cross-tenant compromise. The one-click vulnerability has been codenamed WriteOut by the Sand Secu",
+    "tags": [],
+    "title": "Writer AI Flaw Could Let Agent Previews Leak Session Tokens Across Tenants",
+    "url": "https://thehackernews.com/2026/07/writer-ai-flaw-could-let-agent-previews.html"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/what-changes-when-your-software-supply.html",
+    "published": "2026-07-07T11:30:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Software supply chain security was hard enough. Then AI joined the build pipeline. For five years, \"software supply chain security\" meant one question: what's in your code? Which open-source packages, which versions, which transitive dependencies three layers deep that nobody chose on purpose? Solar",
+    "tags": [
+      "RCE"
+    ],
+    "title": "What Changes When Your Software Supply Chain Includes AI Writing Your Code?",
+    "url": "https://thehackernews.com/2026/07/what-changes-when-your-software-supply.html"
   }
 ]
