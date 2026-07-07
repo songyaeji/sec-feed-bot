@@ -25,8 +25,9 @@ LIBRARIAN_PROMPT_PATH = os.path.join(BASE_DIR, "librarian_prompt.md")
 TIMEOUT_SECONDS = 300  # 청크당
 MODEL = "claude-haiku-4-5-20251001"
 # 276건을 한 번에 넣으면 모델이 최종 JSON을 못 뱉고 무너진다(실측) —
-# 한 subprocess가 감당할 수 있는 크기로 잘라 순차 처리한다
-BATCH_SIZE = 25
+# 한 subprocess가 감당할 수 있는 크기로 잘라 순차 처리한다.
+# 25건은 300초 타임아웃을 종종 넘겼다(2026-07-07 하루 두 번, 청크째 유실) → 20건
+BATCH_SIZE = 20
 
 
 def _item_to_input(item: dict) -> dict:
@@ -143,21 +144,36 @@ def run_librarian(items: list[dict]) -> dict | None:
 
     chunks = [items[i:i + BATCH_SIZE] for i in range(0, len(items), BATCH_SIZE)]
     merged_verdicts: dict = {}
-    failed = 0
+    lost = 0
     for i, chunk in enumerate(chunks, start=1):
         print(f"[librarian] 배치 {i}/{len(chunks)}: {len(chunk)}건", file=sys.stderr)
         chunk_verdicts = _run_chunk(chunk, prompt)
         if chunk_verdicts is None:
-            failed += 1
-            print(f"[librarian] 배치 {i}/{len(chunks)} 실패 — 해당 청크 스킵", file=sys.stderr)
+            # 실패 배치는 반으로 쪼개 각 1회 재시도 — 타임아웃 원인 대부분이
+            # 배치 크기라서 절반이면 제한 내 완료 확률이 크게 오른다.
+            # 여기서도 실패한 반쪽만 유실(기존 부분 성공 계약 유지)
+            print(f"[librarian] 배치 {i}/{len(chunks)} 실패 — 반으로 쪼개 재시도", file=sys.stderr)
+            mid = (len(chunk) + 1) // 2
+            for j, half in enumerate((chunk[:mid], chunk[mid:]), start=1):
+                if not half:
+                    continue
+                half_verdicts = _run_chunk(half, prompt)
+                if half_verdicts is None:
+                    lost += len(half)
+                    print(
+                        f"[librarian] 배치 {i} 재시도 {j}/2 실패 — {len(half)}건 스킵",
+                        file=sys.stderr,
+                    )
+                    continue
+                merged_verdicts.update(half_verdicts)
             continue
         merged_verdicts.update(chunk_verdicts)
 
     if not merged_verdicts:
         # 부분 성공조차 없으면 기존 계약대로 None — main.py가 fail-open
         return None
-    if failed:
-        print(f"[librarian] 청크 {failed}/{len(chunks)}개 실패 — 부분 성공으로 계속", file=sys.stderr)
+    if lost:
+        print(f"[librarian] 재시도까지 실패 {lost}건 유실 — 부분 성공으로 계속", file=sys.stderr)
 
     return {"verdicts": merged_verdicts}
 
