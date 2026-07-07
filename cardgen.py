@@ -163,7 +163,7 @@ def plan_cards(items: list[dict]):
     추적이고 CVE 엔트리는 그 부록이다.
 
     v21: 총량 상한 10장(Discord 첨부 한도, preflight fatal)을 여기서
-    강제 — 고정 3장(표지+CVE+마무리) + 뉴스 + 목록(있을 때 1)이 넘치면
+    강제 — 고정 2장(표지+CVE) + 뉴스 + 목록(있을 때 1)이 넘치면
     뉴스 최하위부터 목록 카드 맨 앞으로 강등한다. build_link_lines가
     이 반환값 순서를 그대로 쓰므로 트리밍은 반드시 여기서 끝낸다."""
     cve_items = [it for it in items if is_cve_item(it)]
@@ -174,7 +174,7 @@ def plan_cards(items: list[dict]):
 
     cve_rest = pick_top(cve_items, limit=len(cve_items))  # 중요도순 정렬만
     other_rest = [it for it in other_items if id(it) not in top_ids]
-    while 3 + len(top) + (1 if other_rest else 0) > 10:
+    while 2 + len(top) + (1 if other_rest else 0) > 10:
         other_rest.insert(0, top.pop())
     return top, cve_rest, other_rest
 
@@ -199,7 +199,7 @@ def build_cards(
     regions: dict[str, str] | None = None,
 ) -> list[bytes]:
     """표지 1 + 뉴스(pick_top 파급력순) + 목록(나머지 있을 때 1) +
-    오늘의 CVE 1(상시) + 마무리 1(상시)의 PNG 리스트를 돌려준다.
+    오늘의 CVE 1(상시, 항상 맨 마지막 장)의 PNG 리스트를 돌려준다.
     총 10장 이하 — Discord 웹훅 한 번에 첨부 가능한 상한과 같고,
     plan_cards가 초과분을 뉴스→목록으로 강등해 보장한다.
 
@@ -225,8 +225,8 @@ def build_cards(
     date_short = date_full.split(" ")[0]  # "2026.07.06"
 
     # 도트는 전체 장수를 먼저 알아야 그릴 수 있다(v21: 전 카드 footer):
-    # 표지 1 + 뉴스 + (그 외 있을 때 1) + 오늘의 CVE 1(상시) + 마무리 1(상시)
-    total = 1 + len(top) + (1 if other_rest else 0) + 1 + 1
+    # 표지 1 + 뉴스 + (그 외 있을 때 1) + 오늘의 CVE 1(상시)
+    total = 1 + len(top) + (1 if other_rest else 0) + 1
 
     card_htmls = [
         _build_cover(fragments, date_full, top, briefing, stats, total, n=1)
@@ -257,13 +257,6 @@ def build_cards(
                                 N=str(n),
                                 DATE=html.escape(date_short),
                                 DOTS=_dots(fragments, total, n)))
-    # v21: 마무리 카드가 항상 맨 마지막 장 — CVE 리스트에서 뚝 끊기던
-    # 마감(마케팅 리뷰)을 닫는다
-    n = len(card_htmls) + 1
-    card_htmls.append(
-        _build_closing(fragments, briefing, stats, date_short,
-                       dots=_dots(fragments, total, n), n=n)
-    )
     assert len(card_htmls) == total
 
     page_html = shell.replace("<!-- CARDS -->", "\n".join(card_htmls))
@@ -557,23 +550,6 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
         SUBHEAD=subhead,
         ROWS="".join(rows),
         FOOT=html.escape("출처: NVD · 원문 링크는 아래 메시지에"),
-        DOTS=dots,
-    )
-
-
-def _build_closing(fragments: dict, briefing: str | None, stats: dict,
-                   date_short: str, dots: str, n: int) -> str:
-    """마무리 카드(v21 신설) — 항상 맨 마지막 장. 브리핑 한 줄 총평 +
-    내일 예고 + 워드마크 재노출. 브리핑 전문을 싣고 넘침은 CSS overflow
-    hidden + fit 스크립트(.closing-brief 폰트 축소)가 처리한다."""
-    issue_no = stats.get("issue_no")
-    issue_label = f"NO. {issue_no}" if issue_no is not None else ""
-    return _fill(
-        fragments["closing"],
-        N=str(n),
-        DATE=html.escape(date_short),
-        BRIEF=html.escape(" ".join((briefing or "").split())),
-        ISSUE_NO=html.escape(issue_label),
         DOTS=dots,
     )
 

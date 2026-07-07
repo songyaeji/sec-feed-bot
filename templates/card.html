@@ -317,29 +317,6 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   overflow: hidden;
 }
 
-/* v5의 마무리 카드 폐기는 v21에서 번복(마케팅 리뷰: CVE 리스트에서 뚝
-   끊김) — 단 라임 반전이 아니라 본 톤 유지 클로징. 브리핑 한 줄 총평 +
-   내일 예고 + 워드마크 재노출 */
-.closing-body {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 64px;
-  gap: 44px;
-}
-.closing-eyebrow { font-size: 32px; color: #C6FF33; letter-spacing: 0.15em; }
-.closing-brief {
-  font-size: 58px;
-  font-weight: 800;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
-  text-wrap: pretty;
-  overflow: hidden;
-}
-.closing-next { font-size: 32px; color: #8A8A84; }
-.closing-next .lime { color: #C6FF33; }
 </style>
 <script>
 /* cardgen._render가 폰트 로드 후 page.evaluate("fitAllCards()")로 호출.
@@ -352,7 +329,7 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
    전제(키워드는 명사구, 태그 속성에 종결어미 없음). */
 function fitAllCards() {
   const SENT = /(?<=[.!?다요함음됨임])\s+/;
-  document.querySelectorAll(".news-headline, .list-headline, .closing-brief").forEach((el) => {
+  document.querySelectorAll(".news-headline, .list-headline").forEach((el) => {
     let size = parseFloat(getComputedStyle(el).fontSize);
     while (el.scrollHeight > el.clientHeight + 2 && size > 44) {
       size -= 4;
@@ -538,21 +515,3 @@ function fitAllCards() {
 <!-- BEGIN term -->
 <div class="term"><span class="mono term-label">용어</span><span>{{TEXT}}</span></div>
 <!-- END term -->
-
-<!-- BEGIN closing -->
-<div class="card closing" id="card-{{N}}">
-  <div class="bar bar-head">
-    <div class="mono f30 brand">TREND OF SECURITY</div>
-    <div class="mono f30 meta">{{DATE}}</div>
-  </div>
-  <div class="closing-body">
-    <div class="mono closing-eyebrow">CLOSING</div>
-    <div class="closing-brief">{{BRIEF}}</div>
-    <div class="mono closing-next">내일 아침 <span class="lime">07:00</span> · MORNING ToS로 다시 만나요</div>
-  </div>
-  <div class="bar bar-foot">
-    <div class="mono f28 meta foot-left">{{ISSUE_NO}}</div>
-    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">끝 →</div></div>
-  </div>
-</div>
-<!-- END closing -->
