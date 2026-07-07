@@ -381,7 +381,7 @@ def main() -> None:
                         action = item_verdict.get("action")
                         # 사서의 한국어 제목·요약 — 카드뉴스에 실린다(요약이 메인).
                         # 누락 시 cardgen이 피드 원문으로 폴백
-                        for key in ("title_ko", "summary_ko"):
+                        for key in ("title_ko", "summary_ko", "why_ko", "term_ko"):
                             value = item_verdict.get(key)
                             if value:
                                 item[key] = value

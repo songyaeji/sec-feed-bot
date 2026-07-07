@@ -109,12 +109,33 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 /* v7: 표지 줄글(briefing 서브) 폐기 — 해시태그 행이 표지 요약을 겸한다 */
 .cover-tags { display: flex; flex-wrap: wrap; gap: 20px 32px; }
 .cover-tag { font-size: 34px; font-weight: 600; color: #C6FF33; white-space: nowrap; }
+/* v21: 표지 티저 — 상단 공백(리뷰 지적)에 오늘의 대표 사건 1줄.
+   margin-bottom:auto로 티저는 상단, 나머지 히어로 블록은 중앙 유지 */
+.cover-teaser { margin-bottom: auto; padding-top: 24px; }
+.teaser-label { font-size: 26px; color: #8A8A84; letter-spacing: 0.15em; }
+.teaser-title {
+  margin-top: 20px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #C8C8C2;
+  overflow: hidden;
+  max-height: 2.7em;
+}
+.cover-hero .cover-eyebrow { margin-top: auto; }
 /* 회차 없는 날에도 도트가 정중앙을 지키도록 좌우 슬롯에 균등 flex */
 .foot-slot { flex: 1; }
 .foot-slot.right { text-align: right; }
 .dots { display: flex; gap: 12px; align-items: center; flex: none; }
 .dot { width: 12px; height: 12px; border-radius: 6px; background: #3A3A36; flex: none; }
 .dot.active { width: 48px; background: #C6FF33; }
+/* v21: 내지 footer — 도트를 우측 화살표 옆에 묶어 좌측 출처가 한 줄을
+   온전히 쓴다(중앙 도트는 긴 출처명("Google Security Blog")을 두 줄로
+   꺾던 문제). 도트도 내지에선 소형 */
+.foot-left { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; }
+.foot-group { flex: none; display: flex; align-items: center; gap: 28px; }
+.card:not(.cover) .dot { width: 10px; height: 10px; }
+.card:not(.cover) .dot.active { width: 36px; }
 
 /* ---------- 뉴스 카드 ---------- */
 .news-body {
@@ -143,13 +164,11 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   line-height: 1.22;
   letter-spacing: -0.02em;
   text-wrap: pretty;
-  /* v11: 본문과 같이 오른쪽 끝을 맞춘다(justify). keep-all(카드 전역)만 두면
-     줄당 어절이 2~3개뿐이라 justify가 어절 사이를 과하게 벌린다 → 본문처럼
-     word-break: normal로 한글을 음절 단위로 줄바꿈해 줄을 촘촘히 채운 뒤
-     justify가 나머지 미세공간만 분배하게 한다(라틴 약어 LLM·MCP는 안 쪼개짐).
-     마지막 줄은 justify가 늘리지 않아 자연스럽게 왼쪽에서 끝난다 */
-  text-align: justify;
-  word-break: normal;
+  /* v21: justify+음절 줄바꿈(v11) 폐기 — 리뷰에서 "기본값→기|본값" 등
+     합성어 음절 분리와 어절 간격 벌어짐이 동시 반려됨. 매거진 관례대로
+     좌측 정렬 + 어절 단위 줄바꿈(keep-all, 카드 전역값 상속). 오른쪽
+     래그는 허용한다 */
+  text-align: left;
   flex: none;
   overflow: hidden;
 }
@@ -159,19 +178,21 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
    전부 폐기(사용자 결정: 이미지·diagram 없이 타이포만). 매거진식 문법으로
    대체 — 헤드라인 아래 라임 rule, 본문 확대, 핵심 수치 pull-out */
 .head-rule { width: 120px; height: 6px; background: #C6FF33; flex: none; }
-/* v7: 오른쪽 래그(들쭉날쭉한 공백) 제거 — 양쪽 정렬 + 한글 음절 단위
-   줄바꿈 허용(word-break: normal; 라틴 단어는 안 쪼개진다). 카드 전역
-   keep-all을 본문에서만 푼다 */
+/* v21: justify(v7) 폐기 — 헤드라인과 같은 사유(음절 분리·간격 벌어짐 반려).
+   본문은 문장 청크(<p>)로 분절: 청크1 = 핵심 사실, 청크2 = 부가 맥락.
+   불릿 기호 없이 청크 사이 여백만으로 시선 쉼 지점을 만든다(구성위원 판정:
+   완결형 문장 유지, 개조식 회귀 금지) */
 .news-text {
   font-size: 44px;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #C8C8C2;
-  text-align: justify;
-  word-break: normal;
+  text-align: left;
   flex: 1;
   min-height: 0;
   overflow: hidden;
 }
+.news-text p { margin: 0 0 0.55em; }
+.news-text p:last-child { margin-bottom: 0; }
 /* v20: 핵심 수치 pull-out — 본문 속 수치구를 뽑아 카드 하단에 크게.
    캡션은 원문 문장의 잔여부라 수치와 이어 읽힌다 ("100만 달러" + "를 요구") */
 .pullout {
@@ -191,6 +212,28 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   white-space: nowrap;
 }
 .pullout-cap { font-size: 34px; color: #8A8A84; min-width: 0; }
+/* v21: WHY 블록 — 수치 pull-out이 없는 카드의 하단 슬롯. "왜 중요한가"
+   1문장(librarian why_ko). 리뷰 반려된 하단 공백·밀도 편차를 채우는 담당 */
+.why {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  border-top: 2px solid #2A2A26;
+  padding-top: 40px;
+}
+.why-label { font-size: 26px; color: #C6FF33; letter-spacing: 0.15em; flex: none; }
+.why-text { font-size: 34px; line-height: 1.5; color: #C8C8C2; min-width: 0; }
+/* v21: 용어 각주 — 낯선 고유명사 최대 1개 한 줄 정의(librarian term_ko) */
+.term {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  font-size: 26px;
+  color: #8A8A84;
+}
+.term-label { color: #C6FF33; flex: none; }
 /* v20: CVE 빈 상태 — 발행 기간에 신규 CVE가 없었음을 명시(생략 아님) */
 .cve-empty {
   flex: 1;
@@ -256,9 +299,47 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   font-size: 28px;
   color: #8A8A84;
 }
+/* v21: 리스트 서브헤드 — CVE가 단일 제품 일괄 공개일 때 맥락 한 줄 */
+.list-subhead { font-size: 30px; color: #8A8A84; flex: none; margin-top: -20px; }
+/* v21: CVE 행 2단 구조 — 리뷰 전원 반려된 "제목 말줄임" 해소.
+   1행 = ID+CVSS(메타), 2행 = 취약점 설명 전문. 행당 ~97px × 최대 8행 */
+.cve-row { display: block; padding: 14px 0; border-bottom: 2px solid #2A2A26; }
+.cve-row-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
+.cve-id { font-size: 24px; color: #8A8A84; }
+.cve-score { font-size: 24px; color: #C6FF33; flex: none; }
+.cve-desc {
+  margin-top: 4px;
+  font-size: 31px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #F2F2EF;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-/* v5: 마무리(라임 반전) 카드 폐기 — 10장 한도를 뉴스 8장에 쓰기 위해
-   목록 카드(그 밖의 소식)가 마지막 장을 겸한다 */
+/* v5의 마무리 카드 폐기는 v21에서 번복(마케팅 리뷰: CVE 리스트에서 뚝
+   끊김) — 단 라임 반전이 아니라 본 톤 유지 클로징. 브리핑 한 줄 총평 +
+   내일 예고 + 워드마크 재노출 */
+.closing-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 64px;
+  gap: 44px;
+}
+.closing-eyebrow { font-size: 32px; color: #C6FF33; letter-spacing: 0.15em; }
+.closing-brief {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+  overflow: hidden;
+}
+.closing-next { font-size: 32px; color: #8A8A84; }
+.closing-next .lime { color: #C6FF33; }
 </style>
 <script>
 /* cardgen._render가 폰트 로드 후 page.evaluate("fitAllCards()")로 호출.
@@ -271,7 +352,7 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
    전제(키워드는 명사구, 태그 속성에 종결어미 없음). */
 function fitAllCards() {
   const SENT = /(?<=[.!?다요함음됨임])\s+/;
-  document.querySelectorAll(".news-headline, .list-headline").forEach((el) => {
+  document.querySelectorAll(".news-headline, .list-headline, .closing-brief").forEach((el) => {
     let size = parseFloat(getComputedStyle(el).fontSize);
     while (el.scrollHeight > el.clientHeight + 2 && size > 44) {
       size -= 4;
@@ -279,16 +360,33 @@ function fitAllCards() {
     }
   });
   document.querySelectorAll(".news-text").forEach((el) => {
-    const sentences = el.innerHTML.trim().split(SENT);
+    /* v21: 본문이 문장 청크 <p>로 분절됨 — 넘치면 뒤 청크부터 통째로
+       덜어내고(최소 1개 유지), 그래도 넘치면 청크 내부 문장 절단 후
+       폰트 축소. 완결형 문장 경계만 자른다는 원칙은 동일 */
+    const chunks = Array.from(el.querySelectorAll("p"));
+    while (el.scrollHeight > el.clientHeight + 2 && chunks.length > 1) {
+      chunks.pop().remove();
+    }
+    const last = el.querySelector("p:last-child") || el;
+    const sentences = last.innerHTML.trim().split(SENT);
     while (el.scrollHeight > el.clientHeight + 2 && sentences.length > 1) {
       sentences.pop();
-      el.innerHTML = sentences.join(" ");
+      last.innerHTML = sentences.join(" ");
     }
     let size = parseFloat(getComputedStyle(el).fontSize);
     while (el.scrollHeight > el.clientHeight + 2 && size > 30) {
       size -= 2;
       el.style.fontSize = size + "px";
     }
+  });
+  /* v21: CVE 설명 한 줄 맞춤 — 폰트 축소(하한 24px), 그래도 넘치면 말줄임 */
+  document.querySelectorAll(".cve-desc").forEach((el) => {
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollWidth > el.clientWidth + 1 && size > 24) {
+      size -= 1;
+      el.style.fontSize = size + "px";
+    }
+    if (el.scrollWidth > el.clientWidth + 1) el.style.textOverflow = "ellipsis";
   });
 }
 </script>
@@ -308,6 +406,7 @@ function fitAllCards() {
     <div class="mono f30 meta">{{DATE_FULL}}</div>
   </div>
   <div class="cover-hero">
+    {{TEASER_BLOCK}}
     <div class="mono cover-eyebrow">MORNING ToS</div>
     <div class="cover-headline">{{DATE_HEAD}}<br>보안 이슈 <span class="lime">{{COUNT}}가지</span></div>
     {{TAGS_BLOCK}}
@@ -346,11 +445,12 @@ function fitAllCards() {
     <div class="news-headline {{TITLE_LINES}}">{{TITLE}}</div>
     <div class="head-rule"></div>
     <div class="news-text">{{SUMMARY}}</div>
-    {{PULLOUT}}
+    {{BOTTOM}}
+    {{TERM}}
   </div>
   <div class="bar bar-foot">
-    <div class="mono f28 meta">출처: {{SOURCE}}</div>
-    <div class="mono f28 lime">→</div>
+    <div class="mono f28 meta foot-left">출처: {{SOURCE}}</div>
+    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">→</div></div>
   </div>
 </div>
 <!-- END news -->
@@ -375,14 +475,26 @@ function fitAllCards() {
   </div>
   <div class="list-body">
     <div class="list-headline">{{HEADING}} <span class="lime">{{COUNT}}건</span></div>
+    {{SUBHEAD}}
     <div class="list-rows">{{ROWS}}</div>
   </div>
   <div class="bar bar-foot">
-    <div class="mono f28 meta">원문 링크는 아래 메시지에</div>
-    <div class="mono f28 lime">→</div>
+    <div class="mono f28 meta foot-left">{{FOOT}}</div>
+    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">→</div></div>
   </div>
 </div>
 <!-- END list -->
+
+<!-- BEGIN list_subhead -->
+<div class="list-subhead">{{TEXT}}</div>
+<!-- END list_subhead -->
+
+<!-- BEGIN cve_row -->
+<div class="cve-row">
+  <div class="cve-row-head"><span class="mono cve-id">{{ID}}</span><span class="mono cve-score">CVSS {{SCORE}}</span></div>
+  <div class="cve-desc">{{DESC}}</div>
+</div>
+<!-- END cve_row -->
 
 <!-- BEGIN list_row -->
 <div class="list-row"><span class="row-bullet"></span><span class="row-title">{{TITLE}}</span><span class="mono row-source">{{SOURCE}}</span></div>
@@ -406,8 +518,41 @@ function fitAllCards() {
     <div class="cve-empty mono">이번 호 기간에 등재된 신규 CVE가 없습니다.</div>
   </div>
   <div class="bar bar-foot">
-    <div class="mono f28 meta"></div>
-    <div class="mono f28 lime">→</div>
+    <div class="mono f28 meta foot-left"></div>
+    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">→</div></div>
   </div>
 </div>
 <!-- END cve_empty -->
+
+<!-- BEGIN cover_teaser -->
+<div class="cover-teaser">
+  <div class="mono teaser-label">TODAY'S HEADLINE</div>
+  <div class="teaser-title">{{TITLE}}</div>
+</div>
+<!-- END cover_teaser -->
+
+<!-- BEGIN why -->
+<div class="why"><span class="mono why-label">WHY</span><span class="why-text">{{TEXT}}</span></div>
+<!-- END why -->
+
+<!-- BEGIN term -->
+<div class="term"><span class="mono term-label">용어</span><span>{{TEXT}}</span></div>
+<!-- END term -->
+
+<!-- BEGIN closing -->
+<div class="card closing" id="card-{{N}}">
+  <div class="bar bar-head">
+    <div class="mono f30 brand">TREND OF SECURITY</div>
+    <div class="mono f30 meta">{{DATE}}</div>
+  </div>
+  <div class="closing-body">
+    <div class="mono closing-eyebrow">CLOSING</div>
+    <div class="closing-brief">{{BRIEF}}</div>
+    <div class="mono closing-next">내일 아침 <span class="lime">07:00</span> · MORNING ToS로 다시 만나요</div>
+  </div>
+  <div class="bar bar-foot">
+    <div class="mono f28 meta foot-left">{{ISSUE_NO}}</div>
+    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">끝 →</div></div>
+  </div>
+</div>
+<!-- END closing -->

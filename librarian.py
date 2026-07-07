@@ -56,9 +56,10 @@ _SENT_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
 
 
 def _style_ok(text: str) -> bool:
-    """summary_ko 문체 게이트 — 모든 문장이 완결형 종결어미('~다')로
+    """summary_ko/why_ko 문체 게이트 — 모든 문장이 완결형 종결어미('~다')로
     끝나는지. 명사형(개조식) 종결("~플랫폼 분석.")은 카드 본문 품질
-    기준 미달(사용자 피드백 v20 — 프롬프트 규칙만으로는 안 지켜짐)."""
+    기준 미달(사용자 피드백 v20 — 프롬프트 규칙만으로는 안 지켜짐).
+    term_ko("용어 — 정의" 명사구)는 검사 대상이 아니다."""
     plain = text.replace("**", "").strip()
     if not plain:
         return True
@@ -138,21 +139,27 @@ def _run_chunk(chunk: list[dict], prompt: str) -> dict | None:
 
 
 def _fix_styles(verdicts: dict, model: str, timeout: int) -> None:
-    """개조식 summary_ko를 완결형으로 고치는 교정 재호출 1회.
+    """개조식 summary_ko/why_ko를 완결형으로 고치는 교정 재호출 1회.
     실패해도 원문 유지(fail-open) — verdicts를 제자리에서 고친다."""
-    bad = {
-        vid: v["summary_ko"]
-        for vid, v in verdicts.items()
-        if v.get("summary_ko") and not _style_ok(v["summary_ko"])
-    }
+    bad: dict = {}
+    for vid, v in verdicts.items():
+        fields = {
+            key: v[key]
+            for key in ("summary_ko", "why_ko")
+            if v.get(key) and not _style_ok(v[key])
+        }
+        if fields:
+            bad[vid] = fields
     if not bad:
         return
 
     prompt = (
-        "아래 보안 뉴스 요약들은 명사형(개조식)으로 끝나는 문장이 있다. "
-        "각 요약의 뜻·키워드(**별표 마커** 포함)를 그대로 유지하면서, "
+        "아래 보안 뉴스 텍스트들은 명사형(개조식)으로 끝나는 문장이 있다. "
+        "각 텍스트의 뜻·키워드(**별표 마커** 포함)를 그대로 유지하면서, "
         "모든 문장이 '~했다/~한다/~이다' 완결형 종결어미로 끝나게만 고쳐 써라. "
-        'JSON 하나만 출력: {"<id>": "<고친 요약>", ...}\n\n'
+        "입력과 같은 구조(id·필드명 유지)로 JSON 하나만 출력: "
+        '{"<id>": {"summary_ko": "<고친 요약>", "why_ko": "<고친 문장>"}, ...} '
+        "— 각 id에는 입력에 있던 필드만 넣는다.\n\n"
         + json.dumps(bad, ensure_ascii=False)
     )
 
@@ -176,17 +183,22 @@ def _fix_styles(verdicts: dict, model: str, timeout: int) -> None:
             json.JSONDecodeError, KeyError, TypeError, ValueError):
         fixed = None
 
+    total = sum(len(fields) for fields in bad.values())
     if not isinstance(fixed, dict):
-        print(f"[librarian] 문체 교정 실패 — 원문 발송 {len(bad)}건", file=sys.stderr)
+        print(f"[librarian] 문체 교정 실패 — 원문 발송 {total}건", file=sys.stderr)
         return
 
     passed = 0
-    for vid in bad:
-        new_summary = fixed.get(vid)
-        if isinstance(new_summary, str) and new_summary.strip() and _style_ok(new_summary):
-            verdicts[vid]["summary_ko"] = new_summary
-            passed += 1
-    print(f"[librarian] 개조식 요약 {len(bad)}건 교정 → {passed}건 통과", file=sys.stderr)
+    for vid, fields in bad.items():
+        fixed_fields = fixed.get(vid)
+        if not isinstance(fixed_fields, dict):
+            continue
+        for key in fields:
+            new_text = fixed_fields.get(key)
+            if isinstance(new_text, str) and new_text.strip() and _style_ok(new_text):
+                verdicts[vid][key] = new_text
+                passed += 1
+    print(f"[librarian] 개조식 텍스트 {total}건 교정 → {passed}건 통과", file=sys.stderr)
 
 
 def run_librarian(items: list[dict]) -> dict | None:
@@ -278,7 +290,9 @@ def summarize(items: list[dict]) -> dict | None:
         "키워드 규칙: 한국어, 공백 없이 (표지에 #키워드 해시태그로 실린다. "
         "예: \"AI에이전트\", \"랜섬웨어\", \"공급망공격\"). 보안 통용 약어"
         "(APT·LLM)만 영문 허용, 그 외는 한국어로 쓴다. AI 관련 키워드가 "
-        "있으면 우선 포함한다.\n\n"
+        "있으면 우선 포함한다. 키워드는 항목 본문이 지지하는 것만 쓴다 — "
+        "암호화 없는 데이터 유출 협박은 \"랜섬웨어\"가 아니라 "
+        "\"데이터협박\"으로 쓴다.\n\n"
         "출력 형식 (설명 텍스트·코드블록 없이 JSON 그 자체):\n"
         '{"briefing": "...", "keywords": ["...", ...]}\n\n'
         "오늘의 항목:\n" + "\n".join(lines)
