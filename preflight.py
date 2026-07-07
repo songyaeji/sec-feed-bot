@@ -4,7 +4,7 @@ digest 카드뉴스가 실제로 나가기 전에, 운영 가이드라인 준수
 결정적(deterministic)으로 점검한다 — LLM·네트워크 없이 stdlib만 쓴다.
 
 점검 근거가 되는 가이드라인:
-- 카드·링크는 정말 중요한 것만 소수 (config max_digest_items 상한)
+- 카드·링크는 정말 중요한 것만 소수 (config max_news_items + max_cve_items 상한)
 - 카드는 전면 한국어 (사서가 title_ko/summary_ko 생성)
 - Discord 웹훅 제약: 메시지당 첨부 10개, 파일 8MB
   (출처: Discord Developer Docs — Uploading Files / message limits)
@@ -28,7 +28,8 @@ _WEBHOOK_PATTERN = "discord.com/api/webhooks"
 _HANGUL_RE = re.compile(r"[가-힣]")
 _URL_RE = re.compile(r"https?://")
 
-# 정상 카드 구성은 표지 1 + 뉴스 1~8 + 목록 0~1 = 2~10장.
+# 정상 카드 구성은 표지 1 + 뉴스 0~7 + 목록 0~2 = 2~10장 (v16: 뉴스 7 +
+# '오늘의 CVE' 1 = 9장이 정상 상한이나, 과도기 구성 여지로 10까지 허용).
 # 이 범위를 벗어나면 렌더 로직 이상 신호로 보고 경고만 남긴다
 _EXPECTED_PNG_MIN = 2
 _EXPECTED_PNG_MAX = 10
@@ -70,10 +71,13 @@ def check_card_news(
         )
 
     # --- FATAL: 선별 상한(가이드라인 '정말 중요한 것만 소수') ----------
-    max_digest = config.get("max_digest_items", 12)
-    if len(items) > max_digest:
+    # v16: 뉴스·CVE 상한 분리 — 총량은 두 상한의 합
+    max_items = (config.get("max_news_items", 7)
+                 + config.get("max_cve_items", 10))
+    if len(items) > max_items:
         fatal.append(
-            f"발송 항목 {len(items)}건 — 상한 max_digest_items={max_digest} 초과(선별 로직 버그 의심)"
+            f"발송 항목 {len(items)}건 — 상한 max_news_items+max_cve_items={max_items} "
+            f"초과(선별 로직 버그 의심)"
         )
 
     # --- FATAL: 카드 번호 ↔ 링크 줄 1:1 대응 ---------------------------

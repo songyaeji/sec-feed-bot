@@ -221,8 +221,12 @@ max_items_per_run: 25
 
 # 아침 다이제스트 카드·링크에 싣는 항목 상한 — 나머지는 위키에만 적립된다.
 # 사서(librarian)가 매긴 importance(1~5)가 digest_min_importance 이상인 것만
-# 후보가 되고, 그중 중요도순 상위 max_digest_items건만 카드뉴스에 실린다
-max_digest_items: 12
+# 후보가 되고, 중요도순으로 뉴스·CVE 각각의 상한까지 실린다 (v16: 상한 분리 —
+# CVE가 뉴스 슬롯을 잠식하지 않게).
+# 뉴스 7 = 표지1+뉴스7+CVE목록1 = 총 9장(사용자 결정, 첨부 상한 10 이내),
+# CVE 10 = '오늘의 CVE' 목록 카드 1장의 행 상한(LIST_ROWS)과 동일
+max_news_items: 7
+max_cve_items: 10
 digest_min_importance: 4
 
 discord:

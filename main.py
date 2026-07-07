@@ -371,12 +371,22 @@ def main() -> None:
                 briefing = None
                 wiki_new = None
                 brief = None
-                max_digest = config.get("max_digest_items", 12)
+                # v16: 뉴스·CVE 상한 분리 — CVE(kev/cvss 구조 항목)가 뉴스
+                # 슬롯을 잠식하지 않게 각자 상한까지 담는다
+                max_news = config.get("max_news_items", 7)
+                max_cve = config.get("max_cve_items", 10)
                 min_importance = config.get("digest_min_importance", 4)
+
+                def _cap_split(pool: list[dict], key) -> list[dict]:
+                    news = sorted((it for it in pool if not cardgen.is_cve_item(it)), key=key)
+                    cves = sorted((it for it in pool if cardgen.is_cve_item(it)), key=key)
+                    return news[:max_news] + cves[:max_cve]
+
                 if verdict is None:
                     print("[main] 위키 사서 실패 — fail-open", file=sys.stderr)
                     # fail-open이어도 카드·링크 상한은 지킨다: 휴리스틱 상위만 원문으로
-                    to_send = cardgen.pick_top(merged, limit=max_digest)
+                    to_send = _cap_split(
+                        merged, key=lambda it: -cardgen.heuristic_score(it))
                 else:
                     action_counts = {"new": 0, "update": 0, "skip_duplicate": 0, "no_wiki": 0}
                     wiki_worthy = []
@@ -412,10 +422,10 @@ def main() -> None:
                             f"[main] importance {min_importance}+ 없음 — 상위 {len(eligible)}건 폴백",
                             file=sys.stderr,
                         )
-                    to_send = sorted(
+                    to_send = _cap_split(
                         eligible,
                         key=lambda it: (-it.get("importance", 3), -cardgen.heuristic_score(it)),
-                    )[:max_digest]
+                    )
                     wiki_only = len(wiki_worthy) - len(to_send)
                     if wiki_only > 0:
                         print(f"[main] 위키 전용 {wiki_only}건 (카드·링크 제외)", file=sys.stderr)

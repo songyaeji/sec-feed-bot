@@ -32,7 +32,7 @@ WEEKDAYS_EN = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 CARD_WIDTH = 1080
 CARD_HEIGHT = 1350
 
-MAX_ISSUE_CARDS = 7     # v6: 표지 1 + 뉴스 7 + 목록 1 = 9장
+MAX_ISSUE_CARDS = 7     # v16: 표지 1 + 뉴스 7 + 오늘의 CVE 1 = 9장(사용자 결정)
 LIST_ROWS = 10          # 목록 카드 1장의 행 상한 (넘치면 "…외 N건")
 MAX_TAG_PILLS = 2       # 카테고리·긴급 pill 외 태그 pill 상한 — 한 줄 유지
 
@@ -147,7 +147,7 @@ def pick_top(items: list[dict], limit: int = MAX_ISSUE_CARDS) -> list[dict]:
     return sorted(items, key=heuristic_score, reverse=True)[:limit]
 
 
-def _is_cve_item(item: dict) -> bool:
+def is_cve_item(item: dict) -> bool:
     """CVE 피드 항목(KEV·NVD 등 구조적 취약점 엔트리) 여부. 기사 본문에
     CVE가 언급된 뉴스는 여기 해당하지 않는다 — kev/cvss 구조 필드로만
     판별해, NVD·KEV 덤프가 카드를 도배하는 것만 걸러낸다(사용자 v10)."""
@@ -162,8 +162,8 @@ def plan_cards(items: list[dict]):
     승격'도 폐기(사용자 결정). 전부 '오늘의 CVE' 코너(맨 마지막 장)로
     모으고, 표지 이슈 건수에서도 뺀다. 카드뉴스의 목적은 보안 '동향'
     추적이고 CVE 엔트리는 그 부록이다."""
-    cve_items = [it for it in items if _is_cve_item(it)]
-    other_items = [it for it in items if not _is_cve_item(it)]
+    cve_items = [it for it in items if is_cve_item(it)]
+    other_items = [it for it in items if not is_cve_item(it)]
 
     top = pick_top(other_items)
     top_ids = {id(it) for it in top}
