@@ -415,15 +415,20 @@ def _build_news(
     # v6: 이미지는 유의미한 소스(image_sources)만. 세로 예산상 이미지
     # 카드는 제목 2줄, 없으면 3줄 — 넘치는 본문은 fit 스크립트가 문장
     # 경계로 줄여 '…' 없이 끝맺는다
-    # v9: 이미지 우선순위 — ① 소스 이미지(품질 게이트 통과 시)
-    # ② CVE/CVSS 인포패널(우리가 그리는 타이포 비주얼 — 렌더라 AI 티 없음)
-    # ③ 키워드 패널(v13) — 텍스트만 있는 카드가 허전하다는 사용자 결정.
-    # 어떤 카드든 비주얼이 있으므로 제목은 항상 2줄 예산
-    img_path = None
-    if item.get("source") in image_sources:
+    # v18: 이미지 우선순위 — ① 소스 og:image(품질 게이트 통과 시)
+    # ② figure 서브에이전트의 SVG 다이어그램(검증 통과분만, figure.py)
+    # ③ CVE/CVSS 인포패널 ④ 키워드 흐름도(최종 폴백).
+    # 어떤 카드든 비주얼이 있으므로 제목은 항상 2줄 예산.
+    # _img_path는 figure 단계가 선확인한 캐시 — ""는 "시도했으나 없음"
+    # 표식이라 재fetch하지 않는다
+    img_path = item.get("_img_path")
+    if img_path is None and item.get("source") in image_sources:
         img_path = _fetch_article_image(item, slot_index=n)
     if img_path:
         img_block = _fill(fragments["img_photo"], SRC=Path(img_path).as_uri())
+    elif item.get("figure_svg"):
+        # figure.py의 _validate_svg 게이트를 통과한 SVG만 여기 도달한다
+        img_block = _fill(fragments["fig_panel"], SVG=item["figure_svg"])
     else:
         img_block = (_build_info_panel(fragments, item)
                      or _build_keyword_panel(fragments, item))

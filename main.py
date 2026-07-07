@@ -14,6 +14,7 @@ import yaml
 
 import cardgen
 import dedup as dedup_lib
+import figure
 import judge
 import librarian
 import notify
@@ -433,6 +434,10 @@ def main() -> None:
                     brief = librarian.summarize(to_send)
                     if brief:
                         briefing = brief.get("briefing")
+                # v18: figure 서브에이전트 — og:image 없는 뉴스 카드에
+                # 논문풍 SVG 다이어그램을 붙인다 (fail-open, 실패 시
+                # cardgen이 키워드 흐름도로 폴백)
+                figure.attach_figures(to_send, config, _card_image_sources(config))
                 # stats line on the digest header embed; wiki_new is left
                 # out entirely (not shown as 0) when the librarian failed
                 # open, since "no new wiki topics" and "wiki didn't run"
