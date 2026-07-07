@@ -356,6 +356,15 @@ function fitAllCards() {
       el.style.fontSize = size + "px";
     }
   });
+  /* v21.1: WHY 한 줄 맞춤 — 폰트 축소(하한 28px)로 한 줄을 노리고,
+     그래도 안 되면 두 줄 수용(말줄임 없음 — 문장 정보 보존이 우선) */
+  document.querySelectorAll(".why-text").forEach((el) => {
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollHeight > parseFloat(getComputedStyle(el).lineHeight) + 2 && size > 28) {
+      size -= 1;
+      el.style.fontSize = size + "px";
+    }
+  });
   /* v21: CVE 설명 한 줄 맞춤 — 폰트 축소(하한 24px), 그래도 넘치면 말줄임 */
   document.querySelectorAll(".cve-desc").forEach((el) => {
     let size = parseFloat(getComputedStyle(el).fontSize);
@@ -457,7 +466,7 @@ function fitAllCards() {
   </div>
   <div class="bar bar-foot">
     <div class="mono f28 meta foot-left">{{FOOT}}</div>
-    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">→</div></div>
+    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">{{ARROW}}</div></div>
   </div>
 </div>
 <!-- END list -->
@@ -496,7 +505,7 @@ function fitAllCards() {
   </div>
   <div class="bar bar-foot">
     <div class="mono f28 meta foot-left"></div>
-    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">→</div></div>
+    <div class="foot-group"><div class="dots">{{DOTS}}</div><div class="mono f28 lime">end.</div></div>
   </div>
 </div>
 <!-- END cve_empty -->

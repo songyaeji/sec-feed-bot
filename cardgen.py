@@ -474,6 +474,7 @@ def _list_card(fragments: dict, heading: str, rest: list[dict],
         ROWS="".join(rows),
         FOOT=html.escape(foot),
         DOTS=dots,
+        ARROW="→",
     )
 
 
@@ -551,6 +552,8 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
         ROWS="".join(rows),
         FOOT=html.escape("출처: NVD · 원문 링크는 아래 메시지에"),
         DOTS=dots,
+        # CVE 목록은 항상 맨 마지막 장 — 다음 장 화살표 대신 종결 표기
+        ARROW="end.",
     )
 
 
