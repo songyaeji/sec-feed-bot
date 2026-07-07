@@ -15,7 +15,7 @@
 }
 @font-face {
   font-family: "Pretendard";
-  font-weight: 500;
+  font-weight: 600;
   src: url("../assets/fonts/Pretendard-SemiBold.otf") format("opentype");
 }
 @font-face {
@@ -82,7 +82,6 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 }
 .bar-head { padding: 56px 64px; border-bottom: 2px solid #2A2A26; }
 .bar-foot { padding: 44px 64px; border-top: 2px solid #2A2A26; }
-.cover .bar-foot { padding: 48px 64px; }
 .f30 { font-size: 30px; }
 .f28 { font-size: 28px; }
 .meta { color: #8A8A84; }
@@ -195,9 +194,10 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   align-items: baseline;
   gap: 20px;
   font-size: 26px;
+  line-height: 1.5;
   color: #8A8A84;
 }
-.term-label { color: #C6FF33; flex: none; }
+.term-label { color: #C6FF33; letter-spacing: 0.15em; flex: none; }
 /* v20: CVE 빈 상태 — 발행 기간에 신규 CVE가 없었음을 명시(생략 아님) */
 .cve-empty {
   flex: 1;
@@ -223,13 +223,13 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 .list-headline {
   font-size: 68px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.22;
   letter-spacing: -0.02em;
   flex: none;
 }
 .list-rows { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
 /* 행 높이 예산: 본문 818px에 최대 10행(또는 9행+"…외 N건")이 들어가야
-   하므로 행당 81px 이하로 맞춘다 (패딩 18×2 + 제목 43 + 보더 2) */
+   하므로 행당 81px 이하로 맞춘다 (패딩 18×2 + 제목 42 + 보더 2) */
 .list-row {
   display: flex;
   align-items: center;
@@ -241,7 +241,7 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 .row-title {
   flex: 1;
   min-width: 0;
-  font-size: 33px;
+  font-size: 32px;
   line-height: 1.3;
   font-weight: 700;
   color: #F2F2EF;
@@ -273,7 +273,7 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 .cve-score { font-size: 24px; color: #C6FF33; flex: none; }
 .cve-desc {
   margin-top: 4px;
-  font-size: 31px;
+  font-size: 32px;
   line-height: 1.3;
   font-weight: 700;
   color: #F2F2EF;
