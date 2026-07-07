@@ -885,5 +885,156 @@
     ],
     "title": "What Changes When Your Software Supply Chain Includes AI Writing Your Code?",
     "url": "https://thehackernews.com/2026/07/what-changes-when-your-software-supply.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-4375",
+    "published": "2026-07-07T06:16:22.360",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The DoLeads Integrator WordPress plugin through 0.65, wp2epub WordPress plugin through 0.65 have been seen to be used to achieve RCE, once they are added adding to a blog, for example using a vulnerability where unclosed extensions from wordpress.org can be installed by unauthorized users.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-4375 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4375"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-33264",
+    "published": "2026-07-07T10:16:40.443",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A bug in `BaseSerialization.deserialize()` allowed unrestricted `import_string()` of attacker-controlled class paths when the Scheduler / API Server loaded a serialized DAG: a DAG author could embed a malicious trigger into a DAG to gain remote code execution on the API Server / Scheduler process, c",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-33264 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33264"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-45169",
+    "published": "2026-06-12T05:16:32.703",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Idira Privileged Access Manager (PAM) Self-Hosted Vault versions prior to 15.0.3, 14.6.5, 14.2.7, and 14.0.8 exhibit a validation vulnerability. Under specific circumstances and configuration scenarios, processing unexpected input could potentially lead to an unexpected service termination, resultin",
+    "tags": [],
+    "title": "CVE-2026-45169 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45169"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-44941",
+    "published": "2026-07-02T16:16:30.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A relative path traversal in the \"keyhint\" option in repomd.xml parsing of libzypp before 17.38.12 can be used by attackers able to supply a malicious repository to inject or overwrite files in the target system as root.",
+    "tags": [],
+    "title": "CVE-2026-44941 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44941"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-40138",
+    "published": "2026-07-06T17:16:30.793",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A critical pre-authentication vulnerability exists in the authentication subsystem of BeyondTrust Remote Support and Privileged Remote Access. Improper validation of authentication data may allow a network-positioned attacker to bypass access controls and gain unauthorized access to the appliance, i",
+    "tags": [],
+    "title": "CVE-2026-40138 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40138"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-12277",
+    "published": "2026-07-07T06:16:21.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Frontend File Manager Plugin WordPress plugin through 23.6 does not validate a file path derived from user input before deleting the referenced file, allowing unauthenticated users to delete arbitrary files on the server (such as wp-config.php) when guest upload mode is enabled. Deleting wp-conf",
+    "tags": [],
+    "title": "CVE-2026-12277 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12277"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-44938",
+    "published": "2026-07-07T14:16:30.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability has been identified in Fleet's agent-side deployer, which did not filter security-sensitive keys from namespaceLabels in fleet.yaml (or BundleDeployment.spec.options.namespaceLabels) when applying them to the target namespace.\n\n\n\n\nAn attacker with git push access to a\n Fleet-monitore",
+    "tags": [],
+    "title": "CVE-2026-44938 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44938"
+  },
+  {
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207498",
+    "published": "2026-07-08T00:25:43+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "데일리시큐는 7월 6일 서울 조선팰리스호텔에서 의료기관 정보보호책임자(CISO)와 보안팀장 등 30여 명이 참석한 가운데 ‘MPIS 리더스 포럼 2026’을 개최했다.이날 이승호 버카다(Verkada) 부장은 ‘보안 그 이상의 가치: AI 카메라가 병원의 인텔리전스가 되는 순간’을 주제로 강연하고, 인공지능 기반 영상보안 시스템이 단순한 사고 기록 장비를 넘어 환자 안전과 시설 관리, 출입통제, 사고 대응, 병원 운영 효율화를 지원하는 핵심 인프라로 발전하고 있다고 설명했다.강연의 핵심은 병원에 설치된 카메라를 사후 확인용 CCTV",
+    "tags": [
+      "AI"
+    ],
+    "title": "[MPIS 리더스 포럼 2026] “AI 카메라, 병원 안전 넘어 운영 인텔리전스로”…버카다, 통합 물리보안 전략 제시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207498"
+  },
+  {
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207497",
+    "published": "2026-07-08T00:13:29+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "데일리시큐는 7월 6일 서울 조선팰리스호텔에서 의료기관 정보보호책임자(CISO), 보안팀장 등 30여 명이 참석한 가운데 ‘MPIS 리더스 포럼 2026’을 개최했다.이번 포럼은 인공지능 확산과 디지털 의료 환경 변화에 따라 의료기관이 점검해야 할 개인정보보호 및 소프트웨어 보안 현안을 공유하기 위해 마련됐다. 이날 윤종원 스패로우 CTO는 ‘AI 시대의 개발 환경에서의 디지털 의료SW 신뢰성 확보 전략’을 주제로 강연했다.윤 CTO는 생성형 AI가 소프트웨어 개발 속도와 생산성을 크게 높이고 있지만, AI가 만든 코드가 곧 안전한",
+    "tags": [
+      "AI"
+    ],
+    "title": "[MPIS 리더스 포럼 2026] 스패로우 “AI가 만든 코드도 반드시 검증해야…의료SW 보안은 환자 안전 문제”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207497"
+  },
+  {
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207496",
+    "published": "2026-07-07T23:59:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "데일리시큐는 7월 6일 서울 조선팰리스호텔에서 의료기관 정보보호책임자(CISO)와 보안팀장 등 30여 명이 참석한 가운데 ‘MPIS 리더스 포럼 2026’을 개최했다.‘AI 시대, 의료기관 개인정보보호와 디지털 의료 보안 전략’을 주제로 열린 이번 포럼에서는 인공지능 확산과 디지털 의료 환경 변화에 따라 의료기관이 점검해야 할 개인정보보호 정책과 소프트웨어 보안, 지능형 영상보안 전략 등이 논의됐다.이날 김직동 개인정보보호위원회 대변인은 ‘AI 시대 개인정보 정책 방안’을 주제로 강연하고, 개인정보 유출사고 증가와 AI 데이터 처리",
+    "tags": [
+      "AI"
+    ],
+    "title": "[MPIS  리더스 포럼 2026] “의료기관, AI 도입 전 과정에서 개인정보 위험 관리해야”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207496"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html",
+    "published": "2026-07-07T15:14:14+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A Microsoft 365 device code phishing campaign has been observed leveraging collaboration-themed lures to take control of victim accounts between the last week of June 2026 and into early July, per findings from ZeroBEC. \"The campaign did not depend on a fake Microsoft password page. It used a malici",
+    "tags": [
+      "피싱"
+    ],
+    "title": "DEBULL Tooling Abuses Microsoft Device-Code Flow to Target M365 Accounts",
+    "url": "https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html",
+    "published": "2026-07-07T14:04:50+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A public issue can trick GitHub Agentic Workflows into leaking the contents of an organization's private repositories, researchers at Noma Security have shown. The attacker needs only to open a normal-looking issue on a public repository, with no stolen credentials and no access to the organization.",
+    "tags": [],
+    "title": "Public GitHub Issue Could Trick GitHub Agentic Workflows Into Leaking Private Repo Data",
+    "url": "https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html"
   }
 ]
