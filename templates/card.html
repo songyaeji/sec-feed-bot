@@ -194,6 +194,45 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   overflow: hidden;
 }
 .ip-fill { height: 100%; border-radius: 6px; background: #C6FF33; }
+/* v13: 키워드 패널 — 이미지·CVE 패널 둘 다 없는 카드의 기본 비주얼(사용자
+   요청: 텍스트만 있는 카드에 시각화 추가). 아이콘은 인라인 SVG 고정 —
+   CI 러너 headless chromium에 이모지 폰트 보장이 없어 이모지는 두부(□)가 된다 */
+.kw-panel {
+  height: 340px;
+  flex: none;
+  border-radius: 12px;
+  background: #141412;
+  border: 2px solid #2A2A26;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 48px;
+  gap: 48px;
+}
+.kwp-icon { text-align: center; flex: none; }
+.kwp-icon svg { width: 150px; height: 150px; display: block; margin: 0 auto; }
+.kwp-label { margin-top: 18px; font-size: 26px; color: #8A8A84; letter-spacing: 0.12em; }
+.kwp-chips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  min-width: 0;
+}
+/* 칩 말줄임은 안전판 — 사서 키워드는 명사구라 보통 짧다(v6 '…' 금지는
+   제목·본문 문장에 대한 규칙, 라벨 칩은 예외) */
+.kwp-chip {
+  font-size: 40px;
+  font-weight: 600;
+  color: #C6FF33;
+  border: 2px solid #C6FF33;
+  border-radius: 100px;
+  padding: 12px 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 620px;
+}
 /* v7: 오른쪽 래그(들쭉날쭉한 공백) 제거 — 양쪽 정렬 + 한글 음절 단위
    줄바꿈 허용(word-break: normal; 라틴 단어는 안 쪼개진다). 카드 전역
    keep-all을 본문에서만 푼다 */
@@ -372,6 +411,34 @@ function fitAllCards() {
 <!-- BEGIN info_panel_score -->
 <div class="ip-right"><div class="ip-label mono">CVSS</div><div class="ip-score">{{SCORE}}</div><div class="ip-bar"><div class="ip-fill" style="width:{{PCT}}%"></div></div></div>
 <!-- END info_panel_score -->
+
+<!-- BEGIN kw_panel -->
+<div class="kw-panel"><div class="kwp-icon">{{ICON}}<div class="kwp-label mono">{{LABEL}}</div></div><div class="kwp-chips">{{CHIPS}}</div></div>
+<!-- END kw_panel -->
+
+<!-- BEGIN kw_chip -->
+<span class="kwp-chip mono">{{TEXT}}</span>
+<!-- END kw_chip -->
+
+<!-- BEGIN icon_ai -->
+<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><rect x="32" y="32" width="56" height="56" rx="8"/><rect x="50" y="50" width="20" height="20"/><path d="M46 32V16M60 32V16M74 32V16M46 104V88M60 104V88M74 104V88M32 46H16M32 60H16M32 74H16M104 46H88M104 60H88M104 74H88"/></svg>
+<!-- END icon_ai -->
+
+<!-- BEGIN icon_bank -->
+<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 44L60 18l44 26H16z"/><path d="M28 58v30M48 58v30M72 58v30M92 58v30"/><path d="M20 100h80"/></svg>
+<!-- END icon_bank -->
+
+<!-- BEGIN icon_shield -->
+<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M60 14l38 14v28c0 26-16 42-38 50-22-8-38-24-38-50V28z"/><path d="M60 32l-9 18 13 8-11 22"/></svg>
+<!-- END icon_shield -->
+
+<!-- BEGIN icon_doc -->
+<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M32 14h38l22 22v70H32z"/><path d="M70 14v22h22"/><path d="M44 58h32M44 72h32M44 86h22"/></svg>
+<!-- END icon_doc -->
+
+<!-- BEGIN icon_globe -->
+<svg viewBox="0 0 120 120" fill="none" stroke="#C6FF33" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="60" r="44"/><ellipse cx="60" cy="60" rx="20" ry="44"/><path d="M18 60h84"/></svg>
+<!-- END icon_globe -->
 
 <!-- BEGIN pill_cat -->
 <span class="mono pill pill-cat">{{TEXT}}</span>

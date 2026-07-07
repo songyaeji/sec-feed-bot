@@ -406,16 +406,17 @@ def _build_news(
     # 경계로 줄여 '…' 없이 끝맺는다
     # v9: 이미지 우선순위 — ① 소스 이미지(품질 게이트 통과 시)
     # ② CVE/CVSS 인포패널(우리가 그리는 타이포 비주얼 — 렌더라 AI 티 없음)
-    # ③ 둘 다 없으면 슬롯 생략, 본문이 공간 사용
+    # ③ 키워드 패널(v13) — 텍스트만 있는 카드가 허전하다는 사용자 결정.
+    # 어떤 카드든 비주얼이 있으므로 제목은 항상 2줄 예산
     img_path = None
     if item.get("source") in image_sources:
         img_path = _fetch_article_image(item, slot_index=n)
     if img_path:
         img_block = _fill(fragments["img_photo"], SRC=Path(img_path).as_uri())
-        title_lines = "lines-2"
     else:
-        img_block = _build_info_panel(fragments, item)
-        title_lines = "lines-2" if img_block else "lines-3"
+        img_block = (_build_info_panel(fragments, item)
+                     or _build_keyword_panel(fragments, item))
+    title_lines = "lines-2"
     return _fill(
         fragments["news"],
         N=str(n),
@@ -434,8 +435,7 @@ def _build_news(
 
 def _build_info_panel(fragments: dict, item: dict) -> str:
     """CVE가 있는 항목의 이미지 대체 비주얼 — CVE id + CVSS 게이지.
-    데이터가 없으면 빈 문자열(패널 없이 본문 확장). 억지로 채우는
-    장식은 가독성에 기여하지 않는다(사용자 v9 기준)."""
+    CVE가 없으면 빈 문자열 — 그 경우 키워드 패널(v13)이 슬롯을 채운다."""
     text = f"{item.get('id', '')} {item.get('title', '')} {item.get('summary', '')}"
     m = CVE_RE.search(text)
     if not m:
@@ -452,6 +452,40 @@ def _build_info_panel(fragments: dict, item: dict) -> str:
             PCT=str(pct),
         )
     return _fill(fragments["info_panel"], CVE=html.escape(cve), RIGHT=right)
+
+
+def _build_keyword_panel(fragments: dict, item: dict) -> str:
+    """이미지도 CVE도 없는 카드의 기본 비주얼 — 카테고리 아이콘(인라인 SVG)
+    + 핵심 키워드 칩. 메타데이터만으로 조립하는 결정적 시각화라 무인
+    파이프라인에서 렌더 실패·품질 변동이 없다(v13 사용자 결정).
+    이모지 대신 SVG인 이유: CI 러너에 이모지 폰트가 없어 두부(□)가 된다."""
+    category = item.get("category") or ""
+    tags = item.get("tags") or []
+    if category == "ai" or "AI" in tags:
+        icon_key, label = "icon_ai", "AI 보안"
+    elif "금융" in tags:
+        icon_key, label = "icon_bank", "금융 보안"
+    elif category in ("critical", "high"):
+        icon_key, label = "icon_shield", "취약점·위협"
+    elif category in ("research", "paper"):
+        icon_key, label = "icon_doc", "리서치"
+    else:
+        icon_key, label = "icon_globe", "보안 뉴스"
+    # 라벨은 아이콘과 짝으로 고정 — 카테고리 라벨(pill)로 덮으면
+    # 은행 아이콘에 "뉴스" 같은 어긋난 조합이 나온다
+
+    # 칩 = 사서가 summary_ko에 **키워드**로 표시한 명사구(본문 형광 강조와
+    # 동일 어휘). 사서 실패 시 tags로 폴백, 그마저 없으면 아이콘만
+    keywords = [k.strip() for k in _KW_MD_RE.findall(item.get("summary_ko") or "")
+                if k.strip()]
+    if not keywords:
+        keywords = [t for t in tags if t]
+    chips = "".join(
+        _fill(fragments["kw_chip"], TEXT=html.escape(_clean_text(k)))
+        for k in keywords[:3]
+    )
+    return _fill(fragments["kw_panel"], ICON=fragments[icon_key],
+                 LABEL=html.escape(label), CHIPS=chips)
 
 
 def _list_card(fragments: dict, heading: str, rest: list[dict],
