@@ -467,9 +467,11 @@ def _build_info_panel(fragments: dict, item: dict) -> str:
 
 
 def _build_keyword_panel(fragments: dict, item: dict) -> str:
-    """이미지도 CVE도 없는 카드의 기본 비주얼 — 카테고리 아이콘(인라인 SVG)
-    + 핵심 키워드 칩. 메타데이터만으로 조립하는 결정적 시각화라 무인
-    파이프라인에서 렌더 실패·품질 변동이 없다(v13 사용자 결정).
+    """이미지도 CVE도 없는 카드의 기본 비주얼 — 키워드 흐름 다이어그램(v17).
+    사서가 summary_ko에 표시한 **키워드**는 요약의 서사 순서(무슨 일 →
+    영향/기법)를 따르므로, 노드─화살표 체인으로 이으면 사건 흐름도가 된다.
+    v13 칩 나열은 '아이콘+키워드일 뿐 figure가 아니다'로 반려됨.
+    메타데이터만으로 조립하는 결정적 시각화(LLM·네트워크 없음)는 유지.
     이모지 대신 SVG인 이유: CI 러너에 이모지 폰트가 없어 두부(□)가 된다."""
     category = item.get("category") or ""
     tags = item.get("tags") or []
@@ -486,18 +488,22 @@ def _build_keyword_panel(fragments: dict, item: dict) -> str:
     # 라벨은 아이콘과 짝으로 고정 — 카테고리 라벨(pill)로 덮으면
     # 은행 아이콘에 "뉴스" 같은 어긋난 조합이 나온다
 
-    # 칩 = 사서가 summary_ko에 **키워드**로 표시한 명사구(본문 형광 강조와
-    # 동일 어휘). 사서 실패 시 tags로 폴백, 그마저 없으면 아이콘만
     keywords = [k.strip() for k in _KW_MD_RE.findall(item.get("summary_ko") or "")
                 if k.strip()]
     if not keywords:
         keywords = [t for t in tags if t]
-    chips = "".join(
-        _fill(fragments["kw_chip"], TEXT=html.escape(_clean_text(k)))
-        for k in keywords[:3]
-    )
+    if not keywords:
+        keywords = [label]   # 최후 폴백 — 단일 노드로라도 도형은 그린다
+
+    parts = []
+    for i, kw in enumerate(keywords[:3]):
+        if i:
+            parts.append(fragments["kw_arrow"])
+        parts.append(_fill(fragments["kw_node"],
+                           FIRST=" first" if i == 0 else "",
+                           TEXT=html.escape(_clean_text(kw))))
     return _fill(fragments["kw_panel"], ICON=fragments[icon_key],
-                 LABEL=html.escape(label), CHIPS=chips)
+                 LABEL=html.escape(label), FLOW="".join(parts))
 
 
 def _list_card(fragments: dict, heading: str, rest: list[dict],
@@ -593,6 +599,11 @@ def _render(page_html: str, card_count: int) -> list[bytes]:
             page.goto(Path(render_path).as_uri())
             # 폰트 로드 전에 찍으면 fallback 글꼴로 렌더된 스크린샷이 나온다
             page.evaluate("() => document.fonts.ready")
+            # v17: fitAllCards의 이미지 비율 분기(naturalWidth)가 로드 완료를
+            # 전제한다 — 실패 이미지는 무시(비율 분기만 생략됨)
+            page.evaluate(
+                "() => Promise.all(Array.from(document.images,"
+                " im => im.decode().catch(() => {})))")
             # v6: 말줄임 금지 — 제목 폰트 축소·본문 문장 경계 절단 (템플릿 <script>)
             page.evaluate("() => fitAllCards()")
             for i in range(1, card_count + 1):
