@@ -92,6 +92,54 @@ sources:
     category: "high"
     region: "해외"
 
+  # 2026-07-07 추가 (feedparser 실fetch 검증) — AI보안·위협인텔·실무 축 보강
+  # AI/ML 취약점 공개(huntr 연계) — 사용자 AI기업보안트랙 직결
+  - name: "Protect AI"
+    type: rss
+    url: "https://protectai.com/blog/rss.xml"
+    category: "ai"
+    region: "해외"
+
+  # 위협 인텔·멀웨어 분석 — 공격 체인 다이어그램이 유의미해 카드 이미지로 씀
+  # (직접 RSS는 봇 UA에 403 → feedburner 미러가 안정적으로 열림)
+  - name: "Cisco Talos"
+    type: rss
+    url: "https://feeds.feedburner.com/feedburner/Talos"
+    category: "high"
+    card_image: true
+    region: "해외"
+
+  - name: "Google Security Blog"
+    type: rss
+    url: "https://security.googleblog.com/feeds/posts/default"
+    category: "research"
+    region: "해외"
+
+  # 일일 실무 핸들러 다이어리 — 실전 위협·IOC 중심
+  - name: "SANS ISC"
+    type: rss
+    url: "https://isc.sans.edu/rssfeed_full.xml"
+    category: "news"
+    region: "해외"
+
+  # AI 벤더(Anthropic/OpenAI/Gemini) 보안 이슈만 — 벤더 원본 블로그는 제품·
+  # 마케팅 글이 대부분이라(Anthropic은 RSS 자체 없음) 구글뉴스 보안 쿼리로
+  # 좁혀 수집한다. 링크는 구글뉴스 리다이렉트라 카드 이미지는 안 붙는다
+  - name: "AI 벤더 보안뉴스"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%28Anthropic%20OR%20OpenAI%20OR%20Gemini%29%20%28jailbreak%20OR%20vulnerability%20OR%20%EB%B3%B4%EC%95%88%20OR%20safety%29&hl=ko&gl=KR&ceid=KR:ko"
+    category: "ai"
+    region: "해외"
+
+  # 금융보안원 — 공식 RSS가 없어 구글뉴스 쿼리로 대체(기관 관련 보안뉴스).
+  # 금융권 특화 축(사용자 목표: 금융권 AI보안). 금결원/금감원은 보안 비중이
+  # 낮아 제외했다(사용자 결정)
+  - name: "금융보안원"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%22%EA%B8%88%EC%9C%B5%EB%B3%B4%EC%95%88%EC%9B%90%22&hl=ko&gl=KR&ceid=KR:ko"
+    category: "news"
+    region: "국내"
+
   # ---- 속보 소스 (breaking: true) — 즉시 발송 판정(judge) 전용 ----
   # 대형 사건은 언론 기사보다 HN/레딧에 먼저 뜬다. 이 소스들은 아침
   # 다이제스트/카드뉴스에 실리지 않고, judge가 긴급 판정한 것만 즉시
