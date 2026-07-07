@@ -140,6 +140,36 @@ sources:
     category: "news"
     region: "국내"
 
+  # 금융보안원 게시판 원문 크롤러 — 공식 RSS가 없어 프런트가 쓰는 AJAX
+  # (POST /bbs/list) 백엔드를 직접 호출한다(2026-07-07 실측). 위 구글뉴스
+  # 소스가 '금융보안원 관련 언론보도'라면 이쪽은 발간물·보고서·보도자료
+  # '원문'을 잡는다. boards menuNo(실측): 242 Digital Finance Insight,
+  # 241 인사이트 리포트, 244·1006·1011 인텔리전스/위협분석 보고서,
+  # 1009 취약점 공개(FVE), 253 보도자료(기획부). 저빈도 게시판이라
+  # max_age_days로 최근분만 싣는다(첫 실행 백로그 홍수 방지)
+  - name: "금융보안원"
+    type: fsec
+    base_url: "https://www.fsec.or.kr"
+    boards: [242, 241, 244, 1006, 1011, 1009, 253]
+    category: "news"
+    region: "국내"
+    max_age_days: 21
+
+  # 금융감독원 — 표준 eGovFrame 게시판이라 list.do가 정적 HTML로 온다
+  # (2026-07-07 실측). WAF가 봇 UA/HTTP2를 끊어 sources/fss.py는 브라우저
+  # UA로 요청한다. 보도자료(B0000188/200218)와 정보기술 IT(B0000087/200116)만
+  # 크롤링 — 후자는 금융 IT·보안 직결. 목록에 본문이 없어 summary는 제목 기반,
+  # summary_ko는 librarian이 생성. 저빈도라 max_age_days로 최근분만 싣는다
+  - name: "금융감독원"
+    type: fss
+    base_url: "https://www.fss.or.kr"
+    boards:
+      - { bbs: "B0000188", menu: "200218" }   # 보도자료
+      - { bbs: "B0000087", menu: "200116" }   # 정보기술(IT)
+    category: "news"
+    region: "국내"
+    max_age_days: 21
+
   # ---- 속보 소스 (breaking: true) — 즉시 발송 판정(judge) 전용 ----
   # 대형 사건은 언론 기사보다 HN/레딧에 먼저 뜬다. 이 소스들은 아침
   # 다이제스트/카드뉴스에 실리지 않고, judge가 긴급 판정한 것만 즉시

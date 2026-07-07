@@ -18,7 +18,7 @@ import judge
 import librarian
 import notify
 import tagger
-from sources import dblp, hackernews, kev, nvd, rss
+from sources import dblp, fsec, fss, hackernews, kev, nvd, rss
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
@@ -43,6 +43,8 @@ FETCHERS = {
     "kev": kev.fetch,
     "nvd": nvd.fetch,
     "rss": rss.fetch,
+    "fsec": fsec.fetch,
+    "fss": fss.fetch,
     "dblp": dblp.fetch,
     "hn": hackernews.fetch,
 }
@@ -132,7 +134,7 @@ def collect_all(config: dict, state: dict) -> list[dict]:
         try:
             if source_type == "nvd":
                 items = fetcher(source_cfg, state, config)
-            elif source_type == "rss":
+            elif source_type in ("rss", "fsec", "fss"):
                 items = fetcher(source_cfg, state, config)
             else:
                 items = fetcher(source_cfg)
