@@ -143,6 +143,13 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   line-height: 1.22;
   letter-spacing: -0.02em;
   text-wrap: pretty;
+  /* v11: 본문과 같이 오른쪽 끝을 맞춘다(justify). keep-all(카드 전역)만 두면
+     줄당 어절이 2~3개뿐이라 justify가 어절 사이를 과하게 벌린다 → 본문처럼
+     word-break: normal로 한글을 음절 단위로 줄바꿈해 줄을 촘촘히 채운 뒤
+     justify가 나머지 미세공간만 분배하게 한다(라틴 약어 LLM·MCP는 안 쪼개짐).
+     마지막 줄은 justify가 늘리지 않아 자연스럽게 왼쪽에서 끝난다 */
+  text-align: justify;
+  word-break: normal;
   flex: none;
   overflow: hidden;
 }
@@ -159,6 +166,9 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 }
 .img-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
 /* v9: 이미지 대체 인포패널 — CVE id + CVSS 게이지 (타이포만, 장식 금지) */
+/* v11: 좌우 블록을 space-around로 균등 배치해 게이지가 오른쪽 끝에
+   붙지 않게 하고, 우측 CVSS 게이지(라벨·점수·바)를 한 열로 가운데 정렬해
+   대칭을 맞춘다 */
 .info-panel {
   height: 340px;
   flex: none;
@@ -167,20 +177,20 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
   border: 2px solid #2A2A26;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 60px;
+  justify-content: space-around;
+  padding: 0 48px;
   gap: 48px;
 }
 .ip-label { font-size: 26px; color: #8A8A84; letter-spacing: 0.12em; margin-bottom: 20px; }
 .ip-cve { font-size: 58px; font-weight: 600; color: #C6FF33; white-space: nowrap; }
-.ip-right { text-align: right; flex: none; }
+.ip-right { text-align: center; flex: none; }
 .ip-score { font-size: 96px; font-weight: 800; line-height: 1; color: #F2F2EF; }
 .ip-bar {
   width: 280px;
   height: 12px;
   border-radius: 6px;
   background: #2A2A26;
-  margin-top: 24px;
+  margin: 24px auto 0;
   overflow: hidden;
 }
 .ip-fill { height: 100%; border-radius: 6px; background: #C6FF33; }
