@@ -34,7 +34,7 @@ CARD_HEIGHT = 1350
 
 MAX_ISSUE_CARDS = 7     # v16: 표지 1 + 뉴스 7 + 오늘의 CVE 1 = 9장(사용자 결정)
 LIST_ROWS = 10          # 목록 카드 1장의 행 상한 (넘치면 "…외 N건")
-MAX_TAG_PILLS = 2       # 카테고리·긴급 pill 외 태그 pill 상한 — 한 줄 유지
+MAX_TAG_PILLS = 3       # 태그 pill 총 상한 — 한 줄 유지 (v19: 카테고리 pill 폐기로 한 칸 확보)
 
 # 기사 og:image 다운로드 상한 — 렌더 한 번에 8장이라 과한 대기 금지
 IMG_TIMEOUT = 8
@@ -50,18 +50,6 @@ OG_IMAGE_RE = re.compile(
     r'|<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\']og:image(?::url)?["\']',
     re.IGNORECASE,
 )
-
-# 뉴스 카드 카테고리 pill의 한글 라벨 (미등록 카테고리는 원문 그대로 표기)
-# v8: "긴급"은 즉시 발송(judge 판정)의 전유 라벨 — 다이제스트 카드의
-# critical 카테고리는 "중대"로 표기해 채널 의미와 충돌하지 않게 한다
-CATEGORY_LABELS = {
-    "critical": "중대",
-    "high": "주요",
-    "research": "리서치",
-    "ai": "AI 보안",
-    "news": "뉴스",
-    "paper": "논문",
-}
 
 # 이미지 슬롯 중앙 라벨용: 텍스트 등장 순서 기준 첫 CVE id
 CVE_RE = re.compile(r"CVE-\d{4}-\d{4,7}", re.IGNORECASE)
@@ -247,13 +235,6 @@ def build_cards(
         )
     assert len(card_htmls) == total
 
-    # 페이지 표기("02 / 08")는 전체 장수를 알아야 채울 수 있어
-    # 카드 조립이 끝난 뒤 2차 치환으로 채운다 (표지에는 {{PAGE}} 없음)
-    card_htmls = [
-        h.replace("{{PAGE}}", f"{i:02d} / {total:02d}")
-        for i, h in enumerate(card_htmls, start=1)
-    ]
-
     page_html = shell.replace("<!-- CARDS -->", "\n".join(card_htmls))
     return _render(page_html, card_count=total)
 
@@ -393,21 +374,22 @@ def _build_news(
     fragments: dict, item: dict, date_short: str, n: int,
     image_sources: set[str], regions: dict[str, str],
 ) -> str:
-    category = item.get("category") or ""
-    cat_label = CATEGORY_LABELS.get(category, category)
-
+    # v19: 카테고리 라벨("주요"/"뉴스" 등) 폐기 — 분류어는 내용이 없다는
+    # 사용자 피드백. 실제 키워드(tags)가 pill의 주인이 되고, 첫 태그가
+    # 카테고리 pill의 라임 스타일(pill_cat)을 물려받아 시각 앵커가 된다.
+    # 개수는 유동 — 태그 없으면 국내/해외·실악용만 남아도 그대로 둔다.
     pills = []
-    if cat_label:
-        pills.append(_fill(fragments["pill_cat"], TEXT=html.escape(cat_label)))
-    # v7: 국내/해외 표기 — 카테고리 바로 옆, 태그와 같은 아웃라인 pill
+    tags = list(item.get("tags") or [])[:MAX_TAG_PILLS]
+    if tags:
+        pills.append(_fill(fragments["pill_cat"], TEXT=html.escape(tags[0])))
+    # v7: 국내/해외 표기 — 태그와 같은 아웃라인 pill
     region = regions.get(item.get("source", ""))
     if region:
         pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(region)))
-    # v8: KEV(실악용 확인)만 아웃라인 pill — "긴급" 라벨은 즉시 발송
-    # 채널 전용이 됐으므로 사실 그대로 "실악용"으로 표기
+    # v8: KEV(실악용 확인)만 — "긴급" 라벨은 즉시 발송 채널 전용
     if item.get("kev"):
         pills.append(fragments["pill_urgent"])
-    for tag in (item.get("tags") or [])[:MAX_TAG_PILLS]:
+    for tag in tags[1:]:
         pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(tag)))
 
     # v5: 기사 og:image가 실제로 있을 때만 이미지 슬롯을 그린다.
