@@ -17,6 +17,7 @@ import dedup as dedup_lib
 import judge
 import librarian
 import notify
+import preflight
 import tagger
 from sources import dblp, fsec, fss, hackernews, kev, nvd, rss
 
@@ -365,13 +366,16 @@ def main() -> None:
                 verdict = librarian.run_librarian(merged)
                 briefing = None
                 wiki_new = None
+                brief = None
+                max_digest = config.get("max_digest_items", 12)
+                min_importance = config.get("digest_min_importance", 4)
                 if verdict is None:
                     print("[main] 위키 사서 실패 — fail-open", file=sys.stderr)
-                    to_send = merged
+                    # fail-open이어도 카드·링크 상한은 지킨다: 휴리스틱 상위만 원문으로
+                    to_send = cardgen.pick_top(merged, limit=max_digest)
                 else:
-                    briefing = verdict.get("briefing")
                     action_counts = {"new": 0, "update": 0, "skip_duplicate": 0, "no_wiki": 0}
-                    to_send = []
+                    wiki_worthy = []
                     for item in merged:
                         item_verdict = verdict.get("verdicts", {}).get(item["id"], {})
                         action = item_verdict.get("action")
@@ -381,17 +385,40 @@ def main() -> None:
                             value = item_verdict.get(key)
                             if value:
                                 item[key] = value
+                        item["importance"] = item_verdict.get("importance", 3)
                         if action in action_counts:
                             action_counts[action] += 1
-                        if action == "skip_duplicate":
-                            continue
-                        to_send.append(item)
+                        # 카드 후보 = 위키에 실린 사건(new/update)만. skip_duplicate·no_wiki
+                        # (비사건·중복)는 위키/휴지통에만 남고 카드·링크에서 제외
+                        if action in ("new", "update"):
+                            wiki_worthy.append(item)
                     wiki_new = action_counts["new"]
                     print(
                         f"[main] 위키 사서: 신규 {action_counts['new']}건, "
                         f"갱신 {action_counts['update']}건, "
                         f"중복스킵 {action_counts['skip_duplicate']}건"
                     )
+                    # 정말 중요한 것만 카드·링크에: importance 게이트 + 상한.
+                    # 동점은 휴리스틱 점수(AI>KEV>제로데이>금융)로 가른다
+                    eligible = [it for it in wiki_worthy if it["importance"] >= min_importance]
+                    if not eligible and wiki_worthy:
+                        # 전원이 게이트 미달인 날도 다이제스트는 나가야 한다 — 상위 5건 폴백
+                        eligible = sorted(wiki_worthy, key=cardgen.heuristic_score, reverse=True)[:5]
+                        print(
+                            f"[main] importance {min_importance}+ 없음 — 상위 {len(eligible)}건 폴백",
+                            file=sys.stderr,
+                        )
+                    to_send = sorted(
+                        eligible,
+                        key=lambda it: (-it.get("importance", 3), -cardgen.heuristic_score(it)),
+                    )[:max_digest]
+                    wiki_only = len(wiki_worthy) - len(to_send)
+                    if wiki_only > 0:
+                        print(f"[main] 위키 전용 {wiki_only}건 (카드·링크 제외)", file=sys.stderr)
+                    # 표지 총평·키워드는 실제 실리는 항목 기준으로 별도 생성(fail-open)
+                    brief = librarian.summarize(to_send)
+                    if brief:
+                        briefing = brief.get("briefing")
                 # stats line on the digest header embed; wiki_new is left
                 # out entirely (not shown as 0) when the librarian failed
                 # open, since "no new wiki topics" and "wiki didn't run"
@@ -403,8 +430,8 @@ def main() -> None:
                 }
                 if wiki_new is not None:
                     stats["wiki_new"] = wiki_new
-                # 표지 해시태그: 사서가 뽑은 그날의 키워드, 실패 시 태그 빈도 상위
-                keywords = (verdict or {}).get("keywords") or _fallback_keywords(to_send)
+                # 표지 해시태그: summarize가 뽑은 그날의 키워드, 실패 시 태그 빈도 상위
+                keywords = (brief or {}).get("keywords") or _fallback_keywords(to_send)
                 stats["keywords"] = keywords
                 # 발행 회차: seen.json에 다음 회차 번호를 들고 다닌다(최초 1).
                 # 실제 전송(카드뉴스든 텍스트 폴백이든)에 성공해야 증가 —
@@ -426,8 +453,19 @@ def main() -> None:
                         image_sources=_card_image_sources(config),
                         regions=_source_regions(config),
                     )
-                    notify.send_card_news(
-                        pngs, cardgen.build_link_lines(top, cve_rest, other_rest))
+                    link_lines = cardgen.build_link_lines(top, cve_rest, other_rest)
+                    # 발송 직전 게이트 — 가이드라인 위반(fatal)이면 카드뉴스를
+                    # 보내지 않고 예외를 올려 기존 텍스트 다이제스트 폴백을 태운다
+                    fatal, warnings = preflight.check_card_news(
+                        pngs, link_lines, to_send, briefing, config)
+                    for w in warnings:
+                        print(f"[preflight] 경고: {w}", file=sys.stderr)
+                    if fatal:
+                        for f_msg in fatal:
+                            print(f"[preflight] 차단: {f_msg}", file=sys.stderr)
+                        raise RuntimeError(
+                            f"preflight 실패 {len(fatal)}건 — 카드뉴스 발송 차단")
+                    notify.send_card_news(pngs, link_lines)
                 except Exception as exc:
                     print(
                         f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",

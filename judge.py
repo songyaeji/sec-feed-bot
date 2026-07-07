@@ -55,7 +55,10 @@ _PROMPT_HEADER = """\
 _PROMPT_FOOTER = """
 
 응답은 아래 형식의 JSON 하나만 출력한다 (설명·코드블록 없이):
-{"urgent_ids": ["긴급 판정한 item id들 — 없으면 빈 배열"]}
+{"urgent": [{"id": "<item id>", "reason": "긴급 판정 사유 한 줄 (한국어 30자 이내, 예: '국내 금융권 고객정보 대량 유출')"}]}
+
+긴급 항목이 없으면 {"urgent": []}. reason은 '왜 지금 봐야 하는지'가
+한눈에 읽히는 명사구나 짧은 문장으로 쓴다.
 """
 
 
@@ -139,13 +142,29 @@ def select_urgent(items: list[dict], config: dict, allow_llm: bool = True) -> li
     try:
         outer = json.loads(proc.stdout)
         result = _extract_json_object(outer["result"])
-        urgent_ids = set(result.get("urgent_ids") or [])
+        # 신형: {"urgent": [{"id", "reason"}]} — id→사유 매핑으로 embed에 전달.
+        # 레거시: {"urgent_ids": [...]} — 모델이 구 스키마로 답해도 선별은
+        # 유지하되 사유 없이(fail-open: embed는 사유 없어도 렌더된다).
+        reasons: dict[str, str] = {}
+        if result.get("urgent") is not None:
+            for entry in result["urgent"] or []:
+                if isinstance(entry, dict) and entry.get("id"):
+                    # 프롬프트가 30자 이내를 요구하지만 모델이 어길 수 있다 —
+                    # 폭주한 사유가 embed 본문을 밀어내지 않게 코드에서도 자른다
+                    reasons[entry["id"]] = str(entry.get("reason") or "").strip()[:50]
+            urgent_ids = set(reasons)
+        else:
+            urgent_ids = set(result.get("urgent_ids") or [])
     except (json.JSONDecodeError, KeyError, TypeError, ValueError) as exc:
         print(f"[judge] 응답 파싱 실패(다이제스트로): {exc}", file=sys.stderr)
         return []
 
     # 후보에 없던 id를 지어내도 무시된다 — 게이트 통과분 안에서만 선별
     selected = [it for it in candidates if it.get("id") in urgent_ids]
+    for it in selected:
+        reason = reasons.get(it.get("id"))
+        if reason:
+            it["urgent_reason"] = reason
     if selected:
         print(f"[judge] 대형 사건 판정: {len(selected)}건 즉시 발송", file=sys.stderr)
     return selected

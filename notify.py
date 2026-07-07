@@ -44,6 +44,14 @@ INDIVIDUAL_SEVERITY_EMOJI = {
     "high": "🟡",
 }
 
+# urgent (judge.select_urgent 판정) 개별 카드 강화 스타일 — 빨강 고정 색과
+# 심각도 스탯 타일 라벨. urgent_reason이 있는 항목에만 적용된다.
+URGENT_COLOR = 0xE74C3C
+URGENT_SEVERITY_LABEL = {
+    "critical": "🔴 CRITICAL",
+    "high": "🟠 HIGH",
+}
+
 # digest bullet-line emoji, checked in priority order (first tag match wins);
 # an item with no matching tag falls back to a plain bullet
 DIGEST_TAG_EMOJI = [
@@ -239,18 +247,37 @@ def _has_tag(item: dict, tag: str) -> bool:
 
 
 def _build_individual_embed(item: dict, colors: dict) -> dict:
-    category = item.get("category")
-    color = colors.get(category, colors.get("high", 0xF1C40F))
+    # urgent_reason 존재 = judge가 대형 사건으로 판정한 긴급 항목.
+    # 이때만 강화 스타일(빨강·🚨·사유 blockquote·심각도 타일)을 적용하고,
+    # 그 외 호출 경로(send()의 category 라우팅 등)는 기존 렌더를 유지한다.
+    urgent_reason = item.get("urgent_reason")
 
-    sev_emoji = INDIVIDUAL_SEVERITY_EMOJI.get(item.get("severity"), "")
-    prefix_parts = [p for p in (sev_emoji, "💰" if _has_tag(item, "금융") else "") if p]
-    prefix = " ".join(prefix_parts)
+    category = item.get("category")
+    if urgent_reason:
+        color = URGENT_COLOR  # 긴급은 category 색 무시 — 무조건 빨강
+    else:
+        color = colors.get(category, colors.get("high", 0xF1C40F))
+
+    finance_emoji = "💰" if _has_tag(item, "금융") else ""
+    if urgent_reason:
+        prefix_parts = ["🚨", finance_emoji]
+    else:
+        sev_emoji = INDIVIDUAL_SEVERITY_EMOJI.get(item.get("severity"), "")
+        prefix_parts = [sev_emoji, finance_emoji]
+    prefix = " ".join(p for p in prefix_parts if p)
     title = f"{prefix} {item['title']}".strip() if prefix else item["title"]
 
-    desc_lines = [_chip_line(item["source"], item.get("tags") or [])]
+    desc_lines = []
+    if urgent_reason:
+        # 사유가 첫 줄에 blockquote로 크게 보이게 — "왜 지금 봐야 하는지"
+        desc_lines.append(f"> ❗ **왜 긴급:** {urgent_reason}")
+    desc_lines.append(_chip_line(item["source"], item.get("tags") or []))
 
     if item.get("kev"):
-        desc_lines.append("⚠️ 실제 악용 중")
+        if urgent_reason:
+            desc_lines.append("⚠️ **실제 악용 중** — CISA KEV 등재")
+        else:
+            desc_lines.append("⚠️ 실제 악용 중")
 
     desc_lines.append("")  # blank line before the summary body
     desc_lines.append(item.get("summary", ""))
@@ -264,11 +291,25 @@ def _build_individual_embed(item: dict, colors: dict) -> dict:
         "timestamp": item["published"],
     }
 
+    if urgent_reason:
+        # author는 embed 최상단에 작게 붙는 라벨 — 채널을 훑을 때 긴급
+        # 카드가 한눈에 구분되게 한다 (author.name ≤ 256자 제약, 여유 충분)
+        embed["author"] = {"name": "🚨 긴급 보안 알림"}
+
+    fields = []
     # CVSS moves out of the description body into its own field (a small
     # stat tile next to the title) instead of being one more text line
     cvss = item.get("cvss")
     if cvss is not None:
-        embed["fields"] = [{"name": "CVSS", "value": f"**{cvss}**", "inline": True}]
+        fields.append({"name": "CVSS", "value": f"**{cvss}**", "inline": True})
+    if urgent_reason:
+        fields.append({
+            "name": "심각도",
+            "value": URGENT_SEVERITY_LABEL.get(item.get("severity"), "⚪ INFO"),
+            "inline": True,
+        })
+    if fields:
+        embed["fields"] = fields
 
     return embed
 

@@ -1,5 +1,5 @@
 """Generic RSS/Atom source via feedparser."""
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import feedparser
 import requests
@@ -9,6 +9,13 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
     url = source_cfg["url"]
     category = source_cfg.get("category", "research")
     keywords = [k.lower() for k in source_cfg.get("keywords", [])]
+    max_age_days = source_cfg.get("max_age_days")
+
+    # 신규 소스 첫 실행 때 백로그가 통째로 들어오는 것을 막는다.
+    # 미설정 소스는 기존 동작 그대로 전건 반환
+    cutoff = None
+    if max_age_days is not None:
+        cutoff = datetime.now(timezone.utc) - timedelta(days=int(max_age_days))
 
     # feedparser.parse(url) has no timeout of its own; fetch via requests
     # first so an unresponsive feed can't hang the Actions job forever
@@ -30,6 +37,14 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             if not any(kw in haystack for kw in keywords):
                 continue
 
+        published = _parse_published(entry)
+        if cutoff is not None:
+            try:
+                if datetime.fromisoformat(published) < cutoff:
+                    continue
+            except ValueError:
+                pass  # 파싱 불가 날짜는 버리지 않고 통과시킨다
+
         items.append({
             "id": entry_id,
             "source": source_cfg.get("name", url),
@@ -38,7 +53,7 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             "url": entry.get("link", ""),
             "summary": summary[:300],
             "severity": "info",
-            "published": _parse_published(entry),
+            "published": published,
         })
     return items
 

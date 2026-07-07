@@ -130,6 +130,8 @@ sources:
     url: "https://news.google.com/rss/search?q=%28Anthropic%20OR%20OpenAI%20OR%20Gemini%29%20%28jailbreak%20OR%20vulnerability%20OR%20%EB%B3%B4%EC%95%88%20OR%20safety%29&hl=ko&gl=KR&ceid=KR:ko"
     category: "ai"
     region: "해외"
+    # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
+    max_age_days: 5
 
   # 금융보안원 — 공식 RSS가 없어 구글뉴스 쿼리로 대체(기관 관련 보안뉴스).
   # 금융권 특화 축(사용자 목표: 금융권 AI보안). 금결원/금감원은 보안 비중이
@@ -139,6 +141,8 @@ sources:
     url: "https://news.google.com/rss/search?q=%22%EA%B8%88%EC%9C%B5%EB%B3%B4%EC%95%88%EC%9B%90%22&hl=ko&gl=KR&ceid=KR:ko"
     category: "news"
     region: "국내"
+    # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
+    max_age_days: 5
 
   # 금융보안원 게시판 원문 크롤러 — 공식 RSS가 없어 프런트가 쓰는 AJAX
   # (POST /bbs/list) 백엔드를 직접 호출한다(2026-07-07 실측). 위 구글뉴스
@@ -214,6 +218,12 @@ urgent_gate:
 # still recorded in seen.json so it is not re-sent next run
 # (env MAX_ITEMS_PER_RUN overrides this)
 max_items_per_run: 25
+
+# 아침 다이제스트 카드·링크에 싣는 항목 상한 — 나머지는 위키에만 적립된다.
+# 사서(librarian)가 매긴 importance(1~5)가 digest_min_importance 이상인 것만
+# 후보가 되고, 그중 중요도순 상위 max_digest_items건만 카드뉴스에 실린다
+max_digest_items: 12
+digest_min_importance: 4
 
 discord:
   # embed color mapping (hex ints)

@@ -102,37 +102,40 @@ def _summary_html(text: str) -> str:
 _FRAGMENT_RE = re.compile(r"<!-- BEGIN (\w+) -->\n(.*?)\n<!-- END \1 -->", re.S)
 
 
+def heuristic_score(item: dict) -> float:
+    """카드 승격용 가산점. 사서(librarian) importance의 동점 시 보조 정렬
+    기준으로도 쓰인다."""
+    s = 0.0
+    # 사용자 = BoB AI기업보안트랙 → AI 관련 이슈를 최우선 가중.
+    # KEV(100)·제로데이(80)·금융(70)보다 위로 올려 AI 항목이 카드
+    # 상단을 차지하게 한다(태그는 config tags.AI: llm/prompt injection/생성형 등)
+    tags = item.get("tags") or []
+    if "AI" in tags:
+        s += 120
+    if item.get("kev"):
+        s += 100
+    if "제로데이" in tags:
+        s += 80
+    if "금융" in tags:
+        s += 70
+    cvss = item.get("cvss")
+    if cvss is not None:
+        s += cvss * 5
+    category = item.get("category")
+    if category == "ai":
+        s += 50   # AI 보안 카테고리 소스(OWASP GenAI 등)도 가산
+    elif category == "critical":
+        s += 40
+    elif category == "high":
+        s += 20
+    return s
+
+
 def pick_top(items: list[dict], limit: int = MAX_ISSUE_CARDS) -> list[dict]:
     """뉴스 카드로 승격할 상위 아이템 선정. 가산점 방식(배타적 분기가
     아님)이라 'KEV이면서 금융' 같은 복합 이슈가 자연히 위로 올라온다.
     sorted는 안정 정렬이므로 동점은 입력 순서(=심각도 정렬 순)를 유지."""
-    def score(item: dict) -> float:
-        s = 0.0
-        # 사용자 = BoB AI기업보안트랙 → AI 관련 이슈를 최우선 가중.
-        # KEV(100)·제로데이(80)·금융(70)보다 위로 올려 AI 항목이 카드
-        # 상단을 차지하게 한다(태그는 config tags.AI: llm/prompt injection/생성형 등)
-        tags = item.get("tags") or []
-        if "AI" in tags:
-            s += 120
-        if item.get("kev"):
-            s += 100
-        if "제로데이" in tags:
-            s += 80
-        if "금융" in tags:
-            s += 70
-        cvss = item.get("cvss")
-        if cvss is not None:
-            s += cvss * 5
-        category = item.get("category")
-        if category == "ai":
-            s += 50   # AI 보안 카테고리 소스(OWASP GenAI 등)도 가산
-        elif category == "critical":
-            s += 40
-        elif category == "high":
-            s += 20
-        return s
-
-    return sorted(items, key=score, reverse=True)[:limit]
+    return sorted(items, key=heuristic_score, reverse=True)[:limit]
 
 
 def _is_cve_item(item: dict) -> bool:
