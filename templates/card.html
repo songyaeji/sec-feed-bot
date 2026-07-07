@@ -109,9 +109,6 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 /* v7: 표지 줄글(briefing 서브) 폐기 — 해시태그 행이 표지 요약을 겸한다 */
 .cover-tags { display: flex; flex-wrap: wrap; gap: 20px 32px; }
 .cover-tag { font-size: 34px; font-weight: 600; color: #C6FF33; white-space: nowrap; }
-/* 회차 없는 날에도 도트가 정중앙을 지키도록 좌우 슬롯에 균등 flex */
-.foot-slot { flex: 1; }
-.foot-slot.right { text-align: right; }
 .dots { display: flex; gap: 12px; align-items: center; flex: none; }
 .dot { width: 12px; height: 12px; border-radius: 6px; background: #3A3A36; flex: none; }
 .dot.active { width: 48px; background: #C6FF33; }
@@ -364,9 +361,8 @@ function fitAllCards() {
     {{TAGS_BLOCK}}
   </div>
   <div class="bar bar-foot">
-    <div class="mono f28 meta foot-slot">{{ISSUE_NO}}</div>
-    <div class="dots">{{DOTS}}</div>
-    <div class="mono f28 lime foot-slot right">밀어서 시작 →</div>
+    <div class="mono f28 meta foot-left">{{ISSUE_NO}}</div>
+    <div class="foot-group"><div class="dots">{{DOTS}}</div></div>
   </div>
 </div>
 <!-- END cover -->
