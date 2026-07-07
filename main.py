@@ -196,10 +196,14 @@ def _print_dry_run_stats(card_items: list[dict], non_urgent_items: list[dict]) -
 
 
 def _card_image_sources(config: dict) -> set[str]:
-    # 카드에 og:image를 실을 소스(config sources[].card_image: true).
-    # 국내 매체 og:image는 대부분 스톡 일러스트라 기본은 미포함
+    # 카드에 og:image를 실을 소스. v12: opt-in → opt-out — 품질 게이트
+    # (≥600×315, fail-open)가 저품질을 걸러주므로 기본 켠다. 제외는
+    # (a) card_image: false 명시, (b) 구글뉴스 쿼리(링크가 리다이렉트라
+    # og:image를 못 얻음 — 요청 낭비 방지)
     return {
-        s.get("name") for s in config.get("sources", []) if s.get("card_image")
+        s.get("name") for s in config.get("sources", [])
+        if s.get("card_image", True)
+        and "news.google.com" not in (s.get("url") or "")
     }
 
 

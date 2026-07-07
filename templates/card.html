@@ -209,6 +209,12 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 }
 /* v7: 본문 핵심 키워드 강조 — 사서가 summary_ko에 **키워드**로 표시 */
 .news-text .kw { color: #C6FF33; font-weight: 700; }
+/* v12: 이미지·인포패널 둘 다 없는 카드 — 본문 flex:1이면 글이 상단에
+   붙고 아래가 텅 빈다(사용자 피드백). 표지(cover-hero)처럼 pill·제목·본문
+   묶음을 세로 중앙에 앉히고, 본문은 자연 높이(최대 8줄 예산)만 차지.
+   fit 스크립트의 문장 경계 절단은 max-height 기준으로 동일하게 동작한다 */
+.news-body.no-media { justify-content: center; }
+.news-body.no-media .news-text { flex: none; max-height: 12.8em; }
 
 /* ---------- 목록 카드 (시안에 없는 타입 — 같은 프레임·토큰으로 적응 설계) ---------- */
 .list-body {
@@ -348,7 +354,7 @@ function fitAllCards() {
     <div class="mono f30 meta">SEC.DAILY · {{DATE}}</div>
     <div class="mono f30 lime">{{PAGE}}</div>
   </div>
-  <div class="news-body">
+  <div class="news-body {{BODY_CLASS}}">
     <div class="pill-row">{{PILLS}}</div>
     <div class="news-headline {{TITLE_LINES}}">{{TITLE}}</div>
     {{IMG_BLOCK}}

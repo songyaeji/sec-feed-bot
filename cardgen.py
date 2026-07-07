@@ -416,10 +416,13 @@ def _build_news(
     else:
         img_block = _build_info_panel(fragments, item)
         title_lines = "lines-2" if img_block else "lines-3"
+    # v12: 비주얼 없는 카드는 글 묶음을 세로 중앙 배치(상단 쏠림 방지)
+    body_class = "" if img_block else "no-media"
 
     return _fill(
         fragments["news"],
         N=str(n),
+        BODY_CLASS=body_class,
         DATE=html.escape(date_short),
         PILLS="".join(pills),
         TITLE=html.escape(_card_title(item)),
