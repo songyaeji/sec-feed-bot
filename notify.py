@@ -353,8 +353,18 @@ def _build_digest_embed(category: str, group_items: list[dict], colors: dict) ->
     }
 
 
+def _safe_post(webhook_url: str, **kwargs) -> requests.Response:
+    """requests.post 래퍼. 연결·타임아웃 예외(RequestException)의 문자열에는
+    requests가 요청 URL을 담기 때문에, 그대로 전파되면 웹훅 URL이 CI 로그로
+    샐 수 있다. 예외를 잡아 URL 없는 메시지로 바꿔 재발생시킨다."""
+    try:
+        return requests.post(webhook_url, timeout=kwargs.pop("timeout", 15), **kwargs)
+    except requests.RequestException as e:
+        raise RuntimeError(f"Discord webhook POST failed ({type(e).__name__})") from None
+
+
 def _post_with_retry(webhook_url: str, payload: dict) -> None:
-    resp = requests.post(webhook_url, json=payload, timeout=15)
+    resp = _safe_post(webhook_url, json=payload, timeout=15)
 
     if resp.status_code == 429:
         try:
@@ -364,7 +374,7 @@ def _post_with_retry(webhook_url: str, payload: dict) -> None:
             # crashing the whole run over a malformed rate-limit response
             retry_after = 1
         time.sleep(float(retry_after))
-        resp = requests.post(webhook_url, json=payload, timeout=15)
+        resp = _safe_post(webhook_url, json=payload, timeout=15)
 
     if not resp.ok:
         # deliberately omit webhook_url/payload details that could leak
@@ -377,7 +387,7 @@ def _post_multipart_with_retry(webhook_url: str, files: dict, data: dict) -> Non
     429 시 단순 재전송이면 충분하다. 오류 메시지에 URL/본문을 넣지 않는
     원칙도 동일하게 유지."""
     # 이미지 10장(수 MB)은 json POST보다 업로드가 오래 걸리므로 타임아웃 상향
-    resp = requests.post(webhook_url, files=files, data=data, timeout=60)
+    resp = _safe_post(webhook_url, files=files, data=data, timeout=60)
 
     if resp.status_code == 429:
         try:
@@ -385,7 +395,7 @@ def _post_multipart_with_retry(webhook_url: str, files: dict, data: dict) -> Non
         except ValueError:
             retry_after = 1
         time.sleep(float(retry_after))
-        resp = requests.post(webhook_url, files=files, data=data, timeout=60)
+        resp = _safe_post(webhook_url, files=files, data=data, timeout=60)
 
     if not resp.ok:
         raise RuntimeError(f"Discord webhook request failed with status {resp.status_code}")
