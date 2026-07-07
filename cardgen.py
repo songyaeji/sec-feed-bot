@@ -313,13 +313,6 @@ def _build_cover(
     # (목록 카드에 못 실린 초과분 포함) 없으면 뉴스 카드 수로 폴백
     count = stats.get("total") or len(top)
 
-    # v21: 표지 티저 — 상단 공백(리뷰 지적)에 파급력 1위(첫 뉴스 카드)
-    # 제목 한 줄
-    teaser_block = ""
-    if top:
-        teaser_block = _fill(fragments["cover_teaser"],
-                             TITLE=html.escape(_card_title(top[0])))
-
     # v7: 표지 줄글(briefing) 폐기 — 해시태그가 그날의 요약을 겸한다.
     # briefing 인자는 호출부 호환용으로만 남는다.
     # v21: 해시태그는 카드 등장 순서 기반 — 뉴스 카드 각각의 첫 태그를
@@ -355,7 +348,6 @@ def _build_cover(
         DATE_FULL=html.escape(date_full.split(" ")[0]),
         DATE_HEAD=html.escape(date_head),
         COUNT=str(count),
-        TEASER_BLOCK=teaser_block,
         TAGS_BLOCK=tags_block,
         ISSUE_NO=html.escape(issue_label),
         DOTS=_dots(fragments, total, n),

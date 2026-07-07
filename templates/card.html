@@ -109,20 +109,6 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 /* v7: 표지 줄글(briefing 서브) 폐기 — 해시태그 행이 표지 요약을 겸한다 */
 .cover-tags { display: flex; flex-wrap: wrap; gap: 20px 32px; }
 .cover-tag { font-size: 34px; font-weight: 600; color: #C6FF33; white-space: nowrap; }
-/* v21: 표지 티저 — 상단 공백(리뷰 지적)에 오늘의 대표 사건 1줄.
-   margin-bottom:auto로 티저는 상단, 나머지 히어로 블록은 중앙 유지 */
-.cover-teaser { margin-bottom: auto; padding-top: 24px; }
-.teaser-label { font-size: 26px; color: #8A8A84; letter-spacing: 0.15em; }
-.teaser-title {
-  margin-top: 20px;
-  font-size: 44px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #C8C8C2;
-  overflow: hidden;
-  max-height: 2.7em;
-}
-.cover-hero .cover-eyebrow { margin-top: auto; }
 /* 회차 없는 날에도 도트가 정중앙을 지키도록 좌우 슬롯에 균등 flex */
 .foot-slot { flex: 1; }
 .foot-slot.right { text-align: right; }
@@ -373,7 +359,6 @@ function fitAllCards() {
     <div class="mono f30 meta">{{DATE_FULL}}</div>
   </div>
   <div class="cover-hero">
-    {{TEASER_BLOCK}}
     <div class="mono cover-eyebrow">MORNING ToS</div>
     <div class="cover-headline">{{DATE_HEAD}}<br>보안 이슈 <span class="lime">{{COUNT}}가지</span></div>
     {{TAGS_BLOCK}}
@@ -486,13 +471,6 @@ function fitAllCards() {
   </div>
 </div>
 <!-- END cve_empty -->
-
-<!-- BEGIN cover_teaser -->
-<div class="cover-teaser">
-  <div class="mono teaser-label">TODAY'S HEADLINE</div>
-  <div class="teaser-title">{{TITLE}}</div>
-</div>
-<!-- END cover_teaser -->
 
 <!-- BEGIN why -->
 <div class="why"><span class="mono why-label">WHY</span><span class="why-text">{{TEXT}}</span></div>
