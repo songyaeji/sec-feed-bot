@@ -39,4 +39,8 @@
 - [genai-prompt-injection-defense](topics/2026-07-genai-prompt-injection-defense.md) GenAI 프롬프트 주입 공격 방어 계층화 전략 (최종갱신일: 2026-07-07)
 - [card-fraud-alert](topics/2026-07-card-fraud-alert.md) 금융당국 카드 부정 사용 피해 경보 (최종갱신일: 2026-07-07)
 - [cross-chain-hacking](topics/2026-07-cross-chain-hacking.md) 디지털자산 크로스체인 공격 확산 (최종갱신일: 2026-07-07)
+- [fintech-ai-security-test](topics/2026-07-fintech-ai-security-test.md) 금융감독당국 AI 보안테스트 면책 규정 (최종갱신일: 2026-07-07)
 - [mitos-ai-incident](topics/2026-07-mitos-ai-incident.md) KB국민은행 AI 사건 대응 및 내부통제 강화 (최종갱신일: 2026-07-07)
+- [t3mp3st-vuln-framework](topics/2026-07-t3mp3st-vuln-framework.md) AI 기반 자동화 취약점 연구 프레임워크 T3MP3ST (최종갱신일: 2026-07-07)
+- [midnight-privacy-blockchain](topics/2026-07-midnight-privacy-blockchain.md) AI 에이전트 신원 증명 프라이버시 블록체인 (최종갱신일: 2026-07-07)
+- [windows11-black-screen-bug](topics/2026-07-windows11-black-screen-bug.md) Windows 11 Enterprise 누적 업데이트 부팅 실패 (최종갱신일: 2026-07-07)
