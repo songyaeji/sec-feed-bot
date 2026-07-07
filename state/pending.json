@@ -2549,5 +2549,90 @@
     "tags": [],
     "title": "Spanish Police Arrest Man Linked to CARR, Z-Pentest, and NoName057(16)",
     "url": "https://securityaffairs.com/194894/hacktivism/spanish-police-arrest-man-linked-to-carr-z-pentest-and-noname05716.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-58473",
+    "published": "2026-07-07T21:17:29.007",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cognee before 1.2.0 contains an improper access control vulnerability that allows unauthenticated attackers to overwrite the global LLM provider configuration by self-registering an account and calling the settings endpoint, which performs no admin or superuser check. Attackers can redirect all LLM ",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-58473 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58473"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-32845",
+    "published": "2026-03-23T16:16:48.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "cgltf version 1.15 and prior contain an integer overflow vulnerability in the cgltf_validate() function when validating sparse accessors that allows attackers to trigger out-of-bounds reads by supplying crafted glTF/GLB input files with attacker-controlled size values. Attackers can exploit unchecke",
+    "tags": [],
+    "title": "CVE-2026-32845 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32845"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-44454",
+    "published": "2026-07-07T21:17:25.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coder allows organizations to provision remote development environments via Terraform. Prior to versions 2.29.7 and 2.30.2, workspace creation via `mode=auto` deep links silently provisioned workspaces with attacker-controlled parameters, requiring no explicit user confirmation. In versions 2.29.7 a",
+    "tags": [],
+    "title": "CVE-2026-44454 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44454"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-49471",
+    "published": "2026-07-07T21:17:25.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Serena is a powerful MCP toolkit for coding that provides semantic retrieval and editing capabilities. Prior to v1.5.2, Serena's built-in web dashboard exposes an unauthenticated Flask API on a fixed, predictable port, with no authentication, no CSRF protection, and no Host header validation. A DNS ",
+    "tags": [],
+    "title": "CVE-2026-49471 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49471"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-58583",
+    "published": "2026-07-07T21:17:29.163",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FluxInk (formerly Sunia SPB Peripheral) Color Management Driver (TcnPeripheral64.sys) 1.0.7.2 allows local privilege escalation for a standard user account via arbitrary physical memory mapping at \\Device\\PhysicalMemory. Fixed in version 1.0.7.6. The fixed driver is currently available in the Window",
+    "tags": [],
+    "title": "CVE-2026-58583 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58583"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-59707",
+    "published": "2026-07-07T21:17:29.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LocalAI contains an unauthenticated server-side request forgery vulnerability in the POST /models/apply endpoint that allows attackers to fetch arbitrary internal URLs. The endpoint passes unsanitized gallery URL fields directly to gallery.GetGalleryConfigFromURLWithContext without proper validation",
+    "tags": [],
+    "title": "CVE-2026-59707 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59707"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:219100",
+    "published": "2026-07-08T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "고속도로 주행 중, 장마기간, 평상시보다 사고에 유의하여야 합니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219100&menuNo=200218"
   }
 ]
