@@ -1305,5 +1305,53 @@
     "tags": [],
     "title": "U.S. CISA adds Adobe ColdFusion, Joomlack Page Builder, Langflow, and JoomShaper SP Page Builder flaws to its Known Exploited Vulnerabilities catalog",
     "url": "https://securityaffairs.com/194927/hacking/u-s-cisa-adds-adobe-coldfusion-joomlack-page-builder-langflow-and-joomshaper-sp-page-builder-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-6297",
+    "published": "2025-07-01T17:15:30.177",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "It was discovered that dpkg-deb does not properly sanitize directory permissions when extracting a control member into a temporary directory, which is\ndocumented as being a safe operation even on untrusted data. This may result in leaving temporary files behind on cleanup. Given automated and repeat",
+    "tags": [],
+    "title": "CVE-2025-6297 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6297"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-55999",
+    "published": "2026-07-08T09:16:29.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Local attackers with a X connection able to provide PCX fonts to the X \nserver xorg-server before 21.2.24 and xwayland before 24.1.13 could \ncause a heap buffer overflow via SetFont due to missing glyph boundary checks.",
+    "tags": [],
+    "title": "CVE-2026-55999 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55999"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-56001",
+    "published": "2026-07-08T09:16:30.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap buffer overflow in BitmapScaleBitmaps in libXfont2 before 2.0.8 due to an overflowing 32bit size could be used by attackers able to access the X Server to execute code within the X server cont",
+    "tags": [],
+    "title": "CVE-2026-56001 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56001"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-57239",
+    "published": "2026-07-08T09:16:31.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The user-controllable executable files will be directly executed by high-privilege processes, allowing low-privilege users to have the opportunity to elevate their privileges to NT AUTHORITY\\SYSTEM.",
+    "tags": [],
+    "title": "CVE-2026-57239 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57239"
   }
 ]
