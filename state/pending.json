@@ -2574,5 +2574,77 @@
     "tags": [],
     "title": "CVE-2026-53235 (CVSS 7.5)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53235"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-46289",
+    "published": "2026-06-08T17:16:47.097",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nlib/scatterlist: fix length calculations in extract_kvec_to_sg\n\nPatch series \"Fix bugs in extract_iter_to_sg()\", v3.\n\nFix bugs in the kvec and user variants of extract_iter_to_sg.  This series\nis growing due to useful remarks made ",
+    "tags": [],
+    "title": "CVE-2026-46289 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46289"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-46286",
+    "published": "2026-06-08T17:16:46.627",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nleds: qcom-lpg: Check for array overflow when selecting the high resolution\n\nWhen selecting the high resolution values from the array, FIELD_GET() is\nused to pull from a 3 bit register, yet the array being indexed has only\n5 values",
+    "tags": [],
+    "title": "CVE-2026-46286 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46286"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-46287",
+    "published": "2026-06-08T17:16:46.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: txgbe: fix RTNL assertion warning when remove module\n\nFor the copper NIC with external PHY, the driver called\nphylink_connect_phy() during probe and phylink_disconnect_phy() during\nremove. It caused an RTNL assertion warning i",
+    "tags": [],
+    "title": "CVE-2026-46287 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46287"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-46288",
+    "published": "2026-06-08T17:16:46.957",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nof: unittest: fix use-after-free in of_unittest_changeset()\n\nThe variable 'parent' is assigned the value of 'nchangeset' earlier in the\nfunction, meaning both point to the same struct device_node. The call to\nof_node_put(nchangeset",
+    "tags": [],
+    "title": "CVE-2026-46288 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46288"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-46290",
+    "published": "2026-06-08T17:16:47.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nx86/efi: Fix graceful fault handling after FPU softirq changes\n\nSince commit d02198550423 (\"x86/fpu: Improve crypto performance by\nmaking kernel-mode FPU reliably usable in softirqs\"), kernel_fpu_begin()\ncalls fpregs_lock() which u",
+    "tags": [],
+    "title": "CVE-2026-46290 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46290"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59257",
+    "published": "2026-07-08T14:17:20.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "n8n before 1.123.61, 2.x before 2.27.4, and 2.28.x before 2.28.1 contains a SQL injection vulnerability in the legacy MySQL v1 node's executeQuery operation. The operation substitutes evaluated {{ ... }} expression values directly into the raw SQL string without parameterization. When a workflow use",
+    "tags": [],
+    "title": "CVE-2026-59257 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59257"
   }
 ]
