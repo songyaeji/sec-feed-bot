@@ -1366,5 +1366,29 @@
     ],
     "title": "China-Linked UAT-7810 Expands ORB Network With New LONGLEASH Malware",
     "url": "https://thehackernews.com/2026/07/china-linked-uat-7810-expands-orb.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-56002",
+    "published": "2026-07-08T10:16:23.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap bufferflow in pcfReadFont() due to missing glyph bounds checking in libXfont2 before 2.0.8  allows attackers authenticated as X client to execute code within the X server.",
+    "tags": [],
+    "title": "CVE-2026-56002 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56002"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-56003",
+    "published": "2026-07-08T10:16:23.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap buffer overflow due to missing size checking in the property buffer when parsing PCF files in libXfont2 ComputeScaledProperties() before libXfont2 before 2.0.8 could be used by attackers using authenticated X clients to execute code within the X server.",
+    "tags": [],
+    "title": "CVE-2026-56003 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56003"
   }
 ]
