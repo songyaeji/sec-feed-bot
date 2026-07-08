@@ -1,8 +1,10 @@
 """Entry point: fetch -> filter -> dedup -> notify -> persist state.
 
-Run by a GitHub Actions cron every 20 minutes. This script only writes
-state/seen.json locally; the workflow (not this script) is responsible
-for committing that file back to the repo.
+Run by GitHub Actions every ~10 minutes (external cron-job.org trigger
+via workflow_dispatch — see docs/external-trigger.md; the */20 cron is a
+fallback). This script only writes state/seen.json locally; the workflow
+(not this script) is responsible for committing that file back to the
+repo.
 """
 import json
 import os
@@ -93,7 +95,7 @@ def save_pending(pending: list[dict]) -> None:
 
 
 def append_pending(pending: list[dict], new_items: list[dict]) -> list[dict]:
-    # realtime mode calls this every 20 minutes; an id already sitting in
+    # realtime mode calls this every ~10 minutes; an id already sitting in
     # pending.json (queued but not yet flushed by a digest run) must not be
     # appended a second time
     existing_ids = {it["id"] for it in pending}
@@ -287,7 +289,7 @@ def main() -> None:
     routable_items.sort(key=lambda it: SEVERITY_ORDER.get(it["severity"], 99))
 
     # v8: "긴급" = 대형 사건·사고만 (judge.py 하이브리드 판정 — 키워드
-    # 게이트 + haiku). 구 기준(KEV/CVSS≥9/긴급 소스)은 폐기: 그런 항목도
+    # 게이트 + sonnet). 구 기준(KEV/CVSS≥9/긴급 소스)은 폐기: 그런 항목도
     # 아침 다이제스트로 몰아 보낸다. DRY_RUN은 LLM 호출 없이 게이트만 로그.
     dry_run = os.environ.get("DRY_RUN") == "1"
     urgent_items = judge.select_urgent(routable_items, config, allow_llm=not dry_run)

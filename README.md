@@ -1,9 +1,12 @@
 # sec-feed-bot
 
-Security-news Discord notification bot. A GitHub Actions cron job runs
-`main.py` every 20 minutes: it fetches from CISA KEV, NVD, and RSS
-sources, dedups against `state/seen.json`, and posts new items to a
-Discord channel via webhook.
+Security-news Discord notification bot. GitHub Actions runs `main.py`
+every ~10 minutes (an external cron-job.org trigger calls
+`workflow_dispatch` — see `docs/external-trigger.md`; the `*/20` cron
+stays on as a fallback, since GitHub's scheduled cron is routinely
+delayed by 1-3 hours): it fetches from CISA KEV, NVD, and RSS sources,
+dedups against `state/seen.json`, and posts to a Discord channel via
+webhook.
 
 > Note: `config.yaml` has a comment at the top marking its source URLs
 > as design-time candidates pending verification — see that file before
@@ -11,17 +14,34 @@ Discord channel via webhook.
 
 ## Hybrid notification mode
 
-Every run classifies each new item as **urgent** or not
-(`main.is_urgent`): urgent if its source is flagged `urgent: true` in
-`config.yaml` (CISA KEV, KISA 보안공지), or CVSS >= 9.0, or KEV
-(known-exploited). Urgent items always go out immediately as an
-individual Discord card.
+**Urgent** = national/global-impact incidents only (쿠팡·SKT급 대량 유출,
+전국 통신망 마비 수준). Judged in two stages by `judge.py`:
 
-- **realtime** (`*/20 * * * *` cron): non-urgent items are queued into
+1. **Keyword gate** (free) — only items whose title/summary matches an
+   incident keyword in `config.yaml`'s `urgent_gate` become candidates.
+2. **LLM judge** (headless Claude, sonnet) — a 3-question checklist
+   (actual ongoing incident? household-name victim? mass scale?) plus a
+   1-5 impact `scale` self-rating; code drops anything below
+   `urgent_min_scale` (default 5) as a second gate. Recently sent alerts
+   (`state/urgent_history.json`, 14-day window) are fed back into the
+   prompt so follow-up coverage of the same incident doesn't re-ring.
+   Failures (no token, timeout, bad output) fail **quiet**: nothing is
+   urgent, everything waits for the digest — in the urgent channel a
+   false alarm at 3am is worse than hearing about it at 7am.
+
+Urgent items go out immediately as an individual red Discord card with
+the judge's one-line reason. Sources flagged `breaking: true` (HN,
+Reddit, 국내 사건 속보) exist only to feed this pipeline: their
+non-urgent items are dropped, not queued.
+
+- **realtime** (every ~10 min): non-urgent items are queued into
   `state/pending.json` instead of being sent.
 - **digest** (daily cron, KST 07:00): non-urgent items from this run are
-  merged with everything queued in `pending.json` and sent as one
-  category-grouped digest embed, then `pending.json` is emptied.
+  merged with everything queued in `pending.json`, run through the wiki
+  librarian (importance 1-5 rating + wiki ingest), and sent as the
+  "Trend of Security" card-news carousel (importance >= 4 items as PNG
+  cards, capped at 7 news + 1 CVE-list card) plus source links; then
+  `pending.json` is emptied.
 
 `RUN_MODE` (env var, default `realtime`) selects the mode; the workflow
 sets it automatically based on which cron fired (or the `workflow_dispatch`
@@ -75,6 +95,12 @@ librarian will start fail-opening silently.
    - The workflow at `.github/workflows/collect.yml` runs on a `*/20 * * * *`
      cron schedule and can also be triggered manually via
      "Run workflow" (`workflow_dispatch`) in the Actions tab.
+
+4. **(Recommended) External realtime trigger**
+   - GitHub's scheduled cron is delayed 1-3 hours in practice, which kills
+     urgent-alert latency. Set up cron-job.org to call `workflow_dispatch`
+     every 10 minutes with a fine-grained PAT — full steps in
+     `docs/external-trigger.md`.
 
 ## Local testing
 
