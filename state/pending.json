@@ -2319,5 +2319,81 @@
     "tags": [],
     "title": "New HalluSquatting Attack Could Trick AI Coding Assistants Into Installing Botnet Malware",
     "url": "https://thehackernews.com/2026/07/new-hallusquatting-attack-could-trick.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-41042",
+    "published": "2026-07-08T12:17:20.550",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated callers can supply a malicious H2 JDBC URL through the testConnection API, which executes arbitrary Java code on the server via H2's INIT parameter. Vulnerability in Apache Gravitino.\n\nThis issue affects Apache Gravitino: before 1.2.1.\n\nUsers are recommended to upgrade to version 1.2",
+    "tags": [],
+    "title": "CVE-2026-41042 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41042"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-59702",
+    "published": "2026-07-08T16:16:31.577",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "repomix contains a server-side request forgery vulnerability in the POST /api/pack endpoint that allows unauthenticated attackers to make arbitrary outbound requests. The endpoint fails to properly validate http://, https://, and file:// URLs before passing them to git clone, enabling attackers to a",
+    "tags": [],
+    "title": "CVE-2026-59702 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59702"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-9074",
+    "published": "2026-07-08T16:16:35.050",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.9 and 12.1.0.0 through 12.1.0.3 contains an unauthenticated SQL injection vulnerability in the password reset functionality.",
+    "tags": [],
+    "title": "CVE-2026-9074 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9074"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-24698",
+    "published": "2026-07-08T15:16:26.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability exists in the save_syslog_to_file() function of the \"httpd\" binary in Cisco RV130/RV130W with firmware 1.0.3.55 and RV110W routers with firmware 1.2.2.5 / 1.2.2.8. The model_name configuration parameter is not properly sanitized, which could allow an authenticat",
+    "tags": [],
+    "title": "CVE-2026-24698 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24698"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-3144",
+    "published": "2026-07-08T16:16:28.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM API Connect 12.1.0.0 through 12.1.0.3 uses default credentials which could allow an attacker to gain unauthorized access to the application before the system enforces a credential update.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3144 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3144"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-59871",
+    "published": "2026-07-08T16:16:33.723",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "node-tar is a tar archive manipulation library for Node.js. Prior to 7.5.18, node-tar coerces all-digit PAX path and linkpath values in src/pax.ts to JavaScript numbers, causing downstream path handling such as normalizeWindowsPath(entry.path).split('/') to throw an uncaught TypeError. This issue is",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59871 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59871"
   }
 ]
