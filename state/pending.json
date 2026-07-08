@@ -1502,5 +1502,41 @@
     ],
     "title": "Felons, Fraudsters Flog Offensive Cybersecurity Startup",
     "url": "https://krebsonsecurity.com/2026/07/felons-fraudsters-flog-offensive-cybersecurity-startup/"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53239",
+    "published": "2026-06-25T09:16:41.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: policy: fix use-after-free on inexact bin in xfrm_policy_bysel_ctx()\n\nFix the race by pruning the bin while still holding xfrm_policy_lock,\nbefore dropping it. Use __xfrm_policy_inexact_prune_bin() directly since\nthe lock is ",
+    "tags": [],
+    "title": "CVE-2026-53239 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53239"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-53240",
+    "published": "2026-06-25T09:16:41.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs: fix use-after-free on first_skb in __input_process_payload\n\n__input_process_payload() stores first_skb into xtfs->ra_newskb under\ndrop_lock when starting partial reassembly, then unlocks and breaks out\nof the processin",
+    "tags": [],
+    "title": "CVE-2026-53240 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53240"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53250",
+    "published": "2026-06-25T09:16:42.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxsk: cache csum_start/csum_offset to fix TOCTOU in xsk_skb_metadata()\n\nThe TX metadata area resides in the UMEM buffer which is memory-mapped\nand concurrently writable by userspace. In xsk_skb_metadata(),\ncsum_start and csum_offset",
+    "tags": [],
+    "title": "CVE-2026-53250 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53250"
   }
 ]
