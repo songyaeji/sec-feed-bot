@@ -1390,5 +1390,30 @@
     "tags": [],
     "title": "CVE-2026-56003 (CVSS 8.5)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56003"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12378",
+    "published": "2026-07-08T07:16:46.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Appointment Booking Calendar Plugin and Scheduling Plugin  WordPress plugin through 1.1.28 does not validate data before passing it to a PHP deserialization function, allowing unauthenticated attackers to inject arbitrary PHP objects; where a suitable gadget chain is present on the site this can",
+    "tags": [],
+    "title": "CVE-2026-12378 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12378"
+  },
+  {
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=194942",
+    "published": "2026-07-08T11:09:44+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "RedWing: The Android Banking Trojan You Can Rent on Telegram for Less Than a Coffee Subscription Zimperium’s zLabs team has uncovered RedWing, an Android spyware operation sold as a subscription service through Telegram, with links to Russian threat actors and apparent roots in the Oblivion malware ",
+    "tags": [
+      "금융"
+    ],
+    "title": "Telegram-Hosted RedWing Malware Lets Anyone Rent Android Spyware Tools",
+    "url": "https://securityaffairs.com/194942/malware/telegram-hosted-redwing-malware-lets-anyone-rent-android-spyware-tools.html"
   }
 ]
