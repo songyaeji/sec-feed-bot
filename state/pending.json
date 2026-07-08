@@ -2142,5 +2142,67 @@
     "tags": [],
     "title": "Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS",
     "url": "https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-46276",
+    "published": "2026-06-08T17:16:45.103",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdgpu: fix zero-size GDS range init on RDNA4\n\nRDNA4 (GFX 12) hardware removes the GDS, GWS, and OA on-chip memory\nresources. The gfx_v12_0 initialisation code correctly leaves\nadev->gds.gds_size, adev->gds.gws_size, and adev->",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46276 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46276"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46277",
+    "published": "2026-06-08T17:16:45.277",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/zone_device: do not touch device folio after calling ->folio_free()\n\nThe contents of a device folio can immediately change after calling\n->folio_free(), as the folio may be reallocated by a driver with a\ndifferent order.  Instea",
+    "tags": [],
+    "title": "CVE-2026-46277 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46277"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-46278",
+    "published": "2026-06-08T17:16:45.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/imagination: Fix segfault when updating ftrace mask\n\nFix invalid data access by passing right data for debugfs entry.\n\n[  171.549793] Unable to handle kernel NULL pointer dereference at virtual address 0000000000000000\n[  171.5",
+    "tags": [],
+    "title": "CVE-2026-46278 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46278"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46279",
+    "published": "2026-06-08T17:16:45.530",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/alloc_tag: clear codetag for pages allocated before page_ext initialization\n\nDue to initialization ordering, page_ext is allocated and initialized\nrelatively late during boot.  Some pages have already been allocated and\nfreed be",
+    "tags": [],
+    "title": "CVE-2026-46279 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46279"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53145",
+    "published": "2026-06-25T09:16:31.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/gem: Try to fix change_handle ioctl, attempt 4\n\n[airlied: just added some comments on how to reenable]\nOn-list because the cat is out of the bag and we're clearly not good\nenough to figure this out in private. The story thus fa",
+    "tags": [],
+    "title": "CVE-2026-53145 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53145"
   }
 ]
