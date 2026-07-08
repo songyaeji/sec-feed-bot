@@ -143,3 +143,49 @@ jobs:
               exit 1
             fi
           done
+
+      # 다이제스트 발송 성공 시 main.py가 out/trend/(카드 PNG + meta.json)를
+      # 남긴다. 이를 포트폴리오 repo로 push하면 해당 repo의 deploy 워크플로가
+      # 자동 재빌드해 https://songyaeji.github.io/trend/ 에 게시된다.
+      # PORTFOLIO_PUSH_TOKEN: fine-grained PAT — 대상 songyaeji.github.io 한정,
+      # Contents Read/Write. 미등록이면 게시만 건너뛴다(Discord 발송은 이미 완료).
+      # 토큰은 로그에 출력하지 않는다(Actions 자동 마스킹 + echo 금지).
+      - name: Publish card news to portfolio (Trend tab)
+        if: steps.run_mode.outputs.mode == 'digest'
+        env:
+          PORTFOLIO_PUSH_TOKEN: ${{ secrets.PORTFOLIO_PUSH_TOKEN }}
+        run: |
+          if [ ! -f out/trend/meta.json ]; then
+            echo "out/trend 없음(카드뉴스 미발송 또는 텍스트 폴백) — 게시 스킵"
+            exit 0
+          fi
+          if [ -z "$PORTFOLIO_PUSH_TOKEN" ]; then
+            echo "PORTFOLIO_PUSH_TOKEN secret 미등록 — 게시 스킵"
+            exit 0
+          fi
+          DATE=$(python3 -c "import json; print(json.load(open('out/trend/meta.json'))['date'])")
+          ISSUE=$(python3 -c "import json; print(json.load(open('out/trend/meta.json'))['issue_no'])")
+          # 공개 repo라 clone은 무인증 — 토큰은 push 원격 URL에만 넣는다
+          git clone --depth 1 https://github.com/songyaeji/songyaeji.github.io.git /tmp/portfolio
+          mkdir -p "/tmp/portfolio/public/trend/$DATE" /tmp/portfolio/src/content/trend
+          cp out/trend/card_*.png "/tmp/portfolio/public/trend/$DATE/"
+          cp out/trend/meta.json "/tmp/portfolio/src/content/trend/$DATE.json"
+          cd /tmp/portfolio
+          git remote set-url origin \
+            "https://x-access-token:${PORTFOLIO_PUSH_TOKEN}@github.com/songyaeji/songyaeji.github.io.git"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/trend src/content/trend
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 게시 스킵"
+            exit 0
+          fi
+          git commit -m "content: Trend NO.$ISSUE ($DATE)"
+          for attempt in 1 2; do
+            git pull --rebase origin main
+            if git push; then
+              exit 0
+            fi
+            echo "portfolio push attempt $attempt failed"
+          done
+          exit 1

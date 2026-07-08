@@ -28,6 +28,9 @@ CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
 STATE_DIR = os.path.join(BASE_DIR, "state")
 STATE_PATH = os.path.join(STATE_DIR, "seen.json")
 PENDING_PATH = os.path.join(STATE_DIR, "pending.json")
+# 포트폴리오(songyaeji.github.io) Trend 탭 게시 산출물 — collect.yml의
+# 후속 스텝이 이 디렉터리를 포트폴리오 repo로 push한다
+TREND_DIR = os.path.join(BASE_DIR, "out", "trend")
 
 SEEN_TTL_DAYS = 90
 
@@ -248,8 +251,61 @@ def _save_preview_cards(
             with open(os.path.join(preview_dir, f"card_{i:02d}.png"), "wb") as f:
                 f.write(png)
         print(f"[main] DRY_RUN: 카드뉴스 {len(pngs)}장 -> state/preview/ 저장")
+        # 포트폴리오 게시 산출물도 함께 남긴다 — Trend 페이지 레이아웃을
+        # 실제 발송 없이 로컬에서 검증하기 위한 경로
+        top, cve_rest, other_rest = cardgen.plan_cards(merged)
+        _publish_trend(
+            pngs, top + other_rest + cve_rest,
+            issue_no=stats.get("issue_no"), briefing=None,
+            keywords=stats.get("keywords") or [],
+        )
     except Exception as exc:
         print(f"[main] DRY_RUN: 카드뉴스 렌더 실패(경고만): {_safe_exc_str(exc)}", file=sys.stderr)
+
+
+def _publish_trend(
+    pngs: list[bytes],
+    ordered_items: list[dict],
+    issue_no: int | None,
+    briefing: str | None,
+    keywords: list[str],
+) -> None:
+    """포트폴리오 Trend 탭 게시용 PNG + meta.json 저장.
+
+    ordered_items는 카드 표시 순서(뉴스 → 그 밖의 소식 → 오늘의 CVE)와
+    동일해야 links 번호가 build_link_lines와 1:1로 맞는다. 발송이 이미
+    성공한 뒤에 불리므로 어떤 실패도 삼킨다 — 사이트 게시 실패가 아침
+    브리핑 파이프라인(폴백 이중발송 포함)을 건드리면 안 된다."""
+    try:
+        os.makedirs(TREND_DIR, exist_ok=True)
+        names = []
+        for i, png in enumerate(pngs, start=1):
+            name = f"card_{i:02d}.png"
+            with open(os.path.join(TREND_DIR, name), "wb") as f:
+                f.write(png)
+            names.append(name)
+        kst = timezone(timedelta(hours=9))
+        meta = {
+            "date": datetime.now(kst).strftime("%Y-%m-%d"),
+            "issue_no": issue_no,
+            "briefing": briefing,
+            "keywords": keywords,
+            "links": [
+                {
+                    # 제목 개행 정리는 build_link_lines와 동일 규칙
+                    "n": i,
+                    "title": " ".join((it.get("title") or "").split()),
+                    "url": it.get("url", ""),
+                }
+                for i, it in enumerate(ordered_items, start=1)
+            ],
+            "cards": names,
+        }
+        with open(os.path.join(TREND_DIR, "meta.json"), "w", encoding="utf-8") as f:
+            json.dump(meta, f, ensure_ascii=False, indent=2)
+        print(f"[main] trend 게시 산출물 저장: out/trend ({len(names)}장)")
+    except Exception as exc:
+        print(f"[main] trend 산출물 저장 실패(무시): {_safe_exc_str(exc)}", file=sys.stderr)
 
 
 def main() -> None:
@@ -471,6 +527,13 @@ def main() -> None:
                         raise RuntimeError(
                             f"preflight 실패 {len(fatal)}건 — 카드뉴스 발송 차단")
                     notify.send_card_news(pngs, link_lines)
+                    # 발송 성공 확정 후에만 포트폴리오 게시 산출물 저장
+                    # (내부에서 모든 실패를 삼킴 — 폴백 이중발송 방지)
+                    _publish_trend(
+                        pngs, top + other_rest + cve_rest,
+                        issue_no=issue_no, briefing=briefing,
+                        keywords=stats.get("keywords") or [],
+                    )
                 except Exception as exc:
                     print(
                         f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",
