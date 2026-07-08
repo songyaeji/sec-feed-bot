@@ -1808,5 +1808,17 @@
     "tags": [],
     "title": "CVE-2026-53238 (CVSS 5.5)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53238"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5067",
+    "published": "2026-06-09T06:16:53.920",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A remote, unauthenticated attacker can trigger memory corruption in Zephyr's HTTP server WebSocket upgrade path by sending a crafted Sec-WebSocket-Key header. The HTTP/1 header parser copies the header into a fixed-size buffer using a bounded copy that does not guarantee NUL termination when the inp",
+    "tags": [],
+    "title": "CVE-2026-5067 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5067"
   }
 ]
