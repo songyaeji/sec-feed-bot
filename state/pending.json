@@ -1883,5 +1883,181 @@
     ],
     "title": "SCMBANKER Malware Uses ClickFix Lures to Target Mexican Banking Users",
     "url": "https://thehackernews.com/2026/07/scmbanker-malware-uses-clickfix-lures.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-26083",
+    "published": "2026-05-12T18:16:39.817",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A missing authorization vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.1, FortiSandbox 4.4.0 through 4.4.8, FortiSandbox Cloud 5.0.2 through 5.0.5, FortiSandbox PaaS 23.4 all versions, FortiSandbox PaaS 23.3 all versions, FortiSandbox PaaS 23.1 all versions, FortiSandbox PaaS 22.2 all vers",
+    "tags": [],
+    "title": "CVE-2026-26083 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26083"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14739",
+    "published": "2026-07-07T23:16:54.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DBI versions before 1.650 for Perl have a heap overflow when preparsing SQL statements with an extreme number of placeholders.\n\nThe fix for CVE-2026-10879 did not allocate enough memory to handle approximately 1.2-million placeholders.\n\nDBI version 1.650 sets a hard limit of 99,999 placeholders.",
+    "tags": [],
+    "title": "CVE-2026-14739 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14739"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-14740",
+    "published": "2026-07-07T23:16:54.193",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DBI versions before 1.650 for Perl read one byte out-of-bounds in preparse when deleting an initial SQL comment.\n\nThe preparse method normalises SQL and removes comments. When the SQL starts with a comment line, the deletion of that line during normalisation led to an out-of-bounds read by one byte.",
+    "tags": [],
+    "title": "CVE-2026-14740 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14740"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-59705",
+    "published": "2026-07-07T23:16:55.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "mem0's openmemory/api component contains an unauthenticated access vulnerability that allows unauthenticated attackers to read, write, and delete arbitrary user memories by accessing API routers registered without authentication middleware. Attackers can supply arbitrary user_id parameters or direct",
+    "tags": [],
+    "title": "CVE-2026-59705 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59705"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-56843",
+    "published": "2026-07-08T01:16:28.277",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Incorrect authorization in the XML-RPC API of WebPros Plesk before 18.0.78.4 allows a low-privileged authenticated customer to look up domains they do not own, because ownership is enforced only for certain lookup filters and schema validation is bypassed for legacy protocol versions. This results i",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56843 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56843"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-54061",
+    "published": "2026-07-08T14:17:06.520",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dgraph is an open source distributed GraphQL database. Prior to version 25.3.5, Dgraph Alpha exposes the RPCs used for external snapshot import on the public gRPC port `:9080` without authentication or authorization. As a result, an unauthenticated network client can open `StreamExtSnapshot` and sen",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54061 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54061"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-58480",
+    "published": "2026-07-08T14:17:19.977",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Blocksy Companion Pro plugin for WordPress before 2.1.47 contains an unauthenticated arbitrary file upload vulnerability that allows attackers to upload executable files by bypassing extension validation in the save_attachments function exposed through the Advanced Reviews feature. Attackers can exp",
+    "tags": [],
+    "title": "CVE-2026-58480 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58480"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2024-23668",
+    "published": "2024-06-03T10:15:13.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper authorization in Fortinet FortiWebManager 7.2.0, FortiWebManager 7.0.0 through 7.0.4, FortiWebManager 6.3.0, FortiWebManager 6.2.3 through 6.2.4, FortiWebManager 6.0.2 allows attacker to execute unauthorized code or commands via HTTP requests or CLI.",
+    "tags": [],
+    "title": "CVE-2024-23668 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23668"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-55653",
+    "published": "2026-06-23T04:17:36.600",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in OpenSSH. A malicious SSH server can exploit a double free vulnerability in the Diffie-Hellman Group Exchange (DH-GEX) client path. This occurs during FIPS (Federal Information Processing Standards) mode known-group validation when the client processes attacker-controlled DH-GEX g",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-55653 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55653"
+  },
+  {
+    "category": "high",
+    "cvss": 4.8,
+    "id": "CVE-2026-59998",
+    "published": "2026-07-08T01:16:28.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "sshd in OpenSSH before 10.4 has an undocumented security-relevant behavior: GSSAPIStrictAcceptorCheck has no value if the server is in Windows Active Directory.",
+    "tags": [],
+    "title": "CVE-2026-59998 (CVSS 4.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59998"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-15035",
+    "published": "2026-07-08T14:16:56.643",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in bentoml OpenLLM 0.6.30. This affects the function async_run_command of the file src/openllm/common.py of the component Model Repository Directory Name Handler. Performing a manipulation of the argument cmd results in command injection. Attacking locally is a requirement.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-15035 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15035"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-22927",
+    "published": "2026-07-08T14:16:57.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Omnissa Workspace ONE® Tunnel for Windows addresses a   Local Privilege Escalation Vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-22927 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22927"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56086",
+    "published": "2026-07-08T14:17:14.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dell PowerProtect Data Domain, versions 7.7.1.0 through 8.6, LTS2026 release version 8.6.1.0 through 8.6.1.10, LTS2025 release version 8.3.1.0 through 8.3.1.30, LTS2024 release versions 7.13.1.0 through 7.13.1.70 contain an Incorrect Authorization vulnerability. A low privileged attacker with remote",
+    "tags": [],
+    "title": "CVE-2026-56086 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56086"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56246",
+    "published": "2026-07-08T14:17:15.543",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Capgo before 12.128.2 contains a broken access control vulnerability in the organization management API where a scoped API key (limited_to_orgs) inherits its owner-user's permissions, allowing destructive cross-organization actions. When a user is an admin in two organizations and creates a write-mo",
+    "tags": [],
+    "title": "CVE-2026-56246 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56246"
   }
 ]
