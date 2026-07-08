@@ -2204,5 +2204,95 @@
     "tags": [],
     "title": "CVE-2026-53145 (CVSS 7.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53145"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-9182",
+    "published": "2026-07-06T19:17:09.680",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ArcGIS Server contains an unrestricted file upload vulnerability. An unauthenticated attacker could exploit this issue by uploading a crafted file to the affected endpoint. Successful exploitation could allow arbitrary file upload.",
+    "tags": [],
+    "title": "CVE-2026-9182 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9182"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-15062",
+    "published": "2026-07-08T15:16:26.320",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQL injection vulnerabilities in the Snowflake Snowpark Python SDK (snowpark-python) versions prior to 1.53.0 could allow authenticated low-privilege users to execute SQL beyond their authorization scope. An attacker could exploit these vulnerabilities by embedding SQL payloads in source database co",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15062 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15062"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-52720",
+    "published": "2026-06-15T20:16:32.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap buffer overflow vulnerability was found in GStreamer's librfb (RFB/VNC client). The rectangle bounds check incorrectly validates area rather than individual dimensions, allowing a malicious VNC server to send a rectangle that extends beyond the framebuffer. A remote attacker could set up a ma",
+    "tags": [],
+    "title": "CVE-2026-52720 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52720"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53262",
+    "published": "2026-06-25T09:16:44.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nl2tp: pppol2tp: hold reference to session in pppol2tp_ioctl()\n\npppol2tp_ioctl() read sock->sk->sk_user_data directly without any\nlocks or reference counting.  If a controllable sleep was induced during\ncopy_from_user() (e.g. via a ",
+    "tags": [],
+    "title": "CVE-2026-53262 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53262"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-11903",
+    "published": "2026-07-08T15:16:25.470",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Progress MOVEit Transfer (Ad Hoc module).\n\nThis issue affects MOVEit Transfer: from 2026.0.0 before 2026.0.1, from 2025.1.0 before 2025.1.4, from 2025.0.0 before 2025.0.8.",
+    "tags": [],
+    "title": "CVE-2026-11903 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11903"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15067",
+    "published": "2026-07-08T15:16:26.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Snowflake Terraform Provider versions prior to 2.18.0 contain several security vulnerabilities, including SQL injection via an unsanitized data source input could result in arbitrary SQL execution under the provider's privileged Snowflake session, potentially enabling sensitive data exfiltration and",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15067 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15067"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-54652",
+    "published": "2026-07-08T15:16:29.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Frigate is an open source network video recorder. In version 0.17.1, the GET /api/logs/{service} endpoint allows any authenticated user including the viewer role to download Frigate and nginx logs, exposing auto-generated admin passwords and camera credentials logged in request query strings and ena",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54652 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54652"
   }
 ]
