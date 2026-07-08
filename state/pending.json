@@ -2083,5 +2083,64 @@
     "tags": [],
     "title": "CVE-2026-30799 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30799"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2025-71315",
+    "published": "2026-06-08T16:16:33.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/vkms: Convert to DRM's vblank timer\n\nReplace vkms' vblank timer with the DRM implementation. The DRM\ncode is identical in concept, but differs in implementation.\n\nVblank timers are covered in vblank helpers and initializer macr",
+    "tags": [],
+    "title": "CVE-2025-71315 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71315"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46274",
+    "published": "2026-06-08T16:16:40.707",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nio-wq: check that the predecessor is hashed in io_wq_remove_pending()\n\nio_wq_remove_pending() needs to fix up wq->hash_tail[] if the cancelled\nwork was the tail of its hash bucket. When doing this, it checks whether\nthe preceding e",
+    "tags": [],
+    "title": "CVE-2026-46274 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46274"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46275",
+    "published": "2026-06-08T16:16:40.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: hci_uart: fix UAFs and race conditions in close and init paths\n\nVulnerabilities leading to Use-After-Free (UAF) and Null Pointer\nDereference (NPD) conditions were observed in the lifecycle management\nof hci_uart.\n\nThe pr",
+    "tags": [],
+    "title": "CVE-2026-46275 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46275"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53143",
+    "published": "2026-06-25T09:16:31.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdkfd: Fix buffer overflow in SDMA queue checkpoint/restore on GFX11\n\nThe v11 MQD manager incorrectly assigned the CP-compute variants of\ncheckpoint_mqd/restore_mqd for KFD_MQD_TYPE_SDMA queues. These functions\nuse sizeof(stru",
+    "tags": [],
+    "title": "CVE-2026-53143 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53143"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html",
+    "published": "2026-07-08T14:38:05+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Ubiquiti has shipped updates to address multiple critical security flaws impacting UniFi Connect, UniFi Talk, UniFi Access, UniFi Protect, and UniFi OS that could result in privilege escalation and arbitrary command execution. The list of vulnerabilities is as follows - CVE-2026-50746 (CVSS score: 1",
+    "tags": [],
+    "title": "Ubiquiti Patches Critical UniFi Flaws Across Connect, Talk, Access, Protect, and OS",
+    "url": "https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html"
   }
 ]
