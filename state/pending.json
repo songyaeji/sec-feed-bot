@@ -2395,5 +2395,29 @@
     ],
     "title": "CVE-2026-59871 (CVSS 5.3)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59871"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-53258",
+    "published": "2026-06-25T09:16:43.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: fix leak if split 6 GHz scanning fails\n\nrdev->int_scan_req is leaked if cfg80211_scan() fails.  Note that it's\nsupposed to be released at ___cfg80211_scan_done() but this doesn't happen\nas rdev->scan_req is NULL at that point",
+    "tags": [],
+    "title": "CVE-2026-53258 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53258"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53259",
+    "published": "2026-06-25T09:16:43.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: anycast: insert aca into global hash under idev->lock\n\nsyzbot reported a splat [1]: a slab-use-after-free in\nipv6_chk_acast_addr(), which walks the global inet6_acaddr_lst[] hash\nunder RCU and dereferences a struct ifacaddr6 ",
+    "tags": [],
+    "title": "CVE-2026-53259 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53259"
   }
 ]
