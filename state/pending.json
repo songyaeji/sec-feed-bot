@@ -2479,5 +2479,41 @@
     "tags": [],
     "title": "CVE-2026-53256 (CVSS 8.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53256"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-29009",
+    "published": "2026-07-08T17:17:21.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "U-Boot through 2026.04-rc3 contains a buffer overflow vulnerability in nfs_readlink_reply() (net/nfs-common.c) when CONFIG_CMD_NFS is enabled, allowing a malicious or compromised NFS server to overflow the 2048-byte nfs_path_buff buffer by returning multiple relative symlink targets that are appende",
+    "tags": [],
+    "title": "CVE-2026-29009 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29009"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-59731",
+    "published": "2026-07-08T17:17:25.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Astro is a web framework for content-driven websites. Version 6.4.7 performs authorization decisions on a partially decoded pathname after reaching the iterative URL decoder limit, while later rewrite route matching performs an additional decodeURI() operation and can resolve the request to a protec",
+    "tags": [],
+    "title": "CVE-2026-59731 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59731"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-60102",
+    "published": "2026-07-08T17:17:28.997",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Horde Virtual File System (VFS) API before 3.0.1 contains an OS command injection vulnerability in the Horde_Vfs_Smb driver where the _escapeShellCommand() method fails to sanitize command substitution sequences, allowing authenticated attackers to inject arbitrary shell commands through user-contro",
+    "tags": [],
+    "title": "CVE-2026-60102 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60102"
   }
 ]
