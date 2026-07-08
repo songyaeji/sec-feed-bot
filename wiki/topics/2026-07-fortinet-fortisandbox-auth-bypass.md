@@ -1,0 +1,14 @@
+---
+slug: fortinet-fortisandbox-auth-bypass
+first_seen: 2026-07-08
+tags: [Fortinet, 샌드박스, 인증우회]
+cves: [CVE-2026-26083]
+---
+
+**Fortinet FortiSandbox** 5.0.x, 4.4.x, Cloud 5.0.2-5.0.5, PaaS 여러 버전에서 미인증 파라미터 조작으로 인한 권한 상향 취약점(CVSS 9.8). API 엔드포인트 미인증 접근으로 관리자 권한 획득 가능.
+
+## 타임라인
+
+- 2026-07-08 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-26083) — CVE-2026-26083 공개 (CVSS 9.8)
+
+## 관련

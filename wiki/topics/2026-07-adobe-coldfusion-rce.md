@@ -10,6 +10,7 @@ Adobe ColdFusion 임계 취약점 **CVE-2026-48282**. 경로 이동 결함으로
 ## 타임라인
 
 - 2026-07-06 [Security Affairs](https://securityaffairs.com/?p=194837) — 악용 활동 시작 확인
+- 2026-07-08 [CISA](https://securityaffairs.com/?p=194927) — CISA Known Exploited Vulnerabilities 카탈로그에 추가
 
 ## 관련
 
