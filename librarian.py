@@ -101,8 +101,15 @@ def _run_chunk(chunk: list[dict], prompt: str) -> dict | None:
                 # --bare는 credentials 파일까지 스킵해 CI에서 "Not logged in"이 됨 (2.1.201 실측)
                 "claude", "-p", prompt,
                 "--model", MODEL,
-                "--allowedTools", "Read,Write,Edit,Glob,Grep",
-                "--permission-mode", "acceptEdits",
+                # 피드 본문은 신뢰할 수 없는 입력 — 경로 무제한 Read/Write는
+                # 프롬프트 인젝션 시 자격증명 파일을 읽어 wiki 페이지(커밋되어
+                # 공개 repo로 push됨)에 쓰는 유출 경로가 된다. 도구를 위키와
+                # 입력 파일로 스코프하고, 경로 무관 자동승인이라 allowlist를
+                # 무력화하는 acceptEdits 모드는 제거(비대화형 -p에서 allowlist
+                # 밖 도구 호출은 자동 거부된다)
+                "--allowedTools",
+                "Read(wiki/**),Read(state/librarian_input.json),"
+                "Write(wiki/**),Edit(wiki/**),Glob(wiki/**),Grep(wiki/**)",
                 "--output-format", "json",
             ],
             cwd=BASE_DIR,

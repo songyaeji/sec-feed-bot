@@ -193,7 +193,9 @@ def select_urgent(items: list[dict], config: dict, allow_llm: bool = True) -> li
                 # --bare 금지: credentials 파일까지 스킵해 CI에서 인증이 깨진다
                 "claude", "-p", prompt,
                 "--model", MODEL,
-                "--allowedTools", "Read",  # 판정에 도구 불필요 — 최소 허용
+                # 도구 일절 미허용 — 피드 본문은 신뢰할 수 없는 입력이라
+                # Read가 있으면 프롬프트 인젝션으로 러너의 자격증명 파일을
+                # 읽혀 판정 사유(공개 Discord/로그)로 유출될 수 있다
                 "--output-format", "json",
             ],
             cwd=BASE_DIR,

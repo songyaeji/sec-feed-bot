@@ -37,11 +37,18 @@ jobs:
 
       - name: Determine run mode
         id: run_mode
+        env:
+          # 표현식을 스크립트 본문에 직접 보간하지 않는다(스크립트 인젝션
+          # 방어 — github.event.* 값은 env로만 받는 것이 GitHub 권장)
+          DISPATCH_MODE: ${{ github.event.inputs.mode }}
         run: |
           # digest cron -> digest; workflow_dispatch -> the chosen input;
           # anything else (the */20 realtime cron) -> realtime
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
+            case "$DISPATCH_MODE" in
+              realtime|digest) echo "mode=$DISPATCH_MODE" >> "$GITHUB_OUTPUT" ;;
+              *) echo "mode=realtime" >> "$GITHUB_OUTPUT" ;;
+            esac
           elif [ "${{ github.event.schedule }}" = "50 21 * * *" ]; then
             echo "mode=digest" >> "$GITHUB_OUTPUT"
           else

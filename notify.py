@@ -27,6 +27,10 @@ BATCH_SIZE = 10
 
 WEBHOOK_USERNAME = "보안동향 브리핑"
 
+# 피드 제목/요약은 신뢰할 수 없는 입력 — content에 @everyone/@here가
+# 섞여 들어오면 채널 전체가 핑된다. 모든 멘션 파싱을 끈다
+NO_MENTIONS = {"parse": []}
+
 KST = timezone(timedelta(hours=9))
 KOREAN_WEEKDAYS = ["월", "화", "수", "목", "금", "토", "일"]
 HEADER_COLOR = 0x5865F2
@@ -169,14 +173,19 @@ def send_card_news(pngs: list[bytes], link_lines: list[str]) -> None:
         }
         _post_multipart_with_retry(
             webhook_url, files,
-            {"payload_json": json.dumps({"username": WEBHOOK_USERNAME})},
+            {"payload_json": json.dumps(
+                {"username": WEBHOOK_USERNAME, "allowed_mentions": NO_MENTIONS})},
         )
 
     if link_lines:
         time.sleep(1)  # 이미지 메시지와 같은 rate-limit 버킷을 공유하므로
         chunks = _chunk_lines(link_lines, MESSAGE_CONTENT_MAX)
         for i, chunk in enumerate(chunks):
-            _post_with_retry(webhook_url, {"content": chunk, "username": WEBHOOK_USERNAME})
+            _post_with_retry(webhook_url, {
+                "content": chunk,
+                "username": WEBHOOK_USERNAME,
+                "allowed_mentions": NO_MENTIONS,
+            })
             if i + 1 < len(chunks):
                 time.sleep(1)
 
@@ -210,7 +219,11 @@ def _dispatch(embeds: list[dict]) -> None:
 
     for i in range(0, len(embeds), BATCH_SIZE):
         batch = embeds[i:i + BATCH_SIZE]
-        _post_with_retry(webhook_url, {"embeds": batch, "username": WEBHOOK_USERNAME})
+        _post_with_retry(webhook_url, {
+            "embeds": batch,
+            "username": WEBHOOK_USERNAME,
+            "allowed_mentions": NO_MENTIONS,
+        })
 
         # Discord rate-limits webhooks fairly aggressively; a fixed pause
         # between batches keeps us under the limit without needing to
