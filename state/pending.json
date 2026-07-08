@@ -1820,5 +1820,68 @@
     "tags": [],
     "title": "CVE-2026-5067 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5067"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-30803",
+    "published": "2026-06-17T18:17:43.410",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Integer Underflow (Wrap or Wraparound) vulnerability in RTI Connext Micro (Core Libraries) allows Overread Buffers.This issue affects Connext Micro: from 4.0.0 before 4.3.0.",
+    "tags": [],
+    "title": "CVE-2026-30803 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30803"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-3894",
+    "published": "2026-06-17T18:17:44.287",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Out-of-bounds Read vulnerability in RTI Connext Professional (Core Libraries) allows Overread Buffers.This issue affects Connext Professional: from 7.4.0 before 7.7.0, from 7.0.0 before 7.3.1.3, from 6.1.0 before 6.1.*, from 6.0.0 before 6.0.*, from 5.3.0 before 5.3.*, from 5.0.0 before 5.2.*.",
+    "tags": [],
+    "title": "CVE-2026-3894 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3894"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-30802",
+    "published": "2026-06-17T18:17:43.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Out-of-bounds Read vulnerability in RTI Connext Micro (Core Libraries) allows Overread Buffers.This issue affects Connext Micro: from 4.0.0 before 4.3.0, from 2.4.5 before 2.4.*.",
+    "tags": [],
+    "title": "CVE-2026-30802 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30802"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/new-ghost-phishing-wave-is-breaking.html",
+    "published": "2026-07-08T13:00:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A recent EvilTokens campaign targeting businesses across the US and Europe is exposing a new email security blind spot. This “ghost phishing” technique keeps the malicious page hidden until it decrypts and comes to life inside the victim’s browser. For security leaders, the risk is clear: traditiona",
+    "tags": [
+      "피싱"
+    ],
+    "title": "New Ghost Phishing Wave Is Breaking Traditional Email Security",
+    "url": "https://thehackernews.com/2026/07/new-ghost-phishing-wave-is-breaking.html"
+  },
+  {
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/scmbanker-malware-uses-clickfix-lures.html",
+    "published": "2026-07-08T12:52:15+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A new banking fraudulent operation is targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges using ClickFix lures. The activity cluster, tracked by Elastic Security Labs under the moniker REF6045, involves infecting victims through fake CAPTCHA verification p",
+    "tags": [
+      "금융",
+      "APT"
+    ],
+    "title": "SCMBANKER Malware Uses ClickFix Lures to Target Mexican Banking Users",
+    "url": "https://thehackernews.com/2026/07/scmbanker-malware-uses-clickfix-lures.html"
   }
 ]
