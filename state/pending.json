@@ -2562,5 +2562,17 @@
     "tags": [],
     "title": "CVE-2026-47898 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47898"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-53235",
+    "published": "2026-06-25T09:16:41.397",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: add pskb_may_pull() to skb_gro_receive_list()\n\nskb_gro_receive_list() calls skb_pull(skb, skb_gro_offset(skb)) without\nfirst ensuring the data is in the linear area via pskb_may_pull(). When\nthe skb arrives via napi_gro_frags(",
+    "tags": [],
+    "title": "CVE-2026-53235 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53235"
   }
 ]
