@@ -2659,5 +2659,164 @@
     ],
     "title": "A Hacker Claims 35 GB of Accenture Source Code. The Company discloses the data breach",
     "url": "https://securityaffairs.com/194962/data-breach/a-hacker-claims-35-gb-of-accenture-source-code-the-company-discloses-the-data-breach.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-49763",
+    "published": "2026-06-15T21:17:21.357",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Integration for Contact Form 7 HubSpot <= 1.3.7 versions.",
+    "tags": [],
+    "title": "CVE-2026-49763 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49763"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-49468",
+    "published": "2026-06-22T21:16:25.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, a Host-header parsing flaw in the LiteLLM proxy could, under specific conditions, allow unauthenticated access to protected management routes. The auth layer derived the effective route from reques",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-49468 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49468"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-14891",
+    "published": "2026-07-08T20:16:48.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HashiCorp Nomad and Nomad Enterprise are vulnerable to a sandbox escape in the Docker task driver that may allow a job submitter to bind-mount a host path into a container even when volume bind mounts are disabled, potentially leading to reading and writing files on the host. This vulnerability, CVE",
+    "tags": [],
+    "title": "CVE-2026-14891 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14891"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-15154",
+    "published": "2026-07-08T20:16:48.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in `guardrails-detectors`, a component of Red Hat OpenShift AI. This vulnerability, known as Regular Expression Denial of Service (ReDoS), allows a remote attacker to provide specially crafted regular expressions to the public detection API. This can cause catastrophic backtracking,",
+    "tags": [],
+    "title": "CVE-2026-15154 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15154"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-44512",
+    "published": "2026-07-08T20:16:49.913",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open Neural Network Exchange (ONNX) is an open standard for machine learning interoperability. From 1.9.0 before 1.22.0, onnx.version_converter.convert_version() can dereference a null pointer in Upsample_6_7::adapt_upsample_6_7() in onnx/version_converter/adapters/upsample_6_7.h when processing an ",
+    "tags": [
+      "AI",
+      "APT"
+    ],
+    "title": "CVE-2026-44512 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44512"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-55404",
+    "published": "2026-07-08T20:16:52.987",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "yt-dlp and youtube-dl are command-line audio/video downloaders. Prior to 2026.7.4, the --write-link, --write-url-link, and --write-desktop-link options can write .url or .desktop shortcut files using attacker-controlled webpage_url or filename metadata without sufficient validation or escaping, allo",
+    "tags": [],
+    "title": "CVE-2026-55404 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55404"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58253",
+    "published": "2026-07-08T20:16:54.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NATS Server is a high-performance server for NATS.io, the cloud and edge native messaging system. Prior to 2.14.0, 2.12.7, and 2.11.16, when no_auth_user was configured, a parser fast path intended for ordinary client connections could also apply to route or leafnode listeners, allowing an unauthent",
+    "tags": [],
+    "title": "CVE-2026-58253 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58253"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-59802",
+    "published": "2026-07-08T20:16:55.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PasswordPusher before 2.8.1 accepts data URI schemes in URL push payloads due to insufficient validation in the valid_url function. Attackers can create malicious pushes containing data:text/html URIs that execute arbitrary JavaScript in victims' browsers when clicked, enabling phishing and credenti",
+    "tags": [
+      "피싱"
+    ],
+    "title": "CVE-2026-59802 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59802"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-59819",
+    "published": "2026-07-08T20:16:57.277",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.83.10-stable, LiteLLM's /health/test_connection endpoint resolved request-supplied environment and OIDC file references in litellm_params, allowing a proxy administrator or another privileged caller with",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-59819 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59819"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-59820",
+    "published": "2026-07-08T20:16:57.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.83.7-stable, LiteLLM Skills archive extraction did not sufficiently validate file paths from uploaded skill ZIP archives, allowing an authenticated user with access to LiteLLM LLM API routes or a key who",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-59820 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59820"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-59821",
+    "published": "2026-07-08T20:16:57.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.82.0-stable, LiteLLM's Custom Code Guardrails production create and update paths did not apply the same sandboxing and validation used by the test endpoint, allowing a privileged user with access to crea",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-59821 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59821"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-59822",
+    "published": "2026-07-08T20:16:57.683",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. Prior to 1.84.0, LiteLLM's MCP Streamable HTTP endpoint allowed an unauthenticated attacker to use a fabricated Authorization header to trigger an OAuth2 passthrough fallback path that replaced failed LiteLLM key v",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-59822 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59822"
   }
 ]
