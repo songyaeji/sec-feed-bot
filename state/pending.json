@@ -2892,5 +2892,41 @@
     "tags": [],
     "title": "CVE-2026-6896 (CVSS 8.7)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6896"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-43414",
+    "published": "2026-05-08T15:16:53.353",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nscsi: qla2xxx: Completely fix fcport double free\n\nIn qla24xx_els_dcmd_iocb() sp->free is set to qla2x00_els_dcmd_sp_free().\nWhen an error happens, this function is called by qla2x00_sp_release(),\nwhen kref_put() releases the first ",
+    "tags": [],
+    "title": "CVE-2026-43414 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43414"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-46284",
+    "published": "2026-06-08T17:16:46.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/hugetlb: fix early boot crash on parameters without '=' separator\n\nIf hugepages, hugepagesz, or default_hugepagesz are specified on the\nkernel command line without the '=' separator, early parameter parsing\npasses NULL to hugetl",
+    "tags": [],
+    "title": "CVE-2026-46284 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46284"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46285",
+    "published": "2026-06-08T17:16:46.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmtd: docg3: fix use-after-free in docg3_release()\n\nIn docg3_release(), the docg3 pointer is obtained from\ncascade->floors[0]->priv before the loop that calls\ndoc_release_device() on each floor. doc_release_device() frees the\ndocg3 ",
+    "tags": [],
+    "title": "CVE-2026-46285 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46285"
   }
 ]
