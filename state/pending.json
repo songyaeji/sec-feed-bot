@@ -1461,5 +1461,33 @@
     "tags": [],
     "title": "GitHub Copilot Refuses Harmful Requests in Chat, Then Writes Them in Code",
     "url": "https://thehackernews.com/2026/07/github-copilot-refuses-harmful-requests.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14536",
+    "published": "2026-07-06T20:16:29.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper enforcement of a mandatory multi-factor authentication policy in Devolutions Server 2026.2.9.0 allows an attacker with valid user credentials to bypass the MFA Required policy and authenticate without completing multi-factor authentication. The problem occurs when DVLS encounters an invalid",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14536 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14536"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-3688",
+    "published": "2026-07-08T12:17:20.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WCFM Membership – WooCommerce Memberships for Multivendor Marketplace plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.11.10. This is due to the 'wcfmvm_membership_change' AJAX action not validating user permission to modify other use",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3688 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3688"
   }
 ]
