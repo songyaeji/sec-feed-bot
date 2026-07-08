@@ -2928,5 +2928,69 @@
     "tags": [],
     "title": "CVE-2026-46285 (CVSS 7.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46285"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44024",
+    "published": "2026-07-08T22:17:14.337",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on. Prior to 1.19.3, Fluentd allows dynamically constructing file paths using the ${tag} placeholder, and insufficient validation of ${tag} in file configurations such as the path para",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44024 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44024"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-60104",
+    "published": "2026-07-08T20:17:00.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Bitwarden Server before 2026.6.0 does not verify that the email in a POST /auth-requests/admin-request body belongs to the authenticated caller, allowing a low-privileged organization member to obtain another user's vault key and a victim-scoped access token by creating a Trusted Device Encryption a",
+    "tags": [],
+    "title": "CVE-2026-60104 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60104"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10037",
+    "published": "2026-07-08T22:17:12.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A sandbox escape vulnerability exists in the OpenJDK packages provided in Ubuntu. The .jar MIME handlers installed by these packages execute files marked as executable when the mailcap package is installed. A compromised or malicious sandboxed application with access to the OpenURI portal via xdg-de",
+    "tags": [],
+    "title": "CVE-2026-10037 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10037"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-54777",
+    "published": "2026-07-08T22:17:15.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF NetNamedPipe transport accepts attachment to a pre-existing named pipe instance, allowing local interception of NetNamedPipe traffic when an attacker races NamedPipeListene",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54777 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54777"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-55830",
+    "published": "2026-07-08T22:17:15.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "RestrictedPython is a tool that helps to define a subset of the Python language which allows to provide a program input into a trusted environment. Prior to 8.3, check_function_argument_names() rejected protected guard hook names for regular, variadic, and keyword-only arguments but omitted position",
+    "tags": [],
+    "title": "CVE-2026-55830 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55830"
   }
 ]
