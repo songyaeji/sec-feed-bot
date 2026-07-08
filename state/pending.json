@@ -2294,5 +2294,19 @@
     ],
     "title": "CVE-2026-54652 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54652"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53260",
+    "published": "2026-06-25T09:16:43.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ntcp: Add preempt_{disable,enable}_nested() in reqsk_queue_hash_req().\n\nsyzbot reported a weird reqsk->rsk_refcnt underflow in\n__inet_csk_reqsk_queue_drop().\n\nThe captured reqsk_put() in __inet_csk_reqsk_queue_drop()\nis called only ",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-53260 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53260"
   }
 ]
