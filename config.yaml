@@ -183,7 +183,9 @@ sources:
   - name: "Hacker News"
     type: hn
     category: "news"
-    min_points: 150
+    # 150은 포인트 축적까지 수 시간 걸려 속보성이 죽는다 — 대형 사건은
+    # 1~2시간 내 100+ 도달. 노이즈 증가분은 judge LLM이 최종 거른다
+    min_points: 100
     breaking: true
     region: "해외"
 
@@ -194,6 +196,22 @@ sources:
     category: "news"
     breaking: true
     region: "해외"
+
+  # 국내 속보 — 국내 대형사고(쿠팡·SKT급)는 언론 보도가 가장 빠르다.
+  # 사건·사고 어휘 검색이라 노이즈가 많지만 breaking 소스는 어차피
+  # judge 긴급 판정분만 발송되고 나머지는 버려진다
+  - name: "국내 사건 속보"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%ED%95%B4%ED%82%B9%20OR%20%EC%9C%A0%EC%B6%9C%20OR%20%EB%9E%9C%EC%84%AC%EC%9B%A8%EC%96%B4&hl=ko&gl=KR&ceid=KR:ko"
+    category: "news"
+    breaking: true
+    region: "국내"
+    max_age_days: 1
+
+# judge scale(파장 자기평가 1~5) 하한 — 이 값 미만은 LLM이 긴급이라 해도
+# 코드에서 탈락시킨다(이중 게이트). 5 = 국가적/글로벌 파장만. 긴급 알림이
+# 너무 조용하면 4로 낮춰 업계 전체 파장까지 허용
+urgent_min_scale: 5
 
 # v8 즉시 발송 1차 게이트 — 이 키워드가 제목/요약에 있어야 haiku 판정
 # 후보가 된다 (사건·사고 어휘만; 최종 선별은 judge.py의 LLM이 한다)

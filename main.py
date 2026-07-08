@@ -344,6 +344,9 @@ def main() -> None:
 
         if card_items:
             notify.send_cards(card_items, discord_cfg)
+            # 발송 성공분만 이력에 — judge가 다음 런에서 같은 사건의
+            # 후속 보도를 긴급으로 재판정하지 않게 하는 컨텍스트
+            judge.record_history(card_items)
             had_backlog = True
 
         if run_mode == "digest":

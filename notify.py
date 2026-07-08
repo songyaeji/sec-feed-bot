@@ -44,13 +44,9 @@ INDIVIDUAL_SEVERITY_EMOJI = {
     "high": "🟡",
 }
 
-# urgent (judge.select_urgent 판정) 개별 카드 강화 스타일 — 빨강 고정 색과
-# 심각도 스탯 타일 라벨. urgent_reason이 있는 항목에만 적용된다.
+# urgent (judge.select_urgent 판정) 개별 카드 강화 스타일 — 빨강 고정 색.
+# urgent_reason이 있는 항목에만 적용된다.
 URGENT_COLOR = 0xE74C3C
-URGENT_SEVERITY_LABEL = {
-    "critical": "🔴 CRITICAL",
-    "high": "🟠 HIGH",
-}
 
 # digest bullet-line emoji, checked in priority order (first tag match wins);
 # an item with no matching tag falls back to a plain bullet
@@ -302,12 +298,6 @@ def _build_individual_embed(item: dict, colors: dict) -> dict:
     cvss = item.get("cvss")
     if cvss is not None:
         fields.append({"name": "CVSS", "value": f"**{cvss}**", "inline": True})
-    if urgent_reason:
-        fields.append({
-            "name": "심각도",
-            "value": URGENT_SEVERITY_LABEL.get(item.get("severity"), "⚪ INFO"),
-            "inline": True,
-        })
     if fields:
         embed["fields"] = fields
 

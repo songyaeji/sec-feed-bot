@@ -111,6 +111,11 @@ jobs:
           # wiki pages are picked up, then skip the commit entirely when
           # there's nothing staged, to avoid empty commits
           git add state/seen.json state/pending.json wiki/
+          # 긴급 발송 이력(후속 보도 재울림 차단 컨텍스트) — 첫 긴급 발송
+          # 전에는 파일이 없어서 무조건 add하면 pathspec 에러가 난다
+          if [ -f state/urgent_history.json ]; then
+            git add state/urgent_history.json
+          fi
           if git diff --cached --quiet; then
             echo "No state changes, skipping commit."
             exit 0
