@@ -2181,5 +2181,69 @@
     ],
     "title": "INTERPOL Operation First Light Nets 5,811 Arrests and Seizes $293 Million",
     "url": "https://securityaffairs.com/195056/security/interpol-operation-first-light-nets-5811-arrests-and-seizes-293-million.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-58122",
+    "published": "2026-07-09T22:17:09.363",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hermes WebUI before 0.51.307 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to circumvent local-origin IP restrictions on onboarding endpoints by supplying a spoofed X-Forwarded-For header with a loopback address. Attackers can exploit this bypass to per",
+    "tags": [],
+    "title": "CVE-2026-58122 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58122"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-58123",
+    "published": "2026-07-09T22:17:09.517",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hermes WebUI before 0.51.788 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary shell commands by accessing the embedded terminal API endpoints without credentials. Attackers can create a session, attach a PTY shell, and write arbitrary ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58123 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58123"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-44787",
+    "published": "2026-07-09T22:17:04.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Discourse is an open-source discussion platform. Prior to 2026.6.0, 2026.5.1, 2026.4.2, and 2026.1.5, the signup flow could allow newly registered users to set primary_group_id and gain whisper-group privileges without legitimate group membership on sites with whispers_allowed_groups configured. Thi",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44787 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44787"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-55604",
+    "published": "2026-07-09T22:17:06.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DeepSeek MCP Server is an MCP server for DeepSeek V4. Starting in version 1.4.2 and prior to version 1.7.0, the process-global `SessionStore` accepts caller-supplied `session_id` values without binding them to any authenticated principal or transport session. An attacker can enumerate active session",
+    "tags": [],
+    "title": "CVE-2026-55604 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55604"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58143",
+    "published": "2026-07-09T22:17:09.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cotonti Siena 0.9.26 and earlier contains a cross-site request forgery vulnerability that allows unauthenticated attackers to modify administrator configuration by tricking a logged-in administrator into submitting a forged POST request to the admin.php config update handler, which never invokes the",
+    "tags": [],
+    "title": "CVE-2026-58143 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58143"
   }
 ]
