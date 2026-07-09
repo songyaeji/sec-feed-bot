@@ -1486,5 +1486,17 @@
     "tags": [],
     "title": "CVE-2026-51846 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51846"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-50086",
+    "published": "2026-06-12T16:16:32.187",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Aqara IAM/SSO gateway (gw-builder.aqara.com) exposes bidirectional AES round-trups against the platform's signing key without authentication. This is an instance of \"CWE-306: Missing Authentication for Critical Function\" and \"CWE-327: Use of a Broken or Risky Cryptographic Algorithm,\" and has an",
+    "tags": [],
+    "title": "CVE-2026-50086 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50086"
   }
 ]
