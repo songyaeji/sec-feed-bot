@@ -2000,5 +2000,67 @@
     "tags": [],
     "title": "Winning 54% of the time",
     "url": "https://blog.talosintelligence.com/winning-54-of-the-time/"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46215",
+    "published": "2026-05-28T10:16:37.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm: Set old handle to NULL before prime swap in change_handle\n\nThere was a potential race condition in change_handle. The ioctl\nbriefly had a single object with two idr entries; a concurrent\ngem_close could delete the object and r",
+    "tags": [],
+    "title": "CVE-2026-46215 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46215"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-59224",
+    "published": "2026-07-09T17:17:03.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. Prior to 0.10.0, backend/open_webui/routers/terminals.py built the ws_terminal upstream URL from an unencoded session_id and appended user_id as a query parameter, allowing query injection to make the terminal back",
+    "tags": [],
+    "title": "CVE-2026-59224 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59224"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-13492",
+    "published": "2026-07-09T19:17:03.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The UsersWP plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 1.2.65. This is due to insufficient validation of file-field values in the UsersWP_Validation::validate_fields() function (which falls through to sanitize_text_field() for fields of type 'file",
+    "tags": [],
+    "title": "CVE-2026-13492 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13492"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-58198",
+    "published": "2026-07-09T19:17:06.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ChatterBot is a machine learning, conversational dialog engine for creating chat bots. Prior to 1.2.14, UbuntuCorpusTrainer.extract() uses a predictable home-rooted output directory (~/ubuntu_data/ubuntu_dialogs) with a check-then-create pattern followed by tar.extractall(path=self.data_path), allow",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-58198 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58198"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59148",
+    "published": "2026-07-09T19:17:07.067",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mockoon provides way to design and run mock APIs. Prior to 9.7.0, Mockoon's admin API in commons-server/src/libs/server/admin-api.ts is mounted on the same Express listener as user-defined mock routes, enabled by default in shipped runtimes, serves Access-Control-Allow-Origin: * with write methods a",
+    "tags": [],
+    "title": "CVE-2026-59148 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59148"
   }
 ]
