@@ -108,6 +108,12 @@ jobs:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
           RUN_MODE: ${{ steps.run_mode.outputs.mode }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # 인스타/쓰레드 크로스포스트 — secret 미등록이면 빈 값이 되고
+          # crosspost.py가 해당 플랫폼을 건너뛴다(digest 모드에서만 사용)
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
         run: python main.py
 
       - name: Commit updated state
@@ -129,20 +135,36 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: update seen.json/pending.json/wiki [skip ci]"
 
-          # rebase onto latest main and retry once so an overlapping/delayed
-          # cron run doesn't fail outright on a non-fast-forward push
-          for attempt in 1 2; do
-            git pull --rebase origin main
+          # A concurrent writer (an overlapping cron run or a direct local
+          # push) may have advanced origin/main. git's line-based rebase can't
+          # auto-merge the JSON state files and aborts with a CONFLICT, so
+          # instead of `pull --rebase` we re-base our changes onto the latest
+          # origin/main without a textual replay: `git reset --mixed` moves
+          # HEAD and the index to origin/main (so unrelated files that advanced
+          # on main are kept, not reverted) while leaving this run's state/wiki
+          # edits in the working tree, then merge_state.py union-merges the JSON
+          # state files at the data level -- guaranteeing no seen id / pending
+          # item from either writer is lost.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --mixed origin/main
+            python merge_state.py origin/main
+            git add state/seen.json state/pending.json wiki/
+            if [ -f state/urgent_history.json ]; then
+              git add state/urgent_history.json
+            fi
+            if git diff --cached --quiet; then
+              echo "No net state changes after merge, skipping commit."
+              exit 0
+            fi
+            git commit -m "chore: update seen.json/pending.json/wiki [skip ci]"
             if git push; then
-              break
+              exit 0
             fi
             echo "push attempt $attempt failed"
-            if [ "$attempt" -eq 2 ]; then
-              exit 1
-            fi
           done
+          exit 1
 
       # 다이제스트 발송 성공 시 main.py가 out/trend/(카드 PNG + meta.json)를
       # 남긴다. 이를 포트폴리오 repo로 push하면 해당 repo의 deploy 워크플로가
