@@ -15,7 +15,6 @@ from datetime import datetime, timedelta, timezone
 import yaml
 
 import cardgen
-import crosspost
 import dedup as dedup_lib
 import judge
 import librarian
@@ -23,6 +22,15 @@ import notify
 import preflight
 import tagger
 from sources import dblp, fsec, fss, hackernews, kev, nvd, rss
+
+# 크로스포스트(인스타/쓰레드)는 선택적 모듈이다. 아직 배포되지 않은
+# 환경(crosspost.py 부재)에서도 수집·발송 파이프라인이 import 단계에서
+# 죽지 않도록 가드한다 — 모듈이 없으면 발송은 정상 진행하고 크로스포스트
+# 단계만 조용히 건너뛴다
+try:
+    import crosspost
+except ImportError:
+    crosspost = None
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
@@ -572,19 +580,20 @@ def main() -> None:
                     # 인스타/쓰레드 크로스포스트 — 반드시 자체 try로 격리:
                     # 예외가 바깥 except에 닿으면 텍스트 다이제스트 폴백이
                     # 실행돼 Discord에 이중 발송되기 때문
-                    try:
-                        crosspost.crosspost_all(
-                            cdn_urls,
-                            issue_no=issue_no,
-                            briefing=briefing,
-                            keywords=stats.get("keywords") or [],
-                            cfg=config.get("crosspost", {}),
-                        )
-                    except Exception as exc:
-                        print(
-                            f"[main] 크로스포스트 실패(무시): {_safe_exc_str(exc)}",
-                            file=sys.stderr,
-                        )
+                    if crosspost is not None:
+                        try:
+                            crosspost.crosspost_all(
+                                cdn_urls,
+                                issue_no=issue_no,
+                                briefing=briefing,
+                                keywords=stats.get("keywords") or [],
+                                cfg=config.get("crosspost", {}),
+                            )
+                        except Exception as exc:
+                            print(
+                                f"[main] 크로스포스트 실패(무시): {_safe_exc_str(exc)}",
+                                file=sys.stderr,
+                            )
                 except Exception as exc:
                     print(
                         f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",
