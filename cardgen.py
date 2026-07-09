@@ -186,7 +186,10 @@ def build_link_lines(top_items: list[dict], cve_rest: list[dict],
     URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다."""
     lines = []
     for i, item in enumerate(top_items + other_rest + cve_rest, start=1):
-        title = " ".join(item.get("title", "").split())  # 개행이 목록 줄을 깨지 않게
+        # 링크 라벨은 카드 본문 제목과 글자 그대로 일치시킨다(_card_title):
+        # 사서 번역 제목(title_ko) 우선 + 선두 "[속보]/[카드뉴스]" 등 분류
+        # 접두어 제거. 개행은 목록 줄이 깨지지 않게 공백으로 접는다
+        title = " ".join(_card_title(item).split())
         lines.append(f"{i}. [{title}](<{item['url']}>)")
     return lines
 
