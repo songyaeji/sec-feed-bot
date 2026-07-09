@@ -41,6 +41,14 @@ MAX_TAG_PILLS = 3       # 태그 pill 총 상한 — 한 줄 유지 (v19: 카테
 # '오늘의 CVE' 행 라벨용: 텍스트 등장 순서 기준 첫 CVE id
 CVE_RE = re.compile(r"CVE-\d{4}-\d{4,7}", re.IGNORECASE)
 
+
+def _cve_id(item: dict) -> str:
+    """항목에서 첫 CVE id(대문자)를 뽑는다 — 카드 'CVE 행'과 링크 라벨이
+    같은 표기를 쓰도록 한 곳에서 결정한다. 없으면 빈 문자열."""
+    text = f"{item.get('id', '')} {item.get('title', '')} {item.get('summary', '')}"
+    m = CVE_RE.search(text)
+    return m.group(0).upper() if m else ""
+
 # 피드 제목에 섞여 오는 장식용 특수문자(딩벳·박스 등)는 번들 폰트에 글리프가
 # 없어 두부(□)로 렌더된다 — ASCII 인쇄 문자 전체·한글·통용 문장부호만 남기고
 # 걷어낸다 (개별 열거는 sentinel_token의 '_'처럼 정상 문자를 삼킨 전력)
@@ -186,11 +194,16 @@ def build_link_lines(top_items: list[dict], cve_rest: list[dict],
     URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다."""
     lines = []
     for i, item in enumerate(top_items + other_rest + cve_rest, start=1):
-        # 링크 라벨은 카드 본문 제목과 글자 그대로 일치시킨다(_card_title):
-        # 사서 번역 제목(title_ko) 우선 + 선두 "[속보]/[카드뉴스]" 등 분류
-        # 접두어 제거. 개행은 목록 줄이 깨지지 않게 공백으로 접는다
-        title = " ".join(_card_title(item).split())
-        lines.append(f"{i}. [{title}](<{item['url']}>)")
+        if is_cve_item(item):
+            # CVE 항목(KEV·NVD 등)은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
+            # (사용자 결정). id 추출 실패 시에만 제목으로 폴백
+            label = _cve_id(item) or " ".join(_card_title(item).split())
+        else:
+            # 그 외는 카드 본문 제목과 글자 그대로 일치(_card_title):
+            # title_ko 우선 + 선두 "[속보]/[카드뉴스]" 등 분류 접두어 제거.
+            # 개행은 목록 줄이 깨지지 않게 공백으로 접는다
+            label = " ".join(_card_title(item).split())
+        lines.append(f"{i}. [{label}](<{item['url']}>)")
     return lines
 
 
@@ -489,9 +502,7 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
 
     rows = []
     for item, title in zip(shown, shown_titles):
-        text = f"{item.get('id', '')} {item.get('title', '')} {item.get('summary', '')}"
-        m = CVE_RE.search(text)
-        cve = m.group(0).upper() if m else ""
+        cve = _cve_id(item)
         cvss = item.get("cvss")
         score = f"{float(cvss):.1f}" if cvss is not None else "—"
         desc = title
