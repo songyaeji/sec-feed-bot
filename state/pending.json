@@ -239,5 +239,93 @@
     "tags": [],
     "title": "노르마, 제3회 글로벌 퀀텀 AI 경진대회 개최...예선 문제 공개",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207529"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-7839",
+    "published": "2026-07-01T05:16:24.680",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "UltraVNC repeater through 1.8.2.2 initializes the HTTP administration server with a hardcoded default password. In repeater/webgui/settings.c:197, when settings2.txt is absent on first run the repeater writes the literal string \"adminadmi2\" as the admin password via strcpy_s(saved_password, 64, \"adm",
+    "tags": [],
+    "title": "CVE-2026-7839 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7839"
+  },
+  {
+    "category": "high",
+    "cvss": 4.8,
+    "id": "CVE-2026-44040",
+    "published": "2026-07-01T05:16:20.897",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "UltraVNC through 1.8.2.2 uses a cryptographically weak pseudo-random number generator to produce VNC authentication challenge bytes. In rfb/vncauth.c:119-129, the vncRandomBytes() function seeds libc rand() with time(0) + getpid() + rand() and generates a 16-byte challenge. The combined seed space i",
+    "tags": [],
+    "title": "CVE-2026-44040 (CVSS 4.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44040"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-7830",
+    "published": "2026-07-01T05:16:24.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "UltraVNC through 1.8.2.2 uses inadequate cryptography in the MS-Logon II authentication scheme (rfbUltraVNC_MsLogonIIAuth). In rfb/dh.cpp the Diffie-Hellman key exchange is performed with parameters that fit in an unsigned 64-bit integer (DH_MAX_BITS controls the prime size). A 64-bit DH key can be ",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-7830 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7830"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-7838",
+    "published": "2026-07-01T05:16:24.540",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "UltraVNC viewer through 1.8.2.2 contains an integer overflow leading to a heap buffer overflow in the RFB protocol failure-response parsing path. In vncviewer/ClientConnection.cpp, the 4-byte network-supplied reasonLen field (type CARD32) is passed as reasonLen+1 to CheckBufferSize(). Because both o",
+    "tags": [],
+    "title": "CVE-2026-7838 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7838"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-5523",
+    "published": "2026-07-09T06:16:21.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Divi Form Builder plugin for WordPress is vulnerable to Missing Authorization in versions up to, and including, 5.1.8. This is due to the update_user() function accepting a user ID parameter from form submissions without verifying that the authenticated user has permission to edit that specific ",
+    "tags": [],
+    "title": "CVE-2026-5523 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5523"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144601&kind=&sub_kind=",
+    "published": "2026-07-09T06:21:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "단일 노드부터 고가용성 클러스터까지 다양한 구축 환경 지원[보안뉴스 강초희 기자] 글로벌 엔터프라이즈 스토리지 및 AI 인프라 솔루션 전문 기업 인포트렌드는 9일 급변하는 AI 및 엣지 컴퓨팅 환경에 대응하기 위한 엣지 컴퓨팅 포트폴리오 확대를 발표했다.새롭게 개편된 엣지 컴퓨팅 포트폴리오는 단일 노드 환경 기반부터 고가용성(HA) 클러스터 구축 환경까지",
+    "tags": [],
+    "title": "인포트렌드, AI·엣지 워크로드 대응 엣지 컴퓨팅 포트폴리오 확대",
+    "url": "http://www.boannews.com/media/view.asp?idx=144601&kind=&sub_kind="
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144602&kind=&sub_kind=",
+    "published": "2026-07-09T06:20:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "액티브 디렉터리(AD) 연동 및 ‘링펜싱’ 기술로 핵심 비즈니스 시스템 격리프로세스 수준 마이크로세그멘테이션 적용, 내부망 횡적이동 차단[보안뉴스 조재호 기자] 아카마이가 삼성생명에 아카마이 가디코어 마이크로세그멘테이션(Akamai Guardicore Microsegmentation) 구축을 완료했다고 9일 밝혔다. 복잡한 금융 인프라 전반의 보호 체계를",
+    "tags": [
+      "금융"
+    ],
+    "title": "아카마이, 삼성생명에 ‘가디코어 세그멘테이션’ 구축... 제로트러스트 지원",
+    "url": "http://www.boannews.com/media/view.asp?idx=144602&kind=&sub_kind="
   }
 ]
