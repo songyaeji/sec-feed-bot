@@ -2245,5 +2245,47 @@
     "tags": [],
     "title": "CVE-2026-58143 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58143"
+  },
+  {
+    "category": "high",
+    "cvss": 7.7,
+    "id": "CVE-2026-33655",
+    "published": "2026-07-09T23:17:04.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to 0.12.0-alpha.1, the default SSRF protection configuration did not apply IP filtering to hostnames; with ApplyIPFilterForDomain disabled by default, URL validation checked domain allow/bl",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-33655 (CVSS 7.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33655"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-44342",
+    "published": "2026-07-09T23:17:05.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to 0.12.0-alpha.1, the email and WeChat account binding endpoints GET /api/oauth/email/bind and GET /api/oauth/wechat/bind used GET requests for state-changing account operations, allowing ",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-44342 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44342"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBqY3ZiSHc4bWhYcmJLRDZqQ3ozbjdseWhmM0pZYzNhZ0lyRk9ocmI3RlpLdzdWRU9MbmkxWThHblEzbVVlam5YOWhGZ0JlNmZsQkN2OGk4VGMyYmQxanNtdtIBkAJBVV95cUxQMXJ5WVJJSUprWHAtZkZTWjU2U3RadUo3clZnQjdSY1NGdUVqd25tY2FpamJudTRnTlJNTnh3UVh0U29MSjBnSS01djAydmlRRWhQNGkyTFRzY2VzT2JSaDNIbEltV2NqLU51ZFhxdTJqU1BWd1BLRmZ3azdWZGtxTzNYZnlOYUYxRUJwZ1BibTBaTjF1Q1RENzNOeFVFOWktWHJrc0lkZW9VNXhzZTNRamg0cmZOTmtCWDY5ZXU4WTZZN2RJbE1NWVVKVlVna0twVEw2U0Jqak4zYlh4OEEzWUdZX0V6OGkxVFFpSWdIWWpZM2V0OFFWaGJsYi1sQ19UdjBON0FpSlNFdjZ4Q2F2WA",
+    "published": "2026-07-09T23:31:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "이억원 금융위원장 \"AI 보안체계 구축…망분리 전면 개선 추진\" 데일리안",
+    "tags": [
+      "금융"
+    ],
+    "title": "이억원 금융위원장 \"AI 보안체계 구축…망분리 전면 개선 추진\" - 데일리안",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBqY3ZiSHc4bWhYcmJLRDZqQ3ozbjdseWhmM0pZYzNhZ0lyRk9ocmI3RlpLdzdWRU9MbmkxWThHblEzbVVlam5YOWhGZ0JlNmZsQkN2OGk4VGMyYmQxanNtdtIBkAJBVV95cUxQMXJ5WVJJSUprWHAtZkZTWjU2U3RadUo3clZnQjdSY1NGdUVqd25tY2FpamJudTRnTlJNTnh3UVh0U29MSjBnSS01djAydmlRRWhQNGkyTFRzY2VzT2JSaDNIbEltV2NqLU51ZFhxdTJqU1BWd1BLRmZ3azdWZGtxTzNYZnlOYUYxRUJwZ1BibTBaTjF1Q1RENzNOeFVFOWktWHJrc0lkZW9VNXhzZTNRamg0cmZOTmtCWDY5ZXU4WTZZN2RJbE1NWVVKVlVna0twVEw2U0Jqak4zYlh4OEEzWUdZX0V6OGkxVFFpSWdIWWpZM2V0OFFWaGJsYi1sQ19UdjBON0FpSlNFdjZ4Q2F2WA?oc=5"
   }
 ]

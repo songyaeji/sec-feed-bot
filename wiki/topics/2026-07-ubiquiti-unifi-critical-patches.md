@@ -9,7 +9,6 @@ cves: [CVE-2026-50746]
 
 ## 타임라인
 
-- 2026-07-02 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-50747) — CVE-2026-50747(SQL 인젝션), CVE-2026-50748(명령 인젝션), CVE-2026-54400(권상향), CVE-2026-55117(경로 순회), CVE-2026-55119(권상향) 발표
 - 2026-07-08 [The Hacker News](https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html) — 다중 UniFi 제품 임계 취약점 공개
 
 ## 관련
