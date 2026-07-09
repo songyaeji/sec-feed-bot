@@ -2139,5 +2139,33 @@
     "tags": [],
     "title": "WolfSSL, GeoVision, VTK vulnerabilities",
     "url": "https://blog.talosintelligence.com/wolfssl-vulnerabilities/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-9072",
+    "published": "2026-06-22T16:16:43.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server and IBM WebSphere Application Server Liberty - when using Intelligent Management with the WebSphere WebServer Plug-in component - are vulnerable to remote code execution and denial of service. This vulnerability can be exploited when an attacker impersonates backend ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-9072 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9072"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55207",
+    "published": "2026-07-09T21:16:55.890",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pimcore is an Open Source Data & Experience Management Platform. Prior to 2025.4.6 and 2026.1.6, an unauthenticated attacker who knows a valid admin username can take over any Pimcore admin account by sending a password reset request with an attacker-controlled resetPasswordUrl. The server generates",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55207 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55207"
   }
 ]
