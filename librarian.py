@@ -39,6 +39,7 @@ def _item_to_input(item: dict) -> dict:
         "summary": item.get("summary"),
         "url": item.get("url"),
         "source": item.get("source"),
+        "published": item.get("published"),
         "tags": item.get("tags", []),
         "cves": sorted(dedup.extract_cves(text)),
     }

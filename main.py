@@ -15,6 +15,7 @@ from datetime import datetime, timedelta, timezone
 import yaml
 
 import cardgen
+import crosspost
 import dedup as dedup_lib
 import judge
 import librarian
@@ -436,10 +437,12 @@ def main() -> None:
                         merged, key=lambda it: -cardgen.heuristic_score(it))
                 else:
                     action_counts = {"new": 0, "update": 0, "skip_duplicate": 0, "no_wiki": 0}
+                    recap_count = 0
                     wiki_worthy = []
                     for item in merged:
                         item_verdict = verdict.get("verdicts", {}).get(item["id"], {})
                         action = item_verdict.get("action")
+                        recency = item_verdict.get("recency")
                         # 사서의 한국어 제목·요약 — 카드뉴스에 실린다(요약이 메인).
                         # 누락 시 cardgen이 피드 원문으로 폴백
                         for key in ("title_ko", "summary_ko", "why_ko", "term_ko"):
@@ -452,12 +455,20 @@ def main() -> None:
                         # 카드 후보 = 위키에 실린 사건(new/update)만. skip_duplicate·no_wiki
                         # (비사건·중복)는 위키/휴지통에만 남고 카드·링크에서 제외
                         if action in ("new", "update"):
-                            wiki_worthy.append(item)
+                            # recap = 발행일만 최근이고 알맹이는 지난 사건(재조명·뒤늦은
+                            # 재보도). 오래된 사건을 오늘 속보처럼 싣는 혼동을 막는다 —
+                            # 위키엔 적립하되 카드·링크에선 뺀다. recency 누락은 통과
+                            # (fail-open: 사서가 값을 못 줘도 카드가 통째 비지 않게)
+                            if recency == "recap":
+                                recap_count += 1
+                            else:
+                                wiki_worthy.append(item)
                     wiki_new = action_counts["new"]
                     print(
                         f"[main] 위키 사서: 신규 {action_counts['new']}건, "
                         f"갱신 {action_counts['update']}건, "
-                        f"중복스킵 {action_counts['skip_duplicate']}건"
+                        f"중복스킵 {action_counts['skip_duplicate']}건, "
+                        f"재탕(recap) 카드제외 {recap_count}건"
                     )
                     # 정말 중요한 것만 카드·링크에: importance 게이트 + 상한.
                     # 동점은 휴리스틱 점수(AI>KEV>제로데이>금융)로 가른다
@@ -526,7 +537,7 @@ def main() -> None:
                             print(f"[preflight] 차단: {f_msg}", file=sys.stderr)
                         raise RuntimeError(
                             f"preflight 실패 {len(fatal)}건 — 카드뉴스 발송 차단")
-                    notify.send_card_news(pngs, link_lines)
+                    cdn_urls = notify.send_card_news(pngs, link_lines)
                     # 발송 성공 확정 후에만 포트폴리오 게시 산출물 저장
                     # (내부에서 모든 실패를 삼킴 — 폴백 이중발송 방지)
                     _publish_trend(
@@ -534,6 +545,22 @@ def main() -> None:
                         issue_no=issue_no, briefing=briefing,
                         keywords=stats.get("keywords") or [],
                     )
+                    # 인스타/쓰레드 크로스포스트 — 반드시 자체 try로 격리:
+                    # 예외가 바깥 except에 닿으면 텍스트 다이제스트 폴백이
+                    # 실행돼 Discord에 이중 발송되기 때문
+                    try:
+                        crosspost.crosspost_all(
+                            cdn_urls,
+                            issue_no=issue_no,
+                            briefing=briefing,
+                            keywords=stats.get("keywords") or [],
+                            cfg=config.get("crosspost", {}),
+                        )
+                    except Exception as exc:
+                        print(
+                            f"[main] 크로스포스트 실패(무시): {_safe_exc_str(exc)}",
+                            file=sys.stderr,
+                        )
                 except Exception as exc:
                     print(
                         f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",

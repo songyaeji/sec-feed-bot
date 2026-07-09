@@ -231,6 +231,12 @@ urgent_gate:
   - mass exploitation
   - under active exploitation
 
+# 전역 신선도 게이트: 카드뉴스 = 동향 추적이므로 오래된 기사(재게시·후속
+# 보도가 끌어올린 역주행 원문)를 전 소스에서 거른다. 소스별 max_age_days가
+# 있으면 그 값이 우선하고, max_age_days: false(또는 0)이면 필터를 끈다
+# (릴리스/논문 atom 등 오래돼도 유효한 피드용). rss/fsec/fss에 적용.
+default_max_age_days: 14
+
 # cap on individual cards (urgent items) per run; the digest embed is not
 # capped here since it already truncates itself per category. Overflow is
 # still recorded in seen.json so it is not re-sent next run
@@ -246,6 +252,17 @@ max_items_per_run: 25
 max_news_items: 7
 max_cve_items: 10
 digest_min_importance: 4
+
+# 인스타그램/쓰레드 크로스포스트 — 토큰·계정 ID는 GitHub secrets(env)로만
+# 공급한다(IG_USER_ID/IG_ACCESS_TOKEN/THREADS_USER_ID/THREADS_ACCESS_TOKEN).
+# 어느 플랫폼이 실패해도 디스코드 발송·상태 저장에는 영향 없음(fail-open).
+crosspost:
+  instagram:
+    enabled: true
+  threads:
+    enabled: true
+  # 사서 키워드 해시태그 뒤에 붙는 고정 태그
+  hashtags: [보안뉴스, 사이버보안, 카드뉴스]
 
 discord:
   # embed color mapping (hex ints)

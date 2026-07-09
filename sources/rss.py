@@ -23,12 +23,16 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
     url = source_cfg["url"]
     category = source_cfg.get("category", "research")
     keywords = [k.lower() for k in source_cfg.get("keywords", [])]
-    max_age_days = source_cfg.get("max_age_days")
+    # 신선도 게이트: 소스에 max_age_days가 있으면 그 값이 우선, 없으면 전역
+    # default_max_age_days를 쓴다(오래된 재게시·역주행 원문 차단). false/0/None은
+    # 필터 해제 — 릴리스/논문 atom처럼 오래돼도 유효한 피드용 탈출구.
+    if "max_age_days" in source_cfg:
+        max_age_days = source_cfg["max_age_days"]
+    else:
+        max_age_days = (global_cfg or {}).get("default_max_age_days")
 
-    # 신규 소스 첫 실행 때 백로그가 통째로 들어오는 것을 막는다.
-    # 미설정 소스는 기존 동작 그대로 전건 반환
     cutoff = None
-    if max_age_days is not None:
+    if max_age_days:  # None, False, 0 → 필터 없음
         cutoff = datetime.now(timezone.utc) - timedelta(days=int(max_age_days))
 
     # feedparser.parse(url) has no timeout of its own; fetch via requests
