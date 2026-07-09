@@ -644,5 +644,41 @@
     "tags": [],
     "title": "Microsoft Patches RoguePlanet Defender Flaw That Can Grant SYSTEM Privileges",
     "url": "https://thehackernews.com/2026/07/microsoft-patches-rogueplanet-defender.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15158",
+    "published": "2026-07-09T10:16:25.370",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Blocksy Companion plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.1.46 via the save_attachments function. This is due to the Custom Fonts extension registering a wp_check_filetype_and_ext filter that approves any filename containing .woff2 or .",
+    "tags": [],
+    "title": "CVE-2026-15158 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15158"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-2342",
+    "published": "2026-07-09T10:16:25.833",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in OceanicSoft Informatics Systems Ltd. ValeApp allows Stored XSS.\n\nThis issue affects ValeApp: through 09072026. NOTE: The vendor was contacted early about this disclosure but did not respond in any w",
+    "tags": [],
+    "title": "CVE-2026-2342 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2342"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5955",
+    "published": "2026-07-09T10:16:27.427",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Inrove Software and Internet Services BiEticaret allows SQL Injection.\n\nThis issue affects BiEticaret: before v3.3.57.",
+    "tags": [],
+    "title": "CVE-2026-5955 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5955"
   }
 ]
