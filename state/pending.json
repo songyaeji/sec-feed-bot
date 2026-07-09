@@ -1352,5 +1352,67 @@
     "tags": [],
     "title": "CVE-2026-4256 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4256"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15121",
+    "published": "2026-07-08T23:16:53.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in WebRTC in Google Chrome prior to 150.0.7871.115 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15121 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15121"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-54772",
+    "published": "2026-07-08T23:16:54.830",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, an unauthenticated remote attacker that can reach a NetTcpBinding, NetNamedPipeBinding, or UnixDomainSocketBinding endpoint can trigger premature EOF handling in the CoreWCF net.tc",
+    "tags": [],
+    "title": "CVE-2026-54772 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54772"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-54779",
+    "published": "2026-07-08T23:16:55.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF SAML token replay protection is inoperative because DefaultTokenReplayCache.TryAdd does not reject duplicate tokens when DetectReplayedTokens is enabled, allowing a capture",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-54779 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54779"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59723",
+    "published": "2026-07-08T23:16:56.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cline is an autonomous coding agent as an SDK, IDE extension, or CLI assistant. Prior to 3.0.30, the Cline Hub dashboard server launched by the cline dashboard command accepts WebSocket connections on the /browser endpoint without validating the Origin header, and when ROOM_SECRET is unset for local",
+    "tags": [],
+    "title": "CVE-2026-59723 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59723"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47826",
+    "published": "2026-07-09T07:16:23.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The blobs.yml path key traversal vulnerability in the BOSH CLI tool allows an attacker to write arbitrary files and exfiltrate sensitive information.\nAffected versions: BOSH CLI tool versions prior to v7.10.4.",
+    "tags": [],
+    "title": "CVE-2026-47826 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47826"
   }
 ]
