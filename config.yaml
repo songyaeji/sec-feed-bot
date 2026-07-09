@@ -20,6 +20,7 @@ sources:
   - name: "Project Zero Blog"
     type: rss
     url: "https://googleprojectzero.blogspot.com/feeds/posts/default"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
     category: "research"
     card_image: true
     region: "해외"
@@ -45,6 +46,7 @@ sources:
   - name: "Unit 42"
     type: rss
     url: "https://unit42.paloaltonetworks.com/feed/"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
     category: "research"
     card_image: true  # 공격 체인 다이어그램 등 유의미한 이미지가 실림
     region: "해외"
@@ -52,6 +54,7 @@ sources:
   - name: "OWASP GenAI Security"
     type: rss
     url: "https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/releases.atom"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
     category: "ai"
     region: "해외"
 
@@ -68,6 +71,7 @@ sources:
   - name: "Krebs on Security"
     type: rss
     url: "https://krebsonsecurity.com/feed/"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
     category: "research"
     card_image: true
     region: "해외"
@@ -97,6 +101,7 @@ sources:
   - name: "Protect AI"
     type: rss
     url: "https://protectai.com/blog/rss.xml"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
     category: "ai"
     region: "해외"
 
@@ -105,6 +110,7 @@ sources:
   - name: "Cisco Talos"
     type: rss
     url: "https://feeds.feedburner.com/feedburner/Talos"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
     category: "high"
     card_image: true
     region: "해외"
@@ -112,6 +118,7 @@ sources:
   - name: "Google Security Blog"
     type: rss
     url: "https://security.googleblog.com/feeds/posts/default"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
     category: "research"
     region: "해외"
 
@@ -236,6 +243,15 @@ urgent_gate:
 # 있으면 그 값이 우선하고, max_age_days: false(또는 0)이면 필터를 끈다
 # (릴리스/논문 atom 등 오래돼도 유효한 피드용). rss/fsec/fss에 적용.
 default_max_age_days: 14
+
+# 특정 기자/작성자 후순위 — 신뢰도 이슈로 카드 우선순위를 낮춘다.
+# 피드 author 바이라인이 author_contains를 포함하면 사서가 매긴 importance에서
+# penalty만큼 감점한다(최소 1). 완전 제외가 아니라 강등이라 importance가 충분히
+# 높은 대형 사건이면 카드에 살아남을 수 있다. source 지정 시 해당 소스에만 적용.
+deprioritize_authors:
+  - source: "보안뉴스"
+    author_contains: "지진솔"   # 2026-07-09 클로드코드 유출 오보 계기(사용자 결정)
+    penalty: 2
 
 # cap on individual cards (urgent items) per run; the digest embed is not
 # capped here since it already truncates itself per category. Overflow is

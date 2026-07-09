@@ -72,6 +72,9 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             "summary": summary[:300],
             "severity": "info",
             "published": published,
+            # 바이라인(예: "[지진솔기자 (email)]") — deprioritize_authors 매칭용.
+            # 피드에 없으면 빈 문자열
+            "author": entry.get("author", "") or "",
         })
     return items
 

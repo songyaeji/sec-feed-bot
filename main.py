@@ -127,6 +127,22 @@ def prune_seen(seen: dict) -> dict:
     return pruned
 
 
+def _author_penalty(item: dict, config: dict) -> int:
+    # deprioritize_authors 규칙에 걸리는 바이라인이면 importance 감점폭을 돌려준다.
+    # 여러 규칙에 걸리면 가장 큰 penalty만 적용(중복 감점 안 함)
+    author = item.get("author") or ""
+    source = item.get("source") or ""
+    pen = 0
+    for rule in config.get("deprioritize_authors", []):
+        rule_source = rule.get("source")
+        if rule_source and rule_source != source:
+            continue
+        needle = rule.get("author_contains")
+        if needle and needle in author:
+            pen = max(pen, int(rule.get("penalty", 1)))
+    return pen
+
+
 def collect_all(config: dict, state: dict) -> list[dict]:
     all_items = []
     for source_cfg in config.get("sources", []):
@@ -449,7 +465,15 @@ def main() -> None:
                             value = item_verdict.get(key)
                             if value:
                                 item[key] = value
-                        item["importance"] = item_verdict.get("importance", 3)
+                        base_importance = item_verdict.get("importance", 3)
+                        penalty = _author_penalty(item, config)
+                        item["importance"] = max(1, base_importance - penalty)
+                        if penalty:
+                            print(
+                                f"[main] 작성자 후순위: '{item.get('source')}' "
+                                f"{item.get('author','')} importance {base_importance}→{item['importance']}",
+                                file=sys.stderr,
+                            )
                         if action in action_counts:
                             action_counts[action] += 1
                         # 카드 후보 = 위키에 실린 사건(new/update)만. skip_duplicate·no_wiki
