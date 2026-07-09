@@ -1782,5 +1782,53 @@
     "tags": [],
     "title": "ThreatsDay: Cloud Bucket Hijacking, Windows LPE Chain, Global Fraud Bust + 17 More Stories",
     "url": "https://thehackernews.com/2026/07/threatsday-cloud-bucket-hijacking.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-50083",
+    "published": "2026-06-12T16:16:31.827",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Aqara IAM/SSO Gateway (gw-builder.aqara.com) used a hardcoded OAuth client credential, which is an instance of \"CWE-798: Use of Hard-coded Credentials.\" This issue has an estimated CVSS of CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N (9.1 Critical). When combined with CVE-2026-50082, CVE-50084, ",
+    "tags": [],
+    "title": "CVE-2026-50083 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50083"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-50084",
+    "published": "2026-06-12T16:16:31.940",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Aqara Cloud Production API (open-cn.aqara.com/v3.0/open/api) would authorize any valid developer token for access to any account. This is an instance of \"CWE-862: Missing Authorization\" with an estimated CVSS of CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N (9.6 Critical). When combined with CVE-",
+    "tags": [],
+    "title": "CVE-2026-50084 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50084"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-50085",
+    "published": "2026-06-12T16:16:32.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Aqara Board service (op-test.aqara.com) accepts arbitrary MQTT command payloads, and forwards them to the platfom's HiveMQ broker without authentication. This is an instance of \"CWE-306: Missing Authentication for Critical Function\" and has an estimated CVSS ofCVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:",
+    "tags": [],
+    "title": "CVE-2026-50085 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50085"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-50088",
+    "published": "2026-06-12T16:16:32.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Aqara Developer Portal (developer.aqara.com) and shared test environments (developer-test.aqara.com, aiot-test.aqara.com) exhibit cross-origin request sharing, which is an instance of \"CWE-942: Permissive Cross-domain Policy with Untrusted Domains,\" and has an estimated CVSS of CVSS:3.1/AV:N/AC:",
+    "tags": [],
+    "title": "CVE-2026-50088 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50088"
   }
 ]
