@@ -900,5 +900,29 @@
     ],
     "title": "미국 보험사 어슈어런스아메리카, 약 700만 명 개인정보 유출",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207543"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15110",
+    "published": "2026-07-08T23:16:52.103",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Extensions in Google Chrome prior to 150.0.7871.115 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15110 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15110"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15132",
+    "published": "2026-07-08T23:16:54.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Uninitialized Use in V8 in Google Chrome prior to 150.0.7871.115 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15132 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15132"
   }
 ]
