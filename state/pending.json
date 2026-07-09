@@ -1830,5 +1830,137 @@
     "tags": [],
     "title": "CVE-2026-50088 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50088"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-3564",
+    "published": "2026-03-17T15:16:19.253",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A condition in the ScreenConnect server component may allow an actor with access to server-level cryptographic material used for authentication to obtain unauthorized access, including elevated privileges, in certain scenarios. ScreenConnect host and guest client agents are not independently affecte",
+    "tags": [],
+    "title": "CVE-2026-3564 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3564"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-55116",
+    "published": "2026-07-02T15:17:05.633",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network and under certain network configurations could exploit an Improper Access Control vulnerability found in certain devices running UniFi OS to make unauthorized changes to such UniFi OS devices.",
+    "tags": [],
+    "title": "CVE-2026-55116 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55116"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-59726",
+    "published": "2026-07-09T18:16:57.337",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ruflo is an agent meta-harness for Claude Code and Codex. Prior to 3.16.3, ruflo's default docker-compose deployment exposed the MCP bridge POST /mcp and POST /mcp/:group endpoints without authentication, allowing an unauthenticated network attacker to invoke tools/call to terminal_execute, obtain a",
+    "tags": [],
+    "title": "CVE-2026-59726 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59726"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-59826",
+    "published": "2026-07-09T18:16:57.757",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Metabase is an open-source business intelligence and embedded analytics tool. From 1.55.0 until 1.58.15.1, 1.59.12, 1.60.6.3, and 1.61.2, Metabase did not validate unsafe H2 connection properties on one database-creation code path, allowing an authenticated administrator to register a crafted H2 dat",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59826 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59826"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-59827",
+    "published": "2026-07-09T18:16:57.893",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Metabase is an open-source business intelligence and embedded analytics tool. Prior to 1.58.15, 1.59.12, 1.60.6.3, and 1.61.1.4, Metabase instances with an H2 database connection, including the default sample database, deserialize arbitrary Java objects returned in H2 native query result columns of ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59827 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59827"
+  },
+  {
+    "category": "high",
+    "cvss": 3.5,
+    "id": "CVE-2026-59213",
+    "published": "2026-07-09T17:17:02.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.6.27 before 0.10.0, get_all_models handlers in routers/openai.py and routers/ollama.py passed a lambda to aiocache key instead of key_builder, causing permission-filtered per-user model lists to share a stat",
+    "tags": [],
+    "title": "CVE-2026-59213 (CVSS 3.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59213"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-43752",
+    "published": "2026-07-09T18:16:52.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An authenticated administrator may be able to achieve arbitrary code execution on the host system by uploading a malicious file through the Open Source LLM setup feature in the Admin Console. This vulnerability has been addressed in FileMaker Server 26.0.1.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-43752 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43752"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58378",
+    "published": "2026-07-09T18:16:54.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Allwinner H616 TV Box TV98 has ADB enabled and exposed to the network on production. An attacker could request for ADB authorization and gain root level privileges if the victim allows access.",
+    "tags": [],
+    "title": "CVE-2026-58378 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58378"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59734",
+    "published": "2026-07-09T18:16:57.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify is an open-source and self-hostable tool for managing servers, applications, and databases. Prior to 4.0.0-beta.469, Coolify's app/Jobs/ApplicationDeploymentJob.php generate_healthcheck_commands() function directly interpolated the health_check_host, health_check_method, and health_check_pat",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59734 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59734"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195042",
+    "published": "2026-07-09T18:11:37+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "GodDamn ransomware uses the signed PoisonX driver to disable security tools, marking a more advanced version of the Beast ransomware family. Symantec’s Threat Hunter Team found a new ransomware family called GodDamn that first appeared in the wild on May 21, 2026, and analyzed an attack that took pl",
+    "tags": [
+      "제로데이",
+      "랜섬웨어"
+    ],
+    "title": "GodDamn Ransomware Uses PoisonX to Blind Security Software",
+    "url": "https://securityaffairs.com/195042/malware/goddamn-ransomware-uses-poisonx-to-blind-security-software.html"
   }
 ]
