@@ -1170,5 +1170,77 @@
     "tags": [],
     "title": "AssuranceAmerica Breach Exposes 7 Million Driver’s Licenses After Employee Account Hack",
     "url": "https://securityaffairs.com/195027/data-breach/assuranceamerica-breach-exposes-7-million-drivers-licenses-after-employee-account-hack.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-50747",
+    "published": "2026-07-02T15:17:02.877",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network and low privileges could exploit a series of authenticated SQL Injection vulnerabilities found in UniFi Talk Application to escalate privileges on the host device.",
+    "tags": [],
+    "title": "CVE-2026-50747 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50747"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-50748",
+    "published": "2026-07-02T15:17:02.990",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network and low privileges could exploit an Improper Input Validation vulnerability found in UniFi Access Application to execute a Command Injection on the host device.",
+    "tags": [],
+    "title": "CVE-2026-50748 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50748"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-54400",
+    "published": "2026-07-02T15:17:03.623",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network and high privileges could exploit an Improper Access Control vulnerability found in UniFi Access Application to escalate privileges on the host device.",
+    "tags": [],
+    "title": "CVE-2026-54400 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54400"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-55117",
+    "published": "2026-07-02T15:17:05.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network could exploit a Path Traversal vulnerability found in UniFi Access Application to access files on the host device.",
+    "tags": [],
+    "title": "CVE-2026-55117 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55117"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-55119",
+    "published": "2026-07-02T15:17:05.957",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network and low privileges could exploit an Improper Access Control vulnerability found in UniFi Talk Application to escalate privileges within the UniFi Talk Application.",
+    "tags": [],
+    "title": "CVE-2026-55119 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55119"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207548",
+    "published": "2026-07-09T22:19:34+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI 코딩 에이전트가 기업 보안 시스템에서 해킹 시도로 탐지되는 사례가 확인됐다. 코딩을 돕는 정상 도구지만, 실제 실행하는 명령이 공격자 행동과 비슷했기 때문이다.소포스 엑스옵스는 클로드 코드, 커서, 코덱스 등 AI 코딩 에이전트의 동작을 7일간 분석했다. 그 결과 이들 도구가 엔드포인트 탐지 및 대응(EDR) 솔루션의 보안 경고를 여러 차례 발생시킨 것으로 나타났다.AI가 실행한 명령, 공격자와 비슷했다AI 코딩 에이전트는 개발 작업을 위해 터미널을 열고 명령어를 실행한다. 프로그램을 설치하거나 파일을 수정하고, 클라우드 서비",
+    "tags": [],
+    "title": "클로드 코드 등 AI 코딩 도구, 정상 작업도 보안 솔루션이 공격으로 탐지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207548"
   }
 ]
