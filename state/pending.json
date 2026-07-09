@@ -2062,5 +2062,17 @@
     "tags": [],
     "title": "CVE-2026-59148 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59148"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-58025",
+    "published": "2026-07-01T16:16:49.703",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of untrusted data vulnerability in Wikimedia Foundation MediaWiki.\n\n This vulnerability is associated with program files includes/Import/WikiImporter.Php, includes/Import/WikiRevision.Php, includes/Logging/LogEntryBase.Php.\n\n\n\nThis issue affects MediaWiki: from * before 1.46.0, 1.45.",
+    "tags": [],
+    "title": "CVE-2026-58025 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58025"
   }
 ]
