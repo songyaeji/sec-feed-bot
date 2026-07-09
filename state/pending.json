@@ -1686,5 +1686,53 @@
     "tags": [],
     "title": "CVE-2025-27464 (CVSS N/A)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27464"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-9862",
+    "published": "2026-06-15T16:16:35.357",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Fortra's \nCore Privileged Access Manager (BoKS) contains an OS command injection vulnerability in the boks_autoregisterd service. A remote attacker with network access to the service may be able to cause commands to be executed with the privileges of the service during the autoregistration processin",
+    "tags": [],
+    "title": "CVE-2026-9862 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9862"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-50087",
+    "published": "2026-06-12T16:16:32.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Aqara IAM/SSO gateway (gw-builder.aqara.com) exhibits a cross-origin request sharing vulnerability, which is an instance of \"CWE-942: Permissive Cross-domain Policy with Untrusted Domains,\" and has an estimated CVSS of CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N (8.2 High).",
+    "tags": [],
+    "title": "CVE-2026-50087 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50087"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-54773",
+    "published": "2026-07-08T23:16:54.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF WS-Security signature verification performs a document-wide ds:Signature lookup, allowing an unauthenticated remote attacker to place a SOAP header before wsse:Security and",
+    "tags": [],
+    "title": "CVE-2026-54773 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54773"
+  },
+  {
+    "category": "high",
+    "cvss": 3.7,
+    "id": "CVE-2026-54780",
+    "published": "2026-07-08T23:16:55.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, the CoreWCF WS-Security 1.0 receive pipeline validates ds:SignedInfo SignatureMethod against the configured SecurityAlgorithmSuite but does not validate each ds:Reference DigestMet",
+    "tags": [],
+    "title": "CVE-2026-54780 (CVSS 3.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54780"
   }
 ]
