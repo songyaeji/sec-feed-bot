@@ -1426,5 +1426,65 @@
     "tags": [],
     "title": "CVE-2026-50168 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50168"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2020-26867",
+    "published": "2020-10-12T14:15:12.260",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ARC Informatique PcVue prior to version 12.0.17 is vulnerable due to the deserialization of untrusted data, which may allow an attacker to remotely execute arbitrary code on the web and mobile back-end server.",
+    "tags": [],
+    "title": "CVE-2020-26867 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-26867"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51843",
+    "published": "2026-06-19T17:16:29.790",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tenda AC7 v15.03.06.44 contains a stack buffer overflow vulnerability in the /goform/AdvSetMacMtuWan interface via the wanMTU parameter.",
+    "tags": [],
+    "title": "CVE-2026-51843 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51843"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51844",
+    "published": "2026-06-19T17:16:29.890",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tenda AC7 v15.03.06.44 contains a stack buffer overflow vulnerability in the /goform/AdvSetMacMtuWan interface via the cloneType parameter.",
+    "tags": [],
+    "title": "CVE-2026-51844 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51844"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51845",
+    "published": "2026-06-19T17:16:29.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tenda AC7 v15.03.06.44 contains a stack buffer overflow vulnerability in the /goform/AdvSetMacMtuWan interface via the mac parameter.",
+    "tags": [],
+    "title": "CVE-2026-51845 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51845"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51846",
+    "published": "2026-06-19T17:16:30.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Tenda AC7 v15.03.06.44, the wanSpeed parameter of the route /goform/AdvSetMacMtuWan has a stack buffer overflow vulnerability that can lead to remote arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-51846 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51846"
   }
 ]
