@@ -2074,5 +2074,33 @@
     "tags": [],
     "title": "CVE-2026-58025 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58025"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0277",
+    "published": "2026-07-09T20:16:24.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper certificate validation vulnerability in the Prisma® Access Agent for iOS enables an attacker to perform a man-in-the-middle (MitM) attack to intercept VPN traffic. \n\nThe Prisma Access Agent on Windows, macOS, Linux, Android and ChromeOS are not affected.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-0277 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0277"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0278",
+    "published": "2026-07-09T20:16:24.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Multiple protection mechanism failures in the Prisma Access Agent Data Loss Prevention (DLP) component for Windows allow a local user to bypass DLP policy enforcement controls.\n\n\n\nThe Prisma Access Agent on macOS is not affected.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-0278 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0278"
   }
 ]
