@@ -2102,5 +2102,17 @@
     ],
     "title": "CVE-2026-0278 (CVSS N/A)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0278"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-44937",
+    "published": "2026-07-06T11:16:27.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Potential forgery of webhook requests when using a unauthenticated webhook in SUSE Rancher Fleet 0.15 before 0.15.2, 0.14 before 0.14.6, 0.13 before 0.13.11 and 0.12 before 0.12.5 could be used by remote attackers to cause a denial of service or a downgrade attack on other repositories on the system",
+    "tags": [],
+    "title": "CVE-2026-44937 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44937"
   }
 ]
