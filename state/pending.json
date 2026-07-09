@@ -1498,5 +1498,193 @@
     "tags": [],
     "title": "CVE-2026-50086 (CVSS 10.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50086"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-37270",
+    "published": "2026-07-07T23:16:54.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Trueview Security camera T18161- AF v4.9.60.0 contains an authentication bypass vulnerability caused by improper password validation and the presence of hard-coded credentials in the firmware.",
+    "tags": [],
+    "title": "CVE-2026-37270 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37270"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-37271",
+    "published": "2026-07-07T23:16:54.773",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Fire-Boltt Smartwatch FB BGS001 Firmware: MOY-JS14-2.0.4 is vulnerable to Improper Authentication, The device accepts GATT Write Request commands without sufficient authentication or strong session validation. Under specific conditions, previously captured BLE packets can be replayed from a nearby d",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-37271 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37271"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14454",
+    "published": "2026-07-08T13:16:30.053",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Imager versions before 1.033 for Perl treat unsigned EXIF IFD entry counts as signed.\n\nImager mishandled large EXIF IFD entry count values, treating them as negative numbers.  This could lead to an attempt to allocate a block nearly the size of the address space, which fails and kills the process.\n\n",
+    "tags": [],
+    "title": "CVE-2026-14454 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14454"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-52200",
+    "published": "2026-07-08T22:17:15.127",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in Generic OEM UZ801_v2.1 4G LTE Router V3.4.3 allows a remote attacker to execute arbitrary code via the /ajax web management API endpoint in MifiService.apk",
+    "tags": [],
+    "title": "CVE-2026-52200 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52200"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-54782",
+    "published": "2026-07-08T23:16:56.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF SAML 1.1 and SAML 2.0 token validation does not correctly resolve the issuer signing key or require signed tokens when IdentityConfiguration is used with federated bindings",
+    "tags": [],
+    "title": "CVE-2026-54782 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54782"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12116",
+    "published": "2026-07-09T14:16:26.467",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the Xerte Online Tools allows for RCE through the antivirus binary path in the tools server settings, which can be changed to a PHP interpreter, allowing an attacker to upload PHP data that will then be executed.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12116 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12116"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-14261",
+    "published": "2026-07-09T14:16:28.263",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the Xerte Online Tools allows for authentication bypass and remote code execution via reinstallation through the /setup/ folder, enabling attackers to reinstall the service to a remote database they control.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14261 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14261"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14380",
+    "published": "2026-07-07T23:16:53.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DBI versions before 1.650 for Perl are vulnerable to code injection via caller-influenced Profile.\n\nWhen a string is assigned to a DBI handle's Profile attribute, DBI splits it into path, package and arguments, and interpolates the package part in a string eval with no validation of the package name",
+    "tags": [],
+    "title": "CVE-2026-14380 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14380"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-35552",
+    "published": "2026-07-08T22:17:13.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In CAXperts UPVWebServices 2.4.2212.603 through 2.7.6 and UDiTH Portal 2026.0.0 through 2026.2.0, an authenticated remote user can invoke an administrative API endpoint intended for privileged users. Due to missing authorization checks, this allows the attacker to deactivate the application's licens",
+    "tags": [],
+    "title": "CVE-2026-35552 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35552"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-54774",
+    "published": "2026-07-08T23:16:55.090",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, SamlSerializer skips final SignatureValue verification when a CoreWCF service validates SAML tokens using a non-X.509 signing token, allowing an attacker to reference a non-X.509 S",
+    "tags": [],
+    "title": "CVE-2026-54774 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54774"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-54775",
+    "published": "2026-07-08T23:16:55.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, a CoreWCF service listening on a Kafka topic stops processing new records from that topic when KafkaTransportPump receives a null-value tombstone record, causing a persistent endpo",
+    "tags": [],
+    "title": "CVE-2026-54775 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54775"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-54781",
+    "published": "2026-07-08T23:16:55.890",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CoreWCF is a port of the service side of Windows Communication Foundation (WCF) to .NET Core. Prior to 1.8.1 and 1.9.1, CoreWCF SAML token validation does not enforce SubjectConfirmation method URIs or holder-of-key proof keys in SamlSecurityTokenHandler, allowing holder-of-key downgrade or custom c",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54781 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54781"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-27462",
+    "published": "2026-07-09T16:16:33.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "[This CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.]\n\n\nThe Windows PV drivers expose various facilities to userspace.  Several\nof these have no security descriptor, and are therefore fully accessible\nto unprivileged users.  ",
+    "tags": [],
+    "title": "CVE-2025-27462 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27462"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-27463",
+    "published": "2026-07-09T16:16:33.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "[This CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] The Windows PV drivers expose various facilities to userspace. Several of these have no security descriptor, and are therefore fully accessible to unprivileged users. Thes",
+    "tags": [],
+    "title": "CVE-2025-27463 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27463"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-27464",
+    "published": "2026-07-09T16:16:33.313",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "[This CNA information record relates to multiple CVEs; the text explains which aspects/vulnerabilities correspond to which CVE.] The Windows PV drivers expose various facilities to userspace. Several of these have no security descriptor, and are therefore fully accessible to unprivileged users. Thes",
+    "tags": [],
+    "title": "CVE-2025-27464 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27464"
   }
 ]
