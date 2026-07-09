@@ -447,7 +447,6 @@ def main() -> None:
                 # 슬롯을 잠식하지 않게 각자 상한까지 담는다
                 max_news = config.get("max_news_items", 7)
                 max_cve = config.get("max_cve_items", 10)
-                min_importance = config.get("digest_min_importance", 4)
 
                 def _cap_split(pool: list[dict], key) -> list[dict]:
                     news = sorted((it for it in pool if not cardgen.is_cve_item(it)), key=key)
@@ -502,18 +501,14 @@ def main() -> None:
                         f"중복스킵 {action_counts['skip_duplicate']}건, "
                         f"재탕(recap) 카드제외 {recap_count}건"
                     )
-                    # 정말 중요한 것만 카드·링크에: importance 게이트 + 상한.
-                    # 동점은 휴리스틱 점수(AI>KEV>제로데이>금융)로 가른다
-                    eligible = [it for it in wiki_worthy if it["importance"] >= min_importance]
-                    if not eligible and wiki_worthy:
-                        # 전원이 게이트 미달인 날도 다이제스트는 나가야 한다 — 상위 5건 폴백
-                        eligible = sorted(wiki_worthy, key=cardgen.heuristic_score, reverse=True)[:5]
-                        print(
-                            f"[main] importance {min_importance}+ 없음 — 상위 {len(eligible)}건 폴백",
-                            file=sys.stderr,
-                        )
+                    # v23: 순위 채움(rank-fill) — importance는 컷라인이 아니라
+                    # 정렬 기준이다. 하드 게이트(4+)는 조용한 날 카드가 1~2장으로
+                    # 쪼그라들던 문제로 폐기(사용자 결정: 뉴스 7건 상시 보장).
+                    # recap 게이트를 통과한 신선한 사건 전체에서 중요도순으로
+                    # 뉴스·CVE 상한까지 항상 채운다. 동점은 휴리스틱 점수
+                    # (AI>KEV>제로데이>금융)로 가른다.
                     to_send = _cap_split(
-                        eligible,
+                        wiki_worthy,
                         key=lambda it: (-it.get("importance", 3), -cardgen.heuristic_score(it)),
                     )
                     wiki_only = len(wiki_worthy) - len(to_send)

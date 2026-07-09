@@ -260,14 +260,14 @@ deprioritize_authors:
 max_items_per_run: 25
 
 # 아침 다이제스트 카드·링크에 싣는 항목 상한 — 나머지는 위키에만 적립된다.
-# 사서(librarian)가 매긴 importance(1~5)가 digest_min_importance 이상인 것만
-# 후보가 되고, 중요도순으로 뉴스·CVE 각각의 상한까지 실린다 (v16: 상한 분리 —
-# CVE가 뉴스 슬롯을 잠식하지 않게).
+# 선별은 순위 채움(rank-fill): 사서 importance(1~5) 내림차순, 동점은
+# heuristic_score로 갈라 뉴스·CVE 각각의 상한까지 항상 채운다. 하드 게이트
+# (구 digest_min_importance)는 폐기 — 조용한 날 카드가 1~2장으로 쪼그라드는
+# 문제를 막고 매일 뉴스 7건을 보장한다(recap 제외로 후보가 모자라면 있는 만큼).
 # 뉴스 7 = 표지1+뉴스7+CVE목록1 = 총 9장(사용자 결정, 첨부 상한 10 이내),
 # CVE 10 = '오늘의 CVE' 목록 카드 1장의 행 상한(LIST_ROWS)과 동일
 max_news_items: 7
 max_cve_items: 10
-digest_min_importance: 4
 
 # 인스타그램/쓰레드 크로스포스트 — 토큰·계정 ID는 GitHub secrets(env)로만
 # 공급한다(IG_USER_ID/IG_ACCESS_TOKEN/THREADS_USER_ID/THREADS_ACCESS_TOKEN).
