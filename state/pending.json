@@ -4966,5 +4966,81 @@
     "tags": [],
     "title": "Six New U-Boot Flaws Could Let Malicious Images Crash Devices or Run Code at Boot",
     "url": "https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-51597",
+    "published": "2026-07-09T17:16:59.333",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "MERCURY MIPC252W IP camera v1.0.5 Build 230306 Rel.79931n does not implement nonce expiration in RTSP Digest authentication. An adjacent network attacker can capture a legitimate authentication exchange and replay the nonce and response values in a new connection to bypass authentication without knowledge of the device credentials, gaining unauthorized access to the live video stream.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-51597 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51597"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51599",
+    "published": "2026-07-09T17:16:59.577",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An insufficient input validation vulnerability in the RTSP service of MERCURY MIPC252W v1.0.5 Build 230306 Rel.79931n allows an unauthenticated remote attacker to render an individual TCP connection temporarily unusable via sending an RTSP request with a Content-Length header but no corresponding message body. The affected RTSP parser enters a body-waiting state instead of rejecting the malformed request, causing all subsequent data on the connection to be silently consumed as body content until a server-side timeout closes the connection.",
+    "tags": [],
+    "title": "CVE-2026-51599 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51599"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-2397",
+    "published": "2026-07-10T18:16:20.613",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Adam Retail Automation Ltd. MobilMen 20T allows SQL Injection.\n\nThis issue affects MobilMen 20T: from v3 through 10072026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-2397 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2397"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-0271",
+    "published": "2026-06-10T22:16:54.110",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A privilege escalation (PE) vulnerability in the Palo Alto Networks Prisma Access Agent app on Linux devices enables a local user to execute code with elevated privileges.\n\n\n\nThis does not impact Prisma Access Agent on Windows, macOS, iOS, Android, or ChromeOS.",
+    "tags": [],
+    "title": "CVE-2026-0271 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0271"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-45422",
+    "published": "2026-07-09T21:16:54.167",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect access control in Proximus b-box v8c.725A allows authenticated attackers to bypass normal restrictions and make arbitrary changes to port forwarding rules.",
+    "tags": [],
+    "title": "CVE-2025-45422 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-45422"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56668",
+    "published": "2026-07-10T18:16:24.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ZITADEL is an open source identity management platform. Prior to 4.15.3, ZITADEL's OAuth2 Token Exchange endpoint for urn:ietf:params:oauth:grant-type:token-exchange does not verify that the subject token belongs to the requesting client or that requested scopes remain within the original token's scopes, allowing a low-privilege token to be exchanged for elevated permissions at another application. This issue is fixed in version 4.15.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56668 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56668"
   }
 ]
