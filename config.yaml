@@ -115,6 +115,36 @@ sources:
     card_image: true
     region: "해외"
 
+  # 2026-07-10 추가 (feedparser 실fetch 검증) — 위협 리서치·정부 권고 축 보강
+  # 국내 벤더 위협 리서치(멀웨어 분석) — 국내 관점 보강
+  - name: "AhnLab ASEC"
+    type: rss
+    url: "https://asec.ahnlab.com/en/feed/"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
+    category: "research"
+    card_image: true
+    region: "국내"
+
+  # APT·멀웨어 심층분석 — Unit42/Talos급 위협 리서치
+  - name: "Kaspersky Securelist"
+    type: rss
+    url: "https://securelist.com/feed/"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
+    category: "research"
+    card_image: true
+    region: "해외"
+
+  # 영국 정부 공식 보안 권고문 — CISA KEV/KISA와 같은 결의 공식 발표 축.
+  # 갱신이 주 1~2건뿐이라 전역 14일 게이트에 걸리면 조용한 주 전체가
+  # 빈다(2026-07-10 실측: 최신글도 14일 컷오프 밖) — Krebs/Talos와
+  # 같은 이유로 신선도 게이트 제외
+  - name: "NCSC-UK"
+    type: rss
+    url: "https://www.ncsc.gov.uk/api/1/services/v1/news-rss-feed.xml"
+    max_age_days: false
+    category: "critical"
+    region: "해외"
+
   - name: "Google Security Blog"
     type: rss
     url: "https://security.googleblog.com/feeds/posts/default"
