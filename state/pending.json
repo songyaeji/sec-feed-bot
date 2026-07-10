@@ -4658,5 +4658,159 @@
     ],
     "title": "CVE-2026-56291 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56291"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-28564",
+    "published": "2026-07-10T08:16:21.897",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient Session Expiration, Authentication Bypass by Capture-replay vulnerability in Apache IoTDB.\nREST Basic Authentication Accepts Stale Cached Credentials\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-28564 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28564"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-40005",
+    "published": "2026-07-10T08:16:22.043",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Apache IoTDB.\nAn attacker can write arbitrary files anywhere the IoTDB process has write permissions with unsafe API.\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-40005 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40005"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-15143",
+    "published": "2026-07-10T16:16:25.680",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the file_type content detector of guardrails-detectors. This vulnerability allows a remote attacker to supply an arbitrary XML Schema Definition (XSD) string, which is processed without proper restrictions. This can lead to server-side requests to arbitrary URLs or local file reads, potentially resulting in sensitive information disclosure, such as cloud provider credentials or access to internal network services.",
+    "tags": [],
+    "title": "CVE-2026-15143 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15143"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-55500",
+    "published": "2026-07-10T16:16:33.357",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. Prior to 0.4.80, the /api/settings/database endpoint allows full database export (containing all credentials, API keys, OAuth tokens, and settings) and full database import (complete overwrite) without any authentication requirement beyond the ALWAYS_PROTECTED middleware check, which only validates JWT or CLI token. This issue is fixed in version 0.4.80.",
+    "tags": [],
+    "title": "CVE-2026-55500 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55500"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-11769",
+    "published": "2026-06-13T06:16:14.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "We have released version 5.24.0 of the Grafana Operator. This patch includes a MEDIUM severity security fix for a path traversal/privilege escalation vulnerability in the Grafana Operator.\n\n\n### Summary\n\nThe Grafana Operator supports loading dashboards & library panels using the jsonnet data templating language. The jsonnet expression is evaluated in the context of the operator manager pod.\n\n\n### Impact\n\nIt is possible for a malicious user who can create Dashboard or LibraryPanel resources for a Grafana instance to obtain the Kubernetes service account token of the Grafana Operator manager.\n\n### Affected versions\n\nAll Grafana Operator versions <= 5.23\n\n### Solutions and mitigations\n\nAll installations should be upgraded as soon as possible.\n\nAs a workaround, the following ValidatingAdmissionPolicy prevent the creation or modification of jsonnet based resources:\n\napiVersion: admissionregistration.k8s.io/v1\nkind: ValidatingAdmissionPolicy\nmetadata:\n  name: \"prevent-jsonnet-dashboards\"\nspec:\n  failurePolicy: Fail\n  matchConstraints:\n    resourceRules:\n      - apiGroups: [\"grafana.integreatly.org\"]\n        apiVersions: [\"v1beta1\"]\n        operations: [\"CREATE\", \"UPDATE\"]\n        resources: [\"grafanadashboards\", \"grafanalibrarypanels\"]\n  validations:\n    - expression: \"!has(object.spec.jsonnetLib)\"\n---\napiVersion: admissionregistration.k8s.io/v1\nkind: ValidatingAdmissionPolicyBinding\nmetadata:\n  name: \"prevent-jsonnet-dashboards-clusterwide\"\nspec:\n  policyName: \"prevent-jsonnet-das",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-11769 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11769"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-51923",
+    "published": "2026-07-09T21:16:55.480",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An Insecure Direct Object Reference (IDOR) vulnerability exists in docuForm GmbH Client v.11.11c allowing a remote attacker to execute arbitrary code via the user settings component, and modify or retrieve sensitive data associated with other users’ accounts.",
+    "tags": [],
+    "title": "CVE-2026-51923 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51923"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-51924",
+    "published": "2026-07-09T21:16:55.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in docuForm GmbH Client v.11.11c allows a remote attacker to execute arbitrary code via the file upload and report.php component",
+    "tags": [],
+    "title": "CVE-2026-51924 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51924"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-51925",
+    "published": "2026-07-09T21:16:55.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A Local File Inclusion (LFI) vulnerability exists in docuForm GmbH Client v.11.11c that allows a remote attacker to execute arbitrary code via the dfm-menu_report.php component. Attackers can exploit this flaw to read arbitrary files on the server, including sensitive configuration files, source code or system files.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-51925 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51925"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-54000",
+    "published": "2026-07-10T16:16:32.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "osquery is a SQL powered operating system instrumentation, monitoring, and analytics framework. Prior to 5.23.1, on Windows, a local unprivileged attacker can cause a heap buffer out-of-bounds write if there is a query of the processes table targeting a maliciously crafted process, due to unchecked PEB string lengths in process command-line and current-directory reads. If exploited successfully, this could allow a potential local privilege escalation from standard user to SYSTEM. This issue is fixed in version 5.23.1.",
+    "tags": [],
+    "title": "CVE-2026-54000 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54000"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-54001",
+    "published": "2026-07-10T16:16:32.467",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "osquery is a SQL powered operating system instrumentation, monitoring, and analytics framework. Prior to 5.23.1, on Windows, a local unprivileged attacker can cause a heap buffer out-of-bounds write if there is a query of the authenticode table targeting a maliciously crafted binary, due to publisher information parsing in getOriginalProgramName. If exploited successfully, this could allow a potential local privilege escalation from standard user to SYSTEM. This issue is fixed in version 5.23.1.",
+    "tags": [],
+    "title": "CVE-2026-54001 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54001"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-54149",
+    "published": "2026-07-10T16:16:32.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MaxKB is an open-source AI assistant for enterprise. Prior to 2.10.0-lts, MaxKB tool import functionality in apps/tools/serializers/tool.py and MCP referencing mode in apps/application/chat_pipeline/step/chat_step/impl/base_chat_step.py do not consistently validate MCP transport type, allowing an authenticated user to import a .tool file containing stdio transport with malicious commands and trigger the configuration through an AI Chat node so MultiServerMCPClient executes arbitrary system commands. This issue is fixed in version 2.10.0-lts.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54149 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54149"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-56676",
+    "published": "2026-07-10T16:16:34.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. Prior to 0.5.2, 9router validates image URLs by resolving the host before fetching, but open-sse/translator/concerns/image.js performs the later server-side image fetch with a separate DNS resolution. An authenticated attacker with access to the LLM proxy can use a vision-capable model and an attacker-controlled DNS name that first resolves to a public IP and then rebinds to an internal address, allowing server-side requests to internal-only HTTP services. This issue is fixed in version 0.5.2.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-56676 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56676"
   }
 ]
