@@ -6340,5 +6340,47 @@
     "tags": [],
     "title": "CVE-2026-21262 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21262"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-55377",
+    "published": "2026-07-10T20:16:46.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Logto is the modern, open-source auth infrastructure for SaaS and AI apps. Prior to 1.41.0, Logto's Account Center step-up check accepted any active verification record that belonged to the current user and had isVerified === true. A WebAuthn registration verification record for binding a new passkey could be created and verified with only an existing Account API bearer token, then sent in the logto-verification-id header and treated as identityVerified=true by Account Center routes, allowing MFA factor management without proving possession of an existing password, identifier, or MFA factor. This issue is fixed in version 1.41.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55377 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55377"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-55789",
+    "published": "2026-07-10T20:16:47.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Logto is the modern, open-source auth infrastructure for SaaS and AI apps. Prior to 1.41.0, Logto's self-hosted SAML application IdP built the signed SAML response and assertion by string-substituting user-controlled profile attributes such as name, email, and custom attribute-mapping values into element-text placeholders of a SAML XML template using samlify 2.10.0, which left those placeholders unescaped. An authenticated low-privilege user could place XML markup in a profile attribute so Logto signed a forged SAML attribute, such as an arbitrary role, allowing privilege escalation at relying Service Providers that authorize on SAML attributes. This issue is fixed in version 1.41.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55789 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55789"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-57850",
+    "published": "2026-07-10T20:16:48.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "RustDesk before 1.4.9 does not enforce a session's authorized connection scope on the server side, so a peer granted a limited session type (FileTransfer, PortForward, ViewCamera, or Terminal) can send control messages and login options reserved for a full Remote session. An authenticated remote peer can exploit this missing scope check to act outside its granted scope, injecting out-of-scope control messages to observe and control the host beyond the permissions it was given.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57850 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57850"
   }
 ]
