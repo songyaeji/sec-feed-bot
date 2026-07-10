@@ -6382,5 +6382,105 @@
     ],
     "title": "CVE-2026-57850 (CVSS 8.3)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57850"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-13461",
+    "published": "2026-07-09T17:16:56.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "When coupled with the SSL bypass vulnerability, JavaScript can be injected into a WebView in the PayRange version 7.0.7 app. The injection of specific JavaScript function calls allows the attacker to escape the WebView sandbox and perform a number of dangerous actions on the user's device.",
+    "tags": [],
+    "title": "CVE-2026-13461 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13461"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12761",
+    "published": "2026-07-10T21:16:53.160",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The miniOrange Social Login and Register (Discord, Google, Twitter, LinkedIn) plugin for WordPress is vulnerable to authentication bypass leading to account takeover in versions up to and including 7.7.0. This is due to the Profile Completion flow accepting an arbitrary email address via the 'email_field' POST parameter without verifying that the email belongs to the identity returned by the OAuth provider, combined with send_otp_token() returning the SHA-512(customer_key || otp) transaction hash to the client where the OTP space is only 99,000 values (wp_rand(1000, 99999)) and the customer_key is a static option (empty on unregistered installs). This makes it possible for unauthenticated attackers to trigger an OTP email to an arbitrary admin's address, crack the OTP offline from the leaked hash in under a second, and submit the cracked OTP to mo_openid_social_login_validate_otp(), which logs the attacker in as the user whose email was supplied — granting full administrator access.",
+    "tags": [],
+    "title": "CVE-2026-12761 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12761"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-55879",
+    "published": "2026-07-10T21:16:57.367",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenReplay is a self-hosted session replay suite. From 1.24.0 before 1.25.0, the OpenReplay tracking SDK accepts custom event names and captured page URLs from any visitor using a public project key, stores them in ClickHouse without output encoding, and later renders them in the authenticated dashboard through TextEllipsis and the event-details modal, allowing an unauthenticated attacker to store script that executes in the dashboard origin, reads the session JWT from localStorage, and takes over a dashboard account. This issue is fixed in version 1.25.0.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-55879 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55879"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-57807",
+    "published": "2026-07-10T21:16:59.947",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Authentication Bypass Using an Alternate Path or Channel vulnerability in miniOrange Security Software Pvt Ltd. OAuth Single Sign On - SSO (OAuth Client) allows Password Recovery Exploitation.\n\nThis issue affects OAuth Single Sign On - SSO (OAuth Client): from n/a through 38.5.8.",
+    "tags": [],
+    "title": "CVE-2026-57807 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57807"
+  },
+  {
+    "category": "high",
+    "cvss": 7.6,
+    "id": "CVE-2026-55405",
+    "published": "2026-07-10T21:16:55.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LangChain4j is a Java library for building LLM-powered applications on the JVM. Prior to  1.2.1-beta8, 1.5.1-beta11, 1.11.8-beta19, and 1.16.3-beta26, the MariaDB and pgvector embedding stores build metadata-filter SQL by string-concatenating filter keys, and in MariaDB string values, directly into the query without adequate escaping. A crafted metadata key in EmbeddingSearchRequest.filter() can break out of its SQL context and inject arbitrary SQL into the statements executed by the stores' search and removeAll(Filter) operations, enabling blind data exfiltration, denial of service via sleep functions, and deletion of arbitrary rows through removeAll(Filter). This issue is fixed in langchain4j-mariadb and langchain4j-pgvector versions 1.2.1-beta8, 1.5.1-beta11, 1.11.8-beta19, and 1.16.3-beta26.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-55405 (CVSS 7.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55405"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-57211",
+    "published": "2026-07-10T21:16:58.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "RabbitMQ is a messaging and streaming broker. Prior to 4.1.11 and 4.2.6 on Windows, the RabbitMQ management plugin static file handler rabbit_mgmt_wm_static can pass URL-encoded backslashes to erl_prim_loader:read_file_info before path validation when multiple management extension plugins are enabled, causing outbound DNS and SMB requests to attacker-controlled UNC paths. This issue is fixed in versions 4.1.11 and 4.2.6.",
+    "tags": [],
+    "title": "CVE-2026-57211 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57211"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-58499",
+    "published": "2026-07-10T21:17:00.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "EverOS is a memory runtime for agents. Prior to 1.0.1, EverOS is vulnerable to path traversal in the POST /api/v1/memory/add ingestion endpoint because the per-message sender_id field was not validated as a path-safe identifier, unlike app_id and project_id. During user-memory extraction, sender_id is used as owner_id and joined into the filesystem path where the extracted episode is persisted as a Markdown file, so a sender_id containing ../ sequences could direct writes outside the configured memory root and allow an unauthenticated caller to create or overwrite .md files at locations writable by the server process with partially attacker-influenced content. This issue is fixed in version 1.0.1.",
+    "tags": [],
+    "title": "CVE-2026-58499 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58499"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195130",
+    "published": "2026-07-10T20:42:40+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Zimbra addressed a critical stored XSS vulnerability in its Classic Web Client that lets malicious emails execute code when opened. Zimbra has released version 10.1.19 to fix a critical stored XSS vulnerability in its Classic Web Client, which is widely used to access Zimbra Collaboration. The flaw, which has not yet received a CVE ID, […]",
+    "tags": [],
+    "title": "Update Now: Critical Zimbra Classic Web Client Flaw Could Expose Mailboxes",
+    "url": "https://securityaffairs.com/195130/hacking/update-now-critical-zimbra-classic-web-client-flaw-could-expose-mailboxes.html"
   }
 ]
