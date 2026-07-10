@@ -4644,5 +4644,19 @@
     "tags": [],
     "title": "Laser Attack Resets Tangem Wallet Passwords on Cards That Can't Be Patched",
     "url": "https://thehackernews.com/2026/07/laser-attack-resets-tangem-wallet.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-56291",
+    "published": "2026-07-09T11:16:40.990",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Joomla extension Balbooa Forms is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56291 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56291"
   }
 ]
