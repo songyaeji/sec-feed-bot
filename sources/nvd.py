@@ -88,7 +88,8 @@ def _to_item(cve: dict, category: str, min_cvss: float, keywords: list[str], sou
         "category": category,
         "title": f"{cve_id} (CVSS {score if score is not None else 'N/A'})",
         "url": f"https://nvd.nist.gov/vuln/detail/{cve_id}",
-        "summary": desc_text[:300],
+        # 1500자: rss.py와 동일 — 300자 절단은 사서 요약의 정보 밀도를 깎는다
+        "summary": desc_text[:1500],
         "severity": severity,
         "cvss": score,
         "published": cve.get("published", datetime.now(timezone.utc).isoformat()),

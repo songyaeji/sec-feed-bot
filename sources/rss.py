@@ -69,7 +69,9 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             "category": category,
             "title": title,
             "url": entry.get("link", ""),
-            "summary": summary[:300],
+            # 1500자: 300자 절단은 계보·공격체인 같은 뒷부분 세부를 사서가
+            # 못 보게 해 요약 정보 밀도를 깎았다 (사용자 피드백 — GodDamn 사례)
+            "summary": summary[:1500],
             "severity": "info",
             "published": published,
             # 바이라인(예: "[지진솔기자 (email)]") — deprioritize_authors 매칭용.

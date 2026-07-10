@@ -340,7 +340,8 @@ def _build_cover(
     tags_block = ""
     keywords: list[str] = []
     for it in top:
-        tag = (it.get("tags") or [None])[0]
+        # 사서 구체 키워드(tags_ko) 우선 — 규칙 태그(금융/피싱류)는 폴백
+        tag = ((it.get("tags_ko") or it.get("tags")) or [None])[0]
         if tag and tag not in keywords:
             keywords.append(tag)
     keywords = keywords[:5]
@@ -382,7 +383,8 @@ def _build_news(
     # 카테고리 pill의 라임 스타일(pill_cat)을 물려받아 시각 앵커가 된다.
     # 개수는 유동 — 태그 없으면 국내/해외·실악용만 남아도 그대로 둔다.
     pills = []
-    tags = list(item.get("tags") or [])[:MAX_TAG_PILLS]
+    # 사서 구체 키워드(tags_ko) 우선, 없으면 규칙 태그 폴백 (fail-open)
+    tags = list(item.get("tags_ko") or item.get("tags") or [])[:MAX_TAG_PILLS]
     if tags:
         pills.append(_fill(fragments["pill_cat"], TEXT=html.escape(tags[0])))
     # v7: 국내/해외 표기 — 태그와 같은 아웃라인 pill

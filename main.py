@@ -472,6 +472,17 @@ def main() -> None:
                             value = item_verdict.get(key)
                             if value:
                                 item[key] = value
+                        # 사서의 항목별 구체 키워드 — 카드 해시태그·pill이
+                        # 규칙 태그(tags) 대신 우선 사용. LLM 출력이라 형태 검증:
+                        # 문자열 원소만, 공백 제거, 빈 리스트면 미설정(태그 폴백)
+                        tags_ko = item_verdict.get("tags_ko")
+                        if isinstance(tags_ko, list):
+                            cleaned = [
+                                t.strip() for t in tags_ko
+                                if isinstance(t, str) and t.strip()
+                            ]
+                            if cleaned:
+                                item["tags_ko"] = cleaned
                         base_importance = item_verdict.get("importance", 3)
                         penalty = _author_penalty(item, config)
                         item["importance"] = max(1, base_importance - penalty)
