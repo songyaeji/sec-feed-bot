@@ -235,6 +235,49 @@ def _source_regions(config: dict) -> dict[str, str]:
     }
 
 
+def _dedup_by_topic(items: list[dict], verdicts: dict) -> list[dict]:
+    """같은 위키 토픽(slug)에 매인 카드 후보가 2건 이상이면 1건만 남긴다.
+
+    사서 LLM이 같은 사건의 교차 소스 보도를 skip_duplicate로 못 걸러도
+    (GodDamn/PoisonX 2026-07-10 사례: THN·Security Affairs 각각 new/update
+    판정 → 카드 2장) topic slug는 같게 주므로, 여기서 결정적으로 차단한다.
+    생존자는 카드 정렬 기준과 동일한 (-importance, -heuristic_score) 우선.
+    slug가 유효한 문자열이 아니면(null/누락) 판단 근거가 없으므로 그대로
+    통과시킨다 — 사서 출력 불량이 카드를 지우면 안 된다(fail-open)."""
+    best_by_topic: dict[str, dict] = {}
+    dup_counts: dict[str, int] = {}
+    for item in items:
+        topic = verdicts.get(item["id"], {}).get("topic")
+        if not (isinstance(topic, str) and topic.strip()):
+            continue
+        topic = topic.strip()
+        current = best_by_topic.get(topic)
+        if current is None:
+            best_by_topic[topic] = item
+            continue
+        dup_counts[topic] = dup_counts.get(topic, 0) + 1
+        challenger_key = (-item.get("importance", 3), -cardgen.heuristic_score(item))
+        current_key = (-current.get("importance", 3), -cardgen.heuristic_score(current))
+        if challenger_key < current_key:
+            best_by_topic[topic] = item
+
+    for topic, count in dup_counts.items():
+        print(
+            f"[main] 같은 토픽 카드 중복 {count}건 제외 (topic={topic})",
+            file=sys.stderr,
+        )
+
+    winners = {id(it) for it in best_by_topic.values()}
+
+    def _keep(item: dict) -> bool:
+        topic = verdicts.get(item["id"], {}).get("topic")
+        if not (isinstance(topic, str) and topic.strip()):
+            return True  # topic 없음 — fail-open 통과
+        return id(item) in winners
+
+    return [it for it in items if _keep(it)]
+
+
 def _fallback_keywords(items: list[dict], limit: int = 4) -> list[str]:
     # 사서가 keywords를 못 준 날의 표지 해시태그 — 태그 빈도 상위로 대체
     counts: dict[str, int] = {}
@@ -518,6 +561,11 @@ def main() -> None:
                     # recap 게이트를 통과한 신선한 사건 전체에서 중요도순으로
                     # 뉴스·CVE 상한까지 항상 채운다. 동점은 휴리스틱 점수
                     # (AI>KEV>제로데이>금융)로 가른다.
+                    # 같은 사건의 교차 소스 보도(같은 topic slug)는 최고
+                    # 중요도 1건만 카드에 — 사서의 skip_duplicate 판정 실패에
+                    # 대한 결정적 백스톱 (GodDamn/PoisonX 중복 카드 재발 방지)
+                    wiki_worthy = _dedup_by_topic(
+                        wiki_worthy, verdict.get("verdicts", {}))
                     to_send = _cap_split(
                         wiki_worthy,
                         key=lambda it: (-it.get("importance", 3), -cardgen.heuristic_score(it)),
