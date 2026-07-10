@@ -3885,5 +3885,31 @@
     "tags": [],
     "title": "GigaWiper Merges Three Malware Families Into One Destructive Backdoor",
     "url": "https://securityaffairs.com/195068/malware/gigawiper-merges-three-malware-families-into-one-destructive-backdoor.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-15378",
+    "published": "2026-07-10T10:16:23.553",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the `guardrails-detectors` component. This vulnerability allows a remote attacker to perform a blind Server-Side Request Forgery (SSRF) by submitting a specially crafted XML Schema Definition (XSD) string. This can lead to unauthorized access to sensitive information, including credentials from cloud metadata services, Kubernetes API, internal MinIO, and other internal network endpoints. Additionally, it enables local file reads of critical data such as service account tokens and pod secrets.",
+    "tags": [],
+    "title": "CVE-2026-15378 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15378"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195081",
+    "published": "2026-07-10T09:21:29+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A former ransomware negotiator was sentenced to nearly six years for secretly helping BlackCat extort victims while betraying his clients. A U.S. court sentenced former ransomware negotiator Angelo Martino, 41, to 70 months in prison for conspiring with the BlackCat ransomware gang. While negotiating on behalf of five victims, he secretly shared confidential information about […]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Former Ransomware Negotiator Sentenced to 70 Months in Prison for Secretly Helping BlackCat Gang",
+    "url": "https://securityaffairs.com/195081/cyber-crime/former-ransomware-negotiator-sentenced-to-70-months-in-prison-for-secretly-helping-blackcat-gang.html"
   }
 ]
