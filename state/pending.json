@@ -2954,5 +2954,77 @@
     ],
     "title": "이억원 금융위원장 \"AI 보안체계 고도화…망분리 전면 해제 조속 추진“ - 인더스트리뉴스",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBSVjZkWE5XWG5mZFhQYU9sVWtDbEJDRWxvNDRIemJ0SHlhdEN2NXZJZzVHZFRJU2p2N2EtSGl5QmpQeU5ycU4yanpkbXVBSnJxVW9jb01ORER4Wk9ic080NjBpdTJWU2t4emhWQ2M2akNWZw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15282",
+    "published": "2026-07-10T05:16:30.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Instant Appointment plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'insapp_upload_image_as_attachment' function in all versions up to, and including, 1.2. This makes it possible for unauthenticated attackers to upload arbitrary files on th",
+    "tags": [],
+    "title": "CVE-2026-15282 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15282"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15300",
+    "published": "2026-07-10T05:16:33.393",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The GEO my WP plugin for WordPress was vulnerable to SQL Injection via the 'distance', 'lat', and 'lng' parameters in versions up to, and including, 4.5.4. The values were read from $_SERVER['QUERY_STRING'] via parse_str() (bypassing wp_magic_quotes, which does not cover $_SERVER), then passed throu",
+    "tags": [],
+    "title": "CVE-2026-15300 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15300"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-15293",
+    "published": "2026-07-10T05:16:32.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Business Intelligence Lite plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.2.0. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with Subscrib",
+    "tags": [],
+    "title": "CVE-2026-15293 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15293"
+  },
+  {
+    "author": "[엄호식기자 (eomhs@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144625&kind=&sub_kind=",
+    "published": "2026-07-10T05:15:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "인증서 유효기간 단축과 양자컴퓨터·AI 시대의 새로운 보안 과제 해결 지원[보안뉴스 엄호식 기자] 써트코리아는 파인앤서비스의 인증사업부이자 디지서트(DigiCert) 총판 자격의 공식 파트너로, 20년 이상 국내 인증서 시장을 선도해 온 인증 전문기업이다. 디지서트 ONE 플랫폼을 기반으로 인증서 수명주기 자동화(DigiCert TLM), DNS 보안 서비",
+    "tags": [],
+    "title": "[ISEC 2026 미리보기] 써트코리아, 디지서트의 ‘지능형 신뢰(Intelligent Trust)’ 플랫폼 DigiCert",
+    "url": "http://www.boannews.com/media/view.asp?idx=144625&kind=&sub_kind="
+  },
+  {
+    "author": "[엄호식기자 (eomhs@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144626&kind=&sub_kind=",
+    "published": "2026-07-10T05:13:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "시스코 공식 총판 아이넷뱅크, Duo·Secure Access·Secure Workload로 통합 보안 전략 제시[보안뉴스 엄호식 기자] 시스코(Cisco) 공식 총판인 아이넷뱅크(iNETBANK)는 20년 이상의 시스코 공식 총판이며 국내 IT시장과 함께 성장해 온 ICT 유통 전문기업으로, 서울 본사와 대구·대전·부산 지사를 거점으로 2400여개 파트너",
+    "tags": [],
+    "title": "[ISEC 2026 미리보기] 시스코 보안 3종으로 완성하는 제로트러스트... ISEC 2026서 만난다",
+    "url": "http://www.boannews.com/media/view.asp?idx=144626&kind=&sub_kind="
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207555",
+    "published": "2026-07-10T14:10:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "펜타시큐리티가 지난 9일 개최된 제2회 국제 e-비즈니스 정보시스템 및 ICT 융합보안 심포지엄(EBISION 2026) 시상식에서 산업 선도기업상(Industry Pioneer Award)을 수상했다. 이 심포지엄은 정보통신기술 분야 학술기구인 국제정보처리연맹(IFIP) 산하 WG 8.4가 주관하는 공식 행사다.올해 심포지엄에는 한국, 대만, 덴마크, 일본 등 11개국에서 연구자와 기업 관계자들이 참여해 총 91편의 논문을 발표했다. 펜타시큐리티가 수상한 산업 선도기업상은 AI, 양자컴퓨팅, 6G 등 차세대 ICT 분야에서 산업",
+    "tags": [],
+    "title": "펜타시큐리티, 'EBISION 2026'에서 산업 선도기업상 수상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207555"
   }
 ]
