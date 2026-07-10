@@ -4826,5 +4826,121 @@
     ],
     "title": "CVE-2026-0274 (CVSS 9.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0274"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-2398",
+    "published": "2026-07-10T17:16:56.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Authorization bypass through User-Controlled key vulnerability in Adam Retail Automation Ltd. MobilMen 20T allows Privilege Escalation.\n\nThis issue affects MobilMen 20T: from v3 through 10072026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-2398 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2398"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-53657",
+    "published": "2026-07-10T17:16:57.987",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Lima launches Linux virtual machines, typically on macOS, for running containerd. Prior to 2.1.3, on an instance of Lima running with the qemu driver, an arbitrary user in the VM could access /run/lima-guestagent.sock when the guest agent is enabled, which could result in running arbitrary commands with root privileges in the VM because the guest agent socket provides tunneling for arbitrary addresses, including Unix socket addresses for privileged daemons like D-Bus. This issue is fixed in version 2.1.3.",
+    "tags": [],
+    "title": "CVE-2026-53657 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53657"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-55638",
+    "published": "2026-07-10T17:16:59.183",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. Prior to 0.5.2, 9router protects /v1, /v1beta, /api/v1, and /api/v1beta in src/dashboardGuard.js but omits /codex before next.config.mjs rewrites /codex/* to /api/v1/responses. A remote unauthenticated attacker can send requests to /codex/* to bypass the API-key gate and cause the server to make upstream provider calls using operator-stored LLM provider credentials. This issue is fixed in version 0.5.2.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-55638 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55638"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-55641",
+    "published": "2026-07-10T17:16:59.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. Prior to 0.5.2, 9router determines whether a /v1 LLM proxy request is local by reading the client-controlled Host header, allowing a remote unauthenticated attacker to send Host: localhost and bypass API-key authentication. In the default configuration, this exposes the /v1 proxy to upstream provider calls using stored provider credentials and allows /v1/search with the searxng provider_options.baseUrl parameter to drive server-side requests to internal or cloud-metadata hosts. This issue is fixed in version 0.5.2.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-55641 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55641"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-55780",
+    "published": "2026-07-10T17:16:59.733",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NanaZip is the 7-Zip derivative intended for the modern Windows experience. Prior to 6.5.1749.0, NanaZip's .NET single-file bundle handler in NanaZip.Codecs.Archive.DotNetSingleFile.cpp sizes its extraction buffer from the bundle entry Size field, which is only checked for sign and is not validated against the real file size. A crafted bundle can cause an attacker-chosen allocation inside Extract, where std::bad_alloc or std::length_error can escape across the COM STDMETHODCALLTYPE boundary and crash the process. This issue is fixed in version 6.5.1749.0.",
+    "tags": [],
+    "title": "CVE-2026-55780 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55780"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-55781",
+    "published": "2026-07-10T17:16:59.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NanaZip is the 7-Zip derivative intended for the modern Windows experience. Prior to 6.5.1749.0, NanaZip's UFS and FFS image handler in NanaZip.Codecs.Archive.Ufs.cpp validates the superblock block size only against the MINBSIZE lower bound and does not validate the fs_fsize fragment size, allowing attacker-controlled 32-bit fields to flow into indirect-block, directory, and extraction buffer allocations. A tiny crafted UFS image can force multi-gigabyte allocations during open or extraction, causing memory exhaustion or process termination. This issue is fixed in version 6.5.1749.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55781 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55781"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-55782",
+    "published": "2026-07-10T17:17:00.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NanaZip is the 7-Zip derivative intended for the modern Windows experience. Prior to 6.5.1749.0, NanaZip's WebAssembly archive handler in NanaZip.Codecs.Archive.WebAssembly.cpp allocates buffers from attacker-controlled 32-bit section and custom-name length fields without validating them against the data present in the file. A tiny crafted module can force multi-gigabyte allocations during listing or extraction through NameSize, Information.Size, and std::string or vector allocation paths, causing memory exhaustion or process termination. This issue is fixed in version 6.5.1749.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55782 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55782"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-55783",
+    "published": "2026-07-10T17:17:00.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NanaZip is the 7-Zip derivative intended for the modern Windows experience. Prior to 6.5.1749.0, NanaZip's seven in-house IInArchive handlers in NanaZip.Codecs unconditionally dereference the caller-supplied Indices array inside Extract when the archive engine signals extract everything by passing Indices as NULL and NumItems as 0xFFFFFFFF. This causes a NULL pointer dereference in the standard Test archive or Extract all code path for WebAssembly, ElectronAsar, Zealfs, Romfs, Ufs, Littlefs, and DotNetSingleFile archives, resulting in a process crash. This issue is fixed in version 6.5.1749.0.",
+    "tags": [],
+    "title": "CVE-2026-55783 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55783"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-56675",
+    "published": "2026-07-10T17:17:01.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. Prior to 0.5.2, 9router treats loopback requests as trusted and allows /v1/* access without an API key, so a same-host reverse proxy that forwards public traffic to the backend through 127.0.0.1 causes src/dashboardGuard.js to misclassify external requests as local. A remote unauthenticated attacker can access /v1 APIs such as /v1/models and may abuse configured upstream provider credentials through /v1 proxy endpoints depending on enabled providers. This issue is fixed in version 0.5.2.",
+    "tags": [],
+    "title": "CVE-2026-56675 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56675"
   }
 ]
