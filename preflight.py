@@ -42,10 +42,16 @@ _SENT_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
 
 
 def _noun_ending_count(text: str) -> int:
-    """완결형 종결어미('~다')로 끝나지 않는 문장 수 — 개조식 본문 감지.
-    librarian의 교정 게이트가 실패(fail-open)한 항목을 발송 전에 드러낸다."""
+    """완결형 종결어미('~다')로 끝나지 않거나 마침표로 닫히지 않은 문장 수 —
+    개조식 본문·종결 부호 누락 감지. librarian의 교정 게이트가
+    실패(fail-open)한 항목을 발송 전에 드러낸다."""
     plain = (text or "").replace("**", "").strip()
+    if not plain:
+        return 0
     n = 0
+    # 전체 텍스트가 마침표로 닫히지 않으면 마지막 문장 종결 부호 누락 1건
+    if not plain.endswith("."):
+        n += 1
     for sent in _SENT_SPLIT_RE.split(plain):
         sent = sent.strip().rstrip('.!?"\')』」]')
         if sent and not sent.endswith("다"):
