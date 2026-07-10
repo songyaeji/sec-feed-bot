@@ -3986,5 +3986,391 @@
     ],
     "title": "Hackers Use Fake Microsoft Entra Passkey Enrollment to Gain Microsoft 365 Access",
     "url": "https://thehackernews.com/2026/07/hackers-use-fake-microsoft-entra.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-32640",
+    "published": "2026-03-16T14:19:40.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SimpleEval is a library for adding evaluatable expressions into python projects. Prior to 1.0.5, objects (including modules) can leak dangerous modules through to direct access inside the sandbox. If the objects you've passed in as names to SimpleEval have modules or other disallowed / dangerous objects available as attrs. Additionally, dangerous functions or modules could be accessed by passing them as callbacks to other safe functions to call. The latest version 1.0.5 has this issue fixed. This vulnerability is fixed in 1.0.5.",
+    "tags": [],
+    "title": "CVE-2026-32640 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32640"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-39892",
+    "published": "2026-04-08T21:17:01.547",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. From 45.0.0 to before 46.0.7, if a non-contiguous buffer was passed to APIs which accepted Python buffers (e.g. Hash.update()), this could lead to buffer overflows. This vulnerability is fixed in 46.0.7.",
+    "tags": [],
+    "title": "CVE-2026-39892 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39892"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-41242",
+    "published": "2026-04-18T17:16:13.983",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "protobufjs compiles protobuf definitions into JavaScript (JS) functions. In versions prior to 8.0.1 and 7.5.5, attackers can inject arbitrary code in the \"type\" fields of protobuf definitions, which will then execute during object decoding using that definition. Versions 8.0.1 and 7.5.5 patch the issue.",
+    "tags": [],
+    "title": "CVE-2026-41242 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41242"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44930",
+    "published": "2026-05-22T13:16:22.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An LDAP injection vulnerability in the LDAP Certificate repository of the XKMS server in Apache CXF may allow an attacker to retrieve arbitrary certificates from the repository. \nUsers are recommended to upgrade to versions 4.2.1, 4.1.6 or 3.6.11, which fix this issue.",
+    "tags": [],
+    "title": "CVE-2026-44930 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44930"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-5241",
+    "published": "2026-06-03T14:16:46.337",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the LightGlue model loading path of huggingface/transformers version 5.2.0 allows an attacker-controlled model repository to execute arbitrary code during model initialization. The issue arises because the `trust_remote_code` parameter, intended to prevent remote code execution, is overridden by untrusted serialized configuration data in a nested code path. Specifically, when loading a LightGlue model using `AutoModel.from_pretrained()` with `trust_remote_code=False`, the `LightGlueConfig` reads the `trust_remote_code` value from the untrusted `config.json` file and propagates it into nested `AutoConfig.from_pretrained()` calls. This results in the execution of attacker-provided Python modules, even when the victim explicitly disables remote code execution. The vulnerability poses a high risk for environments such as API inference servers, research notebooks, CI/CD pipelines, and model evaluation workers, potentially leading to credential theft, lateral movement, or persistence/backdoor deployment.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-5241 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5241"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-50627",
+    "published": "2026-06-12T10:16:22.587",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The JwtAccessTokenValidator class in Apache CXF fails to validate the 'aud' (Audience) claims of incoming JWT access tokens. This allows a JWT issued for one Resource Server to be successfully replayed against a completely different Resource Server, leading to Token Confusion/Routing attacks. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fixes this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-50627 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50627"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-50628",
+    "published": "2026-06-12T10:16:22.710",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A logic error in OAuthRequestFilter rejects legitimate requests originating from the bound IP address, while blindly allowing requests from any other IP address. Enabling this\n\nsecurity feature inadvertently creates an inverse security check. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fixes this issue.",
+    "tags": [],
+    "title": "CVE-2026-50628 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50628"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44170",
+    "published": "2026-06-12T18:16:33.853",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, MariaDB on WIndows with installed CONNECT engine and enabled REST support interpolated table HTTP attribute into the curl command line without proper sanitizing. This allows the user to execute shell commands on the server. This issue has been patched in versions 10.6.26, 10.11.17, 11.4.11, 11.8.7, and 12.3.2.",
+    "tags": [],
+    "title": "CVE-2026-44170 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44170"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-56688",
+    "published": "2026-07-10T12:17:23.453",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability during OS Repository processing to achieve arbitrary command execution as root, potentially leading to full appliance compromise and lateral movement into managed infrastructure.",
+    "tags": [],
+    "title": "CVE-2026-56688 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56688"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-33236",
+    "published": "2026-03-20T23:16:47.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NLTK (Natural Language Toolkit) is a suite of open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing. In versions 3.9.3 and prior, the NLTK downloader does not validate the `subdir` and `id` attributes when processing remote XML index files. Attackers can control a remote XML index server to provide malicious values containing path traversal sequences (such as `../`), which can lead to arbitrary directory creation, arbitrary file creation, and arbitrary file overwrite. Commit 89fe2ec2c6bae6e2e7a46dad65cc34231976ed8a patches the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-33236 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33236"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-34070",
+    "published": "2026-03-31T03:15:58.947",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LangChain is a framework for building agents and LLM-powered applications. Prior to version 1.2.22, multiple functions in langchain_core.prompts.loading read files from paths embedded in deserialized config dicts without validating against directory traversal or absolute path injection. When an application passes user-influenced prompt configurations to load_prompt() or load_prompt_from_config(), an attacker can read arbitrary files on the host filesystem, constrained only by file-extension checks (.txt for templates, .json/.yaml for examples). This issue has been patched in version 1.2.22.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-34070 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34070"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-31488",
+    "published": "2026-04-22T14:16:46.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amd/display: Do not skip unrelated mode changes in DSC validation\n\nStarting with commit 17ce8a6907f7 (\"drm/amd/display: Add dsc pre-validation in\natomic check\"), amdgpu resets the CRTC state mode_changed flag to false when\nrecomputing the DSC configuration results in no timing change for a particular\nstream.\n\nHowever, this is incorrect in scenarios where a change in MST/DSC configuration\nhappens in the same KMS commit as another (unrelated) mode change. For example,\nthe integrated panel of a laptop may be configured differently (e.g., HDR\nenabled/disabled) depending on whether external screens are attached. In this\ncase, plugging in external DP-MST screens may result in the mode_changed flag\nbeing dropped incorrectly for the integrated panel if its DSC configuration\ndid not change during precomputation in pre_validate_dsc().\n\nAt this point, however, dm_update_crtc_state() has already created new streams\nfor CRTCs with DSC-independent mode changes. In turn,\namdgpu_dm_commit_streams() will never release the old stream, resulting in a\nmemory leak. amdgpu_dm_atomic_commit_tail() will never acquire a reference to\nthe new stream either, which manifests as a use-after-free when the stream gets\ndisabled later on:\n\nBUG: KASAN: use-after-free in dc_stream_release+0x25/0x90 [amdgpu]\nWrite of size 4 at addr ffff88813d836524 by task kworker/9:9/29977\n\nWorkqueue: events drm_mode_rmfb_work_fn\nCall Trace:\n <TASK>\n dump_",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-31488 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31488"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-43284",
+    "published": "2026-05-08T08:16:43.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: esp: avoid in-place decrypt on shared skb frags\n\nMSG_SPLICE_PAGES can attach pages from a pipe directly to an skb. TCP\nmarks such skbs with SKBFL_SHARED_FRAG after skb_splice_from_iter(),\nso later paths that may modify packet data can first make a private\ncopy. The IPv4/IPv6 datagram append paths did not set this flag when\nsplicing pages into UDP skbs.\n\nThat leaves an ESP-in-UDP packet made from shared pipe pages looking\nlike an ordinary uncloned nonlinear skb. ESP input then takes the no-COW\nfast path for uncloned skbs without a frag_list and decrypts in place\nover data that is not owned privately by the skb.\n\nMark IPv4/IPv6 datagram splice frags with SKBFL_SHARED_FRAG, matching\nTCP. Also make ESP input fall back to skb_cow_data() when the flag is\npresent, so ESP does not decrypt externally backed frags in place.\nPrivate nonlinear skb frags still use the existing fast path.\n\nThis intentionally does not change ESP output. In esp_output_head(),\nthe path that appends the ESP trailer to existing skb tailroom without\ncalling skb_cow_data() is not reachable for nonlinear skbs:\nskb_tailroom() returns zero when skb->data_len is nonzero, while ESP\ntailen is positive. Thus ESP output will either use the separate\ndestination-frag path or fall back to skb_cow_data().",
+    "tags": [],
+    "title": "CVE-2026-43284 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43284"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-44293",
+    "published": "2026-05-13T16:16:56.253",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "protobufjs compiles protobuf definitions into JavaScript (JS) functions. Prior to 7.5.6 and 8.0.2, protobufjs generated JavaScript for toObject conversion could include an unsafe expression derived from a schema-controlled bytes field default value. A crafted descriptor with a non-string default value for a bytes field could cause attacker-controlled code to be emitted into the generated conversion function. This vulnerability is fixed in 7.5.6 and 8.0.2.",
+    "tags": [],
+    "title": "CVE-2026-44293 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44293"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-44574",
+    "published": "2026-05-13T17:16:22.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Next.js is a React framework for building full-stack web applications. From 15.4.0 to before 15.5.16 and 16.2.5, applications that rely on middleware to protect dynamic routes can be vulnerable to authorization bypass. In affected deployments, specially crafted query parameters can alter the dynamic route value seen by the page while leaving the visible path unchanged, which can allow protected content to be rendered without passing the expected middleware check. This vulnerability is fixed in 15.5.16 and 16.2.5.",
+    "tags": [],
+    "title": "CVE-2026-44574 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44574"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-44578",
+    "published": "2026-05-13T18:16:17.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Next.js is a React framework for building full-stack web applications. From 13.4.13 to before 15.5.16 and 16.2.5, self-hosted applications using the built-in Node.js server can be vulnerable to server-side request forgery through crafted WebSocket upgrade requests. An attacker can cause the server to proxy requests to arbitrary internal or external destinations, which may expose internal services or cloud metadata endpoints. Vercel-hosted deployments are not affected. This vulnerability is fixed in 15.5.16 and 16.2.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44578 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44578"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-46300",
+    "published": "2026-05-23T12:17:02.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: skbuff: preserve shared-frag marker during coalescing\n\nskb_try_coalesce() can attach paged frags from @from to @to.  If @from\nhas SKBFL_SHARED_FRAG set, the resulting @to skb can contain the same\nexternally-owned or page-cache-backed frags, but the shared-frag marker\nis currently lost.\n\nThat breaks the invariant relied on by later in-place writers.  In\nparticular, ESP input checks skb_has_shared_frag() before deciding\nwhether an uncloned nonlinear skb can skip skb_cow_data().  If TCP\nreceive coalescing has moved shared frags into an unmarked skb, ESP can\nsee skb_has_shared_frag() as false and decrypt in place over page-cache\nbacked frags.\n\nPropagate SKBFL_SHARED_FRAG when skb_try_coalesce() transfers paged\nfrags.  The tailroom copy path does not need the marker because it copies\nbytes into @to's linear data rather than transferring frag descriptors.",
+    "tags": [],
+    "title": "CVE-2026-46300 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46300"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-53435",
+    "published": "2026-06-10T14:16:36.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Jenkins 2.567 and earlier, LTS 2.555.2 and earlier, it is possible for attackers to have Jenkins deserialize arbitrary types defined in Jenkins core or plugins from an attacker-controlled `config.xml` submission in a way that allows them to handle HTTP requests afterwards.\nThis can be used to impersonate any user and send HTTP requests on their behalf, up to and including use of the Script Console to run arbitrary code, or to read arbitrary files from the Jenkins controller.",
+    "tags": [],
+    "title": "CVE-2026-53435 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53435"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-50632",
+    "published": "2026-06-12T10:16:23.183",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A further incomplete fix for a previous advisory CVE-2026-44417 (Untrusted JMS configuration can lead to RCE) for Apache CXF has been identified, which can allow code execution capabilities, if untrusted users are allowed to configure JMS for Apache CXF. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fixes this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-50632 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50632"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-50633",
+    "published": "2026-06-12T10:16:23.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A JNDI Injection vulnerability has been discovered in Apache CXF's JCA integration module, which can allow for code execution, if an attacker is able to manipulate the JCA deployment descriptor (ra.xml) or runtime activation parameters. Users are recommended to upgrade to versions 4.2.2 or 4.1.7, which fixes this issue.",
+    "tags": [],
+    "title": "CVE-2026-50633 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50633"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-45674",
+    "published": "2026-06-12T15:16:27.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, Netty's DnsResolveContext fails to validate the origin (bailiwick) of CNAME records in DNS responses. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
+    "tags": [],
+    "title": "CVE-2026-45674 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45674"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-47691",
+    "published": "2026-06-12T16:16:30.310",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, Netty's `DnsResolveContext` insufficiently validates the bailiwick of NS records, enabling DNS Cache Poisoning. An attacker controlling an authoritative name server for a subdomain can poison the cache for parent domains (like `.co.uk`). In `io.netty.resolver.dns.DnsResolveContext.AuthoritativeNameServerList#add` method accepts any NS record from the AUTHORITY section as long as the record's name is a suffix of the questionName. Subsequently, the `handleWithAdditional` method caches the associated A records from the ADDITIONAL section directly into the `authoritativeDnsServerCache` under the parent domain's key. This bypasses standard bailiwick rules, where a server authoritative for a subdomain should not be trusted to provide authoritative records for its parent. The poisoned cache is then used for all future resolutions under the parent domain's key. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
+    "tags": [],
+    "title": "CVE-2026-47691 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47691"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-50010",
+    "published": "2026-06-12T16:16:31.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Netty is a network application framework for development of protocol servers and clients. Prior to versions 4.1.135.Final and 4.2.15.Final, SimpleTrustManagerFactory.engineGetTrustManagers() and related paths wrap any user-supplied plain X509TrustManager in X509TrustManagerWrapper, which extends X509ExtendedTrustManager but implements the 3-arg checkServerTrusted(chain, authType, SSLEngine) by discarding the SSLEngine and calling the 2-arg delegate. Because the object now IS an X509ExtendedTrustManager, neither SunJSSE's internal AbstractTrustManagerWrapper nor Netty's own OpenSslX509TrustManagerWrapper will re-wrap it to add endpoint-identification. Consequently, even though Netty 4.2 sets endpointIdentificationAlgorithm=\"HTTPS\" by default, a client built with `SslContextBuilder.forClient().trustManager(somePlainX509TrustManager)` performs no hostname verification at all. Versions 4.1.135.Final and 4.2.15.Final patch the issue.",
+    "tags": [],
+    "title": "CVE-2026-50010 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50010"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-44168",
+    "published": "2026-06-12T18:16:33.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.26, 10.11.1 to before 10.11.17, 11.4.1 to before 11.4.11, 11.8.1 to before 11.8.7, and 12.3.1, during the SST the donor node is interpolating parameters that the joiner sent into the command line. Not all parameters were properly validated which could allow a malicious joiner to execute arbitrary shell commands on the donor side via the mariabackup SST method. This issue has been patched in versions 10.6.26, 10.11.17, 11.4.11, 11.8.7, and 12.3.2.",
+    "tags": [],
+    "title": "CVE-2026-44168 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44168"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-48163",
+    "published": "2026-06-12T18:16:35.037",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.27, 10.11.1 to before 10.11.18, 11.4.1 to before 11.4.12, 11.8.1 to before 11.8.8, and 12.3.1, during the SST the donor node is interpolating parameters that the joiner sent into the command line. Not all parameters were properly validated which could allow a malicious joiner to execute arbitrary shell commands on the donor side via the rsync SST method. This issue has been patched in versions 10.6.27, 10.11.18, 11.4.12, 11.8.8, and 12.3.2.",
+    "tags": [],
+    "title": "CVE-2026-48163 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48163"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-48165",
+    "published": "2026-06-12T18:16:35.177",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MariaDB server is a community developed fork of MySQL server. From versions 10.6.1 to before 10.6.27, 10.11.1 to before 10.11.18, 11.4.1 to before 11.4.12, 11.8.1 to before 11.8.8, and 12.3.1, a high-privileged MariaDB user could've used wsrep_sst_receive_address or wsrep_sst_donor global system variables to execute shell commands as the uid of the mariadbd process on the galera joiner node. This issue has been patched in versions 10.6.27, 10.11.18, 11.4.12, 11.8.8, and 12.3.2.",
+    "tags": [],
+    "title": "CVE-2026-48165 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48165"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53330",
+    "published": "2026-07-01T14:16:40.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amd/display: Fix out-of-bounds read in dp_get_eq_aux_rd_interval()\n\n[Why & How]\nThe aux_rd_interval array in struct dc_lttpr_caps is declared with\nMAX_REPEATER_CNT - 1 (7) elements, indexed 0..6. However, the offset\nparameter passed to dp_get_eq_aux_rd_interval() can be as large as\nMAX_REPEATER_CNT (8) when a sink reports 8 LTTPR repeaters via DPCD.\nThis leads to an out-of-bounds read of aux_rd_interval[7] when offset\nis 8.\n\nFix this by growing aux_rd_interval to MAX_REPEATER_CNT elements to\naccommodate the full range of valid repeater counts defined by the DP\nspec.\n\n(cherry picked from commit a55a458a8df37a65ffda5cf721d554a8f74f6b04)",
+    "tags": [],
+    "title": "CVE-2026-53330 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53330"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53345",
+    "published": "2026-07-01T14:16:42.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: Don't WARN if memory is dirtied without a vCPU when the VM is dying\n\nWhen marking a page dirty, complain about not having a running/loaded vCPU\nif and only if the VM is still alive, i.e. its refcount is non-zero.  This\nwill allow fixing a memory leak for x86 SEV-ES guests without hitting what\nis effectively a false positive on the WARN.\n\nFor some SEV-ES VM-Exits, KVM keeps a writable mapping of a guest page\nacross an exit to userspace, and typically unmaps the page on the next\nKVM_RUN.  But if userspace never calls KVM_RUN after such an exit, then KVM\nneeds to unmap the page when the vCPU is destroyed, which in turn triggers\nthe WARN about not having a running vCPU.\n\nAlternatively, SEV-ES could temporarily load the vCPU to suppress the WARN,\nas is done in nested_vmx_free_vcpu() (but for completely unrelated reasons;\nsuppressing WARN from nested_put_vmcs12_pages() is pure happenstance).  But\nloading a vCPU during destruction is gross (ideally nVMX code would be\ncleaned up), risks complicating the SEV-ES code (KVM would need to ensure\nthe temporarily load()+put() only runs when the vCPU isn't already loaded),\nand is ultimately pointless.\n\nThe motivation for the WARN is to guard against KVM dirtying guest memory\nwithout pushing the corresponding GFN to the active vCPU's dirty ring, e.g.\nto ensure userspace doesn't miss a dirty page.  But for the VM's refcount\nto reach zero, there can't be _any_ userspace m",
+    "tags": [],
+    "title": "CVE-2026-53345 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53345"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53354",
+    "published": "2026-07-01T14:16:43.627",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\narm64: errata: Mitigate TLBI errata on various Arm CPUs\n\nA number of CPUs developed by Arm suffer from errata whereby a broadcast\nTLBI;DSB sequence may complete before the global observation of writes\nwhich are translated by an affected TLB entry.\n\nThese errata ONLY affect the completion of memory accesses which have\nbeen translated by an invalidated TLB entry, and these errata DO NOT\naffect the actual invalidation of TLB entries. TLB entries are removed\ncorrectly.\n\nThis issue has been assigned CVE ID CVE-2025-10263.\n\nTo mitigate this issue, Arm recommends that software follows any\naffected TLBI;DSB sequence with an additional TLBI;DSB, which will\nensure that all memory write effects affected by the first TLBI have\nbeen globally observed. The additional TLBI can use any operation that\nis broadcast to affected CPUs, and the additional DSB can use any option\nthat is sufficient to complete the additional TLBI.\n\nThe ARM64_WORKAROUND_REPEAT_TLBI workaround is sufficient to mitigate\nthe issue. Enable this workaround for affected CPUs, and update the\nsilicon errata documentation accordingly.\n\nNote that due to the manner in which Arm develops IP and tracks errata,\nsome CPUs share a common erratum number.",
+    "tags": [],
+    "title": "CVE-2026-53354 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53354"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53363",
+    "published": "2026-07-10T12:17:22.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: iptfs: preserve shared-frag marker in iptfs_consume_frags()\n\niptfs_consume_frags() transfers paged fragments from one socket buffer\nto another but fails to propagate the SKBFL_SHARED_FRAG flag. This is\nthe same class of bug that was fixed in skb_try_coalesce() for\nCVE-2026-46300: when fragments backed by read-only page-cache pages are\nmerged, the marker indicating their shared nature must be preserved so\nthat ESP can decide correctly whether in-place encryption is safe.\n\nApply the same two-line fix used in skb_try_coalesce() to\niptfs_consume_frags().",
+    "tags": [],
+    "title": "CVE-2026-53363 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53363"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-56690",
+    "published": "2026-07-10T12:17:23.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dell PowerFlex Manager, Version prior to 5.1.0.1, contain(s) an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure, Information exposure, and Unauthorized access.",
+    "tags": [],
+    "title": "CVE-2026-56690 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56690"
   }
 ]
