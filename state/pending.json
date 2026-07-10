@@ -2328,5 +2328,146 @@
     ],
     "title": "[속담으로 배우는 100가지 보안 습관 59] 세 살 버릇 여든까지 간다(9)-광고 클릭 하나로 감염되는 이유",
     "url": "http://www.boannews.com/media/view.asp?idx=143646&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-54769",
+    "published": "2026-07-10T00:16:33.603",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Langroid is a framework for building large-language-model-powered applications. Versions prior to 0.65.2 are vulnerable to a critical Sandbox Escape leading to Remote Code Execution (RCE) in its `TableChatAgent` and `VectorStore` capabilities. When these agents evaluate LLM-generated tool messages w",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-54769 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54769"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12595",
+    "published": "2026-07-10T00:16:32.120",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The LoginPress Pro plugin for WordPress is vulnerable to Authentication Bypass via Unverified OAuth Email in all versions up to and including 6.2.3. The vulnerability exists in the loginpress_on_discord_login() Discord OAuth callback handler, which accepts the email field returned by Discord's /user",
+    "tags": [],
+    "title": "CVE-2026-12595 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12595"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12597",
+    "published": "2026-07-10T00:16:32.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The LoginPress Pro plugin for WordPress is vulnerable to Authentication Bypass via the GitHub OAuth callback in versions up to, and including, 6.2.3. The vulnerability exists in the loginpress_on_github_login() function, which blindly trusts the first element (profile[0]['email']) of the array retur",
+    "tags": [],
+    "title": "CVE-2026-12597 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12597"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12598",
+    "published": "2026-07-10T00:16:32.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The LoginPress Pro plugin for WordPress is vulnerable to authentication bypass in versions up to and including 6.2.3 via the Spotify Social Login addon. This is due to the loginpress_on_spotify_login() function trusting the unverified 'email' field returned by Spotify's /v1/me endpoint and using it ",
+    "tags": [],
+    "title": "CVE-2026-12598 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12598"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-50180",
+    "published": "2026-07-10T00:16:33.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Langroid is a framework for building large-language-model-powered applications. Prior to version 0.64.0, `SQLChatAgent` in `langroid` ships a `_validate_query` defense-in-depth layer whose `_DANGEROUS_SQL_PATTERNS` regex blocklist enumerates dangerous SQL primitives by specific function name. The li",
+    "tags": [],
+    "title": "CVE-2026-50180 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50180"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-50181",
+    "published": "2026-07-10T00:16:33.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Langroid is a framework for building large-language-model-powered applications. Prior to version 0.64.0, Langroid's `ReadFileTool` and `WriteFileTool` appear to treat `curr_dir` as the intended working-directory boundary for file operations. However, the tools only change the process working directo",
+    "tags": [],
+    "title": "CVE-2026-50181 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50181"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-54771",
+    "published": "2026-07-10T00:16:33.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Langroid is a framework for building large-language-model-powered applications. Prior to version 0.65.3, a Langroid application exposing a chat interface to untrusted users may allow direct tool invocation via raw JSON payloads, even when tools are registered with `use=False, handle=True`. Version 0",
+    "tags": [],
+    "title": "CVE-2026-54771 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54771"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-55615",
+    "published": "2026-07-10T00:16:33.867",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Langroid is a framework for building large-language-model-powered applications. Prior to version 0.65.5, Neo4jChatAgent passes LLM-generated Cypher queries straight to the Neo4j driver with no validation, no statement-type allowlist, and no opt-out gate. The query text is influenceable by prompt inj",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-55615 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55615"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207549",
+    "published": "2026-07-10T09:12:33+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국범죄학회와 한국융합보안학회는 공동 하계학술대회 특별세션을 열고, AI 시대 디지털 포렌식의 책임성과 의료기관 정보보호 강화 방안을 논의했다고 밝혔다.‘검찰의 포렌식과 한국사회보장정보원의 범죄예방기능’을 주제로 열린 이번 특별세션에서는 디지털 전환과 생성형 AI 확산에 따른 수사기술 발전 방향과 의료정보 보호 정책 과제가 집중적으로 다뤄졌다.첫 번째 발표는 서울고등검찰청 이정인 수사관이 ‘AI-Native Digital Forensics with Human-in-the-Loop’를 주제로 진행했다. 이 수사관은 생성형 AI를 활용",
+    "tags": [
+      "AI"
+    ],
+    "title": "한국범죄학회, AI 수사 책임성과 의료정보 보안 논의…AI스페라 등 전문가 토론",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207549"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE41OFVJOVl3VVFTdWw4eVNDclhOWEtsQkpUSGdHNXg3Ynpubi1TWXRSVXdSU3lkZHpLdDRRR3gtQjNCbUtnR2llVFplTkRyd2hBMTR4UE1udWpfWDIybVhvaUZUbVBSODJBUXY0",
+    "published": "2026-07-10T00:14:35+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"AI 보안체계 강화…망분리 전면 해제 방안도 조속히 마련\" 서울뉴스통신",
+    "tags": [],
+    "title": "\"AI 보안체계 강화…망분리 전면 해제 방안도 조속히 마련\" - 서울뉴스통신",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41OFVJOVl3VVFTdWw4eVNDclhOWEtsQkpUSGdHNXg3Ynpubi1TWXRSVXdSU3lkZHpLdDRRR3gtQjNCbUtnR2llVFplTkRyd2hBMTR4UE1udWpfWDIybVhvaUZUbVBSODJBUXY0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9aMjNLTl9zNDdXNk9ZdlFMcmRWb2JGeXI3RTR4SzZwclNDdERzLWIxSko2cms3d1V5VzBlV1FlbUF4elFzZWk3SW5kdk1WWmVfMS1QVXV0TGFiZmlicnJyMF9NSEhHUlhPRUE",
+    "published": "2026-07-10T00:13:06+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, AI·보안 역량 갖춘 금융사, 망분리 전면 해제 추진 컨슈머타임스",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, AI·보안 역량 갖춘 금융사, 망분리 전면 해제 추진 - 컨슈머타임스",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9aMjNLTl9zNDdXNk9ZdlFMcmRWb2JGeXI3RTR4SzZwclNDdERzLWIxSko2cms3d1V5VzBlV1FlbUF4elFzZWk3SW5kdk1WWmVfMS1QVXV0TGFiZmlicnJyMF9NSEhHUlhPRUE?oc=5"
   }
 ]
