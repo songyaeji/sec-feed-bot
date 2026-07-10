@@ -157,8 +157,11 @@ def pick_top(items: list[dict], limit: int = MAX_ISSUE_CARDS) -> list[dict]:
 def is_cve_item(item: dict) -> bool:
     """CVE 피드 항목(KEV·NVD 등 구조적 취약점 엔트리) 여부. 기사 본문에
     CVE가 언급된 뉴스는 여기 해당하지 않는다 — kev/cvss 구조 필드로만
-    판별해, NVD·KEV 덤프가 카드를 도배하는 것만 걸러낸다(사용자 v10)."""
-    return bool(item.get("kev")) or item.get("cvss") is not None
+    판별해, NVD·KEV 덤프가 카드를 도배하는 것만 걸러낸다(사용자 v10).
+    cvss는 키 존재 여부로 판별한다 — NVD는 CVSS 미산정(N/A) CVE도
+    "cvss": None으로 키를 채워 넣으므로, 값 None 체크는 CVSS 없는
+    CVE를 뉴스로 새게 만든다(2026-07-09 사고: 뉴스 7장에 CVE 혼입)."""
+    return bool(item.get("kev")) or "cvss" in item
 
 
 def plan_cards(items: list[dict]):

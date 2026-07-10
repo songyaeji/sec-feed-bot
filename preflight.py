@@ -146,7 +146,7 @@ def check_card_news(
     # --- WARNING: 개조식(명사형 종결) 요약 — 뉴스 카드 본문은 완결형 문장이어야 한다
     bad_style_ids = [
         it.get("id") for it in items
-        if not it.get("kev") and it.get("cvss") is None
+        if not it.get("kev") and "cvss" not in it
         and it.get("summary_ko") and _noun_ending_count(it["summary_ko"])
     ]
     if bad_style_ids:
