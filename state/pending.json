@@ -5054,5 +5054,115 @@
     "tags": [],
     "title": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat",
     "url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-51119",
+    "published": "2026-07-10T17:16:57.587",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in Invixium IXM WEB v.2.3.85.25 allows an attacker to escalate privileges via the /SystemUsers/CreateAppUser components",
+    "tags": [],
+    "title": "CVE-2026-51119 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51119"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-59151",
+    "published": "2026-07-10T19:17:26.780",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Prowler is a cloud security platform. Prior to 5.30.3, Prowler's SAML authentication flow trusted the email domain asserted in a SAMLResponse when deciding which tenant should receive the final token, and the ACS finish logic in api/src/backend/api/v1/views.py recalculated the tenant from user.email instead of binding token issuance to the validated SAML configuration. An authenticated attacker with a controlled SAML IdP could complete a valid SAML flow for an attacker-controlled domain while asserting an email address from another configured domain, causing a SAMLToken and tenant-scoped JWT to be issued for the wrong tenant and enabling cross-tenant account takeover. This issue is fixed in version 5.30.3.",
+    "tags": [],
+    "title": "CVE-2026-59151 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59151"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5801",
+    "published": "2026-07-10T19:17:27.323",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Semtek Informatics Software Consulting Trade Ltd. Co. SEM-PMP allows Command Line Execution through SQL Injection.\n\nThis issue affects SEM-PMP: through 23042026.",
+    "tags": [],
+    "title": "CVE-2026-5801 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5801"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-61459",
+    "published": "2026-07-10T19:17:27.450",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "MCP Server Kubernetes before 3.9.0 contains an argument injection vulnerability in structured tools (kubectl_get, kubectl_describe, kubectl_delete) that allows attackers to bypass the assertNoDangerousFlags security check by supplying resourceType and name parameters with leading dashes. Attackers can inject the --server flag to redirect kubectl commands to an attacker-controlled API server, causing the operator's bearer token to be transmitted externally and enabling full cluster compromise.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-61459 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61459"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-30007",
+    "published": "2026-07-10T19:17:18.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HestiaCP before 1.9.5 contains an authenticated OS command injection vulnerability that allows low-privilege authenticated users to execute arbitrary commands as root by injecting a single-quote character into unvalidated DNS record types. Attackers can exploit insufficient input validation in is_dns_record_format_valid() combined with unsafe eval-based parsing in update_domain_zone() to prematurely close a variable assignment string and achieve full root code execution on the underlying host in a single DNS record creation step.",
+    "tags": [],
+    "title": "CVE-2025-30007 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30007"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-54329",
+    "published": "2026-07-10T19:17:24.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Snipe-IT is an IT asset/license management system. Prior to 8.6.2, the Accessories API create path mass-assigns request parameters to the Accessory model while company_id is mass assignable, allowing a low-privileged authenticated user in one company to create accessory records under another company when Full Multiple Companies Support is enabled. This issue is fixed in version 8.6.2.",
+    "tags": [],
+    "title": "CVE-2026-54329 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54329"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61460",
+    "published": "2026-07-10T19:17:27.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Krayin CRM through 2.2.3 contains an insecure direct object reference vulnerability in LeadController, PersonController, OrganizationController, QuoteController, and ActivityController that allows authenticated users to edit, update, or delete records owned by other users. Attackers can modify CRM records and reassign ownership by exploiting missing record-level ownership validation in edit, update, and destroy methods.",
+    "tags": [],
+    "title": "CVE-2026-61460 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61460"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61461",
+    "published": "2026-07-10T19:17:27.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dify before 1.16.0-rc1 contains a SQL injection vulnerability in the MyScale vector store backend that allows attackers to execute arbitrary SQL by supplying unsanitized search parameters to the search_by_full_text method without escaping or parameterization. Attackers can inject malicious SQL through the search parameters to read, modify, or delete data in the underlying ClickHouse database.",
+    "tags": [],
+    "title": "CVE-2026-61461 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61461"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-6212",
+    "published": "2026-07-10T19:17:27.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Authorization bypass through User-Controlled key vulnerability in Teracity Software Technologies Inc. TeraMIS allows Privilege Abuse.\n\nThis issue affects TeraMIS: from V03.26.01.14 through 30.04.2026.",
+    "tags": [],
+    "title": "CVE-2026-6212 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6212"
   }
 ]
