@@ -4424,5 +4424,29 @@
     ],
     "title": "삼성화재·한국증권금융, 금융보안 유공 금융위원장 표창 - ER 이코노믹리뷰",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uX01BTXYydmI4SDc3VEh1dWtWdFVjSkpTNTl1VDBrUjg3X3JTNG9UQkpHeFZPX1JYQVg4a0R5M3g0aHhSZENQRm80ZERfdmE3WldTOTdVYWJuajZ0UmxtQU9BbU11RlBKaDRLNA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-22659",
+    "published": "2026-07-10T14:16:52.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FlaskBB through 2.2.0, fixed in commit acc88cf, contains an authorization bypass vulnerability that allows authenticated moderators to perform unauthorized actions on topics in forums they do not control by submitting crafted topic ID lists. Attackers can include a low-ID topic from a permitted forum as an anchor in a batch request, causing the permission check applied only to the first result to pass, and then execute lock, unlock, delete, or hide actions against topics in unmoderated forums.",
+    "tags": [],
+    "title": "CVE-2026-22659 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22659"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMif0FVX3lxTE5peHNINHZkYURVN0kzV1VVdm5ROXJfTVplQVJtNHhmeEhjd2JPYldodFdlNmlCajNXM2tyZzZkTS1mMFJ5eFBRNEUteWxqNmVzOU93eHhUelIyT2JSZktMQ0JLMzE4N2sxOGR0TDloMS1XSWJidnpteEpXeVc1Q0E",
+    "published": "2026-07-10T08:47:12+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "트럼프 행정부가 보안 검토를 완료한 후 OpenAI가 GPT-5.6을 공개했습니다 Cryptopolitan",
+    "tags": [],
+    "title": "트럼프 행정부가 보안 검토를 완료한 후 OpenAI가 GPT-5.6을 공개했습니다 - Cryptopolitan",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5peHNINHZkYURVN0kzV1VVdm5ROXJfTVplQVJtNHhmeEhjd2JPYldodFdlNmlCajNXM2tyZzZkTS1mMFJ5eFBRNEUteWxqNmVzOU93eHhUelIyT2JSZktMQ0JLMzE4N2sxOGR0TDloMS1XSWJidnpteEpXeVc1Q0E?oc=5"
   }
 ]
