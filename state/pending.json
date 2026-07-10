@@ -4472,5 +4472,165 @@
     "tags": [],
     "title": "CVE-2026-46733 (CVSS 7.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46733"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-40008",
+    "published": "2026-07-10T08:16:22.397",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') vulnerability in Apache IoTDB.\nThe pipe processor reads a fully\nqualified Java class name and\ninstantiates it using Class.forName().newInstance() without any\nvalidation or allowlisting.\n\n\nThis issue affects Apache IoTDB: from 1.0.0 before 2.0.10.\n\nUsers are recommended to upgrade to version 2.0.10, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-40008 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40008"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-56765",
+    "published": "2026-07-10T15:16:43.727",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vikunja before 2.2.1 contains an authorization flaw where the LinkSharing.ReadAll endpoint exposes share hashes to users with read access, enabling permission escalation to admin-level shares. The GetTaskAttachment endpoint performs permission checks against user-supplied task IDs but fetches attachments by sequential ID without verifying ownership, allowing attackers to download and delete all file attachments across all projects instance-wide.",
+    "tags": [],
+    "title": "CVE-2026-56765 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56765"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-59792",
+    "published": "2026-07-10T15:16:48.240",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In JetBrains IntelliJ IDEA before 2026.1.4, \n2026.2 code execution via path traversal in project workspace ID handling was possible",
+    "tags": [],
+    "title": "CVE-2026-59792 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59792"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-61444",
+    "published": "2026-07-10T15:16:50.610",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI versions before 4.6.78 contain a code injection vulnerability in deploy/api.py where the agents_file parameter is directly interpolated into an f-string without sanitization. Attackers can inject arbitrary Python code that executes when the generated server code runs via subprocess.Popen().",
+    "tags": [],
+    "title": "CVE-2026-61444 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61444"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2020-37094",
+    "published": "2026-02-03T22:16:25.673",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "EspoCRM 5.7.0 prior to 5.9.0 contains an authentication token reuse vulnerability that allows authenticated attackers to bypass two-factor authentication by exploiting token-to-password-hash mapping in application/Espo/Core/Utils/Authentication/Espo.php. Attackers can obtain an authentication token for a controlled account and replay it against any victim account sharing the same password, since tokens are bound to password hashes rather than unique per-user values, bypassing the victim's 2FA protections.",
+    "tags": [],
+    "title": "CVE-2020-37094 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-37094"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-29519",
+    "published": "2026-07-10T15:16:39.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Lucee CFML Server versions across the 5.3.x, 6.1.x, 6.2.x, and 7.0.x release lines contain a reflected cross-site scripting vulnerability in URL path parsing that allows unauthenticated remote attackers to execute arbitrary JavaScript in a victim's browser by embedding HTML or JavaScript payloads within the request path. Attackers can craft a malicious URL containing injected script content that is reflected in the server's response without proper output encoding, enabling session hijacking or unauthorized actions against the Lucee administrative interface when a victim visits the crafted link.",
+    "tags": [],
+    "title": "CVE-2026-29519 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29519"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-38057",
+    "published": "2026-07-10T15:16:39.397",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The iDirect iQ200 does not validate CSRF tokens on state-changing API endpoints after authentication. The /api/reboot endpoint accepts POST requests authenticated solely by a session cookie that lacks the SameSite attribute. A remote attacker can host a malicious web page that, when visited by an authenticated administrator, automatically submits a cross-site POST request causing an immediate device reboot and satellite link loss. Repeated attacks can sustain a denial-of-service condition.",
+    "tags": [],
+    "title": "CVE-2026-38057 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38057"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-56261",
+    "published": "2026-07-10T15:16:42.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crawl4AI before 0.8.7 contains a server-side request forgery (SSRF) vulnerability in the Docker API server's /crawl/job and /llm/job endpoints, which accept webhook URLs without destination validation. An attacker can supply webhook URLs pointing to private or internal IP ranges, Docker networks, or cloud metadata endpoints (e.g. 169.254.169.254), causing the server to make requests to internal services and potentially expose cloud metadata.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-56261 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56261"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-56305",
+    "published": "2026-07-10T15:16:42.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Capgo before 12.128.2 contains an authentication bypass vulnerability in the password change endpoint that allows attackers to change user passwords without requiring current password confirmation. Attackers with temporary session access can exploit this flaw to permanently lock out legitimate users and achieve full account takeover.",
+    "tags": [],
+    "title": "CVE-2026-56305 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56305"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59793",
+    "published": "2026-07-10T15:16:48.350",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains TeamCity before 2026.1.2 arbitrary file access was possible via the Perforce VCS integration",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59793 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59793"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-59795",
+    "published": "2026-07-10T15:16:48.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains TeamCity before 2026.1.2 stored XSS via unauthenticated agent registration was possible",
+    "tags": [],
+    "title": "CVE-2026-59795 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59795"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-59796",
+    "published": "2026-07-10T15:16:48.683",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains TeamCity before 2026.1.2 pipeline modification was possible due to improper permission checks",
+    "tags": [],
+    "title": "CVE-2026-59796 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59796"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61434",
+    "published": "2026-07-10T15:16:50.213",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI versions before 4.6.78 contain an allowlist bypass vulnerability in shell command execution that allows attackers to execute restricted commands via find's built-in -exec, -execdir, and -delete actions. Attackers can craft find commands with these built-in actions to read blocked files, delete files, or execute non-allowlisted binaries without triggering shell metacharacter filters.",
+    "tags": [],
+    "title": "CVE-2026-61434 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61434"
   }
 ]
