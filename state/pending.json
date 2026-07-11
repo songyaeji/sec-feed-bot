@@ -6706,5 +6706,31 @@
     ],
     "title": "CVE-2026-13353 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13353"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14262",
+    "published": "2026-07-11T05:16:32.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Simple JWT Login – Allows you to use JWT on REST endpoints. plugin for WordPress is vulnerable to Authentication Bypass to Privilege Escalation in all versions up to, and including, 3.6.6 via the `payload` parameter. The vulnerability exists because `AuthenticateService::generatePayload()` only overwrites JWT payload keys whose names appear in the admin-configured `jwt_payload` list — leaving any attacker-supplied identity claims such as `email`, `id`, or `username` intact and signed into the JWT with the site's HS256 secret. This makes it possible for authenticated attackers, with subscriber-level access and above, to escalate their privileges to that of an Administrator by injecting a target administrator's email address into the `payload` parameter at the `/wp-json/simple-jwt-login/v1/auth` endpoint, then redeeming the resulting JWT at the `/autologin` endpoint to obtain a fully authenticated session as that administrator.",
+    "tags": [],
+    "title": "CVE-2026-14262 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14262"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-2354",
+    "published": "2026-07-11T05:16:33.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Swiss Toolkit For WP plugin for WordPress is vulnerable to arbitrary file upload due to a flawed file type validation bypass in the `upload_extension_files()` function in all versions up to, and including, 1.4.6. The `upload_extension_files()` function hooks into WordPress's `wp_check_filetype_and_ext` filter and uses `strpos()` to check if a filename contains a configured extension string, rather than verifying the actual file extension. This makes it possible for authenticated attackers, with Author-level access and above, to upload arbitrary files (including PHP) on the affected site's server which may make remote code execution possible, granted the \"Enhanced Multi-Format Image Support\" feature is enabled with at least one extension (e.g., avif) in the allowed formats.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-2354 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2354"
   }
 ]
