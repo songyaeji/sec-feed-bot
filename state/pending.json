@@ -6732,5 +6732,17 @@
     ],
     "title": "CVE-2026-2354 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2354"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-7655",
+    "published": "2026-07-11T06:16:10.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The SureCart plugin for WordPress is vulnerable to privilege escalation via account takeover in versions up to, and including, 4.2.3. This is due to the plugin not properly validating a user's identity prior to updating their details like email during customer profile synchronization from webhook events. This makes it possible for unauthenticated attackers to change linked user's email addresses, including administrators if the administrator account is linked to a SureCart customer record, and leverage that to reset the user's password and gain access to their account if the customer ID is known.",
+    "tags": [],
+    "title": "CVE-2026-7655 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7655"
   }
 ]
