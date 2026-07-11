@@ -6968,5 +6968,31 @@
     ],
     "title": "Critical U-Boot Bugs Undermine Secure Boot on Millions of Devices",
     "url": "https://securityaffairs.com/195150/security/critical-u-boot-bugs-undermine-secure-boot-on-millions-of-devices.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
+    "published": "2026-07-11T17:59:26+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Version 8.14.0 of the jscrambler npm package shipped with a malicious preinstall hook that silently drops and runs a native infostealer during installation, one build each for Windows, macOS, and Linux. Published on July 11, 2026, it needs no import and no CLI call. Installing 8.14.0 is enough to run it. Socket flagged the release six minutes after it was",
+    "tags": [],
+    "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
+    "url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html",
+    "published": "2026-07-11T17:49:31+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of sustained cyber espionage activity against several Pakistani law enforcement organizations undertaken by suspected China- and India-aligned threat actors between February 2024 and April 2026. \"At Balochistan Police, the compromised assets included servers hosting web applications that manage police and citizen data, such as criminal and",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Hackers Weaponize Balochistan Police Portal in Multi-Group Espionage Campaigns",
+    "url": "https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html"
   }
 ]
