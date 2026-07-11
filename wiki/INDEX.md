@@ -253,6 +253,7 @@
 - [htop-oob-access](topics/2024-06-htop-oob-access.md) htop 모니터링 도구 범위 초과 접근 (최종갱신일: 2024-06-20)
 - [totolink-a6000r-injection](topics/2024-06-totolink-a6000r-injection.md) TOTOLINK A6000R 펌웨어 명령 인젝션 (최종갱신일: 2024-06-20)
 - [lost-found-sql-injection](topics/2024-07-lost-found-sql-injection.md) Lost and Found 시스템 SQL 인젝션 (최종갱신일: 2024-07-29)
+- [arc-informatique-pcvue-rce](topics/2020-10-arc-informatique-pcvue-rce.md) ARC Informatique PcVue 역직렬화 원격 코드 실행 (최종갱신일: 2020-10-12)
 - [ultravnc-buffer-overflow](topics/2026-07-ultravnc-buffer-overflow.md) UltraVNC 1.8.2.2 다중 취약점 (최종갱신일: 2026-07-09)
 - [pacsgear-pacs-rce](topics/2026-07-pacsgear-pacs-rce.md) PACSgear 의료 영상 관리 시스템 RCE (최종갱신일: 2026-07-01)
 - [pacsgear-mediawriter-rce](topics/2026-07-pacsgear-mediawriter-rce.md) PACSgear MediaWriter 미디어 도구 RCE (최종갱신일: 2026-07-01)
