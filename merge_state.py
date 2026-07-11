@@ -135,6 +135,14 @@ def merge_seen(local: dict, remote: dict) -> dict:
     if issue_no or "issue_no" in local or "issue_no" in remote:
         merged["issue_no"] = issue_no
     merged["last_run"] = _max_iso(local.get("last_run"), remote.get("last_run"))
+    # digest 이중발행 가드 날짜(main.py) — YYYY-MM-DD라 사전순 max가 곧
+    # 날짜 max. 화이트리스트 merge라 여기 안 넣으면 merge마다 유실돼
+    # 가드가 무력화된다
+    last_digest = max(
+        local.get("last_digest_date") or "", remote.get("last_digest_date") or ""
+    )
+    if last_digest:
+        merged["last_digest_date"] = last_digest
     return merged
 
 

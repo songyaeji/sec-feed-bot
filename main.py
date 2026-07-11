@@ -385,6 +385,19 @@ def main() -> None:
         print(f"[main] unknown RUN_MODE '{run_mode}', falling back to 'realtime'", file=sys.stderr)
         run_mode = "realtime"
 
+    # digest 이중발행 가드 — digest는 외부 트리거(cron-job.org)와 GitHub
+    # schedule cron 두 경로로 발화한다(후자는 지연이 커서 안전망으로만 유지,
+    # docs/external-trigger.md). 같은 날 두 번째 digest는 realtime으로
+    # 강등해 카드뉴스·issue_no 이중 발행을 막는다. 발행 실패 시에는
+    # last_digest_date가 안 남아 늦게 온 cron이 자연스럽게 재시도가 된다.
+    today_kst = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
+    if run_mode == "digest" and state.get("last_digest_date") == today_kst:
+        print(
+            f"[main] 오늘({today_kst}) digest 이미 발행됨 — realtime으로 강등",
+            file=sys.stderr,
+        )
+        run_mode = "realtime"
+
     all_items = collect_all(config, state)
     new_items = dedup(all_items, state["seen"])
 
@@ -655,6 +668,9 @@ def main() -> None:
                     )
                     notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
                 state["issue_no"] = issue_no + 1
+                # 발행 성공 확정(카드뉴스·텍스트 폴백 공통 경로)에만 기록 —
+                # 위 이중발행 가드가 이 날짜를 본다
+                state["last_digest_date"] = today_kst
                 had_backlog = True
             save_pending([])
         else:

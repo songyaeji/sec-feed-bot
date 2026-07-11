@@ -13,8 +13,10 @@ heuristic top-N -- a wiki-sync problem must never suppress a real alert.
 import json
 import os
 import re
+import signal
 import subprocess
 import sys
+import time
 
 import dedup
 
@@ -24,7 +26,53 @@ LIBRARIAN_INPUT_PATH = os.path.join(STATE_DIR, "librarian_input.json")
 LIBRARIAN_PROMPT_PATH = os.path.join(BASE_DIR, "librarian_prompt.md")
 
 TIMEOUT_SECONDS = 300  # 청크당
+# 전역 시간예산 — 배치가 아무리 많아도(255건=13배치) 이 벽에서 멈추고
+# 부분 성공(fail-open 계약)으로 넘어간다. 없으면 배치×timeout이 GitHub
+# Actions 6h 상한까지 쌓여 concurrency 그룹을 동결시킨다(2026-07-10 실측:
+# digest run이 1h23m hang). workflow의 timeout-minutes와 이중 방어.
+DEADLINE_SECONDS = 900  # 15분 — 최악(마지막 배치 직전 통과 + 청크 300s)
+# ≈ 20분이라 workflow step timeout 25분 안에 확실히 끝난다
 MODEL = "claude-haiku-4-5-20251001"
+
+
+def _run_claude_json(extra_args: list[str], prompt: str, timeout: int):
+    """`claude -p ... --output-format json` 을 새 프로세스그룹으로 띄워
+    timeout 시 그룹째 SIGKILL 한다. subprocess.run(timeout=)은 직속 자식만
+    죽여서, claude CLI가 남긴 node 손자프로세스가 stdout 파이프를 붙들면
+    communicate()가 timeout을 넘겨 무한 블록한다(2026-07-10 digest 1h23m
+    hang의 실제 원인). start_new_session으로 프로세스그룹을 분리하고
+    killpg로 손자까지 회수해 timeout을 실효화한다.
+    반환: CompletedProcess, 또는 timeout/OSError 시 None."""
+    try:
+        proc = subprocess.Popen(
+            ["claude", "-p", prompt, *extra_args, "--output-format", "json"],
+            cwd=BASE_DIR,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            start_new_session=True,
+        )
+    except OSError as exc:
+        print(f"[librarian] claude 기동 실패: {exc}", file=sys.stderr)
+        return None
+
+    try:
+        stdout, stderr = proc.communicate(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            pass
+        proc.wait()
+        print(f"[librarian] claude 타임아웃 {timeout}s — 프로세스그룹 kill", file=sys.stderr)
+        return None
+    except OSError as exc:
+        print(f"[librarian] claude 통신 실패: {exc}", file=sys.stderr)
+        return None
+
+    return subprocess.CompletedProcess(proc.args, proc.returncode, stdout, stderr)
+
+
 # 276건을 한 번에 넣으면 모델이 최종 JSON을 못 뱉고 무너진다(실측) —
 # 한 subprocess가 감당할 수 있는 크기로 잘라 순차 처리한다.
 # 25건은 300초 타임아웃을 종종 넘겼다(2026-07-07 하루 두 번, 청크째 유실) → 20건
@@ -102,30 +150,24 @@ def _run_chunk(chunk: list[dict], prompt: str) -> dict | None:
         print(f"[librarian] 입력 준비 실패: {exc}", file=sys.stderr)
         return None
 
-    try:
-        proc = subprocess.run(
-            [
-                # --bare는 credentials 파일까지 스킵해 CI에서 "Not logged in"이 됨 (2.1.201 실측)
-                "claude", "-p", prompt,
-                "--model", MODEL,
-                # 피드 본문은 신뢰할 수 없는 입력 — 경로 무제한 Read/Write는
-                # 프롬프트 인젝션 시 자격증명 파일을 읽어 wiki 페이지(커밋되어
-                # 공개 repo로 push됨)에 쓰는 유출 경로가 된다. 도구를 위키와
-                # 입력 파일로 스코프하고, 경로 무관 자동승인이라 allowlist를
-                # 무력화하는 acceptEdits 모드는 제거(비대화형 -p에서 allowlist
-                # 밖 도구 호출은 자동 거부된다)
-                "--allowedTools",
-                "Read(wiki/**),Read(state/librarian_input.json),"
-                "Write(wiki/**),Edit(wiki/**),Glob(wiki/**),Grep(wiki/**)",
-                "--output-format", "json",
-            ],
-            cwd=BASE_DIR,
-            capture_output=True,
-            text=True,
-            timeout=TIMEOUT_SECONDS,
-        )
-    except (subprocess.TimeoutExpired, OSError) as exc:
-        print(f"[librarian] 실행 실패: {exc}", file=sys.stderr)
+    proc = _run_claude_json(
+        [
+            # --bare는 credentials 파일까지 스킵해 CI에서 "Not logged in"이 됨 (2.1.201 실측)
+            "--model", MODEL,
+            # 피드 본문은 신뢰할 수 없는 입력 — 경로 무제한 Read/Write는
+            # 프롬프트 인젝션 시 자격증명 파일을 읽어 wiki 페이지(커밋되어
+            # 공개 repo로 push됨)에 쓰는 유출 경로가 된다. 도구를 위키와
+            # 입력 파일로 스코프하고, 경로 무관 자동승인이라 allowlist를
+            # 무력화하는 acceptEdits 모드는 제거(비대화형 -p에서 allowlist
+            # 밖 도구 호출은 자동 거부된다)
+            "--allowedTools",
+            "Read(wiki/**),Read(state/librarian_input.json),"
+            "Write(wiki/**),Edit(wiki/**),Glob(wiki/**),Grep(wiki/**)",
+        ],
+        prompt,
+        TIMEOUT_SECONDS,
+    )
+    if proc is None:
         return None
 
     if proc.returncode != 0:
@@ -180,24 +222,13 @@ def _fix_styles(verdicts: dict, model: str, timeout: int) -> None:
     )
 
     fixed = None
-    try:
-        proc = subprocess.run(
-            [
-                "claude", "-p", prompt,
-                "--model", model,
-                "--output-format", "json",
-            ],
-            cwd=BASE_DIR,
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-        )
-        if proc.returncode == 0:
+    proc = _run_claude_json(["--model", model], prompt, timeout)
+    if proc is not None and proc.returncode == 0:
+        try:
             outer = json.loads(proc.stdout)
             fixed = _extract_json_object(outer["result"])
-    except (subprocess.TimeoutExpired, OSError,
-            json.JSONDecodeError, KeyError, TypeError, ValueError):
-        fixed = None
+        except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+            fixed = None
 
     total = sum(len(fields) for fields in bad.values())
     if not isinstance(fixed, dict):
@@ -243,17 +274,46 @@ def run_librarian(items: list[dict]) -> dict | None:
     chunks = [items[i:i + BATCH_SIZE] for i in range(0, len(items), BATCH_SIZE)]
     merged_verdicts: dict = {}
     lost = 0
+    start = time.monotonic()
     for i, chunk in enumerate(chunks, start=1):
+        # 전역 시간예산 초과 시 남은 배치는 처리하지 않고 부분 성공으로 종료.
+        # 각 subprocess가 killpg로 실제 timeout을 지키므로 이 검사가 배치마다
+        # 반드시 도달한다(예산 없으면 13배치×재시도가 6h까지 누적).
+        if time.monotonic() - start > DEADLINE_SECONDS:
+            remaining = sum(len(c) for c in chunks[i - 1:])
+            lost += remaining
+            print(
+                f"[librarian] 전역 예산 {DEADLINE_SECONDS}s 초과 — "
+                f"남은 {remaining}건 스킵, 부분 성공으로 종료",
+                file=sys.stderr,
+            )
+            break
         print(f"[librarian] 배치 {i}/{len(chunks)}: {len(chunk)}건", file=sys.stderr)
         chunk_verdicts = _run_chunk(chunk, prompt)
         if chunk_verdicts is None:
             # 실패 배치는 반으로 쪼개 각 1회 재시도 — 타임아웃 원인 대부분이
             # 배치 크기라서 절반이면 제한 내 완료 확률이 크게 오른다.
             # 여기서도 실패한 반쪽만 유실(기존 부분 성공 계약 유지)
+            # 재시도도 예산을 본다 — 예산 초과 후의 반쪼개 2회(최대 600s)가
+            # step timeout을 뚫는 걸 막는다. 초과면 이 배치는 그냥 유실
+            if time.monotonic() - start > DEADLINE_SECONDS:
+                lost += len(chunk)
+                print(
+                    f"[librarian] 배치 {i} 실패 + 예산 초과 — 재시도 없이 {len(chunk)}건 스킵",
+                    file=sys.stderr,
+                )
+                continue
             print(f"[librarian] 배치 {i}/{len(chunks)} 실패 — 반으로 쪼개 재시도", file=sys.stderr)
             mid = (len(chunk) + 1) // 2
             for j, half in enumerate((chunk[:mid], chunk[mid:]), start=1):
                 if not half:
+                    continue
+                if time.monotonic() - start > DEADLINE_SECONDS:
+                    lost += len(half)
+                    print(
+                        f"[librarian] 배치 {i} 재시도 {j}/2 예산 초과 — {len(half)}건 스킵",
+                        file=sys.stderr,
+                    )
                     continue
                 half_verdicts = _run_chunk(half, prompt)
                 if half_verdicts is None:
@@ -319,21 +379,10 @@ def summarize(items: list[dict]) -> dict | None:
         "오늘의 항목:\n" + "\n".join(lines)
     )
 
-    try:
-        proc = subprocess.run(
-            [
-                # 파일 편집이 필요 없으므로 --allowedTools 없이(도구 불필요)
-                "claude", "-p", prompt,
-                "--model", MODEL,
-                "--output-format", "json",
-            ],
-            cwd=BASE_DIR,
-            capture_output=True,
-            text=True,
-            timeout=120,
-        )
-    except (subprocess.TimeoutExpired, OSError) as exc:
-        print(f"[librarian] 총평 실행 실패: {exc}", file=sys.stderr)
+    # 파일 편집이 필요 없으므로 --allowedTools 없이(도구 불필요)
+    proc = _run_claude_json(["--model", MODEL], prompt, 120)
+    if proc is None:
+        print("[librarian] 총평 실행 실패", file=sys.stderr)
         return None
 
     if proc.returncode != 0:

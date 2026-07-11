@@ -22,6 +22,11 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    # hang이 concurrency 그룹(group: collect)을 GitHub 6h 상한까지 점유해
+    # 이후 모든 run을 동결시키는 사고 방지(2026-07-10 digest 1h23m hang).
+    # digest 정상 소요는 수 분 — 30분이면 충분한 여유. librarian 전역
+    # 예산(DEADLINE_SECONDS)과 이중 방어.
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -103,6 +108,11 @@ jobs:
           PY
 
       - name: Run collector
+        # step 단위 timeout — job timeout(30분)으로 죽으면 job이 cancelled로
+        # 끝나 아래 failure() 알림이 못 돈다. step 초과는 step failure라
+        # 알림이 실행된다. librarian 전역 예산(900s)+청크 300s 최악 ≈ 20분
+        # 이므로 25분이면 정상 경로를 절대 안 자른다.
+        timeout-minutes: 25
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
@@ -211,3 +221,34 @@ jobs:
             echo "portfolio push attempt $attempt failed"
           done
           exit 1
+
+      # 어떤 step이든 실패하면(수집 hang의 step timeout 포함) Discord로
+      # 즉시 알림 — 카드뉴스 부재로 뒤늦게 사고를 인지하던 패턴 제거
+      # (2026-07-10: digest hang을 발행 실패로만 알게 됨). run URL은
+      # github 컨텍스트 값이라 인젝션 벡터 아님. webhook 미등록이면 스킵.
+      - name: Notify failure to Discord
+        if: failure()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          RUN_MODE: ${{ steps.run_mode.outputs.mode }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "DISCORD_WEBHOOK_URL 미등록 — 알림 스킵"
+            exit 0
+          fi
+          python3 - <<'PY'
+          import json, os, urllib.request
+          payload = {"content": (
+              ":warning: collect 워크플로 실패 "
+              f"(mode={os.environ.get('RUN_MODE') or '?'})\n"
+              f"{os.environ['RUN_URL']}"
+          )}
+          req = urllib.request.Request(
+              os.environ["DISCORD_WEBHOOK_URL"],
+              data=json.dumps(payload).encode(),
+              headers={"Content-Type": "application/json"},
+          )
+          urllib.request.urlopen(req, timeout=10)
+          print("실패 알림 발송됨")
+          PY
