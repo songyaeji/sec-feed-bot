@@ -6887,5 +6887,72 @@
     "tags": [],
     "title": "‘일 블룸’ 취약점 실제 공격에 악용...가상화폐 지갑 431개서 500만달러 탈취",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207566"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-60090",
+    "published": "2026-07-11T14:16:22.353",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI before 4.6.78 fails to validate the caller-controlled dimension argument in the PGVector and Cassandra knowledge-store create_collection() backends. Although schema, keyspace, and collection-name identifiers are validated, the dimension value (declared as int but not enforced at runtime) is interpolated directly into the vector column of the generated CREATE TABLE DDL. A caller able to influence collection-creation dimensions can pass a string such as '3); DROP TABLE tenant_secrets; --' to inject SQL/CQL tokens into the statement executed by the database driver.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-60090 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60090"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-61445",
+    "published": "2026-07-11T14:16:23.240",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI before 4.6.78 contains arbitrary file write and command execution vulnerabilities in the AICoder component due to missing path validation and command sanitization in LLM tool calls. Attackers can inject malicious prompts through the chat interface to write files to arbitrary filesystem locations and execute arbitrary shell commands with root privileges.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-61445 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61445"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-61447",
+    "published": "2026-07-11T14:16:23.377",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in CodeAgent._execute_python() that executes LLM-generated Python code without AST validation, import restrictions, or sandbox enforcement. Attackers can influence LLM output through prompt injection to exfiltrate all environment secrets and execute arbitrary code on the host system.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-61447 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61447"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-61426",
+    "published": "2026-07-11T14:16:22.483",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI before 1.7.3 contains an insecure default configuration that binds to all interfaces with no API key requirement and wildcard CORS. Unauthenticated attackers can call GET /api/agents to read agent instructions and system prompts, or POST /api/chat to invoke agents without authentication.",
+    "tags": [],
+    "title": "CVE-2026-61426 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61426"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-61429",
+    "published": "2026-07-11T14:16:22.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI versions before 1.6.78 contain a server-side request forgery vulnerability in the Crawl4AI/Chromium backend that allows attackers to bypass SSRF validation by exploiting DNS rebinding and HTTP redirects. Attackers can craft URLs that resolve to internal services after the initial validation check, enabling the headless browser to follow redirects and read internal responses including sensitive canary values.",
+    "tags": [],
+    "title": "CVE-2026-61429 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61429"
   }
 ]
