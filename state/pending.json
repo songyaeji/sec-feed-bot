@@ -6834,5 +6834,17 @@
     "tags": [],
     "title": "Wireshark 4.6.7 Released, (Sat, Jul 11th)",
     "url": "https://isc.sans.edu/diary/rss/33146"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-1359",
+    "published": "2026-07-11T09:16:16.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Genolve – AI image AI video generation plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the genolve_setOpt() function in all versions up to, and including, 5.0.5. This makes it possible for authenticated attackers, with Contributor-level access and above, to update arbitrary WordPress options, including enabling user registration and setting the default role to administrator, resulting in privilege escalation.",
+    "tags": [],
+    "title": "CVE-2026-1359 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1359"
   }
 ]
