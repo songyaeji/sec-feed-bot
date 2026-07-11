@@ -6756,5 +6756,59 @@
     "tags": [],
     "title": "AI 시대, 되짚어보는 보안의 본질",
     "url": "http://www.boannews.com/media/view.asp?idx=144545&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-6784",
+    "published": "2026-07-11T07:16:44.637",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Code Engine plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 0.3.5 via the 'code-engine' shortcode. This is due to the plugin not restricting access to the code injecting functionality of the plugin. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-6784 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6784"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15155",
+    "published": "2026-07-11T07:16:46.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Essential Addons for Elementor – Popular Elementor Templates & Widgets plugin for WordPress is vulnerable to Authenticated Account Takeover via Email Header Injection in all versions up to, and including, 6.6.10 This is due to insufficient server-side validation of a Login/Register widget setting used to construct outgoing email headers — the allowed-values restriction is enforced only in the client-side editor UI and not on the server, and the applied sanitization does not strip or encode CR/LF characters, allowing CRLF sequences stored in that setting to survive into raw mail headers. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject an additional Bcc header into the WordPress administrator's password-reset notification email, receive a copy of a valid administrator password-reset link, and achieve full administrator account takeover.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15155 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15155"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144586&kind=&sub_kind=",
+    "published": "2026-07-11T07:17:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "AI 시대의 원격 액세스와 자율 엔드포인트 관리공공기관 및 기업의 보안성과 운영 효율성 동시 확보[보안뉴스 강초희 기자] 디지털 전환과 AI 도입이 가속화되면서 기업과 공공기관의 IT 환경은 그 어느 때보다 복잡해지고 있다. 업무 시스템은 클라우드와 온프레미스를 넘나들고, 사용자와 단말기는 다양한 장소에서 업무를 수행한다. 이러한 환경 변화는 생산성 향상이",
+    "tags": [],
+    "title": "[ISEC 2026 미리보기] 스플래시탑, 제로트러스트로 강화하는 보안 운영 주목",
+    "url": "http://www.boannews.com/media/view.asp?idx=144586&kind=&sub_kind="
+  },
+  {
+    "author": "[엄호식기자 (eomhs@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144637&kind=&sub_kind=",
+    "published": "2026-07-11T07:14:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "금융·공공·민간 고객사 확대고도화된 웹 격리 기술과 AI 보안 기능으로 시장 경쟁력 강화[보안뉴스 엄호식 기자] 엑소스피어랩스(대표 박상호, Exosphere Labs)는 기업이 제로트러스트(Zero Trust) 보안 모델을 손쉽게 구축할 수 있도록 SaaS 기반의 통합보안 서비스를 제공하는 기업이다. 외부, 내부위협으로부터 통합적으로 기업의 데이터를 보호",
+    "tags": [
+      "금융"
+    ],
+    "title": "[ISEC 2026 미리보기] 엑소스피어랩스, 정보 보안도 AI처럼 대중화... 사용자 경험으로 문턱 낮춘다",
+    "url": "http://www.boannews.com/media/view.asp?idx=144637&kind=&sub_kind="
   }
 ]
