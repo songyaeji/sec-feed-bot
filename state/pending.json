@@ -6954,5 +6954,19 @@
     "tags": [],
     "title": "CVE-2026-61429 (CVSS 8.5)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61429"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195150",
+    "published": "2026-07-11T17:45:43+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Binarly found six U-Boot flaws, including two that enable code execution during boot image verification, impacting 50+ releases. Binarly’s research team has found six vulnerabilities in U-Boot, the open-source bootloader that runs on home routers, smart cameras, server management controllers, and a large portion of the embedded hardware that powers the internet. All six are […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Critical U-Boot Bugs Undermine Secure Boot on Millions of Devices",
+    "url": "https://securityaffairs.com/195150/security/critical-u-boot-bugs-undermine-secure-boot-on-millions-of-devices.html"
   }
 ]
