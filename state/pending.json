@@ -6574,5 +6574,45 @@
     ],
     "title": "CVE-2026-52747 (CVSS 8.6)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52747"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-14480",
+    "published": "2026-07-10T23:16:47.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenPLC Runtime v3 contains an authenticated arbitrary file write \nvulnerability in the legacy web UI program‑upload workflow. The \napplication stores an attacker‑supplied filename (prog_file) directly \ninto the Programs.File database field and later uses this value as the \ndestination path for an uploaded file without validating or restricting \nthe path. Because Python os.path.join() honors attacker‑controlled \nabsolute paths, an authenticated user can write arbitrary files anywhere\n writable by the OpenPLC webserver process. In the default build \npipeline, all C++ source files within the OpenPLC runtime core directory\n are automatically compiled into the executable runtime binary. By \nwriting a malicious .cpp file into this directory, an authenticated \nattacker can escalate the arbitrary file write into arbitrary native \ncode execution when the operator triggers a normal program compilation \nand runtime start.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14480 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14480"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-20744",
+    "published": "2026-07-10T23:16:47.683",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The charging station websocket endpoint accepts connections without \nproper authentication, which could lead to privilege escalation.",
+    "tags": [],
+    "title": "CVE-2026-20744 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20744"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-40066",
+    "published": "2026-04-17T20:16:35.637",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Anviz CX2 Lite and CX7 are vulnerable to unverified update packages that can be uploaded. The device unpacks and executes a script resulting in unauthenticated remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40066 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40066"
   }
 ]
