@@ -39,5 +39,17 @@
     ],
     "title": "[인터뷰] 고봉수 시큐리온 대표 \"악성 문자 사전 탐지 시장 선점...2세대 MDM과 IoT 보안 시장으로 사업 확장\"",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207570"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15511",
+    "published": "2026-07-12T23:16:38.137",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in Comfast CF-WR631AX V3 up to 2.7.0.8. Affected by this vulnerability is the function system_wl_upload_pic_file of the file /usr/bin/webmgnt of the component FastCGI Backend. This manipulation of the argument filename causes os command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-15511 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15511"
   }
 ]
