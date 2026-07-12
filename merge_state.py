@@ -146,18 +146,39 @@ def merge_seen(local: dict, remote: dict) -> dict:
     return merged
 
 
+def _load_consumed() -> set:
+    # digest run이 남기는 소진 id 마커(main.py, 커밋 안 됨) — 이 id들은
+    # 방금 발행에 쓰였으므로 origin pending에서 부활시키면 안 된다.
+    # 마커가 없으면(realtime run) 빈 집합 = 기존 union 그대로.
+    # (2026-07-12: union이 digest flush를 무효화해 pending 566건 누적,
+    # 사서 예산 초과로 판정 누락 → 카드 빈약의 근본 원인 수정)
+    path = os.path.join(STATE_DIR, ".digest_consumed.json")
+    if not os.path.exists(path):
+        return set()
+    with open(path, "r", encoding="utf-8") as f:
+        try:
+            ids = json.load(f)
+        except json.JSONDecodeError:
+            return set()
+    return {i for i in ids if isinstance(i, str)}
+
+
 def merge_pending(local: list, remote: list) -> list:
     local = local if isinstance(local, list) else []
     remote = remote if isinstance(remote, list) else []
+    consumed = _load_consumed()
     # union by id; keep the LOCAL copy of a shared id (this run's version may
     # carry freshly enriched fields), but preserve items only the other writer
-    # queued so nothing waiting for the next digest is dropped
+    # queued so nothing waiting for the next digest is dropped. digest가
+    # 소진한 id는 예외 — union에서 제외해 flush가 유지되게 한다.
     by_id = {}
     order = []
     for item in list(remote) + list(local):
         if not isinstance(item, dict) or "id" not in item:
             continue
         item_id = item["id"]
+        if item_id in consumed:
+            continue
         if item_id not in by_id:
             order.append(item_id)
         by_id[item_id] = item  # local (later in the chain) wins on conflict

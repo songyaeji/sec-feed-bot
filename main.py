@@ -698,6 +698,15 @@ def main() -> None:
                 state["last_digest_date"] = today_kst
                 had_backlog = True
             save_pending([])
+            # digest가 소진한 id 마커 — commit step의 merge_state.py가
+            # origin pending과 union할 때 이 id들을 부활시키지 않게 한다.
+            # (2026-07-12 발견: digest 20분 사이 realtime 커밋이 끼면
+            # union이 flush를 매번 무효화해 pending이 566건까지 누적,
+            # 사서 예산 초과로 판정 누락 → 카드 빈약의 근본 원인)
+            # 커밋되지 않는 러너 로컬 파일 — 같은 job 안에서만 쓰인다.
+            with open(os.path.join(STATE_DIR, ".digest_consumed.json"),
+                      "w", encoding="utf-8") as f:
+                json.dump([it["id"] for it in merged], f)
         else:
             pending_before = len(pending)
             new_pending = append_pending(pending, non_urgent_items)
