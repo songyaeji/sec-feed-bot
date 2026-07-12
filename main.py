@@ -390,10 +390,28 @@ def main() -> None:
     # docs/external-trigger.md). 같은 날 두 번째 digest는 realtime으로
     # 강등해 카드뉴스·issue_no 이중 발행을 막는다. 발행 실패 시에는
     # last_digest_date가 안 남아 늦게 온 cron이 자연스럽게 재시도가 된다.
-    today_kst = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d")
+    now_kst = datetime.now(timezone(timedelta(hours=9)))
+    today_kst = now_kst.strftime("%Y-%m-%d")
     if run_mode == "digest" and state.get("last_digest_date") == today_kst:
         print(
             f"[main] 오늘({today_kst}) digest 이미 발행됨 — realtime으로 강등",
+            file=sys.stderr,
+        )
+        run_mode = "realtime"
+
+    # digest 발행 시간창 가드 — 외부 트리거 payload 오설정(2026-07-12:
+    # realtime 잡이 mode=digest를 보내 KST 자정 직후 00:23에 발행됨)에
+    # 대한 2차 방어. 아침 발행(06:50 예약 + Actions 지연 여유)만 허용하고
+    # 그 밖의 시각에 도착한 digest는 realtime으로 강등한다.
+    # 수동 테스트 등 의도적 심야 발행은 ALLOW_OFFHOUR_DIGEST=1로 우회.
+    if (
+        run_mode == "digest"
+        and not (6 <= now_kst.hour < 12)
+        and os.environ.get("ALLOW_OFFHOUR_DIGEST") != "1"
+    ):
+        print(
+            f"[main] digest 허용 시간창(KST 06~12시) 밖({now_kst.strftime('%H:%M')}) "
+            "— realtime으로 강등 (우회: ALLOW_OFFHOUR_DIGEST=1)",
             file=sys.stderr,
         )
         run_mode = "realtime"
@@ -554,19 +572,20 @@ def main() -> None:
                         # (비사건·중복)는 위키/휴지통에만 남고 카드·링크에서 제외
                         if action in ("new", "update"):
                             # recap = 발행일만 최근이고 알맹이는 지난 사건(재조명·뒤늦은
-                            # 재보도). 오래된 사건을 오늘 속보처럼 싣는 혼동을 막는다 —
-                            # 위키엔 적립하되 카드·링크에선 뺀다. recency 누락은 통과
-                            # (fail-open: 사서가 값을 못 줘도 카드가 통째 비지 않게)
+                            # 재보도). v24: 하드 제외에서 최후순위 백필로 완화(사용자
+                            # 결정: 카드뉴스는 웬만하면 표지1+뉴스7+CVE1=9장 유지) —
+                            # 신선한 사건만으로 뉴스 7장이 안 차는 날에만 recap이
+                            # 남은 슬롯을 채운다. recency 누락은 신선 취급(fail-open)
                             if recency == "recap":
                                 recap_count += 1
-                            else:
-                                wiki_worthy.append(item)
+                                item["_recap"] = True
+                            wiki_worthy.append(item)
                     wiki_new = action_counts["new"]
                     print(
                         f"[main] 위키 사서: 신규 {action_counts['new']}건, "
                         f"갱신 {action_counts['update']}건, "
                         f"중복스킵 {action_counts['skip_duplicate']}건, "
-                        f"재탕(recap) 카드제외 {recap_count}건"
+                        f"재탕(recap) 후순위 {recap_count}건"
                     )
                     # v23: 순위 채움(rank-fill) — importance는 컷라인이 아니라
                     # 정렬 기준이다. 하드 게이트(4+)는 조용한 날 카드가 1~2장으로
@@ -579,9 +598,15 @@ def main() -> None:
                     # 대한 결정적 백스톱 (GodDamn/PoisonX 중복 카드 재발 방지)
                     wiki_worthy = _dedup_by_topic(
                         wiki_worthy, verdict.get("verdicts", {}))
+                    # 정렬 1순위 = 신선/recap 티어(False<True: 신선 먼저) —
+                    # recap은 신선한 사건이 상한을 못 채울 때만 뒤에서 채워진다
                     to_send = _cap_split(
                         wiki_worthy,
-                        key=lambda it: (-it.get("importance", 3), -cardgen.heuristic_score(it)),
+                        key=lambda it: (
+                            bool(it.get("_recap")),
+                            -it.get("importance", 3),
+                            -cardgen.heuristic_score(it),
+                        ),
                     )
                     wiki_only = len(wiki_worthy) - len(to_send)
                     if wiki_only > 0:

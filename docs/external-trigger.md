@@ -57,6 +57,11 @@ GitHub schedule cron만으로는 digest 발화가 21:50 UTC 예약에서 실측
    digest 발행까지 확인하려면 그날 `last_digest_date`가 오늘이 아니어야
    한다(이미 발행된 날의 테스트 런은 realtime으로 강등되는 게 정상).
 
+주의: main.py에 digest 허용 시간창 가드가 있다 — KST 06~12시 밖에 도착한
+digest는 realtime으로 강등된다(2026-07-12 사고: realtime 잡 payload가
+`mode=digest`로 잘못 등록돼 자정 직후 00:23에 발행됨). 시간창 밖 수동
+테스트가 필요하면 워크플로 env에 `ALLOW_OFFHOUR_DIGEST=1`을 임시로 준다.
+
 ## 3. 보안 유의사항
 
 > **Warning:** PAT는 이 저장소의 Actions 실행 권한을 가진 자격증명이다.

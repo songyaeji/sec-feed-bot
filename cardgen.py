@@ -147,9 +147,16 @@ def pick_top(items: list[dict], limit: int = MAX_ISSUE_CARDS) -> list[dict]:
     기준으로 강등한다(사용자 결정: 금융 +70이 importance 5짜리 대형
     사고를 밀어내던 문제의 수정). sorted는 안정 정렬이므로 동점은 입력
     순서(=심각도 정렬 순)를 유지."""
+    # _recap(main의 백필 표식)은 중요도보다 앞선 1순위 — 9장을 채우려고
+    # 실린 재탕이 신선한 속보를 카드 상단에서 밀어내지 않게 한다.
+    # reverse=True이므로 신선(True)이 recap(False)보다 먼저 온다.
     return sorted(
         items,
-        key=lambda it: ((it.get("importance") or 0), heuristic_score(it)),
+        key=lambda it: (
+            not it.get("_recap", False),
+            (it.get("importance") or 0),
+            heuristic_score(it),
+        ),
         reverse=True,
     )[:limit]
 

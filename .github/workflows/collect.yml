@@ -107,6 +107,15 @@ jobs:
           print("credentials 파일 생성됨")
           PY
 
+      # 이중발행 race 방어 — concurrency 큐에서 대기하던 run의 checkout이
+      # 직전 run의 state push와 초 단위로 엇갈리면 last_digest_date 가드가
+      # 옛 state를 보고 뚫린다(2026-07-12: NO.5 이중 발행, 00:23/00:42).
+      # 수집 직전에 origin 최신 state를 다시 당겨 race 창을 없앤다.
+      - name: Sync latest state (double-publish race guard)
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
       - name: Run collector
         # step 단위 timeout — job timeout(30분)으로 죽으면 job이 cancelled로
         # 끝나 아래 failure() 알림이 못 돈다. step 초과는 step failure라
