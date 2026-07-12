@@ -3,7 +3,7 @@
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
 - [mcp-kubernetes-argument-injection](topics/2026-07-mcp-kubernetes-argument-injection.md) MCP Server Kubernetes 키달릭 명령 인젝션 (최종갱신일: 2026-07-10)
-- [progress-sharefile-critical](topics/2026-07-progress-sharefile-critical.md) Progress ShareFile 스토리지 존 컨트롤러 보안 위협 (최종갱신일: 2026-07-10)
+- [progress-sharefile-critical](topics/2026-07-progress-sharefile-critical.md) Progress ShareFile 스토리지 존 컨트롤러 보안 위협 (최종갱신일: 2026-07-12)
 - [prowler-saml-tenant-takeover](topics/2026-07-prowler-saml-tenant-takeover.md) Prowler 클라우드 보안 플랫폼 SAML 테넌트 계정 탈취 (최종갱신일: 2026-07-10)
 - [dify-sql-injection](topics/2026-07-dify-sql-injection.md) Dify LLM 플랫폼 MyScale SQL 인젝션 (최종갱신일: 2026-07-10)
 - [invixium-ixm-web-privesc](topics/2026-07-invixium-ixm-web-privesc.md) Invixium IXM WEB 권한상향 (최종갱신일: 2026-07-10)
@@ -157,6 +157,7 @@
 - [upnp-type-confusion-rce](topics/2026-06-upnp-type-confusion-rce.md) Windows UPnP 타입 혼동 원격 코드 실행 (최종갱신일: 2026-06-09)
 - [hyperv-type-confusion-rce](topics/2026-06-hyperv-type-confusion-rce.md) Windows Hyper-V 타입 혼동 원격 코드 실행 (최종갱신일: 2026-06-09)
 - [rdc-use-after-free-rce](topics/2026-06-rdc-use-after-free-rce.md) Windows Remote Desktop Client 사용 후 해제 RCE (최종갱신일: 2026-06-09)
+- [microsoft-edge-cve-2026-58596](topics/2026-07-microsoft-edge-cve-2026-58596.md) Microsoft Edge 포인터 역참조 권한상향 취약점 (최종갱신일: 2026-07-12)
 - [microsoft-oauth-device-flow-phishing](topics/2026-07-microsoft-oauth-device-flow-phishing.md) OAuth 2.0 Device Flow 악용 피싱 (최종갱신일: 2026-07-07)
 - [veeam-binaryformatter-rce](topics/2026-07-veeam-binaryformatter-rce.md) Veeam Backup CVE-2026-44963 역직렬화 RCE (최종갱신일: 2026-07-07)
 - [gentlemen-ransomware](topics/2026-07-gentlemen-ransomware.md) Gentlemen Go 기반 RaaS 랜섬웨어 (최종갱신일: 2026-07-07)
@@ -252,6 +253,7 @@
 - [perl-dbi-sql-preparse](topics/2026-07-perl-dbi-sql-preparse.md) Perl DBI SQL 사전파싱 메모리 취약점 (최종갱신일: 2026-07-08)
 - [rti-connext-vulnerabilities](topics/2026-07-rti-connext-vulnerabilities.md) RTI Connext 메모리 안전 취약점 (최종갱신일: 2026-07-08)
 - [scmbanker-clickfix-mexico](topics/2026-07-scmbanker-clickfix-mexico.md) SCMBANKER ClickFix 멕시코 금융 공격 (최종갱신일: 2026-07-08)
+- [zephyr-ipv4-parse-overflow](topics/2026-07-zephyr-ipv4-parse-overflow.md) Zephyr RTOS IPv4 파서 스택 오버플로우 (최종갱신일: 2026-07-12)
 - [zephyr-websocket-memory](topics/2026-07-zephyr-websocket-memory.md) Zephyr RTOS WebSocket 메모리 손상 (최종갱신일: 2026-07-08)
 - [plesk-xmlrpc-authbypass](topics/2026-07-plesk-xmlrpc-authbypass.md) Plesk XML-RPC API 인증 우회 (최종갱신일: 2026-07-08)
 - [dgraph-unauth-snapshot](topics/2026-07-dgraph-unauth-snapshot.md) Dgraph 미인증 스냅샷 임포트 RCE (최종갱신일: 2026-07-08)

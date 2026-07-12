@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-10 [The Hacker News](https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html) — Progress, ShareFile 고객 대상 Storage Zone Controller 종료 긴급 통지
+- 2026-07-12 [Security Affairs](https://securityaffairs.com/195194/hacking/progress-told-sharefile-customers-to-pull-the-plug-on-their-servers-heres-what-we-know.html) — Progress, ShareFile 스토리지 존 고객에게 인터넷 연결 서버 즉시 종료 권고
 
 ## 관련

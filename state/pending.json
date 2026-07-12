@@ -1,58 +1,9 @@
 [
   {
-    "author": "Pierluigi Paganini",
-    "category": "high",
-    "id": "https://securityaffairs.com/?p=195194",
-    "published": "2026-07-12T14:39:10+00:00",
-    "severity": "info",
-    "source": "Security Affairs",
-    "summary": "Progress urged ShareFile Storage Zone customers to shut down internet-facing servers immediately over a credible security threat under investigation. Progress Software sent an urgent email to ShareFile customers the evening of July 10 with a subject line that left no room for ambiguity: “Service Disruption. Immediate Action Required.” The company told customers running Storage Zone […]",
-    "tags": [],
-    "title": "Progress Told ShareFile Customers to Pull the Plug on Their Servers. Here’s What We Know.",
-    "url": "https://securityaffairs.com/195194/hacking/progress-told-sharefile-customers-to-pull-the-plug-on-their-servers-heres-what-we-know.html"
-  },
-  {
-    "category": "high",
-    "cvss": 8.3,
-    "id": "CVE-2026-58596",
-    "published": "2026-07-12T16:16:31.350",
-    "severity": "high",
-    "source": "NVD",
-    "summary": "Untrusted pointer dereference in Microsoft Edge (Chromium-based) allows an unauthorized attacker to elevate privileges over a network.",
-    "tags": [],
-    "title": "CVE-2026-58596 (CVSS 8.3)",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58596"
-  },
-  {
-    "category": "high",
-    "cvss": 8.1,
-    "id": "CVE-2026-10666",
-    "published": "2026-07-12T17:16:24.550",
-    "severity": "high",
-    "source": "NVD",
-    "summary": "parse_ipv4() in subsys/net/ip/utils.c (reached via net_ipaddr_parse() for strings of the form \"a.b.c.d:port\") copies the port substring into a fixed 17-byte stack buffer (char ipaddr[NET_IPV4_ADDR_LEN + 1]) using a length of str_len - end - 1, where str_len is the full, unbounded input length and end is only the (<=15-byte) offset of the ':' delimiter. Because the destination size is never consulted, a crafted address string with a long suffix after the colon (e.g. \"1.2.3.4:\" followed by hundreds of bytes) causes an out-of-bounds stack write whose length and contents are fully attacker-controlled (memcpy of the suffix plus a trailing NUL), enabling memory corruption and at minimum a denial of service, and potentially control-flow hijack. The parser is reached from the standard socket API (zsock_getaddrinfo / literal-address resolution), DNS server-string configuration, and the eswifi Wi-Fi co-processor DNS-response path, so an application that resolves a network-influenced address string is exposed. The bug was introduced when the parser was added (Zephyr v1.9.0) and shipped in all releases through v4.4.0. The fix removes the unbounded copy and validates the port length before copying into a small dedicated buffer. Note: the equivalent IPv6 \"[addr]:port\" path in parse_ipv6() retains the same unbounded copy at this commit and remains a separate, still-reachable instance of the defect.",
-    "tags": [],
-    "title": "CVE-2026-10666 (CVSS 8.1)",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10666"
-  },
-  {
-    "author": "Pierluigi Paganini",
-    "category": "high",
-    "id": "https://securityaffairs.com/?p=195216",
-    "published": "2026-07-12T20:48:04+00:00",
-    "severity": "info",
-    "source": "Security Affairs",
-    "summary": "An alleged Ryuk ransomware member pleaded guilty in the U.S. for helping deploy attacks on American companies and faces up to 15 years in prison. Armenian national Karen Serobovich Vardanyan (34) pleaded guilty in the U.S. for his role in Ryuk ransomware attacks targeting American organizations between 2019 and 2020. Extradited from Ukraine after his […]",
-    "tags": [
-      "랜섬웨어"
-    ],
-    "title": "Ryuk Ransomware Member Pleads Guilty Over Attacks on U.S. Organizations",
-    "url": "https://securityaffairs.com/195216/uncategorized/ryuk-ransomware-member-pleads-guilty-over-attacks-on-u-s-organizations.html"
-  },
-  {
     "author": "",
     "category": "news",
     "id": "CBMifEFVX3lxTFB5aXRuelhCcUZnMHM5SWxMSmlCSEh5ay03T0FTMDVNdEZHYm5WRnhyMHJvbFU0ejNtaDg0X2xwNGJmLUZOYWdUa0lqZXZ0QkVkWjA4Ulc0Zm1tY3gwWHFQaWdYT0Z0cUF6N2M1c0x0Wm5Nck05WUZBc0QzS1Q",
+    "importance": 3,
     "published": "2026-07-12T22:00:00+00:00",
     "severity": "info",
     "source": "금융보안원",
@@ -62,31 +13,5 @@
     ],
     "title": "[현장] 박상원號 금융보안원, 금융사 CEO와 AI 보안 해법 모색 [디지털 안전망 점검] - 한국금융신문",
     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5aXRuelhCcUZnMHM5SWxMSmlCSEh5ay03T0FTMDVNdEZHYm5WRnhyMHJvbFU0ejNtaDg0X2xwNGJmLUZOYWdUa0lqZXZ0QkVkWjA4Ulc0Zm1tY3gwWHFQaWdYT0Z0cUF6N2M1c0x0Wm5Nck05WUZBc0QzS1Q?oc=5"
-  },
-  {
-    "author": "",
-    "category": "news",
-    "id": "CBMiWkFVX3lxTE1IM0d6REV6eDA0YjJiemFLQzBOekNvZVVuS3BhejM1NjBtOFNkVW5FYnZuYVdYVy16YkdXQm5heDBUR1NWeC1nY3E5X3JkY1ZKNzBSaFRhdlNWUdIBVEFVX3lxTE5aSU11U0lfMjg5VXg3Y3dzMzh5UEN0SHh4bE9xQUhzaHFyQXdYS0JQU004aTBXRnNHRXc3XzlMdkZxYm5NYjdRZkRvNm1iaEZnYURFZw",
-    "published": "2026-07-12T22:00:53+00:00",
-    "severity": "info",
-    "source": "금융보안원",
-    "summary": "삼성화재, '금융보안 유공 금융위원장 표창' 수상 한국경제",
-    "tags": [
-      "금융"
-    ],
-    "title": "삼성화재, '금융보안 유공 금융위원장 표창' 수상 - 한국경제",
-    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IM0d6REV6eDA0YjJiemFLQzBOekNvZVVuS3BhejM1NjBtOFNkVW5FYnZuYVdYVy16YkdXQm5heDBUR1NWeC1nY3E5X3JkY1ZKNzBSaFRhdlNWUdIBVEFVX3lxTE5aSU11U0lfMjg5VXg3Y3dzMzh5UEN0SHh4bE9xQUhzaHFyQXdYS0JQU004aTBXRnNHRXc3XzlMdkZxYm5NYjdRZkRvNm1iaEZnYURFZw?oc=5"
-  },
-  {
-    "author": "길민권 기자",
-    "category": "news",
-    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207567",
-    "published": "2026-07-13T07:15:28+00:00",
-    "severity": "info",
-    "source": "데일리시큐",
-    "summary": "[이 연재는 이혁중 CISO가 2026년 6월부터 데일리시큐를 통해 매주 한 편씩, 보안 현장에서 축적한 경험과 통찰을 전할 예정이다. 30년 가까이 CISO·CPO로 현장을 지켜온 경험을 바탕으로, 기술보다 운영, 솔루션보다 기본, 규제보다 실행의 문제를 짚어간다. 보안과 개인정보보호가 만나는 현실의 질문에 답을 찾아가는 연재가 될 예정이다.-데일리시큐 편집자-]“개인정보가 유출되었습니다.” 퇴근길 이런 전화를 받아 보신 적이 있으십니까? 순간 “올 것이 왔구나” 하는 생각이 들더군요. 이번 차수는 그 경험을 기반으로 작성하고자",
-    "tags": [],
-    "title": "[이혁중 CISO의 현장 보안 인사이트-7] 서버가 뚫린 것인가, 조직이 뚫린 것인가: 침해사고가 드러내는 조직의 민낯",
-    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207567"
   }
 ]
