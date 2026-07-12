@@ -11,6 +11,13 @@ on:
         default: 'realtime'
         type: choice
         options: [realtime, digest]
+      # 시간창(KST 06~12시) 밖 의도적 digest 발행용 — 사람이 Actions UI/CLI로
+      # 명시할 때만 true. cron-job.org payload에는 절대 넣지 않는다
+      # (payload 오설정이 자정 오발행 사고 원인이었으므로 기본 false 유지)
+      allow_offhour:
+        description: 'digest 시간창 밖 발행 허용 (수동 재발송용)'
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -126,6 +133,9 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
           RUN_MODE: ${{ steps.run_mode.outputs.mode }}
+          # 'true'일 때만 main.py 시간창 가드 우회 — workflow_dispatch 수동
+          # 재발송 전용(위 allow_offhour input 주석 참조)
+          ALLOW_OFFHOUR_DIGEST: ${{ github.event.inputs.allow_offhour == 'true' && '1' || '' }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # 인스타/쓰레드 크로스포스트 — secret 미등록이면 빈 값이 되고
           # crosspost.py가 해당 플랫폼을 건너뛴다(digest 모드에서만 사용)
