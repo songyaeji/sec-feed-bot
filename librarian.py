@@ -30,8 +30,9 @@ TIMEOUT_SECONDS = 300  # 청크당
 # 부분 성공(fail-open 계약)으로 넘어간다. 없으면 배치×timeout이 GitHub
 # Actions 6h 상한까지 쌓여 concurrency 그룹을 동결시킨다(2026-07-10 실측:
 # digest run이 1h23m hang). workflow의 timeout-minutes와 이중 방어.
-DEADLINE_SECONDS = 900  # 15분 — 최악(마지막 배치 직전 통과 + 청크 300s)
-# ≈ 20분이라 workflow step timeout 25분 안에 확실히 끝난다
+DEADLINE_SECONDS = 1500  # 25분 — 900s는 배치 3~4개(60~80건)에서 바닥나
+# 뉴스 대량 유실(2026-07-12: 119건 무판정). 최악 = 마지막 배치 직전
+# 통과 + 청크 300s ≈ 30분 → workflow step timeout 33분 안에 끝난다
 MODEL = "claude-haiku-4-5-20251001"
 
 

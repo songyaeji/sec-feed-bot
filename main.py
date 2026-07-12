@@ -513,6 +513,17 @@ def main() -> None:
                 # (missing token, timeout, bad output) returns None and we
                 # send the full merged list; a wiki-sync problem must never
                 # suppress a real alert.
+                # 사서 입력을 뉴스 우선 + 휴리스틱 내림차순으로 정렬 — 전역
+                # 예산(DEADLINE_SECONDS) 소진 시 판정 못 받는 꼬리가 CVE·
+                # 저순위에 몰리게 한다(2026-07-12: 무순서 입력으로 예산
+                # 소진 때 뉴스 119건이 통째 유실돼 보안이슈 0장 발행)
+                merged = sorted(
+                    merged,
+                    key=lambda it: (
+                        cardgen.is_cve_item(it),
+                        -cardgen.heuristic_score(it),
+                    ),
+                )
                 verdict = librarian.run_librarian(merged)
                 briefing = None
                 wiki_new = None
@@ -697,16 +708,25 @@ def main() -> None:
                 # 위 이중발행 가드가 이 날짜를 본다
                 state["last_digest_date"] = today_kst
                 had_backlog = True
-            save_pending([])
-            # digest가 소진한 id 마커 — commit step의 merge_state.py가
-            # origin pending과 union할 때 이 id들을 부활시키지 않게 한다.
-            # (2026-07-12 발견: digest 20분 사이 realtime 커밋이 끼면
-            # union이 flush를 매번 무효화해 pending이 566건까지 누적,
-            # 사서 예산 초과로 판정 누락 → 카드 빈약의 근본 원인)
+            # 판정 못 받은 항목(사서 예산 소진·청크 실패)은 pending에 남겨
+            # 다음 digest가 재도전 — 2026-07-12: 무판정 119건이 소진 처리돼
+            # 영구 유실됐던 버그의 수정. verdict None(사서 전체 실패)은
+            # fail-open으로 이미 발송됐으므로 전량 소진.
+            # merged가 비면 verdict 자체가 정의되지 않음 — 전량 소진 취급.
+            if not merged or verdict is None:
+                judged_ids = {it["id"] for it in merged}
+            else:
+                judged_ids = set(verdict.get("verdicts", {}).keys())
+            save_pending([it for it in merged if it["id"] not in judged_ids])
+            # digest가 소진한(=판정받은) id 마커 — commit step의
+            # merge_state.py가 origin pending과 union할 때 이 id들을
+            # 부활시키지 않게 한다. (2026-07-12 발견: digest 20분 사이
+            # realtime 커밋이 끼면 union이 flush를 매번 무효화해 pending
+            # 566건 누적, 사서 예산 초과 → 카드 빈약의 근본 원인)
             # 커밋되지 않는 러너 로컬 파일 — 같은 job 안에서만 쓰인다.
             with open(os.path.join(STATE_DIR, ".digest_consumed.json"),
                       "w", encoding="utf-8") as f:
-                json.dump([it["id"] for it in merged], f)
+                json.dump([it["id"] for it in merged if it["id"] in judged_ids], f)
         else:
             pending_before = len(pending)
             new_pending = append_pending(pending, non_urgent_items)

@@ -33,7 +33,7 @@ jobs:
     # 이후 모든 run을 동결시키는 사고 방지(2026-07-10 digest 1h23m hang).
     # digest 정상 소요는 수 분 — 30분이면 충분한 여유. librarian 전역
     # 예산(DEADLINE_SECONDS)과 이중 방어.
-    timeout-minutes: 30
+    timeout-minutes: 38
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -126,9 +126,9 @@ jobs:
       - name: Run collector
         # step 단위 timeout — job timeout(30분)으로 죽으면 job이 cancelled로
         # 끝나 아래 failure() 알림이 못 돈다. step 초과는 step failure라
-        # 알림이 실행된다. librarian 전역 예산(900s)+청크 300s 최악 ≈ 20분
-        # 이므로 25분이면 정상 경로를 절대 안 자른다.
-        timeout-minutes: 25
+        # 알림이 실행된다. librarian 전역 예산(1500s)+청크 300s 최악 ≈ 30분
+        # 이므로 33분이면 정상 경로를 절대 안 자른다.
+        timeout-minutes: 33
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
