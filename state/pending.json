@@ -2139,5 +2139,103 @@
     ],
     "title": "[이슈칼럼] 잇따른 개인정보 유출, 해법은 예방 중심의 개인정보 보호 체계",
     "url": "http://www.boannews.com/media/view.asp?idx=144645&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-56260",
+    "published": "2026-07-12T12:16:45.153",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crawl4AI before 0.8.7 contains an arbitrary file write vulnerability in the Docker API server's /screenshot and /pdf endpoints. The output_path parameter accepts arbitrary filesystem paths without validation, allowing an attacker to supply absolute or path-traversal values to write to any location writable by the application's user, overwriting server files and causing denial of service.",
+    "tags": [],
+    "title": "CVE-2026-56260 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56260"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-56271",
+    "published": "2026-07-12T12:16:45.290",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Flowise before 3.1.0 (affected versions 3.0.13 and earlier) uses weak hardcoded default JWT secrets ('auth_token', 'refresh_token') and default audience and issuer values ('AUDIENCE', 'ISSUER') in the enterprise passport authentication middleware (packages/server/src/enterprise/middleware/passport/index.ts). When the corresponding environment variables (JWT_AUTH_TOKEN_SECRET, JWT_REFRESH_TOKEN_SECRET, JWT_AUDIENCE, JWT_ISSUER) are not set, the application silently falls back to these publicly known defaults, allowing an attacker to forge valid JWTs and impersonate any user, including administrators, resulting in authentication bypass.",
+    "tags": [],
+    "title": "CVE-2026-56271 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56271"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-56241",
+    "published": "2026-07-12T12:16:44.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Capgo before 12.128.2 contains a privilege escalation vulnerability where demoted super_admin users retain access to delete_non_compliant_bundles and count_non_compliant_bundles RPCs due to stale org_users.user_right column not being cleared during role binding deletion. Attackers can exploit this by maintaining a previously granted super_admin role to enumerate and bulk delete non-compliant bundles across the entire organization indefinitely.",
+    "tags": [],
+    "title": "CVE-2026-56241 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56241"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-56259",
+    "published": "2026-07-12T12:16:45.013",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crawl4AI before 0.8.8 contains credential exfiltration vulnerabilities in the Docker API server that allow attackers to redirect LLM API calls to attacker-controlled endpoints and read arbitrary environment variables. Attackers can exploit the unauthenticated /md, /llm, and /llm/job endpoints by supplying a malicious base_url parameter and setting api_token to env:VARIABLE_NAME to exfiltrate provider API keys and server secrets including JWT SECRET_KEY for authentication bypass.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-56259 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56259"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56313",
+    "published": "2026-07-12T12:16:45.703",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Capgo before 12.128.2 contains a cross-organization account disruption vulnerability in the SSO prelink endpoint that allows enterprise administrators to delete password identities of users in foreign organizations. Attackers with org.update_settings permission and an active SSO provider can call the prelink-users endpoint to permanently remove email-based authentication for any user matching the provider's email domain, forcing victims to use the attacker's SSO provider or complete password reset recovery.",
+    "tags": [],
+    "title": "CVE-2026-56313 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56313"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59260",
+    "published": "2026-07-12T12:16:45.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenWrt luci-app-samba4 read ACL grants file.exec permission on /usr/sbin/smbd, allowing authenticated delegated users to execute the Samba daemon with caller-controlled command-line arguments. Attackers can pass arbitrary Samba global options such as message command to a root smbd process, triggering command execution when SMB protocol messages are processed.",
+    "tags": [],
+    "title": "CVE-2026-59260 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59260"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61875",
+    "published": "2026-07-12T12:16:46.260",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "luci-app-upnp contains a stored cross-site scripting vulnerability that allows unauthenticated LAN clients to inject JavaScript via UPnP IGD AddPortMapping SOAP requests. Attackers can send malicious HTML in the NewPortMappingDescription field, which miniupnpd stores and luci-app-upnp renders without output encoding, executing the payload when administrators view the UPnP or Status pages.",
+    "tags": [],
+    "title": "CVE-2026-61875 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61875"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61876",
+    "published": "2026-07-12T12:16:46.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LuCI versions fail to properly encode DHCPv6 lease hostnames before rendering in status tables, allowing adjacent network attackers to inject HTML markup. Attackers can send a DHCPv6 Client FQDN containing script tags that execute in the administrator's browser when viewing DHCP lease pages.",
+    "tags": [],
+    "title": "CVE-2026-61876 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61876"
   }
 ]
