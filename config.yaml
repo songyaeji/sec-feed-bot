@@ -31,6 +31,17 @@ sources:
     category: "critical"
     region: "국내"
 
+  # 2026-07-13 추가 (rss.do 실fetch 검증) — KISA 보고서/가이드 발간물.
+  # AI 보안 레드티밍 가이드·AI 보안위협 대응 매뉴얼 등 사용자 AI보안트랙
+  # 직결 자료가 실린다. 이 피드는 pubDate가 없어 수집 시각이 published로
+  # 찍힌다 — 신선도 게이트 무의미, id 기반 dedup으로만 중복 방지
+  - name: "KISA 보고서/가이드"
+    type: rss
+    url: "https://www.boho.or.kr/kr/rss.do?bbsId=B0000127"
+    max_age_days: false
+    category: "research"
+    region: "국내"
+
   - name: "보안뉴스"
     type: rss
     url: "http://www.boannews.com/media/news_rss.xml"
@@ -210,6 +221,30 @@ sources:
     category: "news"
     region: "국내"
     max_age_days: 21
+
+  # 2026-07-13 추가 — 국정원/국가사이버안보센터. ncsc.go.kr은 데이터센터
+  # IP를 정책 차단(실fetch: "Web Page Blocked")해 원문 크롤 불가 —
+  # 보안권고문·지침·실태평가 관련 언론보도를 구글뉴스 쿼리로 잡는다
+  # (실fetch 검증: 사이버보안 기본지침 개정·N2SF 등 전건 보안 기사)
+  - name: "국가사이버안보센터"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%22%EA%B5%AD%EA%B0%80%EC%82%AC%EC%9D%B4%EB%B2%84%EC%95%88%EB%B3%B4%EC%84%BC%ED%84%B0%22%20OR%20%22%EA%B5%AD%EC%A0%95%EC%9B%90%20%EC%82%AC%EC%9D%B4%EB%B2%84%22%20OR%20%22%EA%B5%AD%EA%B0%80%EC%A0%95%EB%B3%B4%EC%9B%90%20%EC%82%AC%EC%9D%B4%EB%B2%84%22%20OR%20%22%EA%B5%AD%EC%A0%95%EC%9B%90%20%EB%B3%B4%EC%95%88%EA%B6%8C%EA%B3%A0%22&hl=ko&gl=KR&ceid=KR:ko"
+    category: "news"
+    region: "국내"
+    # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
+    max_age_days: 5
+
+  # 2026-07-13 추가 — 금융결제원(KFTC). 사이트가 React SPA + 별도 백엔드라
+  # 원문 크롤 비용이 큼(뉴스룸 라우트 직접 GET 404 실측) — 보도자료·발표
+  # 언론보도를 구글뉴스 쿼리로 잡는다. 과거 "보안 비중 낮음"으로 제외했으나
+  # 사용자 결정(2026-07-13)으로 재추가 — 양자내성암호 실증 등 보안 발표 존재
+  - name: "금융결제원"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%22%EA%B8%88%EC%9C%B5%EA%B2%B0%EC%A0%9C%EC%9B%90%22&hl=ko&gl=KR&ceid=KR:ko"
+    category: "news"
+    region: "국내"
+    # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
+    max_age_days: 5
 
   # ---- 속보 소스 (breaking: true) — 즉시 발송 판정(judge) 전용 ----
   # 대형 사건은 언론 기사보다 HN/레딧에 먼저 뜬다. 이 소스들은 아침
