@@ -4,6 +4,7 @@
 
 - [mcp-kubernetes-argument-injection](topics/2026-07-mcp-kubernetes-argument-injection.md) MCP Server Kubernetes 키달릭 명령 인젝션 (최종갱신일: 2026-07-10)
 - [progress-sharefile-critical](topics/2026-07-progress-sharefile-critical.md) Progress ShareFile 스토리지 존 컨트롤러 보안 위협 (최종갱신일: 2026-07-12)
+- [comfast-cf-wr631ax-rce](topics/2026-07-comfast-cf-wr631ax-rce.md) Comfast CF-WR631AX V3 원격 명령 실행 (최종갱신일: 2026-07-12)
 - [prowler-saml-tenant-takeover](topics/2026-07-prowler-saml-tenant-takeover.md) Prowler 클라우드 보안 플랫폼 SAML 테넌트 계정 탈취 (최종갱신일: 2026-07-10)
 - [dify-sql-injection](topics/2026-07-dify-sql-injection.md) Dify LLM 플랫폼 MyScale SQL 인젝션 (최종갱신일: 2026-07-10)
 - [invixium-ixm-web-privesc](topics/2026-07-invixium-ixm-web-privesc.md) Invixium IXM WEB 권한상향 (최종갱신일: 2026-07-10)
