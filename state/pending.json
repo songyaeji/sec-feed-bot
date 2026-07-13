@@ -4388,5 +4388,17 @@
     ],
     "title": "CVE-2026-55772 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55772"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61876",
+    "published": "2026-07-12T12:16:46.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LuCI versions fail to properly encode DHCPv6 lease hostnames before rendering in status tables, allowing adjacent network attackers to inject HTML markup. Attackers can send a DHCPv6 Client FQDN containing script tags that execute in the administrator's browser when viewing DHCP lease pages.",
+    "tags": [],
+    "title": "CVE-2026-61876 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61876"
   }
 ]
