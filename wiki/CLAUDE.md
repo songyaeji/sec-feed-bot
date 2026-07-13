@@ -37,6 +37,10 @@
   `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 - 기존 토픽 페이지에 타임라인을 추가했다면 INDEX.md의 해당 줄도 한줄요약과
   최종갱신일을 최신 상태로 갱신한다.
+- `INDEX.md`에는 최근(약 60일) 갱신 토픽만 남는다 — 더 오래된 줄은
+  자동화(main.py)가 `INDEX-archive.md`로 옮긴다. 옛 사건과의 중복 여부가
+  의심되면 `wiki/topics/`·`INDEX-archive.md`를 Grep으로 확인해도 된다.
+  아카이브 파일은 손으로 갱신할 의무가 없다.
 
 ## 위키에 넣지 않는 것
 

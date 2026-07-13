@@ -317,6 +317,12 @@ pending_ttl_days: 3
 # 검산: 07-12=NO.5, 07-13=NO.6
 issue_epoch: "2026-07-08"
 
+# 위키 INDEX.md 토픽 줄 수명(일, 최종갱신일 기준) — 초과분은 digest가
+# wiki/INDEX-archive.md로 이동한다. 사서가 배치마다 INDEX 전체를 읽으므로
+# 무한 성장은 배치 타임아웃 → 뉴스 유실로 되돌아온다(2026-07-12 실측).
+# 토픽 페이지 자체는 보존되고 사서는 Grep으로 여전히 검색 가능.
+wiki_index_max_age_days: 60
+
 # 인스타그램/쓰레드 크로스포스트 — 토큰·계정 ID는 GitHub secrets(env)로만
 # 공급한다(IG_USER_ID/IG_ACCESS_TOKEN/THREADS_USER_ID/THREADS_ACCESS_TOKEN).
 # 어느 플랫폼이 실패해도 디스코드 발송·상태 저장에는 영향 없음(fail-open).
