@@ -753,87 +753,98 @@ def main() -> None:
                     if brief:
                         briefing = brief.get("briefing")
                 # v20: 텍스트 온리 전환 — og:image·figure(SVG) 단계 폐기(사용자 결정)
-                # stats line on the digest header embed; wiki_new is left
-                # out entirely (not shown as 0) when the librarian failed
-                # open, since "no new wiki topics" and "wiki didn't run"
-                # are different facts
-                stats = {
-                    "total": len(to_send),
-                    "urgent": len(card_items),
-                    "finance": sum(1 for it in to_send if "금융" in (it.get("tags") or [])),
-                }
-                if wiki_new is not None:
-                    stats["wiki_new"] = wiki_new
-                # 표지 해시태그: summarize가 뽑은 그날의 키워드, 실패 시 태그 빈도 상위
-                keywords = (brief or {}).get("keywords") or _fallback_keywords(to_send)
-                stats["keywords"] = keywords
-                # 발행 회차: seen.json에 다음 회차 번호를 들고 다닌다(최초 1).
-                # 실제 전송(카드뉴스든 텍스트 폴백이든)에 성공해야 증가 —
-                # 전송 예외 시에는 그대로 남아 다음 시도에 같은 번호로 나간다
-                issue_no = state.get("issue_no", 1)
-                stats["issue_no"] = issue_no
-                # 아침 다이제스트는 카드뉴스 이미지로 전송하고, 렌더/전송
-                # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
-                # 어떤 경우에도 아침 브리핑 자체가 사라지면 안 된다
-                try:
-                    # 링크 목록은 카드 표시 순서(뉴스→그 외→오늘의 CVE)와
-                    # 동일하게 맞춰야 번호가 카드와 1:1로 대응한다
-                    top, cve_rest, other_rest = cardgen.plan_cards(to_send)
-                    pngs = cardgen.build_cards(
-                        to_send,
-                        briefing=briefing,
-                        stats=stats,
-                        colors=discord_cfg.get("colors", {}),
-                        regions=_source_regions(config),
-                    )
-                    link_lines = cardgen.build_link_lines(top, cve_rest, other_rest)
-                    # 발송 직전 게이트 — 가이드라인 위반(fatal)이면 카드뉴스를
-                    # 보내지 않고 예외를 올려 기존 텍스트 다이제스트 폴백을 태운다
-                    fatal, warnings = preflight.check_card_news(
-                        pngs, link_lines, to_send, briefing, config)
-                    for w in warnings:
-                        print(f"[preflight] 경고: {w}", file=sys.stderr)
-                    if fatal:
-                        for f_msg in fatal:
-                            print(f"[preflight] 차단: {f_msg}", file=sys.stderr)
-                        raise RuntimeError(
-                            f"preflight 실패 {len(fatal)}건 — 카드뉴스 발송 차단")
-                    cdn_urls = notify.send_card_news(pngs, link_lines)
-                    # 발송 성공 확정 후에만 포트폴리오 게시 산출물 저장
-                    # (내부에서 모든 실패를 삼킴 — 폴백 이중발송 방지)
-                    _publish_trend(
-                        pngs, top + other_rest + cve_rest,
-                        issue_no=issue_no, briefing=briefing,
-                        keywords=stats.get("keywords") or [],
-                    )
-                    # 인스타/쓰레드 크로스포스트 — 반드시 자체 try로 격리:
-                    # 예외가 바깥 except에 닿으면 텍스트 다이제스트 폴백이
-                    # 실행돼 Discord에 이중 발송되기 때문
-                    if crosspost is not None:
-                        try:
-                            crosspost.crosspost_all(
-                                cdn_urls,
-                                issue_no=issue_no,
-                                briefing=briefing,
-                                keywords=stats.get("keywords") or [],
-                                cfg=config.get("crosspost", {}),
-                            )
-                        except Exception as exc:
-                            print(
-                                f"[main] 크로스포스트 실패(무시): {_safe_exc_str(exc)}",
-                                file=sys.stderr,
-                            )
-                except Exception as exc:
+                if not to_send:
+                    # 카드에 실릴 것이 0건 — 표지+빈 CVE뿐인 껍데기 발행은
+                    # 하지 않는다(2026-07-13 실측: 같은 날 연속 재발행으로
+                    # 후보 고갈). last_digest_date를 남기지 않으므로 안전망
+                    # cron이 후보가 쌓인 뒤 자연 재시도하고, issue_no도
+                    # 소모하지 않는다.
                     print(
-                        f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",
+                        "[main] 카드 후보 0건 — digest 발행 스킵(다음 트리거가 재시도)",
                         file=sys.stderr,
                     )
-                    notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
-                state["issue_no"] = issue_no + 1
-                # 발행 성공 확정(카드뉴스·텍스트 폴백 공통 경로)에만 기록 —
-                # 위 이중발행 가드가 이 날짜를 본다
-                state["last_digest_date"] = today_kst
-                had_backlog = True
+                else:
+                    # stats line on the digest header embed; wiki_new is left
+                    # out entirely (not shown as 0) when the librarian failed
+                    # open, since "no new wiki topics" and "wiki didn't run"
+                    # are different facts
+                    stats = {
+                        "total": len(to_send),
+                        "urgent": len(card_items),
+                        "finance": sum(1 for it in to_send if "금융" in (it.get("tags") or [])),
+                    }
+                    if wiki_new is not None:
+                        stats["wiki_new"] = wiki_new
+                    # 표지 해시태그: summarize가 뽑은 그날의 키워드, 실패 시 태그 빈도 상위
+                    keywords = (brief or {}).get("keywords") or _fallback_keywords(to_send)
+                    stats["keywords"] = keywords
+                    # 발행 회차: seen.json에 다음 회차 번호를 들고 다닌다(최초 1).
+                    # 실제 전송(카드뉴스든 텍스트 폴백이든)에 성공해야 증가 —
+                    # 전송 예외 시에는 그대로 남아 다음 시도에 같은 번호로 나간다
+                    issue_no = state.get("issue_no", 1)
+                    stats["issue_no"] = issue_no
+                    # 아침 다이제스트는 카드뉴스 이미지로 전송하고, 렌더/전송
+                    # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
+                    # 어떤 경우에도 아침 브리핑 자체가 사라지면 안 된다
+                    try:
+                        # 링크 목록은 카드 표시 순서(뉴스→그 외→오늘의 CVE)와
+                        # 동일하게 맞춰야 번호가 카드와 1:1로 대응한다
+                        top, cve_rest, other_rest = cardgen.plan_cards(to_send)
+                        pngs = cardgen.build_cards(
+                            to_send,
+                            briefing=briefing,
+                            stats=stats,
+                            colors=discord_cfg.get("colors", {}),
+                            regions=_source_regions(config),
+                        )
+                        link_lines = cardgen.build_link_lines(top, cve_rest, other_rest)
+                        # 발송 직전 게이트 — 가이드라인 위반(fatal)이면 카드뉴스를
+                        # 보내지 않고 예외를 올려 기존 텍스트 다이제스트 폴백을 태운다
+                        fatal, warnings = preflight.check_card_news(
+                            pngs, link_lines, to_send, briefing, config)
+                        for w in warnings:
+                            print(f"[preflight] 경고: {w}", file=sys.stderr)
+                        if fatal:
+                            for f_msg in fatal:
+                                print(f"[preflight] 차단: {f_msg}", file=sys.stderr)
+                            raise RuntimeError(
+                                f"preflight 실패 {len(fatal)}건 — 카드뉴스 발송 차단")
+                        cdn_urls = notify.send_card_news(pngs, link_lines)
+                        # 발송 성공 확정 후에만 포트폴리오 게시 산출물 저장
+                        # (내부에서 모든 실패를 삼킴 — 폴백 이중발송 방지)
+                        _publish_trend(
+                            pngs, top + other_rest + cve_rest,
+                            issue_no=issue_no, briefing=briefing,
+                            keywords=stats.get("keywords") or [],
+                        )
+                        # 인스타/쓰레드 크로스포스트 — 반드시 자체 try로 격리:
+                        # 예외가 바깥 except에 닿으면 텍스트 다이제스트 폴백이
+                        # 실행돼 Discord에 이중 발송되기 때문
+                        if crosspost is not None:
+                            try:
+                                crosspost.crosspost_all(
+                                    cdn_urls,
+                                    issue_no=issue_no,
+                                    briefing=briefing,
+                                    keywords=stats.get("keywords") or [],
+                                    cfg=config.get("crosspost", {}),
+                                )
+                            except Exception as exc:
+                                print(
+                                    f"[main] 크로스포스트 실패(무시): {_safe_exc_str(exc)}",
+                                    file=sys.stderr,
+                                )
+                    except Exception as exc:
+                        print(
+                            f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",
+                            file=sys.stderr,
+                        )
+                        notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
+                    state["issue_no"] = issue_no + 1
+                    # 발행 성공 확정(카드뉴스·텍스트 폴백 공통 경로)에만 기록 —
+                    # 위 이중발행 가드가 이 날짜를 본다
+                    state["last_digest_date"] = today_kst
+                    had_backlog = True
             # 이월(retained) = 사서 예산 초과 등으로 판정 못 받은 신선 뉴스만.
             # 그 외(발송분·위키 전용·논문·미선발 CVE·TTL 초과분)는 전부 소진.
             retained_ids = {it["id"] for it in retained}
