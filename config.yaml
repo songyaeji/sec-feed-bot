@@ -439,7 +439,9 @@ crosspost:
   instagram:
     enabled: true
   threads:
-    enabled: true
+    # 사용자 결정(2026-07-13): 쓰레드 제외 — 인스타그램만 발행.
+    # 재개하려면 true + collect.yml Crosspost 스텝에 THREADS_* env 복원
+    enabled: false
   # 사서 키워드 해시태그 뒤에 붙는 고정 태그
   hashtags: [보안뉴스, 사이버보안, 카드뉴스]
 

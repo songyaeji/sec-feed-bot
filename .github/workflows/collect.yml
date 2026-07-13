@@ -260,8 +260,8 @@ jobs:
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
-          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          # THREADS_*: 쓰레드 제외(사용자 결정, config crosspost.threads.enabled=false)
+          # — 재개 시 secrets env 복원
         run: python crosspost.py
 
       # 어떤 step이든 실패하면(수집 hang의 step timeout 포함) Discord로
