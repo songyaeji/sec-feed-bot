@@ -4166,5 +4166,19 @@
     "tags": [],
     "title": "Google and Microsoft Pull ModHeader With 1.6 Million Installs After Dormant Collector Found",
     "url": "https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-56259",
+    "published": "2026-07-12T12:16:45.013",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crawl4AI before 0.8.8 contains credential exfiltration vulnerabilities in the Docker API server that allow attackers to redirect LLM API calls to attacker-controlled endpoints and read arbitrary environment variables. Attackers can exploit the unauthenticated /md, /llm, and /llm/job endpoints by supplying a malicious base_url parameter and setting api_token to env:VARIABLE_NAME to exfiltrate provider API keys and server secrets including JWT SECRET_KEY for authentication bypass.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-56259 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56259"
   }
 ]
