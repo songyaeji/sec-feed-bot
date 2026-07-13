@@ -4180,5 +4180,93 @@
     ],
     "title": "CVE-2026-56259 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56259"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-61500",
+    "published": "2026-07-13T18:16:29.903",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Rejetto HFS 3.0.0 through 3.2.0 derives its session-cookie signing key from the non-cryptographic Math.random() generator and discloses outputs of the same generator to unauthenticated clients during login. A remote attacker can collect a small number of login responses, reconstruct the generator's state, recover the signing key, and forge a valid administrator session cookie, leading to full administrative access and remote code execution via the server_code configuration feature.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-61500 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61500"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15080",
+    "published": "2026-07-10T22:16:40.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in Drupal Ray Enterprise Translation allows Cross Site Request Forgery. This issue affects Ray Enterprise Translation versions: from 0.0.0 to 4.0.4, from 4.1.0 to 4.1.4, from 11.0.0 to 11.0.4.",
+    "tags": [],
+    "title": "CVE-2026-15080 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15080"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53364",
+    "published": "2026-07-13T18:16:28.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: hci_conn: Fix memory leak in hci_le_big_terminate()\n\nhci_le_big_terminate() allocates iso_list_data via kzalloc_obj but\nreturns 0 without freeing it when neither pa_sync_term nor big_sync_term\nflags are set after evaluating the PA and BIG sync connection state.\n\nThis early-return path was introduced when hci_le_big_terminate() was\nrefactored to take struct hci_conn instead of raw u8 parameters, adding\nPA/BIG flag evaluation logic. The existing kfree() on hci_cmd_sync_queue\nfailure does not cover this path.",
+    "tags": [],
+    "title": "CVE-2026-53364 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53364"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53365",
+    "published": "2026-07-13T18:16:28.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nvsock/virtio: fix zerocopy completion for multi-skb sends\n\nWhen a large message is fragmented into multiple skbs, the zerocopy\nuarg is only allocated and attached to the last skb in the loop.\nNon-final skbs carry pinned user pages with no completion tracking,\nso the kernel has no way to notify userspace when those pages are safe\nto reuse. If the loop breaks early the uarg is never allocated at all,\nleaking pinned pages with no completion notification.\n\nFix this by following the approach used by TCP: allocate the zerocopy\nuarg (if not provided by the caller) before the send loop and attach\nit to every skb via skb_zcopy_set(), which takes a reference per skb.\nEach skb's completion properly decrements the refcount, and the\nnotification only fires after the last skb is freed.\nOn failure, if no data was sent, the uarg is cleanly aborted via\nnet_zcopy_put_abort().\n\nThis issue was initially discovered by sashiko while reviewing commit\n1cb36e252211 (\"vsock/virtio: fix MSG_ZEROCOPY pinned-pages accounting\")\nbut was pre-existing.",
+    "tags": [],
+    "title": "CVE-2026-53365 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53365"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-61462",
+    "published": "2026-07-13T18:16:29.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "mcp-gitlab contains a path traversal vulnerability in the job_id parameter of build/index.js that allows attackers to redirect GitLab API requests to arbitrary endpoints. Attackers can supply crafted job_id values like ../../../user to escape the intended path prefix and access arbitrary GitLab API resources using the operator's personal access token.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-61462 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61462"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61463",
+    "published": "2026-07-13T18:16:29.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Shiori contains a privilege escalation vulnerability in the account update endpoint that allows authenticated users to modify the owner field without authorization checks. Attackers can escalate to administrator by submitting a crafted PATCH request with owner: true, then re-authenticate to obtain an admin JWT token granting full system access.",
+    "tags": [],
+    "title": "CVE-2026-61463 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61463"
+  },
+  {
+    "author": "Nadim Abdo",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=148497",
+    "published": "2026-07-13T17:00:00+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "Microsoft Entra ID makes passkeys the default sign-in experience and introduces a new model for SMS and voice authentication. Read about how to prepare. The post Microsoft Entra ID security updates: Passkeys are the default authentication method in Entra ID appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "Microsoft Entra ID security updates: Passkeys are the default authentication method in Entra ID",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/07/13/microsoft-entra-id-security-updates-passkeys-are-the-default-authentication-method-in-entra-id/"
   }
 ]
