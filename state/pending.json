@@ -2487,5 +2487,34 @@
     ],
     "title": "“고도화되는 사이버 위협 대응”… 삼성화재, 금융보안 유공 표창 수상 - 더글로벌기빙뉴스",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9fajRwaEQtblpIUkY3Q0RKeFcwMVNXcTYyWERyVExkN3pYZHBxejhnQjJydzZhdm1mVGVjQ1dlLW9QMDAwMGhSX2pzSU5RMXkwdEw5SQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-12275",
+    "published": "2026-07-13T07:16:27.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Tutor LMS  WordPress plugin before 3.9.13 does not, in its Droip and Kirki page-builder integration, perform the enrollment, purchase, and private-course capability checks it enforces in its core course handler, allowing authenticated users with subscriber-level access to enroll in paid or private courses without authorization, read private course content, and mark arbitrary courses as completed, on sites where the Droip or Kirki integration is active.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-12275 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12275"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE5EYnRHVjlreUVJSXB5RVEzbmJWN2xDSlZWVGZwb19hV1dTeWt1S3ZMcXl2bEZ2ZFpKUGROak1TbjBHbUVTZnR3Rjd6R0J3aXZJWDJN",
+    "published": "2026-07-13T07:13:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "삼성화재, '정보보호의 날' 금융위원장 표창 수상 네이트",
+    "tags": [
+      "금융"
+    ],
+    "title": "삼성화재, '정보보호의 날' 금융위원장 표창 수상 - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5EYnRHVjlreUVJSXB5RVEzbmJWN2xDSlZWVGZwb19hV1dTeWt1S3ZMcXl2bEZ2ZFpKUGROak1TbjBHbUVTZnR3Rjd6R0J3aXZJWDJN?oc=5"
   }
 ]
