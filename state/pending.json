@@ -2583,5 +2583,93 @@
     ],
     "title": "은행 없는 군 지역, 우체국서 대출 상담…금융 공백 메운다 - 매일경제",
     "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE56UkxjUjNMZER1VXF1MzRxbE42SXo4X3JFRzZrMzl5WnBpaVBiNzdrOGF5VGwtbkcyTGItUlR2T2Mza1Y2dlE?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-4769",
+    "published": "2026-07-13T08:16:21.343",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Certain devices in the WAGO System I/O Field series activate an internal diagnostic capability during the initial startup sequence. This functionality is not formally documented and becomes accessible without authentication for a brief period in the early boot phase. During this window, an unauthenticated remote attacker can gain access to the internal system processes, resulting in full system compromise.",
+    "tags": [],
+    "title": "CVE-2026-4769 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4769"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15543",
+    "published": "2026-07-13T08:16:20.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in Tenda CH22 1.0.0.1. This impacts the function formCertListInfo of the file /goform/CertListInfo. The manipulation of the argument Name results in buffer overflow. The attack can be launched remotely. The exploit has been made public and could be used.",
+    "tags": [],
+    "title": "CVE-2026-15543 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15543"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15544",
+    "published": "2026-07-13T08:16:21.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in Shibby Tomato up to 1.28.0000. Affected is the function getupsvar of the file www/apcupsd/tomatodata.cgi of the component apcupsd. This manipulation of the argument Field causes stack-based buffer overflow. The attack may be initiated remotely. The exploit has been publicly disclosed and may be utilized. This project is superseded by FreshTomato.",
+    "tags": [],
+    "title": "CVE-2026-15544 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15544"
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144661&kind=&sub_kind=",
+    "published": "2026-07-13T08:10:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "47개국 216개 대학서 1799명 참가한 국제 사이버보안 경진대회 공식 운영고려대 세종캠퍼스와 산학협력으로 실전형 위성 해킹 문제 공동 기획 및 출제[보안뉴스 조재호 기자] 엔키화이트햇이 지난 9일부터 10일까지 정부세종컨벤션센터에서 열린 ‘2026 핵테온 세종 국제 대학생 사이버보안 경진대회’의 문제 출제 및 대회 운영을 성공적으로 마쳤다고 13일 밝혔",
+    "tags": [],
+    "title": "“위성을 해킹하라” 엔키화이트햇, ‘2026 핵테온 세종’ 성료",
+    "url": "http://www.boannews.com/media/view.asp?idx=144661&kind=&sub_kind="
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207585",
+    "published": "2026-07-13T17:19:38+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "기업 양자 전환 전문 기업 블록에스가 케이스마텍, 금융결제원과 함께 양자컴퓨팅 시대에 대비한 금융 보안 기술 협력을 목적으로 3자 업무협약(MOU)을 체결했다.이번 협약은 디지털 금융 환경에서 중요성이 높아진 차세대 보안 기술을 공동으로 검토하고, 향후 금융 분야에서 양자내성암호(PQC)를 비롯한 미래 보안 기술의 활용 가능성을 연구하기 위해 마련됐다.PQC는 양자컴퓨팅 기술 발전에 따라 기존 공개키 암호체계가 직면할 수 있는 보안 위협에 대비하는 차세대 암호 기술이다. 금융, 공공, 통신 등 높은 수준의 보안성과 안정성이 요구되는",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 양자컴퓨팅 위협 대비...블록에스-케이스마텍-금융결제원 3자 협력",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207585"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207584",
+    "published": "2026-07-13T17:14:54+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아이티아이즈가 글로벌 기관용 블록체인 네트워크인 '캔톤 네트워크(Canton Network)'와 국내 금융시장 공동 대응을 위한 포괄적 업무협약(MOU) 체결을 추진한다.양측은 현재 협약의 세부 내용을 조율하는 최종 단계에 있으며, 협약 체결 시 아이티아이즈는 캔톤의 국내 금융권 안착을 기술적으로 지원하는 파트너 역할을 맡게 된다.캔톤 네트워크는 골드만삭스, HSBC, 나스닥, 미국 예탁결제원(DTCC) 등 글로벌 금융기관들이 참여하는 금융기관 전용 블록체인이다. 제도권 금융회사들이 규제를 준수하며 주식, 채권, 부동산 등의 자산을",
+    "tags": [
+      "금융"
+    ],
+    "title": "아이티아이즈, 캔톤 네트워크와 손잡고 국내 금융 블록체인 시장 공략",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207584"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195208",
+    "published": "2026-07-13T07:39:23+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Australia warns of a global campaign exploiting CMS flaws to deploy webshells on WordPress, Joomla, and other websites. Australia’s Signals Directorate has issued an alert about a large-scale exploitation campaign actively targeting content management systems (CMS) worldwide, with many small and medium-sized Australian businesses already hit. Attackers are scanning websites for known vulnerabilities, deploying webshells […]",
+    "tags": [],
+    "title": "Australia Alerts Organizations to Ongoing CMS Exploitation Attacks",
+    "url": "https://securityaffairs.com/195208/security/australia-alerts-organizations-to-ongoing-cms-exploitation-attacks.html"
   }
 ]
