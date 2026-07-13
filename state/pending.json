@@ -3688,5 +3688,53 @@
     ],
     "title": "우체국에서 ‘시중은행 대출’ 신청 가능해진다… 20일부터 시범 운영 - 한국보험신문",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ySkUwY3NxMUYyNmJmTWpTaWdBRW5PNURWdkVVLU5GaGFKT1N6SjBWbkFHZEUxY2pGcTZZTkwtNU5BNEpYcnJQM3lGWEozUGFlekVXcWNLY0RqbzVmUWNSN05kSjdBZ01NdXRF0gFvQVVfeXFMT0lkWkpkZ2dtU09nejMwZW1YdHZlU0V5RU5BNmluYlc2Tm5JSWV0cE9SSEVWc3lRQ0JDV0p0YXI1RkYtUEJLSE4zUDd1emhPb0xyenljY3Nrc0lnT1hnbWp3dFZIc1pWVmk5bmg5OHZv?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-56260",
+    "published": "2026-07-12T12:16:45.153",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crawl4AI before 0.8.7 contains an arbitrary file write vulnerability in the Docker API server's /screenshot and /pdf endpoints. The output_path parameter accepts arbitrary filesystem paths without validation, allowing an attacker to supply absolute or path-traversal values to write to any location writable by the application's user, overwriting server files and causing denial of service.",
+    "tags": [],
+    "title": "CVE-2026-56260 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56260"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15481",
+    "published": "2026-07-12T06:16:42.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in Trendnet TEW-635BRM up to 1.00.03. This vulnerability affects the function ipoa_test of the file /sbin/rc of the component IPoA WAN Connection Setup. Performing a manipulation of the argument ipoa_ipaddr results in command injection. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor explains: \"We are unable to confirm if the vulnerability exists. This item has been EOL since 2011. We will make an official announcement of possible vulnerabilities, and recommend users to switch devices.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-15481 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15481"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59260",
+    "published": "2026-07-12T12:16:45.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenWrt luci-app-samba4 read ACL grants file.exec permission on /usr/sbin/smbd, allowing authenticated delegated users to execute the Samba daemon with caller-controlled command-line arguments. Attackers can pass arbitrary Samba global options such as message command to a root smbd process, triggering command execution when SMB protocol messages are processed.",
+    "tags": [],
+    "title": "CVE-2026-59260 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59260"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-12582",
+    "published": "2026-07-13T07:16:28.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Library Management System WordPress plugin before 3.5.8 does not sanitize and escape a user-supplied parameter before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection and extract arbitrary data from the database, including user password hashes.",
+    "tags": [],
+    "title": "CVE-2026-12582 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12582"
   }
 ]
