@@ -4552,5 +4552,201 @@
     ],
     "title": "[인터뷰] 김성웅 금융보안원 금융AI보안연구소장 \"ASAP·공동모델로 AI 방어체계 지원\" [2026 금융권 보안 전략] - 한국금융신문",
     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1pS3FJNks5a0FFTEpOc2ZSQ2hYcGR1VkIzS2JqanZQSXVhRWNqeElRYWM2d0pidnhkU2JEbk9xU2xjSmZ1bDhpbElvYnhFVTFqRmxWRHo2bXJhTWhIRHdtc21CNDhWZDFrbWNJOTBjUTY1cVgwcmJBcmEtYXk?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-59801",
+    "published": "2026-07-13T22:16:48.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "9Router through version 0.4.41 contains an unauthenticated access vulnerability that allows remote attackers to interact with provider management API endpoints by sending requests without any credentials due to missing authentication middleware in the Next.js API routes under src/app/api/providers/*. Attackers can enumerate, create, modify, or delete provider connections to expose partial credentials, OAuth tokens, and API keys, redirect AI traffic to attacker-controlled servers, or cause complete denial of service by deleting all provider connections.",
+    "tags": [],
+    "title": "CVE-2026-59801 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59801"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-62327",
+    "published": "2026-07-13T22:16:52.403",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "9Router through version 0.4.41 contain an unauthenticated information disclosure vulnerability that allows remote attackers to retrieve plaintext API keys for all connected AI provider accounts by sending a single unauthenticated request to the /api/usage/stats endpoint. Attackers can exploit the missing authentication middleware on the Next.js API route to obtain full API key strings alongside token counts, cost breakdowns, and request metadata, enabling unauthorized use of connected AI provider accounts, billing fraud, and quota exhaustion.",
+    "tags": [],
+    "title": "CVE-2026-62327 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62327"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-51539",
+    "published": "2026-07-13T22:16:47.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A Denial of Service (DoS) vulnerability exists in the receive loop of libmodbus 3.1.12 when running on Windows. The issue stems from improper timeout management during network read operations.",
+    "tags": [],
+    "title": "CVE-2026-51539 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51539"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-58500",
+    "published": "2026-07-13T22:16:48.677",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MCP Appium is an MCP server that provides AI assistants with tools to automate mobile app testing on Android and iOS. In versions prior to 1.85.10, the createLocatorGeneratorUI function interpolates attacker-controlled element attributes — text, content-desc, resource-id, and locator selector values — directly into an HTML template literal without any HTML or JavaScript context escaping. An attacker who controls the UI of the app under test can inject arbitrary HTML and JavaScript into the MCP UI resource returned by the generate_locators tool. When a victim's MCP client renders this resource, the injected script executes and can invoke arbitrary MCP tools via window.parent.postMessage, leading to unauthorized MCP tool execution such as taking screenshots, reading page source, or any other registered capability. This issue has been fixed in version 1.85.10.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58500 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58500"
+  },
+  {
+    "category": "high",
+    "cvss": 7.6,
+    "id": "CVE-2026-62186",
+    "published": "2026-07-13T22:16:49.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions before 2026.6.8 contain an authorization bypass vulnerability in OpenAI-compatible HTTP model overrides that allows lower-trust callers to perform actions requiring stronger authorization checks. Attackers can exploit misconfigured input paths to bypass admin authorization policies and execute restricted operations.",
+    "tags": [],
+    "title": "CVE-2026-62186 (CVSS 7.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62186"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62187",
+    "published": "2026-07-13T22:16:49.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw Feishu tools (npm package @openclaw/feishu) in versions <= 2026.6.6 could ignore per-account disablement. A lower-trust caller or a configured input path could perform actions that should have required a stronger authorization or policy check, resulting in unauthorized operations. The issue is fixed in version 2026.6.9. Impact depends on the operator's configuration and whether lower-trust input can reach the affected feature.",
+    "tags": [],
+    "title": "CVE-2026-62187 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62187"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62188",
+    "published": "2026-07-13T22:16:49.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw @openclaw/feishu versions 2026.6.6 and earlier contain an incorrect authorization vulnerability in which the Feishu permission tools could ignore per-account disablement settings. When the affected feature is enabled and reachable, a lower-trust caller or configured input path could perform actions that should have required a stronger authorization or policy check. The issue is fixed in version 2026.6.9.",
+    "tags": [],
+    "title": "CVE-2026-62188 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62188"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62190",
+    "published": "2026-07-13T22:16:50.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions before 2026.6.9 contain an authorization bypass vulnerability in the flock wrapper that allows lower-trust callers to execute or persist actions beyond their intended authorization. Attackers can leverage configured input paths to bypass durable exec approval binding and perform unauthorized operations when the affected feature is enabled.",
+    "tags": [],
+    "title": "CVE-2026-62190 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62190"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62192",
+    "published": "2026-07-13T22:16:50.457",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions 2026.6.6 before 2026.6.9 contain an authorization bypass vulnerability in Discord guild actions that allows lower-trust callers to perform actions requiring stronger authorization checks. Attackers can exploit misconfigured input paths to skip cross-provider requester authorization and execute restricted operations.",
+    "tags": [],
+    "title": "CVE-2026-62192 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62192"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62194",
+    "published": "2026-07-13T22:16:50.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions 2026.5.20 before 2026.6.9 contain a privilege escalation vulnerability in plugin install commands that allows lower-trust callers to execute or persist actions beyond their intended authorization. Attackers can exploit misconfigured input paths or enabled features to escalate privileges and perform unauthorized actions when the feature is reachable.",
+    "tags": [],
+    "title": "CVE-2026-62194 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62194"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-62195",
+    "published": "2026-07-13T22:16:51.100",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions 2026.5.20 before 2026.6.6 contain an authorization bypass vulnerability in the MCP loopback feature that allows lower-trust callers to execute owner-only tools. Attackers can bypass authorization checks through configured input paths to execute or persist actions beyond their intended permissions.",
+    "tags": [],
+    "title": "CVE-2026-62195 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62195"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-62196",
+    "published": "2026-07-13T22:16:51.243",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions 2026.3.22 before 2026.6.6 contain an authorization bypass vulnerability where WhatsApp group IDs can satisfy elevated sender allowlists. Attackers with lower-trust access can perform actions requiring stronger authorization by leveraging group ID validation in the affected feature.",
+    "tags": [],
+    "title": "CVE-2026-62196 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62196"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-62197",
+    "published": "2026-07-13T22:16:51.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.6.6 contains a policy bypass vulnerability in browser CDP discovery that accepts blocked WebSocket URLs. Attackers with lower-trust access can reach network destinations that should have been blocked by OpenClaw policy when the affected feature is enabled.",
+    "tags": [],
+    "title": "CVE-2026-62197 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62197"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62199",
+    "published": "2026-07-13T22:16:51.673",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions before 2026.6.6 contain a flaw in host exec environment filtering that can miss interpreter startup variables. When the affected feature is enabled and reachable, a lower-trust caller or configured input path can supply crafted environment variables to execute or persist actions beyond the caller's intended authorization.",
+    "tags": [],
+    "title": "CVE-2026-62199 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62199"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62200",
+    "published": "2026-07-13T22:16:51.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions before 2026.6.1 contain a flaw in host exec environment filtering that could allow Git ext transport to be abused. When the affected feature is enabled and reachable, a lower-trust caller or configured input path could execute or persist actions beyond the caller's intended authorization.",
+    "tags": [],
+    "title": "CVE-2026-62200 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62200"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-62242",
+    "published": "2026-07-13T22:16:52.260",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spring Boot Admin Server before 4.1.2 contains a server-side request forgery vulnerability that allows unauthenticated attackers to register instances with attacker-controlled healthUrl and managementUrl parameters without validation against private IP ranges or metadata endpoints. Attackers can force the server to make HTTP requests to arbitrary internal addresses and retrieve response bodies via the actuator proxy to exfiltrate cloud credentials.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-62242 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62242"
   }
 ]
