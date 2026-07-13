@@ -2,6 +2,13 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [android-vpn-apps-vulnerabilities](topics/2026-07-android-vpn-apps-vulnerabilities.md) 281개 Android VPN 앱 개인정보 유출 위험 (최종갱신일: 2026-07-10)
+- [citrixbleed2-dragonforce-ransomware](topics/2026-07-citrixbleed2-dragonforce-ransomware.md) Citrix NetScaler MFA 탈취 DragonForce 랜섬웨어 (최종갱신일: 2026-07-10)
+- [forg365-phaas-microsoft365](topics/2026-07-forg365-phaas-microsoft365.md) Forg365 Microsoft 365 피싱 서비스 플랫폼 (최종갱신일: 2026-07-10)
+- [dell-bios-password-extraction](topics/2026-07-dell-bios-password-extraction.md) Dell BIOS 평문 패스워드 추출 취약점 (최종갱신일: 2026-07-11)
+- [zimbra-stored-xss](topics/2026-07-zimbra-stored-xss.md) Zimbra 메일 클라이언트 저장 XSS 취약점 (최종갱신일: 2026-07-07)
+- [visual-studio-project-backdoor](topics/2026-07-visual-studio-project-backdoor.md) Visual Studio 프로젝트 파일 다단계 백도어 배포 (최종갱신일: 2026-07-11)
+- [aws-govcloud-cisa-credential-leak](topics/2026-07-aws-govcloud-cisa-credential-leak.md) AWS GovCloud 자격증명 유출 CISA 공개 (최종갱신일: 2026-07-11)
 - [mcp-kubernetes-argument-injection](topics/2026-07-mcp-kubernetes-argument-injection.md) MCP Server Kubernetes 키달릭 명령 인젝션 (최종갱신일: 2026-07-10)
 - [progress-sharefile-critical](topics/2026-07-progress-sharefile-critical.md) Progress ShareFile 스토리지 존 컨트롤러 보안 위협 (최종갱신일: 2026-07-12)
 - [comfast-cf-wr631ax-rce](topics/2026-07-comfast-cf-wr631ax-rce.md) Comfast CF-WR631AX V3 원격 명령 실행 (최종갱신일: 2026-07-12)
@@ -335,3 +342,5 @@
 - [linux-drm-ttm-swapout-lru](topics/2026-06-linux-drm-ttm-swapout-lru.md) Linux drm/ttm swapout 무한 LRU 순회 (최종갱신일: 2026-06-24)
 - [linux-drm-idr-prime](topics/2026-06-linux-drm-idr-prime.md) Linux drm DMA-buf IDR 포인터 교체 오류 (최종갱신일: 2026-06-24)
 - [linux-smb-symlink-data-loop](topics/2026-06-linux-smb-symlink-data-loop.md) Linux SMB 클라이언트 symlink_data 무한루프 및 OOB (최종갱신일: 2026-06-24)
+- [odyssey-stealer-macos](topics/2026-07-odyssey-stealer-macos.md) Odyssey Stealer macOS 정보 탈취 악성코드 100여 개국 확산 (최종갱신일: 2026-07-13)
+- [ryuk-ransomware-member-guilty](topics/2026-07-ryuk-ransomware-member-guilty.md) Ryuk 랜섬웨어 멤버 미국 법원 유죄 판결 (최종갱신일: 2026-07-12)
