@@ -4294,5 +4294,99 @@
     "tags": [],
     "title": "New CrashStealer malware poses as Apple crash reporting tool",
     "url": "https://www.bleepingcomputer.com/news/security/new-crashstealer-malware-poses-as-apple-crash-reporting-tool/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-15608",
+    "published": "2026-03-20T17:16:41.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "This vulnerability in AX53 v1, AX55 v4 and AX55 v4.6 results from insufficient input sanitization in the device’s probe handling logic, where unvalidated parameters can trigger a stack-based buffer overflow that causes the affected service to crash and, under specific conditions, may enable remote code execution through complex heap-spray techniques.  \n\nSuccessful exploitation may result in repeated service unavailability and, in certain scenarios, allow an attacker to gain control of the device.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-15608 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15608"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-11913",
+    "published": "2026-07-10T23:16:46.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "vulnerability in Drupal Mother May I allows . This issue affects Mother May I versions: *.*.",
+    "tags": [],
+    "title": "CVE-2026-11913 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11913"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15089",
+    "published": "2026-07-10T23:16:47.533",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "vulnerability in Drupal Commerce guest registration allows . This issue affects Commerce guest registration versions: *.*.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15089 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15089"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13244",
+    "published": "2026-07-10T22:16:40.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improperly Controlled Modification of Dynamically-Determined Object Attributes vulnerability in Drupal Tealium iQ Tag Management allows Object Injection. This issue affects Tealium iQ Tag Management versions: from 0.0.0 to 2.4.0.",
+    "tags": [],
+    "title": "CVE-2026-13244 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13244"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-49970",
+    "published": "2026-07-13T19:17:09.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Laravel-Mediable before 7.0.0 contains a path traversal vulnerability in the File::sanitizePath() function that allows attackers to write uploaded files to arbitrary locations by controlling the directory argument passed to MediaUploader::toDestination(). Attackers can exploit the permissive character-class regex that allows both dot and slash characters combined with an ineffective trailing trim() call to bypass sanitization and upload files to sensitive locations such as the document root, environment configuration files, or application configuration directories, enabling remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-49970 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49970"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-49972",
+    "published": "2026-07-13T19:17:10.447",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Laravel-Mediable before 7.0.0 contains a file upload vulnerability that allows unauthenticated attackers to achieve remote code execution by uploading a file with an embedded PHP extension disguised within a double extension such as shell.php.jpg. The PATHINFO_FILENAME extraction preserves the inner .php extension in the base name, and on misconfigured Apache or nginx servers that execute any filename containing .php as PHP, the stored file is interpreted as executable code while all MIME type, extension, and aggregate type validation checks pass due to the outer .jpg extension.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-49972 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49972"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55772",
+    "published": "2026-07-13T19:17:15.183",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CedarJava is an open source Java implementation of the Cedar policy language, used for fine-grained authorization decisions. In versions prior to 2.3.6, 3.4.1 and 4.9.0, under certain circumstances, improper input handling could allow Record-to-Entity type confusion across the Java-Rust FFI boundary. CedarJava sends authorization requests to the Rust cedar-policy evaluator as JSON. The JSON protocol reserves magic single-key object shapes (__entity and __extn) for entity references and extension values. When serializing a CedarMap, there is no validation preventing these reserved keys from being used. If an integrating service builds a CedarMap from caller-supplied key/value data (such as request headers, user-defined metadata, or resource tags), an actor who controls those keys could cause the Rust evaluator to interpret a record as an entity reference. This issue requires the integrating service to build a CedarMap where the an actor controls the keys, and a policy must reference that value in a when/unless clause. This vulnerability has been fixed in versions 2.3.6, 3.4.1, and 4.9.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55772 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55772"
   }
 ]
