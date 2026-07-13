@@ -3534,5 +3534,53 @@
     ],
     "title": "Breach at the Beach: Play the Ultimate Entra ID CTF",
     "url": "https://www.bleepingcomputer.com/news/security/breach-at-the-beach-play-the-ultimate-entra-id-ctf/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-60121",
+    "published": "2026-07-13T14:16:32.067",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vitec Flamingo 4.12.2 contains an unauthenticated OS command injection vulnerability in the admin/ajax/ping.php endpoint that allows remote attackers to execute arbitrary commands by exploiting a double-evaluation flaw in shell argument handling. The endpoint applies escapeshellarg() to the user-supplied host POST parameter before passing it to a system wrapper, but the wrapper retrieves the decoded value from argv and incorporates it into a second shell_exec() call without escaping, allowing injected commands to execute with root privileges via passwordless sudo.",
+    "tags": [],
+    "title": "CVE-2026-60121 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60121"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-61498",
+    "published": "2026-07-13T14:16:32.213",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vitec Flamingo 4.12.2 contains an unauthenticated OS command injection vulnerability in the admin/ajax/gen_graphs.php endpoint that allows remote unauthenticated attackers to execute arbitrary commands by supplying shell metacharacters in the start, end, key, or format HTTP GET parameters. Attackers can exploit the lack of input sanitization in the graph generation script, which passes user-supplied values directly to shell commands via passthru(), to execute arbitrary OS commands with root privileges due to the web server context having passwordless sudo access.",
+    "tags": [],
+    "title": "CVE-2026-61498 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61498"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/",
+    "published": "2026-07-13T14:19:43+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "German discount supermarket chain Lidl notified customers in Germany, Belgium, and the Netherlands that attackers stole their personal information in a breach at a service provider. [...]",
+    "tags": [],
+    "title": "Lidl discloses online shop breach after service provider hack",
+    "url": "https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE5UZUhSZURSSWVURng0UkY1bWhtYVk4QmtYdXlpSkZSeWN5OGlPWWtYZWZBNXduMTNDTG9zRVp3eDBFVXhLUlMtSUVZbDZncjZ5MkFz",
+    "published": "2026-07-09T08:10:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "회원 130만명 털리고도 몰랐다…락앤락, 개인정보 유출로 과징금 5억 네이트",
+    "tags": [],
+    "title": "회원 130만명 털리고도 몰랐다…락앤락, 개인정보 유출로 과징금 5억 - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5UZUhSZURSSWVURng0UkY1bWhtYVk4QmtYdXlpSkZSeWN5OGlPWWtYZWZBNXduMTNDTG9zRVp3eDBFVXhLUlMtSUVZbDZncjZ5MkFz?oc=5"
   }
 ]
