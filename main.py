@@ -23,14 +23,10 @@ import preflight
 import tagger
 from sources import dblp, fsec, fss, hackernews, kev, nvd, rss
 
-# 크로스포스트(인스타/쓰레드)는 선택적 모듈이다. 아직 배포되지 않은
-# 환경(crosspost.py 부재)에서도 수집·발송 파이프라인이 import 단계에서
-# 죽지 않도록 가드한다 — 모듈이 없으면 발송은 정상 진행하고 크로스포스트
-# 단계만 조용히 건너뛴다
-try:
-    import crosspost
-except ImportError:
-    crosspost = None
+# 크로스포스트(인스타/쓰레드)는 crosspost.py CLI로 분리됐다 — Instagram
+# Graph API가 '공개 URL + JPEG'만 받아 디스코드 첨부(PNG)로는 발행이
+# 불가능하기 때문. collect.yml이 포트폴리오 push 후 crosspost.py를
+# 별도 스텝으로 실행한다(_publish_trend가 JPEG 사본과 meta를 남긴다).
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
@@ -460,6 +456,24 @@ def _publish_trend(
             with open(os.path.join(TREND_DIR, name), "wb") as f:
                 f.write(png)
             names.append(name)
+        # JPEG 사본 — 인스타그램 Graph API가 JPEG만 받는다(crosspost.py가
+        # github.io에 배포된 이 사본의 URL로 발행). 변환 실패는 크로스포스트만
+        # 포기(fail-open) — Pillow는 requirements에 있으나 방어적으로 감싼다
+        jpg_names = []
+        try:
+            from io import BytesIO
+
+            from PIL import Image
+            for i, png in enumerate(pngs, start=1):
+                jpg_name = f"card_{i:02d}.jpg"
+                Image.open(BytesIO(png)).convert("RGB").save(
+                    os.path.join(TREND_DIR, jpg_name), "JPEG",
+                    quality=92, optimize=True)
+                jpg_names.append(jpg_name)
+        except Exception as exc:
+            jpg_names = []
+            print(f"[main] JPEG 변환 실패(크로스포스트만 스킵): {_safe_exc_str(exc)}",
+                  file=sys.stderr)
         kst = timezone(timedelta(hours=9))
         meta = {
             "date": datetime.now(kst).strftime("%Y-%m-%d"),
@@ -476,6 +490,8 @@ def _publish_trend(
                 for i, it in enumerate(ordered_items, start=1)
             ],
             "cards": names,
+            # 크로스포스트(IG/Threads)용 JPEG 사본 — crosspost.py가 참조
+            "cards_jpg": jpg_names,
         }
         with open(os.path.join(TREND_DIR, "meta.json"), "w", encoding="utf-8") as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
@@ -884,7 +900,7 @@ def main() -> None:
                                 print(f"[preflight] 차단: {f_msg}", file=sys.stderr)
                             raise RuntimeError(
                                 f"preflight 실패 {len(fatal)}건 — 카드뉴스 발송 차단")
-                        cdn_urls = notify.send_card_news(pngs, link_lines)
+                        notify.send_card_news(pngs, link_lines)
                         # 발송 성공 확정 후에만 포트폴리오 게시 산출물 저장
                         # (내부에서 모든 실패를 삼킴 — 폴백 이중발송 방지)
                         _publish_trend(
@@ -892,23 +908,9 @@ def main() -> None:
                             issue_no=issue_no, briefing=briefing,
                             keywords=stats.get("keywords") or [],
                         )
-                        # 인스타/쓰레드 크로스포스트 — 반드시 자체 try로 격리:
-                        # 예외가 바깥 except에 닿으면 텍스트 다이제스트 폴백이
-                        # 실행돼 Discord에 이중 발송되기 때문
-                        if crosspost is not None:
-                            try:
-                                crosspost.crosspost_all(
-                                    cdn_urls,
-                                    issue_no=issue_no,
-                                    briefing=briefing,
-                                    keywords=stats.get("keywords") or [],
-                                    cfg=config.get("crosspost", {}),
-                                )
-                            except Exception as exc:
-                                print(
-                                    f"[main] 크로스포스트 실패(무시): {_safe_exc_str(exc)}",
-                                    file=sys.stderr,
-                                )
+                        # 인스타/쓰레드 크로스포스트는 collect.yml의 후속
+                        # 스텝(crosspost.py)이 담당 — Pages 배포 완료 후
+                        # github.io JPEG URL로 발행해야 하기 때문
                     except Exception as exc:
                         print(
                             f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",

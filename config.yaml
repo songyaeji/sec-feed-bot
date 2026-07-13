@@ -433,6 +433,9 @@ wiki_index_max_age_days: 60
 # 공급한다(IG_USER_ID/IG_ACCESS_TOKEN/THREADS_USER_ID/THREADS_ACCESS_TOKEN).
 # 어느 플랫폼이 실패해도 디스코드 발송·상태 저장에는 영향 없음(fail-open).
 crosspost:
+  # 카드 JPEG 사본이 게시되는 포트폴리오 base URL — crosspost.py가
+  # {site_base}/{date}/card_NN.jpg 형태로 IG/Threads에 발행한다
+  site_base: "https://songyaeji.github.io/trend"
   instagram:
     enabled: true
   threads:
