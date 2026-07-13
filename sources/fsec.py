@@ -96,12 +96,21 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
 
     items = []
     for menu_no in boards:
-        try:
-            raw_items = _fetch_board(base_url, menu_no, page_size)
-        except Exception as exc:
-            # 게시판 하나가 죽어도(네트워크·스키마 변경) 나머지는 수집한다.
-            # URL은 남기되 자격증명 위험이 없어 예외 타입만 찍는다
-            print(f"[fsec] board {menu_no} 스킵: {type(exc).__name__}")
+        raw_items = None
+        for attempt in (1, 2):
+            try:
+                raw_items = _fetch_board(base_url, menu_no, page_size)
+                break
+            except Exception as exc:
+                # 게시판 하나가 죽어도(네트워크·스키마 변경) 나머지는 수집.
+                # 연속 POST에 커넥션이 간헐적으로 끊긴다(2026-07-12 실측:
+                # 뒤쪽 보드 3개 연속 ConnectionError) — 1회 재시도 후 스킵.
+                # URL은 남기되 자격증명 위험이 없어 예외 타입만 찍는다
+                if attempt == 2:
+                    print(f"[fsec] board {menu_no} 스킵: {type(exc).__name__}")
+                else:
+                    time.sleep(3)
+        if raw_items is None:
             continue
 
         for it in raw_items:

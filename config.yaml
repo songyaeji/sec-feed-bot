@@ -299,6 +299,19 @@ max_items_per_run: 25
 max_news_items: 7
 max_cve_items: 10
 
+# 사서(LLM 위키 사서)에 넘길 뉴스 후보 상한 — 전 항목 판정은 전역 예산
+# (librarian.DEADLINE_SECONDS)을 구조적으로 초과해 뉴스 무판정 유실을
+# 재발시킨다(2026-07-12: 171건 입력 → 119건 유실 → 뉴스 카드 0장 발행).
+# 휴리스틱 상위 이 건수만 판정받고, 초과분은 pending 이월(TTL이 청소).
+# CVE는 별도로 max_cve_items건만 결정적으로 선발돼 사서 입력에 합류한다.
+# 논문(paper)은 카드 부적합이라 사서·카드 모두 제외.
+librarian_news_cap: 60
+
+# digest에서 이월(pending) 항목의 수명(일) — seen 최초 목격 기준.
+# 카드뉴스는 일간 동향이라 이보다 오래 이월된 무판정 꼬리는 소진한다
+# (pending 무한 누적 → 사서 예산 재초과 방지)
+pending_ttl_days: 3
+
 # 인스타그램/쓰레드 크로스포스트 — 토큰·계정 ID는 GitHub secrets(env)로만
 # 공급한다(IG_USER_ID/IG_ACCESS_TOKEN/THREADS_USER_ID/THREADS_ACCESS_TOKEN).
 # 어느 플랫폼이 실패해도 디스코드 발송·상태 저장에는 영향 없음(fail-open).

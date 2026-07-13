@@ -13,6 +13,12 @@ import requests
 _TAG_RE = re.compile(r"<[^>]*>|<[^>]*$")
 
 
+# 봇 UA 차단(403) 피드용 폴백 UA — 실제 브라우저와 동일한 형식
+_BROWSER_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+)
+
 def _strip_html(text: str) -> str:
     text = _TAG_RE.sub(" ", text or "")
     text = _TAG_RE.sub(" ", html.unescape(text))
@@ -38,6 +44,11 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
     # feedparser.parse(url) has no timeout of its own; fetch via requests
     # first so an unresponsive feed can't hang the Actions job forever
     resp = requests.get(url, timeout=20, headers={"User-Agent": "sec-feed-bot/1.0"})
+    if resp.status_code in (403, 406, 429):
+        # 일부 매체(GBHackers 등)는 봇 UA를 WAF에서 차단한다(2026-07-12
+        # 실측: 403 상시) — 브라우저 UA로 1회 재시도. 성공하던 피드에는
+        # 아무 영향 없다(첫 요청이 2xx면 이 분기를 안 탄다)
+        resp = requests.get(url, timeout=20, headers={"User-Agent": _BROWSER_UA})
     resp.raise_for_status()
     feed = feedparser.parse(resp.content)
 

@@ -136,6 +136,11 @@ def heuristic_score(item: dict) -> float:
         s += 50   # AI 보안 카테고리 소스(OWASP GenAI 등)도 가산
     elif category == "critical":
         s += 40
+    elif category == "research":
+        # 벤더 위협 리서치·심층 보고서(Unit42/Talos/ASEC 등) — 뉴스 헤드라인
+        # 가산(high +20)보다 높게: 보고서가 사서 입력 컷(librarian_news_cap)
+        # 꼬리에 몰려 카드에 못 실리던 문제(사용자 보고)의 수정
+        s += 30
     elif category == "high":
         s += 20
     return s

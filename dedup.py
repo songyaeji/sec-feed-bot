@@ -124,3 +124,23 @@ def prune_dedup_state(state: dict, now: datetime = None) -> None:
         if dt >= title_cutoff:
             pruned_titles.append(entry)
     state["recent_titles"] = pruned_titles
+
+
+TITLE_SIMILARITY_THRESHOLD = 0.5
+
+
+def is_similar_event(a: dict, b: dict) -> bool:
+    """두 항목이 같은 사건을 다루는지에 대한 결정적 판정 — 카드 최종 선별
+    단계의 교차 소스 중복 백스톱(main._dedup_similar). CVE 교집합이 있으면
+    같은 사건으로 보고, 아니면 제목 토큰 자카드 유사도로 판정한다.
+    영어 매체 2곳은 title끼리, 국내·해외 교차 보도는 사서 번역(title_ko)
+    끼리 겹치므로 두 키를 각각 비교한다."""
+    cves_a, cves_b = _item_cves(a), _item_cves(b)
+    if cves_a and cves_b and cves_a & cves_b:
+        return True
+    for key in ("title", "title_ko"):
+        ta = set(_normalize_title(a.get(key) or "").split())
+        tb = set(_normalize_title(b.get(key) or "").split())
+        if ta and tb and len(ta & tb) / len(ta | tb) >= TITLE_SIMILARITY_THRESHOLD:
+            return True
+    return False

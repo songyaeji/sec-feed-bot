@@ -278,6 +278,50 @@ def _dedup_by_topic(items: list[dict], verdicts: dict) -> list[dict]:
     return [it for it in items if _keep(it)]
 
 
+def _split_fresh(items: list[dict], seen: dict, ttl_days: int) -> tuple[list[dict], int]:
+    """pending TTL — seen 최초 목격이 ttl_days보다 오래된 항목을 걸러낸다.
+    카드뉴스는 일간 동향이라 며칠씩 이월된 무판정 꼬리는 카드 가치가 없고,
+    이월 무한 누적(사서 예산 재초과 → 뉴스 유실 재발)의 원인이 된다.
+    이번 run에서 처음 본 항목은 seen에 아직 없다 — 신선 취급."""
+    cutoff = datetime.now(timezone.utc) - timedelta(days=ttl_days)
+    fresh: list[dict] = []
+    stale = 0
+    for item in items:
+        first_seen = seen.get(item.get("id"))
+        if first_seen:
+            try:
+                if datetime.fromisoformat(first_seen) < cutoff:
+                    stale += 1
+                    continue
+            except (TypeError, ValueError):
+                pass
+        fresh.append(item)
+    return fresh, stale
+
+
+def _dedup_similar(items: list[dict]) -> list[dict]:
+    """결정적 유사 사건 dedup — CVE 교집합 또는 제목(원문·한국어) 토큰
+    유사도로 같은 사건의 교차 소스 보도를 걸러낸다. topic slug 백스톱
+    (_dedup_by_topic)은 사서가 두 배치에서 다른 slug를 주면 뚫린다
+    (2026-07 사용자 보고: 같은 내용 카드 2장) — slug와 무관한 최종
+    방어선. 중요도 상위가 생존한다."""
+    kept: list[dict] = []
+    for item in sorted(
+        items,
+        key=lambda it: (-(it.get("importance") or 0), -cardgen.heuristic_score(it)),
+    ):
+        dup = next((k for k in kept if dedup_lib.is_similar_event(item, k)), None)
+        if dup is not None:
+            print(
+                f"[main] 유사 사건 카드 중복 제외: {item.get('title_ko') or item.get('title')} "
+                f"(대표: {dup.get('title_ko') or dup.get('title')})",
+                file=sys.stderr,
+            )
+            continue
+        kept.append(item)
+    return kept
+
+
 def _fallback_keywords(items: list[dict], limit: int = 4) -> list[str]:
     # 사서가 keywords를 못 준 날의 표지 해시태그 — 태그 빈도 상위로 대체
     counts: dict[str, int] = {}
@@ -508,46 +552,84 @@ def main() -> None:
 
         if run_mode == "digest":
             merged = pending + non_urgent_items
+            retained: list[dict] = []  # 소진하지 않고 다음 digest로 이월할 항목
             if merged:
-                # 2nd layer: LLM wiki librarian. Fails open -- any error
-                # (missing token, timeout, bad output) returns None and we
-                # send the full merged list; a wiki-sync problem must never
-                # suppress a real alert.
-                # 사서 입력을 뉴스 우선 + 휴리스틱 내림차순으로 정렬 — 전역
-                # 예산(DEADLINE_SECONDS) 소진 시 판정 못 받는 꼬리가 CVE·
-                # 저순위에 몰리게 한다(2026-07-12: 무순서 입력으로 예산
-                # 소진 때 뉴스 119건이 통째 유실돼 보안이슈 0장 발행)
-                merged = sorted(
-                    merged,
+                max_news = config.get("max_news_items", 7)
+                max_cve = config.get("max_cve_items", 10)
+                news_cap = config.get("librarian_news_cap", 60)
+                ttl_days = config.get("pending_ttl_days", 3)
+
+                # v25: 결정적 선별 파이프라인 — 사서(LLM)에게 전 항목을
+                # 맡기면 전역 예산(librarian.DEADLINE_SECONDS)을 구조적으로
+                # 초과해 뉴스가 무판정 유실된다(2026-07-12: 171건 입력 →
+                # 119건 유실 → 뉴스 카드 0장 발행). 사서 입력을 '카드에
+                # 실릴 가능성이 있는 소수'로 결정적으로 줄이고, 나머지는
+                # 코드가 소진/이월을 책임진다.
+                # ① pending TTL: 오래 이월된 무판정 꼬리는 동향 가치가
+                #    없다 — 소진(위키·카드 모두 제외)
+                fresh, stale_count = _split_fresh(merged, state["seen"], ttl_days)
+                if stale_count:
+                    print(
+                        f"[main] pending TTL {ttl_days}일 초과 {stale_count}건 소진",
+                        file=sys.stderr,
+                    )
+                # ② 논문(dblp 프로시딩 덤프)은 카드 부적합 — 사서 예산만
+                #    잠식하므로 digest에서 조용히 소진한다
+                paper_count = sum(1 for it in fresh if it.get("category") == "paper")
+                if paper_count:
+                    print(f"[main] 논문 {paper_count}건 카드 제외(소진)", file=sys.stderr)
+                news_pool = [
+                    it for it in fresh
+                    if it.get("category") != "paper" and not cardgen.is_cve_item(it)
+                ]
+                cve_pool = [
+                    it for it in fresh
+                    if it.get("category") != "paper" and cardgen.is_cve_item(it)
+                ]
+                # ③ '오늘의 CVE'는 사서 판정과 무관하게 결정적으로 선발 —
+                #    KEV(실악용) 우선, CVSS 내림차순. 미선발 CVE는 소진
+                #    (CVE 카드는 그날의 스냅샷이지 적립 대상이 아니다)
+                cve_selected = sorted(
+                    cve_pool,
                     key=lambda it: (
-                        cardgen.is_cve_item(it),
+                        not it.get("kev"),
+                        -(it.get("cvss") or 0),
                         -cardgen.heuristic_score(it),
                     ),
+                )[:max_cve]
+                # ④ 뉴스는 휴리스틱 상위 news_cap건만 사서에 — 초과분은
+                #    이월해 다음 digest가 재도전한다(TTL이 무한 누적 청소)
+                news_ranked = sorted(
+                    news_pool, key=lambda it: -cardgen.heuristic_score(it))
+                lib_input = news_ranked[:news_cap] + cve_selected
+                retained = news_ranked[news_cap:]
+                print(
+                    f"[main] digest 선별: 후보 {len(merged)}건 → 사서 입력 "
+                    f"{len(lib_input)}건(뉴스 {min(len(news_ranked), news_cap)}"
+                    f"+CVE {len(cve_selected)}), 이월 {len(retained)}건",
+                    file=sys.stderr,
                 )
-                verdict = librarian.run_librarian(merged)
+
+                # 2nd layer: LLM wiki librarian. Fails open -- any error
+                # (missing token, timeout, bad output) returns None and we
+                # send a heuristic top-N; a wiki-sync problem must never
+                # suppress a real alert.
+                verdict = librarian.run_librarian(lib_input)
                 briefing = None
                 wiki_new = None
                 brief = None
-                # v16: 뉴스·CVE 상한 분리 — CVE(kev/cvss 구조 항목)가 뉴스
-                # 슬롯을 잠식하지 않게 각자 상한까지 담는다
-                max_news = config.get("max_news_items", 7)
-                max_cve = config.get("max_cve_items", 10)
-
-                def _cap_split(pool: list[dict], key) -> list[dict]:
-                    news = sorted((it for it in pool if not cardgen.is_cve_item(it)), key=key)
-                    cves = sorted((it for it in pool if cardgen.is_cve_item(it)), key=key)
-                    return news[:max_news] + cves[:max_cve]
 
                 if verdict is None:
                     print("[main] 위키 사서 실패 — fail-open", file=sys.stderr)
-                    # fail-open이어도 카드·링크 상한은 지킨다: 휴리스틱 상위만 원문으로
-                    to_send = _cap_split(
-                        merged, key=lambda it: -cardgen.heuristic_score(it))
+                    # fail-open이어도 카드·링크 상한은 지킨다: 휴리스틱 상위만
+                    # 원문으로. 기존 계약대로 전량 소진(발송했으므로 이월 없음)
+                    retained = []
+                    to_send = news_ranked[:max_news] + cve_selected
                 else:
                     action_counts = {"new": 0, "update": 0, "skip_duplicate": 0, "no_wiki": 0}
                     recap_count = 0
                     wiki_worthy = []
-                    for item in merged:
+                    for item in lib_input:
                         item_verdict = verdict.get("verdicts", {}).get(item["id"], {})
                         action = item_verdict.get("action")
                         recency = item_verdict.get("recency")
@@ -598,28 +680,56 @@ def main() -> None:
                         f"중복스킵 {action_counts['skip_duplicate']}건, "
                         f"재탕(recap) 후순위 {recap_count}건"
                     )
+                    # 사서 예산 소진·청크 실패로 판정 못 받은 뉴스는 이월 —
+                    # 다음 digest가 재도전한다(2026-07-12 유실 재발 방지)
+                    judged_id_set = set(verdict.get("verdicts", {}).keys())
+                    unjudged_news = [
+                        it for it in news_ranked[:news_cap]
+                        if it["id"] not in judged_id_set
+                    ]
+                    if unjudged_news:
+                        print(f"[main] 무판정 뉴스 {len(unjudged_news)}건 이월", file=sys.stderr)
+                        retained = unjudged_news + retained
                     # v23: 순위 채움(rank-fill) — importance는 컷라인이 아니라
-                    # 정렬 기준이다. 하드 게이트(4+)는 조용한 날 카드가 1~2장으로
-                    # 쪼그라들던 문제로 폐기(사용자 결정: 뉴스 7건 상시 보장).
-                    # recap 게이트를 통과한 신선한 사건 전체에서 중요도순으로
-                    # 뉴스·CVE 상한까지 항상 채운다. 동점은 휴리스틱 점수
-                    # (AI>KEV>제로데이>금융)로 가른다.
-                    # 같은 사건의 교차 소스 보도(같은 topic slug)는 최고
-                    # 중요도 1건만 카드에 — 사서의 skip_duplicate 판정 실패에
-                    # 대한 결정적 백스톱 (GodDamn/PoisonX 중복 카드 재발 방지)
-                    wiki_worthy = _dedup_by_topic(
-                        wiki_worthy, verdict.get("verdicts", {}))
+                    # 정렬 기준이다(사용자 결정: 뉴스 7건 상시 보장).
+                    # 같은 사건의 교차 소스 보도는 결정적 2중 백스톱으로 차단:
+                    # ① 같은 topic slug(사서 출력), ② CVE 교집합·제목 토큰
+                    # 유사도(_dedup_similar) — slug가 배치마다 갈려도 막는다
+                    news_worthy = [
+                        it for it in wiki_worthy if not cardgen.is_cve_item(it)]
+                    news_worthy = _dedup_by_topic(
+                        news_worthy, verdict.get("verdicts", {}))
+                    news_worthy = _dedup_similar(news_worthy)
                     # 정렬 1순위 = 신선/recap 티어(False<True: 신선 먼저) —
                     # recap은 신선한 사건이 상한을 못 채울 때만 뒤에서 채워진다
-                    to_send = _cap_split(
-                        wiki_worthy,
+                    news_sorted = sorted(
+                        news_worthy,
                         key=lambda it: (
                             bool(it.get("_recap")),
                             -it.get("importance", 3),
                             -cardgen.heuristic_score(it),
                         ),
                     )
-                    wiki_only = len(wiki_worthy) - len(to_send)
+                    to_send_news = news_sorted[:max_news]
+                    # 백필: 사서 부분 실패 등으로 뉴스 7장이 안 차면 무판정
+                    # 뉴스 상위로 채운다(카드는 원문 제목·요약 폴백) —
+                    # 표지1+뉴스7+CVE1=9장 유지가 사용자 결정. 백필분은
+                    # 발송되므로 소진(이월 목록에서 제거)한다.
+                    if len(to_send_news) < max_news:
+                        selected_ids = {it["id"] for it in to_send_news}
+                        for cand in news_ranked:
+                            if len(to_send_news) >= max_news:
+                                break
+                            if cand["id"] in selected_ids or cand.get("importance") is not None:
+                                continue
+                            if any(dedup_lib.is_similar_event(cand, s) for s in to_send_news):
+                                continue
+                            to_send_news.append(cand)
+                            selected_ids.add(cand["id"])
+                        retained = [
+                            it for it in retained if it["id"] not in selected_ids]
+                    to_send = to_send_news + cve_selected
+                    wiki_only = len(news_worthy) - len(to_send_news)
                     if wiki_only > 0:
                         print(f"[main] 위키 전용 {wiki_only}건 (카드·링크 제외)", file=sys.stderr)
                     # 표지 총평·키워드는 실제 실리는 항목 기준으로 별도 생성(fail-open)
@@ -708,25 +818,19 @@ def main() -> None:
                 # 위 이중발행 가드가 이 날짜를 본다
                 state["last_digest_date"] = today_kst
                 had_backlog = True
-            # 판정 못 받은 항목(사서 예산 소진·청크 실패)은 pending에 남겨
-            # 다음 digest가 재도전 — 2026-07-12: 무판정 119건이 소진 처리돼
-            # 영구 유실됐던 버그의 수정. verdict None(사서 전체 실패)은
-            # fail-open으로 이미 발송됐으므로 전량 소진.
-            # merged가 비면 verdict 자체가 정의되지 않음 — 전량 소진 취급.
-            if not merged or verdict is None:
-                judged_ids = {it["id"] for it in merged}
-            else:
-                judged_ids = set(verdict.get("verdicts", {}).keys())
-            save_pending([it for it in merged if it["id"] not in judged_ids])
-            # digest가 소진한(=판정받은) id 마커 — commit step의
-            # merge_state.py가 origin pending과 union할 때 이 id들을
-            # 부활시키지 않게 한다. (2026-07-12 발견: digest 20분 사이
-            # realtime 커밋이 끼면 union이 flush를 매번 무효화해 pending
-            # 566건 누적, 사서 예산 초과 → 카드 빈약의 근본 원인)
+            # 이월(retained) = 사서 예산 초과 등으로 판정 못 받은 신선 뉴스만.
+            # 그 외(발송분·위키 전용·논문·미선발 CVE·TTL 초과분)는 전부 소진.
+            retained_ids = {it["id"] for it in retained}
+            save_pending(retained)
+            # digest가 소진한 id 마커 — commit step의 merge_state.py가
+            # origin pending과 union할 때 이 id들을 부활시키지 않게 한다.
+            # (2026-07-12 발견: digest 20분 사이 realtime 커밋이 끼면 union이
+            # flush를 매번 무효화해 pending 566건 누적, 사서 예산 초과)
             # 커밋되지 않는 러너 로컬 파일 — 같은 job 안에서만 쓰인다.
             with open(os.path.join(STATE_DIR, ".digest_consumed.json"),
                       "w", encoding="utf-8") as f:
-                json.dump([it["id"] for it in merged if it["id"] in judged_ids], f)
+                json.dump(
+                    [it["id"] for it in merged if it["id"] not in retained_ids], f)
         else:
             pending_before = len(pending)
             new_pending = append_pending(pending, non_urgent_items)

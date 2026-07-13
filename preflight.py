@@ -169,5 +169,14 @@ def check_card_news(
         warnings.append(
             f"카드 PNG {len(pngs)}장 — 예상 범위({_EXPECTED_PNG_MIN}~{_EXPECTED_PNG_MAX}장) 밖(렌더 구성 이상 의심)"
         )
+    # --- WARNING: 뉴스 카드 목표 미달 ------------------------------------
+    # 표지1+뉴스7+CVE1=9장이 사용자가 정한 정상 구성 — 뉴스가 7건 미만이면
+    # 선별 파이프라인(사서 유실·후보 부족)이 조용히 무너진 신호다
+    max_news = config.get("max_news_items", 7)
+    news_count = sum(1 for it in items if not (it.get("kev") or "cvss" in it))
+    if news_count < max_news:
+        warnings.append(
+            f"뉴스 항목 {news_count}건 — 목표 {max_news}건 미달(후보 부족 또는 선별 유실 의심)"
+        )
 
     return fatal, warnings

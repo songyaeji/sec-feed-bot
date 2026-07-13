@@ -18,6 +18,7 @@ want the old category-based split in one call.
 """
 import json
 import os
+import sys
 import time
 from datetime import datetime, timedelta, timezone
 
@@ -154,40 +155,72 @@ def send_digest(
 MESSAGE_CONTENT_MAX = 2000  # Discord 일반 메시지 content 상한
 
 
-def send_card_news(pngs: list[bytes], link_lines: list[str]) -> None:
+def send_card_news(pngs: list[bytes], link_lines: list[str]) -> list[str]:
     """digest 카드뉴스: PNG 첨부 메시지 1건 + 원문 링크 메시지(들).
 
     이미지는 웹훅 multipart 업로드(files[0..9] + payload_json)로 한
     메시지에 몰아넣는다 — 한 메시지여야 모바일에서 갤러리로 묶여
     카드뉴스처럼 스와이프된다. 링크는 이미지에 넣을 수 없으니 직후
     별도 content 메시지로 보내되, 카드 번호와 줄 번호가 1:1로 맞는다
-    (cardgen.build_link_lines가 그 순서를 보장)."""
+    (cardgen.build_link_lines가 그 순서를 보장).
+
+    반환: 디스코드가 확정한 첨부 CDN URL 목록 — 크로스포스트(인스타/
+    쓰레드)가 공개 URL로 재사용한다. `?wait=true`로 메시지 생성을 확정
+    응답으로 받아 첨부 누락(발송 불완전)을 발송 시점에 감지한다."""
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
     if not webhook_url:
         raise RuntimeError("DISCORD_WEBHOOK_URL is not set")
 
+    cdn_urls: list[str] = []
     if pngs:
         files = {
             f"files[{i}]": (f"card_{i:02d}.png", png, "image/png")
             for i, png in enumerate(pngs)
         }
-        _post_multipart_with_retry(
+        resp = _post_multipart_with_retry(
             webhook_url, files,
             {"payload_json": json.dumps(
                 {"username": WEBHOOK_USERNAME, "allowed_mentions": NO_MENTIONS})},
+            params={"wait": "true"},
         )
+        attachments = None
+        try:
+            attachments = resp.json().get("attachments") or []
+            cdn_urls = [a.get("url", "") for a in attachments if a.get("url")]
+        except ValueError:
+            pass  # wait=true 미지원/이상 응답 — 2xx였으므로 발송은 된 것
+        if attachments is not None and len(attachments) != len(pngs):
+            if not attachments:
+                # 메시지에 이미지가 하나도 안 붙었다 — 발송 실패로 취급해
+                # 호출자(main)가 텍스트 다이제스트 폴백을 태우게 한다
+                raise RuntimeError(f"카드 첨부 0/{len(pngs)}장 — 카드뉴스 발송 실패")
+            print(
+                f"[notify] 카드 첨부 {len(attachments)}/{len(pngs)}장 — 일부 누락",
+                file=sys.stderr,
+            )
 
     if link_lines:
         time.sleep(1)  # 이미지 메시지와 같은 rate-limit 버킷을 공유하므로
         chunks = _chunk_lines(link_lines, MESSAGE_CONTENT_MAX)
         for i, chunk in enumerate(chunks):
-            _post_with_retry(webhook_url, {
-                "content": chunk,
-                "username": WEBHOOK_USERNAME,
-                "allowed_mentions": NO_MENTIONS,
-            })
+            try:
+                _post_with_retry(webhook_url, {
+                    "content": chunk,
+                    "username": WEBHOOK_USERNAME,
+                    "allowed_mentions": NO_MENTIONS,
+                })
+            except RuntimeError as exc:
+                # 카드(이미지)는 이미 전달됐다 — 여기서 예외를 올리면 main이
+                # 텍스트 다이제스트 폴백까지 발송해 이중 발행이 된다(구현
+                # 전: 링크 1건 실패 = 카드+텍스트 중복). 링크 누락은 로그만.
+                print(
+                    f"[notify] 링크 메시지 {i + 1}/{len(chunks)} 발송 실패(카드는 전달됨): {exc}",
+                    file=sys.stderr,
+                )
             if i + 1 < len(chunks):
                 time.sleep(1)
+
+    return cdn_urls
 
 
 def _chunk_lines(lines: list[str], limit: int) -> list[str]:
@@ -408,39 +441,52 @@ def _safe_post(webhook_url: str, **kwargs) -> requests.Response:
         raise RuntimeError(f"Discord webhook POST failed ({type(e).__name__})") from None
 
 
-def _post_with_retry(webhook_url: str, payload: dict) -> None:
-    resp = _safe_post(webhook_url, json=payload, timeout=15)
+RETRY_ATTEMPTS = 3
 
-    if resp.status_code == 429:
+
+def _retrying_post(post_fn) -> requests.Response:
+    """429(rate limit)·5xx(일시 장애)·네트워크 예외를 최대 RETRY_ATTEMPTS회
+    재시도한다. 종전에는 429 1회 재시도뿐이라 일시 장애 한 번에 아침
+    발송이 불완전해졌다. 오류 메시지에 URL/본문을 넣지 않는 원칙 유지."""
+    for attempt in range(1, RETRY_ATTEMPTS + 1):
+        last = attempt == RETRY_ATTEMPTS
         try:
-            retry_after = resp.json().get("retry_after", 1)
-        except ValueError:
-            # non-JSON 429 body; fall back to a sane default rather than
-            # crashing the whole run over a malformed rate-limit response
-            retry_after = 1
-        time.sleep(float(retry_after))
-        resp = _safe_post(webhook_url, json=payload, timeout=15)
+            resp = post_fn()
+        except RuntimeError:
+            if last:
+                raise
+            time.sleep(2 * attempt)
+            continue
+        if resp.status_code == 429 and not last:
+            try:
+                retry_after = float(resp.json().get("retry_after", 1))
+            except ValueError:
+                # non-JSON 429 body; fall back to a sane default rather
+                # than crashing the whole run
+                retry_after = 1.0
+            time.sleep(retry_after)
+            continue
+        if resp.status_code >= 500 and not last:
+            time.sleep(2 * attempt)
+            continue
+        if not resp.ok:
+            # deliberately omit webhook_url/payload details that could leak
+            # the credential or flood logs; status code is enough to debug
+            raise RuntimeError(
+                f"Discord webhook request failed with status {resp.status_code}")
+        return resp
 
-    if not resp.ok:
-        # deliberately omit webhook_url/payload details that could leak
-        # the credential or flood logs; status code is enough to debug
-        raise RuntimeError(f"Discord webhook request failed with status {resp.status_code}")
+
+def _post_with_retry(webhook_url: str, payload: dict) -> requests.Response:
+    return _retrying_post(
+        lambda: _safe_post(webhook_url, json=payload, timeout=15))
 
 
-def _post_multipart_with_retry(webhook_url: str, files: dict, data: dict) -> None:
-    """_post_with_retry의 multipart 버전. PNG는 bytes라 재사용 가능하므로
-    429 시 단순 재전송이면 충분하다. 오류 메시지에 URL/본문을 넣지 않는
-    원칙도 동일하게 유지."""
-    # 이미지 10장(수 MB)은 json POST보다 업로드가 오래 걸리므로 타임아웃 상향
-    resp = _safe_post(webhook_url, files=files, data=data, timeout=60)
-
-    if resp.status_code == 429:
-        try:
-            retry_after = resp.json().get("retry_after", 1)
-        except ValueError:
-            retry_after = 1
-        time.sleep(float(retry_after))
-        resp = _safe_post(webhook_url, files=files, data=data, timeout=60)
-
-    if not resp.ok:
-        raise RuntimeError(f"Discord webhook request failed with status {resp.status_code}")
+def _post_multipart_with_retry(
+    webhook_url: str, files: dict, data: dict, params: dict | None = None,
+) -> requests.Response:
+    """PNG는 bytes라 재시도 시 그대로 재전송 가능. 이미지 10장(수 MB)은
+    json POST보다 업로드가 오래 걸리므로 타임아웃 상향."""
+    return _retrying_post(
+        lambda: _safe_post(
+            webhook_url, files=files, data=data, params=params, timeout=60))

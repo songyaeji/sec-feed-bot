@@ -76,8 +76,11 @@ def _run_claude_json(extra_args: list[str], prompt: str, timeout: int):
 
 # 276건을 한 번에 넣으면 모델이 최종 JSON을 못 뱉고 무너진다(실측) —
 # 한 subprocess가 감당할 수 있는 크기로 잘라 순차 처리한다.
-# 25건은 300초 타임아웃을 종종 넘겼다(2026-07-07 하루 두 번, 청크째 유실) → 20건
-BATCH_SIZE = 20
+# 25건은 300초 타임아웃을 종종 넘겼다(2026-07-07 하루 두 번, 청크째 유실)
+# → 20건도 위키가 커지자 300s를 다시 넘겼다(2026-07-12 배치1 타임아웃 —
+# 반쪼개 10건은 ~170s에 통과). 12건이면 타임아웃 낭비 없이 안정 통과하고,
+# main의 librarian_news_cap(60)+CVE(10) 입력이 6배치 ≈ 예산 내에 끝난다
+BATCH_SIZE = 12
 
 
 def _item_to_input(item: dict) -> dict:
