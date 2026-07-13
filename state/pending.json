@@ -4488,5 +4488,43 @@
     "tags": [],
     "title": "EU leaders eye social media ban for children under age 13",
     "url": "https://therecord.media/eu-proposed-social-media-ban-kids-under-13"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-58409",
+    "published": "2026-07-13T21:16:48.450",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ChurchCRM is an open-source church management system. Prior to version 7.4.0, an authenticated administrator can achieve Remote Code Execution (RCE) on the server by installing a malicious plugin ZIP archive containing a PHP webshell. The application explicitly includes 'php' in its ALLOWED_EXTENSIONS list, while the dangerous extensions denylist (DENIED_EXTENSIONS) fails to block standard .php files. Because `php` is explicitly included in the allowed extension list for plugin archives, and extracted files are placed directly under the web root, any PHP file inside the ZIP becomes immediately executable via HTTP — without even needing to \"enable\" the plugin through the application UI. The /plugins/install-url API route (management.php) allows an administrator to source the malicious ZIP from any attacker-controlled HTTPS URL, validating it only against an attacker-supplied SHA-256 hash. This issue has been fixed in version 7.4.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58409 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58409"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-48363",
+    "published": "2026-07-13T21:16:47.857",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Uncontrolled Search Path Element vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48363 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48363"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-48364",
+    "published": "2026-07-13T21:16:48.337",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2025.9, 2023.20 and earlier are affected by an Uncontrolled Search Path Element vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48364 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48364"
   }
 ]
