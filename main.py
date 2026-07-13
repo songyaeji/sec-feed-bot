@@ -434,9 +434,18 @@ def main() -> None:
     # docs/external-trigger.md). 같은 날 두 번째 digest는 realtime으로
     # 강등해 카드뉴스·issue_no 이중 발행을 막는다. 발행 실패 시에는
     # last_digest_date가 안 남아 늦게 온 cron이 자연스럽게 재시도가 된다.
+    # FORCE_DIGEST=1: 사람이 Actions UI/CLI로 명시한 같은 날 재발행 —
+    # state의 last_digest_date를 손으로 되감는 방식은 merge_state의
+    # max() union이 동시 실행 중인 realtime 커밋에서 오늘 날짜를 부활시켜
+    # 레이스로 무산된다(2026-07-13 실측). 가드 우회 플래그가 레이스 프리.
     now_kst = datetime.now(timezone(timedelta(hours=9)))
     today_kst = now_kst.strftime("%Y-%m-%d")
-    if run_mode == "digest" and state.get("last_digest_date") == today_kst:
+    force_digest = os.environ.get("FORCE_DIGEST") == "1"
+    if (
+        run_mode == "digest"
+        and state.get("last_digest_date") == today_kst
+        and not force_digest
+    ):
         print(
             f"[main] 오늘({today_kst}) digest 이미 발행됨 — realtime으로 강등",
             file=sys.stderr,
@@ -452,6 +461,7 @@ def main() -> None:
         run_mode == "digest"
         and not (6 <= now_kst.hour < 12)
         and os.environ.get("ALLOW_OFFHOUR_DIGEST") != "1"
+        and not force_digest
     ):
         print(
             f"[main] digest 허용 시간창(KST 06~12시) 밖({now_kst.strftime('%H:%M')}) "

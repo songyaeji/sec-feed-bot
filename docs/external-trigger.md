@@ -61,6 +61,11 @@ GitHub schedule cron만으로는 digest 발화가 21:50 UTC 예약에서 실측
 digest는 realtime으로 강등된다(2026-07-12 사고: realtime 잡 payload가
 `mode=digest`로 잘못 등록돼 자정 직후 00:23에 발행됨). 시간창 밖 수동
 테스트가 필요하면 워크플로 env에 `ALLOW_OFFHOUR_DIGEST=1`을 임시로 준다.
+같은 날 digest 재발행(검증·사고 복구)은 state의 `last_digest_date`를
+손으로 되감지 말 것 — merge_state의 max() union이 동시 realtime 커밋에서
+오늘 날짜를 부활시켜 레이스로 무산된다(2026-07-13 실측). 대신
+workflow_dispatch 입력 `force_digest=true`(이중발행·시간창 가드 동시
+우회)를 쓴다: `gh workflow run collect.yml -f mode=digest -f force_digest=true`.
 
 ## 3. 보안 유의사항
 

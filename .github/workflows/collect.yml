@@ -18,6 +18,14 @@ on:
         description: 'digest 시간창 밖 발행 허용 (수동 재발송용)'
         default: false
         type: boolean
+      # 같은 날 digest 재발행(검증·사고 복구용) — last_digest_date 가드와
+      # 시간창 가드를 함께 우회한다. state를 되감는 방식은 merge_state의
+      # max() union 레이스로 무산되므로(2026-07-13 실측) 이 플래그를 쓴다.
+      # 사람이 명시할 때만 true — cron-job.org payload에는 절대 넣지 않는다
+      force_digest:
+        description: 'digest 강제 재발행 (이중발행 가드 우회)'
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -136,6 +144,8 @@ jobs:
           # 'true'일 때만 main.py 시간창 가드 우회 — workflow_dispatch 수동
           # 재발송 전용(위 allow_offhour input 주석 참조)
           ALLOW_OFFHOUR_DIGEST: ${{ github.event.inputs.allow_offhour == 'true' && '1' || '' }}
+          # 같은 날 강제 재발행 — 사람이 workflow_dispatch로 명시할 때만 '1'
+          FORCE_DIGEST: ${{ github.event.inputs.force_digest == 'true' && '1' || '' }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # 인스타/쓰레드 크로스포스트 — secret 미등록이면 빈 값이 되고
           # crosspost.py가 해당 플랫폼을 건너뛴다(digest 모드에서만 사용)
