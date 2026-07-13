@@ -639,8 +639,15 @@ def main() -> None:
                     action_counts = {"new": 0, "update": 0, "skip_duplicate": 0, "no_wiki": 0}
                     recap_count = 0
                     wiki_worthy = []
+                    judged_id_set = set(verdict.get("verdicts", {}).keys())
                     for item in lib_input:
-                        item_verdict = verdict.get("verdicts", {}).get(item["id"], {})
+                        if item["id"] not in judged_id_set:
+                            # 무판정(예산 소진·청크 실패) — 기본 importance를
+                            # 찍으면 백필 자격( judged 여부)과 구분이 안 돼
+                            # 뉴스 0장이 재발한다(2026-07-13 NO.7 실측). 건드리지
+                            # 않고 이월시킨다.
+                            continue
+                        item_verdict = verdict["verdicts"][item["id"]]
                         action = item_verdict.get("action")
                         recency = item_verdict.get("recency")
                         # 사서의 한국어 제목·요약 — 카드뉴스에 실린다(요약이 메인).
@@ -692,7 +699,6 @@ def main() -> None:
                     )
                     # 사서 예산 소진·청크 실패로 판정 못 받은 뉴스는 이월 —
                     # 다음 digest가 재도전한다(2026-07-12 유실 재발 방지)
-                    judged_id_set = set(verdict.get("verdicts", {}).keys())
                     unjudged_news = [
                         it for it in news_ranked[:news_cap]
                         if it["id"] not in judged_id_set
@@ -730,7 +736,7 @@ def main() -> None:
                         for cand in news_ranked:
                             if len(to_send_news) >= max_news:
                                 break
-                            if cand["id"] in selected_ids or cand.get("importance") is not None:
+                            if cand["id"] in selected_ids or cand["id"] in judged_id_set:
                                 continue
                             if any(dedup_lib.is_similar_event(cand, s) for s in to_send_news):
                                 continue
