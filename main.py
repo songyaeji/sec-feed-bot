@@ -679,8 +679,16 @@ def main() -> None:
                         if action in action_counts:
                             action_counts[action] += 1
                         # 카드 후보 = 위키에 실린 사건(new/update)만. skip_duplicate·no_wiki
-                        # (비사건·중복)는 위키/휴지통에만 남고 카드·링크에서 제외
-                        if action in ("new", "update"):
+                        # (비사건·중복)는 위키/휴지통에만 남고 카드·링크에서 제외.
+                        # 예외: force_digest(수동 재발행) — 같은 날 앞선 발행이
+                        # 이미 위키에 적재한 사건을 사서가 전부 skip_duplicate로
+                        # 걸러 재발행이 빈 껍데기가 된다(2026-07-13 NO.9 실측:
+                        # 오늘 사건 6건 전원 중복 판정 → 뉴스 2장). 재발행의
+                        # 목적이 바로 그 사건들의 재게재이므로 카드 후보로
+                        # 허용한다(배치 내 중복은 topic·유사도 백스톱이 거른다).
+                        if action in ("new", "update") or (
+                            force_digest and action == "skip_duplicate"
+                        ):
                             # recap = 발행일만 최근이고 알맹이는 지난 사건(재조명·뒤늦은
                             # 재보도). v24: 하드 제외에서 최후순위 백필로 완화(사용자
                             # 결정: 카드뉴스는 웬만하면 표지1+뉴스7+CVE1=9장 유지) —
