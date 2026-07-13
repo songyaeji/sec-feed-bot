@@ -3368,5 +3368,79 @@
     "tags": [],
     "title": "CVE-2026-0268 (CVSS 4.4)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0268"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-42216",
+    "published": "2026-05-07T04:16:34.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenEXR provides the specification and reference implementation of the EXR file format, an image storage format for the motion picture industry. From versions 3.0.0 to before 3.2.9, 3.3.0 to before 3.3.11, and 3.4.0 to before 3.4.11, IDManifest::init() reconstructs strings from a prefix-compressed representation. If the previous string is longer than 255 bytes, the next string is expected to begin with a 2-byte prefix length. The code reads stringList[i][0] and stringList[i][1] without checking that the current string has at least two bytes. This issue has been patched in versions 3.2.9, 3.3.11, and 3.4.11.",
+    "tags": [],
+    "title": "CVE-2026-42216 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42216"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-9698",
+    "published": "2026-06-09T08:16:29.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DBI versions before 1.648 for Perl saved errors in a limited-sized buffer.\n\nError messages that were returned when RaiseError, PrintError or HandleError were set were written to a 200-byte buffer without a length limit.\n\nAttackers that can influence the error text in an application can trigger a buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-9698 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9698"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-49980",
+    "published": "2026-06-24T19:17:11.597",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. From 1.46.0 until 1.74.3, rclone rcd --rc-serve accepts unauthenticated GET and HEAD requests to paths of the form: /[remote:path]/object. The remote value is parsed from the URL and passed to normal backend initialization. Inline remote configuration can set backend options that execute local commands during initialization. As a result, a single unauthenticated GET or HEAD request can execute a command as the rclone process user. This vulnerability is fixed in 1.74.3.",
+    "tags": [],
+    "title": "CVE-2026-49980 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49980"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-41142",
+    "published": "2026-05-07T04:16:26.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEXR provides the specification and reference implementation of the EXR file format, an image storage format for the motion picture industry. From versions 3.0.0 to before 3.2.9, 3.3.0 to before 3.3.11, and 3.4.0 to before 3.4.11, there is an integer overflow in ImageChannel::resize that leads to heap OOB write via OpenEXRUtil public API. This issue has been patched in versions 3.2.9, 3.3.11, and 3.4.11.",
+    "tags": [],
+    "title": "CVE-2026-41142 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41142"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195242",
+    "published": "2026-07-13T12:23:27+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "EU sanctions target nine people and four entities tied to Russia’s FSB over a 15-year cyberespionage and critical infrastructure sabotage campaign. The European Union imposed sanctions on Monday targeting nine individuals and four entities linked to a Russian cyberespionage and sabotage operation that Brussels says has been running since 2010. The targets include Russian military […]",
+    "tags": [],
+    "title": "EU Targets FSB-Linked Hackers in New Sanctions Over Cyber Sabotage",
+    "url": "https://securityaffairs.com/195242/intelligence/eu-targets-fsb-linked-hackers-in-new-sanctions-over-cyber-sabotage.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE5pUXFUMTZ0NjlYcDhoNEozdFA1WGJiSkNvUk9nVlNtcThvZndmc0VRaUlTYV8yNFV0YzVQbDRSeW4taXZGbnZ6WExsSGd6ZjhlYnVaRnBpRVFLTGJDSFN0Y0NPYlBkTFBhQ3ZfMHNSONIBb0FVX3lxTE5pUXFUMTZ0NjlYcDhoNEozdFA1WGJiSkNvUk9nVlNtcThvZndmc0VRaUlTYV8yNFV0YzVQbDRSeW4taXZGbnZ6WExsSGd6ZjhlYnVaRnBpRVFLTGJDSFN0Y0NPYlBkTFBhQ3ZfMHNSOA",
+    "published": "2026-07-13T03:50:37+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "삼성화재, 금융보안 유공 표창 받았다…개인정보 보호 성과 인정 금융경제신문",
+    "tags": [
+      "금융"
+    ],
+    "title": "삼성화재, 금융보안 유공 표창 받았다…개인정보 보호 성과 인정 - 금융경제신문",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5pUXFUMTZ0NjlYcDhoNEozdFA1WGJiSkNvUk9nVlNtcThvZndmc0VRaUlTYV8yNFV0YzVQbDRSeW4taXZGbnZ6WExsSGd6ZjhlYnVaRnBpRVFLTGJDSFN0Y0NPYlBkTFBhQ3ZfMHNSONIBb0FVX3lxTE5pUXFUMTZ0NjlYcDhoNEozdFA1WGJiSkNvUk9nVlNtcThvZndmc0VRaUlTYV8yNFV0YzVQbDRSeW4taXZGbnZ6WExsSGd6ZjhlYnVaRnBpRVFLTGJDSFN0Y0NPYlBkTFBhQ3ZfMHNSOA?oc=5"
   }
 ]
