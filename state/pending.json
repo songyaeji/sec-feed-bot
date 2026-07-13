@@ -3482,5 +3482,17 @@
     ],
     "title": "[부고] 권기남씨(금융보안원 사이버대응본부장) 모친상 - 퍼블릭타임스",
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBadnl0bldVYmFXelQxcVFERzRXcE1BUG1NRU91ekZPYm9NTHNUN2tNQlNfLVRQV2E2OG9SdXBjVnphT1VTRTkwemxBT2UwUFJjVk5HcjFRNWtrcEdFcWdiR1NOWENpc3Z0S0HSAW5BVV95cUxPNmxmOTFGeUhNR0FLejkySFRnS0djWW4tR0oybktfZkp1U29zNDZIZlh4dmJjU0NmNGZjaUY5N0ZMUnNlVS1xaHZIRVUzRThMdERrYVpiTkJUTXh6WGFGS1ozRlNpXzlRZExCekpmdw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47828",
+    "published": "2026-07-09T07:16:23.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "During bosh create-env and bosh delete-env, the CLI uploads compiled CPI packages and rendered job templates to the new VM's DAV blobstore over HTTPS without verifying the server certificate, even though a CA certificate for that endpoint is available in the installation manifest. A network attacker can terminate the TLS connection, harvest the Basic-auth credentials, and read the rendered-templates archive containing every bootstrap secret for the new BOSH Director, then replay the credentials against the real VM's agent for root code execution.\nAffected versions: bosh-cli versions prior to v7.10.4.",
+    "tags": [],
+    "title": "CVE-2026-47828 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47828"
   }
 ]
