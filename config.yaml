@@ -312,6 +312,11 @@ librarian_news_cap: 60
 # (pending 무한 누적 → 사서 예산 재초과 방지)
 pending_ttl_days: 3
 
+# 발행 회차 기준일(NO.1 발행일) — 회차는 날짜의 순수 함수: (KST 오늘 - 기준일)+1.
+# 같은 날 재발행해도 NO.가 변하지 않는다(사용자 결정, v26).
+# 검산: 07-12=NO.5, 07-13=NO.6
+issue_epoch: "2026-07-08"
+
 # 인스타그램/쓰레드 크로스포스트 — 토큰·계정 ID는 GitHub secrets(env)로만
 # 공급한다(IG_USER_ID/IG_ACCESS_TOKEN/THREADS_USER_ID/THREADS_ACCESS_TOKEN).
 # 어느 플랫폼이 실패해도 디스코드 발송·상태 저장에는 영향 없음(fail-open).

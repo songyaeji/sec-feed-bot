@@ -7,7 +7,6 @@ state file has append-only, union semantics:
 
   seen.json         seen / alerted_cves : id -> first-seen iso (only grows)
                     recent_titles       : list of {t, d}      (only grows)
-                    issue_no            : digest counter       (only grows)
                     last_run            : iso                  (moves forward)
   pending.json      list of items keyed by "id"               (union by id)
   urgent_history    list of {date, title, ...}                (union by tuple)
@@ -129,11 +128,9 @@ def merge_seen(local: dict, remote: dict) -> dict:
             local.get("recent_titles", []), remote.get("recent_titles", [])
         ),
     }
-    # issue_no only ever increments (each digest bumps it); the higher of the
-    # two writers' counters is the authoritative next-issue number
-    issue_no = max(local.get("issue_no", 0) or 0, remote.get("issue_no", 0) or 0)
-    if issue_no or "issue_no" in local or "issue_no" in remote:
-        merged["issue_no"] = issue_no
+    # issue_no(구 digest 카운터)는 v26에서 날짜 기반 회차로 대체돼 더는
+    # merge하지 않는다 — 화이트리스트에서 빠지므로 잔존 키는 다음 merge에서
+    # 자연 소거된다.
     merged["last_run"] = _max_iso(local.get("last_run"), remote.get("last_run"))
     # digest 이중발행 가드 날짜(main.py) — YYYY-MM-DD라 사전순 max가 곧
     # 날짜 max. 화이트리스트 merge라 여기 안 넣으면 merge마다 유실돼

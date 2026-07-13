@@ -331,6 +331,23 @@ def _fallback_keywords(items: list[dict], limit: int = 4) -> list[str]:
     return [t for t, _ in sorted(counts.items(), key=lambda x: -x[1])[:limit]]
 
 
+# 날짜 기반 회차의 기본 기준일 — NO.1 = 2026-07-08, NO.5 = 07-12, NO.6 = 07-13.
+# config issue_epoch("YYYY-MM-DD")로 조정 가능.
+DEFAULT_ISSUE_EPOCH = "2026-07-08"
+
+
+def _issue_no(config: dict, now_kst: datetime) -> int:
+    """발행 회차 = (KST 오늘 - 기준일) + 1. 날짜의 순수 함수라 같은 날
+    몇 번을 재발행해도 항상 같은 번호가 나온다(사용자 결정 — 구 카운터
+    방식은 재발행마다 번호를 소모했다). 기준일 파싱 실패는 기본값 폴백."""
+    raw = str(config.get("issue_epoch") or DEFAULT_ISSUE_EPOCH)
+    try:
+        epoch = datetime.strptime(raw, "%Y-%m-%d").date()
+    except ValueError:
+        epoch = datetime.strptime(DEFAULT_ISSUE_EPOCH, "%Y-%m-%d").date()
+    return (now_kst.date() - epoch).days + 1
+
+
 def _save_preview_cards(
     merged: list[dict], card_items: list[dict], discord_cfg: dict,
     issue_no: int | None = None,
@@ -537,7 +554,7 @@ def main() -> None:
             )
             _save_preview_cards(
                 pending + non_urgent_items, card_items, discord_cfg,
-                issue_no=state.get("issue_no", 1),
+                issue_no=_issue_no(config, now_kst),
                 regions=_source_regions(config),
             )
         else:
@@ -786,10 +803,11 @@ def main() -> None:
                     # 표지 해시태그: summarize가 뽑은 그날의 키워드, 실패 시 태그 빈도 상위
                     keywords = (brief or {}).get("keywords") or _fallback_keywords(to_send)
                     stats["keywords"] = keywords
-                    # 발행 회차: seen.json에 다음 회차 번호를 들고 다닌다(최초 1).
-                    # 실제 전송(카드뉴스든 텍스트 폴백이든)에 성공해야 증가 —
-                    # 전송 예외 시에는 그대로 남아 다음 시도에 같은 번호로 나간다
-                    issue_no = state.get("issue_no", 1)
+                    # 발행 회차(v26): 날짜 기반 — NO. = (KST 오늘 - 기준일) + 1.
+                    # 카운터(state issue_no) 방식은 같은 날 재발행마다 번호가
+                    # 올라가 사용자 결정으로 폐기: 오늘 몇 번을 발행해도 NO.는
+                    # 항상 같다. 기준일은 config issue_epoch(NO.1 발행일).
+                    issue_no = _issue_no(config, now_kst)
                     stats["issue_no"] = issue_no
                     # 아침 다이제스트는 카드뉴스 이미지로 전송하고, 렌더/전송
                     # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
@@ -848,7 +866,6 @@ def main() -> None:
                             file=sys.stderr,
                         )
                         notify.send_digest(to_send, discord_cfg, briefing=briefing, stats=stats)
-                    state["issue_no"] = issue_no + 1
                     # 발행 성공 확정(카드뉴스·텍스트 폴백 공통 경로)에만 기록 —
                     # 위 이중발행 가드가 이 날짜를 본다
                     state["last_digest_date"] = today_kst
