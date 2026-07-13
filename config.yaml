@@ -94,11 +94,28 @@ sources:
     card_image: true
     region: "해외"
 
-  # 2026-07-07 추가 (URL 실fetch 검증) — 해외 보안 뉴스 축 보강
-  - name: "GBHackers"
+  # GBHackers는 Cloudflare가 GitHub 러너 IP를 차단(브라우저 UA로도 403 상시,
+  # 2026-07-13 확정)해 제거 — 해외 사건 속보 축은 BleepingComputer로 대체
+  - name: "BleepingComputer"
     type: rss
-    url: "https://gbhackers.com/feed/"
+    url: "https://www.bleepingcomputer.com/feed/"
     category: "high"
+    region: "해외"
+
+  # 2026-07-13 추가 (실fetch 검증) — CISA 보안권고 원문(공공기관 공지 축).
+  # KEV 신규 등재 소식이 CISA KEV 소스와 겹칠 수 있으나 CVE 교집합
+  # 유사도 백스톱이 카드 중복을 거른다
+  - name: "CISA Advisories"
+    type: rss
+    url: "https://www.cisa.gov/cybersecurity-advisories/all.xml"
+    category: "critical"
+    region: "해외"
+
+  # 2026-07-13 추가 (실fetch 검증) — 해외 정책·사건 뉴스(Recorded Future 뉴스룸)
+  - name: "The Record"
+    type: rss
+    url: "https://therecord.media/feed"
+    category: "news"
     region: "해외"
 
   - name: "Security Affairs"
@@ -144,6 +161,39 @@ sources:
     category: "research"
     card_image: true
     region: "해외"
+
+  # 2026-07-13 추가 (실fetch 검증) — 구 Mandiant 위협 인텔리전스, APT 심층분석
+  - name: "Google Threat Intelligence"
+    type: rss
+    url: "https://cloudblog.withgoogle.com/topics/threat-intelligence/rss/"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
+    category: "research"
+    region: "해외"
+
+  # 2026-07-13 추가 (실fetch 검증) — MS 공식 위협 리서치·사고 대응.
+  # 제품 마케팅 글이 섞이지만 사서 no_wiki 판정이 거른다
+  - name: "Microsoft Security Blog"
+    type: rss
+    url: "https://www.microsoft.com/en-us/security/blog/feed/"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
+    category: "research"
+    region: "해외"
+
+  # 2026-07-13 추가 (실fetch 검증) — 엔터프라이즈 장비 취약점 심층 리서치(주 1~2건)
+  - name: "watchTowr Labs"
+    type: rss
+    url: "https://labs.watchtowr.com/rss/"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
+    category: "research"
+    region: "해외"
+
+  # 2026-07-13 추가 (실fetch 검증) — 국내 위협 인텔(Kimsuky 등 국내 APT 분석 강점)
+  - name: "지니언스 위협인텔"
+    type: rss
+    url: "https://www.genians.co.kr/blog/rss.xml"
+    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
+    category: "research"
+    region: "국내"
 
   # 영국 정부 공식 보안 권고문 — CISA KEV/KISA와 같은 결의 공식 발표 축.
   # 갱신이 주 1~2건뿐이라 전역 14일 게이트에 걸리면 조용한 주 전체가
@@ -241,6 +291,27 @@ sources:
   - name: "금융결제원"
     type: rss
     url: "https://news.google.com/rss/search?q=%22%EA%B8%88%EC%9C%B5%EA%B2%B0%EC%A0%9C%EC%9B%90%22&hl=ko&gl=KR&ceid=KR:ko"
+    category: "news"
+    region: "국내"
+    # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
+    max_age_days: 5
+
+  # 2026-07-13 추가 — 개인정보보호위원회. 공식 RSS 없음(실fetch 404) —
+  # 유출사고 제재·과징금·정책 언론보도를 구글뉴스 쿼리로 잡는다
+  - name: "개인정보보호위원회"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%22%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%9C%84%EC%9B%90%ED%9A%8C%22&hl=ko&gl=KR&ceid=KR:ko"
+    category: "news"
+    region: "국내"
+    # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
+    max_age_days: 5
+
+  # 2026-07-13 추가 — 금융위원회. 공식 RSS 없음(실fetch 404) — 금융정책
+  # 전반은 노이즈라 보안·유출·사이버·정보보호로 좁힌 구글뉴스 쿼리
+  # (검증: 프런티어 AI 보안조치·롯데카드 제재 등 전건 보안 기사)
+  - name: "금융위원회"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%22%EA%B8%88%EC%9C%B5%EC%9C%84%EC%9B%90%ED%9A%8C%22%20%EB%B3%B4%EC%95%88%20OR%20%EC%9C%A0%EC%B6%9C%20OR%20%EC%82%AC%EC%9D%B4%EB%B2%84%20OR%20%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8&hl=ko&gl=KR&ceid=KR:ko"
     category: "news"
     region: "국내"
     # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
