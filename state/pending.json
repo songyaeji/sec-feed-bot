@@ -10134,5 +10134,31 @@
     "tags": [],
     "title": "CVE-2026-0259 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0259"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-0246",
+    "published": "2026-05-13T19:16:58.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability with a privilege management mechanism in the Palo Alto Networks Prisma Access Agent® enables a locally authenticated non-administrative user to escalate their privileges to root on macOS and Linux or NT AUTHORITY\\SYSTEM on Windows. This allows the user to execute arbitrary code and read sensitive information otherwise accessible only to privileged accounts.\n\n\n\nThe Prisma Access Agent on iOS, Android and Chrome OS are not affected.",
+    "tags": [],
+    "title": "CVE-2026-0246 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0246"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/",
+    "published": "2026-07-14T16:08:47+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Progress Software has confirmed that a high-severity zero-day vulnerability is behind the emergency shutdown of ShareFile Storage Zone Controllers last week and has released security updates to patch the flaw. [...]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown",
+    "url": "https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/"
   }
 ]
