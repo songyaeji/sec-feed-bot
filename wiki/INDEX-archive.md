@@ -29,3 +29,5 @@
 - [lost-found-sql-injection](topics/2024-07-lost-found-sql-injection.md) Lost and Found 시스템 SQL 인젝션 (최종갱신일: 2024-07-29)
 - [arc-informatique-pcvue-rce](topics/2020-10-arc-informatique-pcvue-rce.md) ARC Informatique PcVue 역직렬화 원격 코드 실행 (최종갱신일: 2020-10-12)
 - [react-router-open-redirect](topics/2026-01-react-router-open-redirect.md) React Router 오픈 리디렉션 취약점 (최종갱신일: 2026-01-10)
+- [traefik-rest-handler-bypass](topics/2026-05-traefik-rest-handler-bypass.md) Traefik REST 제공자 노출 취약점 (최종갱신일: 2026-05-15)
+- [npm-axios-supply-chain](topics/2026-03-npm-axios-supply-chain.md) UNC1069 Axios NPM 공급망 공격 WAVESHAPER.V2 백도어 (최종갱신일: 2026-03-31)
