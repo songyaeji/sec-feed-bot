@@ -3573,5 +3573,44 @@
     "tags": [],
     "title": "Malware Hits Japan’s Largest Taxi Company Nihon Kotsu, Services Temporarily Suspended",
     "url": "https://securityaffairs.com/195305/cyber-crime/malware-hits-japans-largest-taxi-company-nihon-kotsu-services-temporarily-suspended.html"
+  },
+  {
+    "author": "[강현주기자 (jjoo@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144686&kind=&sub_kind=",
+    "published": "2026-07-14T09:27:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "주로 범국민·범산업적 기념일에 참석해 온 대통령사이버 보안이야말로 범국가적 사안[보안뉴스 강현주 기자] 지난해 8월 14일 대통령실 브리핑 방송을 시청하다 적잖이 놀란적이 있다. 당시 중국 또는 북한 소행으로 추정되는 공격으로 대한민국 정부가 해킹을 당한 사실이 일명 ‘프랙보고서’를 통해 전세계에 퍼졌다. 이에 대한 대통령실의 입장을 묻는 외신 기자의 질문",
+    "tags": [],
+    "title": "[기자수첩] 정보보호의 날, 대통령이 꼭 참석해야 했을까?",
+    "url": "http://www.boannews.com/media/view.asp?idx=144686&kind=&sub_kind="
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144684&kind=&sub_kind=",
+    "published": "2026-07-14T09:20:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "과기정통부 ‘하이퍼 AI 네트워크 기반조성’ 사업 선정AI-RAN 선도망·피지컬 AI 융합 서비스 2027년까지 검증[보안뉴스 조재호 기자] SK텔레콤이 과학기술정보통신부와 한국지능정보사회진흥원(NIA)이 주관하는 ‘하이퍼 AI(Hyper-AI) 네트워크 기반조성’ 실증사업 수행기관으로 선정돼 ‘AI-RAN 선도망’ 구축과 피지컬 AI 융합 서비스 실증을",
+    "tags": [],
+    "title": "SKT, 국정과제 ‘AI고속도로’ 실증 본격화",
+    "url": "http://www.boannews.com/media/view.asp?idx=144684&kind=&sub_kind="
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html",
+    "published": "2026-07-14T09:02:48+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "xAI's Grok Build coding CLI was uploading entire Git repositories, full commit history and all, to a Google Cloud Storage bucket run by xAI, not just the files a coding task needed. A researcher publishing as cereblab, testing version 0.2.93, captured one of those uploads, cloned the git bundle out of the intercepted request, and pulled back a file the agent had been told in plain terms not",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "Grok Build Uploads Entire Git Repositories to xAI Storage, Not Just Files It Reads",
+    "url": "https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html"
   }
 ]
