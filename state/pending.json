@@ -3798,5 +3798,127 @@
     ],
     "title": "SAP warns of critical flaws in NetWeaver and Commerce Cloud",
     "url": "https://www.bleepingcomputer.com/news/security/sap-warns-of-critical-flaws-in-netweaver-and-commerce-cloud/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2016-9841",
+    "published": "2017-05-23T04:29:01.743",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "inffast.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact by leveraging improper pointer arithmetic.",
+    "tags": [],
+    "title": "CVE-2016-9841 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-9841"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2022-23303",
+    "published": "2022-01-17T02:15:06.760",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The implementations of SAE in hostapd before 2.10 and wpa_supplicant before 2.10 are vulnerable to side channel attacks as a result of cache access patterns. NOTE: this issue exists because of an incomplete fix for CVE-2019-9494.",
+    "tags": [],
+    "title": "CVE-2022-23303 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23303"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2022-23304",
+    "published": "2022-01-17T02:15:06.813",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The implementations of EAP-pwd in hostapd before 2.10 and wpa_supplicant before 2.10 are vulnerable to side-channel attacks as a result of cache access patterns. NOTE: this issue exists because of an incomplete fix for CVE-2019-9495.",
+    "tags": [],
+    "title": "CVE-2022-23304 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23304"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2022-37434",
+    "published": "2022-08-05T07:15:07.240",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2022-37434 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-37434"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2023-28531",
+    "published": "2023-03-17T04:15:14.553",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ssh-add in OpenSSH before 9.3 adds smartcard keys to ssh-agent without the intended per-hop destination constraints. The earliest affected version is 8.9.",
+    "tags": [],
+    "title": "CVE-2023-28531 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28531"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2022-48174",
+    "published": "2023-08-22T19:16:31.080",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "There is a stack overflow vulnerability in ash.c:6030 in busybox before 1.35. In the environment of Internet of Vehicles, this vulnerability can be executed from command to arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2022-48174 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-48174"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-42880",
+    "published": "2026-05-07T23:16:32.450",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From versions 3.2.0 to before 3.2.11 and 3.3.0 to before 3.3.9, there is a missing authorization and data-masking gap in Argo CD's ServerSideDiff endpoint that allows an attacker with read-only access to extract plaintext Kubernetes Secret data from etcd via the Kubernetes API server's Server-Side Apply dry-run mechanism. This issue has been patched in versions 3.2.11 and 3.3.9.",
+    "tags": [],
+    "title": "CVE-2026-42880 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42880"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2016-9840",
+    "published": "2017-05-23T04:29:01.667",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "inftrees.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact by leveraging improper pointer arithmetic.",
+    "tags": [],
+    "title": "CVE-2016-9840 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-9840"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2016-9842",
+    "published": "2017-05-23T04:29:01.837",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The inflateMark function in inflate.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact via vectors involving left shifts of negative integers.",
+    "tags": [],
+    "title": "CVE-2016-9842 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-9842"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-55466",
+    "published": "2026-07-10T20:16:46.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Snipe-IT is an IT asset/license management system. Prior to 8.6.2, UploadFileRequest sanitizes SVG content only when PHP finfo reports image/svg+xml and UploadedFilesController serves attachments inline without using StorageHelper::allowSafeInline(), allowing a low-privilege user to upload active XHTML or XML content that is later served same-origin and executes JavaScript in a viewer’s browser. This issue is fixed in version 8.6.2.",
+    "tags": [],
+    "title": "CVE-2026-55466 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55466"
   }
 ]
