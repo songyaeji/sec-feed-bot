@@ -16279,5 +16279,273 @@
     "tags": [],
     "title": "개인정보위, 개인정보 전송요구권 전송체계 기술적 기틀 고용⋅교육 부문까지 확대 마련 - 누리일보",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE44ZlpadFlfNjYtc1dtUk1kZUw0VENNaUhKTWpTc1lMSElfLTNjMGgwR2tEcDVnTlFJZUJ5VHV6RXFodDlSY1lnQlpuZ2VhWlFTQ0NfajBpRS1nQUVR?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-13001",
+    "published": "2026-07-14T20:16:56.610",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Podlove Podcast Publisher plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'podlove_handle_cache_files' function in all versions up to, and including, 4.5.1. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13001 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13001"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-47428",
+    "published": "2026-07-14T20:17:02.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vitest is a testing framework powered by Vite. From 4.0.17 until 4.1.6 and 5.0.0-beta.3, Vitest Browser Mode served /__vitest_test__/ with the otelCarrier query parameter inserted directly into an inline module script, allowing a crafted browser-runner URL to execute arbitrary JavaScript in the Vitest server origin and recover VITEST_API_TOKEN for authenticated API calls. This issue is fixed in versions 4.1.6 and 5.0.0-beta.3.",
+    "tags": [],
+    "title": "CVE-2026-47428 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47428"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-47429",
+    "published": "2026-07-14T20:17:02.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vitest is a testing framework powered by Vite. Prior to 3.2.5 and 4.1.0, the Vitest UI/API server on Windows used isFileServingAllowed incorrectly for /__vitest_attachment__, allowing \\\\?\\\\..\\\\ path traversal to read files outside the project; exposed API write and rerun features such as saveTestFile and rerun could also allow arbitrary script execution. This issue is fixed in versions 3.2.5 and 4.1.0.",
+    "tags": [],
+    "title": "CVE-2026-47429 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47429"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-48259",
+    "published": "2026-07-14T20:17:06.697",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Experience Manager is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could leverage this vulnerability to issue unauthorized server-side requests, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48259 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48259"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-48356",
+    "published": "2026-07-14T20:17:08.437",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Commerce is affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48356 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48358",
+    "published": "2026-07-14T20:17:08.653",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Commerce is affected by an Improper Encoding or Escaping of Output vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48358 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48358"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-48359",
+    "published": "2026-07-14T20:17:08.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Experience Manager is affected by an Improper Restriction of XML External Entity Reference ('XXE') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to read sensitive files, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48359 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48359"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53633",
+    "published": "2026-07-14T20:17:42.173",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vitest is a testing framework powered by Vite. From 3.0.0 until 3.2.5, 4.1.8, and 5.0.0-beta.4, Vitest Browser Mode exposed a cdp() API that forwarded raw Chrome DevTools Protocol methods without being gated by allowWrite or allowExec, allowing a remote client with exposed browser API metadata to use CDP Page.setDownloadBehavior and Runtime.evaluate to overwrite vite.config.ts and execute attacker-controlled Node.js code. This issue is fixed in versions 3.2.5, 4.1.8, and 5.0.0-beta.",
+    "tags": [],
+    "title": "CVE-2026-53633 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53633"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-47423",
+    "published": "2026-07-14T20:17:02.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DOMPurify is a DOM-only cross-site scripting sanitizer for HTML, MathML, and SVG. In 3.4.4, DOMPurify allowed selectedcontent by default, allowing browsers to re-clone an XSS payload after sanitization so that unsanitized markup inside <selectedcontent> is returned. This issue is fixed in version 3.4.5.",
+    "tags": [],
+    "title": "CVE-2026-47423 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47423"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-47984",
+    "published": "2026-07-14T20:17:04.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Commerce is affected by an Incorrect Authorization vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access. Exploitation of this issue does not require user interaction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47984 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47984"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-47988",
+    "published": "2026-07-14T20:17:04.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Commerce is affected by an Incorrect Authorization vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access. Exploitation of this issue does not require user interaction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47988 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47988"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-47994",
+    "published": "2026-07-14T20:17:04.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Commerce is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the page containing the vulnerable field, potentially gaining elevated access or control over the victim's account or session. Scope is changed.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47994 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47994"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47995",
+    "published": "2026-07-14T20:17:04.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Commerce is affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a high-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim's browser when they browse to the page containing the vulnerable field, potentially gaining elevated access or control over the victim's account or session. Scope is changed.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47995 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47995"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-48252",
+    "published": "2026-07-14T20:17:06.053",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Experience Manager is affected by a Missing Authentication for Critical Function vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized write access. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48252 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48252"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-48310",
+    "published": "2026-07-14T20:17:07.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Experience Manager is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48310 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48310"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-48345",
+    "published": "2026-07-14T20:17:07.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Animate is affected by an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48345 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48345"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-48349",
+    "published": "2026-07-14T20:17:08.067",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Animate is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploit depends on conditions beyond the attacker's control. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48349 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48349"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-48350",
+    "published": "2026-07-14T20:17:08.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Animate is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to access sensitive files or directories outside the intended restrictions. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48350 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48350"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-50528",
+    "published": "2026-07-14T20:17:37.533",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect authorization in .NET allows an unauthorized attacker to bypass a security feature over a network.",
+    "tags": [],
+    "title": "CVE-2026-50528 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50528"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195336",
+    "published": "2026-07-14T19:47:53+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "U.S. sanctions hit VPN provider 1VPNS and a cryptor seller for enabling ransomware gangs behind billions in losses to critical infrastructure. The U.S. Treasury’s Office of Foreign Assets Control sanctioned two individuals and one entity on July 13 for supplying tools and infrastructure to ransomware groups that have caused billions of dollars in losses to […]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "U.S. Treasury Sanctions VPN Provider and Cryptor Seller Behind Billions in Ransomware Losses",
+    "url": "https://securityaffairs.com/195336/security/u-s-treasury-sanctions-vpn-provider-and-cryptor-seller-behind-billions-in-ransomware-losses.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE5Qa0JnU3ROMy1IbE9TcjZnNUhuLWZPRzExaDVoaGdwb3ZpZHdXMXBha0NmTGhDamM4bzRUdjBYdlFxTTJsRG5taFprM0xNM2hraUxLVkF2N05YWG92NEZHSHI4LV9FLThScXJRdV9lT3hoNk0",
+    "published": "2026-07-14T07:12:41+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "연방의원들 “해외 디지털 규제, 검열 법안 수출” 지적 News And Post",
+    "tags": [],
+    "title": "연방의원들 “해외 디지털 규제, 검열 법안 수출” 지적 - News And Post",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5Qa0JnU3ROMy1IbE9TcjZnNUhuLWZPRzExaDVoaGdwb3ZpZHdXMXBha0NmTGhDamM4bzRUdjBYdlFxTTJsRG5taFprM0xNM2hraUxLVkF2N05YWG92NEZHSHI4LV9FLThScXJRdV9lT3hoNk0?oc=5"
   }
 ]
