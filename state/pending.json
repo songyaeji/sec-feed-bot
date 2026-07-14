@@ -3638,5 +3638,65 @@
     ],
     "title": "US sanctions VPN, malware providers for enabling ransomware attacks",
     "url": "https://www.bleepingcomputer.com/news/security/us-sanctions-vpn-malware-providers-linked-to-ransomware-gangs/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-7891",
+    "published": "2026-05-07T22:16:37.070",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been identified in Mendix Runtime (All versions). Mendix documentation for access rules does not adequately describe the special behavior of the System.User entity, leaving developers without sufficient guidance to configure access rules securely. This documentation gap may lead application developers to unknowingly apply overly permissive access rules to System.User, resulting in unintended exposure of sensitive user data or privilege escalation within deployed Mendix applications.",
+    "tags": [],
+    "title": "CVE-2026-7891 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7891"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-25786",
+    "published": "2026-05-12T10:16:44.193",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Affected devices do not properly validate and sanitize PLC/station name rendered on the \"communication\" parameters page of the web interface.\r\nThis could allow an authenticated attacker who is authorized to download a TIA project into the product, to inject malicious scripts into the page.\r\nIf a benign user with appropriate rights accesses the \"communication\" parameters page, the malicious code would be executed in the scope of their web session.",
+    "tags": [],
+    "title": "CVE-2026-25786 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25786"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-25787",
+    "published": "2026-05-12T10:16:44.610",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Affected devices do not properly validate and sanitize Technology Object (TO) name rendered on the \"Motion Control Diagnostics\" page of the web interface. This could allow an authenticated attacker who is authorized to download a TIA project into the product, to inject malicious scripts into the page.\r\nIf a benign user with appropriate rights accesses the \"Motion Control Diagnostics\" parameters page, the malicious code would be executed in the scope of their web session.",
+    "tags": [],
+    "title": "CVE-2026-25787 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25787"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-3014",
+    "published": "2026-07-14T10:16:32.917",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Milestone\nhas released a new version of XProtect® (and several cumulative patch updates)\nwhich fix security vulnerability in Management Server API. \n\n\n\nThe vulnerability\ncauses users with edit permissions to the Management Server to be able to\nexecute arbitrary code in context of the Management Server Service.",
+    "tags": [],
+    "title": "CVE-2026-3014 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3014"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-56451",
+    "published": "2026-07-14T10:16:33.287",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been identified in Opcenter X (All versions < V2604). Affected applications do not properly validate the algorithm specified in the JSON Web Token (JWT) header.\r\nThis could allow an unauthenticated remote attacker to forge arbitrary JWT, bypass authentication mechanisms and impersonate any user including administrative accounts, potentially gaining full unauthorized access to the application.",
+    "tags": [],
+    "title": "CVE-2026-56451 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56451"
   }
 ]
