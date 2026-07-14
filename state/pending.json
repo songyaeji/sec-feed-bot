@@ -10110,5 +10110,29 @@
     "tags": [],
     "title": "ABB Advant Master Online Builder",
     "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-6653",
+    "published": "2026-06-22T14:17:51.113",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use After Free in libxml2's xmlParseInternalSubset from GNOME libxml2 version 2.9.11 to 2.11.0 allows a remote attacker to cause a denial-of-service via maliciously crafted XML input with improper entity resolution handling.",
+    "tags": [],
+    "title": "CVE-2026-6653 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6653"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-0259",
+    "published": "2026-05-13T19:17:01.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An arbitrary File Read and Delete Vulnerability in Palo Alto Networks WildFire® WF-500 and WF-500-B appliances enables users to read sensitive information and delete arbitrary files. This vulnerability affects WF-500 and WF-500-B appliances running in the default non-FIPS configuration mode.\n\n\n\nThe WildFire Appliance (WF-500, WF-500-B) software update is now available to customers that use the WildFire Appliance (WF-500, WF-500-B) for on-premise sandboxing.\n\n\n\nPlease note that customers using the WildFire Public cloud service are NOT impacted by this vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-0259 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0259"
   }
 ]
