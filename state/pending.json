@@ -3160,5 +3160,291 @@
     "tags": [],
     "title": "Spanish Police take down €140 million cyber fraud ring, arrest four",
     "url": "https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-22051",
+    "published": "2024-01-04T21:15:10.173",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CommonMarker versions prior to 0.23.4 are at risk of an integer overflow vulnerability. This vulnerability can result in possibly unauthenticated remote attackers to cause heap memory corruption, potentially leading to an information leak or remote code execution, via parsing tables with marker rows that contain more than UINT16_MAX columns.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-22051 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22051"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-23679",
+    "published": "2024-01-19T21:15:10.073",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Enonic XP versions less than 7.7.4 are vulnerable to a session fixation issue. An remote and unauthenticated attacker can use prior sessions due to the lack of invalidating session attributes.",
+    "tags": [],
+    "title": "CVE-2024-23679 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23679"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2024-23687",
+    "published": "2024-01-19T22:15:08.517",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hard-coded credentials in FOLIO mod-data-export-spring versions before 1.5.4 and from 2.0.0 to 2.0.2 allows unauthenticated users to access critical APIs, modify user data, modify configurations including single-sign-on, and manipulate fees/fines.",
+    "tags": [],
+    "title": "CVE-2024-23687 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23687"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-6127",
+    "published": "2024-06-27T20:15:23.093",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "BC Security Empire before 5.9.3 is vulnerable to a path traversal issue that can lead to remote code execution. A remote, unauthenticated attacker can exploit this vulnerability over HTTP by acting as a normal agent, completing all cryptographic handshakes, and then triggering an upload of payload data containing a malicious path.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-6127 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6127"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2025-34157",
+    "published": "2025-08-27T17:15:37.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Coolify versions prior to v4.0.0-beta.420.6 are vulnerable to a stored cross-site scripting (XSS) attack in the project creation workflow. An authenticated user with low privileges can create a project with a maliciously crafted name containing embedded JavaScript. When an administrator attempts to delete the project or its associated resource, the payload executes in the admin’s browser context. This results in full compromise of the Coolify instance, including theft of API tokens, session cookies, and access to WebSocket-based terminal sessions on managed servers.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-34157 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34157"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2025-34267",
+    "published": "2025-10-14T20:15:34.147",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Flowise v3.0.1 < 3.0.8 and all versions after with 'ALLOW_BUILTIN_DEP' enabled contain an authenticated remote code execution vulnerability and node VM sandbox escape due to insecure use of integrated modules (Puppeteer and Playwright) within the nodevm execution environment. An authenticated attacker able to create or run a tool that leverages Puppeteer/Playwright can specify attacker-controlled browser binary paths and parameters. When the tool executes, the attacker-controlled executable/parameters are run on the host and circumvent the intended nodevm sandbox restrictions, resulting in execution of arbitrary code in the context of the host. This vulnerability was incorrectly assigned as a duplicate CVE-2025-26319 by the developers and should be considered distinct from that identifier.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-34267 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34267"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-34282",
+    "published": "2025-10-17T19:15:37.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ThingsBoard versions < 4.2.1 contain a server-side request forgery (SSRF) vulnerability in the dashboard's Image Upload Gallery feature. An attacker can upload a malicious SVG file that references a remote URL. If the server processes the SVG file in a way that parses external references, it may initiate unintended outbound requests. This can be used to access internal services or resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-34282 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34282"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-34468",
+    "published": "2025-12-31T19:15:43.923",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "libcoap versions up to and including 4.3.5, prior to commit 30db3ea, contain a stack-based buffer overflow in address resolution when attacker-controlled hostname data is copied into a fixed 256-byte stack buffer without proper bounds checking. A remote attacker can trigger a crash and potentially achieve remote code execution depending on compiler options and runtime memory protections. Exploitation requires the proxy logic to be enabled (i.e., the proxy request handling code path in an application using libcoap).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-34468 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34468"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-8634",
+    "published": "2026-05-14T20:17:21.717",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crabbox prior to v0.12.0 contains an environment variable exposure vulnerability that allows attackers with access to a malicious or compromised repository to forward local secrets such as API tokens, cloud credentials, and broker tokens into the remote command environment. Attackers can exploit overly permissive environment variable allowlisting in repo-local Crabbox configuration to serialize sensitive environment variables into remote command execution, exposing credentials to the remote environment.",
+    "tags": [],
+    "title": "CVE-2026-8634 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8634"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-58449",
+    "published": "2026-06-30T22:16:58.397",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "txtai through 9.10.0, fixed in commit 11b32da, exposes an API /reindex endpoint whose function body parameter is resolved through txtai.util.Resolver, which performs __import__ and getattr on the caller-supplied dotted path with no allowlist. When the API is exposed with no TOKEN configured (authentication is opt-in, so all endpoints are unauthenticated) and the index is configured writable, a remote attacker can set function to an arbitrary callable such as subprocess.getoutput, achieving remote code execution as the server process during reindexing. Exploitation requires those deployment conditions (API exposed, no TOKEN, writable index); it is not the default configuration. The fix gates the endpoint behind a new reindex configuration flag.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58449 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58449"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2024-23681",
+    "published": "2024-01-19T21:15:10.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Artemis Java Test Sandbox versions before 1.11.2 are vulnerable to a sandbox escape when an attacker loads untrusted libraries using System.load or System.loadLibrary. An attacker can abuse this issue to execute arbitrary Java when a victim executes the supposedly sandboxed code.",
+    "tags": [],
+    "title": "CVE-2024-23681 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23681"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2024-23682",
+    "published": "2024-01-19T21:15:10.273",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Artemis Java Test Sandbox versions before 1.8.0 are vulnerable to a sandbox escape when an attacker includes class files in a package that Ares trusts. An attacker can abuse this issue to execute arbitrary Java when a victim executes the supposedly sandboxed code.",
+    "tags": [],
+    "title": "CVE-2024-23682 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23682"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2024-23683",
+    "published": "2024-01-19T21:15:10.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Artemis Java Test Sandbox versions less than 1.7.6 are vulnerable to a sandbox escape when an attacker crafts a special subclass of InvocationTargetException. An attacker can abuse this issue to execute arbitrary Java when a victim executes the supposedly sandboxed code.",
+    "tags": [],
+    "title": "CVE-2024-23683 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23683"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2024-23689",
+    "published": "2024-01-19T21:15:10.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Exposure of sensitive information in exceptions in ClichHouse's clickhouse-r2dbc, com.clickhouse:clickhouse-jdbc, and com.clickhouse:clickhouse-client versions less than 0.4.6 allows unauthorized users to gain access to client certificate passwords via client exception logs. This occurs when 'sslkey' is specified and an exception, such as a ClickHouseException or SQLException, is thrown during database operations; the certificate password is then included in the logged exception message.",
+    "tags": [],
+    "title": "CVE-2024-23689 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23689"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-2609",
+    "published": "2025-03-21T23:15:21.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper neutralization of input during web page generation vulnerability in MagnusSolution MagnusBilling login logging allows unauthenticated users to store HTML content in the viewable log component accessible at /mbilling/index.php/logUsers/read\" cross-site scripting This vulnerability is associated with program files protected/components/MagnusLog.Php.\n\nThis issue affects MagnusBilling: through 7.3.0.",
+    "tags": [],
+    "title": "CVE-2025-2609 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2609"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-34088",
+    "published": "2025-07-03T20:15:23.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An authenticated remote code execution vulnerability exists in Pandora FMS version 7.0NG and earlier. The net_tools.php functionality allows authenticated users to execute arbitrary OS commands via the select_ips parameter when performing network tools operations, such as pinging. This occurs because user input is not properly sanitized before being passed to system commands, enabling command injection.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-34088 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34088"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-34126",
+    "published": "2025-07-16T22:15:24.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A path traversal vulnerability exists in RIPS Scanner version 0.54. The vulnerability allows remote attackers to read arbitrary files on the system with the privileges of the web server by sending crafted HTTP GET requests to the 'windows/code.php' script with a manipulated 'file' parameter. This can lead to disclosure of sensitive information.",
+    "tags": [],
+    "title": "CVE-2025-34126 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34126"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-34159",
+    "published": "2025-08-27T17:15:38.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify versions prior to v4.0.0-beta.420.6 are vulnerable to a remote code execution vulnerability in the application deployment workflow. The platform allows authenticated users, with low-level member privileges, to inject arbitrary Docker Compose directives during project creation. By crafting a malicious service definition that mounts the host root filesystem, an attacker can gain full root access to the underlying server.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-34159 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34159"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-34161",
+    "published": "2025-08-27T17:15:38.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coolify versions prior to v4.0.0-beta.420.7 are vulnerable to a remote code execution vulnerability in the project deployment workflow. The platform allows authenticated users, with low-level member privileges, to inject arbitrary shell commands via the Git Repository field during project creation. By submitting a crafted repository string containing command injection syntax, an attacker can execute arbitrary commands on the underlying host system, resulting in full server compromise.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-34161 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34161"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2024-58340",
+    "published": "2026-01-12T23:15:51.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LangChain versions up to and including 0.3.1 contain a regular expression denial-of-service (ReDoS) vulnerability in the MRKLOutputParser.parse() method (libs/langchain/langchain/agents/mrkl/output_parser.py). The parser applies a backtracking-prone regular expression when extracting tool actions from model output. An attacker who can supply or influence the parsed text (for example via prompt injection in downstream applications that pass LLM output directly into MRKLOutputParser.parse()) can trigger excessive CPU consumption by providing a crafted payload, causing significant parsing delays and a denial-of-service condition.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2024-58340 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58340"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8621",
+    "published": "2026-05-14T19:16:39.517",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crabbox prior to v0.12.0 contains an authentication bypass vulnerability that allows non-admin shared-token callers to impersonate other owners or organizations by spoofing identity headers. Attackers can inject malicious X-Crabbox-Owner and X-Crabbox-Org headers in requests authenticated with a shared token to bypass authorization checks and access owner/org-scoped lease operations belonging to victim accounts.",
+    "tags": [],
+    "title": "CVE-2026-8621 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8621"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-8629",
+    "published": "2026-05-14T20:17:21.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crabbox prior to v0.12.0 contains a privilege escalation vulnerability that allows users with shared visibility-only access to obtain Code, WebVNC, and Egress agent tickets by sending POST requests to ticket endpoints. Attackers can exploit insufficient access control checks on the /v1/leases/:id/code/ticket, /v1/leases/:id/webvnc/ticket, and /v1/leases/:id/egress/ticket endpoints to obtain bridge-agent tickets and impersonate trusted lease-side bridges despite having only visibility permissions.",
+    "tags": [],
+    "title": "CVE-2026-8629 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8629"
   }
 ]
