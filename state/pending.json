@@ -3748,5 +3748,41 @@
     ],
     "title": "The serpent’s tongue: Luring the Python out of its den",
     "url": "https://blog.talosintelligence.com/the-serpents-tongue-luring-the-python-out-of-its-den/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-36265",
+    "published": "2024-06-12T15:15:52.247",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "** UNSUPPORTED WHEN ASSIGNED ** Incorrect Authorization vulnerability in Apache Submarine Server Core.\n\nThis issue affects Apache Submarine Server Core: from 0.8.0.\n\nAn attacker can bypass authentication by sending specially crafted REST requests.\n\nAs this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2024-36265 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-36265"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-62422",
+    "published": "2026-07-14T11:16:48.367",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In JetBrains YouTrack before 2026.1.13757,\n2025.3.148033,\n2025.2.148048,\n2025.1.148120,\n2024.3.148430,\n2024.2.148429 authentication bypass via direct database access leading to administrative access was possible",
+    "tags": [],
+    "title": "CVE-2026-62422 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62422"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195321",
+    "published": "2026-07-14T10:21:28+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Huntress found an AI-generated PowerShell script used for AD reconnaissance, showing attackers are using AI to create custom, evasive tools. During an incident response investigation on June 3, 2026, Huntress analyst Jevon Ang recovered a PowerShell script from a compromised Windows Server that the attacker had used to map out the victim’s Active Directory environment. […]",
+    "tags": [],
+    "title": "Attacker Used AI to Build Custom PowerShell Recon Malware",
+    "url": "https://securityaffairs.com/195321/hacking/attacker-used-ai-to-build-custom-powershell-recon-malware.html"
   }
 ]
