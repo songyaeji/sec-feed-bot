@@ -2735,5 +2735,103 @@
     "tags": [],
     "title": "개인정보 전송요구권 '고용·교육' 분야 확대…실증 사업 착수 - 네이트",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ucHJXZjFxbkk3ZGdKRVNzS1R1eDFJLWFGZEVXREYzM1M1NFpiaDllZ1NRcVVPNHp5U2EwbDlxUDllYU5RT015V2NfV2hIRng0SUFv?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-57156",
+    "published": "2026-07-10T20:16:48.257",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.28.0 on 32-bit builds, FreeRDP clients contain an integer overflow in update_read_delta_points in libfreerdp/core/orders.c when multiplying an attacker-controlled point count by sizeof(DELTA_POINT), allowing a malicious RDP peer to allocate an undersized heap buffer and then write beyond it during initialization. This issue is fixed in version 3.28.0.",
+    "tags": [],
+    "title": "CVE-2026-57156 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57156"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-27690",
+    "published": "2026-07-14T01:16:17.193",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Due to an HTTP Request Smuggling vulnerability in SAP Approuter, an unauthenticated attacker could send a specially crafted HTTP request that leads to request-response desynchronization. This could result in the exposure of user responses and cause the system to become unavailable. This leads to a high impact on confidentiality and availability.",
+    "tags": [],
+    "title": "CVE-2026-27690 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27690"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-44747",
+    "published": "2026-07-14T01:16:17.437",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SAP NetWeaver Application Server ABAP allows an authenticated attacker to leverage logical errors in memory management to cause a memory corruption that could lead to unauthorized data access, modification, or system unavailability. This has high impact on confidentiality, integrity, and availability of the application.",
+    "tags": [],
+    "title": "CVE-2026-44747 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44747"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44761",
+    "published": "2026-07-14T01:16:18.023",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SAP Commerce Cloud could retain a sample OAuth2 client with publicly documented sample credentials originating from sample configuration provided in SAP Help Portal documentation. If left unchanged, an unauthenticated attacker could use these well-known credentials to obtain a valid access token and invoke certain APIs to read and modify data. Successful exploitation results in high impact on confidentiality and integrity, with no impact on availability.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44761 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44761"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-0487",
+    "published": "2026-07-14T01:16:16.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SAProuter on Microsoft Windows allows an unauthenticated attacker to load library (DLL) files from an untrusted location, allowing them to execute malicious code on the system. This could enable the attacker to hijack the DLL loading process and achieve arbitrary code execution. This has high impact on confidentiality, integrity and availability of the system.",
+    "tags": [],
+    "title": "CVE-2026-0487 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0487"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-44745",
+    "published": "2026-07-14T01:16:17.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SAP Approuter does not properly validate incoming request headers during the OAuth2 login flow under certain configurations. This allows an unauthenticated remote attacker to craft a malicious link which, when clicked by a victim, could lead to unauthorized access. Successful exploitation results in a high impact to the confidentiality and integrity with no impact on the availability of the application.",
+    "tags": [],
+    "title": "CVE-2026-44745 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44745"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-44752",
+    "published": "2026-07-14T01:16:17.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SAP NetWeaver Application Server Java allows an unauthenticated attacker to inject malicious JavaScript through crafted URLs. When a victim accesses such a URL, the script executes in the user's browser, allowing the attacker to access sensitive session information and modify non-sensitive data displayed in the client�s browser. This results in a high impact on confidentiality, low impact on integrity with no impact on availability of the application.",
+    "tags": [],
+    "title": "CVE-2026-44752 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44752"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTFB6b25vNlowRjU4dkgzSXNCekFkMGZQN09TSTBVQUszZGk1SWVoc2M3d0ZsX3ZGWkQybndDY2FEZGdsQlVWeEFEeGlsT2JHUQ",
+    "published": "2026-07-14T01:15:48+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위·KISA, '고용·교육' 마이데이터 중계 실증 사업 착수 전자신문",
+    "tags": [],
+    "title": "개인정보위·KISA, '고용·교육' 마이데이터 중계 실증 사업 착수 - 전자신문",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB6b25vNlowRjU4dkgzSXNCekFkMGZQN09TSTBVQUszZGk1SWVoc2M3d0ZsX3ZGWkQybndDY2FEZGdsQlVWeEFEeGlsT2JHUQ?oc=5"
   }
 ]
