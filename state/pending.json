@@ -16573,5 +16573,17 @@
     ],
     "title": "Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack",
     "url": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html"
+  },
+  {
+    "category": "high",
+    "cvss": 3.3,
+    "id": "CVE-2026-58052",
+    "published": "2026-06-28T02:16:32.283",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "7-Zip for Windows through 26.01 fails to preserve the Mark-of-the-Web when extracting a crafted RAR5 archive, because its guard that suppresses an archive-supplied Zone.Identifier stream matches the exact name 'Zone.Identifier' while a RAR5 STM record named ':Zone.Identifier:$DATA' is not matched and NTFS canonicalizes it to the same stream, overwriting the propagated Internet-zone marker with ZoneId=0. A second STM record named '::$DATA' overwrites the extracted file's default data stream, letting an attacker defeat SmartScreen/MotW warnings and spoof file content.",
+    "tags": [],
+    "title": "CVE-2026-58052 (CVSS 3.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58052"
   }
 ]
