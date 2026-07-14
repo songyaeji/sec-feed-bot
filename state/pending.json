@@ -8460,5 +8460,19 @@
     "tags": [],
     "title": "CVE-2026-0263 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0263"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-23052",
+    "published": "2024-02-29T01:44:07.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in WuKongOpenSource WukongCRM v.72crm_9.0.1_20191202 allows a remote attacker to execute arbitrary code via the parseObject() function in the fastjson component.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-23052 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23052"
   }
 ]
