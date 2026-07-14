@@ -15686,5 +15686,19 @@
     "tags": [],
     "title": "CVE-2026-56164: Microsoft SharePoint Server Missing Authentication for Critical Function Vulnerability (Microsoft SharePoint Server)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56164"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25148",
+    "published": "2026-07-14T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "CISA is aware of active exploitation of vulnerabilities CVE-2026-32201 , CVE-2026-45659 , and CVE-2026-56164 , enabling cyber threat actors to gain unauthorized access to on-premises SharePoint Server instances. These vulnerabilities affect all supported on-premises SharePoint Server versions (Subscription Edition, 2019, and 2016) and involve establishing remote code execution (RCE) and post-exploitation activities, such as stealing Internet Information Services (IIS) machine keys and performing deserialization techniques, to gain persistence and deploy malware. Organizations should monitor affected SharePoint Servers closely for any signs of exploitation or unusual activity. Additionally, the following newly disclosed CVEs are not yet known to have been exploited, but Microsoft has identified them as posing a potential risk if left unpatched: CVE-2026-55040 CVE-2026-58644 CISA urges organizations to detect and remediate a potential compromise by implementing the following recommendations: Apply the latest patches and security updates from Microsoft, verify that installation completes successfully, and shorten patching cycles when possible. Verify that Antimalware Scan Interface (AMSI) integration is enabled for each SharePoint web application. Follow Microsoft’s Configure AMSI integration with SharePoint Server guidance to ensure proper configuration and select the “Full Mode” option for the Request Body Scan Mode, where feasible. When compromise is expected, use the followi",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CISA Urges SharePoint Hardening After New Exploitations",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations"
   }
 ]
