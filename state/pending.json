@@ -3394,5 +3394,67 @@
     "tags": [],
     "title": "이스트소프트, 과기정통부 ‘모두의 AI’ 사업 합류... 대국민 안전 인프라 구축",
     "url": "http://www.boannews.com/media/view.asp?idx=144682&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-6851",
+    "published": "2026-07-14T08:16:24.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An Improper link resolution before file access ('link following') vulnerability in the File Shredder module as used in Bitdefender Total Security and Internet Security on Windows allows a less-privileged local user to elevate rights by leveraging a race conditions via Symbolic Links.\n\nThis issue affects Total Security: before 27.0.58.315; Internet Security: before 27.0.58.315.",
+    "tags": [],
+    "title": "CVE-2026-6851 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6851"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207601",
+    "published": "2026-07-14T17:18:08+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "기업들이 사용하는 세일즈포스 환경에서 취약점을 공격하지 않고도 대량의 정보를 빼내는 공격이 지난 1년간 이어진 것으로 확인됐다.공격자는 비밀번호를 훔치거나 악성코드를 설치하지 않았다. 기업이 이미 허용한 애플리케이션과 외부 서비스 연결을 이용했다. 정상 사용자가 승인한 앱이나 협력업체의 연동 계정을 통해 접근했기 때문에 일반적인 로그인 기록만으로는 공격을 찾기 어려웠다.마이크로소프트는 7월 13일 공개한 분석에서 2025년 중반부터 2026년 중반까지 이어진 공격을 세 가지 방식으로 구분했다. 공격 수법은 데이터 탈취 조직 샤이니헌",
+    "tags": [],
+    "title": "해킹조직 샤이니헌터스, 세일즈포스 ‘신뢰 연결’ 악용해 기업 정보 탈취",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207601"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html",
+    "published": "2026-07-14T08:02:33+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The U.S. Treasury Department's Office of Foreign Assets Control (OFAC) has designated two individuals and a VPN service provider for enabling ransomware actors' and other cybercriminals' malicious activities, including ransomware attacks against Americans. The VPN, named First VPN Service (1VPNS), has been accused of offering its tools to ransomware groups, along with its 45-year-old Ukrainian",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "U.S. Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support",
+    "url": "https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/148-npm-packages-disguised-as-student.html",
+    "published": "2026-07-14T07:08:36+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A campaign of 148 npm packages disguised as student web proxies turned visitors' browsers into a distributed denial-of-service botnet for roughly two weeks in May, according to new research from JFrog. The packages did not go after the developers who might install them. The operators used the registry as free hosting for a booby-trapped proxy site and let the students who came to dodge",
+    "tags": [],
+    "title": "148 npm Packages Disguised as Student Proxies Turned Browsers Into a DDoS Botnet",
+    "url": "https://thehackernews.com/2026/07/148-npm-packages-disguised-as-student.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195278",
+    "published": "2026-07-14T07:42:51+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "New macOS infostealer CrashStealer uses a signed app to bypass Gatekeeper, steals credentials and wallets, then AES-encrypts stolen data. Jamf Threat Labs first spotted CrashStealer in early May 2026 as a suspicious macOS sample uploaded to VirusTotal. By early July, in-the-wild detections confirmed the malware had moved from development into active deployment. The malware is […]",
+    "tags": [],
+    "title": "CrashStealer: New macOS Infostealer Uses Signed Apps to Evade Gatekeeper",
+    "url": "https://securityaffairs.com/195278/malware/crashstealer-new-macos-infostealer-uses-signed-apps-to-evade-gatekeeper.html"
   }
 ]
