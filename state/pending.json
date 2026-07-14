@@ -3509,5 +3509,69 @@
     "tags": [],
     "title": "[Global Security TOP 100] 이화수 에프에스네트웍스 대표이사 “보안산업도 기술 중심으로 무게중심을 옮겨야”",
     "url": "http://www.boannews.com/media/view.asp?idx=144366&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-57898",
+    "published": "2026-07-14T09:16:41.173",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Eclipse BaSyx Java Server SDK versions 2.0.0-milestone-05 to 2.0.0-milestone-12, deployments using the MongoDB backend are vulnerable to an unauthenticated arbitrary file write through the AAS thumbnail API.\n\n\n\n\nThe AAS thumbnail upload path accepted a client-controlled fileName request parameter and passed it through repository file handling as both a repository key and, during thumbnail retrieval, a local filesystem path. With the MongoDB file repository, the supplied filename was treated as an opaque GridFS key and was not normalized or restricted as a filesystem path. A remote attacker could upload thumbnail content using an absolute or traversal-style filename, then trigger thumbnail retrieval so that the uploaded bytes were written to the attacker-chosen path on the server filesystem.\n\n\n\n\nThis could allow writing files anywhere the Java process has permission to write and may lead to remote code execution. The default InMemory backend is not affected by this specific path because it normalizes and restricts file paths to its temporary directory.\n\n\n\n\nThe issue is fixed in Eclipse BaSyx Java Server SDK 2.0.0-milestone-13.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57898 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57898"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2026-15416",
+    "published": "2026-07-14T09:16:40.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was identified in Argo CD, the GitOps engine used by Red Hat OpenShift GitOps, that could allow an unauthenticated attacker with network access to the Argo CD repo-server to achieve remote code execution. Under certain conditions, the attacker may then manipulate cached data to deploy malicious Kubernetes resources to managed clusters, potentially resulting in complete cluster compromise.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15416 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15416"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144367&kind=&sub_kind=",
+    "published": "2026-07-14T09:17:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "하반기 영상보안 키워드는 ‘엣지 AI’와 ‘하이브리드 아키텍처’영상과 열화상 결합한 예방 중심 통합 안전 플랫폼 제시AI·소프트웨어 경쟁력 확보로 글로벌 K-보안 도약 강조[보안뉴스 강초희 기자] AI와 열화상 기술의 발전으로 영상보안 시장이 감시 중심에서 위험을 사전에 감지하고 대응하는 예방 중심 체계로 빠르게 전환되고 있다. 이러한 변화 속에서 엔토스정",
+    "tags": [],
+    "title": "[Global Security TOP 100] 조헌 엔토스정보통신 부사장 “영상보안은 기록에서 예방 플랫폼으로 진화해야 한다”",
+    "url": "http://www.boannews.com/media/view.asp?idx=144367&kind=&sub_kind="
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144685&kind=&sub_kind=",
+    "published": "2026-07-14T09:13:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "비공개 저장소 노린 ‘개인 액세스 토큰’ 탈취 정황 발견로그 점검·접속 키 관리·스캐닝 기능 활성화 권고[보안뉴스 조재호 기자] 경찰청 국가수사본부 수사국 사이버테러대응과는 국내외 기업과 개발자가 사용하는 소프트웨어 개발 플랫폼 깃허브(GitHub)의 ‘개인 액세스 토큰’(PAT) 다수가 유출된 정황을 파악하고 14일 긴급 보안 권고문을 발표했다.경찰청 수",
+    "tags": [],
+    "title": "깃허브 PAT 대량 유출... 경찰청, 내부망 연쇄 침투 경고",
+    "url": "http://www.boannews.com/media/view.asp?idx=144685&kind=&sub_kind="
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195305",
+    "published": "2026-07-14T09:05:51+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Japan’s largest taxi operator Nihon Kotsu shut down systems after a malware attack, disrupting dispatch and bookings. Nihon Kotsu, Japan’s largest taxi company, disclosed on July 13, 2026 that its internal systems suffered an unauthorized external access involving malware infection in the early morning hours of Saturday, July 11. The company immediately shut down systems […]",
+    "tags": [],
+    "title": "Malware Hits Japan’s Largest Taxi Company Nihon Kotsu, Services Temporarily Suspended",
+    "url": "https://securityaffairs.com/195305/cyber-crime/malware-hits-japans-largest-taxi-company-nihon-kotsu-services-temporarily-suspended.html"
   }
 ]
