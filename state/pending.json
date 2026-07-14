@@ -10160,5 +10160,399 @@
     ],
     "title": "Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown",
     "url": "https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-22189",
+    "published": "2026-01-07T21:16:03.067",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The egg-mkfont utility in Panda3D versions up to and including 1.10.16 contains a stack-based buffer overflow vulnerability due to use of an unbounded sprintf() call with attacker-controlled input. When constructing glyph filenames, egg-mkfont formats a user-supplied glyph pattern (-gp) into a fixed-size stack buffer without length validation. Supplying an excessively long glyph pattern string can overflow the stack buffer, resulting in memory corruption and a deterministic crash. Depending on build configuration and execution environment, the overflow may also be exploitable for arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-22189 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22189"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-22213",
+    "published": "2026-01-12T23:15:52.300",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "RIOT OS versions up to and including 2026.01-devel-317 contain a stack-based buffer overflow vulnerability in the tapslip6 utility. The vulnerability is caused by unsafe string concatenation in the devopen() function, which constructs a device path using unbounded user-controlled input. The utility uses strcpy() and strcat() to concatenate the fixed prefix '/dev/' with a user-supplied device name provided via the -s command-line option without bounds checking. This allows an attacker to supply an excessively long device name and overflow a fixed-size stack buffer, leading to process crashes and memory corruption.",
+    "tags": [],
+    "title": "CVE-2026-22213 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22213"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-22214",
+    "published": "2026-01-12T23:15:52.453",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "RIOT OS versions up to and including 2026.01-devel-317 contain a stack-based buffer overflow vulnerability in the ethos utility due to missing bounds checking when processing incoming serial frame data. The vulnerability occurs in the _handle_char() function, where incoming frame bytes are appended to a fixed-size stack buffer without verifying that the current write index remains within bounds. An attacker capable of sending crafted serial or TCP-framed input can cause the current write index to exceed the buffer size, resulting in a write past the end of the stack buffer. This condition leads to memory corruption and application crash.",
+    "tags": [],
+    "title": "CVE-2026-22214 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22214"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-25560",
+    "published": "2026-02-07T22:16:01.347",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "WeKan versions prior to 8.19 contain an LDAP filter injection vulnerability in LDAP authentication. User-supplied username input is incorporated into LDAP search filters and DN-related values without adequate escaping, allowing an attacker to manipulate LDAP queries during authentication.",
+    "tags": [],
+    "title": "CVE-2026-25560 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25560"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-25858",
+    "published": "2026-02-07T22:16:02.753",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "macrozheng mall version 1.0.3 and prior contains an authentication vulnerability in the mall-portal password reset workflow that allows an unauthenticated attacker to reset arbitrary user account passwords using only a victim’s telephone number. The password reset flow exposes the one-time password (OTP) directly in the API response and validates password reset requests solely by comparing the provided OTP to a value stored by telephone number, without verifying user identity or ownership of the telephone number. This enables remote account takeover of any user with a known or guessable telephone number.",
+    "tags": [],
+    "title": "CVE-2026-25858 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25858"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-26216",
+    "published": "2026-02-12T16:16:17.447",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crawl4AI versions prior to 0.8.0 contain a remote code execution vulnerability in the Docker API deployment. The /crawl endpoint accepts a hooks parameter containing Python code that is executed using exec(). The __import__ builtin was included in the allowed builtins, allowing unauthenticated remote attackers to import arbitrary modules and execute system commands. Successful exploitation allows full server compromise, including arbitrary command execution, file read and write access, sensitive data exfiltration, and lateral movement within internal networks.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-26216 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26216"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-26218",
+    "published": "2026-02-12T19:15:52.120",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "newbee-mall includes pre-seeded administrator accounts in its database initialization script. These accounts are provisioned with a predictable default password. Deployments that initialize or reset the database using the provided schema and fail to change the default administrative credentials may allow unauthenticated attackers to log in as an administrator and gain full administrative control of the application.",
+    "tags": [],
+    "title": "CVE-2026-26218 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-26219",
+    "published": "2026-02-12T19:15:52.300",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "newbee-mall stores and verifies user passwords using an unsalted MD5 hashing algorithm. The implementation does not incorporate per-user salts or computational cost controls, enabling attackers who obtain password hashes through database exposure, backup leakage, or other compromise vectors to rapidly recover plaintext credentials via offline attacks.",
+    "tags": [],
+    "title": "CVE-2026-26219 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26219"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-22208",
+    "published": "2026-02-17T15:16:22.320",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenS100 (the reference implementation S-100 viewer) prior to commit 753cf29 contains a remote code execution vulnerability via an unrestricted Lua interpreter. The Portrayal Engine initializes Lua using luaL_openlibs() without sandboxing or capability restrictions, exposing standard libraries such as 'os' and 'io' to untrusted portrayal catalogues. An attacker can provide a malicious S-100 portrayal catalogue containing Lua scripts that execute arbitrary commands with the privileges of the OpenS100 process when a user imports the catalogue and loads a chart.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-22208 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22208"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-26338",
+    "published": "2026-02-19T18:24:59.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hyland Alfresco Transformation Service allows unauthenticated attackers to achieve server-side request forgery (SSRF) through the document processing functionality.",
+    "tags": [],
+    "title": "CVE-2026-26338 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26338"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-25873",
+    "published": "2026-03-18T21:16:25.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OmniGen2-RL contains an unauthenticated remote code execution vulnerability in the reward server component that allows remote attackers to execute arbitrary commands by sending malicious HTTP POST requests. Attackers can exploit insecure pickle deserialization of request bodies to achieve code execution on the host system running the exposed service.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25873 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25873"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-26213",
+    "published": "2026-03-26T19:16:38.787",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "thingino-firmware versions up to the firmware-2026-03-16 release contains an unauthenticated os command injection vulnerability in the WiFi captive portal CGI script that allows remote attackers to execute arbitrary commands as root by injecting malicious code through unsanitized HTTP parameter names. Attackers can exploit the eval function in parse_query() and parse_post() functions to achieve remote code execution and perform privileged configuration changes including root password reset and SSH authorized_keys modification, resulting in full persistent device compromise.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-26213 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26213"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-23696",
+    "published": "2026-04-07T17:16:27.247",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Windmill CE and EE versions 1.276.0 through 1.603.2 contain an SQL injection vulnerability in the folder ownership management functionality that allows authenticated attackers to inject SQL through the owner parameter. An attacker can use the injection to read sensitive data such as the JWT signing secret and administrative user identifiers, forge an administrative token, and then execute arbitrary code via the workflow execution endpoints.",
+    "tags": [],
+    "title": "CVE-2026-23696 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23696"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-25874",
+    "published": "2026-04-23T20:16:13.903",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "LeRobot through 0.5.1 contains an unsafe deserialization vulnerability in the async inference pipeline where pickle.loads() is used to deserialize data received over unauthenticated gRPC channels without TLS in the policy server and robot client components. An unauthenticated network-reachable attacker can achieve arbitrary code execution on the server or client by sending a crafted pickle payload through the SendPolicyInstructions, SendObservations, or GetActions gRPC calls.",
+    "tags": [],
+    "title": "CVE-2026-25874 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25874"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-26210",
+    "published": "2026-04-23T22:16:26.400",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "KTransformers through 0.5.3 contains an unsafe deserialization vulnerability in the balance_serve backend mode where the scheduler RPC server binds a ZMQ ROUTER socket to all interfaces with no authentication and deserializes incoming messages using pickle.loads() without validation. Attackers can send a crafted pickle payload to the exposed ZMQ socket to execute arbitrary code on the server with the privileges of the ktransformers process.",
+    "tags": [],
+    "title": "CVE-2026-26210 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26210"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-25555",
+    "published": "2026-06-08T17:16:41.080",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenBullet2 through version 0.3.2 contains an authentication bypass vulnerability in the API key authentication middleware that allows unauthenticated attackers to gain admin access by supplying an empty X-Api-Key header value. Attackers can exploit the middleware's comparison of the supplied header against an empty AdminApiKey default string to access the admin console and all API endpoints without valid credentials.",
+    "tags": [],
+    "title": "CVE-2026-25555 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25555"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-58319",
+    "published": "2026-07-14T10:16:33.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Certain Apache Doris FE HTTP REST administrative APIs were accessible without proper authentication. An unauthenticated attacker with network access to the FE HTTP service could perform unauthorized administrative operations, potentially affecting cluster integrity and availability and leading to cluster instability or denial of service. \n\nThis issue affects Apache Doris versions prior to 3.1.0. Users are advised to upgrade to Apache Doris 3.1.0 or later.",
+    "tags": [],
+    "title": "CVE-2026-58319 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58319"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2024-21529",
+    "published": "2024-09-11T05:15:02.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Versions of the package dset before 3.1.4 are vulnerable to Prototype Pollution via the dset function due improper user input sanitization. This vulnerability allows the attacker to inject malicious object property using the built-in Object property __proto__, which is recursively assigned to all the objects in the program.",
+    "tags": [],
+    "title": "CVE-2024-21529 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21529"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25859",
+    "published": "2026-02-07T22:16:02.910",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wekan versions prior to 8.20 allow non-administrative users to access migration functionality due to insufficient permission checks, potentially resulting in unauthorized migration operations.",
+    "tags": [],
+    "title": "CVE-2026-25859 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25859"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-26217",
+    "published": "2026-02-12T16:16:17.620",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crawl4AI versions prior to 0.8.0 contain a local file inclusion vulnerability in the Docker API deployment. The /execute_js, /screenshot, /pdf, and /html endpoints accept file:// URLs, allowing unauthenticated remote attackers to read arbitrary files from the server filesystem. An attacker can access sensitive files such as /etc/passwd, /etc/shadow, application configuration files, and environment variables via /proc/self/environ, potentially exposing credentials, API keys, and internal application structure.",
+    "tags": [],
+    "title": "CVE-2026-26217 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26217"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-26220",
+    "published": "2026-02-17T03:16:01.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LightLLM version 1.1.0 and prior contain an unauthenticated remote code execution vulnerability in PD (prefill-decode) disaggregation mode. The PD master node exposes WebSocket endpoints that receive binary frames and pass the data directly to pickle.loads() without authentication or validation. A remote attacker who can reach the PD master can send a crafted payload to achieve arbitrary code execution.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-26220 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26220"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-26337",
+    "published": "2026-02-19T18:24:59.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hyland Alfresco Transformation Service allows unauthenticated attackers to achieve both arbitrary file read and server-side request forgery through the absolute path traversal.",
+    "tags": [],
+    "title": "CVE-2026-26337 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26337"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-23750",
+    "published": "2026-02-26T18:23:06.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Golioth Pouch version 0.1.0, prior to commit 1b2219a1, contains a heap-based buffer overflow in BLE GATT server certificate handling. server_cert_write() allocates a heap buffer of size CONFIG_POUCH_SERVER_CERT_MAX_LEN when receiving the first fragment, then appends subsequent fragments using memcpy() without verifying that sufficient capacity remains. An adjacent BLE client can send unauthenticated fragments whose combined size exceeds the allocated buffer, causing a heap overflow and crash; integrity impact is also possible due to memory corruption.",
+    "tags": [],
+    "title": "CVE-2026-23750 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23750"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-22661",
+    "published": "2026-04-03T21:17:08.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "prompts.chat prior to commit 0f8d4c3 contains a path traversal vulnerability in skill file handling that allows attackers to write arbitrary files to the client system by crafting malicious ZIP archives with unsanitized filenames containing path traversal sequences. Attackers can exploit missing server-side filename validation to inject path traversal sequences ../ into skill file archives, which when extracted by vulnerable tools writing files outside the intended directory and overwriting shell initialization files to achieve code execution.",
+    "tags": [],
+    "title": "CVE-2026-22661 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22661"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-22665",
+    "published": "2026-04-03T21:17:09.693",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "prompts.chat prior to commit 1464475, contains an identity confusion vulnerability due to inconsistent case-sensitive and case-insensitive handling of usernames across write and read paths, allowing attackers to create case-variant usernames that bypass uniqueness checks. Attackers can exploit non-deterministic username resolution to impersonate victim accounts, replace profile content on canonical URLs, and inject attacker-controlled metadata and content across the platform.",
+    "tags": [],
+    "title": "CVE-2026-22665 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22665"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-24425",
+    "published": "2026-05-20T14:16:38.917",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Twig versions 2.16.x and 3.9.0 through 3.25.x contain a sandbox bypass vulnerability when using a SourcePolicyInterface that allows attackers with template rendering capabilities to pass arbitrary PHP callables to sort, filter, map, and reduce filters. Attackers can exploit the runtime check that fails to use the current template source to bypass sandbox restrictions and execute arbitrary code when the sandbox is enabled through a source policy rather than globally.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-24425 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24425"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25559",
+    "published": "2026-06-08T17:16:41.237",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenBullet2 through version 0.3.2 contains a path traversal vulnerability in the wordlist endpoint that allows authenticated attackers to perform arbitrary file read, write, and delete operations by supplying unsanitized absolute paths to the upload handler and wordlist functions. Attackers can chain the file write and delete primitives to achieve remote code execution by manipulating critical system files such as /etc/passwd, with full system impact since the application runs as root by default.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25559 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25559"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25855",
+    "published": "2026-06-08T17:16:41.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenBullet2 through version 0.3.2 contains a remote code execution vulnerability that allows authenticated users to execute arbitrary commands by uploading script files (.bat.ps1.sh) through the FileProxySource proxy loading feature. Attackers can upload malicious script files as proxy sources, causing the server to execute the scripts and return output as proxy lines, resulting in arbitrary command execution on the host as the process user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25855 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25855"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25856",
+    "published": "2026-06-08T17:16:41.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenBullet2 through version 0.3.2 contains an authenticated remote code execution vulnerability that allows authenticated users to execute arbitrary C# code on the server host by creating or modifying job configurations. Attackers can leverage the plain C# execution mode, which lacks reference filtering or API restrictions, to access the file system, spawn processes, and invoke arbitrary .NET APIs as the process user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25856 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25856"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-59835",
+    "published": "2026-07-14T16:17:02.593",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A exposure of resource to wrong sphere vulnerability in Fortinet FortiSandbox 5.0.0 through 5.0.2, FortiSandbox 4.4.3 through 4.4.8 may allow an unauthenticated attacker to access the VNC server of VMs performing scanning via network requests.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59835 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59835"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-59841",
+    "published": "2026-07-14T16:17:03.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A improper restriction of communication channel to intended endpoints vulnerability in Fortinet FortiSIEMWindowsAgent 7.4.0 through 7.4.1 may allow attacker to escalation of privilege via <insert attack vector here>",
+    "tags": [],
+    "title": "CVE-2026-59841 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59841"
   }
 ]
