@@ -8448,5 +8448,17 @@
     "tags": [],
     "title": "RabbitMQ Flaws Could Leak OAuth Secrets and Expose Cross-Tenant Queue Metadata",
     "url": "https://thehackernews.com/2026/07/rabbitmq-flaws-could-leak-oauth-secrets.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-0263",
+    "published": "2026-05-13T18:16:14.003",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A buffer overflow vulnerability in the IKEv2 processing of Palo Alto Networks PAN-OS® software allows an unauthenticated network-based attacker to execute arbitrary code with elevated privileges on the firewall, or cause a denial of service (DoS) condition.\n\n\nPanorama, Cloud NGFW, and Prisma® Access are not impacted by these vulnerabilities.",
+    "tags": [],
+    "title": "CVE-2026-0263 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0263"
   }
 ]
