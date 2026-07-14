@@ -10036,5 +10036,79 @@
     ],
     "title": "LastPass, Bitwarden users targeted with fake security alerts",
     "url": "https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-0264",
+    "published": "2026-05-13T18:16:14.283",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A buffer overflow vulnerability in the DNS proxy and DNS Server features of Palo Alto Networks PAN-OS® Software allows an unauthenticated attacker with network access to cause a denial of service (DoS) condition (all PAN-OS platforms except Cloud NGFW and Prisma Access) or potentially execute arbitrary code by sending specially crafted network traffic (PA-Series hardware only).\n\n\n\n\nPanorama, Cloud NGFW, and Prisma® Access are not impacted by this vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-0264 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0264"
+  },
+  {
+    "author": "[한세희기자 (hahn@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144688&kind=&sub_kind=",
+    "published": "2026-07-14T15:50:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "OT 보안 뚫리면 신체적, 물리적 피해 현실화디지털 융합, AI 발달, 지정학적 갈등 속 핵심 인프라 공격 우려 고조제조 환경 속속들이 파악하는 가시성 확보에서 효율적 탐지, 대응까지 OT 보안 전문기업 집중 분석: 센스톤, 모싸, 휴네시온, 요꼬가와전기 [보안뉴스 한세희 기자] 2025년 영국 핵심 인프라 운영 기관에 대한 공격은 200여건에 이른다. 이",
+    "tags": [],
+    "title": "[2026 OT 보안 솔루션 리포트] 세계가 주목하는 한국 첨단 제조업, OT 보안이 경쟁력 지킨다",
+    "url": "http://www.boannews.com/media/view.asp?idx=144688&kind=&sub_kind="
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25153",
+    "published": "2026-07-14T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary ABB became aware of vulnerability in the products versions listed as affected in the advisory. An update is available that resolves the reported vulnerabilities. An attacker who successfully exploited any of these vulnerabilities could potentially compromise the system in different ways. The following versions of ABB T-MAC Plus are affected: T-MAC Plus 4.0-24 (CVE-2025-14771, CVE-2025-14772, CVE-2025-14773, CVE-2025-14774) CVSS Vendor Equipment Vulnerabilities v3 9.9 ABB ABB T-MAC Plus Files or Directories Accessible to External Parties, Authorization Bypass Through User-Controlled Key, Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Incorrect Authorization Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-14771 File Disclosure in ABB T-MAC Plus web application allows authenticated users to exfiltrate files containing sensitive information via crafted HTTP GET request. View CVE Details Affected Products ABB T-MAC Plus Vendor: ABB Product Version: ABB T-MAC Plus 4.0-24 Product Status: known_affected Remediations Vendor fix ABB has investigated these vulnerabilities to provide adequate protection to customers. The problem is corrected in the following product versions: T-MAC Plus version 4.0-25 ABB recommends that customers apply the update at earliest convenience. Mitigation The misconfigur",
+    "tags": [],
+    "title": "ABB T-MAC Plus",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25154",
+    "published": "2026-07-14T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to read or delete files, stop tasks, modify memory, and change I/O states, potentially impacting the confidentiality, integrity, and availability of the device. The following versions of Rockwell Automation 1715-AENTR EtherNet/IP Adapter are affected: 1715-AENTR EtherNet/IP Adapter",
+    "tags": [
+      "APT"
+    ],
+    "title": "Rockwell Automation 1715-AENTR EtherNet/IP Adapter",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25152",
+    "published": "2026-07-14T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary ABB is aware of public reports of a vulnerability CVE‑2026‑31431 (Copy Fail) in the product versions listed as affected in the advisory. An update is available that resolves a publicly reported vulnerability. CVE‑2026‑31431 (Copy Fail) is a Linux kernel vulnerability that may allow a locally authenticated user or compromised container workload to gain elevated (root) privileges on affected systems. Once root access is obtained, the attacker can effectively gain complete control of the system The following versions of ABB Ability Edgenius are affected: Ability Edgenius >=3.2.0.0| =3.2.0.0| =3.2.0.0| =3.2.0.0| =3.2.0.0| =3.2.0.0|",
+    "tags": [],
+    "title": "ABB Ability Edgenius",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25151",
+    "published": "2026-07-14T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary ABB became aware of vulnerability in the products versions listed as affected in the advisory, where an incorrect version of Online Builder (ONB) was included in the media. An update is available that resolves the vulnerability, see details in Recommended immediate actions. The following versions of ABB Advant Master Online Builder are affected: Control Builder A",
+    "tags": [],
+    "title": "ABB Advant Master Online Builder",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01"
   }
 ]
