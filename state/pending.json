@@ -16585,5 +16585,893 @@
     "tags": [],
     "title": "CVE-2026-58052 (CVSS 3.3)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58052"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-47117",
+    "published": "2026-06-02T16:16:43.980",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenMed before 1.5.2 contains a remote code execution vulnerability in the PII privacy-filter model loading path. The privacy-filter dispatcher used broad substring matching on the user-supplied model_name parameter, allowing a value such as attacker/foo-privacy-filter-bar to route through a path that loads Hugging Face models with trust_remote_code=True. An unauthenticated attacker can supply a malicious model repository containing custom Transformers code via auto_map in config.json or tokenizer_config.json, which is imported and executed with the privileges of the OpenMed service process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47117 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47117"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-49973",
+    "published": "2026-06-11T20:16:25.050",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hermes WebUI before version 0.51.358 contains an improper access control vulnerability that allows unauthenticated remote attackers to hijack initial setup by submitting the _set_password parameter to the settings API endpoint without any network origin restriction. Attackers on any reachable network can send a POST request to the settings endpoint during the first-run setup window to persist an arbitrary password hash, obtain a valid session cookie, and lock out the legitimate operator from their own instance.",
+    "tags": [],
+    "title": "CVE-2026-49973 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49973"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-53776",
+    "published": "2026-06-16T17:16:42.620",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Perry before 0.5.1166 contains a JWT validation vulnerability that allows remote attackers to bypass token expiration by exploiting the unconditional setting of validate_exp = false in the verify_decode helper within the stdlib JWT verification path. Attackers in possession of a previously issued bearer token can present expired tokens to any jwt.verify() call and retain authenticated access indefinitely, bypassing force-expired sessions such as user logout or administrative revocation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53776 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53776"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53805",
+    "published": "2026-06-17T18:18:05.320",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "NVIDIA Spatial Intelligence Lab's (SIL) GEN3C contains an unauthenticated remote code execution vulnerability in the inference API server where the /request-inference and /seed-model endpoints deserialize raw HTTP request bodies using Python's pickle.loads() without authentication or input validation. Attackers can supply a crafted payload containing a __reduce__ gadget to the inference API port to achieve remote code execution as the inference process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53805 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53805"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-54387",
+    "published": "2026-06-17T20:17:27.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tinyproxy through 1.11.3, fixed in commit ff45d3b, fails to reconcile conflicting Content-Length and Transfer-Encoding: chunked headers, forwarding both verbatim to the backend while using Content-Length to determine how many request body bytes to consume. Remote attackers can desynchronize the proxy and backend parser state, allowing injection of arbitrary HTTP requests to the backend to enable cache poisoning, access control bypass, and request hijacking.",
+    "tags": [],
+    "title": "CVE-2026-54387 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54387"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-54388",
+    "published": "2026-06-17T20:17:27.623",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tinyproxy through 1.11.3, fixed in commit 364cdb6, fails to reject requests containing multiple Content-Length headers with differing values, forwarding all duplicate headers to the backend while using the first value to determine how many request body bytes to consume. Remote attackers can desynchronize the proxy and backend parser state, allowing injection of arbitrary HTTP requests to the backend to enable cache poisoning, access control bypass, and request hijacking.",
+    "tags": [],
+    "title": "CVE-2026-54388 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54388"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-56111",
+    "published": "2026-06-24T16:16:32.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Marlin Firmware through 2.1.2.7, fixed in commit 1f255d1, when built with MESH_BED_LEVELING enabled, contains an out-of-bounds write vulnerability in the M421 G-code handler that allows attackers to corrupt firmware memory by supplying out-of-range X and Y grid indices. Attackers can send a single crafted G-code command via USB serial, network interface, or malicious gcode file to write an attacker-controlled 32-bit float value past the z_values array bounds, corrupting adjacent firmware variables and causing denial of service or firmware state corruption.",
+    "tags": [],
+    "title": "CVE-2026-56111 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56111"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-56121",
+    "published": "2026-06-24T16:16:33.193",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Feast before 0.63.0 contains an unsafe deserialization vulnerability that allows unauthenticated or unauthorized attackers to achieve remote code execution by sending a crafted gRPC request to the registry server. The user_defined_function.body field of an OnDemandFeatureView spec is decoded from base64 and passed to dill.loads() before any authorization check is performed, enabling attackers to embed a malicious serialized Python object with an arbitrary __reduce__ method to execute OS commands as the feast service account.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56121 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56121"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-56786",
+    "published": "2026-06-25T19:16:44.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "RTKLIB through 2.4.3 contains an out-of-bounds write vulnerability in decode_type1033 function that fails to clamp length counters to destination buffer size, allowing up to 191-byte overflow into fixed 64-byte descriptor fields. An attacker controlling an NTRIP or serial RTCM3 correction stream can craft a valid CRC-bearing type-1033 message to corrupt adjacent rtcm_t object members, potentially achieving arbitrary code execution or denial of service.",
+    "tags": [],
+    "title": "CVE-2026-56786 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56786"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-56782",
+    "published": "2026-06-29T18:16:38.817",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Gorse before 0.5.10 contains an authentication bypass vulnerability in the /api/dump and /api/restore endpoints that allows unauthenticated attackers to access protected functionality when admin_api_key is empty, which is the default configuration. Remote attackers can exfiltrate the entire database including user records, items, and feedback data containing personally identifiable information, or completely overwrite the dataset without authentication.",
+    "tags": [],
+    "title": "CVE-2026-56782 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56782"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-58116",
+    "published": "2026-06-30T13:19:18.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "LLaMA-Factory through 0.9.5 contains a remote code execution vulnerability that allows attackers with WebUI access to execute arbitrary Python code by supplying a malicious model path in the Chat or Training interfaces. The application passes user-supplied model path input unvalidated into AutoTokenizer.from_pretrained() and AutoModel.from_pretrained() with a hardcoded trust_remote_code=True parameter, causing the Hugging Face transformers library to fetch and execute arbitrary code from a remote or local model repository with the privileges of the server process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58116 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58116"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-58166",
+    "published": "2026-06-30T17:16:23.487",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenBMB ChatDev through 2.2.0, fixed in commit 4fd4da6, contains a path traversal vulnerability that allows unauthenticated remote attackers to write or delete arbitrary files by supplying a malicious multipart filename in the file upload endpoint. Attackers can send a crafted filename containing path traversal sequences or an absolute path to the POST uploads session endpoint, which constructs the destination path without sanitization in save_upload_file, causing file write and cleanup operations to target attacker-chosen paths on the server filesystem.",
+    "tags": [],
+    "title": "CVE-2026-58166 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58166"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-58172",
+    "published": "2026-06-30T17:16:24.313",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ocelot through 24.1.0, fixed in commit f156fd4, contains a security control bypass vulnerability that allows denied clients to circumvent IP-based access restrictions by sending WebSocket upgrade requests. The WebSocket upgrade pipeline branch configured via MapWhen in OcelotPipelineExtensions.cs omits SecurityMiddleware, causing requests from blocked IP addresses to be proxied to downstream services without enforcement of the configured allow/block list.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58172 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58172"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-58138",
+    "published": "2026-06-30T19:17:00.520",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Orkes Conductor 3.21.21 before 3.30.2 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary OS commands by submitting inline workflow definitions containing malicious JavaScript or Python expressions to the workflow API endpoint prior to authentication. Attackers can exploit unsandboxed GraalVM evaluators configured with HostAccess.ALL or allowAllAccess(true) through INLINE, LAMBDA, DO_WHILE, and SWITCH task types to invoke arbitrary system commands via Java reflection or direct subprocess calls.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58138 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58138"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-45363",
+    "published": "2026-07-14T22:16:54.463",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ruby-jwt is a Ruby implementation of the RFC 7519 OAuth JSON Web Token standard. Prior to 2.10.3 and 3.2.0, JWT.decode(token, '', true, algorithm: 'HS256') accepts an attacker-forged token because OpenSSL::HMAC.digest('SHA256', '', payload) returns a valid digest under an empty key and no empty-key precondition exists in the HMAC algorithm. The same path is reached when a keyfinder block or key_finder: argument returns an empty string, nil, or an array containing nil for an unknown key, affecting HS256, HS384, and HS512 verification through JWT.decode and JWT::EncodedToken#verify_signature!. This issue is fixed in versions 2.10.3 and 3.2.0.",
+    "tags": [],
+    "title": "CVE-2026-45363 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45363"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-48334",
+    "published": "2026-07-14T22:17:01.717",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Illustrator is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48334 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48334"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-47092",
+    "published": "2026-05-18T20:16:40.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Claude HUD through 0.0.12, patched in commit 234d9aa, contains a command injection vulnerability that allows local attackers to execute arbitrary commands by manipulating the COMSPEC environment variable. Attackers can set COMSPEC to an arbitrary binary path before claude-hud performs its version check, causing execFile() to execute the attacker-supplied executable with cmd.exe arguments, resulting in arbitrary code execution on Windows systems.",
+    "tags": [],
+    "title": "CVE-2026-47092 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47092"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47107",
+    "published": "2026-05-19T18:16:22.167",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Windmill prior to 1.703.2 contains an incorrect default permissions vulnerability in nsjail sandbox configuration files where /etc is bind-mounted without read-write restrictions, allowing authenticated users to write arbitrary entries to /etc/hosts, /etc/resolv.conf, and /etc/ssl/certs/ca-certificates.crt from within script execution sandboxes. Attackers can exploit persistent poisoned entries across all subsequent script executions on the same worker pod to redirect hostnames, intercept DNS queries, perform transparent HTTPS man-in-the-middle attacks, and intercept WM_TOKEN JWTs to gain workspace-admin access to other users' workspaces.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47107 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47107"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47114",
+    "published": "2026-05-21T20:16:14.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IINA before 1.4.3 contains a user-assisted command execution vulnerability that allows remote attackers to execute arbitrary commands by supplying malicious mpv_-prefixed query parameters through the iina://open custom URL scheme handler. Attackers can deliver a crafted URL via a browser that passes unvalidated mpv_options/input-commands parameters into the mpv runtime, causing arbitrary command execution as the current macOS user upon approval of the browser protocol prompt without requiring a valid media file.",
+    "tags": [],
+    "title": "CVE-2026-47114 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47114"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47101",
+    "published": "2026-05-21T21:16:32.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LiteLLM prior to 1.83.14 allows an authenticated internal_user to create API keys with access to routes that their role does not permit. When generating a key, the allowed_routes field is stored without verifying that the specified routes fall within the user's own permissions. A key created with access to admin-only routes can then be used to reach those routes successfully, bypassing the role-based access controls that would otherwise block the request, enabling full privilege escalation from internal_user to proxy_admin.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-47101 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47101"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47102",
+    "published": "2026-05-21T21:16:32.557",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LiteLLM prior to 1.83.10 allows a user to modify their own user_role via the /user/update endpoint. While the endpoint correctly restricts users to updating only their own account, it does not restrict which fields may be changed. A user who can reach this endpoint can set their role to proxy_admin, gaining full administrative access to LiteLLM including all users, teams, keys, models, and prompt history. Users with the org_admin role have legitimate access to this endpoint and can exploit this vulnerability without chaining any additional flaw.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-47102 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47102"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-49127",
+    "published": "2026-05-28T20:16:26.387",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Music Player Daemon (MPD) before version 0.24.11 contains a stack buffer overflow vulnerability in the pcm_unpack_24be function in src/pcm/Pack.cxx that allows unauthenticated attackers to corrupt stack memory by triggering an off-by-one write in the PCM decoder plugin. Attackers can issue two MPD commands referencing a malicious HTTP audio source to cause the unpack loop to write 1366 entries into a 1365-entry buffer, overwriting four bytes past the array boundary with three attacker-controlled bytes from an HTTP response body, resulting in daemon termination or potential code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-49127 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49127"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-48557",
+    "published": "2026-05-29T20:16:28.957",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spatie Laravel Media Library before version 11.23.0 contains a file upload restriction bypass in FileAdder::defaultSanitizer(). The sanitizer checks only the final filename suffix, allowing double-extension filenames such as shell.php.jpg to bypass the blocklist, with pathinfo() preserving inner .php stems in saved filenames. The blocklist also omits executable extensions including .php6, .shtml, and .htaccess. The double-extension bypass requires a legacy Apache AddHandler configuration to achieve PHP execution; the incomplete blocklist bypass does not.",
+    "tags": [],
+    "title": "CVE-2026-48557 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48557"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-49120",
+    "published": "2026-06-02T20:16:39.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Medplum before 5.1.14 contains a server-side request forgery vulnerability in the subscription worker that allows authenticated users to perform unauthorized internal network requests by creating FHIR Subscription resources with arbitrary endpoint URLs. Attackers can point subscription endpoints at internal addresses such as cloud instance metadata services, internal databases, or container orchestration endpoints to exfiltrate IAM credentials and patient health records via the POST body containing full FHIR resource payloads.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-49120 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49120"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-49143",
+    "published": "2026-06-02T21:16:28.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "BrowserStack Runner through 0.9.5 contains a remote code execution vulnerability in the /_log HTTP handler that allows unauthenticated network-adjacent attackers to execute arbitrary code by submitting crafted JSON request bodies to the handler, which passes user-supplied data to vm.runInNewContext() combined with eval(). Attackers can escape the Node.js vm sandbox by leveraging a host-context Function reference through util.format to access the host process via this.constructor.constructor, achieving full remote code execution on the underlying system without any authentication.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-49143 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49143"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-49948",
+    "published": "2026-06-09T16:16:43.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mem0 versions through 0.2.8, fixed in commit ae7f406, contain a missing authorization vulnerability in the self-hosted server component where the POST /configure endpoint modifies global LLM provider and embedder configuration but only verifies authentication via JWT or X-API-Key without validating the caller's role. Any authenticated user holding a distributed API key can redirect all LLM and embedder traffic to an attacker-controlled server, with the malicious configuration persisted to PostgreSQL and surviving server restarts to affect all users and API keys on the instance.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-49948 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49948"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-49959",
+    "published": "2026-06-09T17:17:49.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hermes WebUI before version 0.51.311 contains a remote code execution vulnerability that allows authenticated attackers to execute arbitrary commands by placing malicious executable Git configuration in a workspace repository's .git/config file. Attackers can exploit Git subprocess invocations in api/workspace_git.py through vectors such as core.fsmonitor during git status, protocol.ext.allow with ext:: remotes during git fetch, credential.helper, core.askPass, core.gitProxy, or inherited environment variables including GIT_SSH_COMMAND to achieve arbitrary command execution on the host running the application.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-49959 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49959"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-49498",
+    "published": "2026-06-10T14:16:34.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ghidra 11.0 before 12.1 contains a SQL injection vulnerability in the changePassword() method of PostgresFunctionDatabase that fails to escape double quotes in usernames interpolated into ALTER ROLE statements. Authenticated attackers can inject SQL commands via crafted username parameters in PasswordChange network messages to escalate to PostgreSQL superuser privileges and gain full database control.",
+    "tags": [],
+    "title": "CVE-2026-49498 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49498"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-52750",
+    "published": "2026-06-10T14:16:35.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ghidra before 12.1 contains a command injection vulnerability in URL annotation handling on Windows where cmd.exe metacharacters are not properly escaped. Attackers can execute arbitrary commands under the Ghidra user's privileges by embedding malicious URLs in program comments that victims click.",
+    "tags": [],
+    "title": "CVE-2026-52750 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52750"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-52751",
+    "published": "2026-06-10T14:16:35.187",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ghidra before 12.1 contains an unsafe deserialization vulnerability in client-side Shared-Project RMI connection code that allows unauthenticated remote code execution. Attackers can craft a malicious project file with a ghidra:// URL that, when opened via File → Open Project, deserializes untrusted objects using a Jython 2.7.4 gadget chain to execute arbitrary commands.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-52751 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52751"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-52754",
+    "published": "2026-06-10T14:16:35.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ghidra before 12.1 contains an authentication bypass vulnerability in PKIAuthenticationModule.authenticate() that allows any user with a valid CA-signed certificate to impersonate other users by presenting their public certificate with a null signature. Attackers can escalate privileges, modify repository access controls, exfiltrate shared reverse engineering databases, and permanently compromise server integrity.",
+    "tags": [],
+    "title": "CVE-2026-52754 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52754"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-52758",
+    "published": "2026-06-10T14:16:36.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ghidra before 12.1 contains a SQL injection vulnerability in BSim filter types that concatenate user-supplied values directly into SQL queries without escaping or parameterization. Remote attackers can inject arbitrary SQL via the BSim network query protocol to read, modify, or delete data in the PostgreSQL database.",
+    "tags": [],
+    "title": "CVE-2026-52758 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52758"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53777",
+    "published": "2026-06-11T16:16:24.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Perry before 0.5.1159 contains a path traversal vulnerability that allows a malicious build server to write arbitrary content to any location writable by the running process by supplying unsanitized path components in the artifact_name field of ArtifactReady WebSocket messages. Attackers controlling the server URL can deliver traversal payloads through the artifact_name or download_path fields, causing the client to overwrite sensitive files or expose arbitrary local files to an attacker-accessible location.",
+    "tags": [],
+    "title": "CVE-2026-53777 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53777"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-55200",
+    "published": "2026-06-17T20:17:28.667",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "libssh2 through 1.11.1, fixed in commit 7acf3df contains an out-of-bounds write vulnerability in ssh2_transport_read() that fails to enforce upper bounds on packet_length field. Remote attackers can send crafted SSH packets with excessively large packet_length values to corrupt heap memory and achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55200 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55200"
+  },
+  {
+    "category": "high",
+    "cvss": 6.8,
+    "id": "CVE-2026-55201",
+    "published": "2026-06-17T20:17:29.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Evil-WinRM through 3.9, fixed in commit 6ecd570, contains a path traversal vulnerability in the download_dir() function that allows a rogue or compromised remote Windows server to write files outside the intended download directory by returning filenames with traversal sequences from Get-ChildItem command output that are passed unsanitized to File.join(). Attackers controlling the remote server can exploit this to overwrite sensitive client-side files such as SSH authorized_keys or shell configuration files, achieving persistent access or privilege escalation on the client machine.",
+    "tags": [],
+    "title": "CVE-2026-55201 (CVSS 6.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55201"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-55202",
+    "published": "2026-06-17T20:17:29.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Tinyproxy through 1.11.3, fixed in commit 09312a1, fails to properly validate the Host header during stathost detection, allowing unauthenticated attackers to access the stats page by injecting a matching Host header or bypass detection via port manipulation. Remote attackers can trigger unauthorized access to internal proxy statistics or misroute requests as transparent proxy connections to circumvent access controls.",
+    "tags": [],
+    "title": "CVE-2026-55202 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55202"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-56104",
+    "published": "2026-06-22T16:16:40.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Chainlit before 2.10.1 contains a session hijacking vulnerability that allows unauthenticated attackers to restore and inherit authenticated user sessions by presenting a valid sessionId during WebSocket session restoration without ownership verification. Attackers can exploit the restore_existing_session path to assume a victim's permissions and roles, enabling unauthorized invocation of tools and access to data restricted to the authenticated victim.",
+    "tags": [],
+    "title": "CVE-2026-56104 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56104"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-53779",
+    "published": "2026-06-22T19:17:13.513",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WebP Server Go through 0.14.4 contains a path traversal vulnerability on Windows that allows unauthenticated attackers to read files outside the configured IMG_PATH directory by sending requests with percent-encoded backslashes (%5C) that bypass the path.Clean() sanitization in handler/router.go. Attackers can exploit the discrepancy between Go's forward-slash-only path normalization and Windows file system APIs that treat backslashes and forward slashes as equivalent to access arbitrary files on the host filesystem accessible to the server process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53779 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53779"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56784",
+    "published": "2026-06-23T13:16:46.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenRemote before 1.25.0 contains an insecure direct object reference (IDOR) vulnerability in the bulk alarm deletion endpoint that allows authenticated users to permanently delete alarms belonging to other tenants by supplying arbitrary alarm IDs. The removeAlarms() method in AlarmResourceImpl.java omits realm-scoping validation in its JPA query, enabling any user with alarm-write permissions to enumerate sequential auto-increment alarm IDs and delete cross-tenant alarm records without authorization.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56784 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56784"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56115",
+    "published": "2026-06-23T17:17:09.287",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Bootimus through 0.1.70 contains a broken access control vulnerability that allows authenticated low-privileged users to perform administrative actions by exploiting missing role enforcement in the JWTMiddleware function in internal/auth/auth.go, which validates JWT tokens and account status but fails to inspect the is_admin flag. Attackers can send requests to any endpoint under the /api/users path to create new administrator accounts or reset administrator passwords, thereby gaining full control of the server and the ability to modify boot menus and installation scripts served to PXE clients.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56115 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56115"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-45233",
+    "published": "2026-06-25T17:16:39.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HTMLy CMS through 3.1.1 contains a path traversal vulnerability that allows low-privileged authenticated attackers to relocate arbitrary files by supplying directory traversal sequences in the oldfile parameter at the admin autosave endpoint. Attackers can pass unsanitized traversal sequences directly to file_exists() and rename() functions in admin.php without canonicalization or directory boundary enforcement to cause unintended relocation of any file writable by the web server process to an attacker-specified draft location.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45233 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45233"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56766",
+    "published": "2026-06-25T19:16:43.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hydra through 9.7, fixed in commit 9cc84c2, contains a stack buffer overflow in NTLM authentication across SMTP, POP3, IMAP, NNTP, HTTP, HTTP-Proxy, and HTTP-Proxy-Urlenum modules when processing malicious NTLM Type-2 challenges. A malicious server can send a crafted NTLM Type-2 challenge with an excessively long domain string, causing base64-encoded response data to overflow a 500-byte stack buffer by 18 to 330 bytes, enabling remote code execution on systems without stack protection.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56766 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56766"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56767",
+    "published": "2026-06-25T19:16:43.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Maxun before 0.0.42 contains a cross-tenant insecure direct object reference vulnerability in storage and webhook API handlers that allows authenticated users to access other users' robots and OAuth tokens. Attackers can read plaintext Google and Airtable access tokens, modify, delete, or execute other users' robots by bypassing ownership checks in API endpoints.",
+    "tags": [],
+    "title": "CVE-2026-56767 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56767"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56768",
+    "published": "2026-06-25T19:16:43.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Seahub before 13.0.23 does not enforce SHARE_LINK_LOGIN_REQUIRED on GET /api/v2.1/share-link-zip-task/, allowing unauthenticated users to bypass authentication. Attackers with a folder share-link token can call the GET endpoint to obtain a fileserver zip token and download entire shared directory trees.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56768 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56768"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-56769",
+    "published": "2026-06-25T19:16:43.973",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Huly Platform through 0.7.423, fixed in commit 68cbf8a contains an authenticated server-side request forgery vulnerability in the /import endpoint of front pod that allows workspace users to make arbitrary server requests. Attackers can exploit this by supplying malicious URLs to fetch internal services, exfiltrate responses, and replay credentials against backend systems.",
+    "tags": [],
+    "title": "CVE-2026-56769 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56769"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-56771",
+    "published": "2026-06-25T19:16:44.253",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NewsBlur before version 14.5.0 contains a server-side request forgery vulnerability in the add_url endpoint that allows authenticated users to make arbitrary server requests to internal networks by failing to filter private IP addresses. Attackers can exploit this to access localhost services and cloud metadata endpoints, enabling internal network scanning and sensitive data exfiltration.",
+    "tags": [],
+    "title": "CVE-2026-56771 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56771"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56773",
+    "published": "2026-06-26T15:16:47.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Teable's v2 REST API controller lacks @Permissions metadata on ORPC endpoints, allowing any authenticated user to bypass authorization checks. Attackers can read table schemas, create tables, and modify or delete records across bases and tables via endpoints like GET /api/v2/tables/get and POST /api/v2/tables/updateRecords.",
+    "tags": [],
+    "title": "CVE-2026-56773 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56773"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-57527",
+    "published": "2026-06-26T15:16:49.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zed Attack Proxy (ZAP) ViewState add-on before version 4 contains an insecure deserialization vulnerability that allows attackers who control a proxied web server to achieve arbitrary code execution by embedding a malicious serialized Java object in the javax.faces.ViewState HTTP response parameter. The JSFViewState.decode() method base64-decodes the ViewState value and passes it directly to ObjectInputStream.readObject() without a deserialization filter, allowlist, or type restriction, causing the malicious object to be deserialized within the ZAP JVM when the Desktop UI renders the ViewState panel.",
+    "tags": [],
+    "title": "CVE-2026-57527 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57527"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-57518",
+    "published": "2026-06-26T17:16:34.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pagekit CMS 1.0.18 contains a privilege escalation vulnerability that allows authenticated users with the 'user: manage users' permission to escalate privileges by assigning arbitrary custom roles to themselves due to missing authorization checks in UserApiController::saveAction(). Attackers can assign themselves a custom role with the 'system: manage packages' permission and then upload and install a malicious PHP package through the admin package installer to achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57518 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57518"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-56285",
+    "published": "2026-06-29T18:16:38.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nitter's /video media proxy endpoint fails to validate target URLs against Twitter/X domains and uses a hardcoded default HMAC key, allowing unauthenticated attackers to compute valid HMACs for arbitrary URLs. Attackers can retrieve HTTP responses from any host reachable by the server, including cloud metadata services and internal network resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56285 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56285"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-57947",
+    "published": "2026-06-29T18:16:39.720",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pinpoint through 3.1.0 contains a server-side request forgery vulnerability in the webhook registration endpoint that allows authenticated users to register internal URLs due to missing SSRF protection. Attackers can trigger alarm threshold breaches to force the server to issue POST requests to internal hosts and metadata endpoints, enabling unauthorized access to internal network resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57947 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57947"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-57950",
+    "published": "2026-06-29T18:16:40.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ruoyi-vue-pro through 2026.05, fixed in commit 5d1fd70 contains a broken access control vulnerability in ErpSaleOrderController that allows attackers with erp:sale-out permissions to gain unauthorized access to sale order operations by exploiting an incorrect permission namespace enforcement. Attackers holding shipment-level permissions can perform unauthorized create, update, delete, and read operations on financially sensitive sale orders due to the controller enforcing erp:sale-out instead of the intended erp:sale-order namespace.",
+    "tags": [
+      "금융",
+      "RCE"
+    ],
+    "title": "CVE-2026-57950 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57950"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-57955",
+    "published": "2026-06-29T18:16:40.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SigNoz through 0.130.1 contains a SQL injection vulnerability that allows authenticated attackers to execute arbitrary ClickHouse queries by injecting URL-encoded quotes into the rule ID path parameter of the alert-history endpoints. Attackers can manipulate the unsanitized rule ID interpolated into ClickHouse queries to read all stored traces, logs, and metrics, or abuse the url() function to perform server-side request forgery.",
+    "tags": [],
+    "title": "CVE-2026-57955 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57955"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-57999",
+    "published": "2026-06-29T19:16:42.857",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "luci-app-tailscale-community contains a command injection vulnerability in the tailscale.do_login RPC method that allows authenticated users to execute arbitrary commands as root. The vulnerability exists because user-controlled loginserver and loginserver_authkey parameters are improperly quoted within a double-quoted shell command, allowing shell substitutions like $() to be evaluated by the outer shell before argument processing.",
+    "tags": [],
+    "title": "CVE-2026-57999 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57999"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58000",
+    "published": "2026-06-29T19:16:42.993",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "luci-proto-openvpn through 0.11.1, fixed in commit e4ff45e, contains a command injection vulnerability in the generateKey ubus method where the cl_meta parameter is interpolated into a shell command without proper escaping or quoting. An authenticated LuCI user with OpenVPN protocol configuration access can inject arbitrary shell metacharacters into cl_meta to execute commands as root via the popen function.",
+    "tags": [],
+    "title": "CVE-2026-58000 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58000"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58165",
+    "published": "2026-06-30T17:16:23.350",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenZiti through 2.0.0, fixed in commit 3027fdf, contains a privilege escalation vulnerability that allows authenticated non-admin identities with fine-grained enrollment management permissions to create enrollments for any identity, including the default administrator, because the ApplyCreate function in controller/model/enrollment_manager.go verifies only that the target identity exists without performing authorization checks binding the caller to the target identity. Attackers can redeem the resulting one-time token through the unauthenticated client API enrollment endpoint to obtain a client certificate authenticating as the targeted admin identity, yielding full administrative control of the controller and the zero-trust overlay it manages.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-58165 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58165"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58168",
+    "published": "2026-06-30T17:16:23.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DeepTutor before version 1.4.10 contains an authorization bypass vulnerability that allows low-privilege users to invoke unrestricted MCP tools due to the allowed_mcp_tools function returning None instead of a denied result when mcp_tools is omitted from a user's grant in deeptutor/multi_user/tool_access.py. Attackers or prompt-injected content acting within a user session can enumerate and invoke any configured MCP tool, including filesystem, shell, and browser servers, gaining unauthorized access to sensitive deployment resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58168 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58168"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-58169",
+    "published": "2026-06-30T17:16:23.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vibe-Trading before 0.1.10 contains a DNS rebinding authentication bypass vulnerability that allows remote attackers to bypass bearer-token authentication by exploiting the server's trust of TCP peer addresses for loopback clients combined with missing Host header validation while binding to 0.0.0.0 with credentialed CORS. Attackers can craft a malicious DNS rebinding page to issue authenticated requests to the local API server, reach the shell execution endpoint with a bash-enabled preset, and achieve remote code execution as the API process user while also overwriting LLM and data-source settings to exfiltrate credentials.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-58169 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58169"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-58170",
+    "published": "2026-06-30T17:16:24.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vibe-Trading before 0.1.10 builds the proposal file path by joining a caller-supplied proposal identifier onto the broker proposals directory without sanitization (agent/src/live/mandate/commit.py). A proposal identifier containing path traversal sequences causes the application to load an attacker-controlled JSON file as an authoritative live trading mandate. Combined with the file upload endpoint, an admitted caller can write a JSON file to a known location and traverse to it, and because the ceilings validation is skipped when ceilings are absent, the attacker fully controls the committed mandate.",
+    "tags": [],
+    "title": "CVE-2026-58170 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58170"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-58370",
+    "published": "2026-06-30T17:16:24.987",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Woodpecker before 3.15.0 matches the ApprovalAllowedUsers bypass list against pipeline.Author. For the GitLab forge driver, pipeline.Author is populated from the git commit author name (commit.author.name) carried in the webhook payload, which is attacker-controlled and not verified by GitLab. A user who can open a merge request from a fork can set the commit author name to match an entry in ApprovalAllowedUsers, causing needsApproval to return false so the pipeline runs without the required approval. This defeats the fork-approval security boundary and allows execution of attacker-controlled pipeline steps on a Woodpecker agent and exfiltration of CI secrets exposed to the run. Other built-in forge drivers (Gitea, Forgejo, GitHub, Bitbucket) derive pipeline.Author from the forge-validated sender/actor identity and are not affected.",
+    "tags": [],
+    "title": "CVE-2026-58370 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58370"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-58372",
+    "published": "2026-06-30T17:16:25.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SeaweedFS before 4.34 contains a path traversal vulnerability in the S3 gateway DeleteMultipleObjectsHandler that allows authenticated S3 principals with write access to a single bucket to delete arbitrary objects in other tenants' buckets by supplying object keys containing ../ sequences in the DeleteObjects XML request body. Attackers can bypass authorization controls through a confused deputy condition, as the validateRequestPath middleware only inspects URL-captured path variables and never examines request-body keys, allowing the filer path to collapse directory traversal sequences and resolve deletions outside the authorized bucket.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-58372 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58372"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-58377",
+    "published": "2026-06-30T17:16:26.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "JeecgBoot through 3.9.2 contains a broken access control vulnerability that allows authenticated low-privilege users to perform full create, read, update, and delete operations on OpenAPI credentials by accessing the OpenApiAuthController and OpenApiPermissionController endpoints which lack Shiro authorization annotations. Attackers can exploit the unenforced access controls to list, add, edit, and delete all AK/SK credential pairs, with the list endpoint returning secret keys in plaintext, enabling credential theft and unauthorized invocation of the OpenAPI surface.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58377 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58377"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-58446",
+    "published": "2026-06-30T22:16:57.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Presenton before 0.8.8-beta bundles an MCP server that, on server/Docker deployments configured with session authentication (AUTH_USERNAME/AUTH_PASSWORD), is reachable unauthenticated at /mcp because the nginx front-end does not apply the auth_request gate to that path and the MCP server auto-mints a valid internal session token for the configured user. A remote unauthenticated attacker can invoke MCP tools such as generate_presentation, performing authenticated application actions, consuming the operators configured LLM API keys, and creating presentations in the operators instance. The Electron desktop build is not affected (MCP disabled).",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-58446 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58446"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-48275",
+    "published": "2026-07-14T22:17:00.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Illustrator is affected by an Untrusted Search Path vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48275 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48275"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-48290",
+    "published": "2026-07-14T22:17:00.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CAI Content Credentials is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48290 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48290"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-50130",
+    "published": "2026-07-14T22:17:13.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pi-hole is a DNS sinkhole that protects devices from unwanted content without installing any client-side software. From 6.0 to 6.4.2, a user with code execution as the unprivileged pihole user can escalate to root by replacing /etc/pihole/logrotate. The replacement is laundered to root:root ownership by pihole-FTL-prestart.sh and then parsed as root by the daily pihole flush cron, executing firstaction shell as uid 0. This issue is fixed in version 6.4.3.",
+    "tags": [],
+    "title": "CVE-2026-50130 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50130"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59733",
+    "published": "2026-07-14T22:17:30.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to 1.74.4, rclone serve restic --private-repos enforces authorization using the routed user path segment while building the backend object key from the raw uncleaned URL path, allowing an authenticated user to include .. in a request such as //..//config and read, overwrite, or delete another user's private repository on backends that clean path components. This issue is fixed in version 1.74.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59733 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59733"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195347",
+    "published": "2026-07-14T21:33:05+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Patch Tuesday: Microsoft fixes a record 621 CVEs, including 2 exploited zero-days and critical flaws affecting SharePoint, RDP, Hyper-V, and AD FS. Microsoft’s July 2026 Patch Tuesday is, by a significant margin, the largest single-month security release in the company’s history. The Zero Day Initiative counted 621 new Microsoft CVEs for the month, and the […]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Patch Tuesday security updates for July 2026, the largest update ever. 621 CVEs in one month",
+    "url": "https://securityaffairs.com/195347/security/patch-tuesday-security-updates-for-july-2026-the-largest-update-ever-621-cves-in-one-month.html"
   }
 ]
