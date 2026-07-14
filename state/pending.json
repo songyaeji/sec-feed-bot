@@ -2634,5 +2634,106 @@
     ],
     "title": "[속담으로 배우는 100가지 보안 습관 63] 아는 길도 물어가라(3)-원격 접속 끄지 않으면 생기는 위험",
     "url": "http://www.boannews.com/media/view.asp?idx=144211&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-58065",
+    "published": "2026-07-13T16:16:41.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Apache Airflow Git provider runs its git-over-SSH operations with `StrictHostKeyChecking=no` by default, disabling SSH host-key verification. An attacker who can intercept the network path between an Airflow worker and the Git server can impersonate the server (man-in-the-middle), capturing the SSH deploy key or injecting malicious repository content. Deployments that use the Git DAG bundle or Git provider to clone over SSH with a deploy key are affected. The fix changes the default to verify host keys; upgrade to apache-airflow-providers-git `0.4.1` or later and configure a `known_hosts` file.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-58065 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58065"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-59245",
+    "published": "2026-07-13T16:16:41.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Apache Airflow FAB auth manager, a DAG whose `dag_id` is `DAGs` collided with the global all-DAGs permission resource name produced by `resource_name()`, so a user granted per-DAG `access_control` on that one DAG was silently granted the global all-DAGs permission (privilege escalation). The escalation triggers when a DAG named `DAGs` exists and a lower-privileged user is given per-DAG access to it, granting that user read/edit access to every DAG. Users are advised to upgrade to `apache-airflow-providers-fab` 3.7.2 or later, which disambiguates the resource-name collision.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59245 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59245"
+  },
+  {
+    "author": "[강현주기자 (jjoo@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144666&kind=&sub_kind=",
+    "published": "2026-07-14T01:04:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "[보안뉴스 김형근 기자] 자바스크립트 보안 솔루션 제이스크램블러(Jscrambler)의 엔피엠(npm) 공식 배포 인증 정보가 유출됐다.이로 인해 설치 시 정보 탈취형 악성코드 러스트(Rust)를 자동 실행하는 오염된 배포판이 유포돼 글로벌 공급망 생태계의 심각한 위협으로 부상했다.공격자들은 유출된 배포 인증 정보로 정상적인 검증 절차를 우회한 뒤, 사전",
+    "tags": [],
+    "title": "“설치만 해도 개발자 PC 탈취”... 제이스크램블러 npm 배포판, Rust 악성코드 오염",
+    "url": "http://www.boannews.com/media/view.asp?idx=144666&kind=&sub_kind="
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE1MUGJEYlJTRjZpcGtmdXFtTDdlaWd2d0tlaVFoTUlNMl9SRVRxZnZ0TFItZ01EQ25ybXlmNkhlREQxaWp6Rnk2eXZFU284X2trcy1sS2tDeWRUelhpQ3RzOVI1d0tlT0FZbnBub01WLTc5QQ",
+    "published": "2026-07-14T00:58:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보보호위원회, 제4회 개인정보보호 모의재판 경연대회 개최 로스쿨타임즈",
+    "tags": [],
+    "title": "개인정보보호위원회, 제4회 개인정보보호 모의재판 경연대회 개최 - 로스쿨타임즈",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1MUGJEYlJTRjZpcGtmdXFtTDdlaWd2d0tlaVFoTUlNMl9SRVRxZnZ0TFItZ01EQ25ybXlmNkhlREQxaWp6Rnk2eXZFU284X2trcy1sS2tDeWRUelhpQ3RzOVI1d0tlT0FZbnBub01WLTc5QQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1iREFGRnR3N2JXVWE5WW0xRUYwa3VscTAtSElHLXYzZUZDc0hpcDRPSlJHajBXcjliYnU0ZkhFT0dQTVJ0eWxUNzRYUUI4ZExmWU5JanJBVVRUZ2vSAWBBVV95cUxNLVA3bHMwY0lhZEdYSkpLeG4tRVBpVUxaZ2RyMEpERHpOZ0wtU05TcS0wTGszd0xLSzZfQXRzSGt4cGZhaEhqdUFlaFMyY3VOZTVvTWpHenVTNzMtSjV2Qnc",
+    "published": "2026-07-14T01:00:04+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 고용·교육 마이데이터 중계 인프라 실증 착수 연합뉴스",
+    "tags": [],
+    "title": "개인정보위, 고용·교육 마이데이터 중계 인프라 실증 착수 - 연합뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iREFGRnR3N2JXVWE5WW0xRUYwa3VscTAtSElHLXYzZUZDc0hpcDRPSlJHajBXcjliYnU0ZkhFT0dQTVJ0eWxUNzRYUUI4ZExmWU5JanJBVVRUZ2vSAWBBVV95cUxNLVA3bHMwY0lhZEdYSkpLeG4tRVBpVUxaZ2RyMEpERHpOZ0wtU05TcS0wTGszd0xLSzZfQXRzSGt4cGZhaEhqdUFlaFMyY3VOZTVvTWpHenVTNzMtSjV2Qnc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5aMkl3MW1fcWNVanc5clZnQV9DNFBGcTBIeWRxS1RmT1BaaHp1VFFOUXVrVU5Ka2wyZWlEMVUxakxyaWZkV3Jsa1N5eFMzTjN4NEVpX0hyZkpHQ1dmcUM5VNIBeEFVX3lxTE1CY2tNNGlhMllJUkdwOGZLN1E3dzVfM0R0MGhNcWljTDlEVHRMbl80b2tMTWUxRldNT25udWJ2TmZMY3hWdHh6YVprWjVQcm1BTmF0U21HclNhNUg3RUtyb1AxWW01MHhJOHN6d0V0UDJKd0lWTGlCWg",
+    "published": "2026-07-14T01:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "대학 성적·구직 정보, 내가 원하는 곳으로 보낸다…마이데이터 실증 착수 뉴시스",
+    "tags": [],
+    "title": "대학 성적·구직 정보, 내가 원하는 곳으로 보낸다…마이데이터 실증 착수 - 뉴시스",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5aMkl3MW1fcWNVanc5clZnQV9DNFBGcTBIeWRxS1RmT1BaaHp1VFFOUXVrVU5Ka2wyZWlEMVUxakxyaWZkV3Jsa1N5eFMzTjN4NEVpX0hyZkpHQ1dmcUM5VNIBeEFVX3lxTE1CY2tNNGlhMllJUkdwOGZLN1E3dzVfM0R0MGhNcWljTDlEVHRMbl80b2tMTWUxRldNT25udWJ2TmZMY3hWdHh6YVprWjVQcm1BTmF0U21HclNhNUg3RUtyb1AxWW01MHhJOHN6d0V0UDJKd0lWTGlCWg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE94T3BlTWpuTGVOWkZfTXc3dmZHNzNqbU5tNnAtNC1lTDFPZFppcS0teWJkMlV4Wm13Tk5rTXM0aW40cFdZb3lZTmRuT3RsdVVJRFppZFlYNExYY3dZa3BGMQ",
+    "published": "2026-07-14T01:02:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 전송요구권 전송체계, 고용·교육 부문까지 확대 네이트",
+    "tags": [],
+    "title": "개인정보 전송요구권 전송체계, 고용·교육 부문까지 확대 - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94T3BlTWpuTGVOWkZfTXc3dmZHNzNqbU5tNnAtNC1lTDFPZFppcS0teWJkMlV4Wm13Tk5rTXM0aW40cFdZb3lZTmRuT3RsdVVJRFppZFlYNExYY3dZa3BGMQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE9ucHJXZjFxbkk3ZGdKRVNzS1R1eDFJLWFGZEVXREYzM1M1NFpiaDllZ1NRcVVPNHp5U2EwbDlxUDllYU5RT015V2NfV2hIRng0SUFv",
+    "published": "2026-07-14T01:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 전송요구권 '고용·교육' 분야 확대…실증 사업 착수 네이트",
+    "tags": [],
+    "title": "개인정보 전송요구권 '고용·교육' 분야 확대…실증 사업 착수 - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ucHJXZjFxbkk3ZGdKRVNzS1R1eDFJLWFGZEVXREYzM1M1NFpiaDllZ1NRcVVPNHp5U2EwbDlxUDllYU5RT015V2NfV2hIRng0SUFv?oc=5"
   }
 ]
