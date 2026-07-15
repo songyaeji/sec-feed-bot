@@ -9649,5 +9649,102 @@
     "tags": [],
     "title": "Dutch police bust investment fraud ring stealing over €100 million",
     "url": "https://www.bleepingcomputer.com/news/security/dutch-police-bust-investment-fraud-ring-stealing-over-100-million/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-52891",
+    "published": "2026-07-15T22:17:16.450",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Wekan is open source kanban built with Meteor. Prior to 9.07, Wekan avatar upload functionality embeds user-supplied filenames into paths later passed to child_process.exec() for MIME-type detection. Because models/avatars.js and models/fileValidation.js used a shell command with the avatar filename, shell metacharacters such as backticks and $() in the filename could execute commands on the server. This issue is fixed in version 9.07.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-52891 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52891"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-54458",
+    "published": "2026-07-15T22:17:19.160",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "WWBN AVideo is an open source video platform. Versions prior to 29.0 contain a stored DOM Cross-Site Scripting vulnerability in the YPTSocket plugin. Any unauthenticated remote attacker can execute arbitrary JavaScript in the authenticated origin of every administrator currently viewing a page that renders the YPTSocket online-users debug panel. plugin/YPTSocket/getWebSocket.json.php issues a signed WebSocket token to any anonymous caller, and MessageSQLiteV2::onOpen at plugin/YPTSocket/MessageSQLiteV2.php lines 91 and 110 reads the attacker-controlled webSocketSelfURI and page_title query parameters from the WebSocket connection URL with no validation. Both values persist into the in-memory SQLite connections table and broadcast inside the users_id_online array sent to every connected client; on the client, plugin/YPTSocket/script.js::updateSocketUserCard interpolates the broadcast page_title into an HTML template literal that is passed to jQuery $.append(html), which parses attacker bytes into live DOM nodes including <img> with inline event handlers. Successful attackers can can read non-HttpOnly cookies and the CSRF token rendered into the admin dashboard, issue authenticated requests to any admin-only endpoint, exfiltrate the admin dashboard DOM, and chain into any admin-context mutation. When the victim is an AVideo administrator, the attacker turns a single anonymous WebSocket connection into full administrative takeover via the admin's own session. This issue has been",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54458 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54458"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-55652",
+    "published": "2026-07-15T22:17:26.293",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Wekan is open source kanban built with Meteor. Prior to 9.46, header-login with HEADER_LOGIN_TRUSTED_IPS uses getRequestIp() in server/lib/headerLoginAuth.js to trust the client-supplied X-Forwarded-For header before the real socket address, allowing an unauthenticated attacker to send HEADER_LOGIN_ID for any username and receive a meteor_login_token session, including for admin. This issue is fixed in version 9.46.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55652 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55652"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-30623",
+    "published": "2026-07-15T22:16:46.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LiteLLM 1.18.10 contains a remote code execution vulnerability in its MCP server creation functionality. The application allows users to add MCP servers via a JSON configuration specifying arbitrary command and args values. LiteLLM executes these values on the host without validation, enabling attackers to run arbitrary operating system commands. Successful exploitation may result in remote code execution with the privileges of the LiteLLM process.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-30623 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30623"
+  },
+  {
+    "category": "high",
+    "cvss": 7.7,
+    "id": "CVE-2026-45313",
+    "published": "2026-07-15T22:16:48.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. Prior to 1.17.6, GuiServer::WndHookRegisterSlave in Sandboxie/core/svc/GuiServer.cpp stores attacker-supplied hthread and hproc fields from a GUI_WND_HOOK_REGISTER request without validating that the thread belongs to the sandboxed process or that the function pointer is in the caller address space, and GuiServer::WndHookNotifySlave then calls OpenThread(THREAD_SET_CONTEXT, FALSE, whk->hthread) and QueueUserAPC((PAPCFUNC)whk->hproc, hThread, (ULONG_PTR)req->threadid) as SYSTEM, allowing a sandboxed process to execute arbitrary code in an unsandboxed host process. This issue is fixed in version 1.17.6.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45313 (CVSS 7.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45313"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-48795",
+    "published": "2026-07-15T22:16:50.383",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AdonisJS is a TypeScript-first web framework. From 10.1.3 until 10.1.5 and 11.0.3, AdonisJS @adonisjs/bodyparser incompletely fixed CVE-2026-25754 because nested multipart field payloads such as user.__proto__.polluted and constructor.prototype still caused lodash _.set() via @poppinss/utils to create plain intermediate objects and pollute Object.prototype. This issue is fixed in versions 10.1.5 and 11.0.3.",
+    "tags": [],
+    "title": "CVE-2026-48795 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48795"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-55234",
+    "published": "2026-07-15T22:17:25.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wekan is open source kanban built with Meteor. Prior to 9.37, Wekan DDP update allow rules in server/permissions/cards.js, server/permissions/lists.js, and server/permissions/swimlanes.js authorize against the stored source boardId and do not validate a new boardId in the update modifier. Any authenticated user with write access to their own board can call /cards/update, /lists/update, or /swimlanes/update to move cards, lists, or swimlanes into a private board they are not a member of. This issue is fixed in version 9.37.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55234 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55234"
   }
 ]
