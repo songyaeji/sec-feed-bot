@@ -8308,5 +8308,32 @@
     "tags": [],
     "title": "Firefox, Chrome, Adobe, and VMware Updates Fix Multiple Critical Security Flaws",
     "url": "https://thehackernews.com/2026/07/firefox-chrome-adobe-and-vmware-updates.html"
+  },
+  {
+    "author": "Sponsored by Intruder",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/",
+    "published": "2026-07-15T14:01:11+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Intruder built an AI-powered \"vulnerability vending machine\" that combines code slicing with LLMs to automatically discover complex software vulnerabilities. The company explains how the system found and exploited a previously unknown WordPress plugin zero-day, with additional discoveries already under responsible disclosure. [...]",
+    "tags": [
+      "AI",
+      "제로데이"
+    ],
+    "title": "We built a vulnerability vending machine: AI tokens in, zero-days out",
+    "url": "https://www.bleepingcomputer.com/news/security/we-built-a-vulnerability-vending-machine-ai-tokens-in-zero-days-out/"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/exposed-cloud-functions-harden/",
+    "published": "2026-07-15T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Corné de Jong Introduction Mandiant security assessments frequently identify publicly exposed serverless applications that lack authentication, often as a result of specific business requirements. Serverless deployments typically run custom-developed code that incorporates third-party packages, making them targets for a wide range of application-level attacks, including: Local and Remote File Inclusion (LFI/RFI) Command Injection Successful exploitation of these vulnerabilities can grant an attacker full control over the underlying container instance. Such access can serve as a foothold that may ultimately lead to a full compromise of the victim’s cloud environment. Based on lessons learned in customer engagements, in this blog post we describe attack scenarios and provide actionable guidance on how to secure serverless environments. While this analysis focuses on hardening strategies for Google Cloud Run services and functions that must remain publicly accessible, these principles apply universally to any public serverless deployment. What are Serverless Applications? Serverless applications, also described as Function-as-a-Service (FaaS), allow the deployment of individual blocks of code as microservices within a flexible, decoupled, and event-driven cloud architecture without the need to manage underlying infrastructure. These services enable applications and automations to scale automatically and deploy instantly, removing operational overhead. Serverless serv",
+    "tags": [],
+    "title": "The Risk of Exposed Cloud Functions and How to Harden",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/exposed-cloud-functions-harden/"
   }
 ]
