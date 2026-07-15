@@ -9084,5 +9084,91 @@
     "tags": [],
     "title": "CVE-2023-4346: KNX Association KNX Protocol Connection Authorization Option 1 Overly Restrictive Account Lockout Mechanism Vulnerability (KNX Association KNX Protocol Connection Authorization Option 1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4346"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15747",
+    "published": "2026-07-14T18:17:12.587",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Mojolicious versions from 4.59 before 9.48 for Perl expose a stable representation of the session CSRF token to a BREACH compression oracle.\n\n_csrf_token generates and caches one token per session and returns the same value on every call, and _csrf_field places that value in a hidden `csrf_token` input. When a response carrying the token also echoes attacker-controlled input and is gzip-compressed, the chosen values and the resulting compressed lengths form a BREACH oracle.\n\nAn attacker able to query it can recover the token and pass csrf_protect validation.",
+    "tags": [],
+    "title": "CVE-2026-15747 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15747"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-52842",
+    "published": "2026-07-15T17:16:50.317",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lightpanda is a headless browser designed for AI and automation. Prior to 0.3.1, Lightpanda searched for @ across the entire URL string instead of only the authority component when computing a page origin, so a URL such as `http://attacker.com/@victim.com/` was fetched from attacker.com but treated as `http://victim.com`, allowing a complete Same-Origin Policy bypass. This issue is fixed in version 0.3.1.",
+    "tags": [],
+    "title": "CVE-2026-52842 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52842"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-52843",
+    "published": "2026-07-15T17:16:50.467",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lightpanda is a headless browser designed for AI and automation. Prior to 0.2.9, Lightpanda fetch() and XMLHttpRequest unconditionally attached session cookies to every HTTP request, ignoring credentials: omit, credentials: same-origin, credentials: include, and XMLHttpRequest.withCredentials, allowing an attacker-controlled origin in a Lightpanda session to issue authenticated cross-origin requests against a victim origin. This issue is fixed in version 0.2.9.",
+    "tags": [],
+    "title": "CVE-2026-52843 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52843"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-62378",
+    "published": "2026-07-15T17:16:53.020",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "RustFS Console is a web management console for the RustFS distributed file system. From 0.1.7 until 0.1.10, the RustFS Console components/object/preview-modal.tsx and components/object/pdf-viewer.tsx extension-based PDF preview path can render HTML content uploaded as .pdf, allowing stored cross-site scripting in the management console and exposure of administrator AccessKeyId, SecretAccessKey, and SessionToken values. This is caused by a regression of CVE-2026-27822. This vulnerability is fixed in 0.1.10.",
+    "tags": [],
+    "title": "CVE-2026-62378 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62378"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-20150",
+    "published": "2026-07-15T17:16:47.110",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco RoomOS engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20150 are related to improper access control&nbsp;that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-284.",
+    "tags": [],
+    "title": "CVE-2026-20150 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20150"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-20156",
+    "published": "2026-07-15T17:16:47.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "As part of Cisco's ongoing commitment to proactive security and product quality, the Cisco RoomOS engineering team has conducted a comprehensive internal security review. This review resulted in a software hardening release that addresses multiple internally discovered vulnerabilities.\r\n\r\nThe vulnerabilities tracked by CVE-2026-20156 are related to improper restriction of operations within the bounds of a memory buffer that are grouped under the Common Weakness Enumeration (CWE) Pillar CWE-119.",
+    "tags": [],
+    "title": "CVE-2026-20156 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20156"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195418",
+    "published": "2026-07-15T16:57:55+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "LegacyHive PoC exposes a Windows Privilege Escalation flaw affecting fully patched Windows desktop and server systems. Just hours after Microsoft’s July 2026 Patch Tuesday, security researcher Nightmare Eclipse, also known as Chaotic Eclipse, published a new Windows zero-day proof-of-concept called LegacyHive. This time, the target is the Windows User Profile Service (ProfSvc), and unlike the […]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Chaotic Eclipse Unveils LegacyHive Exploit Affecting Fully Patched Windows Systems",
+    "url": "https://securityaffairs.com/195418/hacking/chaotic-eclipse-unveils-legacyhive-exploit-affecting-fully-patched-windows-systems.html"
   }
 ]
