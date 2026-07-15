@@ -7984,5 +7984,29 @@
     ],
     "title": "Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution",
     "url": "https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12281",
+    "published": "2026-07-15T06:16:43.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Shibboleth WordPress plugin before 2.5.4 does not fail closed when its HTTP header identity mode is enabled without an anti-spoofing key, treating any request that carries identity headers as an authenticated session without verifying them. On a deployment where untrusted client headers reach the application, an unauthenticated attacker can log in with forged identity headers and, when automatic account creation and the default administrator role mapping are enabled, create and sign in as a new administrator. Exploitation requires the non-default HTTP header attribute mode, an empty or absent spoof key, automatic account creation enabled, and a deployment that does not strip untrusted client headers before they reach the application.",
+    "tags": [],
+    "title": "CVE-2026-12281 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12281"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-12512",
+    "published": "2026-07-15T06:16:44.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Quotes llama WordPress plugin before 3.1.6 does not properly sanitize and escape a user-supplied parameter before using it in a SQL query, allowing unauthenticated attackers to perform UNION-based SQL injection and read arbitrary data from the database, including password hashes.",
+    "tags": [],
+    "title": "CVE-2026-12512 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12512"
   }
 ]
