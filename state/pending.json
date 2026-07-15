@@ -3446,5 +3446,17 @@
     "tags": [],
     "title": "CVE-2026-8629 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8629"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/94479/",
+    "published": "2026-07-12T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Summary Public analyses of AtlasRAT are limited, and this report documents a four-stage loader chain and RAT capabilities not previously described in existing public reports. The chain operates entirely through memory execution throughout all stages, minimizing disk activity. Group Characteristics Since June 9, 2026, 43 AtlasRAT C2 servers have been tracked. The analyzed chain consists […]",
+    "tags": [],
+    "title": "Not Every Fox is Silver: Inside an AtlasRAT loader chain",
+    "url": "https://asec.ahnlab.com/en/94479/"
   }
 ]
