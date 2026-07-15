@@ -3469,5 +3469,558 @@
     "tags": [],
     "title": "온투업권 스탁론 리스크 관리 강화",
     "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219205&menuNo=200218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5731",
+    "published": "2026-04-07T13:16:47.347",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox ESR 115.34.0, Firefox ESR 140.9.0, Thunderbird ESR 140.9.0, Firefox 149.0.1 and Thunderbird 149.0.1. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 149.0.2, Firefox ESR 115.34.1, Firefox ESR 140.9.1, Thunderbird 149.0.2, and Thunderbird 140.9.1.",
+    "tags": [],
+    "title": "CVE-2026-5731 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5731"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5734",
+    "published": "2026-04-07T13:16:47.667",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox ESR 140.9.0, Thunderbird ESR 140.9.0, Firefox 149.0.1 and Thunderbird 149.0.1. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 149.0.2, Firefox ESR 140.9.1, Thunderbird 149.0.2, and Thunderbird 140.9.1.",
+    "tags": [],
+    "title": "CVE-2026-5734 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5734"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5735",
+    "published": "2026-04-07T13:16:47.763",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox 149.0.1 and Thunderbird 149.0.1. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 149.0.2 and Thunderbird 149.0.2.",
+    "tags": [],
+    "title": "CVE-2026-5735 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5735"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-6388",
+    "published": "2026-04-15T22:17:22.583",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in ArgoCD Image Updater. This vulnerability allows an attacker, with permissions to create or modify an ImageUpdater resource in a multi-tenant environment, to bypass namespace boundaries. By exploiting insufficient validation, the attacker can trigger unauthorized image updates on applications managed by other tenants. This leads to cross-namespace privilege escalation, impacting application integrity through unauthorized application updates.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-6388 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6388"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-6748",
+    "published": "2026-04-21T13:16:20.910",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Uninitialized memory in the Audio/Video: Web Codecs component. This vulnerability was fixed in Firefox 150, Firefox ESR 140.10, Thunderbird 150, and Thunderbird 140.10.",
+    "tags": [],
+    "title": "CVE-2026-6748 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6748"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-6951",
+    "published": "2026-04-25T06:16:16.453",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Versions of the package simple-git before 3.36.0 are vulnerable to Remote Code Execution (RCE) due to an incomplete fix for [CVE-2022-25912](https://security.snyk.io/vuln/SNYK-JS-SIMPLEGIT-3112221) that blocks the -c option but not the equivalent --config form. If untrusted input can reach the options argument passed to simple-git, an attacker may still achieve remote code execution by enabling protocol.ext.allow=always and using an ext:: clone source.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-6951 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6951"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-5081",
+    "published": "2026-05-06T13:16:09.833",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache::Session::Generate::ModUniqueId versions from 1.54 through 1.94 for Perl session ids are insecure.\n\nApache::Session::Generate::ModUniqueId (added in version 1.54) uses the value of the UNIQUE_ID environment variable for the session id. The UNIQUE_ID variable is set by the Apache mod_unique_id plugin, which generates unique ids for the request. The id is based on the IPv4 address, the process id, the epoch time, a 16-bit counter and a thread index, with no obfuscation.\n\nThe server IP is often available to the public, and if not available, can be guessed from previous session ids being issued. The process ids may also be guessed from previous session ids. The timestamp is easily guessed (and leaked in the HTTP Date response header).\n\nThe purpose of mod_unique_id is to assign a unique id to requests so that events can be correlated in different logs. The id is not designed, nor is it suitable for security purposes.",
+    "tags": [],
+    "title": "CVE-2026-5081 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5081"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-8091",
+    "published": "2026-05-07T13:16:14.087",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Incorrect boundary conditions in the Audio/Video: Playback component. This vulnerability was fixed in Firefox 150, Thunderbird 150, Firefox ESR 140.10.1, Thunderbird 140.10.1, and Firefox ESR 115.35.2.",
+    "tags": [],
+    "title": "CVE-2026-8091 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8091"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-8094",
+    "published": "2026-05-07T13:16:14.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Other issue in the WebRTC component. This vulnerability was fixed in Firefox ESR 140.10.2 and Thunderbird 140.10.2.",
+    "tags": [],
+    "title": "CVE-2026-8094 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8094"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-6722",
+    "published": "2026-05-10T05:16:11.070",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In PHP versions 8.2.* before 8.2.31, 8.3.* before 8.3.31, 8.4.* before 8.4.21, and 8.5.* before 8.5.6, the SOAP extension's object deduplication mechanism stores pointers to PHP objects in a global map without incrementing their reference counts. When an apache:Map node contains duplicate keys, processing the second entry overwrites the first in the temporary result map, freeing the original PHP object while its stale pointer remains in the map. A subsequent href reference to the freed node can copy the dangling pointer into the result. As PHP string allocations can reclaim the freed memory region, an attacker with control over the SOAP request body can exploit this use-after-free to achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-6722 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6722"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-6104",
+    "published": "2026-05-10T06:16:07.397",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In PHP versions 8.4.* before 8.4.21 and 8.5.* before 8.5.6, when an encoding name containing an embedded NUL byte is passed to mb_convert_encoding() or related mbstring functions, the code incorrectly assumes that when strncasecmp() returns 0 it means the strings have the same length. This can lead to out-of-bounds read of global memory, potentially causing a crash or information disclosure or crash. Affected functions include mb_convert_encoding(), mb_detect_encoding(), mb_convert_variables(), and mb_detect_order(), as well as the mbstring.detect_order and mbstring.http_output INI settings.",
+    "tags": [],
+    "title": "CVE-2026-6104 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6104"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-8401",
+    "published": "2026-05-12T15:16:20.100",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sandbox escape in the Profile Backup component. This vulnerability was fixed in Firefox 150.0.3, Firefox ESR 115.36, Firefox ESR 140.11, and Thunderbird 140.11.",
+    "tags": [],
+    "title": "CVE-2026-8401 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8401"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-8948",
+    "published": "2026-05-19T14:16:51.027",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Same-origin policy bypass in the DOM: Networking component. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
+    "tags": [],
+    "title": "CVE-2026-8948 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8948"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-7374",
+    "published": "2026-05-26T14:16:40.717",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in KubeVirt's virt-handler component. This vulnerability allows an authenticated OpenShift user with edit permissions in a single namespace to exploit improper symlink validation when connecting to virtual machine console sockets. By replacing the console socket with a symlink to the host's container runtime (CRI-O) socket, an attacker can hijack virt-handler's privileged connection. This enables the attacker to access any Unix socket on the host, potentially leading to full control of the node and the entire cluster.",
+    "tags": [],
+    "title": "CVE-2026-7374 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7374"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-53622",
+    "published": "2026-06-23T20:16:48.777",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Traefik is an HTTP reverse proxy and load balancer. Prior to 3.7.3, there is a critical vulnerability in Traefik's HTTP/3 (QUIC) TLS configuration selection that allows unauthenticated clients to bypass router-specific mTLS enforcement. When HTTP/3 is enabled on an entrypoint, the TLS handshake selects the applicable TLS configuration through an exact, case-sensitive lookup on the SNI value, which fails to match wildcard host patterns (e.g., *.example.com) or case variants of the configured hostname. Because the handshake falls back to the default TLS configuration — which may not require client certificates — a client can complete the QUIC handshake without presenting a certificate, while the subsequent HTTP routing layer still dispatches the request to a backend protected by a router-specific mTLS policy. The issue affects deployments where HTTP/3 is enabled, a router uses a wildcard Host rule or case-insensitive hostname matching, a router-specific TLSOptions enforces client certificate authentication, and UDP access to the entrypoint is reachable by an attacker. This vulnerability is fixed in 3.7.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53622 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53622"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-5732",
+    "published": "2026-04-07T13:16:47.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect boundary conditions, integer overflow in the Graphics: Text component. This vulnerability was fixed in Firefox 149.0.2, Firefox ESR 140.9.1, Thunderbird 149.0.2, and Thunderbird 140.9.1.",
+    "tags": [],
+    "title": "CVE-2026-5732 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5732"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-5733",
+    "published": "2026-04-07T13:16:47.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect boundary conditions in the Graphics: WebGPU component. This vulnerability was fixed in Firefox 149.0.2 and Thunderbird 149.0.2.",
+    "tags": [],
+    "title": "CVE-2026-5733 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5733"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-5483",
+    "published": "2026-04-10T18:16:46.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in odh-dashboard in Red Hat Openshift AI. This vulnerability in the `odh-dashboard` component of Red Hat OpenShift AI (RHOAI) allows for the disclosure of Kubernetes Service Account tokens through a NodeJS endpoint. This could enable an attacker to gain unauthorized access to Kubernetes resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-5483 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5483"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-6100",
+    "published": "2026-04-13T18:16:31.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use-after-free (UAF) was possible in the `lzma.LZMADecompressor`, `bz2.BZ2Decompressor`, and `gzip.GzipFile` when a memory allocation fails with a `MemoryError` and the decompression instance is re-used. This scenario can be triggered if the process is under memory pressure. The fix cleans up the dangling pointer in this specific error condition.\n\nThe vulnerability is only present if the program re-uses decompressor instances across multiple decompression calls even after a `MemoryError` is raised during decompression. Using the helper functions to one-shot decompress data such as `lzma.decompress()`, `bz2.decompress()`, `gzip.decompress()`, and `zlib.decompress()` are not affected as a new decompressor instance is used per call. If the decompressor instance is not re-used after an error condition, this usage is similarly not vulnerable.",
+    "tags": [],
+    "title": "CVE-2026-6100 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6100"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-6750",
+    "published": "2026-04-21T13:16:21.073",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Privilege escalation in the Graphics: WebRender component. This vulnerability was fixed in Firefox 150, Firefox ESR 115.35, Firefox ESR 140.10, Thunderbird 150, and Thunderbird 140.10.",
+    "tags": [],
+    "title": "CVE-2026-6750 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6750"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-6859",
+    "published": "2026-04-22T14:17:07.687",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in InstructLab. The `linux_train.py` script hardcodes `trust_remote_code=True` when loading models from HuggingFace. This allows a remote attacker to achieve arbitrary Python code execution by convincing a user to run `ilab train/download/generate` with a specially crafted malicious model from the HuggingFace Hub. This vulnerability can lead to complete system compromise.",
+    "tags": [],
+    "title": "CVE-2026-6859 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6859"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-5367",
+    "published": "2026-04-24T13:16:21.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in OVN (Open Virtual Network). A remote attacker, by sending crafted DHCPv6 (Dynamic Host Configuration Protocol for IPv6) SOLICIT packets with an inflated Client ID length, could cause the ovn-controller to read beyond the bounds of a packet. This out-of-bounds read can lead to the disclosure of sensitive information stored in heap memory, which is then returned to the attacker's virtual machine port.",
+    "tags": [],
+    "title": "CVE-2026-5367 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5367"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-5402",
+    "published": "2026-04-30T07:16:37.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TLS protocol dissector heap overflow in Wireshark 4.6.0 to 4.6.4 allows denial of service and possible code execution",
+    "tags": [],
+    "title": "CVE-2026-5402 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5402"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-6266",
+    "published": "2026-05-04T14:16:35.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the AAP gateway. The user auto-link strategy, introduced in AAP 2.6, automatically links an external Identity Provider (IDP) identity to an existing AAP user account based on email matching without verifying email ownership. This allows a remote attacker to potentially hijack a victim's account or gain unauthorized access to other accounts, including administrative accounts, by manipulating the IDP-provided email.",
+    "tags": [],
+    "title": "CVE-2026-6266 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6266"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-8092",
+    "published": "2026-05-07T13:16:14.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox ESR 115.35.1, Firefox ESR 140.10.1 and Firefox 150.0.1. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 150.0.2, Firefox ESR 140.10.2, Firefox ESR 115.35.2, Thunderbird 150.0.2, and Thunderbird 140.10.2.",
+    "tags": [],
+    "title": "CVE-2026-8092 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8092"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-8093",
+    "published": "2026-05-07T13:16:14.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox 150.0.1. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 150.0.2 and Thunderbird 150.0.2.",
+    "tags": [],
+    "title": "CVE-2026-8093 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8093"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8389",
+    "published": "2026-05-12T14:17:11.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "JIT miscompilation in the JavaScript Engine: JIT component. This vulnerability was fixed in Firefox 150.0.3.",
+    "tags": [],
+    "title": "CVE-2026-8389 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8389"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-7504",
+    "published": "2026-05-19T12:16:19.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Keycloak's URL validation logic during redirect operations. By crafting a malicious request, an attacker could bypass validation to redirect users to unauthorized URLs, potentially leading to the exposure of sensitive information within the domain or facilitating further attacks. This vulnerability specifically affects Keycloak clients configured with a wildcard (*) in the \"Valid Redirect URIs\" field and requires user interaction to be successfully exploited.\n\nThe issue stems from a discrepancy in how Keycloak and the underlying Java URI implementation handle the user-info component of a URL. If a malicious redirect URL is constructed using multiple @ characters in the user-info section, Java's URI parser fails to extract the user-info, leaving only the raw authority field. Consequently, Keycloak's validation check fails to detect the malformed user-info, falls back to a wildcard comparison, and incorrectly permits the malicious redirect.",
+    "tags": [],
+    "title": "CVE-2026-7504 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7504"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8973",
+    "published": "2026-05-19T14:16:53.860",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151 and Thunderbird 151.",
+    "tags": [],
+    "title": "CVE-2026-8973 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8973"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8975",
+    "published": "2026-05-19T14:16:54.090",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox ESR 115.35, Firefox ESR 140.10 and Firefox 150. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 151, Firefox ESR 115.36, Firefox ESR 140.11, Thunderbird 151, and Thunderbird 140.11.",
+    "tags": [],
+    "title": "CVE-2026-8975 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8975"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-9256",
+    "published": "2026-05-22T15:16:27.073",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_rewrite_module module. This vulnerability exists when a rewrite directive uses a regex pattern with distinct, overlapping Perl-Compatible Regular Expression (PCRE) captures (for example, ^/((.*))$) and a replacement string that references multiple such captures (for example, $1$2) in a redirect or arguments context. An unauthenticated attacker along with conditions beyond their control can exploit this vulnerability by sending crafted HTTP requests. This may cause a heap buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR. \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-9256 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9256"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-5497",
+    "published": "2026-06-11T10:16:21.903",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM versions 0.8.0 and later are vulnerable to an Out-of-Memory (OOM) Denial of Service (DoS) attack due to unbounded frame count processing in the `VideoMediaIO.load_base64()` method. When processing `video/jpeg` data URLs, the method splits the base64 data string on commas to extract individual JPEG frames without enforcing a frame count limit. An attacker can exploit this by crafting a single API request containing thousands of comma-separated base64-encoded JPEG frames in a data URL, causing the server to decode all frames into memory and crash due to excessive memory consumption. This vulnerability is reachable via the OpenAI-compatible chat completions API and does not require authentication.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-5497 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5497"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8461",
+    "published": "2026-06-18T14:17:36.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An out-of-bounds write vulnerability in FFmpeg's libavcodec library, specifically in the MagicYUV decoder, allows denial-of-service and, in some cases, can be exploited for remote code execution.\n\n This vulnerability is associated with the file libavcodec/magicyuv.C.\n\n\n\nThis issue affects FFmpeg before version 8.1.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8461 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8461"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56340",
+    "published": "2026-06-20T19:16:23.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM versions >= 0.10.2 and < 0.13.0 are missing sparse tensor validation in multimodal embeddings processing. Because PyTorch disables sparse tensor invariant checks by default, an attacker can submit crafted embedding requests with malformed (negative or out-of-bounds) tensor indices, when the prompt-embeds feature is enabled, to trigger crashes or resource exhaustion (denial of service), with potential for out-of-bounds/write-what-where memory corruption. This continues CVE-2025-62164, whose prior fix only disabled the feature by default rather than addressing the root cause.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-56340 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56340"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-54099",
+    "published": "2026-06-22T14:17:40.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. The WICD CSR auto-approver validates that a Certificate Signing Request contains the organization system:wicd-nodes but does not reject additional organization values such as system:masters. A compromised Windows worker node that holds WICD credentials can submit a CSR that is auto-approved and signed by the cluster, yielding a client certificate that grants cluster-administrator privileges and enabling full cluster takeover.",
+    "tags": [],
+    "title": "CVE-2026-54099 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54099"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-54100",
+    "published": "2026-06-22T14:17:40.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. WMCO establishes SSH connections to Windows worker nodes without verifying the remote server host key. An adjacent-network attacker who can intercept or redirect WMCO's SSH session can capture WICD and kubelet bootstrap credentials transferred during node configuration, enabling compromise of Windows node identities in the cluster.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-54100 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54100"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56379",
+    "published": "2026-06-23T13:16:46.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ImageMagick before 7.1.2-15 and 6.9.13-40 contains a command injection vulnerability in the SVG decoder that allows attackers to inject arbitrary MVG drawing commands. Attackers can craft malicious SVG files with injected Magick Vector Graphics commands that execute during rendering.",
+    "tags": [],
+    "title": "CVE-2026-56379 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56379"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-52845",
+    "published": "2026-06-23T18:18:05.267",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Caddy is an extensible server platform that uses TLS by default. Prior to 2.11.4, forward_auth copy_headers deletes the exact client-supplied identity header before copying the trusted value from the auth gateway. But when the request later goes through php_fastcgi, Caddy normalizes HTTP headers into CGI variables by replacing - with _. This lets a client send an underscore alias that survives the forward_auth delete step but becomes the same PHP/FastCGI variable. Result: a remote client can inject or sometimes override identity/group headers trusted by PHP/FastCGI applications behind Caddy. This vulnerability is fixed in 2.11.4.",
+    "tags": [],
+    "title": "CVE-2026-52845 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52845"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53148",
+    "published": "2026-06-25T09:16:32.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nthunderbolt: Clamp XDomain response data copy to allocation size\n\ntb_xdp_properties_request() derives the per-packet copy length from\nthe response header without checking that it fits in the previously\nallocated data buffer.  A malicious peer can set its length field\nlarger than the declared data_length, causing memcpy to write past\nthe kcalloc allocation.\n\nClamp the per-packet copy length so that the cumulative offset\nnever exceeds data_len.",
+    "tags": [],
+    "title": "CVE-2026-53148 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53148"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53153",
+    "published": "2026-06-25T09:16:32.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/list_lru: drain before clearing xarray entry on reparent\n\nmemcg_reparent_list_lrus() clears the dying memcg's xarray entry with\nxas_store(&xas, NULL) before reparenting its per-node lists into the\nparent.  This opens a window where a concurrent list_lru_del() arriving\nfor the dying memcg sees xa_load() == NULL, walks to the parent in\nlock_list_lru_of_memcg(), takes the parent's per-node lock, and calls\nlist_del_init() on an item still physically linked on the dying memcg's\nlist.\n\nIf another in-flight thread holds the dying memcg's per-node lock at the\nsame moment (another list_lru_del, or a list_lru_walk_one running an\nisolate callback), both threads modify ->next/->prev pointers on the same\nphysical list under different locks.  Adjacent items can corrupt each\nother's links.\n\nFix it by reversing the order: reparent each per-node list and mark the\nchild's list lru dead and then clear the xarray entry.  Any concurrent\nlist_lru op that finds the still-set xarray entry either takes the dying\nmemcg's per-node lock (synchronizing with the drain) or sees LONG_MIN and\nwalks to the parent, where the items now live.",
+    "tags": [],
+    "title": "CVE-2026-53153 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53153"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53202",
+    "published": "2026-06-25T09:16:37.783",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\naccel/ivpu: Fix signed integer truncation in IPC receive\n\nFix potential buffer overflow where firmware-supplied data_size is cast\nto signed int before being used in min_t(). Large unsigned values\n(>= 0x80000000) become negative, causing unsigned wraparound and\noversized memcpy operations that can overflow the stack buffer.\n\nChange min_t(int, ...) to min() as both values are unsigned and can be\nhandled by min() without explicit cast.",
+    "tags": [],
+    "title": "CVE-2026-53202 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53202"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-53203",
+    "published": "2026-06-25T09:16:37.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\naccel/ivpu: Add buffer overflow check in MS get_info_ioctl\n\nAdd validation that the info size returned from the metric stream info\nquery is not exceeded when checked against the allocated buffer size.\nIf the firmware returns a size larger than the buffer, reject the\noperation with -EOVERFLOW instead of proceeding with an incorrect\nbuffer copy.",
+    "tags": [],
+    "title": "CVE-2026-53203 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53203"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-9800",
+    "published": "2026-06-25T17:17:04.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Keycloak Policy Enforcer. This vulnerability allows any authenticated user to bypass all authorization policies, including role, scope, and User-Managed Access (UMA) permission checks. By including the configured access-denied page path within a request URL, either as a path segment or a query parameter, an attacker can gain unauthorized access to protected resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-9800 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9800"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxPX0F5V1RDelVBVkFyeG1PTGN1SW55OE5NMnJGY0RKalpxWWxUc1VjV3A4VkZNcUI0RDhZSHdPT2wzTzktdDlDTkRWTXB5RWlXQmVnQkpMLVFqaTlLNnJTLWdZd2lOYnB2ZmZEZF9fam1JWWpzcjFDWmx1NGs1RW1EVw",
+    "published": "2026-07-15T01:15:23+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[인사] 개인정보보호위원회 edaily.co.kr",
+    "tags": [],
+    "title": "[인사] 개인정보보호위원회 - edaily.co.kr",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPX0F5V1RDelVBVkFyeG1PTGN1SW55OE5NMnJGY0RKalpxWWxUc1VjV3A4VkZNcUI0RDhZSHdPT2wzTzktdDlDTkRWTXB5RWlXQmVnQkpMLVFqaTlLNnJTLWdZd2lOYnB2ZmZEZF9fam1JWWpzcjFDWmx1NGs1RW1EVw?oc=5"
   }
 ]
