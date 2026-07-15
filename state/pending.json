@@ -9565,5 +9565,17 @@
     "tags": [],
     "title": "Trump administration unveils AI-supported clearinghouse for cyber vulnerabilities",
     "url": "https://therecord.media/gold-eagle-cybersecurity-vulnerabilities-clearinghouse"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-54527",
+    "published": "2026-07-08T21:16:49.273",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "JupyterLab Git is a Git extension for JupyterLab. From 0.30.0b3 before 0.54.0, the PlainTextDiff.ts createHeader() method passes Git filenames directly to innerHTML when rendering renamed files in commit history, allowing a crafted filename to execute JavaScript when a victim views the rename diff in the Git History tab. This issue is fixed in version 0.54.0.",
+    "tags": [],
+    "title": "CVE-2026-54527 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54527"
   }
 ]
