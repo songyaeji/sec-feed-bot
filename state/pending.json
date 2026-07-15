@@ -7970,5 +7970,19 @@
     "tags": [],
     "title": "유락, ‘현장형 AI 포렌식’으로 인도 4개 주 실증 확보",
     "url": "http://www.boannews.com/media/view.asp?idx=144710&kind=&sub_kind="
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html",
+    "published": "2026-07-15T10:55:22+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Open a repository in Cursor on Windows and, if a file named git.exe is sitting in the project root, Cursor runs it. No click, no approval dialog, no warning that anything in the folder is about to execute. Whatever that binary does, it does as you, with your source, your SSH keys and your cloud tokens. Cursor keeps re-running it for as long as the project stays open. No prompt",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Cursor Flaw Lets Malicious Cloned Repositories Trigger Windows Code Execution",
+    "url": "https://thehackernews.com/2026/07/cursor-flaw-lets-malicious-cloned.html"
   }
 ]
