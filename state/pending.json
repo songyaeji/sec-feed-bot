@@ -8783,5 +8783,17 @@
     "tags": [],
     "title": "CVE-2026-61836 (CVSS 8.6)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61836"
+  },
+  {
+    "category": "high",
+    "cvss": 6.3,
+    "id": "CVE-2026-21404",
+    "published": "2026-06-04T20:16:57.083",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NAVTOR NavBox through version 4.16.1.20 contains hard-coded credentials within its Windows Communication Foundation (SOAP) implementation. If the SOAP functionality is enabled, a local attacker can extract credentials to bypass the intended transfer workflow. Successful authentication against the SOAP interface grants access to privileged WCF methods, enabling an attacker to write or overwrite files within application-defined paths.",
+    "tags": [],
+    "title": "CVE-2026-21404 (CVSS 6.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21404"
   }
 ]
