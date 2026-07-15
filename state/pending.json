@@ -9386,5 +9386,60 @@
     ],
     "title": "TuxBot v3 Evolution Shows Signs of LLM-Assisted IoT Botnet Development",
     "url": "https://thehackernews.com/2026/07/tuxbot-v3-evolution-shows-signs-of-llm.html"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-15746",
+    "published": "2026-07-15T19:16:57.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Strands Agents is an open-source Python SDK for building and running AI agents. The strands-agents-tools package provides pre-built tools for use with the SDK, including the elasticsearch_memory tool for agent memory storage. We identified CVE-2026-15746, a server-side request forgery (SSRF) issue in the elasticsearch_memory tool. The tool exposed its connection parameters (es_url, cloud_id, api_key) as fields the large language model (LLM) could control through the tool schema. When a caller omitted the api_key parameter, the tool fell back to the operator's ELASTICSEARCH_API_KEY environment variable and sent it to whichever host the LLM specified. A crafted prompt could cause the tool to connect to a threat-actor-controlled server and disclose the operator's Elasticsearch API key in the Authorization header.\n\n\n\nWe recommend you upgrade to strands-agents-tools version 0.7.0 or later. As a precautionary measure, we recommend all operators rotate their ELASTICSEARCH_API_KEY, even if there is no indication the credential was exposed.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-15746 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15746"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-46485",
+    "published": "2026-07-15T19:17:17.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dashy is a self-hostable personal dashboard. Prior to 4.0.8, Dashy deployments using OIDC can allow unauthenticated users or non-admin authenticated users to write changes to the main config.yaml through the config-saving functionality despite configured permissions, allowing unauthorized modification of dashboard configuration and potential service disruption. This issue is fixed in version 4.0.8.",
+    "tags": [],
+    "title": "CVE-2026-46485 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46485"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-62349",
+    "published": "2026-07-15T19:18:37.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TDengine is an open source, time-series database optimized for Internet of Things devices. In 3.4.1.6 and earlier, source/libs/parser/src/parUtil.c trimString() checks space for only one byte before processing SQL string escape sequences \\%, \\_, or \\x, allowing a one-byte out-of-bounds write to the stack buffer tmpTokenBuf that can cause denial of service and potentially remote code execution. This issue is fixed in version 3.4.1.14.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-62349 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62349"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195448",
+    "published": "2026-07-15T18:59:09+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "US and allies warn of Russian APT groups targeting routers and network devices to compromise critical infrastructure worldwide. The US and allied governments warn that Russian state-sponsored APT groups are scanning and exploiting poorly secured network devices, especially routers, to access critical infrastructure. Groups linked to FSB Center 16, including Berserk Bear, Energetic Bear, Ghost […]",
+    "tags": [
+      "APT"
+    ],
+    "title": "US and allied Governments’ Recommendations: Securing Network Devices Against Russian APT Groups",
+    "url": "https://securityaffairs.com/195448/apt/us-and-allied-governments-recommendations-securing-network-devices-against-russian-apt-groups.html"
   }
 ]
