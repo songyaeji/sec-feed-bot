@@ -8425,5 +8425,17 @@
     "tags": [],
     "title": "Establishing a Coordinated Vulnerability Disclosure Program to Work With Security Researchers",
     "url": "https://www.cisa.gov/resources-tools/resources/establishing-coordinated-vulnerability-disclosure-program-work-security-researchers"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-45075",
+    "published": "2026-07-14T19:17:06.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Symfony is a PHP framework for web and console applications and a set of reusable PHP components. Prior to 7.4.12 and 8.0.12, method-scoped #[IsGranted], #[IsSignatureValid], and #[IsCsrfTokenValid] attributes can be configured for GET only, but Symfony routes HEAD requests to the GET handler while the attribute check is skipped, allowing protected controllers to execute and leak headers or perform side effects. This issue is fixed in versions 7.4.12 and 8.0.12.",
+    "tags": [],
+    "title": "CVE-2026-45075 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45075"
   }
 ]
