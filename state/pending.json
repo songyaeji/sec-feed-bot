@@ -9527,5 +9527,31 @@
     "tags": [],
     "title": "Zoom warns of critical account takeover vulnerability",
     "url": "https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-46633",
+    "published": "2026-07-14T22:16:55.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Twig is a template language for PHP. Prior to 3.26.0, Compiler::string() does not escape single quotes when a template name from a {% use %} tag is placed inside a PHP single-quoted string literal, allowing a crafted template name to terminate the string and inject arbitrary PHP expressions into the compiled cache file. This issue is fixed in version 3.26.0.",
+    "tags": [],
+    "title": "CVE-2026-46633 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46633"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-46634",
+    "published": "2026-07-14T22:16:56.130",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Twig is a template language for PHP. From 3.9.0 until 3.26.0, template_from_string() compiles an inner template under a synthesized __string_template__<hash> name that can fall outside a SourcePolicyInterface sandbox decision, allowing a sandboxed template that can call template_from_string and include to render an inner template without security policy enforcement. This issue is fixed in version 3.26.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46634 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46634"
   }
 ]
