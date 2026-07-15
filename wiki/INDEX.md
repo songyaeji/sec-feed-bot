@@ -2,6 +2,16 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [traefik-http3-mtls-bypass](topics/2026-07-traefik-http3-mtls-bypass.md) Traefik HTTP/3 mTLS 우회 (최종갱신일: 2026-07-15)
+- [firefox-148-sandbox-escapes](topics/2026-07-firefox-148-sandbox-escapes.md) Firefox 148 샌드박스 탈출 5개 (최종갱신일: 2026-07-15)
+- [firefox-147-sandbox-escape](topics/2026-07-firefox-147-sandbox-escape.md) Firefox 147 메시징 샌드박스 탈출 (최종갱신일: 2026-07-15)
+- [knx-protocol-lockout](topics/2026-07-knx-protocol-lockout.md) KNX 프로토콜 계정 잠금 취약점 (최종갱신일: 2026-07-15)
+- [oracle-ebusiness-privilege-mgmt](topics/2026-07-oracle-ebusiness-privilege-mgmt.md) Oracle E-Business Suite 권한 관리 취약점 (최종갱신일: 2026-07-15)
+- [gigawiper-backdoor](topics/2026-07-gigawiper-backdoor.md) GigaWiper 파괴적 백도어 (최종갱신일: 2026-07-15)
+- [unc6692-social-engineering-malware](topics/2026-04-unc6692-social-engineering-malware.md) UNC6692 소셜 엔지니어링 침입 (최종갱신일: 2026-07-15)
+- [vsphere-brickstorm-campaign](topics/2026-04-vsphere-brickstorm-campaign.md) BRICKSTORM vSphere 공격 (최종갱신일: 2026-07-15)
+- [tuxbot-v3-llm-iot-botnet](topics/2026-07-tuxbot-v3-llm-iot-botnet.md) TuxBot v3 Evolution LLM 기반 개발 IoT 보트넷 (최종갱신일: 2026-07-15)
+- [intruder-ai-vulnerability-vending](topics/2026-07-intruder-ai-vulnerability-vending.md) Intruder AI 기반 취약점 자동 발견 시스템 (최종갱신일: 2026-07-15)
 - [windows-vmswitch-privesc](topics/2026-07-windows-vmswitch-privesc.md) Windows VMSwitch 사용 후 해제 권한상향 (최종갱신일: 2026-07-14)
 - [sap-netweaver-memory-corruption](topics/2026-07-sap-netweaver-memory-corruption.md) SAP NetWeaver ABAP 메모리 관리 논리 오류 (최종갱신일: 2026-07-14)
 - [jetbrains-youtrack-auth-bypass](topics/2026-07-jetbrains-youtrack-auth-bypass.md) JetBrains YouTrack 데이터베이스 접근 인증 우회 (최종갱신일: 2026-07-14)
