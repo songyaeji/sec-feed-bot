@@ -8831,5 +8831,160 @@
     "tags": [],
     "title": "​    ​AsyncAPI npm packages infected with credential-stealing malware",
     "url": "https://www.bleepingcomputer.com/news/security/-asyncapi-npm-packages-infected-with-credential-stealing-malware/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-41681",
+    "published": "2026-04-24T18:16:29.717",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "rust-openssl provides OpenSSL bindings for the Rust programming language.  From 0.10.39 to before 0.10.78, EVP_DigestFinal() always writes EVP_MD_CTX_size(ctx) to the out buffer. If out is smaller than that, MdCtxRef::digest_final() writes past its end, usually corrupting the stack. This is reachable from safe Rust. This vulnerability is fixed in 0.10.78.",
+    "tags": [],
+    "title": "CVE-2026-41681 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41681"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-44986",
+    "published": "2026-07-15T16:16:45.513",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Penpot is an open-source design tool for design and code collaboration. Prior to 2.14.5, Penpot exposed teams_invitations.clj invitation tokens from create-team-invitations, embedded an existing profile id in auth.clj prepare-register-profile, and had auth.clj register-profile issue a session based on the invitation email match without password verification, allowing a registered user to take over any non-blocked profile. This issue is fixed in version 2.14.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44986 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44986"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-50148",
+    "published": "2026-07-15T16:16:47.963",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Metabase is an open-source business intelligence and embedded analytics tool. From 1.54.0 until 1.54.24, 1.55.24, 1.56.25, 1.57.19, 1.58.14, 1.59.10, and 1.60.4, a Metabase user with permission to add or edit a database connection can achieve remote code execution on the Metabase server by configuring a Snowflake connection to an attacker-controlled server, because a flaw in the Snowflake JDBC driver can write arbitrary files anywhere on the Metabase host, including replacing one of Metabase's own database driver files that later executes inside the Metabase process. This issue is fixed in versions 1.54.24, 1.55.24, 1.56.25, 1.57.19, 1.58.14, 1.59.10, and 1.60.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-50148 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50148"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-1022",
+    "published": "2025-02-05T05:15:10.337",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Versions of the package spatie/browsershot before 5.0.5 are vulnerable to Improper Input Validation in the setHtml function, invoked by Browsershot::html(), which can be bypassed by omitting the slashes in the file URI (e.g., file:../../../../etc/passwd). This is due to missing validations of the user input that should be blocking file URI schemes (e.g., file:// and file:/) in the HTML content.\r\r**Note:** Further analysis has identified additional proof-of-concept exploits leveraging the vulnerable function. Developers using this package should ensure proper input validation to mitigate potential risks, as the issue remains unaddressed.",
+    "tags": [],
+    "title": "CVE-2025-1022 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1022"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-41676",
+    "published": "2026-04-24T18:16:29.120",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rust-openssl provides OpenSSL bindings for the Rust programming language.  From 0.9.27 to before 0.10.78, Deriver::derive (and PkeyCtxRef::derive) sets len = buf.len() and passes it as the in/out length to EVP_PKEY_derive, relying on OpenSSL to honor it. On OpenSSL 1.1.x, X25519, X448, DH and HKDF-extract ignore the incoming *keylen, unconditionally writing the full shared secret (32/56/prime-size bytes). A caller passing a short slice gets a heap/stack overflow from safe code. OpenSSL 3.x providers do check, so this only impacts older OpenSSL. This vulnerability is fixed in 0.10.78.",
+    "tags": [],
+    "title": "CVE-2026-41676 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41676"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-41898",
+    "published": "2026-04-24T18:16:29.860",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rust-openssl provides OpenSSL bindings for the Rust programming language.  From 0.9.24 to before 0.10.78, the FFI trampolines behind SslContextBuilder::set_psk_client_callback, set_psk_server_callback, set_cookie_generate_cb, and set_stateless_cookie_generate_cb forwarded the user closure's returned usize directly to OpenSSL without checking it against the &mut [u8] that was handed to the closure. This can lead to buffer overflows and other unintended consequences. This vulnerability is fixed in 0.10.78.",
+    "tags": [],
+    "title": "CVE-2026-41898 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41898"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-48320",
+    "published": "2026-07-14T21:16:58.703",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by a reflected Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48320 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48320"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-45805",
+    "published": "2026-07-15T16:16:45.787",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Penpot is an open-source design tool for design and code collaboration. Prior to 2.15.0, Penpot MCP's mcp/packages/server/src/ReplServer.ts bound the ReplServer to 0.0.0.0:4403 and exposed an unauthenticated /execute endpoint that passed the code field to PluginBridge.executePluginTask(), allowing anyone on the network to execute JavaScript on the server. This issue is fixed in version 2.15.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45805 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45805"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-47158",
+    "published": "2026-07-15T16:16:46.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vaultwarden is a Bitwarden-compatible server written in Rust. Prior to 1.36.0, Vaultwarden's SSO authorization flow did not bind the OAuth state parameter accepted by /connect/authorize to the initiating browser session, allowed attacker-controlled PKCE parameters, and left SsoAuth records intact after failed token exchange, allowing an unauthenticated attacker to induce IdP authentication and redeem tokens for a fully authenticated session. This issue is fixed in version 1.36.0.",
+    "tags": [],
+    "title": "CVE-2026-47158 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47158"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55242",
+    "published": "2026-07-15T16:16:48.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.111.0 and 16.22.0, an authenticated user with a standard operational role can trigger server-side template injection through a configuration field, resulting in unauthorized disclosure of data outside the user's normal permission scope. This issue is fixed in versions 15.111.0 and 16.22.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55242 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55242"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-60005",
+    "published": "2026-07-15T16:16:49.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NGINX Plus and NGINX Open Source have a vulnerability in the ngx_http_slice_module module. When the slice directive and unnamed regex captures are configured or when a background cache update happens, unauthenticated attackers can send requests that may cause uninitialized memory access in the NGINX worker process, leading to limited disclosure of memory or a restart.\n\nImpact:\nThis vulnerability may allow remote, unauthenticated attackers to have limited control to disclose memory contents or restart the NGINX worker process. There is no control plane exposure; this is a data plane issue only.\nNote: The ngx_http_slice_module module is not enabled by default; it's enabled with the --with-http_slice_module configuration parameter.\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-60005 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60005"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62685",
+    "published": "2026-07-15T16:16:51.783",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "File Browser is a file managing interface for uploading, deleting, previewing, renaming, and editing files within a specified directory. Prior to 2.63.17, File Browser builds new user scopes from usernames passed through cleanUsername() when Signup=true and CreateUserDir=true, but the many-to-one normalization can collapse usernames such as team/one, team one, and team-one to the same home directory without checking whether the resulting scope is already taken, allowing a second registrant to gain full read and write access to another user's files. This issue is fixed in version 2.63.17.",
+    "tags": [],
+    "title": "CVE-2026-62685 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62685"
   }
 ]
