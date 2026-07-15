@@ -9577,5 +9577,65 @@
     "tags": [],
     "title": "CVE-2026-54527 (CVSS 9.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54527"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-46339",
+    "published": "2026-07-15T21:16:50.067",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. From 0.4.30 until 0.4.37, 9Router's src/proxy.js middleware did not protect /api/cli-tools/* and /api/mcp/*, allowing unauthenticated registration of customPlugins through src/app/api/cli-tools/cowork-settings/route.js and command execution through the MCP bridge. This vulnerability is fixed in 0.4.37.",
+    "tags": [],
+    "title": "CVE-2026-46339 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46339"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-49352",
+    "published": "2026-07-15T21:16:53.743",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. From 0.2.21 until 0.4.44, 9Router used the hardcoded fallback JWT secret 9router-default-secret-change-me in src/app/api/auth/login/route.js, src/middleware.js, and later src/lib/auth/dashboardSession.js, allowing attackers to forge an auth_token cookie when JWT_SECRET was unset. This issue is fixed in version 0.4.44",
+    "tags": [],
+    "title": "CVE-2026-49352 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49352"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-52887",
+    "published": "2026-07-15T21:16:54.543",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Prior to 2.0.61, NocoBase @nocobase/plugin-notification-in-app-message exposed GET /api/myInAppChannels:list, where the filter[latestMsgReceiveTimestamp][$lt] value was inserted into a Sequelize.literal() template string without escaping or parameter binding, allowing a signed-up authenticated user to run stacked PostgreSQL statements and potentially execute commands with COPY ... TO PROGRAM. This vulnerability is fixed in 2.0.61.",
+    "tags": [],
+    "title": "CVE-2026-52887 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52887"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-54052",
+    "published": "2026-07-15T21:16:54.797",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "n8n-MCP is an MCP server that provides AI assistants access to n8n node documentation, properties, and operations. Prior to 2.56.1, in HTTP mode with multi-tenancy enabled through ENABLE_MULTI_TENANT=true, n8n-mcp's local workflow version history backups were not isolated per tenant, allowing an authenticated tenant to read workflow version snapshots belonging to other tenants and delete or destroy other tenants' stored backups, including full node definitions, credential references, and authorization headers. This issue is fixed in version 2.56.1.",
+    "tags": [],
+    "title": "CVE-2026-54052 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54052"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62312",
+    "published": "2026-07-15T21:16:55.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. Prior to 0.5.2, 9Router allows a remote authenticated attacker to achieve arbitrary code execution on the host operating system by combining a Host header bypass of localhost-only routes with unvalidated MCP plugin args passed to child_process.spawn(), allowing malicious custom plugins to execute commands through /api/mcp//sse. This issue is fixed in version 0.5.2.",
+    "tags": [],
+    "title": "CVE-2026-62312 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62312"
   }
 ]
