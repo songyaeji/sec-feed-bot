@@ -8449,5 +8449,339 @@
     "tags": [],
     "title": "CVE-2026-45069 (CVSS 9.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45069"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-60082",
+    "published": "2026-07-14T16:17:03.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DBI versions before 1.651 for Perl do not enforce statement handle consistency with the row.\n\nWhen the statement handle had no fields but the source row was non-empty, the internal row-buffer helper would read from a negative array index.\n\nThis could be triggered by a caller supplying inconsistent metadata and rows to the prepare method.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-60082 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60082"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-48321",
+    "published": "2026-07-14T21:16:58.813",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could leverage this vulnerability to gain unauthorized read and write access. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48321 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48321"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-52101",
+    "published": "2026-07-14T21:17:05.343",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in andreimarcu linux-server v.1.0 through v.2.3.8 allows a remote attacker to obtain sensitive information via the function uploadRemote function in upload.go",
+    "tags": [],
+    "title": "CVE-2026-52101 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52101"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38450",
+    "published": "2026-07-14T22:16:52.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in Aetopia Digital Asset Management DAM v.1.0.0 allows a remote attacker to execute arbitrary code via the name and description parameter of the Add/Update Project function",
+    "tags": [],
+    "title": "CVE-2026-38450 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38450"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51807",
+    "published": "2026-07-14T23:17:29.843",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Buffer Overflow vulnerability in OpenHTJ2K v.0.18.4 and before allows an attacker to execute arbitrary code via the j2k_precinct_subband::parse_packet_header() in source/core/coding/coding_units.cpp",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-51807 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51807"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5269",
+    "published": "2026-07-14T23:17:34.453",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Ciena's Navigator Network Control Suite (NCS) and Manage Control Plan (MCP), there are hidden system accounts used for internal software operations. Some of these accounts have default passwords that may be predictable. While these accounts have very limited permissions on their own, an attacker could combine an attack using one of these accounts with other potential weaknesses to launch a more significant attack, possibly leading to escalation of privilege on the system.",
+    "tags": [],
+    "title": "CVE-2026-5269 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5269"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-61736",
+    "published": "2026-07-15T15:16:48.217",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "LightRAG provides simple and fast retrieval-augmented generation. Prior to 1.5.4, the server defaults to CORS_ORIGINS=* combined with allow_credentials=True in lightrag/api/lightrag_server.py, causing Starlette CORSMiddleware to effectively whitelist every origin for credentialed cross-origin requests. Any malicious website visited by an authenticated LightRAG user can silently make authenticated API requests, exfiltrating documents and knowledge graph data or performing destructive actions such as deleting the document store. This vulnerability is fixed in 1.5.4.",
+    "tags": [],
+    "title": "CVE-2026-61736 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61736"
+  },
+  {
+    "category": "high",
+    "cvss": 6.4,
+    "id": "CVE-2026-24220",
+    "published": "2026-07-14T21:16:43.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for any platform contains a vulnerability in visual gen server, where an attacker could cause an unsafe deserialization by unauthorized zeroMQ deserialization. A successful exploit of this vulnerability might lead to code execution.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-24220 (CVSS 6.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24220"
+  },
+  {
+    "category": "high",
+    "cvss": 6.3,
+    "id": "CVE-2026-24226",
+    "published": "2026-07-14T21:16:43.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for Linux contains a vulnerability where an attacker could cause improper control of code generation. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-24226 (CVSS 6.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24226"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2026-24229",
+    "published": "2026-07-14T21:16:44.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for Linux contains a vulnerability in the disaggregated orchestrator component, where an attacker could read, write, or delete internal cluster state by sending requests to the FastAPI server. A successful exploit of this vulnerability might lead to information disclosure, data tampering, and denial of service.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-24229 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24229"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-24233",
+    "published": "2026-07-14T21:16:44.187",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for Linux contains a vulnerability in the restricted unpickler used for model weight deserialization, where a local, unauthenticated attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, data tampering, and information disclosure.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-24233 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24233"
+  },
+  {
+    "category": "high",
+    "cvss": 6.8,
+    "id": "CVE-2026-24234",
+    "published": "2026-07-14T21:16:44.293",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for Linux contains a vulnerability in the multimodal media fetching functions, where a network-accessible attacker could cause server-side request forgery. A successful exploit of this vulnerability might lead to denial of service and information disclosure.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-24234 (CVSS 6.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24234"
+  },
+  {
+    "category": "high",
+    "cvss": 6.4,
+    "id": "CVE-2026-24259",
+    "published": "2026-07-14T21:16:44.510",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for Linux contains a vulnerability where an attacker could cause missing authentication for a critical function. A successful exploit of this vulnerability might lead to code execution, data tampering, and information disclosure.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-24259 (CVSS 6.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24259"
+  },
+  {
+    "category": "high",
+    "cvss": 6.2,
+    "id": "CVE-2026-24271",
+    "published": "2026-07-14T21:16:44.717",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM contains a vulnerability in the OpenAI-compatible inference API, where an attacker could cause allocation of GPU resources without limits or throttling. A successful exploit of this vulnerability might lead to denial of service.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-24271 (CVSS 6.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24271"
+  },
+  {
+    "category": "high",
+    "cvss": 6.2,
+    "id": "CVE-2026-47470",
+    "published": "2026-07-14T21:16:56.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for any platform contains a vulnerability in the gRPC server chat API endpoint, where an attacker could cause CWE-20 by local attack. A successful exploit of this vulnerability might lead to denial of service.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-47470 (CVSS 6.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47470"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-47471",
+    "published": "2026-07-14T21:16:56.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM for any platform contains a vulnerability in tensor deserialization, where an attacker could cause a heap based buffer overflow. A successful exploit of this vulnerability might lead to information disclosure, data tampering, or denial of service.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-47471 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47471"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-47472",
+    "published": "2026-07-14T21:16:56.333",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM contains a vulnerability in its inter-process communication layer where an attacker with local same-user access could cause deserialization. A successful exploit of this vulnerability might lead to code execution, information disclosure, data tampering, and denial of service.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-47472 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47472"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-47473",
+    "published": "2026-07-14T21:16:56.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM contains a vulnerability where an attacker could cause a write-what-where condition. A successful exploit of this vulnerability might lead to data tampering, denial of service, and information disclosure.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-47473 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47473"
+  },
+  {
+    "category": "high",
+    "cvss": 6.2,
+    "id": "CVE-2026-47475",
+    "published": "2026-07-14T21:16:56.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA TensorRT-LLM contains a vulnerability in the OpenAI-compatible inference API where an attacker could trigger a reachable assertion in the sampler thread. A successful exploit of this vulnerability might lead to denial of service.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-47475 (CVSS 6.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47475"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-15583",
+    "published": "2026-07-15T08:16:22.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A confused-deputy flaw in Grafana MCP Server allows an unauthenticated remote attacker to exfiltrate the server's environment-configured Grafana service-account token by supplying a crafted X-Grafana-URL request header. This also enables SSRF against arbitrary internal services, including cloud metadata endpoints.",
+    "tags": [],
+    "title": "CVE-2026-15583 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15583"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-35152",
+    "published": "2026-07-15T10:16:46.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A SQL Injection vulnerability exists in Apache Fineract's Report Execution API (runreports endpoint) in versions up to and including 1.14.0. Report parameter values are incorporated into the generated SQL query without sufficient validation, allowing an authenticated user with permission to run reports to inject arbitrary SQL via crafted parameter values. This can be leveraged to perform unauthorized access to data beyond what the report was designed to expose. Users are recommended to upgrade to a version containing the fix.",
+    "tags": [],
+    "title": "CVE-2026-35152 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35152"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56287",
+    "published": "2026-07-15T10:16:47.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A boolean-based SQL Injection vulnerability exists in Apache Fineract's Client Search API (GET /api/v1/clients) in versions up to and including 1.14.0. The orderBy and sortOrder request parameters are concatenated into a SQL query without sufficient validation, allowing an authenticated user with permission to view clients to inject arbitrary SQL via a crafted orderBy value. This can be leveraged to perform blind boolean-based data extraction and, on MySQL/MariaDB, to disclose arbitrary files readable by the database process via the LOAD_FILE() function. Users are recommended to upgrade to a version containing the fix",
+    "tags": [],
+    "title": "CVE-2026-56287 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56287"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-42533",
+    "published": "2026-07-15T15:16:33.480",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability exists in NGINX Plus and NGINX Open Source when a map directive uses regex matching and a string expression references the map's regex capture variables before referencing the map output variable. Alternatively, the same result could be achieved by using a non-cacheable variable in a string expression under certain conditions. An unauthenticated attacker along with conditions beyond their control can exploit this vulnerability by sending crafted HTTP requests. This may cause a heap buffer overflow in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR.\n\nImpact:\nThis vulnerability may allow remote attackers to cause a denial-of-service (DoS) on the NGINX system or to possibly trigger a code execution. There is no control plane exposure; this is a data plane issue only.\n\n\n\n\n Note: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-42533 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42533"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-55723",
+    "published": "2026-07-15T15:16:45.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "When NGINX Ingress Controller is configured with Custom Resource Definitions (CRDs) or Ingress annotations, an injection vulnerability exists in the configuration generator of NGINX Ingress Controller. Multiple user-controllable fields are written into the generated NGINX configuration without sanitization. An authenticated attacker with permission to create or modify these CRDs or annotations may craft values that inject arbitrary NGINX configuration directives. \n\nImpact:\nAn authenticated attacker granted write access to NGINX Ingress Controller CRDs or Ingress annotations through the Kubernetes API may be able to inject arbitrary NGINX configuration directives, create or delete files, or disable services. There is no data plane exposure; this is a control plane issue only.\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55723 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55723"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-61836",
+    "published": "2026-07-15T15:16:48.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Directus is a real-time API and App dashboard for managing SQL database content. Prior to 12.0.0, when response caching is enabled, the cache-key derivation in api/src/utils/get-cache-key.ts includes version, path, query, and accountability.user but omits authorization context such as share, role, roles, admin, app, and policies. Directus share tokens and anonymous requests can both reduce to user null, so different shares or anonymous clients requesting the same URL and query can receive a permission-filtered cached response without permission re-evaluation. This issue is fixed in version 12.0.0.",
+    "tags": [],
+    "title": "CVE-2026-61836 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61836"
   }
 ]
