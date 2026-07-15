@@ -8986,5 +8986,65 @@
     "tags": [],
     "title": "CVE-2026-62685 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62685"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-15773",
+    "published": "2026-07-14T21:16:43.007",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use after free in Core in Google Chrome on Windows prior to 150.0.7871.125 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15773 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15773"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-15769",
+    "published": "2026-07-14T21:16:42.420",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in Linux Toolkit Theming in Google Chrome on Linux prior to 150.0.7871.125 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15769 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15769"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-15771",
+    "published": "2026-07-14T21:16:42.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in Media in Google Chrome on Windows prior to 150.0.7871.125 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15771 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15771"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-15772",
+    "published": "2026-07-14T21:16:42.860",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in GPU in Google Chrome on Android prior to 150.0.7871.125 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15772 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15772"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-15774",
+    "published": "2026-07-14T21:16:43.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Skia in Google Chrome prior to 150.0.7871.125 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15774 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15774"
   }
 ]
