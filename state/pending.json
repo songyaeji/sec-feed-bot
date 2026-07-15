@@ -8248,5 +8248,41 @@
     "tags": [],
     "title": "New Webinar: Closing the Approval Gap in AI-Era Ad Tech",
     "url": "https://thehackernews.com/2026/07/new-webinar-closing-approval-gap-in-ai.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5270",
+    "published": "2026-07-14T23:17:34.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authentication bypass vulnerability exists in certain releases of Ciena Navigator Network Control Suite (NCS), Manage Control Plan (MCP), and Blue Planet products. The issue is caused by improper handling of HTTP request paths and headers, which allows an unauthenticated attacker to manipulate requests in a manner that bypasses authentication and associated audit logging controls.",
+    "tags": [],
+    "title": "CVE-2026-5270 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5270"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15804",
+    "published": "2026-07-15T08:16:23.100",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The HCM developed by MetaGuru has a SQL Injection vulnerability. Authenticated remote attackers can inject SQL commands via specific parameters, thereby compromising the confidentiality, integrity, and availability of database data.",
+    "tags": [],
+    "title": "CVE-2026-15804 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15804"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-57821",
+    "published": "2026-07-15T10:16:47.620",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A SQL Injection vulnerability exists in Apache Fineract's Office Search API (GET /api/v1/offices) in versions up to and including 1.14.0. The orderBy request parameter is concatenated into a SQL query without sufficient validation, allowing an authenticated user with permission to view offices to inject arbitrary SQL via a crafted orderBy value. This is a bypass of the ColumnValidator fix introduced for CVE-2024-32838, which does not detect bare subqueries in the ORDER BY position. This can be leveraged to perform time-based blind SQL injection for data exfiltration. Because the injected query blocks the database connection for its full duration, concurrent exploitation can exhaust the application's database connection pool, resulting in denial of service for other users. Users are recommended to upgrade to a version containing the fix.",
+    "tags": [],
+    "title": "CVE-2026-57821 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57821"
   }
 ]
