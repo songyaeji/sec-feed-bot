@@ -9206,5 +9206,157 @@
     "tags": [],
     "title": "Trump’s DNI pick grilled about election security, voter fraud",
     "url": "https://therecord.media/jay-clayton-odni-nominee-senate-confirmation-hearing"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-53513",
+    "published": "2026-07-15T18:16:47.547",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Better Auth is an authentication and authorization library for TypeScript. Prior to 1.6.11, the @better-auth/sso plugin's POST /sso/register and POST /sso/update-provider endpoints accept attacker-controlled oidcConfig.userInfoEndpoint, tokenEndpoint, and jwksEndpoint URLs when skipDiscovery: true is set, store them on the ssoProvider row without origin validation, and fetch them during OIDC callback, allowing non-blind server-side request forgery and possible account linking when trustEmailVerified: true is configured. This issue is fixed in version 1.6.11.",
+    "tags": [],
+    "title": "CVE-2026-53513 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53513"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-62948",
+    "published": "2026-07-15T18:16:50.293",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenWrt is a Linux operating system targeting embedded devices. Prior to 25.12.5, odhcpd writes a DHCPv6 client FQDN option 39 hostname into /tmp/odhcpd.leases through src/statefiles.c statefiles_write_state6() and statefiles_write_state4() without escaping, allowing newline injection of forged lease lines that LuCI rpcd-mod-luci getDHCPLeases displays through htdocs/luci-static/resources/view/status/include/40_dhcp.js and htdocs/luci-static/resources/luci.js dom.append as live HTML in the Active DHCPv6 Leases admin page. This vulnerability is fixed in 25.12.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-62948 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62948"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-10673",
+    "published": "2026-07-15T18:16:44.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Zephyr ADIN2111/ADIN1110 10BASE-T1S/T1L Ethernet driver (drivers/ethernet/eth_adin2111.c) reassembles received Ethernet frames in OPEN Alliance (OA) SPI mode by copying device-supplied 64-byte data chunks into a fixed static buffer ctx->buf of size CONFIG_ETH_ADIN2111_BUFFER_SIZE (default 1524 bytes). In eth_adin2111_oa_data_read(), each valid chunk was memcpy'd into ctx->buf[ctx->scur] and the write cursor scur advanced, with no check that scur + len stayed within the buffer. The number of chunks (up to 255, from the BUFSTS RCA field) and the per-chunk length are taken entirely from the frame data received off the wire; the cursor is only reset on a start-of-frame chunk. An attacker on the single-pair Ethernet segment can therefore send a frame whose reassembled size exceeds the configured buffer, causing the driver's RX offload thread to write attacker-controlled frame bytes past the end of the static buffer into adjacent driver/kernel memory (up to roughly 14.8 KB in the worst case). This is a remotely/adjacently reachable out-of-bounds write (CWE-787) that can corrupt memory and cause denial of service or potentially code execution. The defect was introduced when OA SPI support was added (commit 0ca8b0756b1) and shipped in releases v3.7.0 through v4.4.0. The fix adds a bounds check that drops the oversized frame and resets the cursor before the copy.",
+    "tags": [],
+    "title": "CVE-2026-10673 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10673"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-12382",
+    "published": "2026-07-15T18:16:44.307",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the AAP Gateway Envoy proxy configuration. The non-mTLS route to EDA event streams does not remove the Subject HTTP header from client requests, despite the source code defining requestHeadersToRemove for this header. An unauthenticated remote attacker can inject a spoofed Subject header matching a legitimate client certificate DN to bypass mTLS authentication and inject arbitrary events into protected EDA event streams.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12382 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12382"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-20296",
+    "published": "2026-07-15T18:16:44.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Splunk Enterprise versions below 10.4.1, 10.2.5, 10.0.8, and 9.4.13, and Splunk Cloud Platform versions below 10.5.2605.0, 10.4.2604.7, 10.3.2512.16, 10.2.2510.18, and 10.1.2507.24, an attacker could trick a user that holds a role with the `list_deployment_server` capability into running arbitrary Search Processing Language (SPL) searches on their behalf as `splunk-system-user`, allowing for access to stored credentials and indexed data.<br><br>The vulnerability is possible because Deployment Server endpoints in Splunk Web do not validate Cross-Site Request Forgery (CSRF) tokens on GET requests, and caller-supplied input is not correctly neutralized before it is placed into an SPL search.",
+    "tags": [],
+    "title": "CVE-2026-20296 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20296"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-40501",
+    "published": "2026-07-15T18:16:45.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cherry Studio versions 1.2.2 through 1.9.12, fixed in commit 1518530, contain a remote code execution vulnerability in SearchService that allows remote attackers to execute arbitrary code by delivering malicious JavaScript through controlled search provider content loaded into an Electron BrowserWindow configured with nodeIntegration enabled and contextIsolation disabled. Attackers who control a search engine provider, individual search result pages, or provider settings pages can execute JavaScript with full Node.js privileges, gaining access to fs, child_process, os, and process.env under the operating-system account of the Cherry Studio process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40501 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40501"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-53516",
+    "published": "2026-07-15T18:16:47.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Better Auth is an authentication and authorization library for TypeScript. Prior to 1.6.11, Better Auth's OAuth callback auto-link gate in handleOAuthUserInfo accepts implicit account linking when the OAuth provider asserts email_verified: true without requiring the local user row's emailVerified field to also be true, allowing an attacker who pre-registers a victim email through /sign-up/email to bind the victim's OAuth identity to the attacker's account. The same primitive affects one-tap, and emailAndPassword.requireEmailVerification: true does not mitigate the link-time verification change. This issue is fixed in version 1.6.11.",
+    "tags": [],
+    "title": "CVE-2026-53516 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53516"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53517",
+    "published": "2026-07-15T18:16:48.107",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Better Auth is an authentication and authorization library for TypeScript. From 1.4.8-beta.7 until 1.6.11, the @better-auth/oauth-provider POST /oauth2/token endpoint on the refresh_token grant performs a non-atomic read, validate, revoke, and mint sequence on the oauthRefreshToken row, allowing concurrent requests with the same parent refresh token to pass the revoked check and create forked refresh-token families; the vulnerable range also includes embedded better-auth plugin versions before 1.6.0. This issue is fixed in version 1.6.11.",
+    "tags": [],
+    "title": "CVE-2026-53517 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53517"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-58658",
+    "published": "2026-07-15T18:16:48.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GPUStack through 2.2.1, fixed in commit 4e20551, contains an unauthenticated information disclosure vulnerability that allows unauthenticated attackers to access sensitive inference logs and modify worker configuration by exploiting unprotected /serveLogs and /debug endpoints on the worker port. Attackers can enumerate model instance IDs to stream serving logs containing prompts and completions, change log levels, and read memory profiling data without any authentication.",
+    "tags": [],
+    "title": "CVE-2026-58658 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58658"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-58659",
+    "published": "2026-07-15T18:16:48.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PyTorch Lightning through 2.6.5, fixed in commit d710d68, contains a remote code execution vulnerability in the _load_state function that imports and executes attacker-controlled module names from checkpoint _instantiator hyperparameters. Attackers can craft malicious checkpoint files that bypass weights_only=True protections to execute arbitrary code when LightningModule.load_from_checkpoint is called.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58659 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58659"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-58660",
+    "published": "2026-07-15T18:16:48.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kanboard through 1.2.52, fixed in commit 564cc30, BoardAjaxController save() method (used by the kanban board drag-and-drop endpoint) validates the caller's role on the attacker-supplied project_id but never verifies that the supplied task_id actually belongs to that project. Because task identifiers are sequential integers shared across the entire instance, any authenticated user who is a member of at least one project can enumerate and move (corrupt/hide) tasks belonging to any other project on the same instance, including private projects they have no membership or role on.",
+    "tags": [],
+    "title": "CVE-2026-58660 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58660"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-59258",
+    "published": "2026-07-15T18:16:49.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "immich before 3.0.3 contains a broken access control vulnerability in the PUT /albums/:id/user/:userId endpoint that allows shared album editors to modify member roles without owner-only restrictions. Attackers with editor access can demote the album owner to editor and promote themselves to owner in sequential requests, gaining full control including deletion and eviction capabilities.",
+    "tags": [],
+    "title": "CVE-2026-59258 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59258"
   }
 ]
