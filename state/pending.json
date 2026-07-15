@@ -8022,5 +8022,193 @@
     ],
     "title": "[기획] 우리은행 개인정보 유출…이중 조사에 '반쪽 보안투자' 논란 - 알티케이뉴스",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE94Zm42cUl5M1NSTTVSbkktSmd6Q05oSFlDT0l4a3AyTnczbkl4a2tSVXFiY1ZqQWgwQ1paMTNqS0VodzU3WFpXWEttTlV1U2JFSS1pZ0R6UzMtM1VnWkl5X2tIMDlIRHdDWk5Nag?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-45829",
+    "published": "2026-05-18T17:16:34.040",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A pre-authentication, code injection vulnerability in version 1.0.0 or later of the ChromaDB Python project allows an unauthenticated attacker to run arbitrary code on the server by sending a malicious model repository and trust_remote_code set to true in the /api/v2/tenants/{tenant}/databases/{db}/collections endpoint.",
+    "tags": [],
+    "title": "CVE-2026-45829 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45829"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-56699",
+    "published": "2026-07-15T12:18:15.293",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Wazuh Manager before 5.0.0-beta3 fails to escape the DataValue.index field when constructing OpenSearch bulk requests, allowing enrolled agents to inject arbitrary NDJSON operations. Attackers can smuggle delete, index, or update operations into bulk requests executed under the manager's admin credentials, enabling document deletion, alert tampering, and cross-agent SIEM state manipulation.",
+    "tags": [],
+    "title": "CVE-2026-56699 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56699"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-61451",
+    "published": "2026-07-15T12:18:19.897",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Grav API plugin (grav-plugin-api) before 1.0.4 does not validate the origin of the client-supplied admin_base_url field in the POST /api/v1/auth/forgot-password endpoint. The sanitizeHttpUrl() function only checks that the URL scheme is http/https and never verifies the host against the server's own origin, so an attacker can supply an arbitrary host. As a result, an unauthenticated attacker can cause the password reset email sent to a victim to contain a reset link pointing at an attacker-controlled server; when the victim follows the link, the valid reset token is disclosed to the attacker, enabling full account takeover. The vulnerable base URL can also be influenced via the Referer or Origin headers.",
+    "tags": [],
+    "title": "CVE-2026-61451 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61451"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-56400",
+    "published": "2026-07-15T12:18:03.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "open-webui before 0.3.14 contains a cross-origin resource sharing misconfiguration allowing arbitrary origins with allow_origins=* and authenticated requests to the /api/v1/functions endpoint. Attackers can execute arbitrary code on the openwebui instance by crafting malicious cross-site requests from attacker-controlled websites when an admin user visits them.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56400 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56400"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-57996",
+    "published": "2026-07-15T12:18:16.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpMyFAQ before 4.1.5 contains a privilege escalation vulnerability in the user/add API endpoint that allows non-SuperAdmin administrators to create SuperAdmin accounts. A delegated administrator with USER_ADD/EDIT/DELETE permissions can call POST /admin/api/user/add with isSuperAdmin: true and attacker-chosen credentials to create a SuperAdmin account, then authenticate as that account to achieve full instance takeover.",
+    "tags": [],
+    "title": "CVE-2026-57996 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57996"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58655",
+    "published": "2026-07-15T12:18:17.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The bundled Grav Flex Objects plugin (getgrav/grav-plugin-flex-objects) before 1.4.0 contains a stored server-side template injection vulnerability. When rendering dynamic collection or object titles, the plugin passes user-controlled frontmatter values (page.header.flex.collection.title or page.header.flex.object.title) to Twig's template_from_string(), causing them to be evaluated as Twig code rather than treated as text. This path bypasses Grav's Security::cleanDangerousTwig() sanitization. An attacker who can control the title frontmatter of a publicly reachable Flex Objects page can achieve arbitrary Twig execution and escalate to remote command execution via access to internal Grav services such as the scheduler.",
+    "tags": [],
+    "title": "CVE-2026-58655 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58655"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-61430",
+    "published": "2026-07-15T12:18:18.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI before 1.6.78 contains a server-side request forgery vulnerability in the web_crawl tool that validates hostnames at check time but re-resolves them at connection time without IP pinning. Attackers can use DNS rebinding to bypass SSRF protection and retrieve internal HTTP response bodies from private or loopback services.",
+    "tags": [],
+    "title": "CVE-2026-61430 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61430"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-61435",
+    "published": "2026-07-15T12:18:18.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI before 4.6.78 contains an authentication bypass in the Call API agent invocation endpoints (src/praisonai/praisonai/api/agent_invoke.py) when PRAISONAI_CALL_AUTH=disabled is configured. The safeguard intended to restrict the disabled-auth opt-out to localhost binding derives the bind host from request.url.hostname, which is taken from the client-controlled HTTP Host header. A remote, unauthenticated attacker who can reach the service over the network can send a spoofed 'Host: 127.0.0.1' header to bypass the localhost-only restriction and list (GET /api/v1/agents) and invoke (POST /api/v1/agents/{agent_id}/invoke) registered agents without authentication.",
+    "tags": [],
+    "title": "CVE-2026-61435 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61435"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-61436",
+    "published": "2026-07-15T12:18:18.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI before 4.6.78 fails to verify Svix webhook signatures in AgentMail webhook mode, allowing unauthenticated attackers to forge message.received events. Attackers can send crafted JSON payloads to the webhook endpoint to invoke configured agents with arbitrary sender addresses and message content.",
+    "tags": [],
+    "title": "CVE-2026-61436 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61436"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-61443",
+    "published": "2026-07-15T12:18:19.467",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI before 1.6.78 contains a remote code execution vulnerability in SkillTools.run_skill_script() that executes scripts without path containment validation. Attackers can supply absolute file paths to execute arbitrary scripts from any filesystem location, including those outside the intended working directory.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-61443 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61443"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-61446",
+    "published": "2026-07-15T12:18:19.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI (praisonaiagents) before 1.6.78 contains a remote code execution vulnerability in the plugin manager, which loads and executes arbitrary Python (.py) files from project-level and user-home .praisonai/plugins/ directories using importlib spec_from_file_location() and exec_module() without code signing, integrity verification, or sandboxing. An attacker who can write a malicious .py file to a plugin directory (for example via path traversal, a supply chain attack, or a compromised dependency) achieves arbitrary code execution when the plugin system initializes.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-61446 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61446"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-61457",
+    "published": "2026-07-15T12:18:20.480",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.3 contains a file upload extension bypass in the API media controller. HandlesMediaUploads::validateFileExtension() inspects only the final file extension via pathinfo($filename, PATHINFO_EXTENSION), so a user with api.media.write permission can upload a file with a double extension such as shell.php.jpg to bypass the dangerous extensions blocklist. The web server may then execute the file as PHP, resulting in remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-61457 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61457"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-61873",
+    "published": "2026-07-15T12:18:22.533",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Grav before 9.1.8 contains an arbitrary file write vulnerability in the Form plugin's process.save.filename parameter, which is validated against path traversal before Twig processing but never re-validated after rendering. Attackers can submit form data containing path traversal sequences that are processed through Twig templates, allowing them to write arbitrary files including PHP webshells to the web root or other sensitive directories.",
+    "tags": [],
+    "title": "CVE-2026-61873 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61873"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/microsoft-vulnerabilities-patch-tuesday-release",
+    "published": "2026-07-15T12:15:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Vulnerability counts have been surging this year, and Microsoft's mammoth disclosure this week of 622 bugs is larger than the three previous months combined.",
+    "tags": [],
+    "title": "Microsoft smashes Patch Tuesday record for second successive month",
+    "url": "https://therecord.media/microsoft-vulnerabilities-patch-tuesday-release"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195395",
+    "published": "2026-07-15T11:55:46+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "AsyncAPI npm packages with 2M weekly downloads were compromised, spreading malware with info-stealing, crypto-theft and RAT capabilities. OX Security researchers disclosed on July 14 that the AsyncAPI npm organization was compromised, with malicious code injected into four packages that together account for over 2 million weekly downloads. The affected versions are @asyncapi/generator 3.3.1, @asyncapi/generator-components 0.7.1, […]",
+    "tags": [],
+    "title": "AsyncAPI npm Supply Chain Attack: Malware Injected Into Packages With 2 Million Weekly Downloads",
+    "url": "https://securityaffairs.com/195395/security/asyncapi-npm-supply-chain-attack-malware-injected-into-packages-with-2-million-weekly-downloads.html"
   }
 ]
