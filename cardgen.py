@@ -202,24 +202,27 @@ def plan_cards(items: list[dict]):
     return top, cve_rest, other_rest
 
 
+def link_label(item: dict) -> str:
+    """링크 목록용 라벨 — 카드 본문 제목과 글자 그대로 일치해야 한다.
+    Discord(build_link_lines)와 github.io meta.json이 공유하는 단일 규칙:
+    CVE 항목은 CVE ID, 그 외는 _card_title(title_ko 우선 + 분류 접두어 제거).
+    개행은 목록 줄이 깨지지 않게 공백으로 접는다."""
+    if is_cve_item(item):
+        # CVE 항목(KEV·NVD 등)은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
+        # (사용자 결정). id 추출 실패 시에만 제목으로 폴백
+        return _cve_id(item) or " ".join(_card_title(item).split())
+    return " ".join(_card_title(item).split())
+
+
 def build_link_lines(top_items: list[dict], cve_rest: list[dict],
                      other_rest: list[dict]) -> list[str]:
     """카드 번호와 1:1로 매칭되는 원문 링크 목록. 카드 표시 순서와
     동일하게 뉴스 → 그 밖의 소식 → 오늘의 CVE(맨 마지막) 순으로 나열한다.
     URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다."""
-    lines = []
-    for i, item in enumerate(top_items + other_rest + cve_rest, start=1):
-        if is_cve_item(item):
-            # CVE 항목(KEV·NVD 등)은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
-            # (사용자 결정). id 추출 실패 시에만 제목으로 폴백
-            label = _cve_id(item) or " ".join(_card_title(item).split())
-        else:
-            # 그 외는 카드 본문 제목과 글자 그대로 일치(_card_title):
-            # title_ko 우선 + 선두 "[속보]/[카드뉴스]" 등 분류 접두어 제거.
-            # 개행은 목록 줄이 깨지지 않게 공백으로 접는다
-            label = " ".join(_card_title(item).split())
-        lines.append(f"{i}. [{label}](<{item['url']}>)")
-    return lines
+    return [
+        f"{i}. [{link_label(item)}](<{item['url']}>)"
+        for i, item in enumerate(top_items + other_rest + cve_rest, start=1)
+    ]
 
 
 def build_cards(

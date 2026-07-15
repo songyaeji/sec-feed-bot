@@ -482,9 +482,10 @@ def _publish_trend(
             "keywords": keywords,
             "links": [
                 {
-                    # 제목 개행 정리는 build_link_lines와 동일 규칙
+                    # 라벨은 Discord 링크 목록과 동일 규칙(cardgen.link_label):
+                    # title_ko 우선·CVE는 ID — 카드 본문 제목과 일치해야 한다
                     "n": i,
-                    "title": " ".join((it.get("title") or "").split()),
+                    "title": cardgen.link_label(it),
                     "url": it.get("url", ""),
                 }
                 for i, it in enumerate(ordered_items, start=1)
