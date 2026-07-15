@@ -7297,5 +7297,127 @@
     ],
     "title": "PG사의 부정결제 예방, 대응체계 강화를 통해 온라인 결제의 신뢰성과 안전성을 높이겠습니다",
     "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219210&menuNo=200218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-48284",
+    "published": "2026-07-14T21:16:58.043",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48284 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48284"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-48318",
+    "published": "2026-07-14T21:16:58.493",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48318 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48318"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48319",
+    "published": "2026-07-14T21:16:58.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48319 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48319"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-48322",
+    "published": "2026-07-14T21:16:58.920",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48322 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48322"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48324",
+    "published": "2026-07-14T21:16:59.023",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48324 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48324"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-48325",
+    "published": "2026-07-14T21:16:59.143",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by a Missing Authentication for Critical Function vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48325 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48325"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-48327",
+    "published": "2026-07-14T21:16:59.257",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion is affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48327 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48327"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15767",
+    "published": "2026-07-14T21:16:42.187",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap buffer overflow in libyuv in Google Chrome on Windows prior to 150.0.7871.125 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted video file. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15767 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15767"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15776",
+    "published": "2026-07-14T21:16:43.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in V8 in Google Chrome prior to 150.0.7871.125 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-15776 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15776"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207609",
+    "published": "2026-07-15T14:12:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "포티넷이 통합 엔드포인트 플랫폼인 포티엔드포인트의 신규 기능을 발표했다. 인공지능 기술을 업무에 도입하는 기업이 증가함에 따라 데이터 노출 위험과 관리 편의성에 대응하려는 목적이다.포티엔드포인트는 이번 업데이트를 통해 사내 AI 사용 현황에 대한 가시성과 통제 기능, 데이터 보안 체계를 한층 강화했다.기존의 파편화된 보안 도구들은 보안팀의 대응 속도와 가시성을 제약하는 원인으로 지적받아 왔다. 포티엔드포인트는 AI 가시성과 거버넌스, 엔드포인트 보호, 탐지 및 대응, 보안 원격 접속, 데이터 보안, AI 기반 운영 지원을 단일 에이",
+    "tags": [
+      "AI"
+    ],
+    "title": "포티넷, AI 보안 가시성 높인 통합 엔드포인트 플랫폼 신기능 발표",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207609"
   }
 ]
