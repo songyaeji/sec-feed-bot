@@ -6422,5 +6422,29 @@
     "tags": [],
     "title": "李대통령, “허위정보 악용 막아야”…“규범과 질서 만드는 게 방미통위 역할” - 경기일보",
     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0tXzdPQmd4a2M4LXNrZm1GR1ktd1BoNmM5aFl1WDRTRzFvcm1Lb21ReFdxSktleFp6aERzMW9yWGY3MG96aW1VRkltcmo2MHVjYzBrbV9VTTRkM1U?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-47767",
+    "published": "2026-07-14T19:17:09.237",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Symfony is a PHP framework for web and console applications and a set of reusable PHP components. From 5.4.46 until 5.4.52, 6.4.40, 7.4.12, and 8.0.12, the CVE-2024-50340 fix gated runtime argv parsing on empty($_GET), but parse_str() and the web SAPI can disagree, allowing a crafted query string to leave $_GET empty while $_SERVER['argv'] still carries attacker-controlled --env or --no-debug flags that change APP_ENV or APP_DEBUG. This issue is fixed in versions 5.4.52, 6.4.40, 7.4.12, and 8.0.12.",
+    "tags": [],
+    "title": "CVE-2026-47767 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47767"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-59863",
+    "published": "2026-07-16T15:16:35.707",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kiota is an OpenAPI based HTTP Client code generator. Prior to 1.32.5, Kiota honored a poisoned .kiota/workspace.json workspace configuration without validating per-client or per-plugin outputPath values during kiota client generate and kiota plugin generate, allowing a malicious repository or pull request to use absolute paths, rooted POSIX / paths, UNC \\\\ or // paths, Windows drive X:\\ paths, or .. traversal segments to write generated client files outside the workspace root on a developer or CI host. This issue is fixed in version 1.32.5.",
+    "tags": [],
+    "title": "CVE-2026-59863 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59863"
   }
 ]
