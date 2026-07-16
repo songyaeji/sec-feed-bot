@@ -5001,5 +5001,65 @@
     "tags": [],
     "title": "개보위, 개인정보 사전 예방 체제 전환…AI 활용도 확대 - 뉴스토마토",
     "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9fcElnTnkwZWZuUVh0X2VjSlB3UXpsRHQ3TXdaejQwREYwUHhrTFZ5dnNJb0JtNkZ1VXNIVXJIRjBWN3FsVHdvZ3JJRzVWbUU0NjRheDBEbUU2ekI4WUhZ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15013",
+    "published": "2026-07-16T05:16:18.043",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The SAML Single Sign On – SSO Login plugin for WordPress is vulnerable to Authentication Bypass via SAML Signature Algorithm Confusion in all versions up to, and including, 5.4.3. The vulnerability exists because `Mo_SAML_Utilities::mo_saml_cast_key()` reads the `SignatureMethod` Algorithm attribute directly from the attacker-controlled `SAMLResponse` parameter rather than enforcing the locally configured algorithm, causing the plugin to recast the IdP's RSA public key as an HMAC-SHA1 shared secret and validate the forged signature against it. This makes it possible for unauthenticated attackers to forge a SAML assertion targeting any WordPress account — including administrators — obtain valid WordPress authentication cookies, and achieve full administrator-level account takeover.",
+    "tags": [],
+    "title": "CVE-2026-15013 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15013"
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144720&kind=&sub_kind=",
+    "published": "2026-07-16T05:18:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "WWT ‘ARMOR’ 프레임워크에 아카마이 방어 아키텍처 결합엔비디아 DPU에 보안 로직 오프로딩, AI 컴퓨팅 성능 저하 차단[보안뉴스 조재호 기자] 아카마이가 월드와이드테크놀로지(WWT)의 ‘운영 회복탄력성을 위한 AI 준비도 모델(ARMOR)’ 프레임워크 전략적 보안 파트너로 선정됐다고 16일 밝혔다. 이에 따라 아카마이는 AI 팩토리의 기반 보안 아",
+    "tags": [],
+    "title": "AI 혁신 발목 잡는 ‘보안 부담’ 해소... 아카마이·WWT 파트너십 체결",
+    "url": "http://www.boannews.com/media/view.asp?idx=144720&kind=&sub_kind="
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144715&kind=&sub_kind=",
+    "published": "2026-07-16T05:14:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "상반기 제도적 기반 마련에 이어 국민과 기업이 체감하는 성과 창출 본격화혁신조달 가속화, 비수도권 기업 우대 등 공공조달 10대 핵심과제 중점 추진[보안뉴스 강초희 기자] 조달청(청장 백승보)은 15일 청와대에서 열린 대통령 주재 부처 합동 업무보고에서 2026년 상반기 주요 성과와 향후 핵심 추진과제를 보고했다.이번 업무보고는 작년 12월 새정부 첫 업무",
+    "tags": [],
+    "title": "조달청, 공공조달 전략적 활용으로 대한민국 대도약 뒷받침",
+    "url": "http://www.boannews.com/media/view.asp?idx=144715&kind=&sub_kind="
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144712&kind=&sub_kind=",
+    "published": "2026-07-16T05:11:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "이벤트 신뢰성 검증 누락 악용한 지메일 열람 메커니즘 경고‘묻지 않고 실행’ 모드에서 CVSS 9.6... 자동화 해제 조치 필요[보안뉴스 김형근 기자] 앤트로픽의 공식 브라우저 확장 프로그램 ‘클로드 포 크롬’(Claude for Chrome)에시 권한 탈취 취약점이 발견됐다. 이 취약점을 악용하면 제3의 외부 확장 프로그램이 사용자의 지메일, 구글 문서",
+    "tags": [],
+    "title": "합성 클릭에 뚫린 AI... 클로드 크롬 확장 프로그램, 권한 탈취 취약점 노출",
+    "url": "http://www.boannews.com/media/view.asp?idx=144712&kind=&sub_kind="
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE1RR1R2dnJNemMyMGE3SFlxYXVHS0w2dzc2V1NoNUVqOEhuUTdody01eHVWdmR3ZVZXeWd4cFJfWkx4TFIzMENRTWdVWDllUGoyWkdyN1VnYzlMck5xYklyN2VuVjZiMk0",
+    "published": "2026-07-16T02:27:02+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "李 대통령, 쿠팡 논란에 “개인정보유출 제재, 법과 방침에 따라 한 것” 서울STV뉴스",
+    "tags": [],
+    "title": "李 대통령, 쿠팡 논란에 “개인정보유출 제재, 법과 방침에 따라 한 것” - 서울STV뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1RR1R2dnJNemMyMGE3SFlxYXVHS0w2dzc2V1NoNUVqOEhuUTdody01eHVWdmR3ZVZXeWd4cFJfWkx4TFIzMENRTWdVWDllUGoyWkdyN1VnYzlMck5xYklyN2VuVjZiMk0?oc=5"
   }
 ]
