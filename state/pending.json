@@ -6374,5 +6374,17 @@
     "tags": [],
     "title": "CVE-2026-5674 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5674"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html",
+    "published": "2026-07-16T13:33:25+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "n8n, the workflow automation platform, handed out the wrong accounts at login. On Enterprise instances configured to trust more than one external token issuer, it matched an incoming JWT to a local user on the sub claim alone and ignored iss. A valid token from issuer A carrying a sub that belongs to someone under issuer B logged you in as them. Their password never",
+    "tags": [],
+    "title": "n8n Token Exchange Flaw Could Let Attackers Log In as Users From Another Issuer",
+    "url": "https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html"
   }
 ]
