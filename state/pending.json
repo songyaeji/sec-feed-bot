@@ -6007,5 +6007,45 @@
     ],
     "title": "UAT-11795 deploys novel Starland RAT and bespoke WLDR C2 implant in financially motivated campaign",
     "url": "https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2023-49899",
+    "published": "2026-07-16T11:16:35.597",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unauthenticated remote attacker can execute any command on the affected device due to not correctly verifying the origin of a communication channel.",
+    "tags": [],
+    "title": "CVE-2023-49899 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49899"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2023-49900",
+    "published": "2026-07-16T11:16:36.597",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unauthenticated remote attacker is able to perform remote code execution due to incorrectly sanitized user input in the SetParameter command.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2023-49900 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49900"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195486",
+    "published": "2026-07-16T11:13:09+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "TuxBot v3, an AI-built IoT botnet for 17 architectures, shipped with LLM bugs and safety disclaimers the developer never removed. Palo Alto Networks’ Unit 42 identified a previously undocumented modular IoT botnet framework called TuxBot v3 Evolution, and it comes with an unusual detail: the developer used a large language model to write significant portions […]",
+    "tags": [
+      "AI"
+    ],
+    "title": "TuxBot v3: The IoT Botnet Built With AI – Bugs, Disclaimers and All",
+    "url": "https://securityaffairs.com/195486/ai/tuxbot-v3-the-iot-botnet-built-with-ai-bugs-disclaimers-and-all.html"
   }
 ]
