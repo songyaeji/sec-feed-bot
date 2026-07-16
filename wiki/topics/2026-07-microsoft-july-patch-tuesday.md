@@ -14,5 +14,6 @@ cves: []
 - 2026-07-14 [Security Affairs](https://securityaffairs.com/195347/security/patch-tuesday-security-updates-for-july-2026-the-largest-update-ever-621-cves-in-one-month.html) — Microsoft 621개 CVE 역사적 최대 규모 월간 패치
 - 2026-07-14 [CISA Alerts](https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations) — CISA, SharePoint Server 온프레미스 CVE-2026-32201, CVE-2026-45659, CVE-2026-56164 실제 공격 중 경고 및 강화 권고
 - 2026-07-14 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-56155) — CVE-2026-56155 Microsoft Active Directory Federation Services 권한상향 취약점 공개
+- 2026-07-14 [Krebs on Security](https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/) — AI 기반 취약점 발견으로 지난달보다 약 3배 증가한 570개 결함 패치
 
 ## 관련
