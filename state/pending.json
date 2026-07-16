@@ -6209,5 +6209,92 @@
     "tags": [],
     "title": "Scattered Spider members behind TfL hack get five years in prison",
     "url": "https://www.bleepingcomputer.com/news/security/scattered-spider-members-behind-transport-for-london-hack-get-five-years-in-prison/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-31309",
+    "published": "2026-07-08T22:17:13.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper authorization in the /tequilapi/config/user endpoint of Mysterium Node from v1.21.1-rc0 before v1.36.0 allows an unauthenticated attacker to arbitrarily overwrite the node's configuration and achieve a full node takeover via a crafted POST request.",
+    "tags": [],
+    "title": "CVE-2026-31309 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31309"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-11386",
+    "published": "2026-07-16T13:16:24.770",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An input validation and injection vulnerability exists in Canonical ubuntu-pro-client (formerly ubuntu-advantage-tools). The client constructs APT source files (such as /etc/apt/sources.list.d/ubuntu-.list or their DEB822 equivalents) using data received directly from the contract server response via the directives.suites[] and directives.aptURL fields. Because the client utilizes Python's str.format() to write these files without performing escaping, validation, or newline character filtering, a malicious or tampered contract response containing embedded newline (\\n) characters can successfully inject arbitrary, attacker-controlled deb configuration lines into root-owned APT sources. When combined with the unvalidated additionalPackages[] field—which is passed positionally into a root-executed apt-get install command—an attacker capable of spoofing or manipulating the contract response (e.g., via a compromised internal infrastructure, an intercepted connection utilizing a trusted CA, or local logical bugs) can force the client to fetch and install malicious packages. This ultimately leads to arbitrary code execution with root privileges on the affected system. This component is preinstalled on supported Ubuntu Server releases and auto-attaches by default on cloud provider Ubuntu Pro images.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-11386 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11386"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-63304",
+    "published": "2026-07-16T13:16:33.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AVideo through 29.0 contains an OS command injection vulnerability in plugin/API/standAlone/functions.php where the listFFmpegProcesses() function interpolates unsanitized keyword parameters inside single quotes without escaping. Attackers who can craft a valid encrypted codeToExec payload can break out of the single-quoted grep context and execute arbitrary OS commands as the web-server user.",
+    "tags": [],
+    "title": "CVE-2026-63304 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63304"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-63305",
+    "published": "2026-07-16T13:16:33.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AVideo through 29.0 contains an OS command injection vulnerability in the ffmpeg.json.php endpoint where notifyCode and callback parameters are concatenated into a shell command without escaping. Attackers who can craft a valid encrypted payload can inject arbitrary shell metacharacters into these fields to execute OS commands as the web-server user.",
+    "tags": [],
+    "title": "CVE-2026-63305 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63305"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-63306",
+    "published": "2026-07-16T13:16:33.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "stoatchat before 0.13.5 contains an unauthenticated server-side request forgery vulnerability in the /proxy and /embed endpoints that accept arbitrary URLs without DNS resolution filtering or private IP range validation. Attackers can enumerate internal services, fingerprint applications, and reach instance metadata endpoints by supplying malicious URLs or leveraging redirect chains to access internal infrastructure.",
+    "tags": [],
+    "title": "CVE-2026-63306 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63306"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html",
+    "published": "2026-07-16T12:50:13+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have called attention to a new modular malware called TELEPUZ that's been spreading via websites infected with ClickFix lures since late April 2026. \"The malware is full-featured, lightweight, and modular,\" Elastic Security Labs researcher Cyril François said in a technical report. \"While the number of C2 [command-and-control] domains is currently small, the daily",
+    "tags": [],
+    "title": "New TELEPUZ Malware Spreads via ClickFix to Steal Data and Run Commands",
+    "url": "https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html",
+    "published": "2026-07-16T12:33:42+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "ClickLock Stealer, a new macOS infostealer, answers a victim's refusal by killing their apps on a loop until they hand over the login password. It arrives as a command pasted into Terminal, asks for the password behind a fake system dialog, and when the victim cancels, installs two LaunchAgents and quietly exits. At the next login, Finder, the Dock, Spotlight, Terminal, Activity Monitor, and",
+    "tags": [],
+    "title": "New ClickLock macOS Stealer Kills Apps Every 210ms Until Victims Type Their Password",
+    "url": "https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html"
   }
 ]
