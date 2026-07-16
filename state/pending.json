@@ -5197,5 +5197,41 @@
     "tags": [],
     "title": "[김정덕의 인간중심보안-14] 디지털 보안문화 전환 모델: CORE-TRUST",
     "url": "http://www.boannews.com/media/view.asp?idx=144731&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53366",
+    "published": "2026-07-16T06:16:27.333",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv4: account for fraggap on the paged allocation path\n\nIn __ip_append_data(), when the paged-allocation branch is taken,\nalloclen and pagedlen are computed as\n\n\talloclen = fragheaderlen + transhdrlen;\n\tpagedlen = datalen - transhdrlen;\n\ndatalen already includes fraggap, but the fraggap bytes carried over\nfrom the previous skb are copied into the new skb's linear area at\noffset transhdrlen by the subsequent skb_copy_and_csum_bits(). The\nlinear area is therefore undersized by fraggap bytes while pagedlen is\noverstated by the same amount.\n\nThe non-paged branch sets alloclen to fraglen, which already accounts\nfor fraggap because datalen does. Bring the paged branch in line by\nadding fraggap to alloclen and subtracting it from pagedlen.\n\nAfter this adjustment, copy no longer collapses to -fraggap on the\npaged path, so remove the stale comment describing that old arithmetic.",
+    "tags": [],
+    "title": "CVE-2026-53366 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53366"
+  },
+  {
+    "author": "[엄호식기자 (eomhs@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144729&kind=&sub_kind=",
+    "published": "2026-07-16T05:56:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "통합관제 차량으로 어떤 곳에서도 시스템 운용 가능시간과 날씨 등 다양한 현장 상황 맞춰 유·무선 드론 운용[송도=보안뉴스 엄호식 기자] 개방형 사물지능융합기술(AIoT) 네트워크 전문기업 ‘스마티’(SMATI)가 2026 대한민국 드론·UAM 박람회에 참가해 제주특별자치도에 구축한 △드론활용 AI 인파 밀집 관리 시스템을 선보였다. 스마티의 드론활용 AI",
+    "tags": [],
+    "title": "스마티, 인파 밀집 모니터링 등 재해·재난 대응 드론 통합 솔루션 주목",
+    "url": "http://www.boannews.com/media/view.asp?idx=144729&kind=&sub_kind="
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5hcjdHUUs3Vi1OT0J5eGlScWJBNU15SzEzZjNwa2hwRE1xRm1xdlRnX3lpdlp5blpFNjFGWnlGS3NQQUcxSkhwd0JMYkV4aHgwTElDS0FuSEUyUURQNldEQmpJUTI",
+    "published": "2026-07-16T06:16:06+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 유출 정보 불법 유통에 징역형 신설 매일일보",
+    "tags": [],
+    "title": "개인정보위, 유출 정보 불법 유통에 징역형 신설 - 매일일보",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hcjdHUUs3Vi1OT0J5eGlScWJBNU15SzEzZjNwa2hwRE1xRm1xdlRnX3lpdlp5blpFNjFGWnlGS3NQQUcxSkhwd0JMYkV4aHgwTElDS0FuSEUyUURQNldEQmpJUTI?oc=5"
   }
 ]
