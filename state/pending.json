@@ -3799,5 +3799,19 @@
     "tags": [],
     "title": "과기정통부, 방미통위, 개보위 2차 업무보고 - 네이트",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5SaXlVOXpSTWpGMzQ1azBhNTcxb0c0amdkTFFFWEdnS0ZzajFQal9FbDdOUldXR0tEdWFqbzZMeVVYVzEwcEh3NFFfTkRNNzl2UGVSREFmejZmaU9RRldpOQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-1609",
+    "published": "2026-07-16T01:16:30.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Keycloak. When the JSON Web Token (JWT) authorization grant preview feature is enabled and a user account is disabled, Keycloak fails to validate the user’s disabled status during JWT authorization grant processing. A remote attacker with low privileges can exploit this improper access control vulnerability by presenting a valid assertion token from an external identity provider to obtain a JWT for a disabled user. This allows unauthorized access to sensitive resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-1609 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1609"
   }
 ]
