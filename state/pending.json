@@ -6594,5 +6594,133 @@
     "tags": [],
     "title": "Least privilege for AI agents: Identity, access, and tool binding",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/07/16/least-privilege-for-ai-agents-identity-access-and-tool-binding/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14960",
+    "published": "2026-07-15T18:16:44.540",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Pegatron `Tdelo64.sys` improperly exposes privileged hardware access functionality through the `\\\\.\\TdeIo` device interface. IOCTL handlers including `TDE_IOCTL_INDEXIO_READ` and `TDE_IOCTL_INDEXIO_WRITE` permit unprivileged user-mode callers to perform arbitrary hardware I/O port reads and writes without authorization checks. A local attacker can abuse this functionality to manipulate hardware registers, tamper with firmware-related interfaces, cause system instability, or establish persistent low-level compromise.",
+    "tags": [],
+    "title": "CVE-2026-14960 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14960"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51380",
+    "published": "2026-07-15T21:16:54.437",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Buffer Overflow vulnerability in Tenda AC10 v3 (firmware V03.03.16.09) allows attackers to cause a permanent Denial of Service (DoS) or potentially execute remote code via the /cgi-bin/UploadCfg endpoint",
+    "tags": [],
+    "title": "CVE-2026-51380 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51380"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12492",
+    "published": "2026-07-16T07:16:46.787",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Happy Coders OTP Login for WooCommerce WordPress plugin before 2.8 does not verify that a one-time password was actually validated before authenticating a user based on a supplied identifier, allowing unauthenticated attackers to log in as any existing user, including administrators, as well as to create new accounts.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12492 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12492"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-45695",
+    "published": "2026-07-16T16:19:08.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kopia is a cross-platform backup tool for Windows, macOS, and Linux with fast incremental backups, client-side end-to-end encryption, compression, and data deduplication. Prior to 0.23.0, Kopia's HTTP server started with --without-password accepts unauthenticated requests to /api/v1/repo/exists and forwards attacker-supplied SFTP storage configuration to blob.NewStorage, where externalSSH: true and sshArguments containing -oProxyCommand=<cmd> can cause exec.CommandContext(\"ssh\") to invoke the command through OpenSSH. This issue is fixed in version 0.23.0.",
+    "tags": [],
+    "title": "CVE-2026-45695 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45695"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-4601",
+    "published": "2026-03-23T06:16:21.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Versions of the package jsrsasign before 11.1.1 are vulnerable to Missing Cryptographic Step via the KJUR.crypto.DSA.signWithMessageHash process in the DSA signing implementation. An attacker can recover the private key by forcing r or s to be zero, so the library emits an invalid signature without retrying, and then solves for x from the resulting signature.",
+    "tags": [],
+    "title": "CVE-2026-4601 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4601"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53597",
+    "published": "2026-07-16T16:19:12.860",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Prompty is a markdown file format (.prompty) for LLM prompts. From 2.0.0-alpha.1 until 2.0.0-beta.3, the @prompty/core TypeScript loader in runtime/typescript/packages/core/src/core/loader.ts used gray-matter without overriding executable js and javascript frontmatter engines, allowing an attacker-controlled .prompty file with ---js frontmatter to execute arbitrary JavaScript during prompt loading. This issue is fixed in version 2.0.0-beta.3.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-53597 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53597"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-53598",
+    "published": "2026-07-16T16:19:12.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Prompty is a markdown file format (.prompty) for LLM prompts. Prior to 2.0.0-beta.2, Prompty loaders expanded ${file:...} references in .prompty frontmatter without enforcing that resolved paths stayed within the prompt directory or allowed roots, allowing an attacker-controlled prompt file to read local files through absolute paths, .. traversal, or symlink escapes. This issue is fixed in versions 2.0.0-beta.2.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-53598 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53598"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-57206",
+    "published": "2026-07-16T16:19:14.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SimpleChat is a secure AI conversation application with personal and group workspaces for document-grounded interactions. Prior to 0.241.206, several plugin validation routes in application/single_app/plugin_validation_endpoint.py, including `POST /api/admin/plugins/test-instantiation`, `GET /api/admin/plugins/health-check/<plugin_name>`, `POST /api/admin/plugins/repair/<plugin_name>`, and `POST /api/plugins/validate`, relied on @swagger_route(security=get_auth_security()) documentation without enforcing @login_required, @user_required, or @admin_required at runtime, allowing unauthenticated or unauthorized clients to invoke plugin validation, health, and repair behavior. This issue is fixed in version 0.241.206.",
+    "tags": [],
+    "title": "CVE-2026-57206 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57206"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-59864",
+    "published": "2026-07-16T16:19:15.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kiota is an OpenAPI based HTTP Client code generator. Prior to 1.32.5, `kiota plugin add` and `kiota plugin generate` (with `-t APIPlugin`) emitted attacker-controlled static_template.file values from x-ai-adaptive-card and x-ai-capabilities into generated Microsoft 365 Copilot and Teams plugin manifests without path validation, allowing ../, absolute, rooted, UNC, Windows drive, or URI paths in response_semantics.static_template.file to cause path traversal or out-of-package file inclusion when the generated plugin was deployed. This issue is fixed in version 1.32.5.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-59864 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59864"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/ukraine-fedorov-drones-dismissal",
+    "published": "2026-07-16T16:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Ukraine President Volodymyr Zelensky dismissed Defense Minister Mykhailo Fedorov, who championed the push to integrate drone technology and digital innovation into the military.",
+    "tags": [],
+    "title": "Ukrainians rally against dismissal of tech-minded defense minister Fedorov",
+    "url": "https://therecord.media/ukraine-fedorov-drones-dismissal"
   }
 ]
