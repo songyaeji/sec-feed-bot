@@ -6988,5 +6988,97 @@
     "tags": [],
     "title": "New OkoBot framework deploys 20 payloads to steal data, crypto",
     "url": "https://www.bleepingcomputer.com/news/security/new-okobot-framework-deploys-20-payloads-to-steal-data-crypto/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-65720",
+    "published": "2026-07-15T22:16:45.417",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in Open Source GPT Researcher v3.3.7 allows attackers to execute arbitrary commands on a victim system via user interaction with a crafted HTML page.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-65720 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65720"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-26718",
+    "published": "2026-07-15T22:16:45.980",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A Cross-Site Request Forgery (CSRF) vulnerability exists in the xxl-job-admin web application v.3.0.0 that allows an attacker to perform unauthorized modifications to Glue IDE shell scripts. The affected endpoint lacks proper CSRF token validation and accepts arbitrary HTTP methods via a permissive request mapping",
+    "tags": [],
+    "title": "CVE-2026-26718 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26718"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-14890",
+    "published": "2026-07-16T16:19:00.413",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SGLang uses an expert-parallel backup subsystem that exposes a ZeroMQ PULL socket on a routable network interface that does not contain authentication or deserialization safeguards, allowing an attacker to provide a malicious pickle file that results in unauthenticated remote code execution when the feature is enabled and the service is reachable over the network.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14890 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14890"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-46512",
+    "published": "2026-07-16T19:16:46.510",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Frogman provides headless PBX control through MCP and HTTP API. Prior to 1.6.2, fm_dialplan_apply accepted template parameters including greeting, dest, url, extension, code, and file, and Tools/DialplanApply.php wrote Dialplan/Templates.php output to extensions_custom.conf while only Dialplan/TemplateBase.php:38-42 sanitized contextName(), allowing a PERM_WRITE caller using confirm:true to inject arbitrary Asterisk directives such as System(), Set(SHELL(...)), Goto, or Macro. This issue is fixed in version 1.6.2.",
+    "tags": [],
+    "title": "CVE-2026-46512 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46512"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2021-27137",
+    "published": "2026-07-16T18:16:39.113",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in router/upnp/src/ssdp.c in DD-WRT before 45724. An unsafe strcpy in the UPnP handling functionality allows an unauthenticated remote attacker to send a request that would overflow an internal fixed buffer. Exploitation requires the DD-WRT user to enable UPnP (which is off by default, and only listens on internal interfaces by default). This occurs in ssdp_msearch (reachable by an M-SEARCH request).",
+    "tags": [],
+    "title": "CVE-2021-27137 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27137"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-46351",
+    "published": "2026-07-16T19:16:45.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.21, bbb-web generated conference sessionToken values with insufficiently secure randomness in bbb-common-web/src/main/java/org/bigbluebutton/api/Util.java and bigbluebutton-web/grails-app/controllers/org/bigbluebutton/web/controllers/ApiController.groovy, allowing a session user to predict other users' conference session tokens and impersonate them. This issue is fixed in version 3.0.21.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46351 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46351"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-46353",
+    "published": "2026-07-16T19:16:46.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "BigBlueButton is an open-source virtual classroom. Prior to 3.0.21, bbb-web checksum validation could be bypassed when a presentationUploadExternalUrl parameter was supplied to API request handling in CreateMeeting.java and ValidationService.java, allowing a user to send valid requests to some endpoints without a checksum. This issue is fixed in version 3.0.21.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46353 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46353"
   }
 ]
