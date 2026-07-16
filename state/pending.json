@@ -7222,5 +7222,67 @@
     ],
     "title": "New ClickLock macOS malware traps users into revealing login password",
     "url": "https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44180",
+    "published": "2026-07-16T22:17:02.237",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Jupyter Enterprise Gateway launches remote Jupyter Notebook kernels across distributed clusters like Apache Spark, Kubernetes, and Docker Swarm. Versions 2.0.0rc1 and above prior to 3.3.0 have a prohibited UID and GID feature that by default prevents launching kernels with UID or GID 0 (root), and this restriction can be bypassed using a specially crafted KERNEL_UID or KERNEL_GID value. This input validation vulnerability allows running Jupyter kernels as root, which can be dangerous as it allows more attack surface, and may lead to container escapes, compromising the worker node and all workloads running on it. Repeated exploitation can compromise all worker nodes, and thus the entire Kubernetes cluster. It is possible to specify volume mounts, so one vector for a container escape is to use a hostPath R/W volume mount, use this UID/GID bypass to run as root, and then gain code execution in the underlying worker node by creating a crontab entry in the mounted host file system. This issue has been fixed in version 3.0.0.",
+    "tags": [],
+    "title": "CVE-2026-44180 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44180"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-53411",
+    "published": "2026-07-16T22:17:31.267",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A time-of-check to time-of-use (TOCTOU) race condition in the installation and uninstallation process of certain Zoom Clients for Windows could allow an authenticated local user to escalate privileges.",
+    "tags": [],
+    "title": "CVE-2026-53411 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53411"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2026-58598",
+    "published": "2026-07-16T22:17:50.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Backup Engine allows an authorized attacker to elevate privileges locally.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58598 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58598"
+  },
+  {
+    "category": "high",
+    "cvss": 6.1,
+    "id": "CVE-2026-58643",
+    "published": "2026-07-16T22:17:52.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper neutralization of input during web page generation ('cross-site scripting') in Windows Admin Center allows an unauthorized attacker to perform spoofing over a network.",
+    "tags": [],
+    "title": "CVE-2026-58643 (CVSS 6.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58643"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-59117",
+    "published": "2026-07-16T22:17:52.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Integer overflow or wraparound in Windows Terminal allows an unauthorized attacker to execute code over a network.",
+    "tags": [],
+    "title": "CVE-2026-59117 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59117"
   }
 ]
