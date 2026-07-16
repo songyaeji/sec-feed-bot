@@ -6746,5 +6746,147 @@
     "tags": [],
     "title": "CVE-2026-55471 (CVSS 9.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55471"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44632",
+    "published": "2026-07-16T17:16:56.023",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Yamcs is a mission control framework. Prior to 5.12.7, a server-side code injection vulnerability existed in the Yamcs algorithm evaluation engine org.yamcs.algorithms.JavaExprAlgorithmExecutionFactory, which dynamically compiled and evaluated user-controlled algorithm text through the Janino compiler without enforcing a secure sandbox, so an authenticated user with the ChangeMissionDatabase privilege could override an existing algorithm's text via the mission database REST API and inject Java code (for example using java.lang.Runtime) to achieve remote code execution on the underlying host operating system. This issue is fixed in versions 5.12.7 and 5.13.0, which disable algorithm editing by default.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44632 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44632"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-46562",
+    "published": "2026-07-16T17:16:56.953",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Yamcs is a mission control framework. Prior to 5.12.7, the Nashorn ScriptEngine used to evaluate user-supplied JavaScript algorithm text in yamcs-core/src/main/java/org/yamcs/algorithms/ScriptAlgorithmExecutorFactory.java was constructed without a ClassFilter, so a user with the ChangeMissionDatabase privilege could override an algorithm through the MdbOverrideApi.updateAlgorithm endpoint and supply JavaScript that reaches arbitrary Java classes (for example Java.type(\"java.lang.Runtime\").getRuntime().exec(...)) to execute arbitrary OS commands as the Yamcs process; in the default configuration with no security.yaml the built-in guest user has superuser=true, making the issue reachable without authentication. This issue is fixed in versions 5.12.7 and 5.13.0, which disable algorithm editing by default.",
+    "tags": [],
+    "title": "CVE-2026-46562 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46562"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-46621",
+    "published": "2026-07-16T17:16:57.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Yamcs is a mission control framework. Prior to 5.12.7, the Yamcs script evaluation engine for Python algorithms dynamically compiled and evaluated user-controlled algorithm text using Jython through the JSR-223 ScriptEngine API without enforcing a secure sandbox, so an authenticated user with the ChangeMissionDatabase privilege could override an existing Python algorithm's logic through the mission database REST API and import and execute arbitrary Java classes such as java.lang.Runtime to achieve remote code execution on the underlying host operating system. This issue is fixed in versions 5.12.7 and 5.13.0, which disable algorithm editing by default.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46621 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46621"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-63087",
+    "published": "2026-07-16T17:16:58.703",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Grafana OnCall through 1.16.11 contains an unauthenticated access vulnerability that allows remote attackers to obtain a valid PluginAuthToken by sending a POST request to the internal plugin install endpoint using hardcoded default stack_id and org_id values present in the public source tree. Attackers can leverage the acquired token to authenticate against all internal API endpoints, create arbitrary Admin users via the user-context header bootstrap path, revoke the legitimate plugin token, and redirect OnCall-to-Grafana API calls to an attacker-controlled host by overwriting the organization's grafana_url and api_token.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63087 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63087"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-14371",
+    "published": "2026-07-16T17:16:55.423",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Lenovo XClarity Integrator for Windows Admin Center plugin version 5.1.1 and below running on the WAC Gateway is vulnerable to Powershell Command Injection when establishing remote PowerShell commands.",
+    "tags": [],
+    "title": "CVE-2026-14371 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14371"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-45325",
+    "published": "2026-07-16T17:16:56.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Gestor de Oferta is a web application for managing mobility service offerings. Prior to 20260509.0340.15, @tmlmobilidade/utils has a prototype pollution vulnerability in setValueAtPath() in packages/utils/src/generic/value-at-path.ts because unsafe path segments are not blocked. This issue is fixed in version 20260509.0340.15.",
+    "tags": [],
+    "title": "CVE-2026-45325 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45325"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-63085",
+    "published": "2026-07-16T17:16:58.420",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Axelor Open Platform versions 8.x prior to 8.2.2 contains an authorization bypass vulnerability that allows authenticated non-admin users to escalate privileges by exploiting unenforced field restrictions on nested relational save operations. Attackers can modify sensitive User record fields such as roles and group by submitting changes through a related entity's save path, bypassing the USER_RESTRICTED_FIELDS control and causing the JPA persistence layer to flush attacker-supplied admin role and group assignments on commit.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63085 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63085"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-63086",
+    "published": "2026-07-16T17:16:58.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "text-generation-inference through 3.3.7 contains a server-side request forgery (SSRF) vulnerability in the OpenAI-compatible multimodal chat completions endpoint that allows unauthenticated network attackers to coerce the server into issuing arbitrary HTTP GET requests by supplying a crafted image_url value in chat message content. The fetch_image function in router/src/validation.rs performs no validation of private, loopback, link-local, or cloud metadata target addresses, and the reqwest HTTP client follows redirects by default, enabling attackers to bypass scheme checks via redirect chains to reach internal services and cloud instance-metadata endpoints for internal port scanning and credential theft.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63086 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63086"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-63088",
+    "published": "2026-07-16T17:16:58.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "stoatchat before 0.14.0 contains a server-side request forgery (SSRF) vulnerability that allows unauthenticated network-accessible attackers to bypass the DNS-based IP blocklist by exploiting incomplete address validation in the url_is_blacklisted function, which inspects only the first resolved address while the underlying HTTP client iterates all cached addresses.",
+    "tags": [],
+    "title": "CVE-2026-63088 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63088"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-6511",
+    "published": "2026-07-16T17:16:58.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "During an internal security assessment, a potential improper access control vulnerability was discovered in Lenovo Smart Connect for Windows that could allow a local authenticated user to access files owned by a different user on the same system.",
+    "tags": [],
+    "title": "CVE-2026-6511 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6511"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2026-9046",
+    "published": "2026-07-16T17:16:59.100",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A potential insecure permissions vulnerability was reported in Legion Zone and the Lenovo App Store Windows applications, distributed exclusively in the Chinese market, that when installed on a non‑system partition, could allow a local user to execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-9046 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9046"
   }
 ]
