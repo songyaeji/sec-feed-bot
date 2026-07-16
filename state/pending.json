@@ -6095,5 +6095,71 @@
     "tags": [],
     "title": "“뉴스공장 김어준의 ‘김민석 12·3 행적 영상’ 공개는 ‘위법 가능성’”…개인정보보호위 유권해석 - v.daum.net",
     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZNGo5R2NpdWdlNnRoU0lpWWZYNWNhd3ludjJNVDlGR0d2SlRJTXFUVGFqb3ZmbmpOeVppT25NQUttV1ZtSE5Yc1NjWWx1Z0U?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2024-58093",
+    "published": "2025-04-16T15:15:53.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nPCI/ASPM: Fix link state exit during switch upstream function removal\n\nBefore 456d8aa37d0f (\"PCI/ASPM: Disable ASPM on MFD function removal to\navoid use-after-free\"), we would free the ASPM link only after the last\nfunction on the bus pertaining to the given link was removed.\n\nThat was too late. If function 0 is removed before sibling function,\nlink->downstream would point to free'd memory after.\n\nAfter above change, we freed the ASPM parent link state upon any function\nremoval on the bus pertaining to a given link.\n\nThat is too early. If the link is to a PCIe switch with MFD on the upstream\nport, then removing functions other than 0 first would free a link which\nstill remains parent_link to the remaining downstream ports.\n\nThe resulting GPFs are especially frequent during hot-unplug, because\npciehp removes devices on the link bus in reverse order.\n\nOn that switch, function 0 is the virtual P2P bridge to the internal bus.\nFree exactly when function 0 is removed -- before the parent link is\nobsolete, but after all subordinate links are gone.\n\n[kwilczynski: commit log]",
+    "tags": [],
+    "title": "CVE-2024-58093 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58093"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-46092",
+    "published": "2026-05-27T14:17:30.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: rtw88: check for PCI upstream bridge existence\n\npci_upstream_bridge() returns NULL if the device is on a root bus.  If\n8821CE is installed in the system with such a PCI topology, the probing\nroutine will crash.  This has probably been unnoticed as 8821CE is mostly\nsupplied in laptops where there is a PCI-to-PCI bridge located upstream\nfrom the device.  However the card might be installed on a system with\ndifferent configuration.\n\nCheck if the bridge does exist for the specific workaround to be applied.\n\nFound by Linux Verification Center (linuxtesting.org) with Svace static\nanalysis tool.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-46092 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46092"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-42530",
+    "published": "2026-06-17T15:16:50.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NGINX Open Source has a vulnerability in the ngx_http_v3_module module. When NGINX Open Source is configured to use the HTTP/3 QUIC module, a remote unauthenticated attacker along with conditions beyond their control can use a specially crafted HTTP/3 session to reopen a QPACK encoder stream. This may cause a Use-after-Free in the NGINX worker process leading to a restart. Additionally, attackers can execute code on systems with Address Space Layout Randomization (ASLR) disabled or when the attacker can bypass ASLR.  \n\n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42530 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42530"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-35147",
+    "published": "2026-07-16T12:17:35.617",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HCL DFXServer is affected by a Broken Authentication vulnerability via direct API access. The application fails to verify the user's authentication status when accessing specific API endpoints, allowing an unauthenticated attacker to interact with the APIs and perform unauthorized actions without valid credentials.",
+    "tags": [],
+    "title": "CVE-2026-35147 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35147"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-35149",
+    "published": "2026-07-16T12:17:35.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HCL DFXServer is affected by an Authentication Bypass vulnerability via server response manipulation. An unauthorized user without valid credentials can exploit this flaw by intercepting and altering the server's authentication responses, allowing them to gain unauthorized access to the application without verification.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35149 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35149"
   }
 ]
