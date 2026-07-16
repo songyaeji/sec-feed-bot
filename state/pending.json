@@ -6446,5 +6446,115 @@
     "tags": [],
     "title": "CVE-2026-59863 (CVSS N/A)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59863"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25178",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition. The following versions of Rockwell Automation CompactLogix, ControlLogix, Compact GuardLogix and GuardLogix are affected: CompactLogix 5370",
+    "tags": [],
+    "title": "Rockwell Automation CompactLogix, ControlLogix, Compact GuardLogix and GuardLogix",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25180",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service condition on the affected product. The following versions of Rockwell Automation Flex 5000 Adapter are affected: Flex 5000 Adapter 6.011 (CVE-2026-12659) CVSS Vendor Equipment Vulnerabilities v3 7.5 Rockwell Automation Rockwell Automation Flex 5000 Adapter Double Free Background Critical Infrastructure Sectors: Critical Manufacturing, Information Technology Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-12659 A denial-of-service security issue exists in the affected products. The security issue stems from improper handling of exceptional conditions when processing crafted CIP packets sent to the adapter. A power cycle is required to recover the module and associated I/O. View CVE Details Affected Products Rockwell Automation Flex 5000 Adapter Vendor: Rockwell Automation Product Version: Rockwell Automation Flex 5000 Adapter: 6.011 Product Status: known_affected Remediations Vendor fix Rockwell Automation recommends users to upgrade to the following: Flex 5000 Adapter version 6.012. Mitigation Customers using the affected software, who are not able to upgrade to one of the corrected versions, should use Rockwell Automation's security best practices (https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight). https://support.rockwellautomation.com/app/a",
+    "tags": [
+      "APT"
+    ],
+    "title": "Rockwell Automation Flex 5000 Adapter",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-08"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25177",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Multiple SICAM 8 products are affected by multiple vulnerabilities that could lead to denial of service, namely: - SICAM A8000 Device firmware - CPCI85 for CP-8031/CP-8050 - SICORE for CP-8010/CP-8012 - SICAM EGS Device firmware - CPCI85 - SICAM S8000 - SICORE Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens SICAM 8 are affected: CPCI85 Central Processing/Communication vers:intdot/",
+    "tags": [],
+    "title": "Siemens SICAM 8",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25179",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability allows an authenticated attacker to escalate privileges and access spaces outside their assigned partition, within the same Salto ProAccess Space installation or system. Exploitation requires valid authenticated operator credentials and the partition feature to be enabled; installations without partitioning are not affected. The following versions of SALTO ProAccess Space are affected: ProAccess Space",
+    "tags": [],
+    "title": "SALTO ProAccess Space",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25181",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an authenticated attacker to inject malicious scripts on the server. The following versions of Rockwell Automation FactoryTalk DataMosaix are affected: DataMosaix Private Cloud",
+    "tags": [],
+    "title": "Rockwell Automation FactoryTalk DataMosaix",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-09"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25175",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service condition. The following versions of NASA Core Flight System (cFS) Health & Safety (HS) Application are affected: Core Flight System (cFS) Health & Safety (HS) Application CVSS Vendor Equipment Vulnerabilities v3 7.5 NASA NASA Core Flight System (cFS) Health & Safety (HS) Application NULL Pointer Dereference Background Critical Infrastructure Sectors: Transportation Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-15352 A vulnerability exists in the Health & Safety (HS) application of NASA's Core Flight System (cFS). The flaw allows the application to crash via segmentation fault when processing a routine Housekeeping Telemetry request, leading to denial of service. View CVE Details Affected Products NASA Core Flight System (cFS) Health & Safety (HS) Application Vendor: NASA Product Version: NASA Core Flight System (cFS) Health & Safety (HS) Application:",
+    "tags": [],
+    "title": "NASA Core Flight System (cFS) Health & Safety (HS) Application",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25173",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation these vulnerabilities could allow an attacker to execute arbitrary code in the context of the current process. The following versions of Rockwell Automation Arena are affected: Arena",
+    "tags": [],
+    "title": "Rockwell Automation Arena",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25176",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker with local or physical access to cause memory corruption, unintended information disclosure, application instability, or a denial-of-service condition in the affected product. The following versions of AutomationDirect Productivity Suite are affected: Productivity Suite",
+    "tags": [],
+    "title": "AutomationDirect Productivity Suite",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25174",
+    "published": "2026-07-16T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service condition. The following versions of Rockwell Automation 1756-EN2, 1756-EN3, and 1756-ENBT are affected: 1756-EN3",
+    "tags": [],
+    "title": "Rockwell Automation 1756-EN2, 1756-EN3, and 1756-ENBT",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-02"
   }
 ]
