@@ -4757,5 +4757,29 @@
     "tags": [],
     "title": "Ernst & Young discloses data breach after support system hack",
     "url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-63093",
+    "published": "2026-07-17T15:16:47.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cursor for Windows version 3.2.16 contains a binary planting vulnerability that allows remote attackers to achieve arbitrary code execution by placing a malicious git.exe file in the repository root directory. When a developer clones and opens a crafted repository, Cursor automatically resolves and executes the workspace-resident git.exe during IDE startup and on a recurring timed cadence without any user interaction, running the malicious binary under the privileges of the current user.",
+    "tags": [],
+    "title": "CVE-2026-63093 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63093"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-63094",
+    "published": "2026-07-17T15:16:47.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SigNoz through 0.133.0 contains an open redirect vulnerability in the SSO authentication flow that allows unauthenticated attackers to steal session tokens from any user on instances configured with Google OAuth, SAML, or OIDC. Attackers can call the unauthenticated sessions context endpoint with a ref parameter pointing to an attacker-controlled host, deliver the resulting crafted login URL to a victim, and receive the victim's access and refresh tokens when they complete SSO authentication.",
+    "tags": [],
+    "title": "CVE-2026-63094 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63094"
   }
 ]
