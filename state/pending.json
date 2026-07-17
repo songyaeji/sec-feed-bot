@@ -4927,5 +4927,59 @@
     "tags": [],
     "title": "CVE-2026-59950 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59950"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-9198",
+    "published": "2026-07-17T18:17:17.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to chain /api/v1/auto_login (mints SUPERUSER tokens to any network caller) with /api/v1/validate/code (executes user code via exec()) to achieve full RCE on default Langflow deployments",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-9198 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9198"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-9202",
+    "published": "2026-07-17T18:17:17.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 allows unauthenticated attackers to create unlimited user accounts on any Langflow instance; when NEW_USER_IS_ACTIVE=true (documented deployment option), newly created accounts are immediately active and can authenticate to reach RCE endpoints, bypassing the need for AUTO_LOGIN.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-9202 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9202"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-13410",
+    "published": "2026-07-17T13:17:56.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dancer::Plugin::Auth::Google versions through 0.07 for Perl have TLS verification disabled.\n\nThe default user agent is initialised with SSL_verify_mode explicitly disabled.\n\nAn attacker with network man-in-the-middle (MITM) capability between the Dancer application and googleapis.com can intercept the OAuth2 token exchange and userinfo fetch, return a forged access_token and user profile, and be logged in to the Dancer application as any Google user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13410 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13410"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195543",
+    "published": "2026-07-17T17:52:06+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A cyberattack hit one of Japan’s largest food companies, Nichirei, disrupting logistics and shipments. The company is gradually restoring operations. Nichirei is one of Japan’s largest food companies, best known for its frozen food business. Founded in 1942 and headquartered in Tokyo, it operates globally through dozens of subsidiaries. The food giant confirmed that the […]",
+    "tags": [],
+    "title": "A cyberattack hit Nichirei, one of Japan’s largest food companies",
+    "url": "https://securityaffairs.com/195543/security/a-cyberattack-hit-nichirei-one-of-japans-largest-food-companies.html"
   }
 ]
