@@ -4443,5 +4443,17 @@
     "tags": [],
     "title": "개인정보위원회, 개인정보 유출 신고 시 과징금 30% 포상금 방안 추진 - 한국정경신문",
     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9ieE9HTWxFSDFUWW5mZDUwR05CLXNXNDhRY2tGZHNZUkFUMmswdWZWdFZsbWtVcVQwQ1Zjem0zT0lxYU4za041WmF2dUxZN0Z3QUE?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15982",
+    "published": "2026-07-17T06:16:36.560",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Aimogen Pro - All-in-One AI Content Writer, Editor, ChatBot & Automation Toolkit plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.8.4. This is due to due to a missing capability check on the 'aiomatic_call_google_ai_function' function. This makes it possible for unauthenticated attackers to leverage the 'aimogen_wp_god_mode' tool to clear function blacklists and execute arbitrary PHP functions, such as creating administrator accounts.",
+    "tags": [],
+    "title": "CVE-2026-15982 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15982"
   }
 ]
