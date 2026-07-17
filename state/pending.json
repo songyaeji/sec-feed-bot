@@ -4915,5 +4915,17 @@
     "tags": [],
     "title": "HollowByte DDoS flaw bloats OpenSSL server memory with 11-byte payload",
     "url": "https://www.bleepingcomputer.com/news/security/hollowbyte-ddos-flaw-bloats-openssl-server-memory-with-11-byte-payload/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-59950",
+    "published": "2026-07-15T21:16:55.683",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The MCP Python SDK, called mcp on PyPI, is a Python implementation of the Model Context Protocol (MCP). Prior to 1.28.1, the deprecated mcp.server.websocket.websocket_server transport accepted WebSocket handshakes without applying Host or Origin header validation, leaving no SDK-level way to restrict which origins could connect to applications that exposed that transport. This issue is fixed in version 1.28.1.",
+    "tags": [],
+    "title": "CVE-2026-59950 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59950"
   }
 ]
