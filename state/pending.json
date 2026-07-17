@@ -4793,5 +4793,115 @@
     "tags": [],
     "title": "Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/07/17/microsoft-at-black-hat-usa-2026-defending-trust-in-the-age-of-ai-and-supply-chain-attacks/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51080",
+    "published": "2026-07-17T14:17:24.270",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "libpvestorage-perl v9.1.1 and libpve-storage-perl v8.3.7 were discovered to contain an XML External Entity (XXE) vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-51080 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51080"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12692",
+    "published": "2026-07-17T17:17:13.303",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unverified password change vulnerability in Vimesoft Inc. Enterprise Video Platform allows Authentication Bypass.\n\nThis issue affects Enterprise Video Platform: from 3.11.0.0 before 3.25.0.",
+    "tags": [],
+    "title": "CVE-2026-12692 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12692"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-12693",
+    "published": "2026-07-17T17:17:13.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Authorization bypass through User-Controlled key vulnerability in Vimesoft Inc. Enterprise Video Platform allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Enterprise Video Platform: from 3.11.0.0 before 3.25.0.",
+    "tags": [],
+    "title": "CVE-2026-12693 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12693"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-12694",
+    "published": "2026-07-17T17:17:13.547",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Missing Authorization vulnerability in Vimesoft Inc. Enterprise Video Platform allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Enterprise Video Platform: from 3.11.0.0 before 3.25.0.",
+    "tags": [],
+    "title": "CVE-2026-12694 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12694"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-54496",
+    "published": "2026-07-17T17:17:16.620",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ZEBRA is a Zcash node written entirely in Rust. Prior to zebrad 5.0.0, halo2_gadgets 0.5.0, orchard 0.14.0, zcash_primitives 0.28.0, and zcashd 6.20.0, the variable-base scalar multiplication gadget in halo2_gadgets/src/ecc/chip/mul/incomplete.rs used assign_advice() for the base point without a copy constraint tying it to the actual base, allowing a malicious prover to produce a valid proof for an Orchard Action with an under-constrained base point and bypass the diversified-address-integrity check that binds pk_d, g_d, ivk, the nullifier (nf), and the spend validating key (ak) to the note being spent. This issue is fixed in zebrad 5.0.0, halo2_gadgets 0.5.0, orchard 0.14.0, zcash_primitives 0.28.0, and zcashd 6.20.0.",
+    "tags": [],
+    "title": "CVE-2026-54496 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54496"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-8297",
+    "published": "2026-07-17T17:17:17.860",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Gis Informatics Engineering Consulting Laboratory R&D and Software Services Inc. GisLab Laboratory Management System allows SQL Injection.\n\nThis issue affects GisLab Laboratory Management System: from 1.4.03 through 08072026.",
+    "tags": [],
+    "title": "CVE-2026-8297 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8297"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-60357",
+    "published": "2026-07-17T14:17:19.003",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AhnLab EPP Management v1.0.14.32-6249 was discovered to contain a NoSQL injection vulnerability via the eventlog/agentEvent/list endpoint.",
+    "tags": [],
+    "title": "CVE-2025-60357 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60357"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html",
+    "published": "2026-07-17T17:12:23+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A Go botnet called NadMesh turned up in early July hunting exposed AI services, and the operator's own dashboard claims 3,811 unique AWS keys. A Shodan harvester keeps the scan queue stocked with ComfyUI, Ollama, n8n, Open WebUI, Langflow, and Gradio: the image generators, local model runners, and workflow builders that teams stand up fast and firewall late. The intel feed behind that counter",
+    "tags": [],
+    "title": "New NadMesh Botnet Hunts Exposed AI Services for Cloud Keys and Kubernetes Tokens",
+    "url": "https://thehackernews.com/2026/07/new-nadmesh-botnet-hunts-exposed-ai.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html",
+    "published": "2026-07-17T16:39:16+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have attributed the April 2026 DigiCert security incident to a threat activity cluster dubbed CylindricalCanine. Expel, which shared technical details of the event, described the threat actor as a sub-group of GoldenEyeDog (aka APT-Q-27, Dragon Breath, and Miuuti Group), a Chinese cybercrime group known for its targeting of the gambling and gaming sectors using",
+    "tags": [
+      "APT"
+    ],
+    "title": "GoldenEyeDog Subgroup Linked to DigiCert Breach and Code-Signing Certificate Theft",
+    "url": "https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html"
   }
 ]
