@@ -4681,5 +4681,69 @@
     "tags": [],
     "title": "Inside the Search for \"Clean\" Residential Proxies for Carding",
     "url": "https://www.bleepingcomputer.com/news/security/inside-the-search-for-clean-residential-proxies-for-carding/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38158",
+    "published": "2026-07-16T21:17:20.567",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL injection vulnerability in the /ureport/datasource/previewData component of ureport v2.2.9 allows attackers to access sensitive database information via crafted SQL statements.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-38158 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38158"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-57075",
+    "published": "2026-07-16T22:17:43.447",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "YAML::Syck versions before 1.47 for Perl allow an out-of-bounds read via a signed-char lookup-table index in syck_base64dec.\n\nThe base64 decoder in the bundled libsyck indexes the 256-entry static table b64_xtable with a signed char, so any !!binary byte >= 0x80 sign-extends to a negative index and reads before the table. The decoder receives the raw bytes of any !!binary node, a standard YAML type not gated by $LoadBlessed or $LoadCode, so it is reached on the default Load path.\n\nAny caller that runs Load or LoadFile on an untrusted document containing a !!binary scalar with a high-bit byte triggers the read, and the value read can surface in the decoded result.",
+    "tags": [],
+    "title": "CVE-2026-57075 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57075"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2024-23564",
+    "published": "2026-07-17T14:17:16.513",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "HCL Aftermarket EPC is affected by Business Logic Vulnerability using which a non valid user of the application can obtain passwords from the server and redirect them to their own email address by manipulating the server's response. The application includes checks in the initial requests to verify the validity of the provided UserId, but similar validation is not applied to Email requests when sending passwords to user emails.",
+    "tags": [],
+    "title": "CVE-2024-23564 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23564"
+  },
+  {
+    "category": "high",
+    "cvss": 6.1,
+    "id": "CVE-2026-46341",
+    "published": "2026-07-16T18:16:43.913",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Apify MCP server enables AI agents to extract data from websites using ready-made scrapers, crawlers, and automation tools available on the Apify Store. Prior to 0.9.21, the fetch-apify-docs tool in src/tools/common/fetch_apify_docs.ts validates allowlisted documentation domains with String.startsWith() rather than URL hostname comparison, allowing attacker-controlled URLs such as `https://docs.apify.com.evil.com/` and `https://docs.apify.com@evil.com/` to pass the ALLOWED_DOC_DOMAINS check and return arbitrary fetched content to the LLM. This issue is fixed in version 0.9.21.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-46341 (CVSS 6.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46341"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-11961",
+    "published": "2026-07-17T07:16:37.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The User Registration & Membership  WordPress plugin before 5.2.3 does not validate that the membership tier submitted during public registration is one of the tiers allowed by the registration form before assigning that tier's associated user role, allowing unauthenticated users to register into an arbitrary published membership tier and obtain its role — up to administrator when such a tier exists.",
+    "tags": [],
+    "title": "CVE-2026-11961 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11961"
   }
 ]
