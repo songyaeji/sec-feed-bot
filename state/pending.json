@@ -4093,5 +4093,251 @@
     "tags": [],
     "title": "ISC Stormcast For Friday, July 17th, 2026 https://isc.sans.edu/podcastdetail/10012, (Fri, Jul 17th)",
     "url": "https://isc.sans.edu/diary/rss/33162"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14956",
+    "published": "2026-07-17T02:18:03.870",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Bricksforge plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 3.1.8.6. This is due to improper validation of the fieldIds parameter in the Pro Forms registration action, which allows attacker-supplied field IDs to be added to the trusted form-field whitelist. This makes it possible for unauthenticated attackers to register a new administrator account by submitting a crafted request to a publicly accessible Bricksforge Pro Forms registration form. Successful exploitation requires that the site has a public Bricksforge Pro Forms element configured with the User Registration action.",
+    "tags": [],
+    "title": "CVE-2026-14956 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14956"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-62241",
+    "published": "2026-07-17T02:18:11.740",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "clawvet self-hosted API server (apps/api) before 0.7.5 hard-codes a fallback JWT secret ('clawvet-dev-secret-change-me') in auth.ts and ships it as the default in .env.example. Because GET /api/v1/scans returns scan records containing userId values without authentication, a remote unauthenticated attacker can harvest a victim's userId, forge a valid HS256 cg_session cookie offline using the known secret, and call GET /api/v1/auth/me to obtain the victim's email address, subscription plan, and secret apiKey. The published clawvet npm package (CLI only) is not affected.",
+    "tags": [],
+    "title": "CVE-2026-62241 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62241"
+  },
+  {
+    "category": "high",
+    "cvss": 4.7,
+    "id": "CVE-2026-40106",
+    "published": "2026-07-17T02:18:05.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wazuh is a free and open source platform used for threat prevention, detection, and response. Versions 4.6.0 and above prior to 4.14.5 contain a heap-based buffer overflow vulnerability in the syscheck component of the Wazuh agent for Windows. When expanding registry paths containing wildcards (* or ?), the agent allocates a fixed-size heap buffer of 256 bytes (OS_SIZE_256). By creating a registry subkey with a maximum allowed length (255 characters) inside a monitored path, a low-privileged local attacker can force an out-of-bounds write during string concatenation. Since wazuh-agent.exe runs as NT AUTHORITY\\SYSTEM, this can lead to a silent Denial of Service (blinding the agent) or potentially Local Privilege Escalation (LPE). This issue has been fixed in version 4.14.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40106 (CVSS 4.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40106"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62202",
+    "published": "2026-07-17T02:18:06.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions 2026.6.1 before 2026.6.9 contain a privilege escalation vulnerability in isolated cron jobs that allows lower-trust callers to regain denied execution tools. Attackers can execute or persist actions beyond their intended authorization by leveraging misconfigured input paths in the affected cron feature.",
+    "tags": [],
+    "title": "CVE-2026-62202 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62202"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62203",
+    "published": "2026-07-17T02:18:06.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions before 2026.6.6 contain an environment variable filtering vulnerability in host exec that fails to properly sanitize rustup startup variables. Attackers with lower-trust caller access or configured input paths can execute or persist actions beyond their intended authorization level.",
+    "tags": [],
+    "title": "CVE-2026-62203 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62203"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62207",
+    "published": "2026-07-17T02:18:07.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions before 2026.6.5 contain an authentication bypass vulnerability that allows lower-trust callers to reach admin-scoped tools. Attackers can perform actions requiring stronger authorization by exploiting insufficient policy checks on configured input paths.",
+    "tags": [],
+    "title": "CVE-2026-62207 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62207"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62209",
+    "published": "2026-07-17T02:18:07.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions 2026.5.10-beta.1 before 2026.6.5 contain an authorization bypass in the ClickClack agent-mode dispatch feature, which could ignore the toolsAllow policy check. When the affected feature is enabled and reachable, a lower-trust caller or configured input path could perform actions that should have required a stronger authorization or policy check.",
+    "tags": [],
+    "title": "CVE-2026-62209 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62209"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-62215",
+    "published": "2026-07-17T02:18:08.243",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw versions before 2026.6.5 contain an authentication bypass vulnerability in HTTP Canvas responses that allows lower-trust callers to forge trusted A2UI actions. Attackers can perform actions requiring stronger authorization by submitting crafted requests through configured input paths, bypassing intended policy checks.",
+    "tags": [],
+    "title": "CVE-2026-62215 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62215"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62217",
+    "published": "2026-07-17T02:18:08.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw 2026.5.14-beta.1 before 2026.5.27 contain an authorization flaw in the QQBot exec approvals feature. When the feature is enabled and reachable, a lower-trust caller or configured input path could execute or persist actions beyond the caller's intended authorization, allowing non-allowlisted senders to perform unauthorized operations.",
+    "tags": [],
+    "title": "CVE-2026-62217 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62217"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62218",
+    "published": "2026-07-17T02:18:08.693",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw 2026.1.20 before 2026.5.27 contain an authorization bypass vulnerability in the device.pair.approve feature that allows lower-trust callers to bypass role-management checks. Attackers can perform actions requiring stronger authorization by reaching the affected feature through configured input paths.",
+    "tags": [],
+    "title": "CVE-2026-62218 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62218"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62223",
+    "published": "2026-07-17T02:18:09.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 contain an authorization bypass vulnerability in the device-pair approval feature that allows lower-trust callers to execute actions beyond their intended authorization. Attackers can exploit misconfigured input paths to execute or persist unauthorized actions when the affected feature is enabled and reachable.",
+    "tags": [],
+    "title": "CVE-2026-62223 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62223"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-62226",
+    "published": "2026-07-17T02:18:09.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw 2026.3.28 before 2026.5.19 contain an authorization bypass vulnerability in the browser act route that fails to properly validate current-tab URL checks. Attackers with lower-trust access or configured input paths can perform actions requiring stronger authorization or policy checks.",
+    "tags": [],
+    "title": "CVE-2026-62226 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62226"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62228",
+    "published": "2026-07-17T02:18:10.153",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.6.5 contain an authorization bypass vulnerability in node exec approvals that allows lower-trust callers to execute actions beyond their intended authorization by using different gateway and node environments. Attackers can exploit mismatched environment configurations to persist or execute actions that exceed the caller's approved permissions.",
+    "tags": [],
+    "title": "CVE-2026-62228 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62228"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62229",
+    "published": "2026-07-17T02:18:10.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 contain an authorization bypass vulnerability in exec allowlist glob matching that allows lower-trust callers to execute actions beyond intended authorization. Attackers can craft input paths that traverse the allowlist glob patterns to execute or persist unauthorized actions when the affected feature is enabled.",
+    "tags": [],
+    "title": "CVE-2026-62229 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62229"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-62230",
+    "published": "2026-07-17T02:18:10.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Grav before 2.0.4 ships a default .htaccess (and reference webserver-configs/htaccess.txt) whose rules blocking access to sensitive file types (.yaml, .php, .json, etc.) lack the [NC] flag, making extension matching case-sensitive. On case-insensitive filesystems (Windows/NTFS, macOS/HFS+, or Docker volume mounts), an unauthenticated attacker can request these files with uppercase or mixed-case extensions (e.g., .YAML, .PHP) to bypass the restrictions and read sensitive configuration files that may contain API keys and credentials.",
+    "tags": [],
+    "title": "CVE-2026-62230 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62230"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62231",
+    "published": "2026-07-17T02:18:10.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.6 contains an authorization bypass: API keys can be created with a restricted scopes array, but the ApiKeyAuthenticator class never reads or enforces these scopes. It loads and returns the owning user's full account object, so a key created with limited scopes (e.g. read-only) can perform any write, delete, or administrative operation the owning user is authorized for. Fixed in 1.0.6.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-62231 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62231"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62233",
+    "published": "2026-07-17T02:18:10.890",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "grav-plugin-api before 1.0.6 fails to validate super-admin status in createApiKey, generate2fa, and disable2fa endpoints, allowing non-super api.users.write managers to escalate to super-admin. Attackers can mint API keys bound to super-admin accounts or strip 2FA from super-admin users to achieve full instance takeover.",
+    "tags": [],
+    "title": "CVE-2026-62233 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62233"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62234",
+    "published": "2026-07-17T02:18:11.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Grav before 2.0.4 fails to restrict cURL protocols in webhook dispatch, allowing authenticated users with api.webhooks.write permission to create webhooks with file://, dict://, or gopher:// URLs. Attackers can trigger webhook events to read local files, access process information, or pivot to internal services via unrestricted protocol handlers.",
+    "tags": [],
+    "title": "CVE-2026-62234 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62234"
+  },
+  {
+    "category": "high",
+    "cvss": 5.4,
+    "id": "CVE-2026-62236",
+    "published": "2026-07-17T02:18:11.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "grav-plugin-login before 3.8.11 contains a cross-site request forgery (CSRF) vulnerability in the login.regenerate2FASecret frontend task, which regenerates and persists a new TOTP secret for the authenticated session user without any anti-CSRF nonce or Origin/Referer check. Because Grav core dispatches the task from the GET 'task:' URI parameter and the default session cookie is SameSite=Lax, an attacker can lure a logged-in victim to an off-site page that performs a top-level GET navigation, rotating the victim's TOTP secret so their enrolled authenticator no longer matches the server, effectively forcing 2FA re-enrollment. Sites configured with session.samesite: Strict are not affected.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-62236 (CVSS 5.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62236"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE16NHpDQWpKR0QwUm13NTVESFVZYTN3STViT2JzUVdZRUswOUJiWUJvaFlmVVp6ZFJrU0RZanRqTHNmYVJFaVAzWTRucGxqR1oxbmk0aDNHY1BjTFk4YXFBZkQxeG1KRHFnUWFYM3BCSFY",
+    "published": "2026-07-17T01:26:26+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "이재명 대통령 “개인정보 유출 기업 제재 강화” 쿠팡 겨냥? 미디어오늘",
+    "tags": [],
+    "title": "이재명 대통령 “개인정보 유출 기업 제재 강화” 쿠팡 겨냥? - 미디어오늘",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE16NHpDQWpKR0QwUm13NTVESFVZYTN3STViT2JzUVdZRUswOUJiWUJvaFlmVVp6ZFJrU0RZanRqTHNmYVJFaVAzWTRucGxqR1oxbmk0aDNHY1BjTFk4YXFBZkQxeG1KRHFnUWFYM3BCSFY?oc=5"
   }
 ]
