@@ -5316,5 +5316,91 @@
     "tags": [],
     "title": "Abbott Laboratories probes two cyber incidents amid extortion claims",
     "url": "https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-13446",
+    "published": "2026-07-17T21:17:05.960",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.1 contains hard-coded credentials, such as a password or cryptographic key, which it uses for its own inbound authentication, outbound communication to external components, or encryption of internal data.",
+    "tags": [],
+    "title": "CVE-2026-13446 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13446"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48062",
+    "published": "2026-07-17T21:17:06.787",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeIgniter is a PHP full-stack web framework. Prior to 4.7.3, the ext_in upload validation rule in system/Validation/StrictRules/FileRules.php checked the MIME-derived guessed extension instead of the client-provided filename extension. As a result, an uploaded file named shell.php containing GIF-like content could pass validation such as uploaded[avatar]|is_image[avatar]|mime_in[avatar,image/gif]|ext_in[avatar,gif] because the detected MIME type maps to gif, even though the uploaded filename extension is php. Applications are impacted if they accept user-controlled uploads, rely on ext_in to validate the uploaded filename extension, save uploaded files using the original client filename with $file->move($path), store uploads in a web-accessible directory, and allow PHP or other executable files to run from that directory. In those conditions, this may lead to arbitrary code execution. This issue is fixed in version 4.7.3.",
+    "tags": [],
+    "title": "CVE-2026-48062 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48062"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-54159",
+    "published": "2026-07-17T21:17:07.963",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PrestaShop ps_facetedsearch is a module that adds layered navigation filters. From 3.0.0 until 4.0.4, the ps_facetedsearch module rebuilds selected search filters from the request URL, and the value of a slider filter, price or weight, is taken from the URL without sufficient validation and stored in an internal filter-block cache where it is serialized and later read back with a raw native unserialize() in src/Filters/Block.php. By crafting that value, an unauthenticated attacker can smuggle a malicious serialized PHP object into the cache, and when it is deserialized, a gadget chain writes an arbitrary PHP file inside the modules/ps_facetedsearch/ directory, which is then used as a webshell to run commands on the server. This issue is fixed in version 4.0.4.",
+    "tags": [],
+    "title": "CVE-2026-54159 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54159"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-55518",
+    "published": "2026-07-17T21:17:09.173",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Avo is a framework to create admin panels for Ruby on Rails apps. Prior to 3.32.1 and 4.0.0.beta.51, Avo's association attach workflow checks attach_<association>? in the UI and GET /resources/:resource/:id/:related/new path, but the actual write endpoint, POST /resources/:resource/:id/:related, does not run the same authorization check before mutating the association through Avo::AssociationsController#create. An authenticated low-privileged Avo user can bypass hidden or disabled attach controls and directly attach related records to a parent record by sending a crafted POST request, which can lead to privilege escalation and cross-tenant data exposure where associations represent authorization-bearing relationships. This issue is fixed in versions 3.32.1 and 4.0.0.beta.51.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55518 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55518"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13445",
+    "published": "2026-07-17T21:17:05.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.1 can allow an authenticated attacker to exploit the SaveToFile component to read and modify another user's uploaded files by specifying absolute paths pointing to victim storage locations. In append mode, the attacker's workflow reads victim file contents, appends attacker-controlled data, and uploads a copy containing victim data to the attacker's namespace (confidentiality breach). In overwrite mode, the attacker can replace victim file contents with arbitrary data (integrity breach). This breaks the storage ownership boundary between users.",
+    "tags": [],
+    "title": "CVE-2026-13445 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13445"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-45784",
+    "published": "2026-07-17T21:17:06.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rust-openssl provides OpenSSL bindings for the Rust programming language. From 0.10.50 until 0.10.80, CipherCtxRef::cipher_update_inplace in openssl/src/cipher_ctx.rs incorrectly sized output buffers when used with AES key-wrap-with-padding ciphers EVP_aes_{128,192,256}_wrap_pad. For a non-multiple-of-8 input, OpenSSL writes up to 7 bytes past the end of the caller's buffer or Vec, producing attacker-controllable heap corruption when the plaintext length is attacker-influenced. This issue is fixed in version 0.10.80.",
+    "tags": [],
+    "title": "CVE-2026-45784 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45784"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-54498",
+    "published": "2026-07-17T21:17:09.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "view_component is a framework for building reusable, testable, and encapsulated view components in Ruby on Rails. From 4.0.0 until 4.12.0, ViewComponent::Base#around_render can return HTML-unsafe strings that bypass the escaping behavior applied to normal #call return values. This creates an XSS risk when downstream applications use around_render to wrap, replace, instrument, or conditionally return content that includes user-controlled data, and ViewComponent::Collection#render_in can amplify the issue by joining per-item results and marking the entire output html_safe, converting raw unsafe output into an ActiveSupport::SafeBuffer. This issue is fixed in version 4.12.0.",
+    "tags": [],
+    "title": "CVE-2026-54498 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54498"
   }
 ]
