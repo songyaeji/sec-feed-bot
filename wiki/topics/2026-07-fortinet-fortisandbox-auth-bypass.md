@@ -12,5 +12,6 @@ cves: [CVE-2026-26083, CVE-2026-25089, CVE-2026-39808]
 - 2026-07-08 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-26083) — CVE-2026-26083 공개 (CVSS 9.8)
 - 2026-07-16 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-25089) — CVE-2026-25089 OS 명령 인젝션 공개 (FortiSandbox, Cloud, PaaS)
 - 2026-07-16 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-39808) — CVE-2026-39808 OS 명령 인젝션 공개
+- 2026-07-17 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/) — CISA 정부기관에 FortiSandbox 실제 공격 취약점 긴급 패치 경고 및 주말까지 패치 명령
 
 ## 관련
