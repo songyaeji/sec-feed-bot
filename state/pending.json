@@ -5292,5 +5292,17 @@
     "tags": [],
     "title": "CVE-2026-8056 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8056"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html",
+    "published": "2026-07-17T20:20:53+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Eleven bytes will make an unpatched OpenSSL server set aside up to 131 KB of memory for a message that never arrives. On the glibc systems Okta tested, that memory is gone until the process restarts. OpenSSL shipped the HollowByte fix in June with no CVE, no advisory, and no changelog entry pointing at it. Okta's Red Team, which reported the denial-of-service bug and named it, published the",
+    "tags": [],
+    "title": "OpenSSL HollowByte Flaw Could Freeze Server Memory with 11-Byte TLS Requests",
+    "url": "https://thehackernews.com/2026/07/openssl-hollowbyte-flaw-could-freeze.html"
   }
 ]
