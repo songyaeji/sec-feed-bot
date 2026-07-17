@@ -4609,5 +4609,41 @@
     "tags": [],
     "title": "Zelensky appoints Ukraine's acting security service chief as acting defense minister",
     "url": "https://therecord.media/ukraine-acting-defense-minister-yevhenii-khmara"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-57073",
+    "published": "2026-07-16T17:16:58.117",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "HTML::Bare versions through 0.04 for Perl have an unbounded character lookahead.\n\nThe parserc_parse function attempts to check for multicharacter strings such as \"<![CDATA\" or element terminators such as \">\" without checking that the offsets are within the buffer.\n\nTruncated strings such as \"<a/\" can trigger an out-of-bounds read.\n\nNote that the latest version available on CPAN is version 0.02. Newer versions are available on the git repository.",
+    "tags": [],
+    "title": "CVE-2026-57073 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57073"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-9810",
+    "published": "2026-07-17T07:16:38.230",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The AI Copilot  WordPress plugin before 1.5.4 does not bind OAuth access tokens to a WordPress user, and accepts any valid token as an administrator session, allowing unauthenticated attackers who complete the public OAuth flow to execute privileged MCP tools as an administrator, including arbitrary user creation and role escalation.",
+    "tags": [],
+    "title": "CVE-2026-9810 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9810"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-7189",
+    "published": "2026-07-17T13:19:01.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insertion of sensitive information into sent data vulnerability in Proliz Software Ltd. Co. Proliz's OBS allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Proliz's OBS: before v3.6.0.",
+    "tags": [],
+    "title": "CVE-2026-7189 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7189"
   }
 ]
