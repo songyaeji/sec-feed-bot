@@ -5097,5 +5097,200 @@
     "tags": [],
     "title": "CVE-2026-41678 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41678"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-15091",
+    "published": "2026-07-17T20:17:15.567",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Engineering AI Hub 1.0.0, 1.1.0, and 1.2.0 could allow a remote attacker to execute arbitrary scripts due to improper neutralization of input during web page generation.",
+    "tags": [],
+    "title": "CVE-2026-15091 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15091"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-60137",
+    "published": "2026-07-17T20:17:27.790",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "WordPress 6.8.x before 6.8.6, 6.9.x before 6.9.5, and 7.0.x before 7.0.2 does not properly sanitise the author__not_in parameter of WP_Query, which could allow SQL Injection when a plugin or theme passes untrusted input to the parameter.",
+    "tags": [],
+    "title": "CVE-2026-60137 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60137"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-8476",
+    "published": "2026-07-17T20:17:30.623",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 contain a critical remote code execution vulnerability in the disk-based caching mechanism. The AsyncDiskCache class uses Python's unsafe pickle.loads() function to deserialize cached objects from disk without validation, integrity verification, or authentication, enabling arbitrary code execution when malicious pickle payloads are processed. Attackers who can influence cached data through file system access, malicious workflow inputs, custom components, or API manipulation can achieve complete system compromise with the privileges of the Langflow server process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8476 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8476"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-8481",
+    "published": "2026-07-17T20:17:30.747",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 contain a critical remote code execution vulnerability in the code validation API endpoint. The POST /api/v1/validate/code endpoint accepts user-supplied Python code and executes it directly using Python's built-in exec() function without sandboxing, input validation, or privilege restrictions, enabling any authenticated user to execute arbitrary system commands with the full privileges of the Langflow server process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8481 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8481"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-8505",
+    "published": "2026-07-17T20:17:31.417",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 has a vulnerability in Langflow's webhook authentication logic allows unauthenticated users to trigger the execution of any flow. The system incorrectly bypasses API key validation when the WEBHOOK_AUTH_ENABLE configuration is set to False (which is the default setting). This allows a remote attacker who knows a flow's UUID to execute it as if they were the owner, potentially leading to Remote Code Execution (RCE).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8505 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8505"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-8635",
+    "published": "2026-07-17T20:17:31.527",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 allows authenticated users to escalate privileges to superuser by directly manipulating the database, execute arbitrary system commands, and achieve full system compromise with Langflow service permissions.",
+    "tags": [],
+    "title": "CVE-2026-8635 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8635"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-8859",
+    "published": "2026-07-17T20:17:31.643",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 Langflow could allow an attacker to write arbitrary files to unintended locations due to improper input validation in the APIRequest component. A path traversal vulnerability exists when the \"Save to File\" feature is enabled, where filenames extracted from HTTP response Content-Disposition headers are not sanitized before being joined to the temporary directory path. An attacker controlling an external HTTP server can supply crafted filename values containing path traversal sequences (e.g., ../), enabling arbitrary file writes to locations accessible by the Langflow process.",
+    "tags": [],
+    "title": "CVE-2026-8859 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8859"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13448",
+    "published": "2026-07-17T20:17:14.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.1 Lanflow OSS contains an unauthenticated remote code execution vulnerability in the public flow build endpoint ( /api/v1/build_public_tmp/{flow_id}/flow ). The vulnerability stems from an incomplete denylist in the validate_public_flow_no_code_execution() function that fails to block several code-execution agent components including OpenDsStarAgent, CodeActAgentSmolagents, and CSVAgent.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13448 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13448"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13473",
+    "published": "2026-07-17T20:17:14.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Storage Protect Client 8.1.0.0 through 8.1.27.0, 8.1.27.1, and 8.2.0.0 through 8.2.1.0 IBM Storage Protect is vulnerable to a heap-based buffer overflow, caused by improper bounds checking. A remote attacker could overflow a buffer and execute arbitrary code on the system or cause the server to crash.",
+    "tags": [],
+    "title": "CVE-2026-13473 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13473"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14499",
+    "published": "2026-07-17T20:17:14.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.1 Langflow could allow an authenticated user to execute arbitrary commands with elevated privileges on the system due to improper validation of user supplied input in the Python Interpreter component.",
+    "tags": [],
+    "title": "CVE-2026-14499 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14499"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-44739",
+    "published": "2026-07-17T20:17:16.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.17 (LTS) and 12.3.6, the columnConfigAction endpoint in bundles/CustomReportsBundle/src/Controller/Reports/CustomReportController.php passes malicious SQL configuration through CustomReportController:columnConfigAction, SqlAdapter::getColumns, SqlAdapter::buildQueryString, and Db::fetchAssociative(), allowing an attacker with the reports_config permission to use arbitrary SELECT queries, UNION statements, dangerous database functions, and error-based SQL injection to exfiltrate or manipulate database data. This issue is fixed in versions 11.5.17 (LTS) and 12.3.6.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-44739 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44739"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-45260",
+    "published": "2026-07-17T20:17:16.857",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pimcore is an Open Source Data & Experience Management Platform. Prior to 11.5.17 (LTS) and 12.3.7, Pimcore's WebDAV asset endpoint exposes a MOVE operation through /asset/webdav{path} without an authentication plugin in bundles/CoreBundle/src/Controller/WebDavController.php, and models/Asset/WebDAV/Tree.php performs asset mutation and deletion through models/Asset.php before checking a current Pimcore user or the rename, delete, create, or publish permissions, allowing unauthorized asset deletion, moves, or overwrites. This issue is fixed in versions 11.5.17 (LTS) and 12.3.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45260 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45260"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-7667",
+    "published": "2026-07-17T20:17:29.350",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 allows an authenticated attacker to create a malicious flow pointing to an attacker-controlled URL that returns a specially crafted Content-Disposition header (e.g., filename=\"../../../target/path\" ), enabling arbitrary file write operations with attacker-controlled content to any path accessible by the Langflow process.",
+    "tags": [],
+    "title": "CVE-2026-7667 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7667"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-7755",
+    "published": "2026-07-17T20:17:30.137",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 Langflow could allow remote code execution due to incomplete validation enforcement on MCP server configuration files.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-7755 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7755"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8056",
+    "published": "2026-07-17T20:17:30.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 allows authenticated users to override component parameters at runtime via the API. A critical security flaw exists in the parameter filtering mechanism within the `apply_tweaks()` function.",
+    "tags": [],
+    "title": "CVE-2026-8056 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8056"
   }
 ]
