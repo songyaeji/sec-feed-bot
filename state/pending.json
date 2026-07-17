@@ -4351,5 +4351,59 @@
     "tags": [],
     "title": "이재명 대통령 “개인정보 보호비용보다 제재가 훨씬 커야”…9월 징벌적 과징금 시행",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207656"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48805",
+    "published": "2026-07-14T22:17:04.773",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Twig is a template language for PHP. Prior to 3.27.0, deprecated internal wrappers in src/Resources/core.php do not forward the current sandbox state to CoreExtension::checkArrow(), arraySome(), and arrayEvery(), allowing legacy calls such as twig_array_some(), twig_array_every(), and twig_check_arrow_in_sandbox() to bypass sandbox callable restrictions. This issue is fixed in version 3.27.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48805 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48805"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48806",
+    "published": "2026-07-14T22:17:04.943",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Twig is a template language for PHP. Prior to 3.27.0, ArrayExpression does not guard dynamic mapping keys that are coerced to strings, allowing PHP to invoke __toString() on a Stringable object used as a mapping key without calling SandboxExtension::ensureToStringAllowed(). This issue is fixed in version 3.27.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48806 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48806"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48807",
+    "published": "2026-07-14T22:17:05.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Twig is a template language for PHP. Prior to 3.27.0, the sandbox __toString() checks do not fully cover Traversable values passed to join and replace filters or operands evaluated by the in and not in operators, allowing contained Stringable objects to be coerced to strings without consulting the sandbox policy. This issue is fixed in version 3.27.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48807 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48807"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-49981",
+    "published": "2026-07-14T22:17:13.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Twig is a template language for PHP. Prior to 3.27.0, the per-template filter, tag, and function allow-list verdict is computed when a Template instance is constructed and can remain cached after sandbox state changes between renders, allowing a later sandboxed render to reuse a template that was originally checked with a different or empty policy. This issue is fixed in version 3.27.0.",
+    "tags": [],
+    "title": "CVE-2026-49981 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49981"
   }
 ]
