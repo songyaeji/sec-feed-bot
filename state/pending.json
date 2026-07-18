@@ -3511,5 +3511,19 @@
     ],
     "title": "Update now: 7-Zip fixes RCE flaw exploitable with malicious archives",
     "url": "https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-2843",
+    "published": "2025-11-12T17:15:37.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Observability Operator. The Operator creates a ServiceAccount with *ClusterRole* upon deployment of the *Namespace-Scoped* Custom Resource MonitorStack. This issue allows an adversarial Kubernetes Account with only namespaced-level roles, for example, a tenant controlling a namespace, to create a MonitorStack in the authorized namespace and then elevate permission to the cluster level by impersonating the ServiceAccount created by the Operator, resulting in privilege escalation and other issues.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-2843 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2843"
   }
 ]
