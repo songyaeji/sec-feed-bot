@@ -3159,5 +3159,19 @@
     "tags": [],
     "title": "CVE-2026-47871 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47871"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2024-3727",
+    "published": "2024-05-14T15:42:07.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the github.com/containers/image library. This flaw allows attackers to trigger unexpected authenticated registry accesses on behalf of a victim user, causing resource exhaustion, local path traversal, and other attacks.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-3727 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3727"
   }
 ]
