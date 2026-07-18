@@ -3271,5 +3271,79 @@
     "tags": [],
     "title": "The Future of Age Verification: Your Face Never Leaves Your Device",
     "url": "https://www.bleepingcomputer.com/news/security/the-future-of-age-verification-your-face-never-leaves-your-device/"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-16117",
+    "published": "2026-07-18T14:17:11.620",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Impact: @fastify/http-proxy versions up to and including 11.5.0 fail to rewrite the request prefix when the prefix segment is URL-encoded. Fastify's router URL-decodes paths for route matching, but request.url retains the original encoded form, and the prefix-rewrite step uses a literal string replace against the decoded prefix. A request that encodes one or more characters of the configured prefix therefore matches the route but skips the rewrite, so the raw encoded path is forwarded to the upstream unchanged. The upstream then decodes the path and serves it, letting an attacker reach upstream paths that the proxy was configured to hide via rewritePrefix, including internal or administrative endpoints.\n\nPatches: upgrade to @fastify/http-proxy 11.6.0.\n\nWorkarounds: none.",
+    "tags": [],
+    "title": "CVE-2026-16117 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16117"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2023-54366",
+    "published": "2026-07-18T14:17:07.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB before 1.0.1 sets default table permissions to FULL instead of NONE, allowing SELECT, CREATE, UPDATE, and DELETE operations on tables without explicit permissions. Attackers with database access or unauthenticated users on publicly exposed instances can perform unrestricted operations on unprotected tables within their authorization scope.",
+    "tags": [],
+    "title": "CVE-2023-54366 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-54366"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2024-58362",
+    "published": "2026-07-18T14:17:09.047",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB before 1.5.5 (and 2.0.0-beta before 2.0.0-beta.3) accepts an arbitrary object in the signin and signup operations of the RPC API without recursively validating it for non-computed values. When a record access method defines a SIGNIN or SIGNUP query and the RPC API is exposed to untrusted users, an unauthenticated attacker can encode a binary object containing a subquery using the bincode serialization format and supply it in place of credentials. The subquery is then executed within the database owner's SIGNIN/SIGNUP query under a system user session with the editor role, allowing the attacker to select, create, update, and delete non-IAM resources (though not view the query results directly, and not affect IAM resources, which require the owner role).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-58362 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58362"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2024-58366",
+    "published": "2026-07-18T14:17:09.600",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB before 1.1.1 contains a format string vulnerability in the rquickjs Exception::throw_type function when scripting is enabled. Attackers with scripting privileges can supply format string sequences in error inputs to read arbitrary memory or execute code with SurrealDB process privileges.",
+    "tags": [],
+    "title": "CVE-2024-58366 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58366"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-11826",
+    "published": "2026-07-18T14:17:11.480",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenPLC_v3 contains a heap-based buffer overflow in the getData() function in webserver/core/modbus_master.cpp. getData() reads characters between two delimiters into a caller-supplied buffer with no size parameter and no bounds check. In parseConfig() the function is invoked with the 100-byte heap-allocated MB_device.dev_name field. An authenticated attacker with access to the OpenPLC web interface can send a crafted HTTP POST to the /modbus endpoint with an oversized device_name value; the value is persisted to mbconfig.cfg and parsed on load, overflowing dev_name and overwriting adjacent struct fields (protocol at offset 108, dev_address at offset 109, ip_port at offset 210). A 200-byte payload writes 100 bytes past the allocation. The result is heap corruption leading to runtime crash and denial of service of the PLC process control loop, with attacker-controlled overwrite of adjacent configuration fields. The upstream repository was archived on 2026-04-04 and no fix is expected; the vendor has confirmed the issue does not affect OpenPLC Runtime v4.",
+    "tags": [],
+    "title": "CVE-2026-11826 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11826"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-9323",
+    "published": "2026-07-18T14:17:12.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The urwid web display backend (urwid/display/web.py) generates web session identifiers (urwid_id) in Screen.start() by concatenating two random.randrange(10**9) calls that use Python's Mersenne Twister PRNG, which is not cryptographically secure. Each call consumes approximately 30 bits of PRNG state, and the Mersenne Twister internal state is approximately 19,937 bits, so an attacker who observes approximately 334 session IDs (for example via the X-Urwid-ID HTTP response header) can fully reconstruct the internal state and predict all past and future session IDs (Path B). The same identifier is also used as the filename of a FIFO created in the world-listable /tmp directory (for example /tmp/urwid375487765176907690.in), so any local user on the host can list /tmp to enumerate active session tokens directly (Path A). With a valid session ID, an attacker can read the victim's terminal screen via the polling endpoint, inject keystrokes into the victim's session (yielding OS-level code execution with the session owner's privileges if the session runs a shell), and inject exit sequences or flood the FIFO to terminate or crash the session. A prior Bandit S311 warning on this usage was suppressed with # noqa: S311 rather than fixed",
+    "tags": [],
+    "title": "CVE-2026-9323 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9323"
   }
 ]
