@@ -3485,5 +3485,17 @@
     "tags": [],
     "title": "CVE-2025-11393 (CVSS 8.7)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11393"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195588",
+    "published": "2026-07-18T18:24:32+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Okta disclosed HollowByte, an 11-byte OpenSSL flaw that lets remote attackers exhaust server memory and trigger denial-of-service attacks. Okta’s Red Team disclosed a denial-of-service vulnerability in OpenSSL they named HollowByte, and the attack payload is exactly 11 bytes. A remote, unauthenticated attacker sends that payload and the server allocates up to 131 KB of memory […]",
+    "tags": [],
+    "title": "OpenSSL Fixes HollowByte Memory Exhaustion Bug",
+    "url": "https://securityaffairs.com/195588/hacking/openssl-fixes-hollowbyte-memory-exhaustion-bug.html"
   }
 ]
