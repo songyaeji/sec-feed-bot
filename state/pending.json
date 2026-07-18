@@ -3197,5 +3197,29 @@
     "tags": [],
     "title": "디지서트 인증서 탈취 사고, 중국계 해킹조직 ‘골든아이고그’ 소행으로 지목",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207661"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16096",
+    "published": "2026-07-18T12:17:11.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in Shibby Tomato 1.28 RT-N5x MIPSR2 Build 124. This affects the function sub_40BB50 of the file /proc/webmon_recent_domains. The manipulation leads to stack-based buffer overflow. It is possible to initiate the attack remotely. This project is superseded by FreshTomato.",
+    "tags": [],
+    "title": "CVE-2026-16096 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16096"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16097",
+    "published": "2026-07-18T12:17:11.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in Shibby Tomato 1.28. This vulnerability affects the function sub_42537C of the component Scheduler Name Handler. The manipulation of the argument a1 results in stack-based buffer overflow. It is possible to launch the attack remotely. This project is superseded by FreshTomato.",
+    "tags": [],
+    "title": "CVE-2026-16097 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16097"
   }
 ]
