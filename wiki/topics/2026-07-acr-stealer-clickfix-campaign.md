@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-16 [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/07/16/acr-stealer-two-observed-intrusion-chains-amid-increased-threat-activity/) — Microsoft Defender Experts, ACR Stealer ClickFix 캠페인 2개 침입 경로 관찰
+- 2026-07-18 [BleepingComputer](https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/) — Microsoft, 고객 대상 ACR Stealer 공격 증가 경고
 
 ## 관련
