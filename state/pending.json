@@ -3071,5 +3071,29 @@
     "tags": [],
     "title": "엔비디아 소프트웨어 위장, 윈도우 호스트 제어하는 신종 ‘라부바RAT’ 포착",
     "url": "http://www.boannews.com/media/view.asp?idx=144742&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-34963",
+    "published": "2026-05-11T23:19:47.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "barebox version prior to 2026.04.0 contains multiple memory-safety vulnerabilities in the EFI PE loader in efi/loader/pe.c where integer overflow in virtual image size computation using 32-bit arithmetic on section VirtualAddress and size values allows undersized heap allocation, and PE section loading logic fails to validate that PointerToRawData plus copied size remains within the PE file buffer. An attacker can supply a malicious EFI PE binary via TFTP, USB, SD card, or network boot to trigger heap buffer overflow or out-of-bounds read from heap memory, potentially achieving code execution in bootloader context.",
+    "tags": [],
+    "title": "CVE-2026-34963 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34963"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207658",
+    "published": "2026-07-18T12:19:53+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "워드프레스(WordPress) 핵심 소프트웨어에서 로그인하지 않은 공격자가 서버에서 임의의 코드를 실행할 수 있는 치명적인 보안 취약점이 발견됐다.이번 취약점은 외부 플러그인이나 테마가 아닌 워드프레스 코어에서 발생했다. 별도의 플러그인을 설치하지 않은 기본 워드프레스 사이트도 공격 대상이 될 수 있어 신속한 업데이트가 필요하다.워드프레스는 2026년 7월 17일 보안 업데이트인 6.9.5와 7.0.2 버전을 공개했다. 취약점은 ‘wp2shell’이라는 이름으로 공개됐으며 CVE-2026-63030이 부여됐다.영향을 받는 버전은 워",
+    "tags": [],
+    "title": "워드프레스 핵심 취약점 ‘wp2shell’ 긴급 패치…로그인 없이 서버 코드 실행",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207658"
   }
 ]
