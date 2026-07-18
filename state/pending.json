@@ -3173,5 +3173,17 @@
     ],
     "title": "CVE-2024-3727 (CVSS 8.3)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3727"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16095",
+    "published": "2026-07-18T11:16:43.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw has been found in Shibby Tomato 1.28 RT-N5x MIPSR2 Build 124. Affected by this issue is the function setup_conntrack of the file /sbin/rc. Executing a manipulation of the argument ct_tcp_timeout can lead to out-of-bounds write. The attack may be performed from remote. This project is superseded by FreshTomato.",
+    "tags": [],
+    "title": "CVE-2026-16095 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16095"
   }
 ]
