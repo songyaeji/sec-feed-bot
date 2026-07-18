@@ -3525,5 +3525,19 @@
     ],
     "title": "CVE-2025-2843 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2843"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-12228",
+    "published": "2026-07-18T21:17:03.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stored cross-site scripting (XSS) vulnerability exists in the `POST /api/prompts/share` endpoint of parisneo/lollms (latest version). The endpoint stores attacker-controlled `prompt_content` into `DBDirectMessage.content` without server-side sanitization. When a victim opens the direct message (DM) thread, the message is rendered by the DM UI through `MessageContentRenderer`, which uses `v-html` to insert rendered HTML into the DOM. The frontend sanitizer, which is regex-based, fails to comprehensively sanitize attacker-controlled HTML, allowing malicious payloads to execute in the victim's browser context. This vulnerability enables any authenticated user to send a malicious prompt-share message to another user's inbox, leading to arbitrary JavaScript execution, authenticated actions as the victim, exposure of same-origin application data, and potential account takeover.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-12228 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12228"
   }
 ]
