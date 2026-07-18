@@ -3221,5 +3221,43 @@
     "tags": [],
     "title": "CVE-2026-16097 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16097"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-15631",
+    "published": "2026-07-18T13:17:05.323",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Impact: @fastify/http-proxy versions from 9.4.0 up to and including 11.5.0 fail to validate the resolved WebSocket destination path against the configured rewrite prefix. The WebSocket routing path in WebSocketProxy.findUpstream resolves the destination via the WHATWG URL constructor, which collapses dot segments, so a crafted upgrade request with path traversal sequences can escape the rewrite prefix and reach upstream endpoints that were not meant to be exposed by the proxy. This is a variant of CVE-2021-21322 in a code path that never went through the HTTP fix in fastify/reply-from. Exploitation requires a non-normalizing WebSocket client, since browsers and the ws package normalize the request path before sending, but raw HTTP clients or downstream proxies that forward the request target unchanged make the attack reachable in production topologies. \n\nPatches: upgrade to @fastify/http-proxy 11.6.0. \n\nWorkarounds: none.",
+    "tags": [],
+    "title": "CVE-2026-15631 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15631"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-16158",
+    "published": "2026-07-18T13:17:06.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Impact: @fastify/reply-from versions from 8.3.1 up to but not including 12.6.4 build the internal URL cache key by concatenating the destination and source path without a delimiter. Different destination and source pairs can therefore produce the same key while resolving to different upstream URLs. When getUpstream selects an upstream from request data, a URL cached for one upstream can be reused for a request intended for another upstream, causing cross-upstream data access and modification. The default configuration is affected. Setting disableCache to true prevents the behavior. Patches: upgrade to @fastify/reply-from 12.6.4. Workarounds: pass disableCache: true when registering the plugin.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16158 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16158"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207662",
+    "published": "2026-07-18T22:11:30+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "북한 연계 해킹 조직이 가짜 채용과 코딩 테스트를 이용해 개발자에게 악성코드를 유포한 사실이 확인됐다.보안기업 엘라스틱 위협연구 조직인 엘라스틱 시큐리티 랩스는 자사 개발자 커뮤니티 슬랙(Slack)에서 수상한 구인 활동을 발견하고 관련 프로젝트를 분석했다.엘라스틱은 이번 공격을 ‘REF9403’으로 추적하고 있다. 공격 방식은 북한 연계 해킹 캠페인인 '컨테이저스 인터뷰(Contagious Interview)'와 연결됐으며, 사용된 악성코드는 '오터쿠키(OtterCookie)' 계열과 유사했다. 분석 결과는 2026년 7월 18일",
+    "tags": [],
+    "title": "북한 연계 해커, 가짜 코딩 테스트에 악성코드 숨겼다…개발자 계정·지갑 탈취",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207662"
   }
 ]
