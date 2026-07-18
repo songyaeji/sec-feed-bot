@@ -3095,5 +3095,69 @@
     "tags": [],
     "title": "워드프레스 핵심 취약점 ‘wp2shell’ 긴급 패치…로그인 없이 서버 코드 실행",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207658"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-47865",
+    "published": "2026-07-18T09:17:08.287",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "VMware Avi Load Balancer contains an authentication bypass vulnerability. A malicious user with network access may be able to access the Avi Control plane by bypassing the authentication mechanism.\n\nAffected versions:\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+    "tags": [],
+    "title": "CVE-2026-47865 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47865"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-47866",
+    "published": "2026-07-18T09:17:08.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "VMware Avi Load Balancer contains an authorization bypass vulnerability. A malicious actor on the network can access a limited subset of the Avi Control Plane without proper authorization.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+    "tags": [],
+    "title": "CVE-2026-47866 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47866"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-47867",
+    "published": "2026-07-18T09:17:08.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious user with network access may be able to access the Avi Control plane and execute code remotely.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47867 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47867"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-47869",
+    "published": "2026-07-18T09:17:08.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "VMware Avi Load Balancer contains a remote code execution vulnerability. A malicious authenticated user with network access may be able to inject and execute code.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47869 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47869"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47871",
+    "published": "2026-07-18T09:17:08.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "VMware Avi Load Balancer contains a directory traversal vulnerability. Flaws in file path validation allow malicious, authenticated network users to perform directory traversal attacks.\n\nAffected versions:\n32.1.1 (fixed in 32.1.2)\n31.1.1 through 31.2.2 (fixed in 31.2.2-2p3)\n30.1.1 through 30.2.6 (fixed in 30.2.7)\n22.1.1 through 22.1.7 (fixed in 30.2.7)",
+    "tags": [],
+    "title": "CVE-2026-47871 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47871"
   }
 ]
