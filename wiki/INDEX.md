@@ -2,13 +2,19 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [uac-0145-clickfix-ukraine](topics/2026-07-uac-0145-clickfix-ukraine.md) 러시아 APT UAC-0145, ClickFix로 우크라이나 표적 정보탈취 (최종갱신일: 2026-07-19)
+- [vipnet-update-abuse-russia](topics/2026-07-vipnet-update-abuse-russia.md) ViPNet 업데이트 메커니즘 악용 러시아 정부기관 공격 (최종갱신일: 2026-07-19)
+- [onsetlink-voicephishing-sanction](topics/2026-07-onsetlink-voicephishing-sanction.md) 온세텔링크 보이스피싱 차단 불이행으로 등록취소 처분 (최종갱신일: 2026-07-19)
+- [google-gtig-ai-malware-deployment](topics/2026-07-google-gtig-ai-malware-deployment.md) Google GTIG, AI 악성코드 실제 배포 단계 진입 확인 (최종갱신일: 2026-07-19)
+- [ai-research-institute-security](topics/2026-07-ai-research-institute-security.md) 한국 정부 AI 연구소 보안 요건 강화 (최종갱신일: 2026-07-19)
+- [sonicwall-sma1000-vulnerabilities](topics/2026-07-sonicwall-sma1000-vulnerabilities.md) SonicWall SMA1000 SSRF 및 코드 인젝션 제로데이 (최종갱신일: 2026-07-19)
 - [fastify-http-proxy-url-bypass](topics/2026-07-fastify-http-proxy-url-bypass.md) @fastify/http-proxy URL 인코딩 라우팅 우회 (최종갱신일: 2026-07-18)
 - [vmware-avi-auth-bypass](topics/2026-07-vmware-avi-auth-bypass.md) VMware Avi 로드밸런서 인증 우회 및 디렉터리 이동 (최종갱신일: 2026-07-18)
 - [shibby-tomato-buffer-overflow](topics/2026-07-shibby-tomato-buffer-overflow.md) Shibby Tomato 1.28 라우터 버퍼 오버플로우 3개 (최종갱신일: 2026-07-18)
 - [surrealdb-default-permissions](topics/2026-07-surrealdb-default-permissions.md) SurrealDB 기본 테이블 권한 설정 실수 (최종갱신일: 2026-07-18)
 - [surrealdb-rpc-auth-bypass](topics/2026-07-surrealdb-rpc-auth-bypass.md) SurrealDB RPC API 인증 우회 및 RCE (최종갱신일: 2026-07-18)
 - [openplc-heap-overflow](topics/2026-07-openplc-heap-overflow.md) OpenPLC_v3 힙 버퍼 오버플로우 (최종갱신일: 2026-07-18)
-- [kt-personal-info-breach](topics/2026-07-kt-personal-info-breach.md) KT 2만 명 개인정보 유출로 정부 제재 대상 (최종갱신일: 2026-07-18)
+- [kt-personal-info-breach](topics/2026-07-kt-personal-info-breach.md) KT 2만 명 개인정보 유출로 정부 제재 심의 예정 (최종갱신일: 2026-07-19)
 - [lineyahoo-game-user-identifier-leak](topics/2026-07-lineyahoo-game-user-identifier-leak.md) 라인야후 게임 이용자 내부 식별자 710만건 외부 전송 설정 오류 (최종갱신일: 2026-07-16)
 - [police-officer-data-sale](topics/2026-07-police-officer-data-sale.md) 경찰관 경찰 내부정보 판매 기소 개인정보 유출 (최종갱신일: 2026-07-16)
 - [7zip-rce](topics/2026-07-7zip-rce.md) 7-Zip 26.02 RCE 취약점 패치 특제 아카이브 악용 (최종갱신일: 2026-07-18)
@@ -75,7 +81,6 @@
 - [sap-netweaver-memory-corruption](topics/2026-07-sap-netweaver-memory-corruption.md) SAP NetWeaver ABAP 메모리 관리 논리 오류 (최종갱신일: 2026-07-14)
 - [jetbrains-youtrack-auth-bypass](topics/2026-07-jetbrains-youtrack-auth-bypass.md) JetBrains YouTrack 데이터베이스 접근 인증 우회 (최종갱신일: 2026-07-14)
 - [opcenter-x-jwt-validation](topics/2026-07-opcenter-x-jwt-validation.md) Siemens Opcenter X JWT 알고리즘 검증 우회 (최종갱신일: 2026-07-14)
-- [sonicwall-sma1000-vulnerabilities](topics/2026-07-sonicwall-sma1000-vulnerabilities.md) SonicWall SMA1000 SSRF 및 코드 인젝션 원격 실행 (최종갱신일: 2026-07-14)
 - [fsb-router-targeting-advisory](topics/2026-07-fsb-router-targeting-advisory.md) 러시아 FSB 설정부실 라우터 악용 기간인프라 공격 경고 (최종갱신일: 2026-07-14)
 - [abb-tmac-plus-vulnerabilities](topics/2026-07-abb-tmac-plus-vulnerabilities.md) ABB T-MAC Plus CVSS 9.9 파일유출·인증우회 취약점 (최종갱신일: 2026-07-14)
 - [rockwell-automation-ethernetip-adapter](topics/2026-07-rockwell-automation-ethernetip-adapter.md) Rockwell Automation 1715-AENTR 산업제어 취약점 (최종갱신일: 2026-07-14)
