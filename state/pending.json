@@ -2158,5 +2158,101 @@
     "tags": [],
     "title": "KT 개인정보 유출 제재 29일 심의…과징금 2000억원 안팎 부과 여부 주목 - 한국사회복지저널",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA2QUY3YmIwUThxUktVVEJ5MDdhNlpPV1BQdVNKQ3FQTHRXWnA3bkNfNTNPSVlZcl9EeThuRzQ3Zjc3OW1JYXAwRnRVVmlCbUllMkNWTVNMQmYybTdhVkFtWHdzZXNFTS1wN1Rr?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53373",
+    "published": "2026-07-19T11:16:38.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/vma: do not try to unmap a VMA if mmap_prepare() invoked from mmap()\n\nThe mmap_prepare hook functionality includes the ability to invoke\nmmap_prepare() from the mmap() hook of existing 'stacked' drivers, that is\nones which are capable of calling the mmap hooks of other drivers/file\nsystems (e.g.  overlayfs, shm).\n\nAs part of the mmap_prepare action functionality, we deal with errors by\nunmapping the VMA should one arise.  This works in the usual mmap_prepare\ncase, as we invoke this action at the last moment, when the VMA is\nestablished in the maple tree.\n\nHowever, the mmap() hook passes a not-fully-established VMA pointer to the\ncaller (which is the motivation behind the mmap_prepare() work), which is\ndetached.\n\nSo attempting to unmap a VMA in this state will be problematic, with the\nmost obvious symptom being a warning in vma_mark_detached(), because the\nVMA is already detached.\n\nIt's also unncessary - the mmap() handler will clean up the VMA on error.\n\nSo to fix this issue, this patch propagates whether or not an mmap action\nis being completed via the compatibility layer or directly.\n\nIf the former, then we do not attempt VMA cleanup, if the latter, then we\ndo.\n\nThis patch also updates the userland VMA tests to reflect the change.",
+    "tags": [],
+    "title": "CVE-2026-53373 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53373"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53374",
+    "published": "2026-07-19T11:16:38.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdgpu: zero-initialize GART table on allocation\n\nGART TLB is flushed after unmapping but not after mapping. Since\namdgpu_bo_create_kernel() does not zero-initialize the buffer, when a\nsingle PTE is written the TLB may speculatively load other uninitialized\nentries from the same cacheline. Those garbage entries can appear valid,\nand a subsequent write to another PTE in the same cacheline may cause the\nGPU to use a stale garbage PTE from the TLB.\n\nFix this by calling memset_io() to zero-initialize the GART table with\ngart_pte_flags immediately after allocation.\n\nUsing AMDGPU_GEM_CREATE_VRAM_CLEARED, SDMA-based clear will not work\nsince SDMA needs GART to be initialized to work.\n\n(cherry picked from commit d9af8263b82b6eaa60c5718e0c6631c5037e4b24)",
+    "tags": [],
+    "title": "CVE-2026-53374 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53374"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53375",
+    "published": "2026-07-19T11:16:38.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdgpu/vce: Prevent partial address patches\n\nIn the case that only one of lo/hi is valid, the patching could result\nin a bad address written to in FW.",
+    "tags": [],
+    "title": "CVE-2026-53375 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53375"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53376",
+    "published": "2026-07-19T11:16:38.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdkfd: Add upper bound check for num_of_nodes\n\ndrm/amdkfd: Add upper bound check for num_of_nodes\nin kfd_ioctl_get_process_apertures_new.\n\n(cherry picked from commit 98ff46a5ea090c14d2cdb4f5b993b05d74f3949f)",
+    "tags": [],
+    "title": "CVE-2026-53376 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53376"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53377",
+    "published": "2026-07-19T11:16:38.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/msm: always recover the gpu\n\nPreviously, in case there was no more work to do, recover worker\nwouldn't trigger recovery and would instead rely on the gpu going to\nsleep and then resuming when more work is submitted.\n\nRecover_worker will first increment the fence of the hung ring so, if\nthere's only one job submitted to a ring and that causes an hang, it\nwill early out.\n\nThere's no guarantee that the gpu will suspend and resume before more\nwork is submitted and if the gpu is in a hung state it will stay in that\nstate and probably trigger a timeout again.\n\nJust stop checking and always recover the gpu.\n\nPatchwork: https://patchwork.freedesktop.org/patch/704066/",
+    "tags": [],
+    "title": "CVE-2026-53377 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53377"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53378",
+    "published": "2026-07-19T11:16:38.953",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/colorop: Fix blob property reference tracking in state lifecycle\n\nThe colorop state blob property handling had memory leaks during state\nduplication, destruction, and reset operations. The implementation\nfailed to follow the established pattern from drm_crtc's handling of\nDEGAMMA/GAMMA blob properties.\n\nIssues fixed:\n- drm_colorop_atomic_destroy_state() was freeing state memory without\n  releasing the blob reference, causing a leak\n- drm_colorop_reset() was directly freeing old state with kfree()\n  instead of properly destroying it, leaking blob references\n- drm_colorop_cleanup() had duplicate blob cleanup code\n\nChanges:\n- Add __drm_atomic_helper_colorop_destroy_state() helper to properly\n  release blob references before freeing state memory\n- Update drm_colorop_atomic_destroy_state() to call the helper\n- Fix drm_colorop_reset() to use drm_colorop_atomic_destroy_state()\n  for proper cleanup of old state\n- Simplify drm_colorop_cleanup() to use the common destruction path\n\nThis matches the well-tested pattern used by drm_crtc since 2016 and\nensures proper reference counting throughout the state lifecycle.\n\nCo-developed by Claude Sonnet 4.5.",
+    "tags": [],
+    "title": "CVE-2026-53378 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53378"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53379",
+    "published": "2026-07-19T11:16:39.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: i2c: ov8856: free control handler on error in ov8856_init_controls()\n\nThe control handler wasn't freed if adding controls failed, add an error\nexit label and convert the existing error return to use it.",
+    "tags": [],
+    "title": "CVE-2026-53379 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53379"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-53380",
+    "published": "2026-07-19T11:16:39.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: rzv2h-ivc: Fix concurrent buffer list access\n\nThe list of buffers (`rzv2h_ivc::buffers.queue`) is protected by a\nspinlock (`rzv2h_ivc::buffers.lock`). However, in\n`rzv2h_ivc_transfer_buffer()`, which runs in a separate workqueue, the\n`list_del()` call is executed without holding the spinlock, which makes\nit possible for the list to be concurrently modified\n\nFix that by removing a buffer from the list in the lock protected section.\n\n[assign ivc->buffers.curr in critical section as reported by Barnabas]",
+    "tags": [],
+    "title": "CVE-2026-53380 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53380"
   }
 ]
