@@ -1651,5 +1651,41 @@
     "tags": [],
     "title": "CVE-2026-10130 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10130"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-49794",
+    "published": "2025-06-16T16:15:18.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A use-after-free vulnerability was found in libxml2. This issue occurs when parsing XPath elements under certain circumstances when the XML schematron has the <sch:name path=\"...\"/> schema elements. This flaw allows a malicious actor to craft a malicious XML document used as input for libxml, resulting in the program's crash using libxml or other possible undefined behaviors.",
+    "tags": [],
+    "title": "CVE-2025-49794 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49794"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-49796",
+    "published": "2025-06-16T16:15:19.370",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in libxml2. Processing certain sch:name elements from the input XML file can trigger a memory corruption issue. This flaw allows an attacker to craft a malicious XML input file that can lead libxml to crash, resulting in a denial of service or other possible undefined behavior due to sensitive data being corrupted in memory.",
+    "tags": [],
+    "title": "CVE-2025-49796 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49796"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiygJBVV95cUxNTUhRRnF6VEJwR1JDeTI5d05SeWxGWVhKV3BTa09tcm93bzU5Qi1LMEtSTnBfSzQtSHBvRUVQQ0dEUXB5Q3BiZk9OeUtldUt0RzJRMFUwb0F4LTBVb25JUzdBYngwMGdZZ1Y2NThieXdBenFjNTRXeGNVbUhuTXdQQkliOEV3aVloUTJ3a0ZwT3BwRDhVZFQ1Nmt5U3N6aVNxT0theXVLZnJ6eGVzS0xHclJ3ZjlpT2dpTEkyMGwtYlEwTkNXTzhZSE9zdlVOcnFybVp2NmRoMklKZWpmY0RXcGFzeUJsUFIwcXpRS1VCQ3AzaTNiNkVTV3kxckRHdjNaRGJiSTlrLXB4SG9Ra1F3cWE5X1JETWhRVmo2ZHlnVWY2UlBBeVg2c3VQX3N2aEVvOHA3end2U1RpVkdaM1RzblhGR0dnbzAtbUE",
+    "published": "2026-07-18T23:09:44+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "과징금 2000억원 낼까…KT 개인정보 유출 제재 이달 중 결론 | HeraldK.com",
+    "tags": [],
+    "title": "과징금 2000억원 낼까…KT 개인정보 유출 제재 이달 중 결론 | - HeraldK.com",
+    "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxNTUhRRnF6VEJwR1JDeTI5d05SeWxGWVhKV3BTa09tcm93bzU5Qi1LMEtSTnBfSzQtSHBvRUVQQ0dEUXB5Q3BiZk9OeUtldUt0RzJRMFUwb0F4LTBVb25JUzdBYngwMGdZZ1Y2NThieXdBenFjNTRXeGNVbUhuTXdQQkliOEV3aVloUTJ3a0ZwT3BwRDhVZFQ1Nmt5U3N6aVNxT0theXVLZnJ6eGVzS0xHclJ3ZjlpT2dpTEkyMGwtYlEwTkNXTzhZSE9zdlVOcnFybVp2NmRoMklKZWpmY0RXcGFzeUJsUFIwcXpRS1VCQ3AzaTNiNkVTV3kxckRHdjNaRGJiSTlrLXB4SG9Ra1F3cWE5X1JETWhRVmo2ZHlnVWY2UlBBeVg2c3VQX3N2aEVvOHA3end2U1RpVkdaM1RzblhGR0dnbzAtbUE?oc=5"
   }
 ]
