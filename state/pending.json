@@ -1925,5 +1925,157 @@
     "tags": [],
     "title": "개인정보위 KT 개인정보 유출 제재, 이르면 이달 결론 - 아시아타임즈",
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE43Tm1qNnpzcTczVmhfNmRmVDU2RW1fUE5CcWdIckFqemZXa1NvckxWOUVEcjlQbEl6cXdEbWU4N0VjMjhiUUxUdm03dm43REFKUkxaNXZpTFQwQ3Y4a3c?oc=5"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207674",
+    "published": "2026-07-19T15:00:46+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "정부가 총 550조원 규모의 민간 AI 데이터센터 투자를 지원하고, 통신·플랫폼 등 국민 생활과 밀접한 기반시설을 대상으로 AI 기반 취약점 점검을 본격화한다. 독자 AI 모델을 활용한 보안 특화 AI 모델 개발도 추진한다.과학기술정보통신부와 우주항공청은 7월 16일 청와대 영빈관에서 대통령에게 2026년 하반기 업무계획을 보고했다.과기정통부는 ‘AI·과학기술로 함께 행복한 대체불가 대한민국’을 목표로 ▲3대 메가프로젝트 총력 추진 ▲모두가 누리는 AI 기본사회 실현 ▲세계 최고에 도전하는 과학기술 생태계 조성 ▲청년의 성장사다리",
+    "tags": [],
+    "title": "[2026 하반기] 정부, AI 데이터센터·피지컬 AI 집중 육성...AI 기반시설 보안·취약점 점검 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207674"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/triofox-vulnerability-cve-2025-12480/",
+    "published": "2025-11-10T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Stallone D'Souza, Praveeth DSouza, Bill Glynn, Kevin O'Flynn, Yash Gupta Welcome to the Frontline Bulletin Series Straight from Mandiant Threat Defense, the \"Frontline Bulletin\" series brings you the latest on the threats we are seeing in the wild right now, equipping our community to understand and respond. Introduction Mandiant Threat Defense has uncovered exploitation of an unauthenticated access vulnerability within Gladinet’s Triofox file-sharing and remote access platform. This now-patched n-day vulnerability, assigned CVE-2025-12480 , allowed an attacker to bypass authentication and access the application configuration pages, enabling the upload and execution of arbitrary payloads. As early as Aug. 24, 2025, a threat cluster tracked by Google Threat Intelligence Group (GTIG) as UNC6485 exploited the unauthenticated access vulnerability and chained it with the abuse of the built-in anti-virus feature to achieve code execution. The activity discussed in this blog post leveraged a vulnerability in Triofox version 16.4.10317.56372, which was mitigated in release 16.7.10368.56560 . Gladinet engaged with Mandiant on our findings, and Mandiant has validated that this vulnerability is resolved in new versions of Triofox . Initial Detection Mandiant leverages Google Security Operations (SecOps) for detecting, investigating, and responding to security incidents across our customer base. As part of Google Cloud Security’s Shared Fate model, SecOps provides out-of-the-",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "No Place Like Localhost: Unauthenticated Remote Access via Triofox Vulnerability CVE-2025-12480",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/triofox-vulnerability-cve-2025-12480/"
+  },
+  {
+    "author": "Google Threat Intelligence Group",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools/",
+    "published": "2025-11-05T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Executive Summary Based on recent analysis of the broader threat landscape, Google Threat Intelligence Group (GTIG) has identified a shift that occurred within the last year: adversaries are no longer leveraging artificial intelligence (AI) just for productivity gains, they are deploying novel AI-enabled malware in active operations . This marks a new operational phase of AI abuse, involving tools that dynamically alter behavior mid-execution. This report serves as an update to our January 2025 analysis, \" Adversarial Misuse of Generative AI ,\" and details how government-backed threat actors and cyber criminals are integrating and experimenting with AI across the industry throughout the entire attack lifecycle. Our findings are based on the broader threat landscape. At Google, we are committed to developing AI responsibly and take proactive steps to disrupt malicious activity by disabling the projects and accounts associated with bad actors, while continuously improving our models to make them less susceptible to misuse. We also proactively share industry best practices to arm defenders and enable stronger protections across the ecosystem. Throughout this report we’ve noted steps we’ve taken to thwart malicious activity, including disabling assets and applying intel to strengthen both our classifiers and model so it’s protected from misuse moving forward. Additional details on how we’re protecting and defending Gemini can be found in this white paper , “ Advancing Gemini’s Se",
+    "tags": [],
+    "title": "GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools/"
+  },
+  {
+    "author": "Adam Greenberg",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/cybersecurity-forecast-2026/",
+    "published": "2025-11-04T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Every November, we make it our mission to equip organizations with the knowledge needed to stay ahead of threats we anticipate in the coming year. The Cybersecurity Forecast 2026 report, released today, provides comprehensive insights to help security leaders and teams prepare for those challenges. This report does not contain \"crystal ball\" predictions. Instead, our forecasts are built on real-world trends and data we are observing right now. The information contained in the report comes directly from Google Cloud security leaders, and dozens of experts, analysts, researchers, and responders directly on the frontlines. aside_block ), ('btn_text', 'Download now'), ('href', 'https://cloud.google.com/security/resources/cybersecurity-forecast?&utm_source=cgc-blog&utm_medium=blog&utm_campaign=FY25-Q4-GLOBAL-ENT37011-website-dl-cyber-forecast-124843&utm_content=launch_blog&utm_term=-'), ('image', )])]> Artificial Intelligence, Cybercrime, and Nation States Cybersecurity in the year ahead will be defined by rapid evolution and refinement by adversaries and defenders. Defenders will leverage artificial intelligence and agentic AI to protect against increasingly sophisticated and disruptive cybercrime operations, nation-state actors persisting on networks for long periods of time to conduct espionage and achieve other strategic goals, and adversaries who are also embracing artificial intelligence to scale and speed up attacks. AI Threats Adversaries Fully Embrace AI: We anticipate th",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Preparing for Threats to Come: Cybersecurity Forecast 2026",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/cybersecurity-forecast-2026/"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/privileged-account-monitoring/",
+    "published": "2025-10-28T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Bhavesh Dhake, Will Silverstone, Matthew Hitchcock, Aaron Fletcher The Criticality of Privileged Access in Today's Threat Landscape Privileged access stands as the most critical pathway for adversaries seeking to compromise sensitive systems and data. Its protection is not only a best practice, it is a fundamental imperative for organizational resilience. The increasing complexity of modern IT environments, exacerbated by rapid cloud migration, has led to a surge in both human and non-human identities, comprising privileged accounts and virtual systems [compute workloads such as virtual machines (VMs), containers, and serverless functions, plus their control planes], significantly expanding the overall attack surface. This environment presents escalating challenges in identity and access management, cross-platform system security, and effective staffing, making the establishment and maintenance of a robust security posture increasingly challenging. The threat landscape is continuously evolving, with a pronounced shift towards attacks that exploit privileged access. Mandiant's 2025 M-Trends report highlights that stolen credentials have surpassed email phishing to become the second-most frequently observed initial access method, accounting for 16% of intrusions in 2024. This resurgence is fueled, in part, by the proliferation of infostealer malware campaigns, which facilitate the collection and trade of compromised user credentials. However, threat actors of all ty",
+    "tags": [
+      "피싱"
+    ],
+    "title": "Keys to the Kingdom: A Defender's Guide to Privileged Account Monitoring",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/privileged-account-monitoring/"
+  },
+  {
+    "author": "Google Threat Intelligence Group",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/vietnamese-actors-fake-job-posting-campaigns/",
+    "published": "2025-10-23T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Google Threat Intelligence Group (GTIG) is tracking a cluster of financially motivated threat actors operating from Vietnam that leverages fake job postings on legitimate platforms to target individuals in the digital advertising and marketing sectors. The actor effectively uses social engineering to deliver malware and phishing kits, ultimately aiming to compromise high-value corporate accounts, in order to hijack digital advertising accounts. GTIG tracks parts of this activity as UNC6229. The activity targets remote digital advertising workers who have contract or part-time positions and may actively look for work while they currently have a job. The attack starts when a target downloads and executes malware or enters credentials into a phishing site. If the target falls victim while logged into a work computer with a personal account, or while using a personal device with access to company ads accounts, threat actors can gain access to those company accounts. Successful compromise of a corporate advertising or social media account allows the threat actor to either sell ads to other actors, or sell the accounts themselves to other actors to monetize, as they see fit. This blog describes the actor's tactics, techniques, and procedures (TTPs). As part of our efforts to combat serious threat actors, GTIG uses the results of our research to improve the safety and security of Google’s products and users. Upon discovery, all identified websites, domains and files are added to the",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "Help Wanted: Vietnamese Actors Using Fake Job Posting Campaigns to Deliver Malware and Steal Credentials",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/vietnamese-actors-fake-job-posting-campaigns/"
+  },
+  {
+    "author": "Google Threat Intelligence Group",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/pro-russia-information-operations-drone-incursions/",
+    "published": "2025-10-21T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Alden Wahlstrom, David Mainor Introduction Google Threat Intelligence Group (GTIG) observed multiple instances of pro-Russia information operations (IO) actors promoting narratives related to the reported incursion of Russian drones into Polish airspace that occurred on Sept. 9-10, 2025. The identified IO activity, which mobilized in response to this event and the ensuing political and security developments, appeared consistent with previously observed instances of pro-Russia IO targeting Poland—and more broadly the NATO Alliance and the West. Information provided in this report was derived from GTIG's tracking of IO beyond Google surfaces. Google is committed to information transparency, and we will continue tracking these threats and blocking their inauthentic content on Google’s platforms. We regularly disclose our latest enforcement actions in the TAG Bulletin . Observed messaging surrounding the Russian drone incursion into Polish airspace advanced multiple, often intersecting, influence objectives aligned with historic pro-Russia IO threat activity : Promoting a Positive Russian Image : Concerted efforts to amplify messaging denying Russia’s culpability for the incursion. Blaming NATO and the West : The reframing of the events to serve Russian strategic interests, effectively accusing either Poland or NATO of manufacturing pretext to serve their own political agendas. Undermining Domestic Confidence in Polish Government : Messaging designed to negatively inf",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Pro-Russia Information Operations Leverage Russian Drone Incursions into Polish Airspace",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/pro-russia-information-operations-drone-incursions/"
+  },
+  {
+    "author": "Google Threat Intelligence Group",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/new-malware-russia-coldriver/",
+    "published": "2025-10-20T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Wesley Shields Introduction COLDRIVER, a Russian state-sponsored threat group known for targeting high profile individuals in NGOs, policy advisors and dissidents, swiftly shifted operations after the May 2025 public disclosure of its LOSTKEYS malware, operationalizing new malware families five days later. It is unclear how long COLDRIVER had this malware in development, but GTIG has not observed a single instance of LOSTKEYS since publication. Instead, GTIG has seen new malware used more aggressively than any other previous malware campaigns we have attributed to COLDRIVER (also known as UNC4057, Star Blizzard, and Callisto). The new malware, which GTIG attributes directly to COLDRIVER, has undergone multiple iterations since discovery, indicating a rapidly increased development and operations tempo from COLDRIVER. It is a collection of related malware families connected via a delivery chain. GTIG seeks to build on details on a part of this infection chain released in a recent Zscaler blog post by sharing wider details on the infection chain and related malware. Malware Development Overview This re-tooling began with a new malicious DLL called NOROBOT delivered via an updated COLDCOPY “ClickFix” lure that pretends to be a custom CAPTCHA. This is similar to previous LOSTKEYS deployment by COLDRIVER, but updates the infection by leveraging the user to execute the malicious DLL via rundll32, instead of the older multi-stage PowerShell method. Figure 1: Malware devel",
+    "tags": [
+      "금융",
+      "APT"
+    ],
+    "title": "To Be (A Robot) or Not to Be: New Malware Attributed to Russia State-Sponsored COLDRIVER",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/new-malware-russia-coldriver/"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/dprk-adopts-etherhiding/",
+    "published": "2025-10-16T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Blas Kojusner, Robert Wallace, Joseph Dobson Google Threat Intelligence Group (GTIG) has observed the North Korea (DPRK) threat actor UNC5342 using ‘EtherHiding’ to deliver malware and facilitate cryptocurrency theft, the first time GTIG has observed a nation-state actor adopting this method. This post is part of a two-part blog series on adversaries using EtherHiding , a technique that leverages transactions on public blockchains to store and retrieve malicious payloads—notable for its resilience against conventional takedown and blocklisting efforts. Read about UNC5142 campaign leveraging EtherHiding to distribute malware . Since February 2025, GTIG has tracked UNC5342 incorporating EtherHiding into an ongoing social engineering campaign, dubbed Contagious Interview by Palo Alto Networks. In this campaign, the actor uses JADESNOW malware to deploy a JavaScript variant of INVISIBLEFERRET, which has led to numerous cryptocurrency heists . How EtherHiding Works EtherHiding emerged in September 2023 as a key component in the financially motivated CLEARFAKE campaign (UNC5142), which uses deceptive overlays, like fake browser update prompts, to manipulate users into executing malicious code. EtherHiding involves embedding malicious code, often in the form of JavaScript payloads, within a smart contract on a public blockchain like BNB Smart Chain or Ethereum. This approach essentially turns the blockchain into a decentralized and highly resilient command-and-control (C",
+    "tags": [
+      "금융"
+    ],
+    "title": "DPRK Adopts EtherHiding: Nation-State Malware Hiding on Blockchains",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/dprk-adopts-etherhiding/"
+  },
+  {
+    "author": "Google Threat Intelligence Group",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/unc5142-etherhiding-distribute-malware/",
+    "published": "2025-10-16T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Mark Magee, Jose Hernandez, Bavi Sadayappan, Jessa Valdez Since late 2023, Mandiant Threat Defense and Google Threat Intelligence Group (GTIG) have tracked UNC5142, a financially motivated threat actor that abuses the blockchain to facilitate the distribution of information stealers (infostealers). UNC5142 is characterized by its use of compromised WordPress websites and \"EtherHiding \" , a technique used to obscure malicious code or data by placing it on a public blockchain, such as the BNB Smart Chain . This post is part of a two-part blog series on adversaries using the EtherHiding technique. Read our other post on North Korea (DPRK) adopting EtherHiding . Since late 2023, UNC5142 has significantly evolved their tactics, techniques, and procedures (TTPs) to enhance operational security and evade detection. Notably, we have not observed UNC5142 activity since late July 2025, suggesting a shift in the actor’s operational methods or a pause in their activity. UNC5142 appears to indiscriminately target vulnerable WordPress sites, leading to widespread and opportunistic campaigns that impact a range of industry and geographic regions. As of June 2025, GTIG had identified approximately 14,000 web pages containing injected JavaScript consistent with an UNC5142 compromised website. We have seen UNC5142 campaigns distribute infostealers including ATOMIC , VIDAR , LUMMAC.V2 , and RADTHIEF . GTIG does not currently attribute these final payloads to UNC5142 as it is possibl",
+    "tags": [
+      "금융"
+    ],
+    "title": "New Group on the Block: UNC5142 Leverages EtherHiding to Distribute Malware",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc5142-etherhiding-distribute-malware/"
+  },
+  {
+    "author": "Google Threat Intelligence Group",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/oracle-ebusiness-suite-zero-day-exploitation/",
+    "published": "2025-10-09T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Peter Ukhanov, Genevieve Stark, Zander Work, Ashley Pearson, Josh Murchie, Austin Larsen Update (Oct. 11): On Oct. 11, Oracle released another patch , addressing CVE-2025-61884. Introduction Beginning Sept. 29, 2025, Google Threat Intelligence Group (GTIG) and Mandiant began tracking a new, large-scale extortion campaign by a threat actor claiming affiliation with the CL0P extortion brand. The actor began sending a high volume of emails to executives at numerous organizations, alleging the theft of sensitive data from the victims' Oracle E-Business Suite (EBS) environments. On Oct. 2, 2025, Oracle reported that the threat actors may have exploited vulnerabilities that were patched in July 2025 and recommended that customers apply the latest critical patch updates . On Oct. 4, 2025, Oracle directed customers to apply emergency patches to address this vulnerability, reiterating their standing recommendation that customers stay current on all Critical Patch Updates. Our analysis indicates that the CL0P extortion campaign followed months of intrusion activity targeting EBS customer environments. The threat actor(s) exploited what may be CVE-2025-61882 as a zero-day vulnerability against Oracle EBS customers as early as Aug. 9, 2025, weeks before a patch was available, with additional suspicious activity dating back to July 10, 2025. In some cases, the threat actor successfully exfiltrated a significant amount of data from impacted organizations. This post provides an ",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Oracle E-Business Suite Zero-Day Exploited in Widespread Extortion Campaign",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/oracle-ebusiness-suite-zero-day-exploitation/"
   }
 ]
