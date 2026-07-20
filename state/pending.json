@@ -1400,5 +1400,47 @@
     ],
     "title": "라온시큐어, NH농협손해보험에 양자내성암호 솔루션 공급",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207694"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-57082",
+    "published": "2026-06-30T12:16:25.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Net::BitTorrent versions before 2.1.0 for Perl generate the MSE Diffie-Hellman private key with a non-cryptographic PRNG.\n\nThe MSE (Message Stream Encryption) handshake derives its 160-bit Diffie-Hellman private key from Perl's rand(), a non-cryptographic drand48-class generator seeded once per process, in KeyExchange.pm. The shared secret and the RC4 keys derived from it (the SHA-1 of \"keyA\" or \"keyB\", the shared secret, and the infohash) therefore depend entirely on a predictable PRNG. The same handshake sends, in cleartext, random padding drawn from the same rand() sequence in _random_pad, immediately after the public key and the private-key draw.\n\nA passive observer of the handshake recovers the PRNG state from the cleartext padding, reconstructs the private key, computes the shared secret from the peer's public key on the wire, derives the RC4 keys, and decrypts the connection, defeating the passive-observation obfuscation MSE provides.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-57082 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57082"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE81cjdmVV9YMnZIbjZvdzN5U0NCMXE3d0oteTlzakcyRjNycG9ObUtfaC1PRDhheU04TFNVUElRemVzN1dhR0FMZFlxYkZIQQ",
+    "published": "2026-07-20T02:44:26+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "방한 외국인, 자국 QR 그대로 쓴다…비씨카드 글로벌 결제망 구축 전자신문",
+    "tags": [
+      "금융"
+    ],
+    "title": "방한 외국인, 자국 QR 그대로 쓴다…비씨카드 글로벌 결제망 구축 - 전자신문",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE81cjdmVV9YMnZIbjZvdzN5U0NCMXE3d0oteTlzakcyRjNycG9ObUtfaC1PRDhheU04TFNVUElRemVzN1dhR0FMZFlxYkZIQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE5NQnl0YU8tTUJaeG1JYUJaZWVlMEY1QVMybHJrekgySS1jZ2hvMmNReUlfMkxjb0dvcDdkTDBydkUycWxjbjlkUFE4c1hvWnJSNUNBNTFlLWlOc09ySk5NOFJKd0plZVZSZkHSAW5BVV95cUxNbXhWZDg1OThMcnQ4ZGNPZVlZQzlidHhhZ2FSbm9WUkRQSmMteE9aYkExYkpuR3F3QzZlT0EyUmRCZjBiLXFzaGVRN2VZN1B2ZnpVV1p0UmkwTUFYcVZfaC05V3pxSWYyN3dZXzlGUQ",
+    "published": "2026-07-20T07:05:34+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "BC카드, 금융결제원과 QR 연동...아시아 전역 ‘글로벌 결제 허브’ 구축 아시아에이",
+    "tags": [
+      "금융"
+    ],
+    "title": "BC카드, 금융결제원과 QR 연동...아시아 전역 ‘글로벌 결제 허브’ 구축 - 아시아에이",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5NQnl0YU8tTUJaeG1JYUJaZWVlMEY1QVMybHJrekgySS1jZ2hvMmNReUlfMkxjb0dvcDdkTDBydkUycWxjbjlkUFE4c1hvWnJSNUNBNTFlLWlOc09ySk5NOFJKd0plZVZSZkHSAW5BVV95cUxNbXhWZDg1OThMcnQ4ZGNPZVlZQzlidHhhZ2FSbm9WUkRQSmMteE9aYkExYkpuR3F3QzZlT0EyUmRCZjBiLXFzaGVRN2VZN1B2ZnpVV1p0UmkwTUFYcVZfaC05V3pxSWYyN3dZXzlGUQ?oc=5"
   }
 ]
