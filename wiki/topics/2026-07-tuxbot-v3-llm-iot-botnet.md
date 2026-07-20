@@ -11,6 +11,7 @@ cves: []
 
 - 2026-07-15 [Unit 42](https://unit42.paloaltonetworks.com/tuxbot-v3-evolution-iot-botnet/) — TuxBot v3 Evolution IoT 보트넷 프레임워크 상세 분석
 - 2026-07-15 [The Hacker News](https://thehackernews.com/2026/07/tuxbot-v3-evolution-shows-signs-of-llm.html) — TuxBot v3 LLM 기반 개발 징후 보도
+- 2026-07-20 [보안뉴스](http://www.boannews.com/media/view.asp?idx=144747) — LLM 악용 추정 악성코드 흔적 포착, 취약한 가정용 IoT 인프라 장악
 
 ## 관련
 

@@ -2,6 +2,7 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [hugging-face-ai-agent-intrusion](topics/2026-07-hugging-face-ai-agent-intrusion.md) 허깅페이스, 자율 AI 에이전트 침해로 자격증명 유출 (최종갱신일: 2026-07-20)
 - [uac-0145-clickfix-ukraine](topics/2026-07-uac-0145-clickfix-ukraine.md) 러시아 APT UAC-0145, ClickFix로 우크라이나 표적 정보탈취 (최종갱신일: 2026-07-19)
 - [vipnet-update-abuse-russia](topics/2026-07-vipnet-update-abuse-russia.md) ViPNet 업데이트 메커니즘 악용 러시아 정부기관 공격 (최종갱신일: 2026-07-19)
 - [onsetlink-voicephishing-sanction](topics/2026-07-onsetlink-voicephishing-sanction.md) 온세텔링크 보이스피싱 차단 불이행으로 등록취소 처분 (최종갱신일: 2026-07-19)
@@ -75,7 +76,7 @@
 - [gigawiper-backdoor](topics/2026-07-gigawiper-backdoor.md) GigaWiper 파괴적 백도어 (최종갱신일: 2026-07-15)
 - [unc6692-social-engineering-malware](topics/2026-04-unc6692-social-engineering-malware.md) UNC6692 소셜 엔지니어링 침입 (최종갱신일: 2026-07-15)
 - [vsphere-brickstorm-campaign](topics/2026-04-vsphere-brickstorm-campaign.md) BRICKSTORM vSphere 공격 (최종갱신일: 2026-07-15)
-- [tuxbot-v3-llm-iot-botnet](topics/2026-07-tuxbot-v3-llm-iot-botnet.md) TuxBot v3 Evolution LLM 기반 개발 IoT 보트넷 (최종갱신일: 2026-07-15)
+- [tuxbot-v3-llm-iot-botnet](topics/2026-07-tuxbot-v3-llm-iot-botnet.md) TuxBot v3 Evolution LLM 기반 개발 IoT 보트넷 (최종갱신일: 2026-07-20)
 - [intruder-ai-vulnerability-vending](topics/2026-07-intruder-ai-vulnerability-vending.md) Intruder AI 기반 취약점 자동 발견 시스템 (최종갱신일: 2026-07-15)
 - [windows-vmswitch-privesc](topics/2026-07-windows-vmswitch-privesc.md) Windows VMSwitch 사용 후 해제 권한상향 (최종갱신일: 2026-07-14)
 - [sap-netweaver-memory-corruption](topics/2026-07-sap-netweaver-memory-corruption.md) SAP NetWeaver ABAP 메모리 관리 논리 오류 (최종갱신일: 2026-07-14)
