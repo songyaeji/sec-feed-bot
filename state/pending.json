@@ -2063,5 +2063,17 @@
     ],
     "title": "BC카드, 금융결제원과 맞손… 국가간 QR결제 동남아까지 넓힌다 - S저널",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FMjZ1dmFDLVFDcFEtdExXdG9HUGhWZ2pGQXZLNDVBUTUxY2RWaWdrc0d0eFFQSVIzQjFXdUVLeG1HaDBoOV9hMGJ3OFNidVVJMUdlUjBYWW5vSnlPb3Z1UTdzNF9sZE1UaWY1ajJ3?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16248",
+    "published": "2026-07-20T13:16:56.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in Tenda AC10 16.03.10.09_multi_TDE01. This issue affects the function fromAdvSetLanip of the file /goform/AdvSetLanip of the component httpd/netctrl. The manipulation of the argument GetValue/SetValue results in stack-based buffer overflow. The attack may be performed from remote. The exploit has been made public and could be used.",
+    "tags": [],
+    "title": "CVE-2026-16248 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16248"
   }
 ]
