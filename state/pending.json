@@ -3396,5 +3396,43 @@
     ],
     "title": "Exposed Server Reveals AI-Assisted Phishing Toolkit Behind WebDAV Malware Campaign",
     "url": "https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-52348",
+    "published": "2026-07-17T21:17:07.610",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "cool-admin-java 8.0.0 has a SQL injection vulnerability in the order() method of CrudOption.java.",
+    "tags": [],
+    "title": "CVE-2026-52348 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52348"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-39878",
+    "published": "2026-07-20T18:16:51.713",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Chamilo LMS versions 1.11.38 and earlier contain a stored cross-site scripting vulnerability in the user registration form that allows any unauthenticated attacker to execute arbitrary JavaScript in an administrator's browser session, leading to full platform admin account takeover. This has been patched in 1.11.40.",
+    "tags": [],
+    "title": "CVE-2026-39878 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39878"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-55626",
+    "published": "2026-07-20T18:16:54.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "xrdp is an open source RDP server. In versions 0.10.6 and prior, when an authenticated user session is initialized using the Xvnc backend over UNIX domain sockets, the Xvnc process is launched with insufficient authentication mechanisms. A local authenticated attacker could exploit this vulnerability to bypass intended session isolation, allowing them to unauthorizedly view or control the active desktop sessions of other users on the same system. Users using other backends, such as xorgxrdp or Xvnc over TCP sockets, are not affected. This issue has been fixed in version 0.10.6.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55626 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55626"
   }
 ]
