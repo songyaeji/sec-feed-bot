@@ -1480,5 +1480,29 @@
     ],
     "title": "BC카드 동남아로 국가간 QR결제서비스 확대…금융결제원과 협력 - 인더뉴스",
     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA3SjdKSF9aa1EzREhoVFdHM2RFc2RIWHJRUTNKQVRrTUZZamFZMV9RRmlXWEIwTUlzTFVpMmhXUWdtSTlSdHA0M3RkOVVTY3RhTEF1WEdrNXdRR1g4cEtwWFJOQWc?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-16242",
+    "published": "2026-07-20T08:16:29.833",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the Konnectivity proxy-server configuration for hosted control planes. The agent-facing listener was started without --cluster-ca-cert (and without token-based agent authentication), so client certificates were not validated. A remote attacker who can reach the Konnectivity cluster endpoint could connect as an unauthenticated agent, join the routing pool, and potentially proxy, inspect, modify, or drop control-plane-to-node traffic.",
+    "tags": [],
+    "title": "CVE-2026-16242 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16242"
+  },
+  {
+    "author": "[엄호식기자 (eomhs@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144763&kind=&sub_kind=",
+    "published": "2026-07-20T08:18:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "지능형 재난안전 솔루션 ‘수위 관제 시스템’ 출시[보안뉴스 엄호식 기자] AI 영상분석 전문기업 렉스젠이 영상을 활용해 수위와 물의 흐름을 실시간으로 분석하는 영상 기반 ‘수위 관제 시스템’을 선보였다. 이 시스템은 강·하천과 계곡, 교량 하부, 도심 침수 취약지역 등 다양한 수변 환경을 지속적으로 모니터링하고 위험 상황에 신속하게 대응할 수 있도록 개발됐",
+    "tags": [],
+    "title": "렉스젠, 영상으로 수위·유속·유량 분석부터 범람 위험 감지까지 통합 지원",
+    "url": "http://www.boannews.com/media/view.asp?idx=144763&kind=&sub_kind="
   }
 ]
