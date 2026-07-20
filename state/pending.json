@@ -3544,5 +3544,105 @@
     "tags": [],
     "title": "Flock Safety kills acoustic system designed to detect 'human distress'",
     "url": "https://therecord.media/flock-safety-kills-audio-detection-system-human-distress"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-60024",
+    "published": "2026-07-17T16:17:16.113",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Joomla extension Events Booking prior version 5.8.0 did by default allow unauthenticated users to upload media assets.",
+    "tags": [],
+    "title": "CVE-2026-60024 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60024"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44231",
+    "published": "2026-07-20T20:16:43.797",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "RT is an open source, enterprise-grade issue and ticket tracking system. Versions prior to 5.0.10, 6.0.0 and above, prior to 6.0.3 contain an information disclosure and privilege escalation vulnerability in the REST 2.0 API. A privileged (non-administrative) user can obtain authentication credentials belonging to other users — including users with administrative privileges — and use those credentials to read data as those users via RT's feed endpoints. The same request that exposes the credentials also rotates them, invalidating previously-distributed feed URLs across the instance. This issue has been fixed in versions 5.0.10 and 6.0.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44231 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44231"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-63766",
+    "published": "2026-07-20T20:16:46.170",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "GPT-SoVITS through 20250606v2pro contains an OS command injection vulnerability in webui.py where ASR, slice, denoise, and uvr5 functions interpolate unsanitized Gradio textbox values directly into shell commands executed with shell=True. Attackers can inject shell metacharacters through path parameters to execute arbitrary OS commands as the server process user without authentication.",
+    "tags": [],
+    "title": "CVE-2026-63766 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63766"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-63767",
+    "published": "2026-07-20T20:16:46.323",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ktransformers through 0.6.3, fixed in commit def0f93, contains an unauthenticated pickle deserialization vulnerability that allows remote attackers to execute arbitrary commands by sending crafted pickle payloads to the SchedulerServer ZMQ ROUTER socket bound to all interfaces. Attackers can exploit malicious __reduce__ methods embedded in crafted pickle payloads to execute arbitrary shell commands as the server process.",
+    "tags": [],
+    "title": "CVE-2026-63767 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63767"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-60025",
+    "published": "2026-07-17T16:17:16.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Joomla extension Events Booking prior version 5.8.0 had an frontend file upload endpoint that lacked CSRF protection.",
+    "tags": [],
+    "title": "CVE-2026-60025 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60025"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-15788",
+    "published": "2026-07-20T20:16:43.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "BuildKit's cache mount source= selector on Windows Container on Windows (WCOW) workers does not detect NTFS directory junctions placed inside the cache root. A build authored by an untrusted user on a WCOW-configured BuildKit daemon can read arbitrary host files reachable to the BuildKit daemon process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15788 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15788"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-53591",
+    "published": "2026-07-20T20:16:44.613",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.223, an unauthenticated attacker can inject messages into any existing support conversation by sending a single email to the helpdesk's public address with a crafted `In-Reply-To` header. No credentials, tokens, or prior access are required. The injected message is rendered in the agent UI as a legitimate customer reply, the conversation is automatically reopened, and the `last_reply_from` field is set to the attacker's identity. Version 1.8.223 contains a fix.",
+    "tags": [],
+    "title": "CVE-2026-53591 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53591"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-53593",
+    "published": "2026-07-20T20:16:44.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.224, the denylist that neutralizes dangerous file uploads (`Helper::$restricted_extensions`) is incomplete: it does not cover the `.pht` extension. The authenticated upload endpoint `POST /uploads/upload` (`SecureController@upload`) stores files with their original extension into the web-accessible directory `storage/app/public/uploads/` (served at `/storage/uploads/`). On the standard Apache + `libapache2-mod-php` deployment, the default handler `<FilesMatch \".+\\.ph(ar|p[3457]?|t|tml)$\">` executes `.pht`, so **any authenticated agent can upload a `.pht` web shell and run arbitrary commands as the web-server user** (`www-data`). This is a direct bypass of the fix for CVE-2025-48471, which added `phtml`/`phar` but not `pht` (nor `phtm`, `phps`). Version 1.8.224 contains an updated fix.",
+    "tags": [],
+    "title": "CVE-2026-53593 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53593"
   }
 ]
