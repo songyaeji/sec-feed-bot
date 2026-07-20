@@ -2130,5 +2130,79 @@
     "tags": [],
     "title": "An AI SOC Evaluation Guide for Security Leaders",
     "url": "https://www.bleepingcomputer.com/news/security/an-ai-soc-evaluation-guide-for-security-leaders/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-1015",
+    "published": "2024-01-29T14:15:09.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Remote command execution vulnerability in SE-elektronic GmbH E-DDC3.3 affecting versions 03.07.03 and higher. An attacker could send different commands from the operating system to the system via the web configuration functionality of the device.",
+    "tags": [],
+    "title": "CVE-2024-1015 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1015"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-13147",
+    "published": "2026-07-20T07:16:35.580",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Kirki  WordPress plugin before 6.0.12 does not validate a user-supplied URL before requesting it server-side, allowing unauthenticated attackers to make the site issue HTTP requests to arbitrary hosts (Server-Side Request Forgery).",
+    "tags": [],
+    "title": "CVE-2026-13147 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13147"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16235",
+    "published": "2026-07-20T07:16:37.320",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crypt::Password versions through 0.28 for Perl generate insecure random values for salts.\n\nThese versions use the built-in rand function, which is predictable and unsuitable for cryptography.",
+    "tags": [],
+    "title": "CVE-2026-16235 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16235"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10081",
+    "published": "2026-07-20T07:16:33.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Unlimited Elements For Elementor WordPress plugin before 2.0.11 does not sanitize or escape Google review content fetched from the Serp API before rendering it in the Google Reviews widget output, allowing unauthenticated attackers who submit a malicious review on the targeted business's Google listing to deliver Stored XSS to any visitor (including administrators) of any WP page displaying that Place ID's reviews.",
+    "tags": [],
+    "title": "CVE-2026-10081 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10081"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-11349",
+    "published": "2026-07-20T07:16:34.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Modern Event Calendar Pro WordPress plugin before 7.34.0, Modern Events Calendar Lite WordPress plugin before 7.34.0 do not sanitise and escape a request parameter before using it in a SQL statement, through an AJAX action available to unauthenticated users, leading to an unauthenticated SQL injection vulnerability that allows attackers to extract sensitive data from the database.",
+    "tags": [],
+    "title": "CVE-2026-11349 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11349"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-13577",
+    "published": "2026-07-20T08:16:28.987",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dancer2 versions through 2.1.0 for Perl generate insecure session ids when CSPRNG modules are unavailable.\n\nDancer2::Core::Role::SessionFactory::generate_id silently falls back to a built-in rand-derived session id when both Math::Random::ISAAC::XS and Crypt::URandom are unavailable.\n\nThe fallback session id is generated from a SHA-1 hash of a call to the built-in rand function, the absolute path of the Dancer2::Core::Role::SessionFactory module, an internal counter, the process id, the module instance memory address, and a shuffled string of characters (using the List::Util::shuffle function, which also uses the built-in rand function).\n\nThese are all low-entropy and easily guessed sources.\n\nThe built-in rand() function is seeded with 32-bits and considered unsuitable for security applications.\n\nPredictable session ids could allow an attacker to gain access to systems.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13577 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13577"
   }
 ]
