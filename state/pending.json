@@ -1900,5 +1900,116 @@
     ],
     "title": "BC카드·금융결제원, 국가간 QR결제 확대…글로벌 QR결제 허브 구축 나서 - 팝콘뉴스",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1xbzFZb2pqam9PUHhWVFY1anFiZ3ZGVVdvS3gzV1MyWlpkNEVLZVZZeXpMdU9jZHd0WkJ6b0VJOEZXVHZZMlhJOGl3VnV3TVdtMDdwel9EZ2JMVG14NDE2ZWJiSGlrdWI1cC1SYld30gFyQVVfeXFMTU9tNTBKR09DdWlodmF5VFJfaVprbjREOV8ydkNXMXV6aGJiZGxwMHpIZHZ4aUc3UGx5TWZubURTcC1NcHlyN2VBQnVXaGFwUVVsZU1TdEp2TFN0Vk5icENrajVITDBKeUowY0ZGMnh5bHBR?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-4599",
+    "published": "2026-03-23T06:16:21.513",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Versions of the package jsrsasign from 7.0.0 and before 11.1.1 are vulnerable to Incomplete Comparison with Missing Factors via the getRandomBigIntegerZeroToMax and getRandomBigIntegerMinToMax functions in src/crypto-1.1.js; an attacker can recover the private key by exploiting the incorrect compareTo checks that accept out-of-range candidates and thus bias DSA nonces during signature generation.",
+    "tags": [],
+    "title": "CVE-2026-4599 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4599"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64620",
+    "published": "2026-07-20T12:19:46.760",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FreeRDP before 3.28.0 (affected <=3.27.1) contains a heap-based buffer overflow in crypto_rsa_common() (libfreerdp/crypto/crypto.c). The function writes the modular-exponentiation result into the caller's output buffer via BN_bn2bin() and only afterward checks output_length > out_length, so out-of-bounds bytes are written before the bounds check. On the server side, when a client selects RDP Standard Security, the encrypted client random is decrypted into a fixed 32-byte buffer. Because the server publishes its RSA public key, an unauthenticated attacker can forge a ciphertext whose decrypted value is up to the full modulus length (e.g. 256 bytes for RSA-2048), overflowing the 32-byte heap buffer by up to ~224 attacker-controlled bytes pre-authentication, resulting in denial of service.",
+    "tags": [],
+    "title": "CVE-2026-64620 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64620"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2026-16246",
+    "published": "2026-07-20T12:17:56.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In BRAIN2 versions prior to 3.09, the\napplication LogPathConfig.exe is executed during setup. As a result, the\nWindows group Everyone is granted full control over %ProgramData% instead of\nbeing restricted to %ProgramData%\\Bizerba\\BRAIN2\\.\n\n\n\n\n\nStarting with BRAIN2 3.09, the setup no\nlonger executes this tool.\n\nHowever, the optional component Bizerba ScriptService still executes it.\n\n\n\n\n\nBizerba ScriptService is being\ndeprecated and will no longer be included starting with BRAIN2 version 3.11.",
+    "tags": [],
+    "title": "CVE-2026-16246 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16246"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2026-16247",
+    "published": "2026-07-20T12:17:56.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In _connect.BRAIN versions prior to 5.06,\nthe application LogPathConfig.exe is executed during setup. During this\nprocess, existing permissions on %ProgramData% are deleted and replaced,\ngranting the Windows group Everyone full control instead of restricting\naccess to %ProgramData%\\Bizerba\\_connect.BRAIN or %ProgramData%\\Bizerba\\BCT.\n\n\n\n\n\n\n\n\n\nStarting with _connect.BRAIN 5.06,\nthe setup no longer executes this tool.",
+    "tags": [],
+    "title": "CVE-2026-16247 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16247"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-63735",
+    "published": "2026-07-20T12:19:42.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB versions before 3.2.0 fail to validate namespace and database scope in custom API routes, allowing authenticated users to invoke endpoints in different namespaces/databases. Attackers with valid credentials for any namespace/database can access custom API endpoints in other tenants by specifying the target scope in the URL path, reading sensitive data or triggering unintended operations.",
+    "tags": [],
+    "title": "CVE-2026-63735 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63735"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-63756",
+    "published": "2026-07-20T12:19:45.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB versions before 3.1.0 contain a time-of-check/time-of-use race condition in the HTTP /rpc endpoint that allows unauthenticated requests to inherit authenticated session state. Unauthenticated attackers can send concurrent requests to the /rpc endpoint while legitimate authenticated traffic is active to execute operations with hijacked user privileges.",
+    "tags": [],
+    "title": "CVE-2026-63756 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63756"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-63757",
+    "published": "2026-07-20T12:19:45.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB versions before 3.1.0 contain a session hijacking vulnerability where the HTTP /rpc sessions method returns attached session UUIDs without authentication and accepts arbitrary session fields with no ownership verification. Unauthenticated attackers can enumerate session UUIDs and impersonate authenticated sessions to read, write, delete data and escalate privileges.",
+    "tags": [],
+    "title": "CVE-2026-63757 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63757"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-64623",
+    "published": "2026-07-20T12:19:47.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Network-AI before 5.13.4 contains an improper cryptographic signature verification vulnerability in APSAdapter where the default local verifier accepts any non-empty string as valid. Unauthenticated attackers can submit forged APS delegation payloads with arbitrary scopes to bypass signature verification and obtain signed permission-grant tokens for sensitive resources including SHELL_EXEC.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-64623 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64623"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/software-provider-for-us-hospitals-customer-data-breach",
+    "published": "2026-07-20T11:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Craneware, which is headquartered in Edinburgh and listed on London's AIM market, told investors it detected unauthorized access to a “subset” of its data environment and has since brought in outside forensic investigators.",
+    "tags": [],
+    "title": "Software provider to more than 2,000 US hospitals says hackers stole employee and customer data",
+    "url": "https://therecord.media/software-provider-for-us-hospitals-customer-data-breach"
   }
 ]
