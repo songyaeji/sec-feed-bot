@@ -1720,5 +1720,31 @@
     "tags": [],
     "title": "경북교육청, 전 직원을 대상 개인정보 보호 교육 - 경북신문",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0zZnBETGdKT2JQTmVabnEySm5fRGNwbEl4Q3VoQVFBOV9pa2xWZ05Yc1VCQXkxUXVLcS1VUFFnUUFLYks4d1hvNXAxVUc5ZmpCZFkxSkdCclE?oc=5"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/new-7-zip-vulnerability-could-let.html",
+    "published": "2026-07-20T09:10:56+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Opening a crafted XZ archive in 7-Zip could let an attacker run code on the machine. The flaw, CVE-2026-14266, is a heap-based buffer overflow in how the archiver processes XZ chunked data, and Trend Micro's Zero Day Initiative (ZDI) detailed it on July 15. A fix shipped on June 25 in 7-Zip 26.02. The overflow lets an attacker \"execute code in the context of the current process,\" per the",
+    "tags": [],
+    "title": "New 7-Zip Vulnerability Could Let Crafted XZ Archives Run Code During Extraction",
+    "url": "https://thehackernews.com/2026/07/new-7-zip-vulnerability-could-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/russian-speaking-hacker-uses-google.html",
+    "published": "2026-07-20T09:07:11+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A solo Russian-speaking threat actor known as \"bandcampro\" outsourced a chunk of their operations to Google's open-source Gemini CLI artificial intelligence (AI) and commandeered a live botnet. The findings come from an analysis of 200 Gemini CLI session logs between March 19 and April 21, 2026, which found the threat actor using AI, among other things, to crack passwords, set up a residential",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Russian-Speaking Hacker Uses Google Gemini CLI to Control Botnet of Eight Dental Clinic PCs",
+    "url": "https://thehackernews.com/2026/07/russian-speaking-hacker-uses-google.html"
   }
 ]
