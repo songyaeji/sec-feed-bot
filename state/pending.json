@@ -3446,5 +3446,79 @@
     "tags": [],
     "title": "India says allegedly leaked nuclear plant files pose no safety risk",
     "url": "https://therecord.media/india-nuclear-plant-kudankulam-world-leaks-documents"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-51677",
+    "published": "2026-07-17T20:17:13.763",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in openRISC OR1200 commit 83ac6b. An output mismatch between the RTL and the netlist of the or1200 cpu output port can lead to unexpected behavior.",
+    "tags": [],
+    "title": "CVE-2025-51677 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-51677"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-36669",
+    "published": "2026-07-17T20:17:16.293",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unauthenticated arbitrary file upload vulnerability in ck_upload_handler.php in Feng Office 3.11.13.11 allows remote attackers to upload malicious files (such as .html) to the web-accessible /tmp/ directory.",
+    "tags": [],
+    "title": "CVE-2026-36669 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36669"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-42168",
+    "published": "2026-07-17T20:17:16.410",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "django-pyas2 through 1.2.3 is vulnerable to OS command injection via the cmd_receive and cmd_send fields on the Partner model. These fields are passed directly to os.system() in pyas2/utils.py without sanitization, allowing an authenticated admin user to execute arbitrary commands on the server when an AS2 message is received or sent.",
+    "tags": [],
+    "title": "CVE-2026-42168 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42168"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-52199",
+    "published": "2026-07-17T20:17:25.100",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in Generic OEM UZ801_v2.1 4G LTE Router V3.4.3 allows a remote attacker to execute arbitrary code via the sbin/adbd component",
+    "tags": [],
+    "title": "CVE-2026-52199 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52199"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12341",
+    "published": "2026-07-20T19:17:18.027",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "This vulnerability\nimpacts all versions of IdentityIQ and allows an unauthenticated attacker\nunauthorized access to protected APIs and data due to improper validation of\nOAuth bearer tokens.",
+    "tags": [],
+    "title": "CVE-2026-12341 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12341"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-63108",
+    "published": "2026-07-20T19:17:29.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Roo Code through 3.54.0 contains a command injection vulnerability in the auto-approve execute feature that allows attackers to bypass allowlist/denylist enforcement by nesting command substitutions inside parameter expansion defaults. The command parser in parse-command.ts replaces parameter expansions with opaque placeholders before extracting command substitutions, causing the containsDangerousSubstitution guard to miss nested payloads, which are then auto-approved based on the outer allowlisted command prefix and executed by the shell via execa, enabling arbitrary command execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63108 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63108"
   }
 ]
