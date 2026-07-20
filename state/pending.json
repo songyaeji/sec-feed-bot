@@ -3670,5 +3670,95 @@
     "tags": [],
     "title": "'따릉이 개인정보 유출' 피해자 462만명에 '30일 정기권' 보상 - 연합뉴스",
     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3d2dDUWczUmZRYmw3X1JUZy16c2RXM0diMWx0SDdLTnU2dzI1ZWVUbE5OMEF2SC1hNEtNNEtYNWl2LWxLS2k0azZUNlptWlEybUJjZXdkVHVOYkXSAWBBVV95cUxQb3BwY2MyT3E3cEpuMHZLbXBKbDh1SXV1VDhQMXI4ekR2SzlwVzctaFVleXV5OEpwNWJGclhXejUzbHdvaVYzTzBDMnNlUEVKVFExYlhZSmhXd0VGc2tORDM?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-53595",
+    "published": "2026-07-20T21:16:48.417",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Prior to version 1.8.224, the public endpoint `POST /user-setup/{hash}/{invite_sent_at}` (`OpenController@userSetupSave`) selects the target account solely by its `invite_hash` column, then overwrites that account's email and password and logs in as it. No authentication, cookie, or prior session is required. After a user activates, FreeScout sets `invite_hash` to the empty string. On MySQL and MariaDB, `VARCHAR` equality ignores trailing spaces, so a single URL-encoded space (`%20`) matches the stored empty string and selects the lowest-id activated user. The expiry guard decrypts `invite_sent_at` with the target's password hash, but `Helper::decrypt` returns its raw input unchanged when decryption fails. A plaintext numeric value such as `9999999999` therefore passes the time-to-live check without any secret. The result is that an anonymous attacker sets the email and password of the lowest-id activated FreeScout account (a support agent, or an administrator if one was added by invitation) and authenticates as that account. Version 1.8.224 contains a fix.",
+    "tags": [],
+    "title": "CVE-2026-53595 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53595"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-44508",
+    "published": "2026-07-20T21:16:47.113",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Rsync is a file-copying tool that uses a delta-transfer algorithm to synchronize remote and local files.  In versions prior to 3.4.3, the receiver's compressed-token decoder accumulated a 32-bit signed counter without checking for overflow. A malicious sender can trigger an overflow that with careful manipulation can lead to the extraction of data stored in memory of the process allowing an attacker to access environment variables, passwords and memory pointers from the heap, stack, and libraries. The leakage of these pointers and data can significantly reduce the effectiveness of ASLR and facilitate further exploitation. This issue is fixed in version 3.4.3.",
+    "tags": [],
+    "title": "CVE-2026-44508 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44508"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47129",
+    "published": "2026-07-20T21:16:47.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NextCRM is open-source customer relationship management (CRM) software. Versions prior to 0.12.0 have a Broken Access Control (BAC) vulnerability in the `activateUser` and `deactivateUser` Next.js Server Actions of NextCRM. The application fails to verify if the requesting user holds the `admin` role. Consequently, any authenticated user (even those with the lowest `member` or `viewer` roles) can arbitrarily activate or deactivate any user account in the system, including the main administrator. Version 0.12.0 fixes the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47129 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47129"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-47198",
+    "published": "2026-07-20T21:16:48.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Paymenter is a free and open-source webshop solution for management of hosting services. In versions prior to 1.5.1, the checkout component improperly filters URL-writable properties, allowing authenticated users to inject arbitrary key-value pairs into server provisioning parameters. Because bundled server extensions prioritize these user-supplied properties over administrator-defined configurations, a regular user can override hosting plans and resource limits at checkout without special privileges. The Checkout Livewire component's $checkoutConfig property exposed via URL query parameters, only validating keys explicitly defined by an extension's configuration method, allowing any undefined injected keys to bypass validation entirely. These unsanitized keys are then stored directly in the database by the cart component and later passed to server extensions during provisioning, enabling user-injected data to override intended administrator settings. Depending on the active extension, this leads to unauthorized overrides of core resource limits (such as CPU, RAM, storage, or package tiers). No administrative privileges are required to exploit this vulnerability. This issue has been fixed in version 1.5.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47198 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47198"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-56623",
+    "published": "2026-07-20T21:16:48.947",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Path traversal on Windows in Apache MINA SSHD component sshd-git. Apache MINA SSHD is a Java library for client-side and server-side SSH.\n\n\n\n\nA git server implemented with Apache MINA SSHD component sshd-git and running on Windows could allow an authenticated remote user access to git repositories outside of the configured server-side root directory. The path validation applied for CVE-2026-48827 in Apache MINA SSHD 2.18.0 and 3.0.0-M4 was partly ineffective for Servers running on Windows.\n\n\n\n\nApplications are affected if they use org.apache.sshd:sshd-git to implement a git server and run on Windows. Applications not using sshd-git or not running on Windows are not affected.\n\n\n\n\nUsers are advised to upgrade affected applications to Apache MINA SSHD 2.19.0, which fixes the issue.\n\n\n\n\nThe issue also is present in the pre-release milestones 3.0.0-M1 to 3.0.0-M4 for a new upcoming new major version 3.0.0. Again, applications are affected only if they use sshd-git and run on Windows. Upgrade affected applications to 3.0.0-M5.",
+    "tags": [],
+    "title": "CVE-2026-56623 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56623"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64650",
+    "published": "2026-07-20T21:16:50.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The `@ai-sdk/harness-opencode` tool is an HarnessV1 adapter backed by @openai/codex-sdk, which drives the codex command line interface. Prior to version 1.0.29, the tool relay authorizes requests from any process whose command line contains an allowed helper script path (the Codex CLI shim). This allows untrusted code executing in the sandbox to invoke arbitrary host-exposed tools, including secret lookups, deployment operations, and cloud API calls  without a corresponding model-authorized tool-call event. Exploitation requires a Linux environment (the vulnerable fallback checks `process.platform === 'linux'` and reads `/proc`); an active harness session with one or more host-provided tools; and untrusted code executing in the sandbox (e.g. a malicious dependency, build script, or lifecycle hook) The fix in version 1.0.29 removes the process-path authorization fallback entirely. Relay requests are now only accepted after exact, short-lived, one-time authorization matching the tool name and input from a bridge-observed model event. Some workarounds are available. Do not run the Codex harness on untrusted repositories or with untrusted dependencies, and/or limit host-exposed tools to non-sensitive operations when working with untrusted code.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-64650 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64650"
+  },
+  {
+    "author": "Ax Sharma",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravity-hit-by-sandbox-escapes/",
+    "published": "2026-07-20T21:14:42+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Researchers escaped the sandboxes in Cursor, Codex, Gemini CLI and Antigravity by having the AI agent write files that trusted host tools later run. Multiple CVEs, patches, and Google downgrading two Antigravity findings. [...]",
+    "tags": [],
+    "title": "Cursor, Codex, Gemini CLI, Antigravity hit by sandbox escapes",
+    "url": "https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravity-hit-by-sandbox-escapes/"
   }
 ]
