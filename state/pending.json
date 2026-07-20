@@ -3139,5 +3139,224 @@
     ],
     "title": "CVE-2026-63429 (CVSS 8.6)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63429"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35048",
+    "published": "2026-07-20T17:17:06.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Piwigo installer in versions 16.3.0 and earlier accepts POST parameters for database configuration and writes them directly into a PHP configuration file without proper sanitization. On PHP 8+, the `addslashes()` protection is bypassed because it checks for `get_magic_quotes_gpc()`, a function removed in PHP 8.0. This allows raw user input to be interpolated directly into PHP source code. An unauthenticated attacker can inject arbitrary PHP code through POST parameters (prefix, dbpasswd, dbhost, dbname, or dbuser), which gets written to `local/config/database.inc.php` and executed on every page load.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35048 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35048"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-41252",
+    "published": "2026-07-20T17:17:08.310",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "xrdp is an open source RDP server. Versions 0.10.6 and prior contain a missing bounds check in xrdp, which allows a heap-based buffer overflow when operating in vnc-any mode. The issue occurs during the handling of RFB protocol color map messages from a VNC server, where incoming color indices are not properly validated. A malicious VNC server can exploit this flaw by sending crafted messages with out-of-range values, leading to an out-of-bounds write on the heap. This memory corruption can result in a denial of service (DoS) or potentially allow remote code execution (RCE) prior to authentication. This issue has been fixed in version 0.10.6.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-41252 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41252"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-54051",
+    "published": "2026-07-20T17:17:57.643",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Network-AI is a TypeScript/Node.js multi-agent orchestrator. Prior to version 5.9.1, the agent sandbox gates shell commands behind an allowlist (`SandboxPolicy.isCommandAllowed`), which THREAT_MODEL.md calls the main control against a compromised agent (Adversary 3.2). The allowlist glob-matches the whole command string, but `ShellExecutor` runs that string through `/bin/sh -c`. So any wildcard allow such as `git *`, `npm *` or `node *` also matches `git status; <anything>`, and a scoped command becomes arbitrary execution. The issue is fixed in v5.9.1. `ShellExecutor` now executes via `spawn(file, args, { shell: false })` using a quote-aware parsed argv, so no shell is invoked. `SandboxPolicy.isCommandAllowed` and the new `SandboxPolicy.tokenizeCommand` reject any unquoted shell metacharacter (`; & | $ ` ` ` ( ) < > { }` newline) or unterminated quote before the allowlist glob match; quoted metacharacters are preserved as literal argument data. Users should upgrade to `network-ai@5.9.1` or later. As defense in depth, avoid broad wildcard allowlist entries such as `node *` / `npm *` which are direct code execution by design.",
+    "tags": [],
+    "title": "CVE-2026-54051 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54051"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-45868",
+    "published": "2026-07-16T16:18:58.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LogicalDOC Enterprise up to and for v9.1.1 is vulnerable to blind SQL injection in the ComparisonServlet component, allowing authenticated user to manipulate SQL queries via crafted input.",
+    "tags": [],
+    "title": "CVE-2025-45868 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-45868"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-32821",
+    "published": "2026-07-20T17:17:05.750",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "dataCycle is a data management system for centrally storing, managing, searching, finding, and distributing data. In dataCycle-CORE, the module handling core processing and framework rules, before and including version 25.07.3, any authenticated API user who has their own access token can ask the collection API to evaluate permissions as a different user by supplying `user_email`. If the target user has collections, this can expose those collections through the API. In V4, once a collection id is known, the same controller also offers `add_item` and `remove_item` routes without any object-level `authorize!` checks,\ncreating a likely cross-user modification path. This is patched in version 26.06.08.",
+    "tags": [],
+    "title": "CVE-2026-32821 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32821"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-39385",
+    "published": "2026-07-20T17:17:07.417",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Frappe LMS is an open source learning management system. In version 2.51.0 and earlier, a user could bypass payment validation for courses by using unrelated batch. This has been patched in 2.52.0 with enrollment now validating that the batch is linked to course.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-39385 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39385"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-41521",
+    "published": "2026-07-20T17:17:08.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "xrdp is an open source RDP server. Versions 0.10.6 and prior contain an integer overflow vulnerability when processing screen update messages within the vnc-any connection mode. A malicious remote VNC server can send crafted image dimensions that cause an integer overflow during memory buffer size calculation, resulting in an undersized allocation. Subsequent processing of the incoming image data using the original oversized parameters leads to an out-of-bounds read. An unauthenticated remote attacker could exploit this flaw to disclose sensitive information from the heap memory or cause a denial of service (DoS) via a process crash. This issue has been fixed in version 0.10.6.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-41521 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41521"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-44178",
+    "published": "2026-07-20T17:17:09.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "xrdp is an open source RDP server. Versions 0.10.6 and prior contain a heap-based buffer overflow vulnerability within the virtual channel forwarding mechanism. When forwarding data from a remote client to the internal channel server, the xrdp process utilizes a fixed-size buffer without adequate bounds checking on the incoming payload. An authenticated remote attacker can exploit this flaw by sending a specially crafted virtual channel message that exceeds the buffer capacity, leading to heap memory corruption. This may result in a denial of service or the execution of arbitrary code with the privileges of the xrdp process. This issue has been fixed in version 0.10.6.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44178 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44178"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64187",
+    "published": "2026-07-20T17:18:21.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: fail recovery on a committed log item with no regions\n\nIf the first op of a transaction is a bare transaction header\n(len == sizeof(struct xfs_trans_header)), xlog_recover_add_to_trans()\nadds an item but no region, leaving it on r_itemq with ri_cnt == 0 and\nri_buf == NULL.\n\nThe header can be split across op records, so later ops may still add\nregions; the item is only invalid if the transaction commits with none.\nThe runtime commit path never emits such a transaction, so this only\nhappens on a crafted log.  It came from an AI-assisted code audit of the\nrecovery parser.\n\nxlog_recover_reorder_trans() calls ITEM_TYPE() on the item, which reads\n*(unsigned short *)item->ri_buf[0].iov_base and faults on the NULL\nri_buf.  Reject it there, before the commit handlers that also read\nri_buf[0].\n\n KASAN: null-ptr-deref in range [0x0000000000000000-0x0000000000000007]\n RIP: 0010:xlog_recover_reorder_trans (fs/xfs/xfs_log_recover.c:1836)\n  xlog_recover_commit_trans (fs/xfs/xfs_log_recover.c:2043)\n  xlog_recover_process_data (fs/xfs/xfs_log_recover.c:2501)\n  xlog_do_recovery_pass (fs/xfs/xfs_log_recover.c:3244)\n  xlog_recover (fs/xfs/xfs_log_recover.c:3493)\n  xfs_log_mount (fs/xfs/xfs_log.c:618)\n  xfs_mountfs (fs/xfs/xfs_mount.c:1034)\n  xfs_fs_fill_super (fs/xfs/xfs_super.c:1938)\n  vfs_get_tree (fs/super.c:1695)\n  path_mount (fs/namespace.c:4161)\n  __x64_sys_mount (fs/namespace.c:4367)",
+    "tags": [],
+    "title": "CVE-2026-64187 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64187"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64188",
+    "published": "2026-07-20T17:18:21.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: qualcomm: rmnet: fix endpoint use-after-free in rmnet_dellink()\n\nrmnet_dellink() removes the endpoint from the hash table with\nhlist_del_init_rcu() and then immediately frees it with kfree(). However,\nRCU readers on the receive path (rmnet_rx_handler ->\n__rmnet_map_ingress_handler) may still hold a reference to the endpoint and\ndereference ep->egress_dev after the memory has been freed. The endpoint is\na kmalloc-32 object, and the stale read at offset 8 corresponds to the\negress_dev pointer.\n\n  BUG: unable to handle page fault for address: ffffffffde942eef\n  Oops: 0002 [#1] SMP NOPTI\n  CPU: 1 UID: 0 PID: 137 Comm: poc_write Not tainted 7.0.0+ #4 PREEMPTLAZY\n  RIP: 0010:rmnet_vnd_rx_fixup (rmnet_vnd.c:27)\n  Call Trace:\n   <TASK>\n   __rmnet_map_ingress_handler (rmnet_handlers.c:48 rmnet_handlers.c:101)\n   rmnet_rx_handler (rmnet_handlers.c:129 rmnet_handlers.c:235)\n   __netif_receive_skb_core.constprop.0 (net/core/dev.c:6096)\n   __netif_receive_skb_one_core (net/core/dev.c:6208)\n   netif_receive_skb (net/core/dev.c:6467)\n   tun_get_user (drivers/net/tun.c:1955)\n   tun_chr_write_iter (drivers/net/tun.c:2003)\n   vfs_write (fs/read_write.c:688)\n   ksys_write (fs/read_write.c:740)\n   </TASK>\n\nAdd an rcu_head field to struct rmnet_endpoint and replace kfree() with\nkfree_rcu() so the endpoint memory remains valid through the RCU grace\nperiod. Also remove the rmnet_vnd_dellink() call and inline only the\nnr_rmnet",
+    "tags": [],
+    "title": "CVE-2026-64188 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64188"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64189",
+    "published": "2026-07-20T17:18:21.997",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: ipset: fix race between dump and ip_set_list resize\n\nThe release path of ip_set_dump_do() and ip_set_dump_done() read\ninst->ip_set_list via ip_set_ref_netlink(), a plain rcu_dereference_raw()\nof the array pointer. These run from netlink_recvmsg() without the nfnl\nmutex and without an RCU read-side critical section.\n\nA concurrent ip_set_create() can grow the array: it publishes the new\narray, calls synchronize_net() and then kvfree()s the old one. Since the\ndump paths read the array outside any RCU reader, synchronize_net() does\nnot wait for them and the old array can be freed while they still index\ninto it, causing a use-after-free.\n\nThe dumped set itself stays pinned via set->ref_netlink, so only the\narray load needs protecting. Take rcu_read_lock() around it, matching\nip_set_get_byname() and __ip_set_put_byindex().\n\n  BUG: KASAN: slab-use-after-free in ip_set_dump_do (net/netfilter/ipset/ip_set_core.c:1697)\n  Read of size 8 at addr ffff88800b5c4018 by task exploit/150\n  Call Trace:\n   ...\n   kasan_report (mm/kasan/report.c:595)\n   ip_set_dump_do (net/netfilter/ipset/ip_set_core.c:1697)\n   netlink_dump (net/netlink/af_netlink.c:2325)\n   netlink_recvmsg (net/netlink/af_netlink.c:1976)\n   sock_recvmsg (net/socket.c:1159)\n   __sys_recvfrom (net/socket.c:2315)\n   ...\n  Oops: general protection fault, probably for non-canonical address ... KASAN NOPTI\n  KASAN: maybe wild-memory-access in range [0x02d6",
+    "tags": [],
+    "title": "CVE-2026-64189 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64189"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64190",
+    "published": "2026-07-20T17:18:22.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: team: fix NULL pointer dereference in team_xmit during mode change\n\n__team_change_mode() clears team->ops with memset() before restoring\nsafe dummy handlers via team_adjust_ops(). A concurrent team_xmit()\nrunning under RCU on another CPU can read team->ops.transmit during\nthis window and call a NULL function pointer, crashing the kernel.\n\nThe race requires a mode change (CAP_NET_ADMIN) concurrent with\ntransmit on the team device.\n\n BUG: kernel NULL pointer dereference, address: 0000000000000000\n Oops: 0010 [#1] SMP KASAN NOPTI\n RIP: 0010:0x0\n Call Trace:\n  team_xmit (drivers/net/team/team_core.c:1853)\n  dev_hard_start_xmit (net/core/dev.c:3904)\n  __dev_queue_xmit (net/core/dev.c:4871)\n  packet_sendmsg (net/packet/af_packet.c:3109)\n  __sys_sendto (net/socket.c:2265)\n\nThe original code assumed that no ports means no traffic, so mode\nchanges could freely memset()/memcpy() the ops.  AF_PACKET with\nforced carrier breaks that assumption.\n\nPrevent the race instead of making it safe: replace memset()/memcpy()\nwith per-field updates that never touch transmit or receive.  Those\ntwo handlers are managed solely by team_adjust_ops(), which already\ninstalls dummies when tx_en_port_count == 0 (always true during mode\nchange since no ports are present).  WRITE_ONCE/READ_ONCE prevent\nstore/load tearing on the handler pointers.\n\nsynchronize_net() before exit_op() drains in-flight readers that may\nstill reference old mode",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64190 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64190"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64191",
+    "published": "2026-07-20T17:18:22.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ni2c: stub: Reject I2C block transfers with invalid length\n\nThe I2C_SMBUS_I2C_BLOCK_DATA case in stub_xfer() uses data->block[0]\nas the transfer length. The existing check only clamps it to avoid\noverrunning the chip->words[256] register array, but does not validate\nit against I2C_SMBUS_BLOCK_MAX (32), which is the limit of the union\ni2c_smbus_data.block buffer (34 bytes total). The driver is a\ndevelopment/test tool (CONFIG_I2C_STUB=m, not built by default)\nthat must be loaded with a chip_addr= parameter.\n\nA local user with access to /dev/i2c-* can issue an I2C_SMBUS ioctl\nwith I2C_SMBUS_I2C_BLOCK_DATA and data->block[0] > 32, causing\nstub_xfer() to read or write past the end of the union\ni2c_smbus_data.block buffer:\n\n BUG: KASAN: stack-out-of-bounds in stub_xfer (drivers/i2c/i2c-stub.c:223)\n Read of size 1 at addr ffff88800abcfd92 by task exploit/81\n Call Trace:\n  <TASK>\n  stub_xfer (drivers/i2c/i2c-stub.c:223)\n  __i2c_smbus_xfer (drivers/i2c/i2c-core-smbus.c:593)\n  i2c_smbus_xfer (drivers/i2c/i2c-core-smbus.c:536)\n  i2cdev_ioctl_smbus (drivers/i2c/i2c-dev.c:391)\n  i2cdev_ioctl (drivers/i2c/i2c-dev.c:478)\n  __x64_sys_ioctl (fs/ioctl.c:583)\n  do_syscall_64 (arch/x86/entry/syscall_64.c:94)\n  entry_SYSCALL_64_after_hwframe (arch/x86/entry/entry_64.S:130)\n  </TASK>\n\nThe bug exists because i2c-stub implements .smbus_xfer directly,\nbypassing the I2C_SMBUS_BLOCK_MAX validation in\ni2c_smbus_xfer_emulated(). The I2C_",
+    "tags": [],
+    "title": "CVE-2026-64191 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64191"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64192",
+    "published": "2026-07-20T17:18:22.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Reject BPF_MAP_TYPE_INODE_STORAGE creation if BPF LSM is uninitialized\n\nWhen CONFIG_BPF_LSM=y is set, BPF inode storage maps\n(BPF_MAP_TYPE_INODE_STORAGE) are compiled into the kernel. However,\nif the BPF LSM is not explicitly enabled at boot time (e.g. omitted\nfrom the \"lsm=\" boot parameter), lsm_prepare() is never executed for\nthe BPF LSM.\n\nConsequently, the BPF inode security blob offset\n(bpf_lsm_blob_sizes.lbs_inode) is never initialized and remains at\nits default compiled size of 8 bytes instead of being updated to a\nvalid offset past the reserved struct rcu_head (typically 16 bytes\nor more).\n\nWhen a privileged user creates and updates a BPF_MAP_TYPE_INODE_STORAGE\nmap, bpf_inode() evaluates inode->i_security + 8. This erroneously\naliases the struct rcu_head.func callback pointer at the beginning\nof the inode->i_security blob. During subsequent map element cleanup\nor inode destruction, writing NULL to owner_storage clears the queued\nRCU callback pointer. When rcu_do_batch() later executes the queued\ncallback, it attempts an instruction fetch at address 0x0, triggering\nan immediate kernel panic.\n\nFix this by introducing a global bpf_lsm_initialized boolean flag\nmarked with __ro_after_init. Set this flag to true inside bpf_lsm_init()\nwhen the LSM framework successfully registers the BPF LSM. Gate map\nallocation in inode_storage_map_alloc() on this flag, returning\n-EOPNOTSUPP if the BPF LSM is in turn u",
+    "tags": [],
+    "title": "CVE-2026-64192 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64192"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64205",
+    "published": "2026-07-20T17:18:22.487",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ni2c: i801: fix hardware state machine corruption in error path\n\nA severe livelock and subsequent Hung Task panic were observed in the\ni2c-i801 driver during concurrent Fuzzing. The crash is caused by an\nunconditional hardware register cleanup in the error handling path of\ni801_access().\n\nWhen i801_check_pre() fails (e.g., returning -EBUSY because the SMBus\ncontroller is actively used by BIOS/ACPI), the kernel does not actually\nacquire the hardware ownership. However, the code jumps to the 'out'\nlabel and executes:\n\n    iowrite8(SMBHSTSTS_INUSE_STS | STATUS_FLAGS, SMBHSTSTS(priv));\n\nThis forcefully clears the INUSE_STS lock and resets the hardware status\nflags without owning the controller. Doing so interrupts ongoing BIOS/ACPI\ntransactions and totally corrupts the SMBus hardware state machine.\n\nConsequently, all subsequent i801_access() calls fail at the pre-check\nstage, triggering an endless stream of \"SMBus is busy, can't use it!\"\nerror logs. Over a slow serial console, this printk flood monopolizes\nthe CPU (Console Livelock), starving other processes trying to acquire\nthe mmap_lock down_read semaphore, ultimately triggering the hung task\nwatchdog.\n\nFix this by moving the 'out' label below the hardware register cleanup.\nIf i801_check_pre() fails, we safely bypass the iowrite8() and only\nrelease the software locks (pm_runtime and mutex), strictly adhering to\nthe rule of not releasing resources that were nev",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64205 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64205"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64206",
+    "published": "2026-07-20T17:18:22.620",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: cancel pending_rx_work before taking conn->lock\n\nl2cap_conn_del() takes conn->lock and then calls cancel_work_sync() for\npending_rx_work.  process_pending_rx() takes the same mutex, so teardown\ncan deadlock against the worker it is flushing.\n\nThis issue was found by our static analysis tool and then manually\nreviewed against the current tree.\n\nThe grounded PoC kept the l2cap_conn_ready() -> queue_work(...,\n&conn->pending_rx_work) submit path, the l2cap_conn_del() ->\ncancel_work_sync(&conn->pending_rx_work) teardown path, and the\nprocess_pending_rx() -> mutex_lock(&conn->lock) worker edge.  Lockdep\n\n  WARNING: possible circular locking dependency detected\n  process_pending_rx+0x21/0x2a [vuln_msv]\n  l2cap_conn_del.constprop.0+0x3f/0x4e [vuln_msv]\n  *** DEADLOCK ***\n\nCancel pending_rx_work before taking conn->lock, matching the existing\nlock-before-drain ordering used for the two delayed works in the same\nteardown path.  The pending_rx queue is still purged after the work has\nbeen cancelled and conn->lock has been acquired.",
+    "tags": [],
+    "title": "CVE-2026-64206 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64206"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64207",
+    "published": "2026-07-20T17:18:22.733",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: dualpi2: fix GSO backlog accounting\n\nWhen DualPI2 splits a GSO skb into N segments, it propagates N\nadditional packets to its parent before returning NET_XMIT_SUCCESS.\nThe parent then accounts for the original skb once more, leaving its\nqlen one larger than the number of packets actually queued.\n\nWith QFQ as the parent, after all real packets are dequeued, QFQ still\nhas a non-zero qlen while its in-service aggregate has no active\nclasses. qfq_choose_next_agg() returns NULL and qfq_dequeue() passes\nthe result to qfq_peek_skb(), causing a NULL pointer dereference.\n\nFollow the same pattern used by tbf_segment() and taprio: count only\nsuccessfully queued segments, propagate the difference between the\noriginal skb and those segments, and return NET_XMIT_SUCCESS whenever\nat least one segment was queued.",
+    "tags": [],
+    "title": "CVE-2026-64207 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64207"
   }
 ]
