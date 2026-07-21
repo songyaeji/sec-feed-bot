@@ -1501,5 +1501,29 @@
     "tags": [],
     "title": "법무법인 태평양, '개인정보 보호법 개정과 AI 데이터 활용' 세미나 성료 · 달라지는 점은? - supple.kr",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5WZ3hIVHNKeXhERDg1SDRMaW9zN2dmeEdmODBRNm9vS0lkRGEwczR3cm5DWVNMeDh2OXdPOXQtZjVFdVllamV0MXAtRUdFU2x5bVhiblNlcjRTV3Vt?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-5318",
+    "published": "2025-06-24T14:15:30.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the libssh library in versions less than 0.11.2. An out-of-bounds read can be triggered in the sftp_handle function due to an incorrect comparison check that permits the function to access memory beyond the valid handle list and to return an invalid pointer, which is used in further processing. This vulnerability allows an authenticated remote attacker to potentially read unintended memory regions, exposing sensitive information or affect service behavior.",
+    "tags": [],
+    "title": "CVE-2025-5318 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5318"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144762&kind=&sub_kind=",
+    "published": "2026-07-21T02:11:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "나라장터 등록 통한 공공조달 공급체계 확보하드웨어 신뢰기반 제로트러스트 영상보안 구현공공 영상보안 시장 사업화 및 파트너 생태계 확대[보안뉴스 강초희 기자] 시큐리티플랫폼(대표 황수익)이 제로트러스트 기반 영상보안 솔루션 ‘엑시오 엣지 시큐리티’(Axio Edge Security) 제품군의 조달청 나라장터 쇼핑몰 등록을 완료했다고 20일 밝혔다. 이번 조달",
+    "tags": [],
+    "title": "시큐리티플랫폼, 제로트러스트 영상보안 솔루션 공공조달 본격화",
+    "url": "http://www.boannews.com/media/view.asp?idx=144762&kind=&sub_kind="
   }
 ]
