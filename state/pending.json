@@ -1879,5 +1879,267 @@
     ],
     "title": "이지서티, 경기 생성형 AI 플랫폼에 개인정보 필터링 솔루션 공급",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207713"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-20237",
+    "published": "2026-04-03T21:17:07.103",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hirschmann Industrial HiVision versions prior to 06.0.07 and 07.0.03 contains an authentication bypass vulnerability in the master service that allows unauthenticated remote attackers to execute arbitrary commands with administrative privileges. Attackers can invoke exposed interface methods over the remote service to bypass authentication and achieve remote code execution on the underlying operating system.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2017-20237 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20237"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2018-25237",
+    "published": "2026-04-03T22:16:24.740",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hirschmann HiSecOS devices versions prior to 05.3.03 contain a buffer overflow vulnerability in the HTTPS login interface when RADIUS authentication is enabled that allows remote attackers to crash the device or execute arbitrary code by submitting a password longer than 128 characters. Attackers can exploit improper bounds checking in password handling to overflow a fixed-size buffer and achieve denial of service or remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2018-25237 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25237"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-20234",
+    "published": "2026-04-03T23:17:00.087",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "GarrettCom Magnum 6K and 10K managed switches contain an authentication bypass vulnerability that allows unauthenticated attackers to gain unauthorized access by exploiting a hardcoded string in the authentication mechanism. Attackers can bypass login controls to access administrative functions and sensitive switch configuration without valid credentials.",
+    "tags": [],
+    "title": "CVE-2017-20234 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20234"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2017-20235",
+    "published": "2026-04-03T23:17:00.267",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ProSoft Technology ICX35-HWC version 1.3 and prior cellular gateways contain an authentication bypass vulnerability in the web user interface that allows unauthenticated attackers to gain access to administrative functions without valid credentials. Attackers can bypass the authentication mechanism in affected firmware versions to obtain full administrative access to device configuration and settings.",
+    "tags": [],
+    "title": "CVE-2017-20235 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20235"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-20236",
+    "published": "2026-04-03T23:17:00.447",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ProSoft Technology ICX35-HWC versions 1.3 and prior cellular gateways contain an input validation vulnerability in the web user interface that allows remote attackers to inject and execute system commands by submitting malicious input through unvalidated fields. Attackers can exploit this vulnerability to gain root privileges and execute arbitrary commands on the device through the accessible web interface.",
+    "tags": [],
+    "title": "CVE-2017-20236 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20236"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2018-25236",
+    "published": "2026-04-03T23:17:00.823",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hirschmann HiOS and HiSecOS products RSP, RSPE, RSPS, RSPL, MSP, EES, EESX, GRS, OS, RED, EAGLE contain an authentication bypass vulnerability in the HTTP(S) management module that allows unauthenticated remote attackers to gain administrative access by crafting specially formed HTTP requests. Attackers can exploit improper authentication handling to obtain the authentication status and privileges of a previously authenticated user without providing valid credentials.",
+    "tags": [],
+    "title": "CVE-2018-25236 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25236"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2016-20052",
+    "published": "2026-04-04T14:16:17.520",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Snews CMS 1.7 contains an unrestricted file upload vulnerability that allows unauthenticated attackers to upload arbitrary files including PHP executables to the snews_files directory. Attackers can upload malicious PHP files through the multipart form-data upload endpoint and execute them by accessing the uploaded file path to achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2016-20052 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-20052"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2009-10007",
+    "published": "2026-06-09T09:16:27.183",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Catalyst::Plugin::Authentication versions before 0.10_027 for Perl is susceptible to session fixation attacks.\n\nCatalyst::Plugin::Authentication does not automatically change the session id after authentication. An attacker that obtains a session id cookie can use this to impersonate the victim.",
+    "tags": [],
+    "title": "CVE-2009-10007 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-10007"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-20251",
+    "published": "2026-06-09T13:16:35.140",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "WordPress Insert PHP plugin versions before 3.3.1 contain a PHP code injection vulnerability that allows unauthenticated attackers to execute arbitrary PHP code by injecting malicious shortcodes through the WordPress REST API. Attackers can send POST requests to the wp-json/wp/v2/posts endpoint with crafted content containing insert_php shortcodes to include and execute remote PHP files on the server.",
+    "tags": [],
+    "title": "CVE-2017-20251 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20251"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2015-10148",
+    "published": "2026-04-03T22:16:24.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hirschmann HiLCOS devices OpenBAT, WLC, BAT300, BAT54 prior to 8.80 and OpenBAT prior to 9.10 are shipped with identical default SSH and SSL keys that cannot be changed, allowing unauthenticated remote attackers to decrypt or intercept encrypted management communications. Attackers can perform man-in-the-middle attacks, impersonate devices, and expose sensitive information by leveraging the shared default cryptographic keys across multiple devices.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2015-10148 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-10148"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2016-15058",
+    "published": "2026-04-03T22:16:24.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hirschmann HiLCOS Classic Platform switches Classic L2E, L2P, L3E, L3P versions prior to 09.0.06 and Classic L2B prior to 05.3.07 contain a credential exposure vulnerability where user passwords are synchronized with SNMPv1/v2 community strings and transmitted in plaintext when the feature is enabled. Attackers with local network access can sniff SNMP traffic or extract configuration data to recover plaintext credentials and gain unauthorized administrative access to the switches.",
+    "tags": [],
+    "title": "CVE-2016-15058 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-15058"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2016-20062",
+    "published": "2026-06-09T13:16:32.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Simply Poll 1.4.1 plugin for WordPress contains an SQL injection vulnerability that allows unauthenticated attackers to extract database information by injecting SQL code through the 'pollid' POST parameter. Attackers can send requests to the admin-ajax.php endpoint with the 'spAjaxResults' action and malicious 'pollid' values to execute arbitrary SQL queries and read sensitive data from the WordPress database.",
+    "tags": [],
+    "title": "CVE-2016-20062 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-20062"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2016-20065",
+    "published": "2026-06-09T13:16:33.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Product Catalog 8 1.2 plugin for WordPress contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the selectedCategory parameter. Attackers can submit POST requests to the admin-ajax.php endpoint with the UpdateCategoryList action to extract sensitive database information from WordPress tables.",
+    "tags": [],
+    "title": "CVE-2016-20065 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-20065"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2017-20243",
+    "published": "2026-06-09T13:16:33.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WordPress Car Park Booking Plugin version 13 October 17 contains a time-based SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the space_id parameter. Attackers can send GET requests to the booking-page endpoint with malicious space_id values using AND SLEEP() payloads to extract sensitive database information.",
+    "tags": [],
+    "title": "CVE-2017-20243 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20243"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2017-20244",
+    "published": "2026-06-09T13:16:34.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wow Forms WordPress Plugin version 2.1 contains an SQL injection vulnerability that allows unauthenticated attackers to read arbitrary database information by exploiting an unescaped POST parameter. Attackers can inject SQL code through the 'mwpformid' parameter in requests to the admin-ajax.php endpoint with the 'send_mwp_form' action to extract sensitive database contents.",
+    "tags": [],
+    "title": "CVE-2017-20244 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20244"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2017-20245",
+    "published": "2026-06-09T13:16:34.270",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wow Viral Signups 2.1 WordPress plugin contains an SQL injection vulnerability that allows unauthenticated attackers to extract database information by exploiting the unescaped 'idsignup' POST parameter. Attackers can send crafted requests to the admin-ajax.php endpoint with malicious SQL payloads in the 'idsignup' parameter to read arbitrary data from the database.",
+    "tags": [],
+    "title": "CVE-2017-20245 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20245"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2017-20246",
+    "published": "2026-06-09T13:16:34.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "KittyCatfish 2.2 plugin for WordPress contains an SQL injection vulnerability that allows unauthenticated attackers to read database contents by exploiting an unescaped GET parameter. Attackers can inject SQL code through the 'kc_ad' parameter in base.css.php or kittycatfish.php to extract sensitive database information using boolean-based blind or time-based blind techniques.",
+    "tags": [],
+    "title": "CVE-2017-20246 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20246"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2017-20247",
+    "published": "2026-06-09T13:16:34.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WordPress Plugin PICA Photo Gallery 1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the aid parameter. Attackers can send GET requests with crafted SQL payloads in the aid parameter to extract sensitive database information including user credentials and table contents.",
+    "tags": [],
+    "title": "CVE-2017-20247 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20247"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2017-20249",
+    "published": "2026-06-09T13:16:34.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Apptha Slider Gallery 1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the albid parameter. Attackers can send GET requests with crafted SQL payloads in the albid parameter to extract sensitive database information including user credentials and authentication hashes.",
+    "tags": [],
+    "title": "CVE-2017-20249 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20249"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207714",
+    "published": "2026-07-21T16:04:51+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "개인정보보호위원회가 8월 20일 시행되는 ‘본인전송요구권’ 제도의 안정적인 정착을 위해 정보전송자와 대리인 간 사전협의 지원 신청을 7월 31일까지 추가로 받는다.이번 제도 시행으로 스크래핑 등 자동화 도구를 이용한 개인정보 전송이 전면 금지되거나 기존 서류 자동제출 서비스가 일괄 중단되는 것은 아니다. 개인정보위는 공공기관과 대리인 간 사전협의와 안전장치가 마련된 경우 자동화된 정보전송을 제한적으로 허용하고, 장기적으로는 API 기반의 통제된 전송 방식으로 전환한다는 방침이다.스크래핑 전면 금지 아닌 단계적 전환본인전송요구권은 정",
+    "tags": [],
+    "title": "개인정보위, 본인전송요구권 사전협의 추가 접수…“8월 20일 서비스 일괄 중단 아냐”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207714"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFB4MjlSQkpWOEotR0lwaUthOEVSVFp4c0NBVGdfN200S2p1UjdXMEdUbDFtWlZEcmd0WmdRa1cyV25URmduWGNpT2FvSkdpTElRT0dvMW5NeU91LWVMSEJJbw",
+    "published": "2026-07-21T07:03:13+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, AI 시대 사이버 위협 대응 전략 특강 개최 아시아경제",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, AI 시대 사이버 위협 대응 전략 특강 개최 - 아시아경제",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB4MjlSQkpWOEotR0lwaUthOEVSVFp4c0NBVGdfN200S2p1UjdXMEdUbDFtWlZEcmd0WmdRa1cyV25URmduWGNpT2FvSkdpTElRT0dvMW5NeU91LWVMSEJJbw?oc=5"
   }
 ]
