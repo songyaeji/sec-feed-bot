@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-17 [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/) — Windows LegacyHive 제로데이 익스플로잇 공개, 권한상향 취약점
+- 2026-07-21 [BleepingComputer](https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/) — 제로데이 공격 대응용 비공식 패치 공개
 
 ## 관련

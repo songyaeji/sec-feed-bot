@@ -9,6 +9,7 @@ cves: [CVE-2026-56451]
 
 ## 타임라인
 
+- 2026-07-21 [CISA ICSA-26-202-03](https://www.cisa.gov/news-events/ics-advisories/icsa-26-202-03) — Siemens Opcenter X 인증 우회 취약점 CISA 어드바이저리 공개
 - 2026-07-14 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-56451) — CVE-2026-56451 Opcenter X JWT 알고리즘 검증 부재 (모든 버전 < 2604) 공개
 
 ## 관련

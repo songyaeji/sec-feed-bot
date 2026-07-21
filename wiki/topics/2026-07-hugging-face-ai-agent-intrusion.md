@@ -9,6 +9,7 @@ cves: []
 
 ## 타임라인
 
+- 2026-07-20 [The Hacker News](https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html) — Hugging Face 자율 AI 에이전트 침해 공개
 - 2026-07-20 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=207696) — 허깅페이스, 자율 AI 에이전트 공격 탐지 및 대응 결과 공개
 - 2026-07-20 [Security Affairs](https://securityaffairs.com/195658/ai/ai-agents-turned-into-attackers-hugging-face-reveals-autonomous-intrusion-campaign.html) — Hugging Face autonomous AI agent 침해 상세 보도
 
