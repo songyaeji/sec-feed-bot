@@ -6401,5 +6401,115 @@
     "tags": [],
     "title": "Apple Fixes Hide My Email Bug That Exposed Real Addresses in Mail Logs",
     "url": "https://thehackernews.com/2026/07/apple-fixes-hide-my-email-bug-that.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-16359",
+    "published": "2026-07-21T13:17:04.413",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Incorrect boundary conditions in the Audio/Video: GMP component. This vulnerability was fixed in Firefox 153, Firefox ESR 115.38, and Firefox ESR 140.13.",
+    "tags": [],
+    "title": "CVE-2026-16359 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16359"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-16394",
+    "published": "2026-07-21T13:17:14.620",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Mitigation bypass in the DOM: Security component. This vulnerability was fixed in Firefox 153.",
+    "tags": [],
+    "title": "CVE-2026-16394 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16394"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16395",
+    "published": "2026-07-21T13:17:14.733",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Integer overflow in the Audio/Video component. This vulnerability was fixed in Firefox 153.",
+    "tags": [],
+    "title": "CVE-2026-16395 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16395"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-16406",
+    "published": "2026-07-21T13:17:16.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Mitigation bypass in the Networking component. This vulnerability was fixed in Firefox 153.",
+    "tags": [],
+    "title": "CVE-2026-16406 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16406"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16408",
+    "published": "2026-07-21T13:17:16.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Integer overflow in the Audio/Video: Playback component. This vulnerability was fixed in Firefox 153.",
+    "tags": [],
+    "title": "CVE-2026-16408 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16408"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16411",
+    "published": "2026-07-21T13:17:16.530",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox 152. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 153.",
+    "tags": [],
+    "title": "CVE-2026-16411 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16411"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16412",
+    "published": "2026-07-21T13:17:16.630",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox ESR 140.12 and Firefox 152. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox 153 and Firefox ESR 140.13.",
+    "tags": [],
+    "title": "CVE-2026-16412 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16412"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-64878",
+    "published": "2026-07-21T20:17:04.630",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unvalidated input in asset filter parameters allows shell metacharacters to escape command argument handling, resulting in remote code execution as a low-privileged OS user via the Analysis REST endpoint.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64878 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64878"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-64879",
+    "published": "2026-07-21T20:17:04.763",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A filename supplied during file upload is not properly sanitized before being used in system command execution, allowing an attacker to inject shell metacharacters and achieve command injection via the audit file upload functionality.",
+    "tags": [],
+    "title": "CVE-2026-64879 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64879"
   }
 ]
