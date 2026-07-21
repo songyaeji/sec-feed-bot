@@ -5820,5 +5820,55 @@
     "tags": [],
     "title": "송경희 개인정보보호위원회 위원장이 개인정보침해신고센터 직원들과 기념 촬영을 하고 있다. - 전자신문",
     "url": "https://news.google.com/rss/articles/CBMi6wdBVV95cUxOQXY2cl9kTzdnVXYtbEVTYTlYX2ZYbXhRSEJjQUphVk1FRlVmV2ZGLW9xbXFxZG9Yc1pwQUprZUVWNk4wbkRnYUt1dzRuLXVybDM5dm9mMFFNNUtHc1NlckJvWUw5Rk5yNDZEN3g3cUU5dWM3UHJFV1E5TDFlZDRfSEh4V1FlekplSmVnU2JMdF9RbFc0SkQyemZxRERid1lWYkRON0txdVo5WGxjWDNlZlJ0VUg4Rml1UUY1QmFabjVSdkFBMzBwbUZ1eU5hMHdTelJRU2xzekx3UEdVZTB3SGctMlE5Q2NrdDJiTElJTW1OOXRjQmJXcXlHQmQwczBxeTJCMFJyN0VNWFZKQzRxSXpTbmZnb2c1bllRUXZiSVhuc1lxTjZTc0VvNDNRSUYwR0RhcVBCQ3U1WHJCbmVsS0JSbGNwdUVMVy0tSGg3UUI0VE1ONDdQQnEweDVnbzA2dmpOeU9QcXA5empUZmZHOHdCUjNOYnRILVZwRW13NDlqbldoZnJwUGtpT19TN0hVV3NpTXpSUXdZX3VZNFFuN1JwbDRnSU9RMWR4WEVvNDR3Ql9DZE9MVmg3d0xadzZpWHg2ZUNoRE9YbGdSeVdUUFZzTldhSjJIVGZ5Slo4Y1g5NDFyQzhZMnVrbzJsRkxGb3dmZ1NvSFJGS0hDSnIxZzhRY1YwRFRHcHRrcHRsdU5PTXVlNnYwQTBSQ3hJdFJ3TGRmbXhYbjB5T2ZDbThBRWdydWphR2x1UWl5YzJnQnNmdGNJWGJNcDFWSGc0MWczNUZHQThVbzN1QUZEU1h6d0xZdFVSWi1HWk1FR1VyRjhvMHlRNElSeEtlLWZ6YkgwemJCdXhPZk1tR2JzRTBHVVF5UjVFSmVwTW1zNTktVW9tekRWd1p1TGxpbU5odnNBdkJSdGp3SkdhaThaWlNwbHYwZGJMOWZmRlFNQmFkaWdQalcteHR0Y0ZKLVlySndFZGlTb29JLUFSMEtmTG9qODFka25zVURtWUJnLXV5TTM3YmlZQXdLYjBlbGQwWGVjejk3NjA5bnoyTnZucGp2OHN2aVNvdE9YZE5pTW5SOGdZVlVyWmZBbHdqZmlBM2g1SHN4WFFZNkVLNFZBMWVMdFJabWNTVnhJMG9FVHNiRm95dmVfRnlTWjZiYlNJN3Q5ZTAySW1TM05jTFhtNUdoNkdsbWc4eEg2MEZ1V21zM21tM1pMVVFmM25ZbHlCbVVUX3phc3BfQzhqRGE1dFlEMFJXQmtmR3A4bjByVzNpRm1NZ3piY2h5QnB1TkRhX1puWVl2dy1PeTBUVk1KOGF4TkdodjktWm1iNnhF?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-7786",
+    "published": "2026-05-29T18:17:13.403",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Jinan USR IOT Technology Limited (PUSR) USR-W610 RS232/485 to Wi-Fi/Ethernet Converter\ndevice firmware contains plaintext administrative credentials embedded in the firmware image. These credentials can be extracted through firmware analysis and used to authenticate to device services.",
+    "tags": [],
+    "title": "CVE-2026-7786 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7786"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-6824",
+    "published": "2026-05-29T18:17:13.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stored cross-site scripting (XSS) vulnerability exists in certain 1xxx series NVR devices due to insufficient sanitization of user-supplied input in specific functional modules. Attackers can inject malicious scripts, which are then persistently stored on the device backend. When administrators or users access affected pages, the stored scripts are executed in their browsers, leading to potential session hijacking, unauthorized actions, or data theft.",
+    "tags": [],
+    "title": "CVE-2026-6824 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6824"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-42929",
+    "published": "2026-05-29T19:16:23.830",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Danelec MacGregor Voyage Data Recorder\nincludes default accounts with hard-coded credentials.",
+    "tags": [],
+    "title": "CVE-2026-42929 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42929"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-42941",
+    "published": "2026-05-29T19:16:23.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Danelec MacGregor Voyage Data Recorder\n\ndevice includes a default username and password, with no enforced password change.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42941 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42941"
   }
 ]
