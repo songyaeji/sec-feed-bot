@@ -5118,5 +5118,17 @@
     "tags": [],
     "title": "CVE-2026-59851 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59851"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53518",
+    "published": "2026-07-15T18:16:48.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Better Auth is an authentication and authorization library for TypeScript. From 1.6.0 until 1.6.11, the @better-auth/oauth-provider POST /oauth2/token endpoint for the authorization_code grant redeems a single-use authorization code through a non-atomic find-then-delete sequence, allowing two concurrent requests to pass the read step and mint independent access tokens, refresh tokens, and ID tokens; legacy /oauth2/token and /mcp/token paths in oidc-provider and mcp plugins share the same primitive. This issue is fixed in version 1.6.11.",
+    "tags": [],
+    "title": "CVE-2026-53518 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53518"
   }
 ]
