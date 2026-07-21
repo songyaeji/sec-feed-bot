@@ -5696,5 +5696,117 @@
     "tags": [],
     "title": "Google Launches Gemini 3.5 Flash Cyber AI to Find and Fix Software Vulnerabilities",
     "url": "https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-62415",
+    "published": "2026-07-21T10:16:24.727",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Joomla extension Membership Pro prior version 4.6.2 did by default allow unauthenticated users to upload media assets.",
+    "tags": [],
+    "title": "CVE-2026-62415 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62415"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-47410",
+    "published": "2026-07-21T17:17:09.773",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an insecure default cryptographic key. The JWT signing secret defaults to the hardcoded literal `\"dev-secret-change-me\"` when `PLATFORM_JWT_SECRET` is unset. A safety check exists but only fires when `PLATFORM_ENV != \"dev\"`; the default value of `PLATFORM_ENV` is `\"dev\"`, so the check is silently bypassed in any deployment that does not explicitly opt out. The attacker reads the literal from this public source file, mints a JWT with arbitrary `sub` and `email` claims, and authenticates as any existing user (including workspace owners and admins). PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47410 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47410"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-15724",
+    "published": "2026-07-21T17:17:04.703",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress ShareFile Storage Zones Controller versions prior to 5.12.5 and 6.0.2, an authenticated administrative user can exploit a path traversal vulnerability to read arbitrary files from the server filesystem, write files to arbitrary directories, or determine whether specific files exist on the server.",
+    "tags": [],
+    "title": "CVE-2026-15724 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15724"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47398",
+    "published": "2026-07-21T17:17:08.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. The v4.6.32 chokepoint refactor (which patched CVE-2026-44334 / GHSA-xcmw-grxf-wjhj) added the PRAISONAI_ALLOW_LOCAL_TOOLS env-var gate to the tool_override.py sinks. However, two additional spec.loader.exec_module call sites in praisonai/agents_generator.py were missed and remain completely unguarded in versions prior to 4.6.40. Both functions accept a module_path parameter sourced from YAML configuration and execute it without validation, signature checking, or the env-var gate. Version 4.6.40 fixes the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47398 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47398"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47399",
+    "published": "2026-07-21T17:17:08.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Prior to version 0.1.4, the workspace-scoped REST routes contain a systemic object-level authorization flaw that allows an authenticated user from one workspace to access, modify, and delete objects belonging to another workspace by supplying the victim object's global UUID. The affected pattern appears in workspace-scoped routes such as agents, projects, issues, and comments. The route layer verifies that the caller is a member of the `workspace_id` provided in the URL, but the service layer later resolves the target object by global object ID only. It does not verify that the resolved object actually belongs to the workspace in the URL. As a result, a valid member of `workspace_attacker` can call a route under `/api/v1/workspaces/{workspace_attacker}/...` while supplying an object UUID from `workspace_victim`. The server authorizes the request based on membership in `workspace_attacker`, then fetches or mutates the victim object by global UUID. This breaks the platform's workspace isolation boundary. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47399 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47399"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47405",
+    "published": "2026-07-21T17:17:09.083",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have a broken workspace authorization check that allows any authenticated low-privilege workspace member to escalate their own role to `owner`. The issue is caused by privileged workspace-management routes using the shared dependency `require_workspace_member(...)` without requiring `admin` or `owner`. The dependency defaults to `min_role=\"member\"`, so routes that should be administrative are accessible to ordinary workspace members. As a result, a normal workspace member can promote their own account from `member` to `owner`; add arbitrary users as `owner` or `admin`; change other members' roles; remove legitimate owners or members; take over workspace membership completely; and/or perform destructive workspace operations after escalation. This is a broken access control / vertical privilege escalation vulnerability. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47405 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47405"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47406",
+    "published": "2026-07-21T17:17:09.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an Insecure Direct Object Reference. The dependency endpoints (`POST/GET /workspaces/{workspace_id}/issues/{issue_id}/dependencies` and `DELETE .../dependencies/{dep_id}`) gate access on `require_workspace_member(workspace_id)` only, then dispatch to `DependencyService` calls that take URL/body-supplied issue and dependency IDs without verifying any of them belong to the membership-checked workspace. Most damaging: `create_dependency` accepts `body.depends_on_issue_id` from the request body — that ID is checked against nothing — letting an attacker create a \"blocks\" or \"related\" link between any two issues anywhere in the database. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47406 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47406"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47409",
+    "published": "2026-07-21T17:17:09.640",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an authorization bypass enabling owner lockout. The `DELETE /workspaces/{workspace_id}/members/{user_id}` endpoint is gated only by `require_workspace_member(workspace_id)` (default `min_role=\"member\"`). Any member can remove any other member, including the workspace owner, using a single DELETE. There is no caller-role check, no target-role check, no \"cannot remove last owner\" guard. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47409 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47409"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/spain-fines-23andme-3-million-cyber-failings-data-breach",
+    "published": "2026-07-21T17:10:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The Agencia Española de Protección de Datos (AEPD) announced the fine on Friday, saying in its decision that more than 2,600 Spaniards were impacted by a breach affecting 6.9 million people worldwide.",
+    "tags": [],
+    "title": "Spain fines 23andMe nearly $3 million for cybersecurity failings enabling 2023 hack",
+    "url": "https://therecord.media/spain-fines-23andme-3-million-cyber-failings-data-breach"
   }
 ]
