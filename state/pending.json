@@ -4686,5 +4686,43 @@
     ],
     "title": "Captive Portal Detection, (Tue, Jul 21st)",
     "url": "https://isc.sans.edu/diary/rss/33172"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html",
+    "published": "2026-07-21T14:04:57+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Threat actors have been observed exploiting a now-patched high-severity Palo Alto Networks PAN-OS vulnerability as an entry point to deploy Qilin (aka Agenda) ransomware on victim environments. Arctic Wolf Labs said it investigated multiple intrusions in June 2026 that began with the exploitation of CVE-2026-0257 (CVSS score: 7.8), an authentication bypass flaw affecting the portal and gateway",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access",
+    "url": "https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html",
+    "published": "2026-07-21T13:18:31+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Zimbra has rolled out fixes to address multiple critical security issues, including a command injection flaw in the Simple Network Management Protocol (SNMP) monitoring component. As many as nine security vulnerabilities have been patched in Zimbra 10.1.20. Topping the list is a command injection vulnerability in the SNMP monitoring component when SNMP notifications are enabled. Also patched",
+    "tags": [],
+    "title": "Zimbra Patches Critical SNMP Command Injection and Four XSS Vulnerabilities",
+    "url": "https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html"
+  },
+  {
+    "author": "Sponsored by Specops Software",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/",
+    "published": "2026-07-21T14:00:10+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Critical infrastructure attacks often begin with stolen credentials, compromised devices, or trusted accounts. Specops Software explains why Zero Trust should verify both user identities and device trust before granting access to critical systems. [...]",
+    "tags": [],
+    "title": "Closing the Identity Gaps in Critical Infrastructure Security",
+    "url": "https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/"
   }
 ]
