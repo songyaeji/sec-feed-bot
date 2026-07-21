@@ -4724,5 +4724,67 @@
     "tags": [],
     "title": "Closing the Identity Gaps in Critical Infrastructure Security",
     "url": "https://www.bleepingcomputer.com/news/security/closing-the-identity-gaps-in-critical-infrastructure-security/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64608",
+    "published": "2026-07-21T10:16:24.923",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Heap type confusion and out-of-bounds read/write in the Apache Fory C++ implementation. When deserializing data in compatible mode, the field-skip paths do not correctly validate the declared field types against the actual data, so input with an inconsistent schema can cause type confusion and out-of-bounds memory access. Only the C++ implementation is affected; other language implementations of Apache Fory are not.\n\nThis issue affects Apache Fory C++: from 0.14.0 before 1.4.0.\n\nUsers are recommended to upgrade to version 1.4.0, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-64608 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64608"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-64609",
+    "published": "2026-07-21T10:16:25.057",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Out-of-bounds read via sun.misc.Unsafe in Apache Fory. When out-of-band zero-copy deserialization is used, readAlignedVarUint() can read beyond the bounds of the underlying buffer. Out-of-band zero-copy deserialization is an opt-in feature; applications that do not use it are not affected.\n\nThis issue affects Apache Fory (formerly Apache Fury): from 0.5.0 before 1.4.0. Versions before 0.11.0 were published under the Maven coordinates org.apache.fury:fury-core.\n\nUsers are recommended to upgrade to version 1.4.0, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-64609 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64609"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64606",
+    "published": "2026-07-21T11:16:27.973",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of untrusted data vulnerability that may allow class-registration checks to be bypassed during Java lambda deserialization. Only lambda capture class is affected\n\n\nThis issue affects Apache Fory: from before 1.4.0.\n\nUsers are recommended to upgrade to version 1.4.0, which fixes the issue.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-64606 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64606"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-59847",
+    "published": "2026-07-21T14:16:34.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in libssh. Incorrect AES-GCM finalization checks in builds using the OpenSSL backend can effectively remove integrity protection, allowing an in-path attacker to modify plaintext on the wire without detection.",
+    "tags": [],
+    "title": "CVE-2026-59847 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59847"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207720",
+    "published": "2026-07-21T23:15:11+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "메타(Meta)의 고객지원 시스템에서 이용자와 상담원이 주고받은 이메일과 채팅 내용, 첨부파일, 개인정보에 접근할 수 있는 취약점이 발견됐다. 공격자가 취약점을 악용했다면 다른 이용자의 지원 요청을 열람하거나 기업 명의로 새로운 상담 요청을 만드는 것도 가능했다.보안 연구원 로니 K. 로이는 지난 1월 메타에 해당 취약점을 신고했다. 메타는 관련 시스템을 조사한 뒤 4월 보완 작업을 마쳤다. 연구원은 7월 17일 취약점 분석 내용을 공개했다.로이는 이번 신고로 메타에서 7만8,000달러, 한화 약 1억800만원의 버그바운티를 받았다",
+    "tags": [],
+    "title": "메타, 고객지원 시스템 데이터 노출 취약점에 7만8,000달러 포상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207720"
   }
 ]
