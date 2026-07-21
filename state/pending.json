@@ -6279,5 +6279,103 @@
     "tags": [],
     "title": "DNI nominee Clayton wins Senate panel’s approval",
     "url": "https://therecord.media/jay-clayton-dni-nomination-senate-committee-approval"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64193",
+    "published": "2026-07-20T19:17:30.047",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Net::DNS versions through 1.55 for Perl allow remote execution injection via EDNS EXTENDED ERROR.\n\nNet::DNS::RR::OPT::EXTENDED_ERROR::_decompose parses the EXTRA-TEXT field of an EDNS EXTENDED-ERROR option (RFC 8914) by tokenising the raw bytes and passing the result to Perl's eval. There is some escaping done for $ and @, but not for backticks. This can be exploited for command execution if $pkt->edns->option('EXTENDED-ERROR') is called in array context, for example with a payload of {0:`\"<command>\"`} in EXTRA-TEXT.",
+    "tags": [],
+    "title": "CVE-2026-64193 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64193"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16361",
+    "published": "2026-07-21T13:17:04.637",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory safety bugs present in Firefox ESR 115.37 and Firefox ESR 140.12. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability was fixed in Firefox ESR 115.38 and Firefox ESR 140.13.",
+    "tags": [],
+    "title": "CVE-2026-16361 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16361"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2016-20096",
+    "published": "2026-07-21T19:17:07.357",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Linknat VOS3000 and VOS2009 through version 2.1.2.0 contain an unauthenticated SQL injection vulnerability that allows remote attackers to execute arbitrary SQL commands by manipulating the name parameter in a POST request to the login endpoint. Attackers can inject malicious SQL through the login form and retrieve injected query results from a subsequent session request, enabling extraction of plaintext credentials and other database content with DBA-level privileges.",
+    "tags": [],
+    "title": "CVE-2016-20096 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-20096"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-64877",
+    "published": "2026-07-21T19:17:13.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authenticated non-admin user can exploit a SQL injection flaw in the ticketing REST API to access sensitive data stored in the appliance database.",
+    "tags": [],
+    "title": "CVE-2026-64877 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64877"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2023-3640",
+    "published": "2023-07-24T16:15:13.063",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A possible unauthorized memory access flaw was found in the Linux kernel's cpu_entry_area mapping of X86 CPU data to memory, where a user may guess the location of exception stacks or other important data. Based on the previous CVE-2023-0597, the 'Randomize per-cpu entry area' feature was implemented in /arch/x86/mm/cpu_entry_area.c, which works through the init_cea_offsets() function when KASLR is enabled. However, despite this feature, there is still a risk of per-cpu entry area leaks. This issue could allow a local user to gain access to some important data with memory in an expected location and potentially escalate their privileges on the system.",
+    "tags": [],
+    "title": "CVE-2023-3640 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3640"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2024-0443",
+    "published": "2024-01-12T00:15:45.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the blkgs destruction path in block/blk-cgroup.c in the Linux kernel, leading to a cgroup blkio memory leakage problem. When a cgroup is being destroyed, cgroup_rstat_flush() is only called at css_release_work_fn(), which is called when the blkcg reference count reaches 0. This circular dependency will prevent blkcg and some blkgs from being freed after they are made offline. This issue may allow an attacker with a local access to cause system instability, such as an out of memory error.",
+    "tags": [],
+    "title": "CVE-2024-0443 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0443"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2024-0639",
+    "published": "2024-01-17T16:15:46.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A denial of service vulnerability due to a deadlock was found in sctp_auto_asconf_init in net/sctp/socket.c in the Linux kernel’s SCTP subsystem. This flaw allows guests with local user privileges to trigger a deadlock and potentially crash the system.",
+    "tags": [],
+    "title": "CVE-2024-0639 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0639"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55084",
+    "published": "2026-07-21T19:17:11.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DHIS2 is a flexible information system for data capture, management, validation, analytics and visualization. A SQL injection vulnerability was identified in the SqlView API endpoint of the DHIS2 application in the `filter` parameter used by the\n`/api/sqlViews/{viewId}/data.json` endpoint. An authenticated user with access to a SqlView can inject arbitrary SQL queries inside the `filter` parameter by abusing an expression executed by PostgreSQL and its output is reflected inside the application error message. This behavior enables attackers to extract arbitrary database content using error-based SQL injection.\n\nAffected versions include: 2.37, 2.38, 2.39, 2.40.x before 2.40.11.1/2.40.12, 2.41.x before 2.41.8.2, 2.42.x before 2.42.5.1, 2.43.0 before 2.43.0.1, 2.44 development branch before PR #24162\nPatched versions include: 2.37-EOS (2026-06-09), 2.38-EOS (2026-06-09), 2.39-EOS (2026-06-09), 2.40.11.1, 2.40.12, 2.41.8.2, 2.42.5.1, 2.43.0.1, 2.44 development branch after PR #24162",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-55084 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55084"
   }
 ]
