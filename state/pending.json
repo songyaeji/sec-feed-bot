@@ -4812,5 +4812,263 @@
     "tags": [],
     "title": "CVE-2026-0770: Langflow Inclusion of Functionality from Untrusted Control Sphere Vulnerability (Langflow Langflow)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0770"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-44962",
+    "published": "2026-05-29T16:16:27.567",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Plesk contains an XPath injection vulnerability in the APS Application Catalog search functionality, where user-supplied input is interpolated into XPath queries without proper sanitization. This allows an authenticated, low-privileged user to execute arbitrary operating system commands on the server, resulting in local privilege escalation.",
+    "tags": [],
+    "title": "CVE-2026-44962 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44962"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-45663",
+    "published": "2026-05-29T16:16:28.347",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.29.1 and earlier, a command injection vulnerability exists in the Docker file upload functionality. When an authenticated user uploads a file to a container, the destinationPath parameter is not properly sanitized and is directly interpolated into a shell command string. By including shell metacharacters such as ; or \", an attacker can escape the intended docker cp command and execute arbitrary OS commands on the Dokploy host.",
+    "tags": [],
+    "title": "CVE-2026-45663 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45663"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-45625",
+    "published": "2026-05-29T18:17:10.267",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 1.19.0, Arcane's huma-based REST API exposes nine endpoints under /api/customize/git-repositories and /api/git-repositories/sync for managing GitOps source repositories and their stored credentials. Eight of those endpoints (list, create, get, update, delete, test, listBranches, browseFiles) never call the checkAdmin(ctx) helper that every other admin-managed resource (container registries, environments, users, API keys, swarm, settings, system, notifications, events) uses, and the huma authentication middleware deliberately enforces only authentication, not the admin role. As a result, any logged-in user with the default user role can list, create, modify, delete, and test git repository configurations. By repointing an existing repository's URL to an attacker-controlled host while omitting the token/sshKey fields (which UpdateRepository only rewrites when explicitly supplied), the attacker causes Arcane to decrypt the legitimate PAT/SSH key on its next /test, /branches, or /files call and present it as HTTP Basic auth (or SSH key auth) to the attacker's host — producing a one-step exfiltration of plaintext Git credentials. This vulnerability is fixed in 1.19.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45625 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45625"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25394",
+    "published": "2026-05-29T16:16:18.837",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the release_id parameter of boards_buttons/update_release.php. The release_id value is concatenated directly into SQL statements without sanitization, allowing attackers to send a crafted GET request with a UNION-based payload to extract sensitive database information including the current user, database name, and DBMS version.",
+    "tags": [],
+    "title": "CVE-2018-25394 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25394"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25395",
+    "published": "2026-05-29T16:16:18.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the feature_id parameter of boards_buttons/update_feature.php. The feature_id value is concatenated directly into SQL statements without sanitization, allowing attackers to send a crafted GET request with a UNION-based payload to extract sensitive database information including the current user, database name, and DBMS version.",
+    "tags": [],
+    "title": "CVE-2018-25395 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25395"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25398",
+    "published": "2026-05-29T16:16:19.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the frm_passwd parameter. Attackers can send POST requests to main.php with crafted SQL payloads to extract sensitive database information including usernames, database names, and version details.",
+    "tags": [],
+    "title": "CVE-2018-25398 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25398"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25399",
+    "published": "2026-05-29T16:16:19.497",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the tick_lat and tick_lng parameters. Attackers can send GET requests to nearby.php with crafted SQL payloads to extract sensitive database information including usernames, database names, and version details.",
+    "tags": [],
+    "title": "CVE-2018-25399 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25399"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25400",
+    "published": "2026-05-29T16:16:19.627",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'id' parameter. Attackers can send GET requests to the ajax/form_post.php endpoint with crafted SQL payloads to extract sensitive database information including schema names and other data.",
+    "tags": [],
+    "title": "CVE-2018-25400 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25400"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25401",
+    "published": "2026-05-29T16:16:19.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the p1 parameter. Attackers can send GET requests to sever_graph.php with crafted SQL payloads to extract sensitive database information including schema names and other data.",
+    "tags": [],
+    "title": "CVE-2018-25401 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25401"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25402",
+    "published": "2026-05-29T16:16:19.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the p1 parameter. Attackers can send GET requests to inc_types_graph.php with crafted SQL payloads to extract sensitive database information including schema names and other data.",
+    "tags": [],
+    "title": "CVE-2018-25402 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25402"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25403",
+    "published": "2026-05-29T16:16:20.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the p1 parameter. Attackers can send GET requests to city_graph.php with crafted SQL payloads to extract sensitive database information including schema names and other data.",
+    "tags": [],
+    "title": "CVE-2018-25403 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25403"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25404",
+    "published": "2026-05-29T16:16:20.137",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Open ISES Project 3.30A contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the ticket_id parameter. Attackers can send GET requests to add_facnote.php with crafted SQL payloads to extract sensitive database information including version details and other data.",
+    "tags": [],
+    "title": "CVE-2018-25404 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25404"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10065",
+    "published": "2026-05-29T16:16:23.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A weakness has been identified in Shibby Tomato 1.28. This vulnerability affects the function get_ups_field of the file tomatodata.cgi. Executing a manipulation of the argument Date can lead to stack-based buffer overflow. It is possible to launch the attack remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-10065 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10065"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10066",
+    "published": "2026-05-29T16:16:23.387",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in Shibby Tomato up to 1.28. This issue affects the function sub_9068 of the file tomatoups.cgi of the component UPS Service. The manipulation leads to stack-based buffer overflow. The attack can be initiated remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-10066 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10066"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10067",
+    "published": "2026-05-29T16:16:23.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in Shibby Tomato 1.28. Impacted is the function sub_90F0 of the file multimon.cgi. The manipulation results in stack-based buffer overflow. The attack can be launched remotely. This project is superseded by FreshTomato. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-10067 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10067"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-32905",
+    "published": "2026-05-29T16:16:25.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.4 contains an authorization bypass vulnerability in the bundled device-pair plugin that allows non-owner authorized chat senders to issue device-pairing bootstrap codes without proper scope validation. Attackers with chat command access can create setup codes to enroll devices with operator/node capabilities, granting persistent credentials until manual removal.",
+    "tags": [],
+    "title": "CVE-2026-32905 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32905"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-35630",
+    "published": "2026-05-29T16:16:26.097",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 contains an authorization bypass vulnerability in QQBot native approval buttons that fails to enforce configured approver identity. Non-approver users can click approval buttons to resolve pending exec or plugin approval requests without proper authorization.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35630 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35630"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-35674",
+    "published": "2026-05-29T16:16:26.377",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 contains a scope bypass vulnerability in the Gateway chat.send route that allows scoped clients to execute privileged commands. Attackers with operator.write scope can deliver commands through inherited external routes to bypass operator.approvals and operator.admin scope requirements, enabling unauthorized plugin, config, MCP, allowlist, and ACP mutations.",
+    "tags": [],
+    "title": "CVE-2026-35674 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35674"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-45662",
+    "published": "2026-05-29T16:16:28.213",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.29.0 and earlier, the deleteRegistry function in Dokploy (packages/server/src/services/registry.ts) executes docker logout ${response.registryUrl} without shell escaping. In the same file, the docker login command correctly uses shEscape() to prevent command injection. This inconsistency creates a command injection vulnerability when deleting a registry with a crafted registryUrl.",
+    "tags": [],
+    "title": "CVE-2026-45662 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45662"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-10105",
+    "published": "2026-05-29T18:16:31.003",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "agno 2.6.5 contains a SQL injection vulnerability in the ClickHouse vector database backend that allows attackers to inject arbitrary SQL expressions by supplying malicious metadata keys and values to the delete_by_metadata() method. Attackers can exploit the unsafe f-string interpolation in clickhousedb.py to delete all rows, target specific rows, or extract information through error-based or blind SQL injection techniques.",
+    "tags": [],
+    "title": "CVE-2026-10105 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10105"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-44697",
+    "published": "2026-05-29T18:17:09.697",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Klever-Go is the Go implementation of the Klever blockchain protocol. Prior to 1.7.17, a remote, unauthenticated denial-of-service vulnerability in Batch.Decompress (data/batch/batch.go) allows any peer that participates in a topic served by MultiDataInterceptor to allocate multi-gigabyte heaps on the receiving node from a sub-50 KiB gossip payload. A single packet is sufficient to OOM-kill a validator with conventional memory provisioning. Fleet-wide application affects chain liveness. This vulnerability is fixed in 1.7.17.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44697 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44697"
   }
 ]
