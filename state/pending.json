@@ -4620,5 +4620,19 @@
     "tags": [],
     "title": "A new extortion cocktail: office printers, small ransoms, and BitLocker",
     "url": "https://securelist.com/new-extortion-scheme-printers-bitlocker/120718/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13142",
+    "published": "2026-07-20T07:16:35.483",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Social Login, Passkeys, Magic Link & Email OTP  WordPress plugin before 1.4.1 does not enforce rate limiting or a working attempt lockout on its passwordless email one-time-password verification, and stores the short numeric codes in plaintext, allowing an unauthenticated attacker who knows a registered email address to brute-force the code and log in as that user, including an administrator, leading to full site takeover.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13142 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13142"
   }
 ]
