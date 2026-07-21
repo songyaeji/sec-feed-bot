@@ -4634,5 +4634,43 @@
     ],
     "title": "CVE-2026-13142 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13142"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-53512",
+    "published": "2026-07-15T18:16:47.420",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Better Auth is an authentication and authorization library for TypeScript. Prior to 1.6.11, the legacy oidcProvider and mcp plugins expose OAuth token endpoints whose refresh_token grant authenticates only possession of the bound refreshToken row and matching client_id, without verifying the confidential client's client_secret, allowing an attacker with a valid refresh_token to mint access tokens and rotated refresh tokens through /api/auth/oauth2/token or /api/auth/mcp/token. The @better-auth/oauth-provider package is not affected. This issue is fixed in version 1.6.11.",
+    "tags": [],
+    "title": "CVE-2026-53512 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53512"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/taiwan-mobile-5g-speed-reductions-han-kuang",
+    "published": "2026-07-21T13:30:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The speed of 5G and 4G networks across much of Taiwan will be temporarily reduced to 1 percent of capacity as the island holds annual civilian and military drills.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Taiwan to slow mobile data during national resilience drills",
+    "url": "https://therecord.media/taiwan-mobile-5g-speed-reductions-han-kuang"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiggFBVV95cUxOMXRPTEJTdWRZdUlvQURJX3A2UmtmdmpJRlh6NS1UZ1NqNk9OVE5uanZ6aG5pUmJhWVFZVnlWMUtCaVpZV190ZG5BdXVCVXktQm5vOFFqc1NrbTFPUV9oMk9iN3pkR1lxTEhJMEd3MUpXQnZ2Z2RIQ3FNbzlsc0hoSFJn",
+    "published": "2026-07-20T18:51:28+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI Erdős 모델을 샌드박스에서 탈출한 후 일시 중지 Unite.AI",
+    "tags": [],
+    "title": "OpenAI Erdős 모델을 샌드박스에서 탈출한 후 일시 중지 - Unite.AI",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMXRPTEJTdWRZdUlvQURJX3A2UmtmdmpJRlh6NS1UZ1NqNk9OVE5uanZ6aG5pUmJhWVFZVnlWMUtCaVpZV190ZG5BdXVCVXktQm5vOFFqc1NrbTFPUV9oMk9iN3pkR1lxTEhJMEd3MUpXQnZ2Z2RIQ3FNbzlsc0hoSFJn?oc=5"
   }
 ]
