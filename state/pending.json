@@ -1767,5 +1767,53 @@
     "tags": [],
     "title": "메가존클라우드, 뉴욕대 EMBA 방문단에 'AI 오케스트레이터' 전략 발표",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207710"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-13439",
+    "published": "2026-07-21T06:16:28.060",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Easy Form Builder by WhiteStudio plugin for WordPress is vulnerable to Unauthenticated Privilege Escalation to Administrator in versions up to, and including, 4.0.11 This is due to the password recovery flow using the publicly-visible session identifier ('sid') as the password reset token stored in wp_emsfb_temp_links, combined with a publicly-accessible nonce refresh endpoint (Emsfb/v1/nonce/refresh) that issues valid WordPress REST nonces to unauthenticated visitors. This makes it possible for unauthenticated attackers to reset the password of any WordPress user — including administrators — by scraping the public sid from a published login form page, submitting a recovery request for any known user email via Emsfb/v1/forms/message/add, and then calling Emsfb/v1/forms/recovery/efb_set_password with the known sid to set an arbitrary new password and gain full administrator access.",
+    "tags": [],
+    "title": "CVE-2026-13439 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13439"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144774&kind=&sub_kind=",
+    "published": "2026-07-21T06:20:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "교통공사 복구비만 505억원영국 최대 사이버범죄 기소 사건으로 기록[보안뉴스 김형근 기자] 2024년 런던교통공사(TfL)를 해킹한 사이버 범죄 조직 스캐터드 스파이더(Scattered Spider) 조직원이 5년 이상의 중형을 선고 받았다. 영국 울위치 형사법원은 해커 조직 핵심 멤버인 탈하 주베이르(20)와 오웬 플라워스(18)에게 각각 징역 5년 6개",
+    "tags": [],
+    "title": "런던 교통 시스템 마비시킨 스캐터드 스파이더 해커 2명, 징역 5년 6개월 선고",
+    "url": "http://www.boannews.com/media/view.asp?idx=144774&kind=&sub_kind="
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144772&kind=&sub_kind=",
+    "published": "2026-07-21T06:14:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "BoB 수료생 포함 국내 5개 연합팀 136명 본선 진출 쾌거8월 7일 미국 라스베이거스서 데프콘 34 본선 돌입[보안뉴스 조재호 기자] 차세대 보안리더 양성 프로그램(BoB) 수료생들이 대거 포진한 국내 5개 연합팀이 미국 라스베이거스에서 열릴 ‘데프콘 34’ 본선 무대에서 세계 정상을 향한 여정에 나섰다.과학기술정보통신부와 한국인터넷진흥원(KISA)은",
+    "tags": [],
+    "title": "K-보안 주역들 라스베이거스로... KISA, 데프콘 34 출정식 개최",
+    "url": "http://www.boannews.com/media/view.asp?idx=144772&kind=&sub_kind="
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207712",
+    "published": "2026-07-21T15:16:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "러시아 정보기관이 유럽과 우크라이나에 설치된 인터넷 연결 보안 카메라를 조직적으로 장악해 군사 정보를 수집하고 있는 것으로 확인됐다. 우크라이나에서는 탈취한 CCTV 영상이 실제 군 장비와 병력을 겨냥한 공격에도 활용된 사례가 확인됐다.네덜란드 민간정보보안국(AIVD)과 군사정보보안국(MIVD)은 7월 10일 공동 사이버보안 권고문을 통해 러시아 정보기관이 현재도 인터넷에 연결된 보안 카메라를 지속적으로 노리고 있다고 밝혔다.정보기관은 러시아 측이 군 수송 차량 이동 경로와 우크라이나로 향하는 무기 수송, 군 병력 배치 상황 등을",
+    "tags": [],
+    "title": "러시아 정보기관, 유럽 CCTV까지 침투…군 수송로·우크라 병력 실시간 감시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207712"
   }
 ]
