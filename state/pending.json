@@ -6537,5 +6537,81 @@
     ],
     "title": "26.5월말 국내은행의 원화대출 연체율 현황(잠정)",
     "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=219296&menuNo=200218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-63764",
+    "published": "2026-07-21T21:16:53.350",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "lmdeploy's OpenAI-compatible API server contains a server-side request forgery vulnerability that allows unauthenticated attackers to access internal services and cloud metadata endpoints by supplying a crafted image_url that redirects to internal targets. Attackers can send a POST request to the chat completions endpoint with an image_url pointing to an attacker-controlled server that responds with an HTTP 302 redirect to internal addresses such as loopback or instance-metadata endpoints, bypassing the initial URL safety check because redirects are followed without re-validating each hop through the safety guard.",
+    "tags": [],
+    "title": "CVE-2026-63764 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63764"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-65057",
+    "published": "2026-07-21T21:16:54.427",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Keep (commit 91c75e0) contains a server-side request forgery vulnerability that allows unauthenticated attackers to make the backend issue arbitrary HTTP requests by supplying attacker-controlled host values to the unprotected healthcheck endpoint. Attackers can send a crafted JSON payload with a malicious host parameter to cause the backend to issue outbound requests to internal services or cloud metadata endpoints, enabling theft of cloud credentials and internal network reconnaissance.",
+    "tags": [],
+    "title": "CVE-2026-65057 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65057"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-47237",
+    "published": "2026-07-21T21:16:50.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kubeflow Community Distribution helps users to install Kubeflow Platform in popular Kubernetes clusters. Prior to version 26.03-rc.1, a Kubeflow setup based on the official manifests or most other packaged Kubeflow distributions is vulnerable to authorization token stealing from any user of the Kubeflow UI or APIs, such as the Dashboard, Pipelines API, or Notebooks. With this token, the attacker can take over the user's account and the data that is processed by that user. The attacker needs a valid user with the ``kubeflow-edit`` role / Contributor role in a random Kubeflow namespace to perform this attack. This is given if _Automatic Profile Creation_ is enabled. Version 26.03-rc.1 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-47237 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47237"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-47688",
+    "published": "2026-07-21T21:16:50.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FOG is a free open-source cloning/imaging/rescue suite/inventory management system. Prior to versions 1.5.10.1832 and 1.6.0-beta.2313, the `clearAES` and `clearPMTasks` methods in `FOGPage` can be invoked by an unauthenticated attacker via a single HTTP GET request through the public `client` node endpoint. This allows remote wiping of host AES encryption credentials and deletion of all power management scheduled tasks, with no login, session, or CSRF token required. Versions 1.5.10.1832 and 1.6.0-beta.2313 fix the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47688 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47688"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-64881",
+    "published": "2026-07-21T21:16:53.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The audit file upload handler does not sanitize filenames, allowing shell metacharacters to flow into system command execution. This input validation failure enables command injection when chained with a related vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-64881 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64881"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-65056",
+    "published": "2026-07-21T21:16:54.287",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "mcp-webresearch 0.1.7 contains a server-side request forgery vulnerability that allows attackers to access internal network services by supplying loopback, link-local, or cloud metadata addresses to the visit_page tool, which only validates the URL protocol without filtering private or reserved IP ranges. Attackers can steer the LLM-controlled URL argument through prompt injection to navigate the server's Playwright browser to internal endpoints such as cloud instance metadata services, causing the server to return sensitive internal page content including credentials into the model context.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-65056 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65056"
   }
 ]
