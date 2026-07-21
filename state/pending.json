@@ -5870,5 +5870,127 @@
     ],
     "title": "CVE-2026-42941 (CVSS 8.3)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42941"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-47413",
+    "published": "2026-07-21T18:17:00.133",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have aprivilege escalation / cross-tenant member injection. The `POST /workspaces/{workspace_id}/members` endpoint is gated only by `require_workspace_member(workspace_id)` (default `min_role=\"member\"`) and forwards the request body's `user_id` and `role` straight into `MemberService.add(workspace_id, user_id, role)`, which has no caller-permission check. A user with the lowest workspace privilege can add any user (including a new attacker-controlled second account, or an existing account they want to grief) as owner of the workspace. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47413 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47413"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-47416",
+    "published": "2026-07-21T18:17:00.563",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 are vulnerable to vertical privilege escalation. The `PATCH /workspaces/{workspace_id}/members/{user_id}` endpoint is gated by `require_workspace_member(workspace_id)`, which defaults to `min_role=\"member\"` and is never overridden by the route. The handler then calls `MemberService.update_role(workspace_id, user_id, body.role)` which sets the target member's role to whatever the request body specifies, with no check that the caller has owner-or-admin privilege, no check that the new role is not higher than the caller's own, and no check that the caller is not silently promoting themselves. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47416 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47416"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-21575",
+    "published": "2026-07-21T18:16:57.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "This High severity RCE (Remote Code Execution) vulnerability was introduced in version 3.4.11 of Sourcetree for Mac and Sourcetree for Windows. \n\t\n\tThis RCE (Remote Code Execution) vulnerability, with a CVSS Score of 7.1, allows an authenticated attacker to execute arbitrary code which has high impact to confidentiality, high impact to integrity, high impact to availability, and requires user interaction. \n\t\n\tAtlassian recommends that Sourcetree for Mac and Sourcetree for Windows customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:\n\t\t\n\t\t* Sourcetree for Mac and Sourcetree for Windows 3.4: Upgrade to a release greater than or equal to 3.4.13\n\t\t\n\t\t\n\t\n\tSee the release notes (https://www.sourcetreeapp.com/download-archives). You can download the latest version of Sourcetree for Mac and Sourcetree for Windows from the download center (https://www.sourcetreeapp.com/download-archives). \n\t\n\tThis vulnerability was reported via our Bug Bounty program.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-21575 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21575"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-44880",
+    "published": "2026-07-21T18:16:58.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A buffer overflow vulnerability was found in the command line interface of AOS-CX. Successful exploitation of these vulnerabilities could allow an remote low-privileged user to execute arbitrary code as a privileged user on the underlying operating system.",
+    "tags": [],
+    "title": "CVE-2026-44880 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44880"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47412",
+    "published": "2026-07-21T18:16:59.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an authorization bypass enabling destructive action. The `DELETE /workspaces/{workspace_id}` endpoint is gated only by `require_workspace_member(workspace_id)` (default `min_role=\"member\"`). Any member of the workspace can issue a single DELETE to wipe the entire workspace, including every project, issue, comment, agent, label, and member record (cascading via the foreign-key relationships). There is no owner-role gate, no confirmation token, no soft-delete window, no recovery path. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47412 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47412"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-47415",
+    "published": "2026-07-21T18:17:00.423",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an Insecure Direct Object Reference. The issue CRUD endpoints (`GET / PATCH / DELETE /workspaces/{workspace_id}/issues/{issue_id}`) gate access on `require_workspace_member(workspace_id)` only, then resolve `issue_id` through `IssueService.get(issue_id)` which is a primary-key lookup with no workspace constraint. A user who is a member of any workspace `W1` can read, modify, or delete issues that belong to a different workspace `W2`. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47415 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47415"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47417",
+    "published": "2026-07-21T18:17:00.707",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an Insecure Direct Object Reference. The comment endpoints (`POST /workspaces/{workspace_id}/issues/{issue_id}/comments` and `GET .../comments`) gate access on `require_workspace_member(workspace_id)` only, then call `CommentService.create(issue_id=issue_id, ...)` and `CommentService.list_for_issue(issue_id)` without verifying that `issue_id` belongs to `workspace_id`. A user who is a member of any workspace `W1` can read every comment on, and post new comments to, any issue in any other workspace `W2`. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47417 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47417"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47418",
+    "published": "2026-07-21T18:17:00.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an Insecure Direct Object Reference. The project CRUD endpoints (`GET / PATCH / DELETE /workspaces/{workspace_id}/projects/{project_id}` and `GET .../{project_id}/stats`) gate access on `require_workspace_member(workspace_id)` only, then resolve `project_id` through `ProjectService.get(project_id)` / `update(project_id, ...)` / `delete(project_id)` / `get_stats(project_id)`. None of these calls thread `workspace_id` through to constrain the lookup. A user who is a member of any workspace `W1` can read, modify, delete, or read stats for projects that belong to a different workspace `W2`. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47418 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47418"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-47419",
+    "published": "2026-07-21T18:17:00.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI Platform is the platform layer for the PraisonAI multi-agent teams system. Versions prior to 0.1.4 have an* Insecure Direct Object Reference. The agent CRUD endpoints (`GET / PATCH / DELETE /workspaces/{workspace_id}/agents/{agent_id}`) gate access on `require_workspace_member(workspace_id)` only, then resolve `agent_id` through `AgentService.get(agent_id)` which is a primary-key lookup with no workspace constraint. A user who is a member of any workspace `W1` can read, modify, or delete agents that belong to a different workspace `W2` by guessing or harvesting an agent UUID and calling `…/workspaces/W1/agents/<W2-agent-id>`. PraisonAI Platform version 0.1.4 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-47419 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47419"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-47425",
+    "published": "2026-07-21T18:17:01.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Rattler is a library that provides common functionality used within the conda ecosystem. Prior to version 0.43.2, `EntryPoint::FromStr` in `rattler_conda_types` performs only `.trim()` on the `command` field before the linker joins it onto the install prefix and writes an executable Python script. A malicious `noarch:python` package can ship an `info/link.json` with an entry-point name containing `..`, `/`, `\\`, or an absolute path; the resulting file is written outside the prefix (or clobbers an existing in-prefix entry-point such as `bin/pip`) with mode `0o775` on Unix and a copied launcher `.exe` on Windows. This affects the default install path of `pixi install`, `mamba install` via py-rattler, `rattler-build`, and any other consumer of the `rattler` install crate; no flag or post-link-script opt-in is involved. Version 0.43.2 contains a fix for the issue.",
+    "tags": [],
+    "title": "CVE-2026-47425 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47425"
   }
 ]
