@@ -2310,5 +2310,41 @@
     ],
     "title": "한국 찾는 아시아 관광객 앱 설치 없이 QR 스캔…BC카드·금융결제원 손잡았다 - thefairnews.co.kr",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1BczFkNVRSTWh3ajFLUFlzXzhieC1kV0E5VklHLTc4NWdmMmI3NG4ydkZaNmNUc0ZFZUdWLXJCOTU0Nks0aFdfTGZrMWE1YWE0YmRFbWMwUmp0czF4cFd2T3FnQzdOT0JlNTJaUy1OZmlkOXcw0gF0QVVfeXFMTUFzMWQ1VFJNaHdqMUtQWXNfOGJ4LWRXQTlWSUctNzg1Z2YyYjc0bjJ2Rlo2Y1RzRkVlR1YtckI5NTQ2SzRoV19MZmsxYTVhYTRiZEVtYzBSanRzMXhwV3ZPcWdDN05PQmU1MlpTLU5maWQ5dzA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-45288",
+    "published": "2026-05-28T21:16:31.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Marten is a .NET Transactional Document DB and Event Store on PostgreSQL. Prior to 8.36.1, Marten's full-text search APIs interpolated the user-supplied regConfig parameter directly into the generated SQL without parameterization or validation, making every code path that exposes regConfig to untrusted input a SQL injection sink. This vulnerability is fixed in 8.36.1.",
+    "tags": [],
+    "title": "CVE-2026-45288 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45288"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207719",
+    "published": "2026-07-21T18:01:07+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인도 최대 원자력발전소인 쿠단쿨람 원자력발전소(Kudankulam Nuclear Power Plant) 건설 협력사에서 유출된 대규모 자료에 국내 기업과 기관 관련 파일 2,432건이 포함된 것으로 확인됐다.다크웹 위협 인텔리전스 기업 스텔스몰(StealthMole)이 해킹 조직 ‘월드리크스(World Leaks)’가 공개한 릴라이언스 그룹 관련 파일 85만8,253건을 분석한 결과다. 분석 자료에서는 LG전자, LG, 두산, 현대, 한화, 대우, 포스코, KINS 등의 명칭이 포함된 파일이 발견됐다.특히 단순한 회사 소개나 연락처",
+    "tags": [],
+    "title": "인도 최대 원전 협력사 해킹, 한국 기업 자료도 2,432건 노출…공급망 타고 번진 정보유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207719"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-manual-fix-for-wsus-sync-delays-and-timeouts/",
+    "published": "2026-07-21T09:05:50+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Microsoft has shared manual mitigations to help IT administrators fix Windows Server Update Services (WSUS) servers affected by a known issue that causes Windows Update scans to fail or time out. [...]",
+    "tags": [],
+    "title": "Microsoft shares manual fix for WSUS sync delays and timeouts",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-manual-fix-for-wsus-sync-delays-and-timeouts/"
   }
 ]
