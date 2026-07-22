@@ -2575,5 +2575,422 @@
     "tags": [],
     "title": "개인정보보호위원회 전체회의 - MSN",
     "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxPTE1IOUI1ZW1QcXRySnNKclFnZHlxdXVEZHNQclpoTHRFemRQQjNFakRmXzh5bnVKa2t4MGxWRGI3LXZ6d2U2bkw1TU9KN3ZRcUtfY1RMdkVDUFNpUzdhSlE2Wjh4bkQ4dVBYUmpBSHBraFFFakFLamZGOU1xaTVTdzZ6VDM5WGM1dkU5bUFqMzVsX0ZCQ3VzMVhqbklIbG5LMy1rRm5fNDBkUmZXdGVIRVZrQ3RtczJpbHl2Zllidkx6TGRVWUVka3A1d29OdHp3U2xyaFltNFQ1dlhyS3VyWEEwdXFnbmVzaWFHWUozYkFkeHg3WG1icEEwbUZxdVRNeGNBN2t4NU50dnpqbzBoYmROcnlRYVlqVUtLYV94Ymh6R3ZvRXVITjM0Z0hWVjVVRE5sM3R4Sk1iNnFoeTMwcXlPdnE5Q3k0NTJtcm9pUHJKdGVpM19aYXRWV0VkdWRmS2VmcGJhTkl0ZWpsVEs5amZKS3lDQmlXN0liT0FQNkdUVUVOX180eHF1Y3FUTHlSMFE?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-45628",
+    "published": "2026-05-29T18:17:10.807",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.29.2 and earlier, Dokploy constructs shell commands using JavaScript template literals and executes them via child_process.exec() (which runs through /bin/sh -c). User-supplied branch names, repository URLs, and Docker credentials are interpolated directly into these commands without escaping. This requires an authenticated user with application create/edit privileges.",
+    "tags": [],
+    "title": "CVE-2026-45628 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45628"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-45629",
+    "published": "2026-05-29T18:17:10.953",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.28.8 and earlier, authenticated OS command injection in the /listen-deployment WebSocket endpoint allows any organization member to execute arbitrary system commands on remote servers managed by Dokploy, leading to full server compromise.",
+    "tags": [],
+    "title": "CVE-2026-45629 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45629"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-45630",
+    "published": "2026-05-29T18:17:11.103",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.28.8 and earlier, authenticated OS command injection in the application.updateTraefikConfig tRPC endpoint allows admin/owner users to execute arbitrary system commands on remote servers via unsanitized echo shell interpolation.",
+    "tags": [],
+    "title": "CVE-2026-45630 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45630"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-45631",
+    "published": "2026-05-29T18:17:11.243",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.27.0 to before 0.29.3, a hardcoded BETTER_AUTH_SECRET fallback (\"better-auth-secret-123456789\") lets an unauthenticated attacker forge email verification JWTs, trigger auto-sign-in as admin, and execute commands on the host via the built-in SSH terminal. This vulnerability is fixed in 0.29.3.",
+    "tags": [],
+    "title": "CVE-2026-45631 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45631"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-45632",
+    "published": "2026-05-29T18:17:11.373",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.26.7 and earlier, the schedule router does not enforce organization/role checks. As a result, any authenticated user can create, update, run, or delete schedules belonging to other organizations if they know the scheduleId/serverId. Schedule types server and dokploy-server write and execute scripts on the host or remote servers, enabling RCE on the Dokploy host or a target server.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45632 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45632"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-45633",
+    "published": "2026-05-29T18:17:11.510",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.26.6 and earlier, Dokploy contains a command injection vulnerability in the /docker-container-logs WebSocket endpoint. The tail and since parameters are not validated and are directly concatenated into shell commands, allowing authenticated users to execute arbitrary commands with root privileges.",
+    "tags": [],
+    "title": "CVE-2026-45633 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45633"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-45661",
+    "published": "2026-05-29T18:17:11.780",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.26.5 and earlier, a critical path traversal vulnerability exists in Dokploy v0.26.5 that allows authenticated users to write arbitrary files to the filesystem during application deployment. When combined with Dokploy's remote server deployment feature, this vulnerability enables arbitrary file write to remote server filesystems, automatic remote code execution via cron jobs, complete server compromise, data exfiltration without user interaction, and persistent backdoor installation. This vulnerability bypasses all container isolation on remote server deployments.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45661 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45661"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-5386",
+    "published": "2026-05-29T18:17:12.867",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The affected KMW CCTV Security Cameras are vulnerable to a critical unauthenticated password reset. This flaw allows an attacker to remotely reset the administrator password to a known value without authentication, granting full access to the camera feeds and settings.",
+    "tags": [],
+    "title": "CVE-2026-5386 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5386"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44649",
+    "published": "2026-05-29T19:16:24.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SillyTavern is a locally installed user interface that allows users to interact with text generation large language models, image generation engines, and text-to-speech voice models. Prior to 1.18.0, SillyTavern accepts Remote-User (Authelia) and X-Authentik-Username (Authentik) HTTP headers to automatically log in users when SSO is configured. There is no validation that these headers originate from a trusted reverse proxy. Any network client that can reach the SillyTavern port directly can inject these headers and authenticate as any user, including administrators, without a password. This vulnerability is exploitable only when sso.autheliaAuth: true or sso.authentikAuth: true is set in config.yaml (both default to false). This vulnerability is fixed in 1.18.0.",
+    "tags": [],
+    "title": "CVE-2026-44649 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44649"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44650",
+    "published": "2026-05-29T19:16:24.857",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SillyTavern is a locally installed user interface that allows users to interact with text generation large language models, image generation engines, and text-to-speech voice models. Prior to 1.18.0, POST /api/extensions/delete endpoint accepts extensionName: \".\" which bypasses sanitize-filename validation, causing the entire user extensions directory to be recursively deleted. No authentication is required in the default configuration. This vulnerability is fixed in 1.18.0.",
+    "tags": [],
+    "title": "CVE-2026-44650 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44650"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-47744",
+    "published": "2026-05-29T19:16:26.037",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Shopper is a Headless e-commerce Admin Panel. Prior to 2.8.0, two distinct authorization defects in the team settings allowed any authenticated panel user to take over the RBAC system. Settings/Team/Index had no mount() authorization. Any authenticated user could load the page and use its public actions to create new roles and delete other users, including administrators. Settings/Team/RolePermission gated its write actions on the read-only view_users permission. Any user holding view_users could grant themselves or any other user arbitrary permissions, including manage_users and edit_orders, effectively escalating to full panel administrator from a read-only account. Combined, these two defects allow a low-privilege authenticated user to obtain administrator privileges and remove the legitimate administrators from the panel. This vulnerability is fixed in 2.8.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47744 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47744"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-9051",
+    "published": "2026-05-29T19:16:28.800",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "There is an authentication bypass vulnerability in the NI SystemLink Enterprise Dashboard application that may allow an unauthenticated remote attacker to bypass authentication controls leading to privilege escalation or information disclosure.  Successful exploitation requires an attacker to send a specially crafted HTTP request.  This vulnerability affects NI SystemLink Enterprise 2026-04 and prior versions.",
+    "tags": [],
+    "title": "CVE-2026-9051 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9051"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-45372",
+    "published": "2026-05-29T20:16:26.473",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to 0.44.0, when cpp-httplib's server parses an incoming request, it applies percent-decoding to every header value except Location and Referer. The validity check (is_field_value) is run before decoding, so encoded %0D%0A passes the check and is then expanded to a literal \\r\\n byte pair inside the stored header value. This vulnerability is fixed in 0.44.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45372 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45372"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-45697",
+    "published": "2026-05-29T20:16:27.393",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Formie is a Craft CMS plugin for creating forms. Prior to 2.2.20 and 3.1.24, unauthenticated users could submit crafted values into Hidden fields (with Default value → Custom) that were evaluated as Twig during submission handling, which could lead to serious compromise of the Craft site (depending on template/sandbox behavior). This vulnerability is fixed in 2.2.20 and 3.1.24.",
+    "tags": [],
+    "title": "CVE-2026-45697 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45697"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2018-25412",
+    "published": "2026-05-30T16:17:01.990",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Delta Sql 1.8.2 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by sending POST requests to docs_upload.php with crafted multipart form data. Attackers can upload PHP files with arbitrary content to the upload directory and execute them on the server for remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2018-25412 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25412"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47125",
+    "published": "2026-05-29T18:17:12.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Arcane is an interface for managing Docker containers, images, networks, and volumes. Prior to 1.19.2, the PUT /api/environments/{id}/templates/variables endpoint, which writes the system-wide .env.global file used for variable substitution in every project's compose file, is missing an admin authorization check. Any authenticated non-admin user can call this endpoint with their bearer token or API key and overwrite the global environment variables that are merged into every project deployment. By overriding values like REGISTRY, IMAGE, DATABASE_URL, or SECRET_KEY that other users reference via ${VAR} in compose files, an attacker can redirect image pulls to attacker-controlled registries (supply-chain RCE on the Docker host), exfiltrate database credentials, or disrupt all projects. This vulnerability is fixed in 1.19.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-47125 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47125"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-5768",
+    "published": "2026-05-29T18:17:12.997",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Frontier X2 device allows unauthenticated BLE read/write access to critical GATT characteristics without enforcing pairing authentication or authorization. This allows attackers within BLE range to perform unauthorized control of device functions, including starting/stopping activities, triggering vibrations, causing denial-of-service conditions, and fuzzing characteristic values to induce unexpected behavior. Additionally, the Frontier X mobile application lacks proper BLE device authentication, allowing attackers to impersonate a legitimate Frontier X2 device and connect to the application. By cloning BLE advertisements and exposing expected GATT characteristics, attackers can manipulate activity states and inject fabricated health telemetry such as breathing rate, heart rate, strain, and other health-related data into the mobile application.",
+    "tags": [],
+    "title": "CVE-2026-5768 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5768"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-46372",
+    "published": "2026-05-29T19:16:25.483",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SillyTavern is a locally installed user interface that allows users to interact with text generation large language models, image generation engines, and text-to-speech voice models. Prior to 1.18.0, SillyTavern exposes /api/search/searxng, which accepts attacker-controlled baseUrl and uses it directly to build outbound server-side fetches. An authenticated low-privilege user can point baseUrl at an internal or loopback HTTP service and receive the /search response body. This vulnerability is fixed in 1.18.0.",
+    "tags": [],
+    "title": "CVE-2026-46372 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46372"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47740",
+    "published": "2026-05-29T19:16:25.620",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Shopper is a Headless e-commerce Admin Panel. Prior to 2.8.0, Multiple Filament actions on the admin Order detail and Order shipments table were callable by an authenticated low-privilege user without the permission required to mutate orders. The order detail actions cancel, mark paid, mark complete, capture payment, archive, and start processing were callable with the read-only read_orders permission and did not require edit_orders. capturePayment could trigger an actual PSP capture (real funds movement). The order shipments table actions mark delivered and edit tracking were callable with the read-only browse_orders permission. A user with read access to orders could therefore alter the lifecycle of every order in the panel and trigger real-world payment captures. This vulnerability is fixed in 2.8.0.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-47740 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47740"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-49367",
+    "published": "2026-05-29T19:16:26.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains IntelliJ IDEA before 2026.1.1 command execution was possible via the guest user account",
+    "tags": [],
+    "title": "CVE-2026-49367 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49367"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-49368",
+    "published": "2026-05-29T19:16:26.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains YouTrack before 2026.1.13162 stored XSS in project notification templates was possible",
+    "tags": [],
+    "title": "CVE-2026-49368 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49368"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-4387",
+    "published": "2026-05-29T20:16:30.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "StrongDM Desktop Application before 23.74.0 (Desktop Client before 53.77.0) on Microsoft Windows stores authentication state, including a JSON Web Token and asymmetric key material, in cleartext in a per-user state file located at C:\\Users\\<username>\\.sdm\\state.kv. The file is protected only by default user-level NTFS permissions.\n\n\n\nExploitation requires local read access to the affected user's profile directory and additional deployment and execution conditions on the target host.\n\n\n\nThe condition was reported through coordinated disclosure by Hope Walker (SpecterOps).",
+    "tags": [],
+    "title": "CVE-2026-4387 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4387"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-7465",
+    "published": "2026-05-30T10:16:23.860",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Spectra Gutenberg Blocks – Website Builder for the Block Editor plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 2.19.25. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server. Exploitation requires a two-block payload embedded in post content: the first block registers a fake uagb/-prefixed block type with an attacker-specified render_callback, and the second block of the same fake type triggers invocation of that callback via call_user_func() during sequential block rendering in the same page request.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-7465 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7465"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10119",
+    "published": "2026-05-30T14:16:24.513",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in TRENDnet TEW-432BRP 3.10B20. Impacted is the function formSetMACFilter of the file /goform/formSetMACFilter. The manipulation of the argument filter_name leads to stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-10119 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10119"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10120",
+    "published": "2026-05-30T15:16:15.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in TRENDnet TEW-432BRP 3.10B20. The affected element is the function formSetFirewallRule of the file /goform/formSetFirewallRule. The manipulation of the argument firewall_name results in stack-based buffer overflow. The attack can be executed remotely. The exploit is now public and may be used. The vendor explains: \"This product has been EOL for 15 years (since 2009). As the item has been EOL for such a long time, we are not able to replicate or fix any vulnerabilities.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-10120 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10120"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25405",
+    "published": "2026-05-30T16:16:55.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "eNdonesia Portal 8.7 contains multiple SQL injection vulnerabilities that allow unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through parameters in mod.php. Attackers can inject SQL through the artid, cid, did, contid, and aboutid parameters to extract sensitive database information including usernames, database names, and version details.",
+    "tags": [],
+    "title": "CVE-2018-25405 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25405"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25406",
+    "published": "2026-05-30T16:17:00.303",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "eNdonesia Portal 8.7 contains multiple SQL injection vulnerabilities that allow unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through parameters in mod.php. Attackers can inject SQL through the artid, cid, did, contid, and aboutid parameters across publisher, diskusi, galeri, content, and about modules to extract database credentials, usernames, and version information.",
+    "tags": [],
+    "title": "CVE-2018-25406 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25406"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2018-25409",
+    "published": "2026-05-30T16:17:01.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SIM-PKH 2.4.1 contains an arbitrary file upload vulnerability that allows authenticated attackers to upload malicious files by submitting PHP code through the fupload parameter. Attackers can upload PHP files via the aksi_pengurus.php endpoint with module=pengurus and act=update parameters, which are stored in the foto directory and executed as web scripts.",
+    "tags": [],
+    "title": "CVE-2018-25409 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25409"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25411",
+    "published": "2026-05-30T16:17:01.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MGB OpenSource Guestbook 0.7.0.2 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'id' parameter. Attackers can send GET requests to email.php with crafted SQL payloads in the 'id' parameter to extract sensitive database information including table and column names.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2018-25411 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25411"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/trojanized-newtonsoftjson-fork-hides.html",
+    "published": "2026-07-22T06:00:06+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have discovered a NuGet typosquat that's unlike the typical information-stealing malware distributed via package registries: usual info-stealers: it's designed to rig live game results on Digitain. The package, named \"Newtonsoftt.Json.Net,\" masquerades as the Newtonsoft.Json library and is a trojanized fork. Seven versions of the package have been published to the",
+    "tags": [],
+    "title": "Trojanized Newtonsoft.Json Fork Hides Game-Rigging Code in a Working Library",
+    "url": "https://thehackernews.com/2026/07/trojanized-newtonsoftjson-fork-hides.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/microsoft-azure-devops-mcp-flaw-lets.html",
+    "published": "2026-07-22T04:57:52+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A single invisible comment in an Azure DevOps pull request can turn a reviewer's own AI coding agent against them, driving it into projects the attacker has no rights to reach and quietly leaking what it finds. The flaw is in Microsoft's official Azure DevOps MCP server, and it works because one of its tools returns pull request descriptions without a prompt-injection guardrail the company had",
+    "tags": [],
+    "title": "Microsoft Azure DevOps MCP Flaw Lets Hidden PR Comments Hijack AI Review Agents",
+    "url": "https://thehackernews.com/2026/07/microsoft-azure-devops-mcp-flaw-lets.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html",
+    "published": "2026-07-22T04:18:33+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "OpenAI on Tuesday said a combination of its artificial intelligence (AI) models, including GPT-5.6 Sol and an \"even more capable pre-release model,\" was behind the security incident that targeted Hugging Face's production infrastructure last week. The AI company said the models were operating with \"reduced cyber refusals for evaluation purposes\" that might otherwise limit their ability to",
+    "tags": [],
+    "title": "OpenAI Says Its AI Models Escaped Sandbox, Targeted Hugging Face to Cheat Benchmark",
+    "url": "https://thehackernews.com/2026/07/openai-says-its-own-ai-models-escaped.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE0yNEdpbUpPeC1TYnBXU0pSSDBpZVQycjk1ekY2SzRGQ2FYeXZrZHdfdnk4Vl9xRUNCZ3JaQzRnV05CZElxUEJIU1J5cmdsMEVUZ0JVMWhlMDhxS1pSbldNaklMOWNTbEl5cFZKZHQ4NA",
+    "published": "2026-07-22T06:03:18+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "[인사] 금융결제원 임원 선임 조세일보",
+    "tags": [
+      "금융"
+    ],
+    "title": "[인사] 금융결제원 임원 선임 - 조세일보",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0yNEdpbUpPeC1TYnBXU0pSSDBpZVQycjk1ekY2SzRGQ2FYeXZrZHdfdnk4Vl9xRUNCZ3JaQzRnV05CZElxUEJIU1J5cmdsMEVUZ0JVMWhlMDhxS1pSbldNaklMOWNTbEl5cFZKZHQ4NA?oc=5"
   }
 ]
