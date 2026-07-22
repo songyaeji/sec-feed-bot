@@ -4547,5 +4547,29 @@
     "tags": [],
     "title": "방미통위 \"청소년 안전한 SNS 이용 위해 관계 부처와 협력\"",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8zWGN3a0t5M1hZUW9UTllvQWZlMzNwZEg5cXprTGFySm9abWhDN0wzaEhpT3paemRJRDYtQWhKVE1ES0VrR0ZiMEs5M2IxTGFlWjZfX25pXzhnbXlHUkg4YTk4a0FCQzk1TV9r?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-2395",
+    "published": "2026-07-22T15:16:54.193",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Xpoda Türkiye Informatics Technology Inc. No Code Platform allows SQL Injection.\n\nThis issue affects No Code Platform: from 4.3.1.0 through 20260722. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-2395 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2395"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-13321",
+    "published": "2026-07-22T15:16:52.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The BIND resolver accepts validly-signed NSEC records where the \"Next Domain Name\" field points outside the signer's zone.\nThis issue affects BIND 9 versions 9.11.0 through 9.18.50, 9.20.0 through 9.20.24, 9.21.0 through 9.21.23, 9.11.3-S1 through 9.18.50-S1, and 9.20.9-S1 through 9.20.24-S1.",
+    "tags": [],
+    "title": "CVE-2026-13321 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13321"
   }
 ]
