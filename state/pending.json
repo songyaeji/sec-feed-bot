@@ -2992,5 +2992,29 @@
     ],
     "title": "[인사] 금융결제원 임원 선임 - 조세일보",
     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0yNEdpbUpPeC1TYnBXU0pSSDBpZVQycjk1ekY2SzRGQ2FYeXZrZHdfdnk4Vl9xRUNCZ3JaQzRnV05CZElxUEJIU1J5cmdsMEVUZ0JVMWhlMDhxS1pSbldNaklMOWNTbEl5cFZKZHQ4NA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-28369",
+    "published": "2026-03-27T17:16:28.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Undertow. When Undertow receives an HTTP request where the first header line starts with one or more spaces, it incorrectly processes the request by stripping these leading spaces. This behavior, which violates HTTP standards, can be exploited by a remote attacker to perform request smuggling. Request smuggling allows an attacker to bypass security mechanisms, access restricted information, or manipulate web caches, potentially leading to unauthorized actions or data exposure.",
+    "tags": [],
+    "title": "CVE-2026-28369 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28369"
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144793&kind=&sub_kind=",
+    "published": "2026-07-22T06:20:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "경기 안산 디지털전환허브에 실제 스마트 공장 라인 연동 데모 센터 구축미쓰비시 오토메이션 인프라 확장해 설비 자산 가시화 및 사이버 위협 탐지 시연[보안뉴스 조재호 기자] 노조미 네트웍스 코리아(Nozomi Networks Korea)가 경기도 안산 경기테크노파크 디지털전환허브에 대규모 OT 보안 데모 센터를 열었다고 22일 밝혔다.이 데모 센터는 실제 작",
+    "tags": [],
+    "title": "OT 가시성 눈으로 확인하자... 노조미 네트웍스, OT 보안 데모 센터 오픈",
+    "url": "http://www.boannews.com/media/view.asp?idx=144793&kind=&sub_kind="
   }
 ]
