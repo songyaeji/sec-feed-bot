@@ -10,6 +10,7 @@ Oracle E-Business Suite의 권한 관리 취약점으로 미인증 공격자가 
 ## 타임라인
 
 - 2026-07-15 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-46817) — CVE-2026-46817 공개, 미인증 공격자의 Payments 타협 가능
+- 2026-07-20 [BleepingComputer](https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/) — Estée Lauder, 취약점을 악용한 HR 시스템 침해 고객통지
 
 ## 관련
 

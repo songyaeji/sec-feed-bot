@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-21 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=207721) — 국립외교원 온라인교육시스템 10개월간 해킹, 외교관·재외공관 인력 정보 최대 1만건 노출
+- 2026-07-22 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=207739) — 침해 기술적 원인 규명: 국내 서버 보안솔루션 제로데이 취약점 악용 (5.0.16~5.0.18 버전), 다른 정부기관도 영향 조사 필요
 
 ## 관련

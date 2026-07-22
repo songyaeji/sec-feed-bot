@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-16 [BleepingComputer](https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/) — Coca-Cola Fairlife 자회사 랜섬웨어 공격, 미국 전역 생산 중단
+- 2026-07-21 [BleepingComputer](https://www.bleepingcomputer.com/news/security/anubis-ransomware-claims-coca-cola-fairlife-attack-threatens-data-leak/) — Anubis 랜섬웨어 갱단이 공격 책임 주장, 탈취 데이터 공개 협박
 
 ## 관련

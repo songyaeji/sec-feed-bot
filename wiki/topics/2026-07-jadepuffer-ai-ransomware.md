@@ -12,6 +12,8 @@ cves: []
 ## 타임라인
 
 - 2026-07-07 [보안뉴스](http://www.boannews.com/media/view.asp?idx=144531) — 보안 기업 Sysdig, JadePuffer AI 에이전트 랜섬웨어 첫 포착
+- 2026-07-20 [BleepingComputer](https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/) — JadePuffer, EncForge 커스텀 랜섬웨어로 AI 모델·학습데이터·벡터DB 목표
+- 2026-07-21 [The Hacker News](https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html) — Langflow 서버 대상 두 번째 공격 확인, JadePuffer → EncForge 배포
 
 ## 관련
 
