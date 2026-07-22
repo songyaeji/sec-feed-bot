@@ -36,8 +36,24 @@ def _strip_source_suffix(title: str, news_source: str) -> str:
         return title
     head, sep, tail = title.rpartition(" - ")
     if sep and head and tail and (tail == news_source or news_source.startswith(tail)):
-        return head.rstrip()
+        return _strip_section_suffix(head.rstrip())
     return title
+
+
+def _strip_section_suffix(title: str) -> str:
+    """제목 끝 사이트 섹션 경로 제거 — 매체명 뒤에 숨어 있다가 노출되는 꼬리.
+
+    정책브리핑 등 일부 매체는 원제에 섹션 경로를 붙인다
+    ("… - 전체 | 카드/한컷 | 멀티미디어"). 섹션 경로는 항상 " | " 구분자를
+    포함하므로 이를 신호로 쓴다 — 실제 기사 제목이 " - a | b" 꼴로 끝나는
+    경우는 없어 오탐 위험이 낮다. 다단 꼬리 대비 반복 제거.
+    """
+    while True:
+        head, sep, tail = title.rpartition(" - ")
+        if sep and head and " | " in tail:
+            title = head.rstrip()
+        else:
+            return title
 
 
 def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list[dict]:
