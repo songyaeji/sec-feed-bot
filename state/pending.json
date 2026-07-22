@@ -4009,5 +4009,19 @@
     ],
     "title": "정부, ’블록체인 기반 예금토큰’ 민간 결제 확산 ‘시동’",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE95QngyREtoTWVjMVgwaTNGRjBkQ18zNXgzblhKRDFMSGhuNUtwWUtoMVlmM2FRYjVqdEJBUDJ5NUk0OFA4WVpaYndTVmVqRWtxTmUxaDF5YlprelhMZ3h6SHVudlB1OWxzbmNQdVk0RmlOMjdk?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14551",
+    "published": "2026-07-22T10:17:13.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The servereye client (also known as sensorhub, technically ClientAgentContainerService) versions 20.15 and earlier are vulnerable to Local Privilege Escalation. The high-privileged service SE3Recovery (EmergencyRecoveryService.exe), running as SYSTEM, periodically monitors the directory %ProgramData%\\ServerEye3\\update\\ for a trigger file named \"update_available\". Due to insufficient access restrictions on this directory, a local standard user can create the trigger file and provide a path to a directory containing malicious JSON instructions. The service subsequently executes the utility UpdaterAction.exe with SYSTEM privileges, which parses the instructions and performs an unvalidated file copy from a user-controlled source to a protected system destination (e.g., overwriting a service binary). This leads to full system compromise as the service automatically restarts the overwritten binary with SYSTEM privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14551 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14551"
   }
 ]
