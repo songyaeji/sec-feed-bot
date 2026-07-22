@@ -5085,5 +5085,67 @@
     "tags": [],
     "title": "CVE-2026-24088 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24088"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-16370",
+    "published": "2026-07-21T13:17:06.860",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Mitigation bypass in the DOM: Networking component. This vulnerability was fixed in Firefox 153.",
+    "tags": [],
+    "title": "CVE-2026-16370 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16370"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-52472",
+    "published": "2026-07-21T21:16:51.983",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQL injection vulnerability in Wgcloud 3.6.4 allows a remote attacker to escalate privileges via the PortInfoMapper.xml file",
+    "tags": [],
+    "title": "CVE-2026-52472 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52472"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-64830",
+    "published": "2026-07-22T17:16:58.557",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FFmpeg versions 2.1 through 8.1.2 contains a heap buffer overflow vulnerability in the VobSub subtitle demuxer that allows attackers to corrupt adjacent heap memory by supplying a malicious .sub/.idx subtitle file declaring more distinct stream IDs than the fixed-size array bounds in libavformat/mpeg.c. Attackers can craft a subtitle file with excessive distinct stream IDs to trigger unbounded writes beyond the vobsub->q[] array boundary via ff_subtitles_queue_insert(), potentially achieving arbitrary code execution in any application using FFmpeg's VobSub demuxer.",
+    "tags": [],
+    "title": "CVE-2026-64830 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64830"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-64831",
+    "published": "2026-07-22T17:16:58.697",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FFmpeg versions 8.0 through 8.1.2 contains a stack buffer overflow vulnerability in the Vulkan HEVC hardware decoder that allows remote attackers to overwrite return addresses and adjacent stack frames by supplying a crafted HEVC/H.265 bitstream. Attackers can embed a malicious vps_num_hrd_parameters value exceeding HEVC_MAX_SUB_LAYERS in any supported container format to overflow stack-allocated arrays in the vk_hevc_end_frame function, potentially achieving arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-64831 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64831"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65013",
+    "published": "2026-07-22T17:16:59.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Onlook through 0.2.32, fixed in commit 423e2e9, contains a broken object level authorization vulnerability that allows authenticated attackers to access and manipulate other users' resources by supplying arbitrary UUID values to tRPC API procedures including project.get, member.remove, and chat.conversation.delete. Attackers can provide arbitrary projectId or conversationId values without authorization validation to read, modify, and delete other users' project data, members, and conversation history.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65013 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65013"
   }
 ]
