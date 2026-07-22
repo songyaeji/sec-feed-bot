@@ -2433,5 +2433,55 @@
     "tags": [],
     "title": "국기에 경례하는 송경희 개인정보보호위원장 - 네이트",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1naXAyNzl4Z2c2d2g2ZGExc2pGVWVrUUNldWRZMEhfejcwSjAzeGhRbFpNRVBmNFZzbU0yRWJPcWxrWkpzeHJfc3p0SGRSMWxFb2RybWx4RTVFS3dJd1pDdQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15802",
+    "published": "2026-07-22T05:17:08.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Foodbakery plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'delete_locations_backup_file_callback' function in all versions up to, and including, 4.9. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15802 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15802"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/openai-says-its-ai-models-hacked-hugging-face-during-testing/",
+    "published": "2026-07-22T05:19:20+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "OpenAI says its AI models, including GPT‑5.6 Sol and a pre-release model, hacked into the Hugging Face artificial intelligence repository while being tested in a sandboxed testing environment. [...]",
+    "tags": [],
+    "title": "OpenAI says its AI models hacked Hugging Face during testing",
+    "url": "https://www.bleepingcomputer.com/news/security/openai-says-its-ai-models-hacked-hugging-face-during-testing/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE9NN1lMNGtqbWdFTWcyMkEyNl9wZkhCVk9VRmdDVkFCd29fN2hmbmd2bGdyLV9UYXBNRjdfcUozT1d3aW9QY19CQTUyaVVZbi1rVzRwWFdaSFg2eElP",
+    "published": "2026-07-22T04:58:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보보호위원회 전체회의, 발언하는 송경희 위원장 뉴스핌",
+    "tags": [],
+    "title": "개인정보보호위원회 전체회의, 발언하는 송경희 위원장 - 뉴스핌",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9NN1lMNGtqbWdFTWcyMkEyNl9wZkhCVk9VRmdDVkFCd29fN2hmbmd2bGdyLV9UYXBNRjdfcUozT1d3aW9QY19CQTUyaVVZbi1rVzRwWFdaSFg2eElP?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFAzYkdneUxkY3dRSkprM0VnTHF5MEFSNVV5aS03d1JYQ3I4NE8zMm4tVGYtODV6UlhtU2E2YjRaVW1ZLUZpbDY2MkRVWU43RnhmM3E3dVFDd19qM2tScktkaw",
+    "published": "2026-07-22T04:58:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국민의례하는 송경희 개인정보보호위원장 뉴시스",
+    "tags": [],
+    "title": "국민의례하는 송경희 개인정보보호위원장 - 뉴시스",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzYkdneUxkY3dRSkprM0VnTHF5MEFSNVV5aS03d1JYQ3I4NE8zMm4tVGYtODV6UlhtU2E2YjRaVW1ZLUZpbDY2MkRVWU43RnhmM3E3dVFDd19qM2tScktkaw?oc=5"
   }
 ]
