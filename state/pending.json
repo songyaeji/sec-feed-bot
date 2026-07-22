@@ -4381,5 +4381,171 @@
     "tags": [],
     "title": "Google, 보안에 초점을 맞춘 고속 Gemini 모델로 AI 경쟁 강화",
     "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOOG9rcHM1cUU1eHlHYnl2N3NlNVZIQjFkbnVUcUZrTllIbzdfSUFwSzZ5WjZORlFGekVaNDA4M1Q4TEJCN2NMRTZpZnF6RV9CaW1GMkhtNVk1VHZCa2FBWFZENk5LVmtMR2VNVVNhVFg1WDFXa3NCS01WeGFGS01TQkFFcGZ5VHZFS3ZjTXNaSDVqSnRPZ25YVUd3S0pJdGp0QkJoLUVBcThfbHAwdEFtZEs0T3RvYmxqOW5nSkM4R3UxVG9WQUZhakxJOTF1cWR2YkJSQ01TcVprVHB1NzRfUmwzOHlmRW8zMzBFQ2ZIbk5jbEpzOVMzbUNTbGtRNGpJTlNmRWhsTm5TckhIRzRITDRtSW9VUzREdmstSGlyYVhhM1V6MmJoMDh1STBXUGlyUHZRYW5WUm1iUDBvblpKOWliZ0LSAcQCQVVfeXFMTjhva3BzNXFFNXh5R2J5djdzZTVWSEIxZG51VHFGa05ZSG83X0lBcEs2eVo2TkZRRnpFWjQwODNUOExCQjdjTEU2aWZxekVfQmltRjJIbTVZNVR2QmthQVhWRDZOS1ZrTEdlTVVTYVRYNVgxV2tzQktNVnhhRktNU0JBRXBmeVR2RUt2Y01zWkg1akp0T2duWFVHd0tKSXRqdEJCaC1FQXE4X2xwMHRBbWRLNE90b2JsajluZ0pDOEd1MVRvVkFGYWpMSTkxdXFkdmJCUkNNU3Faa1RwdTc0X1JsMzh5ZkVvMzMwRUNmSG5OY2xKczlTM21DU2xrUTRqSU5TZkVobE5uU3JISEc0SEw0bUlvVVM0RHZrLUhpcmFYYTNVejJiaDA4dUkwV1BpclB2UWFuVlJtYlAwb25aSjlpYmdC?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-16424",
+    "published": "2026-07-21T23:17:00.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use after free in GPU in Google Chrome on Android prior to 150.0.7871.182 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-16424 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16424"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16423",
+    "published": "2026-07-21T23:16:59.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in UI in Google Chrome prior to 150.0.7871.182 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-16423 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16423"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12968",
+    "published": "2026-07-22T07:16:34.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Product Addons and Product Options With Custom Fields  WordPress plugin before 1.6.15 does not restrict an unauthenticated file-upload endpoint and accepts SVG files that are stored and served inline, allowing an unauthenticated attacker to upload a malicious SVG whose embedded script executes in the session of any user (such as an administrator) who later opens the file.",
+    "tags": [],
+    "title": "CVE-2026-12968 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12968"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-3821",
+    "published": "2026-07-22T07:16:35.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Supermicro (SMC) SMASH services contain an Arbitrary code execution issue in X14DBG-DAP and X14DBI.\nAn authorized attacker can exploit SMASH’s input capability to compromise data integrity or launch a Denial-of-Service (DoS) attack against the BMC.",
+    "tags": [],
+    "title": "CVE-2026-3821 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3821"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13181",
+    "published": "2026-07-22T14:17:13.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress® Telerik® UI for AJAX prior to v2026.2.708, forged upload metadata can influence AsyncUploadTypeName processing and trigger unsafe attacker-controlled type resolution, enabling remote code execution in affected deployments.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13181 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13181"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13185",
+    "published": "2026-07-22T14:17:14.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress® Telerik® UI for AJAX prior to v2026.2.708, applications using cookie-based storage in RadPersistenceManager or RadDockLayout deserialize attacker-controlled cookie content, allowing unauthenticated remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13185 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13185"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13186",
+    "published": "2026-07-22T14:17:14.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress® Telerik® UI for AJAX prior to v2026.2.708, a path traversal vulnerability in the file-based persistence storage provider can be exploited when the storage key is derived from user-controlled input, enabling attacker-controlled deserialization and remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13186 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13186"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13187",
+    "published": "2026-07-22T14:17:14.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress® Telerik® UI for AJAX prior to v2026.2.708, DialogHandler provider type input may be tampered with, potentially altering dialog processing and enabling chained exploitation.",
+    "tags": [],
+    "title": "CVE-2026-13187 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13187"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13190",
+    "published": "2026-07-22T14:17:14.667",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress® Telerik® UI for AJAX prior to v2026.2.708, a deserialization vulnerability in the persistence utilities allows unsafe type instantiation from attacker-influenced persisted state, which can lead to remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13190 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13190"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-13192",
+    "published": "2026-07-22T14:17:14.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress® Telerik® UI for AJAX prior to v2026.2.708, insufficient validation of content submitted to the RadEditor PDF export feature may allow an authenticated attacker to trigger server-side requests to arbitrary hosts, resulting in outbound network connections and potential exposure of Windows authentication credentials.",
+    "tags": [],
+    "title": "CVE-2026-13192 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13192"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-50251",
+    "published": "2026-07-22T14:17:20.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In NLnet Labs Unbound up to and including version 1.25.1, when 'unwanted-reply-threshold' is enabled (set to any value greater than zero), glue records of 0.0.0.0/::0 can short-circuit Unbound, on systems that can direct such traffic, by issuing DNS queries and receiving seemingly unwanted replies since the remote IP does not match the original source IP of 0.0.0.0/::0. This behavior keeps on looping for the glue records and pushing the counter to the configured 'unwanted-reply-threshold' that triggers a defensive cache clear. A malicious actor who controls a delegation that returns in-bailiwick glue of 0.0.0.0/::0 can drive the counter to the limit of 'unwanted-reply-threshold' to the threshold and trigger a cache clean of the message and rrset caches; at will, indefinitely, without sending a single spoofed packet. The iterator uses the 0.0.0.0/::0 glue, and a system that can route this (e.g., Linux kernel routes the datagram over loopback), Unbound's own listener answers from 127.0.0.1. Because of the mismatch of 0.0.0.0 and 127.0.0.1, in this example, Unbound accounts the reply as an unwanted (probably spoofed) answer. The counter resets to zero on every cache flush, so the attack loops forever.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-50251 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50251"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/new-infratrust-report-reveals-infrastructure-flaws-admins-should-patch-first/",
+    "published": "2026-07-22T14:15:00+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Eclypsium has launched InfraTrust, a new infrastructure cybersecurity knowledge base and monthly InfraTrust Pulse report designed to help organizations prioritize vulnerabilities affecting infrastructure, firmware, networking, and edge devices. [...]",
+    "tags": [],
+    "title": "New InfraTrust report reveals infrastructure flaws admins should patch first",
+    "url": "https://www.bleepingcomputer.com/news/security/new-infratrust-report-reveals-infrastructure-flaws-admins-should-patch-first/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE8zWGN3a0t5M1hZUW9UTllvQWZlMzNwZEg5cXprTGFySm9abWhDN0wzaEhpT3paemRJRDYtQWhKVE1ES0VrR0ZiMEs5M2IxTGFlWjZfX25pXzhnbXlHUkg4YTk4a0FCQzk1TV9r",
+    "published": "2026-07-22T12:56:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "방미통위 \"청소년 안전한 SNS 이용 위해 관계 부처와 협력\"",
+    "tags": [],
+    "title": "방미통위 \"청소년 안전한 SNS 이용 위해 관계 부처와 협력\"",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8zWGN3a0t5M1hZUW9UTllvQWZlMzNwZEg5cXprTGFySm9abWhDN0wzaEhpT3paemRJRDYtQWhKVE1ES0VrR0ZiMEs5M2IxTGFlWjZfX25pXzhnbXlHUkg4YTk4a0FCQzk1TV9r?oc=5"
   }
 ]
