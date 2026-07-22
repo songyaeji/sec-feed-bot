@@ -25,6 +25,21 @@ def _strip_html(text: str) -> str:
     return " ".join(text.split())
 
 
+def _strip_source_suffix(title: str, news_source: str) -> str:
+    """Google News RSS 제목은 "기사제목 - 매체명" 형식 — 매체명 꼬리를 뗀다.
+
+    구글이 긴 제목을 자르면 매체명도 중간에 잘린다("서울타임즈뉴스" →
+    "서울타임즈뉴"). startswith 비교로 잘린 꼬리까지 잡는다. <source> 태그가
+    없는 일반 피드는 news_source가 빈 문자열이라 원제목 그대로 반환.
+    """
+    if not news_source:
+        return title
+    head, sep, tail = title.rpartition(" - ")
+    if sep and head and tail and (tail == news_source or news_source.startswith(tail)):
+        return head.rstrip()
+    return title
+
+
 def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list[dict]:
     url = source_cfg["url"]
     category = source_cfg.get("category", "research")
@@ -60,6 +75,15 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
 
         title = entry.get("title", "")
         summary = _strip_html(entry.get("summary", ""))
+
+        # Google News 피드는 entry에 <source>매체명</source>이 붙는다.
+        # 제목·요약 끝의 매체명("… - 네이트")이 카드 제목까지 흘러가는 것 차단
+        src_tag = entry.get("source")
+        news_source = (src_tag.get("title", "") if src_tag else "").strip()
+        if news_source:
+            title = _strip_source_suffix(title, news_source)
+            if summary.endswith(news_source):
+                summary = summary[: -len(news_source)].rstrip()
 
         if keywords:
             haystack = f"{title} {summary}".lower()
