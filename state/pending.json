@@ -4977,5 +4977,113 @@
     ],
     "title": "New Kimsuky campaign compromised South Korean software vendors",
     "url": "https://therecord.media/kimsuky-north-korea-espionage-groupware-companies"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-40965",
+    "published": "2026-06-01T22:16:25.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cloud Foundry UAA versions v76.12.0 through v78.12.0 are vulnerable to a private key exposure. The server contains a vulnerability where EC (Elliptic Curve) private keys are inadvertently exposed through the public /token_keys endpoint. This endpoint is designed to provide public key material for JWT token verification but incorrectly exposes private key components for EC keys. The vulnerability affects deployments using EC keys for JWT token signing. The vulnerability does not affect RSA key configurations, only deployments using EC keys for JWT signing.\n\nAffected versions:\n- uaa_release: v76.12.0 through v78.12.0 (inclusive); fixed in v78.13.0 or later\n- CF Deployment: v30.0.0 through v56.0.0 (inclusive); fixed in v56.1.0 or later (bundles uaa_release v78.13.0)",
+    "tags": [],
+    "title": "CVE-2026-40965 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40965"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-0095",
+    "published": "2026-06-01T22:16:23.027",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In l2c_fcr_clone_buf of l2c_fcr.cc, there is a possible way to trigger controlled heap corruption within the privileged Bluetooth process due to an integer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+    "tags": [],
+    "title": "CVE-2026-0095 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0095"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-0097",
+    "published": "2026-06-01T22:16:23.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In multiple locations, there is a possible way to bypass user interaction when pairing an LE device due to a logic error. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+    "tags": [],
+    "title": "CVE-2026-0097 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0097"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10292",
+    "published": "2026-06-01T22:16:24.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in UTT HiPER 1200GW up to 2.5.3-170306. This affects the function strcpy of the file /goform/formTaskEdit. The manipulation results in stack-based buffer overflow. The attack may be launched remotely. The exploit is now public and may be used.",
+    "tags": [],
+    "title": "CVE-2026-10292 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10292"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-10293",
+    "published": "2026-06-01T22:16:24.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw has been found in UTT HiPER 1200GW up to 2.5.3-170306. This impacts the function strcpy of the file /goform/formFireWall. This manipulation of the argument Profile causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+    "tags": [],
+    "title": "CVE-2026-10293 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10293"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-49491",
+    "published": "2026-06-01T22:16:25.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pixa Bank 2.0 contains an SQL injection vulnerability that allows unauthenticated attackers to extract sensitive data by injecting SQL code into the 'rib' parameter. Attackers can send POST requests to the agence-ajax.php endpoint with UNION-based SQL payloads to retrieve user information including names, email addresses, and phone numbers from the database.",
+    "tags": [],
+    "title": "CVE-2026-49491 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49491"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2019-25718",
+    "published": "2026-06-01T23:16:13.270",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dräger Infinity Explorer C700 contains a privilege escalation vulnerability that allows attackers to break out of kiosk mode and access the underlying operating system through a specific dialog interaction. Attackers can exploit this kiosk escape to take control of the operating system and cause the device to display incorrect or no information from the connected Delta Family patient monitor.",
+    "tags": [],
+    "title": "CVE-2019-25718 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25718"
+  },
+  {
+    "category": "high",
+    "cvss": 6.7,
+    "id": "CVE-2025-59612",
+    "published": "2026-06-01T23:16:16.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory corruption in windows drivers while sending incorrect trusted application request",
+    "tags": [],
+    "title": "CVE-2025-59612 (CVSS 6.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59612"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-24088",
+    "published": "2026-06-01T23:16:19.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cryptographic Issue while processing a specific partition which allows unauthorized write access to load a customized bootloader.",
+    "tags": [],
+    "title": "CVE-2026-24088 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24088"
   }
 ]
