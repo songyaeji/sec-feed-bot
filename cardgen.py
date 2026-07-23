@@ -41,6 +41,9 @@ MAX_TAG_PILLS = 3       # 태그 pill 총 상한 — 한 줄 유지 (v19: 카테
 # '오늘의 CVE' 행 라벨용: 텍스트 등장 순서 기준 첫 CVE id
 CVE_RE = re.compile(r"CVE-\d{4}-\d{4,7}", re.IGNORECASE)
 
+# CVE 카드 desc에서 헤드 행과 겹치는 "(CVSS 9.8)" 꼬리 제거용
+_CVSS_PAREN_RE = re.compile(r"\(?\s*CVSS[:\s]*\d+(?:\.\d+)?\s*\)?", re.IGNORECASE)
+
 
 def _cve_id(item: dict) -> str:
     """항목에서 첫 CVE id(대문자)를 뽑는다 — 카드 'CVE 행'과 링크 라벨이
@@ -552,6 +555,15 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
         desc = title
         if prefix:
             desc = desc.removeprefix(prefix + " — ")
+        # NVD 구조 항목은 title_ko가 없으면 원제("CVE-2026-1 (CVSS 9.8)")가
+        # 그대로 desc로 와, 헤드 행의 ID·CVSS를 두 번 찍는다(QA 2026-07-23).
+        # 헤드와 겹치는 CVE-id·(CVSS n) 토큰을 걷어내고, 남는 게 없으면
+        # 피드 원문 설명(제품명이 담긴다)으로 폴백 — 중복보다 정보가 낫다.
+        desc = CVE_RE.sub("", desc)
+        desc = _CVSS_PAREN_RE.sub("", desc)
+        desc = _clean_text(desc.strip(" ·—-()"))
+        if not desc:
+            desc = _clean_text(_strip_html(item.get("summary", "")))
         rows.append(_fill(
             fragments["cve_row"],
             ID=html.escape(cve),
