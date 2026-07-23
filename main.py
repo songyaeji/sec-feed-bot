@@ -757,6 +757,10 @@ def main() -> None:
                             if cleaned:
                                 item["tags_ko"] = cleaned
                         base_importance = item_verdict.get("importance", 3)
+                        # LLM 출력 타입 가드 — null·문자열이면 아래 산술·정렬
+                        # 키에서 TypeError로 digest 런 전체가 죽는다(QA F1)
+                        if not isinstance(base_importance, (int, float)):
+                            base_importance = 3
                         penalty = _author_penalty(item, config)
                         item["importance"] = max(1, base_importance - penalty)
                         if penalty:

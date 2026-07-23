@@ -415,7 +415,9 @@ def _build_digest_embed(category: str, group_items: list[dict], colors: dict) ->
         if len(title) > DIGEST_TITLE_MAX:
             title = title[:DIGEST_TITLE_MAX] + "…"
         title = title.replace("[", "\\[").replace("]", "\\]")
-        lines.append(f"{emoji} **[{title}]({item['url']})**")
+        # URL 속 ')'가 마크다운 링크를 조기 종료시킨다(QA F3) — <>로 감싸
+        # cardgen.build_link_lines와 처리 통일
+        lines.append(f"{emoji} **[{title}](<{item['url']}>)**")
         lines.append(_chip_line(item["source"], item.get("tags_ko") or item.get("tags") or []))
         lines.append("")  # blank line between items
 

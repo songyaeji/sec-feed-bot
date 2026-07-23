@@ -119,7 +119,11 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             "source": source_cfg.get("name", url),
             "category": category,
             "title": title,
-            "url": entry.get("link", ""),
+            # 비 http(s) 스킴(javascript: 등)은 meta.json 경유로 github.io에
+            # 노출될 수 있다(QA F2) — 경계에서 드롭
+            "url": (entry.get("link", "")
+                    if str(entry.get("link", "")).startswith(
+                        ("http://", "https://")) else ""),
             # 1500자: 300자 절단은 계보·공격체인 같은 뒷부분 세부를 사서가
             # 못 보게 해 요약 정보 밀도를 깎았다 (사용자 피드백 — GodDamn 사례)
             "summary": summary[:1500],

@@ -53,12 +53,23 @@ def _cve_id(item: dict) -> str:
 # 없어 두부(□)로 렌더된다 — ASCII 인쇄 문자 전체·한글·통용 문장부호만 남기고
 # 걷어낸다 (개별 열거는 sentinel_token의 '_'처럼 정상 문자를 삼킨 전력)
 _RENDERABLE_RE = re.compile(
-    r"[^\x20-\x7E가-힣ㄱ-ㆎ\s·‘’“”–—…→↗]"
+    # v21.2: 라틴 확장·통용 기호 추가 — "Lázaro"→"Lzaro", "£2m"→"2m"처럼
+    # 고유명사·수치가 조용히 왜곡되던 것(QA 2026-07-23). Pretendard가
+    # Latin-1/Extended-A 글리프를 갖고 있어 두부 위험 없음.
+    # ‑(U+2011 비분리 하이픈)·↑↓←·《》도 실피드 등장 실측으로 추가
+    r"[^\x20-\x7EÀ-ɏ가-힣ㄱ-ㆎ\s·‘’“”–—…‑→↗↑↓←《》€£¥×°™®]"
 )
+
+# 국내 기사 관용 한자 약칭 — 번들 폰트에 한자 글리프가 없어(두부),
+# 삭제하면 "美 정부"→" 정부"로 의미가 증발한다(QA 2026-07-23). 음차 치환
+_HANJA_MAP = str.maketrans(
+    "美中韓日北靑英獨佛露對反與野"
+    , "미중한일북청영독불러대반여야")
 
 
 def _clean_text(text: str) -> str:
-    return " ".join(_RENDERABLE_RE.sub("", text or "").split())
+    cleaned = (text or "").translate(_HANJA_MAP)
+    return " ".join(_RENDERABLE_RE.sub("", cleaned).split())
 
 
 # 국내 피드 제목의 분류 접두어([이슈칼럼], [단독], [긴급] 등) — 카드가 이미
@@ -90,7 +101,9 @@ def _summary_html(text: str) -> str:
     """본문 요약 → HTML. escape 후에 **키워드** 마커만 강조 태그로 바꾸므로
     피드/사서 출력에 섞인 마크업은 여전히 무력화된다. 홀수 개 ** 잔여물은
     장식이 아니라 노이즈 — 지운다."""
-    escaped = html.escape(" ".join((text or "").split()))
+    # v21.2: 제목만 거치던 렌더 문자 정규화를 본문에도 — 한자·비글리프
+    # 문자가 본문에서 두부(□)로 찍히던 비대칭(QA 2026-07-23) 해소
+    escaped = html.escape(_clean_text(text))
     marked = _KW_MD_RE.sub(r'<b class="kw">\1</b>', escaped)
     return marked.replace("**", "")
 
@@ -426,13 +439,13 @@ def _build_news(
     bottom = ""
     if item.get("why_ko"):
         bottom = _fill(fragments["why"], TEXT=html.escape(
-            " ".join(item["why_ko"].replace("**", "").split())))
+            _clean_text(item["why_ko"].replace("**", ""))))
 
     # v21: 용어 각주 — 사서 term_ko 있을 때만 한 줄
     term = ""
     if item.get("term_ko"):
         term = _fill(fragments["term"], TEXT=html.escape(
-            " ".join(item["term_ko"].replace("**", "").split())))
+            _clean_text(item["term_ko"].replace("**", ""))))
 
     return _fill(
         fragments["news"],
@@ -532,7 +545,10 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
     for item, title in zip(shown, shown_titles):
         cve = _cve_id(item)
         cvss = item.get("cvss")
-        score = f"{float(cvss):.1f}" if cvss is not None else "—"
+        # 피드가 cvss를 ""·"N/A" 문자열로 주면 float()가 렌더 전체를
+        # 죽인다(QA 2026-07-23) — 숫자만 점수로, 그 외는 "—"
+        score = (f"{float(cvss):.1f}"
+                 if isinstance(cvss, (int, float)) else "—")
         desc = title
         if prefix:
             desc = desc.removeprefix(prefix + " — ")
