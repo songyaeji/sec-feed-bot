@@ -8348,5 +8348,763 @@
     "tags": [],
     "title": "[김정덕의 인간중심보안-15] 보안 자가면역질환을 치유하라",
     "url": "http://www.boannews.com/media/view.asp?idx=144823&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-10045",
+    "published": "2026-06-09T19:17:31.760",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Shenzhen Kangda Xin Intelligent Network Technology Company's router, model DR300, version 2.1.2.121, contains hardcoded login credentials and has telnet enabled by default on WAN and LAN interfaces. These vulnerabilities allow attackers to read and write to memory, modify firmware stored in flash, inspect active connections, and view currently connected devices.",
+    "tags": [],
+    "title": "CVE-2026-10045 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10045"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-30141",
+    "published": "2026-06-09T19:17:32.447",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in bitbank2 AnimatedGIF v2.2.0. A buffer overflow in the DecodeLZW function allows remote attackers to cause a denial of service (crash) or potentially execute arbitrary code via a crafted GIF file.",
+    "tags": [],
+    "title": "CVE-2026-30141 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30141"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-36721",
+    "published": "2026-06-09T19:17:42.500",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A lack of cryptographic signature verification in the validateAccessToken function of bookcars v8.3 allows attackers to bypass authentication via a forged JWT token.",
+    "tags": [],
+    "title": "CVE-2026-36721 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36721"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-36727",
+    "published": "2026-06-09T19:17:43.207",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An insecure authentication vulnerability in the /api/social-sign-in endpoint of bookcars v8.3 allows attackers to bypass authentication via a forged JWT token.",
+    "tags": [],
+    "title": "CVE-2026-36727 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36727"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-47928",
+    "published": "2026-06-09T21:17:22.700",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2023.19, 2025.8 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-47928 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47928"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-48303",
+    "published": "2026-06-09T21:17:25.510",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Campaign Classic (ACC) versions 7.4.3 build 9394 and earlier are affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48303 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48303"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-45328",
+    "published": "2026-06-10T02:16:32.687",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ESF-IDF is the Espressif Internet of Things (IOT) Development Framework. In versions 5.5.4 and 6.0, the esp_tee component exposes secure-service wrappers in esp_secure_services.c and esp_secure_services_iram.c that bridge calls from the user application (i.e. the REE) to TEE-protected hardware peripherals (AES, SHA, ECC, HMAC, SPI, MMU, WDT) and to the security feature like attestation, OTA updates, secure storage. This issue has been patched in versions 5.5.5 and 6.0.1.",
+    "tags": [],
+    "title": "CVE-2026-45328 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45328"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-66276",
+    "published": "2026-06-10T03:16:24.730",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "QuTS hero is not affected.\n\nWe have already fixed the vulnerability in the following version:\nQTS 5.2.7.3256 build 20250913 and later",
+    "tags": [],
+    "title": "CVE-2025-66276 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66276"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-26240",
+    "published": "2026-06-10T05:16:38.987",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A buffer overflow vulnerability has been reported to affect File Station 5. The remote attackers can then exploit the vulnerability to modify memory or crash processes.\n\nWe have already fixed the vulnerability in the following version:\nFile Station 5 5.5.6.5243 and later",
+    "tags": [],
+    "title": "CVE-2026-26240 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26240"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-26241",
+    "published": "2026-06-10T05:16:39.103",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A buffer overflow vulnerability has been reported to affect File Station 5. The remote attackers can then exploit the vulnerability to modify memory or crash processes.\n\nWe have already fixed the vulnerability in the following version:\nFile Station 5 5.5.6.5243 and later",
+    "tags": [],
+    "title": "CVE-2026-26241 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26241"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-9067",
+    "published": "2026-06-10T07:16:25.580",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Schema & Structured Data for WP & AMP WordPress plugin before 1.60 does not check user capabilities on its frontend AJAX file-upload handlers and does not validate the actual content of uploaded files against the endpoint's intended media type, allowing unauthenticated users to upload any file type accepted by WordPress's media library through endpoints that should only accept images or videos.",
+    "tags": [],
+    "title": "CVE-2026-9067 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9067"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-46695",
+    "published": "2026-06-10T23:16:47.747",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Boxlite is a sandbox service that allows users to create lightweight virtual machines (Boxes) and launch OCI containers within them to run untrusted code. Prior to version 0.9.0, Boxlite does not restrict the kernel capabilities available inside the container, malicious code can remount the directory in rw mode, thereby gaining write access to that directory. This allows malicious code to perform arbitrary write operations on directories that should be read-only. This issue has been patched in version 0.9.0.",
+    "tags": [],
+    "title": "CVE-2026-46695 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46695"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-46703",
+    "published": "2026-06-10T23:16:47.893",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Boxlite is a sandbox service that allows users to create lightweight virtual machines (Boxes) and launch OCI containers within them to run untrusted code. Prior to version 0.9.0, Boxlite allows users to specify the OCI image used by containers in the sandbox. However, when processing tar entries in OCI images, Boxlite does not account for the possibility that entries may be symlinks pointing to absolute paths. An attacker can craft a malicious OCI image and distribute it on image hosting platforms such as DockerHub, tricking users into using it. Once a user loads the malicious image, the attacker can write arbitrary content to any path on the host, which can further lead to remote code execution on the host. This issue has been patched in version 0.9.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46703 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46703"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53838",
+    "published": "2026-06-12T22:16:55.723",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.27 contains a state mutation vulnerability in node pairing reconnection that allows paired nodes to confuse approval scope decisions. Attackers can exploit reconnection logic to restore or present broader node authority than intended, potentially bypassing approval restrictions.",
+    "tags": [],
+    "title": "CVE-2026-53838 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53838"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12183",
+    "published": "2026-06-13T18:16:22.310",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Nefteprodukttekhnika BUK TS-G Gas Station Automation System 2.9.1 through 2.10.2 on Linux contains an Improper Authentication vulnerability (CWE-287) in the system configuration module. The /php/ajax-login.php endpoint returns userid=1 (administrator) in response to any HTTP POST request that supplies arbitrary credentials (e.g., action=dologin&login=<any_value>&pwd=<any_value>), and subsequent privileged endpoints under /php/ajax-main.php and /modules/* do not validate a server-side session. A remote unauthenticated attacker can invoke any administrative action exposed by the configuration module, including reading and modifying user rules, fuel tank gauges, fuel dispensers, relays, cash registers, bank terminals, fuel cards, price and customer displays, cash collection, and pricing rules.",
+    "tags": [],
+    "title": "CVE-2026-12183 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12183"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-36720",
+    "published": "2026-06-09T19:17:42.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insecure permissions in bookcars v8.3 allows authenticated attackers to escalate privileges from user to admin via modifying their user type.",
+    "tags": [],
+    "title": "CVE-2026-36720 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36720"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-36723",
+    "published": "2026-06-09T19:17:42.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An unrestricted file rename vulnerability in the /api/create-user component of bookcars v8.3 allows authenticated attackers to leverage directory traversal sequences to move arbitrary files from temporary storage to arbitrary locations on the server filesystem. This enables unauthorized access to sensitive files, the overwriting of critical application files, and remote code execution (RCE).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-36723 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36723"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-47906",
+    "published": "2026-06-09T20:16:59.687",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dreamweaver Desktop versions 21.7 and earlier are affected by a Dependency on Vulnerable Third-Party Component vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-47906 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47906"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-47907",
+    "published": "2026-06-09T20:16:59.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dreamweaver Desktop versions 21.7 and earlier are affected by an Improper Access Control vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue requires user interaction in that a victim must open a malicious file. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-47907 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47907"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-47929",
+    "published": "2026-06-09T21:17:22.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2023.19, 2025.8 and earlier are affected by an Incorrect Authorization vulnerability that could result in arbitrary code execution in the context of the current user. A high-privileged attacker could exploit this vulnerability to gain elevated access or control over the victim's account or session. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-47929 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47929"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-47930",
+    "published": "2026-06-09T21:17:22.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2023.19, 2025.8 and earlier are affected by an Improper Input Validation vulnerability that could result in a Security feature bypass. A low-privileged attacker could leverage this vulnerability to bypass security measures and gain unauthorized read and write access. Exploitation of this issue does not require user interaction.",
+    "tags": [],
+    "title": "CVE-2026-47930 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47930"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-47931",
+    "published": "2026-06-09T21:17:23.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2023.19, 2025.8 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. An attacker with high privileges could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-47931 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47931"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-9753",
+    "published": "2026-06-09T23:17:04.897",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The $_internalApplyOplogUpdate aggregation pipeline stage can be used to execute a document diff containing a malformed binary diff to return memory out-of-bounds or crash the server. $_internalApplyOplogUpdate can be executed by any authenticated user with access to the aggregate command.",
+    "tags": [],
+    "title": "CVE-2026-9753 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9753"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-41717",
+    "published": "2026-06-10T00:16:51.683",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spring Data MongoDB contains a SpEL (Spring Expression Language) expression injection vulnerability. The issue occurs during parameter binding when a user-defined repository query method is annotated with @Query and utilizes a capture-all placeholder.\n\nAffected versions:\nSpring Data MongoDB 5.0.0 through 5.0.5; 4.5.0 through 4.5.11; 4.4.0 through 4.4.14; 4.3.0 through 4.3.16; 4.2.0 through 4.2.15; 4.1.0 through 4.1.14; 4.0.0 through 4.0.15; 3.4.0 through 3.4.19.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-41717 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41717"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-41729",
+    "published": "2026-06-10T00:16:52.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spring Data REST is vulnerable to SpEL expression injection through map-typed properties when processing JSON Patch (application/json-patch+json) requests. When a persistent entity exposes a Map-typed property, the JSON Pointer path segment used as the map key is embedded directly into a SpEL expression without sanitization or validation.\n\nAffected versions:\nSpring Data REST 3.7.0 through 3.7.19; 4.3.0 through 4.3.16; 4.4.0 through 4.4.14; 4.5.0 through 4.5.11; 5.0.0 through 5.0.5.",
+    "tags": [],
+    "title": "CVE-2026-41729 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41729"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-41731",
+    "published": "2026-06-10T00:16:52.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "JsonKafkaHeaderMapper and the deprecated DefaultKafkaHeaderMapper matched type headers against trusted packages using a prefix check, meaning that trusting any package implicitly trusted all of its subpackages. Combined with Jackson's default bean deserialization, a producer could supply crafted header values that caused the consumer to deserialize arbitrary JDK types.\n\nAffected versions:\nSpring for Apache Kafka 4.0.0 through 4.0.5; 3.3.0 through 3.3.15; 3.2.0 through 3.2.13; 2.9.0 through 2.9.13; 2.8.0 through 2.8.11.",
+    "tags": [],
+    "title": "CVE-2026-41731 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41731"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-41732",
+    "published": "2026-06-10T00:16:52.720",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "JsonPulsarHeaderMapper matched type headers against trusted packages using a prefix check, meaning that trusting any package implicitly trusted all of its subpackages. Additionally, an empty trusted-packages configuration fell back to trusting all packages rather than applying a safe default allow-list.\n\nAffected versions:\nSpring for Apache Pulsar 2.0.0 through 2.0.5; 1.2.0 through 1.2.17; 1.1.0 through 1.1.17.",
+    "tags": [],
+    "title": "CVE-2026-41732 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41732"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-46491",
+    "published": "2026-06-10T00:16:53.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SimpleSAMLphp-casserver is a CAS 1.0 and 2.0 compliant CAS server in the form of a SimpleSAMLphp module. Prior to version 7.0.3, simplesamlphp-module-casserver builds file paths for the file-based CAS ticket store by directly concatenating the configured ticket directory with an attacker-controlled ticket identifier. Public CAS validation/proxy endpoints pass attacker-controlled ticket / pgt query parameters into this store. In deployments using FileSystemTicketStore, a remote attacker can use path traversal sequences such as ../target.serialized to make the CAS server read and unserialize files outside the ticket directory. In the CAS 1.0 validation flow, the same attacker-selected path is also passed to deleteTicket() immediately after getTicket() returns, which can delete the target file when it is readable by the PHP process, deletable under the PHP process filesystem permissions, and unserializes to a value compatible with the ?array return type. This issue has been patched in version 7.0.3.",
+    "tags": [],
+    "title": "CVE-2026-46491 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46491"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53673",
+    "published": "2026-06-10T00:16:55.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "BuddyPress 14.4.0 contains an insecure direct object reference vulnerability in the messages REST API that allows authenticated attackers to access arbitrary private message threads by supplying a user_id parameter in the request. Attackers can pass another user's identifier to the get_item_permissions_check method, which validates the supplied user_id instead of the logged-in user and is reused by the update and delete handlers, to read, reply to, or delete any user's private messages.",
+    "tags": [],
+    "title": "CVE-2026-53673 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53673"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-24724",
+    "published": "2026-06-10T04:17:17.253",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An incorrect authorization vulnerability has been reported to affect File Station 6. If a remote attacker gains a user account, they can then exploit the vulnerability to bypass intended access restrictions.\n\nWe have already fixed the vulnerability in the following version:\nFile Station 5 5.5.6.5243 and later",
+    "tags": [],
+    "title": "CVE-2026-24724 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24724"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-26239",
+    "published": "2026-06-10T04:17:21.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A buffer overflow vulnerability has been reported to affect File Station 5. If a remote attacker gains a user account, they can then exploit the vulnerability to modify memory or crash processes.\n\nWe have already fixed the vulnerability in the following version:\nFile Station 5 5.5.6.5208 and later",
+    "tags": [],
+    "title": "CVE-2026-26239 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26239"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-3326",
+    "published": "2026-06-10T07:16:25.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Xstore WordPress theme before 9.7.3 does not properly sanitise and escape a parameter before using it in a SQL statement via an AJAX action available to unauthenticated users, leading to a SQL injection",
+    "tags": [],
+    "title": "CVE-2026-3326 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3326"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8071",
+    "published": "2026-06-10T07:16:25.373",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Anti-Spam by CleanTalk. Spam protection WordPress plugin before 6.79 does not properly sanitize content within a custom shortcode used in its email-encoding feature, allowing unauthenticated attackers to inject arbitrary web scripts into approved comments that will execute when any user (including administrators) views the post.",
+    "tags": [],
+    "title": "CVE-2026-8071 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8071"
+  },
+  {
+    "category": "high",
+    "cvss": 3.6,
+    "id": "CVE-2026-45380",
+    "published": "2026-06-10T22:16:58.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "bit7z is a cross-platform C++ static library that allows the compression/extraction of archive files. Prior to version 4.0.12, a one-byte off-by-one error in SafeOutPathBuilder::restoreSymlink() allows an attacker to craft a .7z archive that, when extracted with bit7z on any non-Windows platform, creates a symlink escaping the intended output directory. Subsequent archive entries extracted through this symlink write arbitrary files outside the extraction directory with the permissions of the extracting process. This issue has been patched in version 4.0.12.",
+    "tags": [],
+    "title": "CVE-2026-45380 (CVSS 3.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45380"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53738",
+    "published": "2026-06-10T22:17:02.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Copy & Delete Posts through 1.5.4 lets any plugin-enabled non-admin role invoke every operation in the cdp_action_handling AJAX handler. Attackers with an enabled role can delete posts or overwrite plugin settings via the f parameter, bypassing per-function capability checks.",
+    "tags": [],
+    "title": "CVE-2026-53738 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53738"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-42305",
+    "published": "2026-06-10T23:16:46.113",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dulwich is a pure-Python implementation of the Git file formats and protocols. Versions starting with 0.10.0 and prior to 1.2.5 have an arbitrary file write leading to remote code execution when cloning or checking out a malicious Git repository on Windows. Dulwich's path-element validator accepted tree entries whose filenames contained bytes that Windows interprets as structural path syntax. Contributing configuration bugs made matters worse. The core.protectNTFS and core.protectHFS settings were looked up under a wrong option name and so user-set values were silently ignored, and core.protectNTFS only defaulted to true on Windows (Git upstream has defaulted it to true everywhere since CVE-2019-1353). Both have been corrected. Anyone who clones, fetches, or checks out an untrusted repository with Dulwich on Windows - either through the Dulwich CLI, porcelain.clone, or any downstream tool built on Dulwich - is impacted. POSIX clones are not directly exploitable (on POSIX \\ is a literal filename byte), but a POSIX user can unknowingly propagate a malicious tree to Windows consumers via push or re-publication. This issue is fixed in Dulwich 1.2.5. Users should upgrade to 1.2.5 or later. There is no effective pre-patch workaround. On affected versions the core.protectNTFS configuration key was silently ignored, so setting it to true does not mitigate the issue. Users who cannot upgrade should avoid cloning, fetching, or checking out untrusted repositories with Dulwich on Windows",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42305 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42305"
+  },
+  {
+    "category": "high",
+    "cvss": 7.6,
+    "id": "CVE-2026-42558",
+    "published": "2026-06-10T23:16:46.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Xibo is an open source digital signage platform with a web content management system and Windows display player software. Prior to 4.4.2, a vulnerability chain consisting of Stored XSS and Iframe Sandbox escape in the Xibo CMS allows users with DataSet permissions to use the Data Connector functionality to craft messages which escape the sandbox and facilitate XSS. Exploitation of the vulnerability is possible on behalf of an authorized user who has both of the following privileges, which are not granted to non-admins as standard: Include \"Add DataSet\" button to allow for additional DataSets to be created independently to Layouts Users should upgrade to version 4.4.2 which fixes this issue. Upgrading to a fixed version is necessary to remediate. Users unable to upgrade should revoke such privileges from users they do not trust.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42558 (CVSS 7.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42558"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-44693",
+    "published": "2026-06-10T23:16:46.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pi-hole FTL is the core engine of the Pi-hole network-level advertisement and tracker blocker. Prior to version 6.6.1, Pi-hole FTL contains a race condition vulnerability in the HTTP session management subsystem, introduced with the v6.0 rewrite of the embedded CivetWeb-based web server. This issue has been patched in version 6.6.1.",
+    "tags": [],
+    "title": "CVE-2026-44693 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44693"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-47342",
+    "published": "2026-06-10T23:16:48.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A privilege escalation vulnerability in Apache OFBiz allows a low-privileged authenticated user to obtain higher privileges\n\n\n\nThis issue affects Apache OFBiz: before 24.09.07.\n\nUsers are recommended to upgrade to version 24.09.07, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-47342 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47342"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-50223",
+    "published": "2026-06-10T23:16:49.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Control of Generation of Code ('Code Injection') vulnerability in Apache OFBiz allows a low-privileged authenticated user with Content/DataResource editing privileges to perform template injection attacks that could lead to Remote Code Execution.\n\nThis issue affects Apache OFBiz: before 24.09.07.\n\nUsers are recommended to upgrade to version 24.09.07, which fixes the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-50223 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50223"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-10795",
+    "published": "2026-06-11T07:16:26.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The UpdraftPlus: WP Backup & Migration Plugin plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 1.26.4 via the UpdraftPlus_Remote_Communications_V2::wp_loaded function. This is due to insufficient validation of the remote communications message format, where signature verification can be bypassed and unchecked decryption return values collapse to a predictable all-zero encryption key. This makes it possible for unauthenticated attackers to forge arbitrary RPC commands and run them as the connected administrator, such as uploading and activating a malicious plugin, which ultimately leads to remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-10795 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10795"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-40994",
+    "published": "2026-06-11T07:16:27.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wss4jSecurityInterceptor initialized its BSP (WS-I Basic Security Profile) compliance flag so that inbound validation disabled WSS4J BSP enforcement on RequestData. Services that validate WS-Security on the network could therefore accept messages that violate BSP rules, weakening protocol-level checks.\n\nAffected versions:\nSpring Web Services 5.0.0 through 5.0.1; 4.1.0 through 4.1.3; 4.0.0 through 4.0.18; 3.1.0 through 3.1.8.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40994 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40994"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-40998",
+    "published": "2026-06-11T07:16:27.787",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jaxp13XPathTemplate evaluated XPath expressions for StreamSource and SAXSource inputs using a code path that parsed attacker-controlled XML with the JDK's default DocumentBuilderFactory behavior instead of Spring's hardened parser configuration. Applications that evaluate XPath against untrusted XML payloads could therefore be exposed to XML External Entity (XXE) style attacks.\n\nAffected versions:\nSpring Web Services 5.0.0 through 5.0.1; 4.1.0 through 4.1.3; 4.0.0 through 4.0.18; 3.1.0 through 3.1.8.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40998 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40998"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-40999",
+    "published": "2026-06-11T07:16:27.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "When WS-Addressing is used with non-anonymous ReplyTo or FaultTo addresses, Spring WS may initiate outbound connections through configured WebServiceMessageSender instances to destinations taken directly from request headers without verifying that those destinations are safe to connect to.\n\nAffected versions:\nSpring Web Services 5.0.0 through 5.0.1; 4.1.0 through 4.1.3; 4.0.0 through 4.0.18; 3.1.0 through 3.1.8.",
+    "tags": [],
+    "title": "CVE-2026-40999 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40999"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-41699",
+    "published": "2026-06-11T07:16:28.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spring for GraphQL applications are vulnerable to Unsafe Deserialization when processing paginated GraphQL queries. An attacker can craft a malicious GraphQL request that can lead to Remote Code Execution when the application exposes a paginated (Connection) field and the classpath contains specific classes that can be leveraged during deserialization.\n\nAffected versions:\nSpring for GraphQL 2.0.0 through 2.0.3; 1.4.0 through 1.4.5; 1.3.0 through 1.3.8.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-41699 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41699"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-41700",
+    "published": "2026-06-11T07:16:28.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spring for GraphQL applications that have enabled the WebSocket transport are vulnerable to Cross-Site WebSocket Hijacking. An attacker can trick an authenticated user into visiting a malicious page, allowing the attacker to execute arbitrary GraphQL operations with the victim's credentials.\n\nAffected versions:\nSpring for GraphQL 2.0.0 through 2.0.3; 1.4.0 through 1.4.5; 1.3.0 through 1.3.8; 1.0.0 through 1.0.6.",
+    "tags": [],
+    "title": "CVE-2026-41700 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41700"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-53821",
+    "published": "2026-06-12T22:16:53.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 accepts WebSocket client-declared operator scopes before binding to server-approved pairing or trusted-proxy authorization baseline. Unpaired or restricted trusted-proxy Control UI clients can obtain cached operator.admin authority on live WebSocket connections to execute admin-gated Gateway RPCs.",
+    "tags": [],
+    "title": "CVE-2026-53821 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53821"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-53822",
+    "published": "2026-06-12T22:16:53.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 contains a command injection vulnerability where shell wrapper argv could change between approval and execution. Attackers can rebuild command arguments after allowlist approval to execute unapproved command shapes, potentially bypassing security controls.",
+    "tags": [],
+    "title": "CVE-2026-53822 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53822"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53823",
+    "published": "2026-06-12T22:16:53.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.3 contains a privilege escalation vulnerability in the allowFrom feature that binds to mutable Slack display names. Attackers with Slack account access can change display name metadata to match policy entries, potentially gaining unauthorized agent access intended for other identities.",
+    "tags": [],
+    "title": "CVE-2026-53823 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53823"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-53824",
+    "published": "2026-06-12T22:16:53.613",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.4.24 contains a token revocation vulnerability allowing callers with revoked slash tokens to continue executing commands during monitor refresh windows. Attackers can exploit stale token acceptance to invoke slash command behavior briefly after token revocation, potentially executing unauthorized actions depending on operator configuration.",
+    "tags": [],
+    "title": "CVE-2026-53824 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53824"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-53828",
+    "published": "2026-06-12T22:16:54.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.6 contains an authorization bypass vulnerability in native command handling that allows authenticated senders to execute owner-only commands without proper policy enforcement. Attackers can trigger native command handling to bypass the configured owner-command access control, potentially executing privileged commands from unauthorized users.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53828 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53828"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-53829",
+    "published": "2026-06-12T22:16:54.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 contains an approval display truncation vulnerability allowing authenticated users to hide command suffixes from approvers. Attackers can submit oversized exec commands with benign prefixes and malicious suffixes to execute unauthorized operations after approval.",
+    "tags": [],
+    "title": "CVE-2026-53829 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53829"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-53831",
+    "published": "2026-06-12T22:16:54.643",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.18 contains a policy enforcement vulnerability in system.run safe-bin allowlist validation that allows shell expansion to modify command interpretation on POSIX nodes. Authenticated operators can exploit shell metacharacters in approved commands to read unintended node-local files and expose sensitive configuration data.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53831 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53831"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-53836",
+    "published": "2026-06-12T22:16:55.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.5.12 contains an allowlist bypass vulnerability in PowerShell encoded-command handling that allows attackers to execute encoded commands using abbreviated flag aliases not recognized by the allowlist parser. Remote authenticated operators can bypass execution allowlist checks by using unrecognized encoded-command alias forms to execute arbitrary PowerShell content.",
+    "tags": [],
+    "title": "CVE-2026-53836 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53836"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2025-14098",
+    "published": "2026-06-12T23:16:27.350",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap buffer out-of-bounds write vulnerability due to integer overflow in Avira Antivirus engine when scanning a malformed MS-DOS executable file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process.\n\nThis issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.70.104.",
+    "tags": [],
+    "title": "CVE-2025-14098 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14098"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2025-9032",
+    "published": "2026-06-12T23:16:30.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap buffer out-of-bounds read vulnerability in Avira Antivirus engine when scanning a malformed Windows PE file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process.\n\nThis issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.70.98.",
+    "tags": [],
+    "title": "CVE-2025-9032 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-9032"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2025-9033",
+    "published": "2026-06-12T23:16:31.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap buffer out-of-bounds read vulnerability in Avira Antivirus engine when scanning a malformed PDF file may allow Local Execution of Code or Denial-of-Service of the antivirus engine process.\n\nThis issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.70.76.",
+    "tags": [],
+    "title": "CVE-2025-9033 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-9033"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-12068",
+    "published": "2026-06-12T23:16:33.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Information disclosure vulnerability in Avira Password Manager when used with Mozilla Firefox may allow a remote attacker operating a cross-origin iframe to obtain credentials autofilled for the parent web page via incorrect autofill field selection.\n\nThis issue affects Avira Password Manager when used with Mozilla Firefox on Windows, macOS, and Linux.",
+    "tags": [],
+    "title": "CVE-2026-12068 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12068"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-6676",
+    "published": "2026-06-12T23:16:45.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap buffer out-of-bounds write vulnerability in Avira Antivirus engine when scanning a malformed POSIX tar archive may allow Local Execution of Code or Denial-of-Service of the antivirus engine process.\n\nThis issue affects Avira Antivirus on Windows, macOS, and Linux for engine builds before 8.3.27.12.",
+    "tags": [],
+    "title": "CVE-2026-6676 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6676"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12174",
+    "published": "2026-06-13T21:16:18.830",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in D-Link DCS-935L 1.10.01. This issue affects the function snprintf of the file /web/cgi-bin/greece/rhea of the component HTTP Handler. Such manipulation of the argument data leads to format string. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
+    "tags": [],
+    "title": "CVE-2026-12174 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12174"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE1NRHVOcDhrcWZHdHNFTFloYlJCb1NhcTlzUXpfTS1tQ3RNbUpZN1hKOXprVzhlZXNSZlprcTA4aDFSYjBiRFB1ZU9qdUdaNEY0cGJoVkkzRG1EQQ",
+    "published": "2026-07-23T08:57:00+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "농협은행, 과기부 주관 예금토큰 기반 결제 인프라 확대사업 참여",
+    "tags": [
+      "금융"
+    ],
+    "title": "농협은행, 과기부 주관 예금토큰 기반 결제 인프라 확대사업 참여",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1NRHVOcDhrcWZHdHNFTFloYlJCb1NhcTlzUXpfTS1tQ3RNbUpZN1hKOXprVzhlZXNSZlprcTA4aDFSYjBiRFB1ZU9qdUdaNEY0cGJoVkkzRG1EQQ?oc=5"
   }
 ]
