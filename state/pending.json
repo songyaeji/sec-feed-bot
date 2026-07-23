@@ -13096,5 +13096,91 @@
     ],
     "title": "International alert spotlights Russia-linked attacks on Zimbra webmail",
     "url": "https://therecord.media/zimbra-webmail-zero-click-phishing-russia-laundry-bear"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25216",
+    "published": "2026-07-23T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow a non-privileged user to escalate privileges or view the credentials of other users. The following versions of Weintek cMT3092X are affected: cMT3092X firmware",
+    "tags": [],
+    "title": "Weintek cMT3092X",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25215",
+    "published": "2026-07-23T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in an attacker obtaining confidential information from the device. The following versions of Johnson Controls XAAP Android are affected: XAAP Android",
+    "tags": [],
+    "title": "Johnson Controls XAAP Android",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25219",
+    "published": "2026-07-23T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an unauthenticated network-adjacent attacker to crash critical IEC 61850 services or execute arbitrary code, disrupting or compromising protection, visibility, and control functions. The following versions of MZ Automation libIEC61850 are affected: libIEC61850 >=v1.0.0| =v1.0.0| =v1.0.0| =v1.0.0| =v1.0.0|",
+    "tags": [],
+    "title": "MZ Automation libIEC61850",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25220",
+    "published": "2026-07-23T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could cause the parsing process to crash, which will cause a denial of service. The following versions of MZ Automation lib60870 are affected: lib60870",
+    "tags": [],
+    "title": "MZ Automation lib60870",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25214",
+    "published": "2026-07-23T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker with network access to achieve remote code execution. The following versions of Johnson Controls C-CURE 9000 and Victor application server are affected: C-CURE 9000 and victor",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Johnson Controls C-CURE 9000 and Victor application server",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25217",
+    "published": "2026-07-23T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker with access to the IT network to manipulate industrial control devices without requiring physical access, specialized insider knowledge, or advanced tooling. The following versions of Panduit IntraVUE are affected: IntraVUE",
+    "tags": [],
+    "title": "Panduit IntraVUE",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25218",
+    "published": "2026-07-21T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an authenticated attacker to write arbitrary files to restricted system directories outside of the application's intended directory. The following versions of Rockwell Automation ThinManager are affected: ThinManager >=13.0.0| =13.1.0| =13.2.0| =14.0.0| =13.0.0| =13.1.0| =13.2.0| =14.0.0| 13.0.8 Vendor fix ThinManager Versions 13.1.0 - 13.1.5 --> 13.1.6 Vendor fix ThinManager Versions 13.2.0 - 13.2.4 --> 13.2.5 Vendor fix ThinManager Versions 14.0.0 - 14.0.2 --> 14.0.3 Mitigation Users using the affected software, who are not able to upgrade to one of the corrected versions, should use Rockwell Automation's security best practices. https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight Mitigation For more information, refer to Rockwell Automation's Securitry Advisory page. https://www.rockwellautomation.com/en-us/trust-center/security-advisories.html Relevant CWE: CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.1 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H 4.0 7.2 HIGH CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N Acknowledgments Rockwell Automation reported this vulnerability to CISA Legal Notice and Terms of Use This product is provided subject to this Notification (https://www.cisa.gov/notification) and this Privacy & Use policy (",
+    "tags": [],
+    "title": "Rockwell Automation ThinManager",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-05"
   }
 ]
