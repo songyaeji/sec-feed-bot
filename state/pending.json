@@ -11604,5 +11604,53 @@
     "tags": [],
     "title": "EU fines Google $1 billion for search, app store antitrust violations",
     "url": "https://www.bleepingcomputer.com/news/google/eu-fines-google-1-billion-for-digital-markets-act-breaches-in-search-and-play-store/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-59147",
+    "published": "2026-07-21T20:17:03.513",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Data::DisjointSet::Shared versions before 0.02 for Perl allow out-of-bounds reads and writes via an unvalidated parent index in dsu_find.\n\nThe attach-time validator dsu_validate_header checks the header scalars and region layout against the file size, but does not validate the array contents it then trusts. dsu_find walks and path-compresses parent[x] with x a raw file-stored index never bounded against the node count, so both the read and the compression write-back land out of bounds.\n\nA local peer that can write the backing file can leave the header valid while poisoning the parent array, so the next find or union both reads and writes through an out-of-bounds parent index, corrupting memory or crashing the process.",
+    "tags": [],
+    "title": "CVE-2026-59147 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59147"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-65907",
+    "published": "2026-07-23T13:16:31.860",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In JetBrains TeamCity before 2026.1.2, 2025.11.6 code execution in Git VCS roots was possible",
+    "tags": [],
+    "title": "CVE-2026-65907 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65907"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65906",
+    "published": "2026-07-23T13:16:31.733",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains TeamCity before 2026.1.2, 2025.11.6 сode execution via Kotlin DSL sandbox escape was possible",
+    "tags": [],
+    "title": "CVE-2026-65906 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65906"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-65908",
+    "published": "2026-07-23T13:16:31.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains PyCharm before 2026.1.4, 2026.2 arbitrary code execution via malicious Python executable was possible on untrusted project open",
+    "tags": [],
+    "title": "CVE-2026-65908 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65908"
   }
 ]
