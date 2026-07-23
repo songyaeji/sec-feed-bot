@@ -11702,5 +11702,77 @@
     "tags": [],
     "title": "FedRAMP Rev5 Is Ending: What the 20x Transition Really Requires",
     "url": "https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-24259",
+    "published": "2025-03-31T23:15:22.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "This issue was addressed with additional entitlement checks. This issue is fixed in iPadOS 17.7.7, macOS Sequoia 15.4, macOS Sonoma 14.7.5, macOS Ventura 13.7.5. An app may be able to retrieve Safari bookmarks without an entitlement check.",
+    "tags": [],
+    "title": "CVE-2025-24259 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24259"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65687",
+    "published": "2026-07-23T14:18:02.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Bold Reports Standalone Report Designer before 14.1.12 contains a missing filepath validation vulnerability in its SVG processing feature that allows unauthenticated attackers to read arbitrary files from the server filesystem by supplying a crafted request. Attackers can exploit this path traversal weakness to disclose sensitive server files, including authentication credentials, enabling full unauthorized access to the application.",
+    "tags": [],
+    "title": "CVE-2026-65687 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65687"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65688",
+    "published": "2026-07-23T14:18:03.163",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Bold Reports Standalone Report Designer before 14.1.12 contains a missing filepath validation vulnerability in its font processing feature that allows unauthenticated attackers to read arbitrary files from the server filesystem by supplying a crafted request. Attackers can exploit this path traversal weakness to disclose sensitive server files, including authentication credentials, enabling full unauthorized access to the application.",
+    "tags": [],
+    "title": "CVE-2026-65688 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65688"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65689",
+    "published": "2026-07-23T14:18:03.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Bold Reports Standalone Report Designer before 14.1.12 contains a missing filepath validation vulnerability in its database download feature that allows unauthenticated attackers to read arbitrary files from the server filesystem by supplying a crafted request. Attackers can exploit this path traversal weakness to disclose sensitive server files, including authentication credentials, enabling full unauthorized access to the application.",
+    "tags": [],
+    "title": "CVE-2026-65689 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65689"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65690",
+    "published": "2026-07-23T14:18:03.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Bold Reports Standalone Report Designer before 14.1.12 contains a missing filepath validation vulnerability in its file upload functionality that allows authenticated attackers to traverse outside the intended directory by supplying a crafted filename. Attackers can exploit this path traversal weakness to execute arbitrary commands with high privileges on the server.",
+    "tags": [],
+    "title": "CVE-2026-65690 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65690"
+  },
+  {
+    "author": "Unit 42",
+    "category": "research",
+    "id": "https://unit42.paloaltonetworks.com/?p=184075",
+    "published": "2026-07-23T14:10:53+00:00",
+    "severity": "info",
+    "source": "Unit 42",
+    "summary": "Unit 42 details a Russian cyberespionage campaign targeting Zimbra webmail servers using JavaScript injection to steal credentials. The post Russian Global Webmail Espionage appeared first on Unit 42 .",
+    "tags": [],
+    "title": "Russian Global Webmail Espionage",
+    "url": "https://unit42.paloaltonetworks.com/russian-webmail-espionage/"
   }
 ]
