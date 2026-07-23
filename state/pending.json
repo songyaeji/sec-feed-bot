@@ -9270,5 +9270,55 @@
     "tags": [],
     "title": "CVE-2026-54410 (CVSS 8.6)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54410"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14282",
+    "published": "2026-07-23T10:16:49.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The GoDAM – Organize WordPress Media Library & File Manager with Unlimited Folders for Images, Videos & more plugin for WordPress is vulnerable to arbitrary file uploads in versions up to, and including, 1.12.2. This is due to insufficient file type validation in the save_video_file() function hooked into WPForms' public wpforms_process_before_filter, which trusts the attacker-supplied multipart Content-Type header, preserves the original filename via wp_unique_filename(), and moves the raw upload with $wp_filesystem->move() into a web-served directory — bypassing wp_handle_upload()'s MIME/extension allowlist. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14282 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14282"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15011",
+    "published": "2026-07-23T10:16:49.917",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Customer Support Ticket System & Helpdesk plugin for WordPress is vulnerable to Code Injection via the 'path' parameter in all versions up to, and including, 6.0.5 due to the use of dynamic function invocation on an attacker-controlled value with insufficient validation. This makes it possible for unauthenticated attackers to invoke arbitrary parameterless PHP functions, which can be used to disrupt site functionality or expose sensitive information. The required nonce is publicly emitted via wp_localize_script whenever the plugin's [emd_form] shortcode is rendered on any public-facing page, making the endpoint reachable by unauthenticated visitors without any prior authentication or privilege.",
+    "tags": [],
+    "title": "CVE-2026-15011 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15011"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15015",
+    "published": "2026-07-23T10:16:50.047",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The MountDev AI MCP Connector for WordPress plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.6.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to obtain an administrator-bound OAuth Bearer token via a self-registered client, granting full administrator-equivalent access to the plugin's MCP tool surface and all exposed WordPress content, users, and options. This is exploitable by combining the publicly accessible Dynamic Client Registration endpoint, which allows unauthenticated callers to register arbitrary OAuth clients with an attacker-controlled redirect_uri, with the unprotected authorization endpoint to complete the full OAuth flow without any administrator interaction.",
+    "tags": [],
+    "title": "CVE-2026-15015 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15015"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15017",
+    "published": "2026-07-23T10:16:50.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The MDJM Event Management plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.7.8.4. This is due to missing capability checks and nonce verification in the `MDJM_Permissions::set_permissions()` and `MDJM_Employee_Manager::init()` functions, combined with the absence of server-side allow-list validation on the `employee_roles[]` and `new_role` POST parameters before they are passed to `mdjm_set_employee_role()` and `WP_User::set_role()`. This makes it possible for unauthenticated attackers to grant arbitrary MDJM capabilities — including `mdjm_employee` and `mdjm_employee_edit` — to any registered WordPress role, and subsequently leverage a subscriber-level account to escalate privileges to Administrator. `MDJM_Permissions::init()` is registered on the public WordPress `init` hook without any authentication gate, meaning the role-manipulation endpoint is reachable without any prior login.",
+    "tags": [],
+    "title": "CVE-2026-15017 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15017"
   }
 ]
