@@ -12786,5 +12786,71 @@
     "tags": [],
     "title": "CVE-2018-25348 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25348"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-57827",
+    "published": "2026-07-11T10:16:34.057",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - rsjoomla.com - Unauthenticated file upload in RSFiles component < 1.17.12 - The Joomla extension RSFiles is vulnerable to an unauthenticated arbitrary file upload that allows uploading executable files and leads to full RCE.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57827 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57827"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-57828",
+    "published": "2026-07-11T10:16:35.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - phoca.cz - Authenticated file upload in RSFiles component < 6.1.3 - The Joomla extension Phoca Downloads is vulnerable to an authenticated arbitrary file upload that allows registered users uploading executable files and leads to full RCE.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57828 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57828"
+  },
+  {
+    "category": "high",
+    "cvss": 5.2,
+    "id": "CVE-2026-11804",
+    "published": "2026-07-23T16:17:13.273",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper handling of insufficient permissions or privileges vulnerability in Tridium Niagara Framework on Windows, Linux, QNX, Tridium Niagara Enterprise Security on Windows, Linux, QNX allows Privilege Abuse.\n\nThis issue affects Niagara Framework: before 4.14.6, before 4.15.5; Niagara Enterprise Security: before 4.14.6, before 4.15.5.",
+    "tags": [],
+    "title": "CVE-2026-11804 (CVSS 5.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11804"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-65916",
+    "published": "2026-07-23T16:17:54.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CyberPanel through 1.9.1, fixed in commit b198460, contains a missing authorization vulnerability in the cancelBackupCreation handler that allows authenticated users to kill, delete, and corrupt other tenants' backups. Attackers can send crafted POST requests with arbitrary backupCancellationDomain and fileName parameters to terminate backup processes, delete backup archives, corrupt backup status files, and remove database records belonging to other tenants.",
+    "tags": [],
+    "title": "CVE-2026-65916 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65916"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65917",
+    "published": "2026-07-23T16:17:55.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CyberPanel through 1.9.1, fixed in commit b198460, contains an insecure direct object reference (IDOR) vulnerability in the IncBackups application's incremental-backup handlers (deleteBackup, fetchRestorePoints, and restorePoint) that allows authenticated panel users to access or manipulate other tenants' backup resources by supplying an attacker-controlled globally sequential IncJob integer ID that is never re-scoped to the authorized domain. Attackers can enumerate sequential backup IDs to read another tenant's backup metadata, irrecoverably delete another tenant's backup snapshots, or trigger unauthorized restoration of another tenant's backup job with root privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65917 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65917"
   }
 ]
