@@ -3801,5 +3801,67 @@
     ],
     "title": "한화비전, AI CCTV 4종 ‘국정원 보안기능 확인서’ 획득... 공공시장 경쟁력 강화",
     "url": "http://www.boannews.com/media/view.asp?idx=144807&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64600",
+    "published": "2026-07-23T06:16:50.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfs: resample the data fork mapping after cycling ILOCK\n\nxfs_reflink_fill_{cow_hole,delalloc} are both presented with an inode,\na data fork mapping, and a cow fork mapping.  Unfortunately, these two\nhelpers cycle the ILOCK to grab a transaction, which means that the\nmappings are stale as soon as we reacquire the ILOCK.  Currently we\nrefresh the cow fork mapping by re-calling xfs_find_trim_cow_extent, but\nwe don't refresh the data fork mapping beforehand, which means that the\nxfs_bmap_trim_cow in that function queries the refcount btree about the\nwrong physical blocks and returns an inaccurate value in *shared.\n\nIf *shared is now false, the directio write proceeds with a stale data\nfork mapping.  Fix this by querying the data fork mapping if the\nsequence counter changes across the ILOCK cycle.",
+    "tags": [],
+    "title": "CVE-2026-64600 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64600"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144812&kind=&sub_kind=",
+    "published": "2026-07-23T06:20:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "무분별입찰 차단 근절로 계약질서 확립 및 건전한 조달시장 조성 기대[보안뉴스 강초희 기자] 조달청(청장 백승보)은 공공 조달시장 계약질서 확립을 위해 무분별입찰 우려가 높은 물품을 지정하고, 8월 3일부터 입찰 참가자 전원에게 입찰보증금을 납부받는다.이번 조치는 물품 공급 능력이 없는 일부 업체가 무분별하게 입찰에 참여하거나, 낙찰 후 계약을 이행하지 않는",
+    "tags": [],
+    "title": "조달청, 9개 품목 입찰보증금 의무화 “무분별 입찰 막는다”",
+    "url": "http://www.boannews.com/media/view.asp?idx=144812&kind=&sub_kind="
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144810&kind=&sub_kind=",
+    "published": "2026-07-23T06:19:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "Alpha-H, 상반기 매출 전년 대비 7배 급증하며 실적 견인미국과 영국 등 5개국 진출하며 글로벌 무선 보안 거버넌스 주도[보안뉴스 조재호 기자] 도청·무선 해킹·불법촬영 탐지 전문기업 지슨이 2026년 2분기 영업이익 흑자 전환에 성공하며, 상반기 누적 매출액이 전년 동기 대비 50.8% 증가했다고 23일 밝혔다.회사의 2분기 매출액은 49억원으로 전",
+    "tags": [],
+    "title": "“무선백도어 잡는다”... 지슨, 차세대 탐지 솔루션으로 흑자 전환",
+    "url": "http://www.boannews.com/media/view.asp?idx=144810&kind=&sub_kind="
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144808&kind=&sub_kind=",
+    "published": "2026-07-23T06:13:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "2026 기업 파트너 네트워킹 데이서 하반기 비즈니스 청사진 공유생성형 AI 결합한 알약xLLM 현장 소개하며, 엔드포인트 보안 쇄신[보안뉴스 조재호 기자] 이스트시큐리티가 파트너사를 초청해 네트워킹 데이를 열고 AI 네이티브 시대 보안 비전과 알약 기반 차세대 솔루션 전략을 공유했다.이스트시큐리티가 지난 21일 서울 서초구 본사에서 기업고객 공인 파트너사",
+    "tags": [
+      "AI"
+    ],
+    "title": "“AI 네이티브 시대 선도”... 이스트시큐리티, 차세대 K-AI 제품 전략 공유",
+    "url": "http://www.boannews.com/media/view.asp?idx=144808&kind=&sub_kind="
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207753",
+    "published": "2026-07-23T15:10:16+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "LG유플러스가 자체 개발한 차세대 개인화 AI 기술인 '퍼스널 인텔리전스(Personal Intelligence)' 연구 논문이 호주 멜버른에서 열린 정보검색 분야 학술대회 'SIGIR 2026'에 채택됐다. LG유플러스는 현지시간 7월 23일 행사 현장에서 해당 연구 성과를 발표했다.퍼스널 인텔리전스는 통화 요약, 앱 및 웹 이용 기록, 위치 기반 패턴 등 다양한 형태의 데이터를 결합해 이용자의 상황과 관심사를 분석하는 기술이다. 연령이나 특정 서비스 이용 기록에 의존하던 기존 방식에서 벗어나 이용 패턴을 입체적으로 이해하도록 설",
+    "tags": [],
+    "title": "LG유플러스 개인화 AI 기술 '퍼스널 인텔리전스', 학술대회 SIGIR 2026 논문 채택",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207753"
   }
 ]
