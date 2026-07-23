@@ -13804,5 +13804,95 @@
     "tags": [],
     "title": "New Dolphin X malware uses AI to rank high-value targets",
     "url": "https://www.bleepingcomputer.com/news/security/new-dolphin-x-malware-uses-ai-to-rank-high-value-targets/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2024-58354",
+    "published": "2026-07-23T22:16:51.380",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "cal.com (calcom repository, later renamed cal.diy) is affected by a repository takeover vulnerability in its GitHub Actions workflows. The workflow pr.yml uses the pull_request_target trigger with the repository's default write permissions and passes them down to check-types.yml. check-types.yml then performs a 'dangerous' checkout of the attacker-submitted pull request code (via the dangerous-git-checkout action) and subsequently executes it (through yarn install and package.json scripts). An attacker can open a pull request whose code runs arbitrary commands with the repository's write-scoped GITHUB_TOKEN, allowing them to push commits, merge or mutate pull requests, add or delete comments, and delete or force-push branches, thereby compromising the repository. The main branch is affected; no patched version is available.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-58354 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58354"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2025-71389",
+    "published": "2026-07-23T22:16:51.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cal.com (calcom/cal.diy) before 5.9.9 is vulnerable to unauthenticated remote code execution because it bundles a version of Next.js whose React Server Components (RSC) request handling deserializes attacker-controlled input. A remote attacker can send a crafted RSC request to the server and cause arbitrary code to be executed during server-side processing, without authentication or user interaction. The flaw derives from the upstream Next.js vulnerability CVE-2025-55182 and is resolved in 5.9.9 by updating the affected dependency.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-71389 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71389"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-63732",
+    "published": "2026-07-23T22:16:53.023",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "9router 0.4.59 (fixed in 0.4.60) contains a chain of vulnerabilities: a hardcoded default password (123456) that authenticates any fresh installation, a bypass of the LOCAL_ONLY network gate via a spoofed Host header, and unvalidated arguments passed to child_process.spawn() when registering MCP plugins. A remote, unauthenticated attacker can log in with the default credential, spoof the Host header to reach local-only routes, and register a malicious MCP plugin (e.g. node -e <payload>) to achieve arbitrary code execution on the host operating system when the plugin's SSE endpoint is triggered.",
+    "tags": [],
+    "title": "CVE-2026-63732 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63732"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2024-58353",
+    "published": "2026-07-23T22:16:51.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cal.com (repository calcom/cal.diy) in versions <= 4.7.15 is vulnerable to cross-site scripting (XSS) on the publicly accessible single booking view (e.g., /booking/<id>). Booking question (form field) labels are rendered via React's dangerouslySetInnerHTML without proper input sanitization or CSP, so an attacker who can create an event type with a malicious booking question label can inject arbitrary HTML/JavaScript that executes when a victim visits the booking view URL. Self-hosted instances with open registration are particularly at risk. The issue is fixed in version 4.7.16.",
+    "tags": [],
+    "title": "CVE-2024-58353 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58353"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2024-58355",
+    "published": "2026-07-23T22:16:51.533",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cal.com (calcom/cal.diy) versions through 4.7.15 contain a stored cross-site scripting vulnerability. The single booking view (e.g., https://app.cal.com/booking/<id>) renders booking-question field labels via React's dangerouslySetInnerHTML without sanitizing or escaping user input. An attacker who can create an event type with a malicious booking-question label can inject arbitrary HTML/JavaScript that executes when a victim opens the crafted booking URL. The issue is fixed in v4.7.16.",
+    "tags": [],
+    "title": "CVE-2024-58355 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58355"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-65604",
+    "published": "2026-07-23T22:16:53.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Skipper contains an incomplete fix for CVE-2026-50197 in which oversized request bodies bypass Open Policy Agent (OPA) deny-on-presence Rego policies. When a request body exceeds the configured maxBodyBytes limit, Skipper forwards the full payload to the upstream service while OPA evaluates against an empty parsed_body, so policies that deny requests based on body content are not enforced and forbidden actions proceed. No fixed version is available; v0.27.26 adds documentation guidance only.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65604 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65604"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207764",
+    "published": "2026-07-24T07:17:42+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "앤트로픽의 AI 에이전트 클로드 코워크에서 가상머신을 벗어나 맥(macOS) 전체 파일에 접근할 수 있는 취약점이 발견됐다.보안기업 어컴플리시 AI는 이 취약점을 ‘셰어드루트(SharedRoot)’라고 이름 붙였다. 연구진은 취약점이 수정되기 전 약 50만 명의 macOS 사용자가 영향을 받을 수 있었다고 밝혔다.사용자가 연결한 폴더만 접근해야 하지만, 실제로는 맥 전체 파일시스템이 가상머신 내부에 읽기·쓰기 권한으로 연결돼 있었다.가상머신 관리자 권한 획득클로드 코워크의 AI 에이전트는 맥 안에 만들어진 리눅스 가상머신에서 실행된",
+    "tags": [],
+    "title": "클로드 코워크 샌드박스 탈출 취약점…맥 전체 파일 접근 가능",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207764"
   }
 ]
