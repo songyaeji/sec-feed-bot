@@ -9234,5 +9234,41 @@
     "tags": [],
     "title": "[단독] 개인정보위 틱톡 103억 과징금 '고무줄 잣대' 논란, 국내 직접매출만 반영해 봐주기 제재했나",
     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1HZ1hnMHBEelFnb1ZFMkVyOTVMcm0xaGJUdl9MMGpBazZlWnA5OTQtWk5xY0F5dDF4SGlJOEhvVFBHS2h2YWw0SW11OTBjOE1UQzBxeTJ2Wnptc3RDb0lsMkV5d2hweF9FakYyQ3JwVTFpUDg?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-11526",
+    "published": "2026-06-14T12:16:22.403",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID.",
+    "tags": [],
+    "title": "CVE-2026-11526 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11526"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-11527",
+    "published": "2026-06-14T12:16:23.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle.\n\nConfig::IniFiles::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected.\n\nAny caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID.",
+    "tags": [],
+    "title": "CVE-2026-11527 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11527"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-54410",
+    "published": "2026-06-14T18:17:20.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "nanoMODBUS through v1.23.0 contains an off-by-one buffer overflow in the recv_msg_header() function of the Modbus/TCP server that allows remote unauthenticated attackers to write one attacker-controlled byte past the end of the 260-byte receive buffer by sending a crafted MBAP frame whose Length field is set to 255. The overflow corrupts the adjacent buffer-index field of the nanoMODBUS state structure, resulting in denial of service through invalid memory accesses and, on bare-metal and RTOS targets without memory protection, one-byte information disclosure and writes to unintended register addresses on the Write Multiple Registers (FC16) handler path.",
+    "tags": [],
+    "title": "CVE-2026-54410 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54410"
   }
 ]
