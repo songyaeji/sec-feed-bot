@@ -13423,5 +13423,31 @@
     "tags": [],
     "title": "CVE-2026-63765 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63765"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=195876",
+    "published": "2026-07-23T18:26:38+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Cisco Talos uncovered msaRAT, a Chaos ransomware RAT that hides C2 traffic by routing it through Chrome or Edge using the Chrome DevTools Protocol. Cisco Talos disclosed msaRAT, a Rust-based remote access trojan attributed to the Chaos ransomware group that routes its entire command-and-control channel through the victim’s own Chrome or Edge browser. The malware […]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Chaos ransomware deploys browser-based msaRAT to evade network detection",
+    "url": "https://securityaffairs.com/195876/malware/chaos-ransomware-deploys-browser-based-msarat-to-evade-network-detection.html"
+  },
+  {
+    "author": "Thorsten Rosendahl",
+    "category": "high",
+    "id": "6a60ff8a824f5b00012e5201",
+    "published": "2026-07-23T18:00:46+00:00",
+    "severity": "info",
+    "source": "Cisco Talos",
+    "summary": "Thorsten explores Q2 2026 stats, the artificial buffer zone of 2026, and why smart, prioritized patching is more critical than ever.",
+    "tags": [],
+    "title": "Don’t swing at everything",
+    "url": "https://blog.talosintelligence.com/dont-swing-at-everything/"
   }
 ]
