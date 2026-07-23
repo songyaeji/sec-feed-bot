@@ -12056,5 +12056,735 @@
     "tags": [],
     "title": "Microsoft 365 outage affects Teams, SharePoint and other services",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-365-outage-affects-teams-sharepoint-and-other-services/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-43501",
+    "published": "2026-05-21T13:16:19.410",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: rpl: reserve mac_len headroom when recompressed SRH grows\n\nipv6_rpl_srh_rcv() decompresses an RFC 6554 Source Routing Header, swaps\nthe next segment into ipv6_hdr->daddr, recompresses, then pulls the old\nheader and pushes the new one plus the IPv6 header back.  The\nrecompressed header can be larger than the received one when the swap\nreduces the common-prefix length the segments share with daddr (CmprI=0,\nCmprE>0, seg[0][0] != daddr[0] gives the maximum +8 bytes).\n\npskb_expand_head() was gated on segments_left == 0, so on earlier\nsegments the push consumed unchecked headroom.  Once skb_push() leaves\nfewer than skb->mac_len bytes in front of data,\nskb_mac_header_rebuild()'s call to:\n\n\tskb_set_mac_header(skb, -skb->mac_len);\n\nwill store (data - head) - mac_len into the u16 mac_header field, which\nwraps to ~65530, and the following memmove() writes mac_len bytes ~64KiB\npast skb->head.\n\nA single AF_INET6/SOCK_RAW/IPV6_HDRINCL packet over lo with a two\nsegment type-3 SRH (CmprI=0, CmprE=15) reaches headroom 8 after one\npass; KASAN reports a 14-byte OOB write in ipv6_rthdr_rcv.\n\nFix this by expanding the head whenever the remaining room is less than\nthe push size plus mac_len, and request that much extra so the rebuilt\nMAC header fits afterwards.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-43501 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43501"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5118",
+    "published": "2026-05-21T13:16:20.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Divi Form Builder plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 5.1.2. This is due to the plugin accepting a user-controlled 'role' parameter from POST data during user registration without validating it against the form's configured default_user_role setting. This makes it possible for unauthenticated attackers to create administrator accounts by tampering with the role parameter during registration.",
+    "tags": [],
+    "title": "CVE-2026-5118 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5118"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-71210",
+    "published": "2026-05-21T14:16:43.540",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations.\r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-71210 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71210"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-71211",
+    "published": "2026-05-21T14:16:43.663",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations. This vulnerability is similar in scope to CVE-2025-71210 but affects a different executable. \r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-71211 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71211"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-39531",
+    "published": "2026-05-21T16:16:23.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Wp Directory Kit WP Directory Kit allows Blind SQL Injection.\n\nThis issue affects WP Directory Kit: from n/a through 1.5.0.",
+    "tags": [],
+    "title": "CVE-2026-39531 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39531"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48207",
+    "published": "2026-05-21T17:16:21.857",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of untrusted data in Apache Fory PyFory. PyFory's ReduceSerializer could bypass documented DeserializationPolicy validation hooks during reduce-state restoration and global-name resolution. An application is vulnerable if it deserializes attacker-controlled data using PyFory Python-native mode with strict mode disabled and relies on DeserializationPolicy to restrict unsafe classes, functions, or module attributes.\n\nThis issue affects Apache Fory: from before 1.0.0.\n\nMitigation: Users of Apache Fory are recommended to upgrade to version 1.0.0 or later, which enforces DeserializationPolicy validation for the affected ReduceSerializer paths and thus fixes this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48207 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48207"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-6960",
+    "published": "2026-05-21T22:16:48.643",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The BookingPress Pro plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'bookingpress_validate_submitted_booking_form_func' function in all versions up to, and including, 5.6. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability can only be exploited if a signature custom field is added to the booking form.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-6960 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6960"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-33000",
+    "published": "2026-05-22T02:16:33.933",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network and high privileges could exploit an Improper Input Validation vulnerability found in UniFi OS devices to execute a Command Injection.",
+    "tags": [],
+    "title": "CVE-2026-33000 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33000"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-39831",
+    "published": "2026-05-22T04:16:22.553",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Verify() method for FIDO/U2F security key types (sk-ecdsa-sha2-nistp256@openssh.com, sk-ssh-ed25519@openssh.com) did not check the User Presence flag. Signatures generated without physical touch were accepted, allowing unattended use of a hardware security key. To restore the previous behavior, return a \"no-touch-required\" extension in Permissions.Extensions from PublicKeyCallback.",
+    "tags": [],
+    "title": "CVE-2026-39831 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39831"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-39833",
+    "published": "2026-05-22T04:16:22.773",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The in-memory keyring returned by NewKeyring() silently accepted keys with the ConfirmBeforeUse constraint but never enforced it. The key would sign without any confirmation prompt, with no indication to the caller that the constraint was not in effect. NewKeyring() now returns an error when unsupported constraints are requested.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39833 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39833"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-39834",
+    "published": "2026-05-22T04:16:24.237",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "When writing data larger than 4GB in a single Write call on an SSH channel, an integer overflow in the internal payload size calculation caused the write loop to spin indefinitely, sending empty packets without making progress. The size comparison now uses int64 to prevent truncation.",
+    "tags": [],
+    "title": "CVE-2026-39834 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39834"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-8670",
+    "published": "2026-05-22T14:16:29.640",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient session expiration vulnerability in syslink software AG Avantra on Linux, Windows allows Reusing Session IDs (aka Session Replay).\n\nThis issue affects Avantra: before 25.3.1.",
+    "tags": [],
+    "title": "CVE-2026-8670 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8670"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-32253",
+    "published": "2026-05-22T17:16:46.393",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sunshine is a self-hosted game stream host for Moonlight. In versions prior to 2026.516.143833, the client-certificate authentication can be bypassed because of how OpenSSL verification results are handled. In src/crypto.cpp, the custom verify callback treats X509_V_ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY, X509_V_ERR_CERT_NOT_YET_VALID, and X509_V_ERR_CERT_HAS_EXPIRED as success. This can allow an untrusted certificate to pass authentication and access protected HTTPS endpoints. This issue has been fixed in version 2026.516.143833.",
+    "tags": [],
+    "title": "CVE-2026-32253 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32253"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-33712",
+    "published": "2026-05-22T17:16:46.533",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Typebot is a chatbot builder tool. In versions 3.15.2 and prior, the preview chat endpoint (POST /api/v1/typebots/{typebotId}/preview/startChat) allows unauthenticated users to achieve Server-Side Request Forgery (SSRF) by supplying a custom typebot definition with server-side code blocks. The fetch function exposed inside the isolated-vm sandbox calls Node.js native fetch without the SSRF validation (validateHttpReqUrl) that protects the HTTP Request block. This bypasses all SSRF mitigations added after GHSA-8gq9-rw7v-3jpr. Exploitation of this unauthenticated SSRF vulnerability can lead to cloud credential theft, internal network access and data exfiltration for any self-hosted Typebot deployments and hosted services. This issue has been fixed in version 3.16.0.",
+    "tags": [],
+    "title": "CVE-2026-33712 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33712"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-4858",
+    "published": "2026-05-21T09:16:30.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mattermost versions 11.6.x <= 11.6.0, 11.5.x <= 11.5.3, 11.4.x <= 11.4.4, 10.11.x <= 10.11.14 fail to check integration URL for path traversal which allows an malicious authenticated user  to call an arbitrary API via system admin Mattermost auth token using via path traversal in integration action URL.. Mattermost Advisory ID: MMSA-2026-00640",
+    "tags": [],
+    "title": "CVE-2026-4858 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4858"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-9157",
+    "published": "2026-05-21T09:16:30.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper input validation, Unrestricted upload of file with dangerous type vulnerability in Gmission Web Fax allows Remote Code Inclusion.\n\nThis issue affects Web Fax: from 3.0 before 3.1.",
+    "tags": [],
+    "title": "CVE-2026-9157 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9157"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-39461",
+    "published": "2026-05-21T10:16:25.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "libcasper(3) communicates with helper processes via UNIX domain sockets, and uses the select(2) system call to wait for data to become available.  However, it does not verify that its socket descriptor fits within select(2)'s descriptor set size limit of FD_SETSIZE (1024).\n\nAn attacker able to cause an application using libcasper(3) to allocate large file descriptors, e.g., by opening many descriptors and executing a program which is not careful to close them upon startup, may trigger stack corruption.  If the target application runs with setuid root privileges, this could be used to escalate local privileges.",
+    "tags": [],
+    "title": "CVE-2026-39461 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39461"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-45253",
+    "published": "2026-05-21T10:16:26.270",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ptrace(PT_SC_REMOTE) failed to properly validate parameters for the syscall(2) and __syscall(2) meta-system calls.  As a result, a user with the ability to debug a process may trigger arbitrary code execution in the kernel, even if the target process has no special privileges.\n\nThe missing validation allows an unprivileged local user to escalate privileges, potentially gaining full control of the affected system.",
+    "tags": [],
+    "title": "CVE-2026-45253 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45253"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-43494",
+    "published": "2026-05-21T12:16:19.957",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/rds: reset op_nents when zerocopy page pin fails\n\nWhen iov_iter_get_pages2() fails in rds_message_zcopy_from_user(),\nthe pinned pages are released with put_page(), and\nrm->data.op_mmp_znotifier is cleared.  But we fail to properly\nclear rm->data.op_nents.\n\nLater when rds_message_purge() is called from rds_sendmsg() the\ncleanup loop iterates over the incorrectly non zero number of\nop_nents and frees them again.\n\nFix this by properly resetting op_nents when it should be in\nrds_message_zcopy_from_user().",
+    "tags": [],
+    "title": "CVE-2026-43494 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43494"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-43495",
+    "published": "2026-05-21T13:16:18.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: wwan: t7xx: validate port_count against message length in t7xx_port_enum_msg_handler\n\nt7xx_port_enum_msg_handler() uses the modem-supplied port_count field as\na loop bound over port_msg->data[] without checking that the message buffer\ncontains sufficient data. A modem sending port_count=65535 in a 12-byte\nbuffer triggers a slab-out-of-bounds read of up to 262140 bytes.\n\nAdd a sizeof(*port_msg) check before accessing the port message header\nfields to guard against undersized messages.\n\nAdd a struct_size() check after extracting port_count and before the loop.\n\nIn t7xx_parse_host_rt_data(), guard the rt_feature header read with a\nremaining-buffer check before accessing data_len, validate feat_data_len\nagainst the actual remaining buffer to prevent OOB reads and signed\ninteger overflow on offset.\n\nPass msg_len from both call sites: skb->len at the DPMAIF path after\nskb_pull(), and the validated feat_data_len at the handshake path.",
+    "tags": [],
+    "title": "CVE-2026-43495 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43495"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-43496",
+    "published": "2026-05-21T13:16:18.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: sch_red: Replace direct dequeue call with peek and qdisc_dequeue_peeked\n\nWhen red qdisc has children (eg qfq qdisc) whose peek() callback is\nqdisc_peek_dequeued(), we could get a kernel panic. When the parent of such\nqdiscs (eg illustrated in patch #3 as tbf) wants to retrieve an skb from\nits child (red in this case), it will do the following:\n 1a. do a peek() - and when sensing there's an skb the child can offer, then\n     - the child in this case(red) calls its child's (qfq) peek.\n        qfq does the right thing and will return the gso_skb queue packet.\n        Note: if there wasnt a gso_skb entry then qfq will store it there.\n 1b. invoke a dequeue() on the child (red). And herein lies the problem.\n     - red will call the child's dequeue() which will essentially just\n       try to grab something of qfq's queue.\n\n[   78.667668][  T363] KASAN: null-ptr-deref in range [0x0000000000000048-0x000000000000004f]\n[   78.667927][  T363] CPU: 1 UID: 0 PID: 363 Comm: ping Not tainted 7.1.0-rc1-00033-g46f74a3f7d57-dirty #790 PREEMPT(full)\n[   78.668263][  T363] Hardware name: Bochs Bochs, BIOS Bochs 01/01/2011\n[   78.668486][  T363] RIP: 0010:qfq_dequeue+0x446/0xc90 [sch_qfq]\n[   78.668718][  T363] Code: 54 c0 e8 dd 90 00 f1 48 c7 c7 e0 03 54 c0 48 89 de e8 ce 90 00 f1 48 8d 7b 48 b8 ff ff 37 00 48 89 fa 48 c1 e0 2a 48 c1 ea 03 <80> 3c 02 00 74 05 e8 ef a1 e1 f1 48 8b 7b 48 48 8d 54 24 58 48 8d\n[   78.6693",
+    "tags": [],
+    "title": "CVE-2026-43496 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43496"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2026-43497",
+    "published": "2026-05-21T13:16:19.090",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nfbdev: udlfb: add vm_ops to dlfb_ops_mmap to prevent use-after-free\n\ndlfb_ops_mmap() uses remap_pfn_range() to map vmalloc framebuffer pages\nto userspace but sets no vm_ops on the VMA. This means the kernel cannot\ntrack active mmaps. When dlfb_realloc_framebuffer() replaces the backing\nbuffer via FBIOPUT_VSCREENINFO, existing mmap PTEs are not invalidated.\nOn USB disconnect, dlfb_ops_destroy() calls vfree() on the old pages\nwhile userspace PTEs still reference them, resulting in a use-after-free:\nthe process retains read/write access to freed kernel pages.\n\nAdd vm_operations_struct with open/close callbacks that maintain an\natomic mmap_count on struct dlfb_data. In dlfb_realloc_framebuffer(),\ncheck mmap_count and return -EBUSY if the buffer is currently mapped,\npreventing buffer replacement while userspace holds stale PTEs.\n\nTested with PoC using dummy_hcd + raw_gadget USB device emulation.",
+    "tags": [],
+    "title": "CVE-2026-43497 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43497"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-43498",
+    "published": "2026-05-21T13:16:19.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\naccel/ivpu: Disallow re-exporting imported GEM objects\n\nPrevent re-exporting of imported GEM buffers by adding a custom\nprime_handle_to_fd callback that checks if the object is imported\nand returns -EOPNOTSUPP if so.\n\nRe-exporting imported GEM buffers causes loss of buffer flags settings,\nleading to incorrect device access and data corruption.",
+    "tags": [],
+    "title": "CVE-2026-43498 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43498"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-43502",
+    "published": "2026-05-21T13:16:19.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/rds: handle zerocopy send cleanup before the message is queued\n\nA zerocopy send can fail after user pages have been pinned but before\nthe message is attached to the sending socket.\n\nThe purge path currently infers zerocopy state from rm->m_rs, so an\nunqueued message can be cleaned up as if it owned normal payload pages.\nHowever, zerocopy ownership is really determined by the presence of\nop_mmp_znotifier, regardless of whether the message has reached the\nsocket queue.\n\nCapture op_mmp_znotifier up front in rds_message_purge() and use it as\nthe cleanup discriminator. If the message is already associated with a\nsocket, keep the existing completion path. Otherwise, drop the pinned\npage accounting directly and release the notifier before putting the\npayload pages.\n\nThis keeps early send failure cleanup consistent with the zerocopy\nlifetime rules without changing the normal queued completion path.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-43502 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43502"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-45760",
+    "published": "2026-05-21T13:16:19.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "(Externally Controlled Reference to a Resource in Another Sphere), (Authorization Bypass Through User-Controlled Key) vulnerability in Apache Camel K. Authorized users in a Kubernetes namespace can create a Build resource, controlling the Pod generation in a namespace of their choice, including the operator namespace.\n\nThis issue affects Apache Camel K: from 2.0.0 before 2.8.1, from 2.9.0 before 2.9.2, from 2.10.0 before 2.10.1.\n\nUsers are recommended to upgrade to version 2.10.1 (or 2.8.1 or 2.9.2), which fixes the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45760 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45760"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-2740",
+    "published": "2026-05-21T14:16:44.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zohocorp ManageEngine ADSelfService Plus version before 6525, DataSecurity Plus before 6264 and RecoveryManager Plus before 6313 are vulnerable to Authenticated Remote code execution in the agent machines due to the bug in the 3rd party dependency.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-2740 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2740"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-9089",
+    "published": "2026-05-21T16:16:23.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The ConnectWise Automate™ Agent does not fully verify the authenticity of components obtained during plugin loading and self-update operations. This issue is addressed in Automate 2026.5.",
+    "tags": [],
+    "title": "CVE-2026-9089 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9089"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-48235",
+    "published": "2026-05-21T18:16:20.310",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open ISES Tickets before 3.44.2 contains a SQL injection vulnerability in incs/remotes.inc.php where latitude, longitude, callsign, mph, altitude, and timestamp values parsed from external GPS tracking service XML/JSON responses (InstaMapper and Google Latitude integration) are concatenated into UPDATE and INSERT statements without sanitization. An attacker able to compromise or impersonate the remote GPS tracker endpoint can inject SQL to manipulate the responder location, tracks, and assignment tables.",
+    "tags": [],
+    "title": "CVE-2026-48235 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48235"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-48241",
+    "published": "2026-05-21T18:16:21.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database credentials in loader.php (a public-facing database utility) that are committed to the source repository. Any actor with access to the public source tree (or an unauthenticated attacker with read access to the file on a deployed installation) can read the username, password, and database name and use them to connect to the database if it is reachable from their network.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48241 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48241"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-48242",
+    "published": "2026-05-21T18:16:21.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database connection credentials (host, username, password, database name) in import_mdb.php. The credentials are embedded in source code committed to the public repository, allowing any reader of the source to obtain valid configuration values that may match deployed installations.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48242 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48242"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8350",
+    "published": "2026-05-21T21:16:33.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9.5.0 and below is vulnerable to missing authorization in the bulk_user_assignment.php which can lead to privilege escalation to Administrative Group. Any authenticated user with access to the bulk user assignment dashboard page can add any user email to any group and can remove legitimate admins. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 7.5 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N. Thanks Vincent55 for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8350 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8350"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8417",
+    "published": "2026-05-21T21:16:33.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9.5.0 and below does not validate a CSRF token before processing requests to /dashboard/extend/update/do_update/<pkgHandle>. The do_update() method in concrete/controllers/single_page/dashboard/extend/update.php checks only canInstallPackages() before executing upgradeCoreData() and upgrade() on the named package's controller. Because the endpoint is a state-changing GET route with no token enforcement, an attacker can force an authenticated administrator to trigger a package upgrade via a single cross-site navigation.In order to be vulnerable, the victim must be passing canInstallPackages() and and a target package must already be already installed. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 7.5 with vector CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N. Thanks  https://github.com/maru1009  for reporting.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8417 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8417"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8421",
+    "published": "2026-05-21T21:16:34.107",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9.5.0 and below contains a CSRF vulnerability in the install_package() method of concrete/controllers/single_page/dashboard/extend/install.php.  An attacker who can cause an authenticated administrator to visit a crafted page,  and who has placed or caused a package to be present under DIR_PACKAGES/<handle>/, can force the installation of that package without any CSRF protection. Package installation executes the package controller's install() method as the web server user, enabling remote code execution.  In order to be vulnerable, the victim must be passing canInstallPackages. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 7.5 with vector CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N. Thanks  https://github.com/maru1009  for reporting.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8421 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8421"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8426",
+    "published": "2026-05-21T21:16:34.243",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9.5.0 and below does not validate a CSRF token before processing requests to /dashboard/extend/update/prepare_remote_upgrade/<remoteMPID>. An attacker who controls the remote package returned for a known marketplace item ID can overwrite the package PHP on disk and force its upgrade() method to execute in a single browser navigation. This results in remote code execution as the web server user.   In order to be vulnerable, the victim must be passing canInstallPackages, victim site must be connected to the Concrete marketplace; and the attacker controls the package returned for a marketplace item ID already installed on the victim site. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 7.5 with vector CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N. Thanks https://github.com/maru1009 for reporting.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8426 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8426"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8428",
+    "published": "2026-05-21T21:16:34.387",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9.5.0 and below emits a CSRF token in the local_available_update.php view ($token->output('do_update')) but the corresponding do_update() method in concrete/controllers/single_page/dashboard/system/update/update.php never calls $this->token->validate('do_update'). The form is rendered as a POST form, meaning the token reaches the browser, but because the controller discards it without verification, an attacker can craft a cross-site POST that triggers a core CMS update to an attacker-specified version string.  In order to be vulnerable, theictim must be passing canUpgrade()anda valid update version must be present under DIR_CORE_UPDATES. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 7.5 with vector CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N. Thanks https://github.com/maru1009 for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8428 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8428"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8409",
+    "published": "2026-05-21T22:16:50.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/dialog/logs/delete.  The The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8409 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8409"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8410",
+    "published": "2026-05-21T22:16:50.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/dialog/logs/bulk/delete.  The The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8410 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8410"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8411",
+    "published": "2026-05-21T22:16:50.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/dialog/page/bulk/delete. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8411 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8411"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8412",
+    "published": "2026-05-21T22:16:50.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at \tconcrete/controllers/dialog/page/bulk/cache. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8412 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8412"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8413",
+    "published": "2026-05-21T22:16:51.110",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/dialog/page/bulk/design. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8413 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8413"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8414",
+    "published": "2026-05-21T22:16:51.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/dialog/event/duplicate. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8414 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8414"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8415",
+    "published": "2026-05-21T22:16:51.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/dialog/express/association/reorder. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8415 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8415"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8416",
+    "published": "2026-05-21T22:16:51.467",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/backend/file addFavoriteFolder($id). The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8416 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8416"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8427",
+    "published": "2026-05-21T22:16:51.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/backend/file removeFavoriteFolder($id). The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8427 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8427"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8432",
+    "published": "2026-05-21T22:16:51.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/backend/file star(). The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8432 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8432"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8433",
+    "published": "2026-05-21T22:16:51.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/backend/file rescan(). The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8433 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8433"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8434",
+    "published": "2026-05-21T22:16:51.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concrete CMS 9 before 9.5.0 is vulnerable to Cross Site Request Forgery (CSRF) at concrete/controllers/backend/file rescanMultiple(). The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 2.3 with vector CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N. Thanks Yonatan Drori (Tenzai) for reporting.",
+    "tags": [],
+    "title": "CVE-2026-8434 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8434"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-8671",
+    "published": "2026-05-22T14:16:29.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insertion of sensitive information into log file vulnerability in syslink software AG Avantra on Linux, Windows allows Resource Leak Exposure.\n\nThis issue affects Avantra: before 25.3.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8671 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8671"
+  },
+  {
+    "category": "high",
+    "cvss": 5.1,
+    "id": "CVE-2026-8672",
+    "published": "2026-05-22T14:16:29.957",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use of default password vulnerability in syslink software AG Avantra on Linux, Windows allows Try Common or Default Usernames and Passwords.\n\nThis issue affects Avantra: before 25.3.0.",
+    "tags": [],
+    "title": "CVE-2026-8672 (CVSS 5.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8672"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-8673",
+    "published": "2026-05-22T14:16:30.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Unprotected transport of credentials vulnerability in syslink software AG Avantra on Linux, Windows allows Sniffing Attacks.\n\nThis issue affects Avantra: before 25.3.0.",
+    "tags": [],
+    "title": "CVE-2026-8673 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8673"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8992",
+    "published": "2026-05-22T15:16:26.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper certificate validation vulnerability in Ivanti Secure Access Client before 22.8R6 allows a remote unauthenticated attacker to execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-8992 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8992"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-28445",
+    "published": "2026-05-22T17:16:46.127",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Typebot is a chatbot builder tool. In versions 3.15.2 and prior, the RatingButton component in the embed package renders the user-controlled customIcon.svg field directly via Solid's innerHTML directive without any sanitization, even though DOMPurify is already a dependency and is used elsewhere in the codebase (e.g., StreamingBubble.tsx). Because rating blocks are not flagged as isUnsafe by the import sanitizer and the builder preview renders bots inline on the builder's own origin (builder.typebot.io) under a CSP permitting 'unsafe-inline', a malicious imported or collaborator-crafted typebot can execute arbitrary HTML/JS in the builder's authenticated context, bypassing the Web Worker sandbox that protects Script blocks during preview. This allows session hijacking and privilege escalation within the builder application. This issue has been fixed in version 3.16.0.",
+    "tags": [],
+    "title": "CVE-2026-28445 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28445"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-46727",
+    "published": "2026-05-22T18:16:22.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in Ruby 4 before 4.0.5. A race condition leading to a use-after-free in the pthread-based getaddrinfo timeout handler (rb_getaddrinfo in ext/socket/raddrinfo.c) allows a remote attacker who can delay DNS responses near the user-specified timeout to crash a Ruby process that calls Addrinfo.getaddrinfo(..., timeout:) or Socket.tcp(..., resolv_timeout:). Memory-corruption-based exploitation is theoretically possible. The attack could, for example, be carried out through a crafted authoritative DNS server or recursive resolver.",
+    "tags": [],
+    "title": "CVE-2026-46727 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46727"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-40172",
+    "published": "2026-05-22T19:17:03.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "authentik is an open-source identity provider. In versions prior to 2025.12.5 and 2026.2.0-rc1 through 2026.2.2, the PATCH /api/v3/core/users/{pk}/ API allows a caller with change_user on a target user to assign arbitrary groups through UserSerializer, including groups with is_superuser=True, without requiring enable_group_superuser, leading to privilege escalation. This bypasses the stricter permission model enforced in group-management paths and enables delegated user-management permissions to escalate target users to administrator-equivalent privilege. Users with permissions to update groups or permissions to update users are able to add themselves or other users they have permissions on to users which have superuser permissions. This issue has been fixed in versions 22025.12.5 and 2026.2.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40172 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40172"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-6406",
+    "published": "2026-05-22T19:17:04.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Docker CLI --use-api-socket flag bypasses Enhanced Container Isolation (ECI) restrictions in Docker Desktop. When ECI is enabled, Docker socket mounts from containers are denied unless explicitly allowed via the admin-settings configuration. However, the --use-api-socket flag adds the Docker socket mount via the HostConfig.Mounts field rather than the HostConfig.Binds field. The ECI enforcement in the Docker Desktop API proxy only inspected Binds, allowing the mount to pass unchecked. This grants a container full access to the Docker Engine socket and, if the host user has logged in to container registries, their authentication credentials.\n\nA local attacker with the ability to run Docker CLI commands can exploit this to escape ECI restrictions, access the Docker Engine, and potentially escalate privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-6406 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6406"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25342",
+    "published": "2026-05-23T19:16:54.067",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Smartshop 1 contains a time-based blind SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the 'searched' parameter in search.php. Attackers can send GET requests with malicious SQL payloads like SLEEP commands to extract sensitive database information including product details and system data.",
+    "tags": [],
+    "title": "CVE-2018-25342 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25342"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2018-25344",
+    "published": "2026-05-23T19:16:54.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "10-Strike Network Inventory Explorer 8.54 contains a stack-based buffer overflow vulnerability in the registration key input field that allows local attackers to execute arbitrary code by triggering a structured exception handler overwrite. Attackers can craft a malicious registration key string with 4188 bytes of padding followed by SEH chain values and shellcode, then paste it into the registration dialog to achieve code execution with application privileges.",
+    "tags": [],
+    "title": "CVE-2018-25344 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25344"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-25348",
+    "published": "2026-05-23T19:16:54.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla! Component Ek Rishta 2.10 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the cid parameter. Attackers can send GET requests to the user_detail view with malicious cid values containing SQL commands to extract sensitive database information.",
+    "tags": [],
+    "title": "CVE-2018-25348 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25348"
   }
 ]
