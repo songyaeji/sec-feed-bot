@@ -13327,5 +13327,29 @@
     ],
     "title": "Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes",
     "url": "https://thehackernews.com/2026/07/russian-espionage-group-exploited.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-10684",
+    "published": "2017-06-29T23:29:00.223",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In ncurses 6.0, there is a stack-based buffer overflow in the fmt_entry function. A crafted input will lead to a remote arbitrary code execution attack.",
+    "tags": [],
+    "title": "CVE-2017-10684 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-10684"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-10685",
+    "published": "2017-06-29T23:29:00.253",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In ncurses 6.0, there is a format string vulnerability in the fmt_entry function. A crafted input will lead to a remote arbitrary code execution attack.",
+    "tags": [],
+    "title": "CVE-2017-10685 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-10685"
   }
 ]
