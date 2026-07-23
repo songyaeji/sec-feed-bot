@@ -13411,5 +13411,17 @@
     "tags": [],
     "title": "CVE-2018-25373 (CVSS 8.4)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25373"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-63765",
+    "published": "2026-07-23T19:17:03.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Chatwoot before 4.16.0 contains an authentication bypass vulnerability in the direct uploads controller that allows unauthenticated attackers to create arbitrary ActiveStorage blobs in any tenant account. Attackers can exploit missing authentication checks to resolve any account and conversation, then obtain signed PUT URLs to write arbitrary data to the application's storage backend.",
+    "tags": [],
+    "title": "CVE-2026-63765 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63765"
   }
 ]
