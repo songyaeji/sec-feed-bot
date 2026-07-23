@@ -13657,5 +13657,41 @@
     "tags": [],
     "title": "CVE-2026-9057 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9057"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-63359",
+    "published": "2026-07-23T20:17:20.367",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Appriss Insights (Equifax) Victim Information Notification Exchange (VINE) applications allow an unauthenticated attacker to send a specially-crafted request to bypass the login page, access other users' credentials, take over other user accounts, access sensitive PII, and dump other information from the database.",
+    "tags": [],
+    "title": "CVE-2026-63359 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63359"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15212",
+    "published": "2026-07-23T20:17:07.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WPO365 | Login plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 43.2. This is due to the Ajax_Service::verify_ajax_request() helper gating its wp_verify_nonce() call behind the boolean option 'enable_nonce_check', which is absent from the default 'wpo365_options' array and therefore evaluates to false via get_global_boolean_var(); as a result, the wp_ajax_wpo365_update_settings handler (Ajax_Service::update_settings) accepts POSTs from cross-origin pages and forwards the attacker-supplied 'settings' payload (base64/JSON) to Options_Service::update_options(), which merges every key/value into wpo365_options without a key allowlist. This makes it possible for unauthenticated attackers to overwrite arbitrary plugin options — including enabling the SCIM REST endpoint (enable_scim), planting an attacker-known scim_secret_token, and setting new_usr_default_role to 'administrator' — via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+    "tags": [],
+    "title": "CVE-2026-15212 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15212"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/",
+    "published": "2026-07-23T20:14:35+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Origin Energy has confirmed that an unauthorized party accessed and subsequently leaked customer data online, exposing sensitive personally identifiable information (PII), among others. [...]",
+    "tags": [],
+    "title": "Australian energy provider Origin says data breach exposes client data",
+    "url": "https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/"
   }
 ]
