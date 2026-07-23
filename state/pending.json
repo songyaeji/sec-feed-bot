@@ -9320,5 +9320,31 @@
     "tags": [],
     "title": "CVE-2026-15017 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15017"
+  },
+  {
+    "author": "Jordyn Dunk",
+    "category": "high",
+    "id": "6a544329501b2f00010617f1",
+    "published": "2026-07-23T10:00:38+00:00",
+    "severity": "info",
+    "source": "Cisco Talos",
+    "summary": "The Chaos ransomware group uses new malware \"msaRAT\" that hijacks browsers. The malware doesn't communicate directly with C2 but connects through the browser. It enables arbitrary command execution while hiding the attacker's IP from victims via WebRTC over TURN.",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Chaos ransomware's msaRAT: Living off the browser to build a covert C2 channel",
+    "url": "https://blog.talosintelligence.com/chaos-msarat-living-off-the-browser-to-build-covert-c2-channel/"
+  },
+  {
+    "author": "Hazel Burton",
+    "category": "high",
+    "id": "6a5f858b70c7080001d752bc",
+    "published": "2026-07-23T10:00:14+00:00",
+    "severity": "info",
+    "source": "Cisco Talos",
+    "summary": "Here’s some of the ways Talos is showing up at Black Hat, alongside our friends at Cisco and Splunk.",
+    "tags": [],
+    "title": "Preview: Cisco Talos at Black Hat USA 2026",
+    "url": "https://blog.talosintelligence.com/preview-cisco-talos-at-black-hat-usa-2026/"
   }
 ]
