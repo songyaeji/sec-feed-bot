@@ -738,6 +738,12 @@ def main() -> None:
                         for key in ("title_ko", "summary_ko", "why_ko", "term_ko"):
                             value = item_verdict.get(key)
                             if value:
+                                # **볼드**는 summary_ko 전용(카드 라임 강조).
+                                # 사서가 제목·용어에 흘리면 렌더러가 문자
+                                # 그대로 찍는다(2026-07-23 "**더 젠틀맨**"
+                                # 실측) — 병합 시점에 걷어 meta.json까지 보호
+                                if key in ("title_ko", "term_ko"):
+                                    value = value.replace("**", "")
                                 item[key] = value
                         # 사서의 항목별 구체 키워드 — 카드 해시태그·pill이
                         # 규칙 태그(tags) 대신 우선 사용. LLM 출력이라 형태 검증:

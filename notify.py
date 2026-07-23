@@ -409,9 +409,12 @@ def _build_digest_embed(category: str, group_items: list[dict], colors: dict) ->
     lines = [_h2(f"{label} {total}"), ""]
     for item in group_items[:DIGEST_MAX_LINES]:
         emoji = _bullet_emoji(item)
-        title = item["title"]
+        # 제목 속 **·대괄호는 아래 **[title](url)** 마크다운을 파손시킨다
+        # (QA 2026-07-23) — 볼드 마커는 걷고 대괄호는 이스케이프
+        title = item["title"].replace("**", "")
         if len(title) > DIGEST_TITLE_MAX:
             title = title[:DIGEST_TITLE_MAX] + "…"
+        title = title.replace("[", "\\[").replace("]", "\\]")
         lines.append(f"{emoji} **[{title}]({item['url']})**")
         lines.append(_chip_line(item["source"], item.get("tags_ko") or item.get("tags") or []))
         lines.append("")  # blank line between items

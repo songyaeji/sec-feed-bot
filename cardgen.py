@@ -79,8 +79,10 @@ def _strip_html(text: str) -> str:
 
 
 def _card_title(item: dict) -> str:
-    # v5: 카드에는 전부 한국어 — 사서 번역 제목(title_ko) 우선, 없으면 원제
-    title = item.get("title_ko") or item.get("title", "")
+    # v5: 카드에는 전부 한국어 — 사서 번역 제목(title_ko) 우선, 없으면 원제.
+    # 제목엔 강조 마커가 설 자리가 없는데 사서가 summary_ko용 **볼드**를
+    # 제목에도 흘리는 사고가 실측됨(2026-07-23 "**더 젠틀맨**") — 렌더에서 제거
+    title = (item.get("title_ko") or item.get("title", "")).replace("**", "")
     return _clean_text(_TITLE_PREFIX_RE.sub("", title))
 
 
@@ -218,9 +220,15 @@ def build_link_lines(top_items: list[dict], cve_rest: list[dict],
                      other_rest: list[dict]) -> list[str]:
     """카드 번호와 1:1로 매칭되는 원문 링크 목록. 카드 표시 순서와
     동일하게 뉴스 → 그 밖의 소식 → 오늘의 CVE(맨 마지막) 순으로 나열한다.
-    URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다."""
+    URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다.
+    라벨 속 대괄호는 [label](url) 마크다운을 조기 종료시키므로 \\ 이스케이프
+    (QA 2026-07-23 — "[일부] 검거"류 제목이 링크를 파손)."""
     return [
-        f"{i}. [{link_label(item)}](<{item['url']}>)"
+        "{}. [{}](<{}>)".format(
+            i,
+            link_label(item).replace("[", "\\[").replace("]", "\\]"),
+            item["url"],
+        )
         for i, item in enumerate(top_items + other_rest + cve_rest, start=1)
     ]
 
@@ -424,7 +432,7 @@ def _build_news(
     term = ""
     if item.get("term_ko"):
         term = _fill(fragments["term"], TEXT=html.escape(
-            " ".join(item["term_ko"].split())))
+            " ".join(item["term_ko"].replace("**", "").split())))
 
     return _fill(
         fragments["news"],
