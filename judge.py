@@ -195,7 +195,11 @@ def select_urgent(items: list[dict], config: dict, allow_llm: bool = True) -> li
                 "--model", MODEL,
                 # 도구 일절 미허용 — 피드 본문은 신뢰할 수 없는 입력이라
                 # Read가 있으면 프롬프트 인젝션으로 러너의 자격증명 파일을
-                # 읽혀 판정 사유(공개 Discord/로그)로 유출될 수 있다
+                # 읽혀 판정 사유(공개 Discord/로그)로 유출될 수 있다.
+                # 명시 목록으로 강제 — 단독 "*"는 미차단(2026-07-24 실측)
+                "--disallowedTools",
+                "Read,Bash,Write,Edit,Glob,Grep,WebFetch,WebSearch,"
+                "Task,NotebookEdit",
                 "--output-format", "json",
             ],
             cwd=BASE_DIR,

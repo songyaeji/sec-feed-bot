@@ -83,8 +83,13 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
     resp.raise_for_status()
     feed = feedparser.parse(resp.content)
 
+    # 광량 피드(구글뉴스 쿼리 등) 상한 — 피드 순서가 곧 랭킹이므로 앞쪽만.
+    # 미설정 시 기존과 동일하게 전량
+    max_items = source_cfg.get("max_items")
+    entries = feed.entries[:int(max_items)] if max_items else feed.entries
+
     items = []
-    for entry in feed.entries:
+    for entry in entries:
         entry_id = entry.get("id") or entry.get("link")
         if not entry_id:
             continue

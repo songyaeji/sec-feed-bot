@@ -21,7 +21,9 @@ import librarian
 import notify
 import preflight
 import tagger
-from sources import dblp, fsec, fss, hackernews, kev, nvd, rss
+import trend_enrich
+from sources import (
+    dblp, fsec, fss, github_trend, hackernews, kev, nvd, reddit, rss)
 
 # 크로스포스트(인스타/쓰레드)는 crosspost.py CLI로 분리됐다 — Instagram
 # Graph API가 '공개 URL + JPEG'만 받아 디스코드 첨부(PNG)로는 발행이
@@ -58,6 +60,8 @@ FETCHERS = {
     "fss": fss.fetch,
     "dblp": dblp.fetch,
     "hn": hackernews.fetch,
+    "reddit": reddit.fetch,
+    "github": github_trend.fetch,
 }
 
 
@@ -171,6 +175,11 @@ def collect_all(config: dict, state: dict) -> list[dict]:
             if source_cfg.get("breaking"):
                 for item in items:
                     item["breaking"] = True
+            # 트렌드 라운드로빈 묶음 키 — 유튜브 채널 4개가 각각 소스로
+            # 잡혀 링크 섹션을 독식하는 것 방지(_select_trend가 본다)
+            if source_cfg.get("trend_group"):
+                for item in items:
+                    item["trend_group"] = source_cfg["trend_group"]
             print(f"[main] {name}: fetched {len(items)} item(s)", file=sys.stderr)
             all_items.extend(items)
         except Exception as exc:
@@ -400,6 +409,8 @@ def _save_preview_cards(
     # 전송 없이 로컬에서 카드 디자인을 눈으로 검수하기 위한 용도라서
     # 렌더 실패(playwright 미설치 등)는 경고만 하고 run을 깨지 않는다.
     # 사서(librarian)는 DRY_RUN에서 돌지 않으므로 briefing/wiki_new 없음.
+    # 트렌드는 카드가 아니라 링크 섹션 전용 — 카드 렌더에서 제외
+    merged = [it for it in merged if it.get("category") != "trend"]
     if not merged:
         return
     try:
@@ -433,6 +444,101 @@ def _save_preview_cards(
         )
     except Exception as exc:
         print(f"[main] DRY_RUN: 카드뉴스 렌더 실패(경고만): {_safe_exc_str(exc)}", file=sys.stderr)
+
+
+def _normalize_trend_url(url: str) -> str:
+    # HN·Lobsters가 같은 원문을 동시에 띄우는 경우의 링크 중복 키 —
+    # 스킴·www·꼬리 슬래시 차이만 접는다(쿼리는 유지: 유튜브 watch?v=)
+    u = url.lower()
+    for prefix in ("https://", "http://"):
+        if u.startswith(prefix):
+            u = u[len(prefix):]
+            break
+    if u.startswith("www."):
+        u = u[4:]
+    return u.rstrip("/")
+
+
+def _select_trend(items: list[dict], config: dict) -> list[dict]:
+    """'오늘의 트렌드' 링크 선별 — 카드·위키·사서를 타지 않는 결정적 경로.
+
+    소스별로 (score 내림차순 → published 내림차순) 정렬 후 라운드로빈으로
+    상한까지 뽑는다 — 한 소스(예: HN 검색)가 섹션을 독식하지 않게 하는
+    다양성 장치. 점수 체계가 소스마다 달라(HN points vs 레딧 무점수 RSS)
+    전역 정렬은 의미가 없다. URL 정규화 중복은 먼저 접는다."""
+    cap = int(config.get("trend_max_links", 6))
+    seen_urls: set[str] = set()
+    by_source: dict[str, list[dict]] = {}
+    for item in items:
+        url = item.get("url") or ""
+        key = _normalize_trend_url(url)
+        if not url or key in seen_urls:
+            continue
+        # 유튜브 쇼츠는 본편 영상 대비 정보량이 낮은 클립이 대부분 —
+        # 링크 5석을 소모할 가치가 없다(2026-07-24 실발송 검수에서 제외 결정)
+        if "youtube.com/shorts/" in key:
+            continue
+        seen_urls.add(key)
+        group_key = item.get("trend_group") or item.get("source", "")
+        by_source.setdefault(group_key, []).append(item)
+
+    for group in by_source.values():
+        # 안정 정렬 3단: published 내림차순 → 구글뉴스 리다이렉트 후순위
+        # (같은 소식이면 벤더 공식 원문이 이긴다) → score 내림차순(주 기준)
+        group.sort(key=lambda it: it.get("published") or "", reverse=True)
+        group.sort(key=lambda it: "news.google.com" in (it.get("url") or ""))
+        group.sort(key=lambda it: -(it.get("score") or 0))
+
+    selected: list[dict] = []
+    # 큐 우선순위 = 사용자 관심축(QA2: 관심축 가중치) — 상한(cap)보다
+    # 그룹이 많을 때 어떤 그룹이 슬롯을 얻는지 결정한다. 미등재 그룹은 뒤
+    priority = {g: i for i, g in enumerate(config.get("trend_priority", []))}
+    queues = [g for _, g in sorted(
+        ((priority.get(k, len(priority)), g)
+         for k, g in by_source.items() if g),
+        key=lambda pair: pair[0],
+    )]
+    while queues and len(selected) < cap:
+        next_queues = []
+        for group in queues:
+            if len(selected) >= cap:
+                break
+            while group:
+                cand = group.pop(0)
+                # 이미 뽑힌 항목과 같은 사건/소식(제목 토큰·CVE 유사도)이면
+                # 건너뛰고 그룹의 다음 후보로 — 구글뉴스 재보도 vs 공식
+                # 원문이 다른 그룹에서 둘 다 뽑히는 것 방지
+                if any(dedup_lib.is_similar_event(cand, s) for s in selected):
+                    continue
+                selected.append(cand)
+                break
+            if group:
+                next_queues.append(group)
+        queues = next_queues
+    return selected
+
+
+TREND_SEND_HOURS = (8, 23)  # KST — 심야 트렌드 알림은 소음(긴급 아님)
+
+
+def _should_send_trend(state: dict, now_kst: datetime, config: dict) -> bool:
+    """트렌드 알림 스로틀 — 사용자 요구: 너무 자주 오면 본편을 가린다.
+
+    ① KST 08~23시 밖이면 보류(심야 금지), ② 마지막 발송 후
+    trend_interval_hours(기본 6시간)가 지나야 다시 보낸다 → 하루 최대
+    2~3회. 보류된 후보는 seen에 남기지 않아(main 하단) 다음 run이
+    같은 항목을 다시 가져와 재도전한다 — 별도 대기열 상태 파일이 필요
+    없고, top?t=day·HN 최근 2일 창이 '아직 핫한 것'만 자연 유지한다."""
+    if not (TREND_SEND_HOURS[0] <= now_kst.hour < TREND_SEND_HOURS[1]):
+        return False
+    last = state.get("last_trend_sent")
+    if not last:
+        return True
+    interval = timedelta(hours=float(config.get("trend_interval_hours", 6)))
+    try:
+        return datetime.now(timezone.utc) - datetime.fromisoformat(last) >= interval
+    except (TypeError, ValueError):
+        return True  # 손상된 타임스탬프는 발송 허용(fail-open) 후 덮어쓴다
 
 
 def _publish_trend(
@@ -568,10 +674,15 @@ def main() -> None:
     routable_items = []
     cross_dup_count = 0
     for item in new_items:
-        if dedup_lib.is_cross_duplicate(item, state):
-            cross_dup_count += 1
-            continue
-        dedup_lib.record_alerted(item, state)
+        # trend는 교차중복 검사·기록을 우회한다 — 보류(스로틀) 시 seen에
+        # 남기지 않고 다음 run이 재수집하는 설계라, 여기서 자기 자신의
+        # 기록에 걸려 두 번째 수집이 중복으로 죽으면 안 된다. 트렌드 내부
+        # 중복은 _select_trend의 URL 정규화가 거른다
+        if item.get("category") != "trend":
+            if dedup_lib.is_cross_duplicate(item, state):
+                cross_dup_count += 1
+                continue
+            dedup_lib.record_alerted(item, state)
         routable_items.append(item)
     if cross_dup_count:
         print(f"[main] 교차중복 {cross_dup_count}건 스킵", file=sys.stderr)
@@ -582,15 +693,22 @@ def main() -> None:
     # 게이트 + sonnet). 구 기준(KEV/CVSS≥9/긴급 소스)은 폐기: 그런 항목도
     # 아침 다이제스트로 몰아 보낸다. DRY_RUN은 LLM 호출 없이 게이트만 로그.
     dry_run = os.environ.get("DRY_RUN") == "1"
-    urgent_items = judge.select_urgent(routable_items, config, allow_llm=not dry_run)
+    # 트렌드는 긴급 판정 대상이 아니다(커뮤니티 화제글 ≠ 확인된 사건;
+    # 초기 신호는 breaking HN front_page 소스가 이미 커버) — judge
+    # 키워드 게이트·LLM 예산에서 제외하고 독립 알림 레인으로 뺀다
+    trend_candidates = [
+        it for it in routable_items if it.get("category") == "trend"]
+    judge_input = [
+        it for it in routable_items if it.get("category") != "trend"]
+    urgent_items = judge.select_urgent(judge_input, config, allow_llm=not dry_run)
     urgent_ids = {it["id"] for it in urgent_items}
     # breaking 소스(HN·레딧)는 즉시 발송 후보로만 쓴다 — 긴급이 아니면
     # 다이제스트에 싣지 않고 버린다 (seen에는 남아 재등장하지 않는다)
     non_urgent_items = [
-        it for it in routable_items
+        it for it in judge_input
         if it["id"] not in urgent_ids and not it.get("breaking")
     ]
-    dropped_breaking = len(routable_items) - len(urgent_items) - len(non_urgent_items)
+    dropped_breaking = len(judge_input) - len(urgent_items) - len(non_urgent_items)
     if dropped_breaking:
         print(f"[main] breaking 소스 비긴급 {dropped_breaking}건 버림", file=sys.stderr)
 
@@ -604,6 +722,75 @@ def main() -> None:
 
     pending = load_pending()
     discord_cfg = config.get("discord", {})
+
+    # ── 트렌드 독립 알림 레인 — 아침 카드뉴스와 완전 분리 ──────────────
+    # 핫한 AI 툴·skills·MCP·영상·글이 잡히면 별도 embed 1건으로 알린다.
+    # 스로틀(_should_send_trend)에 걸려 보류된 후보는 seen에 남기지 않아
+    # (아래 state 기록부) 다음 run이 재수집·재도전한다 — 대기열 파일 없음.
+    # 발송 성공 시에는 미선발 후보까지 전량 seen 소진한다(의도된 정책:
+    # 같은 항목이 창마다 재선별 후보로 돌아와 반복 노출되는 소음 방지 —
+    # 선발 경쟁에서 진 항목은 그 시점 화제성이 부족했던 것).
+    unsent_trend_ids: set[str] = set()
+    if trend_candidates:
+        # 긴급 카드로 나간(이번 run + 최근 14일 이력) 사건과 같은 스토리는
+        # 제외 — HN front_page(breaking)와 트렌드 검색이 같은 스토리를 각자
+        # 잡을 수 있고(id 네임스페이스 분리로 seen으론 안 걸러짐, QA1),
+        # 이력 대조가 없으면 다음 run에 새 id로 온 같은 스토리가 다시
+        # 샌다(QA3: cross-run 누수)
+        already_alerted = urgent_items + [
+            {"title": e.get("title", "")} for e in judge.load_history()]
+        picks = _select_trend(
+            [t for t in trend_candidates
+             if not any(dedup_lib.is_similar_event(t, u)
+                        for u in already_alerted)],
+            config,
+        )
+        if not _should_send_trend(state, now_kst, config):
+            unsent_trend_ids = {it["id"] for it in trend_candidates}
+            print(
+                f"[main] 트렌드 {len(trend_candidates)}건 보류(스로틀/시간창) — "
+                "다음 run 재도전",
+                file=sys.stderr,
+            )
+        elif dry_run:
+            print(
+                f"[main] DRY_RUN: 트렌드 알림 {len(picks)}건 발송 예정 "
+                f"(후보 {len(trend_candidates)}건)"
+            )
+            for it in picks:
+                print(f"  - [{it.get('trend_note') or it.get('source')}] "
+                      f"{it.get('title')}")
+        elif picks:
+            # 스로틀 선기록(fail-closed, QA1 지적): Discord가 수신했는데
+            # 응답 단계에서 실패하면 "실패" 오판 → 다음 run 즉시 재발송으로
+            # 같은 embed가 중복된다. 선기록이면 최악이 '한 배치 유실 후
+            # 다음 창(6h)에서 재도전'이고, 스팸 방지가 이 기능의 취지다
+            state["last_trend_sent"] = datetime.now(timezone.utc).isoformat()
+            try:
+                # 발송 확정 시에만 주석(LLM 포함) — 보류 run은 비용 0.
+                # 주석 실패가 발송까지 막으면 스로틀만 낭비되므로(QA3)
+                # 격리 — 실패 시 배지 폴백만으로 나간다
+                try:
+                    trend_enrich.annotate(picks)
+                except Exception as exc:
+                    print(f"[main] 트렌드 주석 실패(폴백 발송): {_safe_exc_str(exc)}",
+                          file=sys.stderr)
+                # 같은 사건의 교차 보도/반응은 대표만(LLM dup_of, QA2:
+                # 5픽 중 2픽이 같은 사건이던 사례) — 접힌 만큼 줄어든 채 발송
+                folded = [p for p in picks if not p.get("dup_of")]
+                if len(folded) < len(picks):
+                    print(f"[main] 트렌드 동일 사건 {len(picks) - len(folded)}건 접음",
+                          file=sys.stderr)
+                notify.send_trend(folded, discord_cfg)
+                print(
+                    f"[main] 트렌드 알림 발송: {len(picks)}건 "
+                    f"(후보 {len(trend_candidates)}건 소진)"
+                )
+            except Exception as exc:
+                # seen 미기록 — 아직 핫하면 다음 창에서 재수집·재도전
+                unsent_trend_ids = {it["id"] for it in trend_candidates}
+                print(f"[main] 트렌드 발송 실패(다음 창 재도전): {_safe_exc_str(exc)}",
+                      file=sys.stderr)
 
     if dry_run:
         print(
@@ -669,13 +856,17 @@ def main() -> None:
                 paper_count = sum(1 for it in fresh if it.get("category") == "paper")
                 if paper_count:
                     print(f"[main] 논문 {paper_count}건 카드 제외(소진)", file=sys.stderr)
+                # (trend는 pending에 들어오지 않는다 — 독립 알림 레인.
+                #  아래 not in 조건은 과거 state 잔존분 방어)
                 news_pool = [
                     it for it in fresh
-                    if it.get("category") != "paper" and not cardgen.is_cve_item(it)
+                    if it.get("category") not in ("paper", "trend")
+                    and not cardgen.is_cve_item(it)
                 ]
                 cve_pool = [
                     it for it in fresh
-                    if it.get("category") != "paper" and cardgen.is_cve_item(it)
+                    if it.get("category") not in ("paper", "trend")
+                    and cardgen.is_cve_item(it)
                 ]
                 # ③ '오늘의 CVE'는 사서 판정과 무관하게 결정적으로 선발 —
                 #    KEV(실악용) 우선, CVSS 내림차순. 미선발 CVE는 소진
@@ -957,6 +1148,10 @@ def main() -> None:
 
     now_iso = datetime.now(timezone.utc).isoformat()
     for item in new_items:
+        # 보류된 트렌드는 seen에 남기지 않는다 — 다음 run이 같은 항목을
+        # 다시 가져와 스로틀 해제 시점에 발송할 수 있게(대기열 대체 설계)
+        if item["id"] in unsent_trend_ids:
+            continue
         state["seen"][item["id"]] = now_iso
     state["seen"] = prune_seen(state["seen"])
     dedup_lib.prune_dedup_state(state)

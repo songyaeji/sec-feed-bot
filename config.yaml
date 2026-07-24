@@ -351,6 +351,123 @@ sources:
     region: "국내"
     max_age_days: 1
 
+  # ── 트렌드 소스 (2026-07-24 추가, 전건 실fetch 검증) ──────────────
+  # category: trend는 아침 카드뉴스와 완전히 무관한 독립 알림 레인 —
+  # 핫한 AI 툴·skills·MCP·영상·글이 잡히면 '🔥 트렌드 픽' embed 1건으로
+  # 발송한다(notify.send_trend). 카드·위키·사서·judge를 타지 않는다.
+  # 빈도 제어: trend_interval_hours 스로틀 + KST 08~23시 창 + 총
+  # trend_max_links건 상한(라운드로빈). 선별 기준 = 커뮤니티 화제성
+  # (업보트·points 순위)이 이미 필터.
+
+  # 멀티레딧 top?t=day 한 요청(개별 요청은 429 — 기존 소스 교훈).
+  # JSON API는 UA 불문 403(2026-07-24 실측)이라 RSS로 간다.
+  # AI 툴·모델(LocalLLaMA·ClaudeAI), MCP(mcp), 보안 커뮤니티(netsec·
+  # cybersecurity) — 대형 서브레딧 독식은 per_subreddit 상한이 막는다
+  - name: "Reddit 트렌드"
+    type: reddit
+    subreddits: [netsec, cybersecurity, LocalLLaMA, ClaudeAI, mcp]
+    per_subreddit: 3
+    category: "trend"
+    region: "해외"
+
+  # HN 키워드 검색(Algolia) — AI 툴·에이전트·AI 보안 화제글.
+  # points 100+ & 최근 2일 numericFilters로 좁힌다. front_page 소스
+  # (breaking)와 같은 스토리는 id가 같아 seen dedup이 한쪽만 남긴다
+  - name: "HN 트렌드"
+    type: hn
+    queries: ["mcp", "claude", "anthropic", "openai", "gemini", "ai agent", "llm", "prompt injection", "ai security"]
+    min_points: 100
+    max_age_days: 2
+    category: "trend"
+    region: "해외"
+
+  # Lobsters ai+security 태그 — 저빈도·고품질 기술글 축
+  - name: "Lobsters"
+    type: rss
+    url: "https://lobste.rs/t/ai,security.rss"
+    category: "trend"
+    max_age_days: 2
+    region: "해외"
+
+  # GitHub 급상승 신규 레포 — 검색 API(최근 생성 + star 하한)로 단기간에
+  # 별을 쓸어담은 프로젝트를 잡는다(공식 trending API 부재 — 스크래핑
+  # 대신 검색 API, 2026-07-24 실fetch 검증). AI·보안 무관 레포는 키워드로 배제
+  - name: "GitHub 급상승"
+    type: github
+    max_age_days: 14
+    min_stars: 300
+    keywords: [ai, llm, mcp, agent, claude, gpt, gemini, security, hack, cve,
+               pentest, prompt, rag, codex, model, inference]
+    category: "trend"
+    region: "해외"
+
+  # AI 벤더 공식 블로그 — 새 모델·기능 릴리스 원문(2026-07-24 실fetch 검증).
+  # Anthropic은 공식 RSS가 없다(뉴스·엔지니어링 블로그 모두 404) — HN
+  # 트렌드 쿼리(anthropic·claude)와 아래 AI 업계 뉴스가 대신 잡는다.
+  # trend_group vendor: 벤더발 소식이 라운드로빈 1자리를 공유
+  - name: "OpenAI Blog"
+    type: rss
+    url: "https://openai.com/blog/rss.xml"
+    category: "trend"
+    trend_group: "vendor"
+    max_age_days: 2
+    region: "해외"
+
+  - name: "Google AI Blog"
+    type: rss
+    url: "https://blog.google/technology/ai/rss/"
+    category: "trend"
+    trend_group: "vendor"
+    max_age_days: 2
+    region: "해외"
+
+  # AI 업계 뉴스(구글뉴스, 영문) — 벤더 간 분쟁·투자·인물 발언 등 업계
+  # 이슈(예: OpenAI vs Anthropic). 광량 쿼리라 상위 10건만(피드 순서 =
+  # 구글뉴스 랭킹). 링크는 구글뉴스 리다이렉트
+  - name: "AI 업계 뉴스"
+    type: rss
+    url: "https://news.google.com/rss/search?q=Anthropic%20OR%20OpenAI%20OR%20DeepMind%20OR%20%22Claude%22&hl=en-US&gl=US&ceid=US:en"
+    category: "trend"
+    trend_group: "vendor"
+    max_items: 10
+    max_age_days: 2
+    region: "해외"
+
+  # 유튜브 보안 채널 — 채널 RSS(API 키 불필요), 채널 ID 실fetch 검증.
+  # trend_group: 4채널이 라운드로빈 슬롯을 각각 차지해 링크 섹션을
+  # 독식하지 않게 한 묶음으로 취급(main.collect_all → _select_trend)
+  - name: "John Hammond"
+    type: rss
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw"
+    category: "trend"
+    trend_group: "youtube"
+    max_age_days: 2
+    region: "해외"
+
+  - name: "IppSec"
+    type: rss
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCa6eh7gCkpPo5XXUDfygQQA"
+    category: "trend"
+    trend_group: "youtube"
+    max_age_days: 2
+    region: "해외"
+
+  - name: "LiveOverflow"
+    type: rss
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UClcE-kVhqyiHCcjYwcpfj9w"
+    category: "trend"
+    trend_group: "youtube"
+    max_age_days: 2
+    region: "해외"
+
+  - name: "Low Level"
+    type: rss
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCzEaIT_yUdxixGEc8mINGmg"
+    category: "trend"
+    trend_group: "youtube"
+    max_age_days: 2
+    region: "해외"
+
 # judge scale(파장 자기평가 1~5) 하한 — 이 값 미만은 LLM이 긴급이라 해도
 # 코드에서 탈락시킨다(이중 게이트). 5 = 국가적/글로벌 파장만. 긴급 알림이
 # 너무 조용하면 4로 낮춰 업계 전체 파장까지 허용
@@ -403,6 +520,26 @@ max_items_per_run: 25
 # 뉴스 7 = 표지1+뉴스7+CVE목록1 = 총 9장(사용자 결정, 첨부 상한 10 이내),
 # CVE 10 = '오늘의 CVE' 목록 카드 1장의 행 상한(LIST_ROWS)과 동일
 max_news_items: 7
+
+# '🔥 트렌드 픽' 알림 1건당 링크 상한 — 소스(그룹)별 라운드로빈으로
+# 채운다. 노이즈로 본편 알림을 가리지 않게 한 자릿수 유지(사용자 요구:
+# 너무 자주·너무 많이 금지)
+trend_max_links: 5
+
+# 트렌드 알림 최소 간격(시간) — KST 08~23시 창과 함께 하루 최대 2~3회로
+# 묶는다. 보류된 후보는 seen 미기록으로 다음 run이 재도전한다
+trend_interval_hours: 6
+
+# 라운드로빈 큐 우선순위(그룹 키 = trend_group 또는 소스명) — 그룹 수가
+# 링크 상한보다 많을 때 슬롯 배분 순서. 사용자 관심축(툴·skills·릴리스)
+# 우선, 범용 커뮤니티는 뒤
+trend_priority:
+  - "GitHub 급상승"
+  - "vendor"
+  - "HN 트렌드"
+  - "Reddit 트렌드"
+  - "Lobsters"
+  - "youtube"
 max_cve_items: 10
 
 # 사서(LLM 위키 사서)에 넘길 뉴스 후보 상한 — 전 항목 판정은 전역 예산

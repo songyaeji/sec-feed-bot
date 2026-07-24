@@ -154,6 +154,67 @@ def send_digest(
 
 MESSAGE_CONTENT_MAX = 2000  # Discord 일반 메시지 content 상한
 
+TREND_COLOR = 0xF39C12  # 주황 — 긴급(빨강)·헤더(파랑)와 구분되는 화제성 톤
+TREND_TITLE_MAX = 120  # 링크 라벨 절단폭 — 5건이 4096자 한도를 못 넘게
+
+
+def send_trend(items: list[dict], discord_cfg: dict) -> None:
+    """트렌드 픽 알림 — 아침 카드뉴스와 무관한 독립 embed 1건.
+
+    핫한 AI 툴·skills·MCP·영상·글 링크 모음. 채널 '분리'는
+    DISCORD_TREND_WEBHOOK_URL을 설정했을 때만 참 — 미설정이면 본 채널
+    웹훅으로 폴백한다(데이터 경로는 어느 쪽이든 카드뉴스와 무관).
+    호출 측(main)이 스로틀로 빈도를 제한하므로 여기서는 형식만 책임진다."""
+    webhook_url = (os.environ.get("DISCORD_TREND_WEBHOOK_URL")
+                   or os.environ.get("DISCORD_WEBHOOK_URL"))
+    if not webhook_url:
+        raise RuntimeError("DISCORD_WEBHOOK_URL is not set")
+
+    lines = []
+    for item in items:
+        # 대괄호 이스케이프는 cardgen.build_link_lines와 동일 규칙 —
+        # 제목 속 [ ]가 마크다운 링크를 조기 종료시키는 것 방지.
+        # URL <> 감싸기 = 링크 미리보기(embed 자동 생성) 억제
+        label = " ".join((item.get("title") or "").split())[:TREND_TITLE_MAX]
+        label = label.replace("[", "\\[").replace("]", "\\]")
+        # 깔끔 우선 레이아웃(2026-07-24 사용자 피드백): 줄당 요소 최소화 —
+        # 마크다운 불릿 없이(디스코드 기본 점과 이중 표기) 유형 이모지
+        # 하나 + 제목 링크가 1행, 화제성 지표 + 왜 핫한지가 subtext 1행
+        badge = item.get("kind_emoji") or "📄"
+        url = item.get("url", "")
+        # <> 감싸기를 조기 종료시키는 문자(공백·'>')가 든 url은 마크다운
+        # 브레이크아웃(가짜 링크 텍스트 주입) 여지가 있다 — 항목 자체를 스킵
+        if not url.startswith(("http://", "https://")) or any(
+                c in url for c in (" ", ">", "<")):
+            continue
+        lines.append(f"{badge} [{label}](<{url}>)")
+        # ↳ 들여쓰기 subtext — 지표와 이유는 '·'로만 구분(— 연결 금지,
+        # 2026-07-24 사용자 피드백)
+        sub = " · ".join(
+            p for p in (item.get("trend_note") or item.get("source"),
+                        item.get("why_ko")) if p)
+        if sub:
+            lines.append(f"-# ↳ {sub}")
+        lines.append("")  # 항목 사이 여백
+    while lines and not lines[-1]:
+        lines.pop()
+
+    if not lines:
+        # 전 항목이 url 검증에서 탈락 — 빈 embed를 보내느니 실패로 올려
+        # 호출자(main)가 보류(다음 창 재도전) 처리하게 한다
+        raise RuntimeError("트렌드 픽 렌더 가능 항목 0건")
+
+    embed = {
+        "title": "🔥 트렌드 픽",
+        "description": "\n".join(lines)[:EMBED_DESCRIPTION_MAX],
+        "color": TREND_COLOR,
+    }
+    _post_with_retry(webhook_url, {
+        "embeds": [embed],
+        "username": WEBHOOK_USERNAME,
+        "allowed_mentions": NO_MENTIONS,
+    })
+
 
 def send_card_news(pngs: list[bytes], link_lines: list[str]) -> list[str]:
     """digest 카드뉴스: PNG 첨부 메시지 1건 + 원문 링크 메시지(들).
