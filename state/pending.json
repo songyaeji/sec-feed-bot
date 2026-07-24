@@ -18603,5 +18603,59 @@
     ],
     "title": "Hermes AI agent used to automate attack on Thai Finance Ministry",
     "url": "https://www.bleepingcomputer.com/news/security/hermes-ai-agent-used-to-automate-attack-on-thai-finance-ministry/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48021",
+    "published": "2026-07-24T19:16:58.033",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In epa4all, prior to version 2026-05-20, an attacker who can intercept the TLS connection between epa4all and the ePA backend can complete the VAU handshake with attacker-controlled keys and obtain the session encryption keys. All inner HTTP traffic (patient consent decisions, medication data, document operations, authorization tokens, and entitlement queries) becomes readable and modifiable. The attacker can also inject arbitrary requests through the hijacked channel. This issue has been patched in version 2026-05-20.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48021 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48021"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-45813",
+    "published": "2026-07-24T13:18:24.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Out-of-bounds Write, Integer Underflow (Wrap or Wraparound) vulnerability in Apache NimBLE BASS service.\nImproper validation when parsing BASS service  \"Add Source\" and \"Modify Source\" operation PDU could results in stack buffer overflow or arbitrary out-of-bound read.\n\n\nThis can be triggered by nearby devices over Bluetooth connection, however pairing is required prior to accessing BASS service, which depending on device configuration may or may not require user action.\n\nThis issue affects Apache NimBLE: through 1.9.0.\n\nUsers are recommended to upgrade to version 1.10.0, which fixes the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45813 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45813"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-17107",
+    "published": "2026-07-24T19:16:55.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the cluster-proxy service-proxy component used in Red Hat Advanced Cluster Management for Kubernetes (RHACM) and multicluster-engine (MCE). The service-proxy appends impersonation group headers to proxied requests without first removing caller-supplied values, and the spoke ServiceAccount holds unrestricted impersonation permissions. An authenticated hub principal can inject an Impersonate-Group header to escalate to cluster-admin on every managed cluster.",
+    "tags": [],
+    "title": "CVE-2026-17107 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17107"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-54342",
+    "published": "2026-07-24T19:16:59.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In epa4all, prior to version 2026-05-20, an attacker on the network path between epa4all and any backend (ePA Aktensystem, Konnektor, IDP, TSS) can present a self-signed TLS certificate and intercept the connection. For non-VAU connections (Konnektor, IDP), this allows direct read and modification of the inner traffic, including smartcard operations and OIDC authentication exchanges. For the ePA backend, the disabled TLS verification is the transport-level enabler for the VAU MITM described in GHSA-vvh7-x6c7-46gh. This issue has been patched in version 2026-05-20.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54342 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54342"
   }
 ]
