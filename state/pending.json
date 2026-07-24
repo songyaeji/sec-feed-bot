@@ -14144,5 +14144,19 @@
     ],
     "title": "[보안이슈] “제조사가 만든 취약점, 왜 CISO가 책임지나”…보안기업의 PSIRT·패치 기한 제도화 요구 확산",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207767"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-12736",
+    "published": "2026-07-24T04:16:51.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Wpify Woo plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 5.4.16. This is due to the SettingsApi::save_option() REST route (POST /wp-json/wpify-woo/v1/option) passing the request-supplied 'option' and 'data' parameters directly to update_option() without any option-name allowlist or value sanitization, while the permission_callback only verifies the manage_woocommerce capability. This makes it possible for authenticated attackers, with Shop Manager-level access and above, to elevate their privileges to Administrator by overwriting arbitrary WordPress options (for example setting default_role to administrator and users_can_register to 1, or disabling security plugins via active_plugins).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12736 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12736"
   }
 ]
