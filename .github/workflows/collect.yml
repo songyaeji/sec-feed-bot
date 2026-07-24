@@ -66,14 +66,34 @@ jobs:
           # anything else (the */20 realtime cron) -> realtime
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             case "$DISPATCH_MODE" in
-              realtime|digest) echo "mode=$DISPATCH_MODE" >> "$GITHUB_OUTPUT" ;;
-              *) echo "mode=realtime" >> "$GITHUB_OUTPUT" ;;
+              realtime|digest) MODE="$DISPATCH_MODE" ;;
+              *) MODE=realtime ;;
             esac
           elif [ "${{ github.event.schedule }}" = "50 21 * * *" ]; then
-            echo "mode=digest" >> "$GITHUB_OUTPUT"
+            MODE=digest
           else
-            echo "mode=realtime" >> "$GITHUB_OUTPUT"
+            MODE=realtime
           fi
+
+          # digest 자가 승격 — digest cron은 실측 ~54분 지연에다 concurrency
+          # 큐에서 뒤이은 run에 교체·취소되면 그날 발행이 통째로 사라진다
+          # (2026-07-24 사고: 22:40 큐잉된 digest run이 cancelled → 미발행).
+          # cron-job.org digest 잡도 미등록 상태라, 10분마다 도는 realtime
+          # run이 "오늘 digest 미발행 + KST 06:50~12:00" 조건이면 스스로
+          # digest로 승격한다. 발행 성공 전까지 매 run 재시도(self-healing),
+          # 성공 후에는 last_digest_date 가드가 승격을 막는다. main.py의
+          # 이중발행·시간창 가드가 그대로 최종 방어선이라 두 run이 동시에
+          # 승격해도 두 번째는 realtime으로 강등된다.
+          if [ "$MODE" = "realtime" ]; then
+            KST_HHMM=$(TZ=Asia/Seoul date +%H%M)
+            KST_TODAY=$(TZ=Asia/Seoul date +%F)
+            LAST_DIGEST=$(python3 -c "import json; print(json.load(open('state/seen.json')).get('last_digest_date',''))" 2>/dev/null || echo "")
+            if [ "$KST_HHMM" -ge 650 ] && [ "$KST_HHMM" -lt 1200 ] && [ "$LAST_DIGEST" != "$KST_TODAY" ]; then
+              echo "오늘($KST_TODAY) digest 미발행(last=$LAST_DIGEST, KST $KST_HHMM) — digest로 자가 승격"
+              MODE=digest
+            fi
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
 
       # v8: realtime에서도 필요 — judge.py(대형 사건 즉시 발송 판정)가
       # 매 run 후보가 있을 때 sonnet을 호출한다. digest는 사서(librarian)용.
