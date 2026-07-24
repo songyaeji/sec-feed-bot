@@ -17229,5 +17229,17 @@
     "tags": [],
     "title": "CVE-2021-20190 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20190"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html",
+    "published": "2026-07-24T14:15:21+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Researchers H0j3n and Aniq Fakhrul published a working exploit on July 24 that lets a low-privileged Active Directory user obtain a certificate for a Domain Controller and authenticate as that machine. They codenamed the flaw Certighost. Because Domain Controller accounts carry directory replication rights, the resulting Kerberos credential can retrieve the krbtgt secret through DCSync.",
+    "tags": [],
+    "title": "Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller",
+    "url": "https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html"
   }
 ]
