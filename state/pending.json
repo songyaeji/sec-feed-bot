@@ -16925,5 +16925,115 @@
     "tags": [],
     "title": "Europol flags 4,340 URLs for removal in 'The Com' crackdown",
     "url": "https://www.bleepingcomputer.com/news/security/europol-flags-4-340-urls-for-removal-in-the-com-crackdown/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-27130",
+    "published": "2026-05-18T21:16:39.890",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Versions 0.26.6 and below have OS command injection through the appName parameter. 3 chained issues cause this problem: inadequate input sanitization, lack of schema validation and direct shell interpolation. User-controlled application names are passed through inadequate sanitization (cleanAppName function only replaces spaces and converts to lowercase) before being interpolated directly into shell commands executed via execAsync() and execAsyncRemote(). An authenticated attacker can inject shell metacharacters (e.g., ;, $(), backticks, |, &) in the appName field during application creation, which are then executed with server-level privileges when service operations (start, stop, remove, scale) are triggered. This issue has been resolved in version 0.26.7.",
+    "tags": [],
+    "title": "CVE-2026-27130 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27130"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-22810",
+    "published": "2026-05-18T21:16:39.373",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joplin is an open source note-taking and to-do application that organises notes and lists into notebooks. Versions prior to 3.5.7 contain a path traversal vulnerability in the importer which allows overwriting arbitrary files on disk. The OneNote converter does not sanitize the names of embedded files before writing them to disk. As a result, it's possible for an attacker to create a malicious .one file that includes file names containing ../../, that are then interpreted as part of the target path when extracting attachments from the .one file. This issue has been patched in version 3.5.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-22810 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22810"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-30950",
+    "published": "2026-05-18T23:16:33.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Versions 0.6.36 through 0.6.50 are vulnerable to Authenticated Session Hijacking via IDOR. If an authenticated attacker can determine the session_id of another user's session, they can take it over, reading any messages in it and locking the legitimate user out. The PATCH /sessions/{session_id}/assign-user endpoint authenticates the caller but never verifies session ownership: the service layer invokes the session lookup with user_id=None, which the data access layer interprets as a privileged/system call that bypasses the ownership filter, allowing any authenticated user to reassign an arbitrary session to themselves. This issue has been patched in version 0.6.51.",
+    "tags": [],
+    "title": "CVE-2026-30950 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30950"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-33232",
+    "published": "2026-05-19T02:16:15.677",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Versions 0.4.2 through 0.6.51 are vulnerable to an unauthenticated Denial of Service (DoS) through the server due to uncontrolled disk space consumption. The download_agent_file endpoint creates persistent temporary files for every request but fails to delete them after they are served. An unauthenticated attacker can repeatedly call this endpoint to exhaust the server's disk space, causing\n the database or other system services to fail due to \"No space left on device\" errors, rendering the entire AutoGPT Platform backend unavailable to all users. This issue has been patched in version 0.6.52.",
+    "tags": [],
+    "title": "CVE-2026-33232 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33232"
+  },
+  {
+    "category": "high",
+    "cvss": 7.6,
+    "id": "CVE-2026-33233",
+    "published": "2026-05-19T02:16:15.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.34 through 0.6.51, the backend deserializes Redis cache bytes using pickle.loads without integrity/authenticity checks. The write path serializes values with pickle.dumps(...) into Redis and the read path blindly invokes pickle.loads(...) on bytes with no HMAC/signature or strict schema validation gating deserialization. If an attacker can poison a shared-cache key in Redis, arbitrary command execution is possible in the backend container context, affecting confidentiality, integrity, and availability. This issue has been fixed in version 0.6.52.",
+    "tags": [],
+    "title": "CVE-2026-33233 (CVSS 7.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33233"
+  },
+  {
+    "category": "high",
+    "cvss": 5.0,
+    "id": "CVE-2026-33234",
+    "published": "2026-05-19T02:16:16.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.1.0 through 0.6.51,  SendEmailBlock in autogpt_platform/backend/backend/blocks/email_block.py accepts a user-supplied smtp_server (string) and smtp_port (integer) as per-execution block inputs, then passes them directly to Python's smtplib.SMTP() to open a raw TCP connection with no IP address validation. This completely bypasses the platform's hardened SSRF protections in backend/util/request.py — the validate_url_host() function and BLOCKED_IP_NETWORKS blocklist that every other block uses to block connections to private, loopback, link-local, and cloud metadata addresses. An authenticated user on a shared AutoGPT deployment can use this to perform non-blind internal network port scanning and service fingerprinting: smtplib reads the target's TCP banner on connect and embeds it in the exception message, which is persisted as user-visible block output via the execution framework. This issue has been fixed in version 0.6.52.",
+    "tags": [],
+    "title": "CVE-2026-33234 (CVSS 5.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33234"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-24792",
+    "published": "2026-05-19T04:16:27.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "in OpenHarmony v6.0 and prior versions allow a remote attacker arbitrary code execution in pre-installed apps.",
+    "tags": [],
+    "title": "CVE-2026-24792 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24792"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-25781",
+    "published": "2026-05-19T04:16:28.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "in OpenHarmony v6.0 and prior versions allow a local attacker cause DOS and it cannot be recovered.",
+    "tags": [],
+    "title": "CVE-2026-25781 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25781"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-27648",
+    "published": "2026-05-19T04:16:28.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "in OpenHarmony v6.0 and prior versions allow a remote attacker arbitrary code execution in pre-installed apps.",
+    "tags": [],
+    "title": "CVE-2026-27648 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27648"
   }
 ]
