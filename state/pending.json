@@ -16663,5 +16663,169 @@
     ],
     "title": "June 2026 Threat Trend Report on Ransomware",
     "url": "https://asec.ahnlab.com/en/94619/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-4885",
+    "published": "2026-05-19T08:16:16.223",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Piotnet Addons for Elementor Pro plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the 'pafe_ajax_form_builder' function in all versions up to, and including, 7.1.70. The plugin uses an incomplete extension blacklist that only blocks php, phpt, php5, php7, and exe extensions, while allowing dangerous extensions such as .phar or .phtml to be uploaded. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The exploit can only be exploited if a file field is added to the form.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-4885 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4885"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-2586",
+    "published": "2026-05-19T15:16:28.413",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authenticated Remote Code Execution (RCE) vulnerability was identified in GlassFish's Administration Console. A user with access to the panel can send crafted requests that allow the execution of arbitrary operating system commands with the privileges of the application service user. This issue affects Eclipse GlassFish: from 8.0.0 to 8.0.1, fixed in 8.0.2; 7.1.0, fixed in 7.1.1; from 7.0.0 to 7.0.25, fixed in 7.0.26. Impact on versions from 5.1.0 to 6.2.5 is unknown.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-2586 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2586"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-2587",
+    "published": "2026-05-19T15:16:28.577",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A critical Remote Code Execution (RCE) vulnerability was identified in the server-side template rendering mechanism used by the Glassfish gadget handler. The application processes .xml files and evaluates user-supplied values within a context where Expression Language (EL) “expressions” are processed without proper sanitization or escaping. By injecting expressions such as #{7*7}, the server returns 49, confirming server-side EL evaluation. This issue allows a remote attacker to fully compromise the underlying host, enabling capabilities as reading/modifying data, executing arbitrary commands, persistence, and lateral movement. This issue affects Eclipse GlassFish: from 8.0.0 to 8.0.1, fixed in 8.0.2; 7.1.0, fixed in 7.1.1; from 7.0.0 to 7.0.25, fixed in 7.0.26. Impact on versions from 5.1.0 to 6.2.5 is unknown.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-2587 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2587"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44159",
+    "published": "2026-05-19T15:16:31.180",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tyler Identity Local (TID-L) uses documented, default administrative credentials. Users are not required to change the credentials before deployment. TID-L has not been distributed since December 2020, and has not been supported since 2021.",
+    "tags": [],
+    "title": "CVE-2026-44159 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44159"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-30117",
+    "published": "2026-05-19T16:16:19.980",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "scalar/astro v0.1.13 was discovered to contain an arbitrary file upload vulnerability in the the scalar_url query parameter of the Scalar Proxy endpoint. This vulnerability allows attackers to execute arbitrary code via uploading a crafted SVG file.",
+    "tags": [],
+    "title": "CVE-2026-30117 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30117"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-30118",
+    "published": "2026-05-19T16:16:20.103",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "scalar/astro v0.1.13 was discovered to contain a Server-Side Request Forgery (SSRF) in the scalar_url query parameter of the Scalar Proxy endpoint. This vulnerability allows unauthenticated attackers to force the backend server to send HTTP requests to attacker-controlled URLs, leading to authentication cookies and headers exposure and possible privilege escalation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-30118 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30118"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-31070",
+    "published": "2026-05-19T16:16:20.363",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The LalanaChami Pharmacy Management System (commit 5c3d028) allows unauthenticated remote attackers to escalate privileges by self-assigning an administrative role during registration. The /api/user/signup endpoint fails to validate the role parameter in the request body",
+    "tags": [],
+    "title": "CVE-2026-31070 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31070"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-31071",
+    "published": "2026-05-19T16:16:20.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "API endpoints in LalanaChami Pharmacy Management System (commit 5c3d028) lack authentication middleware. Unauthenticated remote attackers can exploit this to dump all user records (including bcrypt password hashes) via /api/user/getUserData, modify drug inventory, and access private medical prescription data via /api/doctorOder.",
+    "tags": [],
+    "title": "CVE-2026-31071 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31071"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-37281",
+    "published": "2026-05-19T16:16:21.420",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability in the /stream-to-vlc Express route in hitarth-gg Zenshin before 2.7.0 allows remote attackers to execute arbitrary commands via the url parameter.",
+    "tags": [],
+    "title": "CVE-2026-37281 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-37281"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-36829",
+    "published": "2026-05-19T17:16:22.210",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authentication bypass vulnerability exists in the embedded HTTP server of Panabit PAP-XM320 up to and including v7.7. The server validates session cookies using a filesystem existence check based on a user-controlled cookie value without proper sanitization, allowing directory traversal and bypass of authentication.",
+    "tags": [],
+    "title": "CVE-2026-36829 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36829"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-34883",
+    "published": "2026-05-19T15:16:30.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in the Portrait Dell Color Management application before 3.7.0 for Dell monitors. On Windows, a symbolic link vulnerability allows a local low-privileged user to escalate privileges to Administrator. During installation, the software writes the file CCFLFamily_07Feb11.edr to C:\\ProgramData\\Portrait Displays\\CW\\data\\i1D3\\ while running with elevated privileges. Because the installer does not properly validate symbolic links or reparse points at the destination path, an attacker can create a malicious link that redirects the write operation to an arbitrary system location, enabling arbitrary file creation or overwrite with elevated privileges.",
+    "tags": [],
+    "title": "CVE-2026-34883 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34883"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-31069",
+    "published": "2026-05-19T16:16:20.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "BillaBear (all versions prior to Jan 2026) contains a SQL Injection vulnerability in the EventRepository. User-controlled input from metric filter names and aggregation properties is directly interpolated into SQL queries using sprintf() without proper sanitization or identifier quoting. Although filter values are parameterized, the filter identifiers (keys) are not. An authenticated attacker with ROLE_ACCOUNT_MANAGER permissions can exploit this to execute arbitrary SQL commands.",
+    "tags": [],
+    "title": "CVE-2026-31069 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31069"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-36828",
+    "published": "2026-05-19T17:16:22.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A command injection vulnerability exists in the /cgi-bin/tools/ajax_cmd endpoint of Panabit PAP-XM320 up to and including v7.7. The CGI component allows authenticated users to execute arbitrary shell commands with root privileges via the action=runcmd parameter.",
+    "tags": [],
+    "title": "CVE-2026-36828 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36828"
   }
 ]
