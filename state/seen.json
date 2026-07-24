@@ -2103,6 +2103,7 @@
     "CVE-2026-31942": "2026-07-22T19:12:10.222259+00:00",
     "CVE-2026-31985": "2026-07-09T08:42:18.032735+00:00",
     "CVE-2026-32193": "2026-07-23T08:12:33.854408+00:00",
+    "CVE-2026-32194": "2026-07-24T13:02:28.631163+00:00",
     "CVE-2026-32201": "2026-07-14T18:42:33.015850+00:00",
     "CVE-2026-32253": "2026-07-23T16:12:57.919650+00:00",
     "CVE-2026-32304": "2026-07-15T02:24:13.500367+00:00",
@@ -6089,7 +6090,7 @@
     "CVE-2026-9999": "2026-07-21T12:12:55.353860+00:00"
   },
   "last_digest_date": "2026-07-23",
-  "last_run": "2026-07-24T12:52:08.398948+00:00",
+  "last_run": "2026-07-24T13:02:28.668201+00:00",
   "recent_titles": [
     {
       "d": "2026-07-06T07:52:08.030758+00:00",
@@ -49970,6 +49971,18 @@
     {
       "d": "2026-07-24T12:52:02.744206+00:00",
       "t": "\uc778\ub3c4 \uc2dc\ud5d8\uc9c0 \uc720\ucd9c\uc5d0 \ud3ed\ubc1c\ud55c \uc778\ub3c4 \uccad\ub144\ub4e4 \uad50\uc721\ubd80 \uc7a5\uad00 \uc0ac\ud1f4\ud558\ub77c"
+    },
+    {
+      "d": "2026-07-24T13:02:28.631001+00:00",
+      "t": "chatgpt agentforger flaw could deploy rogue workspace agents via a phishing link"
+    },
+    {
+      "d": "2026-07-24T13:02:28.631163+00:00",
+      "t": "bing images flaws let crafted svgs run commands as system on microsoft s servers"
+    },
+    {
+      "d": "2026-07-24T13:02:28.642102+00:00",
+      "t": "europol flags 4 340 urls for removal in the com crackdown"
     }
   ],
   "seen": {
@@ -62847,8 +62860,10 @@
     "https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html": "2026-07-21T16:42:28.583522+00:00",
     "https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html": "2026-07-06T06:44:04.635733+00:00",
     "https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html": "2026-07-07T11:51:13.151801+00:00",
+    "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html": "2026-07-24T13:02:28.668201+00:00",
     "https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor.html": "2026-07-07T11:51:13.151801+00:00",
     "https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html": "2026-07-23T15:02:24.358825+00:00",
+    "https://thehackernews.com/2026/07/chatgpt-agentforger-flaw-could-deploy.html": "2026-07-24T13:02:28.668201+00:00",
     "https://thehackernews.com/2026/07/check-point-patches-exploited.html": "2026-07-23T08:12:39.341241+00:00",
     "https://thehackernews.com/2026/07/china-linked-uat-7810-expands-orb.html": "2026-07-08T09:33:07.908001+00:00",
     "https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html": "2026-07-23T15:02:24.358825+00:00",
@@ -63138,6 +63153,7 @@
     "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/": "2026-07-17T15:02:53.286465+00:00",
     "https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/": "2026-07-20T22:42:12.905229+00:00",
     "https://www.bleepingcomputer.com/news/security/eu-and-uk-hit-russia-with-first-joint-cyber-sanctions-package/": "2026-07-13T11:22:39.066024+00:00",
+    "https://www.bleepingcomputer.com/news/security/europol-flags-4-340-urls-for-removal-in-the-com-crackdown/": "2026-07-24T13:02:28.668201+00:00",
     "https://www.bleepingcomputer.com/news/security/fake-claude-app-promoted-by-bing-ads-pushes-sectoprat-malware/": "2026-07-23T19:51:56.686629+00:00",
     "https://www.bleepingcomputer.com/news/security/fakegit-campaign-uses-7-600-github-repos-to-push-smartloader-malware/": "2026-07-21T23:10:18.360201+00:00",
     "https://www.bleepingcomputer.com/news/security/fedramp-rev5-is-ending-what-the-20x-transition-really-requires/": "2026-07-23T14:11:57.138249+00:00",
