@@ -15375,5 +15375,34 @@
     "tags": [],
     "title": "'본인전송요구권' 적용 범위 확대 한달 앞으로...대리 수집 시 사전협의",
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9pMG5ZcE9BbHRtR0V5d0JmY2dwTktTREFya0xRVFdyYnpGSG5uMTN3RE5BYVY1MVd6NmFrZFcxS1NCdnMzSFQyUVVkYy1JNm53TEoxdzVfOGlxSThSaEg4c0RxLUtaZ9IBakFVX3lxTE1yMGJjTDhNZzhtNjVudnYzQnlTYVBiNEFlRVdrWjhfcFR3dEZWUkNKSnM5TlNQNXRiSUw0LWRXUzQyN0tiVjZONElaNHZmZFNkWjcwN1dCTHpSTHlHWWJqNU9aZDBHNnBQMmc?oc=5"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/nodebb-patches-eight-ai-found-flaws.html",
+    "published": "2026-07-24T07:41:06+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Eight security flaws in NodeBB went public on Wednesday, along with the code to exploit them. Aikido Security rates all eight as high severity and says its AI pentest agents found them in a six-hour review of the forum software's source code. Every version before 4.14.0 is affected. NodeBB has fixed them all, and administrators should be on 4.14.2. The simplest one takes a settings change. A",
+    "tags": [
+      "RCE"
+    ],
+    "title": "NodeBB Patches Eight AI-Found Flaws Exposing Admin Access and Private Chats",
+    "url": "https://thehackernews.com/2026/07/nodebb-patches-eight-ai-found-flaws.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+    "published": "2026-07-24T06:58:27+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Redis shipped seven security releases on July 23 after researchers published authenticated RCE PoCs for stock Redis 6.2.22, 7.4.9, 8.6.4, and 8.8.0. All four chains require RESTORE. The Streams chains also need EVAL and XGROUP; the 8.8.0 chain needs EVAL and the bundled RedisBloom module. Redis says the underlying memory flaws may lead to remote code execution. Redis 6.2.23, 7.2.15, and 7.4.10",
+    "tags": [
+      "RCE",
+      "제로데이"
+    ],
+    "title": "Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say",
+    "url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html"
   }
 ]
