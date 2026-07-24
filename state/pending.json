@@ -17637,5 +17637,651 @@
     "tags": [],
     "title": "Microsoft blames massive Microsoft 365 outage on maintenance bug",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-blames-massive-microsoft-365-outage-on-maintenance-bug/"
+  },
+  {
+    "category": "high",
+    "cvss": 3.1,
+    "id": "CVE-2026-17039",
+    "published": "2026-07-24T16:16:34.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in pki-core. The certificate authority (CA) renewal request path does not perform the realm-based authorization check that the enrollment path performs, allowing an authenticated user entitled to one realm to cause a certificate belonging to a different realm to be renewed without that realm's authorization.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-17039 (CVSS 3.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17039"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64208",
+    "published": "2026-07-24T16:16:48.420",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto/krb5, rxrpc: Fix lack of pre-decrypt/pre-verify length checks\n\nChange the krb5 crypto library to provide facilities to precheck the length\nof the message about to be decrypted or verified.\n\nFix AF_RXRPC to make use of this to validate DATA packets secured with\nRxGK.",
+    "tags": [],
+    "title": "CVE-2026-64208 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64208"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64209",
+    "published": "2026-07-24T16:16:48.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nphy: qcom: qmp-usbc: Fix out-of-bounds array access in dp swing config\n\nswing_tbl and pre_emphasis_tbl are 4x4 arrays (valid indices 0-3), but\nthe boundary check uses \"> 4\" instead of \">= 4\", allowing index 4 to\ncause an out-of-bounds access.",
+    "tags": [],
+    "title": "CVE-2026-64209 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64209"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64210",
+    "published": "2026-07-24T16:16:48.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/mlx5e: xsk: Fix unlocked writing to ICOSQ\n\nDuring napi poll, when the affinity changes and there's still XSK work\nto be done, we trigger an ICOSQ interrupt on the new CPU. However, this\ntriggering on the ICOSQ is done unprotected.\n\nThere are 2 such races:\n\nA) mlx5e_trigger_irq() is called while mlx5e_xsk_alloc_rx_mpwqe() is\nrunning from a different CPU due to affinity change. This can happen\nbecause IRQ triggering is done after napi_complete_done(). At this point\nthe NAPI can be scheduled on a different CPU. Like this:\n\n  CPU A (old affinity, NAPI tail)    CPU B (new affinity, fresh NAPI)\n  -------------------------------    --------------------------------\n  napi_complete_done()  clears SCHED\n  mlx5e_cq_arm(...)\n                                     napi_schedule_prep() sets SCHED\n                                     mlx5e_napi_poll()\n                                       mlx5e_xsk_alloc_rx_mpwqe()\n                                         mlx5e_icosq_sync_lock() // noop\n                                         memcpy 640 B UMR body\n                                         advance sq->pc by 10\n  mlx5e_trigger_irq(&c->icosq)\n    wqe_info[pi] = {NOP, 1}\n    mlx5e_post_nop() advances sq->pc\n\nB) mlx5e_trigger_irq() is called on the ICOSQ when\nmlx5e_trigger_napi_icosq() is running.\n\nThe obvious fix would be to lock the ICOSQ. But ICOSQ has an optimized\nlocking scheme that doesn't work for this scenario. Kick ",
+    "tags": [],
+    "title": "CVE-2026-64210 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64210"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64211",
+    "published": "2026-07-24T16:16:48.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsrcu: Don't queue workqueue handlers to never-online CPUs\n\nWhile an srcu_struct structure is in the midst of switching from CPU-0\nto all-CPUs state, it can attempt to invoke callbacks for CPUs that\nhave never been online.  Worse yet, it can attempt in invoke callbacks\nfor CPUs that never will be online, even including imaginary CPUs not in\ncpu_possible_mask.  This can cause hangs on s390, which is not set up to\ndeal with workqueue handlers being scheduled on such CPUs.  This commit\ntherefore causes Tree SRCU to refrain from queueing workqueue handlers\non CPUs that have not yet (and might never) come online.\n\nBecause callbacks are not invoked on CPUs that have not been\nonline, it is an error to invoke call_srcu(), synchronize_srcu(), or\nsynchronize_srcu_expedited() on a CPU that is not yet fully online.\nHowever, it turns out to be less code to redirect the callbacks\nfrom too-early invocations of call_srcu() than to warn about such\ninvocations.  This commit therefore also redirects callbacks queued on\nnot-yet-fully-online CPUs to the boot CPU.",
+    "tags": [],
+    "title": "CVE-2026-64211 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64211"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64212",
+    "published": "2026-07-24T16:16:48.843",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: iwlwifi: mld: don't dereference a pointer before NULL checking it\n\nIn iwl_mld_remove_link, the link->fw_id is saved at the beginning of the\nfunction so we have it after we freed the link.\n\nBut the link pointer can be NULL, and is not checked when the fw_id is\nstored.\n\nFix it by simply freeing the link at the end of the function.\n\nfFixes: 0e66a39f4f0e (\"wifi: iwlwifi: fix potential use after free in iwl_mld_remove_link()\")",
+    "tags": [],
+    "title": "CVE-2026-64212 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64212"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64213",
+    "published": "2026-07-24T16:16:48.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nhwmon: (lm90) Add lock protection to lm90_alert\n\nSashiko reports:\n\nlm90_alert() executes in the smbus alert context and calls\nlm90_update_confreg() to disable the hardware alert line, without\nacquiring hwmon_lock.\n\nConcurrently, sysfs write operations (such as lm90_write_convrate) hold\nthe hwmon_lock, temporarily modify data->config, and then restore it.\n\nIf an alert interrupt occurs concurrently with a sysfs write, the sysfs\npath will overwrite the alert handler's modifications to data->config\nand the hardware register.\n\nThis unintentionally re-enables the hardware alert line while the alarm is\nstill active, causing an interrupt storm.\n\nAdd the missing lock to lm90_alert() to solve the problem.",
+    "tags": [],
+    "title": "CVE-2026-64213 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64213"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64214",
+    "published": "2026-07-24T16:16:49.053",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\npowerpc/time: Remove redundant preempt_disable|enable() calls from arch_irq_work_raise()\n\nA kernel panic is observed when handling machine check exceptions from\nreal mode.\n\n  BUG: Unable to handle kernel data access on read at 0xc00000006be21300\n  Oops: Kernel access of bad area, sig: 11 [#1]\n  MSR:  8000000000001003 <SF,ME,RI,LE>  CR: 88222248  XER: 00000005\n  CFAR: c00000000003ffc4 DAR: c00000006be21300 DSISR: 40000000 IRQMASK: 0\n  NIP [c000000000029e40] arch_irq_work_raise+0x10/0x70\n  LR [c00000000003ffc8] machine_check_queue_event+0xa8/0x150\n  Call Trace:\n  [c0000000179d3c70] [c00000000003ff64] machine_check_queue_event+0x44/0x150\n  [c0000000179d3d30] [c0000000000084e0] machine_check_early_common+0x1f0/0x2c0\n\nThe crash occurs because arch_irq_work_raise() calls preempt_disable()\nfrom machine check exception (MCE) handlers running in real mode. In\nthis context, accessing the preempt_count can fault, leading to the panic.\n\nThe preempt_disable()/preempt_enable() pair in arch_irq_work_raise()\nwas originally added by commit 0fe1ac48bef0 (\"powerpc/perf_event: Fix\noops due to perf_event_do_pending call\") to avoid races while raising\nirq work from exception context.\n\nLater, commit 471ba0e686cb (\"irq_work: Do not raise an IPI when\nqueueing work on the local CPU\") added preemption protection in\nirq_work_queue() path, while commit 20b876918c06 (\"irq_work: Use per\ncpu atomics instead of regular atomics\") added equiv",
+    "tags": [],
+    "title": "CVE-2026-64214 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64214"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64215",
+    "published": "2026-07-24T16:16:49.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/msm/a6xx: Check kzalloc return in a8xx_hfi_send_perf_table\n\nCheck the return value of kzalloc() to prevent a NULL pointer\ndereference on allocation failure.\n\nPatchwork: https://patchwork.freedesktop.org/patch/721342/",
+    "tags": [],
+    "title": "CVE-2026-64215 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64215"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64216",
+    "published": "2026-07-24T16:16:49.310",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfs: Fix potential UAF in netfs_unlock_abandoned_read_pages()\n\nnetfs_unlock_abandoned_read_pages(rreq) accesses the index of the folios it\nis wanting to unlock and compares that to rreq->no_unlock_folio so that it\ndoesn't unlock a folio being read for netfs_perform_write() or\nnetfs_write_begin().\n\nHowever, given that netfs_unlock_abandoned_read_pages() is called _after_\nNETFS_RREQ_IN_PROGRESS is cleared, the one folio that it's not allowed to\ndereference is the one specified by ->no_unlock_folio as ownership\nimmediately reverts to the caller.\n\nFix this by storing the folio pointer instead and using that rather than\nthe index.  Also fix netfs_unlock_read_folio() where the same applies.",
+    "tags": [],
+    "title": "CVE-2026-64216 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64216"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64217",
+    "published": "2026-07-24T16:16:49.417",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfs: Fix overrun check in netfs_extract_user_iter()\n\nFix netfs_extract_user_iter() so that if iov_iter_extract_pages() overfills\npages[], then those pages don't get included in the iterator constructed at\nthe end of the function.  If there was an overfill, memory corruption has\nalready happened.",
+    "tags": [],
+    "title": "CVE-2026-64217 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64217"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64218",
+    "published": "2026-07-24T16:16:49.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nbatman-adv: bla: fix report_work leak on backbone_gw purge\n\nbatadv_bla_purge_backbone_gw() removes stale backbone gateway entries,\nbut fails to properly handle their associated report_work:\n\n- If report_work is running, the purge must wait for it to finish before\n  freeing the backbone_gw, otherwise the worker may access freed memory\n  (e.g. bat_priv).\n- If report_work is pending, the purge must cancel it and release the\n  reference held for that pending work item.\n\nThe previous implementation called hlist_for_each_entry_safe() inside a\nspin_lock_bh() section, but cancel_work_sync() may sleep and therefore\ncannot be called from within a spinlock-protected region.\n\nRestructure the loop to handle one entry per spinlock critical section:\nacquire the lock, find the next entry to purge, remove it from the hash\nlist, then release the lock before calling cancel_work_sync() and\ndropping the hash_entry reference. Repeat until no more entries require\npurging.",
+    "tags": [
+      "금융"
+    ],
+    "title": "CVE-2026-64218 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64218"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64219",
+    "published": "2026-07-24T16:16:49.670",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amd/display: Validate payload length and link_index in dc_process_dmub_aux_transfer_async\n\n[Why&How]\ndc_process_dmub_aux_transfer_async() copies payload->length bytes into a\n16-byte stack buffer (dpaux.data[16]) guarded only by an ASSERT(), which\nis a no-op in release builds. If a caller ever passes length > 16 this\nresults in a stack buffer overflow via memcpy.\n\nAdditionally, link_index is used to dereference dc->links[] without\nbounds checking against dc->link_count, risking an out-of-bounds access.\n\nReplace the ASSERT with a hard runtime check that returns false when\npayload->length exceeds the destination buffer size, and add a bounds\ncheck for link_index before it is used.\n\n(cherry picked from commit ba4caa9fecdf7a38f98c878ad05a8a64148b6881)",
+    "tags": [],
+    "title": "CVE-2026-64219 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64219"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64220",
+    "published": "2026-07-24T16:16:49.797",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndevice property: set fwnode->secondary to NULL in fwnode_init()\n\nIf a firmware node is allocated on the stack (for instance: temporary\nsoftware node whose life-time we control) or on the heap - but using a\nnon-zeroing allocation function - and initialized using fwnode_init(),\nits secondary pointer will contain uninitalized memory which likely will\nbe neither NULL nor IS_ERR() and so may end up being dereferenced (for\nexample: in dev_to_swnode()). Set fwnode->secondary to NULL on\ninitialization.",
+    "tags": [],
+    "title": "CVE-2026-64220 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64220"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64221",
+    "published": "2026-07-24T16:16:49.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nspi: ti-qspi: fix use-after-free after DMA setup failure\n\nThe driver falls back to PIO mode if DMA setup fails during probe.\n\nMake sure to clear the DMA channel pointer also if buffer allocation\nfails to avoid passing a pointer to the released channel to the DMA\nengine (or trying to free the channel a second time on late probe errors\nor driver unbind).\n\nThis issue was flagged by Sashiko when reviewing a devres allocation\nconversion patch.",
+    "tags": [],
+    "title": "CVE-2026-64221 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64221"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64222",
+    "published": "2026-07-24T16:16:50.053",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nocteontx2-pf: avoid double free of pool->stack on AQ init failure\n\notx2_pool_aq_init() frees pool->stack when mailbox sync or retry\nallocation fails, but leaves the pointer unchanged. Later,\notx2_sq_aura_pool_init() unwinds the partial setup through\notx2_aura_pool_free(), which frees pool->stack again. The CN20K-specific\ncn20k_pool_aq_init() implementation has the same bug in\nits corresponding error path.\n\nSet pool->stack to NULL immediately after the local free so the shared\ncleanup path does not free the same stack again while cleaning up\npartially initialized pool state.\n\nThe bug was first flagged by an experimental analysis tool we are\ndeveloping for kernel memory-management bugs while analyzing\nv6.13-rc1. The tool is still under development and is not yet publicly\navailable. Manual inspection confirms that the bug is still present in\nv7.1-rc3.\n\nRuntime validation was not performed because reproducing this path\nrequires OcteonTX2/CN20K hardware.",
+    "tags": [],
+    "title": "CVE-2026-64222 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64222"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64223",
+    "published": "2026-07-24T16:16:50.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mac80211: consume only present negotiated TTLM maps\n\nieee80211_tid_to_link_map_size_ok() validates negotiated TTLM elements\nagainst the number of link-map entries indicated by link_map_presence.\nieee80211_parse_neg_ttlm() must consume the same layout.\n\nThe parser advanced its cursor for every TID, including TIDs whose\npresence bit is clear and therefore have no map bytes in the element.\nA sparse map can then make a later present TID read past the validated\nelement.\n\nThe bad bytes land in neg_ttlm->{up,down}link[tid] but are gated by\nvalid_links before being applied to driver state, so a peer cannot\nturn the read into a policy change.  Under KUnit + KASAN with an\nexact-sized element allocation the OOB read is reported as a\nslab-out-of-bounds; whether the same trigger fires under the\nproduction RX path depends on surrounding allocator state.\n\nAdvance the cursor only when the current TID has a map present.",
+    "tags": [],
+    "title": "CVE-2026-64223 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64223"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64224",
+    "published": "2026-07-24T16:16:51.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nocteontx2-pf: fix double free in rvu_rep_rsrc_init()\n\nrvu_rep_rsrc_init() allocates queue memory before calling\notx2_init_hw_resources(). When hardware resource setup fails,\notx2_init_hw_resources() already unwinds the partially initialized\nSQ, CQ, and aura state before returning an error. The representor\nerror path then calls otx2_free_hw_resources() again and can free\nthe same resources a second time.\n\nFix this by splitting the cleanup labels so that a failure from\notx2_init_hw_resources() only releases queue memory. Keep the\notx2_free_hw_resources() call for failures that happen after\nhardware resource initialization completed successfully.\n\nThe bug was first flagged by an experimental analysis tool we are\ndeveloping for kernel memory-management bugs while analyzing\nv6.13-rc1. The tool is still under development and is not yet publicly\navailable. Manual inspection confirms that the bug is still\npresent in v7.1-rc3.\n\nRuntime validation was not performed because reproducing this path\nrequires OcteonTX2 representor hardware.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64224 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64224"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64225",
+    "published": "2026-07-24T16:16:51.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nocteontx2-af: CGX: add bounds check to cgx_speed_mbps index\n\ncgx_speed_mbps has 13 elements but RESP_LINKSTAT_SPEED can yield values\n0-15. If it returns a value >= 13, this causes an out-of-bounds array\naccess. Add a bounds check and default to speed 0 if the index is out of\nrange.",
+    "tags": [],
+    "title": "CVE-2026-64225 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64225"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64226",
+    "published": "2026-07-24T16:16:51.673",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsched_ext: Avoid UAF in scx_root_enable_workfn() init failure path\n\nIn scx_root_enable_workfn(), put_task_struct(p) is called before scx_error()\ndereferences p->comm and p->pid. If the iterator's reference is the last\ndrop, the task is freed synchronously and the deref becomes a UAF.\n\nMove put_task_struct() past scx_error().",
+    "tags": [],
+    "title": "CVE-2026-64226 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64226"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64227",
+    "published": "2026-07-24T16:16:51.793",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nACPI: driver: Check ACPI_COMPANION() against NULL during probe\n\nSince every platform driver can be forced to match a device that doesn't\nmatch its list of device IDs because of device_match_driver_override(),\nplatform drivers that rely on the existence of a device's ACPI companion\nobject should verify its presence.\n\nAccordingly, add requisite ACPI_COMPANION() or ACPI_HANDLE() checks\nagainst NULL to 13 platform drivers handling core ACPI devices.\n\nAlso change the value returned by the ACPI thermal zone driver when\nthe device's ACPI companion is not present to -ENODEV for consistency\nwith the other drivers.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64227 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64227"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64228",
+    "published": "2026-07-24T16:16:51.913",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ethtool: phy: avoid NULL deref when PHY driver is unbound\n\nphydev->drv can become NULL while the phy_device is still attached to\nits net_device, namely after the PHY driver is unbound via sysfs:\n\n\techo <mdio_id> > /sys/bus/mdio_bus/drivers/<phy_drv>/unbind\n\nphy_remove() clears phydev->drv but doesn't call phy_detach(), so the\nphy_device stays in the link topology xarray and ethnl_req_get_phydev()\nstill hands it back. ETHTOOL_MSG_PHY_GET then oopses on:\n\n\trep_data->drvname = kstrdup(phydev->drv->name, GFP_KERNEL);\n\ndrvname is already treated as optional by phy_reply_size(),\nphy_fill_reply() and phy_cleanup_data(), so just skip the allocation\nwhen there is no driver bound.",
+    "tags": [],
+    "title": "CVE-2026-64228 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64228"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64229",
+    "published": "2026-07-24T16:16:52.023",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nx86/mm: Disable broadcast TLB flush when PCID is disabled\n\nBooting with \"nopcid\" clears X86_FEATURE_PCID and keeps CR4.PCIDE from being\nset to one. On AMD CPUs that support INVLPGB, broadcast TLB flushing remains\nenabled.\n\nThere are two checks that decide whether the global ASID code runs,\nmm_global_asid() and consider_global_asid(), that key off of the\nX86_FEATURE_INVLPGB feature. Once an mm becomes active on more than three\nCPUs, consider_global_asid() assigns it a global ASID, after which\nflush_tlb_mm_range() takes the broadcast_tlb_flush() path using a non-zero\nPCID. Issuing an INVLPGB with a non-zero PCID while CR4.PCIDE is not set\nresults in a #GP:\n\n  Oops: general protection fault, kernel NULL pointer dereference 0x1: 0000 [#1] SMP NOPTI\n  CPU: 158 UID: 0 PID: 3119 Comm: snap Not tainted 7.1.0-rc3 #1 PREEMPT(full)\n  Hardware name: ...\n  RIP: 0010:broadcast_tlb_flush\n  Code: ... 89 da 48 83 c8 07 <0f> 01 fe eb 08 cc cc cc ...\n  Call Trace:\n   <TASK>\n   flush_tlb_mm_range\n   ptep_clear_flush\n   wp_page_copy\n   ? _raw_spin_unlock\n   __handle_mm_fault\n   handle_mm_fault\n   do_user_addr_fault\n   exc_page_fault\n   asm_exc_page_fault\n\nAll processors that support broadcast TLB invalidation also have PCID support,\nso it is only the \"nopcid\" scenario that is of concern. In this situation just\ndisable the broadcast TLB support using the CPUID dependency support by making\nX86_FEATURE_INVLPGB dependent on X86_FEAT",
+    "tags": [],
+    "title": "CVE-2026-64229 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64229"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64230",
+    "published": "2026-07-24T16:16:52.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nregulator: tps65219: fix irq_data.rdev not being assigned\n\nCommit 64a6b577490c (\"regulator: tps65219: Remove debugging helper\nfunction\") removed the tps65219_get_rdev_by_name() helper along with\nthe irq_data.rdev assignment that depended on it. This left\nirq_data.rdev uninitialized for all IRQs, causing undefined behavior\nwhen regulator_notifier_call_chain() is called from the IRQ handler:\n\n  Internal error: Oops: 0000000096000004\n  pc : regulator_notifier_call_chain\n  lr : tps65219_regulator_irq_handler\n  Call trace:\n   regulator_notifier_call_chain\n   tps65219_regulator_irq_handler\n   handle_nested_irq\n   regmap_irq_thread\n   irq_thread_fn\n   irq_thread\n   kthread\n   ret_from_fork\n\nInstead of restoring a dedicated lookup array, restructure the probe\nfunction to combine regulator registration with IRQ registration in\nthe same loop. This way the rdev returned by devm_regulator_register()\nis naturally available for assigning to irq_data.rdev without any\nauxiliary data structure.\n\nNon-regulator IRQs (SENSOR, TIMEOUT) that don't correspond to any\nregistered regulator are registered with rdev=NULL, and the IRQ handler\nis protected with a NULL check to avoid crashing.",
+    "tags": [],
+    "title": "CVE-2026-64230 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64230"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64231",
+    "published": "2026-07-24T16:16:52.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/msm/dsi: don't dump registers past the mapped region\n\nOn DSI 6G platforms the IO address space is internally adjusted by\nio_offset. Later this adjusted address might be used for memory dumping.\nHowever the size that is used for memory dumping isn't adjusted to\naccount for the io_offset, leading to the potential access to the\nunmapped region. Lower ctrl_size by the io_offset value to prevent\naccess past the mapped area.\n\n msm_disp_snapshot_add_block+0x1d4/0x3c8 [msm] (P)\n msm_dsi_host_snapshot+0x4c/0x78 [msm]\n msm_dsi_snapshot+0x28/0x50 [msm]\n msm_disp_snapshot_capture_state+0x74/0x140 [msm]\n msm_disp_snapshot_state_sync+0x60/0x90 [msm]\n _msm_disp_snapshot_work+0x30/0x90 [msm]\n kthread_worker_fn+0xdc/0x460\n kthread+0x120/0x140\n\nPatchwork: https://patchwork.freedesktop.org/patch/721747/",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-64231 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64231"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64232",
+    "published": "2026-07-24T16:16:52.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nblock: recompute nr_integrity_segments in blk_insert_cloned_request\n\nblk_insert_cloned_request() already recomputes nr_phys_segments\nagainst the bottom queue, because \"the queue settings related to\nsegment counting may differ from the original queue.\" The exact same\nreasoning applies to integrity segments: a stacked driver's underlying\nqueue can have tighter virt_boundary_mask, seg_boundary_mask, or\nmax_segment_size than the top queue, in which case\nblk_rq_count_integrity_sg() against the bottom queue produces a\ndifferent count than the cached rq->nr_integrity_segments inherited\nfrom the source request by blk_rq_prep_clone().\n\nWhen the cached count is lower than the bottom queue's actual count,\nblk_rq_map_integrity_sg() trips\n\n\tBUG_ON(segments > rq->nr_integrity_segments);\n\non dispatch. The same families of stacked setups that motivated the\nexisting nr_phys_segments recompute -- dm-multipath fanning out to\nnvme-rdma in particular -- can produce this.\n\nMirror the nr_phys_segments handling: when the request carries\nintegrity, recompute nr_integrity_segments against the bottom queue\nand reject the request if it exceeds the bottom queue's\nmax_integrity_segments. blk_rq_count_integrity_sg() and\nqueue_max_integrity_segments() are both already available via\n<linux/blk-integrity.h>, which blk-mq.c includes.\n\nThis closes a latent gap in the stacking contract and brings the\nintegrity-segment accounting in line with th",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64232 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64232"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64233",
+    "published": "2026-07-24T16:16:52.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: uvc: hold opts->lock across XU walks in uvc_function_bind\n\nuvc_function_bind() walks &opts->extension_units twice without holding\nopts->lock:\n\n  - directly, for the iExtension string-descriptor fixup loop;\n  - indirectly, four times via uvc_copy_descriptors() (once per speed),\n    where the helper iterates uvc->desc.extension_units (which aliases\n    &opts->extension_units) to size and emit XU descriptors.\n\nThe configfs side (uvcg_extension_make / uvcg_extension_drop, in\ndrivers/usb/gadget/function/uvc_configfs.c) takes opts->lock around its\nlist_add_tail / list_del operations.  A privileged userspace process\nthat holds the configfs subtree open and writes the gadget UDC name\nto bind the function while concurrently rmdir()'ing an extensions\nsubdir can race uvcg_extension_drop() against the bind-time list walks\nand dereference a freed struct uvcg_extension.\n\nHold opts->lock from the start of the XU string-descriptor fixup\nthrough the last uvc_copy_descriptors() call, releasing on the\ndescriptor-error path via a new error_unlock label that drops the\nlock before falling through to the existing error label.  This\nmatches the locking discipline of the configfs callbacks and removes\nthe only remaining unsynchronised reader of the XU list during bind.\n\nReachability: only privileged processes that can mount configfs and\nwrite to gadget UDC files can trigger the race, so this is a\ncorrectness fix rather ",
+    "tags": [],
+    "title": "CVE-2026-64233 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64233"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64234",
+    "published": "2026-07-24T16:16:52.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ntty: serial: pch_uart: add check for dma_alloc_coherent()\n\nAdd a check for dma_alloc_coherent() failure to prevent a potential\nNULL pointer dereference in dma_handle_rx(). Properly release DMA\nchannels and the PCI device reference using a goto ladder if the\nallocation fails.",
+    "tags": [],
+    "title": "CVE-2026-64234 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64234"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64235",
+    "published": "2026-07-24T16:16:52.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nx86/ftrace: Relocate %rip-relative percpu refs in dynamic trampolines\n\nWith CONFIG_CALL_DEPTH_TRACKING enabled on an x86 retbleed-affected platform\n(eg: Skylake), with retbleed=stuff, registering a dynamic ftrace trampoline\ncrashes on the first call into the traced function:\n\n  BUG: unable to handle page fault for address: ffff88817ae18880\n  #PF: supervisor write access in kernel mode\n  #PF: error_code(0x0002) - not-present page\n  PGD 4b53067 P4D 4b53067 PUD 0\n  Oops: Oops: 0002 [#1] SMP PTI\n  CPU: 3 UID: 0 PID: 187 Comm: usleep Not tainted 7.0.10 #243 PREEMPT(full)\n  Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS Arch Linux 1.17.0-2-2 04/01/2014\n  Code: 24 78 00 00 00 00 48 89 ea 48 89 54 24 20 48 8b b4 24 b8 00 00 00 48 8b bc 24 b0 00 00 00 48 89 bc 24 80 00 00 00 48 83 ef 05 <65> 48 c1 3d 1f a8 b6 02 05 48 8b 15 f6 00 00 00 4c 89 3c 24 4c 89\n  Call Trace:\n   <TASK>\n   ? find_held_lock\n   ? exc_page_fault\n   ? lock_release\n   ? __x64_sys_clock_nanosleep\n   ? lockdep_hardirqs_on_prepare\n   ? trace_hardirqs_on\n   __x64_sys_clock_nanosleep\n   do_syscall_64\n   ? exc_page_fault\n   ? call_depth_return_thunk\n   entry_SYSCALL_64_after_hwframe\n  ...\n  Kernel panic - not syncing: Fatal exception\n\nThis small reproducer allows to easily trigger the crash:\n\n  # echo 'p __x64_sys_clock_nanosleep' > /sys/kernel/tracing/kprobe_events\n  # echo 1 > /sys/kernel/tracing/events/kprobes/p___x64_sys_clock_nanosleep_",
+    "tags": [],
+    "title": "CVE-2026-64235 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64235"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64236",
+    "published": "2026-07-24T16:16:52.860",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ni2c: davinci: fix division by zero on missing clock-frequency\n\nWhen the 'clock-frequency' property is missing from the device tree,\nthe driver falls back to DAVINCI_I2C_DEFAULT_BUS_FREQ. However, this\nmacro was defined in kHz (100), whereas the device tree property is\nexpected in Hz.\n\nThe probe function divided the fallback value by 1000, causing\ninteger truncation that resulted in dev->bus_freq = 0. This triggered\na deterministic division-by-zero kernel panic when calculating clock\ndividers later in the probe sequence.\n\nFix this by redefining DAVINCI_I2C_DEFAULT_BUS_FREQ in Hz (100000)\nto match the expected device tree property unit, allowing the existing\ndivision logic to work correctly for both cases.",
+    "tags": [],
+    "title": "CVE-2026-64236 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64236"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64237",
+    "published": "2026-07-24T16:16:52.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nInput: elan_i2c - validate firmware size before use\n\nEnsure that the firmware file is large enough to contain the expected\nnumber of pages and the signature (which resides at the end of the\nfirmware blob) before accessing them to prevent potential out-of-bounds\nreads.",
+    "tags": [],
+    "title": "CVE-2026-64237 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64237"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64238",
+    "published": "2026-07-24T16:16:53.090",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ngpio: shared: fix deadlock on shared proxy's parent removal\n\nCommit 710abda58055 (\"gpio: shared: call gpio_chip::of_xlate() if set\")\nused the mutex embedded in struct gpio_shared_entry to protect the\noffset field which now can be modified after assignment. The critical\nsection however is too wide and introduced a potential deadlock on the\nremoval of the shared GPIO proxy's parent.\n\nMake the critical section shorter - only protect the offset when it's\nbeing read.\n\nWhile at it: mention the fact that the entry lock is now also used to\nprotect against concurrent access to the offset field in the structure's\ndocumentation.",
+    "tags": [],
+    "title": "CVE-2026-64238 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64238"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64239",
+    "published": "2026-07-24T16:16:53.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/damon/sysfs-schemes: delete tried region in regions_rmdirs()\n\nDAMON sysfs maintains the DAMOS tried region directory objects via a\nlinked list.  When the user requests refresh of the directories, DAMON\nsysfs removes all the region directories first, and then generate updated\nregions directory on the empty space.  The removal function\n(damon_sysfs_scheme_regions_rm_dirs()) only puts the kobj objects. \nDeletion of the container region object from the linked list is done\ninside the kobj release callback function.\n\nIf somehow the callback invocation is delayed, the list will contain\nregions list that gonna be freed.  If the updated region directories\ncreation is started in this situation, the list can be corrupted and\nuse-after-free can happen.\n\nBecause the kobj objects are managed by only DAMON sysfs, the issue cannot\nhappen in normal situation.  But, such delays can be made on kernels that\nbuilt with CONFIG_DEBUG_KOBJECT_RELEASE.  On the kernel, the issue can\nindeed be reproduced like below.\n\n    # damo start --damos_action stat\n    # cd /sys/kernel/mm/damon/admin/kdamonds/0/\n    # for i in {1..10}; do echo update_schemes_tried_regions > state; done\n    # dmesg | grep underflow\n    [   89.296152] refcount_t: underflow; use-after-free.\n\nFix the issue by removing the region object from the list when\ndecrementing the reference count.\n\nAlso update damos_sysfs_populate_region_dir() to add the region object to\nth",
+    "tags": [],
+    "title": "CVE-2026-64239 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64239"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64240",
+    "published": "2026-07-24T16:16:53.323",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: rc: igorplugusb: fix control request setup packet\n\nCommit eac69475b01f (\"media: rc: igorplugusb: heed coherency\nrules\") changed the control request storage from an embedded struct to\nan allocated pointer so it can obey DMA coherency rules.\n\nHowever, the driver still passes &ir->request to usb_fill_control_urb().\nThat points the URB setup packet at the pointer field itself rather than\nat the allocated struct usb_ctrlrequest.\n\nUSB core then interprets pointer bytes as the setup packet. This can\nproduce an invalid bRequestType and trigger the control direction warning\nreported by syzbot:\n\n  usb 2-1: BOGUS control dir, pipe 80003580 doesn't match bRequestType 0\n\nPass ir->request itself as the setup packet.",
+    "tags": [],
+    "title": "CVE-2026-64240 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64240"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64241",
+    "published": "2026-07-24T16:16:53.443",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ngpio: rockchip: teardown bugs and resource leaks\n\nAddress several teardown issues and resource leaks in the driver's remove\npath and error handling:\n\n1. Debounce clock reference leak: The debounce clock (bank->db_clk) is\n   obtained using of_clk_get() which increments the clock's reference\n   count, but clk_put() is never called. Register a devm action to\n   cleanly release it on unbind. Note that of_clk_get(..., 1) remains\n   necessary over devm_clk_get() because the DT binding does not define\n   clock-names, precluding name-based lookup.\n\n2. Unregistered chained IRQ handler: The chained IRQ handler is not\n   disconnected in remove(). If a stray interrupt fires after the driver\n   is removed, the kernel attempts to execute a stale handler, leading\n   to a panic. Fix this by clearing the handler in remove().\n\n3. IRQ domain leak: The linear IRQ domain and its generic chips are\n   allocated manually during probe but never removed. Remove the IRQ\n   domain during driver teardown to free the associated generic chips\n   and mappings.\n\n[Bartosz: don't emit an error message on devres allocation failure]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64241 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64241"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64242",
+    "published": "2026-07-24T16:16:53.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: net2280: Fix double free in probe error path\n\nusb_initialize_gadget() installs gadget_release() as the release\ncallback for the embedded gadget device.  The struct net2280 instance is\ntherefore released through gadget_release() when the gadget device's last\nreference is dropped.\n\nThe probe error path calls net2280_remove(), which tears down the\npartially initialized device and drops the gadget reference with\nusb_put_gadget().  Calling kfree(dev) afterwards can free the same object\nagain.\n\nDrop the explicit kfree() and let the gadget device release callback\nhandle the final free.  This issue was found by a static analysis tool\nI am developing.",
+    "tags": [],
+    "title": "CVE-2026-64242 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64242"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64243",
+    "published": "2026-07-24T16:16:53.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nASoC: codecs: simple-mux: Fix enum control bounds check\n\nsimple_mux_control_put() rejects values greater than e->items, but\nenum control values are zero based. For the two-entry mux used by this\ndriver, valid values are 0 and 1, so value 2 must be rejected as well.\n\nAccepting e->items can store an invalid mux state, pass it to the GPIO\nsetter, and pass it on to the DAPM mux update path where it is used as\nan index into the enum text array.\n\nUse the same >= e->items check used by the ASoC enum helpers.",
+    "tags": [],
+    "title": "CVE-2026-64243 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64243"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64244",
+    "published": "2026-07-24T16:16:53.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrivers/base/memory: set mem->altmap after successful device registration\n\nIf __add_memory_block() fails at xa_store() (under memory pressure for\nexample), device_unregister() is called, which eventually triggers\nmemory_block_release() with mem->altmap still set, causing a\nWARN_ON(mem->altmap).  This was triggered by modifying virtio-mem driver.\n\nFix this by delaying the assignment of mem->altmap until after\n__add_memory_block() has succeeded.",
+    "tags": [],
+    "title": "CVE-2026-64244 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64244"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64245",
+    "published": "2026-07-24T16:16:53.917",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nfbdev: modedb: fix a possible UAF in fb_find_mode()\n\nIf mode_option is NULL, it is assigned from mode_option_buf:\n\n  if (!mode_option) {\n    fb_get_options(NULL, &mode_option_buf);\n    mode_option = mode_option_buf;\n  }\n\nLater, name is assigned from mode_option:\n\n  const char *name = mode_option;\n\nHowever, mode_option_buf is freed before name is no longer used:\n\n  kfree(mode_option_buf);\n\nwhile name is still accessed by:\n\n  if ((name_matches(db[i], name, namelen) ||\n\nSince name aliases mode_option_buf, this may result in a\nuse-after-free.\n\nFix this by extending the lifetime of mode_option_buf until the end of the\nfunction by using scope-based resource management for cleanup.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64245 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64245"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64246",
+    "published": "2026-07-24T16:16:54.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\npower: reset: linkstation-poweroff: fix use-after-free in the linkstation_poweroff_init()\n\nMove of_node_put(dn) after the of_match_node() call, which still needs\nthe node pointer. The node reference is correctly released after use.",
+    "tags": [],
+    "title": "CVE-2026-64246 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64246"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64247",
+    "published": "2026-07-24T16:16:54.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: x86: hyper-v: Bound the bank index when querying sparse banks\n\nWhen checking if a VP ID is included in a sparse bank set, explicitly check\nthat the ID can actually be contained in a sparse bank (the TLFS allows for\na maximum of 64 banks of 64 vCPUs each).  When handling a paravirtual TLB\nflush for L2, the VP ID is copied verbatim from the enlightened VMCS,\nwithout any bounds check, i.e. isn't guaranteed to be under the limit of\n4096.\n\nFailure to check the bounds of the VP ID leads to an out-of-bounds read\nwhen testing the sparse bank, and super strictly speaking could lead to KVM\nperforming an unnecessary TLB flush for an L2 vCPU.\n\n  ==================================================================\n  BUG: KASAN: use-after-free in hv_is_vp_in_sparse_set+0x85/0x100 [kvm]\n  Read of size 8 at addr ffff88811ba5f598 by task hyperv_evmcs/2802\n\n  CPU: 12 UID: 1000 PID: 2802 Comm: hyperv_evmcs Not tainted 7.1.0-rc2 #7 PREEMPT\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 0.0.0 02/06/2015\n  Call Trace:\n   <TASK>\n   dump_stack_lvl+0x51/0x60\n   print_report+0xcb/0x5d0\n   kasan_report+0xb4/0xe0\n   kasan_check_range+0x35/0x1b0\n   hv_is_vp_in_sparse_set+0x85/0x100 [kvm]\n   kvm_hv_flush_tlb+0xe9e/0x16c0 [kvm]\n   kvm_hv_hypercall+0xe6b/0x1e60 [kvm]\n   vmx_handle_exit+0x485/0x1b60 [kvm_intel]\n   kvm_arch_vcpu_ioctl_run+0x22e3/0x5070 [kvm]\n   kvm_vcpu_ioctl+0x5d0/0x10c0 [kvm]\n   __x64_sys_ioctl+0x129/0x1a0\n ",
+    "tags": [],
+    "title": "CVE-2026-64247 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64247"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64248",
+    "published": "2026-07-24T16:16:54.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nMIPS: smp: report dying CPU to RCU in stop_this_cpu()\n\nsmp_send_stop() parks all secondary CPUs in stop_this_cpu(). The function\nmarks the CPU offline for the scheduler via set_cpu_online(false) but\nnever informs RCU, so RCU keeps expecting a quiescent state from CPUs\nthat are now spinning forever with interrupts disabled.\n\nAs long as nothing waits for an RCU grace period after smp_send_stop()\nthis is harmless, which is why it went unnoticed. Since commit\n91840be8f710 (\"irq_work: Fix use-after-free in irq_work_single() on PREEMPT_RT\")\nhowever, irq_work_sync() calls synchronize_rcu() on architectures without\nan irq_work self-IPI, i.e. where arch_irq_work_has_interrupt() returns\nfalse. That is the asm-generic default used by MIPS. Any irq_work_sync()\nissued in the reboot/shutdown path after smp_send_stop() then blocks on\na grace period that can never complete, hanging the reboot:\n\n  WARNING: CPU: 0 PID: 15 at kernel/irq_work.c:144 irq_work_queue_on\n  ...\n  rcu: INFO: rcu_sched detected stalls on CPUs/tasks:\n  rcu: Offline CPU 1 blocking current GP.\n  rcu: Offline CPU 2 blocking current GP.\n  rcu: Offline CPU 3 blocking current GP.\n\nThis issue was noticed on several Realtek MIPS switch SoCs (MIPS\ninterAptiv) and came up during kernel bump downstream in OpenWrt from\n6.18.33 to 6.18.34, after the backport of the patch to the 6.18 stable\nbranch. The patch also has been backported all the way back to 6.1.\n\nCall rcu",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-64248 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64248"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64249",
+    "published": "2026-07-24T16:16:54.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nfpga: region: fix use-after-free in child_regions_with_firmware()\n\nMove of_node_put(child_region) after the error print to avoid accessing\nfreed memory when pr_err() references child_region.\n\n[ Yilun: Fix the Fixes tag ]",
+    "tags": [],
+    "title": "CVE-2026-64249 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64249"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64250",
+    "published": "2026-07-24T16:16:54.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nLoongArch: Report dying CPU to RCU in stop_this_cpu()\n\nThis is a port of MIPS commit 9f3f3bdc6d9dac1 (\"MIPS: smp: report dying\nCPU to RCU in stop_this_cpu()\"). smp_send_stop() parks all secondary\nCPUs in stop_this_cpu(). And the function marks the CPU offline for the\nscheduler via set_cpu_online(false) but never informs RCU, so RCU keeps\nexpecting a quiescent state from CPUs that are now spinning forever with\ninterrupts disabled.\n\nAs long as nothing waits for an RCU grace period after smp_send_stop()\nthis is harmless, which is why it went unnoticed. However, since commit\n91840be8f710370 (\"irq_work: Fix use-after-free in irq_work_single() on\nPREEMPT_RT\"), irq_work_sync() calls synchronize_rcu() on architectures\nwithout an irq_work self-IPI, i.e. where arch_irq_work_has_interrupt()\nreturns false. Any irq_work_sync() issued in the reboot/shutdown/halt\npath after smp_send_stop() then blocks on a grace period that can never\ncomplete, hanging the reboot:\n\n  WARNING: CPU: 0 PID: 15 at kernel/irq_work.c:144 irq_work_queue_on\n  ...\n  rcu: INFO: rcu_sched detected stalls on CPUs/tasks:\n  rcu: Offline CPU 1 blocking current GP.\n  rcu: Offline CPU 2 blocking current GP.\n  rcu: Offline CPU 3 blocking current GP.\n\nThis issue needs some hacks to reproduce, and it was not noticed on\nLoongArch because arch_irq_work_has_interrupt() usually returns true.\n\nCall rcutree_report_cpu_dead() once interrupts are disabled, mirroring\nt",
+    "tags": [],
+    "title": "CVE-2026-64250 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64250"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64251",
+    "published": "2026-07-24T16:16:54.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\npwrseq: core: fix use-after-free in pwrseq_debugfs_seq_next()\n\npwrseq_debugfs_seq_next() declares 'next' with __free(put_device),\nwhich causes put_device() to be called on the returned pointer when\nthe variable goes out of scope.  This results in a use-after-free\nsince the seq_file framework receives a pointer whose reference has\nalready been dropped.\n\nSimply removing __free(put_device) would fix the UAF but would leak\nthe reference acquired by bus_find_next_device(), as stop() only\ncalls up_read(&pwrseq_sem) and never releases the device reference.\n\nFix this by making the reference counting consistent across all\nseq_file callbacks, matching the standard pattern used by PCI and\nSCSI:\n\n- start(): use get_device() so it returns a referenced pointer.\n- next(): explicitly put_device(curr) to release the previous\n  device's reference (no NULL check needed - the seq_file framework\n  only calls next() while the previous return was non-NULL).\n- stop(): put_device(data) to release the last iterated device's\n  reference, with a NULL guard since stop() may be called with NULL\n  when start() returned NULL or next() reached end-of-sequence.",
+    "tags": [],
+    "title": "CVE-2026-64251 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64251"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64252",
+    "published": "2026-07-24T16:16:54.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nMIPS: DEC: Prevent initial console buffer from landing in XKPHYS\n\nIn 64-bit configurations calling the initial console output handler from\na kernel thread other than the initial one will result in a situation\nwhere the stack has been placed in the XKPHYS 64-bit memory segment and\nconsequently so has been the buffer allocated there that is used as the\nargument corresponding to the `%s' output conversion specifier for the\nfirmware's printf() entry point.\n\nThis 64-bit address will then be truncated by 32-bit firmware, resulting\nin an attempt to access the wrong memory location, which in turn will\ncause all kinds of unpredictable behaviour, such as a kernel crash:\n\n  Console: colour dummy device 160x64\n  Calibrating delay loop... 49.36 BogoMIPS (lpj=192512)\n  pid_max: default: 32768 minimum: 301\n  CPU 0 Unable to handle kernel paging request at virtual address 000000000203bd00, epc == ffffffffbfc08364, ra == ffffffffbfc08800\n  Oops[#1]:\n  CPU: 0 PID: 0 Comm: swapper Not tainted 5.18.0-rc2-00254-gfb649bda6f56-dirty #121\n  $ 0   : 0000000000000000 0000000000000001 0000000000000023 ffffffff80684ba0\n  $ 4   : 000000000203bd00 ffffffffbfc0f3b4 ffffffffffffffff 0000000000000073\n  $ 8   : 0a303d7469000000 0000000000000000 0000000000000073 ffffffffbfc0f473\n  $12   : 0000000000000002 0000000000000000 ffffffff80684c1c 0000000000000000\n  $16   : 0000000000000000 ffffffff80596dc9 0000000000000000 ffffffffbfc09240\n  $20   : ",
+    "tags": [],
+    "title": "CVE-2026-64252 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64252"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64253",
+    "published": "2026-07-24T16:16:55.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nkernel/fork: clear PF_BLOCK_TS in copy_process()\n\nPF_BLOCK_TS is only set in blk_time_get_ns() when current->plug is\nnon-NULL, and blk_finish_plug() clears it via __blk_flush_plug()\nbefore NULLing the plug pointer.  copy_process() breaks the\ninvariant by inheriting PF_BLOCK_TS from the parent while resetting\nthe child's plug to NULL.\n\nClear PF_BLOCK_TS alongside that assignment so callers can rely on\n\"PF_BLOCK_TS set implies current->plug != NULL\" and dereference\ncurrent->plug unguarded.",
+    "tags": [],
+    "title": "CVE-2026-64253 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64253"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64254",
+    "published": "2026-07-24T16:16:55.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nNTB: epf: Avoid pci_iounmap() with offset when PEER_SPAD and CONFIG share BAR\n\nWhen BAR_PEER_SPAD and BAR_CONFIG share one PCI BAR, the module teardown\npath ends up calling pci_iounmap() on the same iomem with some offset,\nwhich is unnecessary and triggers a kernel warning like the following:\n\n  Trying to vunmap() nonexistent vm area (0000000069a5ffe8)\n  WARNING: mm/vmalloc.c:3470 at vunmap+0x58/0x68, CPU#5: modprobe/2937\n  [...]\n  Call trace:\n   vunmap+0x58/0x68 (P)\n   iounmap+0x34/0x48\n   pci_iounmap+0x2c/0x40\n   ntb_epf_pci_remove+0x44/0x80 [ntb_hw_epf]\n   pci_device_remove+0x48/0xf8\n   device_remove+0x50/0x88\n   device_release_driver_internal+0x1c8/0x228\n   driver_detach+0x50/0xb0\n   bus_remove_driver+0x74/0x100\n   driver_unregister+0x34/0x68\n   pci_unregister_driver+0x34/0xa0\n   ntb_epf_pci_driver_exit+0x14/0xfe0 [ntb_hw_epf]\n  [...]\n\nFix it by unmapping only when PEER_SPAD and CONFIG use difference bars.",
+    "tags": [],
+    "title": "CVE-2026-64254 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64254"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64255",
+    "published": "2026-07-24T16:16:55.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: iwlwifi: mld: validate sta_mask before ffs() in BA session handlers\n\nThree BA session handlers use ffs(ba_data->sta_mask) - 1 to derive a\nstation ID without checking that sta_mask is non-zero. When sta_mask is\nzero, ffs() returns 0 and the subtraction wraps to 0xFFFFFFFF, causing\nan out-of-bounds access on fw_id_to_link_sta[].\n\nAdd WARN_ON_ONCE(!ba_data->sta_mask) guards before each ffs() call,\nconsistent with the existing check in iwl_mld_ampdu_rx_start().",
+    "tags": [],
+    "title": "CVE-2026-64255 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64255"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-66027",
+    "published": "2026-07-24T16:16:55.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Suna before 0.9.102 contains a broken access control vulnerability in the message queue API that allows authenticated attackers to access and manipulate queue resources belonging to other users by exploiting missing ownership and account isolation checks. Attackers can read pending prompt queues of all users, read or delete individual sessions, and inject arbitrary prompts into another user's session queue, causing the background drainer to forward malicious messages to the victim's running AI agent with the victim's credentials and permissions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-66027 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66027"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/bluenoroff-zoom-phishing-kit-profiles.html",
+    "published": "2026-07-24T15:12:35+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The North Korean threat actors behind the ClickFix-style campaigns that employ typosquatted Zoom and Microsoft Teams domains have been found to operate an active phishing kit to impersonate the videoconferencing platforms in social engineering campaigns designed to deliver malware. \"BlueNoroff has operationalised trust abuse by combining compromised industry contacts, social engineering, wallet",
+    "tags": [
+      "피싱"
+    ],
+    "title": "BlueNoroff Zoom Phishing Kit Profiles Crypto Wallets Before Malware Delivery",
+    "url": "https://thehackernews.com/2026/07/bluenoroff-zoom-phishing-kit-profiles.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/wrench-attacks-against-cryptocurrency-holders",
+    "published": "2026-07-24T15:55:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "There are more reports than ever before of strong-arm tactics like home invasions and kidnappings against cryptocurrency holders, researchers say.",
+    "tags": [],
+    "title": "'Wrench' attacks against crypto holders appear to be on the rise",
+    "url": "https://therecord.media/wrench-attacks-against-cryptocurrency-holders"
   }
 ]
