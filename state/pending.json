@@ -21700,5 +21700,1347 @@
     "tags": [],
     "title": "Google Fined €890M Under EU Digital Markets Act Over Search and Play Store Practices",
     "url": "https://securityaffairs.com/195963/laws-and-regulations/google-fined-e890m-under-eu-digital-markets-act-over-search-and-play-store-practices.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-34156",
+    "published": "2026-03-31T14:16:12.170",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Prior to version 2.0.28, NocoBase's Workflow Script Node executes user-supplied JavaScript inside a Node.js vm sandbox with a custom require allowlist (controlled by WORKFLOW_SCRIPT_MODULES env var). However, the console object passed into the sandbox context exposes host-realm WritableWorkerStdio stream objects via console._stdout and console._stderr. An authenticated attacker can traverse the prototype chain to escape the sandbox and achieve Remote Code Execution as root. This issue has been patched in version 2.0.28.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34156 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34156"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-31818",
+    "published": "2026-04-03T16:16:39.800",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Budibase is an open-source low-code platform. Prior to version 3.33.4, a server-side request forgery (SSRF) vulnerability exists in Budibase's REST datasource connector. The platform's SSRF protection mechanism (IP blacklist) is rendered completely ineffective because the BLACKLIST_IPS environment variable is not set by default in any of the official deployment configurations. When this variable is empty, the blacklist function unconditionally returns false, allowing all requests through without restriction. This issue has been patched in version 3.33.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-31818 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31818"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-28373",
+    "published": "2026-04-03T17:16:42.140",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Stackfield Desktop App before 1.10.2 for macOS and Windows contains a path traversal vulnerability in certain decryption functionality when processing the filePath property. A malicious export can write arbitrary content to any path on the victim's filesystem.",
+    "tags": [],
+    "title": "CVE-2026-28373 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28373"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-32186",
+    "published": "2026-04-03T18:16:24.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Server-side request forgery (ssrf) in Microsoft Bing allows an unauthorized attacker to elevate privileges over a network.",
+    "tags": [],
+    "title": "CVE-2026-32186 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32186"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-28798",
+    "published": "2026-04-03T20:16:02.433",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ZimaOS is a fork of CasaOS, an operating system for Zima devices and x86-64 systems with UEFI. Prior to version 1.5.3, a proxy endpoint (/v1/sys/proxy) exposed by ZimaOS's web interface can be abused (via an externally reachable domain using a Cloudflare Tunnel) to make requests to internal localhost services. This results in unauthenticated access to internal-only endpoints and sensitive local services when the product is reachable from the Internet through a Cloudflare Tunnel. This issue has been patched in version 1.5.3.",
+    "tags": [],
+    "title": "CVE-2026-28798 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28798"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-25197",
+    "published": "2026-04-03T21:17:09.867",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A specific endpoint allows authenticated users to pivot to other user profiles by modifying the id number in the API call.",
+    "tags": [],
+    "title": "CVE-2026-25197 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25197"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-28766",
+    "published": "2026-04-03T21:17:10.387",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A specific endpoint exposes all user account information for registered Gardyn users without requiring authentication.",
+    "tags": [],
+    "title": "CVE-2026-28766 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28766"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-27634",
+    "published": "2026-04-03T22:16:25.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Piwigo is an open source photo gallery application for the web. Prior to version 16.3.0, the four date filter parameters (f_min_date_available, f_max_date_available, f_min_date_created, f_max_date_created) in ws_std_image_sql_filter() are concatenated directly into SQL without any escaping or type validation. This could result in an unauthenticated attacker reading the full database, including user password hashes. This issue has been patched in version 16.3.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-27634 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27634"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2021-4477",
+    "published": "2026-04-03T23:17:01.043",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hirschmann HiLCOS OpenBAT and BAT450 products contain a firewall bypass vulnerability in IPv6 IPsec deployments that allows traffic from VPN connections to bypass configured firewall rules. Attackers can exploit this vulnerability by establishing IPv6 IPsec connections (IKEv1 or IKEv2) while simultaneously using an IPv6 Internet connection to circumvent firewall policy enforcement.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2021-4477 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4477"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-34612",
+    "published": "2026-04-03T23:17:04.587",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kestra is an open-source, event-driven orchestration platform. Prior to version 1.3.7, Kestra (default docker-compose deployment) contains a SQL Injection vulnerability that leads to Remote Code Execution (RCE) in the following endpoint \"GET /api/v1/main/flows/search\". Once a user is authenticated, simply visiting a crafted link is enough to trigger the vulnerability. The injected payload is executed by PostgreSQL using COPY ... TO PROGRAM ..., which in turn runs arbitrary OS commands on the host. This issue has been patched in version 1.3.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34612 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34612"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-34934",
+    "published": "2026-04-03T23:17:05.533",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to version 4.5.90, the get_all_user_threads function constructs raw SQL queries using f-strings with unescaped thread IDs fetched from the database. An attacker stores a malicious thread ID via update_thread. When the application loads the thread list, the injected payload executes and grants full database access. This issue has been patched in version 4.5.90.",
+    "tags": [],
+    "title": "CVE-2026-34934 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34934"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-34935",
+    "published": "2026-04-03T23:17:05.693",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. From version 4.5.15 to before version 4.5.69, the --mcp CLI argument is passed directly to shlex.split() and forwarded through the call chain to anyio.open_process() with no validation, allowlist check, or sanitization at any hop, allowing arbitrary OS command execution as the process user. This issue has been patched in version 4.5.69.",
+    "tags": [],
+    "title": "CVE-2026-34935 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34935"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2018-25254",
+    "published": "2026-04-04T14:16:21.743",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "NICO-FTP 3.0.1.19 contains a structured exception handler buffer overflow vulnerability that allows remote attackers to execute arbitrary code by sending crafted FTP commands. Attackers can connect to the FTP service and send oversized data in response handlers to overwrite SEH pointers and redirect execution to injected shellcode.",
+    "tags": [],
+    "title": "CVE-2018-25254 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25254"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-25687",
+    "published": "2026-04-05T21:16:47.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Pegasus CMS 1.0 contains a remote code execution vulnerability in the extra_fields.php plugin that allows unauthenticated attackers to execute arbitrary commands by exploiting unsafe eval functionality. Attackers can send POST requests to the submit.php endpoint with malicious PHP code in the action parameter to achieve code execution and obtain an interactive shell.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-25687 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25687"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-31405",
+    "published": "2026-04-06T08:16:38.253",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: dvb-net: fix OOB access in ULE extension header tables\n\nThe ule_mandatory_ext_handlers[] and ule_optional_ext_handlers[] tables\nin handle_one_ule_extension() are declared with 255 elements (valid\nindices 0-254), but the index htype is derived from network-controlled\ndata as (ule_sndu_type & 0x00FF), giving a range of 0-255. When\nhtype equals 255, an out-of-bounds read occurs on the function pointer\ntable, and the OOB value may be called as a function pointer.\n\nAdd a bounds check on htype against the array size before either table\nis accessed. Out-of-range values now cause the SNDU to be discarded.",
+    "tags": [],
+    "title": "CVE-2026-31405 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31405"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-58349",
+    "published": "2026-04-06T19:16:26.157",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in L2 in Samsung Mobile Processor, Wearable Processor, and Modem Exynos 980, 990, 850, 1080, 2100, 1280, 2200, 1330, 1380, 1480, 2400, 1580, 2500, 9110, W920, W930, W1000, Modem 5123, Modem 5300, and Modem 5400. Incorrect handling of LTE MAC packets containing many MAC Control Elements (CEs) leads to baseband crashes.",
+    "tags": [],
+    "title": "CVE-2025-58349 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58349"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2025-54328",
+    "published": "2026-04-06T20:16:20.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in SMS in Samsung Mobile Processor, Wearable Processor, and Modem Exynos 980, 990, 850, 1080, 2100, 1280, 2200, 1330, 1380, 1480, 2400, 1580, 2500, 9110, W920, W930, W1000, Modem 5123, Modem 5300, and Modem 5400. A Stack-based Buffer Overflow occurs while parsing SMS RP-DATA messages.",
+    "tags": [],
+    "title": "CVE-2025-54328 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54328"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-71058",
+    "published": "2026-04-07T19:16:43.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dual DHCP DNS Server 8.01 improperly accepts and caches UDP DNS responses without validating that the response originates from a legitimate configured upstream DNS server. The implementation matches responses primarily by TXID and inserts results into the cache, enabling a remote attacker to inject forged responses and poison the DNS cache, potentially redirecting victims to attacker-controlled destinations.",
+    "tags": [],
+    "title": "CVE-2025-71058 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71058"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-69515",
+    "published": "2026-04-07T20:16:22.950",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in JXL 9 Inch Car Android Double Din Player Android v12.0 allows attackers to force the infotainment system into accepting falsified GPS signals as legitimate, resulting in the device reporting an incorrect or static location.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-69515 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69515"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-33439",
+    "published": "2026-04-07T21:17:17.407",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Open Access Management (OpenAM) is an access management solution. Prior to 16.0.6, OpenIdentityPlatform OpenAM is vulnerable to pre-authentication Remote Code Execution (RCE) via unsafe Java deserialization of the jato.clientSession HTTP parameter. This bypasses the WhitelistObjectInputStream mitigation that was applied to the jato.pageSession parameter after CVE-2021-35464. An unauthenticated attacker can achieve arbitrary command execution on the server by sending a crafted serialized Java object as the jato.clientSession GET/POST parameter to any JATO ViewBean endpoint whose JSP contains <jato:form> tags (e.g., the Password Reset pages). This vulnerability is fixed in 16.0.6.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-33439 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33439"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-33229",
+    "published": "2026-04-08T16:16:23.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Prior to 17.4.8 and 17.10.1, an improperly protected scripting API allows any user with script right to bypass the sandboxing of the Velocity scripting API and execute, e.g., arbitrary Python scripts, allowing full access to the XWiki instance and thereby compromising the confidentiality, integrity and availability of the whole instance. Note that script right already constitutes a high level of access that we don't recommend giving to untrusted users. This vulnerability is fixed in 17.4.8 and 17.10.1.",
+    "tags": [],
+    "title": "CVE-2026-33229 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33229"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-33824",
+    "published": "2026-04-14T18:17:34.767",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Double free in Windows IKE Extension allows an unauthorized attacker to execute code over a network.",
+    "tags": [],
+    "title": "CVE-2026-33824 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33824"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-34615",
+    "published": "2026-04-14T18:17:36.373",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Connect versions 2025.3, 12.10 and earlier are affected by a Deserialization of Untrusted Data vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-34615 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34615"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-34457",
+    "published": "2026-04-14T23:16:28.330",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OAuth2 Proxy is a reverse proxy that provides authentication using OAuth2 providers. Versions prior to 7.15.2 contain a configuration-dependent authentication bypass in deployments where OAuth2 Proxy is used with an auth_request-style integration (such as nginx auth_request) and either --ping-user-agent is set or --gcp-healthchecks is enabled. In affected configurations, OAuth2 Proxy treats any request with the configured health check User-Agent value as a successful health check regardless of the requested path, allowing an unauthenticated remote attacker to bypass authentication and access protected upstream resources. Deployments that do not use auth_request-style subrequests or that do not enable --ping-user-agent/--gcp-healthchecks are not affected. This issue is fixed in 7.15.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34457 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34457"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-34084",
+    "published": "2026-05-05T20:16:37.007",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PhpSpreadsheet is a library for reading and writing spreadsheet files. In versions 1.30.2 and earlier, 2.0.0 through 2.1.14, 2.2.0 through 2.4.3, 3.3.0 through 3.10.3, and 4.0.0 through 5.5.0, when the filename argument to IOFactory::load() is user-controlled, an attacker can supply a PHP stream wrapper path (such as phar://, ftp://, or ssh2.sftp://) that passes the is_file() check in File::assertFile(). The phar:// wrapper triggers deserialization of the PHAR metadata, which can lead to remote code execution if a suitable gadget chain is available in the application. The ftp:// and ssh2.sftp:// wrappers can be used for server-side request forgery. This issue has been fixed in versions 1.30.3, 2.1.15, 2.4.4, 3.10.4, and 5.6.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34084 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34084"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-23459",
+    "published": "2026-04-03T16:16:32.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nip_tunnel: adapt iptunnel_xmit_stats() to NETDEV_PCPU_STAT_DSTATS\n\nBlamed commits forgot that vxlan/geneve use udp_tunnel[6]_xmit_skb() which\ncall iptunnel_xmit_stats().\n\niptunnel_xmit_stats() was assuming tunnels were only using\nNETDEV_PCPU_STAT_TSTATS.\n\n@syncp offset in pcpu_sw_netstats and pcpu_dstats is different.\n\n32bit kernels would either have corruptions or freezes if the syncp\nsequence was overwritten.\n\nThis patch also moves pcpu_stat_type closer to dev->{t,d}stats to avoid\na potential cache line miss since iptunnel_xmit_stats() needs to read it.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-23459 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23459"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23460",
+    "published": "2026-04-03T16:16:32.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/rose: fix NULL pointer dereference in rose_transmit_link on reconnect\n\nsyzkaller reported a bug [1], and the reproducer is available at [2].\n\nROSE sockets use four sk->sk_state values: TCP_CLOSE, TCP_LISTEN,\nTCP_SYN_SENT, and TCP_ESTABLISHED. rose_connect() already rejects\ncalls for TCP_ESTABLISHED (-EISCONN) and TCP_CLOSE with SS_CONNECTING\n(-ECONNREFUSED), but lacks a check for TCP_SYN_SENT.\n\nWhen rose_connect() is called a second time while the first connection\nattempt is still in progress (TCP_SYN_SENT), it overwrites\nrose->neighbour via rose_get_neigh(). If that returns NULL, the socket\nis left with rose->state == ROSE_STATE_1 but rose->neighbour == NULL.\nWhen the socket is subsequently closed, rose_release() sees\nROSE_STATE_1 and calls rose_write_internal() ->\nrose_transmit_link(skb, NULL), causing a NULL pointer dereference.\n\nPer connect(2), a second connect() while a connection is already in\nprogress should return -EALREADY. Add this missing check for\nTCP_SYN_SENT to complete the state validation in rose_connect().\n\n[1] https://syzkaller.appspot.com/bug?extid=d00f90e0af54102fb271\n[2] https://gist.github.com/mrpre/9e6779e0d13e2c66779b1653fef80516",
+    "tags": [],
+    "title": "CVE-2026-23460 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23460"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-23461",
+    "published": "2026-04-03T16:16:33.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: Fix use-after-free in l2cap_unregister_user\n\nAfter commit ab4eedb790ca (\"Bluetooth: L2CAP: Fix corrupted list in\nhci_chan_del\"), l2cap_conn_del() uses conn->lock to protect access to\nconn->users. However, l2cap_register_user() and l2cap_unregister_user()\ndon't use conn->lock, creating a race condition where these functions can\naccess conn->users and conn->hchan concurrently with l2cap_conn_del().\n\nThis can lead to use-after-free and list corruption bugs, as reported\nby syzbot.\n\nFix this by changing l2cap_register_user() and l2cap_unregister_user()\nto use conn->lock instead of hci_dev_lock(), ensuring consistent locking\nfor the l2cap_conn structure.",
+    "tags": [],
+    "title": "CVE-2026-23461 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23461"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-23462",
+    "published": "2026-04-03T16:16:33.313",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: HIDP: Fix possible UAF\n\nThis fixes the following trace caused by not dropping l2cap_conn\nreference when user->remove callback is called:\n\n[   97.809249] l2cap_conn_free: freeing conn ffff88810a171c00\n[   97.809907] CPU: 1 UID: 0 PID: 1419 Comm: repro_standalon Not tainted 7.0.0-rc1-dirty #14 PREEMPT(lazy)\n[   97.809935] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.17.0-debian-1.17.0-1 04/01/2014\n[   97.809947] Call Trace:\n[   97.809954]  <TASK>\n[   97.809961]  dump_stack_lvl (lib/dump_stack.c:122)\n[   97.809990]  l2cap_conn_free (net/bluetooth/l2cap_core.c:1808)\n[   97.810017]  l2cap_conn_del (./include/linux/kref.h:66 net/bluetooth/l2cap_core.c:1821 net/bluetooth/l2cap_core.c:1798)\n[   97.810055]  l2cap_disconn_cfm (net/bluetooth/l2cap_core.c:7347 (discriminator 1) net/bluetooth/l2cap_core.c:7340 (discriminator 1))\n[   97.810086]  ? __pfx_l2cap_disconn_cfm (net/bluetooth/l2cap_core.c:7341)\n[   97.810117]  hci_conn_hash_flush (./include/net/bluetooth/hci_core.h:2152 (discriminator 2) net/bluetooth/hci_conn.c:2644 (discriminator 2))\n[   97.810148]  hci_dev_close_sync (net/bluetooth/hci_sync.c:5360)\n[   97.810180]  ? __pfx_hci_dev_close_sync (net/bluetooth/hci_sync.c:5285)\n[   97.810212]  ? srso_alias_return_thunk (arch/x86/lib/retpoline.S:221)\n[   97.810242]  ? up_write (./arch/x86/include/asm/atomic64_64.h:87 (discriminator 5) ./include/linux/atomic/atomic-arch-fallback.h:2852 (di",
+    "tags": [],
+    "title": "CVE-2026-23462 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23462"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23464",
+    "published": "2026-04-03T16:16:33.697",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsoc: microchip: mpfs: Fix memory leak in mpfs_sys_controller_probe()\n\nIn mpfs_sys_controller_probe(), if of_get_mtd_device_by_node() fails,\nthe function returns immediately without freeing the allocated memory\nfor sys_controller, leading to a memory leak.\n\nFix this by jumping to the out_free label to ensure the memory is\nproperly freed.\n\nAlso, consolidate the error handling for the mbox_request_channel()\nfailure case to use the same label.",
+    "tags": [],
+    "title": "CVE-2026-23464 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23464"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23465",
+    "published": "2026-04-03T16:16:33.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nbtrfs: log new dentries when logging parent dir of a conflicting inode\n\nIf we log the parent directory of a conflicting inode, we are not logging\nthe new dentries of the directory, so when we finish we have the parent\ndirectory's inode marked as logged but we did not log its new dentries.\nAs a consequence if the parent directory is explicitly fsynced later and\nit does not have any new changes since we logged it, the fsync is a no-op\nand after a power failure the new dentries are missing.\n\nExample scenario:\n\n  $ mkdir foo\n\n  $ sync\n\n  $rmdir foo\n\n  $ mkdir dir1\n  $ mkdir dir2\n\n  # A file with the same name and parent as the directory we just deleted\n  # and was persisted in a past transaction. So the deleted directory's\n  # inode is a conflicting inode of this new file's inode.\n  $ touch foo\n\n  $ ln foo dir2/link\n\n  # The fsync on dir2 will log the parent directory (\".\") because the\n  # conflicting inode (deleted directory) does not exists anymore, but it\n  # it does not log its new dentries (dir1).\n  $ xfs_io -c \"fsync\" dir2\n\n  # This fsync on the parent directory is no-op, since the previous fsync\n  # logged it (but without logging its new dentries).\n  $ xfs_io -c \"fsync\" .\n\n  <power failure>\n\n  # After log replay dir1 is missing.\n\nFix this by ensuring we log new dir dentries whenever we log the parent\ndirectory of a no longer existing conflicting inode.\n\nA test case for fstests will follow soon.",
+    "tags": [],
+    "title": "CVE-2026-23465 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23465"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23466",
+    "published": "2026-04-03T16:16:34.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/xe: Open-code GGTT MMIO access protection\n\nGGTT MMIO access is currently protected by hotplug (drm_dev_enter),\nwhich works correctly when the driver loads successfully and is later\nunbound or unloaded. However, if driver load fails, this protection is\ninsufficient because drm_dev_unplug() is never called.\n\nAdditionally, devm release functions cannot guarantee that all BOs with\nGGTT mappings are destroyed before the GGTT MMIO region is removed, as\nsome BOs may be freed asynchronously by worker threads.\n\nTo address this, introduce an open-coded flag, protected by the GGTT\nlock, that guards GGTT MMIO access. The flag is cleared during the\ndev_fini_ggtt devm release function to ensure MMIO access is disabled\nonce teardown begins.\n\n(cherry picked from commit 4f3a998a173b4325c2efd90bdadc6ccd3ad9a431)",
+    "tags": [],
+    "title": "CVE-2026-23466 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23466"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23467",
+    "published": "2026-04-03T16:16:34.177",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/i915/dmc: Fix an unlikely NULL pointer deference at probe\n\nintel_dmc_update_dc6_allowed_count() oopses when DMC hasn't been\ninitialized, and dmc is thus NULL.\n\nThat would be the case when the call path is\nintel_power_domains_init_hw() -> {skl,bxt,icl}_display_core_init() ->\ngen9_set_dc_state() -> intel_dmc_update_dc6_allowed_count(), as\nintel_power_domains_init_hw() is called *before* intel_dmc_init().\n\nHowever, gen9_set_dc_state() calls intel_dmc_update_dc6_allowed_count()\nconditionally, depending on the current and target DC states. At probe,\nthe target is disabled, but if DC6 is enabled, the function is called,\nand an oops follows. Apparently it's quite unlikely that DC6 is enabled\nat probe, as we haven't seen this failure mode before.\n\nIt is also strange to have DC6 enabled at boot, since that would require\nthe DMC firmware (loaded by BIOS); the BIOS loading the DMC firmware and\nthe driver stopping / reprogramming the firmware is a poorly specified\nsequence and as such unlikely an intentional BIOS behaviour. It's more\nlikely that BIOS is leaving an unintentionally enabled DC6 HW state\nbehind (without actually loading the required DMC firmware for this).\n\nThe tracking of the DC6 allowed counter only works if starting /\nstopping the counter depends on the _SW_ DC6 state vs. the current _HW_\nDC6 state (since stopping the counter requires the DC5 counter captured\nwhen the counter was started). Thus, usin",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-23467 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23467"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23468",
+    "published": "2026-04-03T16:16:34.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/amdgpu: Limit BO list entry count to prevent resource exhaustion\n\nUserspace can pass an arbitrary number of BO list entries via the\nbo_number field. Although the previous multiplication overflow check\nprevents out-of-bounds allocation, a large number of entries could still\ncause excessive memory allocation (up to potentially gigabytes) and\nunnecessarily long list processing times.\n\nIntroduce a hard limit of 128k entries per BO list, which is more than\nsufficient for any realistic use case (e.g., a single list containing all\nbuffers in a large scene). This prevents memory exhaustion attacks and\nensures predictable performance.\n\nReturn -EINVAL if the requested entry count exceeds the limit\n\n(cherry picked from commit 688b87d39e0aa8135105b40dc167d74b5ada5332)",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-23468 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23468"
+  },
+  {
+    "category": "high",
+    "cvss": 4.7,
+    "id": "CVE-2026-23469",
+    "published": "2026-04-03T16:16:34.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/imagination: Synchronize interrupts before suspending the GPU\n\nThe runtime PM suspend callback doesn't know whether the IRQ handler is\nin progress on a different CPU core and doesn't wait for it to finish.\n\nDepending on timing, the IRQ handler could be running while the GPU is\nsuspended, leading to kernel crashes when trying to access GPU\nregisters. See example signature below.\n\nIn a power off sequence initiated by the runtime PM suspend callback,\nwait for any IRQ handlers in progress on other CPU cores to finish, by\ncalling synchronize_irq().\n\nAt the same time, remove the runtime PM resume/put calls in the threaded\nIRQ handler. On top of not being the right approach to begin with, and\nbeing at the wrong place as they should have wrapped all GPU register\naccesses, the driver would hit a deadlock between synchronize_irq()\nbeing called from a runtime PM suspend callback, holding the device\npower lock, and the resume callback requiring the same.\n\nExample crash signature on a TI AM68 SK platform:\n\n  [  337.241218] SError Interrupt on CPU0, code 0x00000000bf000000 -- SError\n  [  337.241239] CPU: 0 UID: 0 PID: 112 Comm: irq/234-gpu Tainted: G   M                6.17.7-B2C-00005-g9c7bbe4ea16c #2 PREEMPT\n  [  337.241246] Tainted: [M]=MACHINE_CHECK\n  [  337.241249] Hardware name: Texas Instruments AM68 SK (DT)\n  [  337.241252] pstate: 60000005 (nZCv daif -PAN -UAO -TCO -DIT -SSBS BTYPE=--)\n  [  337.241256] pc : p",
+    "tags": [],
+    "title": "CVE-2026-23469 (CVSS 4.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23469"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23470",
+    "published": "2026-04-03T16:16:34.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/imagination: Fix deadlock in soft reset sequence\n\nThe soft reset sequence is currently executed from the threaded IRQ\nhandler, hence it cannot call disable_irq() which internally waits\nfor IRQ handlers, i.e. itself, to complete.\n\nUse disable_irq_nosync() during a soft reset instead.",
+    "tags": [],
+    "title": "CVE-2026-23470 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23470"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25044",
+    "published": "2026-04-03T16:16:35.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Budibase is an open-source low-code platform. Prior to version 3.33.4, the bash automation step executes user-provided commands using execSync without proper sanitization or validation. User input is processed through processStringSync which allows template interpolation, potentially allowing arbitrary command execution. This issue has been patched in version 3.33.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25044 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25044"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-31390",
+    "published": "2026-04-03T16:16:36.987",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/xe: Fix memory leak in xe_vm_madvise_ioctl\n\nWhen check_bo_args_are_sane() validation fails, jump to the new\nfree_vmas cleanup label to properly free the allocated resources.\nThis ensures proper cleanup in this error path.\n\n(cherry picked from commit 29bd06faf727a4b76663e4be0f7d770e2d2a7965)",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-31390 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31390"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-31393",
+    "published": "2026-04-03T16:16:37.420",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: Validate L2CAP_INFO_RSP payload length before access\n\nl2cap_information_rsp() checks that cmd_len covers the fixed\nl2cap_info_rsp header (type + result, 4 bytes) but then reads\nrsp->data without verifying that the payload is present:\n\n - L2CAP_IT_FEAT_MASK calls get_unaligned_le32(rsp->data), which reads\n   4 bytes past the header (needs cmd_len >= 8).\n\n - L2CAP_IT_FIXED_CHAN reads rsp->data[0], 1 byte past the header\n   (needs cmd_len >= 5).\n\nA truncated L2CAP_INFO_RSP with result == L2CAP_IR_SUCCESS triggers an\nout-of-bounds read of adjacent skb data.\n\nGuard each data access with the required payload length check.  If the\npayload is too short, skip the read and let the state machine complete\nwith safe defaults (feat_mask and remote_fixed_chan remain zero from\nkzalloc), so the info timer cleanup and l2cap_conn_start() still run\nand the connection is not stalled.",
+    "tags": [],
+    "title": "CVE-2026-31393 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31393"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-31394",
+    "published": "2026-04-03T16:16:37.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmac80211: fix crash in ieee80211_chan_bw_change for AP_VLAN stations\n\nieee80211_chan_bw_change() iterates all stations and accesses\nlink->reserved.oper via sta->sdata->link[link_id]. For stations on\nAP_VLAN interfaces (e.g. 4addr WDS clients), sta->sdata points to\nthe VLAN sdata, whose link never participates in chanctx reservations.\nThis leaves link->reserved.oper zero-initialized with chan == NULL,\ncausing a NULL pointer dereference in __ieee80211_sta_cap_rx_bw()\nwhen accessing chandef->chan->band during CSA.\n\nResolve the VLAN sdata to its parent AP sdata using get_bss_sdata()\nbefore accessing link data.\n\n[also change sta->sdata in ARRAY_SIZE even if it doesn't matter]",
+    "tags": [],
+    "title": "CVE-2026-31394 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31394"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-31395",
+    "published": "2026-04-03T16:16:37.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nbnxt_en: fix OOB access in DBG_BUF_PRODUCER async event handler\n\nThe ASYNC_EVENT_CMPL_EVENT_ID_DBG_BUF_PRODUCER handler in\nbnxt_async_event_process() uses a firmware-supplied 'type' field\ndirectly as an index into bp->bs_trace[] without bounds validation.\n\nThe 'type' field is a 16-bit value extracted from DMA-mapped completion\nring memory that the NIC writes directly to host RAM. A malicious or\ncompromised NIC can supply any value from 0 to 65535, causing an\nout-of-bounds access into kernel heap memory.\n\nThe bnxt_bs_trace_check_wrap() call then dereferences bs_trace->magic_byte\nand writes to bs_trace->last_offset and bs_trace->wrapped, leading to\nkernel memory corruption or a crash.\n\nFix by adding a bounds check and defining BNXT_TRACE_MAX as\nDBG_LOG_BUFFER_FLUSH_REQ_TYPE_ERR_QPC_TRACE + 1 to cover all currently\ndefined firmware trace types (0x0 through 0xc).",
+    "tags": [],
+    "title": "CVE-2026-31395 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31395"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-31397",
+    "published": "2026-04-03T16:16:38.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/huge_memory: fix use of NULL folio in move_pages_huge_pmd()\n\nmove_pages_huge_pmd() handles UFFDIO_MOVE for both normal THPs and huge\nzero pages.  For the huge zero page path, src_folio is explicitly set to\nNULL, and is used as a sentinel to skip folio operations like lock and\nrmap.\n\nIn the huge zero page branch, src_folio is NULL, so folio_mk_pmd(NULL,\npgprot) passes NULL through folio_pfn() and page_to_pfn().  With\nSPARSEMEM_VMEMMAP this silently produces a bogus PFN, installing a PMD\npointing to non-existent physical memory.  On other memory models it is a\nNULL dereference.\n\nUse page_folio(src_page) to obtain the valid huge zero folio from the\npage, which was obtained from pmd_page() and remains valid throughout.\n\nAfter commit d82d09e48219 (\"mm/huge_memory: mark PMD mappings of the huge\nzero folio special\"), moved huge zero PMDs must remain special so\nvm_normal_page_pmd() continues to treat them as special mappings.\n\nmove_pages_huge_pmd() currently reconstructs the destination PMD in the\nhuge zero page branch, which drops PMD state such as pmd_special() on\narchitectures with CONFIG_ARCH_HAS_PTE_SPECIAL.  As a result,\nvm_normal_page_pmd() can treat the moved huge zero PMD as a normal page\nand corrupt its refcount.\n\nInstead of reconstructing the PMD from the folio, derive the destination\nentry from src_pmdval after pmdp_huge_clear_flush(), then handle the PMD\nmetadata the same way move_huge_pmd() does for",
+    "tags": [],
+    "title": "CVE-2026-31397 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31397"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-31399",
+    "published": "2026-04-03T16:16:38.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnvdimm/bus: Fix potential use after free in asynchronous initialization\n\nDingisoul with KASAN reports a use after free if device_add() fails in\nnd_async_device_register().\n\nCommit b6eae0f61db2 (\"libnvdimm: Hold reference on parent while\nscheduling async init\") correctly added a reference on the parent device\nto be held until asynchronous initialization was complete.  However, if\ndevice_add() results in an allocation failure the ref count of the\ndevice drops to 0 prior to the parent pointer being accessed.  Thus\nresulting in use after free.\n\nThe bug bot AI correctly identified the fix.  Save a reference to the\nparent pointer to be used to drop the parent reference regardless of the\noutcome of device_add().",
+    "tags": [],
+    "title": "CVE-2026-31399 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31399"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-31400",
+    "published": "2026-04-03T16:16:38.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsunrpc: fix cache_request leak in cache_release\n\nWhen a reader's file descriptor is closed while in the middle of reading\na cache_request (rp->offset != 0), cache_release() decrements the\nrequest's readers count but never checks whether it should free the\nrequest.\n\nIn cache_read(), when readers drops to 0 and CACHE_PENDING is clear, the\ncache_request is removed from the queue and freed along with its buffer\nand cache_head reference. cache_release() lacks this cleanup.\n\nThe only other path that frees requests with readers == 0 is\ncache_dequeue(), but it runs only when CACHE_PENDING transitions from\nset to clear. If that transition already happened while readers was\nstill non-zero, cache_dequeue() will have skipped the request, and no\nsubsequent call will clean it up.\n\nAdd the same cleanup logic from cache_read() to cache_release(): after\ndecrementing readers, check if it reached 0 with CACHE_PENDING clear,\nand if so, dequeue and free the cache_request.",
+    "tags": [],
+    "title": "CVE-2026-31400 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31400"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-31401",
+    "published": "2026-04-03T16:16:39.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nHID: bpf: prevent buffer overflow in hid_hw_request\n\nright now the returned value is considered to be always valid. However,\nwhen playing with HID-BPF, the return value can be arbitrary big,\nbecause it's the return value of dispatch_hid_bpf_raw_requests(), which\ncalls the struct_ops and we have no guarantees that the value makes\nsense.",
+    "tags": [],
+    "title": "CVE-2026-31401 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31401"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-31404",
+    "published": "2026-04-03T16:16:39.643",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Defer sub-object cleanup in export put callbacks\n\nsvc_export_put() calls path_put() and auth_domain_put() immediately\nwhen the last reference drops, before the RCU grace period. RCU\nreaders in e_show() and c_show() access both ex_path (via\nseq_path/d_path) and ex_client->name (via seq_escape) without\nholding a reference. If cache_clean removes the entry and drops the\nlast reference concurrently, the sub-objects are freed while still\nin use, producing a NULL pointer dereference in d_path.\n\nCommit 2530766492ec (\"nfsd: fix UAF when access ex_uuid or\nex_stats\") moved kfree of ex_uuid and ex_stats into the\ncall_rcu callback, but left path_put() and auth_domain_put() running\nbefore the grace period because both may sleep and call_rcu\ncallbacks execute in softirq context.\n\nReplace call_rcu/kfree_rcu with queue_rcu_work(), which defers the\ncallback until after the RCU grace period and executes it in process\ncontext where sleeping is permitted. This allows path_put() and\nauth_domain_put() to be moved into the deferred callback alongside\nthe other resource releases. Apply the same fix to expkey_put(),\nwhich has the identical pattern with ek_path and ek_client.\n\nA dedicated workqueue scopes the shutdown drain to only NFSD\nexport release work items; flushing the shared\nsystem_unbound_wq would stall on unrelated work from other\nsubsystems. nfsd_export_shutdown() uses rcu_barrier() followed\nby flush_workqueue() to e",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-31404 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31404"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-25726",
+    "published": "2026-04-03T20:16:02.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cloudreve is a self-hosted file management and sharing system. Prior to version 4.13.0, the application uses the weak pseudo-random number generator math/rand seeded with time.Now().UnixNano() to generate critical security secrets, including the secret_key, and hash_id_salt. These secrets are generated upon first startup and persisted in the database. An attacker can exploit this by obtaining the administrator's account creation time (via public API endpoints) to narrow the search window for the PRNG seed, and use known hashid to validate the seed. By brute-forcing the seed (demonstrated to take <3 hours on general consumer PC), an attacker can predict the secret_key. This allows them to forge valid JSON Web Tokens (JWTs) for any user, including administrators, leading to full account takeover and privilege escalation. This issue has been patched in version 4.13.0.",
+    "tags": [],
+    "title": "CVE-2026-25726 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25726"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2025-10681",
+    "published": "2026-04-03T21:17:08.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Storage credentials are hardcoded in the mobile app and device firmware. These credentials do not adequately limit end user permissions and do not expire within a reasonable amount of time. This vulnerability may grant unauthorized access to production storage containers.",
+    "tags": [],
+    "title": "CVE-2025-10681 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10681"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-28797",
+    "published": "2026-04-03T22:16:26.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine. In versions 0.24.0 and prior, a Server-Side Template Injection (SSTI) vulnerability exists in RAGFlow's Agent workflow Text Processing (StringTransform) and Message components. These components use Python's jinja2.Template (unsandboxed) to render user-supplied templates, allowing any authenticated user to execute arbitrary operating system commands on the server. At time of publication, there are no publicly available patches.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-28797 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28797"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-33175",
+    "published": "2026-04-03T22:16:26.483",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OAuthenticator is software that allows OAuth2 identity providers to be plugged in and used with JupyterHub. Prior to version 17.4.0, an authentication bypass vulnerability in oauthenticator allows an attacker with an unverified email address on an Auth0 tenant to login to JupyterHub. When email is used as the usrname_claim, this gives users control over their username and the possibility of account takeover. This issue has been patched in version 17.4.0.",
+    "tags": [],
+    "title": "CVE-2026-33175 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33175"
+  },
+  {
+    "category": "high",
+    "cvss": 7.7,
+    "id": "CVE-2026-34936",
+    "published": "2026-04-03T23:17:05.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to version 4.5.90, passthrough() and apassthrough() in praisonai accept a caller-controlled api_base parameter that is concatenated with endpoint and passed directly to httpx.Client.request() when the litellm primary path raises AttributeError. No URL scheme validation, private IP filtering, or domain allowlist is applied, allowing requests to any host reachable from the server. This issue has been patched in version 4.5.90.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-34936 (CVSS 7.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34936"
+  },
+  {
+    "category": "high",
+    "cvss": 3.9,
+    "id": "CVE-2026-34768",
+    "published": "2026-04-04T00:16:17.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.1, 40.8.0, and 41.0.0-beta.8, on Windows, app.setLoginItemSettings({openAtLogin: true}) wrote the executable path to the Run registry key without quoting. If the app is installed to a path containing spaces, an attacker with write access to an ancestor directory may be able to cause a different executable to run at login instead of the intended app. On a default Windows install, standard system directories are protected against writes by standard users, so exploitation typically requires a non-standard install location. This issue has been patched in versions 38.8.6, 39.8.1, 40.8.0, and 41.0.0-beta.8.",
+    "tags": [],
+    "title": "CVE-2026-34768 (CVSS 3.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34768"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2026-34770",
+    "published": "2026-04-04T00:16:17.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.1, 40.8.0, and 41.0.0-beta.8, apps that use the powerMonitor module may be vulnerable to a use-after-free. After the native PowerMonitor object is garbage-collected, the associated OS-level resources (a message window on Windows, a shutdown handler on macOS) retain dangling references. A subsequent session-change event (Windows) or system shutdown (macOS) dereferences freed memory, which may lead to a crash or memory corruption. All apps that access powerMonitor events (suspend, resume, lock-screen, etc.) are potentially affected. The issue is not directly renderer-controllable. This issue has been patched in versions 38.8.6, 39.8.1, 40.8.0, and 41.0.0-beta.8.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34770 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34770"
+  },
+  {
+    "category": "high",
+    "cvss": 4.7,
+    "id": "CVE-2026-34773",
+    "published": "2026-04-04T00:16:18.287",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.1, 40.8.1, and 41.0.0, on Windows, app.setAsDefaultProtocolClient(protocol) did not validate the protocol name before writing to the registry. Apps that pass untrusted input as the protocol name may allow an attacker to write to arbitrary subkeys under HKCU\\Software\\Classes\\, potentially hijacking existing protocol handlers. Apps are only affected if they call app.setAsDefaultProtocolClient() with a protocol name derived from external or untrusted input. Apps that use a hardcoded protocol name are not affected. This issue has been patched in versions 38.8.6, 39.8.1, 40.8.1, and 41.0.0.",
+    "tags": [],
+    "title": "CVE-2026-34773 (CVSS 4.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34773"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-34776",
+    "published": "2026-04-04T00:16:18.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to versions 38.8.6, 39.8.1, 40.8.1, and 41.0.0, on macOS and Linux, apps that call app.requestSingleInstanceLock() were vulnerable to an out-of-bounds heap read when parsing a crafted second-instance message. Leaked memory could be delivered to the app's second-instance event handler. This issue is limited to processes running as the same user as the Electron app. Apps that do not call app.requestSingleInstanceLock() are not affected. Windows is not affected by this issue. This issue has been patched in versions 38.8.6, 39.8.1, 40.8.1, and 41.0.0.",
+    "tags": [],
+    "title": "CVE-2026-34776 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34776"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-34780",
+    "published": "2026-04-04T01:16:39.540",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. From versions 39.0.0-alpha.1 to before 39.8.0, 40.0.0-alpha.1 to before 40.7.0, and 41.0.0-alpha.1 to before 41.0.0-beta.8, apps that pass VideoFrame objects (from the WebCodecs API) across the contextBridge are vulnerable to a context isolation bypass. An attacker who can execute JavaScript in the main world (for example, via XSS) can use a bridged VideoFrame to gain access to the isolated world, including any Node.js APIs exposed to the preload script. Apps are only affected if a preload script returns, resolves, or passes a VideoFrame object to the main world via contextBridge.exposeInMainWorld(). Apps that do not bridge VideoFrame objects are not affected. This issue has been patched in versions 39.8.0, 40.7.0, and 41.0.0-beta.8.",
+    "tags": [],
+    "title": "CVE-2026-34780 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34780"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2018-25251",
+    "published": "2026-04-04T14:16:21.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Snes9K 0.0.9z contains a buffer overflow vulnerability in the Netplay Socket Port Number field that allows local attackers to trigger a structured exception handler (SEH) overwrite. Attackers can craft a malicious payload and paste it into the Socket Port Number field via the Netplay Options menu to achieve code execution through SEH chain exploitation.",
+    "tags": [],
+    "title": "CVE-2018-25251 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25251"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2019-25656",
+    "published": "2026-04-05T21:16:42.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "R i386 3.5.0 contains a local buffer overflow vulnerability in the GUI Preferences dialog that allows local attackers to trigger a structured exception handler (SEH) overwrite by supplying malicious input. Attackers can craft a payload string in the 'Language for menus and messages' field to overwrite SEH records and achieve code execution with calculator or arbitrary shellcode.",
+    "tags": [],
+    "title": "CVE-2019-25656 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25656"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25662",
+    "published": "2026-04-05T21:16:43.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ResourceSpace 8.6 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the 'ref' parameter. Attackers can send GET requests to the watched_searches.php endpoint with crafted SQL payloads to extract sensitive database information including usernames and credentials.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-25662 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25662"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25668",
+    "published": "2026-04-05T21:16:44.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "News Website Script 2.0.5 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the news ID parameter. Attackers can send GET requests to index.php/show/news/ with malicious SQL statements to extract sensitive database information.",
+    "tags": [],
+    "title": "CVE-2019-25668 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25668"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25669",
+    "published": "2026-04-05T21:16:44.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "qdPM 9.1 contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the search_by_extrafields[] parameter. Attackers can send POST requests to the users endpoint with malicious search_by_extrafields[] values to trigger SQL syntax errors and extract database information.",
+    "tags": [],
+    "title": "CVE-2019-25669 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25669"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2019-25670",
+    "published": "2026-04-05T21:16:44.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "River Past Video Cleaner 7.6.3 contains a structured exception handler buffer overflow vulnerability that allows local attackers to execute arbitrary code by supplying a malicious string in the Lame_enc.dll field. Attackers can craft a payload with 280 bytes of padding, a next structured exception handler override, and shellcode to trigger code execution when the application processes the input.",
+    "tags": [],
+    "title": "CVE-2019-25670 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25670"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2019-25671",
+    "published": "2026-04-05T21:16:44.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "VA MAX 8.3.4 contains a remote code execution vulnerability that allows authenticated attackers to execute arbitrary commands by injecting shell metacharacters into the mtu_eth0 parameter. Attackers can send POST requests to the changeip.php endpoint with malicious payload in the mtu_eth0 field to execute commands as the apache user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-25671 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25671"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25672",
+    "published": "2026-04-05T21:16:44.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PilusCart 1.4.1 contains a SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the 'send' parameter. Attackers can submit POST requests to the comment submission endpoint with RLIKE-based boolean SQL injection payloads to extract sensitive database information.",
+    "tags": [],
+    "title": "CVE-2019-25672 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25672"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2019-25673",
+    "published": "2026-04-05T21:16:45.113",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "UniSharp Laravel File Manager v2.0.0-alpha7 and v2.0 contain an arbitrary file upload vulnerability that allows authenticated attackers to upload malicious files by sending multipart form data to the upload endpoint. Attackers can upload PHP files with the type parameter set to Files and execute arbitrary code by accessing the uploaded file through the working directory path.",
+    "tags": [],
+    "title": "CVE-2019-25673 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25673"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25674",
+    "published": "2026-04-05T21:16:45.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CMSsite 1.0 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the 'post' parameter. Attackers can send GET requests to post.php with malicious 'post' values to extract sensitive database information or perform time-based blind SQL injection attacks.",
+    "tags": [],
+    "title": "CVE-2019-25674 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25674"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25675",
+    "published": "2026-04-05T21:16:45.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "eDirectory contains multiple SQL injection vulnerabilities that allow unauthenticated attackers to bypass administrator authentication and disclose sensitive files by injecting SQL code into parameters. Attackers can exploit the key parameter in the login endpoint with union-based SQL injection to authenticate as administrator, then leverage authenticated file disclosure vulnerabilities in language_file.php to read arbitrary PHP files from the server.",
+    "tags": [],
+    "title": "CVE-2019-25675 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25675"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25676",
+    "published": "2026-04-05T21:16:45.620",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ask Expert Script 3.0.5 contains cross-site scripting and SQL injection vulnerabilities that allow unauthenticated attackers to inject malicious code by manipulating URL parameters. Attackers can inject script tags through the cateid parameter in categorysearch.php or SQL code through the view parameter in list-details.php to execute arbitrary code or extract database information.",
+    "tags": [],
+    "title": "CVE-2019-25676 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25676"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25678",
+    "published": "2026-04-05T21:16:45.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "C4G Basic Laboratory Information System 3.4 contains multiple SQL injection vulnerabilities that allow unauthenticated attackers to execute arbitrary SQL commands by injecting malicious code through the site parameter. Attackers can send GET requests to the users_select.php endpoint with crafted SQL payloads to extract sensitive database information including patient records and system credentials.",
+    "tags": [],
+    "title": "CVE-2019-25678 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25678"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25680",
+    "published": "2026-04-05T21:16:46.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Advance Gift Shop Pro Script 2.0.3 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the search parameter. Attackers can submit crafted SQL payloads in the 's' parameter of search requests to extract sensitive database information including version details and other data.",
+    "tags": [],
+    "title": "CVE-2019-25680 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25680"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2019-25681",
+    "published": "2026-04-05T21:16:46.457",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Xlight FTP Server 3.9.1 contains a structured exception handler (SEH) overwrite vulnerability that allows local attackers to crash the application and overwrite SEH pointers by supplying a crafted buffer string. Attackers can inject a 428-byte payload through the program execution field in virtual server configuration to trigger a buffer overflow that corrupts the SEH chain and enables potential code execution.",
+    "tags": [],
+    "title": "CVE-2019-25681 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25681"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25684",
+    "published": "2026-04-05T21:16:46.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenDocMan 1.3.4 contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the 'where' parameter. Attackers can send GET requests to search.php with malicious SQL payloads in the 'where' parameter to extract sensitive database information.",
+    "tags": [],
+    "title": "CVE-2019-25684 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25684"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25688",
+    "published": "2026-04-05T21:16:47.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the menu_lev1 parameter. Attackers can send crafted requests with malicious SQL payloads in the menu_lev1 parameter to extract sensitive database information or modify database contents.",
+    "tags": [],
+    "title": "CVE-2019-25688 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25688"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25690",
+    "published": "2026-04-05T21:16:47.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the mng_profile_id parameter. Attackers can send crafted requests with malicious SQL payloads in the mng_profile_id parameter to extract sensitive database information.",
+    "tags": [],
+    "title": "CVE-2019-25690 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25690"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25692",
+    "published": "2026-04-05T21:16:47.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the 'id_to_modify' parameter. Attackers can send crafted requests with malicious SQL statements in the id_to_modify field to extract sensitive database information or modify data.",
+    "tags": [],
+    "title": "CVE-2019-25692 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25692"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25694",
+    "published": "2026-04-05T21:16:48.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows unauthenticated attackers to manipulate database queries by injecting SQL code through the user2reset parameter. Attackers can send crafted requests with malicious SQL payloads to extract sensitive database information or modify data.",
+    "tags": [],
+    "title": "CVE-2019-25694 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25694"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25696",
+    "published": "2026-04-05T21:16:48.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the language_tag parameter. Attackers can submit malicious SQL statements in the language_tag parameter to extract sensitive database information or modify data.",
+    "tags": [],
+    "title": "CVE-2019-25696 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25696"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25698",
+    "published": "2026-04-05T21:16:48.480",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the id_to_delete parameter. Attackers can send crafted requests with malicious SQL statements in the id_to_delete field to extract or modify sensitive database information.",
+    "tags": [],
+    "title": "CVE-2019-25698 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25698"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25700",
+    "published": "2026-04-05T21:16:48.643",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the sort_direction parameter. Attackers can submit malicious SQL statements in the sort_direction parameter to extract sensitive database information or modify data.",
+    "tags": [],
+    "title": "CVE-2019-25700 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25700"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25702",
+    "published": "2026-04-05T21:16:48.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the id_project parameter. Attackers can send crafted requests with malicious SQL statements in the id_project parameter to extract sensitive database information or modify data.",
+    "tags": [],
+    "title": "CVE-2019-25702 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25702"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2019-25704",
+    "published": "2026-04-05T21:16:48.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kados R10 GreenBee contains an SQL injection vulnerability that allows attackers to manipulate database queries by injecting SQL code through the filter_user_mail parameter. Attackers can send crafted requests with malicious SQL statements to extract sensitive database information or modify data.",
+    "tags": [],
+    "title": "CVE-2019-25704 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25704"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-31406",
+    "published": "2026-04-06T08:16:38.457",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm: Fix work re-schedule after cancel in xfrm_nat_keepalive_net_fini()\n\nAfter cancel_delayed_work_sync() is called from\nxfrm_nat_keepalive_net_fini(), xfrm_state_fini() flushes remaining\nstates via __xfrm_state_delete(), which calls\nxfrm_nat_keepalive_state_updated() to re-schedule nat_keepalive_work.\n\nThe following is a simple race scenario:\n\n           cpu0                             cpu1\n\ncleanup_net() [Round 1]\n  ops_undo_list()\n    xfrm_net_exit()\n      xfrm_nat_keepalive_net_fini()\n        cancel_delayed_work_sync(nat_keepalive_work);\n      xfrm_state_fini()\n        xfrm_state_flush()\n          xfrm_state_delete(x)\n            __xfrm_state_delete(x)\n              xfrm_nat_keepalive_state_updated(x)\n                schedule_delayed_work(nat_keepalive_work);\n  rcu_barrier();\n  net_complete_free();\n  net_passive_dec(net);\n    llist_add(&net->defer_free_list, &defer_free_list);\n\ncleanup_net() [Round 2]\n  rcu_barrier();\n  net_complete_free()\n    kmem_cache_free(net_cachep, net);\n                                     nat_keepalive_work()\n                                       // on freed net\n\nTo prevent this, cancel_delayed_work_sync() is replaced with\ndisable_delayed_work_sync().",
+    "tags": [],
+    "title": "CVE-2026-31406 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31406"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-31407",
+    "published": "2026-04-06T08:16:38.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: conntrack: add missing netlink policy validations\n\nHyunwoo Kim reports out-of-bounds access in sctp and ctnetlink.\n\nThese attributes are used by the kernel without any validation.\nExtend the netlink policies accordingly.\n\nQuoting the reporter:\n  nlattr_to_sctp() assigns the user-supplied CTA_PROTOINFO_SCTP_STATE\n  value directly to ct->proto.sctp.state without checking that it is\n  within the valid range. [..]\n\n  and: ... with exp->dir = 100, the access at\n  ct->master->tuplehash[100] reads 5600 bytes past the start of a\n  320-byte nf_conn object, causing a slab-out-of-bounds read confirmed by\n  UBSAN.",
+    "tags": [],
+    "title": "CVE-2026-31407 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31407"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-31408",
+    "published": "2026-04-06T08:16:38.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: SCO: Fix use-after-free in sco_recv_frame() due to missing sock_hold\n\nsco_recv_frame() reads conn->sk under sco_conn_lock() but immediately\nreleases the lock without holding a reference to the socket. A concurrent\nclose() can free the socket between the lock release and the subsequent\nsk->sk_state access, resulting in a use-after-free.\n\nOther functions in the same file (sco_sock_timeout(), sco_conn_del())\ncorrectly use sco_sock_hold() to safely hold a reference under the lock.\n\nFix by using sco_sock_hold() to take a reference before releasing the\nlock, and adding sock_put() on all exit paths.",
+    "tags": [],
+    "title": "CVE-2026-31408 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31408"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-31409",
+    "published": "2026-04-06T08:16:38.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: unset conn->binding on failed binding request\n\nWhen a multichannel SMB2_SESSION_SETUP request with\nSMB2_SESSION_REQ_FLAG_BINDING fails ksmbd sets conn->binding = true\nbut never clears it on the error path. This leaves the connection in\na binding state where all subsequent ksmbd_session_lookup_all() calls\nfall back to the global sessions table. This fix it by clearing\nconn->binding = false in the error path.",
+    "tags": [],
+    "title": "CVE-2026-31409 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31409"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-31410",
+    "published": "2026-04-06T08:16:39.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: use volume UUID in FS_OBJECT_ID_INFORMATION\n\nUse sb->s_uuid for a proper volume identifier as the primary choice.\nFor filesystems that do not provide a UUID, fall back to stfs.f_fsid\nobtained from vfs_statfs().",
+    "tags": [],
+    "title": "CVE-2026-31410 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31410"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-20432",
+    "published": "2026-04-07T04:17:12.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Modem, there is a possible out of bounds write due to a missing bounds check. This could lead to remote escalation of privilege, if a UE has connected to a rogue base station controlled by the attacker, with no additional execution privileges needed. User interaction is needed for exploitation. Patch ID: MOLY01406170; Issue ID: MSV-4461.",
+    "tags": [],
+    "title": "CVE-2026-20432 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20432"
+  },
+  {
+    "category": "high",
+    "cvss": 6.0,
+    "id": "CVE-2026-34765",
+    "published": "2026-04-07T22:16:22.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to 39.8.5, 40.8.5, 41.1.0, and 42.0.0-alpha.5, when a renderer calls window.open() with a target name, Electron did not correctly scope the named-window lookup to the opener's browsing context group. A renderer could navigate an existing child window that was opened by a different, unrelated renderer if both used the same target name. If that existing child was created with more permissive webPreferences (via setWindowOpenHandler's overrideBrowserWindowOptions), content loaded by the second renderer inherits those permissions. Apps are only affected if they open multiple top-level windows with differing trust levels and use setWindowOpenHandler to grant child windows elevated webPreferences such as a privileged preload script. Apps that do not elevate child window privileges, or that use a single top-level window, are not affected. Apps that additionally grant nodeIntegration: true or sandbox: false to child windows (contrary to the security recommendations) may be exposed to arbitrary code execution. This vulnerability is fixed in 39.8.5, 40.8.5, 41.1.0, and 42.0.0-alpha.5.",
+    "tags": [],
+    "title": "CVE-2026-34765 (CVSS 6.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34765"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-3357",
+    "published": "2026-04-08T01:16:41.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow Desktop 1.6.0 through 1.8.2 Langflow could allow an authenticated user to execute arbitrary code on the system, caused by an insecure default setting which permits the deserialization of untrusted data in the FAISS component.",
+    "tags": [],
+    "title": "CVE-2026-3357 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3357"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-33460",
+    "published": "2026-04-08T17:21:18.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect Authorization (CWE-863) in Kibana can lead to cross-space information disclosure via Privilege Abuse (CAPEC-122). A user with Fleet agent management privileges in one Kibana space can retrieve Fleet Server policy details from other spaces through an internal enrollment endpoint. The endpoint bypasses space-scoped access controls by using an unscoped internal client, returning operational identifiers, policy names, management state, and infrastructure linkage details from spaces the user is not authorized to access.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-33460 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33460"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-33466",
+    "published": "2026-04-08T18:26:00.557",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Limitation of a Pathname to a Restricted Directory (CWE-22) in Logstash can lead to arbitrary file write and potentially remote code execution via Relative Path Traversal (CAPEC-139). The archive extraction utilities used by Logstash do not properly validate file paths within compressed archives. An attacker who can serve a specially crafted archive to Logstash through a compromised or attacker-controlled update endpoint can write arbitrary files to the host filesystem with the privileges of the Logstash process. In certain configurations where automatic pipeline reloading is enabled, this can be escalated to remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-33466 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33466"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-33120",
+    "published": "2026-04-14T18:17:34.420",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Untrusted pointer dereference in SQL Server allows an authorized attacker to execute code over a network.",
+    "tags": [],
+    "title": "CVE-2026-33120 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33120"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-33826",
+    "published": "2026-04-14T18:17:35.267",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper input validation in Windows Active Directory allows an authorized attacker to execute code over an adjacent network.",
+    "tags": [],
+    "title": "CVE-2026-33826 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33826"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-33827",
+    "published": "2026-04-14T18:17:35.510",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows TCP/IP allows an unauthorized attacker to execute code over a network.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-33827 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33827"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-33829",
+    "published": "2026-04-14T18:17:35.857",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Exposure of sensitive information to an unauthorized actor in Windows Snipping Tool allows an unauthorized attacker to perform spoofing over a network.",
+    "tags": [],
+    "title": "CVE-2026-33829 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33829"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-34617",
+    "published": "2026-04-14T18:17:36.540",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Connect versions 2025.3, 12.10 and earlier are affected by a Cross-Site Scripting (XSS) vulnerability that could result in privilege escalation. A low-privileged attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over the victim's account or session. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-34617 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34617"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-34160",
+    "published": "2026-04-14T21:16:26.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, the PENS (Package Exchange Notification Services) plugin endpoint at public/plugin/Pens/pens.php is accessible without authentication and accepts a user-controlled package-url parameter that the server fetches using curl without filtering private or internal IP addresses, enabling unauthenticated Server-Side Request Forgery (SSRF). An attacker can exploit this to probe internal network services, access cloud metadata endpoints (such as 169.254.169.254) to steal IAM credentials and sensitive instance metadata, or trigger state-changing operations on internal services via the receipt and alerts callback parameters. No authentication is required to exploit either SSRF vector, significantly increasing the attack surface. This issue has been fixed in version 2.0.0-RC.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34160 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34160"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-34602",
+    "published": "2026-04-14T22:16:31.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, the /api/course_rel_users endpoint is vulnerable to Insecure Direct Object Reference (IDOR), allowing an authenticated attacker to modify the user parameter in the request body to enroll any arbitrary user into any course without proper authorization checks. The backend trusts the user-supplied input for the user field and performs no server-side verification that the requester owns the referenced user ID or has permission to act on behalf of other users. This enables unauthorized manipulation of user-course relationships, potentially granting unintended access to course materials, bypassing enrollment controls, and compromising platform integrity. This issue has been fixed in version  2.0.0-RC.3.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-34602 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34602"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-33324",
+    "published": "2026-05-05T20:16:36.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SQLBot is an intelligent Text-to-SQL system based on large language models and RAG. In versions 1.7.0 and earlier, the Text2SQL chat interface is vulnerable to prompt injection. The user-provided question parameter is directly concatenated into the LLM prompt without filtering or escaping, and the SQL extracted from the LLM response is executed against the database without validation or sanitization. An authenticated attacker can craft a malicious question to manipulate the LLM into generating and executing arbitrary SQL statements. When connected to a PostgreSQL data source, this can lead to remote code execution via COPY FROM PROGRAM. This issue has been fixed in version 1.7.1.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-33324 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33324"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34458",
+    "published": "2026-05-05T20:16:37.163",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, an INI injection vulnerability allows any standard local user to bypass configuration restrictions (EditAdminOnly and ConfigPassword) and inject arbitrary directives into the global Sandboxie.ini configuration file. The background service skips authorization checks for IPC messages targeting sections beginning with UserSettings_, but does not sanitize CRLF characters in either the value parameter (via MSGID_SBIE_INI_ADD_SETTING) or the setting name parameter (via MSGID_SBIE_INI_SET_SETTING). An attacker can inject a new sandbox section header with unrestricted permissions, enabling sandbox escape and SYSTEM privilege escalation. This issue has been fixed in version 1.17.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34458 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34458"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34459",
+    "published": "2026-05-05T20:16:37.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, the SbieSvc proxy service's GetRawInputDeviceInfoSlave handler contains two vulnerabilities that can be chained for sandbox escape. First, when a sandboxed process sends an IPC request with cbSize set to 0, up to 32KB of uninitialized stack memory from the service process is returned, leaking return addresses and stack cookies which bypass ASLR and /GS protections. Second, the handler performs a memcpy with an attacker-controlled length without verifying it fits within the 32KB stack buffer, enabling a stack buffer overflow. By chaining the information leak with the overflow, a sandboxed process can execute a ROP chain to achieve SYSTEM privilege escalation, even from a Security Hardened Sandbox. Hardware-enforced shadow stacks (Intel CET) prevent the ROP chain execution but do not mitigate the information leak. This issue has been fixed in version 1.17.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34459 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34459"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-34461",
+    "published": "2026-05-05T20:16:37.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, the SbieIniServer RunSbieCtrl handler contains a stack buffer overflow. The MSGID_SBIE_INI_RUN_SBIE_CTRL message is handled before normal sandbox and impersonation checks, and for non-sandboxed callers, the handler copies the trailing message payload into a fixed-size WCHAR ctrlCmd[128] stack buffer using memcpy without verifying the length fits within the buffer. The service pipe is created with a NULL DACL, allowing any local interactive process to connect and send an oversized payload to overflow the stack. This can lead to a crash of the SbieSvc service or potential code execution as SYSTEM. This issue has been fixed in version 1.17.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34461 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34461"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-34462",
+    "published": "2026-05-05T20:16:37.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, several ProcessServer handlers (KillAllHandler, SuspendAllHandler, and RunSandboxedHandler) copy a WCHAR boxname[34] field from request structures into WCHAR[40] stack buffers using wcscpy without verifying null termination. Because the service pipe accepts variable-length packets larger than the request structure, an attacker can fill the boxname field with non-zero data and append additional controlled wide characters after the structure. wcscpy then reads past the fixed field and overflows the destination stack buffer. The service pipe is created with a NULL DACL, allowing any local process to connect, and the unsafe copy occurs before authorization checks. This can lead to a crash of the SbieSvc service or potential code execution as SYSTEM. This issue has been fixed in version 1.17.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34462 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34462"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34464",
+    "published": "2026-05-05T20:16:37.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, NamedPipeServer::OpenHandler copies the server field from NAMED_PIPE_OPEN_REQ into a fixed WCHAR pipename[160] stack buffer using wcscat without verifying null termination. The handler only enforces a minimum packet size, and since the service pipe accepts variable-length messages, a sandboxed caller can fill the server[48] field with non-zero data and append additional controlled wide characters after the structure. wcscat then reads past the fixed field and overflows the stack buffer in the SYSTEM service. This message is restricted to sandboxed callers, making it a sandbox escape vector. This can lead to a crash of the SbieSvc service or potential code execution as SYSTEM. This issue has been fixed in version 1.17.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34464 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34464"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-34527",
+    "published": "2026-05-05T20:16:37.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, SbieIniServer::HashPassword converts a SHA-1 digest to hexadecimal incorrectly. The high nibble of each byte is shifted right by 8 instead of 4, which always produces zero for an 8-bit value. As a result, the stored EditPassword hash only preserves the low nibble of each digest byte, reducing the effective entropy from 160 bits to 80 bits. This is layered on top of an unsalted SHA-1 scheme. The reduced entropy makes leaked or backed-up password hashes materially easier to brute-force.\n\nThis issue has been fixed in version 1.17.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34527 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34527"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2026-34596",
+    "published": "2026-05-05T20:16:38.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie-Plus is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, a Time-of-Check-to-Time-of-Use (TOCTOU) race condition exists during addon installation. When a user installs an addon through the SandMan interface, UpdUtil.exe is spawned as SYSTEM by SbieSvc but stages files in the user-writable %TEMP%\\sandboxie-updater directory. After UpdUtil verifies file hashes against the signed addon manifest, install.bat extracts files.cab and executes config.exe from its contents. Between hash verification and extraction, an unprivileged user can replace files.cab with a crafted cabinet containing a malicious executable, which is then run as SYSTEM. No UAC prompt is required.\n\nThis issue has been fixed in version 1.17.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34596 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34596"
   }
 ]
