@@ -19508,5 +19508,2185 @@
     "tags": [],
     "title": "CVE-2026-56167 (CVSS 8.5)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56167"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-33579",
+    "published": "2026-03-31T15:16:14.960",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.28 contains a privilege escalation vulnerability in the /pair approve command path that fails to forward caller scopes into the core approval check. A caller with pairing privileges but without admin privileges can approve pending device requests asking for broader scopes including admin access by exploiting the missing scope validation in extensions/device-pair/index.ts and src/infra/device-pairing.ts.",
+    "tags": [],
+    "title": "CVE-2026-33579 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33579"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-34162",
+    "published": "2026-03-31T15:16:16.960",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FastGPT is an AI Agent building platform. Prior to version 4.14.9.5, the FastGPT HTTP tools testing endpoint (/api/core/app/httpTools/runTool) is exposed without any authentication. This endpoint acts as a full HTTP proxy — it accepts a user-supplied baseUrl, toolPath, HTTP method, custom headers, and body, then makes a server-side HTTP request and returns the complete response to the caller. This issue has been patched in version 4.14.9.5.",
+    "tags": [],
+    "title": "CVE-2026-34162 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34162"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-34400",
+    "published": "2026-03-31T22:16:18.287",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Alerta is a monitoring tool. Prior to version 9.1.0, the Query string search API (q=) was vulnerable to SQL injection via the Postgres query parser, which built WHERE clauses by interpolating user-supplied search terms directly into SQL strings via f-strings. This issue has been patched in version 9.1.0.",
+    "tags": [],
+    "title": "CVE-2026-34400 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34400"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-34448",
+    "published": "2026-03-31T22:16:19.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, an attacker who can place a malicious URL in an Attribute View mAsse field can trigger stored XSS when a victim opens the Gallery or Kanban view with “Cover From -> Asset Field” enabled. The vulnerable code accepts arbitrary http(s) URLs without extensions as images, stores the attacker-controlled string in coverURL, and injects it directly into an <img src=\"...\"> attribute without escaping. In the Electron desktop client, the injected JavaScript executes with nodeIntegration enabled and contextIsolation disabled, so the XSS reaches arbitrary OS command execution under the victim’s account. This issue has been patched in version 3.6.2.",
+    "tags": [],
+    "title": "CVE-2026-34448 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34448"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-34449",
+    "published": "2026-03-31T22:16:19.830",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, a malicious website can achieve Remote Code Execution (RCE) on any desktop running SiYuan by exploiting the permissive CORS policy (Access-Control-Allow-Origin: * + Access-Control-Allow-Private-Network: true) to inject a JavaScript snippet via the API. The injected snippet executes in Electron's Node.js context with full OS access the next time the user opens SiYuan's UI. No user interaction is required beyond visiting the malicious website while SiYuan is running. This issue has been patched in version 3.6.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34449 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34449"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-33746",
+    "published": "2026-04-02T16:16:22.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Convoy is a KVM server management panel for hosting businesses. From version 3.9.0-beta to before version 4.5.1, the JWTService::decode() method did not verify the cryptographic signature of JWT tokens. While the method configured a symmetric HMAC-SHA256 signer via lcobucci/jwt, it only validated time-based claims (exp, nbf, iat) using the StrictValidAt constraint. The SignedWith constraint was not included in the validation step. This means an attacker could forge or tamper with JWT token payloads — such as modifying the user_uuid claim — and the token would be accepted as valid, as long as the time-based claims were satisfied. This directly impacts the SSO authentication flow (LoginController::authorizeToken), allowing an attacker to authenticate as any user by crafting a token with an arbitrary user_uuid. This issue has been patched in version 4.5.1.",
+    "tags": [],
+    "title": "CVE-2026-33746 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33746"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-25212",
+    "published": "2026-04-02T17:16:21.687",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in Percona PMM before 3.7. Because an internal database user retains specific superuser privileges, an attacker with pmm-admin rights can abuse the \"Add data source\" feature to break out of the database context and execute shell commands on the underlying operating system.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25212 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25212"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-33950",
+    "published": "2026-04-02T17:16:22.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Signal K Server is a server application that runs on a central hub in a boat. Prior to version 2.24.0-beta.4, there is a privilege escalation vulnerability by Admin Role Injection via /enableSecurity. An unauthenticated attacker can gain full Administrator access to the SignalK server at any time, allowing them to modify sensitive vessel routing data, alter server configurations, and access restricted endpoints. This issue has been patched in version 2.24.0-beta.4.",
+    "tags": [],
+    "title": "CVE-2026-33950 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33950"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-34877",
+    "published": "2026-04-02T17:16:26.927",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in Mbed TLS versions from 2.19.0 up to 3.6.5, Mbed TLS 4.0.0. Insufficient protection of serialized SSL context or session structures allows an attacker who can modify the serialized structures to induce memory corruption, leading to arbitrary code execution. This is caused by Incorrect Use of Privileged APIs.",
+    "tags": [],
+    "title": "CVE-2026-34877 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34877"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-34717",
+    "published": "2026-04-02T18:16:33.083",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenProject is an open-source, web-based project management software. Prior to version 17.2.3, the =n operator in modules/reporting/lib/report/operator.rb:177 embeds user input directly into SQL WHERE clauses without parameterization. This issue has been patched in version 17.2.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34717 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34717"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-34745",
+    "published": "2026-04-02T19:21:33.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Fireshare facilitates self-hosted media and link sharing. Prior to version 1.5.3, the fix for CVE-2026-33645 was applied to the authenticated /api/uploadChunked endpoint but was not applied to the unauthenticated /api/uploadChunked/public endpoint in the same file (app/server/fireshare/api.py). An unauthenticated attacker can exploit the checkSum parameter to write arbitrary files with attacker-controlled content to any writable path on the server filesystem. This issue has been patched in version 1.5.3.",
+    "tags": [],
+    "title": "CVE-2026-34745 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34745"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-34758",
+    "published": "2026-04-02T19:21:33.670",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, unauthenticated access to Notification test and Phone Number management endpoints allows SMS/Call/Email/WhatsApp abuse and phone number purchase. This issue has been patched in version 10.0.42.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34758 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34758"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-14034",
+    "published": "2026-04-02T20:16:19.943",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hirschmann HiEOS devices versions prior to 01.1.00 contain an authentication bypass vulnerability in the HTTP(S) management module that allows unauthenticated remote attackers to gain administrative access by sending specially crafted HTTP(S) requests. Attackers can exploit improper authentication handling to obtain elevated privileges and perform unauthorized actions including configuration download or upload and firmware modification.",
+    "tags": [],
+    "title": "CVE-2024-14034 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-14034"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-34838",
+    "published": "2026-04-02T20:16:28.150",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Group-Office is an enterprise customer relationship management and groupware tool. Prior to versions 6.8.156, 25.0.90, and 26.0.12, a vulnerability in the AbstractSettingsCollection model leads to insecure deserialization when these settings are loaded. By injecting a serialized FileCookieJar object into a setting string, an authenticated attacker can achieve Arbitrary File Write, leading directly to Remote Code Execution (RCE) on the server. This issue has been patched in versions 6.8.156, 25.0.90, and 26.0.12.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34838 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34838"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-34931",
+    "published": "2026-04-02T20:16:28.830",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "hoppscotch is an open source API development ecosystem. Prior to version 2026.3.0, there is an open redirect vulnerability that leads to token exfiltration. With these tokens, the attacker can sign in as the victim to takeover their account. This issue has been patched in version 2026.3.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34931 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34931"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-34932",
+    "published": "2026-04-02T20:16:28.973",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "hoppscotch is an open source API development ecosystem. Prior to version 2026.3.0, there is a stored XSS vulnerability that can lead to CSRF. This issue has been patched in version 2026.3.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34932 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34932"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35053",
+    "published": "2026-04-02T20:16:29.117",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, the Worker service's ManualAPI exposes workflow execution endpoints (GET /workflow/manual/run/:workflowId and POST /workflow/manual/run/:workflowId) without any authentication middleware. An attacker who can obtain or guess a workflow ID can trigger arbitrary workflow execution with attacker-controlled input data, enabling JavaScript code execution, notification abuse, and data manipulation. This issue has been patched in version 10.0.42.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35053 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35053"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-26135",
+    "published": "2026-04-03T00:16:04.353",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Server-side request forgery (ssrf) in Azure Custom Locations Resource Provider (RP) allows an authorized attacker to elevate privileges over a network.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-26135 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26135"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-32211",
+    "published": "2026-04-03T00:16:04.703",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Missing authentication for critical function in Azure MCP Server allows an unauthorized attacker to disclose information over a network.",
+    "tags": [],
+    "title": "CVE-2026-32211 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32211"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-32213",
+    "published": "2026-04-03T00:16:04.877",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper authorization in Azure AI Foundry allows an unauthorized attacker to elevate privileges over a network.",
+    "tags": [],
+    "title": "CVE-2026-32213 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32213"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-33105",
+    "published": "2026-04-03T00:16:05.040",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper authorization in Microsoft Azure Kubernetes Service allows an unauthorized attacker to elevate privileges over a network.",
+    "tags": [],
+    "title": "CVE-2026-33105 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33105"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-33107",
+    "published": "2026-04-03T00:16:05.207",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Server-side request forgery (ssrf) in Azure Databricks allows an unauthorized attacker to elevate privileges over a network.",
+    "tags": [],
+    "title": "CVE-2026-33107 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33107"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-35216",
+    "published": "2026-04-03T16:16:41.800",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Budibase is an open-source low-code platform. Prior to version 3.33.4, an unauthenticated attacker can achieve Remote Code Execution (RCE) on the Budibase server by triggering an automation that contains a Bash step via the public webhook endpoint. No authentication is required to trigger the exploit. The process executes as root inside the container. This issue has been patched in version 3.33.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35216 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35216"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-34952",
+    "published": "2026-04-03T23:17:06.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to version 4.5.97, the PraisonAI Gateway server accepts WebSocket connections at /ws and serves agent topology at /info with no authentication. Any network client can connect, enumerate registered agents, and send arbitrary messages to agents and their tool sets. This issue has been patched in version 4.5.97.",
+    "tags": [],
+    "title": "CVE-2026-34952 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34952"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-34953",
+    "published": "2026-04-03T23:17:06.653",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to version 4.5.97, OAuthManager.validate_token() returns True for any token not found in its internal store, which is empty by default. Any HTTP request to the MCP server with an arbitrary Bearer token is treated as authenticated, granting full access to all registered tools and agent capabilities. This issue has been patched in version 4.5.97.",
+    "tags": [],
+    "title": "CVE-2026-34953 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34953"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35171",
+    "published": "2026-04-06T18:16:43.373",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kedro is a toolbox for production-ready data science. Prior to 1.3.0, Kedro allows the logging configuration file path to be set via the KEDRO_LOGGING_CONFIG environment variable and loads it without validation. The logging configuration schema supports the special () key, which enables arbitrary callable instantiation. An attacker can exploit this to execute arbitrary system commands during application startup. This is a critical remote code execution (RCE) vulnerability caused by unsafe use of logging.config.dictConfig() with user-controlled input. This vulnerability is fixed in 1.3.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35171 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35171"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-35174",
+    "published": "2026-04-06T18:16:43.677",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Chyrp Lite is an ultra-lightweight blogging engine. Prior to 2026.01, a path traversal vulnerability exists in the administration console that allows an administrator or a user with Change Settings permission to change the uploads path to any folder. This vulnerability allows the user to download any file on the server, including config.json.php with database credentials and overwrite critical system files, leading to remote code execution. This vulnerability is fixed in 2026.01.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35174 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35174"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35178",
+    "published": "2026-04-06T20:16:25.927",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Workbench is a suite of tools for administrators and developers to interact with Salesforce.com organizations via the Force.com APIs. Prior to 65.0.0, Workbench contains remote code execution vulnerability in the timezone conversion flow, which processes attacker-controlled cookie values in an unsafe manner. This vulnerability is fixed in 65.0.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35178 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35178"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35184",
+    "published": "2026-04-06T20:16:26.880",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "EcclesiaCRM is CRM Software for church management. Prior to 8.0.0, there is a SQL injection vulnerability in v2/templates/query/queryview.php via the custom and value parameters. This vulnerability is fixed in 8.0.0.",
+    "tags": [],
+    "title": "CVE-2026-35184 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35184"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-35459",
+    "published": "2026-04-06T20:16:28.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "pyLoad is a free and open-source download manager written in Python. In 0.5.0b3.dev96 and earlier, pyLoad has a server-side request forgery (SSRF) vulnerability. The fix for CVE-2026-33992 added IP validation to BaseDownloader.download() that checks the hostname of the initial download URL. However, pycurl is configured with FOLLOWLOCATION=1 and MAXREDIRS=10, causing it to automatically follow HTTP redirects. Redirect targets are never validated against the SSRF filter. An authenticated user with ADD permission can bypass the SSRF fix by submitting a URL that redirects to an internal address.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35459 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35459"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35392",
+    "published": "2026-04-06T21:16:21.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.3, PUT upload in httpserver/updown.go has no path sanitization. This vulnerability is fixed in 2.0.0-beta.3.",
+    "tags": [],
+    "title": "CVE-2026-35392 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35392"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35393",
+    "published": "2026-04-06T21:16:21.163",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.3, the POST multipart upload directory not sanitized. This vulnerability is fixed in 2.0.0-beta.3.",
+    "tags": [],
+    "title": "CVE-2026-35393 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35393"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35471",
+    "published": "2026-04-06T22:16:23.913",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "goshs is a SimpleHTTPServer written in Go. Prior to 2.0.0-beta.3, tdeleteFile() missing return after path traversal check. This vulnerability is fixed in 2.0.0-beta.3.",
+    "tags": [],
+    "title": "CVE-2026-35471 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35471"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-39351",
+    "published": "2026-04-07T19:16:46.213",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Frappe is a full-stack web application framework. Prior to 16.14.0 and 15.104.0, Frappe allows unrestricted Doctype access via API exploit.",
+    "tags": [],
+    "title": "CVE-2026-39351 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39351"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-39355",
+    "published": "2026-04-07T19:16:46.523",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Genealogy is a family tree PHP application. Prior to 5.9.1, a critical broken access control vulnerability in the genealogy application allows any authenticated user to transfer ownership of arbitrary non-personal teams to themselves. This enables complete takeover of other users’ team workspaces and unrestricted access to all genealogy data associated with the compromised team. This vulnerability is fixed in 5.9.1.",
+    "tags": [],
+    "title": "CVE-2026-39355 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39355"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-39397",
+    "published": "2026-04-07T21:17:18.160",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "@delmaredigital/payload-puck is a PayloadCMS plugin for integrating Puck visual page builder. Prior to 0.6.23, all /api/puck/* CRUD endpoint handlers registered by createPuckPlugin() called Payload's local API with the default overrideAccess: true, bypassing all collection-level access control. The access option passed to createPuckPlugin() and any access rules defined on Puck-registered collections were silently ignored on these endpoints. This vulnerability is fixed in 0.6.23.",
+    "tags": [],
+    "title": "CVE-2026-39397 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39397"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-39847",
+    "published": "2026-04-07T22:16:23.793",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Emmett is a full-stack Python web framework designed with simplicity. From 2.5.0 to before 2.8.1, the RSGI static handler for Emmett's internal assets (/__emmett__ paths) is vulnerable to path traversal attacks. An attacker can use ../ sequences (eg /__emmett__/../rsgi/handlers.py) to read arbitrary files outside the assets directory. This vulnerability is fixed in 2.8.1.",
+    "tags": [],
+    "title": "CVE-2026-39847 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39847"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-4003",
+    "published": "2026-04-08T05:16:06.347",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Users manager – PN plugin for WordPress is vulnerable to Privilege Escalation via Arbitrary User Meta Update in all versions up to and including 1.1.15. This is due to a flawed authorization logic check in the userspn_ajax_nopriv_server() function within the 'userspn_form_save' case. The conditional only blocks unauthenticated users when the user_id is empty, but when a non-empty user_id is supplied, execution bypasses this check entirely and proceeds to update arbitrary user meta via update_user_meta() without any authentication or authorization verification. Additionally, the nonce required for this AJAX endpoint ('userspn-nonce') is exposed to all visitors via wp_localize_script on the public wp_enqueue_scripts hook, rendering the nonce check ineffective as a security control. This makes it possible for unauthenticated attackers to update arbitrary user metadata for any user account, including the userspn_secret_token field.",
+    "tags": [],
+    "title": "CVE-2026-4003 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4003"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-3535",
+    "published": "2026-04-08T07:16:21.417",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The DSGVO Google Web Fonts GDPR plugin for WordPress is vulnerable to arbitrary file upload due to missing file type validation in the `DSGVOGWPdownloadGoogleFonts()` function in all versions up to, and including, 1.1. The function is exposed via a `wp_ajax_nopriv_` hook, requiring no authentication. It fetches a user-supplied URL as a CSS file, extracts URLs from its content, and downloads those files to a publicly accessible directory without validating the file type. This makes it possible for unauthenticated attackers to upload arbitrary files including PHP webshells, leading to remote code execution. The exploit requires the site to use one of a handful of specific themes (twentyfifteen, twentyseventeen, twentysixteen, storefront, salient, or shapely).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3535 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3535"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-39617",
+    "published": "2026-04-08T09:16:31.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in priyanshumittal Bluestreet bluestreet allows Cross Site Request Forgery.This issue affects Bluestreet: from n/a through <= 1.7.3.",
+    "tags": [],
+    "title": "CVE-2026-39617 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39617"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-39619",
+    "published": "2026-04-08T09:16:31.873",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in priyanshumittal Busiprof busiprof allows Upload a Web Shell to a Web Server.This issue affects Busiprof: from n/a through <= 2.5.2.",
+    "tags": [],
+    "title": "CVE-2026-39619 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39619"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-39620",
+    "published": "2026-04-08T09:16:32.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in priyanshumittal Appointment appointment allows Upload a Web Shell to a Web Server.This issue affects Appointment: from n/a through <= 3.5.5.",
+    "tags": [],
+    "title": "CVE-2026-39620 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39620"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-39640",
+    "published": "2026-04-08T09:16:34.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in mndpsingh287 Theme Editor theme-editor allows Code Injection.This issue affects Theme Editor: from n/a through <= 3.2.",
+    "tags": [],
+    "title": "CVE-2026-39640 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39640"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-39860",
+    "published": "2026-04-08T21:17:00.157",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Nix is a package manager for Linux and other Unix systems. A bug in the fix for CVE-2024-27297 allowed for arbitrary overwrites of files writable by the Nix process orchestrating the builds (typically the Nix daemon running as root in multi-user installations) by following symlinks during fixed-output derivation output registration. This affects sandboxed Linux builds - sandboxed macOS builds are unaffected. The location of the temporary output used for the output copy was located inside the build chroot. A symlink, pointing to an arbitrary location in the filesystem, could be created by the derivation builder at that path. During output registration, the Nix process (running in the host mount namespace) would follow that symlink and overwrite the destination with the derivation's output contents. In multi-user installations, this allows all users able to submit builds to the Nix daemon (allowed-users - defaulting to all users) to gain root privileges by modifying sensitive files. This vulnerability is fixed in 2.34.5, 2.33.4, 2.32.7, 2.31.4, 2.30.4, 2.29.3, and 2.28.6.",
+    "tags": [],
+    "title": "CVE-2026-39860 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39860"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-39890",
+    "published": "2026-04-08T21:17:01.267",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.loadAgentFromFile method uses the js-yaml library to parse YAML files without disabling dangerous tags (such as !!js/function and !!js/undefined). This allows an attacker to craft a malicious YAML file that, when parsed, executes arbitrary JavaScript code. An attacker can exploit this vulnerability by uploading a malicious agent definition file via the API endpoint, leading to remote code execution (RCE) on the server. This vulnerability is fixed in 4.5.115.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39890 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39890"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-40035",
+    "published": "2026-04-08T22:16:24.010",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unfurl through 2025.08 contains an improper input validation vulnerability in config parsing that enables Flask debug mode by default. The debug configuration value is read as a string and passed directly to app.run(), causing any non-empty string to evaluate truthy, allowing attackers to access the Werkzeug debugger and disclose sensitive information or achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40035 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40035"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-39906",
+    "published": "2026-04-14T22:16:32.160",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unisys WebPerfect Image Suite versions 3.0.3960.22810 and 3.0.3960.22604 expose a deprecated .NET Remoting TCP channel that allows remote unauthenticated attackers to leak NTLMv2 machine-account hashes by supplying a Windows UNC path as a target file argument through object-unmarshalling techniques. Attackers can capture the leaked NTLMv2 hash and relay it to other hosts to achieve privilege escalation or lateral movement depending on network configuration and patch level.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-39906 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39906"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-39907",
+    "published": "2026-04-14T22:16:32.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unisys WebPerfect Image Suite versions 3.0.3960.22810 and 3.0.3960.22604 expose an unauthenticated WCF SOAP endpoint on TCP port 1208 that accepts unsanitized file paths in the ReadLicense action's LFName parameter, allowing remote attackers to trigger SMB connections and leak NTLMv2 machine-account hashes. Attackers can submit crafted SOAP requests with UNC paths to force the server to initiate outbound SMB connections, exposing authentication credentials that may be relayed for privilege escalation or lateral movement within the network.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39907 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39907"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-35031",
+    "published": "2026-04-14T23:16:28.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Jellyfin is an open source self hosted media server. Versions prior to 10.11.7 contain a vulnerability chain in the subtitle upload endpoint (POST /Videos/{itemId}/Subtitles), where the Format field is not validated, allowing path traversal via the file extension and enabling arbitrary file write. This arbitrary file write can be chained into arbitrary file read via .strm files, database extraction, admin privilege escalation, and ultimately remote code execution as root via ld.so.preload. Exploitation requires an administrator account or a user that has been explicitly granted the \"Upload Subtitles\" permission. This issue has been fixed in version 10.11.7. If users are unable to upgrade immediately, they can grant non-administrator users Subtitle upload permissions to reduce attack surface.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35031 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35031"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-35033",
+    "published": "2026-04-14T23:16:28.817",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Jellyfin is an open source self hosted media server. Versions prior to 10.11.7 contain an unauthenticated arbitrary file read vulnerability via ffmpeg argument injection through the StreamOptions query parameter parsing mechanism. The ParseStreamOptions method in StreamingHelpers.cs adds any lowercase query parameter to a dictionary without validation, bypassing the RegularExpression attribute on the level controller parameter, and the unsanitized value is concatenated directly into the ffmpeg command line. By injecting a drawtext filter with a textfile argument, an attacker can read arbitrary server files such as /etc/shadow and exfiltrate their contents as text rendered in the video stream response. The vulnerable /Videos/{itemId}/stream endpoint has no Authorize attribute, making this exploitable without authentication, though item GUIDs are pseudorandom and require an authenticated user to obtain. This issue has been fixed in version 10.11.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35033 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35033"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-39399",
+    "published": "2026-04-14T23:16:29.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "NuGet Gallery is a package repository that powers nuget.org. A security vulnerability exists in the NuGetGallery backend job’s handling of .nuspec files within NuGet packages. An attacker can supply a crafted nuspec file with malicious metadata, leading to cross package metadata injection that may result in remote code execution (RCE) and/or arbitrary blob writes due to insufficient input validation. The issue is exploitable via URI fragment injection using unsanitized package identifiers, allowing an attacker to control the resolved blob path. This enables writes to arbitrary blobs within the storage container, not limited to .nupkg files, resulting in potential tampering of existing content. This issue has been patched in commit 0e80f87628349207cdcaf55358491f8a6f1ca276.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39399 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39399"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-40976",
+    "published": "2026-04-28T00:16:24.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In certain circumstances, Spring Boot's default web security is ineffective allowing unauthorized access to all endpoints. For an application to be vulnerable, it must: be a servlet-based web application; have no Spring Security configuration of its own and rely on the default web security filter chain; depend on spring-boot-actuator-autoconfigure; not depend on spring-boot-health. If any of the above does not apply, the application is not vulnerable.\n\nAffected: Spring Boot 4.0.0–4.0.5; upgrade to 4.0.6 or later per vendor advisory.",
+    "tags": [],
+    "title": "CVE-2026-40976 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40976"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-41446",
+    "published": "2026-04-28T22:16:49.623",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Snap One WattBox 800 and 820 series firmware versions prior to 2.10.0.0 contain undisclosed diagnostic HTTP endpoints that require only the device MAC address and service tag for authentication, both of which are printed in plaintext on the physical device label. Attackers with access to the device label or documentation containing these values can authenticate to the several endpoints and execute arbitrary commands as root on the device.",
+    "tags": [],
+    "title": "CVE-2026-41446 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41446"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38429",
+    "published": "2026-05-05T17:17:04.547",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenCMS v20 and before is vulnerable to XML External Entity (XXE) in the Admin Import DB feature due to insecure XML parsing of user supplied .zip files containing a manifest.xml.",
+    "tags": [],
+    "title": "CVE-2026-38429 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38429"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38431",
+    "published": "2026-05-05T17:17:04.670",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ERPNext v15.103.1 and before is vulnerable to Server-Side Template Injection (SSTI). An attacker with permission to create or edit email templates can inject template expressions that are executed on the server when the template is rendered.",
+    "tags": [],
+    "title": "CVE-2026-38431 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38431"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38428",
+    "published": "2026-05-05T19:16:21.910",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kestra v1.3.3 and before is vulnerable to SQL Injection. The vulnerability occurs because user-controlled input from a GET parameter is directly concatenated into an SQL query without proper sanitization or parameterization. As a result, attackers can inject arbitrary SQL expressions into the database query.",
+    "tags": [],
+    "title": "CVE-2026-38428 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38428"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35579",
+    "published": "2026-05-05T21:16:22.247",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CoreDNS is a DNS server written in Go. In versions prior to 1.14.3, the gRPC, QUIC, DoH, and DoH3 transport implementations incorrectly handle TSIG authentication. For gRPC and QUIC, the server checks whether the TSIG key name exists in the configuration but never calls dns.TsigVerify() to validate the HMAC. If the key name matches a configured key, the tsigStatus field remains nil and the tsig plugin treats the request as successfully authenticated regardless of the MAC value. For DoH and DoH3, the issue is more severe: the DoHWriter.TsigStatus() method unconditionally returns nil, and the server never inspects the TSIG record at all. Any request containing a TSIG record is treated as authenticated over DoH and DoH3, even if the key name is invalid and the MAC is arbitrary.\n\nAn unauthenticated network attacker can exploit this to bypass TSIG-protected functionality such as AXFR/IXFR zone transfers, dynamic DNS updates, or other TSIG-gated plugin behavior. The DoH and DoH3 variants have a lower exploitation bar because the attacker does not need to know a valid TSIG key name.\n\nThis issue has been fixed in version 1.14.3. As a workaround, disable gRPC, QUIC, DoH, and DoH3 listeners where TSIG authentication is required, or restrict network-level access to affected transport ports to trusted sources only.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35579 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35579"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-42298",
+    "published": "2026-05-08T23:16:36.497",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Postiz is an AI social media scheduling tool. Prior to commit da44801, a \"Pwn Request\" vulnerability in the Build and Publish PR Docker Image workflow (.github/workflows/pr-docker-build.yml) allows any unauthenticated user to execute arbitrary code during the Docker build process and exfiltrate a highly privileged GITHUB_TOKEN (write-all permissions). This can be achieved simply by opening a Pull Request from a fork with a maliciously modified Dockerfile.dev. This issue has been patched via commit da44801.",
+    "tags": [],
+    "title": "CVE-2026-42298 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42298"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-42302",
+    "published": "2026-05-08T23:16:36.640",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FastGPT is an AI Agent building platform. From version 4.14.10 to before version 4.14.13, the agent-sandbox component of FastGPT is vulnerable to unauthenticated Remote Code Execution (RCE). The startup script entrypoint.sh initializes code-server with the --auth none flag and binds the service to all network interfaces (0.0.0.0:8080). This configuration allows any user with network access to the port to bypass authentication and gain full control over the sandbox environment. This issue has been patched in version 4.14.13.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42302 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42302"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-42354",
+    "published": "2026-05-08T23:16:38.513",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sentry is an error tracking and performance monitoring tool. From version 21.12.0 to before version 26.4.1, a critical vulnerability was discovered in the SAML SSO implementation of Sentry. The vulnerability allows an attacker to take over any user account by using a malicious SAML Identity Provider and another organization on the same Sentry instance. The victim email address must be known in order to exploit this vulnerability. This issue has been patched in version 26.4.1.",
+    "tags": [],
+    "title": "CVE-2026-42354 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42354"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-42454",
+    "published": "2026-05-08T23:16:39.097",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities. Prior to version 2.1.0, all Docker container management endpoints in Termix interpolate the containerId URL path parameter and WebSocket message field directly into shell commands executed via ssh2.Client.exec() on remote managed servers without any sanitization or validation. An authenticated attacker can inject arbitrary OS commands by crafting a malicious container ID, achieving Remote Code Execution on any managed server. This issue has been patched in version 2.1.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42454 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42454"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-42560",
+    "published": "2026-05-09T06:16:10.603",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "auth provides authentication via oauth2, direct and email. From versions 1.18.0 to before 1.25.2 and 2.0.0 to before 2.1.2, the Patreon OAuth provider maps every authenticated Patreon account to the same local user.ID, instead of deriving a unique ID from the Patreon account returned by Patreon. In practice, this means all Patreon-authenticated users of an application using this library are collapsed into a single local identity. Any application that trusts token.User.ID as the stable account key can end up mixing or fully merging unrelated Patreon users, which can lead to cross-account access, privilege confusion, and subscription-state leakage. This issue has been patched in versions 1.25.2 and 2.1.2.",
+    "tags": [],
+    "title": "CVE-2026-42560 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42560"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-42257",
+    "published": "2026-05-09T20:16:28.463",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Net::IMAP implements Internet Message Access Protocol (IMAP) client functionality in Ruby. Prior to versions 0.4.24, 0.5.14, and 0.6.4, several Net::IMAP commands accept a raw string argument that is sent to the server without validation or escaping. If this string is derived from user-controlled input, it may contain contain CRLF sequences, which an attacker can use to inject arbitrary IMAP commands. This issue has been patched in versions 0.4.24, 0.5.14, and 0.6.4.",
+    "tags": [],
+    "title": "CVE-2026-42257 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42257"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-33577",
+    "published": "2026-03-31T15:16:14.530",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.28 contains an insufficient scope validation vulnerability in the node pairing approval path that allows low-privilege operators to approve nodes with broader scopes. Attackers can exploit missing callerScopes validation in node-pairing.ts to extend privileges onto paired nodes beyond their authorization level.",
+    "tags": [],
+    "title": "CVE-2026-33577 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33577"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34172",
+    "published": "2026-03-31T15:16:17.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Giskard is an open-source Python library for testing and evaluating agentic systems. Prior to versions 0.3.4 and 1.0.2b1, ChatWorkflow.chat(message) passes its string argument directly as a Jinja2 template source to a non-sandboxed Environment. A developer who passes user input to this method enables full remote code execution via Jinja2 class traversal. The method name chat and parameter name message naturally invite passing user input directly, but the string is silently parsed as a Jinja2 template, not treated as plain text. This issue has been patched in versions 0.3.4 and 1.0.2b1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34172 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34172"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-34210",
+    "published": "2026-03-31T15:16:18.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "mppx is a TypeScript interface for machine payments protocol. Prior to version 0.4.11, the stripe/charge payment method did not check Stripe's Idempotent-Replayed response header when creating PaymentIntents. An attacker could replay a valid credential containing the same spt token against a new challenge, and the server would accept the replayed Stripe PaymentIntent as a new successful payment without actually charging the customer again. This allowed an attacker to pay once and consume unlimited resources by replaying the credential. This issue has been patched in version 0.4.11.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34210 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34210"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34373",
+    "published": "2026-03-31T15:16:19.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.66 and 9.7.0-alpha.10, the GraphQL API endpoint does not respect the allowOrigin server option and unconditionally allows cross-origin requests from any website. This bypasses origin restrictions that operators configure to control which websites can interact with the Parse Server API. The REST API correctly enforces the configured allowOrigin restriction. This issue has been patched in versions 8.6.66 and 9.7.0-alpha.10.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34373 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34373"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-34377",
+    "published": "2026-03-31T15:16:19.233",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ZEBRA is a Zcash node written entirely in Rust. Prior to zebrad version 4.3.0 and zebra-consensus version 5.0.1, a logic error in Zebra's transaction verification cache could allow a malicious miner to induce a consensus split. By matching a valid transaction's txid while providing invalid authorization data, a miner could cause vulnerable Zebra nodes to accept an invalid block, leading to a consensus split from the rest of the Zcash network. This would not allow invalid transactions to be accepted but could result in a consensus split between vulnerable Zebra nodes and invulnerable Zebra and Zcashd nodes. This issue has been patched in zebrad version 4.3.0 and zebra-consensus version 5.0.1.",
+    "tags": [],
+    "title": "CVE-2026-34377 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34377"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-34503",
+    "published": "2026-03-31T15:16:19.470",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.28 fails to disconnect active WebSocket sessions when devices are removed or tokens are revoked. Attackers with revoked credentials can maintain unauthorized access through existing live sessions until forced reconnection.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34503 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34503"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-34504",
+    "published": "2026-03-31T15:16:19.687",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.28 contains a server-side request forgery vulnerability in the fal provider image-generation-provider.ts component that allows attackers to fetch internal URLs. A malicious or compromised fal relay can exploit unguarded image download fetches to expose internal service metadata and responses through the image pipeline.",
+    "tags": [],
+    "title": "CVE-2026-34504 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34504"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-5213",
+    "published": "2026-03-31T21:16:34.167",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. The affected element is the function cgi_adduser_to_session of the file /cgi-bin/account_mgr.cgi. This manipulation of the argument read_list causes stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+    "tags": [],
+    "title": "CVE-2026-5213 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5213"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-34401",
+    "published": "2026-03-31T22:16:18.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "XML Notepad is a Windows program that provides a simple intuitive User Interface for browsing and editing XML documents. Prior to version 2.9.0.21, XML Notepad does not disable DTD processing by default which means external entities are resolved automatically. There is a well known attack related to malicious DTD files where an attacker to craft a malicious XML file that loads a DTD that causes XML Notepad to make outbound HTTP/SMB requests, potentially leaking local file contents or capturing the victim's NTLM credentials. This issue has been patched in version 2.9.0.21.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-34401 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34401"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34406",
+    "published": "2026-03-31T22:16:18.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "APTRS (Automated Penetration Testing Reporting System) is a Python and Django-based automated reporting tool designed for penetration testers and security organizations. Prior to version 2.0.1, the edit_user endpoint (POST /api/auth/edituser/<pk>) allows Any user who can reach that endpoint and submit crafted permission to escalate their own account (or any other account) to superuser by including \"is_superuser\": true in the request body. The root cause is that CustomUserSerializer explicitly includes is_superuser in its fields list but omits it from read_only_fields, making it a writable field. The edit_user view performs no additional validation to prevent non-superusers from modifying this field. Once is_superuser is set to true, gaining unrestricted access to all application functionality without requiring re-authentication. This issue has been patched in version 2.0.1.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-34406 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34406"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34792",
+    "published": "2026-04-02T15:16:43.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Endian Firewall version 3.3.25 and prior allow authenticated users to execute arbitrary OS commands via the DATE parameter to /cgi-bin/logs_clamav.cgi. The DATE parameter value is used to construct a file path that is passed to a Perl open() call, which allows command injection due to an incomplete regular expression validation.",
+    "tags": [],
+    "title": "CVE-2026-34792 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34792"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34793",
+    "published": "2026-04-02T15:16:43.323",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Endian Firewall version 3.3.25 and prior allow authenticated users to execute arbitrary OS commands via the DATE parameter to /cgi-bin/logs_firewall.cgi. The DATE parameter value is used to construct a file path that is passed to a Perl open() call, which allows command injection due to an incomplete regular expression validation.",
+    "tags": [],
+    "title": "CVE-2026-34793 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34793"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34794",
+    "published": "2026-04-02T15:16:44.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Endian Firewall version 3.3.25 and prior allow authenticated users to execute arbitrary OS commands via the DATE parameter to /cgi-bin/logs_ids.cgi. The DATE parameter value is used to construct a file path that is passed to a Perl open() call, which allows command injection due to an incomplete regular expression validation.",
+    "tags": [],
+    "title": "CVE-2026-34794 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34794"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34795",
+    "published": "2026-04-02T15:16:44.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Endian Firewall version 3.3.25 and prior allow authenticated users to execute arbitrary OS commands via the DATE parameter to /cgi-bin/logs_log.cgi. The DATE parameter value is used to construct a file path that is passed to a Perl open() call, which allows command injection due to an incomplete regular expression validation.",
+    "tags": [],
+    "title": "CVE-2026-34795 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34795"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34796",
+    "published": "2026-04-02T15:16:45.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Endian Firewall version 3.3.25 and prior allow authenticated users to execute arbitrary OS commands via the DATE parameter to /cgi-bin/logs_openvpn.cgi. The DATE parameter value is used to construct a file path that is passed to a Perl open() call, which allows command injection due to an incomplete regular expression validation.",
+    "tags": [],
+    "title": "CVE-2026-34796 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34796"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34797",
+    "published": "2026-04-02T15:16:45.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Endian Firewall version 3.3.25 and prior allow authenticated users to execute arbitrary OS commands via the DATE parameter to /cgi-bin/logs_smtp.cgi. The DATE parameter value is used to construct a file path that is passed to a Perl open() call, which allows command injection due to an incomplete regular expression validation.",
+    "tags": [],
+    "title": "CVE-2026-34797 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34797"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-30332",
+    "published": "2026-04-02T16:16:22.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A Time-of-Check to Time-of-Use (TOCTOU) race condition vulnerability in Balena Etcher for Windows prior to v2.1.4 allows attackers to escalate privileges and execute arbitrary code via replacing a legitimate script with a crafted payload during the flashing process.",
+    "tags": [],
+    "title": "CVE-2026-30332 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30332"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-5349",
+    "published": "2026-04-02T16:16:27.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Trendnet TEW-657BRM 1.00.1. The affected element is the function add_apcdb of the file /setup.cgi. The manipulation of the argument mac_pc_dba leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit is publicly available and might be used. The vendor confirms, that \"[t]he product in question (...) has been discontinued and end of life since June 23, 2011, that is more than 14 years ago. We no longer provide support for this product, so we are not able to confirm the vulnerabilities. We will make an announcement on our website's product support page and notify customers who registered their products with us.\" This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-5349 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5349"
+  },
+  {
+    "category": "high",
+    "cvss": 6.7,
+    "id": "CVE-2026-27774",
+    "published": "2026-04-02T18:16:26.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis True Image (Windows) before build 42902.",
+    "tags": [],
+    "title": "CVE-2026-27774 (CVSS 6.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27774"
+  },
+  {
+    "category": "high",
+    "cvss": 6.7,
+    "id": "CVE-2026-28728",
+    "published": "2026-04-02T18:16:27.260",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Local privilege escalation due to DLL hijacking vulnerability. The following products are affected: Acronis True Image (Windows) before build 42902.",
+    "tags": [],
+    "title": "CVE-2026-28728 (CVSS 6.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28728"
+  },
+  {
+    "category": "high",
+    "cvss": 6.7,
+    "id": "CVE-2026-33271",
+    "published": "2026-04-02T18:16:27.903",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Local privilege escalation due to insecure folder permissions. The following products are affected: Acronis True Image (Windows) before build 42902.",
+    "tags": [],
+    "title": "CVE-2026-33271 (CVSS 6.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33271"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34121",
+    "published": "2026-04-02T18:16:28.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An authentication bypass vulnerability within the HTTP handling of the DS configuration service in TP-Link Tapo C520WS v2.6 was identified, due to inconsistent parsing and authorization logic in JSON requests during authentication check.  An unauthenticated attacker can append an authentication-exempt action to a request containing privileged DS do actions, bypassing authorization checks.\n\nSuccessful exploitation allows unauthenticated execution of restricted configuration actions, which may result in unauthorized modification of device state.",
+    "tags": [],
+    "title": "CVE-2026-34121 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34121"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-34522",
+    "published": "2026-04-02T18:16:29.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SillyTavern is a locally installed user interface that allows users to interact with text generation large language models, image generation engines, and text-to-speech voice models. Prior to version 1.17.0, a path traversal vulnerability in /api/chats/import allows an authenticated attacker to write attacker-controlled files outside the intended chats directory by injecting traversal sequences into character_name. This issue has been patched in version 1.17.0.",
+    "tags": [],
+    "title": "CVE-2026-34522 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34522"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-34524",
+    "published": "2026-04-02T18:16:29.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SillyTavern is a locally installed user interface that allows users to interact with text generation large language models, image generation engines, and text-to-speech voice models. Prior to version 1.17.0, a path traversal vulnerability in chat endpoints allows an authenticated attacker to read and delete arbitrary files under their user data root (for example secrets.json and settings.json) by supplying avatar_url=\"..\". This issue has been patched in version 1.17.0.",
+    "tags": [],
+    "title": "CVE-2026-34524 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34524"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-34577",
+    "published": "2026-04-02T18:16:30.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Postiz is an AI social media scheduling tool. Prior to version 2.21.3, the GET /public/stream endpoint in PublicController accepts a user-supplied url query parameter and proxies the full HTTP response back to the caller. The only validation is url.endsWith('mp4'), which is trivially bypassable by appending .mp4 as a query parameter value or URL fragment. The endpoint requires no authentication and has no SSRF protections, allowing an unauthenticated attacker to read responses from internal services, cloud metadata endpoints, and other network-internal resources. This issue has been patched in version 2.21.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34577 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34577"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-34725",
+    "published": "2026-04-02T18:16:33.253",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DbGate is cross-platform database manager. From version 7.0.0 to before version 7.1.5, a stored XSS vulnerability exists in DbGate because attacker-controlled SVG icon strings are rendered as raw HTML without sanitization. In the web UI this allows script execution in another user's browser; in the Electron desktop app this can escalate to local code execution because Electron is configured with nodeIntegration: true and contextIsolation: false. This issue has been patched in version 7.1.5.",
+    "tags": [],
+    "title": "CVE-2026-34725 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34725"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2023-7342",
+    "published": "2026-04-02T19:16:52.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HiSecOS web server versions 03.4.00 prior to 04.1.00 contains a privilege escalation vulnerability that allows authenticated users with operator or auditor roles to escalate privileges to the administrator role by sending specially crafted packets to the web server. Attackers can exploit this flaw to gain full administrative access to the affected device.",
+    "tags": [],
+    "title": "CVE-2023-7342 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-7342"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2024-44250",
+    "published": "2026-04-02T19:18:28.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A permissions issue was addressed with additional restrictions. This issue is fixed in macOS Sequoia 15.1. An app may be able to execute arbitrary code out of its sandbox or with certain elevated privileges.",
+    "tags": [],
+    "title": "CVE-2024-44250 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-44250"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2025-43257",
+    "published": "2026-04-02T19:20:15.797",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "This issue was addressed with improved handling of symlinks. This issue is fixed in macOS Sequoia 15.6. An app may be able to break out of its sandbox.",
+    "tags": [],
+    "title": "CVE-2025-43257 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43257"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-43264",
+    "published": "2026-04-02T19:20:17.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The issue was addressed with improved memory handling. This issue is fixed in macOS Sequoia 15.6. Processing a maliciously crafted image may corrupt process memory.",
+    "tags": [],
+    "title": "CVE-2025-43264 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43264"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-34581",
+    "published": "2026-04-02T19:21:32.157",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "goshs is a SimpleHTTPServer written in Go. From version 1.1.0 to before version 2.0.0-beta.2, when using the Share Token it is possible to bypass the limited selected file download with all the gosh functionalities, including code exec. This issue has been patched in version 2.0.0-beta.2.",
+    "tags": [],
+    "title": "CVE-2026-34581 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34581"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-34759",
+    "published": "2026-04-02T19:21:33.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, multiple notification API endpoints are registered without authentication middleware, while sibling endpoints in the same codebase correctly use ClusterKeyAuthorization.isAuthorizedServiceMiddleware. These endpoints are externally reachable via the Nginx proxy at /notification/. Combined with a projectId leak from the public Status Page API, an unauthenticated attacker can purchase phone numbers on the victim's Twilio account and delete all existing alerting numbers. This issue has been patched in version 10.0.42.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34759 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34759"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-34760",
+    "published": "2026-04-02T20:16:25.437",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models (LLMs). From version 0.5.5 to before version 0.18.0, Librosa defaults to using numpy.mean for mono downmixing (to_mono), while the international standard ITU-R BS.775-4 specifies a weighted downmixing algorithm. This discrepancy results in inconsistency between audio heard by humans (e.g., through headphones/regular speakers) and audio processed by AI models (Which infra via Librosa, such as vllm, transformer). This issue has been patched in version 0.18.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-34760 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34760"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-34840",
+    "published": "2026-04-02T20:16:28.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, OneUptime's SAML SSO implementation (App/FeatureSet/Identity/Utils/SSO.ts) has decoupled signature verification and identity extraction. isSignatureValid() verifies the first <Signature> element in the XML DOM using xml-crypto, while getEmail() always reads from assertion[0] via xml2js. An attacker can prepend an unsigned assertion containing an arbitrary identity before a legitimately signed assertion, resulting in authentication bypass. This issue has been patched in version 10.0.42.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34840 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34840"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2025-15620",
+    "published": "2026-04-02T21:16:40.137",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HiOS Switch Platform versions 09.1.00 through 09.4.04 and 10.0.00 through 10.3.00 contain a denial-of-service vulnerability in the web interface that allows remote attackers to reboot the affected device by sending a malicious HTTP GET request to a specific endpoint. Attackers can trigger an uncontrolled reboot condition through crafted HTTP requests to cause service disruption and unavailability of the switch.",
+    "tags": [],
+    "title": "CVE-2025-15620 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15620"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-32173",
+    "published": "2026-04-03T00:16:04.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper authentication in Azure SRE Agent allows an unauthorized attacker to disclose information over a network.",
+    "tags": [],
+    "title": "CVE-2026-32173 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32173"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2025-7024",
+    "published": "2026-04-03T08:16:17.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect Default Permissions vulnerability in AIRBUS PSS TETRA Connectivity Server on Windows Server OS allows Privilege Abuse.\n\n\nAn attacker may execute arbitrary code with SYSTEM privileges if a user is tricked or directed to place a crafted file into the vulnerable directory.\n\nThis issue affects TETRA connectivity Server: 7.0.\n\n\nVulnerability fix is available and delivered to impacted customers.",
+    "tags": [],
+    "title": "CVE-2025-7024 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-7024"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23418",
+    "published": "2026-04-03T14:16:27.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/xe/reg_sr: Fix leak on xa_store failure\n\nFree the newly allocated entry when xa_store() fails to avoid a memory\nleak on the error path.\n\nv2: use goto fail_free. (Bala)\n\n(cherry picked from commit 6bc6fec71ac45f52db609af4e62bdb96b9f5fadb)",
+    "tags": [],
+    "title": "CVE-2026-23418 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23418"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-23419",
+    "published": "2026-04-03T14:16:27.843",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/rds: Fix circular locking dependency in rds_tcp_tune\n\nsyzbot reported a circular locking dependency in rds_tcp_tune() where\nsk_net_refcnt_upgrade() is called while holding the socket lock:\n\n======================================================\nWARNING: possible circular locking dependency detected\n======================================================\nkworker/u10:8/15040 is trying to acquire lock:\nffffffff8e9aaf80 (fs_reclaim){+.+.}-{0:0},\nat: __kmalloc_cache_noprof+0x4b/0x6f0\n\nbut task is already holding lock:\nffff88805a3c1ce0 (k-sk_lock-AF_INET6){+.+.}-{0:0},\nat: rds_tcp_tune+0xd7/0x930\n\nThe issue occurs because sk_net_refcnt_upgrade() performs memory\nallocation (via get_net_track() -> ref_tracker_alloc()) while the\nsocket lock is held, creating a circular dependency with fs_reclaim.\n\nFix this by moving sk_net_refcnt_upgrade() outside the socket lock\ncritical section. This is safe because the fields modified by the\nsk_net_refcnt_upgrade() call (sk_net_refcnt, ns_tracker) are not\naccessed by any concurrent code path at this point.\n\nv2:\n  - Corrected fixes tag\n  - check patch line wrap nits\n  - ai commentary nits",
+    "tags": [],
+    "title": "CVE-2026-23419 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23419"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23420",
+    "published": "2026-04-03T14:16:28.027",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: wlcore: Fix a locking bug\n\nMake sure that wl->mutex is locked before it is unlocked. This has been\ndetected by the Clang thread-safety analyzer.",
+    "tags": [],
+    "title": "CVE-2026-23420 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23420"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23421",
+    "published": "2026-04-03T14:16:28.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/xe/configfs: Free ctx_restore_mid_bb in release\n\nctx_restore_mid_bb memory is allocated in wa_bb_store(), but\nxe_config_device_release() only frees ctx_restore_post_bb.\n\nFree ctx_restore_mid_bb[0].cs as well to avoid leaking the allocation\nwhen the configfs device is removed.\n\n(cherry picked from commit a235e7d0098337c3f2d1e8f3610c719a589e115f)",
+    "tags": [],
+    "title": "CVE-2026-23421 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23421"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23423",
+    "published": "2026-04-03T14:16:28.487",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nbtrfs: free pages on error in btrfs_uring_read_extent()\n\nIn this function the 'pages' object is never freed in the hopes that it is\npicked up by btrfs_uring_read_finished() whenever that executes in the\nfuture. But that's just the happy path. Along the way previous\nallocations might have gone wrong, or we might not get -EIOCBQUEUED from\nbtrfs_encoded_read_regular_fill_pages(). In all these cases, we go to a\ncleanup section that frees all memory allocated by this function without\nassuming any deferred execution, and this also needs to happen for the\n'pages' allocation.",
+    "tags": [],
+    "title": "CVE-2026-23423 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23423"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-23424",
+    "published": "2026-04-03T14:16:28.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\naccel/amdxdna: Validate command buffer payload count\n\nThe count field in the command header is used to determine the valid\npayload size. Verify that the valid payload does not exceed the remaining\nbuffer space.",
+    "tags": [],
+    "title": "CVE-2026-23424 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23424"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23426",
+    "published": "2026-04-03T14:16:28.890",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/logicvc: Fix device node reference leak in logicvc_drm_config_parse()\n\nThe logicvc_drm_config_parse() function calls of_get_child_by_name() to\nfind the \"layers\" node but fails to release the reference, leading to a\ndevice node reference leak.\n\nFix this by using the __free(device_node) cleanup attribute to automatic\nrelease the reference when the variable goes out of scope.",
+    "tags": [],
+    "title": "CVE-2026-23426 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23426"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-25773",
+    "published": "2026-04-03T14:16:29.127",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "** UNSUPPORTED WHEN ASSIGNED ** Focalboard version 8.0 fails to sanitize category IDs before incorporating them into dynamic SQL statements when reordering categories. An attacker can inject a malicious SQL payload into the category id field, which is stored in the database and later executed unsanitized when the category reorder API processes the stored value. This Second-Order SQL Injection (Time-Based Blind) allows an authenticated attacker to exfiltrate sensitive data including password hashes of other users. NOTE: Focalboard as a standalone product is not maintained and no fix will be issued.",
+    "tags": [],
+    "title": "CVE-2026-25773 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25773"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-59710",
+    "published": "2026-04-03T15:16:04.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in Biztalk360 before 11.5. Because of incorrect access control, any user is able to request the loading a DLL file. During the loading, a method is called. An attacker can craft a malicious DLL, upload it to the server, and use it to achieve remote code execution on the server.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-59710 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59710"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2025-59711",
+    "published": "2026-04-03T15:16:04.637",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in Biztalk360 before 11.5. Because of mishandling of user-provided input in an upload mechanism, an authenticated attacker is able to write files outside of the destination directory and/or coerce an authentication from the service, aka Directory Traversal.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-59711 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59711"
+  },
+  {
+    "category": "high",
+    "cvss": 6.7,
+    "id": "CVE-2025-64340",
+    "published": "2026-04-03T16:16:23.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FastMCP is the standard framework for building MCP applications. Prior to version 3.2.0, server names containing shell metacharacters (e.g., &) can cause command injection on Windows when passed to fastmcp install claude-code or fastmcp install gemini-cli. These install paths use subprocess.run() with a list argument, but on Windows the target CLIs often resolve to .cmd wrappers that are executed through cmd.exe, which interprets metacharacters in the flattened command string. This issue has been patched in version 3.2.0.",
+    "tags": [],
+    "title": "CVE-2025-64340 (CVSS 6.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64340"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23429",
+    "published": "2026-04-03T16:16:24.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\niommu/sva: Fix crash in iommu_sva_unbind_device()\n\ndomain->mm->iommu_mm can be freed by iommu_domain_free():\n  iommu_domain_free()\n    mmdrop()\n      __mmdrop()\n        mm_pasid_drop()\nAfter iommu_domain_free() returns, accessing domain->mm->iommu_mm may\ndereference a freed mm structure, leading to a crash.\n\nFix this by moving the code that accesses domain->mm->iommu_mm to before\nthe call to iommu_domain_free().",
+    "tags": [],
+    "title": "CVE-2026-23429 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23429"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23430",
+    "published": "2026-04-03T16:16:24.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/vmwgfx: Don't overwrite KMS surface dirty tracker\n\nWe were overwriting the surface's dirty tracker here causing a memory leak.",
+    "tags": [],
+    "title": "CVE-2026-23430 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23430"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23431",
+    "published": "2026-04-03T16:16:24.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nspi: amlogic-spisg: Fix memory leak in aml_spisg_probe()\n\nIn aml_spisg_probe(), ctlr is allocated by\nspi_alloc_target()/spi_alloc_host(), but fails to call\nspi_controller_put() in several error paths. This leads\nto a memory leak whenever the driver fails to probe after\nthe initial allocation.\n\nConvert to use devm_spi_alloc_host()/devm_spi_alloc_target()\nto fix the memory leak.",
+    "tags": [],
+    "title": "CVE-2026-23431 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23431"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23432",
+    "published": "2026-04-03T16:16:24.637",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmshv: Fix use-after-free in mshv_map_user_memory error path\n\nIn the error path of mshv_map_user_memory(), calling vfree() directly on\nthe region leaves the MMU notifier registered. When userspace later unmaps\nthe memory, the notifier fires and accesses the freed region, causing a\nuse-after-free and potential kernel panic.\n\nReplace vfree() with mshv_partition_put() to properly unregister\nthe MMU notifier before freeing the region.",
+    "tags": [],
+    "title": "CVE-2026-23432 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23432"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23433",
+    "published": "2026-04-03T16:16:24.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\narm_mpam: Fix null pointer dereference when restoring bandwidth counters\n\nWhen an MSC supporting memory bandwidth monitoring is brought offline and\nthen online, mpam_restore_mbwu_state() calls __ris_msmon_read() via ipi to\nrestore the configuration of the bandwidth counters. It doesn't care about\nthe value read, mbwu_arg.val, and doesn't set it leading to a null pointer\ndereference when __ris_msmon_read() adds to it. This results in a kernel\noops with a call trace such as:\n\nCall trace:\n__ris_msmon_read+0x19c/0x64c (P)\nmpam_restore_mbwu_state+0xa0/0xe8\nsmp_call_on_cpu_callback+0x1c/0x38\nprocess_one_work+0x154/0x4b4\nworker_thread+0x188/0x310\nkthread+0x11c/0x130\nret_from_fork+0x10/0x20\n\nProvide a local variable for val to avoid __ris_msmon_read() dereferencing\na null pointer when adding to val.",
+    "tags": [],
+    "title": "CVE-2026-23433 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23433"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23436",
+    "published": "2026-04-03T16:16:25.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: shaper: protect from late creation of hierarchy\n\nWe look up a netdev during prep of Netlink ops (pre- callbacks)\nand take a ref to it. Then later in the body of the callback\nwe take its lock or RCU which are the actual protections.\n\nThe netdev may get unregistered in between the time we take\nthe ref and the time we lock it. We may allocate the hierarchy\nafter flush has already run, which would lead to a leak.\n\nTake the instance lock in pre- already, this saves us from the race\nand removes the need for dedicated lock/unlock callbacks completely.\nAfter all, if there's any chance of write happening concurrently\nwith the flush - we're back to leaking the hierarchy.\n\nWe may take the lock for devices which don't support shapers but\nwe're only dealing with SET operations here, not taking the lock\nwould be optimizing for an error case.",
+    "tags": [],
+    "title": "CVE-2026-23436 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23436"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23437",
+    "published": "2026-04-03T16:16:25.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: shaper: protect late read accesses to the hierarchy\n\nWe look up a netdev during prep of Netlink ops (pre- callbacks)\nand take a ref to it. Then later in the body of the callback\nwe take its lock or RCU which are the actual protections.\n\nThis is not proper, a conversion from a ref to a locked netdev\nmust include a liveness check (a check if the netdev hasn't been\nunregistered already). Fix the read cases (those under RCU).\nWrites needs a separate change to protect from creating the\nhierarchy after flush has already run.",
+    "tags": [],
+    "title": "CVE-2026-23437 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23437"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-23440",
+    "published": "2026-04-03T16:16:26.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/mlx5e: Fix race condition during IPSec ESN update\n\nIn IPSec full offload mode, the device reports an ESN (Extended\nSequence Number) wrap event to the driver. The driver validates this\nevent by querying the IPSec ASO and checking that the esn_event_arm\nfield is 0x0, which indicates an event has occurred. After handling\nthe event, the driver must re-arm the context by setting esn_event_arm\nback to 0x1.\n\nA race condition exists in this handling path. After validating the\nevent, the driver calls mlx5_accel_esp_modify_xfrm() to update the\nkernel's xfrm state. This function temporarily releases and\nre-acquires the xfrm state lock.\n\nSo, need to acknowledge the event first by setting esn_event_arm to\n0x1. This prevents the driver from reprocessing the same ESN update if\nthe hardware sends events for other reason. Since the next ESN update\nonly occurs after nearly 2^31 packets are received, there's no risk of\nmissing an update, as it will happen long after this handling has\nfinished.\n\nProcessing the event twice causes the ESN high-order bits (esn_msb) to\nbe incremented incorrectly. The driver then programs the hardware with\nthis invalid ESN state, which leads to anti-replay failures and a\ncomplete halt of IPSec traffic.\n\nFix this by re-arming the ESN event immediately after it is validated,\nbefore calling mlx5_accel_esp_modify_xfrm(). This ensures that any\nspurious, duplicate events are correctly ignored, closing",
+    "tags": [],
+    "title": "CVE-2026-23440 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23440"
+  },
+  {
+    "category": "high",
+    "cvss": 4.7,
+    "id": "CVE-2026-23441",
+    "published": "2026-04-03T16:16:26.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/mlx5e: Prevent concurrent access to IPSec ASO context\n\nThe query or updating IPSec offload object is through Access ASO WQE.\nThe driver uses a single mlx5e_ipsec_aso struct for each PF, which\ncontains a shared DMA-mapped context for all ASO operations.\n\nA race condition exists because the ASO spinlock is released before\nthe hardware has finished processing WQE. If a second operation is\ninitiated immediately after, it overwrites the shared context in the\nDMA area.\n\nWhen the first operation's completion is processed later, it reads\nthis corrupted context, leading to unexpected behavior and incorrect\nresults.\n\nThis commit fixes the race by introducing a private context within\neach IPSec offload object. The shared ASO context is now copied to\nthis private context while the ASO spinlock is held. Subsequent\nprocessing uses this saved, per-object context, ensuring its integrity\nis maintained.",
+    "tags": [],
+    "title": "CVE-2026-23441 (CVSS 4.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23441"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23442",
+    "published": "2026-04-03T16:16:28.423",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: add NULL checks for idev in SRv6 paths\n\n__in6_dev_get() can return NULL when the device has no IPv6 configuration\n(e.g. MTU < IPV6_MIN_MTU or after NETDEV_UNREGISTER).\n\nAdd NULL checks for idev returned by __in6_dev_get() in both\nseg6_hmac_validate_skb() and ipv6_srh_rcv() to prevent potential NULL\npointer dereferences.",
+    "tags": [],
+    "title": "CVE-2026-23442 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23442"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23443",
+    "published": "2026-04-03T16:16:28.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nACPI: processor: Fix previous acpi_processor_errata_piix4() fix\n\nAfter commi f132e089fe89 (\"ACPI: processor: Fix NULL-pointer dereference\nin acpi_processor_errata_piix4()\"), device pointers may be dereferenced\nafter dropping references to the device objects pointed to by them,\nwhich may cause a use-after-free to occur.\n\nMoreover, debug messages about enabling the errata may be printed\nif the errata flags corresponding to them are unset.\n\nAddress all of these issues by moving message printing to the points\nin the code where the errata flags are set.",
+    "tags": [],
+    "title": "CVE-2026-23443 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23443"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23444",
+    "published": "2026-04-03T16:16:28.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mac80211: always free skb on ieee80211_tx_prepare_skb() failure\n\nieee80211_tx_prepare_skb() has three error paths, but only two of them\nfree the skb. The first error path (ieee80211_tx_prepare() returning\nTX_DROP) does not free it, while invoke_tx_handlers() failure and the\nfragmentation check both do.\n\nAdd kfree_skb() to the first error path so all three are consistent,\nand remove the now-redundant frees in callers (ath9k, mt76,\nmac80211_hwsim) to avoid double-free.\n\nDocument the skb ownership guarantee in the function's kdoc.",
+    "tags": [],
+    "title": "CVE-2026-23444 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23444"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23445",
+    "published": "2026-04-03T16:16:30.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nigc: fix page fault in XDP TX timestamps handling\n\nIf an XDP application that requested TX timestamping is shutting down\nwhile the link of the interface in use is still up the following kernel\nsplat is reported:\n\n[  883.803618] [   T1554] BUG: unable to handle page fault for address: ffffcfb6200fd008\n...\n[  883.803650] [   T1554] Call Trace:\n[  883.803652] [   T1554]  <TASK>\n[  883.803654] [   T1554]  igc_ptp_tx_tstamp_event+0xdf/0x160 [igc]\n[  883.803660] [   T1554]  igc_tsync_interrupt+0x2d5/0x300 [igc]\n...\n\nDuring shutdown of the TX ring the xsk_meta pointers are left behind, so\nthat the IRQ handler is trying to touch them.\n\nThis issue is now being fixed by cleaning up the stale xsk meta data on\nTX shutdown. TX timestamps on other queues remain unaffected.",
+    "tags": [],
+    "title": "CVE-2026-23445 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23445"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23447",
+    "published": "2026-04-03T16:16:30.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: usb: cdc_ncm: add ndpoffset to NDP32 nframes bounds check\n\nThe same bounds-check bug fixed for NDP16 in the previous patch also\nexists in cdc_ncm_rx_verify_ndp32(). The DPE array size is validated\nagainst the total skb length without accounting for ndpoffset, allowing\nout-of-bounds reads when the NDP32 is placed near the end of the NTB.\n\nAdd ndpoffset to the nframes bounds check and use struct_size_t() to\nexpress the NDP-plus-DPE-array size more clearly.\n\nCompile-tested only.",
+    "tags": [],
+    "title": "CVE-2026-23447 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23447"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-23448",
+    "published": "2026-04-03T16:16:30.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: usb: cdc_ncm: add ndpoffset to NDP16 nframes bounds check\n\ncdc_ncm_rx_verify_ndp16() validates that the NDP header and its DPE\nentries fit within the skb. The first check correctly accounts for\nndpoffset:\n\n  if ((ndpoffset + sizeof(struct usb_cdc_ncm_ndp16)) > skb_in->len)\n\nbut the second check omits it:\n\n  if ((sizeof(struct usb_cdc_ncm_ndp16) +\n       ret * (sizeof(struct usb_cdc_ncm_dpe16))) > skb_in->len)\n\nThis validates the DPE array size against the total skb length as if\nthe NDP were at offset 0, rather than at ndpoffset. When the NDP is\nplaced near the end of the NTB (large wNdpIndex), the DPE entries can\nextend past the skb data buffer even though the check passes.\ncdc_ncm_rx_fixup() then reads out-of-bounds memory when iterating\nthe DPE array.\n\nAdd ndpoffset to the nframes bounds check and use struct_size_t() to\nexpress the NDP-plus-DPE-array size more clearly.",
+    "tags": [],
+    "title": "CVE-2026-23448 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23448"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-23453",
+    "published": "2026-04-03T16:16:31.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ti: icssg-prueth: Fix memory leak in XDP_DROP for non-zero-copy mode\n\nPage recycling was removed from the XDP_DROP path in emac_run_xdp() to\navoid conflicts with AF_XDP zero-copy mode, which uses xsk_buff_free()\ninstead.\n\nHowever, this causes a memory leak when running XDP programs that drop\npackets in non-zero-copy mode (standard page pool mode). The pages are\nnever returned to the page pool, leading to OOM conditions.\n\nFix this by handling cleanup in the caller, emac_rx_packet().\nWhen emac_run_xdp() returns ICSSG_XDP_CONSUMED for XDP_DROP, the\ncaller now recycles the page back to the page pool. The zero-copy\npath, emac_rx_packet_zc() already handles cleanup correctly with\nxsk_buff_free().",
+    "tags": [],
+    "title": "CVE-2026-23453 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23453"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-35214",
+    "published": "2026-04-03T16:16:41.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Budibase is an open-source low-code platform. Prior to version 3.33.4, the plugin file upload endpoint (POST /api/plugin/upload) passes the user-supplied filename directly to createTempFolder() without sanitizing path traversal sequences. An attacker with Global Builder privileges can craft a multipart upload with a filename containing ../ to delete arbitrary directories via rmSync and write arbitrary files via tarball extraction to any filesystem path the Node.js process can access. This issue has been patched in version 3.33.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35214 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35214"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-34954",
+    "published": "2026-04-03T23:17:06.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to version 1.5.95, FileTools.download_file() in praisonaiagents validates the destination path but performs no validation on the url parameter, passing it directly to httpx.stream() with follow_redirects=True. An attacker who controls the URL can reach any host accessible from the server including cloud metadata services and internal network services. This issue has been patched in version 1.5.95.",
+    "tags": [],
+    "title": "CVE-2026-34954 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34954"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34955",
+    "published": "2026-04-04T00:16:19.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to version 4.5.97, SubprocessSandbox in all modes (BASIC, STRICT, NETWORK_ISOLATED) calls subprocess.run() with shell=True and relies solely on string-pattern matching to block dangerous commands. The blocklist does not include sh or bash as standalone executables, allowing trivial sandbox escape in STRICT mode via sh -c '<command>'. This issue has been patched in version 4.5.97.",
+    "tags": [],
+    "title": "CVE-2026-34955 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34955"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-3666",
+    "published": "2026-04-04T12:16:03.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The wpForo Forum plugin for WordPress is vulnerable to arbitrary file deletion in all versions up to, and including, 2.4.16. This is due to a missing file name/path validation against path traversal sequences. This makes it possible for authenticated attackers, with subscriber level access and above, to delete arbitrary files on the server by embedding a crafted path traversal string in a forum post body and then deleting the post.",
+    "tags": [],
+    "title": "CVE-2026-3666 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3666"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-35470",
+    "published": "2026-04-06T18:16:44.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenSTAManager is an open source management software for technical assistance and invoicing. Prior to 2.10.2, confronta_righe.php files across different modules in OpenSTAManager contain an SQL Injection vulnerability. The righe parameter received via $_GET['righe'] is directly concatenated into an SQL query without any sanitization, parameterization or validation. An authenticated attacker can inject arbitrary SQL statements to extract sensitive data from the database, including user credentials, customer information, invoice data and any other stored data. This vulnerability is fixed in 2.10.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35470 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35470"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-35182",
+    "published": "2026-04-06T20:16:26.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Brave CMS is an open-source CMS. Prior to 2.0.6, this vulnerability is a missing authorization check found in the update role endpoint at routes/web.php. The POST route for /rights/update-role/{id} lacks the checkUserPermissions:assign-user-roles middleware. This allows any authenticated user to change account roles and promote themselves to Super Admin. This vulnerability is fixed in 2.0.6.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35182 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35182"
+  },
+  {
+    "category": "high",
+    "cvss": 6.1,
+    "id": "CVE-2026-35199",
+    "published": "2026-04-06T20:16:27.543",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SymCrypt is the core cryptographic function library currently used by Windows. From 103.5.0 to before 103.11.0, The SymCryptXmssSign function passes a 64-bit leaf count value to a helper function that accepts a 32-bit parameter. For XMSS^MT parameter sets with total tree height >= 32 (which includes standard predefined parameters), this causes silent truncation to zero, resulting in a drastically undersized scratch buffer allocation followed by a heap buffer overflow during signature computation. Exploiting this issue would require an application using SymCrypt to perform an XMSS^MT signature using an attacker-controlled parameter set. It is uncommon for applications to allow the use of attacker-controlled parameter sets for signing, since signing is a private key operation, and private keys must be trusted by definition. Additionally, XMSS(^MT) signing should only be performed in a Hardware Security Module (HSM). XMSS(^MT) signing is provided in SymCrypt only for testing purposes. This is a general rule irrespective of this CVE; XMSS(^MT) and other stateful signature schemes are only cryptographically secure when it is guaranteed that the same state cannot be reused for two different signatures, which cannot be guaranteed by software alone. For this reason, XMSS(^MT) signing is also not FIPS approved when performed outside of an HSM. Fixed in version 103.11.0.",
+    "tags": [],
+    "title": "CVE-2026-35199 (CVSS 6.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35199"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-35394",
+    "published": "2026-04-06T21:16:21.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mobile Next is an MCP server for mobile development and automation. Prior to 0.0.50, the mobile_open_url tool in mobile-mcp passes user-supplied URLs directly to Android's intent system without any scheme validation, allowing execution of arbitrary Android intents, including USSD codes, phone calls, SMS messages, and content provider access. This vulnerability is fixed in 0.0.50.",
+    "tags": [],
+    "title": "CVE-2026-35394 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35394"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-35395",
+    "published": "2026-04-06T21:16:21.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WeGIA is a Web manager for charitable institutions. Prior to 3.6.9, WeGIA (Web gerenciador para instituições assistenciais) contains a SQL injection vulnerability in dao/memorando/DespachoDAO.php. The id_memorando parameter is extracted from $_REQUEST without validation and directly interpolated into SQL queries, allowing any authenticated user to execute arbitrary SQL commands against the database. This vulnerability is fixed in 3.6.9.",
+    "tags": [],
+    "title": "CVE-2026-35395 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35395"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-35408",
+    "published": "2026-04-06T22:16:21.557",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Directus is a real-time API and App dashboard for managing SQL database content. Prior to 11.17.0, Directus's Single Sign-On (SSO) login pages lacked a Cross-Origin-Opener-Policy (COOP) HTTP response header. Without this header, a malicious cross-origin window that opens the Directus login page retains the ability to access and manipulate the window object of that page. An attacker can exploit this to intercept and redirect the OAuth authorization flow to an attacker-controlled OAuth client, causing the victim to unknowingly grant access to their authentication provider account (e.g. Google, Discord). This vulnerability is fixed in 11.17.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35408 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35408"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-35442",
+    "published": "2026-04-06T22:16:22.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Directus is a real-time API and App dashboard for managing SQL database content. Prior to 11.17.0, aggregate functions (min, max) applied to fields with the conceal special type incorrectly return raw database values instead of the masked placeholder. When combined with groupBy, any authenticated user with read access to the affected collection can extract concealed field values, including static API tokens and two-factor authentication secrets from directus_users. This vulnerability is fixed in 11.17.0.",
+    "tags": [],
+    "title": "CVE-2026-35442 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35442"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-39341",
+    "published": "2026-04-07T18:16:46.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ChurchCRM is an open-source church management system. Prior to 7.1.0, the application is vulnerable to time-based SQL injection due to an improper input validation. Endpoint Reports/ConfirmReportEmail.php?familyId= is not correctly sanitising user input, specifically, the sanitised input is not used to create the SQL query. This vulnerability is fixed in 7.1.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39341 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39341"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-39342",
+    "published": "2026-04-07T18:16:46.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ChurchCRM is an open-source church management system. Prior to 7.1.0, the searchwhat parameter via QueryView.php with the QueryID=15 is vulnerable to a SQL injection. The authenticated user requires access to Data/Reports > Query Menu and access to the \"Advanced Search\" query. This vulnerability is fixed in 7.1.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39342 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39342"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-39344",
+    "published": "2026-04-07T18:16:46.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ChurchCRM is an open-source church management system. Prior to 7.1.0, there is a Reflected Cross-Site Scripting (XSS) vulnerability on the login page, which is caused by the lack of sanitization or encoding of the username parameter received from the URL. The username parameter value is directly displayed in the login page input element without filter, allowing attackers to insert malicious JavaScript scripts. If successful, script can be executed on the client side, potentially stealing sensitive data such as session cookies or replacing the display to show the attacker's login form. This vulnerability is fixed in 7.1.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39344 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39344"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-39322",
+    "published": "2026-04-07T20:16:28.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PolarLearn is a free and open-source learning program. In 0-PRERELEASE-15 and earlier, POST /api/v1/auth/sign-in creates a valid session for banned accounts before verifying the supplied password. That session is then accepted across authenticated /api routes, enabling account data access and authenticated actions as the banned user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39322 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39322"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-39371",
+    "published": "2026-04-07T20:16:31.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "RedwoodSDK is a server-first React framework. From 1.0.0-beta.50 to 1.0.5, erver functions exported from \"use server\" files could be invoked via GET requests, bypassing their intended HTTP method. In cookie-authenticated applications, this allowed cross-site GET navigations to trigger state-changing functions, because browsers send SameSite=Lax cookies on top-level GET requests. This affected all server functions -- both serverAction() handlers and bare exported functions in \"use server\" files. This vulnerability is fixed in 1.0.6.",
+    "tags": [],
+    "title": "CVE-2026-39371 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39371"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-3499",
+    "published": "2026-04-08T02:16:04.237",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Product Feed PRO for WooCommerce by AdTribes – Product Feeds for WooCommerce plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions 13.4.6 through 13.5.2.1. This is due to missing or incorrect nonce validation on the ajax_migrate_to_custom_post_type, ajax_adt_clear_custom_attributes_product_meta_keys, ajax_update_file_url_to_lower_case, ajax_use_legacy_filters_and_rules, and ajax_fix_duplicate_feed functions. This makes it possible for unauthenticated attackers to trigger feed migration, clear custom-attribute transient caches, rewrite feed file URLs to lowercase, toggle legacy filter and rule settings, and delete duplicated feed posts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3499 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3499"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-39486",
+    "published": "2026-04-08T09:16:23.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WP Chill Download Monitor download-monitor allows Blind SQL Injection.This issue affects Download Monitor: from n/a through <= 5.1.8.",
+    "tags": [],
+    "title": "CVE-2026-39486 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39486"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-39495",
+    "published": "2026-04-08T09:16:23.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in NSquared Simply Schedule Appointments simply-schedule-appointments allows Blind SQL Injection.This issue affects Simply Schedule Appointments: from n/a through <= 1.6.9.27.",
+    "tags": [],
+    "title": "CVE-2026-39495 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39495"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-39621",
+    "published": "2026-04-08T09:16:32.270",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in spicethemes SpicePress spicepress allows Upload a Web Shell to a Web Server.This issue affects SpicePress: from n/a through <= 2.3.2.5.",
+    "tags": [],
+    "title": "CVE-2026-39621 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39621"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-39393",
+    "published": "2026-04-08T15:16:14.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to 0.31.4.0, the install route guard in ci4ms relies solely on a volatile cache check (cache('settings')) combined with .env file existence to block post-installation access to the setup wizard. When the database is temporarily unreachable during a cache miss (TTL expiry or admin-triggered cache clear), the guard fails open, allowing an unauthenticated attacker to overwrite the .env file with attacker-controlled database credentials, achieving full application takeover. This vulnerability is fixed in 0.31.4.0.",
+    "tags": [],
+    "title": "CVE-2026-39393 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39393"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-39394",
+    "published": "2026-04-08T15:16:14.360",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to 0.31.4.0, the Install::index() controller reads the host POST parameter without any validation and passes it directly into updateEnvSettings(), which writes it into the .env file via preg_replace(). Because newline characters in the value are not stripped, an attacker can inject arbitrary configuration directives into the .env file. The install routes have CSRF protection explicitly disabled, and the InstallFilter can be bypassed when cache('settings') is empty (cache expiry or fresh deployment). This vulnerability is fixed in 0.31.4.0.",
+    "tags": [],
+    "title": "CVE-2026-39394 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39394"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-35169",
+    "published": "2026-04-08T19:25:23.447",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LORIS (Longitudinal Online Research and Imaging System) is a self-hosted web application that provides data- and project-management for neuroimaging research. From  to before 27.0.3 and 28.0.1, the help_editor module of LORIS did not properly sanitize some user supplied variables which could result in a reflected cross-site scripting attack if a user is tricked into following an invalid link. The same input vector could also allow an attacker to download arbitrary markdown files on an unpatched server. This vulnerability is fixed in 27.0.3 and 28.0.1.",
+    "tags": [],
+    "title": "CVE-2026-35169 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35169"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-35478",
+    "published": "2026-04-08T20:16:24.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "InvenTree is an Open Source Inventory Management System. From 0.16.0 to before 1.2.7, any authenticated InvenTree user can create a valid API token attributed to any other user in the system — including administrators and superusers — by supplying the target's user ID in the user field of a POST /api/user/tokens/ request. The returned token is immediately usable for full API authentication as the target user, from any network location, with no further interaction required. This vulnerability is fixed in 1.2.7 and 1.3.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35478 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35478"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-39862",
+    "published": "2026-04-08T20:16:26.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Tophat is a mobile applications testing harness. Prior to 2.5.1, Tophat is affected by remote code execution via crafted tophat:// or http://localhost:29070 URLs. The arguments query parameter flows unsanitized from URL parsing through to /bin/bash -c execution, allowing an attacker to execute arbitrary commands on a developer's macOS workstation. Any developer with Tophat installed is vulnerable. For previously trusted build hosts, no confirmation dialog appears. Attacker commands run with the user's permissions. This vulnerability is fixed in 2.5.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39862 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39862"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-39429",
+    "published": "2026-04-08T21:16:59.313",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "kcp is a Kubernetes-like control plane for form-factors and use-cases beyond Kubernetes and container workloads. Prior to 0.30.3 and 0.29.3, the cache server is directly exposed by the root shard and has no authentication or authorization in place. This allows anyone who can access the root shard to read and write to the cache server. This vulnerability is fixed in 0.30.3 and 0.29.3.",
+    "tags": [],
+    "title": "CVE-2026-39429 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39429"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-39844",
+    "published": "2026-04-08T21:16:59.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NiceGUI is a Python-based UI framework. Prior to 3.10.0, Since PurePosixPath only recognizes forward slashes (/) as path separators, an attacker can bypass this sanitization on Windows by using backslashes (\\) in the upload filename. Applications that construct file paths using file.name (a pattern demonstrated in NiceGUI's bundled examples) are vulnerable to arbitrary file write on Windows. This vulnerability is fixed in 3.10.0.",
+    "tags": [],
+    "title": "CVE-2026-39844 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39844"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-39891",
+    "published": "2026-04-08T21:17:01.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. Prior to 4.5.115, the create_agent_centric_tools() function returns tools (like acp_create_file) that process file content using template rendering. When user input from agent.start() is passed directly into these tools without escaping, template expressions in the input are executed rather than treated as literal text. This vulnerability is fixed in 4.5.115.",
+    "tags": [],
+    "title": "CVE-2026-39891 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39891"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-35196",
+    "published": "2026-04-14T22:16:31.993",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, an OS Command Injection vulnerability exists in the main/inc/ajax/gradebook.ajax.php endpoint within the export_all_certificates action, where the course code retrieved from the session variable $_SESSION['_cid'] via api_get_course_id() is concatenated directly into a shell_exec() command string without sanitization or escaping using escapeshellarg(). If an attacker can manipulate or poison their session data to inject shell metacharacters into the _cid variable, they can achieve arbitrary command execution on the underlying server. Successful exploitation grants full access to read system files and credentials, alters the application and database, or disrupts server availability. This issue has been fixed in version 2.0.0-RC.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35196 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35196"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-40291",
+    "published": "2026-04-14T22:16:32.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Chamilo LMS is an open-source learning management system. In versions prior to 2.0.0-RC.3, an insecure direct object modification vulnerability in the PUT /api/users/{id} endpoint allows any authenticated user with ROLE_STUDENT to escalate their privileges to ROLE_ADMIN by modifying the roles field on their own user record. The API Platform security expression is_granted('EDIT', object) only verifies record ownership, and the roles field is included in the writable serialization group, enabling any user to set arbitrary roles such as ROLE_ADMIN. Successful exploitation grants full administrative control of the platform, including access to all courses, user data, grades, and administrative settings. This issue has been fixed in version 2.0.0-RC.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-40291 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40291"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-35032",
+    "published": "2026-04-14T23:16:28.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jellyfin is an open source self hosted media server. Versions prior to 10.11.7 contain a vulnerability chain in the LiveTV M3U tuner endpoint (POST /LiveTv/TunerHosts), where the tuner URL is not validated, allowing local file read via non-HTTP paths and Server-Side Request Forgery (SSRF) via HTTP URLs. This is exploitable by any authenticated user because the EnableLiveTvManagement permission defaults to true for all new users. An attacker can chain these vulnerabilities by adding an M3U tuner pointing to an attacker-controlled server, serving a crafted M3U with a channel pointing to the Jellyfin database, exfiltrating the database to extract admin session tokens, and escalating to admin privileges. This issue has been fixed in version 10.11.7. If users are unable to upgrade immediately, they can disable Live TV Management privileges for all users.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35032 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35032"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-35589",
+    "published": "2026-04-14T23:16:29.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "nanobot is a personal AI assistant. Versions prior to 0.1.5 contain a Cross-Site WebSocket Hijacking (CSWSH) vulnerability exists in the bridge's WebSocket server in bridge/src/server.ts, resulting from an incomplete remediation of CVE-2026-2577. The original fix changed the binding from 0.0.0.0 to 127.0.0.1 and added an optional BRIDGE_TOKEN parameter, but token authentication is disabled by default and the server does not validate the Origin header during the WebSocket handshake. Because browsers do not enforce the Same-Origin Policy on WebSockets unless the server explicitly denies cross-origin connections, any website visited by a user running the bridge can establish a WebSocket connection to ws://127.0.0.1:3001/ and gain full access to the bridge API. This allows an attacker to hijack the WhatsApp session, read incoming messages, steal authentication QR codes, and send messages on behalf of the user. This issue has bee fixed in version 0.1.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35589 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35589"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-41364",
+    "published": "2026-04-28T00:16:25.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.31 contains a symlink following vulnerability in SSH sandbox tar upload that allows remote attackers to write arbitrary files. Attackers can exploit this by uploading tar archives containing symlinks to escape the sandbox and overwrite files on the remote host.",
+    "tags": [],
+    "title": "CVE-2026-41364 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41364"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-41371",
+    "published": "2026-04-28T00:16:26.497",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.28 contains a privilege escalation vulnerability in chat.send that allows write-scoped gateway callers to trigger admin-only session reset operations. Attackers can rotate target sessions, archive prior transcript state, and force new session IDs without requiring admin scope by exploiting improper authorization checks in the chat.send path.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-41371 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41371"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-39849",
+    "published": "2026-05-05T21:16:22.677",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pi-hole FTL is the core engine of the Pi-hole network-level advertisement and tracker blocker. In versions before 6.6.1, the `dns.interface` configuration field in Pi-hole FTL accepted newline characters without validation, allowing an attacker to inject arbitrary directives into the generated dnsmasq configuration file. On installations with no admin password set (the default for many deployments), the configuration API is fully accessible without credentials, allowing a network-adjacent attacker to inject the payload, enable the built-in DHCP server, and achieve arbitrary command execution on the host the next time any device on the network requests a DHCP lease. The injected value is persisted to /etc/pihole/pihole.toml and survives restarts. The strncpy in the code path limits the total interface field to 31 bytes, but payloads such as wlan0\\ndhcp-script=/tmp/p fit within this constraint. The dnsmasq config validation introduced in FTL 6.6 only checks syntactic validity, so valid directives injected via newline pass validation successfully. This issue has been fixed in version 6.6.1.",
+    "tags": [],
+    "title": "CVE-2026-39849 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39849"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-39852",
+    "published": "2026-05-05T21:16:22.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Quarkus is a Java framework for building cloud-native applications. In versions prior to 3.20.6.1, 3.27.3.1, 3.33.1.1, 3.35.1.1, 3.34.7, and 3.35.2, a path normalization inconsistency between the security layer and the routing layer allows unauthenticated or lower-privileged users to bypass HTTP path-based authorization policies. Quarkus's security layer performs authorization checks on the raw URL path which preserves matrix parameters (semicolons), while RESTEasy Reactive's routing layer strips matrix parameters before matching endpoints. An attacker can append a semicolon and arbitrary text to a request URL (e.g., /api/admin;anything) to bypass policies protecting /api/admin while still routing to the protected endpoint. This issue has been fixed in versions 3.20.6.1, 3.27.3.1, 3.33.1.1, 3.35.1.1, 3.34.7, and 3.35.2.",
+    "tags": [],
+    "title": "CVE-2026-39852 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39852"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-40068",
+    "published": "2026-05-05T21:16:23.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In versions 2.1.63 through 2.1.83 of Claude Code, the folder trust determination logic used the git worktree commondir file without validating its contents. An attacker could craft a malicious repository with a commondir file pointing to a path the victim had previously trusted, causing Claude Code to bypass its trust confirmation dialog and immediately execute hooks defined in `.claude/settings.json`. Exploitation requires the victim to clone the malicious repository and run Claude Code within it, and the attacker must know or guess a path the victim had already trusted. This issue has been fixed in version 2.1.84.",
+    "tags": [],
+    "title": "CVE-2026-40068 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40068"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-42339",
+    "published": "2026-05-08T23:16:36.917",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. In versions 0.11.9-alpha.1 and prior, the SSRF protection introduced in v0.9.0.5 (CVE-2025-59146) and hardened in v0.9.6 (CVE-2025-62155) does not block the unspecified address 0.0.0.0. A regular (non-admin) user holding any valid API token can send a multimodal request to /v1/chat/completions, /v1/responses, or /v1/messages with 0.0.0.0 as the image/file URL host, bypassing the private-IP filter and causing the server to issue HTTP requests to localhost. This constitutes at minimum a blind SSRF; when the request is routed through an AWS/Bedrock Claude adaptor, the fetched content is inlined into the model response, upgrading it to a full-read SSRF. At time of publication, there are no publicly available patches.",
+    "tags": [
+      "AI",
+      "APT"
+    ],
+    "title": "CVE-2026-42339 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42339"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-42352",
+    "published": "2026-05-08T23:16:38.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "pygeoapi is a Python server implementation of the OGC API suite of standards. From version 0.23.0 to before version 0.23.3, OGC API  process execution requests can use the subscriber object to requests to internal HTTP services. This issue has been patched in version 0.23.3.",
+    "tags": [],
+    "title": "CVE-2026-42352 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42352"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-42456",
+    "published": "2026-05-08T23:16:39.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. Prior to version 1.12.1, GET /api/workspace/:slug/tts/:chatId in AnythingLLM returns the text-to-speech audio for another user's chat response within the same workspace because the route validates workspace membership but does not enforce ownership of the targeted chat row. As a result, an authenticated user can access another user's private assistant response in audio form if the chatId is known or guessed. This constitutes an insecure direct object reference (IDOR) affecting private chat response content exposed through the TTS endpoint. This issue has been patched in version 1.12.1.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-42456 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42456"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2026-42556",
+    "published": "2026-05-08T23:16:39.373",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Postiz is an AI social media scheduling tool. From version 2.21.6 to before version 2.21.7, any authenticated user who can create a post can store arbitrary HTML in post content by tampering their own save request and send the public preview link /p/<postId>?share=true to another user. The preview page renders that stored HTML with dangerouslySetInnerHTML on the main application origin. This issue has been patched in version 2.21.7.",
+    "tags": [],
+    "title": "CVE-2026-42556 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42556"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-41705",
+    "published": "2026-05-09T01:16:08.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spring AI's MilvusVectorStore#doDelete(List) implementation is vulnerable to filter-expression injection via unsanitized document IDs.\nSpring AI 1.0.x: affected from 1.0.0 through latest 1.0.x; upgrade to 1.0.7 or greater. Spring AI 1.1.x: affected from 1.1.0 through latest 1.1.x; upgrade to 1.1.6 or greater.",
+    "tags": [],
+    "title": "CVE-2026-41705 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41705"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-42296",
+    "published": "2026-05-09T04:16:25.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Prior to versions 3.7.14 and 4.0.5, a user with create Workflow permission can bypass templateReferencing: Strict to get host network access, switch service accounts, override pod security context, add tolerations to schedule on control-plane nodes, or enable SA token mounting. This defeats the stated purpose of the feature. The practical impact depends on what Kubernetes-level controls are in place. Clusters with PodSecurity admission or OPA/Gatekeeper would independently block some of these (like hostNetwork). Clusters that rely on Argo's Strict mode as the primary enforcement layer are fully exposed. This issue has been patched in versions 3.7.14 and 4.0.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42296 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42296"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-42297",
+    "published": "2026-05-09T04:16:25.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. From version 4.0.0 to before version 4.0.5, the Sync Service's ConfigMap-backed provider (server/sync/sync_cm.go) performs zero authorization checks on all CRUD operations (create, read, update, delete). Any authenticated user — including those using fake Bearer tokens — can create, read, update, and delete Kubernetes ConfigMaps containing synchronization limits. This issue has been patched in version 4.0.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42297 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42297"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-42562",
+    "published": "2026-05-09T20:16:28.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Plainpad is a self hosted note taking app. Prior to version 1.1.1, Plainpad allows a low-privilege authenticated user to self-escalate to administrator by submitting admin=true in PUT /api.php/v1/users/{id}. The endpoint directly persists the admin attribute from user input, and the escalated account can immediately access admin-only routes. This issue has been patched in version 1.1.1.",
+    "tags": [],
+    "title": "CVE-2026-42562 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42562"
   }
 ]
