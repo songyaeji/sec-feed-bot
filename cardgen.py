@@ -220,6 +220,26 @@ def plan_cards(items: list[dict]):
     return top, cve_rest, other_rest
 
 
+def has_informative_summary(item: dict) -> bool:
+    """요약이 제목과 사실상 동일하면 False — 카드 본문 가치가 없다.
+    Google News RSS류는 피드 요약(description)이 제목 그대로라, 사서
+    판정 없이(백필 등) 원문 폴백으로 카드에 실리면 '제목=본문' 카드가
+    된다(2026-07-24 NO.17 실측 2장). 선별·렌더·프리플라이트가 공유하는
+    단일 판정: summary_ko가 있으면 사서 요약이 실리므로 무조건 통과."""
+    if item.get("summary_ko"):
+        return True
+    summary = _strip_html(item.get("summary", ""))
+    if not summary.strip():
+        return False
+    norm = lambda s: re.sub(r"[\W_]+", "", s).lower()  # noqa: E731
+    n_title, n_sum = norm(item.get("title", "")), norm(summary)
+    if not n_sum:
+        return False
+    # 완전 일치뿐 아니라 포함 관계(요약 = 제목 + 매체명 꼬리표 등)도 중복으로 본다
+    return not (n_sum == n_title or (n_title and n_title in n_sum
+                                     and len(n_sum) < len(n_title) + 20))
+
+
 def link_label(item: dict) -> str:
     """링크 목록용 라벨 — 카드 본문 제목과 글자 그대로 일치해야 한다.
     Discord(build_link_lines)와 github.io meta.json이 공유하는 단일 규칙:
@@ -462,8 +482,12 @@ def _build_news(
         # 카드뉴스의 메인은 요약 — 사서(librarian)가 만든 한국어 요약
         # summary_ko가 있으면 우선, 없으면(사서 실패 fail-open) 피드 원문 요약.
         # v7: **키워드** 마커를 라임 강조로 변환. v21: 문장 청크 <p> 분절
+        # 폴백 요약이 제목과 동일한 껍데기(구글뉴스류)는 본문을 비운다 —
+        # 같은 문장이 제목·본문에 두 번 찍히는 것보다 낫다(최후 방어;
+        # 1차 방어는 main 백필 후보 필터)
         SUMMARY=_summary_chunks(item.get("summary_ko")
-                                or _strip_html(item.get("summary", ""))),
+                                or (_strip_html(item.get("summary", ""))
+                                    if has_informative_summary(item) else "")),
         SOURCE=html.escape(item.get("source", "")),
         DOTS=dots,
     )

@@ -17,6 +17,8 @@ fatal이 하나라도 있으면 호출자(main.py)는 카드뉴스 발송을 중
 import os
 import re
 
+import cardgen
+
 # Discord 웹훅 하드 리밋 — 초과 시 API가 요청 자체를 거부한다
 DISCORD_MAX_ATTACHMENTS = 10
 DISCORD_MAX_FILE_BYTES = 8 * 1024 * 1024
@@ -148,6 +150,19 @@ def check_card_news(
             warnings.append(
                 f"summary_ko 없는 항목 {no_summary_ko}/{total} — 요약 한국어화가 30% 넘게 누락"
             )
+
+    # --- WARNING: 제목=본문 껍데기 카드 — 사서 요약 없이 폴백된 항목의
+    # 피드 요약이 제목과 동일하면 본문이 비거나 제목이 두 번 찍힌다
+    # (2026-07-24 NO.17 실측 2장: 구글뉴스 RSS는 description이 제목 그대로)
+    hollow = [
+        it.get("id") for it in items
+        if not cardgen.is_cve_item(it)
+        and not cardgen.has_informative_summary(it)
+    ]
+    if hollow:
+        warnings.append(
+            f"제목=본문 껍데기 카드 {len(hollow)}건 — 사서 요약 없음 + 피드 요약이 제목과 동일: {hollow}"
+        )
 
     # --- WARNING: 개조식(명사형 종결) 요약 — 뉴스 카드 본문은 완결형 문장이어야 한다
     bad_style_ids = [

@@ -1032,6 +1032,13 @@ def main() -> None:
                                 continue
                             if any(dedup_lib.is_similar_event(cand, s) for s in to_send_news):
                                 continue
+                            # 백필은 사서 요약 없이 원문 폴백으로 실린다 —
+                            # 피드 요약이 제목과 동일한 껍데기(구글뉴스류)는
+                            # '제목=본문' 카드가 되므로 제외(2026-07-24 NO.17
+                            # 실측 2장). 해당 항목은 이월돼 다음 digest에서
+                            # 사서 판정을 다시 받는다.
+                            if not cardgen.has_informative_summary(cand):
+                                continue
                             to_send_news.append(cand)
                             selected_ids.add(cand["id"])
                         retained = [
