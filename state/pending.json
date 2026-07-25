@@ -6901,5 +6901,375 @@
     "tags": [],
     "title": "개인정보보호위 “유럽연합 일반개인정보보호법상 적정성 결정 유지”",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1mWHNIQm1KbDFRYzhPLWNSVUxwNG5aQTU2eTkxUEFkX1RWRm8zZ3h4S0ZwSUVaakhhY3duUmd5c05XVFFILV9vaGtuX21wVkRqa2FrSlFSWjc2LUxSbHA3TENOa2pqbzNWMU1J0gFuQVVfeXFMUFpBZWdOQ3UybW4wSW5yZGZmTkZ0Nk15dEItdDQ2dVprSE5mWTJZZDByVnNWclRQWjFJU3NTQURiWUdlbDBHNnZTNlBENmg5V2cxdnl3LXloYnhDanpmR25HRlFubm5VcHRDamhrOXc?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-30311",
+    "published": "2026-03-31T15:16:12.987",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ridvay Code's command auto-approval module contains a critical OS command injection vulnerability that renders its whitelist security mechanism completely ineffective. The system relies on fragile regular expressions to parse command structures; while it attempts to intercept dangerous operations, it fails to account for standard Shell command substitution Ridvay Code (specifically$(...)and backticks ...). An attacker can construct a command such as git log --grep=\"$(malicious_command)\", forcing Syntx to misidentify it as a safe git operation and automatically approve it. The underlying Shell prioritizes the execution of the malicious code injected within the arguments, resulting in Remote Code Execution without any user interaction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-30311 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30311"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-30312",
+    "published": "2026-03-31T15:16:13.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DSAI-Cline's command auto-approval module contains a critical OS command injection vulnerability that renders its whitelist security mechanism completely ineffective. The system relies on string-based parsing to validate commands; while it intercepts dangerous operators such as ;, &&, ||, |, and command substitution patterns, it fails to account for raw newline characters embedded within the input. An attacker can construct a payload by embedding a literal newline between a whitelisted command and malicious code (e.g., git log malicious_command), forcing DSAI-Cline to misidentify it as a safe operation and automatically approve it. The underlying PowerShell interpreter treats the newline as a command separator, executing both commands sequentially, resulting in Remote Code Execution without any user interaction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-30312 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30312"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-30314",
+    "published": "2026-03-31T15:16:13.233",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ridvay Code's command auto-approval module contains a critical OS command injection vulnerability that renders its whitelist security mechanism completely ineffective. The system relies on fragile regular expressions to parse command structures; while it attempts to intercept dangerous operations, it fails to account for standard Shell command substitution Ridvay Code (specifically$(...)and backticks ...). An attacker can construct a command such as git log --grep=\"$(malicious_command)\", forcing Syntx to misidentify it as a safe git operation and automatically approve it. The underlying Shell prioritizes the execution of the malicious code injected within the arguments, resulting in Remote Code Execution without any user interaction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-30314 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30314"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-1346",
+    "published": "2026-04-08T01:16:40.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 could allow a locally authenticated user to escalate their privileges to root due to execution with unnecessary privileges than required.",
+    "tags": [],
+    "title": "CVE-2026-1346 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1346"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-27143",
+    "published": "2026-04-08T02:16:03.017",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Arithmetic over induction variables in loops were not correctly checked for underflow or overflow. As a result, the compiler would allow for invalid indexing to occur at runtime, potentially leading to memory corruption.",
+    "tags": [],
+    "title": "CVE-2026-27143 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27143"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-2942",
+    "published": "2026-04-08T19:25:19.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'proSol_fileUploadProcess' function in all versions up to, and including, 1.9.9. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-2942 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2942"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-27304",
+    "published": "2026-04-14T22:16:29.417",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2023.18, 2025.6 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction.",
+    "tags": [],
+    "title": "CVE-2026-27304 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27304"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-32644",
+    "published": "2026-04-28T01:16:00.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Specific firmware versions of Milesight AIOT cameras use SSL certificates with default private keys.",
+    "tags": [],
+    "title": "CVE-2026-32644 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32644"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-27960",
+    "published": "2026-05-05T19:16:21.380",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. In versions 6.6.0 through 6.9.12, there is a privilege escalation vulnerability that can be exploited by unauthenticated attackers to query the API as any existing user, including the default admin account. This issue has been fixed in version 6.9.13. As a workaround, the default admin can be disabled using the `APP__ADMIN__EXTERNALLY_MANAGED` configuration.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-27960 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27960"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2021-47923",
+    "published": "2026-05-10T13:16:28.170",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenCart 3.0.3.8 contains a session fixation vulnerability that allows attackers to hijack user sessions by injecting arbitrary values into the OCSESSID cookie. Attackers can set malicious OCSESSID cookie values that the server accepts and maintains, enabling session takeover and unauthorized access to user accounts.",
+    "tags": [],
+    "title": "CVE-2021-47923 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47923"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-30309",
+    "published": "2026-03-31T15:16:12.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "InfCode's terminal auto-execution module contains a critical command filtering vulnerability that renders its blacklist security mechanism completely ineffective. The predefined blocklist fails to cover native high-risk commands in Windows PowerShell (such as powershell), and the matching algorithm lacks dynamic semantic parsing unable to recognize string concatenation, variable assignment, or double-quote interpolation in Shell syntax. Malicious commands can bypass interception through simple syntax obfuscation. An attacker can construct a file containing malicious instructions for remote code injection. When a user imports and views such a file in the IDE, the Agent executes dangerous PowerShell commands outside the blacklist without user confirmation, resulting in arbitrary command execution or sensitive data leakage.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-30309 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30309"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-30814",
+    "published": "2026-04-08T19:25:20.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stack-based buffer overflow in the tmpServer module of TP-Link Archer AX53 v1.0 allows an authenticated adjacent attacker to trigger a segmentation fault and potentially execute arbitrary code via a specially crafted configuration file. Successful exploitation may cause a crash and could allow arbitrary code execution, enabling modification of device state, exposure of sensitive data, or further compromise of device integrity.\n\nThis issue affects AX53 v1.0: before 1.7.1 Build 20260213.",
+    "tags": [],
+    "title": "CVE-2026-30814 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30814"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-30815",
+    "published": "2026-04-08T19:25:20.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability in the OpenVPN module\nof TP-Link Archer AX53 v1.0 allows an authenticated adjacent attacker to execute system commands when a specially crafted configuration file is processed due to insufficient input validation. Successful exploitation may allow modification of configuration files, disclosure of sensitive information, or further compromise of device integrity.\n\nThis issue affects AX53 v1.0: before 1.7.1 Build 20260213.",
+    "tags": [],
+    "title": "CVE-2026-30815 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30815"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-30818",
+    "published": "2026-04-08T19:25:20.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability in the dnsmasq module of TP-Link Archer AX53 v1.0 allows an authenticated adjacent attacker to execute arbitrary code when a specially crafted configuration file is processed due to insufficient input validation. Successful exploitation may allow the attacker to modify device configuration, access sensitive information, or further compromise system integrity.\n\nThis issue affects AX53 v1.0: before 1.7.1 Build 20260213.",
+    "tags": [],
+    "title": "CVE-2026-30818 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30818"
+  },
+  {
+    "category": "high",
+    "cvss": 4.4,
+    "id": "CVE-2026-32220",
+    "published": "2026-04-14T18:17:29.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper access control in Windows Virtualization-Based Security (VBS) Enclave allows an authorized attacker to bypass a security feature locally.",
+    "tags": [],
+    "title": "CVE-2026-32220 (CVSS 4.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32220"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-32221",
+    "published": "2026-04-14T18:17:30.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap-based buffer overflow in Microsoft Graphics Component allows an unauthorized attacker to execute code locally.",
+    "tags": [],
+    "title": "CVE-2026-32221 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32221"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-32222",
+    "published": "2026-04-14T18:17:30.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Untrusted pointer dereference in Windows Win32K - ICOMP allows an authorized attacker to elevate privileges locally.",
+    "tags": [],
+    "title": "CVE-2026-32222 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32222"
+  },
+  {
+    "category": "high",
+    "cvss": 6.8,
+    "id": "CVE-2026-32223",
+    "published": "2026-04-14T18:17:30.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap-based buffer overflow in Windows USB Print Driver allows an unauthorized attacker to elevate privileges with a physical attack.",
+    "tags": [],
+    "title": "CVE-2026-32223 (CVSS 6.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32223"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2026-32224",
+    "published": "2026-04-14T18:17:30.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Windows Server Update Service allows an authorized attacker to elevate privileges locally.",
+    "tags": [],
+    "title": "CVE-2026-32224 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32224"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-32225",
+    "published": "2026-04-14T18:17:30.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Protection mechanism failure in Windows Shell allows an unauthorized attacker to bypass a security feature over a network.",
+    "tags": [],
+    "title": "CVE-2026-32225 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32225"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-24893",
+    "published": "2026-04-14T21:16:24.987",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "openITCOCKPIT is an open source monitoring tool built for different monitoring engines. openITCOCKPIT Community Edition prior to version 5.5.2 contains a command injection vulnerability that allows an authenticated user with permission to add or modify hosts to execute arbitrary OS commands on the monitoring backend. The vulnerability arises because user-controlled host attributes (specifically the host address) are expanded into monitoring command templates without validation, escaping, or quoting. These templates are later executed by the monitoring engine (Nagios/Icinga) via a shell, resulting in remote code execution. Version 5.5.2 patches the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-24893 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24893"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-27305",
+    "published": "2026-04-14T22:16:29.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2023.18, 2025.6 and earlier are affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could lead to arbitrary file system read. An attacker could exploit this vulnerability to access sensitive files and directories outside the intended access scope. Exploitation of this issue does not require user interaction.",
+    "tags": [],
+    "title": "CVE-2026-27305 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27305"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-27306",
+    "published": "2026-04-14T22:16:29.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ColdFusion versions 2023.18, 2025.6 and earlier are affected by an Improper Input Validation vulnerability that could result in arbitrary code execution in the context of the current user. Attacker requires elevated privileges. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+    "tags": [],
+    "title": "CVE-2026-27306 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27306"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-27290",
+    "published": "2026-04-14T23:16:25.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Framemaker versions 2022.8 and earlier are affected by an Untrusted Search Path vulnerability that might allow attackers to execute arbitrary code in the context of the current user. If the application uses a search path to locate critical resources such as programs, then an attacker could modify that search path to point to a malicious program, which the targeted application would then execute. Exploitation of this issue does not require user interaction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-27290 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27290"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-27785",
+    "published": "2026-04-28T00:16:23.127",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Specific firmware versions of Milesight AIOT camera firmware contain hard-coded credentials.",
+    "tags": [],
+    "title": "CVE-2026-27785 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27785"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25588",
+    "published": "2026-05-05T17:17:03.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "RedisTimeSeries is a time-series module for Redis. In all versions before 1.12.14 of RedisTimeSeries, the module does not properly validate serialized values processed through the Redis RESTORE command. An authenticated attacker with permission to execute RESTORE on a server with the RedisTimeSeries module loaded can supply a crafted serialized payload that triggers invalid memory access and may lead to remote code execution. A workaround is to restrict access to the RESTORE command with ACL rules. This has been patched in version 1.12.14.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25588 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25588"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-25589",
+    "published": "2026-05-05T17:17:03.940",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "RedisBloom is a probabilistic data structures module for Redis. In all versions of RedisBloom before 2.8.20, the module does not properly validate serialized values processed through the Redis RESTORE command. An authenticated attacker with permission to execute RESTORE on a server with the RedisBloom module loaded can supply a crafted serialized payload that triggers invalid memory access and may lead to remote code execution. A workaround is to restrict access to the RESTORE command with ACL rules. This issue is fixed in version 2.8.20.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-25589 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25589"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-32603",
+    "published": "2026-05-05T20:16:35.540",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sandboxie is an open source sandbox-based isolation software for Windows. In versions 1.17.2 and earlier, a local denial of service vulnerability exists in the Sandboxie kernel driver. An unprivileged process running inside a Standard Sandbox can send a malformed IOCTL to the \\Device\\SandboxieDriverApi driver, triggering an immediate kernel crash (BSOD). The vulnerability affects the Standard Sandbox configuration both with and without dropped administrator privileges, but does not affect the Security Hardened Sandbox configuration. This issue has been fixed in version 1.17.3. Users who cannot update can use the Security Hardened Sandbox configuration as a workaround.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-32603 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32603"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-42452",
+    "published": "2026-05-08T23:16:38.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities. Prior to version 2.1.0, /users/login issues a temporary JWT (temp_token) for TOTP-enabled accounts. That token carries a pendingTOTP state and should only be valid for the second-factor flow. However, the auth middleware accepts this token on regular authenticated endpoints. This effectively turns 2FA into single-factor (password) for impacted accounts. This issue has been patched in version 2.1.0.",
+    "tags": [],
+    "title": "CVE-2026-42452 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42452"
   }
 ]
