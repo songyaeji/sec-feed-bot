@@ -1,0 +1,53 @@
+# 단위 테스트 CI — push/PR 전용. collect.yml(10분 주기 수집 run)에는
+# 태우지 않는다: 테스트는 코드가 바뀔 때만 의미 있고, 수집 run은 지금도
+# 분 단위로 돌아 부담을 더하면 안 된다. state 봇 커밋([skip ci])은
+# paths 필터로도 걸러진다(코드 아닌 state/wiki만 바꿈).
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - 'config.yaml'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    paths:
+      - '**.py'
+      - 'requirements.txt'
+      - 'config.yaml'
+      - '.github/workflows/ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pytest
+
+      # config.yaml 로드 + 전 모듈 import 스모크 — 문법 오류·죽은 import를
+      # 수집 run 전에 잡는다 (playwright 브라우저 실행은 없어 바이너리 불필요)
+      - name: Smoke (config + imports)
+        run: |
+          python - <<'PY'
+          import yaml
+          cfg = yaml.safe_load(open("config.yaml"))
+          assert cfg.get("sources"), "config.yaml sources 비어 있음"
+          import main  # noqa: F401 -- top-level import가 전 모듈을 당긴다
+          print(f"config ok ({len(cfg['sources'])} sources), imports ok")
+          PY
+
+      - name: Run unit tests
+        run: python -m pytest tests/ -q
