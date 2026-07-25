@@ -3331,5 +3331,203 @@
     "tags": [],
     "title": "OpenAI confirms ChatGPT is down worldwide",
     "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-confirms-chatgpt-is-down-worldwide/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-32916",
+    "published": "2026-03-31T12:16:28.197",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenClaw versions 2026.3.7 before 2026.3.11 contain an authorization bypass vulnerability where plugin subagent routes execute gateway methods through a synthetic operator client with broad administrative scopes. Remote unauthenticated requests to plugin-owned routes can invoke runtime.subagent methods to perform privileged gateway actions including session deletion and agent execution.",
+    "tags": [],
+    "title": "CVE-2026-32916 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32916"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-32917",
+    "published": "2026-03-31T12:16:28.487",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.13 contains a remote command injection vulnerability in the iMessage attachment staging flow that allows attackers to execute arbitrary commands on configured remote hosts. The vulnerability exists because unsanitized remote attachment paths containing shell metacharacters are passed directly to the SCP remote operand without validation, enabling command execution when remote attachment staging is enabled.",
+    "tags": [],
+    "title": "CVE-2026-32917 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32917"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-30310",
+    "published": "2026-03-31T14:16:11.390",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In its design for automatic terminal command execution, Sixth offers two options: Execute safe commands and Execute all commands. The description for the former states that commands determined by the model to be safe will be automatically executed, whereas if the model judges a command to be potentially destructive, it still requires user approval. However, this design is highly susceptible to prompt injection attacks. An attacker can employ a generic template to wrap any malicious command and mislead the model into misclassifying it as a 'safe' command, thereby bypassing the user approval requirement and resulting in arbitrary command execution.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-30310 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30310"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-3296",
+    "published": "2026-04-08T02:16:04.067",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Everest Forms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.4.3 via deserialization of untrusted input from form entry metadata. This is due to the html-admin-page-entries-view.php file calling PHP's native unserialize() on stored entry meta values without passing the allowed_classes parameter. This makes it possible for unauthenticated attackers to inject a serialized PHP object payload through any public Everest Forms form field. The payload survives sanitize_text_field() sanitization (serialization control characters are not stripped) and is stored in the wp_evf_entrymeta database table. When an administrator views entries or views an individual entry, the unsafe unserialize() call processes the stored data without class restrictions.",
+    "tags": [],
+    "title": "CVE-2026-3296 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3296"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-25776",
+    "published": "2026-04-08T09:16:20.360",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Movable Type provided by Six Apart Ltd. contains a code injection vulnerability which may allow an attacker to execute arbitrary Perl script.",
+    "tags": [],
+    "title": "CVE-2026-25776 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25776"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-31040",
+    "published": "2026-04-08T16:16:22.977",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in stata-mcp prior to v1.13.0 where insufficient validation of user-supplied Stata do-file content can lead to command execution.",
+    "tags": [],
+    "title": "CVE-2026-31040 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31040"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2023-46945",
+    "published": "2026-04-08T17:17:01.010",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "QD 20230821 is vulnerable to Server-side request forgery (SSRF) via a crafted request",
+    "tags": [],
+    "title": "CVE-2023-46945 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-46945"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-31017",
+    "published": "2026-04-08T17:21:18.737",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A Server-Side Request Forgery (SSRF) vulnerability exists in the Print Format functionality of ERPNext v16.0.1 and Frappe Framework v16.1.1, where user-supplied HTML is insufficiently sanitized before being rendered into PDF. When generating PDFs from user-controlled HTML content, the application allows the inclusion of HTML elements such as <iframe> that reference external resources. The PDF rendering engine automatically fetches these resources on the server side. An attacker can abuse this behavior to force the server to make arbitrary HTTP requests to internal services, including cloud metadata endpoints, potentially leading to sensitive information disclosure.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-31017 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31017"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-52221",
+    "published": "2026-04-08T18:24:51.257",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tenda AC6 15.03.05.16_multi is vulnerable to Buffer Overflow in the formSetCfm function via the funcname, funcpara1, and funcpara2 parameters.",
+    "tags": [],
+    "title": "CVE-2025-52221 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52221"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2024-14030",
+    "published": "2026-03-31T12:16:26.153",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sereal::Decoder versions from 4.000 through 4.009_002 for Perl embeds a vulnerable version of the Zstandard library.\n\nSereal::Decoder embeds a version of the Zstandard (zstd) library that is vulnerable to CVE-2019-11922.  This is a race condition in the one-pass compression functions of Zstandard prior to version 1.3.8 could allow an attacker to write bytes out of bounds if an output buffer smaller than the recommended size was used.",
+    "tags": [],
+    "title": "CVE-2024-14030 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-14030"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2024-14031",
+    "published": "2026-03-31T12:16:26.310",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sereal::Encoder versions from 4.000 through 4.009_002 for Perl embeds a vulnerable version of the Zstandard library.\n\nSereal::Encoder embeds a version of the Zstandard (zstd) library that is vulnerable to CVE-2019-11922.  This is a race condition in the one-pass compression functions of Zstandard prior to version 1.3.8 could allow an attacker to write bytes out of bounds if an output buffer smaller than the recommended size was used.",
+    "tags": [],
+    "title": "CVE-2024-14031 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-14031"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-32920",
+    "published": "2026-03-31T12:16:28.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenClaw before 2026.3.12 automatically discovers and loads plugins from .OpenClaw/extensions/ without explicit trust verification, allowing arbitrary code execution. Attackers can execute malicious code by including crafted workspace plugins in cloned repositories that execute when users run OpenClaw from the directory.",
+    "tags": [],
+    "title": "CVE-2026-32920 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32920"
+  },
+  {
+    "category": "high",
+    "cvss": 4.1,
+    "id": "CVE-2026-1163",
+    "published": "2026-04-08T03:16:07.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An insufficient session expiration vulnerability exists in the latest version of parisneo/lollms. The application fails to invalidate active sessions after a password reset, allowing an attacker to continue using an old session token. This issue arises due to the absence of logic to reject requests after a period of inactivity and the excessively long default session duration of 31 days. The vulnerability enables an attacker to maintain persistent access to a compromised account, even after the victim resets their password.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-1163 (CVSS 4.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1163"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-24913",
+    "published": "2026-04-08T06:16:27.073",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SQL Injection vulnerability exists in MATCHA INVOICE 2.6.6 and earlier. If this vulnerability is exploited, information stored in the database may be obtained or altered by a user who can log in to the product.",
+    "tags": [],
+    "title": "CVE-2026-24913 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24913"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-30075",
+    "published": "2026-04-08T17:21:18.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenAirInterface Version 2.2.0 has a Buffer Overflow vulnerability in processing UplinkNASTransport containing Authentication Response containing a NAS PDU with oversize response (For example 100 byte). The response is decoded by AMF and passed to the AUSF component for verification. AUSF crashes on receiving this oversize response. This can prohibit users from further registration and verification and can cause Denial of Services (DoS).",
+    "tags": [],
+    "title": "CVE-2026-30075 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30075"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-30080",
+    "published": "2026-04-08T17:21:18.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenAirInterface v2.2.0 accepts Security Mode Complete without any integrity protection. Configuration has supported integrity NIA1 and NIA2. But if an UE sends initial registration request with only security capability IA0, OpenAirInterface accepts and proceeds. This downgrade security context can lead to the possibility of replay attack.",
+    "tags": [],
+    "title": "CVE-2026-30080 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-30080"
   }
 ]
