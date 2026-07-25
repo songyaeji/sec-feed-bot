@@ -12,7 +12,7 @@ html.escape를 거치므로 피드 본문에 섞인 마크업이 카드 레이�
 v20: 텍스트 온리 — 이미지·다이어그램 슬롯 없음, 수치 pull-out이 시각 앵커.
 
 렌더는 Playwright(chromium) 스크린샷. import는 함수 안에서 지연 —
-realtime 모드(20분 cron)는 카드뉴스를 만들지 않으므로 playwright가
+realtime 모드(10분 주기 dispatch)는 카드뉴스를 만들지 않으므로 playwright가
 설치돼 있지 않아도 돌아가야 한다. 렌더 중 예외는 삼키지 않고 그대로
 올린다: 호출자(main.py)가 기존 텍스트 다이제스트로 fail-open 폴백한다.
 """

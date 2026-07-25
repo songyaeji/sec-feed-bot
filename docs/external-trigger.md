@@ -36,26 +36,25 @@ GitHub Actions 예약 cron(`*/20`)은 지연·스킵이 구조적이다(공식 �
 3. 저장 후 Test run 1회 → GitHub repo Actions 탭에 workflow_dispatch 런이
    생기는지 확인. **성공 응답은 204 No Content(본문 없음)** — 200이 아니어도 정상.
 
-## 2-1. digest 잡 등록 (아침 카드뉴스 — 사용자 직접)
+## 2-1. digest 발행 경로 (아침 카드뉴스 — 자가 승격, 별도 잡 불필요)
 
-GitHub schedule cron만으로는 digest 발화가 21:50 UTC 예약에서 실측
-50분+ 밀린다(2026-07-10: 52분 지연 → 07:00 KST 발행 실패). realtime과
-동일하게 cron-job.org를 주 경로로, GitHub cron(`50 21 * * *`)을 안전망으로
-쓴다. main.py의 `last_digest_date` 가드(state/seen.json, KST 날짜)가 같은
-날 두 번째 digest를 realtime으로 강등해 이중 발행을 막는다 — 그래서 두
-경로가 겹쳐도 안전하다.
+digest 전용 트리거는 등록하지 않는다(2026-07-25 결정). 이유:
+- GitHub schedule cron(`50 21 * * *`)은 실측 50분+ 지연(2026-07-10: 52분
+  지연 → 07:00 KST 발행 실패)에다, concurrency 큐(pending 1칸)에 겹치면
+  뒤 run에 축출돼 미발행 사고를 만들었다(2026-07-24) — collect.yml에서
+  제거됨.
+- 대신 collect.yml "Determine run mode" step의 **자가 승격**이 digest
+  진입로: realtime run이 "KST 06:50~12:00 && 오늘 digest 미발행
+  (`last_digest_date` != 오늘)" 조건이면 스스로 digest로 승격한다.
+  10분 주기 realtime dispatch가 곧 digest 재시도 루프(self-healing).
+- cron-job.org 장애 시에도 GitHub의 hourly fallback cron(`15 * * * *`)이
+  같은 창에서 승격한다(07:15~11:15, 5회 기회).
 
-1. cron-job.org → Create cronjob (두 번째 잡, 기존 PAT 재사용)
-2. 설정 — URL·method·헤더는 realtime 잡과 동일, 차이는 둘뿐:
-   - **Schedule**: 매일 21:50 UTC (= 06:50 KST. cron-job.org 잡 시간대를
-     UTC로 두었는지 확인)
-   - **Request body**:
-     ```json
-     {"ref": "main", "inputs": {"mode": "digest"}}
-     ```
-3. Test run 1회 → Actions 탭에 workflow_dispatch 런 생성 확인. 단, 실제
-   digest 발행까지 확인하려면 그날 `last_digest_date`가 오늘이 아니어야
-   한다(이미 발행된 날의 테스트 런은 realtime으로 강등되는 게 정상).
+main.py의 `last_digest_date` 가드(state/seen.json, KST 날짜)가 같은 날
+두 번째 digest를 realtime으로 강등해 이중 발행을 막는다. 시간창 밖
+수동 재발송은 workflow_dispatch inputs(`allow_offhour`/`force_digest`)로만
+한다 — cron-job.org payload에 `mode: digest`를 넣지 않는다(2026-07-12
+자정 오발행 사고 원인).
 
 주의: main.py에 digest 허용 시간창 가드가 있다 — KST 06~12시 밖에 도착한
 digest는 realtime으로 강등된다(2026-07-12 사고: realtime 잡 payload가

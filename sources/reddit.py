@@ -16,6 +16,8 @@ from datetime import datetime, timezone
 import feedparser
 import requests
 
+from sources.rss import _BROWSER_UA
+
 FEED_URL = "https://www.reddit.com/r/{subs}/top/.rss?t=day&limit=100"
 DEFAULT_PER_SUB = 3
 
@@ -26,11 +28,13 @@ def fetch(source_cfg: dict) -> list[dict]:
         return []
     per_sub = int(source_cfg.get("per_subreddit", DEFAULT_PER_SUB))
 
-    resp = requests.get(
-        FEED_URL.format(subs="+".join(subs)),
-        timeout=20,
-        headers={"User-Agent": "sec-feed-bot/1.0"},
-    )
+    url = FEED_URL.format(subs="+".join(subs))
+    resp = requests.get(url, timeout=20, headers={"User-Agent": "sec-feed-bot/1.0"})
+    if resp.status_code in (403, 406, 429):
+        # 레딧이 데이터센터 IP + 봇 UA 조합을 429로 상시 차단(2026-07-25
+        # Actions 실측: 25/25 run 실패) — rss.py와 같은 브라우저 UA 1회
+        # 재시도. 정상 응답이면 이 분기를 안 탄다.
+        resp = requests.get(url, timeout=20, headers={"User-Agent": _BROWSER_UA})
     resp.raise_for_status()
     feed = feedparser.parse(resp.content)
 

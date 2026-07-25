@@ -44,7 +44,9 @@ sources:
 
   - name: "보안뉴스"
     type: rss
-    url: "http://www.boannews.com/media/news_rss.xml"
+    # https 전환(2026-07-25) — http:80이 Actions에서 간헐 ConnectTimeout,
+    # https는 200 확인. 평문 fetch 제거 겸.
+    url: "https://www.boannews.com/media/news_rss.xml"
     category: "news"
     region: "국내"
 
@@ -124,14 +126,9 @@ sources:
     category: "high"
     region: "해외"
 
-  # 2026-07-07 추가 (feedparser 실fetch 검증) — AI보안·위협인텔·실무 축 보강
-  # AI/ML 취약점 공개(huntr 연계) — 사용자 AI기업보안트랙 직결
-  - name: "Protect AI"
-    type: rss
-    url: "https://protectai.com/blog/rss.xml"
-    max_age_days: false  # 연구/벤더/릴리스 피드 — 오래돼도 유효, 전역 신선도 게이트 제외
-    category: "ai"
-    region: "해외"
+  # Protect AI 소스 제거(2026-07-25) — Palo Alto 인수 후 도메인 전체가
+  # Prisma AIRS 페이지로 301, /blog/rss.xml은 404(실fetch). 후속 콘텐츠는
+  # 기존 Unit 42 소스가 커버한다.
 
   # 위협 인텔·멀웨어 분석 — 공격 체인 다이어그램이 유의미해 카드 이미지로 씀
   # (직접 RSS는 봇 UA에 403 → feedburner 미러가 안정적으로 열림)

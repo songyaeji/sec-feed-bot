@@ -2,8 +2,15 @@ name: Collect security feeds
 
 on:
   schedule:
-    - cron: '*/20 * * * *'   # realtime fallback (primary = cron-job.org 10min dispatch, docs/external-trigger.md)
-    - cron: '50 21 * * *'    # digest: KST 07:00 (UTC+9), 10 min early for Actions delay
+    # realtime 주 트리거는 cron-job.org 10분 dispatch(docs/external-trigger.md).
+    # 예전 */20 fallback은 dispatch와 겹쳐 concurrency 큐(pending 1칸)를
+    # 스스로 밀어내는 취소를 유발(2026-07-25 08:56 run cancelled 실측) —
+    # 시간당 1회, dispatch 시각(:00/:10/…)과 어긋난 :15로 낮춰 유지한다
+    # (cron-job.org 장애 시에도 수집·digest 자가 승격이 완전히 멎지 않게).
+    # digest 전용 cron(50 21)은 제거(2026-07-25) — schedule 지연 ~54분
+    # 실측으로 자가 승격(아래 run mode step)이 사실상 주 발행 경로가 됐고,
+    # cron이 큐에 겹치면 오히려 축출 사고를 만들었다(2026-07-24).
+    - cron: '15 * * * *'     # realtime fallback (primary = cron-job.org dispatch)
   workflow_dispatch:
     inputs:
       mode:
@@ -44,10 +51,10 @@ jobs:
     timeout-minutes: 38
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: 'pip'
@@ -62,15 +69,14 @@ jobs:
           # 방어 — github.event.* 값은 env로만 받는 것이 GitHub 권장)
           DISPATCH_MODE: ${{ github.event.inputs.mode }}
         run: |
-          # digest cron -> digest; workflow_dispatch -> the chosen input;
-          # anything else (the */20 realtime cron) -> realtime
+          # workflow_dispatch -> the chosen input; anything else (the hourly
+          # realtime fallback cron) -> realtime. digest는 아래 자가 승격이
+          # 유일한 진입로(전용 digest cron은 2026-07-25 제거).
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             case "$DISPATCH_MODE" in
               realtime|digest) MODE="$DISPATCH_MODE" ;;
               *) MODE=realtime ;;
             esac
-          elif [ "${{ github.event.schedule }}" = "50 21 * * *" ]; then
-            MODE=digest
           else
             MODE=realtime
           fi

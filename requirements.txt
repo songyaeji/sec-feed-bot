@@ -1,5 +1,8 @@
-feedparser
-requests
-pyyaml
-playwright
-pillow
+# 버전 고정(2026-07-25) — collect.yml의 playwright 브라우저 캐시 키가
+# hashFiles(requirements.txt)라 미고정이면 pip 신버전 설치 후에도 옛
+# 브라우저 캐시를 계속 씀(캐시 무효화 불능). 재현성 겸 로컬 venv 기준 고정.
+feedparser==6.0.12
+requests==2.34.2
+pyyaml==6.0.3
+playwright==1.61.0
+pillow==12.3.0
