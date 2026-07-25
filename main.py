@@ -1,18 +1,19 @@
-"""Entry point: fetch -> filter -> dedup -> notify -> persist state.
+"""Entry point orchestration: fetch -> filter -> dedup -> notify -> persist.
 
 Run by GitHub Actions every ~10 minutes (external cron-job.org trigger
-via workflow_dispatch — see docs/external-trigger.md; the */20 cron is a
-fallback). This script only writes state/seen.json locally; the workflow
-(not this script) is responsible for committing that file back to the
-repo.
+via workflow_dispatch — see docs/external-trigger.md; an hourly schedule
+cron is the fallback). This script only writes state/seen.json locally;
+the workflow (not this script) is responsible for committing that file
+back to the repo.
+
+로직은 응집 그룹별 모듈로 분리돼 있다(2026-07-25 분할): common(경로·마스킹)
+/ state_store(상태 I/O) / collect(소스 수집) / digest_select(카드 선별) /
+wiki_index(INDEX 정리) / trend_lane(트렌드 픽). main()은 흐름 조립만 맡는다.
 """
 import json
 import os
-import re
 import sys
 from datetime import datetime, timedelta, timezone
-
-import yaml
 
 import cardgen
 import dedup as dedup_lib
@@ -22,194 +23,23 @@ import notify
 import preflight
 import tagger
 import trend_enrich
-from sources import (
-    dblp, fsec, fss, github_trend, hackernews, kev, nvd, reddit, rss)
+from collect import collect_all, dedup, max_items_per_run
+from common import STATE_DIR, _safe_exc_str
+from digest_select import (
+    _author_penalty, _dedup_by_topic, _dedup_similar, _fallback_keywords,
+    _issue_no, _source_regions, _split_fresh)
+from state_store import (  # noqa: F401 -- SEEN_TTL_DAYS는 tests가 main 경유로 참조
+    SEEN_TTL_DAYS, append_pending, load_config, load_pending, load_state,
+    prune_seen, save_pending, save_state)
+from trend_lane import _publish_trend, _select_trend, _should_send_trend
+from wiki_index import _prune_wiki_index
 
 # 크로스포스트(인스타/쓰레드)는 crosspost.py CLI로 분리됐다 — Instagram
 # Graph API가 '공개 URL + JPEG'만 받아 디스코드 첨부(PNG)로는 발행이
 # 불가능하기 때문. collect.yml이 포트폴리오 push 후 crosspost.py를
 # 별도 스텝으로 실행한다(_publish_trend가 JPEG 사본과 meta를 남긴다).
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CONFIG_PATH = os.path.join(BASE_DIR, "config.yaml")
-STATE_DIR = os.path.join(BASE_DIR, "state")
-STATE_PATH = os.path.join(STATE_DIR, "seen.json")
-PENDING_PATH = os.path.join(STATE_DIR, "pending.json")
-# 포트폴리오(songyaeji.github.io) Trend 탭 게시 산출물 — collect.yml의
-# 후속 스텝이 이 디렉터리를 포트폴리오 repo로 push한다
-TREND_DIR = os.path.join(BASE_DIR, "out", "trend")
-
-SEEN_TTL_DAYS = 90
-
 SEVERITY_ORDER = {"critical": 0, "high": 1, "info": 2}
-
-# requests exceptions can embed the request URL (e.g. connection/timeout
-# errors), and webhook URLs carry a bearer token in their path, so any
-# exception text we print must have that token pattern masked first
-WEBHOOK_TOKEN_RE = re.compile(r"webhooks/\d+/[\w-]+")
-
-
-def _safe_exc_str(exc: Exception) -> str:
-    return f"{type(exc).__name__}: {WEBHOOK_TOKEN_RE.sub('webhooks/***', str(exc))}"
-
-FETCHERS = {
-    "kev": kev.fetch,
-    "nvd": nvd.fetch,
-    "rss": rss.fetch,
-    "fsec": fsec.fetch,
-    "fss": fss.fetch,
-    "dblp": dblp.fetch,
-    "hn": hackernews.fetch,
-    "reddit": reddit.fetch,
-    "github": github_trend.fetch,
-}
-
-
-def load_config() -> dict:
-    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
-
-
-def load_state() -> dict:
-    if not os.path.exists(STATE_PATH):
-        return {"seen": {}, "last_run": None}
-    with open(STATE_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    # tolerate the repo's initial placeholder value of `{}`
-    if "seen" not in data:
-        data = {"seen": {}, "last_run": data.get("last_run")}
-    return data
-
-
-def save_state(state: dict) -> None:
-    os.makedirs(os.path.dirname(STATE_PATH), exist_ok=True)
-    with open(STATE_PATH, "w", encoding="utf-8") as f:
-        json.dump(state, f, indent=2, sort_keys=True)
-        f.write("\n")
-
-
-def load_pending() -> list[dict]:
-    if not os.path.exists(PENDING_PATH):
-        return []
-    with open(PENDING_PATH, "r", encoding="utf-8") as f:
-        try:
-            data = json.load(f)
-        except json.JSONDecodeError:
-            return []
-    return data if isinstance(data, list) else []
-
-
-def save_pending(pending: list[dict]) -> None:
-    os.makedirs(STATE_DIR, exist_ok=True)
-    with open(PENDING_PATH, "w", encoding="utf-8") as f:
-        json.dump(pending, f, indent=2, sort_keys=True, ensure_ascii=False)
-        f.write("\n")
-
-
-def append_pending(pending: list[dict], new_items: list[dict]) -> list[dict]:
-    # realtime mode calls this every ~10 minutes; an id already sitting in
-    # pending.json (queued but not yet flushed by a digest run) must not be
-    # appended a second time
-    existing_ids = {it["id"] for it in pending}
-    for item in new_items:
-        if item["id"] in existing_ids:
-            continue
-        pending.append(item)
-        existing_ids.add(item["id"])
-    return pending
-
-
-def prune_seen(seen: dict) -> dict:
-    # without pruning, seen.json grows forever since every dedup id is
-    # kept indefinitely; 90 days is far longer than any re-alert window
-    # we care about, so it's safe to drop older entries
-    cutoff = datetime.now(timezone.utc) - timedelta(days=SEEN_TTL_DAYS)
-    pruned = {}
-    for item_id, first_seen in seen.items():
-        try:
-            seen_dt = datetime.fromisoformat(first_seen)
-        except (TypeError, ValueError):
-            continue
-        if seen_dt >= cutoff:
-            pruned[item_id] = first_seen
-    return pruned
-
-
-def _author_penalty(item: dict, config: dict) -> int:
-    # deprioritize_authors 규칙에 걸리는 바이라인이면 importance 감점폭을 돌려준다.
-    # 여러 규칙에 걸리면 가장 큰 penalty만 적용(중복 감점 안 함)
-    author = item.get("author") or ""
-    source = item.get("source") or ""
-    pen = 0
-    for rule in config.get("deprioritize_authors", []):
-        rule_source = rule.get("source")
-        if rule_source and rule_source != source:
-            continue
-        needle = rule.get("author_contains")
-        if needle and needle in author:
-            pen = max(pen, int(rule.get("penalty", 1)))
-    return pen
-
-
-def collect_all(config: dict, state: dict) -> list[dict]:
-    all_items = []
-    for source_cfg in config.get("sources", []):
-        source_type = source_cfg.get("type")
-        fetcher = FETCHERS.get(source_type)
-        name = source_cfg.get("name", "<unnamed>")
-
-        if fetcher is None:
-            print(f"[main] unknown source type '{source_type}' for '{name}', skipping", file=sys.stderr)
-            continue
-
-        try:
-            if source_type == "nvd":
-                items = fetcher(source_cfg, state, config)
-            elif source_type in ("rss", "fsec", "fss"):
-                items = fetcher(source_cfg, state, config)
-            else:
-                items = fetcher(source_cfg)
-            # v8: 소스 단위 urgent 플래그 폐기 — 즉시 발송은 judge.py
-            # (대형 사건 판정)만 결정한다. breaking 소스(HN·레딧)는
-            # 판정 전용: 긴급 아니면 다이제스트에도 안 싣고 버린다
-            if source_cfg.get("breaking"):
-                for item in items:
-                    item["breaking"] = True
-            # 트렌드 라운드로빈 묶음 키 — 유튜브 채널 4개가 각각 소스로
-            # 잡혀 링크 섹션을 독식하는 것 방지(_select_trend가 본다)
-            if source_cfg.get("trend_group"):
-                for item in items:
-                    item["trend_group"] = source_cfg["trend_group"]
-            print(f"[main] {name}: fetched {len(items)} item(s)", file=sys.stderr)
-            all_items.extend(items)
-        except Exception as exc:
-            # one flaky source (network blip, bad feed URL, etc.) should
-            # never take down the whole run; mask potential webhook
-            # tokens since some requests exceptions embed the request URL
-            print(f"[main] source '{name}' failed: {_safe_exc_str(exc)}", file=sys.stderr)
-    return all_items
-
-
-def max_items_per_run(config: dict) -> int | None:
-    # applies only to individual cards (urgent items); the digest embed
-    # already caps itself at DIGEST_MAX_LINES per category ("...외 N건"),
-    # so it never needs this cap. env wins over config so a workflow can
-    # raise/lower the cap without a commit
-    env_value = os.environ.get("MAX_ITEMS_PER_RUN")
-    if env_value is not None:
-        try:
-            return int(env_value)
-        except ValueError:
-            print(f"[main] invalid MAX_ITEMS_PER_RUN '{env_value}', ignoring", file=sys.stderr)
-    return config.get("max_items_per_run")
-
-
-def dedup(items: list[dict], seen: dict) -> list[dict]:
-    new_items = []
-    for item in items:
-        if item["id"] not in seen:
-            new_items.append(item)
-    return new_items
 
 
 def _print_dry_run_stats(card_items: list[dict], non_urgent_items: list[dict]) -> None:
@@ -228,176 +58,6 @@ def _print_dry_run_stats(card_items: list[dict], non_urgent_items: list[dict]) -
         category_counts[item.get("category")] = category_counts.get(item.get("category"), 0) + 1
     for category, count in category_counts.items():
         print(f"[main] non-urgent category '{category}': {count}건 -> digest")
-
-
-def _source_regions(config: dict) -> dict[str, str]:
-    # 카드 국내/해외 pill — config sources[].region ("국내"/"해외").
-    # 미지정 소스는 맵에서 빠져 카드에서 표기를 생략한다
-    return {
-        s.get("name"): s["region"]
-        for s in config.get("sources", [])
-        if s.get("region")
-    }
-
-
-def _dedup_by_topic(items: list[dict], verdicts: dict) -> list[dict]:
-    """같은 위키 토픽(slug)에 매인 카드 후보가 2건 이상이면 1건만 남긴다.
-
-    사서 LLM이 같은 사건의 교차 소스 보도를 skip_duplicate로 못 걸러도
-    (GodDamn/PoisonX 2026-07-10 사례: THN·Security Affairs 각각 new/update
-    판정 → 카드 2장) topic slug는 같게 주므로, 여기서 결정적으로 차단한다.
-    생존자는 카드 정렬 기준과 동일한 (-importance, -heuristic_score) 우선.
-    slug가 유효한 문자열이 아니면(null/누락) 판단 근거가 없으므로 그대로
-    통과시킨다 — 사서 출력 불량이 카드를 지우면 안 된다(fail-open)."""
-    best_by_topic: dict[str, dict] = {}
-    dup_counts: dict[str, int] = {}
-    for item in items:
-        topic = verdicts.get(item["id"], {}).get("topic")
-        if not (isinstance(topic, str) and topic.strip()):
-            continue
-        topic = topic.strip()
-        current = best_by_topic.get(topic)
-        if current is None:
-            best_by_topic[topic] = item
-            continue
-        dup_counts[topic] = dup_counts.get(topic, 0) + 1
-        challenger_key = (-item.get("importance", 3), -cardgen.heuristic_score(item))
-        current_key = (-current.get("importance", 3), -cardgen.heuristic_score(current))
-        if challenger_key < current_key:
-            best_by_topic[topic] = item
-
-    for topic, count in dup_counts.items():
-        print(
-            f"[main] 같은 토픽 카드 중복 {count}건 제외 (topic={topic})",
-            file=sys.stderr,
-        )
-
-    winners = {id(it) for it in best_by_topic.values()}
-
-    def _keep(item: dict) -> bool:
-        topic = verdicts.get(item["id"], {}).get("topic")
-        if not (isinstance(topic, str) and topic.strip()):
-            return True  # topic 없음 — fail-open 통과
-        return id(item) in winners
-
-    return [it for it in items if _keep(it)]
-
-
-def _split_fresh(items: list[dict], seen: dict, ttl_days: int) -> tuple[list[dict], int]:
-    """pending TTL — seen 최초 목격이 ttl_days보다 오래된 항목을 걸러낸다.
-    카드뉴스는 일간 동향이라 며칠씩 이월된 무판정 꼬리는 카드 가치가 없고,
-    이월 무한 누적(사서 예산 재초과 → 뉴스 유실 재발)의 원인이 된다.
-    이번 run에서 처음 본 항목은 seen에 아직 없다 — 신선 취급."""
-    cutoff = datetime.now(timezone.utc) - timedelta(days=ttl_days)
-    fresh: list[dict] = []
-    stale = 0
-    for item in items:
-        first_seen = seen.get(item.get("id"))
-        if first_seen:
-            try:
-                if datetime.fromisoformat(first_seen) < cutoff:
-                    stale += 1
-                    continue
-            except (TypeError, ValueError):
-                pass
-        fresh.append(item)
-    return fresh, stale
-
-
-def _dedup_similar(items: list[dict]) -> list[dict]:
-    """결정적 유사 사건 dedup — CVE 교집합 또는 제목(원문·한국어) 토큰
-    유사도로 같은 사건의 교차 소스 보도를 걸러낸다. topic slug 백스톱
-    (_dedup_by_topic)은 사서가 두 배치에서 다른 slug를 주면 뚫린다
-    (2026-07 사용자 보고: 같은 내용 카드 2장) — slug와 무관한 최종
-    방어선. 중요도 상위가 생존한다."""
-    kept: list[dict] = []
-    for item in sorted(
-        items,
-        key=lambda it: (-(it.get("importance") or 0), -cardgen.heuristic_score(it)),
-    ):
-        dup = next((k for k in kept if dedup_lib.is_similar_event(item, k)), None)
-        if dup is not None:
-            print(
-                f"[main] 유사 사건 카드 중복 제외: {item.get('title_ko') or item.get('title')} "
-                f"(대표: {dup.get('title_ko') or dup.get('title')})",
-                file=sys.stderr,
-            )
-            continue
-        kept.append(item)
-    return kept
-
-
-def _fallback_keywords(items: list[dict], limit: int = 4) -> list[str]:
-    # 사서가 keywords를 못 준 날의 표지 해시태그 — 태그 빈도 상위로 대체
-    counts: dict[str, int] = {}
-    for item in items:
-        for tag in item.get("tags") or []:
-            counts[tag] = counts.get(tag, 0) + 1
-    return [t for t, _ in sorted(counts.items(), key=lambda x: -x[1])[:limit]]
-
-
-# 날짜 기반 회차의 기본 기준일 — NO.1 = 2026-07-08, NO.5 = 07-12, NO.6 = 07-13.
-# config issue_epoch("YYYY-MM-DD")로 조정 가능.
-DEFAULT_ISSUE_EPOCH = "2026-07-08"
-
-
-def _issue_no(config: dict, now_kst: datetime) -> int:
-    """발행 회차 = (KST 오늘 - 기준일) + 1. 날짜의 순수 함수라 같은 날
-    몇 번을 재발행해도 항상 같은 번호가 나온다(사용자 결정 — 구 카운터
-    방식은 재발행마다 번호를 소모했다). 기준일 파싱 실패는 기본값 폴백."""
-    raw = str(config.get("issue_epoch") or DEFAULT_ISSUE_EPOCH)
-    try:
-        epoch = datetime.strptime(raw, "%Y-%m-%d").date()
-    except ValueError:
-        epoch = datetime.strptime(DEFAULT_ISSUE_EPOCH, "%Y-%m-%d").date()
-    return (now_kst.date() - epoch).days + 1
-
-
-# 위키 INDEX 정리 — 사서가 배치마다 INDEX 전체를 읽으므로 무한 성장은
-# 배치 시간 증가 → 300s 타임아웃 → 뉴스 무판정 유실로 되돌아온다
-# (2026-07-12 실측: 위키 성장으로 20건 배치가 타임아웃, 12건으로 축소).
-# 오래된 토픽 줄은 목록만 아카이브로 옮긴다 — 토픽 페이지는 그대로 남고
-# 사서도 Grep(wiki/**)으로 여전히 찾을 수 있다.
-WIKI_INDEX_PATH = os.path.join(BASE_DIR, "wiki", "INDEX.md")
-WIKI_INDEX_ARCHIVE_PATH = os.path.join(BASE_DIR, "wiki", "INDEX-archive.md")
-_INDEX_DATE_RE = re.compile(r"\(최종갱신일:\s*(\d{4}-\d{2}-\d{2})\)\s*$")
-
-
-def _prune_wiki_index(max_age_days: int) -> None:
-    try:
-        with open(WIKI_INDEX_PATH, encoding="utf-8") as f:
-            lines = f.read().splitlines()
-    except OSError:
-        return
-    cutoff = (
-        datetime.now(timezone(timedelta(hours=9))) - timedelta(days=max_age_days)
-    ).strftime("%Y-%m-%d")
-    keep: list[str] = []
-    stale: list[str] = []
-    for line in lines:
-        m = _INDEX_DATE_RE.search(line)
-        if m and line.lstrip().startswith("-") and m.group(1) < cutoff:
-            stale.append(line)
-        else:
-            keep.append(line)
-    if not stale:
-        return
-    try:
-        header_needed = not os.path.exists(WIKI_INDEX_ARCHIVE_PATH)
-        with open(WIKI_INDEX_ARCHIVE_PATH, "a", encoding="utf-8") as f:
-            if header_needed:
-                f.write("# 보안동향 위키 인덱스 아카이브\n\n")
-                f.write("최종갱신일이 오래돼 INDEX.md에서 옮겨진 토픽 목록"
-                        "(자동 이동 — main._prune_wiki_index).\n\n")
-            f.write("\n".join(stale) + "\n")
-        with open(WIKI_INDEX_PATH, "w", encoding="utf-8") as f:
-            f.write("\n".join(keep) + "\n")
-        print(
-            f"[main] 위키 INDEX 정리: {len(stale)}건 아카이브(기준 {max_age_days}일)",
-            file=sys.stderr,
-        )
-    except OSError as exc:
-        print(f"[main] 위키 INDEX 정리 실패(무시): {exc}", file=sys.stderr)
 
 
 def _save_preview_cards(
@@ -444,167 +104,6 @@ def _save_preview_cards(
         )
     except Exception as exc:
         print(f"[main] DRY_RUN: 카드뉴스 렌더 실패(경고만): {_safe_exc_str(exc)}", file=sys.stderr)
-
-
-def _normalize_trend_url(url: str) -> str:
-    # HN·Lobsters가 같은 원문을 동시에 띄우는 경우의 링크 중복 키 —
-    # 스킴·www·꼬리 슬래시 차이만 접는다(쿼리는 유지: 유튜브 watch?v=)
-    u = url.lower()
-    for prefix in ("https://", "http://"):
-        if u.startswith(prefix):
-            u = u[len(prefix):]
-            break
-    if u.startswith("www."):
-        u = u[4:]
-    return u.rstrip("/")
-
-
-def _select_trend(items: list[dict], config: dict) -> list[dict]:
-    """'오늘의 트렌드' 링크 선별 — 카드·위키·사서를 타지 않는 결정적 경로.
-
-    소스별로 (score 내림차순 → published 내림차순) 정렬 후 라운드로빈으로
-    상한까지 뽑는다 — 한 소스(예: HN 검색)가 섹션을 독식하지 않게 하는
-    다양성 장치. 점수 체계가 소스마다 달라(HN points vs 레딧 무점수 RSS)
-    전역 정렬은 의미가 없다. URL 정규화 중복은 먼저 접는다."""
-    cap = int(config.get("trend_max_links", 6))
-    seen_urls: set[str] = set()
-    by_source: dict[str, list[dict]] = {}
-    for item in items:
-        url = item.get("url") or ""
-        key = _normalize_trend_url(url)
-        if not url or key in seen_urls:
-            continue
-        # 유튜브 쇼츠는 본편 영상 대비 정보량이 낮은 클립이 대부분 —
-        # 링크 5석을 소모할 가치가 없다(2026-07-24 실발송 검수에서 제외 결정)
-        if "youtube.com/shorts/" in key:
-            continue
-        seen_urls.add(key)
-        group_key = item.get("trend_group") or item.get("source", "")
-        by_source.setdefault(group_key, []).append(item)
-
-    for group in by_source.values():
-        # 안정 정렬 3단: published 내림차순 → 구글뉴스 리다이렉트 후순위
-        # (같은 소식이면 벤더 공식 원문이 이긴다) → score 내림차순(주 기준)
-        group.sort(key=lambda it: it.get("published") or "", reverse=True)
-        group.sort(key=lambda it: "news.google.com" in (it.get("url") or ""))
-        group.sort(key=lambda it: -(it.get("score") or 0))
-
-    selected: list[dict] = []
-    # 큐 우선순위 = 사용자 관심축(QA2: 관심축 가중치) — 상한(cap)보다
-    # 그룹이 많을 때 어떤 그룹이 슬롯을 얻는지 결정한다. 미등재 그룹은 뒤
-    priority = {g: i for i, g in enumerate(config.get("trend_priority", []))}
-    queues = [g for _, g in sorted(
-        ((priority.get(k, len(priority)), g)
-         for k, g in by_source.items() if g),
-        key=lambda pair: pair[0],
-    )]
-    while queues and len(selected) < cap:
-        next_queues = []
-        for group in queues:
-            if len(selected) >= cap:
-                break
-            while group:
-                cand = group.pop(0)
-                # 이미 뽑힌 항목과 같은 사건/소식(제목 토큰·CVE 유사도)이면
-                # 건너뛰고 그룹의 다음 후보로 — 구글뉴스 재보도 vs 공식
-                # 원문이 다른 그룹에서 둘 다 뽑히는 것 방지
-                if any(dedup_lib.is_similar_event(cand, s) for s in selected):
-                    continue
-                selected.append(cand)
-                break
-            if group:
-                next_queues.append(group)
-        queues = next_queues
-    return selected
-
-
-TREND_SEND_HOURS = (8, 23)  # KST — 심야 트렌드 알림은 소음(긴급 아님)
-
-
-def _should_send_trend(state: dict, now_kst: datetime, config: dict) -> bool:
-    """트렌드 알림 스로틀 — 사용자 요구: 너무 자주 오면 본편을 가린다.
-
-    ① KST 08~23시 밖이면 보류(심야 금지), ② 마지막 발송 후
-    trend_interval_hours(기본 6시간)가 지나야 다시 보낸다 → 하루 최대
-    2~3회. 보류된 후보는 seen에 남기지 않아(main 하단) 다음 run이
-    같은 항목을 다시 가져와 재도전한다 — 별도 대기열 상태 파일이 필요
-    없고, top?t=day·HN 최근 2일 창이 '아직 핫한 것'만 자연 유지한다."""
-    if not (TREND_SEND_HOURS[0] <= now_kst.hour < TREND_SEND_HOURS[1]):
-        return False
-    last = state.get("last_trend_sent")
-    if not last:
-        return True
-    interval = timedelta(hours=float(config.get("trend_interval_hours", 6)))
-    try:
-        return datetime.now(timezone.utc) - datetime.fromisoformat(last) >= interval
-    except (TypeError, ValueError):
-        return True  # 손상된 타임스탬프는 발송 허용(fail-open) 후 덮어쓴다
-
-
-def _publish_trend(
-    pngs: list[bytes],
-    ordered_items: list[dict],
-    issue_no: int | None,
-    briefing: str | None,
-    keywords: list[str],
-) -> None:
-    """포트폴리오 Trend 탭 게시용 PNG + meta.json 저장.
-
-    ordered_items는 카드 표시 순서(뉴스 → 그 밖의 소식 → 오늘의 CVE)와
-    동일해야 links 번호가 build_link_lines와 1:1로 맞는다. 발송이 이미
-    성공한 뒤에 불리므로 어떤 실패도 삼킨다 — 사이트 게시 실패가 아침
-    브리핑 파이프라인(폴백 이중발송 포함)을 건드리면 안 된다."""
-    try:
-        os.makedirs(TREND_DIR, exist_ok=True)
-        names = []
-        for i, png in enumerate(pngs, start=1):
-            name = f"card_{i:02d}.png"
-            with open(os.path.join(TREND_DIR, name), "wb") as f:
-                f.write(png)
-            names.append(name)
-        # JPEG 사본 — 인스타그램 Graph API가 JPEG만 받는다(crosspost.py가
-        # github.io에 배포된 이 사본의 URL로 발행). 변환 실패는 크로스포스트만
-        # 포기(fail-open) — Pillow는 requirements에 있으나 방어적으로 감싼다
-        jpg_names = []
-        try:
-            from io import BytesIO
-
-            from PIL import Image
-            for i, png in enumerate(pngs, start=1):
-                jpg_name = f"card_{i:02d}.jpg"
-                Image.open(BytesIO(png)).convert("RGB").save(
-                    os.path.join(TREND_DIR, jpg_name), "JPEG",
-                    quality=92, optimize=True)
-                jpg_names.append(jpg_name)
-        except Exception as exc:
-            jpg_names = []
-            print(f"[main] JPEG 변환 실패(크로스포스트만 스킵): {_safe_exc_str(exc)}",
-                  file=sys.stderr)
-        kst = timezone(timedelta(hours=9))
-        meta = {
-            "date": datetime.now(kst).strftime("%Y-%m-%d"),
-            "issue_no": issue_no,
-            "briefing": briefing,
-            "keywords": keywords,
-            "links": [
-                {
-                    # 라벨은 Discord 링크 목록과 동일 규칙(cardgen.link_label):
-                    # title_ko 우선·CVE는 ID — 카드 본문 제목과 일치해야 한다
-                    "n": i,
-                    "title": cardgen.link_label(it),
-                    "url": it.get("url", ""),
-                }
-                for i, it in enumerate(ordered_items, start=1)
-            ],
-            "cards": names,
-            # 크로스포스트(IG/Threads)용 JPEG 사본 — crosspost.py가 참조
-            "cards_jpg": jpg_names,
-        }
-        with open(os.path.join(TREND_DIR, "meta.json"), "w", encoding="utf-8") as f:
-            json.dump(meta, f, ensure_ascii=False, indent=2)
-        print(f"[main] trend 게시 산출물 저장: out/trend ({len(names)}장)")
-    except Exception as exc:
-        print(f"[main] trend 산출물 저장 실패(무시): {_safe_exc_str(exc)}", file=sys.stderr)
 
 
 def main() -> None:
