@@ -110,10 +110,11 @@ def check_card_news(
 
     # --- FATAL: 비밀정보(웹훅 URL) 유출 방어 ---------------------------
     # env가 있으면 실제 값까지 대조하고, 없으면 URL 패턴만으로 방어한다
-    webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
+    webhook_urls = [u for u in (os.environ.get("DISCORD_WEBHOOK_URL"),
+                                os.environ.get("DISCORD_TREND_WEBHOOK_URL")) if u]
     leaked = 0
     for text in list(link_lines) + ([briefing] if briefing else []):
-        if _WEBHOOK_PATTERN in text or (webhook_url and webhook_url in text):
+        if _WEBHOOK_PATTERN in text or any(u in text for u in webhook_urls):
             leaked += 1
     if leaked:
         fatal.append(

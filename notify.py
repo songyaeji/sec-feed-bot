@@ -26,7 +26,9 @@ import requests
 
 BATCH_SIZE = 10
 
-WEBHOOK_USERNAME = "보안동향 브리핑"
+# username 필드는 보내지 않는다 — 채널별 웹훅에 설정된 이름/아바타
+# ("보안은 지금"/"트렌드는 지금")가 봇 정체성이므로 코드가 덮어쓰면
+# 두 봇이 같은 이름으로 보여 분리가 무의미해진다.
 
 # 피드 제목/요약은 신뢰할 수 없는 입력 — content에 @everyone/@here가
 # 섞여 들어오면 채널 전체가 핑된다. 모든 멘션 파싱을 끈다
@@ -211,7 +213,6 @@ def send_trend(items: list[dict], discord_cfg: dict) -> None:
     }
     _post_with_retry(webhook_url, {
         "embeds": [embed],
-        "username": WEBHOOK_USERNAME,
         "allowed_mentions": NO_MENTIONS,
     })
 
@@ -241,7 +242,7 @@ def send_card_news(pngs: list[bytes], link_lines: list[str]) -> list[str]:
         resp = _post_multipart_with_retry(
             webhook_url, files,
             {"payload_json": json.dumps(
-                {"username": WEBHOOK_USERNAME, "allowed_mentions": NO_MENTIONS})},
+                {"allowed_mentions": NO_MENTIONS})},
             params={"wait": "true"},
         )
         attachments = None
@@ -267,7 +268,6 @@ def send_card_news(pngs: list[bytes], link_lines: list[str]) -> list[str]:
             try:
                 _post_with_retry(webhook_url, {
                     "content": chunk,
-                    "username": WEBHOOK_USERNAME,
                     "allowed_mentions": NO_MENTIONS,
                 })
             except RuntimeError as exc:
@@ -315,7 +315,6 @@ def _dispatch(embeds: list[dict]) -> None:
         batch = embeds[i:i + BATCH_SIZE]
         _post_with_retry(webhook_url, {
             "embeds": batch,
-            "username": WEBHOOK_USERNAME,
             "allowed_mentions": NO_MENTIONS,
         })
 

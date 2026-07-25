@@ -159,6 +159,8 @@ jobs:
         timeout-minutes: 33
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # 트렌드 픽 전용 웹훅 — 미등록이면 notify.send_trend가 본 채널로 폴백
+          DISCORD_TREND_WEBHOOK_URL: ${{ secrets.DISCORD_TREND_WEBHOOK_URL }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
           RUN_MODE: ${{ steps.run_mode.outputs.mode }}
           # 'true'일 때만 main.py 시간창 가드 우회 — workflow_dispatch 수동
