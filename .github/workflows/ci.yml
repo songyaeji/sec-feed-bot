@@ -35,7 +35,13 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt pytest
+        run: pip install -r requirements.txt pytest pip-audit
+
+      # 고정 버전 5종의 알려진 취약점 대조(PyPI Advisory/OSV) — 버전 고정
+      # 채택에 따른 보안 게이트(security-reviewer 권고 2026-07-25).
+      # --no-deps: requirements가 top-level만 고정하므로 직접 의존성만 검사
+      - name: Audit pinned dependencies
+        run: pip-audit -r requirements.txt --disable-pip --no-deps
 
       # config.yaml 로드 + 전 모듈 import 스모크 — 문법 오류·죽은 import를
       # 수집 run 전에 잡는다 (playwright 브라우저 실행은 없어 바이너리 불필요)
