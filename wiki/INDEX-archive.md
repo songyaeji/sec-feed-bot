@@ -31,3 +31,8 @@
 - [react-router-open-redirect](topics/2026-01-react-router-open-redirect.md) React Router 오픈 리디렉션 취약점 (최종갱신일: 2026-01-10)
 - [traefik-rest-handler-bypass](topics/2026-05-traefik-rest-handler-bypass.md) Traefik REST 제공자 노출 취약점 (최종갱신일: 2026-05-15)
 - [npm-axios-supply-chain](topics/2026-03-npm-axios-supply-chain.md) UNC1069 Axios NPM 공급망 공격 WAVESHAPER.V2 백도어 (최종갱신일: 2026-03-31)
+- [microsoft-entra-id-privesc](topics/2026-05-microsoft-entra-id-privesc.md) Microsoft Entra ID 원본 검증 오류 권한상향 (최종갱신일: 2026-05-22)
+- [microsoft-planetary-computer-deserialization](topics/2026-05-microsoft-planetary-computer-deserialization.md) Planetary Computer 역직렬화 정보 유출 (최종갱신일: 2026-05-22)
+- [azure-orbital-spatio-rce](topics/2026-05-azure-orbital-spatio-rce.md) Azure Orbital 파일 업로드 RCE (최종갱신일: 2026-05-22)
+- [microsoft-power-pages-command-injection](topics/2026-05-microsoft-power-pages-command-injection.md) Power Pages 명령 인젝션 (최종갱신일: 2026-05-22)
+- [ctrlpanel-installer-rce](topics/2026-05-ctrlpanel-installer-rce.md) CtrlPanel 설치 프로그램 잠금 우회 RCE 적극 악용 중 (최종갱신일: 2026-05-19)
