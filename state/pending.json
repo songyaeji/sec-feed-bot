@@ -3203,5 +3203,19 @@
     "tags": [],
     "title": "CVE-2026-61892 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61892"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-66374",
+    "published": "2026-07-25T01:16:26.423",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Knot Resolver before 6.4.1 allows remote code execution via a heap-based buffer overflow in the DoQ (DNS-over-QUIC) receive path.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-66374 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66374"
   }
 ]
