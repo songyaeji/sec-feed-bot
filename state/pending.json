@@ -3281,5 +3281,19 @@
     "tags": [],
     "title": "EU, 韓 개인정보보호 '적정성 유지' 판정…\"국제 데이터 활용 지속\"",
     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE13Z0JwYk51TnV6SzEzT2d3Qld0aHU2YTlrWk5BVE1xcTBVekR5YmdJd0d6T25Cc3RsYmluRUNpbm0yYU1LODZCUFozTVR2ZjNlV0FUWUpFVHpvZDNiaThlalEyRko?oc=5"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html",
+    "published": "2026-07-25T08:34:15+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Security researcher Yuhang Wu at depthfirst has published a working proof-of-concept (PoC) exploit that executes commands as git on an unpatched self-managed GitLab 18.11.3 server. An ordinary authenticated user triggers it by committing two crafted Jupyter notebooks and requesting their diff. The chain needs no administrator rights, continuous integration (CI) runner access, victim interaction",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git",
+    "url": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html"
   }
 ]
