@@ -70,3 +70,33 @@ def test_is_similar_event_cve_intersection_and_title_ko():
     c = {"title": "Massive breach at ACME", "title_ko": "ACME 대규모 유출 사고 발생"}
     d = {"title": "ACME hit by breach", "title_ko": "ACME 유출 사고 대규모 발생"}
     assert dedup.is_similar_event(c, d)
+
+
+def test_is_similar_event_hermes_no19_regression():
+    # 2026-07-26 NO.19 실측 중복 카드 2장(BleepingComputer·THN). 자카드는
+    # 영문 0.4·국문 0.4(조사 차이)로 둘 다 미달이었다
+    a = {
+        "title": "Hermes AI agent used to automate attack on Thai finance ministry",
+        "title_ko": "Hermes AI 에이전트, 태국 재무부 침해 공격 자동화",
+    }
+    b = {
+        "title": (
+            "Hacker runs Hermes AI agent unattended for post exploitation "
+            "at Thai finance ministry"
+        ),
+        "title_ko": "Hermes AI 에이전트로 태국 재무부 침입",
+    }
+    assert dedup.is_similar_event(a, b)
+
+
+def test_strip_josa_keeps_short_nouns_intact():
+    # 2음절 명사가 조사로 오인돼 잘리면 안 된다
+    assert dedup._normalize_title("평가 정의 국가 증가 결과") == "평가 정의 국가 증가 결과"
+    assert dedup._normalize_title("에이전트로 데이터를 기업의") == "에이전트 데이터 기업"
+
+
+def test_is_similar_event_containment_needs_strong_overlap():
+    # 서로 다른 사건 — 토큰 4개가 겹쳐도 포함률(4/7)이 낮아 중복 아님
+    a = {"title": "Clop ransomware targets Windchill FlexPLM in data theft attacks"}
+    b = {"title": "Clop ransomware data theft victims named on leak site today"}
+    assert not dedup.is_similar_event(a, b)
