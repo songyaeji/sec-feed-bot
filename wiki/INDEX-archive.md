@@ -36,3 +36,4 @@
 - [azure-orbital-spatio-rce](topics/2026-05-azure-orbital-spatio-rce.md) Azure Orbital 파일 업로드 RCE (최종갱신일: 2026-05-22)
 - [microsoft-power-pages-command-injection](topics/2026-05-microsoft-power-pages-command-injection.md) Power Pages 명령 인젝션 (최종갱신일: 2026-05-22)
 - [ctrlpanel-installer-rce](topics/2026-05-ctrlpanel-installer-rce.md) CtrlPanel 설치 프로그램 잠금 우회 RCE 적극 악용 중 (최종갱신일: 2026-05-19)
+- [linux-iommu-vt-d-pasid-race](topics/2026-05-linux-iommu-vt-d-pasid-race.md) Linux 커널 IOMMU VT-d PASID 엔트리 교체 경합 조건 (최종갱신일: 2026-05-27)
