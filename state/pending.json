@@ -1919,5 +1919,29 @@
     "tags": [],
     "title": "개인정보 유출 조사 평균 200일… 예산정책처 “우선순위 기준 필요”",
     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBLQms1RWlXelptMEJudms3TWVzMDVrOUJRUkNVOWdtSE9nY2FzeG5jdkFKWUtsbTlDazNKUW5HUVBXaTdUdWN2bndrSFpKdXdoRThwU2ppSE1Hajd6V0NnaHhoNnBMX1Qwb2haVS0zeEfSAXRBVV95cUxQR3B1eXZNZWNiOFh2OUJQVzM2T3JNRGVFT1NEUUZ1TGg4QTZCNVJnNW4zTWdKTktjbi16WGJqb1VYaFllSE5XTFlqcGxQRzFRRUVXUW9pS3FGR0dNb0pscWtqMWJ4VUpjVm0tUGZGd3g0c2VuTw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2024-14040",
+    "published": "2026-07-26T07:16:39.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: nexthop: Increase weight to u16\n\nIn CLOS networks, as link failures occur at various points in the network,\nECMP weights of the involved nodes are adjusted to compensate. With high\nfan-out of the involved nodes, and overall high number of nodes,\na (non-)ECMP weight ratio that we would like to configure does not fit into\n8 bits. Instead of, say, 255:254, we might like to configure something like\n1000:999. For these deployments, the 8-bit weight may not be enough.\n\nTo that end, in this patch increase the next hop weight from u8 to u16.\n\nIncreasing the width of an integral type can be tricky, because while the\ncode still compiles, the types may not check out anymore, and numerical\nerrors come up. To prevent this, the conversion was done in two steps.\nFirst the type was changed from u8 to a single-member structure, which\ninvalidated all uses of the field. This allowed going through them one by\none and audit for type correctness. Then the structure was replaced with a\nvanilla u16 again. This should ensure that no place was missed.\n\nThe UAPI for configuring nexthop group members is that an attribute\nNHA_GROUP carries an array of struct nexthop_grp entries:\n\n\tstruct nexthop_grp {\n\t\t__u32\tid;\t  /* nexthop id - must exist */\n\t\t__u8\tweight;   /* weight of this nexthop */\n\t\t__u8\tresvd1;\n\t\t__u16\tresvd2;\n\t};\n\nThe field resvd1 is currently validated and required to be zero. We can\nlift this requirement and carry high",
+    "tags": [],
+    "title": "CVE-2024-14040 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-14040"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64530",
+    "published": "2026-07-26T07:16:41.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: cls_api: Handle TC_ACT_CONSUMED in tcf_qevent_handle\n\ntcf_classify() can return TC_ACT_CONSUMED while the skb is held by the\ndefragmentation engine (e.g. act_ct on out-of-order fragments). When\nthat happens the skb is no longer owned by the caller and must not be\ntouched again.\n\ntcf_qevent_handle() did not handle TC_ACT_CONSUMED: it fell through the\nswitch and returned the skb to the caller as if classification had\npassed. The only qdisc that wires up qevents today is RED, via three call sites\n(qe_mark on RED_PROB_MARK/HARD_MARK, qe_early_drop on congestion_drop)\nred_enqueue() was continuing to operate on an skb it no longer owns  in this\ncase -- enqueueing it, dropping it, or updating statistics. Resulting in a UAF.\n\n  tc qdisc add dev eth0 root handle 1: red ... qevent early_drop block 10\n  tc filter add block 10 ... action ct\n\n  (with ct defrag enabled and traffic that produces out-of-order\n  fragments, e.g. a fragmented UDP stream)\n\nHandle TC_ACT_CONSUMED in tcf_qevent_handle() the same way the ingress\nand egress fast paths do: treat it as stolen and return NULL without\ntouching the skb. Unlike the TC_ACT_STOLEN case, the skb must not be\ndropped/freed here, as it is no longer owned by us.",
+    "tags": [],
+    "title": "CVE-2026-64530 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64530"
   }
 ]
