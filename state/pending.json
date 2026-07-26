@@ -2006,5 +2006,31 @@
     "tags": [],
     "title": "GitHub, PyPI add time-absed defenses against supply chain attacks",
     "url": "https://www.bleepingcomputer.com/news/security/github-pypi-add-time-absed-defenses-against-supply-chain-attacks/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17496",
+    "published": "2026-07-26T15:16:27.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NoteGen before 0.32.0 renders AI chat responses with markdown-it configured with html:true and injects the result into the DOM via dangerouslySetInnerHTML in chat-preview, without HTML sanitization and with CSP set to null. Attacker-controlled content that reaches the model prompt (for example a malicious skill REFERENCE.md that instructs the model to emit HTML) can cause the model response to include executable markup such as an img onerror handler. When the user views the chat response, that markup runs as JavaScript in the privileged Tauri webview, enabling arbitrary script execution in the application context (cross-site scripting).",
+    "tags": [],
+    "title": "CVE-2026-17496 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17496"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-17497",
+    "published": "2026-07-26T15:16:27.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NoteGen before 0.32.0 grants the Tauri shell plugin shell:allow-execute capability for bash, python, and python3 with arbitrary arguments in the default desktop capabilities. JavaScript running in the application webview can therefore invoke plugin:shell|execute to run attacker-controlled operating system commands with the privileges of the NoteGen process. In combination with script execution in the webview (for example via chat XSS), this enables full remote code execution on the user's machine.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-17497 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17497"
   }
 ]
