@@ -1845,5 +1845,17 @@
     "tags": [],
     "title": "9500억달러 반도체 공급·생산 협력... 샌프란시스코 AI서밋 성과는?",
     "url": "http://www.boannews.com/media/view.asp?idx=144841&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15962",
+    "published": "2026-07-26T02:16:28.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Fluent Forms Pro Add On Pack plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 6.2.6 via deserialization of untrusted input. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain allows attackers to change user passwords and potentially take over administrator accounts. Note: This can only be exploited if user update integration is enabled and a user meta field is mapped.",
+    "tags": [],
+    "title": "CVE-2026-15962 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15962"
   }
 ]
