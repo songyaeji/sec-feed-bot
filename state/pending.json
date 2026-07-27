@@ -2594,5 +2594,31 @@
     "tags": [],
     "title": "CVE-2026-66014 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66014"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-13332",
+    "published": "2026-07-27T07:16:24.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Masteriyo LMS  WordPress plugin before 2.3.1 does not correctly verify authorization on an unauthenticated AJAX action used to clear user sessions, allowing unauthenticated attackers to terminate the active sessions (force-logout) of any user on the site, including administrators.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13332 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13332"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-13597",
+    "published": "2026-07-27T07:16:25.127",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The 微信二维码登陆 WordPress plugin through 1.3 does not properly validate WeChat webhook requests, as its signature check always passes, and it discloses the generated login code in the webhook response. This allows an unauthenticated attacker to forge a login event for any existing username, read the login code, and redeem it through an unauthenticated AJAX action to log in as that user, including an administrator, without a password.",
+    "tags": [],
+    "title": "CVE-2026-13597 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13597"
   }
 ]
