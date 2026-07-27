@@ -1191,5 +1191,17 @@
     ],
     "title": "금융결제원, '예금 토큰 결제 인프라 확대' 추진…프로젝트 한강 2단계 참여",
     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9fcklNSEtGeklMR2lKcW1NemxMTXRVVDh2SW5IU01Kbm5lUE40X2VibTljeFdCaDdQd2ZuY0d5Q3hqUm9pOWM1SlVNZ2JEUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33188",
+    "published": "2026-07-27T10:04:51+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "Spring Boot exposes the endpoint \"/actuator/heapdump\" to collect debug information. By default, the endpoint will return a file heapdump.hprof, which includes a binary heapdump that can be used to analyze the current state of the application. Non-Java readers may be familiar with a similar concept, core dumps, which are produced by binaries to expose a memory image at the time the software crashes. \"heapdumps\" are the Java analog to \"core-dumps\". The heapdump often includes secrets used by the application to connect to backend systems. API keys, database passwords, and other sensitive data may be exposed in the heapdump.",
+    "tags": [],
+    "title": "Java Spring Boot \"heapdump\" scans, (Mon, Jul 27th)",
+    "url": "https://isc.sans.edu/diary/rss/33188"
   }
 ]
