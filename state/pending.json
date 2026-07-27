@@ -2356,5 +2356,121 @@
     "tags": [],
     "title": "CVE-2026-65016 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65016"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64796",
+    "published": "2026-07-22T21:18:10.763",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - various code injection vectors in Sourcerer extension - Free did not require both the article creator and last modifier to be Super Users before executing article PHP. Pro did not consistently enforce configured CSS, JavaScript and PHP permissions across tags, attributes, files and both article owners. PHP include attributes could also escape the configured include folder, and executable script/style variants could bypass detection.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64796 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64796"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51303",
+    "published": "2026-07-27T16:17:39.380",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A use-after-free (UAF) vulnerability was discovered in the core parsing component of SQLite 3.41. The flaw occurs because the program frees an ExprList object via sqlite3ExprListDelete and then subsequently accesses the dangling pointer of the released object. A remote adversary can supply specially crafted SQL queries to trigger this vulnerability during SQL statement parsing. Successful exploitation may result in application crash (denial of service), sensitive memory information leakage, and in some scenarios, arbitrary code execution on the affected host.",
+    "tags": [],
+    "title": "CVE-2026-51303 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51303"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65595",
+    "published": "2026-07-22T12:18:19.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "n8n before 2.30.1 and 2.29.8 assigns all Public API key scopes to JWTs issued through the Token Exchange module regardless of the acting user's role. On instances where the Token Exchange feature and Public API are enabled, a low-privileged user who can obtain a valid external JWT trusted by a configured issuer can use the resulting access token to invoke administrator-only Public API operations such as role escalation, user creation, and user deletion (role escalation requires an Advanced Permissions license), and, when unverified Community Package installation is enabled, achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65595 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65595"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-65596",
+    "published": "2026-07-22T12:18:19.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "n8n before 1.123.64, 2.29.8, and 2.30.1 fails to enforce the \"Allowed HTTP Request Domains\" restriction on HTTP-based credentials (Header Auth, Basic Auth, Query Auth, OAuth) in the GraphQL node, unlike the HTTP Request node. An authenticated user able to create or edit workflows can point the node's endpoint at a server they control and exfiltrate restricted credentials. Only instances where a credential has \"Allowed HTTP Request Domains\" configured and is usable by non-owner users are affected.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65596 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65596"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-63265",
+    "published": "2026-07-22T21:18:09.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Inconsistent CSRF token checks / privilege checks in various Regular Labs extension AJAX endpoints - Privileged Regular Labs AJAX endpoints did not consistently require valid CSRF tokens, matching component/item permissions and trusted server-generated form configuration. Authenticated lower-privileged users or CSRF attacks could invoke lookups or mutations outside their authorization.",
+    "tags": [],
+    "title": "CVE-2026-63265 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63265"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-63280",
+    "published": "2026-07-22T21:18:09.687",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Inconsistent CSRF token checks / privilege checks in Regular Labs conditions manager - Conditions administration did not consistently enforce tokens and component/mapped-item permissions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63280 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63280"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-63685",
+    "published": "2026-07-22T21:18:10.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Authorization bypass in DB Replacer extension - Administrator routes and replacement requests did not consistently require Super User permission and a valid token. An unauthorized backend user or CSRF attack could perform database replacements, potentially causing major data corruption or site compromise.",
+    "tags": [],
+    "title": "CVE-2026-63685 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63685"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-51297",
+    "published": "2026-07-27T16:17:38.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "sqlite 3.41 has a use-after-free vulnerability in the JSON parsing logic. Remote adversaries can craft malicious JSON payload to trigger memory free followed by illegal memory access, which may lead to arbitrary code execution, sensitive information leakage and service denial.",
+    "tags": [],
+    "title": "CVE-2026-51297 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51297"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-51235",
+    "published": "2026-07-27T18:16:56.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LibRaw 0.21 is vulnerable to Buffer Overflow in the stretch() function (src/libraw_cxx.cpp) and fuji_rotate() function (src/decoders/fuji.cpp).",
+    "tags": [],
+    "title": "CVE-2026-51235 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51235"
   }
 ]
