@@ -1203,5 +1203,31 @@
     "tags": [],
     "title": "Java Spring Boot \"heapdump\" scans, (Mon, Jul 27th)",
     "url": "https://isc.sans.edu/diary/rss/33188"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=196062",
+    "published": "2026-07-27T11:20:35+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Researchers chained two Oj parser bugs to achieve GitLab RCE via Jupyter notebook diffs, affecting authenticated users on unpatched versions. Depthfirst researchers published a working remote code execution exploit for GitLab on July 24, chaining two memory corruption bugs in Oj, a Ruby JSON parser with a native C implementation, into full command execution inside […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "GitLab Users Urged to Patch After Research Reveals Critical RCE Chain",
+    "url": "https://securityaffairs.com/196062/hacking/gitlab-users-urged-to-patch-after-research-reveals-critical-rce-chain.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=196085",
+    "published": "2026-07-27T11:16:54+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "EFF says most smart wearables lack basic privacy protections, with Apple standing out for end-to-end encryption and transparency. Most smart wearables still treat privacy like an optional extra, and that’s a problem. The Electronic Frontier Foundation (EFF)’s review of major smart watches, rings, and bands makes the case plainly: these devices collect deeply personal health […]",
+    "tags": [],
+    "title": "EFF: Most Smart Wearables Still Fall Short on Privacy and Transparency",
+    "url": "https://securityaffairs.com/196085/security/eff-most-smart-wearables-still-fall-short-on-privacy-and-transparency.html"
   }
 ]
