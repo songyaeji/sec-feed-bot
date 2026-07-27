@@ -1747,5 +1747,189 @@
     "tags": [],
     "title": "샤이니헌터스 유출정보 악용한 협박메일 확산…“48시간 내 비트코인 2천달러 보내라”",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207807"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2025-68686",
+    "kev": true,
+    "published": "2026-07-27T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacke",
+    "tags": [],
+    "title": "CVE-2025-68686: Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability (Fortinet FortiOS)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68686"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2025-1782",
+    "published": "2025-04-14T19:15:36.277",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In HylaFAX Enterprise Web Interface and AvantFAX, the language form element is not properly sanitized \nbefore being used and can be misused to include an arbitrary file in the\n PHP code allowing an attacker to do anything as the web server user. \nThis flaw requires the attacker to be authenticated with a valid user account.",
+    "tags": [],
+    "title": "CVE-2025-1782 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1782"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65431",
+    "published": "2026-07-23T10:16:52.723",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Zipslip in GeoIP extension - Geo IP database update archives have been broadly extracted without path validation, leading to unsafe file extractions.",
+    "tags": [],
+    "title": "CVE-2026-65431 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65431"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15611",
+    "published": "2026-07-23T16:17:13.947",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Logto allows unverified email-based SSO account linking, enabling an attacker to register an identity at a permissive IdP using a victim’s email and gain unauthorized access to the victim’s account.",
+    "tags": [],
+    "title": "CVE-2026-15611 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15611"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15612",
+    "published": "2026-07-23T16:17:14.047",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Logto bypasses OIDC nonce validation when the nonce claim is absent from the id_token, enabling replay of authentication tokens and weakening session-binding.",
+    "tags": [],
+    "title": "CVE-2026-15612 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15612"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-15630",
+    "published": "2026-07-23T21:17:02.760",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A non-global organization admin in one tenant can bypass tenant boundaries to delete, create, or modify resources in any other tenant by exploiting a mismatch between authorization (based on ?id=) and action (based on request body).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15630 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15630"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-58586",
+    "published": "2026-07-24T15:18:44.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Image::WebP versions through 0.2 for Perl bundle a vulnerable version of libwebp.\n\nImage::WebP does not link to the system libwebp. Instead, it uses a bundled copy of libwebp 0.3.0 (released 2013-03-20). That version has multiple known vulnerabilities, including CVE-2023-4863.\n\nAny caller that decodes an untrusted WebP image reaches the bundled decoder. Because the library is compiled into the module, upgrading the system libwebp does not remediate this.",
+    "tags": [],
+    "title": "CVE-2026-58586 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58586"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-59527",
+    "published": "2026-07-27T15:17:03.017",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in MapSVG <= 8.14.0 versions.",
+    "tags": [],
+    "title": "CVE-2026-59527 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59527"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-59533",
+    "published": "2026-07-27T15:17:03.817",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in Relevanssi Light <= 1.2.2 versions.",
+    "tags": [],
+    "title": "CVE-2026-59533 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59533"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-59538",
+    "published": "2026-07-27T15:17:04.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in GamiPress <= 7.9.7 versions.",
+    "tags": [],
+    "title": "CVE-2026-59538 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59538"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-17191",
+    "published": "2026-07-27T17:16:35.407",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An input validation vulnerability exists in an API component of the orchestrator. An authenticated user can exploit this flaw to manipulate backend queries, which may result in unauthorized access to data beyond their intended privileges and cause the underlying system to initiate unintended outbound network connections.\n\n\n\n\nThis issue was discovered internally by Arista and the company is not aware of any malicious uses of this issue in customer networks.",
+    "tags": [],
+    "title": "CVE-2026-17191 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17191"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-63077",
+    "published": "2026-07-27T17:16:38.830",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In JetBrains TeamCity before 2026.1.3, 2025.11.7 unauthenticated remote code execution was possible via the agent polling protocol",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63077 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63077"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-59551",
+    "published": "2026-07-27T15:17:05.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Subscriber SQL Injection in rtMedia for WordPress, BuddyPress and bbPress <= 4.7.10 versions.",
+    "tags": [],
+    "title": "CVE-2026-59551 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59551"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-66050",
+    "published": "2026-07-27T15:17:10.487",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NitroShare Desktop through 0.3.4 contains a path traversal vulnerability in its LAN file transfer server that allows unauthenticated attackers on the same network to write arbitrary files by sending a crafted filename containing directory traversal sequences in the JSON item header name field. Attackers can exploit the lack of path validation to write files outside the transfer root directory to arbitrary locations the current user has write access, including the Windows Startup folder, enabling persistent code execution on the next user login.",
+    "tags": [],
+    "title": "CVE-2026-66050 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66050"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-17192",
+    "published": "2026-07-27T17:16:35.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A VCO feature does not sufficiently validate caller-supplied input, allowing requests to be made on behalf of authenticated tenant accounts to internal services that are not otherwise accessible. This vulnerability requires a minimum role of Enterprise Standard Admin.\n\n\n\n\nThis issue was discovered internally by Arista and the company is not aware of any malicious uses of this issue in customer networks.",
+    "tags": [],
+    "title": "CVE-2026-17192 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17192"
   }
 ]
