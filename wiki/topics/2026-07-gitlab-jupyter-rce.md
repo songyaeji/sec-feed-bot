@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-07-25 [The Hacker News](https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html) — 보안 연구자 Yuhang Wu, GitLab Jupyter RCE PoC 공개
+- 2026-07-27 [Security Affairs](https://securityaffairs.com/196062/hacking/gitlab-users-urged-to-patch-after-research-reveals-critical-rce-chain.html) — 인증된 사용자 대상 Oj 파서 메모리 손상 취약점 활용 RCE 권고
 
 ## 관련
 
