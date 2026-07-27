@@ -1477,5 +1477,19 @@
     ],
     "title": "Coca-Cola confirms data theft in Fairlife ransomware attack",
     "url": "https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2015-10138",
+    "published": "2025-07-19T12:15:34.123",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Work The Flow File Upload plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the jQuery-File-Upload-9.5.0 server and test files in versions up to, and including, 2.5.2. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2015-10138 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-10138"
   }
 ]
