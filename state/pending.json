@@ -2472,5 +2472,17 @@
     "tags": [],
     "title": "CVE-2026-51235 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51235"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48144",
+    "published": "2026-07-27T12:16:44.700",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Validation of Certificate with Host Mismatch vulnerability in Apache Thrift c_glib bindings.\n\nThis issue affects Apache Thrift: before 0.24.0.\n\nUsers are recommended to upgrade to version 0.24.0, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-48144 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48144"
   }
 ]
