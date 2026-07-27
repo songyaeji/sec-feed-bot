@@ -1403,5 +1403,29 @@
     "tags": [],
     "title": "Shadow AI agents are multiplying. Here's how to find and secure them.",
     "url": "https://www.bleepingcomputer.com/news/security/shadow-ai-agents-are-multiplying-heres-how-to-find-and-secure-them/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-64793",
+    "published": "2026-07-22T21:18:10.447",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Content access and publication bypass in Articles Anywhere and Modules Anywhere extensions - Content tags could use ignore flags or property overrides to render restricted or unpublished articles or modules. A content author could thereby expose content to visitors who lacked the required access.",
+    "tags": [],
+    "title": "CVE-2026-64793 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64793"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64874",
+    "published": "2026-07-23T10:16:52.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - CDN Credential leakage Cache Cleaner Pro extension - CDN credentials were exposed in administrator request URLs.",
+    "tags": [],
+    "title": "CVE-2026-64874 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64874"
   }
 ]
