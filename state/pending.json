@@ -2498,5 +2498,101 @@
     ],
     "title": "NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework",
     "url": "https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-42016",
+    "published": "2026-07-27T20:16:39.613",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "JFrog Artifactory (Self Hosted) versions before 7.133.11 are vulnerable to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+    "tags": [],
+    "title": "CVE-2026-42016 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42016"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-42017",
+    "published": "2026-07-27T20:16:39.750",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An event-handling weakness in JFrog Artifactory could expose privileged authorization material to a lower-privileged user under specific conditions.",
+    "tags": [],
+    "title": "CVE-2026-42017 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42017"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56747",
+    "published": "2026-07-27T20:16:39.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper control of generation of code in the JSON Pointer-to-accessor compiler in Cribl Stream before 4.18.2 allows a remote authenticated attacker with edit privileges to execute arbitrary JavaScript on the server via a crafted database connection identifier or pack configuration value.",
+    "tags": [],
+    "title": "CVE-2026-56747 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56747"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56748",
+    "published": "2026-07-27T20:16:40.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper validation of symbolic links in the Pack Git import feature in Cribl Stream before 4.18.2 allows a remote authenticated attacker with Pack import and pipeline preview permissions to execute arbitrary code as the Cribl server process via a crafted Git repository containing a symbolic link in the pack's functions directory.",
+    "tags": [],
+    "title": "CVE-2026-56748 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56748"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65616",
+    "published": "2026-07-27T20:16:40.843",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect authorization validation in refresh token signature allows non-admin users to obtain a signed JFrog administrator token.",
+    "tags": [],
+    "title": "CVE-2026-65616 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65616"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65617",
+    "published": "2026-07-27T20:16:40.953",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A deserialization weakness in JFrog Artifactory package handling could allow a low-privileged user to impact confidentiality, integrity, and availability under specific repository conditions.",
+    "tags": [],
+    "title": "CVE-2026-65617 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65617"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65921",
+    "published": "2026-07-27T20:16:41.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A path validation weakness in archive extraction/write handling allows entries with traversal sequences to be written outside the intended build artifacts location.",
+    "tags": [],
+    "title": "CVE-2026-65921 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65921"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-66014",
+    "published": "2026-07-27T20:16:41.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "JFrog Artifactory contains an authentication handling weakness in internal request processing that, under specific conditions, may allow an attacker to escalate privileges beyond the intended access level.",
+    "tags": [],
+    "title": "CVE-2026-66014 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66014"
   }
 ]
