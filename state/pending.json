@@ -1519,5 +1519,209 @@
     ],
     "title": "Hackers used Telegram phishing campaign to target exiled Belarusian activist",
     "url": "https://therecord.media/telegram-belarus-activist-russia-cyberattack"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15616",
+    "published": "2026-07-23T16:17:14.330",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Logto does not enforce locally configured MFA during SSO authentication, allowing users to bypass second-factor requirements and grants unauthorized access.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15616 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15616"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15617",
+    "published": "2026-07-23T16:17:14.423",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Logto performs principal lookup without normalizing email and identifier strings, enabling principal collision and unauthorized account access via case- or Unicode-different identities.",
+    "tags": [],
+    "title": "CVE-2026-15617 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15617"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16280",
+    "published": "2026-07-24T23:16:50.393",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An integer overflow when calculating physical offsets for sparse PMRs may result in 32-bit truncation of address computations for PMRs larger than 4 GB. This can lead to incorrect GPU MMU mappings and may allow a non-privileged user to trigger access to unintended physical memory, resulting in memory corruption or information disclosure.",
+    "tags": [],
+    "title": "CVE-2026-16280 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16280"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16766",
+    "published": "2026-07-25T09:16:32.000",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Catalyst::View::Wkhtmltopdf versions before 0.6.1 for Perl allow shell command injection (RCE) via PDF render options.\n\nOptions are passed directly to the wkhtmltopdf command without sanitization.\n\nAny web application that passes user-controlled options such as the page_size, orientation or margins without validation allows shell command injection.\n\nVersion 0.6.0 was released with an incomplete fix for this issue.\n\nNote that the wkhtmltopdf project is no longer being developed, and users of this package should migrate to alternative solutions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16766 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16766"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12394",
+    "published": "2026-07-27T07:16:24.383",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The MemberGlut  WordPress plugin before 1.1.5 does not validate the role chosen during front-end registration, allowing unauthenticated users to register an account with an arbitrary role, including administrator, leading to full site compromise.",
+    "tags": [],
+    "title": "CVE-2026-12394 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12394"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-13714",
+    "published": "2026-07-27T07:16:25.227",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Realtyna Organic IDX plugin + WPL Real Estate WordPress plugin before 5.3.0 does not validate the type of uploaded files, and its file upload functionality is gated only by an API that is enabled by default and authenticated with hardcoded credentials shipped identically across all installations. This makes it possible for unauthenticated attackers to upload arbitrary PHP files and achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13714 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13714"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-59549",
+    "published": "2026-07-27T15:17:04.960",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in rtMedia for WordPress, BuddyPress and bbPress <= 4.7.10 versions.",
+    "tags": [],
+    "title": "CVE-2026-59549 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59549"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-16812",
+    "published": "2026-07-27T16:17:03.640",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "VeloCloud Orchestrator (VCO) on-prem has a security issue where this issue may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.\n\n\n\n\nThis functionality was intended to be for internal use only and is not intended to be remotely accessible.\n\n\n\n\nHosted and Dedicated versions of VCO have already been patched in advance of this notice going out.\n\n\n\n\nThis issue was discovered externally and is known to be actively exploited.",
+    "tags": [],
+    "title": "CVE-2026-16812 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16812"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-66395",
+    "published": "2026-07-27T16:18:12.083",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan desktop before v3.7.2 contains a reflected cross-site scripting vulnerability in the bazaar plugin readme handler that allows attackers to execute arbitrary code by crafting a malicious siyuan:// deep link. Attackers can inject HTML payloads via the plugin name parameter that execute with full Node.js access through insertAdjacentHTML rendering in an insecurely configured Electron renderer.",
+    "tags": [],
+    "title": "CVE-2026-66395 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66395"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2025-15662",
+    "published": "2026-07-27T07:16:23.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Printcart Web to Print Product Designer for WooCommerce WordPress plugin before 2.5.3 does not restrict a user-supplied URL before fetching it server-side and does not enforce a valid authorization check, allowing unauthenticated attackers to read arbitrary local files (including configuration files containing database credentials and secret keys) and to make server-side requests to internal resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-15662 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15662"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12255",
+    "published": "2026-07-27T07:16:24.283",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The MainWP Child  WordPress plugin before 6.1.2 does not verify the requester's identity in its site-registration request handler when password authentication has been disabled for the targeted account, allowing an unauthenticated attacker to obtain a valid authentication session as that account, including an administrator, by naming its login in a single registration request.",
+    "tags": [],
+    "title": "CVE-2026-12255 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12255"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13152",
+    "published": "2026-07-27T07:16:24.697",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Custom Fields Account Registration For Woocommerce WordPress plugin before 1.4 does not prevent its custom registration fields from writing to the user capabilities meta key on sites that use a non-default database table prefix, so an unauthenticated user who registers an account can be granted the administrator role when a correspondingly named field has been configured.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13152 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13152"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-59251",
+    "published": "2026-07-27T16:18:03.517",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Allocation of resources without limits in Erlang/OTP public_key certificate path validation allows a remote unauthenticated attacker to cause denial of service by sending a crafted X.509 certificate chain during the TLS handshake.\n\nDuring RFC 5280 policy processing in public_key:pkix_path_validation/3, the certificate policy tree maintained by pubkey_policy_tree grows without an upper bound. When a certificate chain contains M policies per certificate and K certificates, the tree grows on the order of M^K nodes because pubkey_policy_tree:add_leaves/2 and pubkey_policy_tree:add_leaf_siblings/2 extend the tree per policy per certificate. A modest chain with many policies per certificate is enough to pin BEAM schedulers and exhaust the node's memory, taking down the entire VM. The attacker only needs to be able to present a certificate chain to the victim, which is the normal precondition for a TLS handshake, so exploitation succeeds against any incoming or outgoing TLS connection that validates the peer's chain (the default for SSL/TLS clients and mutual-TLS servers).\n\nThis is the same vulnerability class as OpenSSL's X509_verify_cert policy tree DoS.\n\nThis vulnerability is associated with program files lib/public_key/src/pubkey_policy_tree.erl and program routines pubkey_policy_tree:add_leaves/2 and pubkey_policy_tree:add_leaf_siblings/2.\n\nThis issue affects OTP from OTP 26.2 before OTP 29.0.4, OTP 28.5.0.4 and OTP 27.3.4.15, corresponding to public_key from 1.15 before 1.21.4",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59251 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59251"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-66394",
+    "published": "2026-07-27T16:18:11.947",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SiYuan before v3.7.3 contains stored and reflected cross-site scripting vulnerabilities in SVG sanitization that allows authenticated attackers to execute scripts by bypassing the HTML parser-based cleaner. Attackers can hide script tags within desc, style, or noscript elements which the HTML parser treats as raw text but browsers interpret as executable SVG content when served as image/svg+xml, enabling script execution in the application origin.",
+    "tags": [],
+    "title": "CVE-2026-66394 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66394"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-66396",
+    "published": "2026-07-27T16:18:12.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SiYuan before v3.7.2 fails to escape the title-img Individual Attribute List value when rendering Gallery and Kanban cover images, allowing stored cross-site scripting via unescaped style attribute interpolation. Attackers with editor permissions can inject onload handlers that execute arbitrary code in the Electron renderer with full Node.js access when victims open affected documents.",
+    "tags": [],
+    "title": "CVE-2026-66396 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66396"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207805",
+    "published": "2026-07-28T01:11:48+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "동아시아와 연관된 해커가 중동 정부기관을 겨냥한 사이버공격에서 텔레그램을 원격제어 통신망으로 악용한 사실이 확인됐다.공격에는 지금까지 공개되지 않았던 텔레심(TELESHIM), 믹스드키(MIXEDKEY), 바인드클로크(BINDCLOAK) 등 악성코드 3종이 사용됐다. 공격자는 정상 프로그램과 텔레그램 통신을 이용해 보안 탐지를 피하고, 감염된 컴퓨터에 장기간 접근할 수 있는 통로를 구축했다.이번 공격은 2026년 7월 초 탐지됐다. 공격자가 감염 시스템에 직접 명령을 내린 활동은 7월 7일부터 9일까지 집중적으로 발생했다. 관련 기",
+    "tags": [],
+    "title": "중동 정부기관 뚫은 ‘텔레심’…텔레그램에 숨어 명령 받고 추가 악성코드 설치",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207805"
   }
 ]
