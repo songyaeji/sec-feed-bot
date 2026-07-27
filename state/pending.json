@@ -2178,5 +2178,159 @@
     ],
     "title": "UK court rejects Bahrain immunity claim in spyware case",
     "url": "https://therecord.media/uk-court-rejects-bahrain-immunity-claim-spyware-case"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-16624",
+    "published": "2026-07-22T19:16:58.273",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cal.com OSS ships lacks authorization on webhook teamId creation, allowing any authenticated user to create a webhook on any team via unvalidated teamId injection, then steal booking data, including fields like organizer/attendee emails and custom responses, and conditionally video-call passwords, by triggering webhook delivery.",
+    "tags": [],
+    "title": "CVE-2026-16624 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16624"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-64798",
+    "published": "2026-07-22T21:18:10.970",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Insecure login URL keys in IP login extension - Persistent URL login keys were also generated using a non-cryptographic random generator with insufficient entropy.",
+    "tags": [],
+    "title": "CVE-2026-64798 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64798"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16634",
+    "published": "2026-07-24T10:16:31.693",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TOML::XS versions before 0.06 for Perl bundle an unsupported and vulnerable version of tomlc99.\n\nThe tomlc99 library is no longer maintained, and has an uncontrolled recursion vulnerability publicly reported in the issue tracker.\n\nAny caller that passes untrusted TOML to from_toml risks a stack overflow from a deeply-nested document.\n\nTOML::XS version 0.06 or later uses the successor tomlc17 library.",
+    "tags": [],
+    "title": "CVE-2026-16634 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16634"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-14289",
+    "published": "2026-07-27T07:16:25.890",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The FacturaONE para WooCommerce con VeriFactu WordPress plugin before 5.37 does not authenticate one of its request handlers, whose only protection is derived from a cryptographic key that is empty in the default, unconfigured state, allowing unauthenticated attackers to write an arbitrary file into a web-accessible directory and achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14289 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14289"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-50455",
+    "published": "2026-07-27T16:16:58.860",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQL injection vulnerability exists in the order_by parameter of the /customers/search endpoint in Alex Tselegidis EasyAppointments <= 1.5.1. The vulnerability arises from unsanitized user input passed to the order_by method of the CodeIgniter Query Builder, enabling attackers to perform time-based queries and schema enumeration. Under certain MySQL configurations, the flaw may lead to remote code execution by writing a PHP shell using INTO OUTFILE.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-50455 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-50455"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-48030",
+    "published": "2026-07-27T18:16:55.347",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Pheditor is a single-file editor and file manager written in PHP. From version 2.0.1 to before version 2.0.4, an OS Command Injection vulnerability in the terminal action handler allows any authenticated user to execute arbitrary OS commands by injecting shell metacharacters into the 'dir' POST parameter, completely bypassing the TERMINAL_COMMANDS whitelist and achieving full Remote Code Execution with web server privileges. This issue has been patched in version 2.0.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48030 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48030"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-55579",
+    "published": "2026-07-27T18:16:56.880",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Pheditor is a single-file editor and file manager written in PHP. From version 2.0.1 to before version 2.0.6, Pheditor ships with a hardcoded default password admin (SHA-512 hash stored at pheditor.php:11). There is no mechanism to force a password change on first login. Any deployment using the default credentials grants an attacker full access to the file editor, file upload, and terminal features, enabling arbitrary file read/write and remote code execution. This issue has been patched in version 2.0.6.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55579 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55579"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-63684",
+    "published": "2026-07-22T21:18:10.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Inconsistent CSRF token checks / privilege checks in various admin/import/export actions of multiple Regular Labs extension - Administrator actions, editor popups and import/export requests lacked consistent token, item-permission and input-validation checks. Unauthorized backend users or CSRF attacks could expose, create or modify extension configuration and items.",
+    "tags": [],
+    "title": "CVE-2026-63684 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63684"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-64791",
+    "published": "2026-07-22T21:18:10.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - regularlabs.com - Inconsistent CSRF token checks / privilege checks in Regular Labs Extension Manager - Administrator routes and install/update/uninstall processing did not consistently enforce component-management and installation permissions. An unauthorized backend user or CSRF attack could install, update or remove extensions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64791 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64791"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-9830",
+    "published": "2026-07-27T07:16:30.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The bookingpress-appointment-booking-pro WordPress plugin before 5.7.3 does not correctly invoke its REST permission callback, leaving every route in one of its API namespaces reachable without authentication and allowing unauthenticated attackers to read customer booking data and modify other users' bookings.",
+    "tags": [],
+    "title": "CVE-2026-9830 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9830"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-54540",
+    "published": "2026-07-27T18:16:56.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pheditor is a single-file editor and file manager written in PHP. Prior to version 2.0.5, there is an authenticated terminal command whitelist bypass. The terminal feature checks whether the submitted command starts with one of the configured TERMINAL_COMMANDS values, then passes the full command string to shell_exec(). Shell command substitution such as $() is not blocked, so an authenticated user with the terminal permission can bypass a restricted command allowlist and execute arbitrary shell commands as the web server user. This issue has been patched in version 2.0.5.",
+    "tags": [],
+    "title": "CVE-2026-54540 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54540"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55578",
+    "published": "2026-07-27T18:16:56.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pheditor is a single-file editor and file manager written in PHP. From version 2.0.1 to before version 2.0.6, the terminal feature in Pheditor uses an incomplete character blocklist to sanitize user-supplied commands before passing them to shell_exec(). After the fix for GHSA-9643-6xjp-vx57 (which added $ to the blocklist), the characters | (single pipe), ` (backtick), and the newline byte (0x0A) remain unblocked. An authenticated user with the terminal permission (enabled by default) can leverage any of these to bypass the TERMINAL_COMMANDS allowlist and execute arbitrary OS commands as the web server user. This issue has been patched in version 2.0.6.",
+    "tags": [],
+    "title": "CVE-2026-55578 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55578"
   }
 ]
