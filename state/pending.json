@@ -2033,5 +2033,17 @@
     "tags": [],
     "title": "India’s Bank of Baroda confirms cyber incident after hackers claim data theft",
     "url": "https://therecord.media/india-bank-of-baroda-reports-cybersecurity-incident"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2020-3973",
+    "published": "2020-07-08T14:15:10.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The VeloCloud Orchestrator does not apply correct input validation which allows for blind SQL-injection. A malicious actor with tenant access to Velocloud Orchestrator could enter specially crafted SQL queries and obtain data to which they are not privileged.",
+    "tags": [],
+    "title": "CVE-2020-3973 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3973"
   }
 ]
