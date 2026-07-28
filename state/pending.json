@@ -1232,5 +1232,31 @@
     "tags": [],
     "title": "디스포리아 봇넷 확산…20만대 IoT 기기감염·최대 4테라 디도스 공격",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207819"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-27577",
+    "published": "2026-02-25T23:16:21.387",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "n8n is an open source workflow automation platform. Prior to versions 2.10.1, 2.9.3, and 1.123.22, additional exploits in the expression evaluation of n8n have been identified and patched following CVE-2025-68613. An authenticated user with permission to create or modify workflows could abuse crafted expressions in workflow parameters to trigger unintended system command execution on the host running n8n. The issues have been fixed in n8n versions 2.10.1, 2.9.3, and 1.123.22. Users should upgrade to one of these versions or later to remediate all known vulnerabilities. If upgrading is not immediately possible, administrators should consider the following temporary mitigations. Limit workflow creation and editing permissions to fully trusted users only, and/or deploy n8n in a hardened environment with restricted operating system privileges and network access to reduce the impact of potential exploitation. These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-27577 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27577"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-55971",
+    "published": "2026-07-27T12:16:46.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Heap-based Buffer Overflow vulnerability in Apache Thrift C++ bindings.\n\nThis issue affects Apache Thrift: before 0.24.0.\n\nUsers are recommended to upgrade to version 0.24.0, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-55971 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55971"
   }
 ]
