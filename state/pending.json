@@ -1709,5 +1709,41 @@
     "tags": [],
     "title": "KT 과징금 제재 임박…'관련 매출' 핵심 변수로",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9PczVuT2ZubW9DaGRkamNYTHpKS1QyRW15RjNIXzFFTXlKVGx6ZDJ5RTFtajl6dGhCaUZSOTJfaE5nUWJvZWtJdEc4MlFyQWMwY3YySmFrRzREZW51YU5KNw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-11841",
+    "published": "2026-07-28T10:16:47.867",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An attacker may perform unauthenticated read and write operations on sensitive filesystem areas via the AppEngine Fileaccess over HTTP due to improper access restrictions. A critical filesystem directory was unintentionally exposed through the HTTP-based file access feature, allowing access without authentication. This includes device parameter files, enabling an attacker to read and modify application settings, including customer-defined passwords. Additionally, exposure of the custom application directory may allow execution of arbitrary Lua code within the sandboxed AppEngine environment.",
+    "tags": [],
+    "title": "CVE-2026-11841 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11841"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16462",
+    "published": "2026-07-28T10:16:48.293",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In PROCON-WEB SCADA the endpoint 'GetGridData' is not properly sanitized. This allows a remote unauthenticated attacker to execute arbitrary SQL commands.",
+    "tags": [],
+    "title": "CVE-2026-16462 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16462"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14328",
+    "published": "2026-07-28T10:16:48.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Eazy Plugin Manager – Powerful Plugin Management Solution for WordPress plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.4.1. This is due to insufficient authorization on the `wp_ajax_pos_get_option` AJAX handler, which verifies only a nonce that is localized to every logged-in admin-area user via `admin_enqueue_scripts` — without any capability check — before returning the value of any arbitrary WordPress option via `get_option()`, combined with the `admin_login_endpoint_handler` REST endpoint (`GET /wp-json/epm/v1/admin/login`) being registered as publicly accessible and authenticating callers solely by a whirlpool hash of values stored in those same options. This makes it possible for authenticated attackers, with Subscriber-level access and above, to read the `site_url`, `connection_key`, and `remote_user_id` values stored in the `eazywp_connecting_info` and `eazywp_connection` options, compute the required `auth_key`, call the `admin/login` REST endpoint to obtain Administrator authentication cookies, and fully take over the site. Exploitation requires the plugin's remote connection feature to have been configured, as the `eazywp_connecting_info` and `eazywp_connection` options must be populated with valid credentials.",
+    "tags": [],
+    "title": "CVE-2026-14328 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14328"
   }
 ]
