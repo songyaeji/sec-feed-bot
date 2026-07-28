@@ -3180,5 +3180,89 @@
     ],
     "title": "vBulletin fixes critical pre-auth RCE flaw with public exploit",
     "url": "https://www.bleepingcomputer.com/news/security/vbulletin-fixes-critical-pre-auth-rce-flaw-with-public-exploit/"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2022-3534",
+    "published": "2022-10-17T09:15:12.750",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in Linux Kernel up to 5.10.162/5.15.85/6.0.15/6.1.1. The impacted element is the function btf_dump_name_dups of the file tools/lib/bpf/btf_dump.c of the component libbpf. The manipulation leads to use after free. Upgrading to version 5.10.163, 5.15.86, 6.0.16, 6.1.2 and 6.2 is sufficient to resolve this issue. The identifier of the patch is c61650b869e0b6fb0c0a28ed42d928eea969afc8/fbe08093fb2334549859829ef81d42570812597d/8c64a8e76eb85d422af5ec60ccbf26e3ead8c333/a733bf10198eb5bb927890940de8ab457491ed3b/93c660ca40b5d2f7c1b1626e955a8e9fa30e0749. You should upgrade the affected component.",
+    "tags": [],
+    "title": "CVE-2022-3534 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3534"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2022-3636",
+    "published": "2022-10-21T11:15:09.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Linux Kernel 33fc42de33278b2b3ec6f3390512987bc29a62b7. This affects the function __mtk_ppe_check_skb of the file drivers/net/ethernet/mediatek/mtk_ppe.c of the component Ethernet Handler. Such manipulation leads to use after free. The name of the patch is 17a5f6a78dc7b8db385de346092d7d9f9dc24df6. It is best practice to apply a patch to resolve this issue. No released Linux Kernel version was ever affected by this CVE.",
+    "tags": [],
+    "title": "CVE-2022-3636 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3636"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65015",
+    "published": "2026-07-22T12:18:18.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "n8n versions before 2.30.1 contain a privilege escalation vulnerability in the AI Agents feature where the node-execution tool lacks proper authorization checks. A Project Viewer user can escalate privileges by chatting with an agent that has node tools enabled, executing arbitrary nodes and accessing credential secrets without proper authorization verification.",
+    "tags": [],
+    "title": "CVE-2026-65015 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65015"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-51269",
+    "published": "2026-07-28T16:18:50.670",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "schreibfaul1 ESP32-audioI2S 3.4.5 has a heap-based buffer overflow vulnerability in the connecttospeech() function. The application accepts attacker-controlled long speech text input, performs URL encoding, and directly appends the encoded result into a fixed ps_ptr heap buffer when constructing HTTP TTS request headers. Lack of input length validation and boundary checking allows remote attackers to craft oversized input to trigger out-of-bounds heap write, resulting in arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-51269 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51269"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-51274",
+    "published": "2026-07-28T17:16:46.673",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In schreibfaul1 ESP32-audioI2S 3.4.5, a heap-based buffer overflow in the ID3v2 SYLT synchronized lyrics parser in audiolib allows remote attackers to cause a denial of service (application crash), information disclosure, or potential arbitrary code execution via a crafted MP3 file. The vulnerability occurs due to missing bounds validation on attacker-controlled frame size and improper memory access during lyric parsing.",
+    "tags": [],
+    "title": "CVE-2026-51274 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51274"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-51275",
+    "published": "2026-07-28T17:16:46.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In schreibfaul1 ESP32-audioI2S 3.4.5, a heap-based buffer overflow in the ID3v2 APIC frame parsing function in audiolib allows remote attackers to execute arbitrary code or cause a denial of service (crash) via a crafted MP3 file. The vulnerability exists due to missing length validation when processing the APIC frame size field, leading to an out-of-bounds memory write.",
+    "tags": [],
+    "title": "CVE-2026-51275 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51275"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-48388",
+    "published": "2026-07-28T18:17:20.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Photoshop Installer was affected by an Uncontrolled Search Path Element vulnerability that could have resulted in arbitrary code execution in the context of the current user. An attacker could have exploited this vulnerability by placing a malicious library in a directory searched by the installer. Exploitation of this issue required user interaction in that a victim must have been running the installer. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48388 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48388"
   }
 ]
