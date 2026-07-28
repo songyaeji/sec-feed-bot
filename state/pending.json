@@ -1871,5 +1871,29 @@
     "tags": [],
     "title": "Nimbus Manticore Deploys NightLedger and Turns Victim Systems Into Covert Relays",
     "url": "https://thehackernews.com/2026/07/nimbus-manticore-deploys-nightledger.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-49332",
+    "published": "2026-07-28T13:18:46.067",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in openshift/oauth-proxy. The proxy sets authenticated identity headers using only dash-variant keys (X-Forwarded-User) but does not strip underscore-variant keys (X_Forwarded_User) from incoming requests. WSGI and PHP frameworks normalize both variants to the same variable, allowing an authenticated low-privilege user to smuggle a forged identity that may override the legitimate authenticated identity in the upstream application.",
+    "tags": [],
+    "title": "CVE-2026-49332 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49332"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-7187",
+    "published": "2026-07-28T13:19:08.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing authentication for critical function vulnerability in Universal Software Inc. UKBS allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects UKBS: through 28072026.\nNOTE: The vendor was contacted and it was learned that the product is not supported.",
+    "tags": [],
+    "title": "CVE-2026-7187 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7187"
   }
 ]
