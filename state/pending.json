@@ -2426,5 +2426,31 @@
     ],
     "title": "CVE-2026-63727 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63727"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/tengu-botnet-reboots-compromised-linux.html",
+    "published": "2026-07-28T15:01:33+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A new Mirai-derived botnet called Tengu can use a compromised Linux device's hardware watchdog to trigger a reboot when defenders kill its main process. If that happens, Tengu's other persistence mechanisms get another chance to relaunch it. Nozomi Networks Labs observed the dropper reaching its honeypots through Telnet credential brute force. Tengu supports 25 distributed denial-of-service (",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Tengu Botnet Reboots Compromised Linux Devices When Defenders Kill Its Process",
+    "url": "https://thehackernews.com/2026/07/tengu-botnet-reboots-compromised-linux.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/24650-internet-exposed-bmcs-disclose.html",
+    "published": "2026-07-28T14:41:36+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have sounded an alert after finding more than 36,000 Baseboard Management Controller (BMC) management interfaces exposing Intelligent Platform Management Interface (IPMI) protocol to the public internet. Of the 36,872 internet-exposed server-management interfaces running IPMI, 24,650 have been found to disclose password-derived authentication hashes before login due to",
+    "tags": [],
+    "title": "24,650 Internet-Exposed BMCs Disclose IPMI Password Hashes Before Login",
+    "url": "https://thehackernews.com/2026/07/24650-internet-exposed-bmcs-disclose.html"
   }
 ]
