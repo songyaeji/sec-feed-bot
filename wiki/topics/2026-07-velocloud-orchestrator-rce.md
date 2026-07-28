@@ -9,4 +9,5 @@ VeloCloud Orchestrator 온프레미스 배포판의 CVSS 10.0 중대 원격 접�
 
 ## 타임라인
 
+- 2026-07-27 [BleepingComputer](https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/) — Arista 보안 패치 발표
 - 2026-07-27 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-16812) — CVE-2026-16812 공개, CVSS 10.0 평가, 적극적 악용 확인

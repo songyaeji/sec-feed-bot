@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-15 [The Hacker News](https://thehackernews.com/2026/07/compromised-asyncapi-npm-packages.html) — OX Security, SafeDep, Socket, StepSecurity, 침해된 AsyncAPI npm 패키지 4개의 멀티 스테이지 보트넷 분석
+- 2026-07-16 [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/07/15/unpacking-asyncapi-npm-supply-chain-compromise-import-time-payload-delivery/) — Microsoft, AsyncAPI npm 공급망 공격 CI/CD 악용 공격 체인 및 페이로드 전달 메커니즘 상세 분석
 
 ## 관련

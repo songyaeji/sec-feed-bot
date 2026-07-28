@@ -14,4 +14,6 @@ KT가 약 2만 명의 고객 개인정보 유출로 정부 제재 대상에 올�
 
 - 2026-07-27 [개인정보보호위원회](https://news.google.com/rss/articles/CBMieEFVX3lxTFBGeWhoTlJtdU5qZ1lEOWZZSHFkSXRTUGtwb29tNmZqR3o4bG4yUUE1Nkw5MGtBeVM1VkMtbXZTRkZXZG1MakxvQUlScVdoRmc2VENUNGNpYVN4TjRNVTFrTHpsRzdPRTgzcEZaRTROY0tFdXZDSXlPSQ?oc=5) — 소액결제 피해 규모가 제재 수위를 결정하는 핵심 요소
 
+- 2026-07-28 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiU0FVX3lxTFByZjJmS0lORGRVMFZqYnVVd0k3eF9hXy1WMkJTZFdmVmJqZ01kNTU3eUxXbnVublc2LXFaWTBhdEppSjhkM2pENldvTERqTzltY0dF?oc=5) — 개보위 오늘(7/28) 제재안 심의 예정, 과징금 규모 주목
+
 ## 관련

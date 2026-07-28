@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-27 [The Hacker News](https://thehackernews.com/2026/07/public-exploit-released-for-patched.html) — vBulletin 미인증 RCE 공개 exploit 공개
+- 2026-07-28 [BleepingComputer](https://www.bleepingcomputer.com/news/security/vbulletin-fixes-critical-pre-auth-rce-flaw-with-public-exploit/) — 벤더 정식 보안 패치 발표
 
 ## 관련
