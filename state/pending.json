@@ -2476,5 +2476,19 @@
     "tags": [],
     "title": "발행인 칼럼/ 개인정보보호의 핵심은 ‘2차 활용’을 막는 데 있다",
     "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFAtQ1N3VkJ0N0pYOXh1bUpQcDEtalFsSndqMThTcUIwaFVIb3VHQUd3eVNydTBiMXk5cmtWY0hRMThXTGt1?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-5433",
+    "published": "2026-05-21T09:16:30.270",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Honeywell Control\nNetwork Module (CNM) contains command injection vulnerability\nin the web interface. An attacker could exploit this vulnerability via command\ndelimiters, potentially resulting in Remote Code Execution (RCE). \n\n\n\nHoneywell\nrecommends updating to the most recent version of this product, service or\noffering [200.1]. The CNM versions affected are from [100.1, 101.1, 110.1, and 110.2].",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-5433 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5433"
   }
 ]
