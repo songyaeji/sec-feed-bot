@@ -3657,5 +3657,127 @@
     ],
     "title": "개보위, '무단 소액결제' KT 제재안 오늘 심의…과징금 '촉각'",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFByZjJmS0lORGRVMFZqYnVVd0k3eF9hXy1WMkJTZFdmVmJqZ01kNTU3eUxXbnVublc2LXFaWTBhdEppSjhkM2pENldvTERqTzltY0dF?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14446",
+    "published": "2026-07-28T21:17:25.660",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server 9.0, and 8.5 is vulnerable to broken access control/privilege escalation in the administrative console.",
+    "tags": [],
+    "title": "CVE-2026-14446 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14446"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14512",
+    "published": "2026-07-28T21:17:25.783",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server 9.0, and 8.5 traditional is vulnerable to pre-authentication unsafe deserialization which could allow a remote attacker to bypass authentication or execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-14512 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14512"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-14958",
+    "published": "2026-07-28T21:17:26.317",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Aspera Faspex 5 5.0.0 through 5.0.15.4 could allow a remote authenticated attacker to execute arbitrary code due to unquoted shell interpolation.",
+    "tags": [],
+    "title": "CVE-2026-14958 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14958"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-14959",
+    "published": "2026-07-28T21:17:26.443",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Aspera Faspex 5 5.0.0 through 5.0.15.4 could allow a remote authenticated attacker to execute arbitrary code due to shell command injection.",
+    "tags": [],
+    "title": "CVE-2026-14959 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14959"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-14973",
+    "published": "2026-07-28T21:17:26.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Aspera Desktop App 1.0.5 through 1.0.19 IBM Aspera for desktop can allow files to be written outside of the user's selected download destination.",
+    "tags": [],
+    "title": "CVE-2026-14973 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14973"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-14974",
+    "published": "2026-07-28T21:17:26.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server 8.5, and 9.0 traditional could allow a remote attacker to execute arbitrary code caused by unsafe deserialization of untrusted data.",
+    "tags": [],
+    "title": "CVE-2026-14974 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14974"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-14996",
+    "published": "2026-07-28T21:17:27.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Aspera Faspex 5 5.0.0 through 5.0.15.4 has addressed a vulnerability related to session management.",
+    "tags": [],
+    "title": "CVE-2026-14996 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14996"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-15064",
+    "published": "2026-07-28T21:17:27.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server 9.0, and 8.5 and IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.7 is vulnerable to HTTP Response Smuggling due to improper handling of non-standard HTTP version tokens.",
+    "tags": [],
+    "title": "CVE-2026-15064 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15064"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-15325",
+    "published": "2026-07-28T21:17:27.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server 9.0, and 8.5 and IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.7 is vulnerable to HTTP request smuggling due to improper handling of TRACE requests.",
+    "tags": [],
+    "title": "CVE-2026-15325 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15325"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/cubepilot-drone-software-dev-hit-by-dns-hijacking-to-intercept-traffic/",
+    "published": "2026-07-28T21:17:39+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "CubePilot, an Australian firm that designs flight controllers for drones (UAVs), announced a severe operational disruption caused by a DNS hijacking attack. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CubePilot drone software dev hit by DNS hijacking to intercept traffic",
+    "url": "https://www.bleepingcomputer.com/news/security/cubepilot-drone-software-dev-hit-by-dns-hijacking-to-intercept-traffic/"
   }
 ]
