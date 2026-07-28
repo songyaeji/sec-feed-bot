@@ -2045,5 +2045,72 @@
     "tags": [],
     "title": "CVE-2020-3973 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3973"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25232",
+    "published": "2026-07-28T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow attackers to rapidly guess passwords and gain unauthorized system access. The following versions of MikroTik RouterOS and Cloud Hosted Router are affected: RouterOS vers:all/* (CVE-2026-16347) Cloud Hosted Router vers:all/* (CVE-2026-16347) CVSS Vendor Equipment Vulnerabilities v3 8.8 MikroTik MikroTik RouterOS and Cloud Hosted Router Improper Restriction of Excessive Authentication Attempts Background Critical Infrastructure Sectors: Information Technology, Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: Latvia Vulnerabilities Expand All + CVE-2026-16347 MikroTik RouterOS contains a weakness in its API authentication handling that lacks effective safeguards against excessive login attempts. The system does not enforce meaningful rate-limiting, account lockout, or source-based restrictions, allowing repeated authentication failures to proceed without defensive response. In some versions, a fixed per-connection delay is present, but it can be bypassed through concurrent sessions, resulting in continued high-volume attempts. This deficiency increases the risk that an attacker could eventually obtain valid credentials and gain unauthorized access to administrative services. View CVE Details Affected Products MikroTik RouterOS and Cloud Hosted Router Vendor: MikroTik Product Version: MikroTik RouterOS: vers:all/*, MikroTik Cloud Hosted Router: vers:all/* Product St",
+    "tags": [
+      "RCE"
+    ],
+    "title": "MikroTik RouterOS and Cloud Hosted Router",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25230",
+    "published": "2026-07-28T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary SIMATIC S7-PLCSIM Advanced contains a vulnerability that could allow an attacker to cause a denial of service condition. Siemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available. The following versions of Siemens SIMATIC S7-PLCSIM Advanced are affected: SIMATIC S7-PLCSIM Advanced vers:all/* (CVE-2026-54429) CVSS Vendor Equipment Vulnerabilities v3 7.4 Siemens Siemens SIMATIC S7-PLCSIM Advanced Allocation of Resources Without Limits or Throttling Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-54429 Affected devices do not properly handle high-volume multicast network traffic, which can exhaust available memory resources in the affected application. This could allow an unauthenticated attacker on the local network segment to cause a denial-of-service condition of the affected application. The affected application becomes inaccessible and requires a manual restart; no project data is lost. Successful exploitation requires a specific project configuration to be already active on the targeted instance. View CVE Details Affected Products Siemens SIMATIC S7-PLCSIM Advanced Vendor: Siemens Product Version: SIMATIC S7-PLCSIM Advanced Product Status: known_affected Remediations Mitigation Disable the S7-PLCSIM Virtual Switch binding on the network adapter used by the",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "Siemens SIMATIC S7-PLCSIM Advanced",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25231",
+    "published": "2026-07-28T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Multiple vulnerabilities have been identified in the additional GNU/Linux subsystem of the firmware version V3.1.6 for the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP (incl. SIPLUS variant). Siemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available. The following versions of Siemens SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP are affected: SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AB0) vers:intdot/>=3.1.6 (CVE-2021-41617, CVE-2023-28531, CVE-2023-51384, CVE-2023-52927, CVE-2024-26783, CVE-2024-27056, CVE-2024-28956, CVE-2024-36903, CVE-2024-36927, CVE-2024-42079, CVE-2024-46786, CVE-2024-47736, CVE-2024-47809, CVE-2024-49968, CVE-2024-49994, CVE-2024-49998, CVE-2024-50014, CVE-2024-50063, CVE-2024-50164, CVE-2024-50298, CVE-2024-53124, CVE-2024-53170, CVE-2024-54458, CVE-2024-56631, CVE-2024-56703, CVE-2024-56719, CVE-2024-57917, CVE-2024-57924, CVE-2024-57973, CVE-2024-57977, CVE-2024-57979, CVE-2024-58011, CVE-2024-58016, CVE-2024-58020, CVE-2024-58056, CVE-2024-58058, CVE-2024-58061, CVE-2024-58086, CVE-2025-21645, CVE-2025-21648, CVE-2025-21655, CVE-2025-21676, CVE-2025-21682, CVE-2025-21702, CVE-2025-21705, CVE-2025-21706, CVE-2025-21707, CVE-2025-21718, CVE-2025-21731, CVE-2025-21745, CVE-2025-21758, CVE-2025-21760, CVE-2025-21764, CVE-2025-21765, CVE-2025-21780, CVE-2025-21795, CVE-2025-21796, CVE-2025-21802, CVE-2025-21814, CVE-2025-21846, CVE-2025-21853, CVE-2025-21861, CVE-20",
+    "tags": [],
+    "title": "Siemens SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25234",
+    "published": "2026-07-28T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary ABB has been contacted by a researcher who identified a vulnerability in one of its products. ABB has been contacted by a researcher who identified a vulnerability in one of its products. The vulnerability report has been shared in responsible disclosure. An attacker who successfully exploited this vulnerability could cause the product to become unusable. ABB confirms the vulnerability but at the same time acknowledges that the issue affects exclusively classic KNX devices that are not supporting the latest KNX Secure standard. Due to a lack of security in legacy KNX devices, the issue cannot be resolved via a software change. In order to actively exploit this vulnerability, an attacker requires physical access to the bus, the affected device is connected to. ABB has no plans of corrective measures. The following versions of ABB KNX Update Tool are affected: KNX Update Tool (ABB)",
+    "tags": [],
+    "title": "ABB KNX Update Tool",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25233",
+    "published": "2026-07-28T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an unauthorized actor to access functions or backend services. The following versions of igloohome Smart Lock Mobile Application are affected: Smart Lock Mobile Application (Android) 3.2.3 (CVE-2026-16581) CVSS Vendor Equipment Vulnerabilities v3 5.3 igloohome igloohome Smart Lock Mobile Application Inclusion of Sensitive Information in Source Code Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: Singapore Vulnerabilities Expand All + CVE-2026-16581 In igloohome Smart Lock Mobile App versions 3.2.3 and prior, an Inclusion of Sensitive Information in Source Code vulnerability could allow an unauthorized actor to access functions or backend services that were not sufficiently protected by authentication controls. View CVE Details Affected Products igloohome Smart Lock Mobile Application Vendor: igloohome Product Version: igloohome Smart Lock Mobile Application (Android): 3.2.3 Product Status: known_affected Remediations Vendor fix igloohome have enhanced the access control mechanisms on backend services to ensure that only properly authenticated and authorized requests can interact with sensitive functionality. No user interaction is needed. Mitigation For more information, contact igloohome (info@igloohome.com). mailto:info@igloohome.com Relevant CWE: CWE-540 Inclusion of Sensitive Information in Source Code Metrics CVS",
+    "tags": [
+      "RCE"
+    ],
+    "title": "igloohome Smart Lock Mobile Application",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-06"
   }
 ]
