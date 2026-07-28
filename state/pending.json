@@ -1547,5 +1547,59 @@
     "tags": [],
     "title": "이제이엠컴퍼니, 정보보호 및 개인정보 관리체계 'ISMS-P' 획득",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9vRk1lSmhRWnlaZlFCNU1zVEIxX3hmTWdUTmlwOXBFcUJ2UGNQUmF0WkVzdjdIdUhnR3FQd2duM1puVEhCeFRiekVMZGV2ZF9zU2Q4?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-11756",
+    "published": "2026-07-28T08:17:14.007",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A Deserialization of Untrusted Data vulnerability affecting Station Launcher App in 3DEXPERIENCE platform from Release 3DEXPERIENCE R2023x through Release 3DEXPERIENCE R2026x could lead to an unauthenticated remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-11756 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11756"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15014",
+    "published": "2026-07-28T08:17:14.580",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The SMS Alert – SMS & OTP for WooCommerce, Order Notifications & Abandoned Cart Recovery plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in all versions up to, and including, 3.9.7 via the `billing_phone` parameter. This is due to the `processRegistration()` function using a phone-unbound `$_SESSION['sa_mobile_verified']` boolean flag as the sole gate before issuing an authentication cookie — the flag is set to `true` after any successful OTP validation without being bound to the specific phone number that was verified. This makes it possible for unauthenticated attackers to complete OTP verification for a phone number they control, then resubmit the registration request with a victim's `billing_phone` value to have `wp_set_auth_cookie()` called for the resolved victim account, enabling full authentication as any existing WordPress user whose registered phone number is known or guessable, including administrators.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15014 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15014"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-0010",
+    "published": "2026-03-02T19:16:29.470",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In onTransact of IDrmManagerService.cpp, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+    "tags": [],
+    "title": "CVE-2026-0010 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0010"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207825",
+    "published": "2026-07-28T17:07:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이파피루스가 지식재산처의 지식재산정보 분석 플랫폼 구축사업에 딥러닝 기반 인공지능 광학문자인식 솔루션인 텍스트센스를 공급하고 구축을 진행하고 있다.이번 사업은 특허, 상표, 디자인 등 방대한 지식재산 자료를 인공지능으로 분석하고 활용할 수 있는 체계를 단계적으로 구축하는 프로젝트다. 지식재산처가 추진하는 미공개 경제안보 데이터 처리 및 통합 데이터 분석 환경에서 텍스트센스는 대규모 비정형 문서를 데이터로 변환하는 핵심 데이터 파이프라인 역할을 맡는다.텍스트센스는 문맥을 이해하는 딥러닝 인공지능 엔진을 기반으로 논문, 학술저서, 특허",
+    "tags": [
+      "AI"
+    ],
+    "title": "이파피루스, 지식재산처에 인공지능 기반 문서 인식 솔루션 공급",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207825"
   }
 ]
