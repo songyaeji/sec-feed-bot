@@ -3068,5 +3068,89 @@
     "tags": [],
     "title": "잡코리아·알바몬, 정보보호 국제 인증 동시 획득…개인정보 관리 강화",
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9WaFNpTnJ5R0hQc0dhcGttLW04Y29vUl9hR1huOTNlcnR1Uk9CNFRkS2lVR2g2Q3kwNG1oLUZFT25Edm5vQlFLSEo3ME1Td3NSU2pzRVNCX0ZSOFN2cmQ2aE1HbkpFLUc2U1E?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-43778",
+    "published": "2026-07-27T21:17:02.203",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A use after free issue was addressed with improved memory management. This issue is fixed in iOS 26.6 and iPadOS 26.6, macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6, tvOS 26.6, visionOS 26.6, watchOS 26.6. An app may be able to cause unexpected system termination or corrupt kernel memory.",
+    "tags": [],
+    "title": "CVE-2026-43778 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43778"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-43810",
+    "published": "2026-07-27T21:17:04.140",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The issue was addressed with improved memory handling. This issue is fixed in iOS 26.6 and iPadOS 26.6, macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6, tvOS 26.6, visionOS 26.6, watchOS 26.6. A remote user may be able to cause unexpected system termination or corrupt kernel memory.",
+    "tags": [],
+    "title": "CVE-2026-43810 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43810"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64698",
+    "published": "2026-07-27T21:17:09.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The issue was addressed with improved memory handling. This issue is fixed in macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6. An app may be able to cause unexpected system termination or read kernel memory.",
+    "tags": [],
+    "title": "CVE-2026-64698 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64698"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64738",
+    "published": "2026-07-27T21:17:12.677",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A permissions issue was addressed with additional restrictions. This issue is fixed in macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6. A malicious app may be able to break out of its sandbox.",
+    "tags": [],
+    "title": "CVE-2026-64738 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64738"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64775",
+    "published": "2026-07-27T21:17:15.517",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A memory initialization issue was addressed with improved memory handling. This issue is fixed in iOS 26.6 and iPadOS 26.6, macOS Sequoia 15.7.8, macOS Sonoma 14.8.8, macOS Tahoe 26.6, tvOS 26.6, visionOS 26.6, watchOS 26.6. An app may be able to cause unexpected system termination.",
+    "tags": [],
+    "title": "CVE-2026-64775 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64775"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-54603",
+    "published": "2026-07-28T17:16:52.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OAuth2 is a Ruby wrapper for the OAuth 2.0 and 2.1 authorization frameworks, including OpenID Connect (OIDC). From 0.4.0 to 2.0.21, a protocol-relative redirect Location returned to OAuth2::Client#request overrides the request authority, so the bearer Authorization header is sent to an attacker-controlled host, leaking the credential. This issue is fixed in version 2.0.22.",
+    "tags": [],
+    "title": "CVE-2026-54603 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54603"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-54609",
+    "published": "2026-07-28T17:16:52.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "QTI Neon is a minimal, game-agnostic, relay-based UDP multiplayer protocol library. In version 1.0.0, the relay's handleReconnectRequest forwards RECONNECT_REQUEST packets to the host without bounding them, so an unauthenticated client can drive relay-to-host amplification and cause a denial of service on the host. No fixed version is available as of this review.",
+    "tags": [],
+    "title": "CVE-2026-54609 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54609"
   }
 ]
