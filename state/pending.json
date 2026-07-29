@@ -3484,5 +3484,17 @@
     ],
     "title": "CVE-2026-41939 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41939"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
+    "published": "2026-07-29T18:10:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Ruby on Rails has released fixes for a critical Active Storage vulnerability that could let unauthenticated attackers read arbitrary files from application servers through crafted image uploads. Tracked as CVE-2026-66066 (CVSS score: 9.5), the flaw can expose the Rails process environment and secrets such as secret_key_base, the Rails master key, database passwords, cloud storage credentials,",
+    "tags": [],
+    "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
+    "url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html"
   }
 ]
