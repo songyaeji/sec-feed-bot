@@ -2445,5 +2445,65 @@
     ],
     "title": "New Gitea RCE Lets Repository Writers Plant a Git Hook to Run Shell Commands",
     "url": "https://thehackernews.com/2026/07/new-gitea-rce-lets-repository-writers.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-58155",
+    "published": "2026-07-29T09:16:29.877",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache Traffic Server truncates over-long header names, allowing header aliasing, request smuggling, and policy bypass.\n\nThis issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3.\n\nUsers are recommended to upgrade to version 9.2.15 or 10.1.4, which fix the issue.",
+    "tags": [],
+    "title": "CVE-2026-58155 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58155"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-58153",
+    "published": "2026-07-29T09:16:29.613",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Apache Traffic Server forwards HTTP/2 origin trailers to HTTP/1 clients without proper chunked framing when converting HTTP/2 to HTTP/1.\n\nThis issue affects Apache Traffic Server: from 10.0.0 through 10.1.3.\n\nUsers are recommended to upgrade to version 9.2.15 or 10.1.4, which fix the issue.",
+    "tags": [],
+    "title": "CVE-2026-58153 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58153"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2026-58154",
+    "published": "2026-07-29T09:16:29.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Apache Traffic Server can write out of bounds or overflow integers while parsing MIME and HTTP headers.\n\nThis issue affects Apache Traffic Server: from 8.0.0 through 8.1.9, from 9.0.0 through 9.2.14, from 10.0.0 through 10.1.3.\n\nUsers are recommended to upgrade to version 9.2.15 or 10.1.4, which fix the issue.",
+    "tags": [],
+    "title": "CVE-2026-58154 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58154"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64556",
+    "published": "2026-07-29T09:16:30.153",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nperf/core: Detach event groups during remove_on_exec\n\nperf_event_remove_on_exec() removes events by calling\nperf_event_exit_event(). For top-level events, this removes the event from\nthe context with DETACH_EXIT only.\n\nThis can leave inconsistent group state when a removed event is a group\nleader and the group contains siblings without remove_on_exec. If the group\nwas active, the surviving siblings can remain active and attached to the\nremoved leader's sibling list, but are no longer represented by a valid\ngroup leader on the PMU context active lists.\n\nA later close of the removed leader uses DETACH_GROUP and can promote the\nstill-active siblings from this stale group state. The next schedule-in can\nthen add an already-linked active_list entry again, corrupting the PMU\ncontext active list.\n\nWith DEBUG_LIST enabled, this is caught as a list_add double-add in\nmerge_sched_in().\n\nFix this by detaching group relationships when remove_on_exec removes an\nevent. This preserves the existing task-exit and revoke behavior, while\nensuring surviving siblings are ungrouped before the removed event leaves\nthe context.",
+    "tags": [],
+    "title": "CVE-2026-64556 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64556"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64557",
+    "published": "2026-07-29T09:16:30.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: L2CAP: Fix use-after-free in l2cap_sock_new_connection_cb()\n\nl2cap_sock_new_connection_cb() returned l2cap_pi(sk)->chan after\nrelease_sock(parent). Once the parent lock is dropped the newly\nenqueued child socket sk is reachable via the accept queue, so another\ntask can accept and free it before the callback dereferences sk,\nresulting in a use-after-free.\n\nRework the ->new_connection() op so the core, rather than the callback,\nowns the child channel's lifetime. The op now receives a pre-allocated\nnew_chan and returns an errno instead of allocating and returning a\nchannel. l2cap_new_connection() allocates the child channel and links\nit into the conn list via __l2cap_chan_add() before invoking the\ncallback, so the conn-list reference keeps the channel alive once\nrelease_sock(parent) exposes the socket to other tasks.\n\nChannel configuration that was duplicated in l2cap_sock_init() and the\nvarious new_connection callbacks is consolidated into\nl2cap_chan_set_defaults(), which now inherits from the parent channel\nwhen one is supplied.",
+    "tags": [],
+    "title": "CVE-2026-64557 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64557"
   }
 ]
