@@ -3011,5 +3011,65 @@
     "tags": [],
     "title": "CVE-2026-54653 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54653"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-64642",
+    "published": "2026-07-27T18:16:59.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Next.js is a React framework for building full-stack web applications. In versions 16.0.0 through 16.2.10, crafted requests targeting Next.js applications using App Router built with Turbopack and a single entry in config.i18n.locales can bypass middleware/proxy based authentication. This issue has been fixed in version 16.2.11.",
+    "tags": [],
+    "title": "CVE-2026-64642 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64642"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/coordinated-cyberattack-targets-30.html",
+    "published": "2026-07-29T13:48:36+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A coordinated cyberattack targeted operational technology at more than 30 Minnesota community water systems on July 26 and 27, triggering a statewide cybersecurity response. Braham, Plymouth, South St. Paul and Maple Plain have publicly described a plant outage, communications failures or affected automated controls. Braham's water plant went offline, and the city asked residents to minimize",
+    "tags": [],
+    "title": "Coordinated Cyberattack Targets 30+ Minnesota Water Systems as One Plant Goes Offline",
+    "url": "https://thehackernews.com/2026/07/coordinated-cyberattack-targets-30.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/nine-year-fraud-campaign.html",
+    "published": "2026-07-29T13:42:57+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of a large-scale fraud campaign that involves creating lookalike websites of major Russian companies with an aim to siphon funds from international firms for more than nine years. According to Russian cybersecurity vendor F6, the threat actors have set up clone websites of Russian companies across fertilizer manufacturers, petrochemical companies",
+    "tags": [],
+    "title": "Nine-Year Fraud Campaign Clones Russian Company Sites to Steal Advance Payments",
+    "url": "https://thehackernews.com/2026/07/nine-year-fraud-campaign.html"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25070",
+    "published": "2026-07-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "CISA, the National Security Agency, the Federal Bureau of Investigation, and international partners released joint guidance, 2026 Minimum Elements for a Software Bill of Materials (SBOM) , that updates and replaces the minimum elements for an SBOM published by the National Telecommunications and Information Administration (NTIA) in 2021. The new guidance incorporates stakeholder feedback from a 2025 public comment period and reflects current SBOM tools and needs while preserving the core principles of the original NTIA document. An SBOM serves as an “ingredients list” for software and is a key building block of software security and supply chain risk management. Organizations can use SBOM data to better understand the makeup of their software components and supply chains and make more risk-informed decisions. Minimum elements for an SBOM describe the baseline technologies and practices that an SBOM should include. While the minimum elements for an SBOM apply to all software, some software types—such as artificial intelligence and software as a service in cloud environments—may require additional elements. Any effort to improve software transparency, regardless of the software type, should begin with the application of minimum elements.",
+    "tags": [],
+    "title": "2026 Minimum Elements for a Software Bill of Materials (SBOM)",
+    "url": "https://www.cisa.gov/resources-tools/resources/2026-minimum-elements-software-bill-materials-sbom"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=196239",
+    "published": "2026-07-29T13:40:46+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "ShinyHunters claimed the Ernst & Young data breach, threatening to leak stolen tax records unless the firm contacts the group by July 31. The ShinyHunters cybercrime group has taken responsibility for the recently disclosed data breach involving professional services firm Ernst & Young (EY), adding the company to its Tor-based leak site and threatening to […]",
+    "tags": [],
+    "title": "ShinyHunters Claims Ernst & Young Data Breach, Threatens to Leak Stolen Data",
+    "url": "https://securityaffairs.com/196239/data-breach/shinyhunters-claims-ernst-young-data-breach-threatens-to-leak-stolen-data.html"
   }
 ]
