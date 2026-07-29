@@ -2975,5 +2975,41 @@
     "tags": [],
     "title": "Your AI Agents Are Guessing at Scale: Permissions Decide the Damage",
     "url": "https://www.bleepingcomputer.com/news/security/your-ai-agents-are-guessing-at-scale-permissions-decide-the-damage/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-62325",
+    "published": "2026-07-28T23:17:10.077",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "goshs is a feature-rich single-binary file server for red teamers and developers. From 2.1.3 until 2.1.4, the sftpserver/sftpserver.go password handler used Username != \"\" && Password != \"\", so running goshs with -b 'admin:' -sftp and no -fkf left both SFTP authentication handlers unset and allowed unauthenticated file access. This issue is fixed in version 2.1.4.",
+    "tags": [],
+    "title": "CVE-2026-62325 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62325"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2022-1055",
+    "published": "2022-03-29T15:15:08.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free exists in the Linux Kernel in tc_new_tfilter that could allow a local attacker to gain privilege escalation. The exploit requires unprivileged user namespaces. We recommend upgrading past commit 04c2a47ffb13c29778e2a14e414ad4cb5a5db4b5",
+    "tags": [],
+    "title": "CVE-2022-1055 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1055"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-54653",
+    "published": "2026-07-28T22:17:40.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "datamodel-code-generator generates Pydantic v2 models, dataclasses, TypedDict, and msgspec.Struct from OpenAPI, JSON Schema, GraphQL, Avro, Protobuf, and raw JSON, YAML, or CSV. From  0.17.0 until 0.60.2, datamodel-code-generator preserves attacker-controlled default_factory values in src/datamodel_code_generator/parser/jsonschema.py through JsonSchemaObject.init and get_field_extras and emits them into Field(default_factory=...) or field(default_factory=...), allowing Python expression execution when the generated model is imported. This issue is fixed in version 0.60.2.",
+    "tags": [],
+    "title": "CVE-2026-54653 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54653"
   }
 ]
