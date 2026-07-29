@@ -10,5 +10,7 @@ Anthropic의 **Claude Mythos Preview** LLM이 HAWK-256 격자 기반 서명 체�
 ## 타임라인
 
 - 2026-07-28 [The Hacker News](https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html) — Claude Mythos Preview 양자내성 암호 취약성 발견 및 고속 AES 공격 기법 개발
+- 2026-07-29 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=207840) — Claude Mythos 암호분석 연구 기술 논문·검증코드 공개
+- 2026-07-29 [Security Affairs](https://securityaffairs.com/196265/ai/claude-mythos-shows-ai-can-outpace-human-cryptography-research.html) — Anthropic, Claude Mythos의 자율 암호분석 연구 결과 공개 (HAWK 개선 공격, AES 200~800배 고속화)
 
 ## 관련
