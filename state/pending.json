@@ -3742,5 +3742,31 @@
     "tags": [],
     "title": "FTC sues Hims & Hers for allegedly sharing patient information with third-party platforms",
     "url": "https://therecord.media/hims-hers-privacy-lawsuit-ftc"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13308",
+    "published": "2026-07-29T21:17:46.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Autel MaxiCharger AC Elite Home WebSockets Integer Underflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Autel MaxiCharger AC Elite Home EV chargers. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the handling of WebSocket messages related to the OCPP service. The issue results from the lack of proper validation of user-supplied data, which can result in an integer underflow before allocating a buffer. An attacker can leverage this vulnerability to execute code in the context of the device. Was ZDI-CAN-29113.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13308 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13308"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE14QjdtbGp0SlB2RTZaQk9OVW5neVM4Unh5MFB1NEJaZWFCZHdhR3E1azFyUkV0X0dUNWc5ZTdwczE4YXlHLWh3X2RMdlBEaENJVUhuZ0VEUHV2SHcySks0LTVRX2xGRHZ3",
+    "published": "2026-07-29T21:10:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "KT 개인정보 유출 과징금 오늘 공개…법정 상한 1950억, 박윤영 號 첫 시험대",
+    "tags": [],
+    "title": "KT 개인정보 유출 과징금 오늘 공개…법정 상한 1950억, 박윤영 號 첫 시험대",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE14QjdtbGp0SlB2RTZaQk9OVW5neVM4Unh5MFB1NEJaZWFCZHdhR3E1azFyUkV0X0dUNWc5ZTdwczE4YXlHLWh3X2RMdlBEaENJVUhuZ0VEUHV2SHcySks0LTVRX2xGRHZ3?oc=5"
   }
 ]
