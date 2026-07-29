@@ -3083,5 +3083,129 @@
     "tags": [],
     "title": "Hackers target over 30 Minnesota water utilities in coordinated OT attack",
     "url": "https://www.bleepingcomputer.com/news/security/hackers-target-over-30-minnesota-water-utilities-in-coordinated-ot-attack/"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2023-1829",
+    "published": "2023-04-12T12:15:07.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free vulnerability in the Linux Kernel traffic control index filter (tcindex) can be exploited to achieve local privilege escalation. The tcindex_delete function which does not properly deactivate filters in case of a perfect hashes while deleting the underlying structure which can later lead to double freeing the structure. A local attacker user can use this vulnerability to elevate its privileges to root.\n\n\nWe recommend upgrading past commit   8c710f75256bb3cf05ac7b1672c82b92c43f3d28 https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/ .",
+    "tags": [],
+    "title": "CVE-2023-1829 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1829"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-54691",
+    "published": "2026-07-28T22:17:40.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "datamodel-code-generator generates Python data models from schema definitions. From 0.9.1 until 0.61.0, src/datamodel_code_generator/http.py http.get_body accepts --url targets and redirect chain targets without host/IP validation, allowing server-side request forgery against loopback, private, link-local, metadata, and other network-accessible resources. This issue is fixed in version 0.61.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54691 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54691"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-54650",
+    "published": "2026-07-28T23:17:08.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "openhole exposes localhost to the internet in one command. In 0.1.1 and earlier, openhole-server in internal/server/public_proxy.go forwarded r.URL.Path instead of preserving the original request target with r.URL.EscapedPath(), allowing percent encoded dot segments %2e and separators %2f to reach tunneled local services as ../ and / for path traversal. This issue is fixed in version 0.1.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54650 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54650"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-12703",
+    "published": "2026-07-29T15:16:20.183",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TeamViewer Full Client and Host for macOS before version 15.80 contain a business logic error that can allow an authenticated attacker to bypass a configured 2FA for Connections approval flow via Unattended Access and establish a remote connection to an affected macOS host.",
+    "tags": [],
+    "title": "CVE-2026-12703 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12703"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-54661",
+    "published": "2026-07-29T15:16:25.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "swagger-typescript-api generates API clients for Fetch or Axios from an OpenAPI Specification. Prior to 13.12.2, templates/base/http-clients/axios-http-client.ejs interpolates servers[0].url from src/code-gen-process.ts into the HttpClient constructor without escaping, allowing an attacker-controlled OpenAPI spec to inject code that executes when new HttpClient() or new Api() is constructed. This issue is fixed in version 13.12.2.",
+    "tags": [],
+    "title": "CVE-2026-54661 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54661"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-54662",
+    "published": "2026-07-29T15:16:25.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "swagger-typescript-api generates API clients for Fetch or Axios from OpenAPI specifications. Prior to 13.12.2, src/code-gen-process.ts createApiConfig copies servers[0].url into apiConfig.baseUrl, and templates/base/http-clients/fetch-http-client.ejs interpolates apiConfig.baseUrl into the generated HttpClient baseUrl field without escaping, allowing an attacker-controlled OpenAPI spec to inject TypeScript static field code that executes when the generated fetch client module is imported. This issue is fixed in version 13.12.2.",
+    "tags": [],
+    "title": "CVE-2026-54662 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54662"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-54664",
+    "published": "2026-07-29T15:16:25.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "swagger-typescript-api generates API clients for Fetch or Axios from an OpenAPI Specification. Prior to 13.12.2, src/schema-parser/base-schema-parsers/enum.ts passes components.schemas.*.enum[i] values to Ts.StringValue in src/configuration.ts without escaping before templates/base/enum-data-contract.ejs renders TypeScript enum declarations, allowing an attacker-controlled OpenAPI spec to inject code that executes when the generated module is imported. This issue is fixed in version 13.12.2.",
+    "tags": [],
+    "title": "CVE-2026-54664 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54664"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-54666",
+    "published": "2026-07-29T15:16:25.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "swagger-typescript-api generates API clients for Fetch or Axios from an OpenAPI Specification. Prior to 13.12.2, src/schema-routes/schema-routes.ts passes OpenAPI path keys through parseRouteName to templates/default/procedure-call.ejs and templates/modular/procedure-call.ejs without escaping JavaScript template literal interpolation, allowing an attacker-controlled path containing ${...} to execute when the generated method is called. This issue is fixed in version 13.12.2.",
+    "tags": [],
+    "title": "CVE-2026-54666 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54666"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/russia-hackers-outlook-webmail-malware",
+    "published": "2026-07-29T14:45:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Researchers say the Russian state-linked hacking group tracked as Laundry Bear recently began exploiting a bug in Microsoft Outlook Web Access.",
+    "tags": [],
+    "title": "Laundry Bear’s webmail hackers had more in store after February, report says",
+    "url": "https://therecord.media/russia-hackers-outlook-webmail-malware"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE81V0YwZGc3SElCQVNwaXZzdVBWTHFqalQxTHR6TXNBc1h2YUdGNUYxV0NZSkdCUE1adWI4Wm01dHlTUmpyRzVzeTgzMnVodjFuRVpJ",
+    "published": "2026-07-29T15:03:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "KT 해킹 제재 수위 오늘 나온다…과징금 산정 기준 '주목'",
+    "tags": [],
+    "title": "KT 해킹 제재 수위 오늘 나온다…과징금 산정 기준 '주목'",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE81V0YwZGc3SElCQVNwaXZzdVBWTHFqalQxTHR6TXNBc1h2YUdGNUYxV0NZSkdCUE1adWI4Wm01dHlTUmpyRzVzeTgzMnVodjFuRVpJ?oc=5"
   }
 ]
