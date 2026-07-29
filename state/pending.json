@@ -1992,5 +1992,91 @@
     "tags": [],
     "title": "OpenAI Agent Used Exposed Credentials Across Four Services During Hugging Face Breach",
     "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-63227",
+    "published": "2026-07-29T07:16:41.967",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unrestricted SCORM file upload vulnerability\nin Koollab LMS allowed\nan authenticated module designer to upload a SCORM package containing a PHP\nwebshell to a publicly accessible directory and execute arbitrary code on the\nserver.",
+    "tags": [],
+    "title": "CVE-2026-63227 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63227"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-63229",
+    "published": "2026-07-29T07:16:42.267",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A pre-authentication blind SQL injection\nvulnerability in Koollab LMS allowed an unauthenticated attacker to use a time-based SQL oracle via\nthe SSO OAuth endpoint to read sensitive database contents, including\npersonally identifiable information, credentials, and valid JWT tokens that may\nenable account takeover.",
+    "tags": [],
+    "title": "CVE-2026-63229 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63229"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-63230",
+    "published": "2026-07-29T07:16:42.373",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A pre-authentication error-based SQL injection\nvulnerability in Koollab LMS allowed an unauthenticated attacker to read sensitive database\ncontents, including personally identifiable information, credentials, and valid\nJWT tokens that may enable account takeover, via the SCORM report endpoint.",
+    "tags": [],
+    "title": "CVE-2026-63230 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63230"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-63232",
+    "published": "2026-07-29T07:16:42.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL injection and unsafe deserialisation\nvulnerability in Koollab LMS allowed an authenticated attacker to inject through the assessment\nreinforcement endpoint, control data passed to unserialize(), write a webshell\nto a publicly accessible location, and execute arbitrary code on the server.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63232 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63232"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-63233",
+    "published": "2026-07-29T07:16:42.710",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL injection and unsafe deserialisation\nvulnerability in Koollab LMS allowed an authenticated attacker to inject through the assessment\noverall answer endpoint, control data passed to unserialize(), write a webshell\nto a publicly accessible location, and execute arbitrary code on the server.",
+    "tags": [],
+    "title": "CVE-2026-63233 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63233"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-63234",
+    "published": "2026-07-29T07:16:42.817",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL injection and unsafe deserialisation\nvulnerability in Koollab LMS allowed an authenticated attacker to inject through the manual mark\nassessment endpoint, control data passed to unserialize(), write a webshell to\na publicly accessible location, and execute arbitrary code on the server.",
+    "tags": [],
+    "title": "CVE-2026-63234 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63234"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-63231",
+    "published": "2026-07-29T07:16:42.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A post-authentication SQL injection\nvulnerability in Koollab LMS allowed an authenticated attacker to use an error-based SQL oracle via\nthe face-to-face runs update endpoint to read the entire application database\nand obtain valid JWT tokens for account takeover.",
+    "tags": [],
+    "title": "CVE-2026-63231 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63231"
   }
 ]
