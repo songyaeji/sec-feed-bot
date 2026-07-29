@@ -3207,5 +3207,31 @@
     "tags": [],
     "title": "KT 해킹 제재 수위 오늘 나온다…과징금 산정 기준 '주목'",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE81V0YwZGc3SElCQVNwaXZzdVBWTHFqalQxTHR6TXNBc1h2YUdGNUYxV0NZSkdCUE1adWI4Wm01dHlTUmpyRzVzeTgzMnVodjFuRVpJ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-50289",
+    "published": "2026-07-17T20:17:24.857",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "systeminformation is a System and OS information library for node.js. Prior to 5.31.7, networkInterfaces() on Linux is vulnerable to OS command injection through the Debian/Ubuntu interfaces(5) source directive because lib/network.js checkLinuxDCHPInterfaces() reads /etc/network/interfaces, extracts a source <path> token from file content, and interpolates it unquoted into cat ${file} 2> /dev/null | grep 'iface\\|source' executed by execSync(cmd, util.execOptsLinux), allowing a path containing shell metacharacters to execute commands in any process that calls networkInterfaces(), including via getStaticData() and getAllData(). This issue is fixed in version 5.31.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-50289 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50289"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html",
+    "published": "2026-07-29T15:31:15+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Broadcom has released security updates to address multiple security flaws impacting VMware ESX, vCenter, Workstation, and Fusion, three of which have been designated as critical in severity. The first of the three critical-rated flaws is CVE-2026-59309 (CVSS score: 9.8), which has been described as an authentication bypass in VMware vCenter. \"A malicious actor with network access to vCenter",
+    "tags": [],
+    "title": "Three Critical VMware Flaws Allow Auth Bypass, Code Execution, and VM Escape",
+    "url": "https://thehackernews.com/2026/07/three-critical-vmware-flaws-allow-auth.html"
   }
 ]
