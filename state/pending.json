@@ -2863,5 +2863,69 @@
     "tags": [],
     "title": "개인정보보호위원회 기간제근로자(사무보조원) 채용 공고",
     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNb1NGTTVtc1N1aFZWWVZUc2ZYZlVNbVpXX1dJRUxOMlM5TzEyclNydTZvNUZfcXpjcFUzb1hIczkxd0MweVFNSTRjRWRvUi01MEtieEt5RUdlUzA5c1FCR1NRVnExdGxoeDNyd2JoTnExRllVcTVrdEdBYU4yNUowZlU2c0U?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-54658",
+    "published": "2026-07-28T23:17:08.913",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Hypequery is a TypeScript semantic layer for ClickHouse. Prior to 2.0.2, escapeValue() in packages/clickhouse/src/core/utils.ts did not escape backslashes before single quotes during parameter substitution, allowing attacker controlled query parameters with a trailing backslash to escape the closing quote and inject arbitrary SQL. This issue is fixed in version 2.0.2.",
+    "tags": [],
+    "title": "CVE-2026-54658 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54658"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-64863",
+    "published": "2026-07-28T23:17:10.213",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "goshs is a feature-rich single-binary file server for red teamers and developers. Prior to 2.1.4, the httpserver/server.go wdGuard handled WebDAV MOVE as a write-only method and did not enforce --no-delete, allowing WebDAV clients to delete or overwrite files via MOVE with Overwrite: T. This issue is fixed in version 2.1.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64863 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64863"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-13423",
+    "published": "2026-07-29T07:16:41.250",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Streamit WordPress theme through 4.5.0 does not perform any authorization or nonce verification on one of its unauthenticated AJAX routes, which invokes an attacker-supplied PHP function with an attacker-supplied argument array, allowing unauthenticated attackers to call arbitrary functions (for example to create an administrator account), leading to privilege escalation and remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13423 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13423"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-11974",
+    "published": "2026-07-29T07:16:41.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The wp-media-folder-addon WordPress plugin through 4.1.6 does not validate a user-supplied parameter before using it in a file read operation in two AJAX actions available to unauthenticated users, leading to Arbitrary File Disclosure and Server-Side Request Forgery on sites where a cloud storage connection has been configured. This is an incomplete fix of CVE-2026-9690, whose patch hardened only one of the affected cloud-storage handlers and left the others unpatched.",
+    "tags": [],
+    "title": "CVE-2026-11974 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11974"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-50622",
+    "published": "2026-07-29T10:16:41.047",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Description:\nMissing Authorization in Apache Atlas.\nA missing authorization vulnerability in Apache Atlas's admin endpoints allows any authenticated user, regardless of their assigned role, to perform administrative operations.\n\n\n\n\nAffect Version:\nThis issue affects Apache Atlas: from 0.8 through 2.5.0.\n\n\nMitigation:\nUsers are recommended to upgrade to version 2.6.0, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-50622 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50622"
   }
 ]
