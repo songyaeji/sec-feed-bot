@@ -1476,5 +1476,19 @@
     "tags": [],
     "title": "ISC Stormcast For Wednesday, July 29th, 2026 https://isc.sans.edu/podcastdetail/10028, (Wed, Jul 29th)",
     "url": "https://isc.sans.edu/diary/rss/33194"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12144",
+    "published": "2026-07-29T02:16:41.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Wholesale for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.0.5. This is due to the `save_requests_meta()` function applying only `sanitize_text_field()` to the `user_role_set` POST parameter before passing it directly to `WP_User::add_role()`, with no allowlist validation against permitted wholesale roles and no capability check such as `current_user_can('promote_users')` or `current_user_can('manage_options')`. This makes it possible for authenticated attackers with author-level access and above to escalate their privileges to administrator by supplying `administrator` as the `user_role_set` value in a crafted request. The function is gated only by a nonce (`request_user_role_nonce`) that is rendered in the meta box on the `wwp_requests` post edit screen; because the post type is registered with `capability_type => 'post'`, any author-level user who has authored a `wwp_requests` post — such as one created via the wholesale registration form — can access this nonce and submit the role-assignment request.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12144 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12144"
   }
 ]
