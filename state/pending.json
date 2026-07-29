@@ -3470,5 +3470,19 @@
     "tags": [],
     "title": "Health-ISAC warns of rising ShinyHunters data theft attacks on healthcare",
     "url": "https://www.bleepingcomputer.com/news/security/health-isac-warns-of-rising-shinyhunters-data-theft-attacks-on-healthcare/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-41939",
+    "published": "2026-07-29T18:16:53.477",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Care Everywhere Gateway 14.3.10 contains a hard-coded credentials vulnerability in the bundled WildFly 8.2.0.Final management interface that allows unauthenticated remote attackers to gain administrative access by using default credentials identical across all installations. Attackers can authenticate to the exposed WildFly management console on port 20990 and deploy a malicious Web Application Archive file through the Deployments interface to achieve remote code execution as the Windows machine account. Version 14.x.x was declared end-of-life (EOL) in 2017 and future releases have addressed the vulnerable finding.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-41939 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41939"
   }
 ]
