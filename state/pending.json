@@ -2713,5 +2713,55 @@
     "tags": [],
     "title": "Russia Charges Telegram Founder Pavel Durov With Aiding Terrorist Activity",
     "url": "https://thehackernews.com/2026/07/russia-charges-telegram-founder-pavel.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-14488",
+    "published": "2026-07-29T11:16:48.063",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Meta Box AIO plugin for WordPress is vulnerable to Missing Authorization via the template_redirect dispatcher in the MB Frontend Submission extension in versions up to, and including, 3.8.0. This is due to the handle_request() function routing the mbfs_delete action without any capability or ownership check, and the nonce verification in check_ajax() being gated behind is_ajax() which is false for template_redirect requests, making it bypassable. This makes it possible for unauthenticated attackers to delete arbitrary posts and pages by supplying an attacker-controlled post ID via the rwmb_frontend_field_object_id GET parameter on any page that hosts a frontend submission form regardless of whether allow_delete is enabled.",
+    "tags": [],
+    "title": "CVE-2026-14488 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14488"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14900",
+    "published": "2026-07-29T11:16:48.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Cost Calculator Builder PRO plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.0.3 via the js_to_php function. This is due to insufficient sanitization of the orderDetails[*].originalValue field, which is injected verbatim into a calculator formula string passed to PHP eval() inside js_to_php(), with the regex allow-list in evaluateFormula() only filtering alphanumeric tokens and leaving non-word punctuation characters intact. This makes it possible for unauthenticated attackers to execute code on the server. The only authentication barrier is a nonce check, but the required nonce is publicly emitted on every front-end page via the wp_head hook, making it freely obtainable by unauthenticated visitors. Payloads must be non-word XOR gadgets to bypass sanitization.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14900 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14900"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-17523",
+    "published": "2026-07-27T10:16:36.270",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Linux kernel in net/can/bcm.c in can: bcm, where an unprivileged local user can exploit this vulnerability to execute arbitrary code within the kernel, which leads to a local privilege escalation (LPE). This allows the attacker to gain root privileges and take full control of the affected system.",
+    "tags": [],
+    "title": "CVE-2026-17523 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17523"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/these-near-mint-asus-chromebook-refurbs-are-only-145/",
+    "published": "2026-07-29T11:12:19+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Buying a new computer in 2026 is a unique experience. Rather than deal with incredibly high tech prices, more shoppers are opting for high-quality refurbished tech. This ASUS Chromebook CM30 refurb is in near-mint condition with a grade \"A\" rating, but it still only costs $144.97 (reg. $369.99) on sale. [...]",
+    "tags": [],
+    "title": "These near-mint ASUS Chromebook refurbs are only $145",
+    "url": "https://www.bleepingcomputer.com/news/security/these-near-mint-asus-chromebook-refurbs-are-only-145/"
   }
 ]
