@@ -14216,5 +14216,203 @@
     ],
     "title": "개보위, 무단 결제 사고 KT에 과징금 539억원 부과",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1pNFJ0ZmgxSWxqejE1VTlxWUhOMVozcjI4NWFwU3FUMDZZbkZONXJFd0VCQmdLT2U2VlpZV0RFYVc2emlpa19OdVNvcm1zWjFQQm8wT1RMLVdqblZlek51Qg?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-67403",
+    "published": "2026-07-29T22:16:51.033",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sourcecodester CASAP Automated Enrollment System 1.0 is vulnerable to SQL Injection in update_class.php via the parameter class_name.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2025-67403 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67403"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-67404",
+    "published": "2026-07-29T22:16:51.163",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sourcecodester CASAP Automated Enrollment System 1.0 is vulnerable to SQL Injection in save_stud.php via the parameters fname, lname, and student_class.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2025-67404 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67404"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-69943",
+    "published": "2026-07-29T22:16:51.870",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "kishan0725 Hospital Management System 4.0 is vulnerale to SQL Injection in get_doctor.php via the parameters doctor and specilizationid.",
+    "tags": [],
+    "title": "CVE-2025-69943 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69943"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17676",
+    "published": "2026-07-30T01:16:29.783",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in ANGLE in Google Chrome on Android prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-17676 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17676"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17680",
+    "published": "2026-07-30T01:16:30.217",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Heap buffer overflow in Color in Google Chrome on ChromeOS prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-17680 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17680"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17681",
+    "published": "2026-07-30T01:16:30.330",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in Web Authentication in Google Chrome on Android prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-17681 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17681"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-18015",
+    "published": "2026-07-30T01:17:06.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in Tint in Google Chrome on Mac prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-18015 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18015"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-11707",
+    "published": "2026-07-30T15:16:24.010",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Tivoli System Automation Application Manager 4.1 and IBM WebSphere Application Server is affected by a cross-site scripting vulnerability in the administrative console login page.",
+    "tags": [],
+    "title": "CVE-2026-11707 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11707"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15435",
+    "published": "2026-07-30T15:16:26.757",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM App Connect Enterprise 13.0.1.0 through 13.0.7.2, and 12.0.1.0 through 12.0.12.27 could allow a remote attacker to traverse directories on the system. An attacker could send a specially crafted URL request containing \"dot dot\" sequences (/../) to write arbitrary files on the system.",
+    "tags": [],
+    "title": "CVE-2026-15435 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15435"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14522",
+    "published": "2026-07-30T15:16:25.693",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM App Connect Enterprise 13.0.1.0 through 13.0.7.2, and 12.0.1.0 through 12.0.12.27 could allow a remote attacker to execute arbitrary commands due to improper neutralization of CRLF characters.",
+    "tags": [],
+    "title": "CVE-2026-14522 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14522"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-14980",
+    "published": "2026-07-30T15:16:26.120",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.8 is vulnerable to cross-site request forgery which could allow an attacker to perform SSRF attacks with elevated privileges when the collectiveController-1.0 feature is enabled.",
+    "tags": [],
+    "title": "CVE-2026-14980 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14980"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-67345",
+    "published": "2026-07-30T15:16:35.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MaxKey through 4.1.12, fixed in commit ddbb72f, contains an insufficient redirect URI validation vulnerability in DefaultRedirectResolver.hostMatches() that allows remote attackers to hijack OAuth 2.0 authorization codes by supplying a crafted redirect_uri whose hostname suffix matches a registered URI without proper dot-boundary anchoring. Attackers who control a domain ending with the registered redirect URI hostname can social-engineer victims into clicking a crafted authorization URL, causing the authorization code to be issued to the attacker-controlled URI and exchanged for an access token granting access to the victim's identity.",
+    "tags": [],
+    "title": "CVE-2026-67345 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67345"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-67346",
+    "published": "2026-07-30T15:16:35.953",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Swarms through 6.8.1, fixed in commit 8b0fc9e, contains a server-side request forgery vulnerability in the _is_safe_url function that fails to validate hostnames through DNS resolution, allowing attackers to bypass the blocklist. Attackers can supply user-controlled image or audio URLs that resolve to private, loopback, or metadata addresses to reach internal services and exfiltrate credentials.",
+    "tags": [],
+    "title": "CVE-2026-67346 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67346"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-67348",
+    "published": "2026-07-30T15:16:36.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Julep contains an insecure direct object reference vulnerability in the get_execution_details endpoint that allows authenticated tenants to read another tenant's execution data. Attackers can supply arbitrary execution_id values to retrieve sensitive execution records including task inputs, outputs, metadata, and temporal task tokens from other tenants.",
+    "tags": [],
+    "title": "CVE-2026-67348 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67348"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/analog-devices-discloses-data-breach-says-operations-unaffected/",
+    "published": "2026-07-30T15:12:25+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "American semiconductor company Analog Devices announced that an unauthorized party accessed some of its systems and exfiltrated certain files. [...]",
+    "tags": [],
+    "title": "Analog Devices discloses data breach, says operations unaffected",
+    "url": "https://www.bleepingcomputer.com/news/security/analog-devices-discloses-data-breach-says-operations-unaffected/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9oQzlqcVNLdVpHYU5nd1JDTVdFRTR6R0JWRm9rRFZPb0NlUVBxbzlaM1JWbENBZEV2b0xDWm54MWVfWGZNMklhc0xiUzdkNm9oY3M5NGZ3UktmcjNFc0UtdE1DYXFaejRMbExKLQ",
+    "published": "2026-07-30T08:34:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "KT, 개인정보 유출로 540억 과징금…조사 방해 혐의도",
+    "tags": [],
+    "title": "KT, 개인정보 유출로 540억 과징금…조사 방해 혐의도",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9oQzlqcVNLdVpHYU5nd1JDTVdFRTR6R0JWRm9rRFZPb0NlUVBxbzlaM1JWbENBZEV2b0xDWm54MWVfWGZNMklhc0xiUzdkNm9oY3M5NGZ3UktmcjNFc0UtdE1DYXFaejRMbExKLQ?oc=5"
   }
 ]
