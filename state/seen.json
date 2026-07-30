@@ -5742,6 +5742,7 @@
     "CVE-2026-56782": "2026-07-14T22:22:11.448426+00:00",
     "CVE-2026-56784": "2026-07-14T22:22:11.447737+00:00",
     "CVE-2026-56786": "2026-07-14T22:22:11.448186+00:00",
+    "CVE-2026-56817": "2026-07-30T14:52:27.276345+00:00",
     "CVE-2026-5684": "2026-07-24T09:12:13.983274+00:00",
     "CVE-2026-56841": "2026-07-06T21:13:15.184429+00:00",
     "CVE-2026-56843": "2026-07-08T14:22:32.107851+00:00",
@@ -8037,7 +8038,7 @@
     "CVE-2026-9999": "2026-07-21T12:12:55.353860+00:00"
   },
   "last_digest_date": "2026-07-30",
-  "last_run": "2026-07-30T14:41:51.055994+00:00",
+  "last_run": "2026-07-30T14:52:31.818497+00:00",
   "last_trend_sent": "2026-07-30T11:24:17.651461+00:00",
   "recent_titles": [
     {
@@ -66255,6 +66256,26 @@
     {
       "d": "2026-07-30T14:33:47.768323+00:00",
       "t": "azulejo"
+    },
+    {
+      "d": "2026-07-30T14:52:27.276345+00:00",
+      "t": "cve 2026 56817 cvss 9 8"
+    },
+    {
+      "d": "2026-07-30T14:52:27.286935+00:00",
+      "t": "azure cosmos db flaw exposed platform wide key that could access any database"
+    },
+    {
+      "d": "2026-07-30T14:52:27.297107+00:00",
+      "t": "open source software security principles and practices"
+    },
+    {
+      "d": "2026-07-30T14:52:27.306611+00:00",
+      "t": "winandshine dot asia redirect"
+    },
+    {
+      "d": "2026-07-30T14:52:27.316954+00:00",
+      "t": "top\uc774\uc288 kt \uac1c\uc778\uc815\ubcf4 \uc720\ucd9c\ub85c \uacfc\uc9d5\uae08 540\uc5b5 \ubd80\uacfc \ud2f0\ube59 \uc720\ucd9c 2\ucc28 \ud53c\ud574 \ubcf4\uc0c1\uc548\uc740"
     }
   ],
   "seen": {
@@ -66334,6 +66355,7 @@
     "/node/25232": "2026-07-28T15:12:21.988407+00:00",
     "/node/25233": "2026-07-28T15:12:21.988407+00:00",
     "/node/25234": "2026-07-28T15:12:21.988407+00:00",
+    "/node/25235": "2026-07-30T14:52:31.818497+00:00",
     "/node/25237": "2026-07-29T20:12:18.722073+00:00",
     "697cd33bfabc060001a16103": "2026-07-13T02:33:15.653913+00:00",
     "699f52782905d20001da6f79": "2026-07-13T02:33:15.653913+00:00",
@@ -70607,6 +70629,7 @@
     "CBMicEFVX3lxTFBvOXZlaks1QmU5d3FNbnRUVGRYUVNCZlFpak5IZWtMZEM0YVZtbV8wNEYzcXlkWkxvQk9uTDdhd3YwS0xUXzVwd0RtMklfRnNldmhBalRRU05MSUozcjNpY0VEVmJzek13RlVCZHlmQlbSAXRBVV95cUxQc2ZWWjBFeWtzT1ppeGJieUdHWmphQk9xdWxUdW9jT1FaUGdCWWtJYkh5eENFWU83NFY2UnZoczV1bVNFQzE4eVJmX0FVdmNGVkRvd2pQUFRUVDZXelhDSHZPZ3hULWFyUkFuV0xCczJKY1dESQ": "2026-07-09T08:42:31.073126+00:00",
     "CBMicEFVX3lxTFByU05OUTZrdDgtUk1OQ0pTendaYmVkbDNlTjNYaVctSU1YX05pZ04zeTZpVFpHZTVnTDRHWlNKcFpVUGE4QllPYXp1Q0lhSUIxSUdyVlNsa2E0REdnVXNEVURPT0dCY01UUjJONlB0Nkw": "2026-07-25T11:32:38.026431+00:00",
     "CBMickFVX3lxTE0wMkU2X0NhcEQ2Y0k4YkxsZ0NZVkJoU2xOdmJobkpQdFhaX0l2dXZnR2htVk9RRnFGMlFKem5Ea3c1eldpVnNvRjZPcDRibXB6SW9IR0U1cldOSHJXZENzTENMaS1HYjlkVkpHUDA0UWllUQ": "2026-07-24T02:42:09.939427+00:00",
+    "CBMickFVX3lxTE10M1hicEpXWGFYemlEZDVQMkp1TWJNcWVqLWNGd2hoR3hzdGFEMDM4TUY2T0g5MHdLM0ZTTkVGY05wbjZmWXpSZzFCMF91ZW9zUUJNLW9JOWU4NmxXNHdzWTgtYzNCSVV3aU1zWmpfd2g0QQ": "2026-07-30T14:52:31.818497+00:00",
     "CBMickFVX3lxTE15QkhFNkNlX25rVHR2ZVQ4V1U2OHNlQzFfWlJCSTMtbEJTeXBFMnJVUnpIQVFDYUxrWjlEMk5NMk5UUlJWOVlWU3c2TDA2SlpTa3ZndFBxQVppQXZSa1RvT3RuUWtTU3FwS29zYWhjX0ZkZw": "2026-07-21T14:22:15.524040+00:00",
     "CBMickFVX3lxTE1CS2hUbEVGQ2M0UjBtVGltTHdmY0g5cmVsYlg4ZzZpUzVTaWRDaGI0eUdpd2xYMzVLT2JrR1U0MFNlUUxnY3dkN19RRjZzdUdWa0xOV0RWa0c4X0JVb0plY3Vfbk5BakRobk1xOTN4ZFIxdw": "2026-07-28T11:13:04.126124+00:00",
     "CBMickFVX3lxTE1CT2IyYlFZYkUyck9TQzZiTl90M01CYzBzem5ham5JNTdCTm5jVnNSaFViM2FxcFhuVGJ3WjJobHNhUk5LeDBXazZSazVzcEJEY295Njhybjg4MllYczFUX1lFMDNiY0w5WVJfdVI0NkdWdw": "2026-07-23T00:02:19.312723+00:00",
@@ -78816,6 +78839,7 @@
     "CVE-2026-56782": "2026-07-14T22:22:17.252135+00:00",
     "CVE-2026-56784": "2026-07-14T22:22:17.252135+00:00",
     "CVE-2026-56786": "2026-07-14T22:22:17.252135+00:00",
+    "CVE-2026-56817": "2026-07-30T14:52:31.818497+00:00",
     "CVE-2026-5684": "2026-07-24T09:12:19.257533+00:00",
     "CVE-2026-56841": "2026-07-06T21:13:16.958808+00:00",
     "CVE-2026-56843": "2026-07-08T14:22:32.111549+00:00",
@@ -83052,6 +83076,7 @@
     "https://thehackernews.com/2026/07/attackers-weaponize-github-actions.html": "2026-07-23T12:02:50.617431+00:00",
     "https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html": "2026-07-21T16:42:28.583522+00:00",
     "https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html": "2026-07-06T06:44:04.635733+00:00",
+    "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html": "2026-07-30T14:52:31.818497+00:00",
     "https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth.html": "2026-07-07T11:51:13.151801+00:00",
     "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html": "2026-07-24T13:02:28.668201+00:00",
     "https://thehackernews.com/2026/07/bluenoroff-zoom-phishing-kit-profiles.html": "2026-07-24T16:20:45.451326+00:00",
@@ -85221,6 +85246,7 @@
     "t3_1vatd65": "2026-07-30T13:22:12.215783+00:00",
     "t3_1vauljz": "2026-07-30T14:12:22.415347+00:00",
     "t3_1vauygv": "2026-07-30T14:22:17.001194+00:00",
+    "t3_1vavnc3": "2026-07-30T14:52:31.818497+00:00",
     "tag:blogger.com,1999:blog-1176949257541686127.post-1436003009998740920": "2026-07-07T05:31:56.562202+00:00",
     "tag:blogger.com,1999:blog-1176949257541686127.post-1469360228826887140": "2026-07-07T05:31:56.562202+00:00",
     "tag:blogger.com,1999:blog-1176949257541686127.post-1495335074080890598": "2026-07-07T05:31:56.562202+00:00",

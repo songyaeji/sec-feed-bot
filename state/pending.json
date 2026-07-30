@@ -14164,5 +14164,43 @@
     "tags": [],
     "title": "\"채용 공고 보고 지원했어요\"... 사이트 접속만 해도 감염",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQUHJ0RmxlaDc1Rlp6YldZVzdia1lXd2ZfTXQ3VkstSHZULUNuVm5PNW5MWm83ak5rMDdvd3NJYVZiaW1yRms4LVdtWnVZanE3Y05CanlKR04yRXRXRGFCbEtmMHBCckpFXzN6U3ItOFBrWFpZaDNOdE1KMUJKWW1FUklxOA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-56817",
+    "published": "2026-07-21T23:17:52.127",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Netty is a network application framework for development of protocol servers and clients. In versions 4.2.0.Final through 4.2.15.Final and 4.1.0.Final through 4.1.135.Final, any caller that can deliver bytes to a Netty channel pipeline containing `XmlDecoder` can send XML with a `DOCTYPE` declaration to an `AsyncXMLInputFactory` instantiated with no security configuration, leaving DTD and entity handling active depending on Aalto XML async parser behavior and creating conditional XML external entity risk. This issue is fixed in versions 4.1.136.Final and 4.2.16.Final.",
+    "tags": [],
+    "title": "CVE-2026-56817 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56817"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html",
+    "published": "2026-07-30T13:34:09+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A now-patched vulnerability in Azure Cosmos DB could have let an attacker escape the service's Gremlin query sandbox and obtain full read and write access to databases across customer tenants, according to Wiz. Wiz, which codenamed the chain CosmosEscape, said the exploit chain began with a crafted query against a Gremlin database controlled by the attacker. From there, code execution on a",
+    "tags": [],
+    "title": "Azure Cosmos DB Flaw Exposed Platform-Wide Key That Could Access Any Database",
+    "url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25235",
+    "published": "2026-07-30T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "Open source software (OSS) is embedded in nearly every modern system, from business applications to critical infrastructure. Our new Open Source Software: Security Principles and Practices guidance helps agencies securely use, evaluate, and publish open source software. It covers OSS risk management across the full lifecycle, introduces the C4 Framework for trust assessment, and provides specific recommendations for vulnerability management, software bill of materials use, secure development, and handling open source artificial intelligence systems. Visit CISA’s Open Source Security webpage for more resources. CISA is committed to providing access to our web pages and documents for individuals with disabilities, both members of the public and federal employees. If the format of any elements or content within this document interferes with your ability to access the information, as defined in the Rehabilitation Act, please email opensource@cisa.dhs.gov . To enable us to respond in a manner most helpful to you, please indicate the nature of your accessibility problem and the preferred format in which to receive the material. Please share your thoughts! We welcome your feedback. CISA Product Survey",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Open Source Software: Security Principles and Practices",
+    "url": "https://www.cisa.gov/resources-tools/resources/open-source-software-security-principles-and-practices"
   }
 ]
