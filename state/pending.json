@@ -13901,5 +13901,32 @@
     "tags": [],
     "title": "Analog Devices Discloses Data Breach After Unauthorized System Access",
     "url": "https://securityaffairs.com/196320/data-breach/analog-devices-discloses-data-breach-after-unauthorized-system-access.html"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/mitigation-guidance-for-supply-chain-compromise/",
+    "published": "2026-07-30T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Kelli Vanderlee, Stuart Carrera For years, the cybersecurity industry's understanding of software supply chain compromise has been anchored by a few watershed events, including Russian cyber espionage actor ICE RELIC’s (formerly known as APT29) 2020 compromise of SolarWinds and North Korean cyber espionage actor UNC4736's 2023 compromise of 3CX . However, Google Threat Intelligence Group (GTIG) has been tracking growth in threat activity targeting open source software repositories to conduct supply chain compromises over the past several years. A series of large scale open source software supply chain compromise campaigns in 2025 and the first half of 2026 underscore how important it is that organizations implement defensive strategies that directly address this threat vector. In this blog post, GTIG and Mandiant discuss trends we have observed in threat actor use of software supply chain compromise, and provide mitigation and hardening recommendations that incorporate insights we have developed as a result of supporting customers through recent campaigns in which threat actors manipulated open source packages. Open Source Supply Chain Compromise Grows in Volume and Impact in 2025 and Early 2026 The majority of the most impactful and far-reaching supply chain compromise incidents that GTIG tracked in 2025 and early 2026 involved the compromise of code repositories, software dependencies and developer tools (T1195.001). Open source supply chain compromises offer at",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "Batten Down Your Packages: Mitigation Guidance for Supply Chain Compromise",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/mitigation-guidance-for-supply-chain-compromise/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE1yenh5dk1Ga0F6M3BEZ3V2MFZuQlNpZnhPeEhEYlp5RlpxamxsbE9xMFY1SHRwZjQ1ZS1NWlVMTW01M1hRSEV3Znc5N0pDS215TU1r",
+    "published": "2026-07-30T12:24:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"기본 보안만 했어도 예방\"…KT, 과징금 539억 원 부과",
+    "tags": [],
+    "title": "\"기본 보안만 했어도 예방\"…KT, 과징금 539억 원 부과",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1yenh5dk1Ga0F6M3BEZ3V2MFZuQlNpZnhPeEhEYlp5RlpxamxsbE9xMFY1SHRwZjQ1ZS1NWlVMTW01M1hRSEV3Znc5N0pDS215TU1r?oc=5"
   }
 ]
