@@ -15815,5 +15815,229 @@
     "tags": [],
     "title": "CVE-2021-23134 (CVSS 7.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23134"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-24304",
+    "published": "2026-01-23T02:15:55.547",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper access control in Azure Cosmos DB allows an unauthorized attacker to execute code over a network.",
+    "tags": [],
+    "title": "CVE-2026-24304 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24304"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17717",
+    "published": "2026-07-30T01:16:34.247",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Integer overflow in ANGLE in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-17717 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17717"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17718",
+    "published": "2026-07-30T01:16:34.353",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use after free in ANGLE in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-17718 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17718"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17924",
+    "published": "2026-07-30T01:16:56.607",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use after free in DNS in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17924 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17924"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17940",
+    "published": "2026-07-30T01:16:58.273",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in Picture-in-Picture in Google Chrome on Android prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17940 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17940"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17987",
+    "published": "2026-07-30T01:17:03.317",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in Notifications in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted PDF file. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17987 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17987"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-14602",
+    "published": "2026-07-30T06:25:00.937",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Remote API WordPress plugin through 0.2 does not authenticate a request before deserializing user-supplied input, allowing unauthenticated attackers to inject arbitrary PHP objects, which can lead to remote code execution when a suitable gadget chain is present through another installed Remote API WordPress plugin through 0.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14602 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14602"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-51290",
+    "published": "2026-07-30T17:16:32.133",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQLite 3.41 has a use-after-free vulnerability in the shared cache lock management logic of the btree module. The program frees a BtLock structure without removing the node from the linked list. Subsequent linked list traversal accesses the released memory, which can lead to denial of service and sensitive memory information disclosure.",
+    "tags": [],
+    "title": "CVE-2026-51290 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51290"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51291",
+    "published": "2026-07-30T17:16:32.240",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "sqlite 3.41 is vulnerable to use after free in the json.c jsonCacheInsert function of the JSON cache management module.",
+    "tags": [],
+    "title": "CVE-2026-51291 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51291"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51272",
+    "published": "2026-07-30T19:18:05.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In schreibfaul1 ESP32-audioI2S 3.4.5, a heap-based buffer overflow vulnerability exists in the latinToUTF8() character encoding conversion function. The function calculates required buffer size by simply doubling input length and reallocates ps_ptr heap buffer without strict boundary validation. Malicious oversized input can trigger insufficient buffer allocation and out-of-bounds write during Latin-1 to UTF-8 conversion, leading to code execution, information disclosure, denial of service or privilege escalation.",
+    "tags": [],
+    "title": "CVE-2026-51272 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51272"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-12946",
+    "published": "2026-07-30T20:16:52.293",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 could allow a remote attacker to inject arbitrary code on the system, due to the improper control of user input code.",
+    "tags": [],
+    "title": "CVE-2026-12946 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12946"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67208",
+    "published": "2026-07-30T20:18:14.323",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Juggle through 1.6.0 contains a remote code execution vulnerability that allows unauthenticated remote attackers to execute arbitrary OS commands by connecting to the exposed H2 database web console using default shipped credentials. Attackers can access the unprotected /h2-console endpoint, authenticate with default credentials, and leverage the H2 CREATE ALIAS Runtime.exec() technique to execute arbitrary commands, resulting in root-level code execution when running the stock Docker image.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-67208 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67208"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67594",
+    "published": "2026-07-30T20:18:15.173",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Spikster through commit e1cdf8c contains a missing authentication vulnerability that allows unauthenticated remote attackers to access all API routes by exploiting the unattached CipiAuth middleware, which is registered but never applied to any route in the API routing configuration. Attackers can invoke approximately 50 unprotected API endpoints to enumerate and provision servers, reset root passwords, read and write arbitrary files on the host, and create database users.",
+    "tags": [],
+    "title": "CVE-2026-67594 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67594"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17922",
+    "published": "2026-07-30T01:16:56.407",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in Enterprise in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17922 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17922"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13444",
+    "published": "2026-07-30T19:17:06.997",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.1 can allow an attacker to access another user's private vector documents by creating their own flow with matching Chroma persist_directory and collection_name values. The attacker receives exact victim content in their workflow output despite having no authorization to read the victim's flow. Additionally, the attacker can pollute the victim's collection by inserting their own documents into the shared namespace.",
+    "tags": [],
+    "title": "CVE-2026-13444 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13444"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-11536",
+    "published": "2026-07-30T20:16:52.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server 9.0, and 8.5 is affected by a remote code execution vulnerability in the SOAP/JMX connector.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-11536 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11536"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67206",
+    "published": "2026-07-30T20:18:14.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wolf CMS through 0.8.3.1 contains a remote code execution vulnerability in FileManagerController that allows authenticated attackers to create arbitrary PHP files by exploiting missing file extension validation in the create_file() and save() functions. Attackers with the file_manager_mkfile capability can write malicious PHP content into the web-accessible FILES_DIR directory and trigger execution by requesting the file over HTTP.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-67206 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67206"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67207",
+    "published": "2026-07-30T20:18:14.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wolf CMS through 0.8.3.1 contains an authorization bypass vulnerability in BackupRestoreController that allows authenticated non-administrative users to access restricted backup functionality due to a PHP operator precedence flaw in the permission check expression. Attackers can exploit the incorrect evaluation of the access control expression to create, download, and restore backups without administrative privileges.",
+    "tags": [],
+    "title": "CVE-2026-67207 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67207"
   }
 ]
