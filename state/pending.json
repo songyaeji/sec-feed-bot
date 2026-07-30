@@ -16076,5 +16076,31 @@
     ],
     "title": "2026년 6월 외국인 증권투자 동향",
     "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=220052&menuNo=200218"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25251",
+    "published": "2026-07-30T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "CISA is currently observing a significant increase in cyber threat actors targeting programmable logic controllers (PLCs) in the Water and Wastewater Systems (WWS) Sector. CISA urges critical infrastructure owners, operators, and integrators to remove publicly exposed PLCs and other operational technology (OT) from the internet as soon as possible. Threat actors targeting exposed PLCs have modified passwords to lock out operators and disconnected the PLCs by changing their IP addresses. This activity has resulted in boil water notices and sustained manual operations. These threat actors are targeting water entities of all sizes. Even water organizations with mature cybersecurity processes should validate their external connections, as this targeting activity includes cellular modems installed by operators, vendors, or system integrators that may not be documented or included in routine attack surface scans. OT assets exposed to the internet have an increased risk of defacement, configuration changes, operational disruptions, and, in severe cases, physical damage. CISA recommends organizations implement the following mitigations: Disconnect the PLC from the internet. Remote access for operational purposes should go through a VPN or gateway device, not directly to the PLC. Enable password protection and change default passwords. Allowlist IPs to only allow remote access from known engineering laptops or other critical OT assets. After disconnecting PLCs from the internet, opera",
+    "tags": [
+      "APT"
+    ],
+    "title": "CISA Urges Water and Wastewater Systems Sector to Protect OT Against Activity Targeting PLCs",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/07/30/cisa-urges-water-and-wastewater-systems-sector-protect-ot-against-activity-targeting-plcs"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMihwlBVV95cUxPcmdoRlJYUncwS2JJV3lvOE1KOVh4TW1XUlgtaFNzS1ZHTUlRbWJrVWhoMTV1T2pZZU1mWWpoRG1LRDFZb3VLNmp3YUpvTjBqRlBKSUZScVFmcjBWeXlKLW5OTEhOejVLNjJMYWd0M3RqMll3LUx1d0hkbmx0SjEtWi1MZjBPT3d1ZlMwZE15UTRXZUxUVjFvSzNkYTFOTDJ2Q2FTTGlXSmxzOEdVQnZDSlR5d2lHM0QzMFdicnd5bm5OS25yUkplckNqOGdMazdoQ0FadjZsOXNxbFR4QUJvbnlFdjRqTHpzSlUwVGhOOU8zOHlHeTZ6RDU5OEpma2JNQ2VFUHJsbXpza1UyOENFOW5oN2RaVkNYRkg3aWlrT1VBNHBxcHdDcFZKWEZzU2h1X1RFdDdyZ1hUdWxaN0N3T0hlMVEwNC1sR05FUEd3SDEzYmROQllNWTJjeGVNSWZEaVlPMUQxZFdOUnNGQl84LWd4aENxbVRNa1dJQUg3bko3VU0tMzVDVERYLXpXSnVQY3JPNDVaemdrc2JONF9aX0VNS0lYR1dmRFZXdmFBUUo5ZjVPbUFpWl9lZzFnVTlfdUQwTFFGTjNkZ0tnLWxoWXNJODBEQkxXaEJYcHprUU5hYi01dFdxaDZta1dqblAyUHJzSWc0UXpfQ0ZMMEgwUTFBcWtxTkZCZ01XTEphdXV6bk1OaVV2TFR3cUxMLTFhQkE3ZmdsbEFuVjRaVVNfc19ZQkVDczcwdy1mdGhES29EMzYzTW9Obm1UckF2MDhVY1BsVWVNc0t0MzBTWGYtdlBuWlFJSUhsdWp3MmNKclhyRFlieW5XVWY1d1YxeDBNTmY5Vjh3cWloUnR3WEw4TmJ2LWFkY2JIT2NsSHNKNWh3QlRKOU9yWHV6QXRocURQUzJnOV9HME9oQkM3TDVfQVUybVMwNThDaDBzSGNmcllYRG9yZGhrMnh4eE9UaVZjMmRUVGNVbFI5a0xPR1BUd2FEODFkNzVJQUttR0VuTGtJNUtaUFlVNlhUZklVMzRUZkVvVzkyMlNOVFBLZ2VVR2pLTDdhTGlDcDlWbkswZ1dYUnBwZnRZMWw0S3Z2dW93dUk0UjhkZjFFa3VvMjRQVTg5VDYxRWpMcVBQR1RJMDlObW42ekpzU1YzZFVFdXp0eEN0YU1IR0x6TjFsYTZkLVE5TjB4VGhnekszTEdsSnZWWnhwZWE3UEV4bTZBUm5nU3lYZHUxbHpJWUJzNFY1Skt4OHpFX3M5U1p0VmJYQndUY3VHTzhvTWdfQjU5MVB0LTZ3YUhLTzU2MWU5aTQ1VDc4QzdLMFhybHdyR0dKX1RfNnNSSVFKVjZPT0ExNVk2WUt0R25MNUJJazBjWTdySzE1WnNXaTh6bUgyZkZzempCWjVBdlNQTjJDakUyd1dhQmV3Zl9BSVBTdnMtWXNmbU41NGcyQXZOU0tfcS16c3J2T1hibU5PLS1VVkpHWXF2bkZrUnNpblJJb2FWZ2RkNnRpVVZLX1dGak9SMUxMcGJOSFNsWDZz",
+    "published": "2026-07-30T19:04:25+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "양청삼 개인정보보호위원회 사무처장이 30일 정부서울청사에서 KT 개인정보 유출사고 제재 처분 관련 브리핑을 진행하고 있다.",
+    "tags": [],
+    "title": "양청삼 개인정보보호위원회 사무처장이 30일 정부서울청사에서 KT 개인정보 유출사고 제재 처분 관련 브리핑을 진행하고 있다.",
+    "url": "https://news.google.com/rss/articles/CBMihwlBVV95cUxPcmdoRlJYUncwS2JJV3lvOE1KOVh4TW1XUlgtaFNzS1ZHTUlRbWJrVWhoMTV1T2pZZU1mWWpoRG1LRDFZb3VLNmp3YUpvTjBqRlBKSUZScVFmcjBWeXlKLW5OTEhOejVLNjJMYWd0M3RqMll3LUx1d0hkbmx0SjEtWi1MZjBPT3d1ZlMwZE15UTRXZUxUVjFvSzNkYTFOTDJ2Q2FTTGlXSmxzOEdVQnZDSlR5d2lHM0QzMFdicnd5bm5OS25yUkplckNqOGdMazdoQ0FadjZsOXNxbFR4QUJvbnlFdjRqTHpzSlUwVGhOOU8zOHlHeTZ6RDU5OEpma2JNQ2VFUHJsbXpza1UyOENFOW5oN2RaVkNYRkg3aWlrT1VBNHBxcHdDcFZKWEZzU2h1X1RFdDdyZ1hUdWxaN0N3T0hlMVEwNC1sR05FUEd3SDEzYmROQllNWTJjeGVNSWZEaVlPMUQxZFdOUnNGQl84LWd4aENxbVRNa1dJQUg3bko3VU0tMzVDVERYLXpXSnVQY3JPNDVaemdrc2JONF9aX0VNS0lYR1dmRFZXdmFBUUo5ZjVPbUFpWl9lZzFnVTlfdUQwTFFGTjNkZ0tnLWxoWXNJODBEQkxXaEJYcHprUU5hYi01dFdxaDZta1dqblAyUHJzSWc0UXpfQ0ZMMEgwUTFBcWtxTkZCZ01XTEphdXV6bk1OaVV2TFR3cUxMLTFhQkE3ZmdsbEFuVjRaVVNfc19ZQkVDczcwdy1mdGhES29EMzYzTW9Obm1UckF2MDhVY1BsVWVNc0t0MzBTWGYtdlBuWlFJSUhsdWp3MmNKclhyRFlieW5XVWY1d1YxeDBNTmY5Vjh3cWloUnR3WEw4TmJ2LWFkY2JIT2NsSHNKNWh3QlRKOU9yWHV6QXRocURQUzJnOV9HME9oQkM3TDVfQVUybVMwNThDaDBzSGNmcllYRG9yZGhrMnh4eE9UaVZjMmRUVGNVbFI5a0xPR1BUd2FEODFkNzVJQUttR0VuTGtJNUtaUFlVNlhUZklVMzRUZkVvVzkyMlNOVFBLZ2VVR2pLTDdhTGlDcDlWbkswZ1dYUnBwZnRZMWw0S3Z2dW93dUk0UjhkZjFFa3VvMjRQVTg5VDYxRWpMcVBQR1RJMDlObW42ekpzU1YzZFVFdXp0eEN0YU1IR0x6TjFsYTZkLVE5TjB4VGhnekszTEdsSnZWWnhwZWE3UEV4bTZBUm5nU3lYZHUxbHpJWUJzNFY1Skt4OHpFX3M5U1p0VmJYQndUY3VHTzhvTWdfQjU5MVB0LTZ3YUhLTzU2MWU5aTQ1VDc4QzdLMFhybHdyR0dKX1RfNnNSSVFKVjZPT0ExNVk2WUt0R25MNUJJazBjWTdySzE1WnNXaTh6bUgyZkZzempCWjVBdlNQTjJDakUyd1dhQmV3Zl9BSVBTdnMtWXNmbU41NGcyQXZOU0tfcS16c3J2T1hibU5PLS1VVkpHWXF2bkZrUnNpblJJb2FWZ2RkNnRpVVZLX1dGak9SMUxMcGJOSFNsWDZz?oc=5"
   }
 ]
