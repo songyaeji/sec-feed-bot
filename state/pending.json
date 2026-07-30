@@ -13761,5 +13761,133 @@
     ],
     "title": "North Korean hackers behind major open-source supply chain attacks, Amazon says",
     "url": "https://therecord.media/north-korea-hackers-amazon-malware"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-54363",
+    "published": "2026-07-30T13:16:51.223",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CentreStack before 17.5 contains a hardcoded cryptographic key vulnerability that allows unauthenticated attackers to forge arbitrary encrypted tokens by exploiting a static SysNumber value used as entropy for AccessTicket.Encrypt() and AccessTicket.Decrypt() across all installations. Attackers can use the hardcoded key to craft valid x-glad-auth headers and call privileged API endpoints such as acquiretenantbackuptoken to obtain a domain administrator IdentityTicket, enabling a complete unauthenticated remote code execution chain.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54363 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54363"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-59310",
+    "published": "2026-07-30T13:16:53.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "VMware vCenter contains a directory traversal vulnerability in the Syslog server. A malicious actor with network access to vCenter may exploit this issue to execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-59310 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59310"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17786",
+    "published": "2026-07-30T01:16:41.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in DevTools in Google Chrome prior to 151.0.7922.72 allowed an attacker who convinced a user to install a malicious extension to perform privilege escalation via a crafted Chrome Extension. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17786 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17786"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17868",
+    "published": "2026-07-30T01:16:50.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient policy enforcement in USB in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to perform privilege escalation via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-17868 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17868"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17899",
+    "published": "2026-07-30T01:16:53.953",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient policy enforcement in DevTools in Google Chrome prior to 151.0.7922.72 allowed an attacker who convinced a user to install a malicious extension to perform privilege escalation via a crafted Chrome Extension. (Chromium security severity: Low)",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-17899 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17899"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17969",
+    "published": "2026-07-30T01:17:01.417",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in Passwords in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17969 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17969"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18017",
+    "published": "2026-07-30T01:17:06.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Dawn in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-18017 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18017"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-54365",
+    "published": "2026-07-30T13:16:51.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CentreStack before 17.3 contains an unauthenticated deserialization vulnerability in GSNamespace.dll that allows unauthenticated attackers to create arbitrary local OS user accounts by supplying a crafted base64-encoded XML string to exposed API endpoints. Attackers can send a malicious StorageConfigure parameter to the jsonimportuserbyupn, jsonimportuserbyupnex, or japiimportuserbyupn endpoints to trigger InternalImportAdUserByUPN(), causing GladinetCloudMonitor.exe to invoke the NetUserAdd Windows API with attacker-controlled credentials and create arbitrary directories on the server filesystem.",
+    "tags": [],
+    "title": "CVE-2026-54365 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54365"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-54367",
+    "published": "2026-07-30T13:16:51.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CentreStack before 17.2 contains an authentication bypass vulnerability that allows unauthenticated attackers to read, write, or delete arbitrary account settings by exploiting exposed API endpoints that lack authorization checks. Attackers can generate valid encrypted EntAcctId values using the static shared encryption key to forge identifiers for any user GUID, including the system-wide cluster settings account, enabling enumeration of hosted tenant domains and administrator identities.",
+    "tags": [],
+    "title": "CVE-2026-54367 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54367"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-54368",
+    "published": "2026-07-30T13:16:51.910",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CentreStack before 17.4 contains a SQL injection vulnerability in GladDBFiles.SearchEx() and SearchExUnder() that allows authenticated attackers to execute arbitrary SQL statements by supplying a crafted x-glad-filter request header through the jsondir API endpoint. Attackers can exploit unsanitized interpolation of the Field parameter directly into SQL query strings to write arbitrary files to the server filesystem via PostgreSQL lo_from_bytea() and lo_export() functions, enabling remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54368 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54368"
   }
 ]
