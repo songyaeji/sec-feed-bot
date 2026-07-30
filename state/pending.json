@@ -13940,5 +13940,191 @@
     "tags": [],
     "title": "After the Break-In: What Attackers Do Once They're Already Inside",
     "url": "https://www.bleepingcomputer.com/news/security/after-the-break-in-what-attackers-do-once-theyre-already-inside/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65944",
+    "published": "2026-07-29T13:19:11.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - rolandd.com - CSRF vectors in AJAX endpoint handlers RO CSVI < 9.11.0",
+    "tags": [],
+    "title": "CVE-2026-65944 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65944"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2025-67405",
+    "published": "2026-07-29T22:16:51.283",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sourcecodester CASAP Automated Enrollment System 1.0 is vulnerable to SQL Injection in update_password.php via the parameter new_password.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2025-67405 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67405"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2025-67407",
+    "published": "2026-07-29T22:16:51.510",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sourcecodester CASAP Automated Enrollment System 1.0 is vulnerable to SQL Injection in update_student.php via parameters fname and student_class.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2025-67407 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67407"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2025-67408",
+    "published": "2026-07-29T22:16:51.627",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sourcecodester CASAP Automated Enrollment System 1.0 is vulnerable to SQL Injection in /save_user.php via the parameter status.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2025-67408 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67408"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17950",
+    "published": "2026-07-30T01:16:59.377",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in Safebrowsing in Google Chrome on Mac prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code via a malicious file. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17950 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17950"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17956",
+    "published": "2026-07-30T01:17:00.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in Scheduling in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17956 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17956"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17989",
+    "published": "2026-07-30T01:17:03.533",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Type Confusion in V8 in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-17989 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17989"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18012",
+    "published": "2026-07-30T01:17:05.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in PDFium in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted PDF file. (Chromium security severity: Low)",
+    "tags": [],
+    "title": "CVE-2026-18012 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18012"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-12722",
+    "published": "2026-07-30T14:16:45.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing authentication for critical function vulnerability in FTC Software IT Services FTC E-Commerce Management Panel allows Authentication Bypass.\n\nThis issue affects FTC E-Commerce Management Panel: before 1.0.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12722 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12722"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56428",
+    "published": "2026-07-30T14:16:59.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The SSH service on BSH ELP (Electronic Platform) modules contains a platform-specific vulnerability due to an improperly secured default configuration. An insecure, non-revocable SSH public key is included in the firmware's authorized_keys file for the root user. An attacker in possession of the corresponding private key could leverage it to bypass authentication and gain root-level access to the appliance.",
+    "tags": [],
+    "title": "CVE-2026-56428 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56428"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-5219",
+    "published": "2026-07-30T14:17:01.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cross-Site request forgery (CSRF) vulnerability in Softtr Information Technology Trade Ltd. Co. E-Commerce Pack allows Cross Site Request Forgery.\n\nThis issue affects E-Commerce Pack: through 30072026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-5219 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5219"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67351",
+    "published": "2026-07-30T14:17:04.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Serendipity before 2.6.1 contains an authentication context confusion vulnerability where password validation and session loading operate independently without ensuring both use the same user record. An authenticated Editor can create a username collision with an Administrator account and obtain administrative privileges by logging in with their own password while the session loads the Administrator's account data.",
+    "tags": [],
+    "title": "CVE-2026-67351 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67351"
+  },
+  {
+    "author": "[엄호식기자 (eomhs@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144964&kind=&sub_kind=",
+    "published": "2026-07-30T14:14:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "국산 NPU에 자체 AI 영상분석 소프트웨어 적용공군 기지 시작으로 해안·함정·항공 분야 확대 추진[보안뉴스 엄호식 기자] 인공지능(AI) 기술 선도 기업 핀텔이 공군 기지의 주요 경계 지역을 실시간 감시하는 국방 AI 사업에 진출했다. 핀텔은 ‘NPU 기반 지능형 영상감시체계 시범 구축 사업’을 수주했다고 30일 밝혔다.이번 사업은 공군 기지의 활주로와",
+    "tags": [
+      "AI"
+    ],
+    "title": "핀텔, 공군 기지에 ‘AI 경계감시망’ 구축하며 국방 사업 본격화",
+    "url": "http://www.boannews.com/media/view.asp?idx=144964&kind=&sub_kind="
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/north-korea-hackers-ransomware",
+    "published": "2026-07-30T14:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Cyberattack tools and infrastructure used by North Korea’s Lazarus Group appear to have been shared with ransomware criminals targeting South Korean organizations — further evidence of deepening entanglement between Pyongyang-backed hackers and the ransomware ecosystem.",
+    "tags": [
+      "랜섬웨어",
+      "APT"
+    ],
+    "title": "North Korea’s Lazarus Group sharing tools with ransomware hackers, South Korean agencies warn",
+    "url": "https://therecord.media/north-korea-hackers-ransomware"
   }
 ]
