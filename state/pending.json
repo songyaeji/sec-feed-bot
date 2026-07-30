@@ -3922,5 +3922,46 @@
     "tags": [],
     "title": "KT 불법 펨토셀 해킹 540억 철퇴…개인정보위 고발 조치",
     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9MZE1lekg2U2hUMDVqcXBJM2g0bGUxaTgyTDB6eEVtSmhBT1dBdXlzeHNyUzN4NW5rdUg2NXR1MGZMUzY0U3VhbW5wWkFBcjA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16610",
+    "published": "2026-07-30T05:16:34.520",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Admin and Site Enhancements (ASE) Pro plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 8.9.0 via the recursive_html function. This is due to the frontend save handler enforces only a publicly emitted nonce with no authentication check, CAPTCHA validation is bypassable by omitting an attacker-supplied key, and repeater row keys from cfgroup[input] are stored verbatim and later spliced into an eval() call in recursive_html without any sanitization or identifier validation. This makes it possible for unauthenticated attackers to execute code on the server. This requires the [post_cf_form] shortcode to be present on at least one publicly accessible page, as the nonce and session ID needed to reach the vulnerable save handler are emitted to unauthenticated visitors by that shortcode.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-16610 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16610"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14356",
+    "published": "2026-07-30T05:16:32.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The FleekDash V2 plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.6.2.2. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to overwrite the email address and password of any WordPress user, including administrators, enabling full account takeover and complete site compromise. The public /wp-json/fleekdash/v1/register endpoint auto-provisions a Subscriber-role account and returns a valid REST nonce regardless of the site's users_can_register setting, enabling unauthenticated attackers to self-provision the required credentials and nonce in a single prior request.",
+    "tags": [],
+    "title": "CVE-2026-14356 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14356"
+  },
+  {
+    "author": "[조재호기자 (zephyr@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=144947&kind=&sub_kind=",
+    "published": "2026-07-30T05:13:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "다크웹·텔레그램 등에서 수집한 해킹 기법 적용해 모델·프롬프트 점검금융권 보안 요건 뚫고 국내 대형 금융사 AI 취약점 점검 프로젝트 수주[보안뉴스 조재호 기자] 에스투더블유(S2W)가 에이전틱 AI 시대를 맞이해 기업의 안전한 AI 도입과 활용을 지원하기 위한 AI 서비스 취약점 진단 사업을 확대한다고 30일 밝혔다.이번 사업은 다크웹과 텔레그램, 해킹",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI 보안 사각지대 잡는다... S2W, 오펜시브 취약점 진단 사업 공략",
+    "url": "http://www.boannews.com/media/view.asp?idx=144947&kind=&sub_kind="
   }
 ]
