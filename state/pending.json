@@ -12970,5 +12970,153 @@
     "tags": [],
     "title": "불확실성 덜었지만…KT 박윤영호 수익성 '시험대'",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1EZlJTakttdlNYbDhZX0VzdDNFSHZIbno0YXd3bUJ0d1A0M1JJT3NydFo3b0JTRXlDdjJpUWl2V0xNbngxT3JQLVVGV3JmaVZYOFRFZDRVZUVEajd5TkF5bw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44090",
+    "published": "2026-07-30T07:16:56.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Due to missing authentication, an unauthenticated remote attacker may access the MQTT broker, which is only protected from external access by a firewall. This may lead to the device being fully compromised.",
+    "tags": [],
+    "title": "CVE-2026-44090 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44090"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44091",
+    "published": "2026-07-30T07:16:56.963",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unauthenticated remote attacker can post a malicious ID to the MQTT Broker results in the creation of a new configuration entry in the system configuration. This may lead to integrity and availability loss.",
+    "tags": [],
+    "title": "CVE-2026-44091 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44091"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44092",
+    "published": "2026-07-30T07:16:57.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unauthenticated remote attacker can inject malicious input into the ModbusServer application because it does not validate the input it fetches from MQTT. This may lead to integrity and availability loss.",
+    "tags": [],
+    "title": "CVE-2026-44092 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44092"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-44100",
+    "published": "2026-07-30T07:16:58.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The CHARX JupiCore service allows an unauthenticated remote attacker to reconfigure charging points. This can lead to disclosure of charging point UIDs, Denial-of-Service and files tampering.",
+    "tags": [],
+    "title": "CVE-2026-44100 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44100"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44101",
+    "published": "2026-07-30T07:16:58.357",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Due to missing authentication the CHARX OCPP Agent service allows an unauthenticated remote attacker to reconfigure the backend connection. This can lead to Denial-of-Service and confidential data being disclosed to the attacker.",
+    "tags": [],
+    "title": "CVE-2026-44101 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44101"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44104",
+    "published": "2026-07-30T07:16:58.760",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The firmware update process for the basemodule of the charging controller only validates the\nCRC32 checksum without cryptographic signature verification. This allows an unauthenticated remote attacker to install a modified firmware, resulting in full system compromise.",
+    "tags": [],
+    "title": "CVE-2026-44104 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44104"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44108",
+    "published": "2026-07-30T07:16:59.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Due to a flaw in the execution order of scripts during shutdown, the firewall is terminated prematurely during system shutdown. This creates a temporary window in which internal services may become externally accessible, potentially allowing an unauthenticated remote attacker to connect to these services, resulting in full system compromise.",
+    "tags": [],
+    "title": "CVE-2026-44108 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44108"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-7849",
+    "published": "2026-07-30T07:16:59.443",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Due to improper neutralization of special elements, an unauthenticated remote attacker is able to inject a command into the system configuration which is subsequently executed as root.",
+    "tags": [],
+    "title": "CVE-2026-7849 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7849"
+  },
+  {
+    "category": "high",
+    "cvss": 4.6,
+    "id": "CVE-2022-3566",
+    "published": "2022-10-17T19:15:10.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Linux Kernel up to 4.19.316/5.4.278/5.10.220/5.15.161. This impacts the function tcp_getsockopt/tcp_setsockopt of the component TCP Handler. Such manipulation leads to race condition. A high complexity level is associated with this attack. The exploitability is said to be difficult. The vulnerability was introduced in 2.6.12, commit 1da177e4c3f41524e886b7f1b8a0c1fc7321cac2 (\"Linux-2.6.12-rc2\"). Upgrading to version 4.19.317, 5.4.279, 5.10.221, 5.15.162 and 6.1 will fix this issue. The name of the patch is fcd31dd8291b23d713245947ec2b2d99ef07aef2/3b32f265805a49071e2c4568a524398ba22bf93c/d529193eae979a7bf2255cd9fe68b7af7a1c91b3/5bb642cc3355ffd3c8bca0a8bd8e6e65bcc2091c/f49cd2f4d6170d27a2c61f1fecb03d8a70c91f57. The affected component should be upgraded.",
+    "tags": [],
+    "title": "CVE-2022-3566 (CVSS 4.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3566"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-13584",
+    "published": "2026-07-30T07:16:56.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Enforcement of Message Integrity During Transmission in a Communication Channel vulnerability in Mitsubishi Electric MELSEC MX Controller MX-R model, MELSEC MX Controller MX-F model, Master/local module, CC-Link IE TSN interface board, Motion module, Motion Control Board, Block-type remote module, Block-type remote module with safety functions, Analog-Digital converter module, Digital-Analog converter module, CC-Link IE TSN compatible coupler, FPGA module, Tension meter, AC Servo MELSERVO-J5, AC Servo MELSERVO-JET, Liner Track System MTR-S series Linear track control module, Inverter FR-A800/F800/E800 Series, Industrial Robot CR800-D series controller Network Base Card, CC-Link IE TSN expansion unit, CC-Link IE TSN-CC-Link IE Field Network bridge module, CC-Link IE TSN-AnyWireASLINK bridge module, Energy Measuring Unit CC-Link IE TSN Communication Unit, Industrial Computer MELIPC series, GOT3000 Series, CC-Link IE TSN Communication Unit, Motion Control Software, CC-Link IE TSN Communication Software for Windows, Analysis Support Software MELSOFT VIMA, Master/Local module Designated communication LSI DeviceKit, Master/Local module Designated communication LSI, Remote Station Communication LSI with GbE-PHY, CC-Link IE TSN Master/Local module Designated communication LSI SDK, and Remote station software development kit allows an attacker with access to a CC-Link IE TSN network to tamper with communication data (control input/output values) by sending specially crafted p",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13584 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13584"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-44094",
+    "published": "2026-07-30T07:16:57.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An unauthenticated remote attacker can enforce the system to fall back to a firmware partition with an insecure configuration including default credentials. This could allow the attacker to gain SSH access to the system as an unprivileged user \"user-app\". Charging could be interrupted.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44094 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44094"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-44098",
+    "published": "2026-07-30T07:16:57.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "This vulnerability allows an unauthenticated remote attacker with control over the OCPP backend via firewall-bypass to perform an OS command injection, resulting in the execution of arbitrary commands as the  limited user charx-oa. Charging could be interrupted.",
+    "tags": [],
+    "title": "CVE-2026-44098 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44098"
   }
 ]
