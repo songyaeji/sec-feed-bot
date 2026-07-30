@@ -10,3 +10,4 @@ NASA **Core Flight System(cFS)** Health & Safety 애플리케이션에서 NULL �
 ## 타임라인
 
 - 2026-07-16 [CISA ICS Advisory ICSA-26-197-03](https://www.cisa.gov/news-events/ics-advisories/icsa-26-197-03) — NASA cFS Health & Safety Application NULL 포인터 역참조 DoS 공개
+- 2026-07-30 [CISA ICS Advisory ICSA-26-211-06](https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-06) — NASA cFS Health & Safety 추가 DoS 취약점 공개

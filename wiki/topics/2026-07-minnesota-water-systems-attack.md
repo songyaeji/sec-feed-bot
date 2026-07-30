@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-29 [The Hacker News](https://thehackernews.com/2026/07/coordinated-cyberattack-targets-30.html) — 7월 26~27일 미네소타 30개+ 물 시스템 조정 공격, 브래햄·플라이머스·사우스 세인트 폴·메이플 플레인 등 지역 시설 영향
+- 2026-07-30 [CISA Alert](https://www.cisa.gov/news-events/alerts/2026/07/30/cisa-urges-water-and-wastewater-systems-sector-protect-ot-against-activity-targeting-plcs) — CISA 물·폐수 처리 부문 공격 경고, 인터넷 노출 PLC 즉시 격리 권고
 
 ## 관련

@@ -10,5 +10,6 @@ WebPros **Plesk** 18.0.78.4 이전 버전의 XML-RPC API 인증 검증 누락. �
 ## 타임라인
 
 - 2026-07-08 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-56843) — CVE-2026-56843: XML-RPC API 인증 우회 (CVSS 9.9)
+- 2026-07-30 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-58046) — CVE-2026-58046: XML-RPC API SQL 인젝션으로 데이터 유출 및 패널 완전 손상 (CVSS 9.9)
 
 ## 관련
