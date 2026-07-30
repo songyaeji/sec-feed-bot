@@ -4233,5 +4233,67 @@
     "tags": [],
     "title": "'과징금 쇼크' 피한 KT…신뢰 회복 과제",
     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1BV3c2aVdrTGVIOVJvNjd2UlM1NlFNblZXTVFDb1p5Z1VKREJiUXg4cTdRZUUySEFGcFdUWDB0ajNEbmZNejhvSUwwaUtlcndEcVVVWFR0c21XeS1oaEVEemdtVEhTbGRUX2FLM3lvblU2WTA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2025-4517",
+    "published": "2025-06-03T13:15:20.837",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Allows arbitrary filesystem writes outside the extraction directory during extraction with filter=\"data\".\n\n\nYou are affected by this vulnerability if using the tarfile module to extract untrusted tar archives using TarFile.extractall() or TarFile.extract() using the filter= parameter with a value of \"data\" or \"tar\". See the tarfile  extraction filters documentation https://docs.python.org/3/library/tarfile.html#tarfile-extraction-filter  for more information.\n\nNote that for Python 3.14 or later the default value of filter= changed from \"no filtering\" to `\"data\", so if you are relying on this new default behavior then your usage is also affected.\n\nNote that none of these vulnerabilities significantly affect the installation of source distributions which are tar archives as source distributions already allow arbitrary code execution during the build process. However when evaluating source distributions it's important to avoid installing source distributions with suspicious links.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-4517 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4517"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-66421",
+    "published": "2026-07-30T23:16:53.687",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenClaw Dashboard contains a stored cross-site scripting vulnerability that allows unauthenticated remote attackers to execute arbitrary JavaScript in the administrator's browser session by injecting HTML markup into agent transcript messages processed through the sessions API. Attackers can craft a message containing inline event handler payloads such as an img tag with an onerror attribute within the 60-character rendering budget, which is stored in the session transcript and interpolated unsanitized into innerHTML on the default landing page, allowing theft of session tokens and unauthorized calls to authenticated administrative endpoints including agent instruction file modification.",
+    "tags": [],
+    "title": "CVE-2026-66421 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66421"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-63035",
+    "published": "2026-07-30T23:16:52.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap use-after-free vulnerability in the TransferSubscriptions service\n in open62541 may allow an authenticated attacker to cause a denial of \nservice or potentially execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-63035 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63035"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65423",
+    "published": "2026-07-30T23:16:52.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An integer overflow in the UA_Variant arrayDimensions product \ncomputation in open62541 may allow a remote attacker to trigger an \nout-of-bounds write.",
+    "tags": [],
+    "title": "CVE-2026-65423 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65423"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-66420",
+    "published": "2026-07-30T23:16:53.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MeshCentral 1.1.21 contains a cross-site WebSocket hijacking protection bypass vulnerability that allows unauthenticated remote attackers to hijack authenticated administrator sessions by exploiting an unconditional early return in the CheckWebServerOriginName() function within webserver.js when self-signed certificates are in use. Attackers can open cross-origin WebSocket connections to any of the twelve WebSocket endpoints, send crafted action commands to exfiltrate the server sessionKey used to sign session cookies, forge session tokens as arbitrary users, and gain full remote control of all managed devices governed by the MeshCentral instance.",
+    "tags": [],
+    "title": "CVE-2026-66420 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66420"
   }
 ]
