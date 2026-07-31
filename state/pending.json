@@ -5879,5 +5879,203 @@
     "tags": [],
     "title": "OpenAI says its new GPT 5.6 models are becoming more cost-efficient",
     "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-new-gpt-56-models-are-becoming-more-cost-efficient/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17847",
+    "published": "2026-07-30T01:16:48.350",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in ANGLE in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17847 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17847"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17848",
+    "published": "2026-07-30T01:16:48.453",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Integer overflow in Codecs in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox escape via a crafted video file. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17848 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17848"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17855",
+    "published": "2026-07-30T01:16:49.230",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Race in DevTools in Google Chrome on Mac prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17855 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17855"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17856",
+    "published": "2026-07-30T01:16:49.353",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in Network in Google Chrome on Mac prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17856 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17856"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17865",
+    "published": "2026-07-30T01:16:50.400",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Inappropriate implementation in Crypto in Google Chrome on Mac prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17865 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17865"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-65336",
+    "published": "2026-07-30T21:16:50.690",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ecommerce-project-with-php-and-mysqli-Fruits-Bazar 1.0 is vulnerable to SQL Injection in /show_price_by_pdtId.php.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-65336 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65336"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-69930",
+    "published": "2026-07-30T21:16:51.893",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in /print_membership_card.php?id=1.",
+    "tags": [],
+    "title": "CVE-2025-69930 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69930"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-69933",
+    "published": "2026-07-30T21:16:52.120",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in /memberProfile.php?id=1.",
+    "tags": [],
+    "title": "CVE-2025-69933 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69933"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-69934",
+    "published": "2026-07-30T21:16:52.223",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in /delete_members.php?id=1.",
+    "tags": [],
+    "title": "CVE-2025-69934 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69934"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-69935",
+    "published": "2026-07-30T21:16:52.333",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeAstro Membership Management System 1.0 is vulnerale to SQL Injection in the report.php and revenue_report.php via the fromDate parameter.",
+    "tags": [],
+    "title": "CVE-2025-69935 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69935"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-69936",
+    "published": "2026-07-30T21:16:52.453",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in /edit_member.php?id=1.",
+    "tags": [],
+    "title": "CVE-2025-69936 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69936"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67822",
+    "published": "2026-07-31T17:16:35.210",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Tenda W6-S 1.0.0.4(510) contains a stack-based buffer overflow vulnerability in the /goform/wifiSSIDset endpoint. The function formwrlSSIDset uses sprintf to copy user-controlled 'GO' and 'index' parameters into a 64-byte stack buffer without length restriction, leading to stack overflow.",
+    "tags": [],
+    "title": "CVE-2026-67822 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67822"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17869",
+    "published": "2026-07-30T01:16:50.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Out of bounds read in WebXR in Google Chrome prior to 151.0.7922.72 allowed a remote attacker to perform an out of bounds memory read via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17869 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17869"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-53500",
+    "published": "2026-07-31T19:17:09.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, the ALLOWED_SOURCES configuration passes plain strings to re.match() without escaping dots, so a hostname differing at dot positions can match the allowlist. This issue is fixed in 7.8.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53500 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53500"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-53501",
+    "published": "2026-07-31T19:17:09.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Thumbor is an open-source photo thumbnail service by globo.com. Prior to 7.8.0, Thumbor’s HMAC validation can be bypassed due to the use of Python’s .replace() when removing the signature from the URL before validation. Since .replace() removes all occurrences of the substring, an attacker can insert the same signature multiple times in the URL and manipulate the final URL used for validation. This allows crafting URLs where the validated string differs from the actual requested resource, enabling loading images from unintended domains or paths. This issue is fixed in 7.8.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53501 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53501"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/suspected-chinese-speaking-hackers.html",
+    "published": "2026-07-31T18:52:04+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A Chinese-speaking threat actor is suspected to be behind a fresh wave of cyber attacks targeting government organizations mainly located in Central Asia, including Afghanistan, Kyrgyzstan, Tajikistan, Uzbekistan, Kazakhstan, and the Syrian Arab Republic, since January 2025. These targeted organizations operate across several sectors, such as healthcare, research, government offices,",
+    "tags": [],
+    "title": "Suspected Chinese-Speaking Hackers Target Central Asian Governments With OctLurk and SilkLurk",
+    "url": "https://thehackernews.com/2026/08/suspected-chinese-speaking-hackers.html"
   }
 ]
