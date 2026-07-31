@@ -5170,5 +5170,55 @@
     "tags": [],
     "title": "Anthropic Says Claude Mistook the Open Internet for a CTF and Breached Three Organizations",
     "url": "https://thehackernews.com/2026/07/anthropic-says-claude-mistook-open.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-52539",
+    "published": "2026-07-30T21:17:47.213",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Outstatic CMS <= 2.1.9 contains a hardcoded JWT signing secret. When the OST_TOKEN_SECRET environment variable is not set, the application falls back to the default value which is publicly visible in the source code repository. An unauthenticated remote attacker can exploit this by forging JWT session tokens with arbitrary user data and full administrative permissions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-52539 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52539"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38709",
+    "published": "2026-07-30T22:16:54.970",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the net.set_wan interface. This vulnerability allows attackers to execute arbitrary commands as root via a crafted input.",
+    "tags": [],
+    "title": "CVE-2026-38709 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38709"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-28813",
+    "published": "2026-07-30T16:17:11.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Apache JSPWiki, up to 2.12.3, is vulnerable to JSON Hijacking, which leads to csrf vulnerabilities.\nUsers are recommended to upgrade to version 2.12.4, which fixes this issue.",
+    "tags": [],
+    "title": "CVE-2026-28813 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28813"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/anthropic-ai-hacked-three-real-companies",
+    "published": "2026-07-31T12:15:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Claude maker Anthropic said its AI models escaped test environments and breached networks at three companies on the open internet.",
+    "tags": [],
+    "title": "Anthropic says its AI hacked real-world companies in three incidents",
+    "url": "https://therecord.media/anthropic-ai-hacked-three-real-companies"
   }
 ]
