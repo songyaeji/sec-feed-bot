@@ -5381,5 +5381,29 @@
     ],
     "title": "ESET tracks rise in malicious AI skills and adaptable malware",
     "url": "https://www.bleepingcomputer.com/news/security/eset-tracks-rise-in-malicious-ai-skills-and-adaptable-malware/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-69938",
+    "published": "2026-07-30T21:16:52.670",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeAstro Membership Management System 1.0 is vulnerable to SQL Injection in renew.php via the parameter membershipType.",
+    "tags": [],
+    "title": "CVE-2025-69938 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69938"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2024-5642",
+    "published": "2024-06-27T21:15:16.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CPython 3.9 and earlier doesn't disallow configuring an empty list (\"[]\") for SSLContext.set_npn_protocols() which is an invalid value for the underlying OpenSSL API. This results in a buffer over-read when NPN is used (see CVE-2024-5535 for OpenSSL). This vulnerability is of low severity due to NPN being not widely used and specifying an empty list likely being uncommon in-practice (typically a protocol name would be configured).",
+    "tags": [],
+    "title": "CVE-2024-5642 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5642"
   }
 ]
