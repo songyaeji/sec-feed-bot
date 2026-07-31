@@ -4743,5 +4743,59 @@
     "tags": [],
     "title": "한화비전, 2세대 AI 주차유도 카메라 ‘MGC-F9020LI’ 출시하며 스마트 파킹 시장 정조준",
     "url": "http://www.boannews.com/media/view.asp?idx=144961&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14483",
+    "published": "2026-07-31T07:16:24.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Realtyna Organic IDX plugin + WPL Real Estate plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 5.2.0 via the upload function. This is due to missing file type validation in the upload function, combined with a publicly accessible I/O endpoint authenticated solely by static, plugin-seeded API credentials that are identical across all installations. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The WPL I/O service endpoint is registered on the public WordPress init hook with no WordPress capability check, and the required api_key and api_secret values are static defaults seeded by the plugin's own SQL migration files, meaning any unauthenticated attacker who knows these publicly documented defaults can reach and exploit the vulnerable upload path.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14483 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14483"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-18452",
+    "published": "2026-07-31T07:16:27.400",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DMS+ (Non-Mobile) developed by Rich Source has a Use of Hard-coded Credentials vulnerability. Unauthenticated remote attackers can exploit a fixed API key to gain control over all installed DMS+ devices.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18452 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18452"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16236",
+    "published": "2026-07-31T07:16:27.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Realtyna Organic IDX plugin for WordPress is vulnerable to Arbitrary File Upload in versions up to, and including, 5.3.0. This is due to missing file extension and content validation in the saveLiveImages() function combined with an insufficient authorization check on the get_keys() AJAX handler and a missing authentication check on the REST API import endpoint. This makes it possible for authenticated attackers, with subscriber-level access and above, to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16236 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16236"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE1VclZyalNSWW9DbzlLdDZPTS1EazlyR2M5V3hhaFFMNVhHX3ZhV0Y1RjRDOFRFLXB3ZHpIb0pKaWw3Z0UtS2VGZ092ejZFc21kSlk5VzB0RjFEUmNVXzdsaC1oRmFZbFBxcXc",
+    "published": "2026-07-31T07:15:35+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "KT, 개인정보위 540억 과징금 이어 5G 과장광고 소송도 패소",
+    "tags": [],
+    "title": "KT, 개인정보위 540억 과징금 이어 5G 과장광고 소송도 패소",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1VclZyalNSWW9DbzlLdDZPTS1EazlyR2M5V3hhaFFMNVhHX3ZhV0Y1RjRDOFRFLXB3ZHpIb0pKaWw3Z0UtS2VGZ092ejZFc21kSlk5VzB0RjFEUmNVXzdsaC1oRmFZbFBxcXc?oc=5"
   }
 ]
