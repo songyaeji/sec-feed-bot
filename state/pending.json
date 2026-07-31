@@ -5064,5 +5064,19 @@
     "tags": [],
     "title": "The Xcode Assassin Returns: A Deep Dive Into the Latest XCSSET Version",
     "url": "https://unit42.paloaltonetworks.com/xcsset-v40-malware-analysis/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-10079",
+    "published": "2026-07-31T10:16:43.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Red Hat Advanced Cluster Security for Kubernetes (RHACS). When processing Kubernetes Deployments, ACS replaces deployment identity metadata based on the openshift.io/encoded-deployment-config label. A user with permission to create Deployments can set this label to \"null\", causing ACS to treat the workload as having empty UID, name and labels and namespace \"default\". This bypasses deploy-time policy detection and enforcement visibility, prevents correct persistence in Central and breaks violation reporting and compliance correlation for the affected deployment.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-10079 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10079"
   }
 ]
