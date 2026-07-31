@@ -5662,5 +5662,69 @@
     "tags": [],
     "title": "CISA warns of cyberattacks disrupting U.S. water utilities",
     "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-cyberattacks-disrupting-us-water-utilities/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14919",
+    "published": "2026-07-31T07:16:25.963",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The ShopMonitor.io  WordPress plugin before 1.2.0 does not properly restrict its email-rerouting test mode, gating it behind a trusted-source check that is satisfiable with client-supplied request headers, allowing unauthenticated attackers to redirect outgoing emails, including the WordPress administrator password-reset email, to an address they control and take over the administrator account.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14919 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14919"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-52855",
+    "published": "2026-07-31T17:16:33.313",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Wings is the server control plane for Pterodactyl, a free, open-source game server management panel. Prior to 1.12.3, {{config.}} placeholders in egg configuration-file templates allow a low-privileged user to read {{config.token}}, {{config.token_id}}, and {{config.docker.registries}} from the full daemon configuration. This issue is fixed in version 1.12.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-52855 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52855"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-12721",
+    "published": "2026-07-31T07:16:24.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Kirki  WordPress plugin before 6.0.13 does not properly sanitise and escape a value taken from the request before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection attacks.",
+    "tags": [],
+    "title": "CVE-2026-12721 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12721"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-13609",
+    "published": "2026-07-31T07:16:24.377",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Frontend Admin by DynamiApps WordPress plugin before 3.29.9 decodes HTML entities in a submitted form field value after sanitizing it, which restores HTML tags that the sanitizer had neutralized. A double-encoded payload submitted by an unauthenticated visitor is therefore stored as a live tag and later output without escaping on the Frontend Admin by DynamiApps WordPress plugin before 3.29.9's front-end display surfaces, resulting in stored cross-site scripting that executes in the browser of any user, including an administrator, who views a page displaying the submitted value.",
+    "tags": [],
+    "title": "CVE-2026-13609 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13609"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-62391",
+    "published": "2026-07-31T11:17:11.593",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The security fix for CVE-2025-66518 is incomplete. Any client who can access to Apache Kyuubi Server via Kyuubi frontend protocols can bypass server-side config kyuubi.session.local.dir.allowlist via unprefixed Spark config aliases.\n\nThis issue affects Apache Kyuubi: from 1.6.0 before 1.12.0.\n\nUsers are recommended to upgrade to version 1.12.0, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-62391 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62391"
   }
 ]
