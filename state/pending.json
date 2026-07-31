@@ -4615,5 +4615,81 @@
     "tags": [],
     "title": "쿠팡 개인정보 유출 첫 배상 인정…쿠팡 \"조정안 면밀 검토\"(종합)",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBHc0RGS2lTdkdYc0ZvYlZSdnR4YktBampJOGZMZkhVTFdDbl9UaGU4OG5uZjFCeUpTS0ExdEFQUUxQazBTaEFwSG0zSnBmWjFfbF9Jb0NmcnQydHlsbllMadIBeEFVX3lxTE85TkJVaktCd3J5ZlU3R2NScUt2eW9kZmVka3lKU3ZlLUlHd1VINS1VZ0FueENYcy1WLUppc0pUVTJtaVdxbmg3endvb3ZYYmZad3BSQ0F6WmRITm5TVXVDVnh1RlFHQ3pmeFdfa1lleUNZc1BXeDBNdA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-63221",
+    "published": "2026-07-31T06:16:31.603",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeIgniter is a PHP full-stack web framework. From 4.3.0 through 4.7.3, Query Builder deleteBatch() substitutes bound values from where() conditions into generated SQL while ignoring their escape flags, allowing user-controlled condition values to be interpreted as SQL. This affects only the deleteBatch() code path. Regular delete() operations escape where() binds correctly. This issue is fixed in version 4.7.4.",
+    "tags": [],
+    "title": "CVE-2026-63221 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63221"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-63223",
+    "published": "2026-07-31T06:16:32.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CodeIgniter is a PHP full-stack web framework. Prior to 4.7.4, the is_image and mime_in upload validation rules do not independently enforce a safe client filename extension, allowing a remote attacker to upload executable content when an application preserves the client filename and stores uploads in a web-accessible script-enabled directory. Applications are impacted when they validate uploads using is_image or mime_in without an independent safe extension check (such as ext_in on patched versions), save uploaded files using the client-supplied filename, and place uploads in a web-accessible directory where PHP files can execute. This issue is fixed in version 4.7.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63223 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63223"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-56670",
+    "published": "2026-07-31T06:16:27.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ComfyUI is a modular diffusion model GUI, api and backend with a graph/nodes interface. Prior to 0.28.0, the /view endpoint served uploaded SVG files inline because image/svg+xml and related XML content types were absent from the dangerous-content-type handling, allowing stored cross-site scripting in the ComfyUI origin. This issue is fixed in version 0.28.0.",
+    "tags": [],
+    "title": "CVE-2026-56670 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56670"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-56672",
+    "published": "2026-07-31T06:16:30.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ComfyUI is a node-based diffusion model GUI, API, and backend. Prior to 0.28.0, GET /userdata/{file} served user-controlled HTML and SVG files with extension-derived content types, allowing stored cross-site scripting in the ComfyUI origin and access to browser-stored API tokens, settings, workflows, and authenticated-equivalent API calls. The handler used web.FileResponse(path), so an uploaded .html/.svg was served as text/html/image/svg+xml. POST /userdata stores arbitrary request bodies (confined to the user's userdata directory). When a victim navigated to the file URL, the embedded script executed same-origin. The /view endpoint already forced dangerous MIME types to download; that protection had never been applied to /userdata. This issue is fixed in version 0.28.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-56672 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56672"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207871",
+    "published": "2026-07-31T15:06:14+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아마존웹서비스(AWS)가 최근 18개월 동안 발생한 주요 npm 공급망 공격 4건을 동일한 북한 연계 해킹 조직의 소행으로 지목했다.AWS는 7월 30일 공개한 분석에서 타이포-크립토, 디버그, 초크, 액시오스 침해 사건의 배후를 사파이어 슬릿으로 평가했다. 판단 신뢰도는 ‘중간 수준’으로 제시했다.사파이어 슬릿은 라자루스 그룹과 연계된 북한 해킹 조직으로 알려져 있다. 가상화폐 탈취와 가짜 취업 제안, 개발자를 노린 사회공학 공격을 주로 수행해 왔다.AWS는 네 사건에서 공격 인프라와 악성코드 구조, 설치 방식, 명령제어 통신 방",
+    "tags": [],
+    "title": "아마존 “npm 공급망 공격 4건, 북한 해킹 조직 소행”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207871"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE4xZkRWTXFGYmEtZ2p1SWd4V2Y4aTVJdDNlcTExd1J2UURfZ0tJWFBLdUkwcnFoWEE0X29lN0lnSWpJNzZvMUh1cGpCRHhGbWZVeUZj",
+    "published": "2026-07-31T06:11:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "소비자분쟁조정위 \"쿠팡, 개인정보 유출 피해자에 10만원씩 배상해야\"",
+    "tags": [],
+    "title": "소비자분쟁조정위 \"쿠팡, 개인정보 유출 피해자에 10만원씩 배상해야\"",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4xZkRWTXFGYmEtZ2p1SWd4V2Y4aTVJdDNlcTExd1J2UURfZ0tJWFBLdUkwcnFoWEE0X29lN0lnSWpJNzZvMUh1cGpCRHhGbWZVeUZj?oc=5"
   }
 ]
