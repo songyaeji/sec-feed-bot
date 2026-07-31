@@ -5294,5 +5294,29 @@
     "tags": [],
     "title": "쿠팡 개인정보 유출에 첫 배상 결정 : 분쟁조정위원회 \"1인당 10만 원 지급\" 권고",
     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBUM29WbE56Y1dNRW01WE9VaGZLSTVCVTRWYTdzczY1dXQ3OExSRDB1SW1OeXBTMVhDRnFkQkV4dlFVdzdBRE1YZ3diTGVFbXJNNEJULVQ2MA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17804",
+    "published": "2026-07-30T01:16:43.847",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use after free in Media in Google Chrome prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-17804 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17804"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-3298",
+    "published": "2026-04-21T15:16:37.047",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The method \"sock_recvfrom_into()\" of \"asyncio.ProacterEventLoop\" (Windows only) was missing a boundary check for the data buffer when using nbytes parameter. This allowed for an out-of-bounds buffer write if data was larger than the buffer size. Non-Windows platforms are not affected.",
+    "tags": [],
+    "title": "CVE-2026-3298 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3298"
   }
 ]
