@@ -10,3 +10,4 @@ AhnLab이 **AtlasRAT** 정보 탈취형 악성코드의 공개 미기재 4단계
 ## 타임라인
 
 - 2026-07-12 [AhnLab ASEC](https://asec.ahnlab.com/en/94479/) — AtlasRAT 4단계 로더 체인 및 메모리 기반 실행 기법 분석 리포트
+- 2026-07-27 [AhnLab ASEC](https://asec.ahnlab.com/en/94704/) — Delphi 기반 AGE Flash Player 위장 로더, ChaCha20 TLS C2 통신 심층 분석

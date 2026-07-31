@@ -10,3 +10,4 @@ cves: [CVE-2026-24304]
 ## 타임라인
 
 - 2026-01-23 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-24304) — CVE-2026-24304 공개 (CVSS 10.0)
+- 2026-07-30 [The Hacker News](https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html) — Wiz 분석: CosmosEscape 체인으로 전체 고객 테넌트 전역 키 접근 가능성 확인
