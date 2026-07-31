@@ -6077,5 +6077,99 @@
     "tags": [],
     "title": "Suspected Chinese-Speaking Hackers Target Central Asian Governments With OctLurk and SilkLurk",
     "url": "https://thehackernews.com/2026/08/suspected-chinese-speaking-hackers.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15971",
+    "published": "2026-07-30T19:17:08.590",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SGLang contains an RCE vulnerability when the optional dumper subsystem is enabled, allowing for a sandbox escape when DUMPER_SERVER_PORT is set, enabling code execution on inference requests.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15971 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15971"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15976",
+    "published": "2026-07-30T19:17:08.793",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SGLang contains a RCE vulnerability when attempting to load model weights from a HuggingFace repository, specifically within the /update_weights_from_disk, where torch.load(..., weights_only=False) fallback enables pickle deserialization of .bin files.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15976 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15976"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-43830",
+    "published": "2026-07-31T04:17:21.760",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Full details and mitigation steps are currently restricted and will be published at a later date.",
+    "tags": [],
+    "title": "CVE-2026-43830 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43830"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15658",
+    "published": "2026-07-30T16:16:56.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the foreUP customer REST API allows any authenticated, low-privilege customer to access an endpoint that\r\nreturns the records of other users without checking that the caller owns the data associated with that record.",
+    "tags": [],
+    "title": "CVE-2026-15658 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15658"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15258",
+    "published": "2026-07-31T07:16:27.033",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Product Feed Manager For WooCommerce  WordPress plugin before 7.6.1 does not properly sanitise and escape product-feed custom filter rules before using them in a SQL query, allowing users with the Contributor role and above to perform SQL injection attacks.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15258 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15258"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-18394",
+    "published": "2026-07-31T20:16:49.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect authorization in the http_request tool in Strands Agents Tools before 0.8.2 might allow remote attackers to obtain credentials configured via HTTP_REQUEST_TOKEN_CONFIG by influencing the LLM to route requests through actor-controlled proxy infrastructure.\n\n\n\nTo remediate this issue, users should upgrade to version 0.8.2.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-18394 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18394"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53510",
+    "published": "2026-07-31T20:16:51.530",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Savon is a Ruby SOAP client. From 0.9.8 until 2.17.2, Savon::Model .all_operations interpolates attacker-controlled WSDL operation names into Ruby source passed to module_eval, allowing Ruby code execution in the application process. This issue is fixed in version 2.17.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53510 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53510"
   }
 ]
