@@ -5790,5 +5790,82 @@
     "tags": [],
     "title": "AI Anthropic 모델은 보안 테스트 중에 세 가지 조직의 시스템에 액세스합니다.",
     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5wSjRDVTV6SFZFLXlQSXVudFI3eEJVNm9GY09meGNCT2l5QmEzQkZaNFp4VXd3N3F0b1c0WlpYRWRtX3hubVkyN3A2WdIBQkFVX3lxTE9wLWZERzdsWTY3SFB6S2t5Z25DOUdFc083V21XS0pTYThneGRPelppcXBQUFFBbjRLbkM5YmpNWU9BZw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-52680",
+    "published": "2026-07-30T16:17:14.040",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache Kyuubi REST batch multipart upload handling uses the client-supplied multipart filename when creating a temporary uploaded resource. A remote attacker who can access the REST batch upload endpoint can provide path traversal sequences in the filename and cause the Kyuubi server process to write controlled content outside the intended upload directory, subject to filesystem permissions.\n\n\nThis issue affects Apache Kyuubi: from 1.7.0 through 1.11.1.\n\nUsers are recommended to upgrade to version 1.12.0, which fixes the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-52680 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52680"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15969",
+    "published": "2026-07-30T19:17:08.450",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SGLang contains an unauthenticated RCE in /load_lora_adapter_from_tensors via bypass of SafeUnpickler’s incomplete denylist, allowing arbitrary command execution through crafted base64-encoded pickle payloads.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-15969 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15969"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-35847",
+    "published": "2026-07-30T21:17:15.057",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in dnsmgr v.2.15 and before allows a local attacker to execute arbitrary code via the ping function of the CheckUils.php file",
+    "tags": [],
+    "title": "CVE-2026-35847 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35847"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-54725",
+    "published": "2026-07-31T18:17:17.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "vault-secrets-webhook is a Kubernetes mutating webhook that makes direct secret injection into Pods possible. Prior to 1.23.1, parseVaultConfig() in pkg/webhook/config.go accepts the vault.security.banzaicloud.io/vault-addr annotation, MutateConfigMap and MutateSecret call newVaultClient in pkg/webhook/webhook.go, and vault.security.banzaicloud.io/vault-serviceaccount can cause a ServiceAccount JWT to be sent to an attacker-controlled Vault address. This issue is fixed in version 1.23.1.",
+    "tags": [],
+    "title": "CVE-2026-54725 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54725"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12251",
+    "published": "2026-07-31T07:16:23.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Ultimate Member  WordPress plugin before 2.12.1 does not filter administrator-level capabilities from the roles it makes selectable on its registration forms, and its post-registration safeguard against elevated accounts is disabled by default, allowing unauthenticated users to register with a site-defined role that carries administrator capabilities and gain administrative access, when such a role exists and a role-selection field is present on a published registration form.",
+    "tags": [],
+    "title": "CVE-2026-12251 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12251"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12695",
+    "published": "2026-07-31T07:16:23.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The miniOrange 2FA  WordPress plugin before 6.2.6 does not validate the submitted one-time password against the targeted user's stored secret, instead verifying it against an attacker-supplied value, allowing an unauthenticated attacker who knows a victim's password to bypass two-factor authentication and gain access to the victim's account, including administrators.",
+    "tags": [],
+    "title": "CVE-2026-12695 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12695"
   }
 ]
