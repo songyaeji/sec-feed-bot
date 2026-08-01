@@ -4016,5 +4016,17 @@
     "tags": [],
     "title": "개인정보 유출 과징금 희비···SKT와 KT, 왜 800억 넘게 차이났나",
     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1vVERscWlpUUs5VTdYWUdHVlV1UmZTWWNCTHBqaTY0WHRuQkpXNUlJbmlhV0d0bzJEaXpCbVA1MDRFXzJoV0s1OVA3bzNoV1VKS1FSdE9XT3pKci1Bd0ZuU0FZdXljdEcxVmNJMFlqNDnSAXRBVV95cUxNbXVVemF3bFVaNDdzU3Q3SU93V1RrYU45cDdBS0lNSmNUdy01eEZTQ3VhbDBkM3k0Q2NiZkgxMXBHUGNfZnlEMF9FREFQaFROb2FWZVlVbDB1QlZST1dpOURpXzRzS2NsUkJFUng2UUhoWWxsYg?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-62246",
+    "published": "2026-07-30T22:16:55.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kamaji is the Hosted Control Plane Manager for Kubernetes. Prior to 26.7.4-edge, Kamaji derives a TenantControlPlane datastore schema, database user, and etcd key prefix from a lossy namespace-and-name normalization in GetDefaultDatastoreSchema() and GetDefaultDatastoreUsername(), allowing distinct tenants with colliding normalized identifiers to share control-plane state and read, modify, or destroy another tenant's Kubernetes data. This issue is fixed in version 26.7.4-edge.",
+    "tags": [],
+    "title": "CVE-2026-62246 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62246"
   }
 ]
