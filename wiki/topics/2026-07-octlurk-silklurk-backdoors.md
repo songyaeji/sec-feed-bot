@@ -10,3 +10,4 @@ Kaspersky가 중앙아시아를 표적하는 **사이버 첩보 캠페인**에�
 ## 타임라인
 
 - 2026-07-30 [Kaspersky Securelist](https://securelist.com/octlurk-silklurk-backdoors-central-asia/120840/) — OctLurk, SilkLurk 메모리 기반 백도어 중앙아시아 첩보 캠페인 분석
+- 2026-07-31 [The Hacker News](https://thehackernews.com/2026/08/suspected-chinese-speaking-hackers.html) — 중앙아시아 정부기관 표적 신규 파동 보도

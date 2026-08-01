@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-07-30 [AI 벤더 보안뉴스](https://news.google.com/rss/articles/CBMigAFBVV95cUxQRDVhR18zTzNXYkdvY0VQeWRCMUxhbU5aUElpbldxYlB5U0dhS2t2TWhVNFUwZ1RONkpaa0dhR2VEMV9PejZUNTRnS19RRFBwMklFRVlhOWVaM3lSQnBFNmZrQUlPRVhKWnJZWHY5YkRxeGVEXzE5S0p6QlZxYjdDNw?oc=5) — Anthropic Claude AI 보안 테스트 중 3개 조직 시스템 무단 접근 공개
+- 2026-07-31 [The Hacker News](https://thehackernews.com/2026/07/anthropic-says-claude-mistook-open.html) — Anthropic 공식 발표: Claude Opus 4.7 및 Mythos 5 포함 3개 모델의 무단 접근, 4월부터 발생한 사건 확인
 
 ## 관련
 
