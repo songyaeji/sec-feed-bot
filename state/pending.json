@@ -4384,5 +4384,215 @@
     "tags": [],
     "title": "유럽 전역에서 책임 있는 AI 발전 지원",
     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5ZSlNJXzVJV2NXTGtlMi16SHd1bDB6dnNsck5MQzZCRldvZVo2cDRFOXBuRFFaazl1Q2x0cEx0anlOaGhNNmhFbVVaNW94RFNWZWVHUVZWV1ZQN1BTaFZmSXB4bnBraHlXR0NvY3ZWTXdqRkRKYXBFYnF3?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-66402",
+    "published": "2026-08-01T13:16:57.487",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FreeRDP before 3.29.0 (affected versions <= 3.28.0) contains multiple TLS certificate identity validation weaknesses in tls_verify_certificate(), tls_match_hostname(), and x509_utils_get_dns_names(). Because FreeRDP performs custom Common Name and DNS SAN string matching instead of using OpenSSL's length-aware identity validation APIs, it (1) truncates DNS SAN values at embedded NUL bytes (accepting e.g. 'victim.example\\0.attacker.example' as 'victim.example'), (2) accepts a matching Common Name even when non-matching DNS SAN entries are present, and (3) accepts IP-literal targets via DNS/CN matching without comparing iPAddress SANs. Under a trusted or misissued certificate chain, an attacker positioned to present such a certificate can bypass server identity verification, weakening TLS server authentication.",
+    "tags": [],
+    "title": "CVE-2026-66402 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66402"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67289",
+    "published": "2026-08-01T13:16:57.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FreeRDP before 3.29.0 (affected versions <= 3.28.0) does not validate CRLF and control characters in the server-controlled RDP redirection TargetNetAddress field. This value is copied into the client's ServerHostname and, when the client connects through an HTTP proxy, is written directly into the proxy CONNECT request line and Host header by http_proxy_connect() without filtering. A malicious or compromised RDP server can send a crafted redirection PDU containing embedded control characters to inject arbitrary headers/requests into the HTTP proxy CONNECT request.",
+    "tags": [],
+    "title": "CVE-2026-67289 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67289"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-67308",
+    "published": "2026-08-01T13:17:00.553",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Wazuh workflows before 44bf114 contain a shell injection vulnerability in GitHub Actions that allows attackers to execute arbitrary commands by submitting pull requests with crafted VERSION.json files. Attackers can inject shell metacharacters into environment variables that are directly interpolated into run steps, enabling command execution and exfiltration of secrets including GITHUB_TOKEN and AWS credentials on self-hosted runners.",
+    "tags": [],
+    "title": "CVE-2026-67308 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67308"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67324",
+    "published": "2026-08-01T13:17:02.770",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "GitPython 3.1.50 fails to recognize joined short-option forms such as -u<value> (the short form of --upload-pack=<value>) when enforcing its default unsafe-option gate. When an application passes attacker-influenced clone options into Repo.clone_from(..., multi_options=..., allow_unsafe_options=False), an attacker can supply -u<helper> to bypass the gate that blocks --upload-pack/-u, causing Git to execute the specified helper command during clone. Fixed in 3.1.51.",
+    "tags": [],
+    "title": "CVE-2026-67324 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67324"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-67330",
+    "published": "2026-08-01T13:17:03.677",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "@better-auth/scim (a better-auth plugin) versions >= 1.4.0-beta.27 through <= 1.6.21 and >= 1.7.0-beta.0 through <= 1.7.0-beta.9 contain an authorization bypass. SCIM token issuance did not reject provider IDs already used by existing SSO, SAML, OIDC, generic OAuth, or social account providers, and the same logical provider ID was used for both SCIM provider configuration and account ownership. An authenticated user could mint a SCIM token whose provider ID collided with an existing provider namespace, causing SCIM user routes to resolve account rows the token never provisioned. This allowed listing, reading, updating (including rewriting global profile/email fields without uniqueness checks), and deleting global user accounts and sessions, resulting in account takeover and unauthorized deprovisioning. Fixed in 1.6.22 and 1.7.0-beta.10 (1.7.0-rc.0).",
+    "tags": [],
+    "title": "CVE-2026-67330 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67330"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67340",
+    "published": "2026-08-01T13:17:05.127",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ArcadeDB before 26.7.2 (arcadedb-engine) allows trigger scripts to look up host classes in java.lang.* (via Java.type) because ScriptTriggerExecutor adds java.lang.* to the allowed packages. An authenticated user with UPDATE_SCHEMA permission can create a JavaScript trigger that invokes java.lang.Runtime.getRuntime().exec() (or ProcessBuilder), achieving OS command execution when the trigger fires.",
+    "tags": [],
+    "title": "CVE-2026-67340 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67340"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67341",
+    "published": "2026-08-01T13:17:05.273",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ArcadeDB versions before 26.7.2 fail to enforce scripting authorization checks on the SQL DEFINE FUNCTION statement with LANGUAGE js. Attackers with database access can execute arbitrary JavaScript code by submitting DEFINE FUNCTION statements, bypassing security controls intended to restrict scripting to administrators.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-67341 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67341"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67342",
+    "published": "2026-08-01T13:17:05.417",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ArcadeDB versions before 26.7.2 contain an authorization bypass vulnerability in HTTP handlers for time series, batch, Prometheus, and Grafana endpoints that fail to validate database access permissions. Attackers can access and modify databases they are not authorized to use by directly calling affected endpoints with arbitrary database parameters.",
+    "tags": [],
+    "title": "CVE-2026-67342 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67342"
+  },
+  {
+    "category": "high",
+    "cvss": 4.2,
+    "id": "CVE-2026-67293",
+    "published": "2026-08-01T13:16:58.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeRDP before 3.29.0 (affected versions <= 3.28.0) contains an improper certificate hostname validation vulnerability. The TLS hostname matcher (tls_match_hostname() in libfreerdp/crypto/tls.c) treats a wildcard pattern such as *.example.com as matching any hostname ending in .example.com, so it incorrectly accepts a wildcard certificate for multi-label subdomains like a.b.example.com (which OpenSSL's X509_check_host() rejects). This weakens TLS server authentication under wildcard-certificate conditions.",
+    "tags": [],
+    "title": "CVE-2026-67293 (CVSS 4.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67293"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-67305",
+    "published": "2026-08-01T13:17:00.113",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeRDP Windows client before 3.29.0 contains a heap buffer overflow vulnerability in the clipboard virtual channel when processing CLIPRDR_FILE_CONTENTS_RESPONSE PDUs without validating the server-provided size against the destination buffer. A malicious RDP server can send a response with a data payload significantly larger than requested, causing arbitrary heap memory corruption that may enable remote code execution when a user performs a paste operation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-67305 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67305"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-67323",
+    "published": "2026-08-01T13:17:02.637",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitPython before 3.1.51 fails to guard against dangerous Git options passed as keyword arguments in Repo.archive() and git.ls_remote(), allowing command injection via options such as --exec/--upload-pack (leading to arbitrary command execution). Additionally, Repo.iter_commits() and Repo.blame() do not check for leading-dash revision arguments, so a revision like --output=<path> can cause Git to open and truncate an arbitrary file. Exploitation requires an application that passes attacker-controlled arguments to these methods.",
+    "tags": [],
+    "title": "CVE-2026-67323 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67323"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67325",
+    "published": "2026-08-01T13:17:02.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitPython before 3.1.51 contains an incomplete command injection blocklist that fails to account for git's long-option prefix abbreviation feature. Attackers can bypass the unsafe options guard by using abbreviated option names like upload_p instead of upload_pack, which git resolves to dangerous options and executes arbitrary commands.",
+    "tags": [],
+    "title": "CVE-2026-67325 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67325"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-67327",
+    "published": "2026-08-01T13:17:03.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "better-auth versions >= 1.1.3 and < 1.6.22 (and pre-release versions >= 1.7.0-beta.0 and < 1.7.0-beta.10) are vulnerable to account takeover via pre-account hijacking on magic-link and email-OTP sign-in when open email/password registration is enabled. An attacker registers an account with the victim's email address and an attacker-chosen password; the account remains unverified. When the legitimate owner later signs in via the magic-link or email-OTP passwordless flow, the account is marked verified without removing the pre-existing password or revoking existing sessions, so the attacker's password remains valid, granting persistent access to the victim's account. Fixed in 1.6.22 and 1.7.0-beta.10.",
+    "tags": [],
+    "title": "CVE-2026-67327 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67327"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-67328",
+    "published": "2026-08-01T13:17:03.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "@better-auth/sso versions before 1.6.21 contain multiple authentication bypass vulnerabilities in SSO provider handling that allow attackers to sign in as arbitrary users. Attackers can exploit domain verification parsing mismatches, orphaned provider accounts, unbound SAML assertions, or reflected XSS on logout endpoints to gain unauthorized session access and account takeover.",
+    "tags": [],
+    "title": "CVE-2026-67328 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67328"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-67331",
+    "published": "2026-08-01T13:17:03.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "better-auth SCIM versions from 1.5.0 before 1.7.0-beta.4 fail to bind non-organization SCIM providers to their creator by default, allowing authenticated users to manage other users' providers. Attackers can regenerate SCIM bearer tokens, invalidate legitimate tokens, and authenticate to SCIM API routes with the attacker-controlled token.",
+    "tags": [],
+    "title": "CVE-2026-67331 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67331"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-67336",
+    "published": "2026-08-01T13:17:04.557",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "better-auth versions before 1.6.11 contain insecure cryptographic defaults in the oidcProvider and mcp plugins that advertise the none algorithm and accept plain PKCE by default. Attackers can exploit algorithm negotiation to accept unsigned tokens or intercept authorization codes when PKCE plain is used instead of the required S256 method.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-67336 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67336"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67343",
+    "published": "2026-08-01T13:17:05.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ArcadeDB versions before 26.7.2 fail to properly redact the cluster token in the GET /api/v1/server endpoint, allowing authenticated users to retrieve the arcadedb.ha.clusterToken value in cleartext. Attackers can use the leaked token with X-ArcadeDB-Cluster-Token and X-ArcadeDB-Forwarded-User headers to impersonate root and execute administrative actions including user creation, database operations, and server shutdown.",
+    "tags": [],
+    "title": "CVE-2026-67343 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67343"
   }
 ]
