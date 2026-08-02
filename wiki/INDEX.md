@@ -2,8 +2,11 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [carecloud-health-breach](topics/2026-08-carecloud-health-breach.md) CareCloud 의료정보 유출 345,000명 환자 의료·재정 정보 (최종갱신일: 2026-08-02)
+- [coupang-personal-info-breach](topics/2026-08-coupang-personal-info-breach.md) 쿠팡 고객 개인정보 유출 소비자분조위 피해자 1인당 10만원 배상 (최종갱신일: 2026-08-02)
+- [lgu-plus-breach-investigation](topics/2026-07-lgu-plus-breach-investigation.md) LG유플러스 정보유출 해킹 서버 폐기 의혹 수사 진행 (최종갱신일: 2026-08-02)
 - [amgen-cloud-breach](topics/2026-08-amgen-cloud-breach.md) 암젠 제3자 클라우드 침해 환자 의료정보·기업 기밀 유출 (최종갱신일: 2026-08-01)
-- [coldcard-firmware-flaw](topics/2026-08-coldcard-firmware-flaw.md) Coldcard 펌웨어 버그로 $70M 비트코인 탈취 사건 (최종갱신일: 2026-08-01)
+- [coldcard-firmware-flaw](topics/2026-08-coldcard-firmware-flaw.md) Coldcard 펌웨어 버그로 $88.6M 비트코인 탈취 규모 확대 (최종갱신일: 2026-08-02)
 - [captivecrunch-hotel-wifi-rat](topics/2026-08-captivecrunch-hotel-wifi-rat.md) 호텔 Wi-Fi 가짜 업데이트로 CornFlake RAT 배포 Midnight Blizzard 캠페인 (최종갱신일: 2026-08-01)
 - [adform-script-compromise](topics/2026-08-adform-script-compromise.md) 광고 기업 Adform 스크립트 침해로 암호화폐 지갑 주소 변조 (최종갱신일: 2026-08-01)
 - [ai-voice-clone-finance-auth-bypass](topics/2026-08-ai-voice-clone-finance-auth-bypass.md) AI 음성 복제로 금융 거래 승인 우회 금융 사기 악용 (최종갱신일: 2026-07-31)
@@ -27,7 +30,7 @@
 - [google-opensource-supply-chain-guidance](topics/2026-07-google-opensource-supply-chain-guidance.md) Google GTIG 2025~2026 공개소스 공급망 공격 급증 대응 방어 지침 (최종갱신일: 2026-07-30)
 - [streaming-device-fraud-internet-rental](topics/2026-07-streaming-device-fraud-internet-rental.md) TV 스트리밍 스틱 인터넷 무단 대여·AI 광고 클릭 사기 (최종갱신일: 2026-07-30)
 - [atlasrat-loader-chain-analysis](topics/2026-07-atlasrat-loader-chain-analysis.md) AtlasRAT 메모리 로더 체인 Delphi 기반 다단계 침투 (최종갱신일: 2026-07-30)
-- [npm-debug-chalk-hijack-north-korea](topics/2026-09-npm-debug-chalk-hijack-north-korea.md) npm debug·chalk 2025년 9월 하이재킹 북한 Sapphire Sleet 귀속 (최종갱신일: 2026-07-30)
+- [npm-debug-chalk-hijack-north-korea](topics/2026-09-npm-debug-chalk-hijack-north-korea.md) npm 4대 패키지 2025년~2026년 상반기 하이재킹 북한 Sapphire Sleet 귀속 (최종갱신일: 2026-08-02)
 - [argo-workflows-pod-rce](topics/2026-07-argo-workflows-pod-rce.md) Argo Workflows allow-list 검증 불완전으로 pod 명령 인젝션 CVE-2026-54526 (최종갱신일: 2026-07-30)
 - [adobe-campaign-classic-rce](topics/2026-07-adobe-campaign-classic-rce.md) Adobe Campaign Classic 허가 검증 오류 RCE CVE-2026-48449 (최종갱신일: 2026-07-30)
 - [langflow-vulnerability](topics/2026-07-langflow-vulnerability.md) Langflow OSS 6개 중대 RCE 및 권한상향 취약점 (최종갱신일: 2026-07-30)
@@ -187,7 +190,7 @@
 - [surrealdb-default-permissions](topics/2026-07-surrealdb-default-permissions.md) SurrealDB 기본 테이블 권한 설정 실수 (최종갱신일: 2026-07-18)
 - [surrealdb-rpc-auth-bypass](topics/2026-07-surrealdb-rpc-auth-bypass.md) SurrealDB RPC API 인증 우회 및 RCE (최종갱신일: 2026-07-18)
 - [openplc-heap-overflow](topics/2026-07-openplc-heap-overflow.md) OpenPLC_v3 힙 버퍼 오버플로우 (최종갱신일: 2026-07-18)
-- [kt-personal-info-breach](topics/2026-07-kt-personal-info-breach.md) KT 개인정보 유출 과징금 결정, 악성코드 건 별도 처분 (최종갱신일: 2026-07-30)
+- [kt-personal-info-breach](topics/2026-07-kt-personal-info-breach.md) KT 개인정보 유출 과징금 539억원 결정 및 보안 관리 부실 지적 (최종갱신일: 2026-08-02)
 - [lineyahoo-game-user-identifier-leak](topics/2026-07-lineyahoo-game-user-identifier-leak.md) 라인야후 게임 이용자 내부 식별자 710만건 외부 전송 설정 오류 (최종갱신일: 2026-07-16)
 - [police-officer-data-sale](topics/2026-07-police-officer-data-sale.md) 경찰관 경찰 내부정보 판매 기소 개인정보 유출 (최종갱신일: 2026-07-16)
 - [7zip-rce](topics/2026-07-7zip-rce.md) 7-Zip 26.02 RCE 취약점 패치 특제 아카이브 악용 (최종갱신일: 2026-07-18)

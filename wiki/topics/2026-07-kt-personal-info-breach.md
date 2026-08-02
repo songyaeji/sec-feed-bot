@@ -18,5 +18,10 @@ KT가 약 2만 명의 고객 개인정보 유출로 정부 제재 대상에 올�
 
 - 2026-07-30 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiggFBVV95cUxPdEVQcEJySWo0WmlwV3oxM25rSHhvZkt1NDFOZjJTdEV5Xzl2cnd1eG9IRGlGTUxqMDNpcnIxRTgtRkRKc1YwSlZXSzlNY2ljSzZyY055ZlhCYm9GSmdHbXREUUFaMWVPNFJ0RVJPT2hXNDliY1pkRG9fWkw2eGtxcUFR?oc=5) — 개보위 KT에 540억원 과징금 결정, SK텔레콤 과징금의 약 40% 수준
 - 2026-07-30 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMNlR5VHplN1hINnVjclgzSVpZNkN3RmdZdGo5VjRqR0ZaYnBHM09MMW5nX1hYVFcxek1PTGhjWGg0OWd6WTZxNXA1eHNsR2VTbGVheF85TnVSWi10UGl3d9IBeEFVX3lxTE0xdGN5a2FxVlpXM1BnM1NlN1NGLUhWYUc1NkdpZTZ4UWw4NmVlVHBqWUhSUURrbEFFak0yYnpKVVlqVFBNZy1yRHVjZi1RUGZ2RWdVWWpjRHMxOWpRcTVXYkNSVEszd1VEQXJjZjkxVnp1YXRXVl9NRQ?oc=5) — 악성코드 관련 침해는 별도로 처분할 예정 공식 발표
+- 2026-07-31 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMNlR5VHplN1hINnVjclgzSVpZNkN3RmdZdGo5VjRqR0ZaYnBHM09MMW5nX1hYVFcxek1PTGhjWGg0OWd6YTZxNXA1eHNsR2VTbGVheF85TnVSWi10UGl3d9IBeEFVX3lxTE0xdGN5a2FxVlpXM1BnM1NlN1NGLUhWYUc1NkdpZTZ4UWw4NmVlVHBqWUhSUURrbEFFak0yYnpKVVlqVFBNZy1yRHVjZi1RUGZ2RWdVWWpjRHMxOWpRcTVXYkNSVEszd1VEQXJjZjkxVnp1YXRXVl9NRQ?oc=5) — 펨토셀 우회 접속 11개월 탐지 실패 문제 지적, KT에 540억원 과징금
+- 2026-07-31 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9adGFwcl9tM2ZvdWFVQTZjSjg3UnlxSUExVFE1anRZNDlmUXBmcWlyZFRqeHZhS1FUdk9fVFFZZk9CdC1tbXZvaEtiblJZd0lKQXhnZG1PdF9GOTMyRDlLUy1OeTl3WHJk?oc=5) — KT 과징금 539억원 결정, LG유플러스는 수사의뢰
+- 2026-07-31 [구글뉴스](https://news.google.com/rss/articles/CBMicEFVX3lxTE05cW1McnBOTGQ4eWY5RFdUV2N6WDNfOHRPZmxWUGVZd1N0UkM5eEZDdFY3DJzWE9OZDlLbVJSZ01SakRiM2ZzT3JrLXoxeG1GTGpxajlqN21xOXJMMlJ5Q2Y1TFRmbktkdTVaZk9EQWg?oc=5) — KT 처분이 흔든 과징금 형평성, SKT 소송 새 변수로
 
 ## 관련
+
+[[lgu-plus-breach-investigation]]

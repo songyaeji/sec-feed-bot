@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-01 [The Hacker News](https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html) — Coldcard 펌웨어 오류로 $70M 비트코인 탈취 사건 적발
+- 2026-08-02 [BleepingComputer](https://www.bleepingcomputer.com/news/security/coldcard-wallet-rng-flaw-likely-linked-to-88-million-bitcoin-theft/) — 규모 확대: 실제 도용액 $88.6M 추산
 
 ## 관련
