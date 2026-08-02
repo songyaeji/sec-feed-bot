@@ -3179,5 +3179,53 @@
     "tags": [],
     "title": "개인정보위 과징금에 기업들 잇단 소송...법정 공방 확산 될 조짐",
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9kNWduQ3ltT1JFZEhCTE16Z1lsMVI3Y0xHbWRTMHpDNmlnSGRseWdVX01EVVJwMmYyZUtPRzNGcXZBVnA3UkpQdHRzbmdMc2RBTWJka1p6NExfblpiNnliX0ZiWWpXTWs?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-68579",
+    "published": "2026-08-02T13:16:53.800",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FreeRDP before 3.30.0 (<= 3.29.0) contains a heap-based buffer overflow in the Windows clipboard client's CliprdrStream_Read function (client/Windows/wf_cliprdr.c). When an OLE paste consumer (e.g. explorer.exe) calls IStream::Read with a fixed-size buffer of cb bytes, CliprdrStream_Read requests file contents from the RDP server and then copies the response into the caller's buffer using the server-supplied length (req_fsize) instead of cb. A malicious or compromised RDP server can return an oversized CB_FILECONTENTS_RESPONSE, causing an out-of-bounds write of attacker-controlled data into the paste consumer's heap buffer when a user pastes server-offered clipboard file contents.",
+    "tags": [],
+    "title": "CVE-2026-68579 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68579"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2025-71399",
+    "published": "2026-08-02T13:16:52.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Better Auth relies on better-call, which uses the rou3 router library. In affected versions of rou3, paths are normalized by removing empty segments, so /path, //path, and ///path resolve to the same route. In Better Auth versions prior to 1.4.5 (which bundles the fixed rou3), this can allow attackers to bypass disabledPaths configuration and path-based rate limits by submitting requests with extra slashes in the URL path. The issue does not apply in deployments where the proxy or platform normalizes URLs by collapsing multiple slashes.",
+    "tags": [],
+    "title": "CVE-2025-71399 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71399"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67356",
+    "published": "2026-08-02T13:16:53.363",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ArcadeDB before 26.7.3 binds the real LocalDatabase object into JavaScript trigger contexts with HostAccess.ALL, allowing schema-admins to call getSecurity().createUser() without permission checks. Attackers with UPDATE_SCHEMA permission can create triggers that execute JavaScript to create server-wide admin users, escalating privileges beyond their authorization level.",
+    "tags": [],
+    "title": "CVE-2026-67356 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67356"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-68581",
+    "published": "2026-08-02T13:16:54.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vikunja versions 0.22.0 through 2.3.0 fail to validate the principal type in API token management. Because user IDs and link-share IDs are independent numeric sequences and both resolve through a generic web.Auth.GetID() interface, a link-share JWT whose numeric ID equals a target user's ID is treated as that user by the /api/v1/tokens endpoints. An authenticated attacker can obtain a target's numeric user ID via authenticated user search, then create link shares on an attacker-writable project until the link-share sequence reaches that value, and use the resulting link-share JWT to list, create, and delete the target user's API tokens (including issuing a new token with attacker-chosen scopes under the target's permissions). Fixed in version 2.4.0.",
+    "tags": [],
+    "title": "CVE-2026-68581 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68581"
   }
 ]
