@@ -1284,5 +1284,45 @@
     ],
     "title": "Bitcoin hardware wallet maker destroys some inventory after more than $88 million stolen",
     "url": "https://therecord.media/bitcoin-theft-coldcard-cyberattack"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-10849",
+    "published": "2026-08-03T22:16:47.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The hawkBit device management client in subsys/mgmt/hawkbit accumulates the body of an HTTP response from the update server into a heap buffer in response_json_cb() (subsys/mgmt/hawkbit/hawkbit.c). The buffer is sized to hold the received body bytes but reserves no space for a terminating NUL. When the full response has arrived, the code writes response_data[downloaded_size] = '\\0' — and whenever the accumulated body length equals the allocation, that terminator lands one byte past the end of the heap object (a heap-based out-of-bounds write, CWE-122 / CWE-787).\n\nThe body length and fragmentation are taken directly from the parsed HTTP response (rsp->body_frag_start / rsp->body_frag_len) and are fully controlled by the remote hawkBit server, which chooses its own response length. The precise trigger depends on how the buffer grows, and both forms are remotely reachable. Since v4.0.0 the reallocation is sized to exactly downloaded_size + body_len, so any response body larger than the 1100-byte initial buffer makes the out-of-bounds write deterministic; such response sizes are normal for hawkBit deployment metadata. Before v4.0.0 the buffer grew by doubling and the growth check ((downloaded_size + body_len) > response_buffer_size) is false at equality, so a response body whose length is exactly the current allocation — 1100 bytes with the default initial buffer — skips the reallocation entirely and writes the terminator at response_data[1100] of an 1100-byte object. The HTTP le",
+    "tags": [],
+    "title": "CVE-2026-10849 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10849"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-69247",
+    "published": "2026-08-03T22:16:52.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. From 44.0.0 until 50.0.0, pkcs7_decrypt_der, pkcs7_decrypt_pem, and pkcs7_decrypt_smime reported the outcome of decrypting a RecipientInfo's encryptedKey in several distinguishable ways, one of which disclosed the exact length recovered from the RSA operation. The same distinction was also observable by timing. An application that decrypts attacker-supplied EnvelopedData and reflects the outcome gives the attacker a Bleichenbacher oracle against the content-encryption key. Decryption ran as RSA PKCS#1 v1.5 decrypt of encryptedKey, build an AES cipher from the result, then AES-CBC decrypt and PKCS#7 unpad. Invalid RSA padding, a valid padding with a bad key length, a correct length with a wrong key, and the real key each failed or succeeded differently. Case 1 is reachable only where the linked library lacks implicit rejection: OpenSSL 3.0 and 3.1, LibreSSL, and BoringSSL. Exploitation requires a service that auto-decrypts untrusted EnvelopedData matching the victim certificate and answers adaptively at high volume, such as an S/MIME gateway or mail filter. This issue is fixed in 50.0.0.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-69247 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69247"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207907",
+    "published": "2026-08-04T07:16:29+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈AI가 차세대 인공지능(AI) 모델 ’아스트라(Astra)’의 연구 성과를 공개했다. 아직 출시되지 않은 내부 연구용 모델인 아스트라는 수학과 이론 컴퓨터과학 분야에서 10년 이상 해결되지 않았던 난제 10건에 대해 새로운 결과를 제시했다.오픈AI는 이번 연구가 고차원 기하학, 부호 이론, 군론, 양자 복잡도, 산술 회로 복잡도, 격자 기반 암호학 등 다양한 분야에서 진행됐다고 밝혔다. 해결된 문제에는 비소픽 군(Non-sofic Groups)의 존재 증명, 콘스(Connes) 강성 추측 반박, 고차원 구 충전(Sphere Pa",
+    "tags": [
+      "AI"
+    ],
+    "title": "오픈AI, 차세대 AI ‘아스트라’ 공개…10년 넘은 수학 난제 10건 해결",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207907"
   }
 ]
