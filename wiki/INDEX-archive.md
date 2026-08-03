@@ -39,3 +39,4 @@
 - [linux-iommu-vt-d-pasid-race](topics/2026-05-linux-iommu-vt-d-pasid-race.md) Linux 커널 IOMMU VT-d PASID 엔트리 교체 경합 조건 (최종갱신일: 2026-05-27)
 - [linux-mac80211-fast-rx-race](topics/2026-05-linux-mac80211-fast-rx-race.md) Linux WiFi mac80211 fast-RX 경합조건 (최종갱신일: 2026-05-28)
 - [linux-mac80211-dfs-uaf](topics/2026-05-linux-mac80211-dfs-uaf.md) Linux WiFi mac80211 DFS CAC 해제 후 사용 (최종갱신일: 2026-05-28)
+- [azure-horizondb-auth-bypass](topics/2026-06-azure-horizondb-auth-bypass.md) Azure HorizonDB 스푸핑 인증 우회 권한상향 (최종갱신일: 2026-06-04)
