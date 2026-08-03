@@ -2126,5 +2126,33 @@
     "tags": [],
     "title": "ExfilSquad hackers leak info of over 100,000 UK police officers, staff",
     "url": "https://www.bleepingcomputer.com/news/security/exfilsquad-hackers-leak-info-of-over-100-000-uk-police-officers-staff/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-3009",
+    "published": "2026-03-05T19:16:18.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw in the IdentityBrokerService.performLogin endpoint of Keycloak allows authentication to proceed using an Identity Provider (IdP) even after it has been disabled by an administrator. An attacker who knows the IdP alias can reuse a previously generated login request to bypass the administrative restriction. This undermines access control enforcement and may allow unauthorized authentication through a disabled external provider.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3009 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3009"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFBQaFNtd29WSUhPNHMtakVJT3lWWnNBQlVCWkNJMWtRTklUb0V1NHFHZ19CTFVwLXdBTWE4R0Y4V1U4RUt2ZkExUm9abGlIcHRrcnptZ1puUWpJV3daRVFJRlFCN1VNbkE",
+    "published": "2026-08-03T09:12:17+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "삼성생명, 금융결제원 바이오인증 적용…비대면 인증 간소화",
+    "tags": [
+      "금융"
+    ],
+    "title": "삼성생명, 금융결제원 바이오인증 적용…비대면 인증 간소화",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBQaFNtd29WSUhPNHMtakVJT3lWWnNBQlVCWkNJMWtRTklUb0V1NHFHZ19CTFVwLXdBTWE4R0Y4V1U4RUt2ZkExUm9abGlIcHRrcnptZ1puUWpJV3daRVFJRlFCN1VNbkE?oc=5"
   }
 ]
