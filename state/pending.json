@@ -2166,5 +2166,43 @@
     "tags": [],
     "title": "영국 경찰 법률 데이터베이스 해킹…경찰·사법 관계자 10만 명 이상 정보 유출",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207904"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-18248",
+    "published": "2026-08-03T16:16:28.247",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "@fastify/aws-lambda version 6.4.0 decorates each Fastify request with request.awsLambda.event and request.awsLambda.context, values that applications are documented to use for authorization decisions such as reading API Gateway authorizer claims. In the default configuration, the getter that populates this decoration reads the client-controlled x-apigateway-event and x-apigateway-context HTTP headers before falling back to the trusted internal request token, and those reserved headers are not stripped from the incoming event. An unauthenticated attacker who can set a single HTTP header can therefore forge the entire Lambda proxy event, including the authorizer context, and override the genuine one. This results in a full authentication and authorization bypass and privilege escalation for any application that trusts request.awsLambda.event for identity or access control. Only version 6.4.0 is affected. Patches: upgrade to @fastify/aws-lambda 6.4.1, which resolves the decoration only through the internal per-invocation token and strips the reserved headers before the request is processed.",
+    "tags": [],
+    "title": "CVE-2026-18248 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18248"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-9219",
+    "published": "2026-06-26T00:16:55.213",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Setracker2 Android Companion App com.tgelec.setracker versions 3.1.5 and prior have a predictable registration ID derived from IMEI. The enrollment system lacks additional authentication before assignment. If an attacker is able to obtain the registration ID, they would be able to arbitrarily enroll watches belonging to other users.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-9219 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9219"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-9222",
+    "published": "2026-06-26T00:16:55.647",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Setracker2 Android Companion App com.tgelec.setracker versions 3.1.5 and prior only require the password hash when authenticating with backend services from the client. This could allow an attacker, who knows the hash, to authenticate and gain full access.",
+    "tags": [],
+    "title": "CVE-2026-9222 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9222"
   }
 ]
