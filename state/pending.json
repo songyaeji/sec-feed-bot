@@ -2953,5 +2953,55 @@
     ],
     "title": "26년 상반기 기업의 직접금융 조달실적",
     "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=220733&menuNo=200218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-44221",
+    "published": "2026-05-12T20:16:43.020",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ArcadeDB is a Multi-Model DBMS. Starting in version 21.10.1 and prior to version 26.4.2, authenticated users and API tokens scoped to a specific database could read, write, and mutate schema on any other database on the same server. Two distinct defects contributed: (1) ServerSecurityUser.getDatabaseUser() returned a DB user with an uninitialized fileAccessMap, which requestAccessOnFile treated as allow-all; (2) ArcadeDBServer.createDatabase() omitted factory.setSecurity(...) so any database created via POST /api/v1/server {\"command\":\"create database X\"} had its entire record-level authorization system silently disabled. In combination, record-level and database-level authorization could be bypassed by any authenticated principal. This vulnerability is fixed in 26.4.2.",
+    "tags": [],
+    "title": "CVE-2026-44221 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44221"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-69240",
+    "published": "2026-08-03T21:16:41.970",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Sequelize is a Node.js ORM tool. Prior to 6.37.4, SQL injection is possible with strings only if dialect is set to oracle. The escape function defined in sql-string.js does not escape quotes if the value starts with TO_TIMESTAMP or TO_DATE. In the Oracle dialect, when val is a string and starts with TO_TIMESTAMP or TO_DATE, escape returns val directly instead of replacing single quotes. An attacker can inject arbitrary SQL expressions through an application value that reaches this escape path. This issue is fixed in version 6.37.4.",
+    "tags": [],
+    "title": "CVE-2026-69240 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69240"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18733",
+    "published": "2026-08-03T21:16:37.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A prompt injection vulnerability in the shell tool in Amazon Strands Agents Tools before 0.8.0 might allow remote actors to execute arbitrary operating system commands on the agent's host via a crafted prompt that sets the non_interactive parameter to true, bypassing the human consent gate.\n\n\n\nTo remediate this issue, users should upgrade to version 0.8.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-18733 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18733"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-41447",
+    "published": "2026-08-03T21:16:38.947",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FirmaCheck for Windows before 1.3.16 contains a dll hijacking vulnerability that allows local attackers to execute arbitrary code by placing a crafted openssl.cnf file in the unvalidated C:\\Program Files (x86)\\Common Files\\SSL\\ directory path. Attackers can write a malicious OpenSSL configuration file referencing an attacker-controlled DLL to achieve code execution at startup process privilege level when FirmaCheck.exe runs automatically at system startup.",
+    "tags": [],
+    "title": "CVE-2026-41447 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41447"
   }
 ]
