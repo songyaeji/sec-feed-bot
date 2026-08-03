@@ -1816,5 +1816,29 @@
     "tags": [],
     "title": "FOMO in the SOC: Where AI Platforms like Claude Actually Fit",
     "url": "https://thehackernews.com/2026/08/fomo-in-soc-where-ai-platforms-like.html"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0392",
+    "published": "2026-08-03T10:16:27.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "eParakstītājs 3.0 for Windows before version\n1.10.0 retrieves and executes its automatic updates over a channel that is not\nauthenticated or integrity-protected. On each launch the application fetches an\nupdate descriptor (XML) over TLS but accepts any TLS certificate (a permissive\nTrustManager and a HostnameVerifier that always returns true), does not verify\nany digital signature on the update descriptor, and does not verify the\nAuthenticode signature or a checksum of the downloaded installer before running\nit. A man-in-the-middle attacker able to redirect www.eparaksts.lv can serve a\ncrafted update descriptor pointing to an attacker-controlled executable, which\nthe client downloads and executes, resulting in arbitrary code execution on the\nvictim host.",
+    "tags": [],
+    "title": "CVE-2026-0392 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0392"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE9MY05PSnc1Q1pwMG5YaTR6SnFBOEpuUVZJNk5WcllxSTd0NkJxRUFyRGhlZWFTTDVHYmE1WXpabmM0eDZNaTZIRXowUmpaQlI5SV9qOUp2aVMzdXhq",
+    "published": "2026-08-03T06:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[단독]삼성 만난 개보위, AI 글래스에 '촬영알림' 주문…\"찍히는 사람도 알아야\"",
+    "tags": [],
+    "title": "[단독]삼성 만난 개보위, AI 글래스에 '촬영알림' 주문…\"찍히는 사람도 알아야\"",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MY05PSnc1Q1pwMG5YaTR6SnFBOEpuUVZJNk5WcllxSTd0NkJxRUFyRGhlZWFTTDVHYmE1WXpabmM0eDZNaTZIRXowUmpaQlI5SV9qOUp2aVMzdXhq?oc=5"
   }
 ]
