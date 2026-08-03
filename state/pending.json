@@ -1476,5 +1476,79 @@
     ],
     "title": "스캐닝 넘어 공격자 시선으로... 금융보안원, ‘모의해킹 실무 가이드’ 배포",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA2a2pYNjNMNjZxZHA0cTVsYzItZDJUeDVQWEVsQlFnRndHT0xnNDJ1eEdiLTNZR05pWDZtS29tcnpSdW1JaHUyVmxIS3JmQlNiLTlsaHYwbC1BQ1F2S0p0d01xeFRrSHZERVQyaDZKLTA0dw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-18588",
+    "published": "2026-08-03T07:16:43.047",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in Wavlink WL-NU516U1 708c073-mt7628. This affects the function fgets of the file nas.cgi. The manipulation of the argument CONTENT_LENGTH leads to stack-based buffer overflow. Remote exploitation of the attack is possible. You should upgrade the affected component. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+    "tags": [],
+    "title": "CVE-2026-18588 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18588"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-18589",
+    "published": "2026-08-03T07:16:43.260",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in Wavlink WL-NU516U1 708c073-mt7628. This impacts the function change_password of the file nas.cgi. The manipulation of the argument User1Passwd results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used. The affected component should be upgraded. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.",
+    "tags": [],
+    "title": "CVE-2026-18589 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18589"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-16563",
+    "published": "2026-08-03T07:16:41.877",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Academy LMS WordPress plugin before 3.8.3 does not verify course enrollment or lesson publication status when returning a single lesson through its REST API, allowing users with a self-service student (Subscriber-level) account to disclose the content of arbitrary lessons, including lessons of paid courses they are not enrolled in and unpublished (draft, pending, private) lessons.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-16563 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16563"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html",
+    "published": "2026-08-03T06:41:46+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "N-able said attackers exploited an authentication bypass in N-central to gain remote administrative access and reach the customer systems managed through those servers. Its first fix was incomplete. CVE-2026-18577 affects N-central builds prior to 2026.3.1.7. N-able shipped build 2026.3.1.7 on August 2 as the first unaffected version. N-central is the remote monitoring and management platform",
+    "tags": [],
+    "title": "N-able Says Attackers Take Over N-central Servers After Initial Fix Proves Incomplete",
+    "url": "https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html",
+    "published": "2026-08-03T06:40:31+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Three high-severity security flaws have been disclosed in Hugging Face's Diffusers library that could allow crafted model repositories to stealthily execute arbitrary code on machines that load it, opening the artificial intelligence (AI) supply chain to security risk. \"These vulnerabilities are bypassing trust_remote_code, the safeguard designed to stop unreviewed code from running in the",
+    "tags": [],
+    "title": "Hugging Face Diffusers Flaws Could Let Model Repositories Execute Arbitrary Code",
+    "url": "https://thehackernews.com/2026/08/hugging-face-diffusers-flaws-could-let.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE9LU1ViNk1jQ1ZFX1d6cU1xVUJXR2ZFTUtlT1Y1V0NIQ1oxWVhiTXN4bGdzVm1ETFBfRWlicFg3dnAxSDhHR29vUnM2UlJFa3JVbjJlemRTUXA4d0NfV0V2c3YyN0UzUHJUSzQybWRhMVpSdXM",
+    "published": "2026-08-03T06:59:22+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "해킹사고 증거은닉·조사방해 경찰수사 '하세월', KISA·개인정보위에 '특사경' 도입 목소리 높아져",
+    "tags": [],
+    "title": "해킹사고 증거은닉·조사방해 경찰수사 '하세월', KISA·개인정보위에 '특사경' 도입 목소리 높아져",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9LU1ViNk1jQ1ZFX1d6cU1xVUJXR2ZFTUtlT1Y1V0NIQ1oxWVhiTXN4bGdzVm1ETFBfRWlicFg3dnAxSDhHR29vUnM2UlJFa3JVbjJlemRTUXA4d0NfV0V2c3YyN0UzUHJUSzQybWRhMVpSdXM?oc=5"
   }
 ]
