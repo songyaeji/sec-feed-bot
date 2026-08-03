@@ -2753,5 +2753,168 @@
     "tags": [],
     "title": "New DOUBLECUP ClickFix service hides malware in browser cache images",
     "url": "https://www.bleepingcomputer.com/news/security/new-doublecup-clickfix-service-hides-malware-in-browser-cache-images/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38711",
+    "published": "2026-07-31T20:16:50.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the system.upgrade_check interface. This vulnerability allows attackers to execute arbitrary commands as root via a crafted input.",
+    "tags": [],
+    "title": "CVE-2026-38711 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38711"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38708",
+    "published": "2026-07-31T21:17:30.713",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the system.setclock interface. This vulnerability allows attackers to execute arbitrary commands as root via a crafted input.",
+    "tags": [],
+    "title": "CVE-2026-38708 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38708"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38713",
+    "published": "2026-07-31T21:17:30.937",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TR1200 v2.4.15, TR3000 v2.4.21, WR300 v2.4.25, WR1200 v2.4.23, WR1300 v2.4.22, WR1500 v2.3.10, WR3000 v2.4.19, WR3600 v2.3.16, and WR6500 v2.3.15 were discovered to contain a command injection vulnerability in the ipsec_conn interface. This vulnerability allows attackers to execute arbitrary commands as root via a crafted input.",
+    "tags": [],
+    "title": "CVE-2026-38713 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38713"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-18108",
+    "published": "2026-08-03T14:16:25.157",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Net::SAML2 versions before 0.86 for Perl allow authentication bypass because _verify_encrypted_assertion accepts an EncryptedAssertion whose decrypted content carries no signature.\n\n_verify_encrypted_assertion decrypts the EncryptedAssertion and returns it as verified when it carries no signature, via \"return $xml unless $xpath->exists('dsig:Signature', $assert);\". The signature check and the trust anchor check that follow run only when a signature is present, so a decrypted assertion with no dsig:Signature element reaches new_from_xml unverified and its NameID and attributes are read into the assertion object. An SP's encryption certificate is published in its SAML metadata so the IdP can encrypt to it, so any party can encrypt an unsigned assertion to that certificate, wrap it in a samlp:Response, and post it to the assertion consumer service.\n\nAny caller that configures a decryption key_file, and so accepts EncryptedAssertions, takes identity fields from an assertion that no trust anchor covers, and an unauthenticated party can authenticate as an arbitrary user. Callers with no key_file configured do not decrypt and are unaffected.",
+    "tags": [],
+    "title": "CVE-2026-18108 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18108"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-9390",
+    "published": "2026-08-03T14:16:30.983",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "XML::Sig versions before 0.71 for Perl allow XPath injection in ID lookup.\n\nverify() and _get_signed_xml() in lib/XML/Sig.pm build XPath expressions by concatenating the SignedInfo/Reference/@URI value read from the document being verified. The value is neither escaped nor checked against the NCName grammar that XML requires of an ID, so a URI containing a single quote closes the string literal in the generated expression and appends arbitrary XPath operators.\n\nA crafted URI can make the lookup match elements the reference does not name, or every element in the document, so which node is selected for digest verification is decided by the injected expression rather than by the reference.",
+    "tags": [],
+    "title": "CVE-2026-9390 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9390"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-9487",
+    "published": "2026-08-03T14:16:31.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "XML::Sig versions before 0.71 for Perl allow signature wrapping via duplicate ID.\n\n_get_signed_xml() in lib/XML/Sig.pm, called from verify(), resolves the SignedInfo Reference/@URI to a node with the XPath expression \"//*[@ID='$id']\" and returns the first node of the resulting node set. A document in which two elements share that ID value is accepted: the digest and signature are checked against whichever element comes first in document order, and the duplicate is not detected.\n\nSuch a document verifies successfully while an application that resolves the same ID independently can read the second, attacker supplied element; in a SAML2 context this places the contents of an Assertion under attacker control.",
+    "tags": [],
+    "title": "CVE-2026-9487 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9487"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-38447",
+    "published": "2026-08-03T19:16:46.917",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "osTicket 1.18.3 generates API keys using a predictable construction based on MD5 hashing. The use of MD5, combined with predictable inputs such as the current timestamp and client IP address, significantly reduces entropy. An attacker can approximate the key generation time and brute-force the key space within a feasible time window.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-38447 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-38447"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48031",
+    "published": "2026-08-03T20:17:24.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "go-base is a Go RESTful API Boilerplate template with JWT Authentication, backed by PostgreSQL. In versions prior to 2026-05-18, the JWT signing secret is hardcoded to the known string \"random\", letting any attacker who reads the public repository forge tokens for arbitrary users, including admin roles, and completely bypass authentication on all protected endpoints. This value is set in two places: the dev.env template (line 10) and a programmatic fallback in cmd/serve.go (line 35), so the application uses it even when no .env file is present. The original mitigation in auth/jwt/tokenauth.go (lines 22 to 25) only caught the exact string \"random\", letting other weak secrets through, and replaced it with an in-memory key that was not persisted, invalidating all tokens on every restart and effectively causing a denial-of-service. This issue has been fixed in version 2026-05-18.",
+    "tags": [],
+    "title": "CVE-2026-48031 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48031"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-50986",
+    "published": "2026-07-31T21:17:31.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PrestaShop module, totadministrativemandate <1.8.1 is vulnerable to Cross Site Request Forgery (CSRF). The payment validation controller has no CSRF token. An attacker can confirm an order in an awaiting status by hijacking a link.",
+    "tags": [],
+    "title": "CVE-2026-50986 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50986"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-20465",
+    "published": "2026-08-03T03:16:41.313",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In wlan AP driver, there is a possible out of bounds write due to a missing bounds check. This could lead to remote (proximal/adjacent) escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation. Patch ID: WCNCR00489200; Issue ID: MSV-7834.",
+    "tags": [],
+    "title": "CVE-2026-20465 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20465"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18092",
+    "published": "2026-08-03T14:16:25.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Net::SAML2 versions before 0.86 for Perl allow SAML authentication bypass via XML signature wrapping because new_from_xml reads assertion identity with document-wide XPath instead of the signed subtree.\n\nnew_from_xml reads the NameID, attribute values, SessionIndex, audience and other identity fields with document-wide XPath, such as //saml:Assertion/saml:AttributeStatement/saml:Attribute and //saml:Subject/saml:NameID, which select the first matching element in document order rather than the element covered by the verified signature. handle_response confirms that a signature is present and, when a cacert is configured, that it chains to the CA, but XML::Sig verifies only the element named by the signature's Reference URI, so unsigned sibling assertions in the same document are not covered. An attacker who holds any one IdP-signed assertion can add an unsigned attacker-authored assertion earlier in document order; the signature still verifies and the document-order XPath returns the attacker's NameID and attributes.\n\nAny caller that passes an untrusted Response to new_from_xml can accept identity fields from an assertion the IdP never signed, even when a cacert trust anchor is configured, so a party holding one valid IdP-signed assertion can authenticate as an arbitrary user.",
+    "tags": [],
+    "title": "CVE-2026-18092 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18092"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-67598",
+    "published": "2026-08-03T20:17:27.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Emlog Pro through 2.6.23 contains a disabled TLS certificate validation vulnerability in include/service/ai.php that allows network-adjacent attackers to intercept outbound HTTPS requests to configured LLM providers by presenting arbitrary TLS certificates, as CURLOPT_SSL_VERIFYPEER and CURLOPT_SSL_VERIFYHOST are unconditionally disabled across sendStream(), sendImageRequest(), send(), and fetchSearchHtml() with no option to re-enable verification. Attackers can perform man-in-the-middle interception to extract Authorization Bearer API keys from every AI request and inject crafted AI responses that may be acted upon by the tool-call execution pipeline, including the query_database and update_config tool handlers.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-67598 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67598"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/bitcoin-theft-coldcard-cyberattack",
+    "published": "2026-08-03T20:15:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The company behind a popular hardware wallet for bitcoin owners was forced to destroy part of its inventory after thieves siphoned more than $88 million from customers through a firmware vulnerability.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Bitcoin hardware wallet maker destroys some inventory after more than $88 million stolen",
+    "url": "https://therecord.media/bitcoin-theft-coldcard-cyberattack"
   }
 ]
