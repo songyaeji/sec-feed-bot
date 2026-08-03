@@ -1336,5 +1336,101 @@
     "tags": [],
     "title": "쿠팡 10만원 배상 결정…‘3.8조’ 부담에 소송전 예고(종합)",
     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE52OVZwM0tsaUJQaF9YNlhrODdkMXlXNFlMNUxiWnZQTEloTmp1SzN3TjhHWFc4YzRJaFhnQlU0WkZ0MUZuOEdENk84WFpETXdmNzBFTEJjWUZzSUhfM05ITjFscVpQOERLekpzbUlJY2U3X1RLV2lWaF94QQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-18667",
+    "published": "2026-08-03T23:16:45.590",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in Tenable Sensor Proxy allows a remote attacker to execute code with elevated privileges by inducing an operator to connect the sensor to an attacker-controlled host.",
+    "tags": [],
+    "title": "CVE-2026-18667 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18667"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-18684",
+    "published": "2026-08-03T23:16:45.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A weakness has been identified in GL.iNet GL-MT3000 up to 4.4.5. This issue affects the function remove_profile of the file /cgi-bin/glc of the component modem.so. This manipulation causes command injection. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-18684 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18684"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-48317",
+    "published": "2026-08-03T23:16:45.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48317 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48317"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-48323",
+    "published": "2026-08-03T23:16:46.063",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements Used in a Template Engine vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48323 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48323"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-48326",
+    "published": "2026-08-03T23:16:46.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48326 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48326"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-48330",
+    "published": "2026-08-03T23:16:46.317",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary SQL commands, potentially gaining elevated access or control over the application. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48330 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48330"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-48331",
+    "published": "2026-08-03T23:16:46.443",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Campaign Classic (ACC) is affected by a Server-Side Request Forgery (SSRF) vulnerability that could result in privilege escalation. Exploitation of this issue does not require user interaction. Scope is changed.",
+    "tags": [],
+    "title": "CVE-2026-48331 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48331"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48333",
+    "published": "2026-08-03T23:16:46.567",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Adobe Campaign Classic (ACC) is affected by an Incorrect Authorization vulnerability that could result in privilege escalation. An attacker could exploit this vulnerability to gain elevated privileges. Exploitation of this issue does not require user interaction.",
+    "tags": [],
+    "title": "CVE-2026-48333 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48333"
   }
 ]
