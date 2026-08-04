@@ -1990,5 +1990,55 @@
     "tags": [],
     "title": "클라우드브릭 WAF+, 일본 ‘IT 트렌드’ 상반기 WAF 부문 1위",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207918"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-18753",
+    "published": "2026-08-04T08:16:34.640",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The\nproduct firmware contains an embedded, static RSA private key utilized by the\nLighttpd web server for TLS termination. Exposure of this private key allows\nmalicious actors to breach the confidentiality and integrity of HTTPS\ncommunications, enabling traffic decryption and server spoofing.",
+    "tags": [],
+    "title": "CVE-2026-18753 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18753"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-18754",
+    "published": "2026-08-04T08:16:34.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The\nproduct firmware contains an embedded, static RSA private key utilized by the\nLighttpd web server for TLS termination. Exposure of this private key allows\nmalicious actors to breach the confidentiality and integrity of HTTPS\ncommunications, enabling traffic decryption and server spoofing.",
+    "tags": [],
+    "title": "CVE-2026-18754 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18754"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2024-1132",
+    "published": "2024-04-17T14:15:07.953",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Keycloak, where it does not properly validate URLs included in a redirect. This issue could allow an attacker to construct a malicious request to bypass validation and access other URLs and sensitive information within the domain or conduct further attacks. This flaw affects any client that utilizes a wildcard in the Valid Redirect URIs field, and requires user interaction within the malicious URL.",
+    "tags": [],
+    "title": "CVE-2024-1132 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1132"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-23368",
+    "published": "2025-03-04T16:15:39.270",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Wildfly Elytron integration. The component does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame, making it more susceptible to brute force attacks via CLI.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-23368 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23368"
   }
 ]
