@@ -29411,5 +29411,85 @@
     "tags": [],
     "title": "NCSC statement in response to recent incidents resulting from frontier AI evaluations",
     "url": "https://www.ncsc.gov.uk/news/ncsc-statement-in-response-to-recent-incidents-resulting-from-frontier-ai-evaluations"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-45538",
+    "published": "2026-08-04T21:16:36.270",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenSIPS is a Session Initiation Protocol (SIP) server implementation. In versions 4.0.0 and prior, processing a SIP message with a header name longer than 255 bytes causes a stack buffer overflow when sip_to_json() is called in the routing script. Function sip_to_json() (modules/sipmsgops/sipmsgops.c) copies SIP header names into a fixed 255-byte stack buffer without bounds checking, performing a memcpy of the full header-name length even though the SIP parser imposes no such limit (a header name can be roughly 65000 bytes). As a result, when a routing script calls sip_to_json(), a SIP message with a header name longer than 255 bytes triggers a stack buffer overflow in which both the length and content of the overwrite are attacker-controlled, corrupting the saved frame pointer and return address. A single unauthenticated UDP packet to the SIP port (5060) can crash the process or, on builds without stack protections, hijack the return address to achieve remote code execution. This affects deployments whose routing script invokes sip_to_json(). This issue was not fixed at the time of publication.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-45538 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45538"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-70554",
+    "published": "2026-08-04T21:16:38.613",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "MaxSite CMS contains a PHP object injection vulnerability that allows unauthenticated attackers to execute arbitrary code by passing attacker-controlled serialized data in the maxsite_comuser cookie directly to unserialize() without validation or class allowlisting. Attackers can craft a malicious serialized PHP object payload delivered in a single HTTP request to trigger magic methods during object graph reconstruction, enabling property-oriented programming attacks or remote code execution via available gadget chains such as those targeting SoapClient or Imagick extensions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70554 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70554"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-70492",
+    "published": "2026-08-04T21:16:38.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.10.0 until 0.11.0, src/lib/components/chat/Messages/Markdown/KatexRenderer.svelte could store and render a chat message whose math block makes KaTeX fail with a stack overflow instead of a parse error. The catch branch fell back to inserting the original math source into the page as HTML through {@html} rather than as text, so script in the message runs in the browser of whoever views it, including shared chats and channels. The viewer's session token in localStorage can be stolen, and an administrator viewer can have their account taken over. This issue is fixed in 0.11.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70492 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70492"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70494",
+    "published": "2026-08-04T21:16:38.470",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.10.0 until 0.11.0, the DELETE /api/v1/folders/{id} handler in backend/open_webui/routers/folders.py allowed a user granted write access to a shared chat folder to permanently delete chats and messages belonging to the folder owner. The cascade following the authorization check is bound to the folder owner's id, but the subfolder check accepted any inherited write grant instead of requiring ownership or administrator status. A collaborator can destroy the owner's subtree or force-move chats out of it when delete_contents=false. This issue is fixed in 0.11.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70494 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70494"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMieEFVX3lxTE5uaE51ZGFSMTluSC1PUEhxcWhiZE1TVnRFX1FEUGE0VUZuYmdpSWdjV3JGQ1Nlem1NZGJnbDRjYi1KTldVWWgzTTI3V2RDa19EMzJTUWloQk05UkZrUUxVSXdaNlhrSWpQUjB3NFB6bTk3QWNuai12NQ",
+    "published": "2026-08-04T21:09:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡, 상반기 영업손실 1조1895억원⋯2년치 영업이익 날아갔다",
+    "tags": [],
+    "title": "쿠팡, 상반기 영업손실 1조1895억원⋯2년치 영업이익 날아갔다",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5uaE51ZGFSMTluSC1PUEhxcWhiZE1TVnRFX1FEUGE0VUZuYmdpSWdjV3JGQ1Nlem1NZGJnbDRjYi1KTldVWWgzTTI3V2RDa19EMzJTUWloQk05UkZrUUxVSXdaNlhrSWpQUjB3NFB6bTk3QWNuai12NQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE1lMjlOVlBwOXZHXzNVVVg1Zk1VLTdwTzh5RGpsbHQtRU1vLVJTV3VjcG1MdUg4TE9pVVVVVnE4OFp1YUdwOHNybWNfUGtsZDlvc0w4bFJiMkNkQ3FEZkpKZQ",
+    "published": "2026-08-04T21:13:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡Inc, 상반기 영업손실 1.2조 '역대 최대'…과징금 반영 직격타(상보)",
+    "tags": [],
+    "title": "쿠팡Inc, 상반기 영업손실 1.2조 '역대 최대'…과징금 반영 직격타(상보)",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1lMjlOVlBwOXZHXzNVVVg1Zk1VLTdwTzh5RGpsbHQtRU1vLVJTV3VjcG1MdUg4TE9pVVVVVnE4OFp1YUdwOHNybWNfUGtsZDlvc0w4bFJiMkNkQ3FEZkpKZQ?oc=5"
   }
 ]
