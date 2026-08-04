@@ -28316,5 +28316,53 @@
     ],
     "title": "보이스피싱 의심정보, 금융·통신·수사기관 간 ‘실시간’ 공유된다",
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBNc3o3S2UzbEZnWEFzZzl6NTJEbjRXMV9ybHBOT2lMSG5EV3JNT3B6OTBnOG92Y1drSnZpUUdyTnJURkc2OG16QVV5bFJtR3ZLa25Kc1dwVDRBWlUxQTdfZW5tcW1SWThOWnc?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2023-4501",
+    "published": "2023-09-12T19:15:36.333",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "User authentication with username and password credentials is ineffective in OpenText (Micro Focus) Visual COBOL, COBOL Server, Enterprise Developer, and Enterprise Server (including product variants such as Enterprise Test Server), versions 7.0 patch updates 19 and 20, 8.0 patch updates 8 and 9, and 9.0 patch update 1, when LDAP-based authentication is used with certain configurations. When the vulnerability is active, authentication succeeds with any valid username, regardless of whether the password is correct; it may also succeed with an invalid username (and any password). This allows an attacker with access to the product to impersonate any user.\n\nMitigations: The issue is corrected in the upcoming patch update for each affected product. Product overlays and workaround instructions are available through OpenText Support. The vulnerable configurations are believed to be uncommon.\n\nAdministrators can test for the vulnerability in their installations by attempting to sign on to a Visual COBOL or Enterprise Server component such as ESCWA using a valid username and incorrect password.",
+    "tags": [],
+    "title": "CVE-2023-4501 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4501"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-40477",
+    "published": "2026-04-17T22:16:33.500",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Thymeleaf is a server-side Java template engine for web and standalone environments. Versions 3.1.3.RELEASE and prior contain a security bypass vulnerability in the expression execution mechanisms. Although the library provides mechanisms to prevent expression injection, it fails to properly restrict the scope of accessible objects, allowing specific potentially sensitive objects to be reached from within a template. If an application developer passes unvalidated user input directly to the template engine, an unauthenticated remote attacker can bypass the library's protections to achieve Server-Side Template Injection (SSTI). This issue has ben fixed in version 3.1.4.RELEASE.",
+    "tags": [],
+    "title": "CVE-2026-40477 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40477"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-40478",
+    "published": "2026-04-17T22:16:33.650",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Thymeleaf is a server-side Java template engine for web and standalone environments. Versions 3.1.3.RELEASE and prior contain a security bypass vulnerability in the the expression execution mechanisms. Although the library provides mechanisms to prevent expression injection, it fails to properly neutralize specific syntax patterns that allow for the execution of unauthorized expressions. If an application developer passes unvalidated user input directly to the template engine, an unauthenticated remote attacker can bypass the library's protections to achieve Server-Side Template Injection (SSTI). This issue has ben fixed in version 3.1.4.RELEASE.",
+    "tags": [],
+    "title": "CVE-2026-40478 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40478"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/apple-uk-tcn-icloud-new-legal-challenge",
+    "published": "2026-08-04T13:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Seeking to protect users' iCloud accounts, Apple is reportedly mounting a new challenge to British legal demands for ways around the company's Advanced Data Protection feature.",
+    "tags": [],
+    "title": "Apple launches new legal challenge against UK over iCloud access",
+    "url": "https://therecord.media/apple-uk-tcn-icloud-new-legal-challenge"
   }
 ]
