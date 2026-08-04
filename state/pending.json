@@ -28551,5 +28551,67 @@
     ],
     "title": "INC Ransomware is Calling Victims – Pressure Tactics Post SonicWall Zero-Day Exploit",
     "url": "https://securityaffairs.com/196607/malware/inc-ransomware-is-calling-victims-pressure-tactics-post-sonicwall-zero-day-exploit.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-61514",
+    "published": "2026-08-04T15:16:36.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Puwell IP Camera firmware versions 2.x through 4.x contains an authentication bypass vulnerability that allows unauthenticated attackers to access device functions by sending protocol-conforming packets over TCP port 23456 without credentials. Attackers can exploit the unvalidated Session field in the proprietary control protocol header to access live video streams, control pan and tilt motors, activate audio functions, and remotely restart the device.",
+    "tags": [],
+    "title": "CVE-2026-61514 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61514"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-61515",
+    "published": "2026-08-04T15:16:36.967",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Puwell IP Camera firmware versions 2.x through 4.x contains an unauthenticated command injection vulnerability that allows remote attackers to execute arbitrary operating system commands by sending a crafted JSON payload to the DebugShell interface exposed on TCP port 34567. Attackers can exploit the lack of authentication and input sanitization in the binary protocol service to pass arbitrary commands directly to the underlying operating system, achieving root-level code execution and complete device compromise.",
+    "tags": [],
+    "title": "CVE-2026-61515 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61515"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18650",
+    "published": "2026-08-04T15:16:31.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing Authorization vulnerability in HAVELSAN Inc. Liman MYS allows Privilege Escalation.\n\nThis issue affects Liman MYS: from 2.2.3 before 2.3.1.",
+    "tags": [],
+    "title": "CVE-2026-18650 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18650"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67195",
+    "published": "2026-08-04T15:16:40.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Perspective 5.0.0 contains a remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary operating system commands by submitting crafted expression strings to the PolarsVirtualServer backend, which passes client-supplied input directly to Python's eval() with only __builtins__={} cleared. Attackers can exploit Python object attribute traversal through the interpreter's loaded class list to reach subprocess.Popen via a TableValidateExprReq or TableMakeViewReq protobuf message, achieving arbitrary command execution in the Perspective host process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-67195 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67195"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-67618",
+    "published": "2026-08-04T15:16:41.293",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "marimo before 0.23.15 contains a configuration injection vulnerability that allows notebook authors to exfiltrate operator API keys by embedding a malicious base_url in PEP-723 inline script metadata, which is merged into session configuration with higher precedence than the operator's own settings due to insufficient sanitization in sanitize_pyproject_dict. When an operator opens the crafted notebook and makes an AI request, marimo resolves the attacker-controlled base_url from the notebook config while falling back to the operator's OPENAI_API_KEY environment variable for authentication, transmitting the API key to the attacker-controlled endpoint without requiring any cell execution.",
+    "tags": [],
+    "title": "CVE-2026-67618 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67618"
   }
 ]
