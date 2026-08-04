@@ -29062,5 +29062,158 @@
     "tags": [],
     "title": "New XCSSET variant targets macOS devs via compromised Xcode projects",
     "url": "https://www.bleepingcomputer.com/news/security/new-xcsset-variant-targets-macos-devs-via-compromised-xcode-projects/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16060",
+    "published": "2026-08-03T07:16:40.633",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Insert or Embed Articulate Content into WordPress plugin through 4.3000000027 does not correctly validate the contents of an uploaded archive, relying on a bypassable check that lets an Editor-level user upload a server-executable file into a public directory, resulting in remote code execution on servers configured to execute it.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16060 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16060"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-20241",
+    "published": "2026-08-04T19:16:38.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Keysight IxChariot Endpoint before 9.5.102 contains a heap-based buffer overflow. An unauthenticated remote attacker can send a specially crafted packet to crash the endpoint or potentially execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2017-20241 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20241"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-20242",
+    "published": "2026-08-04T19:16:38.963",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Keysight IxChariot Endpoint before 9.5.102 contains a stack-based buffer overflow. An unauthenticated remote attacker can send a specially crafted packet to crash the endpoint or potentially execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2017-20242 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-20242"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-49435",
+    "published": "2026-08-04T19:16:51.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Keysight IxChariot Endpoint and associated products contain a stack-based buffer overflow. An unauthenticated remote attacker can send a specially crafted packet and execute arbitrary code with administrative privileges.",
+    "tags": [],
+    "title": "CVE-2026-49435 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49435"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-69703",
+    "published": "2026-08-04T19:16:54.130",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Atlas-Livre contains an improper access control vulnerability in the admin controllers under Espace_admin/controleur/ that allows unauthenticated attackers to bypass session-based authentication guards by sending raw HTTP requests that ignore redirects. Attackers can invoke destructive admin actions such as record deletion by requesting controller endpoints with GET parameters like supp, because the PHP header() redirect is never followed by an exit or die call, allowing all subsequent code including database operations to execute regardless of session state.",
+    "tags": [],
+    "title": "CVE-2026-69703 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69703"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-48818",
+    "published": "2026-06-17T19:18:09.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Starlette is a lightweight ASGI framework/toolkit. In versions 1.0.1 and earlier, StaticFiles on Windows is vulnerable to SSRF. An UNC path such as \\\\attacker.com\\share can cause os.path.realpath to initiate an outbound SMB connection before the path is rejected, exposing the service account’s NTLMv2 credentials for offline cracking or relay even though the HTTP response is only a 404. The issue affects default follow_symlink=False deployments, including frameworks built on Starlette such as FastAPI; POSIX systems and follow_symlink=True are unaffected. The issue is fixed in 1.1.0.",
+    "tags": [],
+    "title": "CVE-2026-48818 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48818"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12586",
+    "published": "2026-08-02T06:16:34.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Lenxel WP WordPress theme through 1.0.31 does not perform any authorization or ownership check on its password-reset action, validating only a CSRF nonce, allowing unauthenticated attackers to reset the password of any user (including an administrator) and take over the account.",
+    "tags": [],
+    "title": "CVE-2026-12586 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12586"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-70471",
+    "published": "2026-08-04T19:16:54.540",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise is a drag-and-drop user interface for building customized large language model (LLM) flows. Prior to 3.1.3, Flowise injects $vars into the code execution sandbox without requiring variables:view, bypassing the permission-protected Variables API. Variables for the active workspace are fetched at packages/components/src/utils.ts and runtime variables are resolved from server environment variables, while the official variables route enforces variables:view. A user or API key that is denied variables:view can call /api/v1/node-custom-function and receive $vars pre-populated with all variables for the workspace, including Variable.name to Variable.value static variables and Variable.name to process.env[Variable.name] runtime variables. This can expose secrets such as database passwords, JWT secrets, SMTP passwords, and cloud keys, depending on the workspace Variables configuration. This issue is fixed in version 3.1.3.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-70471 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70471"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-70472",
+    "published": "2026-08-04T19:16:54.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, Flowise openai-assistants-vector-store endpoints accept a client-controlled credential parameter and load credentials by id without checking whether that credential belongs to the caller workspace. Route permissions assistants:* only check feature access. The controller passes req.query.credential straight to the service, and the service uses findOneBy({ id: credentialId }), decrypts the credential, and calls OpenAI APIs without a workspaceId check. If an attacker knows another workspace credentialId, the attacker can use that workspace OpenAI key, read, modify, or delete victim vector stores and files, cause billing impact on the victim OpenAI account, and violate multi-tenant boundaries. This issue is fixed in version 3.1.3.",
+    "tags": [],
+    "title": "CVE-2026-70472 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70472"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-70473",
+    "published": "2026-08-04T19:16:54.830",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise is a drag-and-drop user interface for building customized large language model (LLM) flows. Prior to 3.1.3, Flowise GET /api/v1/upsert-history returns the entire server-wide upsert history instead of being scoped to the requesting user, tenant, or workspace. The response can exceed 100MB and includes sensitive configuration data, including Vector Store settings such as Qdrant Server URL and collection name. The observed behavior indicates missing or insufficient authorization checks, workspace/project/tenant isolation, and pagination or limits, exposing integration parameters and infrastructure details that may enable further targeted attacks. This issue is fixed in version 3.1.3.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-70473 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70473"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-70474",
+    "published": "2026-08-04T19:16:54.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise is a drag-and-drop user interface for building customized large language model (LLM) flows. Prior to 3.1.3, Flowise has three OAuth2 credential endpoints that look up credentials by id alone with no workspaceId filter. The authorize, callback, and refresh handlers query the Credential table by id only; callback and refresh are whitelisted from authentication. This allows any authenticated user to initiate OAuth2 flows against credentials belonging to other workspaces, allows an unauthenticated attacker to forge OAuth2 callbacks to overwrite tokens in any credential, and allows an unauthenticated attacker to refresh tokens for any credential. The affected routes include /api/v1/oauth2-credential/authorize/<VICTIM_CREDENTIAL_UUID>, /api/v1/oauth2-credential/callback?code=ATTACKER_AUTH_CODE&state=<VICTIM_CREDENTIAL_UUID>, and /api/v1/oauth2-credential/refresh/<VICTIM_CREDENTIAL_UUID>. This issue is fixed in version 3.1.3.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-70474 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70474"
+  },
+  {
+    "author": "Ron Pessner",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=148773",
+    "published": "2026-08-04T18:30:00+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "Microsoft expands its Zero Trust for AI strategy to enhance security for AI and DevSecOps environments with new tools and guidance. The post Advance Zero Trust for AI: New tools and guidance to secure AI agents and DevSecOps appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "Advance Zero Trust for AI: New tools and guidance to secure AI agents and DevSecOps",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/04/advance-zero-trust-for-ai-new-tools-and-guidance-to-secure-ai-agents-and-devsecops/"
   }
 ]
