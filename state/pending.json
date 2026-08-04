@@ -28886,5 +28886,143 @@
     ],
     "title": "보이스피싱 의심 정보 실시간 공유…AI 플랫폼 'ASAP' 본격가동",
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9HMXRiS2JWWF92OWxqWDU2N0VhZUhKZVpYNGk3ak9uZ3NFQ3BQWFZ3cUY1WkNzNkE0d1c5ODd1V3MwMTFFczF4eVdkUzVCS0JyenBxLXRzMFU2bUNtZkRoblVfSnRXUFkwS0E?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-14557",
+    "published": "2026-08-03T07:16:39.533",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The SoftMarket — Digital Marketplace WordPress plugin through 1.0.0 does not properly validate an authentication token in one branch of its email-verification flow, allowing unauthenticated attackers to obtain a valid session as any verified user by supplying only that user's ID.",
+    "tags": [],
+    "title": "CVE-2026-14557 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14557"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16250",
+    "published": "2026-08-03T07:16:40.910",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Personal QR Message WordPress plugin through 1.0 does not restrict the file types that can be uploaded through an unauthenticated handler, allowing unauthenticated users to upload arbitrary executable PHP files that are directly reachable, leading to remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16250 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16250"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-15958",
+    "published": "2026-08-04T07:16:29.257",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Easy Integration for Dropbox  WordPress plugin before 2.2.0 does not perform authorization checks on several of its file-management AJAX actions that it also registers for unauthenticated users, allowing an unauthenticated attacker to list, download and upload arbitrary files across the connected Dropbox account and to read the connected account and administrator email addresses.",
+    "tags": [],
+    "title": "CVE-2026-15958 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15958"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16618",
+    "published": "2026-08-04T07:16:30.707",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Improve SEO WordPress plugin through 2.0.11 does not properly validate uploaded files, checking only the file content type while writing the file with the attacker-supplied extension into a publicly accessible directory, allowing unauthenticated users to upload executable PHP files and achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16618 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16618"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-24254",
+    "published": "2026-08-04T18:16:49.937",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "NVIDIA Dynamo for Linux contains a vulnerability in the multimodal serving topology, where an attacker could cause an out-of-bounds write. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, data tampering, denial of service, and information disclosure.",
+    "tags": [],
+    "title": "CVE-2026-24254 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24254"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2023-4853",
+    "published": "2023-09-20T10:15:14.947",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Quarkus where HTTP security policies are not sanitizing certain character permutations correctly when accepting requests, resulting in incorrect evaluation of permissions. This issue could allow an attacker to bypass the security policy altogether, resulting in unauthorized endpoint access and possibly a denial of service.",
+    "tags": [],
+    "title": "CVE-2023-4853 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4853"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-15672",
+    "published": "2026-08-03T07:16:37.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The ChamaWP  WordPress plugin before 1.0.13 does not properly validate user input before passing it to a PHP deserialization function, allowing unauthenticated attackers to inject arbitrary PHP objects, which could lead to remote code execution when a suitable gadget chain is present via other installed code.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-15672 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15672"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-16623",
+    "published": "2026-08-04T07:16:30.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Create Block  WordPress plugin before 2.10.0 does not correctly escape user-supplied text before writing it into a generated PHP pattern file, allowing a multisite subsite administrator (who holds the capability gating this action but is denied the capability that normally gates PHP file editing) to inject and execute arbitrary PHP code on the server.",
+    "tags": [],
+    "title": "CVE-2026-16623 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16623"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18830",
+    "published": "2026-08-04T18:16:49.420",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient input validation in Amazon Bedrock AgentCore harness might allow an authenticated remote user to execute configured tools bypassing model invocation and security controls via crafted content blocks in conversation messages. AWS has addressed this issue. No customer action is required.",
+    "tags": [],
+    "title": "CVE-2026-18830 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18830"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-24253",
+    "published": "2026-08-04T18:16:49.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA Dynamo for Linux contains a vulnerability where an attacker could cause an out-of-bounds write. A successful exploit of this vulnerability might lead to denial of service and data tampering.",
+    "tags": [],
+    "title": "CVE-2026-24253 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24253"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-47623",
+    "published": "2026-08-04T18:16:51.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NVIDIA Dynamo for Linux contains a vulnerability where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to denial of service and data tampering.",
+    "tags": [],
+    "title": "CVE-2026-47623 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47623"
   }
 ]
