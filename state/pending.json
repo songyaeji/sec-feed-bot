@@ -1456,5 +1456,79 @@
     "tags": [],
     "title": "[김승주 교수 칼럼] 한국에도 NIST가 필요하다",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207909"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-18685",
+    "published": "2026-08-04T00:16:40.350",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in GL.iNet GL-MT3000 up to 4.4.5. Impacted is the function set_upgrade of the file /cgi-bin/glc of the component modem.so. Such manipulation leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-18685 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18685"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-18686",
+    "published": "2026-08-04T00:16:40.520",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in GL.iNet GL-MT3000 up to 4.4.5. The affected element is the function nas-web.add_user of the file /cgi-bin/glc of the component nas-web RPC Wrapper. Performing a manipulation results in command injection. The attack can be initiated remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure and confirmed the existence of the vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-18686 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18686"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55002",
+    "published": "2026-07-14T17:17:08.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "External control of file name or path in SQL Server allows an authorized attacker to elevate privileges over a network.",
+    "tags": [],
+    "title": "CVE-2026-55002 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55002"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62870",
+    "published": "2026-08-04T00:17:37.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Microsoft Office Excel allows an unauthorized attacker to execute code over a network.",
+    "tags": [],
+    "title": "CVE-2026-62870 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62870"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-66318",
+    "published": "2026-08-04T00:17:39.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Origin validation error in Microsoft Edge (Chromium-based) allows an unauthorized attacker to disclose information over a network.",
+    "tags": [],
+    "title": "CVE-2026-66318 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66318"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/hotel-wi-fi-attacks-use-custom-malware-to-breach-microsoft-365-accounts/",
+    "published": "2026-08-04T00:17:15+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Microsoft has linked a global campaign targeting hospitality Wi-Fi networks to the Russian threat actor Midnight Blizzard, also known as APT29. [...]",
+    "tags": [
+      "APT"
+    ],
+    "title": "Hotel Wi-Fi attacks use custom malware to breach Microsoft 365 accounts",
+    "url": "https://www.bleepingcomputer.com/news/security/hotel-wi-fi-attacks-use-custom-malware-to-breach-microsoft-365-accounts/"
   }
 ]
