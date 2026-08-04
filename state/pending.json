@@ -29215,5 +29215,141 @@
     "tags": [],
     "title": "Advance Zero Trust for AI: New tools and guidance to secure AI agents and DevSecOps",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/08/04/advance-zero-trust-for-ai-new-tools-and-guidance-to-secure-ai-agents-and-devsecops/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-29296",
+    "published": "2026-08-04T17:16:42.920",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "H3C Magic BE18000 V200R007, H3C NX400 V100R015, H3C Magic NX30 Pro V100R0011, H3C Magic R3010 V100R009, H3C Magic NX15 V100R017, H3C Magic R1510 V100R016, and H3C NE36 Pro V100R002 contain multiple command injection vulnerabilities in the /api/esps request handler. The affected object interfaces and methods are esps.dhcpd.vlan (getlist, delete), esps.filter.url (add, modify), esps.apcm.version (delete, H3C Magic NX15 only), esps.swcm.version (delete, upgrade, all affected models except H3C Magic NX15), and esps.system.ntp (set, all affected models except H3C Magic NX15). Attacker-controlled request parameters are incorporated into shell expressions executed by eval without adequate validation, allowing a remote attacker to execute arbitrary commands as root and gain complete control of the affected device.",
+    "tags": [],
+    "title": "CVE-2025-29296 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-29296"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-0163",
+    "published": "2026-08-04T19:16:39.213",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In multiple functions of vpu_ioctl.c, there is a possible use after free due to a use after free. This could lead to remote escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+    "tags": [],
+    "title": "CVE-2026-0163 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0163"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-70552",
+    "published": "2026-08-04T20:16:55.883",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "MaxSite CMS 109.5 and earlier contains an authentication bypass vulnerability in the AJAX dispatcher that allows unauthenticated attackers to access admin-gated endpoints by supplying any X-Requested-With header and requesting a base64-encoded path resolving to any *-ajax.php file in the codebase. Attackers can exploit this dispatcher bypass to reach privileged plugin endpoints without credentials, enabling actions such as manipulating poll states and vote counts, and amplifying the impact of any dangerous operation performed by admin-only ajax files across the plugin tree.",
+    "tags": [],
+    "title": "CVE-2026-70552 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70552"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-70553",
+    "published": "2026-08-04T20:16:56.023",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "MaxSite CMS contains a remote code execution vulnerability that allows unauthenticated attackers to inject arbitrary PHP code into the application configuration file by submitting crafted POST requests to the install endpoint after installation is complete. Attackers can supply a malicious db_dbprefix value containing a single quote to break out of a PHP string literal in application/config/database.php, appending attacker-controlled PHP statements that are executed by the web server on every subsequent request, resulting in persistent unauthenticated remote code execution as the web-server process user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70553 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70553"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-14920",
+    "published": "2026-08-02T06:16:35.677",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "## Summary",
+    "tags": [],
+    "title": "CVE-2026-14920 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14920"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16793",
+    "published": "2026-08-04T20:16:49.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper neutralization of special elements used in an operating system command vulnerability was reported in Lenovo XClarity Orchestrator (LXCO) 2.2.0 that could allow an authenticated attacker to execute arbitrary operating system commands as a privileged user under a specific circumstance.",
+    "tags": [],
+    "title": "CVE-2026-16793 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16793"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-18656",
+    "published": "2026-08-04T20:16:50.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An uncontrolled search path element in Kiro IDE before version 1.0.228 on Windows might allow a remote unauthenticated actor to execute arbitrary code via a maliciously crafted project directory containing an executable that bypasses workspace trust protections when a local user opens the directory.\n\n\n\nTo remediate this issue, users should upgrade to version 1.0.228 or higher.",
+    "tags": [],
+    "title": "CVE-2026-18656 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18656"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-18657",
+    "published": "2026-08-04T20:16:50.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An uncontrolled search path element in Kiro CLI before version 2.10.0 on Windows might allow a remote unauthenticated actor to execute arbitrary code via a maliciously crafted project directory containing an executable that bypasses workspace trust protections when a local user starts Kiro CLI in the directory.\n\n\n\nTo remediate this issue, users should upgrade to version 2.10.0 or higher.",
+    "tags": [],
+    "title": "CVE-2026-18657 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18657"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-70477",
+    "published": "2026-08-04T20:16:54.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to 3.1.3, a prompt injection sent to a chatflow using a CSV Agent node can cause the LLM to respond with a malicious Python script that bypasses the blocklist validator and executes in an unsandboxed Pyodide environment. The specific flaw exists within the run method of the CSV_Agents class, where untrusted data is used to construct an LLM prompt and the resulting pythonCode is validated by validatePythonCodeForDataFrame before execution. An attacker can leverage this to execute arbitrary code in the context of the service account. This issue is fixed in 3.1.3.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-70477 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70477"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70482",
+    "published": "2026-08-04T20:16:55.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.8.0 until 0.11.0, when ENABLE_OAUTH_TOKEN_EXCHANGE=True, /oauth/{provider}/token/exchange accepts a raw provider access token and validates it by calling the provider userinfo endpoint without confirming which OAuth client the token was issued to. Anyone holding an access token minted for any client registered with the same provider could exchange it for an Open WebUI session as that token user, including applications the operator does not control and has never authorized. This issue is fixed in 0.11.0.",
+    "tags": [],
+    "title": "CVE-2026-70482 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70482"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-70486",
+    "published": "2026-08-04T20:16:55.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform. From 0.9.0 until 0.11.0, the terminal file-preview serveUrl iframe branch always granted allow-same-origin together with allow-scripts for HTML files served from the application origin. Any authenticated user with access to a configured terminal server could cause script in a previewed file to run in the Open WebUI origin, read the victim's session token from localStorage, and take over the account, with possible server-side code execution if the victim was an admin or held workspace.functions. This issue is fixed in 0.11.0.",
+    "tags": [],
+    "title": "CVE-2026-70486 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70486"
   }
 ]
