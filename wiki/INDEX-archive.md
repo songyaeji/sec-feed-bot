@@ -40,3 +40,4 @@
 - [linux-mac80211-fast-rx-race](topics/2026-05-linux-mac80211-fast-rx-race.md) Linux WiFi mac80211 fast-RX 경합조건 (최종갱신일: 2026-05-28)
 - [linux-mac80211-dfs-uaf](topics/2026-05-linux-mac80211-dfs-uaf.md) Linux WiFi mac80211 DFS CAC 해제 후 사용 (최종갱신일: 2026-05-28)
 - [azure-horizondb-auth-bypass](topics/2026-06-azure-horizondb-auth-bypass.md) Azure HorizonDB 스푸핑 인증 우회 권한상향 (최종갱신일: 2026-06-04)
+- [product-slider-pro-rce](topics/2026-06-product-slider-pro-rce.md) Product Slider Pro WooCommerce 플러그인 RCE (최종갱신일: 2026-06-05)

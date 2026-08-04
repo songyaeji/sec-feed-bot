@@ -10,6 +10,7 @@ Palo Alto Networks Unit 42가 **Passkey** 구현의 보안 결함을 분석했�
 ## 타임라인
 
 - 2026-08-03 [Unit 42](https://unit42.paloaltonetworks.com/passwordless-authentication-security-risks/) — Pass the Passkey: A Novel Attack Surface in Passwordless Authentication
+- 2026-08-03 [The Hacker News](https://thehackernews.com/2026/08/google-password-manager-attacks-could.html) — Google Password Manager **Pass-ta-key** 공격: Passkey 클라우드 인증기 3가지 악용 경로 분석
 
 ## 관련
 
