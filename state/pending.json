@@ -1802,5 +1802,79 @@
     "tags": [],
     "title": "[기자수첩] ‘따릉이’ 462만 명의 개인정보는 왜 5천 원이면 충분?",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wd2dxN0RFc1pmZG5mV2FaS0N6M2d4THdCVklRdGxFcENkSHZncUdKaUI1YVY5Wl9RZElUSEY1MmtGV0tNX1dDeVo0bnVRQWs0eDlCeFBOcTlJRzFTbU5IUGlUWmZ6TWNEb2NhR0FB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-16056",
+    "published": "2026-08-04T07:16:29.477",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Contest Gallery  WordPress plugin before 30.0.7 does not perform any capability or nonce check in one of its handlers, allowing any authenticated user down to Subscriber to read the site's entire stored OpenAI prompt history.",
+    "tags": [],
+    "title": "CVE-2026-16056 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16056"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64561",
+    "published": "2026-08-04T07:16:30.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: x86: Check for invalid/obsolete root *after* making MMU pages available\n\nCheck for a \"stale\" page fault, i.e. for an invalid and/or obsolete root,\nafter making MMU pages available for the shadow MMU.  If reclaiming shadow\npages zaps an in-use root, i.e. marks it invalid, then KVM will attempt to\nmap memory into an invalid root.  On its own, populating an invalid root is\n\"fine\", but because child shadow pages inherit their parent's role, any\nchildren created during the map/fetch will be created as invalid pages,\nthus violating KVM's invariant that invalid pages are never on the list of\nactive MMU pages.\n\nNote, the underlying flaw has existed since KVM first started tracking\ninvalid roots in 2008 (commit 2e53d63acba7, \"KVM: MMU: ignore zapped root\npagetables\"), but the true badness only came along in 2020 (Linux 5.9)\nwith the invariant that invalid shadow pages can't be on the list of\nactive pages.\n\nNote #2, inheriting role.invalid when creating child shadow pages is also\nfar from ideal; that flaw will be addressed separately.",
+    "tags": [],
+    "title": "CVE-2026-64561 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64561"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64562",
+    "published": "2026-08-04T07:16:31.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: nVMX: Hide shadow VMCS right after VMCLEAR\n\nfree_nested() frees the shadow VMCS while vmcs01 still points to it. But\nbecause it is asynchronous with respect to loaded_vmcs_clear(), the vCPU\nmight migrate before the pointer is cleared and __loaded_vmcs_clear()\nmay then execute VMCLEAR.\n\nThe VMCS needs to stay attached until its explicit VMCLEAR completes, but\nthen it can be hidden and the page safely freed.",
+    "tags": [],
+    "title": "CVE-2026-64562 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64562"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64563",
+    "published": "2026-08-04T07:16:31.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nrhashtable: clear stale iter->p on table restart\n\nrhashtable_walk_start_check() has two restart paths when resuming a walk.\nWhen iter->walker.tbl is valid, it re-validates iter->p against the table\nand sets iter->p = NULL if the object is gone.  When iter->walker.tbl is\nNULL (table was freed during resize), it resets slot and skip but forgets\nto clear iter->p.\n\nrhashtable_walk_next() then dereferences the stale iter->p, reading\nfreed memory.  This is a use-after-free.\n\nAny caller that does multi-fragment rhashtable walks across\nwalk_stop/walk_start boundaries is affected.  Concrete cases include\nnetlink_diag (__netlink_diag_dump in net/netlink/diag.c) and TIPC\n(tipc_nl_sk_walk in net/tipc/socket.c).\n\nCrash stack (netlink_diag):\n  BUG: KASAN: slab-use-after-free in rhashtable_walk_next+0x365/0x3c0\n  Read of size 8 at addr ffff88801a9d2438 (freed kmalloc-2k, offset 1080)\n  Call Trace:\n   rhashtable_walk_next+0x365/0x3c0 (lib/rhashtable.c:1016)\n   __netlink_diag_dump+0x160/0x760 (net/netlink/diag.c:122)\n   netlink_diag_dump+0xc2/0x240\n   netlink_dump+0x5bc/0x1270\n   netlink_recvmsg+0x7a3/0x980\n   sock_recvmsg+0x1bc/0x200\n   __sys_recvfrom+0x1d4/0x2c0",
+    "tags": [],
+    "title": "CVE-2026-64563 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64563"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64564",
+    "published": "2026-08-04T07:16:31.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsctp: don't free the ASCONF's own transport in DEL-IP processing\n\nsctp_process_asconf() caches the transport the ASCONF chunk is processed\nagainst in asconf->transport (== chunk->transport, set once in sctp_rcv()).\nFor an ASCONF located through its Address Parameter by\n__sctp_rcv_asconf_lookup(), that cached transport corresponds to the\nAddress Parameter, which need not be the packet's source address.\n\nsctp_process_asconf_param() rejects a DEL-IP for the packet source address\n(ADDIP D8, SCTP_ERROR_DEL_SRC_IP), but nothing protects asconf->transport.\nA single ASCONF can therefore carry, in order:\n\n    [Address Parameter L] [DEL-IP L] [DEL-IP 0.0.0.0]\n\nwhere L differs from the source. The DEL-IP for L passes the D8 check and\ncalls sctp_assoc_rm_peer() on the transport that asconf->transport still\npoints at, freeing it (RCU-deferred). The following wildcard DEL-IP then\nreuses the now-dangling asconf->transport in sctp_assoc_set_primary() and\nsctp_assoc_del_nonprimary_peers(): set_primary() dereferences the freed\ntransport (->ipaddr, ->state) and plants the dangling pointer into\nasoc->peer.primary_path / active_path, and del_nonprimary_peers(), keeping\nonly the pointer that is no longer on the list, removes every real\ntransport, leaving the association with a transport_count of 0 and\nprimary_path/active_path pointing at freed memory.\n\nReject a DEL-IP that targets the transport the ASCONF is being processed\nagain",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64564 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64564"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64565",
+    "published": "2026-08-04T07:16:31.477",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nInput: ims-pcu - fix heap-buffer-overflow in ims_pcu_process_data()\n\nThe `ims_pcu_process_data()` processes incoming URB data byte by byte.\nHowever, it fails to check if the `read_pos` index exceeds\nIMS_PCU_BUF_SIZE.\n\nIf a malicious USB device sends a packet larger than IMS_PCU_BUF_SIZE,\n`read_pos` will increment indefinitely. Moreover, since `read_pos` is\nlocated immediately after `read_buf`, the attacker can overwrite\n`read_pos` itself to arbitrarily control the index.\n\nThis manipulated `read_pos` is subsequently used in\n`ims_pcu_handle_response()` to copy data into `cmd_buf`, leading to a\nheap buffer overflow.\n\nSpecifically, an attacker can overwrite the `cmd_done.wait.head` located\nat offset 136 relative to `cmd_buf` in the `ims_pcu_handle_response()`.\nConsequently, when the driver calls `complete(&pcu->cmd_done)`, it\ntriggers a control flow hijack by using the manipulated pointer.\n\nFix this by adding a bounds check for `read_pos` before writing to\n`read_buf`. If the packet is too long, discard it, log a warning,\nand reset the parser state.\n\n[dtor: factor out resetting packet state, reset checksum as well]",
+    "tags": [],
+    "title": "CVE-2026-64565 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64565"
   }
 ]
