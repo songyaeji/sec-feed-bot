@@ -28625,5 +28625,96 @@
     "tags": [],
     "title": "Massive ChainDrop npm supply-chain attack infects hundreds of packages",
     "url": "https://www.bleepingcomputer.com/news/security/massive-chaindrop-npm-supply-chain-attack-infects-hundreds-of-packages/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-25289",
+    "published": "2026-08-04T16:16:24.890",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory Corruption when processing Device Capability Extended attributes in certain NAN Service Discovery Frames with invalid length values.",
+    "tags": [],
+    "title": "CVE-2026-25289 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25289"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-69098",
+    "published": "2026-08-04T16:16:28.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "kotaemon through 0.12.0 contains an insecure deserialization vulnerability in the check_connection endpoint that allows unauthenticated attackers to instantiate arbitrary Python classes by supplying crafted YAML/JSON input with a __type__ field. Attackers can exploit this to override the __type__ field with subprocess.check_output and arbitrary arguments, achieving remote code execution with application process privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-69098 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69098"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-69110",
+    "published": "2026-08-04T16:16:28.483",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenCode Studio before 2.4.4 contains a missing authentication vulnerability that allows unauthenticated remote attackers to read arbitrary files within the temp and static/music directories by directly accessing the GET /api/tmp/:tmpFile and GET /api/music/:fileName endpoints. Attackers can retrieve intermediate audio, video artifacts, and subtitles belonging to other users' jobs, and additionally delete any video by ID through the unauthenticated DELETE /api/short-video/:videoId endpoint.",
+    "tags": [],
+    "title": "CVE-2026-69110 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69110"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-24079",
+    "published": "2026-08-04T16:16:23.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cryptographic Issue while processing registration requests with malformed or missing authentication parameters.",
+    "tags": [],
+    "title": "CVE-2026-24079 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24079"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-69100",
+    "published": "2026-08-04T16:16:28.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LAMP Rapid Development Platform through 5.6.2, fixed in commit 84b0c27, contains a remote code execution vulnerability in GlueFactory that executes unsandboxed Groovy scripts from database template fields without compilation restrictions or whitelisting. Attackers can write or influence the script field via message template endpoints to execute arbitrary Groovy code and OS commands on the backend server.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-69100 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69100"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-69253",
+    "published": "2026-08-04T16:16:29.100",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise is a drag-and-drop user interface for building customized large language model (LLM) flows. Prior to version 3.1.3, several custom-tool components — AgentAsTool, ChatflowTool, and ExecuteFlow — ran code in the in-process  vm2  sandbox. To build that code, they inserted a user-controlled  baseURL  value straight into the JavaScript source, for example  const url = \"${baseURL}/...\"; . The only check on  baseURL  was  isValidURL , but a valid-looking URL can still contain characters that break out of a code string. An authenticated user could craft a  baseURL  that passed this check, closed the surrounding string, and injected their own JavaScript into the sandboxed script (code injection, CWE-94). The  vm2  sandbox runs in the same Node.js process as Flowise and exposes risky dependencies. As a result, the injected code could escape the sandbox and run arbitrary code on the Flowise server as the Flowise process user. Exploitation only requires an authenticated session. The issue is fixed in version 3.1.3, which passes the URL to the sandbox as data instead of inserting it into code and adds stricter URL validation.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-69253 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69253"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/poland-convenience-store-chain-zabka-cyberattack",
+    "published": "2026-08-04T15:55:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Reports said intruders appeared to gain access to the Jira environment and other sensitive data of the Żabka retail chain. The company confirmed an intrusion occurred in late July.",
+    "tags": [],
+    "title": "Polish convenience store chain Żabka hacked through third-party account",
+    "url": "https://therecord.media/poland-convenience-store-chain-zabka-cyberattack"
   }
 ]
