@@ -3968,5 +3968,41 @@
     "tags": [],
     "title": "CVE-2026-9077 (CVSS 8.5)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9077"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65890",
+    "published": "2026-07-29T14:16:33.883",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - balbooa.com - Unauthenticated SQL injection in Gridbox < 2.20.2 - Multiple SQLi vectors allow unauthenticated actors to inject SQL in queries.",
+    "tags": [],
+    "title": "CVE-2026-65890 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65890"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65887",
+    "published": "2026-07-29T15:16:28.613",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - balbooa.com - Unauthenticated arbitrary password reset in Gridbox < 2.20.2 - The resetPassword method allows actors to reset any user password, allowing to login and act as these users - excluding super admins.",
+    "tags": [],
+    "title": "CVE-2026-65887 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65887"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65888",
+    "published": "2026-07-29T15:16:28.813",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - balbooa.com - Account takeover vulnerability in Gridbox < 2.20.2 - The socialLogin method allows actors to login as any given user on the target site.",
+    "tags": [],
+    "title": "CVE-2026-65888 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65888"
   }
 ]
