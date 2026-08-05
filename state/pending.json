@@ -4042,5 +4042,29 @@
     "tags": [],
     "title": "Don't Revoke That Token Yet: Inside the keyv/cacheable npm Worm, (Wed, Aug 5th)",
     "url": "https://isc.sans.edu/diary/rss/33218"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-51400",
+    "published": "2026-08-04T21:16:36.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in Vim Project v9.2.0389 and earlier allows a local attacker to execute arbitrary code via the vms_fixfilename() function within file vim/src/os_vms.c",
+    "tags": [],
+    "title": "CVE-2026-51400 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51400"
+  },
+  {
+    "category": "high",
+    "cvss": 6.9,
+    "id": "CVE-2026-70611",
+    "published": "2026-08-05T18:17:15.613",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to 39.8.9, 40.9.2, 41.2.1, and 42.0.0-beta.3, the DevTools reveal in file manager action could launch the target file rather than reveal it. An attacker with a separate means of running script inside the DevTools frontend, such as a malicious DevTools extension, could use showItemInFolder handling to execute native code outside the sandbox when DevTools is opened for windows exposed to untrusted content or untrusted DevTools extensions. This issue is fixed in 39.8.9, 40.9.2, 41.2.1, and 42.0.0-beta.3.",
+    "tags": [],
+    "title": "CVE-2026-70611 (CVSS 6.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70611"
   }
 ]
