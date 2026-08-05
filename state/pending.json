@@ -4090,5 +4090,70 @@
     "tags": [],
     "title": "CVE-2021-44733 (CVSS 7.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44733"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65883",
+    "published": "2026-07-29T11:16:50.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - aimy-extensions.com - RCE via PHP object injection in Aimy Captcha-Less Form Guard 18.0 - 20.0 - A forged clfgd field allows PHP objection injection and thereby remote code execution.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-65883 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65883"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65884",
+    "published": "2026-07-29T13:19:10.677",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Joomla Extension - balbooa.com - Privilege Escalation in Gridbox < 2.20.2 - The registration method allows users provided usergroup IDs, allowing unauthenticated actors to register new accounts with administrative permissions.",
+    "tags": [],
+    "title": "CVE-2026-65884 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65884"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2021-33033",
+    "published": "2021-05-14T23:15:09.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Linux kernel before 5.11.14 has a use-after-free in cipso_v4_genopt in net/ipv4/cipso_ipv4.c because the CIPSO and CALIPSO refcounting for the DOI definitions is mishandled, aka CID-ad5d07f4a9cd. This leads to writing an arbitrary value.",
+    "tags": [],
+    "title": "CVE-2021-33033 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-33033"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2022-0330",
+    "published": "2022-03-25T19:15:10.027",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A random memory access flaw was found in the Linux kernel's GPU i915 kernel driver functionality in the way a user may run malicious code on the GPU. This flaw allows a local user to crash the system or escalate their privileges on the system.",
+    "tags": [],
+    "title": "CVE-2022-0330 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0330"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65885",
+    "published": "2026-07-29T13:19:10.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla Extension - balbooa.com - Authenticated arbitrary file upload in Gridbox < 2.20.2 - File upload methods allows authenticated attackers to upload arbitrary files. Turns into an authenticated RCE if combined with CVE-2026-65884 as the required account can be created by the attacker.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65885 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65885"
   }
 ]
