@@ -2690,5 +2690,407 @@
     ],
     "title": "Anthropic AI agent faked identities, phished real developers in UK government hacking test",
     "url": "https://therecord.media/anthropic-ai-hacking-uk"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-55740",
+    "published": "2026-06-18T06:16:57.917",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Nur-Alam39 bus-ticket (no released versions; latest commit 459cabdbeb99c00225b26e46e3c2c30ae1de7bad) contains an unauthenticated SQL injection vulnerability in bus_info.php. The busid parameter received via HTTP POST is concatenated directly into a MySQL query (select * from bus_info where id=$busid) without sanitization, escaping, or parameterization, and in a numeric (unquoted) context. A remote, unauthenticated attacker can inject arbitrary SQL — for example a UNION-based payload such as busid=-1 UNION SELECT 1,2,3,4,5,6 — to read arbitrary data from the bus_service database. The application connects to the database as the MySQL root account with an empty password, increasing the potential impact. The query is executed via mysqli_query(), which does not permit stacked (semicolon-separated) statements.",
+    "tags": [],
+    "title": "CVE-2026-55740 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55740"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-54419",
+    "published": "2026-06-18T14:17:31.887",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "claudiopizzillo PIAF-HMS (PBX-In-A-Flash Hotel Management System; no released versions, latest commit 389d2633441b65ced1c104212cd62be2bfca21e5) contains multiple unauthenticated SQL injection vulnerabilities. The application has no authentication mechanism and passes user-supplied HTTP parameters directly into deprecated mysql_query() calls via string concatenation, without sanitization, escaping, or parameterization. Affected sinks include rooms.php (DELETE FROM Rooms WHERE ID = $_GET['ID'], unquoted numeric context), checkuser.php (WHERE Ext = '$_GET[\"Ext\"]'), ec.php (date/extension parameters in a WHERE), checkin.php and wakeup.php ($_POST values into INSERT statements), bills.php ($_POST fields built into a WHERE clause), and rates.php and checkout.php. A remote, unauthenticated attacker can inject arbitrary SQL to read, modify, or delete arbitrary records in the backing database (e.g. rooms.php?ID=1 OR 1=1 deletes all room records). Note: queries run via the legacy mysql_* extension, which does not permit stacked statements.",
+    "tags": [],
+    "title": "CVE-2026-54419 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54419"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71254",
+    "published": "2026-08-05T12:18:57.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "nanoMODBUS through v1.23.0 contains an out-of-bounds write in the Modbus server-side handle_read_file_record() function (FC 0x14, Read File Record) in nanomodbus.c. The function validates that the total request size does not exceed 245 bytes and that each sub-request's record_length is at most 124, but it never validates the CUMULATIVE response size across all sub-requests before processing them. The accumulator response_data_size is declared as uint8_t and is incremented by 2 + record_length*2 for each of up to 35 sub-requests; with 35 sub-requests of record_length=124, the cumulative demand is 8750 bytes, which overflows the uint8_t accumulator. A subsequent loop then calls get_n(), an internal function with no bounds checking, once per sub-request to obtain a pointer into the 260-byte msg.buf receive buffer and advances the internal buf_idx by up to 248 bytes per call; swap_regs() then writes to that pointer unconditionally. A single crafted FC 0x14 request from an unauthenticated network client can cause up to ~8490 bytes to be written out of bounds past the 260-byte buffer, corrupting adjacent memory in the server process and leading to denial of service or potential remote code execution, particularly on embedded/bare-metal targets without memory protection.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71254 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71254"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71256",
+    "published": "2026-08-05T12:18:57.847",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "nanoMODBUS through v1.23.0 contains an out-of-bounds stack read leading to a wild-pointer write in nmbs_read_device_identification_basic() / recv_read_device_identification_res() in nanomodbus.c. A fixed 3-element stack array order[3] = {0,1,2} maps object IDs to buffer indices. The server-supplied object_id field (0-255, read directly from the wire) is used without any bounds check as buf_index = order[object_id]. When a malicious Modbus server sends a Read Device Identification response with object_id >= 3, this reads an out-of-bounds/garbage byte from the stack adjacent to order[], which is then used as an index into a 3-element buffers[] array of char* pointers. The resulting wild pointer is passed to strncpy() as the destination, causing an arbitrary-address write with server-controlled data.",
+    "tags": [],
+    "title": "CVE-2026-71256 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71256"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71262",
+    "published": "2026-08-05T13:24:50.357",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IoTSharp BlobStorageController.cs lacks the [Authorize] attribute applied to every other controller in the application (DevicesController, CustomersController, TenantsController, etc.), and no global authorization FallbackPolicy is configured in Startup.cs, leaving its Upload/Download/List/Modify/Delete endpoints reachable by unauthenticated remote attackers. The path/filename parameters passed to these endpoints (e.g. `_blob.WriteFileAsync($\"{path}/{formFile.FileName}\", ...)`) are used without sanitization, enabling path traversal that allows writing, reading, modifying, and deleting arbitrary files outside the intended blob storage directory, including web-accessible paths that can be leveraged for remote code execution via webshell upload.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71262 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71262"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-71263",
+    "published": "2026-08-05T13:24:50.473",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The LINUXTCP port of FreeModbus contains an off-by-one bounds check in xMBPortTCPPool() (demo/LINUXTCP/port/porttcp.c). The check `if (usTCPFrameBytesLeft > MB_TCP_BUF_SIZE)` uses a strict greater-than comparison instead of greater-than-or-equal against the 263-byte MB_TCP_BUF_SIZE limit. An MBAP frame with a Length field of 264 makes usTCPFrameBytesLeft equal to 263, which passes the flawed check, and the subsequent recv() call writes up to 263 bytes starting at buffer offset 7 into the 263-byte static buffer aucTCPBuf, overflowing it by 7 bytes into the adjacent static variable usTCPBufPos. A single crafted, unauthenticated Modbus TCP packet triggers the overflow, since Modbus has no built-in authentication.",
+    "tags": [],
+    "title": "CVE-2026-71263 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71263"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71267",
+    "published": "2026-08-05T13:24:50.963",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "microtar's mtar_write_file_header() and mtar_write_dir_header() functions (src/microtar.c) copy a caller-supplied entry name into the 100-byte `name` field of a stack-allocated mtar_header_t via strcpy(h.name, name), with no check that strlen(name) is less than 100 before the copy. Any application that calls these functions with an externally-influenced filename longer than 99 characters (e.g. when archiving user-supplied or attacker-controlled filenames) triggers a stack buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-71267 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71267"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-71268",
+    "published": "2026-08-05T13:24:51.083",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenPLC Runtime v3's compile_program() function (webserver/openplc.py) parses `(*FILE:path content*)` directives from uploaded Structured Text (.st) program files and writes the referenced content to `os.path.join('./core', file_path)` with no validation that file_path stays within the ./core directory. A crafted .st file containing a directive such as `(*FILE:../../../etc/cron.d/x * * * * root <command>*)` writes attacker-controlled content to an arbitrary filesystem path, enabling remote code execution (e.g. via cron or SSH authorized_keys). A path-validation function, validate_file_path(), exists elsewhere in the codebase (webserver/credentials.py) but is never invoked from compile_program(), leaving the sink unprotected. OpenPLC additionally ships with hardcoded default credentials (openplc:openplc), lowering the practical bar for exploitation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71268 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71268"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-71277",
+    "published": "2026-08-05T13:24:52.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "rust-iot-platform's AuthToken request-guard implementation (api/src/main.rs) only checks whether the Authorization HTTP header is present, and never validates its value against any session, token store, or signature. Any request carrying an arbitrary non-empty Authorization header (e.g. `Authorization: fake`) satisfies the guard, granting access to every endpoint protected only by this request guard.",
+    "tags": [],
+    "title": "CVE-2026-71277 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71277"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71278",
+    "published": "2026-08-05T13:24:52.320",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "rust-iot-platform allows creating a \"calc rule\" via POST /calc-rule/create (api/src/controller/calc_rule_router.rs) containing an arbitrary `script` field. This route does not take the AuthToken request guard used elsewhere in the application, making it reachable without authentication. The stored script is subsequently executed via quick_js::Context::eval() in api/src/biz/calc_run_biz.rs with no sandboxing, allowing an unauthenticated attacker to achieve arbitrary JavaScript execution in the server process by creating and triggering a malicious calc rule.",
+    "tags": [],
+    "title": "CVE-2026-71278 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71278"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71289",
+    "published": "2026-08-05T13:24:53.703",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The NASA-AMMOS Asynchronous Network Management System (ANMS) reference implementation's default docker-compose.yml publishes the amp-manager service's REST API directly to the host network interface (port 8089, e.g. \"${ION_MGR_PORT:-8089}:8089/tcp\") with cap_add: NET_ADMIN, NET_RAW, SYS_NICE, bypassing the CAM (Configuration and Access Manager) gateway that is otherwise the system's sole authentication boundary. The underlying REST server, implemented with CivetWeb in JHUAPL/dtnma-tools (src/refdm/nm_rest.c), is configured with enable_auth_domain_check set to \"no\" and registers every route, including the DTNMA agent command-dispatch endpoints (.../agents/{eid|idx}/send, which accept and forward EXECSET-encoded command sets to a registered DTNMA agent), with a null authentication callback. Any network-reachable client can therefore enumerate registered agents, submit arbitrary command sets to them, and clear stored reports, entirely without credentials. This affects NASA-AMMOS/anms and JHUAPL-DTNMA/dtnma-tools as published; both repositories present this as a reference/ground DTN network-management implementation and testbed, and the affected components communicate with DTNMA agents (which may represent simulated or real spacecraft/ground nodes depending on deployment) rather than being flight software running onboard a spacecraft.",
+    "tags": [],
+    "title": "CVE-2026-71289 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71289"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70369",
+    "published": "2026-08-04T13:18:57.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Koha's reports/acquisitions_stats.pl builds its per-cell statistics query in sub calculate by interpolating the user-controlled Filter request parameters directly into WHERE fragments covering aqbasket.closedate, aqorders.datereceived, aqbooksellers.name, items.homebranch, items.ccode, biblioitems.itemtype, aqbudgets.budget_code, aqorders.sort1, and aqorders.sort2. The statement is prepared and executed with no bound parameters. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), borrower_password_recovery, api_keys, and sessions.",
+    "tags": [],
+    "title": "CVE-2026-70369 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70369"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70370",
+    "published": "2026-08-04T13:18:57.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Koha's reports/catalogue_stats.pl builds dynamic SQL in sub calculate by interpolating the user-controlled Line and Column request parameters directly into identifier positions of the query (SELECT DISTINCTROW, GROUP BY, ORDER BY) with no whitelist validation. When Line contains itemcallnumber and the cotedigits parameter is truthy, cotedigits is additionally concatenated raw as the numeric argument of a LEFT() call. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.",
+    "tags": [],
+    "title": "CVE-2026-70370 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70370"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70371",
+    "published": "2026-08-04T13:18:57.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Koha's reports/issues_avg_stats.pl builds dynamic SQL in sub calculate by concatenating several user-controlled request parameters directly into the query string. The Line and Column parameters are not validated against any whitelist and land verbatim in identifier positions (SELECT DISTINCTROW, GROUP BY, ORDER BY), and each Filter slot is concatenated raw into single-quoted LIKE, BETWEEN, and comparison fragments with no bound parameters. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.",
+    "tags": [],
+    "title": "CVE-2026-70371 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70371"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70372",
+    "published": "2026-08-04T13:18:58.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Koha's reports/bor_issues_top.pl builds dynamic SQL in sub calculate by concatenating several user-controlled request parameters directly into the query string. The Criteria parameter is only normalized by a table-name prefix and is never whitelisted, landing verbatim in identifier positions (SELECT DISTINCTROW, GROUP BY, ORDER BY); Filter values are concatenated raw into single-quoted LIKE, BETWEEN, and comparison fragments, and the Limit parameter is appended raw to a LIMIT clause. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.",
+    "tags": [],
+    "title": "CVE-2026-70372 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70372"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70373",
+    "published": "2026-08-04T13:18:58.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Koha's reports/issues_stats.pl (the circulation statistics report) builds its calculation query in sub calculate by concatenating several user-controlled request parameters directly into the SQL string. The PeriodTypeSel, PeriodDaySel, and PeriodMonthSel parameters are interpolated raw into single-quoted equality and function-comparison fragments, and the Filter slots plus the Line and Column identifiers are likewise interpolated with no whitelist and no placeholder binding. An authenticated staff user holding the reports module permission can inject arbitrary SQL and read any table reachable by the Koha database user, including borrowers (password hashes, two-factor secrets, personal data), api_keys, and sessions.",
+    "tags": [],
+    "title": "CVE-2026-70373 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70373"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70374",
+    "published": "2026-08-05T07:16:39.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HashBrown CMS through 1.4.6 contains an OS Command Injection vulnerability (CWE-78) in the media upload thumbnail generation routine. Media.generateThumbnail() in src/Server/Entity/Resource/Media.js builds a temporary file path as 'thumbnail' + Path.extname(filename) and passes it, unescaped, into a shell command executed via AppService.exec() ('convert ' + tempFile + ...). The MIME-type filter in getMIMEType() (src/Common/utilities.js) truncates the extracted extension at the first '?' character, while Path.extname() does not, allowing a filename such as 'x.jpg?$(command)' to pass the image-type check while still injecting a shell command substitution into the exec() call. An authenticated user holding the media resource scope can achieve arbitrary OS command execution in the context of the Node.js process via POST /api/{project}/{environment}/media/new.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70374 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70374"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70375",
+    "published": "2026-08-05T07:16:39.697",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HashBrown CMS through 1.4.6 contains an OS Command Injection vulnerability (CWE-78) in the Git deployer component. GitDeployer.pullRepo() in src/Server/Entity/Deployer/GitDeployer.js executes AppService.exec(`git checkout ${this.branch || 'master'}`), interpolating the configured branch value directly into a shell command with no escaping. GitDeployer.validate() only rejects a single-quote character in the repo, branch, username, and password fields; shell metacharacters such as ';', '&&', '|', backticks, and '$()' are not filtered. A user able to configure a project's Git deployer settings can set a malicious branch value (e.g. 'master;<command>#') that executes automatically on every subsequent deployer operation (media upload, content save, etc.), since pullRepo() is invoked unconditionally at the start of each such operation. This is related to CVE-2020-6948, which addressed single-quote escaping of the repo, username, and password fields in the same file's git clone invocation; the branch field used in the unquoted git checkout command was not covered by that fix and remains injectable.",
+    "tags": [],
+    "title": "CVE-2026-70375 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70375"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-71255",
+    "published": "2026-08-05T12:18:57.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "nanoMODBUS through v1.23.0 contains an out-of-bounds write in the Modbus client-side recv_read_device_identification_res() function (FC 0x2B/MEI 0x0E, Read Device Identification) in nanomodbus.c. The server-supplied object_length field (0-246) is validated only against the remaining PDU size (res_size_left) and is never validated against the caller-supplied buffers_length parameter. After copying data with strncpy(buffers_out[buf_index], str, buffers_length), the code unconditionally writes a NUL terminator at buffers_out[buf_index][object_length]. When a malicious or compromised Modbus server sends a response with object_length greater than or equal to the client's buffers_length, this NUL write lands past the end of the caller-provided buffer, corrupting adjacent stack or heap memory on the client.",
+    "tags": [],
+    "title": "CVE-2026-71255 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71255"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-71259",
+    "published": "2026-08-05T13:24:49.993",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ESPHome through 2026.7.0-dev contains an operator-precedence bug in the cv.url() validator in esphome/config_validation.py: `if parsed.scheme and parsed.netloc or parsed.scheme == \"file\": return parsed.geturl()`. Because `and` binds tighter than `or`, any file: URI passes validation regardless of netloc. This validator gates the `url:` field of the external_components YAML directive's git source schema, which is passed to `git clone` (git supports file:// natively). A crafted `external_components` block with `url: \"file:///attacker/repo\"` clones an attacker-controlled local path, which is then added to Python's import machinery via ESPHome's component loader, executing arbitrary Python code when the YAML configuration is processed (e.g. via `esphome config`/`esphome run`).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71259 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71259"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-71264",
+    "published": "2026-08-05T13:24:50.600",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WLED's GET /json/cfg endpoint (registered in wled00/wled_server.cpp) calls serveJson() with no settings-PIN check, unlike the /edit endpoint which explicitly checks correctPIN, disclosing the device's general configuration (network, hardware, LED setup) to any unauthenticated client on the network. Separately, the settings-PIN unlock state is tracked via a single global boolean `correctPIN` (wled00/wled.h), not per-session state: once any single client submits the correct 4-digit PIN via POST /json, correctPIN becomes true for every client, granting all subsequent unauthenticated clients full configuration-write access (OTA firmware updates, WiFi reconfiguration, factory reset) until the device reboots.",
+    "tags": [],
+    "title": "CVE-2026-71264 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71264"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-71270",
+    "published": "2026-08-05T13:24:51.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Stirling-PDF's POST /api/v1/convert/url/pdf endpoint (ConvertWebsiteToPDF.java) was not updated with the CustomHtmlSanitizer/SsrfProtectionService SSRF protections that were added to three sibling conversion endpoints (html/pdf, file/pdf, markdown/pdf). The endpoint validates only that the initial requested URL resolves to a public IP, then fetches the page's HTML server-side and hands it, unsanitized, to a WeasyPrint subprocess. Embedded resource references in the fetched HTML (e.g. `<img src=\"http://169.254.169.254/...\">`) are fetched by WeasyPrint with no per-resource SSRF filtering, allowing an attacker-controlled page to cause the server to retrieve cloud metadata endpoints or internal network resources and leak their contents back into the generated PDF.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71270 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71270"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-71271",
+    "published": "2026-08-05T13:24:51.447",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memos' webhook URL validation, isReservedIP() (internal/webhook/validate.go), checks a candidate IP against a reservedCIDRs list that omits 0.0.0.0/8 and never calls ip.IsUnspecified() — unlike the correctly implemented sibling function isInternalIP() in internal/httpgetter/html_meta.go, which does. Because Linux redirects connections to 0.0.0.0 to loopback (127.0.0.1), an attacker registering a webhook URL of http://0.0.0.0:PORT/ bypasses the reserved-IP check and causes the Memos server to make outbound HTTP requests to its own loopback interface, exposing internal-only services.",
+    "tags": [],
+    "title": "CVE-2026-71271 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71271"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-71272",
+    "published": "2026-08-05T13:24:51.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memos' webhook dispatch function safeDialContext() (internal/webhook/webhook.go) resolves the target hostname via net.DefaultResolver.LookupHost() and validates the resulting IPs against reserved ranges, but then dials net.JoinHostPort(host, port) using the original hostname rather than the already-validated IP address. Because net.Dialer.DialContext() performs its own independent DNS resolution, an attacker controlling DNS for the webhook's hostname (e.g. via a short TTL) can return a public, allowed IP during validation and a different, internal IP at dial time — a classic time-of-check/time-of-use DNS-rebinding bypass of the SSRF protection.",
+    "tags": [],
+    "title": "CVE-2026-71272 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71272"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-71274",
+    "published": "2026-08-05T13:24:51.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenBK7231T's CHANNEL_SetLabel() (src/cmnds/cmd_channels.c) stores channel labels received via the MQTT SetChannelLabel command using strdup() with no HTML sanitization. CHANNEL_GetLabel() returns these labels unsanitized, and they are rendered via hprintf255() at 15+ locations in src/httpserver/http_fns.c with no HTML encoding. An attacker with MQTT broker access (commonly unauthenticated in real deployments) can set a channel label containing a <script> payload that executes when any user views the device's web panel.",
+    "tags": [],
+    "title": "CVE-2026-71274 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71274"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-71279",
+    "published": "2026-08-05T13:24:52.437",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zigbee2MQTT's ExternalJSExtension.getFilePath() (lib/extension/externalJS.ts) joins a `name` parameter received via an MQTT message (topic zigbee2mqtt/bridge/request/extension/save) into the extensions base path using path.join(basePath, name) with no sanitization. Because path.join() resolves `../` sequences, a name such as `../../tmp/evil.js` escapes the intended extensions directory. The extension handler only validates that the name ends in .js/.mjs/.cjs, writes the file, and then dynamically imports it via Node.js import(), achieving remote code execution. Requires the `enable_external_js` config option (off by default, but commonly enabled in legacy installs) and MQTT broker access, which is frequently unauthenticated in real deployments. The identical unsanitized getFilePath() is also used by the extension-removal handler, enabling arbitrary file deletion.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71279 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71279"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-71280",
+    "published": "2026-08-05T13:24:52.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "go-shiori's DownloadBookmark() (internal/core/download.go) fetches a caller-supplied bookmark URL using a plain http.Client with no custom DialContext or destination-IP validation (no IsLoopback(), IsPrivate(), IsUnspecified(), or IsLinkLocalUnicast() checks). An authenticated user creating or updating a bookmark via POST /api/bookmark, PUT /api/v1/bookmarks/cache, or POST /api/bookmarks/ext can supply a loopback (127.0.0.1) or 0.0.0.0 (which Linux redirects to loopback) URL, causing the server to make outbound requests to internal-only services, cloud metadata endpoints, or other network-restricted resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71280 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71280"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71281",
+    "published": "2026-08-05T13:24:52.723",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hugging Face peft's LoRA-GA and CorDA initialization modules (src/peft/tuners/lora/corda.py lines ~102 and ~163, and src/peft/tuners/lora/loraga.py line ~101) call torch.load() on config-specified cache/covariance files without weights_only=True, bypassing peft's own safe-loading wrapper used elsewhere in the codebase. Because torch.load() without weights_only=True performs full pickle deserialization, loading a malicious cache or covariance file (e.g. a shared/downloaded LoRA-GA or CorDA cache) results in arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-71281 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71281"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-71285",
+    "published": "2026-08-05T13:24:53.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Uptime Kuma's Matomo analytics integration (server/analytics/matomo-analytics.js) injects the admin-configurable Matomo `siteId` value as a bare, unquoted JavaScript expression inside a <script> block rendered on every public status page: `_paq.push(['setSiteId', ${escapedSiteIdHTMLAttribute}]);`. The escaping pipeline used (jsesc with isScriptContext:true, then html-escaper.escape()) does not escape the characters `]`, `)`, `;`, `(`, which are sufficient to break out of the array/push expression context. A siteId value such as `1]);alert(document.cookie)//`, once saved by an editor/admin, executes arbitrary JavaScript for every unauthenticated visitor of the public /status/<slug> page, enabling session-cookie theft and full page takeover.",
+    "tags": [],
+    "title": "CVE-2026-71285 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71285"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71287",
+    "published": "2026-08-05T13:24:53.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cacti's sanitize_sql_column() (lib/functions.php) sanitizes user-supplied ORDER BY column names using the regex `preg_replace('/[^a-zA-Z0-9_().]/', '', $column)`. Because this allowlist retains letters, digits, underscore, parentheses, and dot (intended to support expressions like COUNT(id) and table.column), a payload such as `SLEEP(5)` passes through completely unmodified. The sanitized value is concatenated directly into raw SQL ORDER BY clauses (which cannot be parameterized) driven by a `sort_column` GET parameter in at least user_log.php, utilities.php, user_domains.php, and user_group_admin.php, allowing any authenticated Cacti user, regardless of privilege level, to perform time-based blind SQL injection against the Cacti database.",
+    "tags": [],
+    "title": "CVE-2026-71287 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71287"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71288",
+    "published": "2026-08-05T13:24:53.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Koha's guided report builder (reports/guided_reports.pl) reads the `order_by` CGI parameter and, for each value, a dynamically-named `{order}_ovalue` parameter, and concatenates both directly into an SQL ORDER BY clause with no allowlist or validation: `my @order_by = $input->multi_param('order_by'); foreach my $order (@order_by) { my $value = $input->param($order . \"_ovalue\"); $query_orderby = \" ORDER BY $order $value\"; }`. The resulting string is appended verbatim to the final query in C4::Reports::Guided (`$query .= $orderby;`) with no escaping. Since ORDER BY columns cannot be bound via prepared-statement placeholders, this requires an explicit allowlist, which does not exist. Any staff account with the low-privilege create_reports or execute_reports permission (commonly granted to non-admin library staff) can perform time-based blind SQL injection against the Koha database, which stores patron PII and staff/LDAP credentials.",
+    "tags": [],
+    "title": "CVE-2026-71288 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71288"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71291",
+    "published": "2026-08-05T13:24:53.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Bolt CMS renders content field values through Twig's full application-level Environment with no SandboxExtension registered anywhere in the codebase. In src/Entity/Field.php, getTwigValue() calls shouldBeRenderedAsTwig(), which gates rendering only on the field definition's allow_twig flag and a regex checking for `{{`, `{%`, or `{#`; when true, the raw field value is compiled and rendered via `self::getTwig()->createTemplate($value)->render(['record' => $this->getContent()])` with no sandboxing. Bolt's own bundled config/bolt/contenttypes.yaml sets `allow_twig: true` on the default \"pages\" contenttype's content field out of the box. Any user with edit access to that content type (a standard editor role, not just an administrator) can inject a Twig payload such as `{{ ['id']|map('passthru')|join }}` that executes arbitrary OS commands when the content is saved and rendered, achieving remote code execution as the web server user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71291 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71291"
   }
 ]
