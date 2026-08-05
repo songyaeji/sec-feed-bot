@@ -4066,5 +4066,29 @@
     "tags": [],
     "title": "CVE-2026-70611 (CVSS 6.9)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70611"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2021-38166",
+    "published": "2021-08-07T18:15:07.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In kernel/bpf/hashtab.c in the Linux kernel through 5.13.8, there is an integer overflow and out-of-bounds write when many elements are placed in a single bucket. NOTE: exploitation might be impractical without the CAP_SYS_ADMIN capability.",
+    "tags": [],
+    "title": "CVE-2021-38166 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-38166"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2021-44733",
+    "published": "2021-12-22T17:15:09.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free exists in drivers/tee/tee_shm.c in the TEE subsystem in the Linux kernel through 5.15.11. This occurs because of a race condition in tee_shm_get_from_id during an attempt to free a shared memory object.",
+    "tags": [],
+    "title": "CVE-2021-44733 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44733"
   }
 ]
