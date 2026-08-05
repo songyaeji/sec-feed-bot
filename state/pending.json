@@ -4365,5 +4365,53 @@
     "tags": [],
     "title": "[블랙햇 USA 2026] 제프 모스 “AI 시대 사이버보안은 기술 아닌 국가 전략…가장 중요한 자산은 사람”",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207932"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-17544",
+    "published": "2026-07-30T12:17:27.347",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Attacker-provided inputs to bccomp() could lead to an out-of-bounds write with stack and heap corruption in PHP versions from 8.4.* before 8.4.24 and from 8.5.* before 8.5.9.",
+    "tags": [],
+    "title": "CVE-2026-17544 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17544"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12932",
+    "published": "2026-07-30T17:16:27.920",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A memory leak in the tls-crypt-v2 client key extraction in OpenVPN 2.5.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows remote attackers to cause a denial of service (memory exhaustion) via a flood of crafted packets",
+    "tags": [],
+    "title": "CVE-2026-12932 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12932"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12996",
+    "published": "2026-07-30T17:16:28.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free in OpenVPN 2.6.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows remote authenticated peers to potentially cause a denial of service or leak memory via crafted packets during TLS session promotion or expiry",
+    "tags": [],
+    "title": "CVE-2026-12996 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12996"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13117",
+    "published": "2026-07-30T17:16:28.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An incomplete guard in OpenVPN 2.6.0 through 2.6.20 and 2.7_alpha1 through 2.7.4 allows remote authenticated peers to trigger a use-after-free during TLS session promotion, potentially leading to a denial of service or memory leakage",
+    "tags": [],
+    "title": "CVE-2026-13117 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13117"
   }
 ]
