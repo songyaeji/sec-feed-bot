@@ -3158,5 +3158,69 @@
     ],
     "title": "CVE-2026-67623 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67623"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-68979",
+    "published": "2026-08-03T20:17:28.977",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache NiFI 1.10.0 through 2.10.0 provide a Parameter Context update REST API method that does not enforce authorization checking on components referencing Parameter values. Updating a Parameter Context can change parameter values that affect referencing components, but framework authorization was limited to read and write privileges on the Parameter Context itself. As a result of the missing authorization, an authenticated user authorized to modify a Parameter Context, but not authorized on referencing components, could alter Parameter values affecting those components. In deployments where a Parameter value contains executable scripting content, updating a Parameter can result in code execution during automatic component validation, without starting the referencing component. The impact was limited to stopped components by existing verification checks, and the issue applies only to deployments that use component-level authorization policies. Upgrading to Apache NiFi 2.11.0 is the recommended mitigation, which aligns the Parameter Context update method authorization with other methods, adding authorization checking on affected components.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68979 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68979"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-68980",
+    "published": "2026-08-03T20:17:29.127",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache NiFi 2.0.0 through 2.10.0 support creating, reading, and deleting Assets associated with Parameter Contexts through the REST API. The framework authorizes asset deletion against the owning Parameter Context using the supplied Parameter Context Identifier and Asset Identifier. The framework performed authorized based on the supplied Parameter Context Identifier without verifying the requested Identifier against the stored Identifier. Apache NiFi installations that do not implement different levels of authorization across Parameter Contexts are not subject to this vulnerability, because the framework enforces write permissions as the security boundary. Upgrading to Apache NiFi 2.11.0 is the recommended mitigation, which verifies Parameter Context ownership of the requested Asset before deletion using the same strategy applied to Asset read operations.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68980 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68980"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html",
+    "published": "2026-08-05T14:27:30+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "HashiCorp, Veeam, and the Django Software Foundation have patched 11 vulnerabilities across Terraform MCP Server, Veeam Service Provider Console, and Django. The three most serious: An unauthenticated flaw in Veeam's console that hands over a managed agent's credentials, rated 9.5 A cross-tenant flaw in HashiCorp's MCP server that lets one user's Terraform token be reused for later users'",
+    "tags": [],
+    "title": "Veeam, Terraform MCP, Django Patch Critical Flaws, Led by CVSS 10.0 Cross-Tenant Bug",
+    "url": "https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/trojanized-npm-packages-decode-c2-ip.html",
+    "published": "2026-08-05T13:41:27+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have flagged an evolution of the EtherHiding blockchain-based command-and-control (C2) technique that conceals the C2 server IP address inside a made-up destination address of a completely empty Ethereum transfer. The new dead drop resolver approach, observed in two trojanized npm package \"bianira-ui\" and \"fluid-type-ui,\" has been codenamed NullReceiver by",
+    "tags": [],
+    "title": "Trojanized npm Packages Decode C2 IP From Ethereum Recipient Addresses",
+    "url": "https://thehackernews.com/2026/08/trojanized-npm-packages-decode-c2-ip.html"
+  },
+  {
+    "author": "Mayank Parmar",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/google/google-blogger-locks-hundreds-of-blogs-in-malware-false-positive/",
+    "published": "2026-08-05T14:59:29+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Google has locked hundreds of Blogger websites after a false positive claimed they violated its \"Malware and Similar Malicious Content\" policy, with some sites deleted from the platform. [...]",
+    "tags": [],
+    "title": "Google Blogger locks hundreds of blogs in malware false positive",
+    "url": "https://www.bleepingcomputer.com/news/google/google-blogger-locks-hundreds-of-blogs-in-malware-false-positive/"
   }
 ]
