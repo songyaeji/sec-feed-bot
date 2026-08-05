@@ -3130,5 +3130,33 @@
     ],
     "title": "How AI-powered phishing killed blocklists for good",
     "url": "https://www.bleepingcomputer.com/news/security/how-ai-powered-phishing-killed-blocklists-for-good/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15979",
+    "published": "2026-08-05T14:17:03.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Content Egg – Affiliate Product Importer & Price Comparison plugin for WordPress is vulnerable to Arbitrary File Deletion via Path Traversal in versions up to and including 11.3.0. This is due to insufficient validation of the 'img_file' field within the cegg_data post metadata: the value passes only through wp_strip_all_tags() (which does not strip path traversal sequences), is stored directly in post meta, and is later concatenated without normalization into a filesystem path in getFullImgPath() before being passed to PHP's unlink(). This makes it possible for authenticated attackers, with author-level access and above, to delete arbitrary files on the affected site's server which may make remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15979 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15979"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67623",
+    "published": "2026-08-05T14:17:10.047",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mistral Vibe before 2.23.3 contains a remote code execution vulnerability that allows attackers to execute arbitrary commands by embedding a malicious core.fsmonitor hook in a repository's .git/config file, which is triggered when vibe invokes git status --porcelain without suppressing hook execution. Attackers can distribute or create a crafted repository containing a malicious fsmonitor entry to achieve arbitrary command execution with the victim's full privileges when any vibe command is run inside that repository.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-67623 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67623"
   }
 ]
