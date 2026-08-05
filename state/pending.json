@@ -2636,5 +2636,29 @@
     "tags": [],
     "title": "이비엔(EBN)뉴스센터",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5hWkhOdmJVNmdncDZLa25yTnBaQWZyTjdDSTJ0anU4NEU3MVkxa1F6bC1ReDVfbUVvR1NhdEFobXQ3SXNVY3VpOW0wcERrOWpEY1FiTGo5OEE0eWduUk03N1l6ek5NdXEtXzY5aUl2V1dxUQ?oc=5"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/critical-gitea-flaw-let-unauthenticated.html",
+    "published": "2026-08-05T11:04:23+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "An unauthenticated attacker can read any file the service account can access on Gitea, the self-hosted Git platform, in versions 1.22.1 through 1.27.0. No login, no repository write access. A public repository and crafted Org-mode markup are enough. The flaw is fixed in Gitea 1.27.1. The file-read flaw is tracked as CVE-2026-59774, rated Critical with a CVSS score of 9.8, and received its",
+    "tags": [],
+    "title": "Critical Gitea Flaw Let Unauthenticated Attackers Read Server Files via Org-Mode Markup",
+    "url": "https://thehackernews.com/2026/08/critical-gitea-flaw-let-unauthenticated.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/leaked-n8n-api-tokens-exposed-live.html",
+    "published": "2026-08-05T10:35:29+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "GitGuardian researchers found 321 n8n instances accepting API tokens exposed in public GitHub commits and demonstrated four ways attackers could use them to access sensitive data and downstream credentials without exploiting a software vulnerability. We scanned public GitHub commits for exposed n8n API tokens and identified 4,576 unique credentials associated with 1,255 hostnames. Of the 896",
+    "tags": [],
+    "title": "Leaked n8n API Tokens Exposed Live Instances to Credential Theft",
+    "url": "https://thehackernews.com/2026/08/leaked-n8n-api-tokens-exposed-live.html"
   }
 ]
