@@ -2458,5 +2458,183 @@
     "tags": [],
     "title": "CVE-2026-44945 (CVSS 9.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44945"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-66747",
+    "published": "2026-08-05T11:16:25.510",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Zbtlink router firmware ships an embedded remote-control implant, ENDLESSDOORS, present in every published build across the product line. It is the open-source ycsunjane/rctl tool built in as an OpenWrt package (librctl.so), started at boot and run as root under the process name kworker to blend in with the kernel's [kworker/*] threads. It opens no listening port; it phones home over cleartext TCP to a hardcoded command-and-control server (command channel 7000, interactive-shell callback 7001) with no authentication and no transport encryption, re-attempting contact roughly every 35 seconds. Its command handler passes any received string to popen() as uid=0, and a reserved rctlbash command returns an interactive root shell. Because the channel is unauthenticated and cleartext, control is not limited to whoever planted it: any party that answers at the C2 address, occupies the network path (DNS or route hijack), or acquires the hardcoded fallback domain obtains unauthenticated remote code execution as root.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-66747 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66747"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71231",
+    "published": "2026-08-05T11:16:25.740",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IOTSmartHome's gui/login.php checkCookie() function builds an authentication query as SELECT * FROM users WHERE ID='<decoded lastLogin cookie>' after base64-decoding the client-supplied lastLogin cookie via safe_decode(), which performs URL-safe base64 decoding with no sanitization of the decoded value before it is concatenated into the SQL string. An unauthenticated attacker can set a lastLogin cookie containing a base64-encoded SQL injection payload (e.g. base64(\"' OR '1'='1\")) to bypass authentication and, via UNION-based injection, extract arbitrary data including user credentials.",
+    "tags": [],
+    "title": "CVE-2026-71231 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71231"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71237",
+    "published": "2026-08-05T11:16:26.503",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Miantang/IoT-PHP's index.php implements a POST /userlogin route that reads the password directly from $_POST['pwd'] with no sanitization and concatenates it into a raw SQL string: mysql_query(\"select * from userlists where username='$username' and password='$password' limit 1\"). The username value is passed through htmlspecialchars(), which does not encode single quotes by default and therefore does not prevent SQL injection through the password field. An unauthenticated attacker can submit a payload such as pwd=' OR '1'='1 to bypass authentication and, via UNION-based injection, extract arbitrary data from the database.",
+    "tags": [],
+    "title": "CVE-2026-71237 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71237"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-71238",
+    "published": "2026-08-05T11:16:26.630",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DjangoCRM ships with its Django SECRET_KEY hardcoded directly in the committed webcrm/settings.py rather than read from an environment variable. Since this key is used for session signing, CSRF token generation, and password reset tokens, anyone who reads the public repository can forge valid session cookies (including for the superadmin account), forge CSRF tokens, and forge password reset tokens, achieving full account takeover. The repository also ships with DEBUG=True as the default, causing error pages to leak database credentials, email credentials, OAuth data, and internal file paths.",
+    "tags": [],
+    "title": "CVE-2026-71238 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71238"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71248",
+    "published": "2026-08-05T11:16:27.863",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Inventory-Management-System-PHP's login.php constructs its authentication query via direct string concatenation of raw POST parameters: $sql = \"select * from user where email = '$email' and password = '$password'\", with no escaping or parameterization, allowing authentication bypass via a payload such as email=' OR 1=1 LIMIT 1-- -. Separately, delete.php executes mysqli_query($db, \"DELETE FROM product WHERE product_id=\" . $_GET['id']) with no authentication check and no validation of the id parameter, allowing an unauthenticated attacker to delete arbitrary product rows or perform blind SQL injection via payloads such as id=0 OR SLEEP(5).",
+    "tags": [],
+    "title": "CVE-2026-71248 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71248"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-60009",
+    "published": "2026-08-05T11:16:25.363",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Eclipse Theia versions up to and including 1.73.1, the `@theia/filesystem` backend binds `POST /file-upload` in every filesystem-enabled deployment. The handler takes an attacker-supplied absolute path from the multipart `uri` field and calls `fs.move(tmp, target, { overwrite: true })` with no workspace confinement and no authentication. In browser (non-Electron) deployments the connection token is enforced only on WebSocket upgrades; the HTTP middleware in `@theia/core` re-issues the cookie and calls `next()` without rejecting tokenless HTTP requests. Because `multipart/form-data` is a CORS-safelisted request type, a cross-origin web page can trigger the write with no preflight and no credentials, resulting in an unauthenticated arbitrary file write outside the workspace to any absolute path the backend process can write. This can escalate to remote code execution, for example by overwriting a startup-executed file such as `~/.bashrc`. Electron mode uses a separate `ElectronSecurityToken` and is not affected via this path.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-60009 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60009"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-71233",
+    "published": "2026-08-05T11:16:25.997",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "InvoiceNinja v5-stable renders an invoice or quote's \"terms\" field in the client portal using Laravel Blade's raw output directive {!! $entity->terms !!} (resources/views/portal/ninja2020/invoices/includes/terms.blade.php) with no HTML sanitization. StoreInvoiceRequest.php only strips newlines from the field and does not purify HTML. An authenticated user with invoice creation access can set the terms field via the REST API (PUT /api/v1/invoices/{id}) to an HTML/JavaScript payload that executes in the client's browser when they view the invoice, enabling session cookie theft and client account takeover. This is a distinct code path from the previously published invoice line-item description field XSS (GHSA-98wm-cxpw-847p / CVE-2026-33628).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71233 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71233"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71235",
+    "published": "2026-08-05T11:16:26.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Magistrala's Rules Engine allows authenticated users to create rules with embedded Go or Lua scripts executed server-side when IoT messages arrive. The Go script engine (re/golang.go) runs scripts through the Yaegi interpreter with stdlib.Symbols, exposing the full Go standard library (including os and net/http) with validation limited to a regex blocking goroutines and panic() calls; dangerous functions such as os.ReadFile, os.WriteFile, os.Remove, and os.Environ remain fully accessible. The Lua script engine (re/lua.go) performs no input validation at all and preloads dangerous libraries: db (arbitrary database access), ioutil (file I/O), an HTTP client (SSRF), and filepath (traversal). An authenticated low-privileged user can achieve arbitrary file read/write, environment variable leakage, database access, and SSRF against internal microservices.",
+    "tags": [],
+    "title": "CVE-2026-71235 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71235"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-71236",
+    "published": "2026-08-05T11:16:26.377",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Grocy's API request-body parser (controllers/Api/BaseApiController.php, GetParsedAndFilteredRequestBody) purifies incoming field values with HTMLPurifier, then manually reverses HTML-entity encoding of the resulting output by replacing &amp;lt;, &amp;gt;, and &amp;amp; back to <, >, and & immediately after purification. This double-decode reconstructs live HTML/script tags from the entity-encoded form that HTMLPurifier produced to neutralize them, re-introducing stored XSS across API-writable fields (products, recipes, stock, users, chores, and others) that are rendered elsewhere without re-sanitization.",
+    "tags": [],
+    "title": "CVE-2026-71236 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71236"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-71239",
+    "published": "2026-08-05T11:16:26.750",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DjangoCRM's massmail module renders user-controlled EmlMessage fields (subject, content) through Django's Template() constructor with no sanitization, in at least three locations: message_previews.py builds an f-string embedding message.subject/message.content directly into a Template() call; email_creators.py passes eml_message.subject directly as a template string to Template(); and helpers.py contains the same f-string interpolation pattern. An authenticated user with mass-mail message edit rights can inject Django template syntax ({{ }} / {% %}) that executes at render time, enabling disclosure of other users' data and password hashes via request context variables, CSRF token forgery, and inclusion of arbitrary registered templates.",
+    "tags": [],
+    "title": "CVE-2026-71239 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71239"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-71242",
+    "published": "2026-08-05T11:16:27.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Crater's NotePolicy checks only a blanket Bouncer ability (manage-all-notes / view-all-notes) with no company-ownership comparison, unlike InvoicePolicy and other sibling policies which additionally verify $user->hasCompany($model->company_id). NotesController's show(), update(), and destroy() actions authorize via $this->authorize('view notes'/'manage notes') without passing the target Note model, and Note's company-scoping (scopeWhereCompany) is applied only in the list endpoint, not in show/update/destroy. Any authenticated user of one company can read, edit, or delete another company's notes by ID. This is a distinct finding from the previously reported CustomerPolicy company-ownership omission (a different policy class and controller).",
+    "tags": [],
+    "title": "CVE-2026-71242 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71242"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71243",
+    "published": "2026-08-05T11:16:27.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The backmeup npm package assembles shell command strings by directly concatenating its option values (name, source, destination, filter) - e.g. cmd = \"mkdir -p \" + path.join(info.destination, info.name) + \"; \" - and executes the resulting string through a shell via ssh2-exec (locally via child_process, or remotely via SSH when an ssh handle is supplied), rather than using execFile/spawn with an argument array. The only processing applied is path.normalize()/path.join(), which do not neutralize shell metacharacters (;, |, &, $(), backticks, newline). Any application that passes attacker-influenced values into these options (e.g. a user-chosen backup name) is vulnerable to arbitrary OS command execution on the backup host, or on the remote SSH target when one is configured.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71243 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71243"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-71252",
+    "published": "2026-08-05T11:16:28.383",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "toner-management's admin state-changing handlers (add.php, edit.php, delete.php under admin/toners, admin/toner-brands, admin/printers, and related admin subdirectories) executed INSERT/UPDATE/DELETE database operations with no authentication or authorization check, while access control was enforced only in listing views. An unauthenticated remote attacker could invoke these handlers directly to create, modify, or destroy application data. The vendor has since merged a fix requiring an authenticated admin session before any such handler proceeds.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71252 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71252"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE5hWkhOdmJVNmdncDZLa25yTnBaQWZyTjdDSTJ0anU4NEU3MVkxa1F6bC1ReDVfbUVvR1NhdEFobXQ3SXNVY3VpOW0wcERrOWpEY1FiTGo5OEE0eWduUk03N1l6ek5NdXEtXzY5aUl2V1dxUQ",
+    "published": "2026-08-03T00:05:00+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "이비엔(EBN)뉴스센터",
+    "tags": [],
+    "title": "이비엔(EBN)뉴스센터",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5hWkhOdmJVNmdncDZLa25yTnBaQWZyTjdDSTJ0anU4NEU3MVkxa1F6bC1ReDVfbUVvR1NhdEFobXQ3SXNVY3VpOW0wcERrOWpEY1FiTGo5OEE0eWduUk03N1l6ek5NdXEtXzY5aUl2V1dxUQ?oc=5"
   }
 ]
