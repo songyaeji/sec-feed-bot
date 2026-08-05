@@ -4632,5 +4632,57 @@
     "tags": [],
     "title": "Chinese telcos maintain deep US presence despite Salt Typhoon links, House committee says",
     "url": "https://therecord.media/chinese-hackers-telecoms-house"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18411",
+    "published": "2026-08-05T21:16:57.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The KARR Security System and SWDS dealer-installed automotive anti-theft systems use a shared Bluetooth authentication key across affected devices. An attacker within Bluetooth range can leverage this weakness to issue unauthorized commands to the vehicle, potentially allowing unauthorized access to vehicle functions, including door unlocking and engine immobilization.",
+    "tags": [],
+    "title": "CVE-2026-18411 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18411"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-71312",
+    "published": "2026-08-05T21:16:58.867",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rclone is a command-line program to sync files and directories to and from different cloud storage providers. Prior to v1.75.0, rclone interpolates remote SFTP paths into PowerShell hash commands in backend/sftp/sftp.go, and quoteOrEscapeShellPath escapes only ASCII apostrophe even though PowerShell treats U+2018, U+2019, U+201A, and U+201B as single-quote delimiters, allowing an attacker-controlled filename to terminate the intended path literal and append PowerShell statements that execute as the victim SSH account when server-side hashing is invoked. This issue is fixed in v1.75.0.",
+    "tags": [],
+    "title": "CVE-2026-71312 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71312"
+  },
+  {
+    "category": "high",
+    "cvss": 6.9,
+    "id": "CVE-2026-71313",
+    "published": "2026-08-05T21:16:59.003",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rclone is a command-line program to sync files and directories to and from different cloud storage providers. From v1.51.0 until v1.75.0, the local backend in backend/local/local.go relies on the configurable filename encoder to prevent remote filename data from becoming operating-system path syntax, so a local destination using Slash, None, Raw, or on Windows an encoding that preserves backslash can decode a standard-encoded fullwidth dot-dot component or native backslash form into an actual parent-directory component before filepath.Join resolves it outside the configured local root, allowing an attacker-controlled source object to create or overwrite files outside the selected destination directory as the rclone process. This issue is fixed in v1.75.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71313 (CVSS 6.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71313"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-71315",
+    "published": "2026-08-05T21:16:59.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nuxt is an open-source web development framework for Vue.js. From 3.21.7 until 3.21.10 and 4.5.1, mixed-case routeRules keys can fail to match case-folded lookups when router.options.sensitive is false and drop appMiddleware authorization gates. This is caused by an incomplete fix for CVE-2026-53721. This issue is fixed in 3.21.10 and 4.5.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71315 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71315"
   }
 ]
