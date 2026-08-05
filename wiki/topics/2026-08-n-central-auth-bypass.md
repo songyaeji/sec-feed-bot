@@ -12,6 +12,7 @@ cves: [CVE-2026-18577]
 - 2026-08-02 [N-able](https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html) — CVE-2026-18577 취약점 공시, build 2026.3.1.7 배포
 - 2026-08-03 [The Hacker News](https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html) — 첫 패치 불완전으로 공격 계속 확인
 - 2026-08-03 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-18577) — CVE-2026-18577 공지 (CVE-2026-18556의 불완전한 패치로 인한 재발생)
+- 2026-08-05 [CISA](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-langflow-n-central-apache-tomcat-flaws/) — CISA 긴급 경고, 연방 기관 3일 내 완화 지시 (활발히 악용 중)
 
 ## 관련
 
