@@ -1546,5 +1546,29 @@
     ],
     "title": "[블랙햇 USA 2026] 미국 사이버 대응, 방어 넘어 공격 인프라 해체·군사작전 통합으로",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207922"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18895",
+    "published": "2026-08-05T02:16:37.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in UTT HiPER 1250GW up to 3.2.7-210907-180535. Impacted is the function strcpy of the file /goform/APSecurity_5g. Performing a manipulation of the argument cipher results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-18895 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18895"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18897",
+    "published": "2026-08-05T02:16:37.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in UTT HiPER 1250GW up to v3.2.7-210907-180535. The impacted element is the function strcpy of the file /goform/getOneApConfTempEntry. The manipulation of the argument tempName leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-18897 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18897"
   }
 ]
