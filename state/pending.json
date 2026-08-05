@@ -3342,5 +3342,309 @@
     "tags": [],
     "title": "CVE-2026-44181 (CVSS 10.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44181"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2024-42467",
+    "published": "2024-08-12T13:38:34.740",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "openHAB, a provider of open-source home automation software, has add-ons including the visualization add-on CometVisu. In versions 3.4.0.M4 through 4.2.0,, the proxy endpoint of openHAB's CometVisu add-on can be accessed without authentication. This proxy-feature can be exploited as Server-Side Request Forgery (SSRF) to induce GET HTTP requests to internal-only servers, in case openHAB is exposed in a non-private network. Furthermore, this proxy-feature can also be exploited as a Cross-Site Scripting (XSS) vulnerability, as an attacker is able to re-route a request to their server and return a page with malicious JavaScript code. Since the browser receives this data directly from the openHAB CometVisu UI, this JavaScript code will be executed with the origin of the CometVisu UI. This allows an attacker to exploit call endpoints on an openHAB server even if the openHAB server is located in a private network. (e.g. by sending an openHAB admin a link that proxies malicious JavaScript.) This issue may lead up to Remote Code Execution (RCE) when chained with other vulnerabilities. Users should upgrade to version 4.2.1 of the CometVisu add-on of openHAB to receive a patch.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-42467 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-42467"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2025-66024",
+    "published": "2026-03-04T22:16:11.677",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The XWiki blog application allows users of the XWiki platform to create and manage blog posts. Versions starting with 9.15 and prior to 9.15.7 are vulnerable to Stored Cross-Site Scripting (XSS) via the Blog Post Title. The vulnerability arises because the post title is injected directly into the HTML <title> tag without proper escaping. An attacker with permissions to create or edit blog posts can inject malicious JavaScript into the title field. This script will execute in the browser of any user (including administrators) who views the blog post. This leads to potential session hijacking or privilege escalation. The vulnerability has been patched in the blog application version 9.15.7 by adding missing escaping. No known workarounds are available.",
+    "tags": [],
+    "title": "CVE-2025-66024 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66024"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15210",
+    "published": "2026-08-05T07:16:34.897",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The OTP Login With Phone Number, OTP Verification WordPress plugin before 1.8.71 does not limit the number of OTP verification attempts or invalidate a one-time login code after a wrong guess, and an unauthenticated user can request a login code for any account. Because the code is a short numeric OTP, an attacker can brute-force it and take over any account, including an administrator's.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15210 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15210"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-15360",
+    "published": "2026-08-05T07:16:35.123",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Ajax Load More  WordPress plugin before 8.0.1 does not properly sanitise and escape a parameter before using it in a SQL query, allowing unauthenticated attackers to perform time-based blind SQL injection and extract sensitive data from the database.",
+    "tags": [],
+    "title": "CVE-2026-15360 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15360"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-7329",
+    "published": "2026-08-05T16:17:09.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper privilege management vulnerability in the SQL, SPARQL, and Optic REST query interfaces of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows an authenticated user with a low-privileged REST role to escalate privileges to administrator. This enables execution of privileged operations and unauthorized data access.",
+    "tags": [],
+    "title": "CVE-2026-7329 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7329"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-7557",
+    "published": "2026-08-05T16:17:09.437",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper verification of cryptographic signature vulnerability in the SAML authentication module of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows an unauthenticated remote attacker to bypass authentication and impersonate any user, including administrators. This vulnerability affects deployments with SAML single sign-on enabled.",
+    "tags": [],
+    "title": "CVE-2026-7557 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7557"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-8709",
+    "published": "2026-08-05T16:17:09.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper privilege management vulnerability in the REST API document patch operation of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows an authenticated user with a low-privileged REST role to escalate privileges and execute privileged operations against the Security database.",
+    "tags": [],
+    "title": "CVE-2026-8709 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8709"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-9190",
+    "published": "2026-08-05T16:17:09.940",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An HTTP request smuggling vulnerability in the HTTP App Server of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows a remote attacker to bypass authentication and authorization checks, hijack a legitimate user's session, or capture credentials. The vulnerability occurs when a crafted HTTP request containing both Content-Length and Transfer-Encoding headers causes a reverse proxy and MarkLogic Server to interpret request boundaries differently.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-9190 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9190"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-9192",
+    "published": "2026-08-05T16:17:10.063",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authentication bypass vulnerability in the ODBC App Server of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows an unauthenticated remote attacker to bypass password verification and execute queries with the privileges of any named user known to the server, including administrators.",
+    "tags": [],
+    "title": "CVE-2026-9192 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9192"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-9193",
+    "published": "2026-08-05T16:17:10.183",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper privilege management vulnerability in the Hadoop integration of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows an authenticated user with a low-privileged Hadoop role to escalate privileges and execute privileged operations against the Security database.",
+    "tags": [],
+    "title": "CVE-2026-9193 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9193"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-9195",
+    "published": "2026-08-05T16:17:10.313",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A cross-site scripting vulnerability in the Query Console of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows a remote attacker who lures an authenticated administrator to a crafted URL to execute arbitrary JavaScript in the administrator's browser session, capture credentials, and perform privileged actions on the administrator's behalf.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-9195 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9195"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70619",
+    "published": "2026-08-04T22:17:17.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Odysseus before commit bf325f6 contains a missing authorization vulnerability that allows authenticated non-admin users to manage server-wide embedding backend configuration by invoking endpoint management routes that verify session authentication but omit the admin authorization guard. Attackers can supply an attacker-controlled URL to overwrite the embedding backend persisted in the endpoint configuration file and process environment, causing all subsequent embedding operations including chat messages, RAG queries, memory entries, and vault text to be transmitted in plaintext to the attacker-controlled destination, or delete the endpoint configuration to deny embedding service to all users.",
+    "tags": [],
+    "title": "CVE-2026-70619 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70619"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-14553",
+    "published": "2026-08-05T07:16:34.787",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The zportals WordPress plugin before 6.3.4 does not properly validate uploaded files, trusting the client-supplied content type and preserving the original file extension, allowing any authenticated user (Subscriber or higher) to upload arbitrary PHP files and achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14553 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14553"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15230",
+    "published": "2026-08-05T07:16:35.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The YayPricing  WordPress plugin before 3.5.7 does not perform capability checks on several of its REST API routes, relying only on a shared nonce, allowing any authenticated user such as a subscriber to overwrite the store's pricing configuration and to disclose private coupon codes.",
+    "tags": [],
+    "title": "CVE-2026-15230 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15230"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-10025",
+    "published": "2026-08-05T16:16:49.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM QRadar 7.6.0.0 through 7.6.0.1, and 7.5.0 through 7.5.0 UP 15 Interim Fix 005 has an XML External Entity (XXE) injection vulnerability. The vulnerability resides in the parseXmlPayload() function within the event processing pipeline ( q1labs_core.jar ). When at least one log source type is configured to use XML-format property autodetection, the system processes XML-formatted syslog events sent to port 514 (UDP/TCP) without authentication.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-10025 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10025"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15572",
+    "published": "2026-08-05T16:16:50.903",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Keycloak's Dynamic Client Registration (DCR) security policy management. The \"Allowed Protocol Mapper Types\" policy, which restricts which types of data mappers a client can use, fails to re-validate the mapper type during a client update if the mapper's configuration remains unchanged. An attacker with client registration privileges can exploit this by first registering an allowed mapper type with a malicious configuration and then swapping it for a restricted, high-privilege mapper type (such as one that hardcodes administrative roles). This allows the attacker to gain full administrative access to the Keycloak realm.",
+    "tags": [],
+    "title": "CVE-2026-15572 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15572"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-39923",
+    "published": "2026-08-05T16:16:55.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flarum before 1.8.16 contains a password reset token expiry bypass vulnerability that allows unauthenticated attackers to reuse expired password reset tokens by submitting them directly to the reset processing endpoint. The SavePasswordController::handle() method calls PasswordToken::findOrFail() without performing any expiry validation, allowing attackers to bypass the 24-hour token lifetime enforced only during form rendering and change any account's password to gain an authenticated session.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-39923 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39923"
+  },
+  {
+    "category": "high",
+    "cvss": 3.1,
+    "id": "CVE-2026-70600",
+    "published": "2026-08-05T16:17:04.067",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to 39.8.8, 40.9.0, 41.2.1, and 42.0.0-beta.3, the native autofill popup could be positioned by a cross-origin iframe outside that iframe's bounds, over the embedding page's UI, enabling clickjacking or spoofing of trusted UI. Apps are only affected if they embed untrusted content in iframes within windows that also display trusted UI. Apps that do not embed untrusted third-party content are not affected. This issue is fixed in versions 39.8.8, 40.9.0, 41.2.1, and 42.0.0-beta.3.",
+    "tags": [],
+    "title": "CVE-2026-70600 (CVSS 3.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70600"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-70601",
+    "published": "2026-08-05T16:17:04.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to 39.8.9, 40.9.2, 41.2.2, and 42.0.0-beta.5, apps that expose Promise-returning functions to web content via contextBridge may be vulnerable to a context isolation bypass. Untrusted web content could obtain access to the isolated preload world and, through it, every capability the preload script has. In renderers without a sandbox, or with nodeIntegration enabled, this may escalate to Node.js access. Apps are affected if they expose Promise-returning functions via contextBridge, the standard pattern for wrapping ipcRenderer.invoke, in windows that load untrusted content. This issue is fixed in versions 39.8.9, 40.9.2, 41.2.2, and 42.0.0-beta.5.",
+    "tags": [],
+    "title": "CVE-2026-70601 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70601"
+  },
+  {
+    "category": "high",
+    "cvss": 6.6,
+    "id": "CVE-2026-70602",
+    "published": "2026-08-05T16:17:04.333",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to 39.8.8, 40.9.0, 41.2.1, and 42.0.0-beta.3, extension tab and scripting APIs were not scoped to the extension's own session. A malicious or compromised extension loaded into one session could navigate, script, and read from windows belonging to a different session. Apps are only affected if they load Chrome extensions via session.loadExtension and rely on separate sessions to isolate that extension from other content. This issue is fixed in versions 39.8.8, 40.9.0, 41.2.1, and 42.0.0-beta.3.",
+    "tags": [],
+    "title": "CVE-2026-70602 (CVSS 6.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70602"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-7327",
+    "published": "2026-08-05T16:17:09.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper privilege management vulnerability in the REST API document processing pipeline of Progress MarkLogic Server before 11.3.6 and 12.0.3 allows an authenticated user with an administrative REST role to escalate privileges. This can result in unauthorized disclosure of sensitive server-side data when it is accessed by a higher-privileged user.",
+    "tags": [],
+    "title": "CVE-2026-7327 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7327"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-8400",
+    "published": "2026-08-05T16:17:09.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server 8.5, and 9.0 and IBM WebSphere Application Server - Liberty Continuous delivery has a flaw in the ORB component in IBM SDK, Java Technology Edition, may allow a malicious IIOP server to induce loading and instantation of arbitrary classes.",
+    "tags": [],
+    "title": "CVE-2026-8400 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8400"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-9203",
+    "published": "2026-08-05T16:17:10.437",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A server-side request forgery vulnerability in Progress MarkLogic Server before 11.3.6 and 12.0.3 allows an authenticated user with low-privileged roles to bypass protections for cloud instance metadata endpoints. Successful exploitation can disclose cloud credentials and compromise cloud resources accessible to the host instance.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-9203 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9203"
+  },
+  {
+    "author": "Microsoft Security Research and Srinivasan Govindarajan",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=148855",
+    "published": "2026-08-05T15:48:39+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "A macOS ClickFix campaign shifted tactics from openly serving infostealer lures to hiding them behind a browser-fingerprinting gate. The change makes malicious infrastructure harder to detect while giving defenders new hunting opportunities. The post From open lures to cloaked gates: How a macOS ClickFix campaign learned to hide appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "From open lures to cloaked gates: How a macOS ClickFix campaign learned to hide",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/05/macos-clickfix-campaign-learned-hide/"
   }
 ]
