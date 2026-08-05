@@ -1482,5 +1482,31 @@
     "tags": [],
     "title": "쿠팡, 개인정보 과징금 여파 2분기 8350억 적자…상장 후 '최대 영업손실'",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9tbU42bzgxLWwyYlc5MHdtRWZVSmk4a25vSjBSem91YVVpVjU4SUVqVGZpeEtMN1BBVWV3Rll5cXZDXzhkSXZxNk1OU1Y3TW1XeDExUENVSlowRjNscDMyLU1XSlhYTlZUZDNB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-3087",
+    "published": "2026-04-27T21:16:42.480",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "If `shutil.unpack_archive()` is given a ZIP archive with an absolute Windows path containing a drive (`C:\\\\...`) then the archive will be extracted outside the target directory which is different than other operating systems. Only Windows is affected by this vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-3087 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3087"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-12003",
+    "published": "2026-06-16T17:16:31.667",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "To allow builds of Python to be run from an in-tree layout (rather than\nan installed file layout), the VPATH variable is defined at build time\nand used to locate certain landmarks - specifically,\nModules/setup.local. When this landmark is found relative to VPATH\nrelative to the executable, Python assumes it is running in a source\ntree and generates a different default sys.path. This code remains in\nrelease builds, so that release-ready builds can be built in-tree.\n\nOn Windows, since builds are written to 'PCbuild/', the value of\nVPATH is set to '..\\..', which results in a landmark of\n'..\\..\\Modules\\setup.local'. This path is outside the install directory\nof Python, and may have different permissions, potentially allowing a\nlow-privilege user to create the landmark and an alternative `Lib`\nfolder that will be discovered by an otherwise restricted install.\n\nSuch a setup occurs with the legacy default install location for all\nusers (in the now superseded EXE installer), due to how Windows allows\nall users to create folders in the root directory of their OS drive.\n\nOur recommended mitigation on Windows is to migrate away from the\nlegacy installer and use the new [Python install\nmanager](https://www.python.org/downloads/latest/pymanager/) to install\nfor the current user. Installs where the directory two levels above the\nPython installation directory have equivalent permissions are unaffected\n(in general, a per-user install cannot be modified at all by other\nusers, removing any esc",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12003 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12003"
   }
 ]
