@@ -4464,5 +4464,125 @@
     "tags": [],
     "title": "“토스 ‘환급액 찾기’ 막히나”…개인정보 전송요구권 시행 앞두고 업계 초긴장",
     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQdEdsbnBMRDhBT2hlTUo3WlB3VDF1RkV4Y2p2bWs4LVhyLUFsX3BNNDNNTmNSMWNlOXNWNS1kS2pGdUlqVUJWTXR0VEtmdFZ6REF0UDg0T29pNEFIQWYxQlJtZERPbEhFaVFDLUdWc0pMUVpXcFRPR3Yzeks4dnhJdA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12872",
+    "published": "2026-08-03T07:16:39.077",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Webinfos WordPress plugin through 1.2 does not validate the type or name of uploaded files, nor restrict the upload action with any authentication, capability, or nonce check, allowing unauthenticated attackers to upload arbitrary files (including PHP) to a web-accessible directory, leading to remote code execution on servers that execute PHP from the uploads path.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12872 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12872"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-66902",
+    "published": "2026-08-04T21:16:37.253",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Google::Auth versions before 0.06 for Perl run a command named in an external_account credentials JSON via an ungated system call.\n\nThe Pluggable subclass reads credential_source.executable.command from the credentials JSON and runs it as `system($command)`, a single argument call that passes the whole string to /bin/sh -c. The executable's environment_variables map from the same JSON is copied into %ENV first. No opt-in gate guards the call. make_creds selects the Pluggable subclass whenever credential_source.executable is present, so the path is reached from the standard Application Default Credentials flow, including a \"type\": \"external_account\" configuration read from the file named by GOOGLE_APPLICATION_CREDENTIALS. Configurations without credential_source.executable do not select this subclass and do not reach the call.\n\nAny caller that builds credentials from a configuration it does not fully control runs the embedded command with the privileges of the application process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-66902 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66902"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-67979",
+    "published": "2026-08-04T21:16:37.360",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Incorrect access control in the Executive Services dynamic application start path component of NASA cFS v7.0.1 allows attackers to execute arbitrary code via placing a shared object on target storage.",
+    "tags": [],
+    "title": "CVE-2026-67979 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67979"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-70615",
+    "published": "2026-08-05T20:17:17.420",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "boringproxy through 0.10.0 contains a newline injection vulnerability that allows authenticated low-privileged users with tunnel-creation permission to inject arbitrary lines into the server account's SSH authorized_keys file by supplying a percent-encoded newline character in the domain parameter of the tunnel creation endpoint. Attackers can insert an unrestricted public key entry into authorized_keys to gain persistent shell access, and subsequently read cleartext credentials from the database file including all user tokens, tunnel private keys, and TLS certificates.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70615 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70615"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-52521",
+    "published": "2026-08-03T21:16:40.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A SQL injection vulnerability in Z-BlogPHP 1.7.5 allows authenticated attackers to execute arbitrary SQL commands via the id parameter in the CommentBat feature.",
+    "tags": [],
+    "title": "CVE-2026-52521 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52521"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-18953",
+    "published": "2026-08-05T20:17:07.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper limitation of a pathname to a restricted directory in the get_resource tool in Amazon awslabs.aws-transform-mcp-server 0.1.0 through 0.1.4 might allow a context-dependent actor to write arbitrary files outside the intended working directory via the savePath parameter.\n\n\n\nTo remediate this issue, users should upgrade to version 0.1.5 or later.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18953 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18953"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70617",
+    "published": "2026-08-05T20:17:17.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spacebar Server before commit dcfd910 contains a missing authorization vulnerability that allows any authenticated attacker to add themselves to arbitrary group DM channels by sending a PUT request to the channels recipient endpoint without membership verification. Attackers can exploit the unguarded PUT /channels/{channel_id}/recipients/{user_id} handler to join private group DMs, read complete message history, post messages as a participant, and force-add third-party users without their consent.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70617 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70617"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207935",
+    "published": "2026-08-06T05:19:30+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "[라스베이거스=데일리시큐 길민권 기자] 미국 라스베이거스 만달레이베이에서 열린 블랙햇 USA 2026에서 시스코 클라우드 및 네트워크 보안 부문 부사장 릭 마일스(Rick Miles)는 'Security at Agentic Scale: Protecting the Enterprise in the Age of AI Agents'를 주제로 발표하며, AI 에이전트 시대에는 기존 보안 모델만으로는 대응이 불가능하며 공격과 방어 모두 머신 속도로 진화하고 있다고 강조했다.릭 마일스 부사장은 현재 기업이 직면한 가장 큰 변화로 AI 기반 공격",
+    "tags": [],
+    "title": "[블랙햇 USA 2026] \"AI 에이전트가 새로운 내부자 위협으로 부상\"",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207935"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBkcEg0RXFVV3cyVWFoUVhiUnRGVE9qdlRQNF9oVmJtQWZTNkdDTjNPeW1ySWZRWTJRVEJRTXl1V0l1RUdxbmFvUlRrdVc1aVdPOFBzR3hFM1ZqYjFiVkd5MA",
+    "published": "2026-08-05T20:07:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "금융위는 '유예·준비' 택했는데…개인정보위는 \"예정대로 시행\" [only 이데일리]",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위는 '유예·준비' 택했는데…개인정보위는 \"예정대로 시행\" [only 이데일리]",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkcEg0RXFVV3cyVWFoUVhiUnRGVE9qdlRQNF9oVmJtQWZTNkdDTjNPeW1ySWZRWTJRVEJRTXl1V0l1RUdxbmFvUlRrdVc1aVdPOFBzR3hFM1ZqYjFiVkd5MA?oc=5"
   }
 ]
