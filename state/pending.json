@@ -2408,5 +2408,31 @@
     "tags": [],
     "title": "“AI 시대 인증 패러다임 바꾼다”... 패스워드리스 얼라이언스 포럼 콘퍼런스 개최",
     "url": "http://www.boannews.com/media/view.asp?idx=144979&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-10059",
+    "published": "2026-08-05T09:18:13.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the Multicluster Engine for Kubernetes ClusterCurator controller. A tenant administrator with namespace-scoped privileges can exploit this vulnerability by creating a namespaced ClusterCurator. This action inadvertently grants the tenant administrator the ability to mint a token for a ServiceAccount with cluster-wide administrative authority. This leads to a privilege escalation, allowing the tenant administrator to gain full control over the cluster.",
+    "tags": [],
+    "title": "CVE-2026-10059 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10059"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-10090",
+    "published": "2026-08-05T09:18:14.667",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the Application Subscription controller (multicluster-operators-subscription) of Red Hat Advanced Cluster Management for Kubernetes (ACM). A user with namespace-scoped \"edit\" privileges in an ACM hub namespace can create a Channel resource pointing to a Helm repository they control and a Subscription resource referencing it. The app-subscription controller fetches and applies the Helm chart contents with its own elevated authority, without verifying whether the subscription creator holds the \"open-cluster-management:subscription-admin\" role and without restricting applied resources to the subscription namespace. This allows the attacker to include cluster-scoped resources in the Helm chart, such as a ClusterRoleBinding granting the attacker's ServiceAccount the \"cluster-admin\" ClusterRole. Successful exploitation results in full cluster-admin privilege escalation. This contradicts the ACM documentation which states that non-subscription-admin users should have resources deployed into the subscription namespace only.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-10090 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10090"
   }
 ]
