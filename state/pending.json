@@ -2446,5 +2446,17 @@
     "tags": [],
     "title": "Open VSX Removes 77 Malicious Evil Twin Extensions Exfiltrating Developer Data",
     "url": "https://thehackernews.com/2026/08/open-vsx-removes-77-malicious-evil-twin.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44945",
+    "published": "2026-08-05T10:17:27.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A privilege escalation vulnerability exists in Rancher's impersonation middleware (pkg/auth/requests/impersonate.go). An authenticated Rancher user with the default user\n global role can gain full administrative access to the Rancher control \nplane and transitively to all downstream clusters it manages.\n\nThis issue affects Rancher: from 2.11.0 before 2.11.16, from 2.12.0 before 2.12.12, from 2.13.0 before 2.13.8, and from 2.14.0 before 2.14.2.",
+    "tags": [],
+    "title": "CVE-2026-44945 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44945"
   }
 ]
