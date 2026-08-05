@@ -4207,5 +4207,151 @@
     ],
     "title": "OpenAI Disrupts Poipet Scam Network Using ChatGPT Across Multiple Fraud Schemes",
     "url": "https://thehackernews.com/2026/08/openai-disrupts-poipet-scam-network.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-70426",
+    "published": "2026-08-05T18:17:12.233",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Remoting 3384.v60d89463d9e0 and earlier, except 3355.3357.v931d3c992987, included in Jenkins 2.575 and earlier, LTS 2.568.1 and earlier, the JEP-200 class filter is not applied to classes resolved via a fallback path in the Remoting deserialization implementation, allowing agent processes, code running on agents, and attackers with Agent/Connect permission to bypass the JEP-200 deserialization filter for classes on the Jenkins core classpath.",
+    "tags": [],
+    "title": "CVE-2026-70426 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70426"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-48168",
+    "published": "2026-08-05T19:17:31.070",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. In versions prior to 4.6.40, the bundled Claude GitHub Actions workflow is vulnerable to command injection because it embeds an attacker-controlled pull request branch name into a Bash run: block without quoting or validation. Additionally, the workflow allows any @claude comment to trigger the job regardless of whether the commenter is a trusted collaborator. An outside contributor can open a pull request from a fork whose branch name contains shell metacharacters and comment @claude, causing Bash to execute arbitrary shell code in the GitHub Actions runner. Because these commands run in a job holding a GitHub App token with write permissions, OIDC access, and gh/git access, the injection can be chained through $GITHUB_PATH to compromise later privileged steps, enabling repository writes, pull request and issue manipulation, or OIDC-token abuse. This issue has been fixed in version 4.6.40.",
+    "tags": [],
+    "title": "CVE-2026-48168 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48168"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70431",
+    "published": "2026-08-05T18:17:12.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins Multijob Plugin 669.v9d96a_d9c71b_0 and earlier provides Groovy scripting features that do not integrate with Script Security Plugin, allowing attackers with Item/Create or Item/Configure permission to execute arbitrary code in the context of the Jenkins controller JVM.",
+    "tags": [],
+    "title": "CVE-2026-70431 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70431"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70432",
+    "published": "2026-08-05T18:17:12.903",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A cross-site request forgery (CSRF) vulnerability in Jenkins Multijob Plugin 669.v9d96a_d9c71b_0 and earlier allows attackers to execute arbitrary code in the context of the Jenkins controller JVM.",
+    "tags": [],
+    "title": "CVE-2026-70432 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70432"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-17624",
+    "published": "2026-08-05T19:17:27.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3, 1.0.0 through 1.10.3, 1.0.0 through 1.10.3, 1.0.0 through 1.10.3, 1.0.0 through 1.10.3, 1.0.0 through 1.10.3, and 1.0.0 through 1.10.3 could allow a remote authenticated attacker to execute arbitrary code due to improper validation of module imports.",
+    "tags": [],
+    "title": "CVE-2026-17624 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17624"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17632",
+    "published": "2026-08-05T19:17:28.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3 could allow a remote authenticated attacker to execute arbitrary code due to improper validation of Python code during AST-based security scanning.",
+    "tags": [],
+    "title": "CVE-2026-17632 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17632"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-17633",
+    "published": "2026-08-05T19:17:29.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3 could allow a remote authenticated attacker to execute arbitrary code due to code injection.",
+    "tags": [],
+    "title": "CVE-2026-17633 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17633"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-18485",
+    "published": "2026-08-05T19:17:29.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "There is a local privilege escalation vulnerability recently discovered in the NI-PAL kernel driver.  This may allow a local, authenticated user to escalate privileges and execute arbitrary code.  This vulnerability affects NI-PAL 26.3.1 and prior versions running on Microsoft Windows.",
+    "tags": [],
+    "title": "CVE-2026-18485 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18485"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8182",
+    "published": "2026-08-05T19:17:43.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3 installations allow anyone on the internet to execute arbitrary code on the server without any credentials via 2 HTTP requests.",
+    "tags": [],
+    "title": "CVE-2026-8182 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8182"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8478",
+    "published": "2026-08-05T19:17:45.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3 could allow a remote attacker to inject arbitrary code on the system, due to the improper control of user input code.",
+    "tags": [],
+    "title": "CVE-2026-8478 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8478"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-9196",
+    "published": "2026-08-05T19:17:48.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3 could allow an authenticated attacker to execute unintended code during Agentic Assistant validation due to improper handling of LLM‑generated components. The application executes model‑generated Python code in the backend during validation prior to user approval, which may allow an attacker to trigger side effects such as outbound network access, file system interaction, or data exfiltration with the privileges of the Langflow backend process.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-9196 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9196"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-9201",
+    "published": "2026-08-05T19:17:48.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.3 could allow an authenticated attacker to execute arbitrary code due to a cryptographic weakness in the custom component validation mechanism. When the optional hardening mode that restricts execution to trusted component templates is enabled, the application validates component code using a truncated SHA‑256 hash. Because the hash comparison relies on only a portion of the digest, an attacker can craft malicious component code that collides with a trusted template hash and bypasses validation. Successful exploitation allows the attacker to introduce and execute unauthorized Python code within the Langflow process, defeating the intended security control and potentially leading to full compromise of the affected instance.",
+    "tags": [],
+    "title": "CVE-2026-9201 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9201"
   }
 ]
