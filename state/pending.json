@@ -1774,5 +1774,31 @@
     "tags": [],
     "title": "AI시대 개인정보 제도 개편 착수…국민 제안 받는다",
     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9RMXVxUVRpeHU0M1RTM2ZUc0ZLZWZFYXVSVkFkNHJES2hpWEhKZk1mVzUzZGtvdmt5TUEyaTFsZ2dENDRkSTJyY25PSFlHSjQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15459",
+    "published": "2026-08-06T06:16:30.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WPMU DEV Dashboard plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 5.0.0. On sites not yet connected to the WPMU DEV Hub — the default state after installation — the site API key that keys the WDP-AUTH request signature is empty, making the signature verified by validate_hash() trivially forgeable; version 5.0.0 additionally removed the replay check in validate_nonce(), and the remote handler is bound to the public init hook with no capability check. This makes it possible for unauthenticated attackers to invoke privileged Hub actions — including installing and activating a plugin from an attacker-supplied URL (resulting in remote code execution), deleting plugins and themes, upgrading WordPress core, or logging in as an administrator via SSO. Sites connected to a WPMU DEV account, which have a non-empty 64-character API key, are not affected.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15459 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15459"
+  },
+  {
+    "author": "[°­ÇöÁÖąâŔÚ (jjoo@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=145044&kind=&sub_kind=",
+    "published": "2026-08-06T06:12:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "ŔĚˇĐĄ¤˝Ç˝ŔĄ¤ÇöŔĺ żŹ°č ąłŔ° źşˇá[ş¸žČ´ş˝ş °­ÇöÁÖ ąâŔÚ] ÇŃąšŔÎĹÍłÝÁřČďżř(KISA, żřŔĺ ŔĚťóÁß)ŔĚ łŞÁÖ˝Ă(˝ĂŔĺ Ŕąş´ĹÂ) °üłť °íľîÇĐťý 20¸íŔť ´ëťóŔ¸ˇÎ 7żů 27ŔĎşÎĹÍ 8żů 6ŔĎąîÁö ˝Ç˝ĂÇŃ °łŔÎÁ¤ş¸Ą¤Á¤ş¸ş¸ČŁ °řľż ąłŔ°Ŕť ¸śšŤ¸ŽÇß´Ů°í šŕÇű´Ů.ŔĚšř ąłŔ°Ŕş ąłŔ°şÎ ąłŔ°šßŔüĆŻą¸ ˝Ăšüťçž÷ŔÇ ŔĎČŻŔ¸ˇÎ, łŞÁÖ ÁöżŞ ĂťźŇłâŔÇ °łŔÎÁ¤ş¸Ą¤Á¤ş¸ş¸ČŁ şĐžß ŔĚÇŘ¸Ś łôŔĚ°í ÁřˇÎ Ĺ˝",
+    "tags": [],
+    "title": "KISA-łŞÁÖ˝Ă, °íąłťý °łŔÎÁ¤ş¸Ą¤Á¤ş¸ş¸ČŁ ÁřˇÎ Ĺ˝ťö Áöżř",
+    "url": "http://www.boannews.com/media/view.asp?idx=145044&kind=&sub_kind="
   }
 ]
