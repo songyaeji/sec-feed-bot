@@ -2860,5 +2860,539 @@
     "tags": [],
     "title": "CVE-2026-16315 (CVSS 8.7)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16315"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-63823",
+    "published": "2026-08-05T22:17:07.053",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "My Safetipin Android Application 5.2.1 contains Hardcoded credentials in the authentication module, which allows remote attackers to bypass authentication and gain unauthorized access to user accounts via predictable OTP values.",
+    "tags": [],
+    "title": "CVE-2025-63823 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-63823"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-71319",
+    "published": "2026-08-05T22:17:08.227",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Nuxt is an open-source web development framework for Vue.js. Prior to 3.3.1, Nuxt DevTools (development mode only) exposes a bidirectional RPC channel over the Vite HMR WebSocket via the nuxt:devtools:rpc plugin. On affected versions the channel has no authentication: any client that can reach the Vite HMR endpoint (ws://<host>:<port>/, subprotocol vite-hmr) can call RPC methods, with no token, handshake, or origin check before the channel is established. The updateOptions(), clearOptions(), and openInEditor() methods do not enforce the ensureDevAuthToken check that the other mutating methods use. openInEditor() reads the persisted behavior.openInEditor value and passes it to the launch-editor package, which spawns it as a child process. That value is settable through the equally unauthenticated updateOptions(). An attacker who can reach the HMR port can therefore chain updateOptions('behavior', { openInEditor: '<command>' }) then openInEditor('<any-existing-file>') to execute an arbitrary program on the developer's machine. This issue is fixed in 3.3.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71319 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71319"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-28005",
+    "published": "2026-08-06T15:16:51.560",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated Privilege Escalation in Kadence WooCommerce Email Designer <= 1.5.19 versions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-28005 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28005"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-28139",
+    "published": "2026-08-06T15:16:52.580",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Ajax Search Lite <= 4.14.4 versions.",
+    "tags": [],
+    "title": "CVE-2026-28139 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28139"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-53975",
+    "published": "2026-08-06T15:16:55.827",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenChamber 1.11.7 contains an unauthenticated remote code execution vulnerability that allows remote attackers to execute arbitrary shell commands by sending crafted POST requests to the /api/fs/exec endpoint, which passes commands verbatim to Node.js spawn() without any allowlist, blocklist, or argument validation. The authentication middleware becomes a no-op when UI_PASSWORD is not configured, matching the default Docker deployment, enabling attackers to execute arbitrary OS commands as the application user and retrieve full command output including stdout, stderr, and exit code from the server response.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53975 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53975"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-53976",
+    "published": "2026-08-06T15:16:55.983",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenChamber 1.11.7 contains a path traversal vulnerability in the file-serving endpoints /api/fs/read, /api/fs/stat, and /api/fs/raw that allows unauthenticated remote attackers to read arbitrary files by supplying the allowOutsideWorkspace=true query parameter alongside an absolute path, bypassing the workspace boundary check in resolveReadPathFromContext. Attackers can exploit the vacuous isPathWithinRoot guard to read sensitive files such as the JWT signing secret, SSH private keys, API credentials, and environment variables, enabling full authentication bypass by forging session cookies on password-protected deployments.",
+    "tags": [],
+    "title": "CVE-2026-53976 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53976"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-54489",
+    "published": "2026-08-06T15:16:56.120",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dell Virtual Storage Integrator for VMware vSphere Client, versions prior to 10.11.1.0, contain(s) a Sensitive Information Disclosure vulnerability. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to information disclosure and session hijacking. This vulnerability is considered critical as it allows an unauthenticated attacker to obtain active session credentials and fully impersonate authenticated users, including administrators. Dell recommends customers to upgrade at the earliest opportunity.",
+    "tags": [],
+    "title": "CVE-2026-54489 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54489"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65507",
+    "published": "2026-08-06T15:17:14.823",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated Privilege Escalation in AIWU <= 1.5.6 versions.",
+    "tags": [],
+    "title": "CVE-2026-65507 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65507"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-65508",
+    "published": "2026-08-06T15:17:14.957",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in Simply Schedule Appointments <= 1.6.12.10 versions.",
+    "tags": [],
+    "title": "CVE-2026-65508 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65508"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-65520",
+    "published": "2026-08-06T15:17:15.607",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in WP OAuth Server <= 6.2.0 versions.",
+    "tags": [],
+    "title": "CVE-2026-65520 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65520"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-65546",
+    "published": "2026-08-06T15:17:16.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in Qode Tours <= 3.1.3.1 versions.",
+    "tags": [],
+    "title": "CVE-2026-65546 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65546"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-65548",
+    "published": "2026-08-06T15:17:16.737",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Contributor Remote Code Execution (RCE) in Betheme <= 28.4.2 versions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65548 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65548"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65552",
+    "published": "2026-08-06T15:17:17.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Subscriber PHP Object Injection in Export User Data <= 2.2.6 versions.",
+    "tags": [],
+    "title": "CVE-2026-65552 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65552"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-65553",
+    "published": "2026-08-06T15:17:17.557",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated Remote Code Execution (RCE) in Spider Analyser &#8211; WordPress搜索引擎蜘蛛分析插件 <= 2.1.3 versions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65553 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65553"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65556",
+    "published": "2026-08-06T15:17:17.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in WPBruiser {no- Captcha anti-Spam} <= 3.1.43 versions.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-65556 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65556"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65571",
+    "published": "2026-08-06T15:17:18.560",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in 69 Clothing <= 1.2.11.1 versions.",
+    "tags": [],
+    "title": "CVE-2026-65571 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65571"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65572",
+    "published": "2026-08-06T15:17:18.683",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in A.Williams <= 1.3.1 versions.",
+    "tags": [],
+    "title": "CVE-2026-65572 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65572"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65573",
+    "published": "2026-08-06T15:17:18.813",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Abelle <= 1.22 versions.",
+    "tags": [],
+    "title": "CVE-2026-65573 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65573"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65574",
+    "published": "2026-08-06T15:17:18.940",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Abogado <= 1.18 versions.",
+    "tags": [],
+    "title": "CVE-2026-65574 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65574"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65575",
+    "published": "2026-08-06T15:17:19.067",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Accalia <= 1.5.3 versions.",
+    "tags": [],
+    "title": "CVE-2026-65575 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65575"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65576",
+    "published": "2026-08-06T15:17:19.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Adrena <= 1.2.14 versions.",
+    "tags": [],
+    "title": "CVE-2026-65576 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65576"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65577",
+    "published": "2026-08-06T15:17:19.313",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Advice <= 1.18.0 versions.",
+    "tags": [],
+    "title": "CVE-2026-65577 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65577"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65578",
+    "published": "2026-08-06T15:17:19.437",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Agora <= 1.9 versions.",
+    "tags": [],
+    "title": "CVE-2026-65578 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65578"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65579",
+    "published": "2026-08-06T15:17:19.560",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in Agricola <= 1.21.0 versions.",
+    "tags": [],
+    "title": "CVE-2026-65579 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65579"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65581",
+    "published": "2026-08-06T15:17:19.683",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated PHP Object Injection in AI ANN <= 1.29.0 versions.",
+    "tags": [],
+    "title": "CVE-2026-65581 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65581"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-66447",
+    "published": "2026-08-06T15:17:20.207",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated SQL Injection in WordPress File Upload <= 5.1.7 versions.",
+    "tags": [],
+    "title": "CVE-2026-66447 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66447"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-66662",
+    "published": "2026-08-06T15:17:20.850",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated Privilege Escalation in Frontend Admin by DynamiApps <= 3.29.10 versions.",
+    "tags": [],
+    "title": "CVE-2026-66662 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66662"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-66665",
+    "published": "2026-08-06T15:17:21.227",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated Arbitrary File Upload in Type Hub <= 2.0.6 versions.",
+    "tags": [],
+    "title": "CVE-2026-66665 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66665"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-66709",
+    "published": "2026-08-06T15:17:23.927",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Shop manager Remote Code Execution (RCE) in CTX Feed <= 6.6.42 versions.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-66709 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66709"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67261",
+    "published": "2026-08-06T15:17:24.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dell Virtual Storage Integrator for VMware vSphere Client, versions prior to 10.11.1.0, contain(s) an OS Command Injection vulnerability in the IAPI component. A remote unauthenticated attacker could potentially exploit this vulnerability, leading to the execution of arbitrary OS commands on the application's underlying operating system with root privileges. Exploitation may lead to a complete system takeover by an attacker. This vulnerability is considered critical as it allows an unauthenticated remote attacker to achieve arbitrary code execution as root, potentially compromising the entire VSI deployment and underlying infrastructure. Dell recommends customers to upgrade at the earliest opportunity.",
+    "tags": [],
+    "title": "CVE-2026-67261 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67261"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65602",
+    "published": "2026-07-22T12:18:20.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik 3.6.0 through 3.6.22 and 3.7.0 through 3.7.6 fail to enforce the crossProviderNamespaces allowlist for IngressRouteTCP service serversTransport references (the allowlist was only enforced for HTTP serversTransport references). A low-privileged Kubernetes user in a namespace not listed in crossProviderNamespaces can set serversTransport: foo@file on an IngressRouteTCP service, causing Traefik to accept the forbidden cross-provider reference and use a file-provider TCPServersTransport — including privileged backend mTLS client certificates, SPIFFE identity, or PROXY-protocol settings. This is fixed in 3.6.23 and 3.7.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-65602 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65602"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-63822",
+    "published": "2026-08-05T22:17:06.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SirenGPS Android Application 2.19.44 is vulnerable to Incorrect Access Control. An authenticated attacker can manipulate user identifier parameters to bypass authorization controls and gain unauthorized READ and WRITE access to other users' personal information. The API fails to validate that the requesting user is authorized to access the target user's data.",
+    "tags": [],
+    "title": "CVE-2025-63822 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-63822"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-14829",
+    "published": "2026-08-06T07:16:27.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Checkimate — WooCommerce Checkout, Abandoned Cart Recovery & Order Bumps WordPress plugin through 1.0.13 does not properly restrict access to its license-management functionality, relying on a shared secret computed entirely from publicly available information, allowing unauthenticated attackers to deactivate the Checkimate — WooCommerce Checkout, Abandoned Cart Recovery & Order Bumps WordPress plugin through 1.0.13's premium licensing state and erase the stored license key.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14829 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14829"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-16268",
+    "published": "2026-08-06T07:16:28.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Newsletters WordPress plugin before 4.16 does not authenticate or validate a bounce-processing request before fetching a user-supplied URL on the server side, allowing unauthenticated attackers to make the site issue requests to arbitrary internal or external hosts.",
+    "tags": [],
+    "title": "CVE-2026-16268 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16268"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-57818",
+    "published": "2026-08-06T12:16:27.373",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A race condition in JCacheCodeDataProvider allows an attacker to redeem a single authorization code multiple times via concurrent requests, resulting in the issuance of multiple distinct, valid access tokens. Users are recommended to upgrade to versions 4.2.3, 4.1.8 or 3.6.12, which fix this issue.",
+    "tags": [],
+    "title": "CVE-2026-57818 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57818"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-49506",
+    "published": "2026-08-06T15:16:41.890",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "APR-util versions 1.6.3 (and earlier) function apr_password_validate() was not constant-time with regards to hashes or passwords comparisons, potentially leaking their content via a side channel timing attack particularly on platforms without crypt() such as  Windows, BeOS, NetWare, or Android.\n\nUsers are recommended to upgrade to version 1.6.4, which fixes this issue.",
+    "tags": [],
+    "title": "CVE-2025-49506 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49506"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-28111",
+    "published": "2026-08-06T15:16:52.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Contributor Privilege Escalation in Forminator <= 1.56.0 versions.",
+    "tags": [],
+    "title": "CVE-2026-28111 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28111"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65542",
+    "published": "2026-08-06T15:17:15.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Unauthenticated Broken Authentication in Super Socializer <= 7.14.5 versions.",
+    "tags": [],
+    "title": "CVE-2026-65542 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65542"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-65547",
+    "published": "2026-08-06T15:17:16.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Subscriber SQL Injection in Creative Mail <= 1.6.9 versions.",
+    "tags": [],
+    "title": "CVE-2026-65547 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65547"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-65569",
+    "published": "2026-08-06T15:17:18.307",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Subscriber SQL Injection in WP Job Portal <= 2.5.6 versions.",
+    "tags": [],
+    "title": "CVE-2026-65569 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65569"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-65570",
+    "published": "2026-08-06T15:17:18.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Unauthenticated Bypass Vulnerability in Login with phone number <= 1.8.70 versions.",
+    "tags": [],
+    "title": "CVE-2026-65570 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65570"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-66708",
+    "published": "2026-08-06T15:17:23.793",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Unauthenticated Broken Access Control in Total Upkeep <= 1.17.2 versions.",
+    "tags": [],
+    "title": "CVE-2026-66708 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66708"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-66710",
+    "published": "2026-08-06T15:17:24.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Unauthenticated Local File Inclusion in e2pdf <= 1.32.40 versions.",
+    "tags": [],
+    "title": "CVE-2026-66710 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66710"
   }
 ]
