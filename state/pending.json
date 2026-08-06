@@ -2529,5 +2529,19 @@
     ],
     "title": "Token Jacking: Cybercriminals Could Be Stealing Your AI Resources",
     "url": "https://unit42.paloaltonetworks.com/ai-token-jacking/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-55978",
+    "published": "2026-08-06T10:16:43.910",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper access control vulnerability in CatchPulse could allow a non-administrative local attacker to connect to an unrestricted kernel filter communication port and bypass CatchPulse's security policy enforcement.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55978 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55978"
   }
 ]
