@@ -1696,5 +1696,47 @@
     "tags": [],
     "title": "(인사발령) 개인정보보호위원회 인사발령('26.2.11.자)",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQaHdfdm5VTUZ3dVEyMmNvbWNWb1YwakJXZ3N2OVBST3lyME1GTVJKZkhvY0ZEOHRaNWdKZ2xMTHFrRFR1VVhYOGtZTkQ3R2RGa2p2alZteGJNZmZxMzNnV1dkWElNbnh3S1hybERtYU5oYXY5Wnk0ZldsY1pyQVZMVXFIaw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15991",
+    "published": "2026-08-06T05:16:38.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The File Manager plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the connector function in all versions from 6.0 - 6.9. This makes it possible for authenticated attackers, with subscriber-level access and above, to read and delete arbitrary files on the server, which can lead to remote code execution when the right file is deleted (such as wp-config.php). The bypass is triggered by passing cmd=rm or cmf=file in the URL query string of a POST request: elFinder's bind registration reads the command exclusively from $_POST and therefore never registers the rm.pre permission handler, while the dispatcher reads from the merged $_GET+$_POST superglobal and executes the rm or file command unchecked against a volume that defaults to ABSPATH.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15991 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15991"
+  },
+  {
+    "category": "high",
+    "cvss": 4.7,
+    "id": "CVE-2026-18909",
+    "published": "2026-08-06T05:16:40.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stack-based buffer overflow vulnerability exists in ELAN Microelectronics Corp. ELAN Smart-Pad on Windows (ETD.sys and ETDSMBus.sys). During Intel SMBus recovery, ETDSMBus.sys does not enforce an upper-bound check on the hardware-derived report count, allowing an out-of-range value to be forwarded to ETD.sys where it is used as a loop counter for a stack buffer copy without destination size validation. A local attacker with standard user privileges can trigger a kernel bugcheck (BSOD 0xF7 DRIVER_OVERRAN_STACK_BUFFER), resulting in denial of service. This issue affects ELAN Smart-Pad through ETD24.21.52.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18909 (CVSS 4.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18909"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207941",
+    "published": "2026-08-06T14:16:52+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "스노우플레이크(Snowflake)가 오는 8월 27일 서울 삼성동 코엑스 컨퍼런스센터에서 '스노우플레이크 월드 투어 서울'을 연다. 전 세계 23개 도시에서 진행되는 이번 행사는 국내에서 5회째를 맞이한다.올해 주제는 신뢰할 수 있는 데이터와 플랫폼을 바탕으로 AI를 실제 비즈니스 성과로 연결하는 방안을 다룬다. 제조, 리테일, 금융, 게임 등 다양한 산업군의 기업들이 데이터와 플랫폼으로 AI 성과를 만들어낸 방식을 30개 이상의 세션과 4개 트랙에서 소개한다.오전 기조연설에는 발라 카시비스와나탄 스노우플레이크 부사장과 이수현 테크",
+    "tags": [
+      "금융"
+    ],
+    "title": "스노우플레이크, 8월 27일 '월드 투어 서울' 개최...AI 비즈니스 혁신 사례 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207941"
   }
 ]
