@@ -3656,5 +3656,95 @@
     "tags": [],
     "title": "FPT는 ChatGPT를 소유한 OpenAI의 글로벌 파트너가 되었습니다.",
     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxONWF3YVJmREE0NXBxM0t2SDVJLUdXQVhmN0YxYnFTbDFmMlIybnprMVJLWmdIZ1JhbWFsY3UwcGo5UThhbnJodmpiMVl6cUJWX0JSbWowejFVaFFPdnFxRVpKYm1WX0N4bzUtbzYwNWwyX0RaSXZiUWtRTEUwem9mR0F3enNsdXVxN3FscWtLYTB3Zm5r?oc=5"
+  },
+  {
+    "author": "BrianKrebs",
+    "category": "research",
+    "id": "https://krebsonsecurity.com/?p=74093",
+    "published": "2026-08-06T17:00:56+00:00",
+    "severity": "info",
+    "source": "Krebs on Security",
+    "summary": "A 26-year-old Canadian man once described as one of the most consequential cybercrime threat actors of 2024 has pleaded guilty to computer fraud and conspiracy to hack and extort more than 165 organizations that used the cloud data storage provider Snowflake. Connor Riley Moucka, of Kitchener, Ontario, also admitted to stealing call and text history records of more than 100 million AT&T customers.",
+    "tags": [],
+    "title": "Canadian Man Pleads Guilty in Snowflake Extortions",
+    "url": "https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html",
+    "published": "2026-08-06T16:17:13+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "An unprivileged Linux program can time a hardware interrupt to land in the gap between a processor sanitizing its branch predictor and the kernel using it, re-poisoning the predictor after the defense has run. MIT CSAIL researchers Daniël Trujillo and Mengjia Yan named the technique INTERRUPT INJECTION. On an AMD Zen 2 machine running Linux 6.14 with every default Spectre v2 mitigation on,",
+    "tags": [],
+    "title": "New Interrupt Injection Attack Can Bypass Spectre v2 Defenses on Intel and AMD CPUs",
+    "url": "https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25265",
+    "published": "2026-08-06T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to cause the application to crash if a maliciously crafted DICOM file is opened. The following versions of Medixant RadiAnt DICOM are affected: RadiAnt DICOM",
+    "tags": [],
+    "title": "Medixant RadiAnt DICOM",
+    "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-218-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25267",
+    "published": "2026-08-06T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to access sensitive information on the device. The following versions of Johnson Controls Inc. TL280 are affected: TL280",
+    "tags": [],
+    "title": "Johnson Controls Inc. TL280",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25266",
+    "published": "2026-08-06T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow attackers to bypass security, crash systems, execute unauthorized actions, or compromise data. The following versions of ABB Ability Zenon are affected: IIoT services with MongoDB (4.2) installed on ABB Ability Zenon vers:all/* CVSS Vendor Equipment Vulnerabilities v3 7.8 ABB ABB Ability Zenon Improper Handling of Length Parameter Inconsistency, Improper Neutralization of Null Byte or NUL Character, Collapse of Data into Unsafe Value, Undefined Behavior for Input to API, Incorrect Regular Expression, Uncaught Exception, Reachable Assertion, Allocation of Resources Without Limits or Throttling, Out-of-bounds Write, Improper Output Neutralization for Logs, Improper Certificate Validation, Execution with Unnecessary Privileges Background Critical Infrastructure Sectors: Chemical, Communications, Critical Manufacturing, Dams, Energy, Healthcare and Public Health, Information Technology, Water and Wastewater Countries/Areas Deployed: Worldwide Company Headquarters Location: Switzerland Vulnerabilities Expand All + CVE-2025-14847 Mismatched length fields in Zlib compressed protocol headers may allow a read of uninitialized heap memory by an unauthenticated client. This issue affects all MongoDB Server v7.0 prior to 7.0.28 versions, MongoDB Server v8.0 versions prior to 8.0.17, MongoDB Server v8.2 versions prior to 8.2.3, MongoDB Server v6.0 versions prior to 6.0.27, MongoDB Server v5.0 versions prior to ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "ABB Ability Zenon",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-01"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/cyberattack-north-carolina-ports",
+    "published": "2026-08-06T17:15:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "North Carolina Ports is recovering from a cyberattack after its IT system was “hacked by an outside actor or group,” requiring a switch to manual processing of operations.",
+    "tags": [],
+    "title": "Cyberattack on North Carolina Ports ‘contained’ as Coast Guard, state officials investigate",
+    "url": "https://therecord.media/cyberattack-north-carolina-ports"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/",
+    "published": "2026-08-06T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Tyler McLellan, Austin Larsen Introduction Google Threat Intelligence Group (GTIG) continues to track UNC6671 actively conducting compromises leading to data theft extortion, despite the alleged announced retirement of the BlackFile extortion brand in May 2026. Telemetry and infrastructure analysis reveal that rather than disbanding, UNC6671 has diversified its operations across multiple extortion fronts including Redact, Pink, Helix, and Falcon. UNC6671 continues to rely on voice phishing (vishing) to target enterprise employees, posing as IT helpdesk staff facilitating mandatory, urgent security migrations. Significantly, the threat actor often contacts employees via their personal mobile devices. These calls lure victims to spoofed login portals where Adversary-in-the-Middle (AiTM) infrastructure intercepts credentials and multi-factor authentication (MFA) tokens. Once session persistence is established, the actors deploy automated scripts for data exfiltration from enterprise cloud environments, including Microsoft 365 and Okta. In this update to our May 2026 blog , we detail the infrastructure linkages connecting these extortion brands. We also examine the evolution of UNC6671's targeting including recent activity focused on financial services, private equity, and professional services, and provide hardening guidance to help organizations protect themselves from this threat. UNC6671 Associated Extortion Brands Across UNC6671 intrusions, the initial access and",
+    "tags": [
+      "금융",
+      "RCE",
+      "피싱"
+    ],
+    "title": "UNC6671 Rebrands: Multi-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud Environments",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/"
   }
 ]
