@@ -3746,5 +3746,115 @@
     ],
     "title": "UNC6671 Rebrands: Multi-Brand Vishing Extortion Targets Financial Services and Enterprise Cloud Environments",
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc6671-targets-financial-services-and-enterprise-cloud-environments/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15427",
+    "published": "2026-07-14T17:16:44.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An OS command\ninjection vulnerability exists in the TR-069 / CWMP management interface of Archer VX1800v v1 due to insufficient input validation and sanitization of\nparameters, allowing crafted input to be executed as system-level commands.\nExploitation requires specific conditions such as TR-069 being enabled and ability\nto influence ACS-delivered commands, compromise or control an ACS server.\n\n\n\n\n\nSuccessful\nexploitation may allow arbitrary command execution with root privileges,\nresulting in complete compromise of the device.",
+    "tags": [],
+    "title": "CVE-2026-15427 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15427"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15428",
+    "published": "2026-07-14T17:16:44.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An OS\ncommand injection vulnerability exists in Archer VX800v v1 due to insufficient input sanitization of\nthe domain name parameter. An adjacent attacker who can access the relevant\nHTTP interface can modify the parameter to inject shell metacharacters, resulting\nin arbitrary code execution with root privileges.\n\n\n\n\n\n\n\n\n\nSuccessful\nexploitation may allow remote code execution and complete compromise of the\ndevice.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15428 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15428"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15429",
+    "published": "2026-07-14T17:16:44.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A privilege escalation vulnerability exists in the HTTP authentication component in Archer VX1800v v1. Improper handling of user-controlled input may allow newline characters to be injected into internally constructed configuration data. \n\n\n\n\n\n\n\n\n\nAn\nauthenticated user with sufficient privileges may be able to modify account\nsettings and gain elevated administrative privileges.",
+    "tags": [],
+    "title": "CVE-2026-15429 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15429"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=207951",
+    "published": "2026-08-07T03:34:26+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "[라스베이거스=데일리시큐 길민권 기자] AI 에이전트가 사람이 처리하기 어려운 규모로 취약점을 찾아내면서 기존의 검증과 패치, 책임 있는 공개 체계를 다시 설계해야 한다는 의견이 블랙햇에서도 나오고 있다.얀 쇼시타이슈빌리(Yan Shoshitaishvili) 애리조나주립대학교 부교수는 블랙햇 USA 2026 메인 스테이지에서 ‘에이전틱 시대의 취약점 연구(Vulnerability Research in the Agentic Age)’를 주제로 키노트 강연을 진행했다.제프 모스 “공격을 알아야 방어할 수 있다”연사 소개에 나선 제프 모",
+    "tags": [],
+    "title": "[블랙햇 USA 2026] “취약점 발견 속도, 보고 가능한 속도의 10배…인간 연구자 역할 더 중요”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=207951"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
+    "published": "2026-08-06T17:13:15+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cisco has rolled out updates to address multiple critical security vulnerabilities impacting Catalyst SD-WAN and IOS XE Software as part of a comprehensive internal security review. The security issues affect Cisco Catalyst SD-WAN Software, regardless of device configuration, and Cisco IOS XE Software when it is running in autonomous or controller mode. \"These vulnerabilities were found",
+    "tags": [],
+    "title": "Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs",
+    "url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/",
+    "published": "2026-08-06T18:22:09+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Switzerland's federal IT office says hackers exploited vulnerabilities to breach its Microsoft SharePoint servers and compromised approximately 200 accounts. [...]",
+    "tags": [],
+    "title": "Swiss government SharePoint breach compromised 200 accounts",
+    "url": "https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/"
+  },
+  {
+    "author": "Ionut Ilascu",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/",
+    "published": "2026-08-06T18:03:45+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Researchers found a way to bypass recent mitigations for Spectre v2 speculative execution side-channel attacks and developed an exploit to leak secrets from Linux machines. [...]",
+    "tags": [],
+    "title": "New TONTOU CPU attack bypasses Spectre v2 fixes, leaks Linux password hashes",
+    "url": "https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=196766",
+    "published": "2026-08-06T16:44:26+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "An exposed SISVISA database leaked 102,215 Brazilian health records, exposing IDs, tax data, and regulatory documents without authentication. Researcher Jeremiah Fowler found a publicly accessible database that turned out to belong to SISVISA, Brazil’s Health Surveillance Information System, and alerted ExpressVPN, which later shared the findings with Hackread. The exposed instance held exactly 102,215 files, […]",
+    "tags": [],
+    "title": "Exposed SISVISA Database Leaks 102,000 Brazilian Health Surveillance Records",
+    "url": "https://securityaffairs.com/196766/data-breach/exposed-sisvisa-database-leaks-102000-brazilian-health-surveillance-records.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE5GeExFSmppWnUzRFRhNjZZYjN1cmN6dGFuVUFNbEhGNnlwWnc2TWlMY29mVnlZWFFRZGZOY0dyWEMxR0JEQ3ZHT09XbjlaUkVuVWI2TzNKSVRnM0lpa2hUSEltSWllV3VPTEFaM1NiWdIBc0FVX3lxTFBYSEdGaG1vZDMwandWZGtpLUs1b3FBMTZWQ0ppb1J3OEJkVHJtd3Rwa28xUWJJQmtJNzJTV1BHR1BQSm92c3FkUE1YdnhzNmx1ZWJTdnZoTEtFYkZFODhCb29fYURoeVp0YUNQOWkzSFM4azA",
+    "published": "2026-08-04T21:10:09+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡, 2분기 영업손실 8350억원…상반기 영업적자 1조1895억",
+    "tags": [],
+    "title": "쿠팡, 2분기 영업손실 8350억원…상반기 영업적자 1조1895억",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5GeExFSmppWnUzRFRhNjZZYjN1cmN6dGFuVUFNbEhGNnlwWnc2TWlMY29mVnlZWFFRZGZOY0dyWEMxR0JEQ3ZHT09XbjlaUkVuVWI2TzNKSVRnM0lpa2hUSEltSWllV3VPTEFaM1NiWdIBc0FVX3lxTFBYSEdGaG1vZDMwandWZGtpLUs1b3FBMTZWQ0ppb1J3OEJkVHJtd3Rwa28xUWJJQmtJNzJTV1BHR1BQSm92c3FkUE1YdnhzNmx1ZWJTdnZoTEtFYkZFODhCb29fYURoeVp0YUNQOWkzSFM4azA?oc=5"
   }
 ]
