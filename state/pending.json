@@ -1405,5 +1405,19 @@
     "tags": [],
     "title": "시놀로지, SK네트웍스서비스와 영상 보안 카메라 국내 독점 판매 파트너십 체결",
     "url": "http://www.boannews.com/media/view.asp?idx=145040&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-44210",
+    "published": "2026-07-23T18:16:51.053",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kata Containers is an open source project focusing on a standard implementation of lightweight Virtual Machines (VMs) that perform like containers. Versions prior to 3.31.0 ship with a default configuration that allows pod creators to inject arbitrary command-line arguments into the virtiofsd process through the `io.katacontainers.config.hypervisor.virtio_fs_extra_args` pod annotation. By injecting `-o source=/` along with `--no-announce-submounts` and `--sandbox=none`, an attacker can override the virtiofsd shared directory to serve the entire host root filesystem into the guest VM. Combined with the `kernel_params` annotation (also enabled by default) to activate the agent debug console, the attacker can mount the host filesystem from inside the VM and read or write any file on the host, including /etc/shadow. Version 3.31.0 patches the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44210 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44210"
   }
 ]
