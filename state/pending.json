@@ -2808,5 +2808,57 @@
     "tags": [],
     "title": "How AI Exposed a Browser Security Gap that Enterprises Cannot Ignore",
     "url": "https://www.bleepingcomputer.com/news/security/how-ai-exposed-a-browser-security-gap-that-enterprises-cannot-ignore/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-12605",
+    "published": "2026-08-06T14:16:20.887",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Eclipse GlassFish versions 8.0.x before 8.0.4, CSRF + SSRF in DownloadServlet ContentSources leaks the admin `gfresttoken` to attacker-controlled host if the victim is authenticated into the Admin Console -\\> full unauthenticated takeover of Eclipse GlassFish domain until the token expires.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12605 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12605"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-5134",
+    "published": "2026-08-06T14:16:36.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Loca Software Informatics Technology Ltd. Co. CMS allows SQL Injection.\n\nThis issue affects CMS: through 06082026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-5134 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5134"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-71320",
+    "published": "2026-08-05T22:17:08.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nuxt is an open-source web development framework for Vue.js. From 3.4.0 until 3.21.10 and 4.5.1, an attacker can inject a template key through /__nuxt_island/ props into a dynamic component when `vue.runtimeCompiler: true` is enabled, causing template execution in the Nitro process. This issue is fixed in 3.21.10 and 4.5.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71320 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71320"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-16315",
+    "published": "2026-08-06T14:16:21.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OMICRON StationGuard before version 4.10 contains a cryptographic timing side-channel vulnerability in the backend authentication mechanism that may allow an unauthenticated attacker to forge valid authentication credentials, bypass authentication and authorization, and impersonate legitimate clients.\nAn attacker can gain full access to the system configuration, allowing modification, reset, or unauthorized alteration of system parameters.",
+    "tags": [],
+    "title": "CVE-2026-16315 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16315"
   }
 ]
