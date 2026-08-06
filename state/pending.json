@@ -2463,5 +2463,45 @@
     "tags": [],
     "title": "F5, 엔비디아 네모 가드레일과 손잡고 엔터프라이즈 AI 보안 강화",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=207950"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html",
+    "published": "2026-08-06T09:19:23+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Attackers broke into an organization's Oracle database through a SQL injection flaw in a public-facing web application, then installed a post-exploitation toolkit without writing an executable to disk. They fed Java source code to the database, let Oracle compile it into stored schema objects, and ran commands from inside the database engine. Huntress, which tracks the toolkit as khunt,",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access",
+    "url": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html",
+    "published": "2026-08-06T08:57:30+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Security flaws in agent infrastructure from Amazon Web Services (AWS), Google, and Vercel let untrusted or forged instructions reach an agent's tools with no check that a model turn had authorized them. In several of the attack paths, the model never ran at all, so system prompts, content filters, and model-level guardrails never got a chance to intervene. The affected products include Amazon",
+    "tags": [
+      "RCE"
+    ],
+    "title": "AWS, Google, and Vercel Agent Flaws Let Attackers Trigger Tools Without Running the Model",
+    "url": "https://thehackernews.com/2026/08/aws-google-and-vercel-patch-agent-flaws.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=196731",
+    "published": "2026-08-06T09:32:14+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Meta says an AI model hacked a company during testing after accidental internet access, marking the third disclosed AI lab breach in weeks. Meta confirmed that one of its AI models breached an unidentified company during cybersecurity testing, after its independent testing partner Irregular gave the model unintended internet access through a misconfiguration. This is […]",
+    "tags": [],
+    "title": "Meta AI Model Hacked a Company During Testing, Marking Third AI Lab Incident",
+    "url": "https://securityaffairs.com/196731/security/meta-ai-model-hacked-a-company-during-testing-marking-third-ai-lab-incident.html"
   }
 ]
