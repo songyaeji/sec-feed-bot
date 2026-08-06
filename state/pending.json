@@ -2543,5 +2543,56 @@
     ],
     "title": "CVE-2026-55978 (CVSS 8.4)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55978"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/cryptojs-weak-rng-behind-57-million-in.html",
+    "published": "2026-08-06T11:49:48+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Coinspect has identified CryptoJS.lib.WordArray.random() as the weak random number generator behind the Ill Bloom wallet drains. Introduced in the JavaScript cryptography library 12 years ago, the function supplied weak entropy that affected wallet apps used to generate recovery phrases. Coinspect's on-chain analysis puts the measured theft across two sweeps since late May at a lower bound of",
+    "tags": [],
+    "title": "CryptoJS Weak RNG Behind $5.7 Million in Drains Affects Five Crypto Wallet Apps",
+    "url": "https://thehackernews.com/2026/08/cryptojs-weak-rng-behind-57-million-in.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/webkit-proxy-bypasses-can-expose-real.html",
+    "published": "2026-08-06T11:33:08+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed a security issue with Apple's iCloud Private Relay tool that can expose a user's real IP address. Introduced with iOS 15, iCloud Private Relay employs a dual-hop architecture to ensure users' privacy by routing their Safari web traffic through two relays so that no single third-party, including Apple, can determine where the request is originating from",
+    "tags": [],
+    "title": "Apple iCloud Private Relay Can Expose Real IPs Through WebKit Proxy Bypasses",
+    "url": "https://thehackernews.com/2026/08/webkit-proxy-bypasses-can-expose-real.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html",
+    "published": "2026-08-06T11:30:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A new class of prompt injection is spreading across commercial websites. It requires no malware, no stolen credentials, and no zero-day exploit. It abuses a standard feature built into almost every major AI assistant: pre-filled deep links. We observed production websites embedding hidden prompt injection payloads inside \"Ask AI\" buttons on marketing and competitor comparison pages. When a user",
+    "tags": [
+      "AI",
+      "제로데이"
+    ],
+    "title": "AI Recommendation Poisoning: How \"Ask AI\" Buttons Silently Alter LLM Memory",
+    "url": "https://thehackernews.com/2026/08/ai-recommendation-poisoning-how-ask-ai.html"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMijgFBVV95cUxOd1Y0cmVpR05zX0F2SkVfbmhSWTk4aHhrN3JJLUhqbGdIUHFwc3V2c1J4emQwbHRkNXBob0Q5OFh0Q3ZLM1pHVThpNXB2alVlMWxnVzY1M2NLT1hCdDlQaEtGRnduWkhXTTdEVDFQSmx1YU0yYmpjZTBpWkp1RjZ2SUt2UzZnRTZMN2NLN1FB",
+    "published": "2026-08-06T10:31:11+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "베트남의 한 기업이 오픈아이(OpenAI)의 글로벌 파트너로 선정되었습니다.",
+    "tags": [],
+    "title": "베트남의 한 기업이 오픈아이(OpenAI)의 글로벌 파트너로 선정되었습니다.",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOd1Y0cmVpR05zX0F2SkVfbmhSWTk4aHhrN3JJLUhqbGdIUHFwc3V2c1J4emQwbHRkNXBob0Q5OFh0Q3ZLM1pHVThpNXB2alVlMWxnVzY1M2NLT1hCdDlQaEtGRnduWkhXTTdEVDFQSmx1YU0yYmpjZTBpWkp1RjZ2SUt2UzZnRTZMN2NLN1FB?oc=5"
   }
 ]
