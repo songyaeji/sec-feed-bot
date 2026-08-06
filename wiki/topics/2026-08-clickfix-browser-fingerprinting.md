@@ -9,6 +9,7 @@ macOS 대상 ClickFix 피싱 캠페인이 250개 이상의 프론트엔드 도�
 
 ## 타임라인
 
+- 2026-08-05 [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/08/05/macos-clickfix-campaign-learned-hide/) — ClickFix 캠프 전술 변화: 공개 infostealer 루어 → 브라우저 핑거프린팅으로 악성 인프라 은폐 고도화
 - 2026-08-05 [The Hacker News](https://thehackernews.com/2026/08/over-250-clickfix-domains-use-browser.html) — 250개 이상 ClickFix 도메인, 브라우저 핑거프린팅으로 샌드박스·크롤러 탐지 후 선택적 악성 페이지 노출
 
 ## 관련
