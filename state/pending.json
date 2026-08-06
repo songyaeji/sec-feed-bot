@@ -3406,5 +3406,255 @@
     "tags": [],
     "title": "Move 창시자 샘 블랙시어, Anthropic으로 이적",
     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5RTjB2Sl8wNVBBa2tJN1hicEJVNHJ4UHk2bnBZbWF5ZXptM3ZDeEZ2UmoxaWI4SENhWmRiRm1Pc1BTOEZMdGk5VFVxX3dlYUdOTUJrNm9ublpFdkFNY0VBcml5MHV5TjZUNEJ3SV91ZERlV25RdnNLZklB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-54058",
+    "published": "2026-07-14T17:17:03.433",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Pillow is a Python imaging library. Prior to 12.3.0, when Pillow loads an uncompressed McIdas AREA image from a filename through the mmap raw codec path, attacker-controlled header words can set a row stride smaller than the natural row width, causing pixel access such as Image.tobytes(), getpixel, convert, or save to read beyond the mapped region and disclose adjacent process memory or fault. This issue is fixed in version 12.3.0.",
+    "tags": [],
+    "title": "CVE-2026-54058 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54058"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-16940",
+    "published": "2026-08-05T07:16:36.650",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Custom Fields WordPress plugin before 1.5.1 does not validate a user-supplied file path before deletion, allowing unauthenticated users to delete arbitrary files on the server (such as wp-config.php), which can lead to a full site takeover.",
+    "tags": [],
+    "title": "CVE-2026-16940 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16940"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-12713",
+    "published": "2026-08-06T07:16:26.990",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The WPCargo Track & Trace WordPress plugin before 8.0.4 does not properly sanitise and escape a parameter before using it in a SQL statement, allowing unauthenticated users to perform SQL injection attacks. This affects a code path distinct from the one addressed by CVE-2024-44004.",
+    "tags": [],
+    "title": "CVE-2026-12713 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12713"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-57817",
+    "published": "2026-08-06T11:16:30.120",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The OpenID Connect Core 1.0 specification mandates that the RP MUST validate the `c_hash` parameter when operating in the Hybrid Flow. If an Apache CXF RP is integrated with a non-compliant or misconfigured Identity Provider (IdP) that omits the `c_hash`, the RP becomes vulnerable to Authorization Code Substitution/Injection attacks. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.",
+    "tags": [],
+    "title": "CVE-2026-57817 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57817"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-66909",
+    "published": "2026-08-06T11:16:30.583",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache CXF's JMS transport deserializes the body of any inbound JMS ObjectMessage using native Java deserialization, with no type restrictions in place. Any attacker able to place a message on the service's JMS destination can submit a malicious serialized object, leading to denial of service or, if a suitable gadget class is on the classpath, remote code execution. The fix disables ObjectMessage deserialization by default, with a configuration switch to re-enable it if needed. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-66909 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66909"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-61466",
+    "published": "2026-08-06T12:16:27.730",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Apache CXF's OAuth2 Dynamic Client Registration endpoint, the authorization server accepts and stores the `scope` value supplied in the client registration request verbatim, without validating it against an AS-defined allowlist. This could lead to a client self-assigning privileged scopes at registration time. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.",
+    "tags": [],
+    "title": "CVE-2026-61466 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61466"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-63687",
+    "published": "2026-08-06T12:16:27.843",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache CXF's JwtRequestCodeFilter copies all claims from a signed request JWT into the authorization parameter map without excluding security-sensitive parameters. A client that can produce a validly-signed request JWT (e.g., one whose client_secret is known or compromised) can thereby substitute the code_challenge, code_challenge_method, nonce, and state values that were set in the outer HTTP request, undermining PKCE integrity and OpenID Connect replay protection. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.",
+    "tags": [],
+    "title": "CVE-2026-63687 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63687"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-65583",
+    "published": "2026-08-06T12:16:27.953",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Apache CXF’s OIDC relying-party token validation could accept self-issued ID tokens without enforcing required claim checks (issuer/subject/audience/time and sub_jwk binding), enabling authentication bypass with crafted tokens. However, note that self-issued ID tokens are not accepted by default in the validator. Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fixes this issue.",
+    "tags": [],
+    "title": "CVE-2026-65583 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65583"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-68079",
+    "published": "2026-08-06T12:16:28.060",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Apache CXF's DefaultEncryptingCodeDataProvider, a captured authorization code can be redeemed an unlimited number of times due to a flaw in the implementation of the removeCodeGrant functionality. This violates the RFC requirement that \"The authorization code MUST NOT be used more than once.\" Users are recommended to upgrade to versions 4.2.3 or 4.1.8 or 3.6.12, which fix this issue.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-68079 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68079"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2024-21549",
+    "published": "2024-12-20T05:15:06.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Versions of the package spatie/browsershot before 5.0.3 are vulnerable to Improper Input Validation due to improper URL validation in the setUrl method. An attacker can exploit this vulnerability by utilizing view-source:file://, which allows for arbitrary file reading on a local file.\r\r**Note:**\r\rThis is a bypass of the fix for [CVE-2024-21544](https://security.snyk.io/vuln/SNYK-PHP-SPATIEBROWSERSHOT-8496745).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-21549 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21549"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65601",
+    "published": "2026-07-22T12:18:20.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik versions 3.7.0 through 3.7.6 contain a namespace confusion vulnerability in the Kubernetes Gateway API provider. When resolving HTTPRoute.spec.rules[].backendRefs[].filters[].extensionRef, Traefik used the backend Service namespace instead of the HTTPRoute namespace. A low-privileged route author holding a ReferenceGrant for a cross-namespace Service could therefore bind a Traefik Middleware from the backend namespace without a separate grant for that middleware, potentially injecting trusted reverse-proxy identity headers into downstream requests. The issue is fixed in version 3.7.7.",
+    "tags": [],
+    "title": "CVE-2026-65601 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65601"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70429",
+    "published": "2026-08-05T18:17:12.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins 2.575 and earlier, LTS 2.568.1 and earlier handles case-insensitivity in user names and group names inconsistently, allowing attackers able to create new users or groups with names that case-insensitively match other characters to impersonate other users or be granted their permissions in some circumstances.",
+    "tags": [],
+    "title": "CVE-2026-70429 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70429"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18258",
+    "published": "2026-08-06T16:16:37.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Authorization bypass in the Line, LineTranscription, VirtualCollection, tag and process API endpoints in Scripta/eScriptorium through 26.04.1 allows a remote authenticated user to read, modify and delete other users' transcription content via primary keys supplied in the request body, which are queried against the global model manager instead of the request-scoped queryset",
+    "tags": [],
+    "title": "CVE-2026-18258 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18258"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-18359",
+    "published": "2026-08-06T16:16:38.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Server-side request forgery in the METS and IIIF import URI handling in Scripta eScriptorium through 26.04.1 allows a remote authenticated user to make the server issue arbitrary HTTP requests to internal hosts, including the cloud instance metadata service, via the mets_uri or iiif_uri parameter of POST /api/documents/{pk}/imports/, because the IMPORT_ALLOWED_DOMAINS setting defaults to '*' and no address filtering, redirect cap or timeout is applied",
+    "tags": [],
+    "title": "CVE-2026-18359 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18359"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-3430",
+    "published": "2026-08-06T16:16:42.760",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Creative Mail WordPress plugin from 1.6.5 to 1.6.9 does not sanitize and escape a parameter before using in an SQL statement, leading to an unauthenticated SQL injection when the abandoned cart email is managed by creative mail.",
+    "tags": [],
+    "title": "CVE-2026-3430 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3430"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/threatsday-odysseus-rce-samsung-one.html",
+    "published": "2026-08-06T15:24:31+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Apparently, opening the thing is now enough. A repo can run before the first prompt, a package can hide among hundreds, and a harmless-looking PDF can finish the job. This week runs on cheap leverage: exposed servers, recycled bugs, poisoned agent instructions, remote-access tools dressed as support software, and trusted defaults doing attackers a favor. Nothing here is especially mystical.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "ThreatsDay: Odysseus RCE, Samsung One-Click Takeover, iCloud Backdoor Fight + 27 More Stories",
+    "url": "https://thehackernews.com/2026/08/threatsday-odysseus-rce-samsung-one.html"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/",
+    "published": "2026-08-06T16:11:39+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Meta has become the latest AI company to confirm that one of its models hacked a real organization during cybersecurity testing, as similar incidents continue to emerge following OpenAI'sOpenAI's initial disclosure that its agents breached Hugging Face. [...]",
+    "tags": [],
+    "title": "Meta AI model hacked a company during misconfigured cyber test",
+    "url": "https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/georgia-alleges-foreign-disinformation-scare-russian-tourists",
+    "published": "2026-08-06T04:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Georgia's State Security Service is investigating whether foreign entities were behind the spread of fabricated stories claiming that Georgians were mistreating Russian tourists.",
+    "tags": [],
+    "title": "Republic of Georgia alleges foreign disinfo campaign sought to scare off Russian tourists",
+    "url": "https://therecord.media/georgia-alleges-foreign-disinformation-scare-russian-tourists"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=196746",
+    "published": "2026-08-06T15:25:21+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A U.S. court sentenced Ransom Cartel founder Maksim Silnikau to 16 years for running a ransomware-as-a-service operation. Maksim Silnikau (aka “J.P. Morgan,” “lansky,” and “xxx,”) built a ransomware business the way a franchise owner builds a chain: he never had to touch most of the crime scenes himself. This week, a federal judge in Virginia […]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Ransom Cartel Leader Sentenced to 16 Years in U.S.",
+    "url": "https://securityaffairs.com/196746/cyber-crime/ransom-cartel-leader-sentenced-to-16-years-in-u-s.html"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMilAFBVV95cUxONWF3YVJmREE0NXBxM0t2SDVJLUdXQVhmN0YxYnFTbDFmMlIybnprMVJLWmdIZ1JhbWFsY3UwcGo5UThhbnJodmpiMVl6cUJWX0JSbWowejFVaFFPdnFxRVpKYm1WX0N4bzUtbzYwNWwyX0RaSXZiUWtRTEUwem9mR0F3enNsdXVxN3FscWtLYTB3Zm5r",
+    "published": "2026-08-06T14:34:02+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "FPT는 ChatGPT를 소유한 OpenAI의 글로벌 파트너가 되었습니다.",
+    "tags": [],
+    "title": "FPT는 ChatGPT를 소유한 OpenAI의 글로벌 파트너가 되었습니다.",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxONWF3YVJmREE0NXBxM0t2SDVJLUdXQVhmN0YxYnFTbDFmMlIybnprMVJLWmdIZ1JhbWFsY3UwcGo5UThhbnJodmpiMVl6cUJWX0JSbWowejFVaFFPdnFxRVpKYm1WX0N4bzUtbzYwNWwyX0RaSXZiUWtRTEUwem9mR0F3enNsdXVxN3FscWtLYTB3Zm5r?oc=5"
   }
 ]
