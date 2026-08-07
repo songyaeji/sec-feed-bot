@@ -3631,5 +3631,46 @@
     "tags": [],
     "title": "CVE-2026-34191 (CVSS 9.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34191"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-48039",
+    "published": "2026-08-07T20:16:51.723",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Meta Ads MCP is a Model Context Protocol (MCP) server that lets AI assistants run Meta Ads. Prior to version 1.0.109, `AuthInjectionMiddleware.dispatch()` at `http_auth_integration.py:272` unconditionally forwards unauthenticated Streamable HTTP requests to downstream MCP tool handlers without issuing a `401` response, allowing any network-reachable caller to invoke MCP tools without authentication. When no per-request credential is present, tool handlers fall back to the `META_ACCESS_TOKEN` environment variable, and when the downstream Meta Graph API call fails, `api.py:263–269` serialises the raw `httpx` request URL—including the operator's `access_token` as a query parameter—into the JSON-RPC response body, delivering the credential to the unauthenticated caller. Version 1.0.109 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-48039 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48039"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-61808",
+    "published": "2026-08-07T20:16:52.007",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "LightRAG provides simple and fast retrieval-augmented generation. Through version 1.5.4, the LightRAG API server binds to all network interfaces with authentication disabled by default, allowing an unauthenticated network attacker to read indexed document content, upload or delete documents, modify the knowledge graph, cancel pipelines, clear caches, and consume LLM resources. This issue is mitigated in version 1.5.5rc1.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-61808 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61808"
+  },
+  {
+    "author": "Mayank Parmar",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
+    "published": "2026-08-07T20:14:46+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/"
   }
 ]
