@@ -2561,5 +2561,29 @@
     "tags": [],
     "title": "비에스아이시스템·남양주시, 방범·환경 통합형 CCTV 운영 확대",
     "url": "http://www.boannews.com/media/view.asp?idx=145074&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-60053",
+    "published": "2026-08-05T16:16:58.323",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient Session Expiration vulnerability in Apache Answer.\n\nThis issue affects Apache Answer: through 2.0.1.\n\nAdministrative API keys remained usable after the owning administrator was demoted or the account was marked inactive, suspended, or deleted, allowing continued access until the keys were explicitly removed.\nUsers are recommended to upgrade to version 2.0.2, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-60053 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60053"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigwFBVV95cUxNalJEaGFmVnRoS0NaeHJfNlNkSFlpNmtlRWRLbG1hZ1VKNWdDN3ZERUFWeGMxbWF6UWw0OGFlOXlEUjBvYWlLd3NrSWNjN0IyNXhFRXNuWFg1al9EbmJWbkpDMTdRaUZSVnlOWU1wR3I2aGpMVkdlNmhSMUFSMmRvNjdKSQ",
+    "published": "2026-08-07T06:46:12+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "(인사발령)개인정보보호위원회 인사발령('26.6.13.자)",
+    "tags": [],
+    "title": "(인사발령)개인정보보호위원회 인사발령('26.6.13.자)",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNalJEaGFmVnRoS0NaeHJfNlNkSFlpNmtlRWRLbG1hZ1VKNWdDN3ZERUFWeGMxbWF6UWw0OGFlOXlEUjBvYWlLd3NrSWNjN0IyNXhFRXNuWFg1al9EbmJWbkpDMTdRaUZSVnlOWU1wR3I2aGpMVkdlNmhSMUFSMmRvNjdKSQ?oc=5"
   }
 ]
