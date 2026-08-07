@@ -2733,5 +2733,17 @@
     "tags": [],
     "title": "Levi Strauss says hackers breached employee computers, accessed corporate data",
     "url": "https://therecord.media/levis-data-breach-social-engineering"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-19158",
+    "published": "2026-08-06T22:16:58.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Views in Google Chrome on Windows prior to 151.0.7922.109 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-19158 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19158"
   }
 ]
