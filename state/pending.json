@@ -2885,5 +2885,95 @@
     "tags": [],
     "title": "Irregular, firm behind AI hacking incidents, won't say if there were more",
     "url": "https://therecord.media/irregular-ai-security-company-incidents"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-18184",
+    "published": "2019-11-27T16:15:11.410",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Crestron DMC-STRO 1.0 devices allow remote command execution as root via shell metacharacters to the ping function.",
+    "tags": [],
+    "title": "CVE-2019-18184 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18184"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-48086",
+    "published": "2026-08-06T22:17:11.593",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, a TENANT_ADMIN promotes themselves to platform-wide GLOBAL_ADMIN through a single PUT request. The role-update handler accepts the `GLOBAL_ADMIN` enum value from any tenant admin updating their own tenant's staff. No policy check enforces that \"only an existing GLOBAL_ADMIN may grant GLOBAL_ADMIN\", so the schema validation IS the authorization decision. After re-login, the JWT contains the new role and the formerly-tenant-scoped admin reaches every other tenant on the platform. On the hosted OpenReception service this is a scope-changed escalation: a single customer-side tenant administrator gains full platform-wide administrative control over all other tenants' configuration, users, staff records, operational metadata, and tenant lifecycle. Plaintext appointment contents remain subject to the E2E model unless chained with the staff-crypto poisoning issue (V-4) or with staff-passkey hijacking (V-1). On a single-tenant self-hosted deployment it is still a privilege escalation because TENANT_ADMIN should not be able to create new tenants, modify global configuration, or manage other administrators. The same handler also accepts updates targeted at any colleague within the tenant. A tenant admin can promote a separate collaborator account instead of themselves, leaving their own audit trail clean while the platform-wide breach happens through a sepa",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48086 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48086"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67689",
+    "published": "2026-08-06T22:18:23.240",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQL Injection vulnerability in FineAdmin V1.0 allows a remote attacker to execute arbitrary code via the `field` and `order` parameters in paginated list endpoints",
+    "tags": [],
+    "title": "CVE-2026-67689 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67689"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2022-4995",
+    "published": "2026-08-07T15:16:57.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Weaver (Fanwei) E-cology 9.0 versions prior to 10.52 contain a file upload vulnerability that allows a remote, unauthenticated attacker to upload arbitrary files, including JSP webshells, by submitting a multipart/form-data POST request to /workrelate/plan/util/uploaderOperate.jsp with arbitrary secId and plandetailid field values. Successful exploitation results in remote code execution under the privileges of the application server process. Exploitation evidence was first observed by the Shadowserver Foundation on 2023-10-14 (UTC).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2022-4995 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4995"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-19264",
+    "published": "2026-08-07T15:17:00.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Postiz is an open-source social media scheduling tool. The route that serves locally stored media joins URL-supplied path segments onto the upload directory and streams the file without normalising the path or confining it to that directory, and the route requires no authentication. Raw dot-segments are collapsed before routing, but URL-encoded separators survive route matching and are decoded only once they reach the handler, restoring the traversal at the filesystem call. An unauthenticated remote attacker can therefore read any file readable by the application process, including the process environment, which exposes the JWT signing secret, the database connection string, and connected provider and billing secrets. Because session tokens are signed with that secret and carry no expiry, this allows forging a non-expiring session as any user, including an administrator, without a password.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19264 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19264"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-1395",
+    "published": "2026-01-30T09:15:49.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Generation of Error Message Containing Sensitive Information vulnerability in Codriapp Innovation and Software Technologies Inc. HeyGarson allows Fuzzing for application mapping.\n\nThis issue affects HeyGarson: through 30012026. \nNOTE: The vendor was contacted and it was learned that the product is not supported.",
+    "tags": [],
+    "title": "CVE-2025-1395 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1395"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-48081",
+    "published": "2026-08-06T22:17:10.850",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, a TENANT_ADMIN can store `javascript:` URLs in the tenant `links` configuration (`website`, `imprint`, `privacyStatement`). These values are returned to the patient-facing landing page via `/api/public`, hydrated into the SvelteKit Button component, and rendered as `<a href=\"javascript:...\">` elements without URL-scheme filtering. A patient who clicks any such link executes the attacker's JavaScript inside the patient browser origin, where patient form data is read before client-side encryption is applied. This breaks the project's central trust claim that the server is an untrusted relay and that administrators cannot read patient data. Patient-side encryption happens after form input, so JavaScript executing in the patient origin can read or alter the plaintext before encryption is performed. Version 1.0.2 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-48081 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48081"
   }
 ]
