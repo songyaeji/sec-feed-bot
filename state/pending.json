@@ -2295,5 +2295,32 @@
     "tags": [],
     "title": "[DEF CON 34] 이상중 KISA 원장 “K-해커들 든든하게 뒷받침할 것”",
     "url": "http://www.boannews.com/media/view.asp?idx=145069&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68480",
+    "published": "2026-08-06T22:18:24.697",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nx86/bugs: Make Safe-RET robust against interrupt injection\n\nAn attacker injecting interrupts while the Safe-RET mitigation executes\non machines affected by SRSO can neutralize the safe return sequence,\npotentially leading to data leakage through speculative execution.\n\nFixup register state as if the Safe-RET sequence executed successfully\nby \"emulating\" it, in a manner of speaking, and avoid executing a RET\ninstruction after returning from the interrupt.",
+    "tags": [],
+    "title": "CVE-2026-68480 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68480"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-12261",
+    "published": "2026-08-07T07:16:26.377",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in `nltk.downloader` in nltk/nltk versions <= 3.9.4 allows for cross-package resource and model poisoning. The downloader extracts package archives into shared namespaces such as `corpora/` and `taggers/` instead of package-isolated roots, and validates package integrity only after the archive has been written and extracted. This design flaw enables one package to overwrite another package's trusted resources within the same namespace, making the changes immediately active through ordinary NLTK APIs. This issue persists across fresh interpreter restarts and can affect downstream workflows, including machine learning pipelines and reproducibility-sensitive environments.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-12261 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12261"
   }
 ]
