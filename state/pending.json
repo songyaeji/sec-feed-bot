@@ -2999,5 +2999,82 @@
     "tags": [],
     "title": "Levi Strauss & Co. says hackers stole corporate data in cyberattack",
     "url": "https://www.bleepingcomputer.com/news/security/levi-strauss-and-co-says-hackers-stole-corporate-data-in-cyberattack/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48085",
+    "published": "2026-08-06T22:17:11.440",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.1, a fully provisioned OpenReception instance accepts unauthenticated POST requests to `/setup/create-admin-account` and creates additional GLOBAL_ADMIN accounts without verifying that an admin already exists. Any unauthenticated network attacker who can submit a same-origin form POST gains full platform-level administrative control. The newly created account is `is_active=true` with `confirmation_state=ACCESS_GRANTED` and does not require completing email confirmation; the GLOBAL_ADMIN row is created active and immediately usable. Login and tenant enumeration succeed without any further interaction. This is distinct from the deployment race condition already documented on the `Claiming an instance` page. That documented race covers the window between deployment and first claim. The bug reported here works after the operator has properly claimed and configured the instance: the layout-level guard that protects the setup page only redirects on GET, while the `default` form action handler creates the user without rechecking `adminExists()`. Three GLOBAL_ADMIN accounts were created in succession during testing, with no rate limiting observed. Audit-specific event logging beyond standard application logs was not assessed; the standard `[error]` line that surfaces only when a uniqueness conflict is hit is not the same as a security event for \"additional ",
+    "tags": [],
+    "title": "CVE-2026-48085 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48085"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67688",
+    "published": "2026-08-06T22:18:23.130",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ICS-Park Smart Park Management System v2.0 contains an unrestricted file upload vulnerability in the file upload module. This allows a remote attacker to execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-67688 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67688"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2024-39024",
+    "published": "2026-08-06T22:16:40.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Packetfence 13.2.0, the WebGui interface setting allows authenticated remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-39024 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39024"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-53983",
+    "published": "2026-08-06T22:17:42.120",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ground Station prior to 0.6.0 contains an unauthenticated blind server-side request forgery vulnerability in the orbital-source configuration path that allows any unauthenticated Socket.IO client to cause the ground-station process to issue outbound HTTP requests to attacker-chosen destinations. Attackers can connect to the Socket.IO server on port 7000 without credentials due to disabled authentication enforcement and a wildcard CORS policy, then submit a data_submission event with submit-orbital-sources action to persist an attacker-supplied URL in the database, then trigger an orbital sync via the equally unauthenticated background_task:start event. The URL is stored with no scheme allowlist, no host validation, and no rejection of loopback, RFC1918, or link-local (cloud instance metadata at 169.254.169.254) addresses, and is passed directly to requests.get in _fetch_http_3le and _fetch_http_omm in backend/tlesync/source_adapters.py. HTTP status codes and error messages from the outbound request are emitted in the orbital_sync_state Socket.IO event to all connected clients, providing a serviceable oracle for interpreting internal-service and cloud-metadata responses even though the raw response body is not directly leaked. Because the malicious source persists in the database across restarts and re-fires every 24 hours on the scheduled sync cycle, the primitive gives durable long-term SSRF without the attacker needing to remain connected.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-53983 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53983"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-67687",
+    "published": "2026-08-06T22:18:23.013",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insecure Permissions vulnerability in ics-park v.2.0 allows a remote attacker to escalate privileges via the /system/role/save endpoint in RoleController.java and system/user/update endpoint in UserController.java",
+    "tags": [],
+    "title": "CVE-2026-67687 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67687"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-9169",
+    "published": "2026-08-07T09:16:59.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DLL Search Order Hijacking in LUCID Vision Labs Arena SDK 1.0.80.49 on Windows allows a local attacker to execute arbitrary code with the privileges of the application by placing a malicious DLL in a user-controlled directory listed in the PATH environment variable, which the SDK traverses when a required dependency is not found locally.",
+    "tags": [],
+    "title": "CVE-2026-9169 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9169"
   }
 ]
