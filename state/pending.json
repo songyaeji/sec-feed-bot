@@ -3500,5 +3500,17 @@
     "tags": [],
     "title": "US cyber ambassador nominee Cassady confirmed in Senate",
     "url": "https://therecord.media/adam-cassady-confirmed-senate-cyber-ambassador"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-9044",
+    "published": "2026-07-31T23:17:26.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability exists in the VPN module of TP-Link AXE75 V1 routers. This vulnerability allows an adjacent, authenticated attacker to execute arbitrary commands on the device by importing a specially crafted VPN client configuration file. The issue arises from improper filtering of special characters. \n\nSuccessful exploitation of this vulnerability may enable an attacker to gain full control of the affected device, potentially compromising configuration integrity, network security, and service availability.",
+    "tags": [],
+    "title": "CVE-2026-9044 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9044"
   }
 ]
