@@ -3605,5 +3605,31 @@
     ],
     "title": "개인정보보호위원회 전문임기제 가급(인공지능 기획) 경력채용 공고",
     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcWRfNE56T19rcjdqUHVXTXMyUHQzRXh1QlJNc0JndXhhaF9RRlM3eF81Uk8wTVBuZVZScnhqZTE4VUp1VGxlRUZLVnlhLUVPbFNEWnVPNFY0X2ZMcm5neE9zWWhBbkZkSDhSZEpBU3RCZE85MEFBdjlTRmxRbnlvY3k1dw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-32327",
+    "published": "2026-08-06T15:16:54.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A bug in APR-util version 1.6.3 (and earlier) allows a stack recursion attack against any library consumer which parses XML from untrusted sources and uses the apr_xml_quote_elem() function.\n\nUsers are recommended to upgrade to version 1.6.4, which fixes this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-32327 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32327"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-34191",
+    "published": "2026-08-06T15:16:54.650",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Apache Portable Runtime Utility via apr_dbd_oracle provider.\n\nThis issue affects Apache Portable Runtime Utility: from 1.6.0 through 1.6.3",
+    "tags": [],
+    "title": "CVE-2026-34191 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34191"
   }
 ]
