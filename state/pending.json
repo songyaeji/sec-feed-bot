@@ -2759,5 +2759,119 @@
     ],
     "title": "Real emails, hijacked payments: Two H1 2026 attack chains",
     "url": "https://www.bleepingcomputer.com/news/security/real-emails-hijacked-payments-two-h1-2026-attack-chains/"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-11976",
+    "published": "2026-08-06T22:16:45.103",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The official MonsterInsights Pro update distribution bucket (`monster-insights.s3.amazonaws.com`) was compromised. Both the current release (10.2.2) and the version MonsterInsights rolled back to (10.2.0) contain a malicious file, `class-system-check.php`. Three distinct variants were observed on 2026-06-11, all sharing the same AES-256-GCM key, confirming a single threat actor. The attacker retains write access to the S3 bucket and has been actively iterating on the payload throughout the day.",
+    "tags": [],
+    "title": "CVE-2026-11976 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11976"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-14812",
+    "published": "2026-08-06T22:16:46.967",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Premium SEO WordPress plugin is malicious: it ships an unauthenticated backdoor that creates a hidden administrator account and, in some builds, also enables remote code execution, server-side request forgery and arbitrary front-end script/content injection, giving an unauthenticated attacker full control of the affected site.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14812 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14812"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-17032",
+    "published": "2026-08-06T22:16:49.237",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Multiple Supsystic Pro plugins were distributed with malicious code through the vendor's compromised update server, allowing unauthenticated attackers to deploy a second-stage payload that exfiltrates credentials and other sensitive data and grants full control of affected sites.",
+    "tags": [],
+    "title": "CVE-2026-17032 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17032"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-18367",
+    "published": "2026-08-06T22:16:50.010",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A privilege escalation vulnerability allows local users to execute arbitrary code as root via Sophos Endpoint for macOS older than version 2026.1.1 and Sophos Home for macOS older than version 10.11.6.",
+    "tags": [],
+    "title": "CVE-2026-18367 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18367"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-19175",
+    "published": "2026-08-06T22:17:00.040",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use after free in Payments in Google Chrome prior to 151.0.7922.109 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-19175 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19175"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-14306",
+    "published": "2026-08-06T22:16:46.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Tutor LMS WordPress plugin before 3.9.14 does not properly verify enrollment when restricting access to protected course content, allowing authenticated users with subscriber-level access and above who are enrolled in at least one course to view paid lesson, quiz, and assignment content belonging to other courses.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-14306 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14306"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19144",
+    "published": "2026-08-06T22:16:56.537",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in HTML in Google Chrome prior to 151.0.7922.109 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-19144 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19144"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-19147",
+    "published": "2026-08-06T22:16:56.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Aura in Google Chrome on Linux prior to 151.0.7922.109 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-19147 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19147"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-43631",
+    "published": "2026-08-06T22:17:06.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "llama.cpp builds b7492 through the latest b9060 contains a use-after-free vulnerability in the vocab pointer of llama-server when the --sleep-idle-seconds feature is enabled, allowing unauthenticated remote attackers to execute arbitrary code. Attackers can trigger the vulnerability by sending requests to affected endpoints while the server transitions to sleep mode, causing concurrent worker threads to dereference a freed vocab pointer that can be reclaimed with attacker-controlled data to achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-43631 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43631"
   }
 ]
