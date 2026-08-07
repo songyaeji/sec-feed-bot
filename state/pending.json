@@ -2446,5 +2446,17 @@
     "tags": [],
     "title": "Claude Code and Gemini CLI Flaws Let a GitHub Issue Reach CI Workflow Secrets",
     "url": "https://thehackernews.com/2026/08/claude-code-and-gemini-cli-flaws-let.html"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-54202",
+    "published": "2026-08-07T10:16:56.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Tobit Laboratories AG TeamDavid's Webbox  is vulnerable to a path traversal vulnerability in the \narchive creation functionality. Because the archive path is \nuser-controlled and insufficiently validated, an attacker can manipulate\n the input to traverse directories. This allows the creation of folders \nin arbitrary locations, including sensitive directories such as \nC:\\Windows or for different users. This issue affects TeamDavid through Rollout 524.",
+    "tags": [],
+    "title": "CVE-2026-54202 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54202"
   }
 ]
