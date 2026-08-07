@@ -10287,6 +10287,7 @@
     "CVE-2026-64620": "2026-07-20T12:24:11.123727+00:00",
     "CVE-2026-64623": "2026-07-20T12:24:11.123796+00:00",
     "CVE-2026-64625": "2026-07-20T22:32:17.592974+00:00",
+    "CVE-2026-64638": "2026-08-07T13:32:06.164305+00:00",
     "CVE-2026-64642": "2026-07-29T14:43:40.919409+00:00",
     "CVE-2026-64650": "2026-07-20T21:22:06.818343+00:00",
     "CVE-2026-64691": "2026-07-28T16:23:35.045845+00:00",
@@ -11053,7 +11054,7 @@
     "CVE-2026-9999": "2026-07-21T12:12:55.353860+00:00"
   },
   "last_digest_date": "2026-08-07",
-  "last_run": "2026-08-07T13:23:12.631743+00:00",
+  "last_run": "2026-08-07T13:32:09.389244+00:00",
   "last_trend_sent": "2026-08-07T11:10:48.346544+00:00",
   "recent_titles": [
     {
@@ -89379,6 +89380,18 @@
     {
       "d": "2026-08-07T13:23:08.798580+00:00",
       "t": "cve 2026 19173 cvss 8 3"
+    },
+    {
+      "d": "2026-08-07T13:32:06.164305+00:00",
+      "t": "new wordpress pre auth xss could lead to php code execution patch asap"
+    },
+    {
+      "d": "2026-08-07T13:32:06.172485+00:00",
+      "t": "best certificate for devsecops"
+    },
+    {
+      "d": "2026-08-07T13:32:06.180985+00:00",
+      "t": "\ubc29\ud654\ubcbd \uc624\uc785\ub825\uc5d0 \ub6ab\ub9b0 \ud3ec\ud2b8\ub85c \uce68\uc785 iitp \uc5f0\uad6c\uc790\uc815\ubcf4 \ub300\uac70 \uc720\ucd9c"
     }
   ],
   "seen": {
@@ -93450,6 +93463,7 @@
     "CBMiZEFVX3lxTFBNaF9oU2JJak5VeXVCQlJHYzdWcGR6S1h3NHpUd3hoc2NndVRZelJaX1R0NnhZeWxGTEFqcDFsNnVRM0J1bG9pdkNFcE5oWlZYcmVsQ0hwVUpOSjRoa05KUjk4MWc": "2026-08-03T09:52:29.085636+00:00",
     "CBMiZEFVX3lxTFBOSmVzMVlIZFlneXE4Y2J3V1BSejcxWTl6Y2Z1OXNyOTB0Vl9UbEZ1a1RhREtEWVlaTGZOR1p3THlDRWdtc1lPOWQ5ODczdndDSFk2RWMwcllQcURmcWROS29icGE": "2026-07-14T07:42:18.433823+00:00",
     "CBMiZEFVX3lxTFBQczJUcWlVSDZsWmpmZFlmamRETDlrcHBwcDZXVXNQU0d1bDlPcjhIQzhiOUlyTFB6S1p2emVsZEJoWHByM1FfRHkwNGNCak5Eck1ZTlVrRkRPNmZxNzJoNVdnSW8": "2026-07-30T02:52:32.035175+00:00",
+    "CBMiZEFVX3lxTFBRQkxZSnNxNi1weDZNZzFVUTM3b1Zxd1d3WFBjYnFkbDdiMXJsa0xPb0luWF9XRWhvX3h1bDVsa2dLVjhSVVltZXF5YkJEWnFXRjZTRnJoems0N1RoZE5Qcjlsd0E": "2026-08-07T13:32:09.389244+00:00",
     "CBMiZEFVX3lxTFBRczliMVJ4SjVzR2NtU05tYVpFeXVHMjEtSG5YLVR2RTV5SDVtdEw1ZjNmZm5xNWdIT2tPdkIwSGJZUWhzYjcweXg3TXFjLTNENkVLa0x3MDRlSWpXYUdhWDZ3NWw": "2026-07-14T16:42:13.371486+00:00",
     "CBMiZEFVX3lxTFBSUEhDZUVHQWlCaEpiejZKdUp3TFYzUVpZR002Uk9XT2hTOFRCRjJKZTJ6aGdUWm9wY2R3SnR1WUJRc21XbXhCQUw1Q2dPTFhKcy1FaTRWWjdVZUZCejhfRmwySi0": "2026-07-14T07:22:17.139804+00:00",
     "CBMiZEFVX3lxTFBVVzlKaEs0Z1VycnNWOUxqcTBqSDZvMDBucm16SnRqS1lQYjBucjFfYktWVWZWeXpyVnhnVWZDV2NiTmZtSWs1ekdBXzdSREgzMlVpQWhSYmZMdldJY3hIMVFlSnM": "2026-08-06T14:02:29.274572+00:00",
@@ -111851,6 +111865,7 @@
     "https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html": "2026-08-06T17:21:40.808519+00:00",
     "https://thehackernews.com/2026/08/new-natjack-attacks-hijack-tcp-sessions.html": "2026-08-07T09:42:10.115739+00:00",
     "https://thehackernews.com/2026/08/new-ovswrap-linux-kernel-flaw-lets.html": "2026-08-05T12:32:38.684924+00:00",
+    "https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html": "2026-08-07T13:32:09.389244+00:00",
     "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html": "2026-08-06T19:08:55.290850+00:00",
     "https://thehackernews.com/2026/08/open-vsx-removes-77-malicious-evil-twin.html": "2026-08-05T10:12:16.187837+00:00",
     "https://thehackernews.com/2026/08/openai-disrupts-poipet-scam-network.html": "2026-08-05T19:12:19.895166+00:00",
@@ -114336,6 +114351,7 @@
     "t3_1vhzilh": "2026-08-07T12:43:56.503291+00:00",
     "t3_1vhzjeb": "2026-08-07T12:43:56.503291+00:00",
     "t3_1vhzkll": "2026-08-07T12:52:05.252473+00:00",
+    "t3_1vi0nvd": "2026-08-07T13:32:09.389244+00:00",
     "tag:blogger.com,1999:blog-1176949257541686127.post-1436003009998740920": "2026-07-07T05:31:56.562202+00:00",
     "tag:blogger.com,1999:blog-1176949257541686127.post-1469360228826887140": "2026-07-07T05:31:56.562202+00:00",
     "tag:blogger.com,1999:blog-1176949257541686127.post-1495335074080890598": "2026-07-07T05:31:56.562202+00:00",

@@ -2697,5 +2697,17 @@
     "tags": [],
     "title": "CVE-2026-19173 (CVSS 8.3)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19173"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html",
+    "published": "2026-08-07T12:56:23+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "WordPress has fixed a pre-authentication reflected cross-site scripting (XSS) flaw in its login screen that affects every version of the content management system. Under additional conditions, the bug can be chained into PHP code execution on the server. Tracked as CVE-2026-64638 (CVSS score: 8.9), the High-severity vulnerability requires no attacker privileges. According to pwn.ai,",
+    "tags": [],
+    "title": "New WordPress Pre-Auth XSS Could Lead to PHP Code Execution - Patch ASAP",
+    "url": "https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html"
   }
 ]
