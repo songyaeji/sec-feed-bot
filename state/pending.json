@@ -3246,5 +3246,259 @@
     ],
     "title": "WordPress XSS2Shell Flaw Turns Simple Login Bug Into Full Server Takeover",
     "url": "https://securityaffairs.com/196820/hacking/wordpress-xss2shell-flaw-turns-simple-login-bug-into-full-server-takeover.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2025-14561",
+    "published": "2026-08-06T22:16:41.420",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In multi-tenant deployments, the Publisher REST APIs fail to enforce tenant isolation correctly. This allows a user in one tenant, possessing sufficient privileges to invoke these APIs, to perform operations that impact other tenants.\n\nThe vulnerability allows a privileged user to perform publisher operations such as exposing or modifying API Metadata in another tenant environment. This impact is only realized in multi-tenant deployments.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-14561 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14561"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15733",
+    "published": "2026-08-06T22:16:48.410",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A Remote Code Execution (RCE) vulnerability exist in WGDashboard version 4.2.3 and earlier. Multiple OS command injection allows authenticated attackers to execute arbitrary commands as root.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15733 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15733"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-3418",
+    "published": "2026-08-06T22:17:03.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The System REST API accepts user-supplied file uploads without enforcing sufficient validation on the file type or destination, allowing files to be written to arbitrary server-accessible locations. Exploitation requires authenticated administrative access with publisher privileges.\n\nSuccessful exploitation permits an authenticated publisher to upload files to server-accessible locations. Depending on the deployment environment and how uploaded files are handled, this could lead to the execution of uploaded content, potentially resulting in remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3418 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3418"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48087",
+    "published": "2026-08-06T22:17:11.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, the registration handler at `POST /api/auth/register/{userId}` validates the relationship between the WebAuthn challenge and the registration cookie's email but never validates that the `userId` in the URL belongs to that email. An unauthenticated attacker requests a challenge for their own email, generates a registration response with their own authenticator, and submits it against any victim user's URL. The challenge-vs-cookie email match passes, the WebAuthn ceremony validates, and `addPasskey` writes the attacker's credential into the victim's `user_passkey` rows. The next victim-email login accepts a passkey assertion from the attacker's authenticator and issues a session as the victim. User IDs are not strictly secret on this platform, but the exact set of exposure surfaces should be assessed by the maintainers. Staff-list endpoints return user IDs to authenticated tenant members per the route signature; live verification of all exposure surfaces (whether user IDs leak through any unauthenticated route, through invite-confirmation URLs, or through other administrative views) is part of the pending live PoC. Where the attacker knows the victim's email and userId, the analysis below becomes account takeover. Version 1.0.2 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-48087 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48087"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-53984",
+    "published": "2026-08-06T22:17:42.280",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ground Station prior to 0.6.0 contains an unauthenticated database-destruction and arbitrary-data-injection vulnerability in the Socket.IO server's database_backup event handler that allows any unauthenticated network peer to wipe or replace the entire SQLite database by sending a single full_restore command with a caller-supplied SQL blob. Attackers can connect to the Socket.IO server on port 7000 without credentials due to disabled authentication enforcement and a wildcard CORS policy, then emit the database_backup event to drop every existing table and recreate the database from attacker-controlled CREATE TABLE and INSERT INTO statements executed via raw exec_driver_sql, permanently destroying all satellite records, orbital sources, hardware configurations, and observation schedules, or planting fabricated orbital-source URLs and observation entries that redirect the ground station to attacker-controlled servers on the next scheduled sync.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53984 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53984"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14205",
+    "published": "2026-08-07T06:16:54.383",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The WP Events Manager WordPress plugin before 2.2.5 does not validate the requested quantity when registering for a paid event and computes the price from the attacker-controlled quantity, allowing any authenticated user to create a completed booking for a paid event without making a payment.",
+    "tags": [],
+    "title": "CVE-2026-14205 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14205"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71558",
+    "published": "2026-08-07T10:16:59.337",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Heap type confusion vulnerability in Apache Fory C++ deserialization.\n\nThis issue affects Apache Fory C++ versions from 0.14.0 before 1.5.0. A crafted input payload can bypass type compatibility checks during polymorphic smart-pointer deserialization, causing an object of an incompatible type to be treated as the declared base type. This may result in undefined behavior and potentially lead to denial of service or arbitrary code execution.\n\n\nUsers are recommended to upgrade to Apache Fory 1.5.0, which fixes this issue. Applications not using Apache Fory C++ polymorphic smart-pointer deserialization are not affected.",
+    "tags": [],
+    "title": "CVE-2026-71558 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71558"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-71560",
+    "published": "2026-08-07T10:16:59.590",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Out-of-bounds Read vulnerability in Apache Fory C++ deserialization.\n\nThis issue affects Apache Fory C++ versions from 0.14.0 before 1.5.0 when deserializing structs containing tagged integer fields. A crafted input payload may trigger an out-of-bounds heap read in the tagged integer fast-path deserializer, potentially causing information disclosure or denial of service.\n\n\nUsers are recommended to upgrade to Apache Fory 1.5.0, which fixes this issue. Applications that do not use Apache Fory C++ or do not use tagged integer fields are not affected.",
+    "tags": [],
+    "title": "CVE-2026-71560 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71560"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-64637",
+    "published": "2026-08-07T18:17:20.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper privilege management in the XML-RPC API of Plesk before 18.0.80, allows an authenticated reseller to obtain an administrative session for the root user account.",
+    "tags": [],
+    "title": "CVE-2026-64637 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64637"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19111",
+    "published": "2026-08-06T22:16:55.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insecure direct object reference in the mongodb_memory, elasticsearch_memory, and mem0_memory tools in Amazon Strands Agents Tools before 0.8.3 might allow remote authenticated users to access, modify, or delete memories belonging to other tenants by influencing the LLM to emit tool calls with a forged namespace parameter.\n\n\n\nTo remediate this issue, users should upgrade to version 0.8.3.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-19111 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19111"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19153",
+    "published": "2026-08-06T22:16:57.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient validation of untrusted input in Workers in Google Chrome prior to 151.0.7922.109 allowed a remote attacker who had compromised the renderer process to bypass site isolation via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-19153 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19153"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-3415",
+    "published": "2026-08-06T22:17:03.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The XML and schema validation functionalities within the SchemaValidator Mediator process XML input as part of validation flows. Under certain conditions, the XML parser allows the resolution of external entities when handling user-supplied XML content during validation operations. This behavior can occur when an attacker supplies crafted XML payloads to the relevant mediator flows with sufficient privileges.\n\nSuccessful exploitation may allow a highly privileged actor to read files accessible within the server hosting the affected product. Additionally, it may be possible to trigger outbound requests to unintended internal or external locations, depending on the server environment and network configuration. Specially crafted XML payloads can also lead to excessive resource consumption during parsing, impacting the availability of the product.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3415 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3415"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-43629",
+    "published": "2026-08-06T22:17:05.917",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "llama.cpp builds b4882 through b9058 contain a heap buffer overflow vulnerability in the KV cache state restore path where the state_read_data() function computes write size without overflow checking, allowing attackers with write access to the slot_save_path directory to corrupt heap memory. Attackers can craft malicious state files where cell_count multiplication overflows or exceeds tensor buffer allocation to write attacker-controlled bytes past buffer boundaries, potentially resulting in heap metadata corruption, model weight corruption, or arbitrary code execution via function pointer overwrite.",
+    "tags": [],
+    "title": "CVE-2026-43629 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43629"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-45414",
+    "published": "2026-08-06T22:17:06.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Decidim is a participatory democracy framework. Prior to 0.31.5 and in 0.32.0.rc1 before 0.32.0.rc2, JWT-backed API authentication is not bound to the organization selected by the current host, allowing a JWT issued for one tenant to be replayed against another tenant’s API to read participantDetails data and reach the proposal.answer mutation path. This issue is fixed in versions 0.31.5 and 0.32.0.rc2.",
+    "tags": [],
+    "title": "CVE-2026-45414 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45414"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-48054",
+    "published": "2026-08-06T22:17:09.530",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenZeppelin Contracts Wizardis a web application to interactively build a contract out of components from OpenZeppelin Contracts. Versions prior to 0.10.9 generate a Hardhat test file (`test/test.ts`) by interpolating user-supplied `opts.name` (ERC20/ERC721) and `opts.uri` (ERC1155) directly into TypeScript string literals at `zip-hardhat.ts:48` and `:50` without any JavaScript string escaping. No authentication is required: an attacker crafts a URL such as `https[:]//wizard[.]openzeppelin[.]com/#/erc20?name=\");require(\"child_process\").execSync(\"...\");(\"` and shares it with a developer. When the victim downloads the resulting zip archive and runs `npx hardhat test`, the injected Node.js code executes with the developer's local OS privileges. Version 0.10.9 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-48054 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48054"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-48080",
+    "published": "2026-08-06T22:17:10.703",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.2, the `GET /api/tenants/{id}` endpoint returns the full tenant record to any authenticated `TENANT_ADMIN` of that tenant, including the `databaseUrl` field. This field contains the live PostgreSQL connection string the application uses to connect to that tenant's database. In the tested official `docker-compose.prod.yml` deployment, the connection string contained the user `postgres` with `rolsuper=true` and the plaintext password from `secrets/postgres_password.txt`. Operators who configure a non-superuser PostgreSQL user via `secrets/postgres_user.txt` would expose a less privileged credential, but the disclosure of the connection string itself is independent of that choice. The same credential applies to every database managed by that PostgreSQL instance: the central `appointment_booking` database, every per-tenant database (one per tenant), and the postgres administrative database. A `TENANT_ADMIN` of one tenant who can reach `postgres:5432` (directly via internal network, indirectly via any SSRF, RCE, or file-read in the application) can read every other tenant's appointment ciphertexts, key shares, and metadata; read the central user table, including all `GLOBAL_ADMIN` accounts, password hashes, and session records; modify or delete any data in any tenant database; and/or i a superuser-scoped deployment: use PostgreSQL's `pg_read_server_files",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48080 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48080"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-64665",
+    "published": "2026-08-06T22:18:14.103",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.74.1 and 6.24.0, when OAuth login was enabled with a provider that does not guarantee verified email addresses, an unauthenticated attacker could sign in as an existing user, potentially including a super admin, without knowing that user's password, because the application matched OAuth identities to accounts by email address alone. Exploitation requires OAuth to be explicitly enabled with such a provider. This issue is fixed in versions 5.74.1 and 6.24.0.",
+    "tags": [],
+    "title": "CVE-2026-64665 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64665"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-16030",
+    "published": "2026-08-07T06:16:55.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The MStore API  WordPress plugin before 4.21.0 does not correctly verify the cryptographic signature of the token used to authenticate its phone-based login, allowing unauthenticated attackers who know a registered user's phone number to forge a token and take over that user's account, including administrator accounts.",
+    "tags": [],
+    "title": "CVE-2026-16030 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16030"
+  },
+  {
+    "category": "high",
+    "cvss": 7.7,
+    "id": "CVE-2026-64636",
+    "published": "2026-08-07T18:17:20.070",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An SQL injection vulnerability in Plesk Obsidian up to 18.0.80 for Linux and Windows allows an authenticated user to read arbitrary data from the panel database.",
+    "tags": [],
+    "title": "CVE-2026-64636 (CVSS 7.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64636"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/adam-cassady-confirmed-senate-cyber-ambassador",
+    "published": "2026-08-07T18:14:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "NTIA official Adam Cassady becomes the second person confirmed to be the State Department's ambassador-at-large for cyber policy.",
+    "tags": [],
+    "title": "US cyber ambassador nominee Cassady confirmed in Senate",
+    "url": "https://therecord.media/adam-cassady-confirmed-senate-cyber-ambassador"
   }
 ]
