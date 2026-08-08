@@ -1466,5 +1466,81 @@
     "tags": [],
     "title": "[DEF CON 34] 데프콘 본선, AI 사용 제한 無... “AI 역량=경쟁력 불가피”",
     "url": "http://www.boannews.com/media/view.asp?idx=145077&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-48088",
+    "published": "2026-08-06T22:17:11.893",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenReception's appointment booking software provides an end-to-end encrypted appointment booking platform. Prior to version 1.0.4, the route `POST /api/tenants/{tenantId}/staff/{staffId}/crypto` accepts and stores attacker-controlled ML-KEM-768 public keys against any tenant on the platform without authentication. The handler logs an \"Unauthorized crypto key storage attempt\" warning when neither a session nor a registration cookie is present, then proceeds to insert the row regardless. The platform's E2E claim that \"even administrators cannot view sensitive information\" is broken: any unauthenticated network attacker can register themselves as an additional encryption recipient for any tenant's future patient appointments. A second variant of the bug suppresses the unauthorized-warning log entry. The Zod schema makes the `email` field optional. When the request body omits `email` and the request carries no registration cookie, the comparison `registrationEmail === email` becomes `undefined === undefined`, which evaluates to `true`. The handler treats the request as a legitimate registration flow, skips the warning entirely, and stores the row. Successful storage is still recorded as an `[info]` log line, but the security-relevant warning that operators are most likely to monitor or alert on is gone. The `staff_crypto` table has no unique constraint on `user_id`, so an arbitrary number of attacker rows can coexist for the same staff identifier and all return as `is_active=tru",
+    "tags": [],
+    "title": "CVE-2026-48088 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48088"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-70558",
+    "published": "2026-08-06T22:18:26.227",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dinky's POST /download/uploadFromRsByLocal handler passes the caller-supplied path parameter directly to new File(path) and file.transferTo(dest) with no path validation. The route is marked @SaIgnore and /download/** is excluded from the Sa-Token interceptor, so the only guard is a header equality check against a dinkyToken value whose default (efda1551-7958-4e0f-80a8-dfd107df3e38) is hardcoded in source and shipped to every deployment. Anyone who can reach Dinky's HTTP port (8888 by default) and supplies the hardcoded token can write arbitrary files as the Dinky service account. The default Docker image runs on 8888 with no proxy or authentication and chmod 777 on /opt/dinky, so the application's own classpath, launch scripts, and static assets are writable. Demonstrated impact: overwriting /opt/dinky/config/static/index.html served attacker JavaScript to admin browsers immediately, and writing /opt/dinky/org/dinky/Dinky.class executed attacker code as the Dinky service account at the next JVM start via a classpath-shadow launched by script/bin/auto.sh. Writes are uid 9999 (flink), not root, so /etc, /root, /home, and /usr are refused. Affects Dinky v1.2.5 (the current release) and the development branch, where the code is byte-identical.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70558 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70558"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-2781",
+    "published": "2025-03-28T23:15:18.157",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WatchGuard Mobile VPN with SSL Client on Windows does not properly configure directory permissions when installed in a non-default directory. This could allow an authenticated local attacker to escalate to SYSTEM privileges on a vulnerable system.",
+    "tags": [],
+    "title": "CVE-2025-2781 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2781"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-2782",
+    "published": "2025-03-28T23:15:18.310",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WatchGuard Terminal Services Agent on Windows does not properly configure directory permissions when installed in a non-default directory. This could allow an authenticated local attacker to escalate to SYSTEM privileges on a vulnerable system.",
+    "tags": [],
+    "title": "CVE-2025-2782 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2782"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2025-1910",
+    "published": "2025-12-04T22:15:48.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WatchGuard Mobile VPN with SSL Client on Windows allows a locally authenticated non-administrative Windows user to escalate their privileges to NT AUTHORITY/SYSTEM on the Windows machine where the VPN Client is installed.",
+    "tags": [],
+    "title": "CVE-2025-1910 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1910"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-5857",
+    "published": "2026-08-06T22:18:10.900",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Contiki-NG's MQTT client parse_publish_vhdr() in os/net/app-layer/mqtt/mqtt.c sets topic_len_received=1 before checking topic_len against the 64-byte limit, so an over-length topic returns early but leaves the flag set. On the next TCP segment, tcp_input() re-invokes the parser with topic_received==0, and the persisted topic_len_received==1 skips the length-reading block containing the guard, falling through directly to a memcpy() that uses the unvalidated 16-bit topic_len as the copy length. The 65-byte topic[] destination overruns into adjacent struct fields including the payload_chunk pointer, which subsequent MQTT code dereferences, giving a compromised or attacker-controlled broker an arbitrary-pointer-write primitive. Contiki-NG's MQTT implementation has no TLS support so the connection is plaintext. Impact ranges from information disclosure and denial of service to remote code execution on embedded targets without memory protection.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-5857 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5857"
   }
 ]
