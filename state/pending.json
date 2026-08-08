@@ -1938,5 +1938,41 @@
     "tags": [],
     "title": "CVE-2026-71955 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71955"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71956",
+    "published": "2026-08-08T18:16:56.503",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a command injection vulnerability in the app.cgi interface. A remote attacker can inject arbitrary malicious commands into the netDig.ping.dst field, resulting in command execution with root privileges.",
+    "tags": [],
+    "title": "CVE-2026-71956 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71956"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71957",
+    "published": "2026-08-08T18:16:56.647",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a buffer overflow vulnerability in the app.cgi interface. A remote attacker can write an overly long string to the netAcc.addlist[].name field and execute arbitrary commands by crafting a specific payload, or cause the device to crash.",
+    "tags": [],
+    "title": "CVE-2026-71957 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71957"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71958",
+    "published": "2026-08-08T18:16:56.783",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "D-Link DWR-M961 devices with hardware version C1 and software version 1.1.2_C1_202602110044 contain a buffer overflow vulnerability in the quicksetup.cgi interface. A remote attacker can write overly long strings to the test4, ssid2, and username fields and execute arbitrary commands by crafting a specific payload, or cause the device to crash.",
+    "tags": [],
+    "title": "CVE-2026-71958 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71958"
   }
 ]
