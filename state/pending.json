@@ -1782,5 +1782,17 @@
     "tags": [],
     "title": "Palo Alto Networks Faces China Cybersecurity Review Amid Rising Tech Tensions",
     "url": "https://securityaffairs.com/196881/intelligence/palo-alto-networks-faces-china-cybersecurity-review-amid-rising-tech-tensions.html"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-64582",
+    "published": "2026-08-05T12:18:57.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nRDMA/rxe: Fix a use-after-free problem in rxe_mmap\n\nrxe_mmap() removes a rxe_mmap_info struct from the pending_mmaps list\nand releases pending_lock while the struct's kref is still at 1:\n\n   list_del_init(&ip->pending_mmaps);\n   spin_unlock_bh(&rxe->pending_lock);   /* ref == 1, no lock held */\n   ret = remap_vmalloc_range(vma, ip->obj, 0);  /* walks PTEs */\n   [...]\n   rxe_vma_open(vma);                    /* kref_get, ref → 2 */\n   remap_vmalloc_range_partial() walks PTEs without any lock.\n\nA concurrent DESTROY_CQ ioctl on another CPU calls:\n\n    kref_put(&q->ip->ref, rxe_mmap_release)   /* ref 1→0 */\n    vfree(ip->obj)   /* clears vmalloc PTEs mid-walk */\n    kfree(ip)        /* frees rxe_mmap_info */\n\nThis yields:\n\n   1. Kernel crash, vmalloc_to_page() returns NULL when vfree wins the\n   per-PTE race -> vm_insert_page(NULL) → GPF in validate_page_before_insert\n\n   2. Page UAF, vmalloc_to_page() reads a stale PTE before vfree clears\n   it. User VMA holds a PTE to a free'd page which might eventually get\n   reallocated later by vmalloc which allows the attacker to get a clean\n   page-level UAF.\n\n   It is worth noting that even though a page-level UAF is possible given\n   the strong primitive, it is statistically very difficult to achieve\n   given the very short time window (after the last insert_page and before\n   the kref_get).\n\nThe call trace are as below:\n\n  Oops: general protection fault, probably for ",
+    "tags": [],
+    "title": "CVE-2026-64582 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64582"
   }
 ]
