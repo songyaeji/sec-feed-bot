@@ -1378,5 +1378,17 @@
     "tags": [],
     "title": "CVE-2024-8424 (CVSS N/A)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8424"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14537",
+    "published": "2026-07-31T02:16:27.687",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Incorrect Authorization in the direct HTTP API tool invocation endpoint in Google mcp-toolbox versions v1.3.0 and v1.4.0 allows an unauthenticated attacker to invoke tools protected by the scopeRequired feature via sending tool invocation requests through legacy HTTP endpoints when the --enable-api flag is active.",
+    "tags": [],
+    "title": "CVE-2026-14537 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14537"
   }
 ]
