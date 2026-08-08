@@ -1442,5 +1442,17 @@
     ],
     "title": "Microsoft 365 AitM 악용 피싱 공격으로 계정 탈취... 급여 관련 이메일 수집",
     "url": "http://www.boannews.com/media/view.asp?idx=145076&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-43632",
+    "published": "2026-08-06T22:17:06.343",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "llama.cpp builds b7492 through the latest b9060 contains a use-after-free vulnerability in llama-server affecting six tokenization endpoints (/tokenize, /detokenize, /infill, /apply-template, /rerank, and /anthropic/count_tokens) that bypass the task queue and access ctx_server.vocab directly on HTTP worker threads. Attackers can exploit a time-of-check-time-of-use race condition where the main thread destroys and frees vocab after the synchronization lock is released but before the handler finishes using it, causing a crash or potential code execution when --sleep-idle-seconds is configured.",
+    "tags": [],
+    "title": "CVE-2026-43632 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43632"
   }
 ]
