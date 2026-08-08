@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-07-21 [Kaspersky Securelist](https://securelist.com/new-extortion-scheme-printers-bitlocker/120718/) — Kaspersky, BitLocker 악용 신규 랜섬웨어 공격 2건 사례 분석 및 TTP 보고
+- 2026-08-06 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=207938) — Kaspersky 보고 국내 매체 재보도 (BitLocker, 프린터 악용 신종 랜섬웨어 주의보)
 
 ## 관련

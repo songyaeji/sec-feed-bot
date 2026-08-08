@@ -41,3 +41,7 @@
 - [linux-mac80211-dfs-uaf](topics/2026-05-linux-mac80211-dfs-uaf.md) Linux WiFi mac80211 DFS CAC 해제 후 사용 (최종갱신일: 2026-05-28)
 - [azure-horizondb-auth-bypass](topics/2026-06-azure-horizondb-auth-bypass.md) Azure HorizonDB 스푸핑 인증 우회 권한상향 (최종갱신일: 2026-06-04)
 - [product-slider-pro-rce](topics/2026-06-product-slider-pro-rce.md) Product Slider Pro WooCommerce 플러그인 RCE (최종갱신일: 2026-06-05)
+- [adobe-campaign-classic-authz](topics/2026-06-adobe-campaign-classic-authz.md) Adobe Campaign Classic 허가 검증 오류 RCE (최종갱신일: 2026-06-09)
+- [upnp-type-confusion-rce](topics/2026-06-upnp-type-confusion-rce.md) Windows UPnP 타입 혼동 원격 코드 실행 (최종갱신일: 2026-06-09)
+- [hyperv-type-confusion-rce](topics/2026-06-hyperv-type-confusion-rce.md) Windows Hyper-V 타입 혼동 원격 코드 실행 (최종갱신일: 2026-06-09)
+- [rdc-use-after-free-rce](topics/2026-06-rdc-use-after-free-rce.md) Windows Remote Desktop Client 사용 후 해제 RCE (최종갱신일: 2026-06-09)

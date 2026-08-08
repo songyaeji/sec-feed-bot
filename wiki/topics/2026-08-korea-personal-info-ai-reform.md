@@ -9,4 +9,5 @@ cves: []
 
 ## 타임라인
 
+- 2026-08-06 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiZEFVX3lxTE81Z0xvVTBzNDJxVVFGUV80Mk85ZnhTNnBFdGhJQkg0WHVBeGZfR1BQSmwzZ2ZqQmh5S3hDS0RsUFZFZkxtSDhhMUQ2UWV6Y0NpX1BrWWdzMHlGT092U2dmaUlkMzA) — 국민 의견 수렴 통한 개인정보 보호 제도 개선 아이디어 공모
 - 2026-08-07 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=207954) — 개인정보위 'AI 시대 제도 혁신 태스크포스' 구성 및 정책제안 접수 시작
