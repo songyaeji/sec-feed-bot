@@ -45,3 +45,4 @@
 - [upnp-type-confusion-rce](topics/2026-06-upnp-type-confusion-rce.md) Windows UPnP 타입 혼동 원격 코드 실행 (최종갱신일: 2026-06-09)
 - [hyperv-type-confusion-rce](topics/2026-06-hyperv-type-confusion-rce.md) Windows Hyper-V 타입 혼동 원격 코드 실행 (최종갱신일: 2026-06-09)
 - [rdc-use-after-free-rce](topics/2026-06-rdc-use-after-free-rce.md) Windows Remote Desktop Client 사용 후 해제 RCE (최종갱신일: 2026-06-09)
+- [boxlite-sandbox-escape](topics/2026-06-boxlite-sandbox-escape.md) Boxlite 샌드박스 탈출 읽기 전용 디렉터리 쓰기 우회 (최종갱신일: 2026-06-10)

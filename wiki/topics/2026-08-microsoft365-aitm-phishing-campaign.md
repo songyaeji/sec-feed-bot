@@ -10,3 +10,4 @@ cves: []
 ## 타임라인
 
 - 2026-08-07 [The Hacker News](https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html) — Microsoft 365 AitM 피싱 캠페인 광범위 확산, MFA 우회 및 금융팀 이메일 탈취
+- 2026-08-08 [보안뉴스](http://www.boannews.com/media/view.asp?idx=145076&kind=&sub_kind=) — 북미·유럽 의료·교육·정부 부문 동시 공격, 급여·재무 이메일 선별 수집
