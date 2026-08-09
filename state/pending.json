@@ -940,5 +940,17 @@
     "tags": [],
     "title": "FPT, OpenAI와 AI 기반 사이버 보안 사업 협력… 2400억 달러 시장 진출 [VietNam Insight]",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1yRWl1SFdhTGlsTV92blRUMzhMX2MyTjVrTzRIOEJKa3NualUxOVZvbm5mLWVEOXdlYUZlYjZRRGF2RG4yWVdCOVhIczNsNFg0dThYMWdQd0d3SHlJNkg5bkFmdTZkUWFvdTl3bXp30gFyQVVfeXFMT0xBYjNGcGNWUTBLV1dfa1BMSzZsc1JwUG5DeXlGUUNsajBsVm1ITGxxX0xTbnBEQW8ydmx1OUxOMV92UGh5MFIxX3MxMnFabEdmdVFVRFRJMWM3SjZFVmgxd1JWaTVYVzVIWTBZdU5JOFB3?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-19348",
+    "published": "2026-08-09T11:16:52.743",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in Shenzhen Aitemi M300 Wi-Fi Repeater r0-ea7890a. Impacted is the function sprintf of the file /protocol.csp?fname=net&opt=smacfilter_conf&function=set&act=add&name=test&enable=1. Performing a manipulation of the argument enable/name/mac results in command injection. The attack may be initiated remotely. The exploit has been released to the public and may be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19348 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19348"
   }
 ]
