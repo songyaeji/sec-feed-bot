@@ -1014,5 +1014,29 @@
     "tags": [],
     "title": "(인사발령) 개인정보보호위원회 인사발령('26.7.15.자)",
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPMDZ0V1NqdHQ4a1Zwb0hYSHgtTXJUU0dOeXljZEFHZVU5NEI1Y2w3NERSX2FydURxSE9rQWtOU0pnLTV3cXFKQXpCbWRoNFByOWFWTGptbTlOckxERTdBVDhZUlhZblFBVFYyNUxKdWRSY1JGc1MxTENob1JfVE91OG1B?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-43197",
+    "published": "2026-05-06T12:16:38.740",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetconsole: avoid OOB reads, msg is not nul-terminated\n\nmsg passed to netconsole from the console subsystem is not guaranteed\nto be nul-terminated. Before recent\ncommit 7eab73b18630 (\"netconsole: convert to NBCON console infrastructure\")\nthe message would be placed in printk_shared_pbufs, a static global\nbuffer, so KASAN had harder time catching OOB accesses. Now we see:\n\n    printk: console [netcon_ext0] enabled\n    BUG: KASAN: slab-out-of-bounds in string+0x1f7/0x240\n    Read of size 1 at addr ffff88813b6d4c00 by task pr/netcon_ext0/594\n\n    CPU: 65 UID: 0 PID: 594 Comm: pr/netcon_ext0 Not tainted 6.19.0-11754-g4246fd6547c9\n    Call Trace:\n     kasan_report+0xe4/0x120\n     string+0x1f7/0x240\n     vsnprintf+0x655/0xba0\n     scnprintf+0xba/0x120\n     netconsole_write+0x3fe/0xa10\n     nbcon_emit_next_record+0x46e/0x860\n     nbcon_kthread_func+0x623/0x750\n\n    Allocated by task 1:\n     nbcon_alloc+0x1ea/0x450\n     register_console+0x26b/0xe10\n     init_netconsole+0xbb0/0xda0\n\n    The buggy address belongs to the object at ffff88813b6d4000\n                which belongs to the cache kmalloc-4k of size 4096\n    The buggy address is located 0 bytes to the right of\n                allocated 3072-byte region [ffff88813b6d4000, ffff88813b6d4c00)",
+    "tags": [],
+    "title": "CVE-2026-43197 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43197"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-23385",
+    "published": "2026-03-25T11:16:38.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: clone set on flush only\n\nSyzbot with fault injection triggered a failing memory allocation with\nGFP_KERNEL which results in a WARN splat:\n\niter.err\nWARNING: net/netfilter/nf_tables_api.c:845 at nft_map_deactivate+0x34e/0x3c0 net/netfilter/nf_tables_api.c:845, CPU#0: syz.0.17/5992\nModules linked in:\nCPU: 0 UID: 0 PID: 5992 Comm: syz.0.17 Not tainted syzkaller #0 PREEMPT(full)\nHardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 02/12/2026\nRIP: 0010:nft_map_deactivate+0x34e/0x3c0 net/netfilter/nf_tables_api.c:845\nCode: 8b 05 86 5a 4e 09 48 3b 84 24 a0 00 00 00 75 62 48 8d 65 d8 5b 41 5c 41 5d 41 5e 41 5f 5d c3 cc cc cc cc cc e8 63 6d fa f7 90 <0f> 0b 90 43\n+80 7c 35 00 00 0f 85 23 fe ff ff e9 26 fe ff ff 89 d9\nRSP: 0018:ffffc900045af780 EFLAGS: 00010293\nRAX: ffffffff89ca45bd RBX: 00000000fffffff4 RCX: ffff888028111e40\nRDX: 0000000000000000 RSI: 00000000fffffff4 RDI: 0000000000000000\nRBP: ffffc900045af870 R08: 0000000000400dc0 R09: 00000000ffffffff\nR10: dffffc0000000000 R11: fffffbfff1d141db R12: ffffc900045af7e0\nR13: 1ffff920008b5f24 R14: dffffc0000000000 R15: ffffc900045af920\nFS:  000055557a6a5500(0000) GS:ffff888125496000(0000) knlGS:0000000000000000\nCS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\nCR2: 00007fb5ea271fc0 CR3: 000000003269e000 CR4: 00000000003526f0\nCall Trace:\n <TASK>\n __nft_release_table+0xceb/0x11f0 net/netfilter/nf_tables_api.c:12115\n nft_rcv",
+    "tags": [],
+    "title": "CVE-2026-23385 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23385"
   }
 ]
