@@ -4511,5 +4511,31 @@
     ],
     "title": "Kimsuky Builds Offline AI Stack to Boost Phishing and Automate Malware Development",
     "url": "https://thehackernews.com/2026/08/kimsuky-builds-offline-ai-stack-that.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-4404",
+    "published": "2026-03-23T15:16:35.403",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Use of hard coded credentials in GoHarbor Harbor version 2.15.0 and below, allows attackers to use the default password and gain access to the web UI.",
+    "tags": [],
+    "title": "CVE-2026-4404 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4404"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/",
+    "published": "2026-08-10T14:34:32+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "CISA has confirmed that ransomware gangs have begun exploiting two recently patched SonicWall SMA1000 vulnerabilities, including a maximum-severity server-side request forgery (SSRF) flaw. [...]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "CISA: SonicWall SMA1000 flaws now exploited by ransomware gangs",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/"
   }
 ]
