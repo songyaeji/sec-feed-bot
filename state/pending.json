@@ -4614,5 +4614,46 @@
     ],
     "title": "DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-48772",
+    "published": "2026-06-19T20:16:17.803",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. In versions 2.0.0 through 3.0.8, the ProxySQL MySQL frontend accepts the `PROXY UNKNOWN <addr> <addr> <port> <port>\\r\\n` PP1 frame as a well-formed PROXY protocol header. The HAProxy PROXY protocol v1 specification says that when the protocol token is `UNKNOWN`, the receiver MUST ignore any address fields that follow it, because the proxy has declared it cannot determine the client identity. ProxySQL parses those address fields anyway via `sscanf` and writes the spoofed source address into the session's `addr.addr` field. From there it flows directly into the query-rule matcher, where the `client_addr` predicate decides routing and ACL. When `mysql-proxy_protocol_networks = '*'` (the default), any TCP peer can send a PP1 frame and choose any source IP claim. With that, any `mysql_query_rules` row pinned to a `client_addr` value is forgeable: the attacker writes the address they want to match into the PP1 line, and ProxySQL routes their query as if it came from that address. In practice this is a routing and ACL bypass. Real deployments use `client_addr` for read-write splitting (internal apps go to the primary, public traffic to read replicas), per-app schema pinning, and query-filter rules (DDL allowed only from admin CIDR, public queries blocked from dangerous patterns). An attacker that can reach the frontend port can forge their way into any of those routes. Version 3.0.9 patches this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48772 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48772"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48773",
+    "published": "2026-06-19T20:16:17.947",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. Versions 2.0.18 through 3.0.8 have a pre-authentication heap memory corruption vulnerability in the MySQL and PostgreSQL protocol first-read paths. A remote unauthenticated client can declare an oversized first packet length, and ProxySQL passes that attacker-controlled length directly to `recv()` while writing into a fixed 32 KB input queue. Version 3.0.9 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-48773 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48773"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25261",
+    "published": "2026-08-10T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a ransomware-as-a-service (RaaS) used by affiliates to target government, critical infrastructure, and other organizations. The Gunra ransomware variant first appeared in 2025 and expanded to RaaS operations in 2026. The actors leverage a double-extortion model, both encrypting data and threatening to publish exfiltrated data to a dedicated leak site (DLS) if the ransom is not paid. This advisory provides technical details of the activity, as well as tailored detection and mitigation guidance to protect at-risk organizations from Gunra. Key Actions Prioritize patching known exploited vulnerabilities in internet-facing systems , including virtual private network (VPN) gateways and remote desktop protocol (RDP)-exposed infrastructure. Implement and test offline, immutable backups stored in a physically separate, segmented location to ensure recoverability without ransom payment. Segment networks to restrict lateral movement from an initially compromised device to other systems in the organization. Indicators of Compromise For a downloadable copy of indicators of compromise, see: AA26-222A STIX XML (54 KB) AA26-222A STIX JSON (61 KB) Intended Audience Organizations: Government, Critical Infrastructure Sectors: Healthcare and public health , financial services and insurance, critical manufacturing and construction, transportation systems and logistics, gove",
+    "tags": [
+      "금융",
+      "랜섬웨어"
+    ],
+    "title": "#StopRansomware: Gunra Ransomware",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a"
   }
 ]
