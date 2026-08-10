@@ -14,5 +14,6 @@ cves: [CVE-2026-15409, CVE-2026-15410]
 - 2026-07-14 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-15410) — CVE-2026-15410 SonicWall SMA1000 코드 인젝션 원격 명령 실행 공개
 - 2026-07-19 [The Hacker News](https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html) — Volexity, UTA0533의 사전 악용 상세 분석 발표
 - 2026-08-03 [The Hacker News](https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html) — **INC 랜섬웨어**, 8월부터 해당 취약점 집중 악용 시작, 데이터 유출 사이트 다수 피해자 기록
+- 2026-08-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/) — **CISA** 확인, 랜섬웨어 갱단들이 CVE-2026-15409·15410 실제 악용 중
 
 ## 관련

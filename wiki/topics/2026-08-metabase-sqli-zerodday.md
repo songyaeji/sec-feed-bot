@@ -10,3 +10,5 @@ cves: []
 ## 타임라인
 
 - 2026-08-07 [BleepingComputer](https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/) — Metabase SQLi 제로데이 악용 Framework·Tally 데이터 탈취 사건
+- 2026-08-10 [NVD CVE-2026-72898](https://nvd.nist.gov/vuln/detail/CVE-2026-72898) — `/reset_password` 데이터베이스 엔드포인트 비인증 SQL 인젝션 CVSS 10.0
+- 2026-08-10 [NVD CVE-2026-72899](https://nvd.nist.gov/vuln/detail/CVE-2026-72899) — 공개 공유 카드·대시보드 필드필터 파라미터 비인증 SQL 인젝션 CVSS 10.0
