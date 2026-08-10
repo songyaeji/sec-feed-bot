@@ -8507,5 +8507,107 @@
     ],
     "title": "Hackers Cross From IT to OT Through a Private APN in Poland",
     "url": "https://securityaffairs.com/196955/security/hackers-cross-from-it-to-ot-through-a-private-apn-in-poland.html"
+  },
+  {
+    "category": "high",
+    "cvss": 4.4,
+    "id": "CVE-2021-4037",
+    "published": "2022-08-24T16:15:09.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in the fs/inode.c:inode_init_owner() function logic of the LInux kernel that allows local users to create files for the XFS file-system with an unintended group ownership and with group execution and SGID permission bits set, in a scenario where a directory is SGID and belongs to a certain group and is writable by a user who is not a member of this group. This can lead to excessive permissions granted in case when they should not.  This vulnerability is similar to the previous CVE-2018-13405 and adds the missed fix for the XFS.",
+    "tags": [],
+    "title": "CVE-2021-4037 (CVSS 4.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4037"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-41287",
+    "published": "2026-05-06T15:16:10.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Stack-based Buffer Overflow vulnerability in the WatchGuard Agent discovery service on Windows allows Overflow Buffers. An unauthenticated attacker on the same local network could exploit this vulnerability to crash the agent service.",
+    "tags": [],
+    "title": "CVE-2026-41287 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41287"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-41286",
+    "published": "2026-05-06T16:16:09.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Stack-based Buffer Overflow vulnerability in the WatchGuard Agent discovery service on Windows allows Overflow Buffers. An unauthenticated attacker on the same local network could exploit this vulnerability to crash the agent service.",
+    "tags": [],
+    "title": "CVE-2026-41286 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41286"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-41288",
+    "published": "2026-05-06T16:16:10.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect permission assignment for a resource in the patch management component of the WatchGuard Agent on Windows allows an authenticated local user to elevate their privileges to NT AUTHORITY\\\\SYSTEM.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-41288 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41288"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-6787",
+    "published": "2026-05-06T16:16:11.643",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use of Hard-coded Cryptographic Key vulnerability in WatchGuard Agent on Windows allows Inclusion of Code in Existing Process.",
+    "tags": [],
+    "title": "CVE-2026-6787 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6787"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-6788",
+    "published": "2026-05-06T16:16:11.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Uncontrolled Search Path Element vulnerability in WatchGuard Agent on Windows allows Using Malicious Files.",
+    "tags": [],
+    "title": "CVE-2026-6788 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6788"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-71576",
+    "published": "2026-08-10T17:17:36.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in multicluster-global-hub. The manager component improperly validates the source identity of incoming CloudEvents on Kafka status topics. A remote attacker, after compromising a managed hub and obtaining its Kafka client certificate, can manipulate the self-asserted source identity. This allows the attacker to falsify or delete critical data, such as compliance, inventory, and cluster health information, belonging to other hubs in the database.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71576 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71576"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-72730",
+    "published": "2026-08-10T17:17:37.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, the Rich Text Editor rendered a chat-transcript username as HTML, allowing stored cross-site scripting. This issue is fixed in versions 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72730 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72730"
   }
 ]
