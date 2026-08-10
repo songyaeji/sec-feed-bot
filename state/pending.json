@@ -960,5 +960,305 @@
     "tags": [],
     "title": "LexisNexis shuts down services after suspicious activity on servers",
     "url": "https://www.bleepingcomputer.com/news/security/lexisnexis-shuts-down-services-after-suspicious-activity-on-servers/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-3843",
+    "published": "2026-03-10T18:19:05.287",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Nefteprodukttekhnika BUK TS-G Gas Station Automation System 2.9.1 on Linux contains a SQL Injection vulnerability (CWE-89) in the system configuration module. A remote attacker can send specially crafted HTTP POST requests to the /php/request.php endpoint via the sql parameter in application/x-www-form-urlencoded data (e.g., action=do&sql=<query_here>&reload_driver=0) to execute arbitrary SQL commands and potentially achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-3843 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3843"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-31848",
+    "published": "2026-03-23T13:16:30.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Nexxt Solutions Nebula 300+ firmware through version 12.01.01.37 uses the ecos_pw cookie for authentication, which contains Base64-encoded credential data combined with a static suffix. Because the encoding is reversible and lacks integrity protection, an attacker can reconstruct or forge a valid cookie value without proper authentication.",
+    "tags": [],
+    "title": "CVE-2026-31848 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31848"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-4809",
+    "published": "2026-03-26T11:16:21.440",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "plank/laravel-mediable through version 6.4.0 can allow upload of a dangerous file type when an application using the package accepts or prefers a client-supplied MIME type during file upload handling. In that configuration, a remote attacker can submit a file containing executable PHP code while declaring a benign image MIME type, resulting in arbitrary file upload.",
+    "tags": [],
+    "title": "CVE-2026-4809 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4809"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-31845",
+    "published": "2026-04-11T19:16:28.537",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A reflected cross-site scripting (XSS) vulnerability exists in Rukovoditel CRM version 3.6.4 and earlier in the Zadarma telephony API endpoint (/api/tel/zadarma.php). The application directly reflects user-supplied input from the 'zd_echo' GET parameter into the HTTP response without proper sanitization, output encoding, or content-type restrictions.",
+    "tags": [],
+    "title": "CVE-2026-31845 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31845"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-31843",
+    "published": "2026-04-16T13:16:48.473",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The goodoneuz/pay-uz Laravel package (<= 2.2.24) contains a critical vulnerability in the /payment/api/editable/update endpoint that allows unauthenticated attackers to overwrite existing PHP payment hook files. The endpoint is exposed via Route::any without authentication middleware, enabling remote access without credentials.",
+    "tags": [],
+    "title": "CVE-2026-31843 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31843"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-55743",
+    "published": "2026-06-17T15:17:02.337",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The shell tool command allowlist in the SecurityPolicy of OpenHuman desktop agent through 0.54.0 (default Supervised security policy) can be bypassed to execute arbitrary OS commands with the privileges of the desktop user.",
+    "tags": [],
+    "title": "CVE-2026-55743 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55743"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-55742",
+    "published": "2026-06-18T08:16:34.100",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cotonti 1.0.0 (master branch, commit f43f1fc3) is vulnerable to Cross-Site Request Forgery in the administration rights handler. In system/admin/admin.rights.php, the rights update action ('a=update') modifies group access rights (including via cot_auth_add_group) without calling cot_check_xg to validate the anti-CSRF token.",
+    "tags": [],
+    "title": "CVE-2026-55742 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55742"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-54414",
+    "published": "2026-06-19T06:17:09.830",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FileRise before 3.16.0 is vulnerable to path traversal in the shared-folder upload endpoint (/api/folder/uploadToSharedFolder.php), leading to arbitrary file write and administrator account takeover. The upload filename is validated by FolderController with basename and REGEX_FILE_NAME, which permit URL-encoded sequences (the regex blocks / and \\ but not %).",
+    "tags": [],
+    "title": "CVE-2026-54414 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54414"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-31844",
+    "published": "2026-03-11T07:16:43.900",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An authenticated SQL Injection vulnerability (CWE-89) exists in the Koha staff interface in the /cgi-bin/koha/suggestion/suggestion.pl endpoint due to improper validation of the displayby parameter used by the GetDistinctValues functionality. Successful exploitation may lead to full compromise of the backend database, including disclosure or modification of stored data.",
+    "tags": [],
+    "title": "CVE-2026-31844 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31844"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-31847",
+    "published": "2026-03-23T13:16:30.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hidden functionality in the /goform/setSysTools endpoint in Nexxt Solutions Nebula 300+ firmware through version 12.01.01.37 allows remote enablement of a Telnet service. By sending a crafted POST request with parameters such as telnetManageEn=true and telnetPwd, an authenticated attacker can activate a Telnet service on port 23.",
+    "tags": [],
+    "title": "CVE-2026-31847 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31847"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55738",
+    "published": "2026-06-17T14:18:00.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stack-based buffer overflow exists in the raw_to_header function in src/microtar.c in rxi microtar 0.1.0. The function copies the 100-byte name and linkname fields of a TAR header with strcpy without guaranteeing null termination of the source.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55738 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55738"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-54415",
+    "published": "2026-06-17T15:17:00.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing Authorization in the server management routes (routes/admin.php) in Azuriom Azuriom CMS before 1.2.11 on all platforms allows an authenticated attacker with the admin.access permission to create AzLink server tokens and take over non-admin user accounts by changing their passwords and email addresses via crafted HTTP requests to /admin/servers/create and the AzLink API endpoints (/api/azlink/password, /api/azlink/email, /api/azlink/user/{id}).",
+    "tags": [],
+    "title": "CVE-2026-54415 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54415"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55741",
+    "published": "2026-06-18T08:16:33.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cotonti 1.0.0 (master branch, commit f43f1fc3) is vulnerable to Cross-Site Request Forgery in the administration configuration handler. In system/admin/admin.config.php, the configuration update action ('a=update') processes POST data via cot_config_update_options without calling cot_check_xg to validate the anti-CSRF token (the 'x' parameter), unlike other admin handlers (e.g. admin.structure.php, admin.cache.php).",
+    "tags": [],
+    "title": "CVE-2026-55741 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55741"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-55744",
+    "published": "2026-06-18T08:16:34.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cotonti 1.0.0 (master branch, commit f43f1fc3) is vulnerable to Cross-Site Request Forgery in the Personal File Storage (PFS) module. In modules/pfs/inc/pfs.main.php, the file upload action ('a=upload') processes uploaded files without calling cot_check_xg to validate the anti-CSRF token, even though sibling actions such as 'delete' (line 272) do.",
+    "tags": [],
+    "title": "CVE-2026-55744 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55744"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68083",
+    "published": "2026-08-10T12:17:20.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix path resolution in ksmbd_vfs_kern_path_create\n\nThe SMB2 open lookup is rooted at the share with LOOKUP_BENEATH, but the\ncreate/mkdir/hardlink sink is not: ksmbd_vfs_kern_path_create() builds an\nabsolute path with convert_to_unix_name() and resolves it from AT_FDCWD\nvia start_creating_path(), so a \"..\" component is walked from the real\nfilesystem root and escapes the export.\n\nAn authenticated client races a missing path component so the rooted open\nlookup returns -ENOENT (taking the create branch) while the same component\nis present (a directory) when the create walk runs; the create then\nresolves \"..\" out of the share.\n\nRoot the create walk at the share like the lookup and rename paths already\nare: resolve the parent with vfs_path_parent_lookup(..., LOOKUP_BENEATH,\n&share_conf->vfs_path) and create the final component with\nstart_creating_noperm(). convert_to_unix_name() then has no callers and is\nremoved.",
+    "tags": [],
+    "title": "CVE-2026-68083 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68083"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68084",
+    "published": "2026-08-10T12:17:20.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nstaging: vme_user: fix location monitor leak in tsi148 bridge\n\ntsi148_probe() allocates a location monitor resource and links it into\ntsi148_bridge->lm_resources. The probe error path frees this list, but\ntsi148_remove() only frees the dma, slave and master resource lists, so\nthe location monitor resource is leaked on device unbind or module\nunload.\n\nFree the lm_resources list in tsi148_remove() as well, before\ntsi148_bridge is freed.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68084 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68084"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68085",
+    "published": "2026-08-10T12:17:21.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: hci_uart: clear HCI_UART_SENDING when write_work is canceled\n\nHCI_UART_SENDING bit in tx_state means write_work is pending and blocks\nqueueing it again.  Currently this bit is not cleared when canceling the\nwork in hci_uart_close(), which blocks future writes when device is\nreopened later if write_work was pending.\n\nFix by clearing HCI_UART_SENDING when canceling the work.\n\nAlso make clearing of tx_skb safe by using disable_work_sync +\nenable_work instead of just cancel_work_sync.  hci_uart_flush() purges\nthe proto tx queue so we can cancel the pending write_work there,\ninstead of doing it just in hci_uart_close().  Re-enable and possibly\nrequeue the work after queue flush.",
+    "tags": [],
+    "title": "CVE-2026-68085 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68085"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68086",
+    "published": "2026-08-10T12:17:21.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/khugepaged: write all dirty file folios when collapsing\n\n[There is no upstream commit, as this code was removed by upstream\n commit 044925f9b565 (\"mm: fs: remove filemap_nr_thps*() functions and their users\")]\n\nAs-is, khugepaged and writable-file opening exclude each other. A file\ncannot be open writeable and have THPs (because the filesystem is not aware\nof them). khugepaged will never collapse file pages for files that are\nopened writeable. On an open(O_RDWR/O_WRONLY), the page cache for that\nparticular file is dropped. This is fine because nothing could've been\ndirtied.\n\nHowever, there is an edge-case: collapse_file() might not be able to\ncoexist with concurrent writers, but it can coexist with dirty folios\n(from previous writers). Therefore, the following can happen:\n\nopen(file, O_RDWR)\nwrite(file)\nclose(file)\nmadvise(file_mapping, MADV_COLLAPSE, some non-dirty range)\nopen(file, O_RDWR)\n nr_thps > 0\n  truncate_inode_pages()\n    /* THPs are cleared out, but so are the dirty folios */\n\nWhen this edge-case happens, there is data loss, as the dirty folios are\nfully discarded.\n\nFix it by fully writing back the page cache (and waiting) when collapsing\nfile THPs. Doing so provides the guarantee that no dirty folio will be\nobserved while there are active THPs. To fully ensure this is safe, the\ninvalidate_lock needs to be held while doing the writeout, so that\ndo_dentry_open()'s page cache truncation excludes ",
+    "tags": [],
+    "title": "CVE-2026-68086 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68086"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68087",
+    "published": "2026-08-10T12:17:21.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nHID: wacom: use GFP_ATOMIC in wacom_wac_queue_flush()\n\nwacom_wac_queue_flush() is called via the .raw_event callback\n(wacom_raw_event → wacom_wac_pen_serial_enforce → wacom_wac_queue_flush).\nFor USB HID devices, this callback is invoked from hid_irq_in(), which\nis a URB completion handler running in atomic context. Using GFP_KERNEL\nin this path can sleep, leading to a \"scheduling while atomic\" bug.\n\nUse GFP_ATOMIC instead. The existing code already handles allocation\nfailure by skipping the fifo entry and continuing.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68087 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68087"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68088",
+    "published": "2026-08-10T12:17:21.467",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: gadget: function: rndis: add length check to response query\n\nAdd variable representations for BufLength and BufOffset in\nrndis_query_response(), and perform a length check on them.\n\nThis is identical to how rndis_set_response() handles these parameters.",
+    "tags": [],
+    "title": "CVE-2026-68088 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68088"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68089",
+    "published": "2026-08-10T12:17:21.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\niio: core: fix uninitialized data in debugfs\n\nIf *ppos is non-zero then simple_write_to_buffer() will not initialize\nthe start of buf[].  Non zero values for *ppos aren't going to work\nanyway.  Test for them at the start of the function and return -EINVAL.",
+    "tags": [],
+    "title": "CVE-2026-68089 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68089"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68090",
+    "published": "2026-08-10T12:17:21.717",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndebugobjects: Plug race against a concurrent OOM disable\n\nsyzbot reported a puzzling splat:\n\n   WARNING: kernel/time/hrtimer.c:443 at stub_timer+0xa/0x20\n\nstub_timer() is installed as timer callback function in\nhrtimer_fixup_assert_init(), which is invoked when\ndebug_object_assert_init() can't find a shadow object. In that case debug\nobjects emits a warning about it before invoking the fixup.\n\nThough the provided console log lacks this warning and instead has the\nfollowing a few seconds before the splat:\n\n     ODEBUG: Out of memory. ODEBUG disabled\n\nSo the object was looked up in debug_object_assert_init() and the lookup\nfailed due a concurrent out of memory situation which disabled debug\nobjects and freed the shadow objects:\n\ndebug_object_assert_init()\n        if (!debug_objects_enabled)\n        \treturn;                         obj = alloc();\n                \t\t\t\tif (!obj) {\n\t\t\t\t\t\t\t// Out of memory\n                                                \tdebug_objects_enabled = false;\n                                                        free_objects();\n        obj = lookup_or_alloc();\n\n        // The lookup failed because the other side\n        // removed the objects, so this returns\n        // an error code as the object in question\n        // is not statically initialized\n\n\tif (!IS_ERR_OR_NULL(obj))\n        \treturn;\n        if (!obj) {\n        \tdebug_oom();\n                return;\n        }\n\n        print(...)\n",
+    "tags": [],
+    "title": "CVE-2026-68090 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68090"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68091",
+    "published": "2026-08-10T12:17:21.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nHID: wacom: stop hardware after post-start probe failures\n\nwacom_parse_and_register() starts HID hardware before registering inputs\nand initializing pad LEDs/remotes. Those later steps can fail, but their\nerror paths currently release Wacom resources without stopping the HID\nhardware.\n\nRoute post-hid_hw_start() failures through hid_hw_stop() before\nreleasing driver resources.\n\nThis issue was identified during our ongoing static-analysis research while\nreviewing kernel code.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68091 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68091"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68092",
+    "published": "2026-08-10T12:17:22.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ntime/jiffies: Register jiffies clocksource before usage\n\nTeddy reported that a XEN HVM has a long boot delay, which was bisected to\nthe recent enhancements to the negative motion detection. It turned out\nthat the jiffies clocksource is used in early boot before it is registered,\nwhich leaves the max_delta_raw field at zero. That causes the read out to\nbe clamped to the max delta of 0, which means time is not making progress.\n\nCure it by ensuring that it is initialized before its first usage in\ntimekeeping_init().",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68092 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68092"
   }
 ]
