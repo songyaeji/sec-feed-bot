@@ -544,5 +544,43 @@
     "tags": [],
     "title": "금보원 소속 화이트해커, '해킹 올림픽' 2~4위 달성",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5vRFAyeGFETjB5aDI1VXRLZDh0enJwSkEtbVlwdUtlcEh6UEd1c2pZdDhlbmVCLTI0TE93M2Nqc2Q5b0RCQWNQRjJzczVLYlVGYUNaZXVn?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-12570",
+    "published": "2026-08-10T07:16:44.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in keras-team/keras versions <= 3.15.0 allows for a denial of service (DoS) attack when loading malicious .keras model files via the keras.models.load_model() function. The H5IOStore.__getitem__ method in keras/src/saving/saving_lib.py does not validate the shape or size of datasets, leading to unbounded memory allocation. A specially crafted .keras file can exploit this flaw to trigger an out-of-memory (OOM) condition, causing the process to be terminated (exit code 137). This issue bypasses the fix for CVE-2026-0897, which only addressed a similar vulnerability in KerasFileEditor. The attack vector includes poisoned models from public repositories or malicious model registries, posing a risk to machine learning pipelines that process untrusted models.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-12570 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12570"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-13133",
+    "published": "2026-08-10T07:16:46.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability has been identified in LineInst.exe (LINE for Windows) prior to version 26.4.0, where Msftedit.dll is loaded via a relative path without a secure DLL search path, allowing a malicious DLL placed in the installer's directory to be loaded ahead of the legitimate System32 copy.",
+    "tags": [],
+    "title": "CVE-2026-13133 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13133"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=145099&kind=&sub_kind=",
+    "published": "2026-08-10T07:11:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "한강홍수통제소-KISTI, 11일 도시침수예보 고도화 업무협약 체결AI 강우분석·시뮬레이션·CCTV 침수인지 기술 단계적 연계강남역·신대방역 침수예보에 첨단기술 실증 후 현장 적용[보안뉴스 강초희 기자] 기후에너지환경부 소속 한강홍수통제소(소장 김구범)는 한국과학기술정보연구원(원장 이식)과 11일 도시침수예보체계 고도화를 위한 업무협약을 체결한다.이번 협약",
+    "tags": [],
+    "title": "한강홍수통제소, AI·슈퍼컴 활용해 도시침수예보 정확도 높인다",
+    "url": "http://www.boannews.com/media/view.asp?idx=145099&kind=&sub_kind="
   }
 ]
