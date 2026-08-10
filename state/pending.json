@@ -8479,5 +8479,33 @@
     "tags": [],
     "title": "Scans for Solana (Surfpool&#x3f;) Endpoints, (Mon, Aug 10th)",
     "url": "https://isc.sans.edu/diary/rss/33230"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-68746",
+    "published": "2026-08-05T20:17:14.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Not Failing Securely ('Failing Open') vulnerability in livebook-dev livebook allows an unauthenticated network client to obtain full access to a Livebook server that enforces identity through Livebook Teams.\n\nA Livebook Agent or App Server connected to Livebook Teams caches the identifier of the deployment group it belongs to, and resolves that identifier against a locally cached list of deployment groups on every request in order to decide whether Teams identity enforcement is active. Livebook.Hubs.TeamClient.handle_call/3 in lib/livebook/hubs/team_client.ex does not distinguish a deployment group that could not be resolved from one that was resolved with identity enforcement switched off: the clause matches only the case where a group was found with enforcement enabled, and falls through to a catch-all that reports enforcement as switched off for everything else. The two neighbouring functions that decide user and application access resolve the same identifier and treat the same unresolved result as a denial.\n\nWhen the identity status is reported as switched off, Livebook.ZTA.LivebookTeams.authenticate/3 in lib/livebook/zta/livebook_teams.ex returns empty identity metadata and allows the request to continue instead of halting it. LivebookWeb.UserPlug.build_current_user/3 merges that empty metadata into a newly built user, whose access type defaults to full access, and LivebookWeb.AuthPlug.authorized?/1 grants access to any user holding full access.\n\nThe cached identifier be",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68746 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68746"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=196955",
+    "published": "2026-08-10T16:17:48+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Attackers breached a Polish CHP plant through a Fortinet device and private APN, reaching PLCs and disrupting turbine and water treatment systems. Poland’s CERT has described a second attack on the country’s energy sector, and this one matters for a simple reason: it shows how an ordinary-looking network design can turn into a route into […]",
+    "tags": [
+      "금융"
+    ],
+    "title": "Hackers Cross From IT to OT Through a Private APN in Poland",
+    "url": "https://securityaffairs.com/196955/security/hackers-cross-from-it-to-ot-through-a-private-apn-in-poland.html"
   }
 ]
