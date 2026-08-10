@@ -752,5 +752,177 @@
     "tags": [],
     "title": "IT threat evolution in Q2 2026. Non-mobile statistics",
     "url": "https://securelist.com/malware-report-q2-2026-pc-iot-statistics/120960/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-72564",
+    "published": "2026-08-10T11:17:28.837",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper authorization vulnerability in fosrl/pangolin through v1.20.0 allows an authenticated remote attacker to authenticate to any resource in any organization by reusing an access token issued for a different resource. The server/routers/resource/authWithAccessToken.ts handler calls verifyResourceAccessToken() without passing the target resourceId, so a valid token scoped to resource X in organization A passes verification for resource Y in organization B.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72564 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72564"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72565",
+    "published": "2026-08-10T11:17:28.973",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL injection vulnerability in Tencent APIJSON through 8.1.8 allows unauthenticated remote attackers to bypass per-table access control and read arbitrary database tables via the Map-form @having operator. The APIJSONORM library's AbstractSQLConfig.java applies the per-role allow-list check only on the String form of @having but not on the Map form, allowing a guest user to inject raw SQL fragments and read tables that are configured with get:[] (empty, meaning no role can read them).",
+    "tags": [],
+    "title": "CVE-2026-72565 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72565"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72567",
+    "published": "2026-08-10T11:17:29.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper path validation vulnerability in AsyncFuncAI/deepwiki-open through commit 16f35a0 allows unauthenticated remote attackers to write to or delete arbitrary files with root privileges. The api/api.py wiki-cache endpoint constructs file paths from user-controlled owner, repo, and repo_type fields without sanitization, enabling path traversal. A second unauthenticated endpoint creates directories, and combined these primitives allow arbitrary file write and delete as the root process user.",
+    "tags": [],
+    "title": "CVE-2026-72567 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72567"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-72569",
+    "published": "2026-08-10T11:17:29.503",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A path traversal vulnerability in cube-root/directory-serve through 1.3.7 allows an unauthenticated remote attacker to delete arbitrary files outside the intended served directory when the application is run with the --delete option. The lib/middleware/file-remove.js middleware does not sanitize the req.query.file parameter before using it to construct file system paths, enabling directory traversal via ../ sequences.",
+    "tags": [],
+    "title": "CVE-2026-72569 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72569"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-72575",
+    "published": "2026-08-10T11:17:30.277",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper authorization vulnerability in daptin through v0.12.34 allows unauthenticated remote attackers to read, create, update, and delete usergroup records. The permission check functions (CanRead, CanPeek, CanCreate, CanUpdate, CanDelete, CanRefer) in server/permission/permission.go return true whenever p.UserId equals the requesting userId, but fail to reject the null/zero reference — unlike CanExecute, which explicitly guards it. Since usergroup table rows have no user_account_id and are loaded with a null owner, an unauthenticated guest whose session UserId is null gains full CRUD access to all usergroup objects.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-72575 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72575"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72577",
+    "published": "2026-08-10T11:17:30.533",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Multiple vulnerabilities in NASA fprime-gds through 3.4.3 allow an unauthenticated remote attacker to achieve arbitrary code execution on the ground station host and inject arbitrary commands to connected spacecraft. The Flask application in src/fprime_gds/flask/app.py applies no authentication to any endpoint. A path traversal in src/fprime_gds/flask/updown.py allows reading and writing arbitrary files outside the upload directory. A hardcoded secret key (CWE-321) in the application enables session forgery. Chained together, these vulnerabilities allow complete compromise of the ground data system and any spacecraft under its control.",
+    "tags": [],
+    "title": "CVE-2026-72577 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72577"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72580",
+    "published": "2026-08-10T11:17:30.897",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability in duhow/xiaoai-patch through commit fb07049 allows a remote attacker to execute arbitrary system commands on Xiaomi smart speakers running the patch. The /mute and /unmute endpoint handlers in api/main.py pass the user-supplied silent query parameter directly to os.system() without sanitization, enabling command injection via shell metacharacters.",
+    "tags": [],
+    "title": "CVE-2026-72580 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72580"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72589",
+    "published": "2026-08-10T11:17:32.003",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability in alseambusher/crontab-ui through 0.4.2 allows an unauthenticated remote attacker to execute arbitrary system commands by importing a crafted crontab database file. The POST /import endpoint accepts arbitrary .db files and overwrites the application database without validation. The hook field value is embedded directly into a shell command by crontab.js makeCommand() without sanitization, so a malicious hook value in the imported file results in command execution on the next cron execution cycle.",
+    "tags": [],
+    "title": "CVE-2026-72589 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72589"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72590",
+    "published": "2026-08-10T11:17:32.123",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability in alseambusher/crontab-ui through 0.4.2 allows an unauthenticated remote attacker to inject arbitrary cron job entries by sending a crafted GET request to /crontab with URL-encoded newlines in the env_vars parameter. The handler appends the env_vars value directly to the crontab file string as '${envVars}\\n' without stripping newline characters, enabling an attacker to insert arbitrary cron expressions that execute attacker-controlled commands.",
+    "tags": [],
+    "title": "CVE-2026-72590 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72590"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72592",
+    "published": "2026-08-10T11:17:32.370",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unrestricted file upload vulnerability in dulldusk/phpfm through 1.8.0 allows an unauthenticated remote attacker to execute arbitrary PHP code on the server. The application ships with an empty upload extension filter ($upload_ext_filter = array()) and no authentication enabled by default (auth_pass is empty string), allowing an unauthenticated attacker to upload a PHP webshell and execute it by browsing to the uploaded path.",
+    "tags": [],
+    "title": "CVE-2026-72592 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72592"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72593",
+    "published": "2026-08-10T11:17:32.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A missing authentication vulnerability in dulldusk/phpfm through 1.8.0 allows an unauthenticated remote attacker to access the full file manager functionality including reading, writing, deleting, and uploading files anywhere on the server filesystem. The authentication check in index.php at line 637 evaluates 'if ($auth_pass == '' || $loggedon==$auth_pass)', and since auth_pass is an empty string in the default configuration, the condition always evaluates to true and grants full access without credentials.",
+    "tags": [],
+    "title": "CVE-2026-72593 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72593"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72573",
+    "published": "2026-08-10T11:17:30.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An OS command injection vulnerability in 4xmen/pm2panel (all versions) allows an authenticated remote attacker to execute arbitrary system commands on the host. The pm2panel.js handler at line 188 passes the unsanitized req.query.id parameter directly to exec('pm2 restart ' + id) without input validation or shell escaping, enabling command chaining via semicolons or other shell metacharacters.",
+    "tags": [],
+    "title": "CVE-2026-72573 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72573"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72578",
+    "published": "2026-08-10T11:17:30.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A cross-site request forgery (CSRF) vulnerability in FreePBX Framework 17.0 allows an unauthenticated remote attacker to perform administrative actions on behalf of an authenticated administrator. The /admin/ajax.php dispatcher in amp_conf/htdocs/admin/libraries/BMO/Ajax.class.php does not implement CSRF tokens; its only protection is a Referer header check that is bypassed when the request is sent without a Referer header or from a same-site context, enabling attackers to trigger admin operations by luring an administrator to a malicious page.",
+    "tags": [],
+    "title": "CVE-2026-72578 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72578"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-72581",
+    "published": "2026-08-10T11:17:31.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A server-side request forgery (SSRF) vulnerability in duhow/xiaoai-patch through commit fb07049 allows a remote attacker to make the Xiaomi smart speaker perform HTTP requests to arbitrary internal or external URLs. The /auth endpoint in api/main.py uses the user-supplied url POST parameter to redirect to a Home Assistant instance without validating the destination URL, enabling internal network scanning and access to internal services.",
+    "tags": [],
+    "title": "CVE-2026-72581 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72581"
   }
 ]
