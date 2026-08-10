@@ -9222,5 +9222,231 @@
     "tags": [],
     "title": "CVE-2026-20002 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20002"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-14450",
+    "published": "2026-08-10T21:17:19.487",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the MaaS API. This vulnerability allows any pod within the cluster to bypass the Kuadrant AuthPolicy gateway by forging HTTP headers, specifically `X-MaaS-Username` and `X-MaaS-Group`, which are trusted verbatim. This lack of first-party authentication enables an attacker to gain unauthorized access and escalate privileges. The concrete consequences include the ability to mint Kubernetes ServiceAccount tokens in other tenants' namespaces, revoke API keys, and exfiltrate sensitive model access configuration.",
+    "tags": [],
+    "title": "CVE-2026-14450 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14450"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-18948",
+    "published": "2026-08-10T21:17:21.290",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in Feast. The system improperly deserializes user-defined functions (UDFs) stored in its registry, which are serialized using the 'dill' library. This allows a remote attacker to store a malicious UDF, leading to unauthenticated arbitrary code execution on the feature server in default configurations. An authenticated attacker can also achieve arbitrary code execution on the registry server by bypassing authorization checks during deserialization. This vulnerability can result in cross-tenant data access and lateral movement within the system.",
+    "tags": [],
+    "title": "CVE-2026-18948 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18948"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72911",
+    "published": "2026-08-10T21:17:25.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 15.118.0 and 16.29.0, the validate_template and render_template calls in erpnext/accounts/doctype/process_statement_of_accounts/process_statement_of_accounts.py render subject, body, and pdf_name fields with unrestricted globals including frappe.utils, allowing an authenticated user with a common operational role to inject template expressions, execute arbitrary server-side code, and read data across the application. This issue is fixed in versions 15.118.0 and 16.29.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72911 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72911"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-13717",
+    "published": "2026-08-10T21:17:19.343",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Red Hat OpenShift AI (RHOAI) MaaS Gateway. Improper configuration of the Gateway in a model-serving context allows a standard user with low privileges to intercept, read, log, and alter all MaaS model traffic. This includes sensitive information such as access keys, input prompts, and outputs, leading to significant information disclosure and data tampering.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13717 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13717"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15467",
+    "published": "2026-08-10T21:17:19.617",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the trustyai-service-operator's LMEvalJob controller. An authenticated user within the cluster can exploit this vulnerability by configuring a sidecar container to bypass existing security policies. This allows the user to enable and execute untrusted remote code, leading to arbitrary code execution within the cluster.",
+    "tags": [],
+    "title": "CVE-2026-15467 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15467"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-15581",
+    "published": "2026-08-10T21:17:19.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the TrustyAI Service (TAS) deployment. This vulnerability allows any pod on the cluster network to bypass authentication and directly access the TAS backend API. An attacker can exploit this to read, tamper with, or delete monitoring data and configurations, and inject arbitrary data into the service, potentially disrupting tenant operations.",
+    "tags": [],
+    "title": "CVE-2026-15581 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15581"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-18608",
+    "published": "2026-08-10T21:17:19.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Data Science Pipelines Operator (DSPO). The operator's ClusterRole, which defines its permissions, includes extensive privileges beyond what is necessary for its operation. These excessive permissions, such as the ability to execute commands within pods and manage cluster-wide roles, could be exploited. If the DSPO pod were compromised, an attacker could leverage these privileges to gain full administrative control over the entire Kubernetes cluster.",
+    "tags": [],
+    "title": "CVE-2026-18608 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18608"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18617",
+    "published": "2026-08-10T21:17:20.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Data Science Pipelines Operator (DSPO). A namespace editor can exploit a vulnerability in the spec.database.customExtraParams field, which allows for the injection of dangerous parameters into the MySQL Data Source Name (DSN) string. By manipulating these parameters, an attacker can enable LOCAL INFILE functionality and exfiltrate sensitive files, such as the service account token, from the operator pod. This can lead to privilege escalation, allowing a namespace editor to gain cluster-admin privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18617 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18617"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-18947",
+    "published": "2026-08-10T21:17:21.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Feast. An authorization bypass vulnerability exists in the /materialize and /materialize-incremental endpoints. By sending a specially crafted request that omits the feature_views field, an attacker can bypass intended permission checks. This allows an unauthenticated remote attacker, or any authenticated user, to trigger a full re-materialization of all feature views. The consequence is a Denial of Service (DoS) due to data corruption and significant resource consumption across all tenants.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18947 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18947"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18949",
+    "published": "2026-08-10T21:17:21.443",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in odh-dashboard. This vulnerability allows an attacker, who has compromised the dashboard's Service Account (SA) token, to exploit overly broad permissions granted to the SA. This enables the attacker to escalate their privileges to cluster-administrator level, gain access to sensitive data like credentials and keys across the entire cluster, and disrupt multi-tenant isolation.",
+    "tags": [],
+    "title": "CVE-2026-18949 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18949"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18950",
+    "published": "2026-08-10T21:17:21.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in odh-dashboard. An authenticated user of the dashboard can exploit a vulnerability related to how RoleBindings are created. The system does not properly validate the `roleRef` field, allowing a user to specify an arbitrary role, including highly privileged ones like `cluster-admin`. This can lead to privilege escalation, where an attacker gains unauthorized elevated access within their namespace and potentially persistent control over the system.",
+    "tags": [],
+    "title": "CVE-2026-18950 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18950"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18951",
+    "published": "2026-08-10T21:17:21.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Red Hat OpenShift AI (RHOAI) overlay for the training operator. The RHOAI overlay incorrectly aggregates `trainjobs` management permissions into the native Kubernetes `edit ClusterRole`. This allows any user with `edit ClusterRole` permissions in a namespace to create, modify, and delete `TrainJobs`. When combined with a separate vulnerability (TRN-01) that permits arbitrary pod configurations, a remote attacker with namespace editor privileges could exploit this to escalate privileges, potentially leading to arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-18951 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18951"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18982",
+    "published": "2026-08-10T21:17:21.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the RHOAI training-operator. This vulnerability allows a user with standard edit or admin roles in any Kubernetes namespace to escalate their privileges. Through the creation of training jobs, an attacker can impersonate service accounts, access the host filesystem, and potentially execute arbitrary code remotely. This issue arises from the aggregation of training job permissions onto native Kubernetes edit and admin ClusterRoles, coupled with unrestricted PodTemplateSpec passthrough.",
+    "tags": [],
+    "title": "CVE-2026-18982 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18982"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-72903",
+    "published": "2026-08-10T21:17:24.980",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Tabby (formerly Terminus) is a highly configurable terminal emulator. Prior to 1.0.235, a malicious SFTP server can return a backslash traversal filename through entry.name. In tabby-ssh/src/session/sftp.ts, SFTPSession.readdir() and _makeFile() use POSIX path processing that preserves the backslashes as ordinary filename characters. In tabby-ssh/src/components/sftpPanel.component.ts, downloadFolderRecursive() propagates item.name into the local relative path. In tabby-electron/src/services/platform.service.ts, ElectronDirectoryDownload.createFile() passes that path to Windows-native path.join(), and in tabby-electron/src/sftpContextMenu.ts, EditSFTPContextMenu.edit() passes item.name to path.join() for the temporary edit path. Windows interprets the preserved backslashes and parent-directory components as traversal, allowing attacker-controlled content to be created or overwritten outside the selected download directory or temporary edit directory. This issue is fixed in version 1.0.235.",
+    "tags": [],
+    "title": "CVE-2026-72903 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72903"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-72904",
+    "published": "2026-08-10T21:17:25.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Firecrawl turns entire websites into LLM-ready markdown or structured data. Prior to 2.11.32, a critical arbitrary file read vulnerability exists in Firecrawl's extraction functionality due to unsafe schema dereferencing of user-supplied JSON schemas in apps/api/src/lib/extract/helpers/dereference-schema.ts. The affected code invokes the json-schema-ref-parser dependency with default resolver settings, allowing external and local file references to be resolved during schema processing. An authenticated attacker can supply a malicious schema containing a $ref within default, const, or enum fields that are not traversed by AJV validation. By triggering a dereference error, file contents from the extract worker filesystem may be included in persisted error messages returned through the extraction API, enabling arbitrary file reads and SSRF against internal or external HTTP endpoints. This issue is fixed in version 2.11.32.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-72904 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72904"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73030",
+    "published": "2026-08-10T21:17:26.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "unearth through 0.18.2, fixed in commit 6c78164, contains a path traversal vulnerability in the is_within_directory function that fails to normalize paths before validation, allowing ../ sequences to bypass directory containment checks. Attackers can supply malicious tar archives with symlink members or traversal sequences to write files to arbitrary filesystem locations accessible to the process.",
+    "tags": [],
+    "title": "CVE-2026-73030 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73030"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/",
+    "published": "2026-08-10T21:12:10+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A threat actor compromised the upstream infrastructure of BdThemes, a developer of premium WordPress web-design tools, and modified a remote JSON feed delivered to administrators' browsers to create rogue admin accounts. [...]",
+    "tags": [],
+    "title": "BdThemes plugins supply-chain hack creates rogue WordPress admins",
+    "url": "https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiqwFBVV95cUxOS3E4V2VYRG9VWDg0dGtXSmt2QnpUeGMxV1JkN0VxYi0tbTFtT2IzdVVTdnpydnFXSzRuaHZBRW12TmlsODZ6ZEJEdmVXZ041QXFuUHZKUUlDUHlNa180dS1BZExCU2pORGJObEdHVkl4UnFsWTlLUUEwcUc2MWpiT0k2dVBLSHlFY2hCZloyRDR2dGNzZUJaWXhIaFYyaUpYR2hxNU1xRHZwSkU",
+    "published": "2026-08-10T18:37:31+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI는 '심각한 사이버 보안 위험'으로 인해 새로운 AI 모델 개발을 일시적으로 중단했습니다.",
+    "tags": [],
+    "title": "OpenAI는 '심각한 사이버 보안 위험'으로 인해 새로운 AI 모델 개발을 일시적으로 중단했습니다.",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOS3E4V2VYRG9VWDg0dGtXSmt2QnpUeGMxV1JkN0VxYi0tbTFtT2IzdVVTdnpydnFXSzRuaHZBRW12TmlsODZ6ZEJEdmVXZ041QXFuUHZKUUlDUHlNa180dS1BZExCU2pORGJObEdHVkl4UnFsWTlLUUEwcUc2MWpiT0k2dVBLSHlFY2hCZloyRDR2dGNzZUJaWXhIaFYyaUpYR2hxNU1xRHZwSkU?oc=5"
   }
 ]
