@@ -4470,5 +4470,46 @@
     ],
     "title": "When Credentials Are No Longer Enough: Device Trust in the AI Era",
     "url": "https://www.bleepingcomputer.com/news/security/when-credentials-are-no-longer-enough-device-trust-in-the-ai-era/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-66756",
+    "published": "2026-07-30T20:18:13.877",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Protection of Alternate Path vulnerability in Apache Tika.\n\nThis issue affects Apache Tika: from 4.0.0-alpha-1 before 4.0.0-beta-1.\n\nUsers are recommended to upgrade to version 4.0.0-beta-1, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-66756 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66756"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-63106",
+    "published": "2026-08-10T14:17:25.633",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ReadyEcommerce before 4.5.2 contains an unauthenticated SQL injection vulnerability in the product listing API where the rating parameter from the products endpoint is concatenated directly into a MySQL HAVING clause without parameterization in ProductController.php. Attackers can perform time-based blind SQL injection through the unsanitized rating parameter to extract the full database contents, including user credentials and administrator password hashes, with potential additional file system access due to the database connection running as root.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63106 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63106"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/kimsuky-builds-offline-ai-stack-that.html",
+    "published": "2026-08-10T13:19:58+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "North Korea's state hackers are no longer content to type prompts into public chatbots. One of the country's main espionage groups has begun running artificial intelligence (AI) offline on its own servers, connecting document-search tools to files in its possession, and collecting the software parts needed to build AI into its malware. South Korean security firm Genians says it uncovered the",
+    "tags": [
+      "APT",
+      "피싱"
+    ],
+    "title": "Kimsuky Builds Offline AI Stack to Boost Phishing and Automate Malware Development",
+    "url": "https://thehackernews.com/2026/08/kimsuky-builds-offline-ai-stack-that.html"
   }
 ]
