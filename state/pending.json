@@ -354,5 +354,55 @@
     ],
     "title": "FBI, South Korea warn of Gunra ransomware gang targeting critical infrastructure",
     "url": "https://therecord.media/ransomware-south-korea-fbi-gunra"
+  },
+  {
+    "category": "high",
+    "cvss": 6.8,
+    "id": "CVE-2024-0565",
+    "published": "2024-01-15T20:15:43.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An out-of-bounds memory read flaw was found in receive_encrypted_standard in fs/smb/client/smb2ops.c in the SMB Client sub-component in the Linux Kernel. This issue occurs due to integer underflow on the memcpy length, leading to a denial of service.",
+    "tags": [],
+    "title": "CVE-2024-0565 (CVSS 6.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0565"
+  },
+  {
+    "category": "high",
+    "cvss": 6.7,
+    "id": "CVE-2024-0775",
+    "published": "2024-01-22T13:15:25.137",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free flaw was found in the __ext4_remount in fs/ext4/super.c in ext4 in the Linux kernel. This flaw allows a local user to cause an information leak problem while freeing the old quota file names before a potential failure, leading to a use-after-free.",
+    "tags": [],
+    "title": "CVE-2024-0775 (CVSS 6.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0775"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-72917",
+    "published": "2026-08-10T22:17:10.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. From 1.0.0 to 1.15.0, AnythingLLM's unauthenticated account-recovery flow in server/utils/PasswordRecovery/index.js uses recoverAccount() to deduplicate the raw recoveryCodes values before trimming them, so one valid code submitted twice with different surrounding whitespace can satisfy the two-code check. Each normalized value can also match the same stored hash instead of consuming a distinct hash. An attacker who knows the target username and one recovery code can call POST /api/system/recover-account in multi-user mode, receive a password-reset token, and use POST /api/system/reset-password to take over the account, including an administrator account.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-72917 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72917"
+  },
+  {
+    "author": "Chris Navarrete, Sai Sathvik Ruppa and Haozhe Zhang",
+    "category": "research",
+    "id": "https://unit42.paloaltonetworks.com/?p=185207",
+    "published": "2026-08-10T22:00:02+00:00",
+    "severity": "info",
+    "source": "Unit 42",
+    "summary": "Analysis of the Aeternum botnet loader, a threat leveraging Polygon blockchain smart contracts for decentralized C2 infrastructure and payload execution. The post The Permanent Threat: Analyzing Aeternum’s Blockchain-Based C2 Operations and Communications appeared first on Unit 42 .",
+    "tags": [],
+    "title": "The Permanent Threat: Analyzing Aeternum’s Blockchain-Based C2 Operations and Communications",
+    "url": "https://unit42.paloaltonetworks.com/aeternum-blockchain-c2-analysis/"
   }
 ]
