@@ -4444,5 +4444,31 @@
     "tags": [],
     "title": "British ‘Com’ member who abused more than 100 girls worldwide jailed for two years",
     "url": "https://therecord.media/british-com-member-abuse-jailed-two-years"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-4946",
+    "published": "2026-03-29T20:16:12.723",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ghidra versions prior to 12.0.3 improperly process annotation directives embedded in automatically extracted binary data, resulting in arbitrary command execution when an analyst interacts with the UI. Specifically, the @execute annotation (which is intended for trusted, user-authored comments) is also parsed in comments generated during auto-analysis (such as CFStrings in Mach-O binaries). This allows a crafted binary to present seemingly benign clickable text which, when clicked, executes attacker-controlled commands on the analyst’s machine.",
+    "tags": [],
+    "title": "CVE-2026-4946 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4946"
+  },
+  {
+    "author": "Sponsored by Specops Software",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/when-credentials-are-no-longer-enough-device-trust-in-the-ai-era/",
+    "published": "2026-08-10T14:01:11+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "AI is making phishing, credential theft, and social engineering faster and more efficient, while traditional trust signals such as passwords, MFA, IP reputation, and geolocation become easier to bypass. Specops explains why organizations are increasingly adding device trust to their Zero Trust strategies. [...]",
+    "tags": [
+      "피싱"
+    ],
+    "title": "When Credentials Are No Longer Enough: Device Trust in the AI Era",
+    "url": "https://www.bleepingcomputer.com/news/security/when-credentials-are-no-longer-enough-device-trust-in-the-ai-era/"
   }
 ]
