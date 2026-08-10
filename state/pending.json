@@ -8931,5 +8931,284 @@
     "tags": [],
     "title": "CVE-2026-21662 (CVSS 9.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21662"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-23600",
+    "published": "2026-03-02T15:16:32.697",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A remote authentication bypass vulnerability \n\n exists in HPE AutoPass License Server (APLS).",
+    "tags": [],
+    "title": "CVE-2026-23600 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23600"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-15038",
+    "published": "2026-08-09T06:17:16.393",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The InfiniteWP Client WordPress plugin before 1.13.6 does not properly verify the site-connection state and the authenticity of requests to its remote-management endpoint on WordPress Multisite installations, allowing unauthenticated attackers to bind their own key, hijack an administrator session, and take over the entire network, leading to remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15038 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15038"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-18473",
+    "published": "2026-08-09T06:19:05.773",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The WP Directory Kit WordPress plugin before 1.5.5 does not properly sanitise and escape a parameter before using it in a SQL statement, leading to a SQL injection exploitable by unauthenticated users.",
+    "tags": [],
+    "title": "CVE-2026-18473 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18473"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-19053",
+    "published": "2026-08-10T07:16:51.047",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The ProSolution WP Client WordPress plugin before 2.0.6 does not sanitise and escape a parameter before using it in a SQL statement reachable by unauthenticated visitors, leading to a blind SQL injection.",
+    "tags": [],
+    "title": "CVE-2026-19053 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19053"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72876",
+    "published": "2026-08-10T20:17:33.967",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, swarm.getNodes, swarm.getNodeInfo, swarm.getNodeApps, and swarm.getAppInfos in apps/dokploy/server/api/routers/swarm.ts accept another organization’s serverId without an activeOrganizationId ownership check, and getNodeInfo in packages/server/src/services/docker.ts interpolates nodeId into execAsyncRemote, allowing a caller with server:read permission to execute arbitrary commands as the configured SSH user on another tenant’s server. This issue is fixed in version 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72876 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72876"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-72877",
+    "published": "2026-08-10T20:17:34.133",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the dockerImage field is interpolated without quoting into shell commands in buildRemoteDocker() in packages/server/src/utils/providers/docker.ts and is validated only as an optional string. An authenticated user with application create or update permission can use shell command substitution in dockerImage to execute arbitrary commands on the local build host or a remote SSH build target, exposing host secrets and other projects. This issue is fixed in version 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72877 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72877"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-72878",
+    "published": "2026-08-10T20:17:34.277",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, Dokploy's backup and restore pipeline constructs shell commands by directly interpolating user-controlled database fields into bash -c \"...\" and sh -c \"...\" strings, then executes them via child_process.exec(). An authenticated admin/owner can inject arbitrary OS commands that execute on the host machine running Dokploy (not just inside a container). This vulnerability is fixed in 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72878 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72878"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72880",
+    "published": "2026-08-10T20:17:34.560",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the apiCreateCertificate schema in packages/server/src/db/schema/certificate.ts accepts a client-supplied certificatePath, and packages/server/src/services/certificate.ts joins that value to the certificate root without confinement. An authenticated user with certificate create or delete permission can use certificatePath to write attacker-controlled certificate content outside the intended directory or delete an out-of-root directory. This vulnerability is fixed in 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72880 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72880"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72882",
+    "published": "2026-08-10T20:17:34.860",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). In 0.28.8 and earlier, an authenticated user who can create or update file mounts for a service can inject shell metacharacters into filePath, causing Dokploy to execute attacker-controlled commands on the configured remote managed server over SSH. In the default deployment model, this yields direct remote host RCE from the web interface.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72882 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72882"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72886",
+    "published": "2026-08-10T20:17:35.423",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). From 0.29.2 until 0.29.13, schedule.create and schedule.update in apps/dokploy/server/api/routers/schedule.ts derive serviceId from applicationId or composeId and execute the owner/admin host-schedule gate only in the alternative branch, allowing a member with access to one application to attach its applicationId to a dokploy-server schedule and run a supplied script as root through schedule.runManually. This issue is fixed in version 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72886 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72886"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72901",
+    "published": "2026-08-10T20:17:35.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, Dokploy allows an authenticated low-privilege member to execute arbitrary commands on the control-plane host because the volumeName field accepted by volumeBackup.create and volumeBackup.runManually is interpolated without quoting in packages/server/src/utils/volume-backups/backup.ts and executed through child_process.exec, with Docker socket access making execution host/root-equivalent. This issue is fixed in version 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72901 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72901"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72902",
+    "published": "2026-08-10T20:17:35.707",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, Dokploy allows an authenticated user to execute arbitrary commands on a local or SSH-connected target server because registry.testRegistry and registry.testRegistryById in apps/dokploy/server/api/routers/registry.ts interpolate the password field into an execAsyncRemote shell command instead of using safeDockerLoginCommand. This issue is fixed in version 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72902 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72902"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2025-13444",
+    "published": "2026-01-13T15:15:57.913",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OS Command Injection Remote Code Execution Vulnerability in API in Progress LoadMaster allows an authenticated attacker with “User Administration” permissions to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in the API input parameters",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-13444 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13444"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-16578",
+    "published": "2026-08-08T07:17:10.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Admin Safety Guard — Login Security, Limit Logins, 2FA & Brute Force Protection WordPress plugin before 1.4.0 does not perform any capability check on one of its REST API endpoints, allowing unauthenticated attackers to retrieve the full list of registered users including their usernames, email addresses, roles, and two-factor authentication enrollment status.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-16578 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16578"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17017",
+    "published": "2026-08-09T06:18:17.940",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The CubeWP Framework WordPress plugin before 1.1.31 does not properly sanitize and escape a parameter before using it in a SQL statement through an AJAX action, and does not include a capability check on that action, allowing users with Subscriber-level access and above to perform SQL injection attacks.",
+    "tags": [],
+    "title": "CVE-2026-17017 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17017"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-14886",
+    "published": "2026-08-10T20:17:26.683",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vault Enterprise's identity entity batch-delete endpoint is vulnerable to a cross-namespace authorization bypass that may allow an authenticated caller in one namespace to permanently delete the storage backing of entities belonging to another namespace. This vulnerability (CVE-2026-14886) is fixed in Vault Enterprise 2.0.4, 1.21.9, 1.20.14 and 1.19.20.",
+    "tags": [],
+    "title": "CVE-2026-14886 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14886"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-69112",
+    "published": "2026-08-10T20:17:31.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hugging Face Accelerate through 1.14.0 contains a path traversal vulnerability in load_checkpoint_in_model and load_checkpoint_and_dispatch functions that fail to sanitize weight_map entries from sharded checkpoint indexes. Attackers can supply relative paths with ../ sequences or absolute paths to read arbitrary files, or point shard entries at named pipes to cause indefinite blocking and denial of service.",
+    "tags": [],
+    "title": "CVE-2026-69112 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69112"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-69118",
+    "published": "2026-08-10T20:17:32.310",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cachet through 2.4.1 contains a server-side template injection vulnerability in incident template rendering that allows authenticated users to execute arbitrary PHP code. Attackers can create malicious incident templates with Blade directives or Twig filters that execute system commands when incidents are created, achieving remote code execution as the web server process.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-69118 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69118"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71965",
+    "published": "2026-08-10T20:17:32.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CyberPanel 2.4.3, fixed in commit eca0c3c, contains an authenticated remote code execution vulnerability in the remote backup feature that allows authenticated attackers to gain root-level SSH access by supplying a malicious remote server address. Attackers can exploit the unverified SSH public key retrieval process to write an attacker-controlled public key directly to /root/.ssh/authorized_keys, granting persistent root access to the host system.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71965 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71965"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-71966",
+    "published": "2026-08-10T20:17:32.723",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CyberPanel 2.4.3, fixed in commit eca0c3c, contains an authenticated command injection vulnerability in the remote backup transfer feature that allows authenticated attackers to execute arbitrary OS commands by controlling a remote server's API response. Attackers can inject malicious commands through a crafted directory name in the remote server's API response, which bypasses security middleware validation and is passed unsanitized to the OS command execution function.",
+    "tags": [],
+    "title": "CVE-2026-71966 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71966"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72875",
+    "published": "2026-08-10T20:17:33.830",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, settings.readTraefikFile in apps/dokploy/server/api/routers/settings.ts passes a path accepted by apiReadTraefikConfig to readConfigInPath in packages/server/src/utils/traefik/application.ts, where configPath is interpolated into execAsyncRemote as cat ${configPath}, allowing a user with traefikFiles.read permission to execute arbitrary commands on a managed server through shell metacharacters. This issue is fixed in version 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72875 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72875"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72883",
+    "published": "2026-08-10T20:17:35.003",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, the WebSocket handlers in apps/dokploy/server/wss/terminal.ts, apps/dokploy/server/wss/docker-container-terminal.ts, apps/dokploy/server/wss/docker-container-logs.ts, and apps/dokploy/server/wss/docker-stats.ts validate organization membership but do not enforce checkServiceAccess, accessedServerIds, or accessedServices, allowing an authenticated organization member to obtain root terminal access and read logs or statistics for restricted servers and services. This issue is fixed in version 0.29.13.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72883 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72883"
   }
 ]
