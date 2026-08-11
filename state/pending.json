@@ -2095,5 +2095,342 @@
     "tags": [],
     "title": "DDoS attacks over 1 Tbps surged fivefold in the second quarter",
     "url": "https://www.bleepingcomputer.com/news/security/ddos-attacks-over-1-tbps-surged-fivefold-in-the-second-quarter/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-0284",
+    "published": "2026-07-09T19:17:01.140",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An XML injection vulnerability in the Large Scale VPN (LSVPN) functionality of Palo Alto Networks PAN-OS® software enables an unauthenticated attacker with network access to inject malicious XML content, potentially leading to information disclosure or corruption of internal LSVPN satellite data.\n\nPanorama, Cloud NGFW, and Prisma® Access are not impacted by this vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-0284 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0284"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-18972",
+    "published": "2026-08-11T13:17:56.997",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authenticated attacker can spoof another GUI user's identity by sending their request with the custom header \\\"Grpc-Metadata-USER\\\". This can lead to an account takeover attack from a user with low privileges to administrator.",
+    "tags": [],
+    "title": "CVE-2026-18972 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18972"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-58115",
+    "published": "2026-08-11T13:19:00.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been identified in SIMATIC IoT2050 Advanced (6ES7647-0BA00-1YA2) (All versions < V4.3.4.1 running Industrial OS with Node-RED installed). Affected devices do not enforce authentication on the Node-RED HTTP interface, allowing unauthenticated access to programming nodes that are capable of executing system commands on the server.\r\nThis could allow an unauthenticated remote attacker to create malicious flows through the HTTP interface in order to execute arbitrary code on the underlying server with maximum privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58115 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58115"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-72748",
+    "published": "2026-08-11T13:19:05.813",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "AVideo contains an unauthenticated arbitrary file write vulnerability in the aVideoEncoderChunk.json.php endpoint that allows remote attackers to write up to 4 GB of arbitrary content to the server filesystem via HTTP PUT requests without authentication. Attackers can exhaust disk space causing denial of service, poison the video encoding pipeline, or chain this with local file inclusion to achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72748 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72748"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-45969",
+    "published": "2022-01-05T23:15:08.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in AhciBusDxe in Insyde InsydeH2O with kernel 5.1 before 05.16.25, 5.2 before 05.26.25, 5.3 before 05.35.25, 5.4 before 05.43.25, and 5.5 before 05.51.25. A vulnerability exists in the SMM (System Management Mode) branch that registers a SWSMI handler that does not sufficiently check or validate the allocated buffer pointer (the CommBuffer+8 location).",
+    "tags": [],
+    "title": "CVE-2021-45969 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-45969"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-45970",
+    "published": "2022-01-05T23:15:08.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in IdeBusDxe in Insyde InsydeH2O with kernel 5.1 before 05.16.25, 5.2 before 05.26.25, 5.3 before 05.35.25, 5.4 before 05.43.25, and 5.5 before 05.51.25. A vulnerability exists in the SMM (System Management Mode) branch that registers a SWSMI handler that does not sufficiently check or validate the allocated buffer pointer (the status code saved at the CommBuffer+4 location).",
+    "tags": [],
+    "title": "CVE-2021-45970 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-45970"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-45971",
+    "published": "2022-01-06T00:15:07.910",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in SdHostDriver in Insyde InsydeH2O with kernel 5.1 before 05.16.25, 5.2 before 05.26.25, 5.3 before 05.35.25, 5.4 before 05.43.25, and 5.5 before 05.51.25. A vulnerability exists in the SMM (System Management Mode) branch that registers a SWSMI handler that does not sufficiently check or validate the allocated buffer pointer (CommBufferData).",
+    "tags": [],
+    "title": "CVE-2021-45971 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-45971"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2022-24069",
+    "published": "2022-02-03T00:15:07.723",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in AhciBusDxe in Insyde InsydeH2O with kernel 5.0 before 05.08.41, 5.1 before 05.16.29, 5.2 before 05.26.29, 5.3 before 05.35.29, 5.4 before 05.43.29, and 5.5 before 05.51.29. An SMM callout vulnerability allows an attacker to hijack the execution flow of code running in System Management Mode. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2022-24069 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24069"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-33627",
+    "published": "2022-02-03T02:15:06.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in Insyde InsydeH2O Kernel 5.0 before 05.09.11, 5.1 before 05.17.11, 5.2 before 05.27.11, 5.3 before 05.36.11, 5.4 before 05.44.11, and 5.5 before 05.52.11 affecting FwBlockServiceSmm. Software SMI services that use the Communicate() function of the EFI_SMM_COMMUNICATION_PROTOCOL do not check whether the address of the buffer is valid, which allows use of SMRAM, MMIO, or OS kernel addresses.",
+    "tags": [],
+    "title": "CVE-2021-33627 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-33627"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-41837",
+    "published": "2022-02-03T02:15:07.033",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in AhciBusDxe in the kernel 5.0 through 5.5 in Insyde InsydeH2O. Because of an Untrusted Pointer Dereference that causes SMM memory corruption, an attacker may be able to write fixed or predictable data to SMRAM. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2021-41837 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41837"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-41838",
+    "published": "2022-02-03T02:15:07.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in SdHostDriver in the kernel 5.0 through 5.5 in Insyde InsydeH2O. There is an SMM callout that allows an attacker to access the System Management Mode and execute arbitrary code. This occurs because of a Numeric Range Comparison Without a Minimum Check.",
+    "tags": [],
+    "title": "CVE-2021-41838 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41838"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-41839",
+    "published": "2022-02-03T02:15:07.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in NvmExpressDxe in the kernel 5.0 through 5.5 in Insyde InsydeH2O. Because of an Untrusted Pointer Dereference that causes SMM memory corruption, an attacker may be able to write fixed or predictable data to SMRAM. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2021-41839 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41839"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-41840",
+    "published": "2022-02-03T02:15:07.167",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in NvmExpressDxe in the kernel 5.0 through 5.5 in Insyde InsydeH2O. There is an SMM callout that allows an attacker to access the System Management Mode and execute arbitrary code. This occurs because of Inclusion of Functionality from an Untrusted Control Sphere.",
+    "tags": [],
+    "title": "CVE-2021-41840 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41840"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-41841",
+    "published": "2022-02-03T02:15:07.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in AhciBusDxe in the kernel 5.0 through 5.5 in Insyde InsydeH2O. There is an SMM callout that allows an attacker to access the System Management Mode and execute arbitrary code. This occurs because of Inclusion of Functionality from an Untrusted Control Sphere.",
+    "tags": [],
+    "title": "CVE-2021-41841 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41841"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-42060",
+    "published": "2022-02-03T02:15:07.293",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in Insyde InsydeH2O Kernel 5.0 through 05.08.41, Kernel 5.1 through 05.16.41, Kernel 5.2 before 05.23.22, and Kernel 5.3 before 05.32.22. An Int15ServiceSmm SMM callout vulnerability allows an attacker to hijack execution flow of code running in System Management Mode. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2021-42060 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42060"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-42113",
+    "published": "2022-02-03T02:15:07.337",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in StorageSecurityCommandDxe in Insyde InsydeH2O with Kernel 5.1 before 05.14.28, Kernel 5.2 before 05.24.28, and Kernel 5.3 before 05.32.25. An SMM callout vulnerability allows an attacker to hijack execution flow of code running in System Management Mode. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2021-42113 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42113"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-42554",
+    "published": "2022-02-03T02:15:07.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in Insyde InsydeH2O with Kernel 5.0 before 05.08.42, Kernel 5.1 before 05.16.42, Kernel 5.2 before 05.26.42, Kernel 5.3 before 05.35.42, Kernel 5.4 before 05.42.51, and Kernel 5.5 before 05.50.51. An SMM memory corruption vulnerability in FvbServicesRuntimeDxe allows a possible attacker to write fixed or predictable data to SMRAM. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2021-42554 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42554"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-43323",
+    "published": "2022-02-03T02:15:07.427",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in UsbCoreDxe in Insyde InsydeH2O with kernel 5.5 before 05.51.45, 5.4 before 05.43.45, 5.3 before 05.35.45, 5.2 before 05.26.45, 5.1 before 05.16.45, and 5.0 before 05.08.45. An SMM callout vulnerability allows an attacker to hijack execution flow of code running in System Management Mode. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2021-43323 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-43323"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2021-43615",
+    "published": "2022-02-03T02:15:07.470",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in HddPassword in Insyde InsydeH2O with kernel 5.1 before 05.16.23, 5.2 before 05.26.23, 5.3 before 05.35.23, 5.4 before 05.43.22, and 5.5 before 05.51.22. An SMM memory corruption vulnerability allows an attacker to write fixed or predictable data to SMRAM. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2021-43615 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-43615"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2022-24031",
+    "published": "2022-02-03T02:15:07.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in NvmExpressDxe in Insyde InsydeH2O with kernel 5.1 through 5.5. An SMM memory corruption vulnerability allows an attacker to write fixed or predictable data to SMRAM. Exploiting this issue could lead to escalating privileges to SMM.",
+    "tags": [],
+    "title": "CVE-2022-24031 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24031"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-43003",
+    "published": "2026-05-01T09:16:17.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in OpenStack ironic-python-agent 1.0.0 through 11.5.0. Ironic Python Agent (IPA) sometimes executes grub-install from within a chroot of the deployed partition image, leading to code execution in the case of a malicious image.",
+    "tags": [],
+    "title": "CVE-2026-43003 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43003"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-72771",
+    "published": "2026-08-11T13:19:07.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "n8n versions before 2.32.1 fail to enforce the Allowed HTTP Request Domains allowlist in multiple AI and LLM nodes when user-supplied base or endpoint URLs are configured. Low-privileged workflow editors with use-only access to shared credentials can redirect requests to attacker-controlled hosts and exfiltrate credential secrets for reuse against underlying services.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-72771 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72771"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72778",
+    "published": "2026-08-11T13:19:08.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Craft CMS versions from 4.0.0-RC1 before 4.18.2 and from 5.0.0-RC1 before 5.10.6 contain an authenticated remote code execution vulnerability in the control panel element-search condition handling. Craft cleanses the outer request-controlled condition array via Component::cleanseConfig(), but Conditions::createCondition() later decodes and merges the JSON string in condition.config without re-running cleanseConfig() on the decoded configuration. Because condition.config is a JSON string during the first cleanse, Yii special config keys such as 'as ...' and 'on ...' can be hidden inside it and, after JSON decoding, are interpreted by Yii as behavior/event configuration during FieldLayout object creation. An attacker with an authenticated control panel session (and a valid CSRF token) can exploit this to execute operating system commands as the PHP/web user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72778 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72778"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72781",
+    "published": "2026-08-11T13:19:08.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Craft CMS versions >= 5.0.0-RC1 before 5.10.7 and >= 4.0.0-RC1 before 4.18.3 contain a remote code execution vulnerability in the Twig sandbox mechanism. Because Craft marks the ElementInterface as safe (via the AllowedInSandbox attribute) and the sandbox allowlisting extends to the entire class hierarchy (craft\\base\\Component up to yii\\base\\Component), an authenticated attacker with permission to access the control panel can render a malicious Twig template that abuses the yii\\base\\Component arbitrary function-call gadget to execute arbitrary code, even when the Twig sandbox is enabled via enableTwigSandbox().",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72781 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72781"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/mozilla-updates-gpg-key-for-signing-firefox-thunderbird-releases-after-exposure/",
+    "published": "2026-08-11T13:20:28+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Mozilla announced today that it updated the GPG key used to sign Firefox and Thunderbird releases after it was accidentally exposed on GitHub. [...]",
+    "tags": [],
+    "title": "Mozilla updates GPG signing key for Firefox releases after exposure",
+    "url": "https://www.bleepingcomputer.com/news/security/mozilla-updates-gpg-key-for-signing-firefox-thunderbird-releases-after-exposure/"
+  },
+  {
+    "author": "Sponsored by Token Security",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/vague-task-total-access-when-ai-delegation-becomes-a-security-risk/",
+    "published": "2026-08-11T13:15:24+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "AI agents can improvise beyond the intended scope of a task when they are given broad access to enterprise systems and data. Token Security explains why organizations need to define agent intent and continuously enforce permissions around what each agent was actually created to do. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Vague Task, Total Access: When AI Delegation Becomes a Security Risk",
+    "url": "https://www.bleepingcomputer.com/news/security/vague-task-total-access-when-ai-delegation-becomes-a-security-risk/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/cyberattacks-ransomware-local-governments",
+    "published": "2026-08-11T13:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Municipalities in California, Oklahoma, Wisconsin and Texas are all recovering from disruptive cyberattacks that have affected government operations.",
+    "tags": [],
+    "title": "Local governments in four states dealing with cyberattacks that have shut down services",
+    "url": "https://therecord.media/cyberattacks-ransomware-local-governments"
   }
 ]
