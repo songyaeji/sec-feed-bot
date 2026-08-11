@@ -7883,5 +7883,148 @@
     "tags": [],
     "title": "본인전송요구권 확대 앞두고…'스크래핑' 단계적 차단",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1pMGE2WmFOdVI1emlJYktPbHBYMjJkT2t4YWhVcm9hbW1CY3JrYnA3b2t4U2o1UVBiYkdIcHNDZi1DUXpPZkpDVFF5aHA4Y2Q0TDdV?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-17061",
+    "published": "2026-08-11T15:17:27.783",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A Deserialization of Untrusted Data vulnerability affecting SIMULIA Execution Engine from Release 2023 through Release 2026 could lead to an unauthenticated remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-17061 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17061"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16230",
+    "published": "2026-08-11T20:17:27.133",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Formidable Digital Signatures plugin for WordPress is vulnerable to file deletion due to insufficient file path validation in the delete_file function in all versions up to, and including, 3.0.6. This makes it possible for unauthenticated attackers to delete files on the server by supplying an attacker-controlled filename in the item_meta[field_id][content] parameter alongside the delete_saved_image flag during the standard entry-creation POST flow on any form that accepts anonymous submissions.",
+    "tags": [],
+    "title": "CVE-2026-16230 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16230"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-45618",
+    "published": "2026-08-11T20:17:40.163",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "LiquidJS is a Shopify/GitHub Pages compatible template engine. Prior to version 10.26.0, it is possible to execute arbitrary code with crafted templates. Version 10.26.0 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-45618 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45618"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-73032",
+    "published": "2026-08-11T20:18:46.320",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "PapersGPT for Zotero 0.6.1 contains a remote code execution vulnerability that allows attackers to execute arbitrary JavaScript by returning malicious code from an LLM endpoint that is passed unsanitized to window.eval() in views.ts. Attackers can exploit this through prompt injection in PDFs, MITM interception of API requests, or a malicious custom LLM endpoint to execute arbitrary code in Zotero's chrome-privileged context, enabling file read/write, process execution, and access to all Zotero data.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-73032 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73032"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73034",
+    "published": "2026-08-11T20:18:46.470",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DB-GPT v0.8.1 contains an unauthenticated path traversal vulnerability that allows remote attackers to write arbitrary files to any location on the server by injecting directory traversal sequences into the user_id HTTP header of the Python file-upload endpoint. Attackers can send a crafted multipart upload request with a traversal-poisoned user_id header to escape the intended upload directory and write attacker-controlled content to locations such as Python startup hooks, cron directories, or agent scripts, resulting in remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73034 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73034"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-16267",
+    "published": "2026-08-08T07:17:09.667",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Newsletters WordPress plugin before 4.16 does not restrict the classes allowed when unserialising a value taken from a public form submission, allowing unauthenticated attackers to inject arbitrary PHP objects.",
+    "tags": [],
+    "title": "CVE-2026-16267 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16267"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-16948",
+    "published": "2026-08-08T07:17:11.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Solace Extra WordPress plugin before 1.6.1 does not perform capability checks in several of its AJAX actions and exposes the nonce that protects them on admin pages reachable by low-privileged users, allowing users with a role as low as Subscriber to modify site-wide presentation settings and delete imported site-builder content.",
+    "tags": [],
+    "title": "CVE-2026-16948 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16948"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-17044",
+    "published": "2026-08-09T06:18:22.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Iptanus File Upload WordPress plugin before 5.1.8 does not properly sanitise and escape a parameter before using it in a SQL statement, leading to an SQL injection exploitable by unauthenticated users.",
+    "tags": [],
+    "title": "CVE-2026-17044 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17044"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-18860",
+    "published": "2026-08-11T15:17:28.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Velociraptor allows multi-tenant deployments named \"Orgs\".\n\nBy default Velociraptor, uses the ROOT org, but users can create child orgs for other tenants within the same deployment.\n\nUsers can have different permissions in each org. To manage Orgs, Velociraptor usually examines the ORG_ADMIN permission on the ROOT org.\n\nThis issue results from the Velociraptor server allowing for the deletion of Orgs by incorrectly checking the ORG_ADMIN permission of callers within the calling ORG instead of the ROOT org. However, Org admins of child orgs were able to add this permission to their ACL token within their own org. This allows an administrator in a child org, which is not also an administrator in the ROOT org, to delete other orgs.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-18860 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18860"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19091",
+    "published": "2026-08-11T20:17:38.797",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The GeoDirectory – WP Business Directory Plugin and Classified Listings Directory plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the delete_revision function in all versions up to, and including, 2.8.169. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). By placing post_type=attachment exclusively in the query string to bypass the consistency check, an attacker can convert an auto-draft GeoDirectory listing into a WordPress attachment with attacker-controlled file paths injected into attachment metadata, which the delete_revision handler then dereferences and unlinks without any post-type or path validation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19091 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19091"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-73031",
+    "published": "2026-08-11T20:18:46.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "telegram-search contains a stored cross-site scripting vulnerability that allows remote attackers to execute arbitrary JavaScript in victims' browsers by sending crafted messages containing unsanitized HTML to a shared Telegram group. The highlightKeyword function in MessageList.vue passes raw message content directly to v-html without HTML escaping or sanitization, enabling stored, cross-user, zero-click execution of injected payloads such as image onerror handlers when victims browse or search messages.",
+    "tags": [],
+    "title": "CVE-2026-73031 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73031"
   }
 ]
