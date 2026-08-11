@@ -2461,5 +2461,29 @@
     ],
     "title": "OpenAI Launches GPT-5.6-Cyber with Reduced Safeguards for Exploit Development",
     "url": "https://thehackernews.com/2026/08/openai-launches-gpt-56-cyber-with.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-46670",
+    "published": "2026-08-11T14:17:13.863",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "YesWiki is a wiki system written in PHP. Prior to version 4.6.4,  an unauthenticated SQL injection in the Bazar form-import path (`FormManager::create()`) allows any unauthenticated visitor of a default YesWiki install to inject arbitrary SQL into an `INSERT` statement and read the full database, including `yeswiki_users.password` hashes. Version 4.6.4 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-46670 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46670"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-48056",
+    "published": "2026-08-11T14:17:14.170",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Streambert is a cross-platform Electron Desktop App to stream and download video content. Versions prior to 2.5.0  improperly validate executable paths supplied to the  run-download  IPC handler, allowing a compromised renderer process to execute arbitrary local binaries with the application’s privileges. Version 2.5.0 contains a patch.",
+    "tags": [],
+    "title": "CVE-2026-48056 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48056"
   }
 ]
