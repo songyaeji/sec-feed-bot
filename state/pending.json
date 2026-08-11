@@ -2813,5 +2813,29 @@
     ],
     "title": "Cisco Warns of Seven ClamAV Flaws, Two With Public PoCs",
     "url": "https://securityaffairs.com/196973/security/cisco-warns-of-seven-clamav-flaws-two-with-public-pocs.html"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25279",
+    "published": "2026-08-11T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to access unauthorized health profile information, make changes to health information, cause a denial-of-service condition, disclose session token information, and obtain control of user accounts. The following versions of Mira Hormone Monitor, Mira Android App are affected: Mira Monitor Firmware 1.7.1.47 (CVE-2026-66875, CVE-2026-66098, CVE-2026-67558, CVE-2026-67568, CVE-2026-68067, CVE-2026-66340, CVE-2026-64934, CVE-2026-66832) Mira Android App 4.5.15.4 (CVE-2026-66875, CVE-2026-66098, CVE-2026-67558, CVE-2026-67568, CVE-2026-68067, CVE-2026-66340, CVE-2026-64934, CVE-2026-66832) CVSS Vendor Equipment Vulnerabilities v3 9.8 Quanovate Tech Inc. (operating as Mira / Mira Care) Mira Hormone Monitor, Mira Android App Missing Authentication for Critical Function, Authentication Bypass by Spoofing, Use of Hard-coded Credentials, Weak Authentication, Improper Restriction of Excessive Authentication Attempts, Reliance on Untrusted Inputs in a Security Decision, Use of GET Request Method With Sensitive Query Strings Background Critical Infrastructure Sectors: Healthcare and Public Health Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-66875 In the Mira hormone monitor device firmware v1.7.1.47 build 01070147, a remote unauthenticated attacker within BLE range (approximately 10–30 meters) can silently rebind the device to ",
+    "tags": [],
+    "title": "Mira Hormone Monitor, Mira Android App",
+    "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-223-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25280",
+    "published": "2026-08-11T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to use hidden commands to disable electrical safety mechanisms or modify other stimulation output settings. The following versions of Pulsetto Vagus Nerve Stimulator are affected: Pulsetto Vagus Nerve Stimulator vers:all/* (CVE-2026-18844) CVSS Vendor Equipment Vulnerabilities v3 8.1 Pulsetto Pulsetto Vagus Nerve Stimulator Hidden Functionality Background Critical Infrastructure Sectors: Healthcare and Public Health Countries/Areas Deployed: Worldwide Company Headquarters Location: Lithuania Vulnerabilities Expand All + CVE-2026-18844 The firmware of the affected product accepts several undisclosed commands over its Bluetooth Low Energy (BLE) interface. These commands are sent without authentication or encryption, and are never issued by the companion mobile application, yet are fully processed by the device when it is powered on. View CVE Details Affected Products Pulsetto Vagus Nerve Stimulator Vendor: Pulsetto Product Version: Pulsetto Pulsetto Vagus Nerve Stimulator: vers:all/* Product Status: known_affected Remediations Mitigation Pulsetto has not responded to requests to work with CISA to mitigate this vulnerability. Users are encouraged to reach out directly to Pulsetto for assistance at info@pulsetto.tech. mailto:info@pulsetto.tech Relevant CWE: CWE-912 Hidden Functionality Metrics CVSS Version Base Score Base Severity Vector String 3.1 8.1 HIGH CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N",
+    "tags": [],
+    "title": "Pulsetto Vagus Nerve Stimulator",
+    "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-223-02"
   }
 ]
