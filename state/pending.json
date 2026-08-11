@@ -1381,5 +1381,31 @@
     "tags": [],
     "title": "[기획] KT ‘개인정보 유출’ 2.4억 금전 피해…540억 과징금 배경은 (상)",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA3SExXUlh4UTNYRU0tSFFuTFhYeGp6bkRQNlMtZGxaNnNSY1R0c0RXQl9BbHVOcl9HU2JFaVpmQTBFMU9HcGJRQVk2dl9BTFFRYXRPWDZobzNJTm9SV2J5Y1JhUGsxUFB3d2tuOQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-10140",
+    "published": "2026-06-30T20:17:27.007",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.10.0 voice mode contains improper shared-state handling that allows reuse of API clients across tenant boundaries. An authenticated attacker can manipulate cache state to cause requests from other users to be processed using incorrect upstream API credentials, leading to cross-tenant billing and accountability misattribution.",
+    "tags": [],
+    "title": "CVE-2026-10140 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10140"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-73250",
+    "published": "2026-08-11T23:18:10.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Notepad++ is a free and open-source source code editor. Prior to 8.9.7, the Notepad++ Windows 11 x64 and ARM64 installer passes the attacker-influenced installation directory `$INSTDIR` from PowerEditor/installer/nppSetup.nsi into a PowerShell `-Command` string used by RegisterMSIX to invoke Add-AppxPackage, allowing PowerShell subexpression syntax such as `$()` in the installation path to execute commands in the installer's security context when the context menu component is selected. This issue is fixed in version 8.9.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73250 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73250"
   }
 ]
