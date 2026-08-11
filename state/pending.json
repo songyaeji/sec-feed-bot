@@ -2583,5 +2583,195 @@
     "tags": [],
     "title": "Wesco confirms security incident after ExfilSquad claims data theft",
     "url": "https://www.bleepingcomputer.com/news/security/wesco-confirms-security-incident-after-exfilsquad-claims-data-theft/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2024-45496",
+    "published": "2024-09-17T00:15:52.433",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in OpenShift. This issue occurs due to the misuse of elevated privileges in the OpenShift Container Platform's build process. During the build initialization step, the git-clone container is run with a privileged security context, allowing unrestricted access to the node. An attacker with developer-level access can provide a crafted .gitconfig file containing commands executed during the cloning process, leading to arbitrary command execution on the worker node. An attacker running code in a privileged container could escalate their permissions on the node running the container.",
+    "tags": [],
+    "title": "CVE-2024-45496 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45496"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2024-7387",
+    "published": "2024-09-17T00:15:52.757",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in openshift/builder. This vulnerability allows command injection via path traversal, where a malicious user can execute arbitrary commands on the OpenShift node running the builder container. When using the “Docker” strategy, executable files inside the privileged build container can be overridden using the `spec.source.secrets.secret.destinationDir` attribute of the `BuildConfig` definition. An attacker running code in a privileged container could escalate their permissions on the node running the container.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2024-7387 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7387"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-73069",
+    "published": "2026-08-11T16:17:38.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Twenty is an open-source CRM (customer relationship management) platform. Prior to 2.15.0, Twenty allowed a workspace administrator with the DATA_MODEL permission to supply settings.asExpression for the system TS_VECTOR field searchVector through PATCH /rest/metadata/fields/:id or the updateOneField GraphQL mutation, causing buildSqlColumnDefinition in packages/twenty-server/src/engine/twenty-orm/workspace-schema-manager/utils/build-sql-column-definition.util.ts to concatenate unescaped input into GENERATED ALWAYS AS (...) and execute arbitrary PostgreSQL statements as the application database user. This issue is fixed in version 2.15.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73069 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73069"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-73080",
+    "published": "2026-08-11T16:17:39.857",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SeaweedFS is a distributed storage system. Prior to 4.24, VolumeServer.FetchAndWriteNeedle in weed/server/volume_grpc_remote.go fetches a caller-supplied remote endpoint through weed/remote_storage/s3/s3_storage_client.go and writes the response into a needle. The RPC performs no authentication and no target validation, allowing anyone who can reach a volume server's gRPC port to cause requests to arbitrary hosts, including loopback, link-local, RFC 1918, and cloud metadata endpoints such as 169.254.169.254, and read the response. On cloud deployments, this can disclose instance metadata and IAM credentials and reach otherwise unexposed internal services. The volume server gRPC plane is unauthenticated by default, and configuring documented JWT signing keys does not protect this RPC. This issue is fixed in version 4.24.",
+    "tags": [],
+    "title": "CVE-2026-73080 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73080"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2024-6508",
+    "published": "2024-08-21T06:15:08.120",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An insufficient entropy vulnerability was found in the Openshift Console. In the authorization code type and implicit grant type, the OAuth2 protocol is vulnerable to a Cross-Site Request Forgery (CSRF) attack if the state parameter is used inefficiently. This flaw allows logging into the victim’s current application account using a third-party account without any restrictions.",
+    "tags": [],
+    "title": "CVE-2024-6508 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6508"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-56020",
+    "published": "2026-06-18T17:16:35.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Webmin HTTP server (miniserv.pl) allows unauthenticated attackers to impersonate any user with a configured SSL client certificate by sending a forged HTTP header. A remote attacker can spoof certificate DNs and authenticate as any user. Fixed in 2.202.",
+    "tags": [],
+    "title": "CVE-2026-56020 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56020"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14293",
+    "published": "2026-08-10T07:16:47.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Autopay WordPress plugin before 5.0.1 does not perform any capability or nonce check before saving a styling option from a public request, and does not escape that value when it is later output on the checkout page, allowing unauthenticated attackers to store JavaScript that executes in the browser of any user, including administrators, who loads the checkout page.",
+    "tags": [],
+    "title": "CVE-2026-14293 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14293"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18786",
+    "published": "2026-08-10T07:16:50.487",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The CheckView  WordPress plugin before 2.3.2 does not restrict its REST API authentication filter to its own routes and unconditionally discards the authentication error raised for any request whose URI merely contains a CheckView  WordPress plugin before 2.3.2-specific string, making it possible for unauthenticated attackers to bypass the REST nonce check and perform any REST action available to a logged-in administrator, such as creating a new administrator account, via a crafted link an administrator is tricked into opening.",
+    "tags": [],
+    "title": "CVE-2026-18786 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18786"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19546",
+    "published": "2026-08-11T16:17:31.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in DBI. This is a fix for a partial fix for CVE-2026-14380 for RHEL 9.8.z and 10.2.z.\n\nFor a detailed Statement, Description and Mitigation please reffer to the original https://access.redhat.com/security/cve/cve-2026-19546.",
+    "tags": [],
+    "title": "CVE-2026-19546 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19546"
+  },
+  {
+    "category": "high",
+    "cvss": 7.6,
+    "id": "CVE-2026-48766",
+    "published": "2026-08-11T16:17:32.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TypeBot is a chatbot builder tool. Versions prior to 3.17.0 allow a low-privilege guest member of a workspace to exfiltrate stored OpenAI-compatible API keys by invoking the OpenAI model-listing helper with an attacker-controlled `baseUrl`. The vulnerable path decrypts the selected workspace credential, creates an OpenAI client with the secret in both `apiKey` and the explicit `api-key` header, and then sends the outbound request to the caller-supplied URL. Because the permission check accepts any readable workspace member and `listCredentials` reveals credential identifiers to guests, a guest can force the server to deliver the workspace secret to attacker infrastructure. Version 3.17.0 patches the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-48766 (CVSS 7.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48766"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-53413",
+    "published": "2026-08-11T16:17:32.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing bounds check in the annotator function of Zoom Clients allows buffer over-write, which may allow a meeting participant to achieve remote code execution of another participant via network access.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53413 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53413"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-53415",
+    "published": "2026-08-11T16:17:32.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after Free in the annotator function of Zoom Clients may allow a meeting participant to achieve remote code execution of another participant via network access.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53415 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53415"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-56721",
+    "published": "2026-08-11T16:17:33.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CamaleonCMS version 2.9.2 and earlier contains a privilege escalation vulnerability via insecure direct object reference (IDOR) that allows authenticated low-privileged attackers to overwrite any user's credentials by exploiting a parameter confusion flaw between the authorization filter and action body in the UsersController. Attackers can send a PATCH request to the updated_ajax endpoint setting params[:id] to their own user ID to pass the self-authorization check while simultaneously setting params[:user_id] to a victim's ID, causing the controller to load and mutate the victim's account, including overwriting administrator passwords to achieve full site takeover.",
+    "tags": [],
+    "title": "CVE-2026-56721 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56721"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-67180",
+    "published": "2026-08-11T16:17:34.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Google Turbinia allows arbitrary command execution via worker tasks. An attacker with privileges to submit a processing request or influence an evidence path/name obtains code execution on the worker fleet. Fixed on 2026-07-10.",
+    "tags": [],
+    "title": "CVE-2026-67180 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67180"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-73079",
+    "published": "2026-08-11T16:17:39.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Sub2API is an AI API gateway platform designed to distribute and manage API quotas from AI product subscriptions. From 0.1.135, to 0.1.168, platform API keys issued to tenants are exchanged for upstream requests made with shared provider accounts (ChatGPT/Codex OAuth, OpenAI platform keys, or an operator-configured base URL) that belong to the operator, not to the caller. The `POST /responses/*subpath` wildcard routes spliced the client-supplied subpath into the upstream URL with no validation. This lets an authenticated tenant relay requests to arbitrary upstream endpoints using pooled account credentials via a path traversal. This vulnerability is fixed in 0.1.169.",
+    "tags": [],
+    "title": "CVE-2026-73079 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73079"
   }
 ]
