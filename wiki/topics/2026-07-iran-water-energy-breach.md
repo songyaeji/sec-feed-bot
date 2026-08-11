@@ -9,5 +9,6 @@ cves: []
 
 ## 타임라인
 - 2026-07-25 [CISA/FBI/NSA/DoE](https://securityaffairs.com/195991/apt/iran-linked-actors-breach-are-targeting-us-water-and-energy-control-systems.html) — 이란 행위자들의 미국 물·에너지 시스템 침투 및 설정 변조 경고
+- 2026-08-11 [Security Affairs](https://securityaffairs.com/197012/hacking/iran-linked-hackers-target-more-us-water-infrastructure-in-new-jersey-and-alabama.html) — 피해 확산 뉴저지·앨라배마 포함 12개주 이상 확인
 
 ## 관련

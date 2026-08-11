@@ -11,5 +11,6 @@ cves: []
 
 - 2026-08-08 [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-breach-trueconf-to-trojanize-client-installers-with-backdoors/) — Head Mare 그룹 TrueConf 서버 침해 및 클라이언트 설치 프로그램 변조 백도어 배포 캠페인
 - 2026-08-10 [The Hacker News](https://thehackernews.com/2026/08/head-mare-exploits-trueconf-flaws-to.html) — 러시아 회사 대상 공격 확대, **PhantomCore** 악성코드 배포 확인, Kaspersky 2026년 7월 감지
+- 2026-08-11 [Kaspersky Securelist](https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/) — Head Mare APT, **PhantomCore** 및 **PhantomGraph** 백도어 배포 확인, 미패치 TrueConf 서버 취약점 악용
 
 ## 관련

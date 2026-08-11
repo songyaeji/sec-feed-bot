@@ -9,7 +9,8 @@ cves: []
 
 ## 타임라인
 
-- 2026-07-21 [Kaspersky Securelist](https://securelist.com/project-cav3rn-cyberespionage-framework-using-outlook-and-dns/120757/) — Kaspersky GReAT, Project CAV3RN C2 모듈 분석 및 Outlook/DNS 악용 기법 공개
+- 2026-07-21 [Kaspersky Securelist](https://securelist.com/project-cav3rn-cybeerspionage-framework-using-outlook-and-dns/120757/) — Kaspersky GReAT, Project CAV3RN C2 모듈 분석 및 Outlook/DNS 악용 기법 공개
+- 2026-08-11 [Kaspersky Securelist](https://securelist.com/project-cav3rn-continues/120991/) — Project CAV3RN 진화: **Google Apps Script** C2 릴레이 및 DNS 기반 동적 라우팅 확인
 
 ## 관련
 
