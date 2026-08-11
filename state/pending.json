@@ -2485,5 +2485,43 @@
     "tags": [],
     "title": "CVE-2026-48056 (CVSS 10.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48056"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-49604",
+    "published": "2024-10-20T08:15:04.117",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Authentication Bypass Using an Alternate Path or Channel vulnerability in N-Media Simple User Registration wp-registration allows Authentication Bypass.This issue affects Simple User Registration: from n/a through <= 6.7.",
+    "tags": [],
+    "title": "CVE-2024-49604 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-49604"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-4334",
+    "published": "2025-06-26T02:15:21.173",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Simple User Registration plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 6.3. This is due to insufficient restrictions on user meta values that can be supplied during registration. This makes it possible for unauthenticated attackers to register as an administrator.",
+    "tags": [],
+    "title": "CVE-2025-4334 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-4334"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208006",
+    "published": "2026-08-11T23:45:19+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈AI(OpenAI)가 취약점 연구와 침투테스트, 익스플로잇 개발 등 고난도 사이버보안 업무에 특화된 ‘GPT-5.6-Cyber’를 8월 10일 공개했다.GPT-5.6-Cyber는 GPT-5.6 솔(GPT-5.6 Sol)을 기반으로 개발됐다. 제로데이 취약점 탐지와 인증 우회, 권한 상승, 여러 취약점을 연결한 익스플로잇 체인 개발 등 전문적인 보안 연구 작업을 수행하도록 별도 학습됐다.다만 일반 사용자에게 공개되는 모델은 아니다. 오픈AI는 검증된 보안전문가와 기업이 사용하는 ‘데이브레이크 레드(Daybreak Red)’를 통해",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "오픈AI ‘GPT-5.6-Cyber’ 출시…제로데이 탐지·공격코드 개발까지 가능",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208006"
   }
 ]
