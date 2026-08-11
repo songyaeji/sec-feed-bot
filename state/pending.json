@@ -1724,5 +1724,33 @@
     "tags": [],
     "title": "Cisco warns of high-severity ClamAV flaws with public exploits",
     "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-high-severity-clamav-flaws-with-public-exploits/"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-58231",
+    "published": "2026-08-11T11:17:15.390",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SAP Commerce Cloud allows an unauthenticated\nattacker to abuse a default authentication client and submit specially crafted\ninput to certain functions lacking sufficient validation. Successful\nexploitation could enable arbitrary code execution and compromise internal\ncomponents, resulting in high impact on confidentiality, integrity, and\navailability of the application.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-58231 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58231"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE43MVItYVlBUTFJVW1VR0JET2liRVJyMmNZN24yVGVBYUEtTG9hLURZZWFUWnpqVmNHR2pGNnQwNC0tMDdoX0g3MXMzeXk5bkd1dU9oOVNENmNwS1FveFduSlRXR1hLNm1iOHR5LWxJNEVZb25B0gF0QVVfeXFMTjcxUi1hWUFRMUlVbVVHQkRPaWJFUnIyY1k3bjJUZUFhQS1Mb2EtRFllYVRaempWY0dHakY2dDA0LS0wN2hfSDcxczN5eTluR3V1T2g5U0Q2Y3BLUW94V25KVFdHWEs2bWI4dHktbEk0RVlvbkE",
+    "published": "2026-08-10T21:00:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융 망분리 완화 2차 추진… 록히드마틴 모의해킹 가이드라인 필수 요약",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융 망분리 완화 2차 추진… 록히드마틴 모의해킹 가이드라인 필수 요약",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE43MVItYVlBUTFJVW1VR0JET2liRVJyMmNZN24yVGVBYUEtTG9hLURZZWFUWnpqVmNHR2pGNnQwNC0tMDdoX0g3MXMzeXk5bkd1dU9oOVNENmNwS1FveFduSlRXR1hLNm1iOHR5LWxJNEVZb25B0gF0QVVfeXFMTjcxUi1hWUFRMUlVbVVHQkRPaWJFUnIyY1k3bjJUZUFhQS1Mb2EtRFllYVRaempWY0dHakY2dDA0LS0wN2hfSDcxczN5eTluR3V1T2g5U0Q2Y3BLUW94V25KVFdHWEs2bWI4dHktbEk0RVlvbkE?oc=5"
   }
 ]
