@@ -466,5 +466,41 @@
     ],
     "title": "이스트시큐리티, ‘알약 에이전틱 EDR’ 공식 출시… 독파모 AI 에이전트가 보안 업무 전반 보조",
     "url": "http://www.boannews.com/media/view.asp?idx=145105&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-34265",
+    "published": "2026-08-11T01:17:20.240",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SAP NetWeaver Application Server ABAP allows an unauthenticated attacker to exploit logical errors in DIAG protocol parsing, resulting in memory corruption. This vulnerability could potentially disclose sensitive system information or crash the system, leading to a high impact on the confidentiality, integrity, and availability of the application.",
+    "tags": [],
+    "title": "CVE-2026-34265 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34265"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-44758",
+    "published": "2026-08-11T01:17:20.670",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SAP Manufacturing Integration and Intelligence (MII) allows an attacker with high privileges to submit specially crafted input to certain affected functionality, which is processed without sufficient validation. Successful exploitation could allow the attacker to execute arbitrary commands on the underlying operating system, resulting in high impact on confidentiality, integrity, and availability of the application.",
+    "tags": [],
+    "title": "CVE-2026-44758 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44758"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-58243",
+    "published": "2026-08-11T01:17:22.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SAP ABAP Development Tools does not perform necessary authorization checks for certain functionality, allowing an attacker with low privileges to execute unauthorized database operations against SAP NetWeaver AS ABAP. Successful exploitation could allow the attacker to read sensitive data, modify application data, and disrupt access for legitimate users, resulting in high impact on confidentiality, integrity, and availability.",
+    "tags": [],
+    "title": "CVE-2026-58243 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58243"
   }
 ]
