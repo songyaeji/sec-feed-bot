@@ -6681,5 +6681,203 @@
     ],
     "title": "Sandworm-Linked UAC-0145 Uses Fake Job Interviews to Push VPN That Can Run Commands",
     "url": "https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-16439",
+    "published": "2026-07-21T18:16:56.883",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Eclipse OpenJ9 versions up to 0.60, using -Xtrace to trace method arguments can lead to buffer underflow.",
+    "tags": [],
+    "title": "CVE-2026-16439 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16439"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15426",
+    "published": "2026-08-11T19:17:20.447",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The AcyMailing – An Ultimate Newsletter Plugin and Marketing Automation Solution for WordPress plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 10.11.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to overwrite the BCC field of the acy_notification_cms notification template, causing subsequent WordPress password-reset emails — including those targeting administrator accounts — to be silently copied to an attacker-controlled address, enabling account takeover via the captured reset link. Successful exploitation requires the site administrator to have enabled the \"Send website emails with AcyMailing\" option, which routes WordPress core notification emails through AcyMailing's templating system.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-15426 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15426"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18690",
+    "published": "2026-08-11T19:17:22.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in MongoDB Server could allow an authenticated user with a limited database-scoped role to perform an action against protected system collections that their assigned privileges should not permit. This could result in critical system collections being dropped and recreated without proper authorization.",
+    "tags": [],
+    "title": "CVE-2026-18690 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18690"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18691",
+    "published": "2026-08-11T19:17:22.903",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in MongoDB Server's intra-cluster connection setup could allow a party with suitable network access to influence which authentication mechanism is used when one replica set member connects to another. Under certain conditions, this could cause the cluster's shared internal credential to be transmitted in a less-protected form, potentially allowing that credential to be recovered. If recovered, the credential could be used to authenticate as the internal superuser to nodes in the deployment.",
+    "tags": [],
+    "title": "CVE-2026-18691 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18691"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18692",
+    "published": "2026-08-11T19:17:23.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in MongoDB Server's handling of timeseries bucket lifecycle could allow an authenticated user with write privileges to cause an internal reference to be used after the underlying memory has been freed. Subsequent operations could then result in a server crash or, potentially, execution of unintended code.",
+    "tags": [],
+    "title": "CVE-2026-18692 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18692"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18712",
+    "published": "2026-08-11T19:17:29.360",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in MongoDB Server's Queryable Encryption maintenance operations could allow an authenticated user with privileges on one encrypted collection to cause unauthorized modification or destruction of data belonging to a different collection. This is due to insufficient validation of certain internal metadata references before they are used to perform operations on other namespaces.",
+    "tags": [],
+    "title": "CVE-2026-18712 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18712"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-69119",
+    "published": "2026-08-11T19:18:42.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Taubyte Tau v1.1.10 contains a missing authorization vulnerability in the services/auth HTTP service that allows any authenticated user to read or permanently delete another tenant's project by supplying an arbitrary project ID to the GET and DELETE /projects/{id} endpoints. The GitHubTokenHTTPAuth middleware only validates that a caller presents a valid GitHub OAuth token without verifying ownership or access rights to the target project, enabling attackers with any valid GitHub token to invoke bare KV-store operations such as projects.Fetch and project.Delete against any project ID to achieve cross-tenant project takeover.",
+    "tags": [],
+    "title": "CVE-2026-69119 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69119"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-72742",
+    "published": "2026-08-11T19:18:49.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DSPy 3.3.0b1 contains a file exfiltration vulnerability in the Image and Audio output field adapters that allows attackers with influence over language model outputs to read arbitrary local files by injecting a filesystem path into the url field of a parsed Image or Audio typed output. The JSONAdapter and ChatAdapter parse untrusted language model completions through parse_value into TypeAdapter validation, which triggers encode_image or encode_audio to read and base64-encode any local file path via the os.path.isfile branch in image.py and audio.py, subsequently embedding the file contents into outgoing prompt messages sent to the attacker-controlled model endpoint.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-72742 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72742"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73222",
+    "published": "2026-08-11T19:18:51.720",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Claude Code Templates is a CLI tool for configuring and monitoring Claude Code. Prior to 1.29.4, the Claude Code Studio server launched by the --studio option in cli-tool/src/sandbox-server.js binds to all interfaces on port 3444, permits cross-origin requests, and requires no authentication. The POST /api/execute endpoint passes the prompt request-body field to executeLocalTask(), and POST /api/install-agent passes the agentName request-body field to a child process. The same unsafe agent field path is reachable from /api/execute through checkAndInstallAgent(). These attacker-controlled values reach child_process.spawn() with shell execution enabled, causing Node.js to construct a shell command in which metacharacters are interpreted. An attacker who can reach the port directly, or who convinces a developer running Studio to visit a malicious website, can execute arbitrary operating-system commands with the developer's privileges and compromise source code, credentials, and local data. This issue is fixed in version 1.29.4.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73222 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73222"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73223",
+    "published": "2026-08-11T19:18:51.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious SFTP server to write attacker-controlled content outside the temporary directory because the server-controlled filename name used by editWithSystemEditor in src/client/components/sftp/file-item.jsx is interpolated into path.resolve without sanitization. This issue is fixed in version 3.15.120.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73223 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73223"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73224",
+    "published": "2026-08-11T19:18:52.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious FTP or SFTP server to execute arbitrary commands when a user downloads a crafted folder and invokes Properties and Calculate Size because calcLocal in src/client/components/sftp/file-info-modal.jsx inserts the server-controlled folder name into a du -sh shell command without safely escaping single quotes. This issue is fixed in version 3.15.120.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73224 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73224"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73225",
+    "published": "2026-08-11T19:18:52.177",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious FTP or SFTP server to write attacker-controlled content outside the selected download directory because recursive transfers in src/client/components/file-transfer/transfer.jsx pass server-supplied file.name and folder.name values to resolve without sanitization. This issue is fixed in version 3.15.120.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73225 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73225"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73226",
+    "published": "2026-08-11T19:18:52.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.186, electerm allows an authenticated WebSocket client to invoke unintended internal functions through client-controlled func values in upgrade-func in src/app/server/dispatch-center.js and handleFs in src/app/server/fs.js, exposing Upgrade and fsExport methods that can execute commands, open files, mutate the filesystem, or terminate the process. This issue is fixed in version 3.15.186.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73226 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73226"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73227",
+    "published": "2026-08-11T19:18:52.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "electerm is an open-sourced terminal/ssh/sftp/telnet/serialport/RDP/VNC/Spice/ftp client. Prior to 3.15.120, electerm allows a malicious RDP server to write attacker-controlled content outside the selected save directory because the RDP clipboard download path in src/client/components/rdp/file-transfer.js passes the server-controlled CLIPRDR filename fileInfo.name to osResolve without sanitization. This issue is fixed in version 3.15.120.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73227 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73227"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiyAJBVV95cUxOWkZ1UUNPaUpyMG1wRkMzRWhKZEZYNUFKSFpiQlhhRFEybm1uVnRxVlhlY1owd0FqOUlnN1RrQVJPTWgyd2loQVNCVUVZZVY0RVVGYW9FdHZTNGhrYVA0NHZ1UG5zYkZhdHdXaUxpTW8yNHZvUVh5eU5VczJCMHJMZjJxZjlmUmdIbmFZSmsxbEVVWjdiM25KUkRyaDhDbHNoa09HRHNkN0x2OVJxQmM3bjZsekxFak4wazlxcTdJUEMwU2FaZzRuX1haWDl6aFdmSmJEbTVnTEwwRERyYXJCaTh4Yk92RzdBazF4QTVIXzBUamlDT0Y0NXJKYmZsWmJfdHBRTzVNbTVCckZpQWlQdGdZOUJxV1F0N0s2OC05VE16eHpBd0Y0eXFsMGVicHMzYTdDOVR0OVh3Q2tfd2pxTnRETXRMTlFh",
+    "published": "2026-08-11T17:44:38+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원 토토 디시 발표 능력을 통한 반성: 핵심 개념과 실제 응용",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원 토토 디시 발표 능력을 통한 반성: 핵심 개념과 실제 응용",
+    "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxOWkZ1UUNPaUpyMG1wRkMzRWhKZEZYNUFKSFpiQlhhRFEybm1uVnRxVlhlY1owd0FqOUlnN1RrQVJPTWgyd2loQVNCVUVZZVY0RVVGYW9FdHZTNGhrYVA0NHZ1UG5zYkZhdHdXaUxpTW8yNHZvUVh5eU5VczJCMHJMZjJxZjlmUmdIbmFZSmsxbEVVWjdiM25KUkRyaDhDbHNoa09HRHNkN0x2OVJxQmM3bjZsekxFak4wazlxcTdJUEMwU2FaZzRuX1haWDl6aFdmSmJEbTVnTEwwRERyYXJCaTh4Yk92RzdBazF4QTVIXzBUamlDT0Y0NXJKYmZsWmJfdHBRTzVNbTVCckZpQWlQdGdZOUJxV1F0N0s2OC05VE16eHpBd0Y0eXFsMGVicHMzYTdDOVR0OVh3Q2tfd2pxTnRETXRMTlFh?oc=5"
   }
 ]
