@@ -8074,5 +8074,245 @@
     "tags": [],
     "title": "Sandworm hackers target IT pros with trojanized WireGuard VPN client",
     "url": "https://www.bleepingcomputer.com/news/security/sandworm-hackers-target-it-pros-with-trojanized-wireguard-vpn-client/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16298",
+    "published": "2026-08-10T07:16:48.050",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The FoodBoxBooker WordPress plugin before 1.0.7 does not properly validate the password reset request, allowing unauthenticated attackers to reset the password of arbitrary users, including administrators, which could lead to a full site takeover.",
+    "tags": [],
+    "title": "CVE-2026-16298 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16298"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16299",
+    "published": "2026-08-10T07:16:48.163",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Single Sign On For TNG WordPress plugin before 2.2.0 does not properly validate a password reset request, allowing unauthenticated attackers to reset the password of arbitrary users, including administrators, which could lead to a full site takeover.",
+    "tags": [],
+    "title": "CVE-2026-16299 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16299"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-48765",
+    "published": "2026-08-11T21:17:36.947",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TypeBot is a chatbot builder tool. Versions prior to 3.17.0 allow a low-privilege read collaborator to extract a workspace OAuth `credentialsId` from a readable bot configuration and then overwrite that credential through `handleUpdateOAuthCredentials()` by supplying an attacker-controlled writable `workspaceId`. The update path validates only the attacker-supplied workspace and then updates the credential record by global `id` alone, while also rewriting the credential's `workspaceId`. This allows cross-workspace OAuth credential takeover and reassignment. Version 3.17.0 patches the issue.",
+    "tags": [],
+    "title": "CVE-2026-48765 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48765"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13600",
+    "published": "2026-08-10T07:16:46.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The AutoNetTV Relay WordPress plugin before 3.0.14 does not perform any capability or authentication check before setting a WordPress administrator authentication cookie during its scheduled content-synchronization task. On server configurations where the scheduled task executes before the HTTP response is committed, an unauthenticated attacker who triggers the due task can receive the administrator's session cookie and gain administrator access without credentials.",
+    "tags": [],
+    "title": "CVE-2026-13600 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13600"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-16257",
+    "published": "2026-08-10T07:16:47.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Arvow AI SEO Writer WordPress plugin before 1.5.4 does not properly restrict access to one of its REST endpoints, whose only access control can be bypassed by unauthenticated users through type juggling when the Arvow AI SEO Writer WordPress plugin before 1.5.4 has not been configured, allowing them to create arbitrary posts and pages and to disclose author account and taxonomy information.",
+    "tags": [],
+    "title": "CVE-2026-16257 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16257"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16985",
+    "published": "2026-08-10T07:16:48.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Squeeze  WordPress plugin before 1.7.12 does not validate the file type or extension of the per-size image data written by one of its attachment-update actions, allowing users with the upload_files capability (Author and above) to write an executable PHP file into the uploads directory and achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16985 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16985"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17540",
+    "published": "2026-08-10T07:16:49.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The File Manager WordPress plugin before 6.9.1 does not properly authorise its file management commands, allowing any authenticated user, such as a subscriber, to read and delete arbitrary files under the WordPress installation directory, which could lead to the disclosure of the site's configuration secrets and to denial of service.",
+    "tags": [],
+    "title": "CVE-2026-17540 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17540"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18030",
+    "published": "2026-08-10T07:16:49.830",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The BricksForge WordPress plugin before 3.1.8.8 does not verify the identity of the requester when processing a password change submitted through one of its form actions, allowing unauthenticated attackers to set an arbitrary password for any user, including administrators, and take over their account.\n\nExploitation requires the site to have a form using the BricksForge WordPress plugin before 3.1.8.8's password reset action in its update mode. The server-side current-password verification option for that action is disabled by default, so the vulnerable state is the default one once the action is used.",
+    "tags": [],
+    "title": "CVE-2026-18030 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18030"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18468",
+    "published": "2026-08-10T07:16:50.047",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Login & Register Forms  WordPress plugin before 4.0.2 does not bind the password reset verification state to the account being reset or to the party that completed the verification, keying it instead on a value the client controls, allowing unauthenticated attackers to take over the account of any user who recently completed a reset verification, including an administrator.",
+    "tags": [],
+    "title": "CVE-2026-18468 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18468"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18469",
+    "published": "2026-08-10T07:16:50.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Login & Register Forms  WordPress plugin before 4.0.2 does not enforce its password reset attempt limit against a server-derived value, keying both the verification code and the per-source attempt counter on client-controlled data, allowing unauthenticated attackers to reset the limit at will and brute-force the code to take over any account, including administrators, when the verification-code reset mode is enabled.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18469 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18469"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-19049",
+    "published": "2026-08-10T07:16:50.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The ProSolution WP Client WordPress plugin before 2.0.9 does not sanitise a cookie value before using it in SQL queries, and processes that cookie on every request without any authentication or capability check, allowing unauthenticated users to read arbitrary data from the database and to delete the records the ProSolution WP Client WordPress plugin before 2.0.9 stores.",
+    "tags": [],
+    "title": "CVE-2026-19049 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19049"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15560",
+    "published": "2026-08-11T09:17:12.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "when EAP runs with -secmgr, the openjdk-orb's JDKBridge honours attacker-supplied CDR codebase URLs during object unmarshalling on :3528, allowing an unauthenticated attacker to load and instantiate arbitrary classes from a remote URL in the server JVM before EJB security interceptors run.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15560 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15560"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-66145",
+    "published": "2026-08-11T20:18:37.717",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An unauthenticated remote code execution vulnerability was identified in GMS 9.5.1 (Build 9510.1044) and earlier versions which allows remote attacker to read sensitive data and perform arbitrary file write via zipslip.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-66145 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66145"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-14863",
+    "published": "2026-08-11T21:17:25.867",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FileRun up to and including version 2026.2.0 contains an OS command injection vulnerability that allows authenticated attackers to achieve remote code execution by uploading a file with a malicious filename containing shell command substitution sequences. The thumbnail generation system passes filenames wrapped in shell double-quotes directly to exec() without escapeshellarg() sanitization, allowing filenames such as $(PAYLOAD).mp4 to survive the filename sanitizer and be evaluated as shell commands when ffmpeg, ImageMagick, vips, or stl-thumb processes the file during thumbnail generation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14863 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14863"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15606",
+    "published": "2026-08-11T21:17:27.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.29.9. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level and above permissions, to reset the password of any user on the site, including administrators, leading to full account takeover and complete site compromise. Exploitation requires the attacker to hold a valid encrypted Current-User token obtained by accessing any Edit User form they are legitimately authorized to submit, which they then use as a known-plaintext base for the CBC bit-flipping forgery.",
+    "tags": [],
+    "title": "CVE-2026-15606 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15606"
+  },
+  {
+    "category": "high",
+    "cvss": 5.4,
+    "id": "CVE-2026-48762",
+    "published": "2026-08-11T21:17:36.677",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TypeBot is a chatbot builder tool. Prior to version 3.16.0, the OpenAI \"Create Transcription\" action handler fetches a user-supplied audio URL using `fetch()` without applying the SSRF protection that exists elsewhere in the codebase. An attacker can direct the server to make HTTP requests to arbitrary internal addresses and localhost. The fetched content is passed to the OpenAI Whisper API and the transcription result is returned to the attacker. Version 3.16.0 fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-48762 (CVSS 5.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48762"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-48763",
+    "published": "2026-08-11T21:17:36.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TypeBot is a chatbot builder tool. Versions prior to 3.17.0 expose a deprecated public upload endpoint at `GET /api/v1/typebots/{typebotId}/blocks/{blockId}/storage/upload-url` that accepts an attacker-controlled `filePath` and returns a presigned S3 `PUT` URL for that exact key. Because the endpoint only checks that the referenced typebot is public and that the referenced block is a file input block, an unauthenticated attacker who knows a valid public `typebotId` and `blockId` can request presigned upload URLs for arbitrary objects in the shared bucket, including `private/...` and other tenants' `public/...` paths. Version 3.17.0 fixes this issue.",
+    "tags": [],
+    "title": "CVE-2026-48763 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48763"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-55676",
+    "published": "2026-08-11T21:17:37.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Malcolm is a network traffic analysis tool suite. The file-upload component (FilePond PHP backend) accepts uploads at `POST /server/php/submit.php` and stores them in a directory served by the same nginx and php-fpm instance. The allow-list that should restrict accepted file types is an empty array by default (`file-upload/php/config.php:16`), so the type check is a no-op and every extension is accepted. The filename sanitizer keeps the `.php` extension intact. Committed files land in `/var/www/upload/server/php/files` (`file-upload/php/config.php:7`), and the component's nginx routes any URL ending in `.php` to php-fpm. An authenticated `GET /server/php/files/<name>.php` then executes the uploaded code as `www-data`. Prior to version 26.06.1, in RBAC mode, the upload endpoint is reachable by the granular `ROLE_UPLOAD` role (`nginx/lua/nginx_auth_helpers.lua:71`), a role intended only for submitting capture files. As a result, a user holding the upload-only role runs arbitrary PHP as `www-data` inside the file-upload container. Version 26.06.1 fixes the issue.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-55676 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55676"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMifEFVX3lxTE1nNmVpbWg4UE1kYVY2ZEw3cjNvaFU2SUxaOS04OVVrc3NRajlRYlZsRVF4TWdXVzNsb2NETnhJTTFCelBwdnBMVW5TbFFNLThsX29fWFpJVHVLU1ZrbFNsbVVKSTg0ZlZXakJDN3NhQWhlMElVLVlac3g3VXA",
+    "published": "2026-08-11T06:47:53+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI는 Daybreak를 블루와 레드 티어로 나누고 GPT-5.6-Cyber를 출시했습니다",
+    "tags": [],
+    "title": "OpenAI는 Daybreak를 블루와 레드 티어로 나누고 GPT-5.6-Cyber를 출시했습니다",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1nNmVpbWg4UE1kYVY2ZEw3cjNvaFU2SUxaOS04OVVrc3NRajlRYlZsRVF4TWdXVzNsb2NETnhJTTFCelBwdnBMVW5TbFFNLThsX29fWFpJVHVLU1ZrbFNsbVVKSTg0ZlZXakJDN3NhQWhlMElVLVlac3g3VXA?oc=5"
   }
 ]
