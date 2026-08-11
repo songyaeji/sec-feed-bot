@@ -6917,5 +6917,933 @@
     "tags": [],
     "title": "국방부의 공급망 위험 지정에도 불구하고 NSA, Anthropic의 Mythos AI 운용",
     "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOSUdpZEdTOExrMTZBaHhzRFBMdDVOdDFoQ0xod1F5UE1najdwRlo5SEd2OUhCTjJVbVJqSzRBNlJkcWlQSGFmQ1pBQWFlVmZRbTlBeTQzRlNIZk9Udkw1UEpEbzJ6TjRFWFRoTFlGc0dNS2xVaDAydXRzaEt2ZHhBNUpZNzRFM0d5OGczbHlrUUhISHJncXExc3hpQmdldnNyVTExUDV2WU55Q2lNX25sbWsyUXZJWFFncDJURlNlLXJmOFEwZXBnT1VyMmRNdm9zNjFrUS00a1JCRTU5SnhDU0x3QjdYOWVtSVRac0haUXFJaEdwVURBWWVjT3JJcmkzWjhGN1JURTg0LWhCdFRsR0RkdlY1eFR5ZlVnNlY2UnN4RkZPSHc?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2018-0101",
+    "published": "2018-01-29T20:29:00.280",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the Secure Sockets Layer (SSL) VPN functionality of the Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to cause a reload of the affected system or to remotely execute code. The vulnerability is due to an attempt to double free a region of memory when the webvpn feature is enabled on the Cisco ASA device. An attacker could exploit this vulnerability by sending multiple, crafted XML packets to a webvpn-configured interface on the affected system. An exploit could allow the attacker to execute arbitrary code and obtain full control of the system, or cause a reload of the affected device. This vulnerability affects Cisco ASA Software that is running on the following Cisco products: 3000 Series Industrial Security Appliance (ISA), ASA 5500 Series Adaptive Security Appliances, ASA 5500-X Series Next-Generation Firewalls, ASA Services Module for Cisco Catalyst 6500 Series Switches and Cisco 7600 Series Routers, ASA 1000V Cloud Firewall, Adaptive Security Virtual Appliance (ASAv), Firepower 2100 Series Security Appliance, Firepower 4110 Security Appliance, Firepower 9300 ASA Security Module, Firepower Threat Defense Software (FTD). Cisco Bug IDs: CSCvg35618.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2018-0101 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0101"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2020-3187",
+    "published": "2020-05-06T17:15:12.087",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to conduct directory traversal attacks and obtain read and delete access to sensitive files on a targeted system. The vulnerability is due to a lack of proper input validation of the HTTP URL. An attacker could exploit this vulnerability by sending a crafted HTTP request containing directory traversal character sequences. An exploit could allow the attacker to view or delete arbitrary files on the targeted system. When the device is reloaded after exploitation of this vulnerability, any files that were deleted are restored. The attacker can only view and delete files within the web services file system. This file system is enabled when the affected device is configured with either WebVPN or AnyConnect features. This vulnerability can not be used to obtain access to ASA or FTD system files or underlying operating system (OS) files. Reloading the affected device will restore all files within the web services file system.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2020-3187 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3187"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2024-20412",
+    "published": "2024-10-23T18:15:09.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 1000, 2100, 3100, and 4200 Series could allow an unauthenticated, local attacker to access an affected system using static credentials.\r\n\r This vulnerability is due to the presence of static accounts with hard-coded passwords on an affected system. An attacker could exploit this vulnerability by logging in to the CLI of an affected device with these credentials. A successful exploit could allow the attacker to access the affected system and retrieve sensitive information, perform limited troubleshooting actions, modify some configuration options, or render the device unable to boot to the operating system, requiring a reimage of the device.",
+    "tags": [],
+    "title": "CVE-2024-20412 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-20412"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2025-20363",
+    "published": "2025-09-25T16:15:32.497",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software, Cisco Secure Firewall Threat Defense (FTD) Software, Cisco IOS Software, Cisco IOS XE Software, and Cisco IOS XR Software could allow an unauthenticated, remote attacker (Cisco ASA and FTD Software) or authenticated, remote attacker (Cisco IOS, IOS XE, and IOS XR Software) with low user privileges to execute arbitrary code on an affected device. \r\n\r This vulnerability is due to improper validation of user-supplied input in HTTP requests. An attacker could exploit this vulnerability by sending crafted HTTP requests to a targeted web service on an affected device after obtaining additional information about the system, overcoming exploit mitigations, or both. A successful exploit could allow the attacker to execute arbitrary code as root, which may lead to the complete compromise of the affected device.\r\n\r For more information about this vulnerability, see the Details [\"#details\"] section of this advisory.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2025-20363 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-20363"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2018-0228",
+    "published": "2018-04-19T20:29:00.363",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the ingress flow creation functionality of Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to cause the CPU to increase upwards of 100% utilization, causing a denial of service (DoS) condition on an affected system. The vulnerability is due to incorrect handling of an internal software lock that could prevent other system processes from getting CPU cycles, causing a high CPU condition. An attacker could exploit this vulnerability by sending a steady stream of malicious IP packets that can cause connections to be created on the targeted device. A successful exploit could allow the attacker to exhaust CPU resources, resulting in a DoS condition during which traffic through the device could be delayed. This vulnerability applies to either IPv4 or IPv6 ingress traffic. This vulnerability affects Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) Software that is running on the following Cisco products: 3000 Series Industrial Security Appliances (ISA), ASA 5500 Series Adaptive Security Appliances, ASA 5500-X Series Next-Generation Firewalls, ASA Services Module for Cisco Catalyst 6500 Series Switches and Cisco 7600 Series Routers, Adaptive Security Virtual Appliances (ASAv), Firepower 2100 Series Security Appliances, Firepower 4110 Security Appliances, Firepower 9300 ASA Security Modules. Cisco Bug IDs: CSCvf63718.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2018-0228 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0228"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2018-0230",
+    "published": "2018-04-19T20:29:00.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the internal packet-processing functionality of Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 2100 Series Security Appliances could allow an unauthenticated, remote attacker to cause an affected device to stop processing traffic, resulting in a denial of service (DoS) condition. The vulnerability is due to the affected software improperly validating IP Version 4 (IPv4) and IP Version 6 (IPv6) packets after the software reassembles the packets (following IP Fragmentation). An attacker could exploit this vulnerability by sending a series of malicious, fragmented IPv4 or IPv6 packets to an affected device. A successful exploit could allow the attacker to cause Snort processes on the affected device to hang at 100% CPU utilization, which could cause the device to stop processing traffic and result in a DoS condition until the device is reloaded manually. This vulnerability affects Cisco Firepower Threat Defense (FTD) Software Releases 6.2.1 and 6.2.2, if the software is running on a Cisco Firepower 2100 Series Security Appliance. Cisco Bug IDs: CSCvf91098.",
+    "tags": [],
+    "title": "CVE-2018-0230 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0230"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2018-0231",
+    "published": "2018-04-19T20:29:00.533",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Transport Layer Security (TLS) library of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a reload of the affected device, resulting in a denial of service (DoS) condition. The vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a malicious TLS message to an interface enabled for Secure Layer Socket (SSL) services on an affected device. Messages using SSL Version 3 (SSLv3) or SSL Version 2 (SSLv2) cannot be be used to exploit this vulnerability. An exploit could allow the attacker to cause a buffer underflow, triggering a crash on an affected device. This vulnerability affects Cisco ASA Software and Cisco FTD Software that is running on the following Cisco products: Adaptive Security Virtual Appliance (ASAv), Firepower Threat Defense Virtual (FTDv), Firepower 2100 Series Security Appliance. Cisco Bug IDs: CSCve18902, CSCve34335, CSCve38446.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2018-0231 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0231"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2018-0240",
+    "published": "2018-04-19T20:29:00.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Multiple vulnerabilities in the Application Layer Protocol Inspection feature of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition. The vulnerabilities are due to logical errors during traffic inspection. An attacker could exploit these vulnerabilities by sending a high volume of malicious traffic across an affected device. An exploit could allow the attacker to cause a deadlock condition, resulting in a reload of an affected device. These vulnerabilities affect Cisco ASA Software and Cisco FTD Software configured for Application Layer Protocol Inspection running on the following Cisco products: 3000 Series Industrial Security Appliance (ISA), ASA 5500 Series Adaptive Security Appliances, ASA 5500-X Series Next-Generation Firewalls, ASA Services Module for Cisco Catalyst 6500 Series Switches and Cisco 7600 Series Routers, Adaptive Security Virtual Appliance (ASAv), Firepower 2100 Series Security Appliance, Firepower 4100 Series Security Appliance, Firepower 9300 ASA Security Module, FTD Virtual (FTDv). Cisco Bug IDs: CSCve61540, CSCvh23085, CSCvh95456.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2018-0240 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0240"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2018-0453",
+    "published": "2018-10-05T14:29:03.340",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Sourcefire tunnel control channel protocol in Cisco Firepower System Software running on Cisco Firepower Threat Defense (FTD) sensors could allow an authenticated, local attacker to execute specific CLI commands with root privileges on the Cisco Firepower Management Center (FMC), or through Cisco FMC on other Firepower sensors and devices that are controlled by the same Cisco FMC. To send the commands, the attacker must have root privileges for at least one affected sensor or the Cisco FMC. The vulnerability exists because the affected software performs insufficient checks for certain CLI commands, if the commands are executed via a Sourcefire tunnel connection. An attacker could exploit this vulnerability by authenticating with root privileges to a Firepower sensor or Cisco FMC, and then sending specific CLI commands to the Cisco FMC or through the Cisco FMC to another Firepower sensor via the Sourcefire tunnel connection. A successful exploit could allow the attacker to modify device configurations or delete files on the device that is running Cisco FMC Software or on any Firepower device that is managed by Cisco FMC.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2018-0453 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-0453"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2018-15454",
+    "published": "2018-11-01T12:29:00.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Session Initiation Protocol (SIP) inspection engine of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload or trigger high CPU, resulting in a denial of service (DoS) condition. The vulnerability is due to improper handling of SIP traffic. An attacker could exploit this vulnerability by sending SIP requests designed to specifically trigger this issue at a high rate across an affected device. Software updates that address this vulnerability are not yet available.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2018-15454 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-15454"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2019-1669",
+    "published": "2019-01-24T16:29:00.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the data acquisition (DAQ) component of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to bypass configured access control policies or cause a denial of service (DoS) condition. The vulnerability exists because the affected software improperly manages system memory resources when inspecting traffic. An attacker could exploit this vulnerability by generating specific traffic patterns for the software to inspect. A successful exploit could allow the attacker to exhaust system memory resources used for traffic inspection. Depending on the configuration, the FTD Software could fail open and cease to inspect traffic or fail closed and result in a DoS condition. This vulnerability may require manual intervention to restore the software.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-1669 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1669"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2018-15462",
+    "published": "2019-05-03T15:29:00.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the TCP ingress handler for the data interfaces that are configured with management access to Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an increase in CPU and memory usage, resulting in a denial of service (DoS) condition. The vulnerability is due to insufficient ingress TCP rate limiting for TCP ports 22 (SSH) and 443 (HTTPS). An attacker could exploit this vulnerability by sending a crafted, steady stream of TCP traffic to port 22 or 443 on the data interfaces that are configured with management access to the affected device.",
+    "tags": [],
+    "title": "CVE-2018-15462 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-15462"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2019-1694",
+    "published": "2019-05-03T15:29:01.040",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the TCP processing engine of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition. The vulnerability is due to the improper handling of TCP traffic. An attacker could exploit this vulnerability by sending a specific sequence of packets at a high rate through an affected device. A successful exploit could allow the attacker to temporarily disrupt traffic through the device while it reboots.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2019-1694 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1694"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2019-1703",
+    "published": "2019-05-03T16:29:00.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the internal packet-processing functionality of Cisco Firepower Threat Defense (FTD) Software for the Cisco Firepower 2100 Series could allow an unauthenticated, remote attacker to cause an affected device to stop processing traffic, resulting in a denial of service (DoS) condition. The vulnerability is due to a logic error, which may prevent ingress buffers from being replenished under specific traffic conditions. An attacker could exploit this vulnerability by sending a series of crafted packets to an affected device. A successful exploit could allow the attacker to consume all input buffers, which are shared between all interfaces, leading to a queue wedge condition in all active interfaces. This situation would cause an affected device to stop processing any incoming traffic and result in a DoS condition until the device is reloaded manually.",
+    "tags": [],
+    "title": "CVE-2019-1703 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1703"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2019-1708",
+    "published": "2019-05-03T16:29:00.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Internet Key Exchange Version 2 Mobility and Multihoming Protocol (MOBIKE) feature for the Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a memory leak or a reload of an affected device that leads to a denial of service (DoS) condition. The vulnerability is due to the incorrect processing of certain MOBIKE packets. An attacker could exploit this vulnerability by sending crafted MOBIKE packets to an affected device to be processed. A successful exploit could cause an affected device to continuously consume memory and eventually reload, resulting in a DoS condition. The MOBIKE feature is supported only for IPv4 addresses.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2019-1708 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1708"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2019-1714",
+    "published": "2019-05-03T17:29:00.533",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the implementation of Security Assertion Markup Language (SAML) 2.0 Single Sign-On (SSO) for Clientless SSL VPN (WebVPN) and AnyConnect Remote Access VPN in Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to successfully establish a VPN session to an affected device. The vulnerability is due to improper credential management when using NT LAN Manager (NTLM) or basic authentication. An attacker could exploit this vulnerability by opening a VPN session to an affected device after another VPN user has successfully authenticated to the affected device via SAML SSO. A successful exploit could allow the attacker to connect to secured networks behind the affected device.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2019-1714 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1714"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2019-15256",
+    "published": "2019-10-02T19:15:15.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Internet Key Exchange version 1 (IKEv1) feature of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition. The vulnerability is due to improper management of system memory. An attacker could exploit this vulnerability by sending malicious IKEv1 traffic to an affected device. The attacker does not need valid credentials to authenticate the VPN session, nor does the attacker's source address need to match a peer statement in the crypto map applied to the ingress interface of the affected device. An exploit could allow the attacker to exhaust system memory resources, leading to a reload of an affected device.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2019-15256 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-15256"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3189",
+    "published": "2020-05-06T17:15:12.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the VPN System Logging functionality for Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a memory leak that can deplete system memory over time, which can cause unexpected system behaviors or device crashes. The vulnerability is due to the system memory not being properly freed for a VPN System Logging event generated when a VPN session is created or deleted. An attacker could exploit this vulnerability by repeatedly creating or deleting a VPN tunnel connection, which could leak a small amount of system memory for each logging event. A successful exploit could allow the attacker to cause system memory depletion, which can lead to a systemwide denial of service (DoS) condition. The attacker does not have any control of whether VPN System Logging is configured or not on the device, but it is enabled by default.",
+    "tags": [],
+    "title": "CVE-2020-3189 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3189"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3191",
+    "published": "2020-05-06T17:15:12.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in DNS over IPv6 packet processing for Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to unexpectedly reload, resulting in a denial of service (DoS) condition. The vulnerability is due to improper length validation of a field in an IPv6 DNS packet. An attacker could exploit this vulnerability by sending a crafted DNS query over IPv6, which traverses the affected device. An exploit could allow the attacker to cause the device to reload, resulting in a DoS condition. This vulnerability is specific to DNS over IPv6 traffic only.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2020-3191 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3191"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3196",
+    "published": "2020-05-06T17:15:12.417",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Secure Sockets Layer (SSL)/Transport Layer Security (TLS) handler of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to exhaust memory resources on the affected device, leading to a denial of service (DoS) condition. The vulnerability is due to improper resource management for inbound SSL/TLS connections. An attacker could exploit this vulnerability by establishing multiple SSL/TLS connections with specific conditions to the affected device. A successful exploit could allow the attacker to exhaust the memory on the affected device, causing the device to stop accepting new SSL/TLS connections and resulting in a DoS condition for services on the device that process SSL/TLS traffic. Manual intervention is required to recover an affected device.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2020-3196 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3196"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3283",
+    "published": "2020-05-06T17:15:12.837",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Secure Sockets Layer (SSL)/Transport Layer Security (TLS) handler of Cisco Firepower Threat Defense (FTD) Software when running on the Cisco Firepower 1000 Series platform could allow an unauthenticated, remote attacker to trigger a denial of service (DoS) condition on an affected device. The vulnerability is due to a communication error between internal functions. An attacker could exploit this vulnerability by sending a crafted SSL/TLS message to an affected device. A successful exploit could allow the attacker to cause a buffer underrun, which leads to a crash. The crash causes the affected device to reload.",
+    "tags": [],
+    "title": "CVE-2020-3283 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3283"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3304",
+    "published": "2020-10-21T19:15:15.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web interface of Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload unexpectedly, resulting in a denial of service (DoS) condition. The vulnerability is due to a lack of proper input validation of HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. An exploit could allow the attacker to cause a DoS condition. Note: This vulnerability applies to IP Version 4 (IPv4) and IP Version 6 (IPv6) HTTP traffic.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2020-3304 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3304"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3373",
+    "published": "2020-10-21T19:15:15.903",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the IP fragment-handling implementation of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a memory leak on an affected device. This memory leak could prevent traffic from being processed through the device, resulting in a denial of service (DoS) condition. The vulnerability is due to improper error handling when specific failures occur during IP fragment reassembly. An attacker could exploit this vulnerability by sending crafted, fragmented IP traffic to a targeted device. A successful exploit could allow the attacker to continuously consume memory on the affected device and eventually impact traffic, resulting in a DoS condition. The device could require a manual reboot to recover from the DoS condition. Note: This vulnerability applies to both IP Version 4 (IPv4) and IP Version 6 (IPv6) traffic.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2020-3373 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3373"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3436",
+    "published": "2020-10-21T19:15:16.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface of Cisco Adaptive Security Appliance (ASA) and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to upload arbitrary-sized files to specific folders on an affected device, which could lead to an unexpected device reload. The vulnerability exists because the affected software does not efficiently handle the writing of large files to specific folders on the local file system. An attacker could exploit this vulnerability by uploading files to those specific folders. A successful exploit could allow the attacker to write a file that triggers a watchdog timeout, which would cause the device to unexpectedly reload, causing a denial of service (DoS) condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2020-3436 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3436"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2020-3514",
+    "published": "2020-10-21T19:15:16.717",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the multi-instance feature of Cisco Firepower Threat Defense (FTD) Software could allow an authenticated, local attacker to escape the container for their Cisco FTD instance and execute commands with root privileges in the host namespace. The attacker must have valid credentials on the device.The vulnerability exists because a configuration file that is used at container startup has insufficient protections. An attacker could exploit this vulnerability by modifying a specific container configuration file on the underlying file system. A successful exploit could allow the attacker to execute commands with root privileges within the host namespace. This could allow the attacker to impact other running Cisco FTD instances or the host Cisco FXOS device.",
+    "tags": [],
+    "title": "CVE-2020-3514 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3514"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3528",
+    "published": "2020-10-21T19:15:16.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the OSPF Version 2 (OSPFv2) implementation of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition. The vulnerability is due to incomplete input validation when the affected software processes certain OSPFv2 packets with Link-Local Signaling (LLS) data. An attacker could exploit this vulnerability by sending a malformed OSPFv2 packet to an affected device. A successful exploit could allow the attacker to cause an affected device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2020-3528 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3528"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3529",
+    "published": "2020-10-21T19:15:16.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the SSL VPN negotiation process for Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a reload of an affected device, resulting in a denial of service (DoS) condition. The vulnerability is due to inefficient direct memory access (DMA) memory management during the negotiation phase of an SSL VPN connection. An attacker could exploit this vulnerability by sending a steady stream of crafted Datagram TLS (DTLS) traffic to an affected device. A successful exploit could allow the attacker to exhaust DMA memory on the device and cause a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2020-3529 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3529"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3533",
+    "published": "2020-10-21T19:15:17.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Simple Network Management Protocol (SNMP) input packet processor of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to restart unexpectedly. The vulnerability is due to a lack of sufficient memory management protections under heavy SNMP polling loads. An attacker could exploit this vulnerability by sending a high rate of SNMP requests to the SNMP daemon through the management interface on an affected device. A successful exploit could allow the attacker to cause the SNMP daemon process to consume a large amount of system memory over time, which could then lead to an unexpected device restart, causing a denial of service (DoS) condition. This vulnerability affects all versions of SNMP.",
+    "tags": [],
+    "title": "CVE-2020-3533 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3533"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2020-3550",
+    "published": "2020-10-21T19:15:17.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the sfmgr daemon of Cisco Firepower Management Center (FMC) Software and Cisco Firepower Threat Defense (FTD) Software could allow an authenticated, remote attacker to perform directory traversal and access directories outside the restricted path. The vulnerability is due to insufficient input validation. An attacker could exploit this vulnerability by using a relative path in specific sfmgr commands. An exploit could allow the attacker to read or write arbitrary files on an sftunnel-connected peer device.",
+    "tags": [],
+    "title": "CVE-2020-3550 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3550"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3562",
+    "published": "2020-10-21T19:15:17.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the SSL/TLS inspection of Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 2100 Series firewalls could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. The vulnerability is due to improper input validation for certain fields of specific SSL/TLS messages. An attacker could exploit this vulnerability by sending a malformed SSL/TLS message through an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition. No manual intervention is needed to recover the device after it has reloaded.",
+    "tags": [],
+    "title": "CVE-2020-3562 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3562"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3563",
+    "published": "2020-10-21T19:15:17.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the packet processing functionality of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. The vulnerability is due to inefficient memory management. An attacker could exploit this vulnerability by sending a large number of TCP packets to a specific port on an affected device. A successful exploit could allow the attacker to exhaust system memory, which could cause the device to reload unexpectedly. No manual intervention is needed to recover the device after it has reloaded.",
+    "tags": [],
+    "title": "CVE-2020-3563 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3563"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3571",
+    "published": "2020-10-21T19:15:18.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the ICMP ingress packet processing of Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 4110 appliances could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. The vulnerability is due to incomplete input validation upon receiving ICMP packets. An attacker could exploit this vulnerability by sending a high number of crafted ICMP or ICMPv6 packets to an affected device. A successful exploit could allow the attacker to cause a memory exhaustion condition that may result in an unexpected reload. No manual intervention is needed to recover the device after the reload.",
+    "tags": [],
+    "title": "CVE-2020-3571 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3571"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2020-3572",
+    "published": "2020-10-21T19:15:18.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the SSL/TLS session handler of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. The vulnerability is due to a memory leak when closing SSL/TLS connections in a specific state. An attacker could exploit this vulnerability by establishing several SSL/TLS sessions and ensuring they are closed under certain conditions. A successful exploit could allow the attacker to exhaust memory resources in the affected device, which would prevent it from processing new SSL/TLS connections, resulting in a DoS. Manual intervention is required to recover an affected device.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2020-3572 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-3572"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-1402",
+    "published": "2021-04-29T18:15:08.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the software-based SSL/TLS message handler of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition. The vulnerability is due to insufficient validation of SSL/TLS messages when the device performs software-based SSL decryption. An attacker could exploit this vulnerability by sending a crafted SSL/TLS message through an affected device. SSL/TLS messages sent to an affected device do not trigger this vulnerability. A successful exploit could allow the attacker to cause a process to crash. This crash would then trigger a reload of the device. No manual intervention is needed to recover the device after the reload.",
+    "tags": [],
+    "title": "CVE-2021-1402 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-1402"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-1445",
+    "published": "2021-04-29T18:15:08.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Multiple vulnerabilities in Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. These vulnerabilities are due to lack of proper input validation of the HTTPS request. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition. Note: This vulnerability affects only specific AnyConnect and WebVPN configurations. For more information, see the Vulnerable Products section.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-1445 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-1445"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2021-1493",
+    "published": "2021-04-29T18:15:09.387",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an authenticated, remote attacker to cause a buffer overflow on an affected system. The vulnerability is due to insufficient boundary checks for specific data that is provided to the web services interface of an affected system. An attacker could exploit this vulnerability by sending a malicious HTTP request. A successful exploit could allow the attacker to cause a buffer overflow condition on the affected system, which could disclose data fragments or cause the device to reload, resulting in a denial of service (DoS) condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-1493 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-1493"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-1501",
+    "published": "2021-04-29T18:15:09.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the SIP inspection engine of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a crash and reload of an affected device, resulting in a denial of service (DoS) condition.The vulnerability is due to a crash that occurs during a hash lookup for a SIP pinhole connection. An attacker could exploit this vulnerability by sending crafted SIP traffic through an affected device. A successful exploit could allow the attacker to cause a crash and reload of the affected device.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-1501 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-1501"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-1504",
+    "published": "2021-04-29T18:15:09.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Multiple vulnerabilities in Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. These vulnerabilities are due to lack of proper input validation of the HTTPS request. An attacker could exploit these vulnerabilities by sending a crafted HTTPS request to an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition. Note: This vulnerability affects only specific AnyConnect and WebVPN configurations. For more information, see the Vulnerable Products section.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-1504 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-1504"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2021-34762",
+    "published": "2021-10-27T19:15:08.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web-based management interface of Cisco Firepower Management Center (FMC) Software could allow an authenticated, remote attacker to perform a directory traversal attack on an affected device. The attacker would require valid device credentials. The vulnerability is due to insufficient input validation of the HTTPS URL by the web-based management interface. An attacker could exploit this vulnerability by sending a crafted HTTPS request that contains directory traversal character sequences to an affected device. A successful exploit could allow the attacker to read or write arbitrary files on the device.",
+    "tags": [],
+    "title": "CVE-2021-34762 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34762"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-34781",
+    "published": "2021-10-27T19:15:08.233",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the processing of SSH connections for multi-instance deployments of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on the affected device. This vulnerability is due to a lack of proper error handling when an SSH session fails to be established. An attacker could exploit this vulnerability by sending a high rate of crafted SSH connections to the instance. A successful exploit could allow the attacker to cause resource exhaustion, which causes a DoS condition on the affected device. The device must be manually reloaded to recover.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2021-34781 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34781"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-34783",
+    "published": "2021-10-27T19:15:08.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the software-based SSL/TLS message handler of Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition. This vulnerability is due to insufficient validation of SSL/TLS messages when the device performs software-based SSL/TLS decryption. An attacker could exploit this vulnerability by sending a crafted SSL/TLS message to an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition. Note: Datagram TLS (DTLS) messages cannot be used to exploit this vulnerability.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-34783 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34783"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-34792",
+    "published": "2021-10-27T19:15:08.510",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the memory management of Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability is due to improper resource management when connection rates are high. An attacker could exploit this vulnerability by opening a significant number of connections on an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2021-34792 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34792"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-34793",
+    "published": "2021-10-27T19:15:08.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the TCP Normalizer of Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software operating in transparent mode could allow an unauthenticated, remote attacker to poison MAC address tables, resulting in a denial of service (DoS) vulnerability. This vulnerability is due to incorrect handling of certain TCP segments when the affected device is operating in transparent mode. An attacker could exploit this vulnerability by sending a crafted TCP segment through an affected device. A successful exploit could allow the attacker to poison the MAC address tables in adjacent devices, resulting in network disruption.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-34793 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34793"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-40116",
+    "published": "2021-10-27T19:15:08.717",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Multiple Cisco products are affected by a vulnerability in Snort rules that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.The vulnerability is due to improper handling of the Block with Reset or Interactive Block with Reset actions if a rule is configured without proper constraints. An attacker could exploit this vulnerability by sending a crafted IP packet to the affected device. A successful exploit could allow the attacker to cause through traffic to be dropped. Note: Only products with Snort3 configured and either a rule with Block with Reset or Interactive Block with Reset actions configured are vulnerable. Products configured with Snort2 are not vulnerable.",
+    "tags": [],
+    "title": "CVE-2021-40116 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40116"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-40117",
+    "published": "2021-10-27T19:15:08.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in SSL/TLS message handler for Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability exists because incoming SSL/TLS packets are not properly processed. An attacker could exploit this vulnerability by sending a crafted SSL/TLS packet to an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-40117 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40117"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-40118",
+    "published": "2021-10-27T19:15:08.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a denial of service (DoS) condition. This vulnerability is due to improper input validation when parsing HTTPS requests. An attacker could exploit this vulnerability by sending a malicious HTTPS request to an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-40118 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40118"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-1573",
+    "published": "2022-01-11T19:15:07.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a denial of service (DoS) condition. This vulnerability is due to improper input validation when parsing HTTPS requests. An attacker could exploit this vulnerability by sending a malicious HTTPS request to an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-1573 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-1573"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2021-34704",
+    "published": "2022-01-11T19:15:07.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a denial of service (DoS) condition. This vulnerability is due to improper input validation when parsing HTTPS requests. An attacker could exploit this vulnerability by sending a malicious HTTPS request to an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2021-34704 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34704"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20715",
+    "published": "2022-05-03T04:15:09.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the remote access SSL VPN features of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability is due to improper validation of errors that are logged as a result of client connections that are made using remote access VPN. An attacker could exploit this vulnerability by sending crafted requests to an affected system. A successful exploit could allow the attacker to cause the affected device to restart, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2022-20715 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20715"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20745",
+    "published": "2022-05-03T04:15:09.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface for remote access VPN features of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition. This vulnerability is due to improper input validation when parsing HTTPS requests. An attacker could exploit this vulnerability by sending a crafted HTTPS request to an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2022-20745 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20745"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20746",
+    "published": "2022-05-03T04:15:09.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the TCP proxy functionality of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a denial of service (DoS) condition. This vulnerability is due to improper handling of TCP flows. An attacker could exploit this vulnerability by sending a crafted stream of TCP traffic through an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [],
+    "title": "CVE-2022-20746 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20746"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20751",
+    "published": "2022-05-03T04:15:09.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Snort detection engine integration for Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause unlimited memory consumption, which could lead to a denial of service (DoS) condition on an affected device. This vulnerability is due to insufficient memory management for certain Snort events. An attacker could exploit this vulnerability by sending a series of crafted IP packets that would generate specific Snort events on an affected device. A sustained attack could cause an out of memory condition on the affected device. A successful exploit could allow the attacker to interrupt all traffic flowing through the affected device. In some circumstances, the attacker may be able to cause the device to reload, resulting in a DoS condition.",
+    "tags": [],
+    "title": "CVE-2022-20751 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20751"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20757",
+    "published": "2022-05-03T04:15:09.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the connection handling function in Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability is due to improper traffic handling when platform limits are reached. An attacker could exploit this vulnerability by sending a high rate of UDP traffic through an affected device. A successful exploit could allow the attacker to cause all new, incoming connections to be dropped, resulting in a DoS condition.",
+    "tags": [],
+    "title": "CVE-2022-20757 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20757"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2022-20759",
+    "published": "2022-05-03T04:15:09.827",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the web services interface for remote access VPN features of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an authenticated, but unprivileged, remote attacker to elevate privileges to level 15. This vulnerability is due to improper separation of authentication and authorization scopes. An attacker could exploit this vulnerability by sending crafted HTTPS messages to the web services interface of an affected device. A successful exploit could allow the attacker to gain privilege level 15 access to the web management interface of the device. This includes privilege level 15 access to the device using management tools like the Cisco Adaptive Security Device Manager (ASDM) or the Cisco Security Manager (CSM). Note: With Cisco FTD Software, the impact is lower than the CVSS score suggests because the affected web management interface allows for read access only.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2022-20759 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20759"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20760",
+    "published": "2022-05-03T04:15:09.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the DNS inspection handler of Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service condition (DoS) on an affected device. This vulnerability is due to a lack of proper processing of incoming requests. An attacker could exploit this vulnerability by sending crafted DNS requests at a high rate to an affected device. A successful exploit could allow the attacker to cause the device to stop responding, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2022-20760 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20760"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20767",
+    "published": "2022-05-03T04:15:09.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Snort rule evaluation function of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. The vulnerability is due to improper handling of the DNS reputation enforcement rule. An attacker could exploit this vulnerability by sending crafted UDP packets through an affected device to force a buildup of UDP connections. A successful exploit could allow the attacker to cause traffic that is going through the affected device to be dropped, resulting in a DoS condition. Note: This vulnerability only affects Cisco FTD devices that are running Snort 3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2022-20767 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20767"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20946",
+    "published": "2022-11-15T21:15:35.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the generic routing encapsulation (GRE) tunnel decapsulation feature of Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.\r\n\r This vulnerability is due to a memory handling error that occurs when GRE traffic is processed. An attacker could exploit this vulnerability by sending a crafted GRE payload through an affected device. A successful exploit could allow the attacker to cause the device to restart, resulting in a DoS condition.\r\n\r    \r\n\r  https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-gre-dos-hmedHQPM [\"https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-gre-dos-hmedHQPM\"]\r\n\r \r This advisory is part of the November 2022 release of the Cisco ASA, FTD, and FMC Security Advisory Bundled publication.",
+    "tags": [],
+    "title": "CVE-2022-20946 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20946"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2022-20947",
+    "published": "2022-11-15T21:15:35.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in dynamic access policies (DAP) functionality of Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition.\r\n\r This vulnerability is due to improper processing of HostScan data received from the Posture (HostScan) module. An attacker could exploit this vulnerability by sending crafted HostScan data to an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.   \r\n\r    \r\n\r  https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ftd-dap-dos-GhYZBxDU [\"https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ftd-dap-dos-GhYZBxDU\"]\r\n\r \r This advisory is part of the November 2022 release of the Cisco ASA, FTD, and FMC Security Advisory Bundled publication.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2022-20947 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-20947"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2023-20006",
+    "published": "2023-06-28T15:15:09.387",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the hardware-based SSL/TLS cryptography functionality of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 2100 Series Appliances could allow an unauthenticated, remote attacker to cause an affected device to reload unexpectedly, resulting in a denial of service (DoS) condition.\r\n\r This vulnerability is due to an implementation error within the cryptographic functions for SSL/TLS traffic processing when they are offloaded to the hardware. An attacker could exploit this vulnerability by sending a crafted stream of SSL/TLS traffic to an affected device. A successful exploit could allow the attacker to cause an unexpected error in the hardware-based cryptography engine, which could cause the device to reload.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2023-20006 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20006"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2023-20086",
+    "published": "2023-11-01T17:15:11.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in ICMPv6 processing of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition. This vulnerability is due to improper processing of ICMPv6 messages. An attacker could exploit this vulnerability by sending crafted ICMPv6 messages to a targeted Cisco ASA or FTD system with IPv6 enabled. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2023-20086 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20086"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2023-20244",
+    "published": "2023-11-01T17:15:11.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the internal packet processing of Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 2100 Series Firewalls could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability is due to improper handling of certain packets when they are sent to the inspection engine. An attacker could exploit this vulnerability by sending a series of crafted packets to an affected device. A successful exploit could allow the attacker to deplete all 9,472 byte blocks on the device, resulting in traffic loss across the device or an unexpected reload of the device. If the device does not reload on its own, a manual reload of the device would be required to recover from this state.",
+    "tags": [],
+    "title": "CVE-2023-20244 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20244"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2023-20063",
+    "published": "2023-11-01T18:15:08.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the inter-device communication mechanisms between devices that are running Cisco Firepower Threat Defense (FTD) Software and devices that are running Cisco Firepower Management (FMC) Software could allow an authenticated, local attacker to execute arbitrary commands with root permissions on the underlying operating system of an affected device.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by accessing the expert mode of an affected device and submitting specific commands to a connected system. A successful exploit could allow the attacker to execute arbitrary code in the context of an FMC device if the attacker has administrative privileges on an associated FTD device. Alternatively, a successful exploit could allow the attacker to execute arbitrary code in the context of an FTD device if the attacker has administrative privileges on an associated FMC device.",
+    "tags": [],
+    "title": "CVE-2023-20063 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20063"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2023-20083",
+    "published": "2023-11-01T18:15:09.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in ICMPv6 inspection when configured with the Snort 2 detection engine for Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the CPU of an affected device to spike to 100 percent, which could stop all traffic processing and result in a denial of service (DoS) condition. FTD management traffic is not affected by this vulnerability. This vulnerability is due to improper error checking when parsing fields within the ICMPv6 header. An attacker could exploit this vulnerability by sending a crafted ICMPv6 packet through an affected device. A successful exploit could allow the attacker to cause the device to exhaust CPU resources and stop processing traffic, resulting in a DoS condition. Note: To recover from the DoS condition, the Snort 2 Detection Engine or the Cisco FTD device may need to be restarted.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2023-20083 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20083"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2023-20095",
+    "published": "2023-11-01T18:15:09.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the remote access VPN feature of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device. This vulnerability is due to improper handling of HTTPS requests. An attacker could exploit this vulnerability by sending crafted HTTPS requests to an affected system. A successful exploit could allow the attacker to cause resource exhaustion, resulting in a DoS condition.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2023-20095 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20095"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2024-20330",
+    "published": "2024-10-23T17:15:17.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Snort 2 and Snort 3 TCP and UDP detection engine of Cisco Firepower Threat Defense (FTD) Software for Cisco Firepower 2100 Series Appliances could allow an unauthenticated, remote attacker to cause memory corruption, which could cause the Snort detection engine to restart unexpectedly.\r\n\r\nThis vulnerability is due to improper memory management when the Snort detection engine processes specific TCP or UDP packets. An attacker could exploit this vulnerability by sending crafted TCP or UDP packets through a device that is inspecting traffic using the Snort detection engine. A successful exploit could allow the attacker to restart the Snort detection engine repeatedly, which could cause a denial of service (DoS) condition. The DoS condition impacts only the traffic through the device that is examined by the Snort detection engine. The device can still be managed over the network.\r\nNote: Once a memory block is corrupted, it cannot be cleared until the Cisco Firepower 2100 Series Appliance is manually reloaded. This means that the Snort detection engine could crash repeatedly, causing traffic that is processed by the Snort detection engine to be dropped until the device is manually reloaded.",
+    "tags": [],
+    "title": "CVE-2024-20330 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-20330"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2024-20402",
+    "published": "2024-10-23T18:15:07.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the SSL VPN feature for Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload unexpectedly, resulting in a denial of service (DoS) condition.\r\n\r This vulnerability is due to a logic error in memory management when the device is handling SSL VPN connections. An attacker could exploit this vulnerability by sending crafted SSL/TLS packets to the SSL VPN server of the affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2024-20402 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-20402"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2024-20494",
+    "published": "2024-10-23T18:15:12.783",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the TLS cryptography functionality of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.\r\n\r This vulnerability is due to improper data validation during the TLS 1.3 handshake. An attacker could exploit this vulnerability by sending a crafted TLS 1.3 packet to an affected system through a TLS 1.3-enabled listening socket. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.\r\n\r Note: This vulnerability can also impact the integrity of a device by causing VPN HostScan communication failures or file transfer failures when Cisco ASA Software is upgraded using Cisco Adaptive Security Device Manager (ASDM).",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2024-20494 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-20494"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2024-20495",
+    "published": "2024-10-23T18:15:13.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Remote Access VPN feature of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition on an affected device.\r\n\r This vulnerability is due to improper validation of client key data after the TLS session is established. An attacker could exploit this vulnerability by sending a crafted key value to an affected system over the secure TLS session. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2024-20495 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-20495"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2025-20182",
+    "published": "2025-05-07T18:15:38.120",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in the Internet Key Exchange version 2 (IKEv2) protocol processing of Cisco Adaptive Security Appliance (ASA) Software, Cisco Firepower Threat Defense (FTD) Software, Cisco IOS Software, and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.\r\n\r\nThis vulnerability is due to insufficient input validation when processing IKEv2 messages. An attacker could exploit this vulnerability by sending crafted IKEv2 traffic to an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition on the affected device.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2025-20182 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-20182"
   }
 ]
