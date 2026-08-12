@@ -2078,5 +2078,31 @@
     ],
     "title": "금융결제원 등기 토토 - 업계 전문가들의 조언",
     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQbTBvaW9pR2dhMFNZZEFLSVJTT0szU0JBb1lMVUVqOFdGckExQ0xLMEw1OU45S2NqOUJQaE5HZERwa25lYkJabld2ajF4cVQ0b2hVOXlLdS12ZEZWcnRUNDFXaVlBRjZtaXdSWHpCOVJydHAzcDBHOFpBSnl3Nmw5ZzFheVJmM0VOVEJaQ19VSXRLWWYyUDQzdGR6TVhkVDIwbW1JdldKbF9vWjdSN2ZZd3Bsb01rZVNzVEk3NGczdVpMc0JoV21lMl9qSlhFQQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18961",
+    "published": "2026-08-12T03:16:42.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Social Login, Passkeys, Magic Link & Email OTP – Passwordless Login by VentraConnect plugin for WordPress is vulnerable to Authentication Bypass via Unverified Provider Email in all versions up to, and including, 1.4.3. This is due to the plugin trusting the unverified email field returned by Spotify's /v1/me endpoint as proof of mailbox ownership — Generic::normalize_common() copies this value into the normalized profile without requiring an email_verified assertion, and User_Links::link_or_login_user() subsequently passes it directly to get_user_by('email', $email) and issues a persistent authentication cookie via wp_set_auth_cookie() without a provider-specific verified-email gate, a local mailbox challenge, or a logged-in approval step. This makes it possible for unauthenticated attackers to log in as any existing WordPress user, including Administrators, by supplying a known target email address through a controlled Spotify OAuth flow, gaining full administrative access to the site.",
+    "tags": [],
+    "title": "CVE-2026-18961 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18961"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE42Z2g2Z1p2WnFzdmg4RV8yNVlHSHJLbmg0d0dlSGE2akZwME9rcW5vbVFnSjBHRHNzalJyUFhuLUZKVkt0YmdJNkNObWxUSTdoeVk4",
+    "published": "2026-08-12T03:09:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"대출 받으려면 서류 떼오세요\"…스크래핑 차단에 비대면 금융 '비상'",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"대출 받으려면 서류 떼오세요\"…스크래핑 차단에 비대면 금융 '비상'",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE42Z2g2Z1p2WnFzdmg4RV8yNVlHSHJLbmg0d0dlSGE2akZwME9rcW5vbVFnSjBHRHNzalJyUFhuLUZKVkt0YmdJNkNObWxUSTdoeVk4?oc=5"
   }
 ]
