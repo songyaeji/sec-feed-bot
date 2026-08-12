@@ -4525,5 +4525,190 @@
     "tags": [],
     "title": "2025 사업연도 투자자문,일임업 영업실적 [잠정]",
     "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=222569&menuNo=200218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2018-9206",
+    "published": "2018-10-11T15:29:00.640",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Unauthenticated arbitrary file upload vulnerability in Blueimp jQuery-File-Upload <= v9.22.0",
+    "tags": [],
+    "title": "CVE-2018-9206 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-9206"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-19001",
+    "published": "2026-08-12T21:17:37.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The MongoDB BI Connector ODBC Driver may write outside the bounds of a fixed-size buffer when an application supplies an unusually long catalog, schema, or object name to a metadata retrieval function. This may result in memory corruption within the calling application's process, leading to abnormal termination and, under certain conditions, the potential for arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-19001 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19001"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-66898",
+    "published": "2026-08-12T21:17:39.700",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A path traversal vulnerability in LXD allows an attacker to manipulate file system paths during backup import and restore operations. When importing or restoring a backup archive, LXD fails to validate instance and storage volume names contained within the archive metadata. An attacker can exploit this flaw by supplying a crafted backup archive with malicious instance or volume names containing path traversal sequences, potentially allowing file access or overwriting outside the designated restore directory.",
+    "tags": [],
+    "title": "CVE-2026-66898 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66898"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-19282",
+    "published": "2026-08-08T13:17:10.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A weakness has been identified in andreahaku llm_memory_mcp up to f11dc8bcff3ff8cf943a2945f99ff3b0bdc8a6d0. This impacts the function auto.capture of the file src/autolearn/GitHooksManager.ts of the component llm_memory_mcp. Executing a manipulation of the argument hash can lead to command injection. The attack is restricted to local execution. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.",
+    "tags": [
+      "AI",
+      "APT"
+    ],
+    "title": "CVE-2026-19282 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19282"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-10543",
+    "published": "2026-08-12T21:17:34.360",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.5 is vulnerable to privilege escalation with a specially crafted query.",
+    "tags": [],
+    "title": "CVE-2026-10543 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10543"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-13094",
+    "published": "2026-08-12T21:17:34.900",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i Access Client Solutions 1.1.2.0 through 1.1.9.13 is vulnerable to arbitrary code execution on Windows when installed for all users due to publicly writeable configuration file.",
+    "tags": [],
+    "title": "CVE-2026-13094 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13094"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-13105",
+    "published": "2026-08-12T21:17:35.027",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i Access Client Solutions 1.1.2.0 through 1.1.9.13 is vulnerable to zip slip path traversal exploit when importing a configuration.",
+    "tags": [],
+    "title": "CVE-2026-13105 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13105"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-13433",
+    "published": "2026-08-12T21:17:35.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i Access Client Solutions 1.1.2.0 through 1.1.9.13 (ACS) is vulnerable to downloading unverified product code when configured to update from an IBM i. A bad actor could use this vulnerablity to run compromised code on the ACS user's workstation.",
+    "tags": [],
+    "title": "CVE-2026-13433 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13433"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-13622",
+    "published": "2026-08-12T21:17:35.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A symlink following vulnerability was found in KubeVirt's virt-handler migration proxy. During live migration, virt-handler dials Unix sockets inside the target virt-launcher pod via /proc/<pid>/root/ paths using net.Dial() without symlink protection. These socket paths reside in qemu-owned directories writable by the virt-launcher user. An attacker with namespace edit and pods/exec permissions can replace a migration proxy socket with a symlink to the host CRI-O socket. Because virt-handler runs as root in the host mount namespace, absolute symlink targets resolve against the host filesystem, and the bidirectional io.Copy proxy relays attacker-controlled bytes to the container runtime, enabling full node compromise.",
+    "tags": [],
+    "title": "CVE-2026-13622 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13622"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-16033",
+    "published": "2026-08-12T21:17:35.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A path traversal vulnerability in LXD allows an attacker to achieve arbitrary host file read or unconstrained file creation. When processing image metadata templates, LXD fails to properly sanitize or restrict template file paths from escaping the instance templates directory (specifically affecting virtual machine / QEMU driver execution paths). An attacker can exploit this flaw by providing a crafted image archive with malicious template directives containing path traversal sequences, causing LXD to access or write files outside the intended template directory on the host system.",
+    "tags": [],
+    "title": "CVE-2026-16033 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16033"
+  },
+  {
+    "category": "high",
+    "cvss": 3.3,
+    "id": "CVE-2026-18096",
+    "published": "2026-08-12T21:17:36.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Db2 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to cause a denial of service due to a memory leak.",
+    "tags": [],
+    "title": "CVE-2026-18096 (CVSS 3.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18096"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2026-18097",
+    "published": "2026-08-12T21:17:36.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.5 for Linux, UNIX and Windows (includes DB2 Connect Server) could allow a local attacker to obtain sensitive information due to the logging of plain text passwords in trace files.",
+    "tags": [],
+    "title": "CVE-2026-18097 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18097"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19002",
+    "published": "2026-08-12T21:17:37.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A missing bounds check when parsing stored procedure parameter metadata in the MongoDB BI Connector ODBC Driver can result in an out-of-bounds write in the client application process. Triggering this issue requires control over the server the driver connects to, or the ability to respond in its place, in order to return malformed metadata. The resulting memory corruption may cause the client application to terminate abnormally or, under certain conditions, execute unintended code.",
+    "tags": [],
+    "title": "CVE-2026-19002 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19002"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19004",
+    "published": "2026-08-12T21:17:37.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An application using the MongoDB BI Connector ODBC Driver may experience a memory-safety issue when processing output parameters from a stored procedure. Triggering this issue requires connecting to an untrusted or impersonated database server that returns crafted metadata. This may result in process termination, disclosure of process memory, or, under certain conditions, arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-19004 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19004"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-73422",
+    "published": "2026-08-12T21:17:41.187",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Astro is a web framework for content-driven websites. From 2.9.0 until 7.1.0, Astro's server-side View Transition CSS generator interpolates animation properties into an inline style element without escaping them for CSS and HTML contexts. An attacker-controlled View Transition animation value such as duration can terminate the generated style element and inject arbitrary HTML or JavaScript. The affected code is packages/astro/src/runtime/server/transition.ts; renderTransition passes sheet.toString() into markHTMLString(), while addAnimationProperty serializes duration through toTimeValue() and also handles easing, direction, delay, fillMode, and name. Exploitation requires an on-demand or server-rendered route to pass attacker-controlled data into a View Transition animation definition and can execute arbitrary JavaScript in the affected application's origin, allowing access to sensitive page data and authenticated actions available to the victim. This issue is fixed in version 7.1.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-73422 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73422"
   }
 ]
