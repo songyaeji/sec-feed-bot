@@ -3066,5 +3066,17 @@
     "tags": [],
     "title": "CVE-2026-73289 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73289"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-8982",
+    "published": "2026-07-21T21:16:54.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Two undocumented privileged accounts exist in Autel Maxi Charger Single firmware through V1.03.51. The accounts use vendor-defined password derivation mechanisms based on device-specific values, allowing an attacker with knowledge of the algorithm and required inputs to authenticate to the web management interface with administrative privileges.",
+    "tags": [],
+    "title": "CVE-2026-8982 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8982"
   }
 ]
