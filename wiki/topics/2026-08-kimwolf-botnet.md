@@ -10,5 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-08-11 [Unit 42](https://unit42.paloaltonetworks.com/kimwolf-v7-botnet-malware/) — Kimwolf v7 발견, HTTP/2 DDoS 지문인식·ENS C2·Tor 백업 라우팅 기법 분석
+- 2026-08-11 [The Hacker News](https://thehackernews.com/2026/08/kimwolf-v7-android-botnet-makes-http2.html) — Kimwolf v7 HTTP/2 DDoS 합법적 브라우징으로 위장 기법
+- 2026-08-12 [Security Affairs](https://securityaffairs.com/197070/malware/kimwolf-v7-hides-ddos-traffic-behind-chrome-fingerprints-and-ethereum.html) — Kimwolf v7 Chrome 지문인식·Ethereum 뒤에 숨은 DDoS 트래픽
 
 ## 관련

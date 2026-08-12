@@ -2,6 +2,23 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [zoom-annotation-hijack](topics/2026-08-zoom-annotation-hijack.md) Zoom 주석 도구 클라이언트 탈취 제로클릭 취약점 (최종갱신일: 2026-08-12)
+- [microsoft-sharepoint-rce-poc](topics/2026-08-microsoft-sharepoint-rce-poc.md) Microsoft SharePoint 중대 원격코드실행 Rapid7 PoC 공개 (최종갱신일: 2026-08-12)
+- [exfilsquad-ransomware-victims](topics/2026-08-exfilsquad-ransomware-victims.md) ExfilSquad 신규 피해자 13개 기관 공개 (최종갱신일: 2026-08-12)
+- [cisco-asa-ftd-vpn-dos](topics/2026-08-cisco-asa-ftd-vpn-dos.md) Cisco ASA/FTD VPN 거부 서비스 취약점 야생 악용 (최종갱신일: 2026-08-12)
+- [sandworm-uac0145-fake-job-vpn](topics/2026-08-sandworm-uac0145-fake-job-vpn.md) Sandworm 산하 UAC-0145 채용 사칭 VPN 캠페인 (최종갱신일: 2026-08-12)
+- [delta-flight-wifi-deauth-attack](topics/2026-08-delta-flight-wifi-deauth-attack.md) 델타항공 비행기 Wi-Fi deauth 공격 사건 (최종갱신일: 2026-08-12)
+- [korea-ai-financial-security-evaluation](topics/2026-08-korea-ai-financial-security-evaluation.md) 금융보안원 AI 안전성·신뢰성 평가체계 개발 (최종갱신일: 2026-08-12)
+- [korea-web-scraping-restriction](topics/2026-08-korea-web-scraping-restriction.md) 대법원 스크래핑 차단 금융권 비대면 금융 차질 (최종갱신일: 2026-08-12)
+- [gentlemen-ransomware](topics/2026-07-gentlemen-ransomware.md) Gentlemen 랜섬웨어 2025년 중반부터 활동 네트워크 전파 및 의료기관 표적 (최종갱신일: 2026-08-12)
+- [lazarus-windows-zero-day-dream-job](topics/2026-08-lazarus-windows-zero-day-dream-job.md) Lazarus 윈도우 제로데이 악용 방위산업 표적 미공개 백도어 배포 (최종갱신일: 2026-08-12)
+- [llm-api-reasoning-trace-exposure](topics/2026-08-llm-api-reasoning-trace-exposure.md) OpenAI·Anthropic·Google LLM API 암호화 추론 과정 복원 민감정보 노출 (최종갱신일: 2026-08-12)
+- [microsoft-defender-shieldbreak-zero-day](topics/2026-08-microsoft-defender-shieldbreak-zero-day.md) Nightmare Eclipse Defender ShieldBreak 제로데이 SYSTEM 권한 탈취 (최종갱신일: 2026-08-12)
+- [malicious-litellm-pypi-supply-chain](topics/2026-08-malicious-litellm-pypi-supply-chain.md) PyPI 악성 LiteLLM 릴리스 Trivy 해킹 연계 클라우드키 탈취 2,100개 조직 노출 (최종갱신일: 2026-08-12)
+- [china-ai-agent-taiwan-government-breach](topics/2026-08-china-ai-agent-taiwan-government-breach.md) 중국 AI 에이전트 8개 대만 정부 자동화 완전 침해 최초 공격 (최종갱신일: 2026-08-12)
+- [jeju-air-personal-info-breach](topics/2026-08-jeju-air-personal-info-breach.md) 제주항공 고객 개인정보 노출 페이지 차단 보상 진행 (최종갱신일: 2026-08-11)
+- [korea-financial-network-segmentation-relaxation-phase2](topics/2026-08-korea-financial-network-segmentation-relaxation-phase2.md) 금융감독원 망분리 완화 2차 록히드마틴 모의해킹 기준 필수화 (최종갱신일: 2026-08-10)
+- [microsoft-patch-tuesday-august](topics/2026-08-microsoft-patch-tuesday-august.md) 마이크로소프트 8월 Patch Tuesday 418개 취약점 제로데이 포함 (최종갱신일: 2026-08-12)
 - [sap-commerce-cloud-rce](topics/2026-08-sap-commerce-cloud-rce.md) SAP Commerce Cloud 미인증 원격코드실행 CVSS 10.0 (최종갱신일: 2026-08-11)
 - [siemens-simatic-iot2050-node-red](topics/2026-08-siemens-simatic-iot2050-node-red.md) SIMATIC IoT2050 Node-RED 미인증 RCE 산업제어 기기 (최종갱신일: 2026-08-11)
 - [streambert-electron-ipc](topics/2026-08-streambert-electron-ipc.md) Streambert 영상 스트리밍 앱 Electron IPC 경로 검증 우회 (최종갱신일: 2026-08-11)
