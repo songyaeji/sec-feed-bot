@@ -2830,5 +2830,91 @@
     "tags": [],
     "title": "Three intrusions at UK criminal records office went undetected for two years",
     "url": "https://therecord.media/uk-criminal-records-office-acro-data-breaches"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-26035",
+    "published": "2026-08-12T13:17:22.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An Improper Authentication vulnerability [CWE-287] vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.2, FortiWeb 7.6.0 through 7.6.6, FortiWeb 7.4.0 through 7.4.11, FortiWeb 7.2.0 through 7.2.12, FortiWeb 7.0.0 through 7.0.12 may allow a remote unauthenticated attacker to login into the Fortiweb GUI/CLI with a random username and password",
+    "tags": [],
+    "title": "CVE-2026-26035 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26035"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-18474",
+    "published": "2026-08-12T06:20:14.283",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Directory Kit WordPress plugin before 1.5.6 does not sanitise and escape a parameter before using it in a SQL statement, leading to a SQL injection exploitable by unauthenticated users when a non-default search field type is configured.",
+    "tags": [],
+    "title": "CVE-2026-18474 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18474"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19594",
+    "published": "2026-08-12T06:21:57.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insufficient input sanitization in Snowflake Python API (`snowflake.core`) versions prior to 1.13.0 allowed confused-deputy privilege escalation through two related weaknesses: path traversal (CWE-22) via unencoded `..` identifier path segments, and HTTP parameter pollution (CWE-141) via unencoded `&`/`#`/`=` characters in query string values. An attacker with access to a downstream application built on snowflake.core could exploit the path traversal by supplying `..` as an object name, causing `snowflake.core` to issue REST requests against a parent resource or exploit the parameter pollution by injecting `&`/`#`/`=` into a free-form name field to override constraints on swap, clone, or rename operations — all executed under the application's privileged session. Successful exploitation requires the attacker to control an identifier or object-name string in an application built on snowflake.core that passes it to `snowflake.core` under a higher-privileged Snowflake session (e.g., an EXECUTE AS OWNER stored procedure, Streamlit app, or Native App). The fix is available in Snowflake Python API version 1.13.0, which also addresses several additional security findings. Users must manually upgrade.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19594 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19594"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2026-57858",
+    "published": "2026-08-12T13:17:22.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cal.com Cal.diy versions 2.1.1 through 6.2.0 contain a stored cross-site scripting vulnerability in the BookingPageTagManager component that allows authenticated event owners to inject arbitrary JavaScript by supplying a malicious analytics tracking ID without sanitization. Attackers can close the inline script string literal with a crafted payload that executes in the browser of every visitor to the affected public booking page, enabling session cookie theft, forged authenticated requests, and wormable propagation by chaining with CSRF-able endpoints to persist payloads on additional events.",
+    "tags": [],
+    "title": "CVE-2026-57858 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57858"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70468",
+    "published": "2026-08-12T13:17:25.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A authentication bypass using an alternate path or channel vulnerability in Fortinet FortiManager 7.6.1, FortiManager 7.4.3 through 7.4.5, FortiManager 7.2.5 through 7.2.9, FortiManager Cloud 7.6.1, FortiManager Cloud 7.4.3 through 7.4.5, FortiManager Cloud 7.2.5 through 7.2.9 may allow attacker to improper access control via <insert attack vector here>",
+    "tags": [],
+    "title": "CVE-2026-70468 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70468"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html",
+    "published": "2026-08-12T11:47:38+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A newly disclosed flaw in the way OpenAI, Anthropic, and Google carried hidden AI reasoning between API calls let researchers recover internal reasoning and secrets from session logs, including API keys and passwords. The weakness affected encrypted reasoning objects used by the providers' reasoning APIs, where a block created in one session could be replayed into another and, during testing,",
+    "tags": [],
+    "title": "OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning",
+    "url": "https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/enterprise-defenses-recovered-at-edge.html",
+    "published": "2026-08-12T11:41:34+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Enterprise defenses are tuned to catch the attacks that make noise. This year's data shows attackers winning by making none. According to Picus Labs' new Blue Report 2026, which measured more than 338 million real attack simulations across actual client production environments in the first half of 2026, defenses are having one of their strongest years yet. Average prevention effectiveness",
+    "tags": [],
+    "title": "Enterprise Defenses Recovered at the Edge and Collapsed Inside",
+    "url": "https://thehackernews.com/2026/08/enterprise-defenses-recovered-at-edge.html"
   }
 ]
