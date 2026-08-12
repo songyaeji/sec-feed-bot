@@ -1857,5 +1857,31 @@
     ],
     "title": "\"City-Forum\" data-theft attacks target Salesforce, ServiceNow portals",
     "url": "https://www.bleepingcomputer.com/news/security/city-forum-data-theft-attacks-target-salesforce-servicenow-portals/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-49481",
+    "published": "2026-08-12T23:17:21.363",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "UpSnap is a wake on lan web app. Versions prior to 5.4.0 have an OS command injection vulnerability in the UpSnap’s device management functionality due to the presence of unsafe shell command template interpolation using the ip and the mac fields. User-controlled values can be inserted into the wake_cmd and shutdown_cmd templates and executed via /bin/sh -c (Linux) or cmd /C (Windows) without sanitization, resulting in an authenticated Remote Code Execution (RCE). A low-privileged user with permission to create or edit devices can execute arbitrary operating system commands on the UpSnap hosted server. Version 5.4.0 patches the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-49481 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49481"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-71193",
+    "published": "2026-08-12T23:17:22.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In OpenStack Designate before 22.0.1, zone creation checks (_is_subzone, _is_superzone, and the duplicate-zone DB constraint) are scoped to the target pool only. An authenticated user can bypass these checks by scheduling a zone to a different pool via the AttributeFilter scheduler, creating an overlapping zone that conflicts with another tenant's zone. This enables cross-tenant DNS hijack (redirecting traffic to attacker-controlled IPs) and DNS denial of service (NODATA responses). Exploitation requires a multi-pool deployment with AttributeFilter enabled in scheduler_filters, which is a non-default but documented and supported configuration for self-service tiering.",
+    "tags": [],
+    "title": "CVE-2026-71193 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71193"
   }
 ]
