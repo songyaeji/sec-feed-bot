@@ -3476,5 +3476,253 @@
     ],
     "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
     "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-19089",
+    "published": "2026-08-10T07:16:51.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Product Input Fields for WooCommerce WordPress plugin before 2.0.2 does not validate uploaded file types when its accepted-types setting is left empty, which its own documentation advertises as accepting all files, allowing unauthenticated attackers to upload arbitrary files and achieve remote code execution on servers that do not honour the directory's access rules.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19089 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19089"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-16860",
+    "published": "2026-08-12T18:17:24.397",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary code due to an uncontrolled search path element.",
+    "tags": [],
+    "title": "CVE-2026-16860 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16860"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-16956",
+    "published": "2026-08-12T18:17:25.133",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Db2 Mirror for i 7.4, 7.5, and 7.6 could allow a remote attacker to execute arbitrary commands due to improper neutralization of special elements used in an OS command.",
+    "tags": [],
+    "title": "CVE-2026-16956 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16956"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-17218",
+    "published": "2026-08-12T18:17:25.867",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to execute arbitrary code due to an out-of-bounds write.",
+    "tags": [],
+    "title": "CVE-2026-17218 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17218"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-17276",
+    "published": "2026-08-12T18:17:26.680",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to escalate privileges due to improper authorization in the handling of high-authority threads.",
+    "tags": [],
+    "title": "CVE-2026-17276 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17276"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-73299",
+    "published": "2026-08-12T18:18:15.197",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Prompty is a markdown file format (.prompty) for LLM prompts. Prior to 0.1.5 and 2.0.0-beta.5, the TypeScript Nunjucks renderer evaluated untrusted .prompty template bodies with unrestricted JavaScript member access. An attacker-controlled template could traverse constructor and prototype properties to execute JavaScript in the host Node.js process. This issue is fixed in versions 0.1.5 and 2.0.0-beta.5.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-73299 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73299"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-73300",
+    "published": "2026-08-12T18:18:15.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Budibase is an open-source low-code platform. Prior to 3.40.0, the MySQL integration component in Budibase is configured with multipleStatements: true, enabling execution of multiple SQL statements in a single query. Attackers can inject malicious SQL commands through user input fields, leading to complete database compromise. This vulnerability is fixed in 3.40.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73300 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73300"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-18634",
+    "published": "2026-08-11T21:17:30.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An insecure handling of serialized objects vulnerability was found in the one of the service of GMS application 9.5.1 (Build 9510.1044) and earlier versions. A local attacker with the ability to interact with the service could exploit this behavior to perform unauthorized actions through the affected component.",
+    "tags": [],
+    "title": "CVE-2026-18634 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18634"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-15423",
+    "published": "2026-08-12T18:17:23.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.0 before 19.0.6, 19.1 before 19.1.4, and 19.2 before 19.2.2 that under certain conditions could have allowed an authenticated user with developer-role permissions to execute CI/CD pipelines on a protected branch without the required push permissions due to improper authorization in pipeline reference validation.",
+    "tags": [],
+    "title": "CVE-2026-15423 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15423"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16856",
+    "published": "2026-08-12T18:17:24.277",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, and 7.5 could allow a local attacker to gain elevated privileges due to improper neutralization of special elements used in an OS command.",
+    "tags": [],
+    "title": "CVE-2026-16856 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16856"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-16904",
+    "published": "2026-08-12T18:17:24.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary commands due to improper privilege management during monitor owner reassignment.",
+    "tags": [],
+    "title": "CVE-2026-16904 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16904"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16906",
+    "published": "2026-08-12T18:17:24.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, and 7.5 could allow a remote authenticated attacker to execute arbitrary commands with elevated privileges due to improper neutralization of special elements used in an OS command.",
+    "tags": [],
+    "title": "CVE-2026-16906 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16906"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17110",
+    "published": "2026-08-12T18:17:25.717",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary commands and obtain sensitive information due to improper privilege management.",
+    "tags": [],
+    "title": "CVE-2026-17110 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17110"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-17418",
+    "published": "2026-08-12T18:17:26.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a local authenticated attacker to cause a denial of service due to improper neutralization of special elements used in an SQL command.",
+    "tags": [],
+    "title": "CVE-2026-17418 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17418"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-18235",
+    "published": "2026-08-12T18:17:28.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary Control Language commands due to insufficient input validation.",
+    "tags": [],
+    "title": "CVE-2026-18235 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18235"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18669",
+    "published": "2026-08-12T18:17:28.723",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 is vulnerable to a privilege escalation as the result of a remote code execution vulnerability in the activation engine component. An authenticated attacker can execute a maliciously planted script with root authority.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18669 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18669"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18713",
+    "published": "2026-08-12T18:17:28.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 s vulnerable to privilege escalation via Navigator for i. An authenticated user could elevate privileges to a root user to execute commands.",
+    "tags": [],
+    "title": "CVE-2026-18713 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18713"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-44741",
+    "published": "2026-08-12T18:17:29.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pimcore's Admin Classic Bundle provides a Backend UI for Pimcore. Versions prior to 2.3.6 and 1.7.18 have a SQL injection vulnerability in Pimcore's translation grid date filter — the user-supplied `property` field from the filter JSON is interpolated directly into a `UNIX_TIMESTAMP(DATE(FROM_UNIXTIME(...)))` SQL expression without parameterization or allowlist validation. Versiosn 2.3.6 and 1.7.18 fix the issue.",
+    "tags": [],
+    "title": "CVE-2026-44741 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44741"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-49467",
+    "published": "2026-08-12T18:17:30.637",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Pingvin Share X is a secure and easy self-hosted file sharing platform. A vulnerability in versions 1.5.0 through 1.18.0 allow an attacker to bypass password verification when managing Time-based One-Time Password (TOTP) settings. The root cause is a missing `await` keyword on calls to the asynchronous `verifyPassword` method in `authTotp.service.ts` and the `authenticateUser` method in `auth.service.ts`. In JavaScript, an unawaited `Promise` is always truthy. So the logic intended to throw a `ForbiddenException` when a password is incorrect. It never executes because the expression evaluates the existence of the `Promise` object rather than its resolved boolean result. The vulnerability is fixed in version 1.18.1 by ensuring all asynchronous authentication calls are properly awaited. There are no official workarounds. If a user is locked out, an administrator must manually reset the user's TOTP status in the database.",
+    "tags": [],
+    "title": "CVE-2026-49467 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49467"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-69106",
+    "published": "2026-08-12T18:18:11.273",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A low-privileged user may poison cached artifact metadata under specific conditions, potentially causing consumers to retrieve untrusted content.",
+    "tags": [],
+    "title": "CVE-2026-69106 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69106"
   }
 ]
