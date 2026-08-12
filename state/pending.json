@@ -2730,5 +2730,43 @@
     ],
     "title": "Signal adds new security feature to thwart man-in-the-middle attacks",
     "url": "https://www.bleepingcomputer.com/news/security/signal-adds-new-security-feature-to-thwart-man-in-the-middle-attacks/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-11325",
+    "published": "2026-08-12T12:17:44.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Description\n\n\n\nCloudflare was recently notified by external researchers of vulnerabilities in this archived repository, including a remote code execution issue in `src/index.ts` reachable from certain GitHub Actions workflow configurations. Successful exploitation may expose workflow secrets such as CLOUDFLARE_API_TOKEN and GITHUB_TOKEN to an attacker. Because this repository has been deprecated since 2024, Cloudflare will not be issuing patches. To remediate this issue, we recommend migrating to `cloudflare/wrangler-action` immediately. Consumers who have already migrated are not affected.\n\n\n\n\nSunset Date\n\n\n\nThe cloudflare/pages-action repository will be removed on 2026-09-18. Consumers must complete migration before 18th September to avoid CI disruption.\n\n\n\n\nAffected Versions\n\n\n\nAll published versions of cloudflare/pages-action, including consumers pinned to the v1 moving tag.\n\n\n\n\nPatched Versions\n\n\n\nNone. This repository will not receive further updates, including security patches.\n\n\n\n\nResolution / Migration Path\nMigrate all workflows using cloudflare/pages-action to `cloudflare/wrangler-action` before 2026-09-18. Refer to the wrangler-action README for the equivalent step configuration and migration guidance.\n\n\n\n\nCredit\n\n\n\nThanks to @agentka99 and @beg1nn3r for reporting their findings via Cloudflare's HackerOne program that informe",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-11325 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11325"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70465",
+    "published": "2026-08-12T12:19:47.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A buffer copy without checking size of input ('classic buffer overflow') vulnerability in Fortinet FortiClientWindows 7.4.0 through 7.4.3, FortiClientWindows 7.2.0 through 7.2.11 may allow an unauthenticated attacker in a position to alter or craft DNS responses to the targeted host to execute arbitrary code via malicious packets.",
+    "tags": [],
+    "title": "CVE-2026-70465 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70465"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/cisa-gives-federal-agencies-two-weeks-to-patch-dprk-microsoft-bug",
+    "published": "2026-08-12T12:06:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Researchers disclosed the bug to Microsoft after examining a long-running campaign by North Korean hackers to exploit the job application process.",
+    "tags": [],
+    "title": "CISA gives federal agencies two weeks to patch Microsoft bug exploited in DPRK campaign",
+    "url": "https://therecord.media/cisa-gives-federal-agencies-two-weeks-to-patch-dprk-microsoft-bug"
   }
 ]
