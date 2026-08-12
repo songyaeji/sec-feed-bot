@@ -3102,5 +3102,205 @@
     "tags": [],
     "title": "Plug and Pwn attack uses fake USB devices for Windows SYSTEM access",
     "url": "https://www.bleepingcomputer.com/news/security/plug-and-pwn-attack-uses-fake-usb-devices-for-windows-system-access/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-28672",
+    "published": "2026-08-10T11:17:25.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache Ranger.\n\nThis issue affects Apache Ranger: from 0.6 through 2.8.",
+    "tags": [],
+    "title": "CVE-2026-28672 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28672"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-32227",
+    "published": "2026-08-10T11:17:26.160",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQL Injection vulnerability vulnerability in Apache Ranger.\n\nThis issue affects .\n\nUsers are recommended to upgrade to version 2.9.0, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-32227 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32227"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-40920",
+    "published": "2026-08-10T11:17:26.287",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Privilege Escalation via URL Parameter is reported in Apache Ranger versions <= 2.8.0.\n\nUsers are recommended to upgrade to version 2.9.0, which fixes this issue.",
+    "tags": [],
+    "title": "CVE-2026-40920 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40920"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-42537",
+    "published": "2026-08-10T11:17:26.420",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Remote Code Execution via JDBC URL Injection in Apache Ranger <= 2.8.0\nUsers are recommended to upgrade to version 2.9.0, which fixes this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42537 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42537"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-44416",
+    "published": "2026-08-10T11:17:26.547",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Remote Code Execution via Arbitrary Class Instantiation in plugin-schema-registry component in Apache Ranger <= 2.8.0.\nUsers are recommended to upgrade to version 2.9.0, which fixes this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44416 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44416"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-55799",
+    "published": "2026-08-10T11:17:26.670",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Remote Code Execution Vulnerability in GraalScriptEngineCreator in Apache Ranger <= 2.8.0\nUsers are recommended to upgrade to version 2.9.0, which fixes this issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55799 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55799"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-18412",
+    "published": "2026-08-10T15:17:42.467",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenCart extensions are uploaded as zip files with .ocmod.zip extensions. Upon installation, the OpenCart v4.2.0.0 extension installer extracts these zip files, but does not validate that the extracted paths stay inside the intended extraction directory. An attacker can craft a malicious extension containing file path traversal sequences, such as ../. With this vulnerability, an attacker can write files, such as a PHP web shell, into the webroot directory.",
+    "tags": [],
+    "title": "CVE-2026-18412 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18412"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-73263",
+    "published": "2026-08-12T15:18:30.943",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Prowler is a cloud security platform. Prior to 5.36.0, the Kubernetes provider connection test accepted kubeconfig_content containing a legacy gcp auth-provider with config.cmd-path and config.cmd-args because kubeconfig_contains_exec_auth in api/src/backend/api/v1/serializers.py checked only exec blocks, and POST /api/v1/providers/{id}/connection loaded it through config.load_kube_config_from_dict in prowler/providers/kubernetes/kubernetes_provider.py, causing kubernetes-python CommandTokenSource.token to run the attacker-supplied command through subprocess.Popen on the shared worker. This issue is fixed in version 5.36.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73263 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73263"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-73294",
+    "published": "2026-08-12T16:17:22.640",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Semaphore UI is a web interface for managing DevOps tools. Prior to 2.18.17 and 2.19.5-beta2, repository git_url handling passes an attacker-controlled --upload-pack option to CmdGitClient.GetLastRemoteCommitHash through POST /api/project/{id}/repositories and scheduled commit-hash polling, allowing a project Manager or Owner to execute arbitrary OS commands in the Semaphore server process. This issue is fixed in versions 2.18.17 and 2.19.5-beta2.",
+    "tags": [],
+    "title": "CVE-2026-73294 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73294"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-2336",
+    "published": "2026-04-16T18:16:44.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A privilege escalation vulnerability in Microchip IStaX allows an authenticated low-privileged user to recover a shared per-device cookie secret from their own webstax_auth session cookie and forge a new cookie with administrative privileges.This issue affects IStaX before 2026.03.",
+    "tags": [],
+    "title": "CVE-2026-2336 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2336"
+  },
+  {
+    "category": "high",
+    "cvss": 7.6,
+    "id": "CVE-2026-73264",
+    "published": "2026-08-12T15:18:31.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Prowler is a cloud security platform. Prior to 5.33.1, an authenticated user with Lighthouse provider configuration access could supply an unvalidated base_url for the openai_compatible provider through POST /api/v1/lighthouse/providers and POST /api/v1/lighthouse/providers/{id}/connection, causing api/src/backend/tasks/jobs/lighthouse_providers.py to send outbound requests, including the API key in the Authorization header, to attacker-controlled or internal endpoints when client.models.list was called. This issue is fixed in version 5.33.1.",
+    "tags": [],
+    "title": "CVE-2026-73264 (CVSS 7.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73264"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-65937",
+    "published": "2026-08-12T16:17:13.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In WhatsUp Gold versions released before 2026.0.2, an authenticated attacker can bypass frontend controls and inject persistent script content.",
+    "tags": [],
+    "title": "CVE-2026-65937 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65937"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65941",
+    "published": "2026-08-12T16:17:14.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In WhatsUp Gold versions released before 2026.0.2, an unauthenticated remote attacker with network access to the affected service can execute arbitrary code in the context of the IIS application service account.",
+    "tags": [],
+    "title": "CVE-2026-65941 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65941"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-69105",
+    "published": "2026-08-12T16:17:20.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An unauthenticated attacker may cause untrusted package content to be cached under specific conditions, potentially affecting artifact integrity and availability.",
+    "tags": [],
+    "title": "CVE-2026-69105 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69105"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-73292",
+    "published": "2026-08-12T16:17:22.343",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Semaphore UI is a web interface for managing DevOps tools. Prior to 2.18.21, the /api/users/{id}/password endpoint accepts a cross-site request using the authenticated user's semaphore session cookie without CSRF protection or current-password confirmation, allowing an unauthenticated attacker to change an administrator's or another user's password after user interaction. This issue is fixed in version 2.18.21.",
+    "tags": [],
+    "title": "CVE-2026-73292 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73292"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73293",
+    "published": "2026-08-12T16:17:22.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Semaphore UI is a web interface for managing DevOps tools.  Prior to 2.18.19 and from 2.19.0-alpha3 until 2.19.5-beta5, ProjectMiddleware and GetProjectOrGlobalRoleBySlug allow a project manager to use POST /api/project/{id}/roles to create a custom manager role with permission bitmask 15, overriding the built-in manager permissions and granting CanUpdateProject and CanManageProjectUsers owner capabilities. This issue is fixed in versions 2.18.19 and 2.19.5-beta5.",
+    "tags": [],
+    "title": "CVE-2026-73293 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73293"
   }
 ]
