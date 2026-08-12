@@ -1923,5 +1923,69 @@
     ],
     "title": "\"금융 아이디어 직접 시험\"...하반기 D-테스트베드 참여자 모집",
     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1Odkx1NmV5VmM0bGFDcFVlMWVvRDJrREN5OUlSX1hZcXpmd1BaU1BqSENVWWx4S1VjMGZDNW15QVQ0UkJXb2tKXy1mbGFNTlE?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-70398",
+    "published": "2026-08-12T02:16:38.060",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in multicloud-integrations, a component of Red Hat Advanced Cluster Management (RHACM). This vulnerability allows an authenticated user, referred to as a tenant, to manipulate the GitOpsCluster controller. By exploiting this, a tenant can redirect sensitive spoke cluster bearer tokens from secure locations to a namespace they control. This unauthorized access to tokens can lead to the disclosure of critical information and bypass security policies within ArgoCD AppProjects.",
+    "tags": [],
+    "title": "CVE-2026-70398 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70398"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72526",
+    "published": "2026-08-12T02:16:38.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the multicloud-integrations component. The Application propagation controller processes the `ocm-managed-cluster` annotation from an Application Custom Resource (CR) without proper validation. A tenant with permissions to create Applications on the hub cluster can exploit this to target arbitrary managed clusters. This can force ArgoCD on the spoke clusters to synchronize attacker-controlled manifests, leading to arbitrary code execution or privilege escalation on those clusters.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72526 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72526"
+  },
+  {
+    "author": "[엄호식기자 (eomhs@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=145121&kind=&sub_kind=",
+    "published": "2026-08-12T02:18:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "민기식 대표·신우철 안전보건최고경영책임자, 대구·양산지사 방문해 폭염 대응 점검여름 온열질환 예방부터 집중호우·태풍 대응까지 계절별 현장 관리체계 운영‘오늘도 무사출동’ 캠페인 통해 구성원 보호와 안전문화 정착 추진[보안뉴스 엄호식 기자] SK쉴더스(대표 민기식)의 물리보안 브랜드 ADT캡스가 기록적인 폭염이 이어지는 가운데 고객 현장을 책임지는 구성원들의",
+    "tags": [],
+    "title": "ADT캡스, 전국 지사 대상 혹서기 안전관리 강화",
+    "url": "http://www.boannews.com/media/view.asp?idx=145121&kind=&sub_kind="
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208013",
+    "published": "2026-08-12T11:16:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI를 활용한 사이버 공격이 빠르게 고도화되는 가운데, 보안을 IT 부서의 기술 업무가 아닌 기업 경영의 핵심 과제로 다룬 신간 《대표님, 보안은 IT가 아니라 경영입니다》가 출간됐다.책은 ‘미토스 쇼크! AI 해커 시대, CEO가 알아야 할 보안의 모든 것’을 부제로 내걸고, 최근 잇따르는 개인정보 유출과 사이버 공격을 기업 생존과 공급망, 국가안보까지 영향을 미치는 경영 리스크로 바라본다.저자들은 AI가 취약점 탐색과 공격 자동화에 활용되면서 기존보다 훨씬 빠른 속도로 사이버 위협이 전개되고 있다는 점에 공감했다. 이에 따라 보",
+    "tags": [],
+    "title": "[신간] AI 해커 시대, CEO는 무엇을 준비해야 하나…'대표님, 보안은 IT가 아니라 경영입니다' 출간",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208013"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1nQ0NLRGU3R0RSRTY1UDRFLV8xeHRXMl82Sy12VjUxUE9YZTB4eDdDcHpLZnVxR3kxaTFQUjB2MXFJY3I0aEFiaGtSTUpPYmR6SDlPNzdlNVZycEthNTJDR3ZXaHdSektYT1Uw0gFwQVVfeXFMUHdXcW82cXlCZGdhZDBVZmlTeWFQYV8wX1hKVHlxR0diMjM0cENpR05IalpHU200TTZmNWZlU2FtWHJVVkpHNVZEbENaaE9tcDF0d1lyRDVIN0NJQXA1eko2bmYwOVk2a3FRSTFPTFRKRg",
+    "published": "2026-08-12T02:10:46+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 AI 안전성 미리 검증…금융보안원, 평가체계 첫 마련 - 머니투데이",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 AI 안전성 미리 검증…금융보안원, 평가체계 첫 마련 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1nQ0NLRGU3R0RSRTY1UDRFLV8xeHRXMl82Sy12VjUxUE9YZTB4eDdDcHpLZnVxR3kxaTFQUjB2MXFJY3I0aEFiaGtSTUpPYmR6SDlPNzdlNVZycEthNTJDR3ZXaHdSektYT1Uw0gFwQVVfeXFMUHdXcW82cXlCZGdhZDBVZmlTeWFQYV8wX1hKVHlxR0diMjM0cENpR05IalpHU200TTZmNWZlU2FtWHJVVkpHNVZEbENaaE9tcDF0d1lyRDVIN0NJQXA1eko2bmYwOVk2a3FRSTFPTFRKRg?oc=5"
   }
 ]
