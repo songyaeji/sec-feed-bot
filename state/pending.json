@@ -3774,5 +3774,81 @@
     "tags": [],
     "title": "Hundreds of fake Chrome VPN extensions route traffic through a proxy",
     "url": "https://www.bleepingcomputer.com/news/security/hundreds-of-fake-chrome-vpn-extensions-route-traffic-through-a-proxy/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-51584",
+    "published": "2026-08-11T14:17:14.463",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in usememos v0.27.1 allows a remote attacker to achieve account takeover via the ssoCredentials branch of the SignIn handler in server/router/api/v1/auth_service.go, because SSO identity is matched only on an attacker-controllable identifier without binding to the IdP's stable subject claim.",
+    "tags": [],
+    "title": "CVE-2026-51584 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51584"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2022-50073",
+    "published": "2025-06-18T11:15:36.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: tap: NULL pointer derefence in dev_parse_header_protocol when skb->dev is null\n\nFixes a NULL pointer derefence bug triggered from tap driver.\nWhen tap_get_user calls virtio_net_hdr_to_skb the skb->dev is null\n(in tap.c skb->dev is set after the call to virtio_net_hdr_to_skb)\nvirtio_net_hdr_to_skb calls dev_parse_header_protocol which\nneeds skb->dev field to be valid.\n\nThe line that trigers the bug is in dev_parse_header_protocol\n(dev is at offset 0x10 from skb and is stored in RAX register)\n  if (!dev->header_ops || !dev->header_ops->parse_protocol)\n  22e1:   mov    0x10(%rbx),%rax\n  22e5:\t  mov    0x230(%rax),%rax\n\nSetting skb->dev before the call in tap.c fixes the issue.\n\nBUG: kernel NULL pointer dereference, address: 0000000000000230\nRIP: 0010:virtio_net_hdr_to_skb.constprop.0+0x335/0x410 [tap]\nCode: c0 0f 85 b7 fd ff ff eb d4 41 39 c6 77 cf 29 c6 48 89 df 44 01 f6 e8 7a 79 83 c1 48 85 c0 0f 85 d9 fd ff ff eb b7 48 8b 43 10 <48> 8b 80 30 02 00 00 48 85 c0 74 55 48 8b 40 28 48 85 c0 74 4c 48\nRSP: 0018:ffffc90005c27c38 EFLAGS: 00010246\nRAX: 0000000000000000 RBX: ffff888298f25300 RCX: 0000000000000010\nRDX: 0000000000000005 RSI: ffffc90005c27cb6 RDI: ffff888298f25300\nRBP: ffffc90005c27c80 R08: 00000000ffffffea R09: 00000000000007e8\nR10: ffff88858ec77458 R11: 0000000000000000 R12: 0000000000000001\nR13: 0000000000000014 R14: ffffc90005c27e08 R15: ffffc90005c27cb6\nFS:  0000000000000000(0000) GS:ffff88858ec",
+    "tags": [],
+    "title": "CVE-2022-50073 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-50073"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-51583",
+    "published": "2026-08-11T14:17:14.323",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in usememos through v0.30.0 allows a remote authenticated attacker to perform Server-Side Request Forgery (SSRF) via the Webhook validation mechanism in internal/webhook/validate.go, by setting a webhook target to an internal address.",
+    "tags": [],
+    "title": "CVE-2026-51583 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51583"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-66375",
+    "published": "2026-08-12T15:18:19.343",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A low-privilege authenticated user may permanently remove protected internal metadata across repositories under specific conditions.",
+    "tags": [],
+    "title": "CVE-2026-66375 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66375"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18952",
+    "published": "2026-08-12T19:17:31.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing input validation in the threat intelligence feed parser in the OpenSearch Security Analytics plugin might allow an authenticated remote user to perform server-side request forgery and read local files via a crafted URL parameter to the threat intel source configuration endpoint.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18952 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18952"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19311",
+    "published": "2026-08-12T19:17:31.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing authorization in the Execute Monitor API in Amazon OpenSearch Alerting plugin might allow an authenticated remote user to read, modify, or delete arbitrary index data via a crafted inline monitor request with unintentional data source and input index parameters.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19311 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19311"
   }
 ]
