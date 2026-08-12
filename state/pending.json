@@ -3314,5 +3314,140 @@
     "tags": [],
     "title": "CVE-2026-2072 (CVSS 8.2)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2072"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-66659",
+    "published": "2026-08-12T06:22:09.420",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Essekia Tablesome Table allows Blind SQL Injection.\n\nThis issue affects Tablesome Table: from n/a through 1.2.9.",
+    "tags": [],
+    "title": "CVE-2026-66659 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66659"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-73296",
+    "published": "2026-08-12T17:17:32.780",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. Prior to 3.0.8, create_mobile_data_collection_server and create_mobile_action_server in ufo/client/mcp/http_servers/mobile_mcp_server.py exposed Streamable HTTP MCP services on TCP ports 8020 and 8021 without authentication, allowing an unauthenticated remote attacker to invoke capture_screenshot, get_ui_tree, tap, swipe, type_text, launch_app, press_key, and click_control against an ADB-connected Android device, disclose screen and device data, and modify device state. This issue is fixed in version 3.0.8.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-73296 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73296"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-16977",
+    "published": "2026-08-12T06:19:18.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Form Maker by 10Web  WordPress plugin before 1.15.45 does not properly parameterize a user-controlled value that is substituted into a dynamic SQL query built for a database-backed choice field, allowing subscriber-level users to perform second-order SQL injection.",
+    "tags": [],
+    "title": "CVE-2026-16977 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16977"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18057",
+    "published": "2026-08-12T06:19:34.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Events Manager  WordPress plugin before 7.4.1 does not sanitise and escape a user-controlled value before using it in a SQL statement, allowing users with a subscriber account and above to perform SQL injection attacks and tamper with booking consent records belonging to other people.",
+    "tags": [],
+    "title": "CVE-2026-18057 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18057"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18230",
+    "published": "2026-08-12T06:20:07.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Directory Kit WordPress plugin before 1.5.6 does not sanitise and escape a parameter before using it in a SQL statement through one of its authenticated AJAX actions, which lacks an authorization check, allowing any authenticated user such as a Subscriber to perform SQL injection attacks.",
+    "tags": [],
+    "title": "CVE-2026-18230 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18230"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-17095",
+    "published": "2026-08-12T17:17:24.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to bypass security restrictions due to unsafe reflection.",
+    "tags": [],
+    "title": "CVE-2026-17095 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17095"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18098",
+    "published": "2026-08-12T17:17:24.993",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to obtain sensitive information and compromise system integrity due to an XML injection flaw.",
+    "tags": [],
+    "title": "CVE-2026-18098 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18098"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18499",
+    "published": "2026-08-12T17:17:25.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.8 is vulnerable to a privilege escalation when using Liberty collectives.",
+    "tags": [],
+    "title": "CVE-2026-18499 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18499"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18683",
+    "published": "2026-08-12T17:17:25.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 is vulnerable to privilege escalation via Navigator for i. An authenticated user could elevate privileges to a root user to execute commands.",
+    "tags": [],
+    "title": "CVE-2026-18683 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18683"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18847",
+    "published": "2026-08-12T17:17:25.920",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote unauthenticated attacker to harvest credentials due to spoofing of Navigator for i.",
+    "tags": [],
+    "title": "CVE-2026-18847 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18847"
+  },
+  {
+    "author": "Microsoft Security Research and Srinivasan Govindarajan",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/2026/08/05/macos-clickfix-campaign-learned-hide/",
+    "published": "2026-08-05T15:48:39+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "A macOS ClickFix campaign shifted tactics from openly serving infostealer lures to hiding them behind a browser-fingerprinting gate. The change makes malicious infrastructure harder to detect while giving defenders new hunting opportunities. The post From open lures to cloaked gates: How a macOS ClickFix campaign learned to hide appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "From open lures to cloaked gates: How a macOS ClickFix campaign learned to hide",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/05/macos-clickfix-campaign-learned-hide/"
   }
 ]
