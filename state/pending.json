@@ -3174,5 +3174,139 @@
     ],
     "title": "\"스크래핑 차단에 비대면 업무 차질\"…금융위, 대응방안 모색",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE82WmVoREJ1Y3lqdzlUSEN5YW9KNGx1SXZIUDJmTnRKaU9aanFOT0RrWjFfT0N2ZjlCWUNXTFRiOWxHNHl5WUE4SjlJcUhpTlhzZGdYZFdyWjNlTkx0eDZrMdIBYEFVX3lxTE82WmVoREJ1Y3lqdzlUSEN5YW9KNGx1SXZIUDJmTnRKaU9aanFOT0RrWjFfT0N2ZjlCWUNXTFRiOWxHNHl5WUE4SjlJcUhpTlhzZGdYZFdyWjNlTkx0eDZrMQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-73603",
+    "published": "2026-08-13T12:17:24.617",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise before 3.1.4 fails to validate chatflow visibility in the unauthenticated text-to-speech endpoint, allowing attackers to abuse private chatflow TTS credentials. Unauthenticated attackers can generate unlimited text-to-speech audio using stored OpenAI or ElevenLabs API keys by providing a valid chatflow UUID, incurring costs on the chatflow owner's account.",
+    "tags": [],
+    "title": "CVE-2026-73603 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73603"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-73608",
+    "published": "2026-08-13T12:17:25.323",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SiYuan's development branch (endpoint introduced by commit 9b8e8956f, not present in v3.7.3 or master, patched in v3.7.4) contains a missing-authorization vulnerability in the /api/av/getAttributeViewSearchTarget endpoint. The route is registered with CheckAuth only and performs no authorization checks (no CheckReadonly, no publish-access or encrypted-notebook gating). Given a database identifier taken from a published page and a keyword, an anonymous reader can query the endpoint to retrieve matching database row content, including rows that publish filters (FilterAttributeViewByPublishAccess) would otherwise withhold. No released stable version is affected.",
+    "tags": [],
+    "title": "CVE-2026-73608 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73608"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73612",
+    "published": "2026-08-13T12:17:25.897",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "File Browser before v2.63.22 fails to validate access rules for descendants during recursive copy, rename, and delete operations, allowing authenticated users to bypass path-based access controls. Attackers can copy, rename, or delete denied files by operating on their allowed parent directory, defeating rule-based isolation for confidentiality and integrity.",
+    "tags": [],
+    "title": "CVE-2026-73612 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73612"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-73613",
+    "published": "2026-08-13T12:17:26.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "filebrowser versions before 2.63.19 contain an out-of-scope file deletion vulnerability in the TUS upload cache eviction mechanism that allows authenticated users with only Create permission to delete arbitrary files outside their scope. Attackers can swap an ancestor directory with a symlink during the cache TTL window to redirect the raw os.Remove call to an out-of-scope target, bypassing ScopedFs scope guards and Perm.Delete checks.",
+    "tags": [],
+    "title": "CVE-2026-73613 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73613"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73614",
+    "published": "2026-08-13T12:17:26.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Network-AI ClaudeHookBridge before 5.15.1 truncates the target string to 500 characters before evaluating denyPatterns, while Claude Code executes the full untruncated command. Attackers can position dangerous content past byte 500 in a Bash command field to bypass the operator's hard-deny list and execute arbitrary commands.",
+    "tags": [],
+    "title": "CVE-2026-73614 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73614"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73615",
+    "published": "2026-08-13T12:17:26.337",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Network-AI versions before 5.15.1 contain a security matcher bypass vulnerability where SandboxPolicy evaluates raw command strings with quotes preserved while the executor tokenizes commands by stripping quotes before execution. Attackers can craft quoted commands that evade blocklist checks and approval gates while the executor runs the identical unquoted dangerous argv.",
+    "tags": [],
+    "title": "CVE-2026-73615 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73615"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-73618",
+    "published": "2026-08-13T12:17:26.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Budibase Server before 3.40.0 contains a NoSQL injection vulnerability in the MongoDB query execution endpoint where user-supplied parameters are interpolated into JSON query templates without proper sanitization of JSON metacharacters. Attackers with query write permission can inject JSON structural characters to alter MongoDB queries, bypassing filters to read, modify, or delete arbitrary documents.",
+    "tags": [],
+    "title": "CVE-2026-73618 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73618"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73620",
+    "published": "2026-08-13T12:17:27.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitPython before 3.1.57 fails to guard git option forwarding in IndexFile.checkout() and TagReference.create(), allowing attackers to pass unsafe options via kwargs. Attackers can use --prefix to overwrite arbitrary files with repository content or -F to read arbitrary files returned in-band.",
+    "tags": [],
+    "title": "CVE-2026-73620 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73620"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73624",
+    "published": "2026-08-13T12:17:27.617",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitPython versions before 3.1.54 contain an arbitrary file overwrite vulnerability in the Diffable.diff method that fails to validate git options passed through kwargs. Attackers can supply the --output argument via the other parameter or output kwarg to write patch content to attacker-chosen file paths at process privilege level.",
+    "tags": [],
+    "title": "CVE-2026-73624 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73624"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73625",
+    "published": "2026-08-13T12:17:27.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitPython versions before 3.1.54 contain a remote code execution vulnerability in the check_unsafe_options guard that can be bypassed by smuggling git options inside single-character kwarg values. Attackers can supply crafted option dictionaries to clone_from, fetch, pull, push, ls_remote, iter_commits, blame, or archive methods to execute arbitrary OS commands via the --upload-pack parameter.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73625 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73625"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-73629",
+    "published": "2026-08-13T12:17:28.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Serendipity before 2.6.0 contains a server-side request forgery vulnerability in the serendipity_url_allowed() filter that fails to block hex-encoded IPv4 addresses, IPv6 literals, and link-local ranges. Authenticated users with adminImagesAdd permission can bypass the filter using alternate address formats to request internal services and retrieve response bodies through the public uploads directory.",
+    "tags": [],
+    "title": "CVE-2026-73629 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73629"
   }
 ]
