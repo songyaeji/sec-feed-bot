@@ -5099,5 +5099,93 @@
     "tags": [],
     "title": "IBM, OpenAI와의 전략적 파트너십을 통해 컨설팅 플랫폼에 OpenAI 모델 통합",
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPd0U5dWV0SFZFNEwycHpnZHNMV0x2TWtFa214a1huWmNPN3hXQUpfaHN1VkJ2dUFRbHRuYnQxYkJrOHRkS1pyc2N5b2dNay0yd3Z6bmsyZzZMZ25TUV8xSFdhc0ptc1JFNW56RHNJdHllRzY2T3FTYWluWWlMOU0xa1ZlMF9TM2FtM1hQN0lUclo?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-73653",
+    "published": "2026-08-13T19:17:38.920",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vitest is a testing framework powered by Vite. Prior to versions 3.2.7, 4.1.10, and 5.0.0-beta.6, Browser Mode provider commands including upload, takeScreenshot, screenshotMatcher, stopChunkTrace, deleteTracing, and annotateTraces accept browser-supplied file paths without enforcing the allowWrite permission gate or confining paths to the project root. A client that can reach the Browser Mode API can read arbitrary local files, create or overwrite image and trace files, or delete files accessible to the Vitest process even when allowWrite is false. This issue is fixed in versions 3.2.7, 4.1.10, and 5.0.0-beta.6.",
+    "tags": [],
+    "title": "CVE-2026-73653 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73653"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-24791",
+    "published": "2026-08-13T17:17:22.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Public-only tokens bypass private-resource restrictions on `/api/v1/user` self routes",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-24791 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24791"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17197",
+    "published": "2026-08-13T19:17:18.640",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to bypass security restrictions due to improper validation of client-asserted identity.",
+    "tags": [],
+    "title": "CVE-2026-17197 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17197"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-17220",
+    "published": "2026-08-13T19:17:18.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to cause a denial of service and modify authentication metadata due to a buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-17220 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17220"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-72777",
+    "published": "2026-08-13T19:17:32.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Next AI Draw.io through 0.4.16 contains a server-side request forgery vulnerability in the POST /api/parse-url endpoint due to hostname validation that only checks string patterns without DNS resolution. Unauthenticated attackers can supply hostnames that bypass string validation but resolve to internal addresses, allowing them to reach arbitrary internal HTTP services and exfiltrate responses including cloud metadata.",
+    "tags": [],
+    "title": "CVE-2026-72777 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72777"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73482",
+    "published": "2026-08-13T19:17:34.423",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpList before 3.7.0-RC5 contains a cross-site request forgery (CSRF) vulnerability in lists/admin/admins.php. The administrator deletion action is triggered via an unauthenticated GET request (?page=admins&delete=N) that is not protected by a CSRF token (the central verifyCsrfGetToken check uses enforce=false and is bypassed when the token parameter is absent). A remote attacker can trick a logged-in super-administrator into loading a crafted URL (e.g., embedded as an image in an email) to delete any non-self administrator account.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73482 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73482"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-73650",
+    "published": "2026-08-13T19:17:38.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SVGO, short for SVG Optimizer, is a Node.js library and command-line application for optimizing SVG files. From version 1.0.0 until versions 2.8.3, 3.3.4, and 4.0.2, the removeScripts plugin, named removeScriptElement in versions 1 through 3, can leave executable content in optimized SVGs because it does not remove namespaced or prefixed script elements such as <svg:script> and, in versions 3 and 4, matches JavaScript URIs case sensitively. Applications that process untrusted SVG input with this plugin enabled and serve the result can allow scripts to execute when another user opens the SVG, exposing local storage or cookies. This issue is fixed in versions 2.8.3, 3.3.4, and 4.0.2.",
+    "tags": [],
+    "title": "CVE-2026-73650 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73650"
   }
 ]
