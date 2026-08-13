@@ -4589,5 +4589,179 @@
     "tags": [],
     "title": "New Mirai variant adds stealth capabilities to notorious botnet code",
     "url": "https://therecord.media/new-mirai-variant-adds-stealth-to-botnet-code"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-59326",
+    "published": "2026-08-12T14:17:46.713",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CPSD CryptoPro Secure Disk for Bitlocker before v7.7.4 fails to enforce IMA policy protections across temporary file systems, allowing for unsigned code to be executed from these locations.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-59326 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59326"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-59321",
+    "published": "2026-08-12T15:17:29.947",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CPSD CryptoPro Secure Disk for Bitlocker before v7.7.4 contains a default TPM PCR policy that fails to consider the system boot state. This allows the TPM to be unsealed via an unintended execution path or from another hardware platform.",
+    "tags": [],
+    "title": "CVE-2025-59321 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59321"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-59324",
+    "published": "2026-08-12T15:17:31.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CPSD CryptoPro Secure Disk for Bitlocker before v7.7.4 fails to properly validate LUKS encryption and, if encryption is present, all CryptoPro file integrity checks are skipped.",
+    "tags": [],
+    "title": "CVE-2025-59324 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59324"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73240",
+    "published": "2026-08-12T17:17:32.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Specifically crafted inputs may lead to git argument injection in Apache Allura.\n\nThis issue affects Apache Allura: before 1.19.1.\n\nUsers are recommended to upgrade to version 1.19.1, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-73240 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73240"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-18749",
+    "published": "2026-08-12T22:17:14.933",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The type=track branch authorises on _is_my_case(t_attach.case) only and never checks VinceTrackAttachment.shared. A coordinator-uploaded case artefact that has NOT been marked shared is still retrievable by any case member who has (or is sent) its uuid — leaks not-yet-released coordinator material to vendors on the case.",
+    "tags": [],
+    "title": "CVE-2026-18749 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18749"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73532",
+    "published": "2026-08-13T16:19:05.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Fluent Forms Pro 6.2.7 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (libs/class-license-sync.php), loaded via a require_once directive added to fluentformpro.php, that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.",
+    "tags": [],
+    "title": "CVE-2026-73532 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73532"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73533",
+    "published": "2026-08-13T16:19:05.620",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ninja Tables Pro 5.2.11 contains an embedded malicious code vulnerability introduced via a tampered plugin build served through a decommissioned update server. The tampered build introduced a rogue PHP file (app/Library/updater/NinjaTableDataSync.php) that established a backdoor REST API endpoint, dropped persistent PHP files in mu-plugins and uploads directories, installed a passwordless administrator account, and registered scheduled tasks that survived plugin removal.",
+    "tags": [],
+    "title": "CVE-2026-73533 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73533"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-72921",
+    "published": "2026-08-11T15:17:38.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SeaweedFS is a distributed storage system. Prior to 4.24, the weed/server/filer_server_handlers.go allowed_prefixes authorization check used strings.HasPrefix on raw path strings, so a filer JWT scoped to /tenant1 also authorized sibling paths such as /tenant1234, /tenant1-old, and /tenant1backup, enabling cross-tenant reads and writes with a valid scoped token. This issue is fixed in version 4.24.",
+    "tags": [],
+    "title": "CVE-2026-72921 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72921"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2025-59323",
+    "published": "2026-08-12T15:17:30.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CPSD CryptoPro Secure Disk for Bitlocker before v7.7.4 fails to validate the integrity of the DataStore, a non-partitioned filesystem, responsible for storing configuration and cryptographic details. Crafted DataStore contents can impact service availability and/or allow for code execution in the context of high privilege.",
+    "tags": [],
+    "title": "CVE-2025-59323 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59323"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-67986",
+    "published": "2026-08-13T14:17:11.440",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "amazing-print/amazing_print at commit dc890dfafdf07088ea901df53c19c2710e5c5234 contains a Ruby code injection condition in AwesomeMethodArray#grep. A specially named method containing Ruby interpolation syntax can be interpolated into a dynamically constructed eval string when grep is called with a block, resulting in Ruby code execution in the host process. Exploitation requires an application path that allows an attacker to influence dynamic method names.",
+    "tags": [],
+    "title": "CVE-2026-67986 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67986"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73514",
+    "published": "2026-08-13T16:19:05.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The address_standardizer extension for PostGIS through 3.7.0, fixed in commit 423570b, contains an out-of-bounds write vulnerability that allows a database user with the ability to supply caller-controlled relation names to standardize_address() to trigger memory corruption by providing a rules table with a classification Type value exceeding the fixed class range. Attackers can craft a malicious rules table entry with an oversized rule type value that is used without bounds checking as an index into an internal output-link table, resulting in an out-of-bounds write.",
+    "tags": [],
+    "title": "CVE-2026-73514 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73514"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73515",
+    "published": "2026-08-13T16:19:05.333",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PostGIS before 3.7.0beta2 contains an out-of-bounds read vulnerability that allows attackers to cause memory disclosure or a server crash by supplying a malformed FlatGeobuf buffer. The FlatGeobuf property metadata decoder verifies that a string length field is present but fails to verify that the subsequent string body is contained within the supplied buffer before materializing it into a SQL-visible value, enabling memory disclosure or denial of service.",
+    "tags": [],
+    "title": "CVE-2026-73515 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73515"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-73559",
+    "published": "2026-08-13T16:19:05.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models. From 0.19.0 until 0.26.0, the /v1/completions CompletionRequest.prompt field in vllm/entrypoints/openai/completion/protocol.py accepts an unbounded list[str] or list[list[int]], prompt_to_seq() in vllm/renderers/inputs/preprocess.py and OnlineRenderer.preprocess_completion() in vllm/renderers/online_renderer.py expand every element, and vllm/entrypoints/openai/completion/serving.py creates one engine generator and response slot per prompt, allowing an authenticated API client to exhaust CPU, memory, async scheduling capacity, engine request slots, and response buffering with one request. This issue is fixed in version 0.26.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-73559 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73559"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2026-73570",
+    "published": "2026-08-13T16:19:06.003",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A remote code execution vulnerability exists in Zimbra Collaboration (ZCS) before 10.1.20 when the optional zimbra-snmp package is installed and SNMP notifications are enabled. Due to improper sanitization of untrusted input during SNMP notification processing, an unauthenticated attacker can send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as the Zimbra user.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73570 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73570"
   }
 ]
