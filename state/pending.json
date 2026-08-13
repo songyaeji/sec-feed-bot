@@ -2437,5 +2437,115 @@
     "tags": [],
     "title": "지슨, 무선백도어·불법촬영 탐지 수요 업고 2분기 흑자 전환",
     "url": "http://www.boannews.com/media/view.asp?idx=145138&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0291",
+    "published": "2026-08-13T03:16:43.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper link resolution before file access vulnerability exists in the Palo Alto Networks Prisma® Access Agent on Linux platforms that enables a local low privileged user to delete system files in a limited scope and disable Prisma Access Agent.\n\nThe Prisma Access Agent on macOS, Windows, iOS, Android, and Chrome OS is not affected.",
+    "tags": [],
+    "title": "CVE-2026-0291 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0291"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0292",
+    "published": "2026-08-13T03:16:43.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An authentication bypass vulnerability in the network driver of Palo Alto Networks Prisma® Access Agent on Windows enables a local administrator to bypass security inspection, subsequently allowing them to  inject and intercept arbitrary network traffic.\n\nThe Prisma Access Agent on Linux, macOS, iOS, Android, and Chrome OS is not affected.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-0292 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0292"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0293",
+    "published": "2026-08-13T03:16:44.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in Palo Alto Networks Prisma® Access Agent on Windows enables a local attacker with administrator privileges to bypass the anti-tamper protection, enabling unauthorized access to protected processes and files.\n\nThe Prisma Access Agent on Linux, macOS, iOS, Android, and Chrome OS is not affected.",
+    "tags": [],
+    "title": "CVE-2026-0293 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0293"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0294",
+    "published": "2026-08-13T03:16:44.323",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A privilege escalation (PE) vulnerability in the Palo Alto Networks Prisma® Access Agent app on Windows and macOS devices enables a local user to execute code with elevated privileges. \n\nThe Prisma Access Agent on Linux, iOS, Android, and ChromeOS is not affected.",
+    "tags": [],
+    "title": "CVE-2026-0294 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0294"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0295",
+    "published": "2026-08-13T03:16:44.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A race condition in the Palo Alto Networks GlobalProtect™ client on macOS enables a locally authenticated low-privileged attacker to escalate their privileges to root.\n\nThe GlobalProtect app on Linux, Windows, iOS, Android, and Chrome OS is not affected.",
+    "tags": [],
+    "title": "CVE-2026-0295 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0295"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0297",
+    "published": "2026-08-13T03:16:45.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A buffer overflow vulnerability exists in the Palo Alto Networks GlobalProtect™ app that enables a man-in-the-middle (MitM) attacker or a rogue gateway to disrupt system processes and potentially execute arbitrary code with elevated privileges (SYSTEM privileges on Windows, and root privileges on macOS and Linux).",
+    "tags": [],
+    "title": "CVE-2026-0297 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0297"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0298",
+    "published": "2026-08-13T03:16:45.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An improper input validation vulnerability exists in the Windows Pre-Logon Access Provider (PLAP) component of the Palo Alto Networks GlobalProtect™ app on Windows devices which enables a man-in-the-middle (MitM) attacker to execute arbitrary code with SYSTEM privileges on an affected client.\n\nThe GlobalProtect app on Linux, macOS, iOS, Android, and Chrome OS  is not affected.",
+    "tags": [],
+    "title": "CVE-2026-0298 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0298"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-0299",
+    "published": "2026-08-13T03:16:45.793",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Local privilege escalation vulnerabilities in the Palo Alto Networks GlobalProtect™ app enable a local user to escalate their privileges to NT AUTHORITY\\SYSTEM on Windows, and root on macOS and Linux. This enables a non-administrative user to execute arbitrary commands with administrative privileges.\n\nThe GlobalProtect app on iOS, Android, and Chrome OS is not affected.",
+    "tags": [],
+    "title": "CVE-2026-0299 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0299"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208030",
+    "published": "2026-08-13T12:10:28+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "흔히 경영학에서 \"측정할 수 없는 것은 관리할 수 없다\"고 말한다. 사이버보안도 마찬가지다. 보다 정확하게 말하면 측정되지 않는 위험은 비교하기 어렵고, 비교할 수 없는 위험에는 우선순위를 부여하기 어려우며, 우선순위가 없으면 한정된 자원을 합리적으로 배분하기 어렵다.가령 두 시스템에서 각각 취약점이 발견됐다고 하자. 어느 것을 먼저 고쳐야 할까? 단순히 취약점의 존재 여부만 확인해서는 답하기 어렵다. 실제 공격에 악용될 가능성은 어느 정도인지, 공격에 성공하면 어떤 자산이 영향을 받는지, 피해 규모는 얼마나 될지, 패치를 적용했을",
+    "tags": [],
+    "title": "[김승주 교수 칼럼] 인증의 시대에서 위험관리의 시대로: 보안, 이제 Pass와 Fail을 넘어야 한다",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208030"
   }
 ]
