@@ -2932,5 +2932,55 @@
     "tags": [],
     "title": "“무단 정보 수집 금지”…개인정보위, 스크래핑에서 API로 단계적 전환 추진",
     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5CcTNtZmpHRkRtdDY3ZnVpZmNMaXpGSVYxQ1FCT2ktX3BTSF9tWV9sM3Z5SktveWdBSWhPQ0V1UmtiYTU3TzNkMkJsZ0YxdjQzYUhXdlRxcC04dF9PNkM5bzVPU3M0ZWlwbWx3dXZMWdIBZkFVX3lxTE5WaUp0WmN1MWV5MFNzZ21jd3RlRFdPUnVqZFpIdURaSU5KampPQjZzWVAwcTFlZXI2UzZyd2p6OHBfdXROd09WanpOalA1VlJDZGR0Zk5pZzdNUlJSaWkwaDFwSVpHdw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-15413",
+    "published": "2026-08-13T09:17:12.153",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Link Factory WordPress plugin is a backdoor. Distributed as a \"homepage sentence publisher\", it exposes an operator-controlled REST API under /wp-json/link-factory/v1/ - authenticated by a detached Ed25519 signature verified against a hardcoded operator public key (except for the health check).",
+    "tags": [],
+    "title": "CVE-2026-15413 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15413"
+  },
+  {
+    "category": "high",
+    "cvss": 6.6,
+    "id": "CVE-2026-19696",
+    "published": "2026-08-13T09:17:12.983",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Ixia IxVeriWave and Vector Informatik BLF file parser crashes in 4.6.0 to 4.6.7 allows denial of service on Windows",
+    "tags": [],
+    "title": "CVE-2026-19696 (CVSS 6.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19696"
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=145148&kind=&sub_kind=",
+    "published": "2026-08-13T09:15:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "정책·법령부터 AI 관제 실무까지... 업계 재직자 및 취업준비생 등 130명 수료[보안뉴스 강초희 기자] 한국영상정보연구조합(이사장 황정현, KIIA)은 ‘물리보안 분야 도메인 지식 교육과정’을 개설해 성황리에 완료했다고 밝혔다. 8월 11~12일 양일간 서울 코엑스 아셈볼룸에서 운영된 이번 교육은 △물리·융합보안 산업 육성 정책 및 인증 제도 △AI 시",
+    "tags": [],
+    "title": "한국영상정보연구조합, ‘물리보안 도메인 지식 교육과정’ 성황리 마쳐",
+    "url": "http://www.boannews.com/media/view.asp?idx=145148&kind=&sub_kind="
+  },
+  {
+    "author": "[강초희기자 (choh@boannews.com)]",
+    "category": "news",
+    "id": "http://www.boannews.com/media/view.asp?idx=145136&kind=&sub_kind=",
+    "published": "2026-08-13T09:11:00+00:00",
+    "severity": "info",
+    "source": "보안뉴스",
+    "summary": "캘리포니아·오클라호마 등 4개 주 지방정부, 랜섬웨어 등 연쇄 사이버공격 피해최근 12개 주 상하수도 시설 연달아 겨냥한 사이버공격보안 취약한 중소 지방정부·공공인프라가 표적된 것으로 추정[보안뉴스 김형근 기자] 미국 4개 주의 여러 지방정부와 카운티가 랜섬웨어 등 연쇄 사이버공격을 받아 911 응급망과 대민 행정 서비스가 전면 마비되는 사태가 벌어졌다.글",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "美 4개 주 지방정부 연쇄 사이버공격... 911 응급망·행정 서비스 전면 마비",
+    "url": "http://www.boannews.com/media/view.asp?idx=145136&kind=&sub_kind="
   }
 ]
