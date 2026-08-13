@@ -4947,5 +4947,31 @@
     "tags": [],
     "title": "Flock tightens privacy controls amid scandals over officer abuse",
     "url": "https://therecord.media/flock-safety-audit-assistance-police-departments"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-50561",
+    "published": "2026-08-12T15:17:38.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Yuxi is a large-model-based intelligent knowledge base and knowledge graph agent development platform. Prior to version 0.6.2, the project's authentication mechanism contains a flaw. In affected versions, the system does not sufficiently validate the identity token in the Authorization header — only performing a validity check. This allows an administrator token generated in another deployment instance or local testing environment to be used to access the backend management interfaces of a different affected instance. An attacker who obtains or constructs an acceptable administrator Authorization token may bypass normal login authentication and gain administrator privileges. This vulnerability could allow an attacker to access system configurations, invoke backend management APIs, create administrator accounts, and ultimately take over the system backend. This issue has been fixed in version 0.6.2. Before upgrading, users are advised to implement the following temporary measures: Set the environment variable `JWT_SECRET_KEY` to a non-default value, and configure a unique, sufficiently strong JWT/authentication key for each deployment instance; and/or avoid exposing backend management interfaces directly to the public network.",
+    "tags": [],
+    "title": "CVE-2026-50561 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50561"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-59109",
+    "published": "2026-08-13T17:17:29.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SQL injection in the Zalktis accounting application via\ntrading-partner-controlled text fields in received electronic invoices. When\nimporting a received e-invoice (UBL/PEPPOL) or an e-commerce export, Zalktis\nconcatenates partner-controlled values directly into SQL statement text using\nstring concatenation, with neither parameterised queries nor escaping. The\napplication's own escaping helper, Dazadi.sql_txt(),\nis not invoked on these code paths, so a party that sends an invoice can break\nout of the string literal and alter the query logic.\n\n\n\n\n\n\n\n\n\nThis issue affects Zalktis: before 2026.1.586 and before 2026.2.592.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59109 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59109"
   }
 ]
