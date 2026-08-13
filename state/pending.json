@@ -4204,5 +4204,17 @@
     "tags": [],
     "title": "CVE-2025-71392 (CVSS 8.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71392"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-71390",
+    "published": "2026-07-18T14:17:10.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB before 2.2.6, 2.3.6, and 2.1.8 (and 3.0.0-alpha.7 and earlier) fails to validate DNS-resolved hostnames against --deny-net network access restrictions in its http::* functions. An authenticated user can invoke http::<fn>(<url>) with a hostname that resolves to a denied IP address, causing the server to issue the request anyway and return the response. This bypasses network access controls, allowing access to restricted internal endpoints and potentially retrieving or altering sensitive information and credentials, depending on the deployment.",
+    "tags": [],
+    "title": "CVE-2025-71390 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71390"
   }
 ]
