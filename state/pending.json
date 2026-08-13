@@ -5573,5 +5573,163 @@
     ],
     "title": "Curiouser and Curiouser",
     "url": "https://blog.talosintelligence.com/curiouser-and-curiouser/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-17482",
+    "published": "2026-08-13T21:17:43.543",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Documentation Offline 1.0.0 through 1.4.1 could allow a remote attacker to execute arbitrary code due to improper control of file paths.",
+    "tags": [],
+    "title": "CVE-2026-17482 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17482"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-19297",
+    "published": "2026-08-13T21:17:45.870",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.9.6 could allow a remote attacker to obtain unauthorized access to user accounts due to improper restriction of excessive authentication attempts.",
+    "tags": [],
+    "title": "CVE-2026-19297 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19297"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-8715",
+    "published": "2026-08-13T21:18:32.333",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vault Secrets Operator 1.3.0 up to 1.4.1 is vulnerable to an arbitrary file read and credential exfiltration issue in the AppRole authentication configuration that may allow a tenant with limited Kubernetes RBAC permissions to read files from the operator pod's filesystem and transmit their contents to a tenant-controlled endpoint, potentially leading to privilege escalation within the cluster. This vulnerability (CVE-2026-8715) is fixed in Vault Secrets Operator 1.5.0.",
+    "tags": [],
+    "title": "CVE-2026-8715 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8715"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-17101",
+    "published": "2026-08-13T21:17:42.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to execute arbitrary code or obtain sensitive information due to improper authentication.",
+    "tags": [],
+    "title": "CVE-2026-17101 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17101"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-17272",
+    "published": "2026-08-13T21:17:42.687",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to cause a denial of service due to a buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-17272 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17272"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17481",
+    "published": "2026-08-13T21:17:43.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Documentation Offline 1.0.0 through 1.4.1 could allow a remote attacker to execute arbitrary code due to improper output neutralization for logs.",
+    "tags": [],
+    "title": "CVE-2026-17481 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17481"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-17502",
+    "published": "2026-08-13T21:17:43.677",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to cause a denial of service due to an out-of-bounds write.",
+    "tags": [],
+    "title": "CVE-2026-17502 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17502"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18101",
+    "published": "2026-08-13T21:17:44.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a local attacker to gain elevated privileges due to improper management of thread authority swaps.",
+    "tags": [],
+    "title": "CVE-2026-18101 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18101"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2026-18193",
+    "published": "2026-08-13T21:17:44.700",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to bypass security restrictions due to improper validation of user-controlled addresses.",
+    "tags": [],
+    "title": "CVE-2026-18193 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18193"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-18249",
+    "published": "2026-08-13T21:17:44.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to gain elevated privileges due to improper validation of pointers read from Java-controlled addresses.",
+    "tags": [],
+    "title": "CVE-2026-18249 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18249"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-18509",
+    "published": "2026-08-13T21:17:45.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a local authenticated attacker to gain privilege escalation via the Navigator for i debugger. This could allow the attacker to access or manipulate sensitive data on the system, or create new profiles with elevated privileges on the IBM i system.",
+    "tags": [],
+    "title": "CVE-2026-18509 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18509"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208048",
+    "published": "2026-08-14T06:12:47+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "중국과 연계된 것으로 의심되는 해커들이 여러 인공지능(AI) 에이전트를 이용해 대만 정부 시스템을 공격한 정황이 확인됐다. 단순히 AI에 악성코드 제작이나 취약점 정보를 물어보는 수준이 아니었다. 여러 AI 에이전트가 동시에 움직이며 공격 대상을 조사하고 취약점을 찾았다. 공격이 막히면 새로운 정보를 검색해 다른 침투 경로까지 선택했다.이스라엘 사이버보안 기업 드림(Dream)이 분석한 이번 공격은 지난 7월 초 약 4일간 진행됐다. 최대 8개의 AI 에이전트가 동시에 움직였으며 21개 정부 시스템을 조사했다. 공격 과정에서 최소",
+    "tags": [
+      "AI"
+    ],
+    "title": "중국 연계 해커, AI 에이전트 8개로 대만 정부망 공격…사이버전 양상 바뀌나",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208048"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/",
+    "published": "2026-08-13T21:12:47+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Authorities in Ukraine shut down 94 fraudulent call centers across the country that lured people into investment scams or tried to obtain access to bank accounts. [...]",
+    "tags": [],
+    "title": "Ukraine shuts down 94 fraudulent call centers, seize millions in cash",
+    "url": "https://www.bleepingcomputer.com/news/security/ukraine-shuts-down-94-fraudulent-call-centers-seize-millions-in-cash/"
   }
 ]
