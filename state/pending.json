@@ -4228,5 +4228,354 @@
     "tags": [],
     "title": "Trezor discloses data breach affecting nearly 14,000 customers",
     "url": "https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-14182",
+    "published": "2026-08-13T06:17:37.887",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Customer Email Verification for WooCommerce WordPress plugin before 3.2.6 does not correctly validate the email-verification activation code, relying on a loose comparison that an attacker can satisfy with a crafted value type, allowing unauthenticated users to verify and take over the account of any registered user who has not yet confirmed their email address.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14182 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14182"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-53791",
+    "published": "2026-08-13T15:19:43.363",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "rsync daemon before 3.5.0 contains an IP address spoofing vulnerability that allows unauthenticated remote attackers to bypass IP-based access controls by sending a crafted PROXY protocol header with a forged source address. Attackers who can connect directly to the rsync daemon can inject a spoofed source IP in the PROXY protocol header to circumvent hosts allow/deny rules, gaining unauthorized access that would otherwise be blocked based on their real source address.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53791 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53791"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-72922",
+    "published": "2026-08-11T15:17:38.350",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.6.70, AutoGPT's autogpt_platform/backend/backend/api/features/integrations/router.py webhook_ingress_generic route selected get_webhook_manager(provider) from the untrusted provider URL segment without verifying webhook.provider, allowing a request to /compass/webhooks/{webhook_id}/ingress to use CompassWebhookManager's inherited no-op BaseWebhooksManager.verify_signature instead of GenericWebhooksManager.verify_signature, bypass X-Webhook-Secret for a configured secret_token, and execute a generic webhook graph as its owner. This issue is fixed in version 0.6.70.",
+    "tags": [],
+    "title": "CVE-2026-72922 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72922"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-18945",
+    "published": "2026-08-13T06:17:38.120",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Helper Premium WordPress plugin before 4.7.6 does not verify the order key when rendering its custom order confirmation page or when handling the related AJAX actions, allowing unauthenticated users to view other customers' order details, including personal information, as well as change the state of arbitrary orders.\n\nExploitation requires WooCommerce to be active and the WP Helper Premium WordPress plugin before 4.7.6's optional order confirmation page module to be enabled.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18945 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18945"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-14456",
+    "published": "2026-08-13T15:19:31.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Issue summary: When an OpenSSL QUIC server (Listener SSL object) processes\nvalid QUIC Initial packets for unknown destination connection IDs, it\ncan allocate and queue new incoming channels without enforcing any limit.\n\nImpact summary: A remote peer that can make many Initial packets reach the\nserver listener faster than the application accepts connections, can cause the\nmemory allocated to store the per-channel state to grow without any limits,\npotentially making the QUIC listener unavailable and causing Denial of Service.\n\nCWE: CWE-770: Allocation of Resources Without Limits or Throttling\n\nDescription: The function that handles inbound QUIC packets uses\nConnection-Id from the packet header to find an existing connection\n(QUIC channel). If no existing connection is found and the packet\ntype is INITIAL, the function treats the packet as a new connection. It\nallocates a new channel object and inserts it into a queue where it\nwaits to be accepted by the local application with SSL_accept(3ossl).\nThe memory occupied by these initial channel objects may grow\nwithout bounds if the application is not able to call SSL_accept()\nfrequently enough to serve these inbound connection requests.\n\nThe issue is present since OpenSSL 3.5 when the QUIC server implementation\nwas added.\n\nThe fix introduces a limit for pending connections. The default limit is set\nto 256 pending connections (waiting to be accepted by the local application).\nApplications may change the default by calling SSL_set_val",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14456 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14456"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16101",
+    "published": "2026-08-13T15:19:33.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Spoofing an already bonded device can force either RS9116W or SiWx917 to re-pair/bond with a rogue device. See V1 in BLERP paper below",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16101 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16101"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19291",
+    "published": "2026-08-13T15:19:37.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Bluetooth re-pairing with an existing device can use a lower security level. RS9116W and SiWx91x impacted. See V3 in the BLERP paper linked below.",
+    "tags": [],
+    "title": "CVE-2026-19291 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19291"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19292",
+    "published": "2026-08-13T15:19:37.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Re-pairing with a legitimate device can use a lower security level than\nprevious making brute-forcing the LTK easier. See V4 in the BLERP paper linked below.",
+    "tags": [],
+    "title": "CVE-2026-19292 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19292"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19293",
+    "published": "2026-08-13T15:19:37.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SMP security request (from peripheral) does not include the maximum\nencryption key size supported. Using a key with less than the maximum keysize\nmakes brute-forcing the key easier. See V6 in BLERP paper linked below.",
+    "tags": [],
+    "title": "CVE-2026-19293 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19293"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53783",
+    "published": "2026-08-13T15:19:41.913",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync before 3.5.0 contains a time-of-check to time-of-use (TOCTOU) race condition vulnerability in the rrsync restricted shell wrapper that allows authenticated clients to escape enforced directory restrictions by substituting a symlink for a path component after validation but before transfer processing. Attackers can additionally leverage unrestricted flags such as --copy-unsafe-links, -D, and --log-file through rrsync to read or write files outside the permitted directory subtree.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-53783 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53783"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53790",
+    "published": "2026-08-13T15:19:43.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync before 3.5.0 contains multiple command and argument injection vulnerabilities that allow attackers to execute arbitrary commands by supplying malicious input through several code paths, including the RSYNC_CONNECT_PROG environment variable, daemon hooks, the rsync-ssl wrapper, and remote-shell command newline injection. Attackers can inject shell metacharacters or newline characters into unsanitized user-supplied values such as hostnames and hostspecs to execute arbitrary commands under the privileges of the rsync process or the invoking user.",
+    "tags": [],
+    "title": "CVE-2026-53790 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53790"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-53795",
+    "published": "2026-08-13T15:19:44.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync before 3.5.0 contains an arbitrary file write vulnerability that allows attackers to write files outside the intended destination tree by specifying an absolute path via --temp-dir or --link-dest options. The rename-confinement logic is bypassed when these options resolve to paths outside the destination tree, enabling attacker-controlled values to write files to arbitrary locations accessible to the rsync process.",
+    "tags": [],
+    "title": "CVE-2026-53795 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53795"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-63423",
+    "published": "2026-08-13T15:19:55.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "During an internal security assessment, a potential vulnerability was discovered in Lenovo Accessories and Display Manager for Enterprise for Windows that could allow a local authenticated user to execute arbitrary code with elevated privileges.",
+    "tags": [],
+    "title": "CVE-2026-63423 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63423"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68451",
+    "published": "2026-08-13T15:19:57.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ns390/zcrypt: Validate length for CCA ECC private key requests\n\ncca_ecc2protkey() derives the copy length for the CPRB parameter\nblock directly from the length field in the key token. Reject the\nrequest early if the token length exceeds the available space in the\nparameter block.",
+    "tags": [],
+    "title": "CVE-2026-68451 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68451"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68452",
+    "published": "2026-08-13T15:19:57.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ns390/zcrypt: Validate length for CCA AES cipher key requests\n\ncca_cipher2protkey() derives the copy length for the CPRB parameter\nblock directly from the length field in the key token. Reject the\nrequest early if the token length exceeds the available space in the\nparameter block.",
+    "tags": [],
+    "title": "CVE-2026-68452 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68452"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68453",
+    "published": "2026-08-13T15:19:58.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ns390/zcrypt: Fix buffer over-read in cca_cipher2protkey\n\nAdd validation of both the actual key buffer size and token length\nfields in all the cca_check_sec*token() functions. Additionally check\nin cca_gencipherkey() for possible underflow with returned key size.\n\nThe CCA token structures contain user-controlled len fields that\nwere used in operations without proper validation against both the\nactual buffer size and minimum token structure size. An attacker\ncould set this field larger than the actual buffer size, leading to\nreading beyond buffer boundaries. This may result in a kernel crash or\nexposure of memory via sending this as part of a request down to the\ncrypto card. Also an attacker could have used a very small len value\nand thus enforce a buffer under-run which may produce similar effects\nas a over-read.\n\nSo now a key must\n- key buf length must be at least sizeof the token struct\n- the key len field inside the token must fit into the range of\n  sizeof key token struct ... key buf length",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68453 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68453"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68454",
+    "published": "2026-08-13T15:19:58.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: s390: pci: Fix handling of AIF enable without AISB\n\nWhen a guest seeks to register IRQs without a summary bit specified,\nensure that the associated GAITE then stores 0 for the guest AISB\nlocation instead of virt_to_phys(page_address(NULL)).",
+    "tags": [],
+    "title": "CVE-2026-68454 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68454"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-70454",
+    "published": "2026-08-13T15:19:59.047",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync 3.2.0 through 3.2.3 (openssl mode) and rsync-ssl through 3.4.4 (stunnel mode) contain a TLS certificate validation vulnerability that allows on-path attackers to intercept encrypted sessions by presenting self-signed or otherwise invalid certificates. Attackers can exploit the failure to validate server TLS certificates against a trusted CA or verify certificate hostname matching to decrypt or tamper with rsync session content without detection by the client.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-70454 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70454"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-70456",
+    "published": "2026-08-13T15:19:59.343",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync 3.0.1 before 3.5.0 contains an out-of-bounds write vulnerability in the read_args() function that allows a malicious sender to corrupt adjacent heap memory by sending a crafted argument list. When the argument count causes the argv allocation to be exactly full, the trailing NULL terminator is written one slot beyond the allocation boundary, corrupting adjacent heap memory.",
+    "tags": [],
+    "title": "CVE-2026-70456 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70456"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-70458",
+    "published": "2026-08-13T15:19:59.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync 3.0.0 before 3.5.0 contains an out-of-bounds write vulnerability that allows attackers to corrupt memory by triggering HLINK_BUMP processing on file entries with the FLAG_HLINKED flag set while the hard-link preservation option is inactive. Attackers can exploit the missing F_SUM field in the file_struct layout to access memory past the end of the allocated structure, corrupting adjacent heap or stack data.",
+    "tags": [],
+    "title": "CVE-2026-70458 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70458"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70460",
+    "published": "2026-08-13T15:19:59.957",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync 2.3.3 before 3.5.0 contains a path traversal vulnerability that allows a malicious sender to escape the module root by exploiting symlinks within the module file tree when using --partial-dir or --backup-dir options. Attackers with write access to place a symlink under the module root, or who can exploit a pre-existing trusted symlink, can direct file writes to locations outside the intended module root, achieving arbitrary file write relative to the module root parent.",
+    "tags": [],
+    "title": "CVE-2026-70460 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70460"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-70461",
+    "published": "2026-08-13T15:20:00.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync 3.2.5 before 3.5.0 contains a heap out-of-bounds write vulnerability that allows remote unauthenticated attackers to write one attacker-controlled byte past the end of a heap allocation by supplying a crafted files-from entry. Attackers can trigger the vulnerability against a read-only rsync daemon module by providing a files-from entry containing both an interior and trailing backslash, causing the add_implied_include() function to under-count the trailing backslash when sizing the destination buffer.",
+    "tags": [],
+    "title": "CVE-2026-70461 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70461"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-70463",
+    "published": "2026-08-13T15:20:01.513",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "rsync 3.1.0 before 3.5.0 contains an authorization bypass in auth users directive parsing. The auth users parser uses comma-only tokenization when splitting the user list, which fails to correctly handle entries of the form @Group Name where the group name contains a space. The space within the group name causes the parser to split the entry at the space boundary, discarding the deny rule associated with the group. An authenticated user whose username or group membership would be denied by an @Group Name auth users entry can connect to a restricted module because the deny rule is silently discarded during parsing.",
+    "tags": [],
+    "title": "CVE-2026-70463 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70463"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-73555",
+    "published": "2026-08-13T15:20:17.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.26.0, the validation_exception_handler in vllm/entrypoints/openai/server_utils.py converts FastAPI RequestValidationError objects with str(exc), and sanitize_message in vllm/entrypoints/utils.py does not remove traceback-style file paths, allowing unauthenticated malformed JSON requests to /v1/chat/completions, /v1/completions, /tokenize, and /detokenize to disclose the OS username, home and virtual-environment paths, Python version, internal package structure, line numbers, and endpoint handler names. This issue is fixed in version 0.26.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-73555 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73555"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-73556",
+    "published": "2026-08-13T15:20:17.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.26.0, the structured_outputs.regex parameter in vllm/v1/structured_output/backend_lm_format_enforcer.py is passed to lmformatenforcer.RegexParser without compile_regex_with_timeout or validation in validate_structured_output_request_lm_format_enforcer, allowing an unauthenticated /v1/completions request against the lm-format-enforcer backend to consume a CPU core and stall the structured-output engine path with a catastrophic regular expression. This issue is fixed in version 0.26.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-73556 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73556"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-73557",
+    "published": "2026-08-13T15:20:18.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models. From 0.20.2rc0 until 0.26.0, safe_load_prompt_embeds in vllm/renderers/embed_utils.py uses torch.sparse.check_sparse_tensor_invariants, whose process-global save, enable, and restore state can be raced by concurrent prompt_embeds parts submitted to POST /v1/chat/completions through AsyncMultiModalItemTracker.resolve_items, asyncio.gather, and the default executor, allowing an invalid sparse tensor to reach tensor.to_dense despite the CVE-2025-62164 guard when enable_prompt_embeds is enabled. This issue is fixed in version 0.26.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-73557 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73557"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-73558",
+    "published": "2026-08-13T15:20:18.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.27.0, an integer overflow in blockIdx.x * 2 * d in activation_kernels.cu can cause act_and_mul_kernel to consume another batched user's input, allowing a request processed in the same inference batch to receive a partial or complete copy of another user's inference result. This issue is fixed in version 0.27.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-73558 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73558"
   }
 ]
