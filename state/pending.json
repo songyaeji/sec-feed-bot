@@ -4192,5 +4192,17 @@
     ],
     "title": "CVE-2026-67991 (CVSS N/A)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67991"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2025-71392",
+    "published": "2026-07-18T14:17:10.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SurrealDB before 2.0.5, 2.1.x before 2.1.5, and 2.2.x before 2.2.2 fails to properly escape table and field names in the command-line export command. An authenticated System User with OWNER or EDITOR roles can create tables or fields with malicious names containing SurrealQL. When a higher-privileged user subsequently imports the exported backup, the injected SurrealQL executes, enabling privilege escalation and root-level takeover of the SurrealDB instance. Applications that let users define custom tables or fields are also exposed to a universal second-order SurrealQL injection even when query parameters are sanitized.",
+    "tags": [],
+    "title": "CVE-2025-71392 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71392"
   }
 ]
