@@ -2,6 +2,15 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [trigger-dev-deployment-authz](topics/2026-08-trigger-dev-deployment-authz.md) Trigger.dev 교차 프로젝트 배포 조작 CVE-2026-73656 (최종갱신일: 2026-08-13)
+- [wp-base-booking-rce](topics/2026-08-wp-base-booking-rce.md) WP BASE Booking 미인증 RCE CVE-2026-61962 (최종갱신일: 2026-08-13)
+- [qa-analytics-rce](topics/2026-08-qa-analytics-rce.md) QA Analytics 미인증 RCE CVE-2026-27544 (최종갱신일: 2026-08-13)
+- [weberpmesv2-rce](topics/2026-08-weberpmesv2-rce.md) WebErpMesv2 미인증 PHP 파일 업로드 RCE CVE-2026-49827 (최종갱신일: 2026-08-13)
+- [improper-authentication-cve-2026-59500](topics/2026-08-improper-authentication-cve-2026-59500.md) 부적절한 인증 취약점 CWE-287 CVE-2026-59500 (최종갱신일: 2026-08-13)
+- [link-factory-wordpress-backdoor](topics/2026-08-link-factory-wordpress-backdoor.md) Link Factory WordPress 플러그인 백도어 CVE-2026-15413 (최종갱신일: 2026-08-13)
+- [upsnap-rce](topics/2026-08-upsnap-rce.md) UpSnap 신규 설치 미인증 RCE CVE-2026-49819 (최종갱신일: 2026-08-13)
+- [pdf-webkit-rce](topics/2026-07-pdf-webkit-rce.md) PDF::WebKit 메타 태그 인자 주입 CVE-2026-16770 (최종갱신일: 2026-08-13)
+- [ibm-doors-next-privesc](topics/2026-08-ibm-doors-next-privesc.md) IBM DOORS Next 보안 논리 우회 CVE-2024-27253 (최종갱신일: 2026-08-13)
 - [zoom-annotation-hijack](topics/2026-08-zoom-annotation-hijack.md) Zoom 주석 도구 클라이언트 탈취 제로클릭 취약점 (최종갱신일: 2026-08-12)
 - [microsoft-sharepoint-rce-poc](topics/2026-08-microsoft-sharepoint-rce-poc.md) Microsoft SharePoint 중대 원격코드실행 Rapid7 PoC 공개 (최종갱신일: 2026-08-12)
 - [exfilsquad-ransomware-victims](topics/2026-08-exfilsquad-ransomware-victims.md) ExfilSquad 신규 피해자 13개 기관 공개 (최종갱신일: 2026-08-12)
@@ -372,6 +381,7 @@
 - [23andme-data-breach-settlement](topics/2026-07-23andme-data-breach-settlement.md) 23andMe 유전자 데이터 유출 1800만 달러 규제 합의 (최종갱신일: 2026-07-16)
 - [uat-11795-starland-rat-campaign](topics/2026-07-uat-11795-starland-rat-campaign.md) UAT-11795 Starland RAT 및 WLDR 배포 캠페인 (최종갱신일: 2026-07-17)
 - [windows-legacyhive-zero-day](topics/2026-07-windows-legacyhive-zero-day.md) Windows LegacyHive 제로데이 권한상향 취약점 (최종갱신일: 2026-07-21)
+- [autel-maxi-charger-rce](topics/2026-07-autel-maxi-charger-rce.md) Autel 전기차 충전기 미인증 RCE CVE-2026-8984 (최종갱신일: 2026-07-21)
 - [siemens-rox-ii-zero-day-trilogy](topics/2026-07-siemens-rox-ii-zero-day-trilogy.md) Siemens ROX II 3개 연쇄 제로데이 취약점 (최종갱신일: 2026-07-17)
 - [rockwell-arena-rce](topics/2026-07-rockwell-arena-rce.md) Rockwell Automation Arena 원격 코드 실행 (최종갱신일: 2026-07-16)
 - [nasa-cfs-health-safety-dos](topics/2026-07-nasa-cfs-health-safety-dos.md) NASA cFS Health & Safety DoS 취약점 (최종갱신일: 2026-07-30)
