@@ -5199,5 +5199,29 @@
     "tags": [],
     "title": "CVE-2026-8247 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8247"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2021-33034",
+    "published": "2021-05-14T23:15:09.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel before 5.12.4, net/bluetooth/hci_event.c has a use-after-free when destroying an hci_chan, aka CID-5c4c8c954409. This leads to writing an arbitrary value.",
+    "tags": [],
+    "title": "CVE-2021-33034 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-33034"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2021-40490",
+    "published": "2021-09-03T01:15:07.940",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A race condition was discovered in ext4_write_inline_data_end in fs/ext4/inline.c in the ext4 subsystem in the Linux kernel through 5.13.13.",
+    "tags": [],
+    "title": "CVE-2021-40490 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40490"
   }
 ]
