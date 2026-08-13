@@ -4763,5 +4763,177 @@
     ],
     "title": "CVE-2026-73570 (CVSS 8.9)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73570"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25299",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Parasolid is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an attacker to crash the application or execute arbitrary code. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Parasolid are affected: Parasolid V38.0 vers:intdot/",
+    "tags": [],
+    "title": "Siemens Parasolid",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-10-0"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25296",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Siemens License Server is affected by multiple vulnerabilities which could allow an attacker to elevate its privileges and read arbitrary files on the system. Siemens has released a new version for Siemens License Server (SLS) and recommends to update to the latest version. The following versions of Siemens License Server (SLS) are affected: Siemens License Server (SLS) vers:intdot/",
+    "tags": [],
+    "title": "Siemens License Server (SLS)",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25297",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary A vulnerability in Desigo DXR and PXC controllers has been identified that could allow an attacker to cause denial of service conditions by sending malformed BACnet packets. Recovery requires a device reset or reboot to restore normal functionality. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Desigo DXR and PXC Controllers are affected: Desigo DXR2 vers:intdot/",
+    "tags": [],
+    "title": "Siemens Desigo DXR and PXC Controllers",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-08"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25304",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a low-privilege user or attacker to inject a persistent malicious payload via a crafted URL that executes in the context of other users' sessions, including administrators, potentially leading to session hijacking and unauthorized access. The following versions of Johnson Controls Metasys are affected: Metasys 12 vers:all/* (CVE-2026-34491) Metasys 13 vers:all/* (CVE-2026-34491) Metasys 14 Metasys 15 CVSS Vendor Equipment Vulnerabilities v3 8 Johnson Controls Inc Johnson Controls Metasys Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Background Critical Infrastructure Sectors: Critical Manufacturing, Commercial Facilities, Government Services and Facilities, Transportation Systems, Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Ireland Vulnerabilities Expand All + CVE-2026-34491 A low-privilege user can inject a malicious XSS payload into the Metasys UI via a crafted URL. The payload persists across logins and executes in the browser context of other users, including administrators. View CVE Details Affected Products Johnson Controls Metasys Vendor: Johnson Controls Inc Product Version: Johnson Controls Inc Metasys 12: vers:all/*, Johnson Controls Inc Metasys 13: vers:all/*, Johnson Controls Inc Metasys 14:",
+    "tags": [],
+    "title": "Johnson Controls Metasys",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-14"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25298",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Siveillance Video Management Servers contains a vulnerability that could allow a Remote Code Execution attack. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Siveillance Video are affected: Siveillance Video V2023 R3 vers:intdot/",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Siemens Siveillance Video",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-10"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25303",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker within Bluetooth range to manipulate brain stimulation parameters and override safety limits. The following versions of Flow Neuroscience FL-100 are affected: Flow Neuroscience FL-100 Halo Neuroscience FL-100 CVSS Vendor Equipment Vulnerabilities v3 8.1 Flow Neuroscience Flow Neuroscience FL-100 Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Healthcare and Public Health Countries/Areas Deployed: Worldwide Company Headquarters Location: Sweden Vulnerabilities Expand All + CVE-2026-18164 An undocumented hard-coded credential, shared by all device units, is authorized to bypass authentication. This allows an attacker within Bluetooth range to arbitrarilymanipulate brain stimulation parameters and state. View CVE Details Affected Products Flow Neuroscience FL-100 Vendor: Flow Neuroscience Product Version: Flow Neuroscience Flow Neuroscience FL-100:",
+    "tags": [],
+    "title": "Flow Neuroscience FL-100",
+    "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-225-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25302",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Siemens LOGO! Soft Comfort contains multiple vulnerabilities in its project-file encryption and password handling mechanisms. A local attacker could exploit these vulnerabilities to extract the master key, allowing them to decrypt project data or remove project passwords. The lack of password salting enables offline dictionary or brute-force attacks against the password hashes. Successful exploitation could result in unauthorized access to, or modification of, sensitive project logic and configurations. Siemens has released a new version for LOGO! Soft Comfort and recommends to update to the latest version. The following versions of Siemens LOGO! Soft Comfort are affected: LOGO! Soft Comfort vers:intdot/",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Siemens LOGO! Soft Comfort",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-13"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25294",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to read data from the device or gain access to affected workstations. The following versions of ANDRITZ HIPASE-250 and 250 SCALA are affected: HIPASE-250",
+    "tags": [],
+    "title": "ANDRITZ HIPASE-250 and 250 SCALA",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25301",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Solid Edge is affected by multiple file parsing vulnerabilities that could be triggered when the application reads specially crafted files in PAR, PSM or DFT format. This could allow an attacker to crash the application or execute arbitrary code. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Solid Edge are affected: Solid Edge SE2025 vers:intdot/",
+    "tags": [],
+    "title": "Siemens Solid Edge",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-12"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25300",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Simcenter Femap contains two file parsing vulnerabilities that could be triggered when the application reads files in BMP file format. If a user is tricked to open a malicious file with the affected application, this could lead the application to crash or potentially lead to arbitrary code execution. Siemens has released a new version for Simcenter Femap and recommends to update to the latest version. The following versions of Siemens Simcenter Femap are affected: Simcenter Femap vers:intdot/",
+    "tags": [],
+    "title": "Siemens Simcenter Femap",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-11"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25291",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability may allow an attacker to inject and execute arbitrary OS commands with root privileges. The following versions of Haiwell IoT Cloud HMI Gateway are affected: Haiwell IoT Cloud HMI Gateway 3.40.1.12 (CVE-2026-19188) CVSS Vendor Equipment Vulnerabilities v3 10 Haiwell Haiwell IoT Cloud HMI Gateway Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') Background Critical Infrastructure Sectors: Energy, Critical Manufacturing, Water and Wastewater Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-19188 A critical OS command injection vulnerability has been identified in the Haiwell IoT Cloud HMI Gateway product. The vulnerability exists in the Net Check feature accessible via the /setting endpoint. The cmdPing Socket.io event fails to properly sanitize user-supplied input before passing it to the underlying operating system, allowing an attacker to inject and execute arbitrary OS commands with root privileges View CVE Details Affected Products Haiwell IoT Cloud HMI Gateway Vendor: Haiwell Product Version: Haiwell Haiwell IoT Cloud HMI Gateway: 3.40.1.12 Product Status: known_affected Remediations Mitigation Haiwell has addressed the issue in patch version number Scada-v3.50.1.19, which is available for download on their website: https://en.haiwell.com/app/system/entrance.php?m=include&c=access&a=dodown&lang=en&id=361 htt",
+    "tags": [],
+    "title": "Haiwell IoT Cloud HMI Gateway",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25290",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to tamper with serialized data, potentially resulting in code execution during deserialization. The following versions of AVEVA Enterprise SCADA are affected: Enterprise SCADA 2025 (CVE-2025-7639) Enterprise SCADA >=2024| =2023| =2022| =2024| =2023| =2022| \"Mode\" setting from 'Binary Formatter' to 'Json'. Change \"BinarySerializer\" -> \"AcceptBinaryFormattedData\" setting from 'true' to 'false'. Re-cache the XOS Event Handlers assembly Mitigation Client Components: Configure clients/products that interface with Enterprise SCADA to only use JSON serialization. Mitigation HMI: Migrate HMI displays Mitigation For step-by-step instructions on where and how to apply these configuration settings, how to migrate HMI displays, compatible server-client versions list, and additional details please refer to KB117814 \"AVEVA Midstream Product Bulletin - Removal of Binary Formatter\" https://softwaresupportsp.aveva.com/en-US/knowledge/details/000117814?lang=en_US Mitigation AVEVA recommends the following general defensive measures: Audit devices, network topology, and perimeter defences to ensure all applicable security best practices from AVEVA's Enterprise SCADA Reference System Architecture are adhered to. Audit assigned permissions to ensure that only trusted users are given \"DNA Authority - Operator\" rights: https://docs.aveva.com/bundle/scada-ent-2025/page/651008.html Disallow BLT Test clients in prod",
+    "tags": [],
+    "title": "AVEVA Enterprise SCADA",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25293",
+    "published": "2026-08-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Hitachi Energy is aware of Dirty Frag vulnerabilities that affect APM Edge product versions listed in this document. Successful exploitation of these vulnerabilities could result in impact on confidentiality, integrity and availability of the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation. The following versions of Hitachi Energy APM Edge Product are affected: APM Edge vers:APM_Edge/",
+    "tags": [],
+    "title": "Hitachi Energy APM Edge Product",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25295",
+    "published": "2026-08-12T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products. Siemens recommends to contact customer support for additional information, and follow Fortinet advisory for workarounds and mitigation measures. The following versions of Siemens RUGGEDCOM APE1808 are affected: RUGGEDCOM APE1808 vers:all/* (CVE-2026-23573, CVE-2026-59839) CVSS Vendor Equipment Vulnerabilities v3 6.1 Siemens Siemens RUGGEDCOM APE1808 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') Background Critical Infrastructure Sectors: Critical Manufacturing, Energy, Transportation Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-23573 An Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability [CWE-79] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.6, FortiOS 7.4 all versions, FortiOS 7.2 all versions, FortiPAM 1.8.0, FortiPAM 1.7 all versions, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.4.0 through 7.4.3, FortiProxy 7.2.0 through 7.2.9 may allow an authenticated remote user to execute code or commands via crafted requests. View CVE Details A",
+    "tags": [],
+    "title": "Siemens RUGGEDCOM APE1808",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-06"
   }
 ]
