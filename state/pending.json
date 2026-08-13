@@ -5001,5 +5001,91 @@
     ],
     "title": "Microsoft patches LegacyHive Windows zero-day vulnerability",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67614",
+    "published": "2026-08-13T18:18:08.370",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CyberPanel before 3.0.0 contains a hard-coded JWT secret vulnerability in the WebTerminal FastAPI SSH service that allows unauthenticated remote attackers to forge valid authentication tokens and obtain an interactive root shell via WebSocket on port 8888. Attackers can craft a forged JWT signed with the hardcoded secret value, specifying ssh_user=root, to authenticate to the terminal service without any valid credentials and receive a root shell.",
+    "tags": [],
+    "title": "CVE-2026-67614 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67614"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-73567",
+    "published": "2026-08-13T18:18:19.387",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "sm-crypto provides JavaScript implementations of the Chinese cryptographic algorithms SM2, SM3, and SM4. Prior to 0.5.0, the default no-argument sm2.generateKeyPairHex() path in Node.js uses the module-wide SecureRandom instance in src/sm2/utils.js, supplied by jsbn@1.1.0, which seeds an ARC4 stream from Math.random() and new Date().getTime() because window.crypto.getRandomValues is unavailable even though globalThis.crypto exists. An attacker who can observe the process's Math.random() outputs and estimate the key-generation time can reconstruct the seed, recover generated SM2 private keys, and predict signing ephemeral scalars used to forge signatures. This issue is fixed in version 0.5.0.",
+    "tags": [],
+    "title": "CVE-2026-73567 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73567"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-73644",
+    "published": "2026-08-13T18:18:20.093",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenDJ is an LDAPv3 compliant directory service. Prior to 5.1.2, the SASL PLAIN authorization identity path in opendj-server-legacy/src/main/java/org/opends/server/extensions/PlainSASLMechanismHandler.java checked the PROXIED_AUTH privilege but did not evaluate the mayProxy proxy ACI scope when an authzid resolved to a different user. Both dn: and u: or bare authzid forms could therefore let an authenticated account holding PROXIED_AUTH assume any resolvable non-root identity outside the identities permitted by its proxy ACI. The fix returns INVALID_CREDENTIALS (49) before password verification when the target authorization identity is not permitted. This issue is fixed in version 5.1.2.",
+    "tags": [],
+    "title": "CVE-2026-73644 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73644"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73649",
+    "published": "2026-08-13T18:18:20.793",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Velocity.js is a JavaScript implementation of the Apache Velocity template engine. Prior to 2.1.7, the earlier fix for CVE-2026-44966 filtered constructor, __proto__, and prototype only in the #set assignment handler in src/compile/set.ts, while property-read expressions in src/compile/references.ts remained unfiltered. The getReferences() flow called getAttributes(), whose property access allowed an attacker-controlled template to traverse constructor.constructor to the JavaScript Function constructor. The #set handler validated only the assignment target and did not inspect the right-hand property-read expression, allowing arbitrary shell commands, environment-variable access, cloud-credential access, and internal-network access in the server process. This issue is fixed in version 2.1.7.",
+    "tags": [],
+    "title": "CVE-2026-73649 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73649"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18428",
+    "published": "2026-08-13T18:17:21.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A SQL query validation bypass in the Flint extension query handler in the OpenSearch SQL plugin allows a remote authenticated actor with async query access to execute arbitrary code on Apache Spark workers by sending a crafted SQL query to the direct query endpoint.",
+    "tags": [],
+    "title": "CVE-2026-18428 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18428"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-72741",
+    "published": "2026-08-13T18:18:16.670",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Rainbond through 6.9.7 contains a broken access control vulnerability in the CheckToken function that allows authenticated attackers to access unauthorized enterprise resources by substituting another enterprise's tenant name in URL paths. Attackers can use any valid API token to bypass enterprise ID verification and access or modify another enterprise's services, plugins, environment variables, and certificates.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72741 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72741"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/",
+    "published": "2026-08-13T18:15:19+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The Jewelbug hacker group has been carrying out espionage operations targeting governments and militaries while also engaging in cryptocurrency fraud. [...]",
+    "tags": [],
+    "title": "Hackers breach govt webmail while running parallel crypto fraud",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/"
   }
 ]
