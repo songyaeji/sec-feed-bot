@@ -2996,5 +2996,129 @@
     ],
     "title": "금융위원회·개인정보보호위원회, 세종 이전 '유력'",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9DRF90ZTZaWk95SFcwVWNJR19EMnJfQmhrVUhMNTZRczg3X0JHMEU3aC1qZkc5VGRxMW9HOFdBa3BBR0lfeDIzVlF6Szh1VmQ4RjYxWEdzNVAta29xeEh4WElCLXUtWV9MMUlQYzNUc0s4UQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-34184",
+    "published": "2026-04-09T10:16:22.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "AlanWeb SCADA does not enforce authorization for some directories. This allows an unauthorized attacker to read all files in these directories and even execute some of them. Critically the attacker could run PHP scripts directly on the connected database.\n\nThis issue was fixed in AlanWeb SCADA version 9.8.5",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-34184 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34184"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-59500",
+    "published": "2026-08-13T10:17:15.017",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CWE-287: Improper Authentication",
+    "tags": [],
+    "title": "CVE-2026-59500 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59500"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-59503",
+    "published": "2026-08-13T10:17:15.380",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor CWE-359: Exposure of Private Personal Information to an Unauthorized Actor",
+    "tags": [],
+    "title": "CVE-2026-59503 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59503"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-59504",
+    "published": "2026-08-13T10:17:15.500",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CWE-602: Client-Side Enforcement of Server-Side Security",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-59504 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59504"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-59506",
+    "published": "2026-08-13T10:17:15.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CWE-306: Missing Authentication for Critical Function",
+    "tags": [],
+    "title": "CVE-2026-59506 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59506"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-59507",
+    "published": "2026-08-13T10:17:15.963",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "CWE-798: Use of Hard-coded Credentials CWE-200: Exposure of Sensitive Information to an Unauthorized Actor CWE-284: Improper Access Control",
+    "tags": [],
+    "title": "CVE-2026-59507 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59507"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-34185",
+    "published": "2026-04-09T10:16:22.260",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AlanWeb SCADA is vulnerable to SQL Injection across most scripts and input parameters. Because no protections are in place, an authenticated attacker can inject arbitrary SQL commands, potentially gaining full control over the database.\n\nThis issue was fixed in AlanWeb SCADA version 9.8.5",
+    "tags": [],
+    "title": "CVE-2026-34185 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34185"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-59499",
+    "published": "2026-08-13T10:17:14.877",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CWE-200: Exposure of Sensitive\nInformation to an Unauthorized Actor",
+    "tags": [],
+    "title": "CVE-2026-59499 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59499"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-59501",
+    "published": "2026-08-13T10:17:15.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CWE-284: Improper Access Control",
+    "tags": [],
+    "title": "CVE-2026-59501 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59501"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-59505",
+    "published": "2026-08-13T10:17:15.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CWE-284: Improper Access Control",
+    "tags": [],
+    "title": "CVE-2026-59505 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59505"
   }
 ]
