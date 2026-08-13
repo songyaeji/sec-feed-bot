@@ -5223,5 +5223,315 @@
     "tags": [],
     "title": "CVE-2021-40490 (CVSS 7.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-40490"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2024-27253",
+    "published": "2026-08-12T22:17:13.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM DOORS Next 7.0.3 through 7.0.3 Interim Fix 018 could allow an authenticated user to bypass security logic to perform unauthorized activities.",
+    "tags": [],
+    "title": "CVE-2024-27253 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27253"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-14525",
+    "published": "2026-08-13T20:17:14.250",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "IBM WebSphere Application Server - Liberty 17.0.0.3 through 26.0.0.8 IBM WebSphere Application Server Liberty is vulnerable to an authentication bypass when the rtcomm-1.0 or rtcommGateway-1.0 feature is enabled.",
+    "tags": [],
+    "title": "CVE-2026-14525 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14525"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-19747",
+    "published": "2026-08-13T20:17:21.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A weakness has been identified in Tenda CH7, CH7G, CH10, CP3, CP3 Pro, CP7, TC3B14C, TC3B15C, TC3T14C and TC3T15C up to 20260625. This impacts the function CAte::HandleCmd of the file Kylin of the component ATE Module. This manipulation causes command injection. The attack is possible to be carried out remotely.",
+    "tags": [],
+    "title": "CVE-2026-19747 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19747"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-73656",
+    "published": "2026-08-13T20:17:30.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Trigger.dev is a platform for building and deploying fully managed AI agents and workflows. Prior to 4.5.6, POST /api/v1/deployments/:deploymentId/background-workers calls CreateDeploymentBackgroundWorkerServiceV4.call() in apps/webapp/app/v3/services/createDeploymentBackgroundWorkerV4.server.ts, where workerDeployment.findFirst() selects a deployment by friendlyId without an environmentId predicate. A caller with a valid API key for one project can submit another project's deployment identifier, link an attacker-owned background worker to the victim deployment, and move the victim deployment from BUILDING to DEPLOYING. This issue is fixed in version 4.5.6.",
+    "tags": [],
+    "title": "CVE-2026-73656 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73656"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2026-14875",
+    "published": "2026-08-13T20:17:14.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i Access Client Solutions 1.1.2.0 through 1.1.9.13 is vulnerable to arbitrary code execution on Windows when installed for all users due to publicly writeable directory.",
+    "tags": [],
+    "title": "CVE-2026-14875 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14875"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16674",
+    "published": "2026-08-13T20:17:14.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary code due to an untrusted search path.",
+    "tags": [],
+    "title": "CVE-2026-16674 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16674"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16722",
+    "published": "2026-08-13T20:17:15.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to obtain unauthorized privileges due to improper privilege management.",
+    "tags": [],
+    "title": "CVE-2026-16722 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16722"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-16815",
+    "published": "2026-08-13T20:17:15.187",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to cause a denial of service and potentially obtain sensitive information due to a stack-based buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-16815 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16815"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-16867",
+    "published": "2026-08-13T20:17:15.723",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to access server resources with the privileges of an authenticated user due to improper authentication during NTLM session negotiation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-16867 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16867"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-16868",
+    "published": "2026-08-13T20:17:15.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to cause a denial of service due to the use of uninitialized memory during ASN.1 length processing.",
+    "tags": [],
+    "title": "CVE-2026-16868 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16868"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-16908",
+    "published": "2026-08-13T20:17:16.667",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to gain unauthorized access to arbitrary objects due to a path traversal vulnerability.",
+    "tags": [],
+    "title": "CVE-2026-16908 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16908"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-16967",
+    "published": "2026-08-13T20:17:17.097",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to gain unauthorized access to system objects due to a time-of-check to time-of-use (TOCTOU) race condition involving symbolic links.",
+    "tags": [],
+    "title": "CVE-2026-16967 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16967"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16975",
+    "published": "2026-08-13T20:17:17.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary code due to a heap-based buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-16975 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16975"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16987",
+    "published": "2026-08-13T20:17:17.530",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a local attacker to gain elevated privileges due to improper validation of the LANG environment variable.",
+    "tags": [],
+    "title": "CVE-2026-16987 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16987"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17029",
+    "published": "2026-08-13T20:17:17.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a local attacker to execute arbitrary code due to an out-of-bounds write.",
+    "tags": [],
+    "title": "CVE-2026-17029 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17029"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17045",
+    "published": "2026-08-13T20:17:18.153",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to perform unauthorized operations and access sensitive information due to improper session management.",
+    "tags": [],
+    "title": "CVE-2026-17045 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17045"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17069",
+    "published": "2026-08-13T20:17:18.303",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to bypass security restrictions due to improper validation of anti-CSRF tokens.",
+    "tags": [],
+    "title": "CVE-2026-17069 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17069"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17206",
+    "published": "2026-08-13T20:17:18.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote attacker to execute arbitrary code due to a buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-17206 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17206"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-17223",
+    "published": "2026-08-13T20:17:19.097",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a remote authenticated attacker to execute arbitrary code due to a buffer overflow.",
+    "tags": [],
+    "title": "CVE-2026-17223 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17223"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72642",
+    "published": "2026-08-13T20:17:24.673",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The native inference process that Elasticsearch uses to evaluate uploaded machine learning models accepts a model operation that computes a memory address from an offset supplied inside the model, without validating that the offset stays within the bounds of the underlying storage. A user with the privileges required to upload and deploy a trained model can craft a model that reads and writes memory outside the intended allocation. The result is heap corruption that crashes the inference process, and, with sufficient control over the heap layout, could allow arbitrary code execution in the context of that process.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-72642 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72642"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-72653",
+    "published": "2026-08-13T20:17:25.513",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Allocation of Resources Without Limits or Throttling (CWE-770) in Kibana can lead to denial of service via Excessive Allocation (CAPEC-130). An authenticated user who is authorized to manage maintenance windows could submit a specially crafted, malformed payload that causes the Kibana process to consume excessive resources. Kibana becomes unresponsive for all users and does not recover without manual intervention.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72653 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72653"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-72665",
+    "published": "2026-08-13T20:17:27.033",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing Authorization (CWE-862) in Kibana can lead to unauthorized execution of Osquery and Elastic Defend response actions on managed hosts via Accessing Functionality Not Properly Constrained by ACLs (CAPEC-1). A Kibana user who is able to author and evaluate Elastic Security detection rules can cause response actions to be carried out against enrolled agents without holding the Osquery live query privileges or the Elastic Defend response action privileges that normally govern those capabilities. Depending on the response action involved, this can result in disclosure of information from the affected hosts or in unauthorized changes to their state.",
+    "tags": [],
+    "title": "CVE-2026-72665 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72665"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-72671",
+    "published": "2026-08-13T20:17:27.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A Kibana Machine Learning capability that removes a saved object from the current space accepts machine learning trained models as a target, but it verifies only the privileges that apply to anomaly detection jobs and data frame analytics jobs. A user whose role grants create anomaly detection jobs and data frame analytics jobs without the trained model privilege can therefore remove a trained model from a space. The model itself is not deleted and remains available in its other spaces, and the change can be reversed by a suitably privileged user.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-72671 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72671"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-72675",
+    "published": "2026-08-13T20:17:28.137",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing Authorization (CWE-862) in Kibana can lead to cross-space information disclosure and unauthorized data modification via Privilege Abuse (CAPEC-122). Kibana Machine Learning carries out its Elasticsearch operations with elevated internal permissions and relies on a per-request space filter to keep the machine learning data of one space separated from another. Part of the Machine Learning functionality did not apply that filter, so operations issued from one space were carried out against the machine learning data of every space in the deployment.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-72675 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72675"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-73654",
+    "published": "2026-08-13T20:17:30.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Trigger.dev is a platform for building and deploying fully managed AI agents and workflows. From 3.3.8 until 4.5.6, the PUT /api/v1/runs/:runId/metadata endpoint passes attacker-controlled operation.key values to new JSONHeroPath(operation.key).set(newMetadata, value) in packages/core/src/v3/runMetadata/operations.ts without rejecting dangerous constructor and prototype path segments. A caller with a normal environment API key can pollute Object.prototype in the shared webapp process, corrupting Prisma queries and Prometheus labels, breaking other tenants' worker authentication, and causing a process-wide denial of service. This issue is fixed in version 4.5.6.",
+    "tags": [],
+    "title": "CVE-2026-73654 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73654"
   }
 ]
