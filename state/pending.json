@@ -1769,5 +1769,239 @@
     ],
     "title": "중국 연계 해커, 신종 랜섬웨어 ‘StormEncryptor’ 공격…패치 전 서버 노린다",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=208050"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72776",
+    "published": "2026-08-13T22:17:23.340",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "AgenticSeek (commit fc242c7) contains an unauthenticated remote code execution vulnerability that allows any network-adjacent attacker to execute arbitrary commands by submitting crafted queries to the unprotected POST /query API endpoint bound to 0.0.0.0:7777 with wildcard CORS. Attackers can send unauthenticated HTTP requests that cause the autonomous agent to generate and execute shell commands through BashInterpreter using subprocess.Popen with shell=True and safety=False, bypassing the incomplete command blocklist to achieve full host-level code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72776 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72776"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72839",
+    "published": "2026-08-13T22:17:23.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "filebrowser through 2.63.16 fails to properly restrict scope and permissions when self-signup is enabled with default CreateUserDir setting. Unauthenticated attackers can register accounts that inherit the server root scope with full create, modify, delete, rename, share, and download permissions, allowing unrestricted access to all files.",
+    "tags": [],
+    "title": "CVE-2026-72839 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72839"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72841",
+    "published": "2026-08-13T22:17:23.813",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "luci-app-openvpn fails to properly validate the instance_name2 parameter during file upload, allowing authenticated users to perform path traversal and write arbitrary files outside the intended directory. Attackers can upload malicious payloads to gain persistent root code execution by placing SSH keys in system directories accessible on reboot.",
+    "tags": [],
+    "title": "CVE-2026-72841 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72841"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72842",
+    "published": "2026-08-13T22:17:23.977",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "luci-app-lxc contains an ACL inconsistency vulnerability that allows low-privileged authenticated LuCI users to access backend container management routes without proper authorization checks. Attackers can exploit path traversal via `/.%2E` in the `lxc_name` parameter to escape container directories and control host-side scripts executed through `lxc.hook.start-host`, achieving root code execution on the OpenWrt host.",
+    "tags": [],
+    "title": "CVE-2026-72842 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72842"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-72850",
+    "published": "2026-08-13T22:17:24.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Budibase before 3.40.0 fails to properly sanitize S3 object keys, allowing authenticated builders to upload files with traversal sequences that are preserved during export. Attackers can craft filenames containing .. segments that escape the temporary directory during workspace export, writing arbitrary content to any path writable by the Budibase process.",
+    "tags": [],
+    "title": "CVE-2026-72850 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72850"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-72851",
+    "published": "2026-08-13T22:17:24.450",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Budibase before 3.40.0 contains an unauthenticated SQL injection vulnerability in webhook-triggered automations with EXECUTE_QUERY steps. Attackers can POST attacker-controlled JSON to the webhook trigger endpoint to inject SQL payloads that execute with builder-configured database credentials, enabling data exfiltration, modification, and persistence in connected datasources like Snowflake.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72851 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72851"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-73842",
+    "published": "2026-08-13T22:17:29.037",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenChoreo is a complete, open-source developer platform for Kubernetes. Prior to 1.0.3, 1.1.3, and 1.2.0-rc.2, internal/cluster-gateway/server.go exposed /api/proxy/, /api/exec/, and /api/wirelogs/ on an internal listener without requiring a client certificate or token, allowing any network-reachable caller to read tenant Kubernetes Secrets, mutate workloads, and execute commands across connected data planes. This issue is fixed in versions 1.0.3, 1.1.3, and 1.2.0-rc.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73842 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73842"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-73843",
+    "published": "2026-08-13T22:17:29.193",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenChoreo is a complete, open-source developer platform for Kubernetes. Prior to 1.0.2 and 1.1.2, internal/cluster-gateway/server.go served caller-facing management APIs on the externally reachable agent listener without authentication, allowing network-reachable attackers to invoke /api/proxy/ and /api/exec/ operations, proxy the data-plane Kubernetes API, and execute commands in workload pods in multi-cluster deployments. This issue is fixed in versions 1.0.2 and 1.1.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73843 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73843"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19750",
+    "published": "2026-08-13T22:17:19.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw has been found in Tenda CH, CP and TX3 V21.x/V22.x/V25.x/V26.x/V27.x. Affected by this issue is some unknown functionality of the component SSH. Executing a manipulation can lead to use of hard-coded password. It is possible to launch the attack remotely. The attack requires a high level of complexity. The exploitation is known to be difficult. The exploit has been published and may be used.",
+    "tags": [],
+    "title": "CVE-2026-19750 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19750"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72840",
+    "published": "2026-08-13T22:17:23.640",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenWrt LuCI contains an overly permissive ACL definition in luci-mod-system-mounts that grants write access to /etc/crontabs/root to users intended only for mount configuration. Authenticated users with only the mount-configuration ACL group can append arbitrary cron entries via ubus file.write, which the default busybox crond daemon executes as root within one minute.",
+    "tags": [],
+    "title": "CVE-2026-72840 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72840"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-72855",
+    "published": "2026-08-13T22:17:24.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Budibase before 3.40.0 contains server-side request forgery vulnerabilities in OpenAPI query import and REST query execution that allow authenticated builder-level users to bypass DNS pinning protections through DNS rebinding attacks. Attackers can configure hostnames that resolve to public addresses during validation but resolve to loopback or private addresses during actual connection, allowing access to blocked internal HTTP services.",
+    "tags": [],
+    "title": "CVE-2026-72855 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72855"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-72856",
+    "published": "2026-08-13T22:17:24.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Budibase versions before 3.40.0 contain an authorization/authentication bypass in the PUT /api/global/users/tenant/owner (changeTenantOwnerEmail) endpoint. On self-hosted instances (SELF_HOSTED or DISABLE_ACCOUNT_PORTAL set), the cloudRestricted middleware is a no-op and the route is protected only by a general authentication check, so any authenticated user — including a lowest-privilege BASIC app user — can reassign the tenant account-holder (top-privilege admin) email to an attacker-controlled address. The attacker can then use the public password-reset flow to take over the admin account, leading to full administrative access.",
+    "tags": [],
+    "title": "CVE-2026-72856 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72856"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73305",
+    "published": "2026-08-13T22:17:25.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Budibase is an open-source low-code platform. Prior to 3.39.24, POST /api/public/v1/roles/assign called validateGlobalRoleUpdate without checking appBuilder.appId or role.appId in packages/server/src/api/controllers/public/globalRoleValidation.ts. An app-scoped builder could scope the request to an app they control and then grant themselves builder access or an arbitrary role in another app, exposing that app data, datasource configuration, and automations. This issue is fixed in version 3.39.24.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73305 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73305"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-73658",
+    "published": "2026-08-13T22:17:27.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Trigger.dev is a platform for building and deploying fully managed AI agents and workflows. From 4.4.2 until 4.5.0-rc.5, Aws4FetchClient.buildUrl() and Aws4FetchClient.presign() in apps/webapp/app/v3/objectStoreClient.server.ts assign user-controlled packet keys to URL.pathname, while apps/webapp/app/routes/api.v1.packets.$.ts accepts params[\"*\"] without rejecting dot segments and uses findResource: async () => 1 without per-resource ownership validation. WHATWG path normalization collapses .. segments before signing, allowing a caller with a valid environment API key to obtain presigned URLs for another tenant's object-store keys and read or overwrite task payloads. This issue is fixed in version 4.5.0-rc.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73658 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73658"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73659",
+    "published": "2026-08-13T22:17:27.333",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Trigger.dev is the open-source platform for building AI workflows in TypeScript. From 4.4.2 until 4.5.0, the packet presign routes in apps/webapp/app/routes/api.v1.packets.$.ts pass a caller-controlled filename through resolveStoreProtocolForPacketPresign to generatePresignedUrl and generatePresignedRequest in apps/webapp/app/v3/objectStore.server.ts, allowing .. traversal to escape the packets/<projectRef>/<env>/ object-store prefix and enabling a project API key to read or overwrite another organization's offloaded task payloads and outputs on multi-organization self-hosted instances. This issue is fixed in version 4.5.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73659 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73659"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-73666",
+    "published": "2026-08-13T22:17:28.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenChoreo is a developer platform for Kubernetes. Prior to 1.0.4, 1.1.4, and 1.2.1, the OpenChoreo Backstage backend hardcoded backend.auth.dangerouslyDisableDefaultAuthPolicy and auth.providers.guest.dangerouslyAllowOutsideDevelopment to true, exposing /api/* without authentication and allowing unauthenticated catalog reads, scaffolder log reads, and catalog location creation or deletion. This issue is fixed in versions 1.0.4, 1.1.4, and 1.2.1.",
+    "tags": [],
+    "title": "CVE-2026-73666 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73666"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73667",
+    "published": "2026-08-13T22:17:28.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenChoreo is a complete, open-source developer platform for Kubernetes. Prior to 1.0.4, 1.1.4, and 1.2.0-rc.2, OpenChoreo Workflow Plane templates under samples/getting-started/workflow-templates/ interpolated developer-controlled workflow parameters into shell program text executed through sh -c instead of passing the values through container.env, allowing arbitrary commands to run in workflow pods while affected privileged Podman templates lacked hostUsers: false. This issue is fixed in versions 1.0.4, 1.1.4, and 1.2.0-rc.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73667 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73667"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73841",
+    "published": "2026-08-13T22:17:28.900",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenChoreo is a complete, open-source developer platform for Kubernetes. From 1.2.0-rc.1 until 1.2.0, internal/openchoreo-api/api/handlers/exec.go and internal/openchoreo-api/api/handlers/wirelogs.go authorize component:exec and wirelogs:view using the caller-supplied project query parameter instead of comp.Spec.Owner.ProjectName, allowing a user with a project-scoped grant to execute commands in and read wirelogs from components owned by other projects in the same namespace. This vulnerability is fixed in 1.2.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73841 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73841"
   }
 ]
