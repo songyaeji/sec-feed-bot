@@ -3566,5 +3566,55 @@
     "tags": [],
     "title": "CVE-2026-13368 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13368"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19823",
+    "published": "2026-08-14T13:17:37.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in Tenda W20E 15.11.0.6(1068_1546_841)_CN_TDC. Impacted is the function formQOSRuleDel of the file /goform/delQos of the component QoS Rule Deletion. Performing a manipulation of the argument qosIndex results in stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19823 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19823"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19824",
+    "published": "2026-08-14T13:17:37.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A weakness has been identified in Tenda W20E 15.11.0.6(1068_1546_841)_CN_TDC. The affected element is the function ipMacBindListStore of the file /goform/addIpMacBind. Executing a manipulation of the argument IPMacBindRule can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been made available to the public and could be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19824 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19824"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73673",
+    "published": "2026-08-14T13:19:09.573",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Netis NC63 router firmware V3.0.0.3327 contains an unauthenticated firmware update vulnerability that allows unauthenticated attackers to submit unsigned firmware images by exploiting a missing authentication enforcement flaw in the Boa web server and netis.cgi CGI dispatcher. Attackers can send a multipart POST request to /cgi-bin/upload_fw.cgi without a valid session cookie, bypassing authentication because Boa grants access to any path containing '.cgi' regardless of cookie validation, and netis.cgi reads but does not enforce the authentication state before invoking the firmware update handler, which accepts images validated only by a forgeable additive checksum and static product strings rather than a cryptographic signature, potentially enabling persistent router compromise.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73673 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73673"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/french-tax-authority-dgfip-confirms-data-breach",
+    "published": "2026-08-14T13:14:15+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "French authorities confirmed that someone gained unauthorized access to systems at the Directorate General of Public Finances in late June after stealing or misusing someone’s identity.",
+    "tags": [],
+    "title": "France investigates tax authority breach after hacker claims 600,000 victims",
+    "url": "https://therecord.media/french-tax-authority-dgfip-confirms-data-breach"
   }
 ]
