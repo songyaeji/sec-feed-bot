@@ -3341,5 +3341,218 @@
     ],
     "title": "Shell investigates 'potential incident' after Clop data theft claims",
     "url": "https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2022-4993",
+    "published": "2026-08-13T17:17:17.780",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "HTML::FormHandler versions through 0.40068 for Perl allow attacker selected method dispatch and resource exhaustion because _apply_actions and add_error use error message text built from request data as a Locale::Maketext bracket notation template.\n\nadd_error hands its first argument to the language handle as the Locale::Maketext message key, and the default handle's lexicon sets `_AUTO`, so a string that is not a lexicon entry is compiled as a bracket notation template instead of being looked up. In a bracket group the first token names a method called on the language handle and the remaining tokens are its arguments.\n\nThree kinds of text the library did not author reach that position. _apply_actions installs a `$SIG{__WARN__}` handler that stores the warning text in `$error_message`, and a captured warning survives a successful action, so a field carrying a numeric transform turns `Argument \"[sprintf,%50000000d,0]\" isn't numeric` into the template; a warning quotes the submitted value verbatim, so the group is well formed and dispatches. `$error_message ||= $tobj->validate($new_value)` takes a type constraint's own failure message, which renders the rejected value through a partial dumper in bracket and comma form (Devel::PartialDump when Moose can load it, Type::Tiny's own dumper always), so a field with `apply => [ Str ]` given a parameter sent more than once, which arrives as an array, gets `Reference [\"a\",\"b\"] did not pass type constraint \"Str\"` as its template, from a ",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2022-4993 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-4993"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-72811",
+    "published": "2026-08-14T12:16:43.903",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan versions <= v3.7.2 contain a SQL injection vulnerability in the backlink/mention search query (kernel/model/backlink.go), which concatenates stored block metadata (title, name, alias, anchor text) and the client-supplied keyword into a SQL MATCH/search statement while escaping only the double-quote character and not the single quote. A single quote in the client keyword (first-order, reachable by an anonymous or RoleReader user on the publish surface) or in stored document metadata (second-order) breaks out of the string literal. Because the query runs on the main read-write siyuan.db handle via a statement-stacking-capable driver, an attacker can execute arbitrary SQL, enabling cross-notebook read and write. Fixed in v3.7.4.",
+    "tags": [],
+    "title": "CVE-2026-72811 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72811"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72822",
+    "published": "2026-08-14T12:16:45.267",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The getgrav/grav-plugin-api Composer package before 1.0.13 (affected <= 1.0.12) fails to enforce API key scope caps on the disable2fa endpoint. Unlike the sibling generate2fa endpoint, disable2fa authorizes the admin (non-self) path solely via ACL reads (isSuperAdmin/hasPermission) and never invokes requirePermission(), so the api_key_scopes cap is never applied. As a result, a holder of a narrow-scope API key on a super account, or a non-super account whose ACL includes api.users.write, can force-disable two-factor authentication on any non-super target account via POST /api/v1/users/{user}/2fa/disable without providing a TOTP code, facilitating account takeover.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72822 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72822"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72824",
+    "published": "2026-08-14T12:16:45.520",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.13 contains an API key scope-cap bypass in PagesController::guardTwigContent(). The Twig-toggle check uses a bare isSuperAdmin() gate that does not consult api_key_scopes, so a least-privilege API key scoped only to api.pages.write and minted on a super account can enable process.twig on a page save even though admin.pages_twig is intentionally outside the api.pages scope. When security.twig_content.process_enabled=true and editor_enabled=false, this allows Twig-in-content to execute server-side, resulting in server-side template injection (SSTI) and remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72824 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72824"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72826",
+    "published": "2026-08-14T12:16:45.780",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The getgrav/grav-plugin-api plugin before 1.0.13 fails to validate that the scopes of a newly created API key are a subset of the caller's scopes in createApiKey. The self-target path of requireApiKeyPermission() requires only the baseline api.access scope, and the new key's scopes are read directly from the request body with no subset check. An attacker holding a minimal-scope API key on a super account can submit an empty scopes array to mint an unscoped, full-access super key, bypassing scope restrictions (and enabling further chains such as configuration write to RCE).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72826 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72826"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72829",
+    "published": "2026-08-14T12:16:46.157",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Grav API plugin (getgrav/grav-plugin-api) before 1.0.13 contains an API-key scope-cap bypass in UsersController's create() and update() methods. These methods enforce the scope cap only for api.users.write, but gate super-privilege grants on a bare isSuperAdmin() check that reads access.api.super directly without consulting the key's scopes. As a result, an api.users.write-scoped key minted on a super account can set access.api.super or assign a super-granting group to mint or promote a full super account, then authenticate as that account for uncapped administrative privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72829 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72829"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-72830",
+    "published": "2026-08-14T12:16:46.277",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Grav API plugin versions before 1.0.13 fail to enforce API key scope caps in ConfigController super-scope gates, allowing scoped keys to write scheduler configuration. Attackers with a scoped api.config.write key can inject arbitrary commands into scheduler.custom_jobs that execute via Symfony Process for remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72830 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72830"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-13048",
+    "published": "2026-08-13T17:17:19.397",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Data::MuForm::Localizer versions through 0.05 for Perl execute Perl from a message catalog header, reached at an arbitrary path because load_lexicon interpolates the language attribute into the catalog filename.\n\nload_lexicon builds the catalog path by appending `Messages/$lang.po` to the directory holding Localizer.pm, where $lang is the language attribute, with no check that it names a bare locale tag. A value holding `../` segments walks out of the message directory, so any readable path with a `.po` suffix is loaded. While parsing the catalog, extract_header_msgstr takes the `Plural-Forms:` header, prefixes `$` to the bare words nplurals, plural and n, and passes the rest verbatim into a string that is evaluated: the nplurals form evaluates the header expression immediately, and the plural_code form compiles it into a subroutine whose body runs when a plural message is localized. A header of `nplurals=2; plural=(system('...'),0);` therefore runs that command as the catalog loads. The evaluation inherits strict, so an expression that assigns to an undeclared variable fails to compile, while one built from calls alone does not.\n\nAn application that sets the language attribute from request data, an Accept-Language header or a locale parameter, and an attacker who can place a file with a `.po` suffix and chosen contents at a readable path, together give code execution as the application user. The message expansion path is not affected: expand_named substitutes only the placeh",
+    "tags": [],
+    "title": "CVE-2026-13048 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13048"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19822",
+    "published": "2026-08-14T12:16:43.577",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Tenda W20E 15.11.0.6(1068_1546_841)_CN_TDC. This issue affects the function lstAdd of the file /goform/editQos of the component QoS Edit. Such manipulation of the argument qosListConnecttedNum leads to stack-based buffer overflow. The attack may be launched remotely. The exploit is publicly available and might be used.",
+    "tags": [],
+    "title": "CVE-2026-19822 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19822"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-72810",
+    "published": "2026-08-14T12:16:43.760",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SiYuan versions before v3.7.4 contain a publish-boundary bypass vulnerability in WebSocket broadcast sessions that allows anonymous readers to receive unfiltered edits. Attackers can establish a WebSocket connection to the publish surface and passively receive real-time content events including password-protected and forbidden documents without authentication.",
+    "tags": [],
+    "title": "CVE-2026-72810 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72810"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72819",
+    "published": "2026-08-14T12:16:44.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Grav CMS before 2.0.13 contains a remote code execution vulnerability in the Flex Objects plugin settings validation that allows authenticated users to execute arbitrary code by uploading a ZIP file containing PHP code. Attackers can bypass routine name validation by using array notation instead of string notation, call the unZip routine with a malicious archive, and write PHP files to the web root for execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72819 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72819"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72827",
+    "published": "2026-08-14T12:16:45.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Grav CMS before 2.0.13 contains a server-side template injection vulnerability in email-action parameters that allows low-privileged page editors to execute arbitrary operating-system commands. Attackers can inject Twig payloads using the unsandboxed find filter in email subject, body, to, or from fields to achieve remote code execution when forms are submitted.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72827 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72827"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72831",
+    "published": "2026-08-14T12:16:46.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Flex Objects plugin (through 1.4.6, tested with Grav 2.0.11) contains an incorrect authorization vulnerability in its Flex Objects API. FlexApiController::update() checks only the general Flex directory permission and does not apply the additional target/field/super-admin checks enforced by the dedicated Users and Groups API controllers. An authenticated account with api.access, admin.login, and users.update permissions (but without api.users.write or admin.super) can use the generic /api/v1/flex-objects/user-accounts endpoint to change a super administrator's password, or the /api/v1/flex-objects/user-groups endpoint to grant its group admin.super, resulting in full site takeover. Fixed in Flex Objects 1.4.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72831 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72831"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72833",
+    "published": "2026-08-14T12:16:46.670",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Grav API plugin (getgrav/grav-plugin-api) versions >= 1.0.6 and <= 1.0.11 contain a privilege escalation vulnerability. A scoped API key minted on a super-admin account bypasses its declared scope cap on four isSuperAdmin()-gated write endpoints (in GroupsController, AccountsConfigController, PreferencesController, and DashboardWidgetController). These endpoints authorize via a super-admin early-return that never invokes requirePermission()—the sole enforcement point of the scope cap—so a 'read-only'-scoped key (e.g. api.pages.read) can perform super-only write operations, including rewriting group ACL maps to grant super-admin privileges to arbitrary accounts. A leaked or delegated read-only CI/monitoring key can therefore gain full super-admin write capability. Fixed in 1.0.13.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-72833 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72833"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-72836",
+    "published": "2026-08-14T12:16:47.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FileBrowser before 2.63.19 does not account for case-insensitive filesystems when checking home directory ownership during self-registration. When Signup and CreateUserDir are enabled and FileBrowser's root is on a case-insensitive filesystem (confirmed on Windows/NTFS), two self-registered usernames that differ only in letter case (e.g., CaseVictim and casevictim) are stored as distinct accounts but resolve to the same physical home directory, because the scope-ownership check compares the persisted scope as an exact case-sensitive string. A second registrant can therefore read, overwrite, and delete another account's files through authenticated HTTP endpoints, without needing an existing account or victim interaction.",
+    "tags": [],
+    "title": "CVE-2026-72836 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72836"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-72837",
+    "published": "2026-08-14T12:16:47.187",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "File Browser versions before 2.63.20 fail to honor the createUserDir isolation in proxy and hook authentication auto-provisioning paths. Attackers with valid upstream-authenticated credentials can read, modify, delete, and share files belonging to other users by exploiting the server root scope assignment.",
+    "tags": [],
+    "title": "CVE-2026-72837 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72837"
   }
 ]
