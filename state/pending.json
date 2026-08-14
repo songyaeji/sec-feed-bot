@@ -3227,5 +3227,29 @@
     ],
     "title": "APT group HoneyMyte upgrades CoolClient: the backdoor gets a kernel-level Windows rootkit",
     "url": "https://securelist.com/honeymyte-coolclient-driver-rootkit/121028/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19814",
+    "published": "2026-08-14T09:16:47.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in TOTOLINK A800R 4.1.2cu.5137_B20200730. Affected is the function setMacQos of the file /cgi-bin/cstecgi.cgi of the component firewall.so. Performing a manipulation of the argument macAddress results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit is now public and may be used.",
+    "tags": [],
+    "title": "CVE-2026-19814 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19814"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19815",
+    "published": "2026-08-14T09:16:48.880",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw has been found in TOTOLINK A800R 4.1.2cu.5137_B20200730. Affected by this vulnerability is the function setParentalRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. Executing a manipulation of the argument urlKeyword can lead to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been published and may be used.",
+    "tags": [],
+    "title": "CVE-2026-19815 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19815"
   }
 ]
