@@ -3554,5 +3554,17 @@
     "tags": [],
     "title": "CVE-2026-72837 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72837"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-13368",
+    "published": "2026-07-03T00:16:50.890",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WatchGuard Fireware OS contains a race condition leading to a use-after-free vulnerability in LDAP authentication for the Mobile User VPN with IKEv2. A remote unauthenticated attacker could exploit this vulnerability to execute arbitrary code in the context of the iked process on Fireboxes that have a Mobile VPN with IKEv2 configured to use an external LDAP authentication server.",
+    "tags": [],
+    "title": "CVE-2026-13368 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13368"
   }
 ]
