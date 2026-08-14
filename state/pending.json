@@ -993,5 +993,19 @@
     "tags": [],
     "title": "쿠팡지회, 첫 단협 맺지 못하고 교섭 결렬 선언",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE45TXRFbHVnVC1mVERGUFlSNkh0b05SR0dzSjJ4eHg4Sm9XY1I5c1FmLW9ERmp1Ny1UX1NPMkladXdQNUhxWlB4VnAtSnIxOFFOdmF0al9zcVVxOVlnZEh4a2dOVlBwa3dJb0FvcTFB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-73683",
+    "published": "2026-08-14T22:17:11.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Laravel Socialite's Facebook provider contains an authentication bypass vulnerability that allows unauthenticated attackers to replay captured OIDC id_tokens by exploiting the missing nonce claim validation in the getUserByOIDCToken() function within FacebookProvider.php. Attackers who obtain a valid, unexpired id_token issued for the same Facebook App ID can submit the captured token to the backend userFromToken() endpoint, bypassing authentication controls because signature, aud, and iss checks pass while no session-bound nonce comparison is performed, resulting in unauthorized access to victim accounts.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-73683 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73683"
   }
 ]
