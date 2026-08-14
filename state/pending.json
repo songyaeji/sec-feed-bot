@@ -3808,5 +3808,215 @@
     "tags": [],
     "title": "Hackers arrested over €30M bank fraud exploiting service provider flaw",
     "url": "https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-65400",
+    "published": "2026-08-06T22:18:14.533",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authentication issue was addressed with improved state management. This issue is fixed in macOS Sequoia 15.7.9, macOS Sonoma 14.8.9, macOS Tahoe 26.6.1. An attacker on the network may be able to authenticate to Screen Sharing without valid credentials.",
+    "tags": [],
+    "title": "CVE-2026-65400 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65400"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-13051",
+    "published": "2026-08-13T17:17:19.513",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Form::Processor::Field::HtmlArea versions from 0.06 through 1.162360 for Perl allow attacker selected method dispatch and resource exhaustion via an HTML::Tidy diagnostic that validate passes to add_error as a Locale::Maketext template.\n\nvalidate runs HTML::Tidy over the submitted markup and passes each resulting message to add_error as its first argument, which add_error hands to the language handle as the Locale::Maketext message key. The default handle's lexicon sets `_AUTO`, so a message that is not a lexicon entry is compiled as a bracket notation template instead of being looked up. Tidy diagnostics quote the offending attribute name or value, so a bracket group in the submitted markup reaches the template position, where the first token of the group names a method called on the language handle and the remaining tokens are its arguments. A group such as `[0]` makes the compile croak, and neither the field nor the handle catches it, so the exception leaves validate. `[sprintf,%2000000000d,7]` reaches CORE::sprintf with an attacker chosen field width.\n\nOne submission of crafted markup to an HtmlArea field throws an unhandled exception out of form validation or allocates an arbitrary amount of memory, and an application whose language handle subclass defines side effecting public methods makes those callable with attacker chosen arguments. The other field types pass fixed templates with the submitted value in an argument slot, where it stays inert, and are unaffected.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13051 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13051"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-55982",
+    "published": "2026-08-13T17:17:24.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OIDC userinfo Endpoint Returns Identity Claims Without Enforcing API Token Scopes",
+    "tags": [],
+    "title": "CVE-2026-55982 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55982"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-19681",
+    "published": "2026-08-14T18:17:23.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authenticated command injection vulnerability exists in Security Center related to file upload processing. An attacker could exploit this issue by uploading a specially crafted file, potentially resulting in arbitrary command execution on the underlying operating system.",
+    "tags": [],
+    "title": "CVE-2026-19681 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19681"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-19682",
+    "published": "2026-08-14T18:17:23.623",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A command injection vulnerability exists in Security Center where a remote, unauthenticated attacker could exploit this issue to execute arbitrary commands on the underlying operating system with the privileges of the service account.",
+    "tags": [],
+    "title": "CVE-2026-19682 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19682"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-48528",
+    "published": "2026-08-14T18:17:27.993",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Metacat is data repository software that helps researchers preserve, share, and discover data. Metacat versions 2.0.0 through 3.4.0 contain an unauthenticated SQL injection vulnerability in the `/cn/v1/object` and `/cn/v2/object` REST API endpoints due to unsanitized user input that can be passed through to the backend SQL database. The `nodeId` parameter can be modified to inject SQL commands, and the results are returned in error messages. Metacat appends the user-supplied data into the sql query without sanitization or parameterization. This allows extraction of arbitrary data from the underlying PostgresQL database, fully exposing protected information to the attacker. This is accomplished by leveraging the error reporting mechanisms in Metacat, where SQL error responses are mirrored back to the caller in the XML error message returned by Metacat. One approach, for example, is to use the PostgreSQL `CAST` function to generate an error with the results of an arbitrary subquery, which is then injected into the XML error message returned by Metacat. Attackers do not need to be authenticated to execute the attack.  In addition, arbitrary SQL statements that insert, update, and delete data in the Metacat database can be executed, resulting in full compromise of all data in the database. Full proof of concept attacks have been developed and verified for these vulnerabilities. The impact of this vulnerability is critical for Metacat deployments in the DataONE network where infor",
+    "tags": [],
+    "title": "CVE-2026-48528 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48528"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73849",
+    "published": "2026-08-14T18:19:09.987",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Emlog is an open source website building system. In 2.6.26 and earlier, install.php accepts action=reinstall without authentication and deliberately skips the already-installed check because the guard runs only when $act != 'reinstall'. A remote attacker can submit hostname, dbuser, dbpasswd, dbname, dbprefix, username, password, and email values to cause file_put_contents('config.php', $config) to overwrite the configuration with attacker-controlled database settings and create a new administrator account. No fixed version is available as of this review.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73849 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73849"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-14300",
+    "published": "2025-12-20T01:16:03.133",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The HTTPS service on Tapo C200 v3, v5, C425 v1.2 and C100 v5  exposes a connectAP interface without proper authentication. An unauthenticated attacker on the same local network segment can exploit this to modify the device’s Wi-Fi configuration, resulting in loss of connectivity and denial-of-service (DoS).",
+    "tags": [],
+    "title": "CVE-2025-14300 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14300"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-57894",
+    "published": "2026-08-13T17:17:25.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Repository Migration Follows Git HTTP Redirects After URL Allow/Block Validation, Enabling Internal Git Repository Exfiltration",
+    "tags": [],
+    "title": "CVE-2026-57894 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57894"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-12364",
+    "published": "2026-08-14T18:17:21.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The user-space system-call verifier z_vrfy_z_log_msg_static_create() in subsys/logging/log_msg.c was a pure pass-through: it forwarded the caller-supplied source, desc, package, and data arguments directly to the kernel-mode implementation z_impl_z_log_msg_static_create() without performing any of the mandatory K_SYSCALL_* checks. Because z_log_msg_static_create() is declared __syscall, under CONFIG_USERSPACE any unprivileged user-mode thread can invoke it directly with fully attacker-controlled arguments.\n\nThe kernel-mode handler dereferences each of these untrusted values: frontend_runtime_filtering() reads through the source pointer as a struct log_source_dynamic_data, cbprintf_package_copy() reads desc.package_len bytes from the package pointer, and z_log_msg_finalize() performs a memcpy() of desc.data_len bytes from the data pointer. With no verification, a user thread can supply arbitrary kernel addresses and arbitrary lengths, and the kernel will read from them.\n\nThe impact is a kernel-mode denial of service (the kernel faults dereferencing an attacker-chosen pointer) and, where a log backend output is observable to the attacker, disclosure of arbitrary kernel memory copied into the emitted log message — a confidentiality breach across the user/kernel boundary that the userspace sandbox is meant to enforce. The reads do not corrupt kernel memory, so there is no out-of-bounds write primitive.\n\nThe fix adds the required validation to the verifier: it bounds desc.package_",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12364 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12364"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12366",
+    "published": "2026-08-14T18:17:22.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zephyr's dynamic kernel-object disposal path unref_check() in kernel/userspace/userspace.c frees an object's storage (k_free(dyn->data)) once its reference count reaches zero, after running a per-object-type cleanup. The cleanup switch handled only K_OBJ_MSGQ and K_OBJ_STACK; there was no K_OBJ_TIMER case. A dynamically-allocated, initialized, and armed k_timer keeps its embedded struct _timeout dnode linked in the global timeout queue (_timeout_q), so freeing the timer storage without cancelling the timeout leaves a dangling node in that queue.\n\nWhen the timer next expires, the timeout machinery walks _timeout_q and invokes z_timer_expiration_handler() on the freed node, dereferencing and writing freed (and reusable) kernel heap in kernel/ISR context. This is a deterministic use-after-free that does not depend on SMP: the queued node is simply never unlinked at free time.\n\nThe disposal is reachable from an unprivileged user thread under CONFIG_USERSPACE + CONFIG_DYNAMIC_OBJECTS: a thread that holds the last permission on such a timer drops it via the k_object_release() syscall (or by exiting, through k_thread_perms_all_clear()), and can arm the timer itself via the k_timer_start() syscall. The free and the expiration handler run at kernel privilege while the actor is a user thread, so the bug is a sandbox-escape memory-corruption primitive usable for privilege escalation. The fix adds k_timer_cleanup() (cancel the timeout and wait for any in-flight handler) and calls it for ",
+    "tags": [],
+    "title": "CVE-2026-12366 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12366"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19629",
+    "published": "2026-08-14T18:17:22.557",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A privilege escalation vulnerability exists in Tenable Security Center that allows a user with \"Security Manager\" role and \"manage user\" permission on a single group to modify users belonging to other groups. This bypasses the intended access control restrictions and enables unauthorized cross-group user management.",
+    "tags": [],
+    "title": "CVE-2026-19629 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19629"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19635",
+    "published": "2026-08-14T18:17:22.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A local privilege escalation vulnerability exists in Security Center. An attacker with write access to a specific configuration file could achieve arbitrary code execution with elevated privileges, without requiring further user or victim interaction.",
+    "tags": [],
+    "title": "CVE-2026-19635 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19635"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19679",
+    "published": "2026-08-14T18:17:23.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An input validation vulnerability exists in Security Center's file upload handling, where insufficient sanitization of uploaded filenames could contribute to a downstream command injection issue.",
+    "tags": [],
+    "title": "CVE-2026-19679 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19679"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19846",
+    "published": "2026-08-14T18:17:23.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in TOTOLINK A800R 4.1.2cu.5137_B20200730. This impacts the function setUrlFilterRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. The manipulation of the argument url leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit is publicly available and might be used.",
+    "tags": [],
+    "title": "CVE-2026-19846 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19846"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19847",
+    "published": "2026-08-14T18:17:24.037",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in TOTOLINK A800R 4.1.2cu.5137_B20200730. Affected is the function setWiFiWpsConfig of the file /cgi-bin/cstecgi.cgi of the component wps.so. The manipulation of the argument pin results in stack-based buffer overflow. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19847 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19847"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-72970",
+    "published": "2026-08-14T18:19:09.003",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Heap-based buffer overflow in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
+    "tags": [],
+    "title": "CVE-2026-72970 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72970"
   }
 ]
