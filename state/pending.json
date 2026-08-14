@@ -2884,5 +2884,43 @@
     ],
     "title": "아톤, 2분기 영업이익 32억원... 전년동기 대비 92.3% 상승",
     "url": "http://www.boannews.com/media/view.asp?idx=145160&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2021-30120",
+    "published": "2021-07-09T14:15:07.903",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kaseya VSA before 9.5.7 allows attackers to bypass the 2FA requirement. The need to use 2FA for authentication in enforce client-side instead of server-side and can be bypassed using a local proxy. Thus rendering 2FA useless. Detailed description --- During the login process, after the user authenticates with username and password, the server sends a response to the client with the booleans MFARequired and MFAEnroled. If the attacker has obtained a password of a user and used an intercepting proxy (e.g. Burp Suite) to change the value of MFARequered from True to False, there is no prompt for the second factor, but the user is still logged in.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2021-30120 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-30120"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19791",
+    "published": "2026-08-14T05:16:58.857",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A weakness has been identified in Tenda G0 up to 20260625. The affected element is the function addStaticRoute of the file /goform/module of the component httpd web management interface. Executing a manipulation of the argument staticRouteNet can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19791 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19791"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19792",
+    "published": "2026-08-14T05:16:59.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in Tenda G0 up to 20260625. Impacted is the function setPortMapping of the file /goform/module of the component httpd web management interface. Performing a manipulation of the argument portMappingServer/porMappingtInternal/portMappingExternal results in buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19792 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19792"
   }
 ]
