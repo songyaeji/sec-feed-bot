@@ -3139,5 +3139,29 @@
     "tags": [],
     "title": "이노뎁, ‘수주 확대+체질 개선’ 동시에... 하반기 실적 회복 승부",
     "url": "http://www.boannews.com/media/view.asp?idx=145166&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19812",
+    "published": "2026-08-14T08:17:38.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A weakness has been identified in TOTOLINK A800R 4.1.2cu.5137_B20200730. This affects the function UploadCustomModule of the file /cgi-bin/cstecgi.cgi of the component product.so. This manipulation of the argument File causes stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19812 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19812"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19813",
+    "published": "2026-08-14T08:17:38.427",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in TOTOLINK A800R 4.1.2cu.5137_B20200730. This impacts the function setMacFilterRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. Such manipulation of the argument Comment leads to stack-based buffer overflow. The attack may be performed from remote. The exploit has been disclosed publicly and may be used.",
+    "tags": [],
+    "title": "CVE-2026-19813 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19813"
   }
 ]
