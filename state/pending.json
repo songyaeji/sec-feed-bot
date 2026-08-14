@@ -3656,5 +3656,17 @@
     "tags": [],
     "title": "Hackers exploit macOS Screen Sharing flaw to deploy Monero miner",
     "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19768",
+    "published": "2026-08-14T14:16:50.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper control of generation of code ('Code Injection') in the settings feature in Devolutions PowerShell Universal 2026.2.3 and earlier allows an authenticated user with settings management permission to execute arbitrary PowerShell code via a crafted setting value that is not properly escaped when written to the settings configuration file.",
+    "tags": [],
+    "title": "CVE-2026-19768 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19768"
   }
 ]
