@@ -3680,5 +3680,43 @@
     "tags": [],
     "title": "CVE-2026-13381 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13381"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-56865",
+    "published": "2026-08-13T22:17:22.797",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious GOPROXY was previously capable of forging up to two sumdb tiles that allow for a requested module to bypass the GOSUMDB check and persist attacker-controlled module content to a local Go module cache. This attack allows for a malicious GOPROXY to serve malicious module content that cannot be detected by evaluating the transparency log. All tiles are now correctly verified against their parents. In order to determine if you have been affected:   rm -r go.sum go.work.sum vendor/ && go mod tidy",
+    "tags": [],
+    "title": "CVE-2026-56865 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56865"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-15205",
+    "published": "2026-08-14T06:16:59.727",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Paymob for WooCommerce WordPress plugin before 4.1.9 does not properly sanitise a client-supplied identifier before using it in a SQL query within its public, unauthenticated payment callback, and performs this query before verifying the payment provider's HMAC signature. This allows unauthenticated attackers to perform SQL injection and read arbitrary data from the database — including user credentials and other secrets — through both in-band (reflected) and time-based blind extraction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15205 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15205"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-18039",
+    "published": "2026-08-14T06:17:09.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Essential Addons for Elementor  WordPress plugin before 6.7.2 does not prevent user-supplied registration fields from overwriting reserved account attributes, allowing unauthenticated attackers to register an account with an arbitrary role, including administrator, on sites where a custom profile field with a particular label has been configured.",
+    "tags": [],
+    "title": "CVE-2026-18039 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18039"
   }
 ]
