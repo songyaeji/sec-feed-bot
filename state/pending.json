@@ -3008,5 +3008,17 @@
     ],
     "title": "You’re Back In The Room (Citrix NetScaler Pre-Auth RCE CVE-2026-8452(?))",
     "url": "https://labs.watchtowr.com/youre-back-in-the-room-citrix-netscaler-pre-auth-rce-cve-2026-8452/"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19811",
+    "published": "2026-08-14T07:16:52.627",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in TOTOLINK A800R 4.1.2cu.5137_B20200730. The impacted element is the function setIpQosRules of the file /cgi-bin/cstecgi.cgi of the component firewall.so. The manipulation of the argument Comment results in stack-based buffer overflow. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-19811 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19811"
   }
 ]
