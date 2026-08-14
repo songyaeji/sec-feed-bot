@@ -2946,5 +2946,29 @@
     "tags": [],
     "title": "조경태 의원, 美 하원의원들에 쿠팡 개인정보 사건 설명 서한",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1PQmF6UmlycVVFRXdNMnBKcmtiZ3FRZmh5WVFYZmhub3pWaHp4UVZkWU9sZmN0Yy1Vc3Z1bk1QQUZiU1F1azlDRU1RQ0FSSjhrRDJleWJKTTROQmVBTm1jMWhOd215Z3ZIX09zSWxnV3JJeTBE?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-12949",
+    "published": "2026-08-14T06:16:53.237",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Wishlist Member plugin for WordPress is vulnerable to Account Takeover via Insufficient Verification of Data Authenticity in versions up to and including 3.34.1. This is due to the wpm_register() function validating the registration cookie only against the GET reg parameter while accepting the POST mergewith and POST wpm_id parameters without verifying that the mergewith user ID references a temporary or incomplete registrant that is bound to the current registration transaction. This makes it possible for unauthenticated attackers to take over any existing WordPress account — including administrator accounts — by supplying an arbitrary user's numeric ID as the mergewith value, which causes wp_update_user() to overwrite the target account's username (additionally written via a direct $wpdb UPDATE), password, email address, first name, and last name with attacker-controlled values, while WordPress password and email change notification emails are explicitly suppressed. When wpm_id references a non-existent membership level, no role key is added to the update payload, causing wp_update_user() to preserve the target user's existing role — including administrator — making full privilege escalation a direct consequence of the takeover.",
+    "tags": [],
+    "title": "CVE-2026-12949 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12949"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208056",
+    "published": "2026-08-14T15:05:42+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이메일 뉴스레터 서비스 스티비가 클라우드 환경의 정보보안 국제 표준 ISO 27017과 클라우드 개인정보보호 국제 표준 ISO 27018 인증을 획득했다. 이번 취득으로 스티비는 지난해 확보한 정보보호관리체계 ISO 27001을 포함해 국제 표준 정보보호 인증 3종을 갖추게 됐다.새롭게 획득한 두 인증은 국제표준화기구(ISO)와 국제전기기술위원회(IEC)가 제정한 클라우드 서비스 특화 보안 표준이다. ISO 27017은 클라우드 서비스 이용 과정의 보안 위험 통제를 다루고, ISO 27018은 클라우드 상의 개인식별정보(PII) 보",
+    "tags": [],
+    "title": "스티비, 클라우드 정보보안·개인정보보호 국제 표준 ISO 27017·27018 인증 취득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208056"
   }
 ]
