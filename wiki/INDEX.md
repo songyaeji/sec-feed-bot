@@ -2,6 +2,13 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [mindsdb-ai-agent-rce](topics/2026-08-mindsdb-ai-agent-rce.md) MindsDB AI 에이전트 미인증 원격코드실행 CVE-2026-73678 (최종갱신일: 2026-08-14)
+- [tenable-security-center-multi-rce](topics/2026-08-tenable-security-center-multi-rce.md) Tenable Security Center 다중 RCE·명령주입 취약점 (최종갱신일: 2026-08-14)
+- [ibm-db2-mirror-i-rce](topics/2026-08-ibm-db2-mirror-i-rce.md) IBM Db2 Mirror for i 명령주입 취약점 (최종갱신일: 2026-08-14)
+- [siyuan-sql-injection](topics/2026-08-siyuan-sql-injection.md) SiYuan 노트앱 4개 SQL injection 취약점 (최종갱신일: 2026-08-14)
+- [luci-app-openvpn-path-traversal](topics/2026-08-luci-app-openvpn-path-traversal.md) OpenWrt OpenVPN 플러그인 경로검증 우회 CVE-2026-72841 (최종갱신일: 2026-08-13)
+- [luci-app-lxc-acl-bypass](topics/2026-08-luci-app-lxc-acl-bypass.md) OpenWrt LXC 플러그인 ACL 우회 권한상향 CVE-2026-72842 (최종갱신일: 2026-08-13)
+- [budibase-webhook-sqli](topics/2026-08-budibase-webhook-sqli.md) Budibase 웹훅 자동화 SQL 인젝션 CVE-2026-72851 (최종갱신일: 2026-08-13)
 - [trigger-dev-deployment-authz](topics/2026-08-trigger-dev-deployment-authz.md) Trigger.dev 교차 프로젝트 배포 조작 CVE-2026-73656 (최종갱신일: 2026-08-13)
 - [wp-base-booking-rce](topics/2026-08-wp-base-booking-rce.md) WP BASE Booking 미인증 RCE CVE-2026-61962 (최종갱신일: 2026-08-13)
 - [qa-analytics-rce](topics/2026-08-qa-analytics-rce.md) QA Analytics 미인증 RCE CVE-2026-27544 (최종갱신일: 2026-08-13)
@@ -18,6 +25,9 @@
 - [sandworm-uac0145-fake-job-vpn](topics/2026-08-sandworm-uac0145-fake-job-vpn.md) Sandworm 산하 UAC-0145 채용 사칭 VPN 캠페인 (최종갱신일: 2026-08-12)
 - [delta-flight-wifi-deauth-attack](topics/2026-08-delta-flight-wifi-deauth-attack.md) 델타항공 비행기 Wi-Fi deauth 공격 사건 (최종갱신일: 2026-08-12)
 - [korea-ai-financial-security-evaluation](topics/2026-08-korea-ai-financial-security-evaluation.md) 금융보안원 AI 안전성·신뢰성 평가체계 개발 (최종갱신일: 2026-08-12)
+- [korea-ai-smart-device-privacy-risk](topics/2026-08-ai-smart-device-privacy-risk.md) AI 가전 60% 암호화 없는 개인정보 무단 수집 (최종갱신일: 2026-08-12)
+- [korea-ransomware-statistics](topics/2026-08-korea-ransomware-statistics.md) KISA 상반기 랜섬웨어 신고 145건 76.8% 증가 (최종갱신일: 2026-08-12)
+- [korea-voicephishing-asap](topics/2026-08-korea-voicephishing-asap.md) 금융보안원 보이스피싱 AI 플랫폼 ASAP 본격 가동 (최종갱신일: 2026-08-12)
 - [korea-web-scraping-restriction](topics/2026-08-korea-web-scraping-restriction.md) 대법원 스크래핑 차단 금융권 비대면 금융 차질 (최종갱신일: 2026-08-12)
 - [gentlemen-ransomware](topics/2026-07-gentlemen-ransomware.md) Gentlemen 랜섬웨어 2025년 중반부터 활동 네트워크 전파 및 의료기관 표적 (최종갱신일: 2026-08-12)
 - [lazarus-windows-zero-day-dream-job](topics/2026-08-lazarus-windows-zero-day-dream-job.md) Lazarus 윈도우 제로데이 악용 방위산업 표적 미공개 백도어 배포 (최종갱신일: 2026-08-12)
@@ -47,7 +57,7 @@
 - [kimwolf-botnet](topics/2026-08-kimwolf-botnet.md) Kimwolf v7 IoT 봇넷 HTTP/2 DDoS·ENS C2·Tor 라우팅 (최종갱신일: 2026-08-11)
 - [domestic-pc-security-zerodday](topics/2026-08-domestic-pc-security-zerodday.md) 국내 공공·금융기관 PC 보안모듈 0-Day RCE 취약점 발견 (최종갱신일: 2026-08-11)
 - [microsoft-patch-tuesday-august](topics/2026-08-microsoft-patch-tuesday-august.md) 마이크로소프트 8월 Patch Tuesday 418개 취약점 제로데이 포함 (최종갱신일: 2026-08-11)
-- [polish-power-plant-breach](topics/2026-08-polish-power-plant-breach.md) 폴란드 발전소 제어 시스템 침해 스팀 터빈 셧다운 (최종갱신일: 2026-08-11)
+- [polish-power-plant-breach](topics/2026-08-polish-power-plant-breach.md) 폴란드 발전소 제어 시스템 침해 스팀 터빈 셧다운 (최종갱신일: 2026-08-12)
 - [gunra-ransomware-campaign](topics/2026-08-gunra-ransomware-campaign.md) Gunra 랜섬웨어 Fortinet·Schneider 취약점 악용 중요 인프라 표적 (최종갱신일: 2026-08-11)
 - [ai-agent-unauthorized-gym-hack](topics/2026-08-ai-agent-unauthorized-gym-hack.md) AI 어시스턴트 짐 예약 시스템 해킹, 명령 범위 초과 피해 발생 (최종갱신일: 2026-08-10)
 - [bdthemes-wordpress-supply-chain](topics/2026-08-bdthemes-wordpress-supply-chain.md) BdThemes WordPress 플러그인 공급망 침해, JSON 피드 변조로 불법 관리자 계정 생성 (최종갱신일: 2026-08-10)

@@ -2,7 +2,7 @@
 slug: siyuan-sql-injection
 first_seen: 2026-08-03
 tags: [SQL인젝션, 노트앱, 미인증접근, RCE, 크리티컬]
-cves: [CVE-2026-69083, CVE-2026-69084, CVE-2026-69085]
+cves: [CVE-2026-69083, CVE-2026-69084, CVE-2026-69085, CVE-2026-72811]
 ---
 
 # SiYuan 다중 SQL Injection 취약점
@@ -14,6 +14,7 @@ cves: [CVE-2026-69083, CVE-2026-69084, CVE-2026-69085]
 - 2026-08-03 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-69083) — CVE-2026-69083 fullTextSearchAssetContent endpoint SQL injection 공개 (CVSS 10.0)
 - 2026-08-03 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-69084) — CVE-2026-69084 /api/search/searchEmbedBlock endpoint SQL injection 공개 (CVSS 10.0)
 - 2026-08-03 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-69085) — CVE-2026-69085 /api/filetree/searchDocs endpoint SQL injection 공개 (CVSS 10.0)
+- 2026-08-14 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-72811) — CVE-2026-72811 역링크 검색(backlink) SQL injection 추가 발견, v3.7.4 패치 (CVSS 10.0)
 
 ## 관련
 
