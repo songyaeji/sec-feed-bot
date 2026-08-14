@@ -4291,5 +4291,19 @@
     ],
     "title": "Investigation of banking hack leads to arrests in Germany, Brazil",
     "url": "https://therecord.media/investigation-into-banking-hack-leads-to-arrests-germany-brazil"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73682",
+    "published": "2026-08-14T21:17:58.033",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Semaphore versions prior to 2.18.20 contain an OS command injection (argument injection) vulnerability in the repository git_url handling that allows authenticated users holding the Manager or Owner role on any project to achieve remote code execution on the Semaphore server host. Attackers can craft a malicious git_url value using git's --upload-pack= option to inject and execute arbitrary shell commands when the server processes repository operations using the default cmd_git client.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73682 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73682"
   }
 ]
