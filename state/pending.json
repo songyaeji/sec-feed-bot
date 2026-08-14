@@ -3732,5 +3732,55 @@
     ],
     "title": "볼타, 전자세금계산서 업계 최초 '금융인증서' 도입",
     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA3cWVpeTFPYkdlWDlPZWtmWkZPWHdFUmxMMVo0QWJDbUNxdzdVQXNIV3RqTjNfbjJhcDFDWWNWYXB1UmVGNVNJck9aXzVmdHF0VDk4TElXSHlxS3lobnhjYjd2czRiZHp00gFrQVVfeXFMUE5OUkVpTjNWS01tMnlMdE50MXNaWnR1c3JMOUJESkROa1VqSEdPUVMwbl9zcDl4U0JmMHlNZEpSWEVnTWZ6Z3hJNl93M3RJOFgxbUZHckdkUnh6TEUyeFhoN2g2d1NuX3gtUEk?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-19626",
+    "published": "2026-08-14T17:17:30.940",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A remote code execution vulnerability exists in Tenable Security Center's report generation functionality. An authenticated, non-administrative user could exploit this issue by supplying specially crafted input that is later processed unsafely during server-side report rendering, resulting in arbitrary code execution with the privileges of the service account.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19626 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19626"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-32153",
+    "published": "2026-04-14T18:17:15.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Microsoft Windows Speech allows an authorized attacker to elevate privileges locally.",
+    "tags": [],
+    "title": "CVE-2026-32153 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32153"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19844",
+    "published": "2026-08-14T17:17:35.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in TOTOLINK A800R 4.1.2cu.5137_B20200730. The impacted element is the function setRadvdCfg of the file /cgi-bin/cstecgi.cgi of the component ipv6.so. Performing a manipulation of the argument radvdinterfacename results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been made public and could be used.",
+    "tags": [],
+    "title": "CVE-2026-19844 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19844"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19845",
+    "published": "2026-08-14T17:17:35.753",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in TOTOLINK A800R 4.1.2cu.5137_B20200730. This affects the function setStaticDhcpConfig of the file /cgi-bin/cstecgi.cgi of the component lan.so. Executing a manipulation of the argument Comment can lead to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized.",
+    "tags": [],
+    "title": "CVE-2026-19845 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19845"
   }
 ]
