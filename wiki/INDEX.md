@@ -2,6 +2,22 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [maxupload-wordpress-file-upload](topics/2026-08-maxupload-wordpress-file-upload.md) MaxUpload WordPress 플러그인 파일명 검증 우회 파일 업로드 (최종갱신일: 2026-08-15)
+- [propovoice-wordpress-role-creation](topics/2026-08-propovoice-wordpress-role-creation.md) Propovoice WordPress 플러그인 역할 검증 우회 관리자 계정 생성 (최종갱신일: 2026-08-15)
+- [bloyal-wordpress-privilege-escalation](topics/2026-08-bloyal-wordpress-privilege-escalation.md) bLoyal WordPress 플러그인 API URL 조작 권한상향 (최종갱신일: 2026-08-15)
+- [link-library-wordpress-file-deletion](topics/2026-08-link-library-wordpress-file-deletion.md) Link Library WordPress 플러그인 경로검증 우회 파일 삭제 (최종갱신일: 2026-08-15)
+- [rapisafe-wordpress-file-deletion](topics/2026-08-rapisafe-wordpress-file-deletion.md) RapiSafe WordPress 플러그인 경로검증 우회 파일 삭제 (최종갱신일: 2026-08-15)
+- [pods-wordpress-acl-bypass](topics/2026-08-pods-wordpress-acl-bypass.md) Pods WordPress 플러그인 접근제어 우회 권한상향 (최종갱신일: 2026-08-15)
+- [truebooker-wordpress-email-change](topics/2026-08-truebooker-wordpress-email-change.md) TrueBooker WordPress 플러그인 이메일 변경 계정 탈취 (최종갱신일: 2026-08-15)
+- [user-profile-builder-wordpress-type-confusion](topics/2026-08-user-profile-builder-wordpress-type-confusion.md) User Profile Builder WordPress 타입 컨퓨전 관리자 권한 탈취 (최종갱신일: 2026-08-15)
+- [user-session-synchronizer-wordpress-auth-bypass](topics/2026-08-user-session-synchronizer-wordpress-auth-bypass.md) User Session Synchronizer WordPress 암호화 키 오류 인증우회 (최종갱신일: 2026-08-15)
+- [six-storage-wordpress-auth-bypass](topics/2026-08-six-storage-wordpress-auth-bypass.md) 6Storage WordPress 플러그인 AJAX 핸들러 인증 우회 (최종갱신일: 2026-08-15)
+- [geoserver-sqli-rce-zerodday](topics/2026-08-geoserver-sqli-rce-zerodday.md) GeoServer SQL injection 미인증 RCE 제로데이 공격 탐사 진행 (최종갱신일: 2026-08-15)
+- [evooo1bot-socks5-relay](topics/2026-08-evooo1bot-socks5-relay.md) Evooo1Bot Mirai 파생 봇넷 라우터 SOCKS5 릴레이 변환 (최종갱신일: 2026-08-15)
+- [dropcatch-malware-campaign](topics/2026-08-dropcatch-malware-campaign.md) 만료된 도메인 재등록 말웨어 배포 C2 인프라 악용 (최종갱신일: 2026-08-15)
+- [us-local-govt-ransomware-campaign](topics/2026-08-us-local-govt-ransomware-campaign.md) 미국 4개 주 지방정부 911 응급망·행정 서비스 랜섬웨어 침해 (최종갱신일: 2026-08-15)
+- [mirai-stealth-encrypted-c2](topics/2026-08-mirai-stealth-encrypted-c2.md) Mirai 신규 변종 암호화 C2·자격증명 스니핑 (최종갱신일: 2026-08-15)
+- [storm-1175-stormencryptor-ransomware](topics/2026-08-storm-1175-stormencryptor-ransomware.md) Storm-1175 신종 랜섬웨어 StormEncryptor 공격 (최종갱신일: 2026-08-15)
 - [mindsdb-ai-agent-rce](topics/2026-08-mindsdb-ai-agent-rce.md) MindsDB AI 에이전트 미인증 원격코드실행 CVE-2026-73678 (최종갱신일: 2026-08-14)
 - [tenable-security-center-multi-rce](topics/2026-08-tenable-security-center-multi-rce.md) Tenable Security Center 다중 RCE·명령주입 취약점 (최종갱신일: 2026-08-14)
 - [ibm-db2-mirror-i-rce](topics/2026-08-ibm-db2-mirror-i-rce.md) IBM Db2 Mirror for i 명령주입 취약점 (최종갱신일: 2026-08-14)
