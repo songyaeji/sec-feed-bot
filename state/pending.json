@@ -1488,5 +1488,230 @@
     "tags": [],
     "title": "서강대, 개인정보 유출…재학생·졸업생·교직원 포함",
     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5eFJvMlZJRUpMY01GRVplRXVHMGc4VkV0M3JyZUFrdmZPUDVmNk1lcGZ5azk3NUc1cEptcGplNXRzTHMtU3RkeDNXazBxNUNEN0pndWJUSUtUenlMeU9lZ3VR?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68455",
+    "published": "2026-08-15T06:17:17.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nliveupdate: validate session type before performing operation\n\nThe sessions ioctls are not applicable to all session types. PRESERVE_FD\nis only applicable to outgoing sessions. RETRIEVE_FD and FINISH are only\nvalid for incoming session. Calling a incoming ioctl on an outgoing\nsession is invalid and can cause file handlers to run into unexpected\nerrors.\n\nFor example, a user can create a (outgoing) session, preserve a memfd,\nand then immediately do a retrieve without doing a kexec in between.\nThis would result in memfd's retrieve handler to run. The handlers\nexpects to be called from a post-kexec context, and will try to do a\nkho_restore_vmalloc() or kho_restore_folio() to try and restore memory.\n\nKHO catches this (thanks to KHO_PAGE_MAGIC) and returns an error, but\nsince this is considered an internal error and KHO throws out a bunch of\nWARN()s.\n\nAssociate a type with each ioctl op and validate the type in\nluo_session_ioctl() before dispatching the ioctl handler to make sure\nthe op is being called for the right session type.",
+    "tags": [],
+    "title": "CVE-2026-68455 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68455"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68456",
+    "published": "2026-08-15T06:17:32.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: atm: ueagle-atm: wait for pre-firmware load in .disconnect()\n\nueagle-atm uses the asynchronous request_firmware_nowait() in .probe(),\nbut does not wait for its completion, not even in .disconnect(); so, if the\ndevice is unplugged meanwhile, its teardown runs concurrently with that.\n\nEven though this inconsistency is worth addressing on its own, it has also\ntriggered several bug reports in syzbot over the years (some auto-closed)\nwhere the firmware sysfs fallback mechanism (CONFIG_FW_LOADER_USER_HELPER)\ncreates a firmware subdirectory in the device directory during its removal,\nwhich might hit unexpected conditions in kernfs, apparently, depending at\nwhich point the add and remove operations raced. (See links.)\n\nThe pattern is:\n\nusb ?-?: Direct firmware load for ueagle-atm/eagle?.fw failed with error -2\nusb ?-?: Falling back to sysfs fallback for: ueagle-atm/eagle?.fw\n<ERROR>\nCall trace:\n ...\n kernfs_create_dir_ns\n sysfs_create_dir_ns\n create_dir\n kobject_add_internal\n kobject_add_varg\n kobject_add\n class_dir_create_and_add\n get_device_parent\n device_add\n fw_load_sysfs_fallback\n fw_load_from_user_helper\n firmware_fallback_sysfs\n _request_firmware\n request_firmware_work_func\n ...\n\n(Some variations are observed, after fw_load_sysfs_fallback(), e.g., [1].)\n\nWhile the kernfs side is being looked at, the ueagle-atm side can be fixed\nby waiting for the pre-firmware load in the .disconnect() handler.\n\nThis chan",
+    "tags": [
+      "금융"
+    ],
+    "title": "CVE-2026-68456 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68456"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68457",
+    "published": "2026-08-15T06:17:48.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: use opener credentials for FSCTL mutations\n\nSET_SPARSE, SET_ZERO_DATA and SET_COMPRESSION operate on an open SMB\nhandle but call VFS xattr, fallocate or fileattr helpers with the current\nksmbd worker credentials. Those helpers can revalidate inode permissions,\nownership and LSM policy independently of the SMB handle access mask.\n\nRun each operation with the credentials captured in the target file when\nthe handle was opened. Keep credential handling local to these single-file\nFSCTLs rather than applying session credentials to the complete IOCTL\nhandler, which also contains handle-less and multi-handle operations.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-68457 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68457"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68458",
+    "published": "2026-08-15T06:18:15.350",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nbinder: cache secctx size before release zeroes it\n\nbinder_transaction() bounds the scatter-gather buffer area with\nsg_buf_end_offset and subtracts the aligned LSM context size because\nthe secctx is written at the tail of that area.  The subtraction reads\nlsmctx.len, but that field has already been cleared by the time the\nline runs:\n\n    security_secid_to_secctx(secid, &lsmctx)   /* lsmctx.len set */\n    lsmctx_aligned_size = ALIGN(lsmctx.len, sizeof(u64))\n    extra_buffers_size += lsmctx_aligned_size\n    ...\n    security_release_secctx(&lsmctx)            /* memset zeroes len */\n    ...\n    sg_buf_end_offset = sg_buf_offset + extra_buffers_size\n                        - ALIGN(lsmctx.len, sizeof(u64)) /* ALIGN(0,8) */\n\nsecurity_release_secctx() does memset(cp, 0, sizeof(*cp)), so lsmctx.len\nreads back as 0 and the subtraction contributes nothing, leaving\nsg_buf_end_offset too large by the aligned secctx size on every\ntransaction to a txn_security_ctx node.\n\nEach BINDER_TYPE_PTR object then derives buf_left = sg_buf_end_offset -\nsg_buf_offset as the sole upper bound on its copy, so the inflated end\noffset lets the copy run into the bytes that already hold the secctx.\n\nThe aligned size must therefore be cached before release rather than\nre-read from the now-cleared field.  Fix by caching it in\nlsmctx_aligned_size at function scope when it is first computed and\nsubtracting lsmctx_aligned_size instead of re-read",
+    "tags": [],
+    "title": "CVE-2026-68458 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68458"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68459",
+    "published": "2026-08-15T06:18:15.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nf2fs: fix potential deadlock in gc_merge path of f2fs_balance_fs()\n\nWhen we mount device w/ gc_merge mount option, we may suffer below\npotential deadlock:\n\nKworker\t\t\t\t\tGC trehad\t\t\tTruncator\n- f2fs_write_cache_pages\n - f2fs_write_single_data_page\n  - f2fs_do_write_data_page\n   - folio_start_writeback  --- set writeback flag on folio\n   - f2fs_outplace_write_data\n   : cached folio in internal bio cache\n  - f2fs_balance_fs\n   - wake_up(gc_thread)\n   : wake up gc thread to run foreground GC\n   - finish_wait(fggc_wq)\n   : wait on the waitqueue --- wait on GC thread to finish the work\n\t\t\t\t\t\t\t\t\t- truncate_inode_pages_range\n\t\t\t\t\t\t\t\t\t - __filemap_get_folio(, FGP_LOCK)  --- lock folio\n\t\t\t\t\t\t\t\t\t - truncate_inode_partial_folio\n\t\t\t\t\t\t\t\t\t  - folio_wait_writeback            --- wait on writeback being cleared\n\t\t\t\t\t- do_garbage_collect\n\t\t\t\t\t - move_data_page\n\t\t\t\t\t  - f2fs_get_lock_data_folio\n\t\t\t\t\t   - lock on folio  --- blocked on folio's lock\n\nIn order to avoid such deadlock, let's call below functions to commit\ncached bios in GC_MERGE path of f2fs_balance_fs() as the same as we did\nin NOGC_MERGE path.\n- f2fs_submit_merged_write(sbi, DATA);\n- f2fs_submit_all_merged_ipu_writes(sbi);",
+    "tags": [],
+    "title": "CVE-2026-68459 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68459"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68460",
+    "published": "2026-08-15T06:18:22.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nf2fs: fix potential deadlock in f2fs_balance_fs()\n\nWhen the f2fs filesystem space is nearly exhausted, we encounter deadlock\nissues as below:\n\nINFO: task A:1890 blocked for more than 120 seconds.\n      Tainted: G           O       6.12.41-g3fe07ddf05ab #1\n\"echo 0 > /proc/sys/kernel/hung_task_timeout_secs\" disables this message.\ntask:A    state:D stack:0     pid:1890  tgid:1626  ppid:1153   flags:0x00000204\nCall trace:\n __switch_to+0xf4/0x158\n __schedule+0x27c/0x908\n schedule+0x3c/0x118\n io_schedule+0x44/0x68\n folio_wait_bit_common+0x174/0x370\n folio_wait_bit+0x20/0x38\n folio_wait_writeback+0x54/0xc8\n truncate_inode_partial_folio+0x70/0x1e0\n truncate_inode_pages_range+0x1b0/0x450\n truncate_pagecache+0x54/0x88\n f2fs_file_write_iter+0x3e8/0xb80\n do_iter_readv_writev+0xf0/0x1e0\n vfs_writev+0x138/0x2c8\n do_writev+0x88/0x130\n __arm64_sys_writev+0x28/0x40\n invoke_syscall+0x50/0x120\n el0_svc_common.constprop.0+0xc8/0xf0\n do_el0_svc+0x24/0x38\n el0_svc+0x30/0xf8\n el0t_64_sync_handler+0x120/0x130\n el0t_64_sync+0x190/0x198\n\nINFO: task kworker/u8:11:2680853 blocked for more than 120 seconds.\n      Tainted: G           O       6.12.41-g3fe07ddf05ab #1\n\"echo 0 > /proc/sys/kernel/hung_task_timeout_secs\" disables this message.\ntask:kworker/u8:11   state:D stack:0     pid:2680853 tgid:2680853 ppid:2      flags:0x00000208\nWorkqueue: writeback wb_workfn (flush-254:0)\nCall trace:\n __switch_to+0xf4/0x158\n __schedule+0x27c/0x908\n ",
+    "tags": [],
+    "title": "CVE-2026-68460 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68460"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68461",
+    "published": "2026-08-15T06:18:34.113",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ndevice property: initialize the remaining fields of fwnode_handle in fwnode_init()\n\nIf a firmware node is allocated on the stack (for instance: temporary\nsoftware node whose life-time we control) or on the heap - but using a\nnon-zeroing allocation function - and initialized using fwnode_init(),\nits secondary pointer will contain uninitialized memory which likely\nwill be neither NULL nor IS_ERR() and so may end up being dereferenced\n(for example: in dev_to_swnode()). Set fwnode->secondary to NULL on\ninitialization. While at it: initialize the remaining fields of struct\nfwnode_handle too just to be sure.\n\n[ Fix typo in commit message. - Danilo ]",
+    "tags": [],
+    "title": "CVE-2026-68461 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68461"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68462",
+    "published": "2026-08-15T06:18:39.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Reject negative const offsets for buffer pointers\n\nThe verifier rejects variable offsets for PTR_TO_TP_BUFFER and PTR_TO_BUF\naccesses, but it currently accepts a constant negative offset produced by\npointer arithmetic.\n\nCommit 022ac0750883 (\"bpf: use reg->var_off instead of reg->off for\npointers\") moved constant pointer offsets from reg->off to reg->var_off.\nHowever, __check_buffer_access() continued to check only the instruction\noffset. An access with reg->var_off equal to -8 and an instruction offset\nof zero therefore passes verification.\n\nFor writable raw tracepoints, the access end is also calculated from the\nunsigned reg->var_off.value. An eight-byte access starting at -8 wraps\nthe calculated end to zero, allowing the program to load and attach\nwithout increasing max_tp_access.\n\nAfter ensuring that reg->var_off is constant, calculate the effective\naccess start using signed arithmetic and reject it when it is negative.\nUse the validated start to calculate the access end for both\nPTR_TO_TP_BUFFER and PTR_TO_BUF.",
+    "tags": [],
+    "title": "CVE-2026-68462 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68462"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68463",
+    "published": "2026-08-15T06:18:39.910",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmmc: sdhci-esdhc-imx: use pm_runtime_resume_and_get() in suspend\n\nReplace pm_runtime_get_sync() with pm_runtime_resume_and_get() to\nsimplify error handling. pm_runtime_resume_and_get() automatically\ndrops the usage counter on failure, avoiding the need for a separate\npm_runtime_put_noidle() call. If it fails, the device is unclocked and\naccessing hardware registers would cause a kernel panic, so return the\nerror immediately.",
+    "tags": [],
+    "title": "CVE-2026-68463 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68463"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68464",
+    "published": "2026-08-15T06:19:25.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmmc: sdhci-esdhc-imx: disable irq during suspend to fix unhandled interrupt\n\nWhen using WIFI out-of-band wakeup, an \"irq xxx: nobody cared\" warning\noccurs. This happens because the usdhc interrupt is not disabled during\nsystem suspend when device_may_wakeup() returns false.\n\nThe sequence of events leading to this issue:\n1. System enters suspend without disabling usdhc interrupt\n(because device_may_wakeup() returns false for usdhc device)\n2. WIFI out-of-band wakeup triggers system resume via GPIO interrupt\n3. WIFI sends a Card interrupt before usdhc has fully resumed\n4. usdhc is still in runtime suspend state and cannot handle the\ninterrupt properly\n5. The unhandled interrupt triggers \"nobody cared\" warning\n\nFix this by unconditionally disabling the usdhc interrupt during suspend\nand re-enabling it during resume, regardless of the wakeup capability.\nThis ensures no interrupts are processed during the suspend/resume\ntransition.",
+    "tags": [],
+    "title": "CVE-2026-68464 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68464"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68465",
+    "published": "2026-08-15T06:19:34.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmmc: sdhci-esdhc-imx: fix esdhc_change_pinstate() to allow default state restore\n\nesdhc_change_pinstate() checks for pins_100mhz and pins_200mhz at the\ntop of the function and returns -EINVAL if either is not defined. This\nprevents the default case from ever being reached, which means devices\nwith a sleep pinctrl state but without high-speed pin states (100mhz/\n200mhz) can never restore their default pin configuration.\n\nMove the IS_ERR checks for pins_100mhz and pins_200mhz into their\nrespective switch cases.",
+    "tags": [],
+    "title": "CVE-2026-68465 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68465"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68466",
+    "published": "2026-08-15T06:19:34.530",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmtd: rawnand: lpc32xx_slc: fail DMA transfer on completion timeout\n\nlpc32xx_xmit_dma() waits for the DMA completion callback but ignores\nwait_for_completion_timeout(). A timed out DMA transfer is therefore\nunmapped and reported as successful to the NAND read/write path.\n\nReturn -ETIMEDOUT when the completion wait expires. Terminate the DMA\nchannel before unmapping the scatterlist so the timed out transfer cannot\ncontinue to access the buffer after the error is returned.",
+    "tags": [],
+    "title": "CVE-2026-68466 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68466"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68467",
+    "published": "2026-08-15T06:19:46.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmtd: mchp23k256: use SPI match data for chip caps\n\nThe driver stores chip capacity information in both the OF match table\nand the SPI id table. Probe currently uses of_device_get_match_data(),\nso a non-OF SPI modalias match falls back to mchp23k256_caps even when\nthe SPI id table selected a different part.\n\nUse spi_get_device_match_data() so SPI id-table driver_data is consumed\nwhen OF match data is absent. This keeps the existing default fallback\nwhile avoiding the wrong MTD geometry for id-table-only matches.",
+    "tags": [],
+    "title": "CVE-2026-68467 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68467"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68468",
+    "published": "2026-08-15T06:19:57.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmtd: virt-concat: free duplicate generated name\n\nEvery MTD registration runs mtd_virt_concat_create_join().  Once a\nvirtual concat has already been registered, the function builds the same\nname again and takes the equal-name branch.  That branch skips to the\nnext item without freeing the newly allocated string.\n\nFree the temporary name before continuing.",
+    "tags": [],
+    "title": "CVE-2026-68468 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68468"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68469",
+    "published": "2026-08-15T06:19:57.620",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mwifiex: fix permanently busy scans after multiple roam iterations\n\nIn order for the firmware to sleep, the driver has to confirm a\npreviously received sleep request. The normal sequence of evets goes\nlike this:\nEVENT_SLEEP -> adapter->ps_state = PS_STATE_PRE_SLEEP -> sleep-confirm\n-> SLEEP -> EVENT_AWAKE -> AWAKE.\nBefore sending the sleep-confirm command, the driver must make sure\nthere are no commands either running or waiting to be completed.\n\nmwifiex_ret_802_11_associate() unconditionally sets\nps_state = PS_STATE_AWAKE when it processes the association command\nresponse, outside of the normal powersave management flow. If\nEVENT_SLEEP arrives while the association command is in flight,\nps_state is PRE_SLEEP when the association command response is parsed,\nand the forced AWAKE overwrites it. The deferred sleep-confirm is\nnever sent.\n\nA subsequent scan_start command is correctly acknowledged, but the\nfirmware doesn't generate scan_result events. The scan request never\nfinishes, and additional requests from userspace fail with -EBUSY.\n\nAfter testing on both IW412 and W8997, I could only trigger the bug on\nthe IW412 and observed the firmwares behave differently. On the IW412\nthe firmware still sends EVENT_SLEEP while the authentication /\nassociation process is ongoing. A W8997 under the same\nconditions seems to suppress power-save for the duration of the\nassociation, so PRE_SLEEP never coincided with the",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-68469 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68469"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68470",
+    "published": "2026-08-15T06:19:57.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mac80211: validate extension-frame layout before RX\n\nExtension frames only have the extension header at the regular 802.11\nheader offset. The generic RX path can still reach helpers and interface\ndispatch code that read regular header address fields before unsupported\nextension subtypes are dropped.\n\nmac80211 currently only handles S1G beacon extension frames. Drop other\nextension subtypes before they can reach regular-header RX processing.\nFor S1G beacons, linearize the SKB with the management-frame path and\nrequire the fixed S1G beacon header, including optional fixed fields\nindicated by frame control, before generic RX dispatch.\n\nRoute S1G beacons through the station/default-link RX path without\nregular-header station lookup. Avoid regular-header address reads in the\nmac80211 RX paths that process S1G extension beacons, including\naccept-frame, duplicate-detection, address-copy, and MLO\naddress-translation paths.\n\nAlso make ieee80211_get_bssid() length-safe before returning the S1G\nsource-address pointer.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-68470 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68470"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68471",
+    "published": "2026-08-15T06:20:05.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: ieee80211: validate MLE common info length\n\nieee80211_mle_common_size() uses the first common-info octet as the\ncommon information length for all known MLE types. However,\nieee80211_mle_size_ok() only validates that octet for Basic, Probe\nRequest, and TDLS MLEs.\n\nReconfiguration MLEs also skipped the length octet when calculating the\nminimum common size, and Priority Access MLEs skipped validation of the\nadvertised common information length.\n\nAccount for the Reconfiguration common-info length octet and validate\nthe advertised common information length for all known MLE types. Keep\nunknown-type handling unchanged.\n\n[remove now misleading comment]",
+    "tags": [],
+    "title": "CVE-2026-68471 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68471"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-68472",
+    "published": "2026-08-15T06:20:05.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: cfg80211: validate EHT MLE before MLD ID read\n\ncfg80211_gen_new_ie() copies ML probe response elements from\nthe parent frame when the parent EHT multi-link element has an\nMLD ID matching the nontransmitted BSSID index.\n\nThe code only checked that the extension element had more than\none byte before calling ieee80211_mle_get_mld_id(). That helper\nassumes a BASIC MLE with enough common info and documents that\ncallers must first use ieee80211_mle_type_ok().\n\nAttack chain:\nmalicious AP sends a short EHT MLE in an MBSSID beacon.\ncfg80211_inform_bss_frame_data() stores the copied IE buffer.\ncfg80211_parse_mbssid_data() builds the nontransmitted BSS IE.\ncfg80211_gen_new_ie() sees the EHT MLE in the parent frame.\nieee80211_mle_get_mld_id() then reads past the IE boundary.\n\nValidate the MLE type and size before reading the MLD ID. This\nmatches the contract required by the MLE helper and rejects the\nshort element before any internal MLE fields are accessed.",
+    "tags": [],
+    "title": "CVE-2026-68472 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68472"
   }
 ]
