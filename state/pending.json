@@ -4692,5 +4692,20 @@
     ],
     "title": "“아이폰이 표적됐다”…애플, 110개국 사용자에 스파이웨어 경고",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=208066"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208067",
+    "published": "2026-08-15T21:35:34+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈소스 지리정보 서버 지오서버(GeoServer)에서 아직 패치되지 않은 제로데이 취약점이 공개된 가운데, 공격자들이 인터넷에 노출된 서버를 찾아 공격을 시도하고 있는 것으로 확인됐다.이번 취약점은 지오서버의 ‘jsonArrayContains’ 기능에서 발견됐다. 인증되지 않은 공격자가 조작된 요청을 보내 SQL 인젝션 공격을 수행할 수 있다. 서버와 데이터베이스 구성에 따라 원격코드실행(RCE)으로 이어질 가능성도 있다.15일 현재 취약점에 CVE 번호가 부여되지 않았으며 공식 보안 패치도 나오지 않았다.공개 수시간 만에 공격",
+    "tags": [
+      "RCE",
+      "제로데이"
+    ],
+    "title": "지오서버 제로데이 공개 직후 공격자 움직였다…수백 건 공격 탐색 포착",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208067"
   }
 ]
