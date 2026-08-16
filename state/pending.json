@@ -614,5 +614,55 @@
     "tags": [],
     "title": "공공기관 개인정보 유출 5년새 7배 늘어",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9JV0w2aElYcVB1T3BvVENoZXZhX3dDWmhUbzk1UTZ6VVJreVQ5b25TZ3p1T2FvMEFNRTNPbjkya1ktZ0pNei1rWkZPTjcwWTVpbEY3TXBvbXZaNm0tZ3BULQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73056",
+    "published": "2026-08-16T14:16:55.083",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan kernel versions before 3.7.4 contain an improper restriction of excessive authentication attempts vulnerability in the CheckAuth() middleware. The middleware accepts the API token (Conf.Api.Token) via an Authorization header (Token/Bearer) or a ?token= query parameter, and neither path is protected by the application's CAPTCHA/lockout mechanism (NeedCaptcha/WrongAuthCount). As a result, an unauthenticated remote attacker can perform unlimited automated guesses of the API token, particularly when a short or weak custom token has been configured, and upon success gains full RoleAdministrator access enabling arbitrary file operations and SQL queries.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-73056 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73056"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73061",
+    "published": "2026-08-16T14:16:55.770",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Scriban before 7.2.2 contains an access-modifier bypass vulnerability in TypedObjectAccessor that allows template code to write CLR object properties without setter-visibility checks. Attackers can modify properties with private, internal, or init-only setters, and perform mass assignment on public-setter properties, permanently altering live host objects after template rendering.",
+    "tags": [],
+    "title": "CVE-2026-73061 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73061"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-74790",
+    "published": "2026-08-16T14:16:57.050",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Scriban before 7.0.0 caches TypedObjectAccessor by Type only without considering MemberFilter changes, allowing reused TemplateContext instances to expose members that should be hidden. Attackers can access filtered properties and fields by reusing a TemplateContext after tightening its MemberFilter, bypassing sandbox policies across requests or tenants.",
+    "tags": [],
+    "title": "CVE-2026-74790 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74790"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-74791",
+    "published": "2026-08-16T14:16:57.183",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Scriban before 7.0.0 fails to clear the CachedTemplates dictionary when TemplateContext.Reset() is called, allowing cached templates to persist across reused contexts. Attackers can exploit request-dependent ITemplateLoader implementations to access previously authorized template content from earlier renders without triggering TemplateLoader.Load() again.",
+    "tags": [],
+    "title": "CVE-2026-74791 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74791"
   }
 ]
