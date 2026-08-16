@@ -2,6 +2,18 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [siyuan-checkauth-token-bruteforce](topics/2026-08-siyuan-checkauth-token-bruteforce.md) SiYuan CheckAuth — 미인증 토큰 무제한 추측 취약점 (최종갱신일: 2026-08-16)
+- [query-wrangler-wordpress-rce](topics/2026-08-query-wrangler-wordpress-rce.md) Query Wrangler WordPress — 미인증 RCE 취약점 (최종갱신일: 2026-08-16)
+- [solace-extra-wordpress-acl-bypass](topics/2026-08-solace-extra-wordpress-acl-bypass.md) Solace Extra WordPress — 권한검증 우회 데이터 삭제·위변조 (최종갱신일: 2026-08-16)
+- [prosolution-wordpress-file-deletion](topics/2026-08-prosolution-wordpress-file-deletion.md) ProSolution WordPress — 경로검증 우회 파일 삭제·RCE (최종갱신일: 2026-08-16)
+- [scriban-cache-member-filter-bypass](topics/2026-08-scriban-cache-member-filter-bypass.md) Scriban — 캐시 정책 우회 접근 제어 탈취 (최종갱신일: 2026-08-16)
+- [scriban-access-modifier-bypass](topics/2026-08-scriban-access-modifier-bypass.md) Scriban — 접근 제한자 우회 취약점 (최종갱신일: 2026-08-16)
+- [apple-mercenary-spyware-warning](topics/2026-08-apple-mercenary-spyware-warning.md) 애플 110개국 아이폰 용병 스파이웨어 경고 (최종갱신일: 2026-08-15)
+- [mustang-panda-kernel-rootkit](topics/2026-08-mustang-panda-kernel-rootkit.md) 무스탕 판다 커널 루트킷 정부기관 공격 (최종갱신일: 2026-08-15)
+- [sogang-university-breach](topics/2026-08-sogang-university-breach.md) 서강대 재학생 졸업생 교직원 개인정보 유출 (최종갱신일: 2026-08-15)
+- [uk-acro-breach](topics/2026-08-uk-acro-breach.md) 영국 범죄기록청 2년간 3회 연쇄 침해 ICO 견책 (최종갱신일: 2026-08-15)
+- [france-tax-authority-dgfip](topics/2026-08-france-tax-authority-dgfip.md) 프랑스 국세청 60만 명 개인정보 유출 침해 확인 (최종갱신일: 2026-08-14)
+- [korea-personal-info-ai-reform](topics/2026-08-korea-personal-info-ai-reform.md) 개인정보보호위 AI 시대 제도 전면 재검토 개인정보 학습 무단 활용 경고 (최종갱신일: 2026-08-14)
 - [maxupload-wordpress-file-upload](topics/2026-08-maxupload-wordpress-file-upload.md) MaxUpload WordPress 플러그인 파일명 검증 우회 파일 업로드 (최종갱신일: 2026-08-15)
 - [propovoice-wordpress-role-creation](topics/2026-08-propovoice-wordpress-role-creation.md) Propovoice WordPress 플러그인 역할 검증 우회 관리자 계정 생성 (최종갱신일: 2026-08-15)
 - [bloyal-wordpress-privilege-escalation](topics/2026-08-bloyal-wordpress-privilege-escalation.md) bLoyal WordPress 플러그인 API URL 조작 권한상향 (최종갱신일: 2026-08-15)
