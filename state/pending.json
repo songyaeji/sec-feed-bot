@@ -488,5 +488,17 @@
     "tags": [],
     "title": "공공기관 개인정보 유출 5년 새 7배…해킹보다 무서운 ‘업무과실’ : 정치/사회",
     "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9HOHYtTFJqZzN0VGhybjFjSHhiclRfVW1TdW90M3B5WVFqWTVadEJCVUw5VU1TbmhPN1lGd3JWMnFuUUFaRTB4bVdR?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-18316",
+    "published": "2026-08-16T06:16:51.683",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Solace Extra plugin for WordPress is vulnerable to unauthorized modification and loss of data due to a missing capability check on the import_zip() function in versions up to, and including, 1.6.0. The handler is registered on both wp_ajax_action-import-zip and wp_ajax_nopriv_action-import-zip and only verifies the 'ajax-nonce' nonce, which is emitted on every admin page via wp_localize_script (unrestricted admin_enqueue_scripts hook) and is therefore accessible to any authenticated user including Subscribers. This makes it possible for authenticated attackers, with Subscriber-level access and above, to wipe navigation menus, sidebar widgets (via update_option('sidebars_widgets', array())), all theme mods (via remove_theme_mods()), and Elementor templates, as well as trigger arbitrary demo-content imports.",
+    "tags": [],
+    "title": "CVE-2026-18316 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18316"
   }
 ]
