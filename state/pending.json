@@ -550,5 +550,45 @@
     "tags": [],
     "title": "보안 생태계 쌍두마차… 정장 입은 블랙햇, 청바지 입은 데프콘",
     "url": "http://www.boannews.com/media/view.asp?idx=145170&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-13784",
+    "published": "2026-08-16T09:16:19.900",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Contact Form, Survey, Quiz & Popup Form Builder – ARForms plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 1.8.5 via deserialization of untrusted input from form submissions. This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+    "tags": [],
+    "title": "CVE-2024-13784 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13784"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-74578",
+    "published": "2026-08-16T09:16:21.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: algif_skcipher - force synchronous processing on trees without ctx->state\n\nThe AIO/async path in skcipher_recvmsg() passes the socket-wide ctx->iv\ndirectly into the skcipher request. After io_submit() the socket lock is\ndropped and the request is processed asynchronously, so a concurrent\nsendmsg(ALG_SET_IV) can overwrite ctx->iv and make the in-flight request\nrun under an attacker-controlled IV. For CTR/stream modes this is\nIV/keystream reuse and lets an unprivileged user recover the plaintext of\na concurrent operation.\n\nSnapshotting ctx->iv into per-request storage for the async path is not\nsufficient. For ciphers with statesize == 0 - which includes cbc and ctr -\nthe MSG_MORE inter-chunk IV chaining is carried solely by the in-place\nreq->iv writeback, which a snapshot redirects into per-request memory that\naf_alg_free_resources() releases on completion, silently producing wrong\noutput. Writing the IV back from the completion callback instead is not\npossible either: that would require lock_sock() there, but the callback can\nrun in softirq/atomic context, so it must not sleep.\n\nMake the operation synchronous instead, which removes both the IV race and\nany writeback race. This is equivalent to the upstream resolution, commit\nfcc77d33a34c (\"net: Remove support for AIO on sockets\"), which removed the\nAIO socket path across net/ entirely and so produces the same end state for\nthis file. This patch deviat",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-74578 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74578"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE4yak16QmptTEpQM2lSdDV6UmxLR18xTFI1NWNyWXhhRl90UTBiSDBuSzg3WGp3WVpHcWdoNDhIY0tOREFhOW5fVmZGT0doZWJQVzU2LWtiNFRwSS1IU2RFaTFzUVFfN18wNWc",
+    "published": "2026-08-16T03:25:00+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "전자세금용 금융인증서 이용처 확대…홈택스 넘어 민간 서비스로",
+    "tags": [
+      "금융"
+    ],
+    "title": "전자세금용 금융인증서 이용처 확대…홈택스 넘어 민간 서비스로",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4yak16QmptTEpQM2lSdDV6UmxLR18xTFI1NWNyWXhhRl90UTBiSDBuSzg3WGp3WVpHcWdoNDhIY0tOREFhOW5fVmZGT0doZWJQVzU2LWtiNFRwSS1IU2RFaTFzUVFfN18wNWc?oc=5"
   }
 ]
