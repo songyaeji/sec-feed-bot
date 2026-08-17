@@ -223,5 +223,17 @@
     "tags": [],
     "title": "CVE-2026-19977 (CVSS 10.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19977"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-19979",
+    "published": "2026-08-17T04:16:55.693",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in GL.iNet A1300, AX1800, AXT1800, BE1400, BE3600, BE6500, BE9300, BE10000, E5800, MT2500, MT3000, MT3600BE, MT5000, MT6000, X2000, X3000 and XE3000 up to 4.8.x. Affected by this vulnerability is the function COPY/MOVE of the component WebDAV Service. Such manipulation leads to authorization bypass. It is possible to launch the attack remotely. The vendor explains: \"After our investigation, we have confirmed that the vulnerability described (...) does indeed exist.\"",
+    "tags": [],
+    "title": "CVE-2026-19979 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19979"
   }
 ]
