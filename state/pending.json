@@ -7469,5 +7469,237 @@
     "tags": [],
     "title": "CVE-2026-11718 (CVSS 9.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11718"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-11717",
+    "published": "2026-06-18T14:17:20.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An authentication bypass vulnerability exists in the generic opaque token validation path (validateOpaqueToken) of googleapis/mcp-toolbox.\n\nWhen verifying an unparsed opaque token via an OAuth 2.0 introspection endpoint (RFC 7662), the toolbox decodes the response into an introspectResp struct where the Active field is declared as a pointer to a boolean (*bool). The code only explicitly rejects a token if the response contains a populated active field set to false (if introspectResp.Active != nil && !*introspectResp.Active). If an introspection endpoint responds with a payload that completely omits the mandatory active key, the internal variable remains nil, causing the conditional check to short-circuit. As a result, Toolbox accepts authorization tokens missing the \"active\" field, granting access to protected tools and underlying data sources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-11717 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11717"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-73042",
+    "published": "2026-08-15T22:16:54.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan before v3.7.4 fails to properly escape database menu metadata in HTML interpolation, allowing stored values to execute script when users open group, view, or field-edit menus. Attackers can inject markup through field descriptions or names that close containing elements and execute arbitrary code via event handlers, reaching Node built-ins due to Electron's insecure configuration.",
+    "tags": [],
+    "title": "CVE-2026-73042 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73042"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-73043",
+    "published": "2026-08-15T22:16:54.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan versions before v3.7.4 contain a remote code execution vulnerability in the Template calculation operator, which renders user-authored Go templates and stores output verbatim without sanitization. Attackers can inject malicious HTML and JavaScript into template calculations that execute in the desktop client renderer with Node integration enabled, allowing arbitrary code execution when the database is opened.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73043 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73043"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-73050",
+    "published": "2026-08-15T22:16:54.870",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan versions before v3.7.4 fail to validate or escape the color field in attribute-view select options, allowing stored cross-site scripting through eight unescaped render sites. Attackers can inject event-handler attributes by including quotation marks in the color value, executing arbitrary JavaScript when viewing databases containing the malicious select field.",
+    "tags": [],
+    "title": "CVE-2026-73050 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73050"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-55674",
+    "published": "2026-08-17T16:16:58.917",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Discourse is an open-source discussion platform. Prior to 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0, an unauthenticated attacker could send a single request with a crafted color_scheme_id (or dark_scheme_id) cookie to inject arbitrary HTML into a Discourse page. Because the cookie value was rendered into a color scheme tag without escaping, the attacker could break out of the attribute and inject a tag that bypassed Discourse's nonce-based Content Security Policy, resulting in arbitrary JavaScript execution in visitors' browsers. This issue is fixed in versions 2026.1.6, 2026.5.2, 2026.6.1, and 2026.7.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55674 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55674"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-64859",
+    "published": "2026-08-17T16:17:22.280",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to 1.0.0-rc.7, the admin user list and user lookup APIs, including GET /api/user/, return User.AccessToken as access_token because User model objects are serialized after queries use Omit(\"password\"), allowing an authenticated administrator to obtain the root user's bearer token and access root-only system configuration APIs. This issue is fixed in version 1.0.0-rc.7.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-64859 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64859"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-71479",
+    "published": "2026-08-17T16:17:44.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to 1.0.0-rc.18, user-controlled image n, video seconds and duration, max_tokens, max_completion_tokens, maxOutputTokens, audio duration, and billing-expression quantities can overflow conversions in common/quota_math.go and related settlement paths, allowing a low-privileged account with positive balance or an active subscription to turn a negative charge into account credit and potentially drain upstream funds. This issue is fixed in version 1.0.0-rc.18.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-71479 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71479"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-75045",
+    "published": "2026-08-17T16:17:51.530",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In JetBrains YouTrack before 2025.3.156085, \n2026.1.13913, \n2026.2.18112 an unauthenticated attacker could download database backups via shared draft signature",
+    "tags": [],
+    "title": "CVE-2026-75045 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75045"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-40144",
+    "published": "2026-08-17T16:16:56.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A memory-corruption vulnerability exists in a kernel-mode component of BeyondTrust Endpoint Privilege Management (Windows deployments) prior to version 26.1.2. Insufficient validation of input processed by the component may result in memory being accessed outside its intended bounds.",
+    "tags": [],
+    "title": "CVE-2026-40144 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40144"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64865",
+    "published": "2026-08-17T16:17:22.427",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to 1.0.0-rc.16, repeated PUT /api/user/self requests that update language or sidebar_modules can race relay billing because controller/user.go calls User.Update and updateUserCache performs a full RedisHSetObj write to user:.Quota, overwriting concurrent HINCRBY deductions and allowing an authenticated user to keep cached quota artificially high. This issue is fixed in version 1.0.0-rc.16.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-64865 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64865"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-64866",
+    "published": "2026-08-17T16:17:22.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. From 0.9.1.3 until 1.0.0-rc.7, AdminResetPasskey in controller/passkey.go lacks the canManageTargetRole authorization check for DELETE /api/user/:id/reset_passkey, allowing a lower-privileged administrator to remove a passkey from a same-level or higher-privileged account, including a root account. This issue is fixed in version 1.0.0-rc.7.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-64866 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64866"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-64868",
+    "published": "2026-08-17T16:17:22.713",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "New API is a large language mode (LLM) gateway and artificial intelligence (AI) asset management system. Prior to 1.0.0-rc.11, POST /api/stripe/webhook, POST /api/creem/webhook, and POST /api/waffo/webhook read and log full request bodies before signature validation in router/api-router.go and the payment controllers, allowing an unauthenticated attacker to cause memory pressure, container restarts, or disk exhaustion without forging a successful payment. This issue is fixed in version 1.0.0-rc.11.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-64868 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64868"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-75044",
+    "published": "2026-08-17T16:17:51.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains YouTrack before 2025.3.156085, \n2026.1.13914, \n2026.2.18095 missing authorisation allowed an authenticated user to delete arbitrary entities via the mailbox endpoint",
+    "tags": [],
+    "title": "CVE-2026-75044 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75044"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-75048",
+    "published": "2026-08-17T16:17:51.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains YouTrack before 2026.2.18068 stored XSS via the fenced code-block language label was possible",
+    "tags": [],
+    "title": "CVE-2026-75048 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75048"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-75051",
+    "published": "2026-08-17T16:17:52.213",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains YouTrack before 2026.2.17917 unauthorised project transfer between organisations was possible",
+    "tags": [],
+    "title": "CVE-2026-75051 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75051"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-75060",
+    "published": "2026-08-17T16:17:53.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In JetBrains PyCharm before 2026.2.1 code execution was possible via unauthenticated Jupyter MCP tools",
+    "tags": [],
+    "title": "CVE-2026-75060 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75060"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/irregular-ai-hacking-model-blog",
+    "published": "2026-08-17T16:15:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The company at the center of a series of incidents in which AI models compromised real-world computer systems during security evaluations is facing criticism after the release of a report that security experts say leaves key questions unanswered.",
+    "tags": [],
+    "title": "Irregular faces criticism over ‘spin’ in AI hacking postmortem",
+    "url": "https://therecord.media/irregular-ai-hacking-model-blog"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/poland-probes-mydr-healthcare-software-breach",
+    "published": "2026-08-17T16:01:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "MyDr, a privately-owned Polish company that supplies software to doctors, clinics and other healthcare providers, said on Friday that it had identified and removed the cause of the incident and introduced additional security measures.",
+    "tags": [],
+    "title": "Poland probes MyDr healthcare software breach potentially affecting 19 million people",
+    "url": "https://therecord.media/poland-probes-mydr-healthcare-software-breach"
   }
 ]
