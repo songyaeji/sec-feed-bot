@@ -7211,5 +7211,33 @@
     "tags": [],
     "title": "CVE-2026-45998 (CVSS 7.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45998"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html",
+    "published": "2026-08-17T11:58:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "MCP servers can expose enterprise secrets through plaintext configuration files, over-permissioned access and prompt injection, often before security teams even know the server is running. As more organizations adopt AI agents into their systems, that exposure can silently become a major gap in MCP server security. The Model Context Protocol (MCP) allows AI agents to reach the tools and data,",
+    "tags": [
+      "AI"
+    ],
+    "title": "How MCP Servers Can Expose Enterprise Secrets",
+    "url": "https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html",
+    "published": "2026-08-17T10:52:34+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Security researchers at SSD Secure Disclosure have published a two-stage exploit chain that achieves full Android kernel access on devices running Unisoc modem firmware through a VoLTE video call, with no fix from the chipset maker. The advisory, published August 17, 2026, is the second stage of a chain that began in March 2026, when SSD disclosed remote code execution in the",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Unisoc VoLTE Video Call Exploit Chain Can Give Attackers Full Android Kernel Access",
+    "url": "https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html"
   }
 ]
