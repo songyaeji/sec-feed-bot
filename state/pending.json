@@ -7405,5 +7405,29 @@
     "tags": [],
     "title": "Microsoft confirms GitHub is down worldwide",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-github-is-down-worldwide/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-71566",
+    "published": "2026-08-17T15:16:57.610",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FakeFish handles incoming credentials by passing them down\n to scripts. This works for real hardware because in the end it's up to \nthe BMC to validate them. However, KubeVirt relies on a KUBECONFIG file \nmounted to the container and completely ignores the credentials. This allows any user of the cluster to control VMs of the \nuser that created fakefish, power them on and off, and mount arbitrary CD\n images to them.",
+    "tags": [],
+    "title": "CVE-2026-71566 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71566"
+  },
+  {
+    "category": "high",
+    "cvss": 4.0,
+    "id": "CVE-2026-71381",
+    "published": "2026-08-07T21:17:30.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Adobe Genuine Software Integrity Service on Windows is affected by an Incorrect Authorization vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized limited write access. Exploitation of this issue does not require user interaction, but requires the attacker to access the target desktop system locally (e.g., keyboard, console), or remotely (e.g., SMB).",
+    "tags": [],
+    "title": "CVE-2026-71381 (CVSS 4.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71381"
   }
 ]
