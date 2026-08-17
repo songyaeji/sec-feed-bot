@@ -7429,5 +7429,33 @@
     "tags": [],
     "title": "CVE-2026-71381 (CVSS 4.0)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71381"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-11719",
+    "published": "2026-06-18T14:17:20.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An authenticated authorization bypass vulnerability exists in MCP Toolbox for Databases due to missing scope enforcement across older protocol handlers.\n\nWhile the 2025-11-25 protocol version handler correctly enforces per-tool restrictions defined by scopesRequired, older supported protocol versions (2025-06-18, 2025-03-26, and 2024-11-05) omit this check. An authenticated client with low-privilege tokens (e.g., read) can bypass the intended per-tool scope restrictions and execute high-privilege tools (e.g., admin) simply by specifying an older protocol version in the MCP-Protocol-Version header, or by omitting the header entirely (which causes the server to default to the vulnerable 2024-11-05 handler).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-11719 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11719"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2019-25758",
+    "published": "2026-06-19T18:16:18.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Joomla! Component vBizz 1.0.7 contains an unrestricted file upload vulnerability that allows authenticated attackers to upload arbitrary PHP files by submitting malicious files through the profile_pic parameter. Attackers can upload PHP files via POST requests to the employee view endpoint and execute them from the uploads directory to achieve remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-25758 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25758"
   }
 ]
