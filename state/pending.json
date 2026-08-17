@@ -8007,5 +8007,146 @@
     "tags": [],
     "title": "Hacker claims 3.6 million Azure account records stolen from major companies",
     "url": "https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-19714",
+    "published": "2026-08-16T06:16:52.300",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Simple JWT Login  WordPress plugin before 3.6.8 does not validate the audience of the Google identity tokens it accepts, allowing unauthenticated users to authenticate as any user whose email address such a token carries, up to and including an administrator. Every site with the Simple JWT Login  WordPress plugin before 3.6.8's Google sign-in enabled is affected.",
+    "tags": [],
+    "title": "CVE-2026-19714 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19714"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-19725",
+    "published": "2026-08-16T06:16:52.487",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The WPvivid — Backup, Migration & Staging WordPress plugin before 0.9.131 does not sanitise a value taken from an unauthenticated request before using it to build a log file path, allowing an attacker holding a site to site transfer key to create a log file in any existing writable directory of the site, including the web root.\n\nThe file name always carries a fixed suffix and the contents are always the WPvivid — Backup, Migration & Staging WordPress plugin before 0.9.131's own log header, so only the location of the file is attacker controlled.",
+    "tags": [],
+    "title": "CVE-2026-19725 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19725"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-50768",
+    "published": "2026-08-17T18:17:08.760",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "File Upload vulnerability in T-Systems International GmbH ImageMaster Version: 9.14.2.8.1 allows a remote attacker to execute arbitrary code via the add attachments feature in the create new document function.",
+    "tags": [],
+    "title": "CVE-2026-50768 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50768"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-51346",
+    "published": "2026-08-17T18:17:09.320",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQL Injection vulnerability in StudIP 6.0.x before 6.0.3 and 5.4.x before 5.4.12 allows a remote attacker to execute arbitrary code and obtain sensitive information via the store() functions.",
+    "tags": [],
+    "title": "CVE-2026-51346 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51346"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-19478",
+    "published": "2026-08-17T20:16:41.777",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.2 before 18.11.11, 19.0 before 19.0.8, 19.1 before 19.1.6, and 19.2 before 19.2.4 that under certain conditions could allow an unauthenticated user to remotely modify or delete public projects and user data via a GraphQL directive.",
+    "tags": [],
+    "title": "CVE-2026-19478 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19478"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-71472",
+    "published": "2026-08-17T20:16:45.777",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in acm-search-v2-rhel9. This vulnerability allows an authenticated attacker, such as a hub administrator or a Search Custom Resource (CR) editor, to inject malicious shell commands or SQL statements. This occurs because the WORK_MEM string provided in the Search CR is not properly validated before being used in a bash script and an SQL query. Successful exploitation could lead to arbitrary code execution within the privileged postgres pod, potentially compromising the system.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71472 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71472"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-57233",
+    "published": "2026-08-17T20:16:44.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Notepad++ is a free and open-source source code editor. Prior to 8.9.7, the WinGup decompress function joins untrusted ZIP entry names to unzipDestTo without canonical containment validation, allowing an entry such as ../mimeTools/mimeTools.dll to overwrite a DLL in a sibling plugin directory and execute attacker-controlled code when Notepad++ next loads that plugin. This issue is fixed in version 8.9.7.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57233 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57233"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-57485",
+    "published": "2026-08-17T20:16:44.587",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Stirling-PDF is a locally hosted web application that facilitates various operations on PDF files. Prior to 2.9.0, the /api/v1/pipeline/handleData endpoint in app/core/src/main/java/stirling/software/SPDF/controller/api/pipeline/PipelineProcessor.java injects the STIRLING-PDF-BACKEND-API-USER API key into pipeline subrequests, allowing an authenticated ROLE_USER to retrieve the key through /api/v1/user/get-api-key, impersonate the internal service account, bypass normal rate limits, and access internal endpoints including /api/v1/info/requests/all and /api/v1/info/load/all. This issue is fixed in version 2.9.0.",
+    "tags": [],
+    "title": "CVE-2026-57485 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57485"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-70495",
+    "published": "2026-08-17T20:16:45.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in search-v2-operator. This component's `search-serviceaccount` has overly broad permissions, allowing it to impersonate users and groups across the entire cluster. If an attacker gains access to any of the pods running under this service account, they could exploit this to achieve `system:masters` access, granting them full control over the cluster.",
+    "tags": [],
+    "title": "CVE-2026-70495 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70495"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-71486",
+    "published": "2026-08-17T20:16:45.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.26.0, the /v1/completions/derender and /v1/chat/completions/derender endpoints accept caller-supplied GenerateResponse objects whose generate_responses, choices, token_ids, prompt_logprobs, logprobs.content, top_logprobs, and routed_experts structures are processed by OnlineDerenderer and tokenizer.decode before max_model_len, max_tokens, max_num_seqs, or response-size limits are enforced, allowing an authenticated API client to consume excessive CPU and memory and produce oversized responses. This issue is fixed in version 0.26.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-71486 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71486"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/financial-info-leak-debt-consolidator",
+    "published": "2026-08-17T20:05:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The breach affected anyone who received a loan through the company or inquired about a loan product through a third party.",
+    "tags": [
+      "금융"
+    ],
+    "title": "Nearly 750k had financial info, SSNs leaked in South Carolina loan company breach",
+    "url": "https://therecord.media/financial-info-leak-debt-consolidator"
   }
 ]
