@@ -7331,5 +7331,41 @@
     ],
     "title": "⚡ Weekly Recap: VMware Exploits, Windows 0-Day, MCP Attacks, Browser Hijacks and More",
     "url": "https://thehackernews.com/2026/08/weekly-recap-vmware-exploits-windows-0.html"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2023-6931",
+    "published": "2023-12-19T14:15:08.277",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap out-of-bounds write vulnerability in the Linux kernel's Performance Events system component can be exploited to achieve local privilege escalation.\n\n\n\nA perf_event's read_size can overflow, leading to an heap out-of-bounds increment or write in perf_read_group().\n\n\n\nWe recommend upgrading past commit 382c27f4ed28f803b1f1473ac2d8db0afc795a1b.",
+    "tags": [],
+    "title": "CVE-2023-6931 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6931"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-16138",
+    "published": "2026-08-17T14:20:19.797",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Progress ShareFile Storage Zones Controller v5.12.5 and below versions, unsafe deserialization of untrusted file metadata can allow a user with write access to a Network share to execute arbitrary code on the Storage Zones Controller host.",
+    "tags": [],
+    "title": "CVE-2026-16138 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16138"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-19693",
+    "published": "2026-08-17T14:20:20.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "extract-zip through 2.0.1 containment-checks only the parent directory of each archive entry and never the entry's own final path component, so an archive containing two entries with identical names - a symlink whose target is outside the destination, followed by a regular file - writes through the planted symlink and yields an arbitrary file write outside the destination directory.",
+    "tags": [],
+    "title": "CVE-2026-19693 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19693"
   }
 ]
