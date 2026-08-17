@@ -16,3 +16,4 @@ Node.js 샌드박스 **VM2** v3.11.0 이전 버전에서 여러 경로의 샌드
 - 2026-05-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-44005) — CVE-2026-44005 프로토타입 오염 (CVSS 10.0)
 - 2026-05-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-44006) — CVE-2026-44006 BaseHandler.getPrototypeOf (CVSS 10.0)
 - 2026-05-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-43999) — CVE-2026-43999 module builtin 우회 (CVSS 9.9)
+- 2026-08-17 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-47686) — CVE-2026-47686 Error.cause 검증 누락 호스트 객체 접근 (CVSS 9.9)

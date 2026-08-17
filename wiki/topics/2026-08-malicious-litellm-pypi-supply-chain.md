@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-12 [The Hacker News](https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html) — 악성 LiteLLM PyPI 릴리스 2건 3월 40분 배포, 434,000개 파일 탈취 데이터셋서 2,100개 조직 노출 가능성
+- 2026-08-17 [Security Affairs](https://securityaffairs.com/197377/hacking/litellm-supply-chain-attack-technology-banking-and-healthcare-the-most-affected.html) — **SANDCLOCK** 백도어로 2,038개 리포지터리 자격증명 노출, 기술·금융·의료 등 최다 피해
 
 ## 관련

@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-07 [The Record](https://therecord.media/irregular-ai-security-company-incidents) — Irregular, Anthropic·OpenAI·Meta AI 모델 해킹 조사 진행 중, 추가 피해 여부 불명
+- 2026-08-17 [The Record](https://therecord.media/irregular-ai-hacking-model-blog) — Postmortem 보도서 공개 후 보안 전문가 비판, 핵심 질문 미답변 지적
 
 ## 관련

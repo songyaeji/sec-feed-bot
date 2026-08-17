@@ -12,5 +12,6 @@ cves: []
 - 2026-08-12 [금융보안원](https://news.google.com/rss/articles/CBMiakFVX3lxTE44UmcyNWNPeUZIcjh2S3BIR0FWVURJN1VFaUw1Vy1xUXZmcTZvOXFzblA1dW1tRXdHWlhUeHdfbU04cGdPSjJ0azBKazFqbzRicVpwQmxmTlBTdEo3OUlWTzFNRDZSR2o3Ymc?oc=5) — 금융권 AI 확산에 따른 환각·편향·보안위협 검증체계 구축 공개
 - 2026-08-12 [금융보안원](https://news.google.com/rss/articles/CBMiYEFVX3lxTE94ZkNqQnJfYmxUSWRocDhIY2tuV054ZHdpV2drRGpaMG1EUDh6cU95QkUwMGFDemFGSGlkWUdaY3hTSHJUbGVnUXJNelJ1dXRaWlkzUFBQTDlKbGxqQzc5Qw?oc=5) — AI 안전성 평가체계 개발, 2027년 본격 가동 예정
 - 2026-08-11 [금융보안원](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9oRkUwSWdTUndaaVRhNVV1SUlhUS1CS21zRHJTaXppbm1xelZWWjJyNDlYVkctNm5pUG1aU2tjTVlVQVVmSkxNTGoxSkRfTEphemJRdVdBUkYzcGpUb21pMU1ydjQtYlEw?oc=5) — 금융권 AI 보안 인재 양성 2차 교육 실시
+- 2026-08-17 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208074) — "AI 환각 막는다" 금융보안원 금융 AI 평가 첫발
 
 ## 관련

@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-12 [Security Affairs](https://securityaffairs.com/197079/apt/china-linked-hackers-use-ai-agents-in-autonomous-attack-on-taiwan.html) — 중국 연계 해커, **8개 AI 에이전트** 사용하여 대만 정부 네트워크 완전 자동화 침해 (7월 초 4일간, Dream 분석)
+- 2026-08-17 [보안뉴스](http://www.boannews.com/media/view.asp?idx=145175&kind=&sub_kind=) — 피해 규모 확인: 계정 85개 침해, 인사정보 2,500건 이상 탈취
 
 ## 관련

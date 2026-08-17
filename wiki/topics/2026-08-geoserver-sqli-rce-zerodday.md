@@ -9,6 +9,7 @@ cves: []
 
 ## 타임라인
 
+- 2026-08-12 [8월 12일 공개 - watchTowr](https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html) — 미인증 **SQL injection** 제로데이 `jsonArrayContains` 함수에서 발견, 공격자 탐사 진행
 - 2026-08-15 [Security Affairs](https://securityaffairs.com/?p=197216) — 미인증 SQL injection·RCE 제로데이 공개, 공격자 탐사 진행 중
 - 2026-08-15 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208067) — 제로데이 공개 후 수백 건 공격 탐색 포착
 

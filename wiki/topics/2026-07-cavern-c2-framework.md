@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-07-06 [The Hacker News](https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html) — 새로운 모듈식 C2 프레임워크 발견
+- 2026-08-17 [The Hacker News](https://thehackernews.com/2026/08/cavern-c2-uses-dns-and-google-apps.html) — Kaspersky 추적, 미공개 컴포넌트 발견, DNS·Google Apps Script 활용 트래픽 위장
 
 ## 관련
 

@@ -12,6 +12,7 @@ Clop 랜섬웨어 집단이 인터넷 노출 PTC Windchill 및 FlexPLM 인스턴
 - 2026-07-24 [BleepingComputer](https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-theft-attacks/) — Clop 랜섬웨어 PTC Windchill/FlexPLM 데이터 협박 캠페인 추적
 - 2026-07-25 [The Hacker News](https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html) — Cl0p 제휴사 FlexPLM WSDL 미인증 정보 공개 취약점과 Windchill 로그인 서블릿 결합해 인증 우회 악용
 - 2026-07-26 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=207779) — CISA 실제 공격 악용 지적, Ransom-ISAC·eCrime.ch·DEFUSED 공동 분석으로 제조·자동차·항공우주 기업 설계도면 탈취 노린 캠페인 확인
+- 2026-08-17 [BleepingComputer](https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/) — 필립스·GE 등 대형 기업들이 Clop 침해 데이터 탈취 주장 조사 중
 
 ## 관련
 

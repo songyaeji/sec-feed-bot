@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-08-12 [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/) — Nightmare Eclipse, **Microsoft Defender** ShieldBreak 제로데이 공개, SYSTEM 권한 탈취
+- 2026-08-17 [BleepingComputer](https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/) — Microsoft 패치 개발 중, CVE-2026-69414 추적
 
 ## 관련
 - [[microsoft-patch-tuesday-august]]
