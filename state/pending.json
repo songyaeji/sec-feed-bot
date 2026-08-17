@@ -34,5 +34,100 @@
     "tags": [],
     "title": "OpenAI “AI 사이버 공격 능력 과소평가했다”... 방어자도 AI로 보안 자동화해야",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBXRE54QnhHZFVBNFVOaTRvRFdNUkJaZ2FwbWk1Z0lVT3R3OW8yVVJlWGdJUF9VM2t3VlZvd0VRb19pNG5TcDFfZE12UTlVRlNmUDMzeDhFN0dRSTlQSGRfSnZZdzRMdjhBVkVyRU40YVRlZ9IBckFVX3lxTFBXRE54QnhHZFVBNFVOaTRvRFdNUkJaZ2FwbWk1Z0lVT3R3OW8yVVJlWGdJUF9VM2t3VlZvd0VRb19pNG5TcDFfZE12UTlVRlNmUDMzeDhFN0dRSTlQSGRfSnZZdzRMdjhBVkVyRU40YVRlZw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-64849",
+    "published": "2026-08-17T22:17:23.580",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "MLflow is an open source AI engineering platform for agents, large language models, and machine learning models. Prior to 3.15.0, the unauthenticated POST /api/2.0/mlflow/webhooks/{id}/test endpoint calls _validate_webhook_url() in mlflow/utils/validation.py only for the original URL while mlflow/webhooks/delivery.py follows redirects and re-resolves the hostname without pinning the validated address, allowing attackers to reach internal or cloud metadata services and receive response_status and response_body. This issue is fixed in version 3.15.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-64849 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64849"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-71424",
+    "published": "2026-08-17T22:17:26.527",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Onyx is an open-source AI platform. Prior to 3.1.10, 3.2.14, and 4.0.0, Onyx's GET /api/mcp/servers and GET /api/mcp/servers/persona/{persona_id} endpoints expose another user's OAuth Authorization header because OnyxTokenStorage.set_tokens and OnyxTokenStorage.set_client_info in backend/onyx/server/features/mcp/api.py copy per-user tokens into a shared admin MCPConnectionConfig row and _db_mcp_server_to_api_mcp_server returns that row through auth_template.headers to any BASIC_ACCESS user. This issue is fixed in versions 3.1.10, 3.2.14, and 4.0.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-71424 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71424"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-45790",
+    "published": "2026-08-17T22:17:14.170",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.6, Dokploy's organization.inviteMember tRPC procedure in apps/dokploy/server/api/routers/organization.ts allows a user with member:create permission to invite an account with the owner role, while packages/server/src/services/user.ts allows a privileged self-hosted user to create an account with an arbitrary role, enabling permanent organization takeover because owner roles cannot be demoted. This issue is fixed in version 0.29.6.",
+    "tags": [],
+    "title": "CVE-2026-45790 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45790"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-56677",
+    "published": "2026-08-17T22:17:14.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "9Router is an AI router & token saver. In 0.5.4 and earlier, the POST /api/auth/oidc/test endpoint in src/app/api/auth/oidc/test/route.js passes the user-controlled issuerUrl parameter to fetchOidcDiscovery() in src/lib/auth/oidc.js without restricting private or loopback destinations, allowing unauthenticated attackers when dashboard login is disabled to scan internal services and reflect OIDC discovery fields including token_endpoint and jwks_uri.",
+    "tags": [],
+    "title": "CVE-2026-56677 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56677"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-69146",
+    "published": "2026-08-17T22:17:26.243",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MLflow is an open source AI engineering platform for agents, large language models, and machine learning models. From 3.13.0 until 3.15.0, LogInputs is absent from BEFORE_REQUEST_HANDLERS in the mlflow/server/auth package, allowing any authenticated user to call POST /api/2.0/mlflow/runs/log-inputs for another user's run_id and inject attacker-controlled DatasetInput records into the dataset_inputs lineage metadata without UPDATE permission. This issue is fixed in version 3.15.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-69146 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69146"
+  },
+  {
+    "category": "high",
+    "cvss": 7.1,
+    "id": "CVE-2026-69148",
+    "published": "2026-08-17T22:17:26.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "MLflow is an open source AI engineering platform for agents, large language models, and machine learning models. Prior to 3.15.0, CreateModelVersion accepts a run_id or model_id after _validate_source_run() or _validate_source_model() in mlflow/server/handlers.py verifies only path containment, allowing authenticated users to create a model version that references another user's artifact directory and read files through GET /model-versions/get-artifact without the required READ permission. This issue is fixed in version 3.15.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-69148 (CVSS 7.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-69148"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-9816",
+    "published": "2026-08-17T22:17:27.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mattermost versions 11.7.x <= 11.7.6, 10.11.x <= 10.11.21, 11.8.x <= 11.8.3 fail to validate BoardMember.Scheme* fields server-side on insert and archive-import paths which allows a board editor or non-guest team member to grant board admin to arbitrary users via POST /api/v2/boards/{boardID}/members and POST /api/v2/teams/{teamID}/archive/import.. Mattermost Advisory ID: MMSA-2026-00685",
+    "tags": [],
+    "title": "CVE-2026-9816 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9816"
   }
 ]
