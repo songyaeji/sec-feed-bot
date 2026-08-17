@@ -7175,5 +7175,17 @@
     ],
     "title": "Philips and GE investigating Clop ransomware data theft claims",
     "url": "https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-48938",
+    "published": "2025-05-30T19:15:29.980",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "go-gh is a collection of Go modules to make authoring GitHub CLI extensions easier. A security vulnerability has been identified in versions prior to 2.12.1 where an attacker-controlled GitHub Enterprise Server could result in executing arbitrary commands on a user's machine by replacing HTTP URLs provided by GitHub with local file paths for browsing. In `2.12.1`, `Browser.Browse()` has been enhanced to allow and disallow a variety of scenarios to avoid opening or executing files on the filesystem without unduly impacting HTTP URLs. No known workarounds are available other than upgrading.",
+    "tags": [],
+    "title": "CVE-2025-48938 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48938"
   }
 ]
