@@ -7790,5 +7790,110 @@
     ],
     "title": "LiteLLM Supply-Chain Attack – Technology, Banking and Healthcare the Most Affected",
     "url": "https://securityaffairs.com/197377/hacking/litellm-supply-chain-attack-technology-banking-and-healthcare-the-most-affected.html"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-73041",
+    "published": "2026-08-15T22:16:53.883",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan versions before v3.7.4 fail to validate or escape annotation fields written to disk by the setFileAnnotation endpoint. Attackers can inject malicious markup into annotation fields that execute as script in the PDF renderer with full Node.js access when a user opens an annotated PDF.",
+    "tags": [],
+    "title": "CVE-2026-73041 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73041"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73046",
+    "published": "2026-08-15T22:16:54.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan before v3.7.4 improperly restricts excessive authentication attempts in the CheckAuth() middleware. The HTTP Basic Authentication branch, which guards nearly the entire /api/* surface, accepts the workspace access code (Conf.AccessAuthCode) as the Basic Auth password but never consults the CAPTCHA/lockout gate or increments the failure counter used by the cookie/session login path. This allows unauthenticated remote attackers to brute-force the admin access code with unlimited automated requests and obtain full RoleAdministrator access to the kernel. A secondary weakness exists because the access code is compared using a non-constant-time string comparison.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-73046 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73046"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-73052",
+    "published": "2026-08-15T22:16:55.017",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan before v3.7.4 stores attribute-view field names without HTML escaping and interpolates them directly into option elements via innerHTML in the sort menu. Attackers can inject markup by renaming a database field to execute arbitrary JavaScript when users open the sort menu, with Node integration enabled in the desktop client enabling code execution.",
+    "tags": [],
+    "title": "CVE-2026-73052 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73052"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2019-10869",
+    "published": "2019-05-07T18:29:01.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Path Traversal and Unrestricted File Upload exists in the Ninja Forms plugin before 3.0.23 for WordPress (when the Uploads add-on is activated). This allows an attacker to traverse the file system to access files and execute code via the includes/fields/upload.php (aka upload/submit page) name and tmp_name parameters.",
+    "tags": [],
+    "title": "CVE-2019-10869 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10869"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-35554",
+    "published": "2026-04-07T14:16:23.413",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A race condition in the Apache Kafka Java producer client’s buffer pool management can cause messages to be silently delivered to incorrect topics.\n\nWhen a produce batch expires due to delivery.timeout.ms while a network request containing that batch is still in flight, the batch’s ByteBuffer is prematurely deallocated and returned to the buffer pool. If a subsequent producer batch—potentially destined for a different topic—reuses this freed buffer before the original network request completes, the buffer contents may become corrupted. This can result in messages being delivered to unintended topics without any error being reported to the producer.\n\n\nData Confidentiality:\nMessages intended for one topic may be delivered to a different topic, potentially exposing sensitive data to consumers who have access to the destination topic but not the intended source topic.\n\nData Integrity:\nConsumers on the receiving topic may encounter unexpected or incompatible messages, leading to deserialization failures, processing errors, and corrupted downstream data.\n\nThis issue affects Apache Kafka versions ≤ 3.9.1, ≤ 4.0.1, and  ≤ 4.1.1.\n\nKafka users are advised to upgrade to 3.9.2, 4.0.2, 4.1.2, 4.2.0, or later to address this vulnerability.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-35554 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35554"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-33437",
+    "published": "2026-08-17T18:16:35.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Stirling-PDF is a locally hosted web application that facilitates various operations on PDF files. Prior to 2.0.0, the Get Info workflow in app/core/src/main/resources/templates/security/get-info-on-pdf.html inserts untrusted PDF Title and Author metadata into the summary-text element with innerHTML, allowing a malicious PDF to execute stored cross-site scripting when a user clicks Get Info and to access browser-session data or modify page content. This issue is fixed in version 2.0.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-33437 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33437"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-46345",
+    "published": "2026-08-17T18:16:38.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "compliance-trestle is a tooling platform for managing compliance as code. Prior to versions 3.12.2 and 4.0.3, the `-o/--output` argument in `trestle author jinja` allows writing files outside the intended workspace. The application does not properly validate, `../`,  `..\\`, or absolute paths. This allows arbitrary file write to attacker-controlled locations. Versions 3.12.3 and 4.0.3 patch the issue.",
+    "tags": [],
+    "title": "CVE-2026-46345 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46345"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62982",
+    "published": "2026-08-17T18:17:56.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Glances is an open-source system cross-platform monitoring tool. From 4.5.2 until 4.5.6, _sanitize_mustache_dict() in glances/actions.py skips nested list and dictionary strings such as process cmdline values, allowing pipe characters to survive chevron.render() and be executed by secure_popen() through administrator-configured action templates. This issue is fixed in 4.5.6.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-62982 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62982"
   }
 ]
