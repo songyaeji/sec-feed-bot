@@ -11,7 +11,12 @@ state file has append-only, union semantics:
   pending.json      list of items keyed by "id"               (union by id)
   urgent_history    list of {date, title, ...}                (union by tuple)
 
-so the merge is deterministic at the data level. The workflow re-parents its
+so the merge is deterministic at the data level. Union alone would undo
+main.py's TTL prune, though: main prunes its local copy, then this script
+folds the *unpruned* <ref> copy back in and every expired entry comes back
+(2026-08-18 measured: recent_titles has a 7-day TTL yet held 44 days /
+24,994 entries, seen.json 7.6MB). So the union result is pruned again here
+-- the last writer owns the prune. The workflow re-parents its
 uncommitted changes onto origin/main with `git reset --soft` (no textual
 rebase) and then calls this script to fold in whatever the other writer added,
 guaranteeing no seen id / pending item from either side is lost.
@@ -29,6 +34,9 @@ import os
 import subprocess
 import sys
 from datetime import datetime
+
+import dedup
+from state_store import prune_seen
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATE_DIR = os.path.join(BASE_DIR, "state")
@@ -149,7 +157,22 @@ def merge_seen(local: dict, remote: dict) -> dict:
     )
     if last_digest:
         merged["last_digest_date"] = last_digest
-    return merged
+    return _prune_merged(merged)
+
+
+def _prune_merged(merged: dict) -> dict:
+    """union 결과에 TTL을 다시 적용한 **새 dict**를 돌려준다.
+
+    main.py가 prune한 뒤 이 스크립트가 remote의 prune 전 사본을 합치므로,
+    여기서 한 번 더 걸러야 만료 항목이 영구히 부활하지 않는다. 기준은
+    main과 같은 함수(state_store.prune_seen / dedup.prune_dedup_state)를
+    그대로 써서 두 경로의 TTL이 갈라지지 않게 한다."""
+    pruned = dict(merged)
+    pruned["seen"] = prune_seen(pruned["seen"])
+    # prune_dedup_state는 받은 dict의 키를 새 값으로 재바인딩한다 —
+    # 얕은 복사본에 걸므로 입력 merged는 그대로 남는다
+    dedup.prune_dedup_state(pruned)
+    return pruned
 
 
 def _load_consumed() -> set:

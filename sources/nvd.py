@@ -41,7 +41,7 @@ def fetch(source_cfg: dict, state: dict, global_cfg: dict) -> list[dict]:
             "resultsPerPage": RESULTS_PER_PAGE,
             "startIndex": start_index,
         }
-        resp = requests.get(API_BASE, params=params, headers=headers, timeout=60)
+        resp = requests.get(url, params=params, headers=headers, timeout=60)
         resp.raise_for_status()
         data = resp.json()
 
