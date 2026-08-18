@@ -12,3 +12,4 @@ cves: [CVE-2025-62593]
 ## 타임라인
 
 - 2026-08-17 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2025-62593) — CVE-2025-62593 공개 원격코드실행 취약점
+- 2026-08-18 [The Hacker News](https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html) — CISA 공개 악용 목록(KEV)에 등재 확인

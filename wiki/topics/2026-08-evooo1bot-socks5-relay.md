@@ -10,7 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-15 [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-evooo1bot-linux-botnet-turns-routers-into-traffic-relay-nodes/) — 신규 Mirai 파생 봇넷 Evooo1Bot 발견, 라우터를 SOCKS5 릴레이로 변환
+- 2026-08-18 [Security Affairs](https://securityaffairs.com/197434/malware/new-mirai-based-evooo1bot-botnet-targets-linux-devices.html) — DDoS 공격·자격증명 탈취·범죄 프록시 서비스·SSH 무차별 대입 스캐너 등 추가 기능 확인
 
 ## 관련
-
-(없음)
