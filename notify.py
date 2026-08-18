@@ -160,13 +160,26 @@ TREND_COLOR = 0xF39C12  # 주황 — 긴급(빨강)·헤더(파랑)와 구분되
 TREND_TITLE_MAX = 120  # 링크 라벨 절단폭 — 5건이 4096자 한도를 못 넘게
 
 
+def _link_domain(url: str) -> str:
+    """링크 행 라벨용 도메인 — 스킴·www를 떼고 호스트만 남긴다.
+
+    마크다운 링크 텍스트로 들어가므로 대괄호는 이스케이프한다(호스트에
+    나올 수 없는 문자지만, 검증을 통과한 url만 들어온다는 가정을 여기서
+    다시 세우지 않는 편이 안전하다)."""
+    host = url.split("://", 1)[-1].split("/", 1)[0].split("?", 1)[0]
+    if host.startswith("www."):
+        host = host[4:]
+    return host.replace("[", "\\[").replace("]", "\\]") or "원문"
+
+
 def send_trend(items: list[dict], discord_cfg: dict) -> None:
     """트렌드 픽 알림 — 아침 카드뉴스와 무관한 독립 embed 1건.
 
     핫한 AI 툴·skills·MCP·영상·글 링크 모음. 채널 '분리'는
     DISCORD_TREND_WEBHOOK_URL을 설정했을 때만 참 — 미설정이면 본 채널
-    웹훅으로 폴백한다(데이터 경로는 어느 쪽이든 카드뉴스와 무관).
-    호출 측(main)이 스로틀로 빈도를 제한하므로 여기서는 형식만 책임진다."""
+    웹훅으로 폴백한다(채널만 다를 뿐 데이터 경로는 카드뉴스와 무관).
+    발송 시점·빈도는 호출 측(trend_lane.send_daily_trend)이 정한다
+    — 하루 1회, 아침 카드뉴스 발행 직후. 여기서는 형식만 책임진다."""
     webhook_url = (os.environ.get("DISCORD_TREND_WEBHOOK_URL")
                    or os.environ.get("DISCORD_WEBHOOK_URL"))
     if not webhook_url:
@@ -178,10 +191,16 @@ def send_trend(items: list[dict], discord_cfg: dict) -> None:
         # 제목 속 [ ]가 마크다운 링크를 조기 종료시키는 것 방지.
         # URL <> 감싸기 = 링크 미리보기(embed 자동 생성) 억제
         label = " ".join((item.get("title") or "").split())[:TREND_TITLE_MAX]
-        label = label.replace("[", "\\[").replace("]", "\\]")
-        # 깔끔 우선 레이아웃(2026-07-24 사용자 피드백): 줄당 요소 최소화 —
-        # 마크다운 불릿 없이(디스코드 기본 점과 이중 표기) 유형 이모지
-        # 하나 + 제목 링크가 1행, 화제성 지표 + 왜 핫한지가 subtext 1행
+        # 제목은 신뢰할 수 없는 피드 입력 — 이제 링크 텍스트가 아니라 굵은
+        # 본문으로 나가므로 대괄호 외에 강조/코드 문자도 이스케이프한다
+        # (제목 속 ** 나 ` 하나가 이후 항목 전체의 서식을 무너뜨린다)
+        for ch in ("[", "]", "*", "`", "_"):
+            label = label.replace(ch, "\\" + ch)
+        # 내용 우선 레이아웃(2026-08-13 사용자 피드백: 링크가 먼저 나오면
+        # 무슨 글인지 모른 채 넘기게 된다) — 3행 고정:
+        #   1행 유형 이모지 + 굵은 제목(무엇인지)
+        #   2행 subtext: 화제성 지표 · 왜 핫한지
+        #   3행 링크(도메인 라벨) — 내용을 읽고 난 뒤 누르는 순서
         badge = item.get("kind_emoji") or "📄"
         url = item.get("url", "")
         # <> 감싸기를 조기 종료시키는 문자(공백·'>')가 든 url은 마크다운
@@ -189,7 +208,7 @@ def send_trend(items: list[dict], discord_cfg: dict) -> None:
         if not url.startswith(("http://", "https://")) or any(
                 c in url for c in (" ", ">", "<")):
             continue
-        lines.append(f"{badge} [{label}](<{url}>)")
+        lines.append(f"{badge} **{label}**")
         # ↳ 들여쓰기 subtext — 지표와 이유는 '·'로만 구분(— 연결 금지,
         # 2026-07-24 사용자 피드백)
         sub = " · ".join(
@@ -197,6 +216,9 @@ def send_trend(items: list[dict], discord_cfg: dict) -> None:
                         item.get("why_ko")) if p)
         if sub:
             lines.append(f"-# ↳ {sub}")
+        # 링크 라벨은 도메인 — 제목을 1행에서 이미 읽었으므로 여기서는
+        # '어디로 가는지'만 알려주면 된다(제목 반복은 시각적 소음)
+        lines.append(f"[🔗 {_link_domain(url)}](<{url}>)")
         lines.append("")  # 항목 사이 여백
     while lines and not lines[-1]:
         lines.pop()

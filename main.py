@@ -22,7 +22,6 @@ import librarian
 import notify
 import preflight
 import tagger
-import trend_enrich
 from collect import collect_all, dedup, max_items_per_run
 from common import STATE_DIR, _safe_exc_str
 from digest_select import (
@@ -31,7 +30,8 @@ from digest_select import (
 from state_store import (  # noqa: F401 -- SEEN_TTL_DAYS는 tests가 main 경유로 참조
     SEEN_TTL_DAYS, append_pending, load_config, load_pending, load_state,
     prune_seen, save_pending, save_state)
-from trend_lane import _publish_trend, _select_trend, _should_send_trend
+from trend_lane import (_publish_trend, _select_trend, _should_send_trend,
+                        send_daily_trend)
 from wiki_index import _prune_wiki_index
 
 # 크로스포스트(인스타/쓰레드)는 crosspost.py CLI로 분리됐다 — Instagram
@@ -222,14 +222,21 @@ def main() -> None:
     pending = load_pending()
     discord_cfg = config.get("discord", {})
 
-    # ── 트렌드 독립 알림 레인 — 아침 카드뉴스와 완전 분리 ──────────────
-    # 핫한 AI 툴·skills·MCP·영상·글이 잡히면 별도 embed 1건으로 알린다.
-    # 스로틀(_should_send_trend)에 걸려 보류된 후보는 seen에 남기지 않아
-    # (아래 state 기록부) 다음 run이 재수집·재도전한다 — 대기열 파일 없음.
+    # ── 트렌드 픽 레인 — 하루 1회, 아침 카드뉴스 발행과 동반 ────────────
+    # 핫한 AI 툴·skills·MCP·영상·글을 별도 embed 1건으로 알린다. 선별·
+    # 주석 경로는 카드뉴스와 여전히 분리(사서·위키·judge 미경유)이고,
+    # 발송 '시점'만 카드뉴스 발행 직후로 묶는다(_should_send_trend).
+    # 여기서는 후보 선별까지만 하고 실제 발송은 발행 확정 뒤로 미룬다 —
+    # 카드뉴스가 그날 안 나가면 트렌드도 안 나가는 것이 사용자 의도.
+    # 게이트에 걸렸거나 발송 전인 후보는 seen에 남기지 않아(아래 state
+    # 기록부) 다음 run이 재수집·재도전한다 — 대기열 파일 없음.
     # 발송 성공 시에는 미선발 후보까지 전량 seen 소진한다(의도된 정책:
-    # 같은 항목이 창마다 재선별 후보로 돌아와 반복 노출되는 소음 방지 —
+    # 같은 항목이 다음 날 재선별 후보로 돌아와 반복 노출되는 소음 방지 —
     # 선발 경쟁에서 진 항목은 그 시점 화제성이 부족했던 것).
+    # [긴급] 레인은 이 변경과 무관하다 — judge가 판정한 대형 사건은
+    # 종전대로 run 즉시 개별 카드(card_items)로 나간다.
     unsent_trend_ids: set[str] = set()
+    trend_picks: list[dict] = []
     if trend_candidates:
         # 긴급 카드로 나간(이번 run + 최근 14일 이력) 사건과 같은 스토리는
         # 제외 — HN front_page(breaking)와 트렌드 검색이 같은 스토리를 각자
@@ -244,11 +251,13 @@ def main() -> None:
                         for u in already_alerted)],
             config,
         )
-        if not _should_send_trend(state, now_kst, config):
-            unsent_trend_ids = {it["id"] for it in trend_candidates}
+        # 발송 여부가 확정될 때까지는 전량 미발송 취급 — 아래 카드뉴스
+        # 발행 직후 send_daily_trend가 성공해야만 소진으로 뒤집는다
+        unsent_trend_ids = {it["id"] for it in trend_candidates}
+        if not _should_send_trend(state, now_kst, run_mode):
             print(
-                f"[main] 트렌드 {len(trend_candidates)}건 보류(스로틀/시간창) — "
-                "다음 run 재도전",
+                f"[main] 트렌드 {len(trend_candidates)}건 보류"
+                f"(하루 1회 게이트, mode={run_mode}) — 다음 아침 발송",
                 file=sys.stderr,
             )
         elif dry_run:
@@ -259,37 +268,8 @@ def main() -> None:
             for it in picks:
                 print(f"  - [{it.get('trend_note') or it.get('source')}] "
                       f"{it.get('title')}")
-        elif picks:
-            # 스로틀 선기록(fail-closed, QA1 지적): Discord가 수신했는데
-            # 응답 단계에서 실패하면 "실패" 오판 → 다음 run 즉시 재발송으로
-            # 같은 embed가 중복된다. 선기록이면 최악이 '한 배치 유실 후
-            # 다음 창(6h)에서 재도전'이고, 스팸 방지가 이 기능의 취지다
-            state["last_trend_sent"] = datetime.now(timezone.utc).isoformat()
-            try:
-                # 발송 확정 시에만 주석(LLM 포함) — 보류 run은 비용 0.
-                # 주석 실패가 발송까지 막으면 스로틀만 낭비되므로(QA3)
-                # 격리 — 실패 시 배지 폴백만으로 나간다
-                try:
-                    trend_enrich.annotate(picks)
-                except Exception as exc:
-                    print(f"[main] 트렌드 주석 실패(폴백 발송): {_safe_exc_str(exc)}",
-                          file=sys.stderr)
-                # 같은 사건의 교차 보도/반응은 대표만(LLM dup_of, QA2:
-                # 5픽 중 2픽이 같은 사건이던 사례) — 접힌 만큼 줄어든 채 발송
-                folded = [p for p in picks if not p.get("dup_of")]
-                if len(folded) < len(picks):
-                    print(f"[main] 트렌드 동일 사건 {len(picks) - len(folded)}건 접음",
-                          file=sys.stderr)
-                notify.send_trend(folded, discord_cfg)
-                print(
-                    f"[main] 트렌드 알림 발송: {len(picks)}건 "
-                    f"(후보 {len(trend_candidates)}건 소진)"
-                )
-            except Exception as exc:
-                # seen 미기록 — 아직 핫하면 다음 창에서 재수집·재도전
-                unsent_trend_ids = {it["id"] for it in trend_candidates}
-                print(f"[main] 트렌드 발송 실패(다음 창 재도전): {_safe_exc_str(exc)}",
-                      file=sys.stderr)
+        else:
+            trend_picks = picks
 
     if dry_run:
         print(
@@ -629,6 +609,13 @@ def main() -> None:
                     # 위 이중발행 가드가 이 날짜를 본다
                     state["last_digest_date"] = today_kst
                     had_backlog = True
+                    # 트렌드 픽은 아침 브리핑 직후 1회 — 발행이 확정된 이
+                    # 지점에서만 나간다(카드뉴스가 안 나간 날은 트렌드도
+                    # 없다). 성공해야 후보를 seen으로 소진하고, 실패하면
+                    # 미소진으로 남겨 다음 날 아침 재도전한다.
+                    if trend_picks and send_daily_trend(
+                            trend_picks, discord_cfg, state, today_kst):
+                        unsent_trend_ids = set()
             # 이월(retained) = 사서 예산 초과 등으로 판정 못 받은 신선 뉴스만.
             # 그 외(발송분·위키 전용·논문·미선발 CVE·TTL 초과분)는 전부 소진.
             retained_ids = {it["id"] for it in retained}

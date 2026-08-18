@@ -349,12 +349,12 @@ sources:
     max_age_days: 1
 
   # ── 트렌드 소스 (2026-07-24 추가, 전건 실fetch 검증) ──────────────
-  # category: trend는 아침 카드뉴스와 완전히 무관한 독립 알림 레인 —
+  # category: trend는 카드·위키·사서·judge를 타지 않는 별도 선별 레인 —
   # 핫한 AI 툴·skills·MCP·영상·글이 잡히면 '🔥 트렌드 픽' embed 1건으로
-  # 발송한다(notify.send_trend). 카드·위키·사서·judge를 타지 않는다.
-  # 빈도 제어: trend_interval_hours 스로틀 + KST 08~23시 창 + 총
-  # trend_max_links건 상한(라운드로빈). 선별 기준 = 커뮤니티 화제성
-  # (업보트·points 순위)이 이미 필터.
+  # 발송한다(notify.send_trend). 발송 시점만 아침 카드뉴스 발행 직후로
+  # 묶여 하루 1회다(2026-08-13, trend_lane._should_send_trend).
+  # 빈도 제어: 하루 1회 게이트 + 총 trend_max_links건 상한(라운드로빈).
+  # 선별 기준 = 커뮤니티 화제성(업보트·points 순위)이 이미 필터.
 
   # 멀티레딧 top?t=day 한 요청(개별 요청은 429 — 기존 소스 교훈).
   # JSON API는 UA 불문 403(2026-07-24 실측)이라 RSS로 간다.
@@ -522,10 +522,6 @@ max_news_items: 7
 # 채운다. 노이즈로 본편 알림을 가리지 않게 한 자릿수 유지(사용자 요구:
 # 너무 자주·너무 많이 금지)
 trend_max_links: 5
-
-# 트렌드 알림 최소 간격(시간) — KST 08~23시 창과 함께 하루 최대 2~3회로
-# 묶는다. 보류된 후보는 seen 미기록으로 다음 run이 재도전한다
-trend_interval_hours: 6
 
 # 라운드로빈 큐 우선순위(그룹 키 = trend_group 또는 소스명) — 그룹 수가
 # 링크 상한보다 많을 때 슬롯 배분 순서. 사용자 관심축(툴·skills·릴리스)

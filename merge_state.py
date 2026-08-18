@@ -132,12 +132,15 @@ def merge_seen(local: dict, remote: dict) -> dict:
     # merge하지 않는다 — 화이트리스트에서 빠지므로 잔존 키는 다음 merge에서
     # 자연 소거된다.
     merged["last_run"] = _max_iso(local.get("last_run"), remote.get("last_run"))
-    # 트렌드 알림 스로틀 기준 시각(main._should_send_trend) — 화이트리스트
-    # merge라 여기 안 넣으면 merge마다 유실돼 스로틀이 무력화된다(스팸 재발)
-    last_trend = _max_iso(
-        local.get("last_trend_sent") or "", remote.get("last_trend_sent") or "")
+    # 트렌드 픽 1일 1회 가드 날짜(trend_lane._should_send_trend) —
+    # YYYY-MM-DD라 사전순 max가 곧 날짜 max. 화이트리스트 merge라 여기 안
+    # 넣으면 merge마다 유실돼 가드가 무력화된다(같은 날 중복 발송 재발).
+    # 구 키 last_trend_sent(6시간 스로틀 시각)는 2026-08-13 하루 1회 전환
+    # 으로 폐기 — 화이트리스트에서 빠지므로 잔존 키는 자연 소거된다.
+    last_trend = max(
+        local.get("last_trend_date") or "", remote.get("last_trend_date") or "")
     if last_trend:
-        merged["last_trend_sent"] = last_trend
+        merged["last_trend_date"] = last_trend
     # digest 이중발행 가드 날짜(main.py) — YYYY-MM-DD라 사전순 max가 곧
     # 날짜 max. 화이트리스트 merge라 여기 안 넣으면 merge마다 유실돼
     # 가드가 무력화된다
