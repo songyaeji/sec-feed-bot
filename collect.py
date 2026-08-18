@@ -4,7 +4,8 @@ import sys
 
 from common import _safe_exc_str
 from sources import (
-    dblp, fsec, fss, github_trend, hackernews, kev, nvd, reddit, rss)
+    dblp, fsec, fss, github_trend, hackernews, kev, mastodon, nvd, reddit,
+    rss)
 
 FETCHERS = {
     "kev": kev.fetch,
@@ -16,6 +17,7 @@ FETCHERS = {
     "hn": hackernews.fetch,
     "reddit": reddit.fetch,
     "github": github_trend.fetch,
+    "mastodon": mastodon.fetch,
 }
 
 

@@ -357,6 +357,29 @@ sources:
   # 선별 기준 = 커뮤니티 화제성(업보트·points 순위)이 이미 필터.
 
   # 멀티레딧 top?t=day 한 요청(개별 요청은 429 — 기존 소스 교훈).
+  # Reddit 트렌드 대체(2026-08-18). 보안·기술 커뮤니티가 실제로 공유
+  # 중인 외부 링크를 공유 횟수와 함께 준다 — 커뮤니티 화제성이 이미
+  # 필터라는 트렌드 레인의 전제가 레딧과 동일하다. 무인증 REST라
+  # Actions 데이터센터 IP에서도 200이었다(2026-08-18 실측).
+  # min_shares: 한두 명만 공유한 링크는 '화제'가 아니다 — 잡음 차단
+  - name: "Mastodon 화제 링크"
+    type: mastodon
+    host: "infosec.exchange"
+    limit: 20
+    min_shares: 30
+    # 보안 인스턴스여도 일반 뉴스(야생동물·기후 등)가 섞여 온다 —
+    # 관심축 밖 링크가 트렌드 슬롯을 먹지 않게 거른다. 단어 경계로
+    # 맞추므로 "ai"가 Airtag·against에 걸리지 않는다. 끝의 '*'는 접두사
+    # 매칭(vulnerabilit* = vulnerability/vulnerabilities)
+    keywords: ["ai", "llm*", "gpt*", "chatgpt", "claude", "anthropic",
+               "openai", "gemini", "mcp", "agent*", "model*", "prompt*",
+               "security", "cyber*", "hack*", "breach*", "vulnerabilit*",
+               "exploit*", "malware", "ransomware", "phishing", "cve-*",
+               "zero-day", "0-day", "privacy", "surveillance", "encrypt*",
+               "backdoor*", "spyware", "botnet", "deepfake*", "infosec"]
+    category: "trend"
+    region: "해외"
+
   # (2026-08-18 비활성화) "Reddit 트렌드" — Actions 데이터센터 IP에서
   # 무인증 접근이 지속 불가. 규격 UA로 한 번 200이 났지만 이후 429·
   # "200 + HTML 차단 페이지"가 반복돼 4회 연속 실패했다. Reddit은
@@ -529,6 +552,7 @@ trend_priority:
   - "GitHub 급상승"
   - "vendor"
   - "HN 트렌드"
+  - "Mastodon 화제 링크"
   - "Lobsters"
   - "youtube"
 max_cve_items: 10
