@@ -73,3 +73,18 @@ def test_untrusted_title_cannot_break_markdown(monkeypatch):
     assert "\\[link\\]" in first
     assert first.startswith("📄 **\\*\\*bold\\*\\*")
     assert "\\`code\\`" in first
+
+
+def test_merge_state_preserves_daily_guard():
+    """merge_state 화이트리스트 누락은 하루 1회 가드를 무력화한다 —
+    origin과 로컬 중 늦은 날짜가 살아남아야 같은 날 중복 발송을 막는다."""
+    import merge_state
+
+    merged = merge_state.merge_seen(
+        {"seen": {}, "last_trend_date": "2026-08-17"},
+        {"seen": {}, "last_trend_date": "2026-08-18"},
+    )
+    assert merged["last_trend_date"] == "2026-08-18"
+    # 구 스로틀 키는 화이트리스트 밖 — merge를 거치며 자연 소거된다
+    assert "last_trend_sent" not in merge_state.merge_seen(
+        {"seen": {}, "last_trend_sent": "2026-08-18T05:03:00+00:00"}, {"seen": {}})
