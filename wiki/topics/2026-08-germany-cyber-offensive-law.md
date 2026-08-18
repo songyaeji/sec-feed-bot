@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-17 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208077) — 독일 내각 승인 법안: 연방정보국(BND)·국내 정보부(BfV) 해외 사이버공격 권한 확대
+- 2026-08-18 [보안뉴스](http://www.boannews.com/media/view.asp?idx=145183&kind=&sub_kind=) — 독일 정보기관 능동적 해킹·공급망 사보타주·역정보 제공 등 공세적 권한 법안 추진
 
 ## 관련
