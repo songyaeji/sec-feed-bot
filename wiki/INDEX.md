@@ -2,6 +2,7 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [fly-delivery-app-data-breach](topics/2026-08-fly-delivery-app-data-breach.md) FLY 배달 앱 — 4,790만 건 고객정보 유출 판매 주장 (최종갱신일: 2026-08-18)
 - [comfast-cf-n1-s-command-injection](topics/2026-08-comfast-cf-n1-s-command-injection.md) COMFAST CF-N1-S — CGI OS 명령 주입 RCE (최종갱신일: 2026-08-18)
 - [duo-data-breach-lawsuit](topics/2026-08-duo-data-breach-lawsuit.md) Duo — 개인정보 유출 손해배상소송 (최종갱신일: 2026-08-18)
 - [korean-accounts-darkweb-sale](topics/2026-08-korean-accounts-darkweb-sale.md) 한국인 계정 — 다크웹 판매 가격 폭로 (최종갱신일: 2026-08-18)
