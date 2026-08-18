@@ -439,5 +439,45 @@
     "tags": [],
     "title": "Kraken의 모회사인 Payward가 Anthropic의 제한된 사이버 보안 AI에 접근 권한을 확보했습니다",
     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQy1iT05mRTRIcUREUG1DWXJUT3FkNVJROEpDaWROQjdPenRLZHlyaHdKSkJHS0JXcHRocXRxOFpJNXN5Y3M4WFp3ZW5xRWw3TFVUQ1lkM0pqRGZjNkRyYlpQdEdVYnNHMk9jVERqMGJRaHVnOU1kYThUY1c2V2E2Y1ROekcwdGttOElUTmMtY3doXzNKaXB0Z3RpYnRQSDNUN3RQcFRmNmtjMXRpR1E?oc=5"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25326",
+    "published": "2026-08-18T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Simcenter Nastran is affected by a stack overflow vulnerability that could be triggered when an application binary reads arbitrary string as a file argument. If a user is tricked to run one of the impacted application binary with a malicious string, an attacker could leverage the vulnerability to perform remote code execution in the context of the current process. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Simcenter Nastran are affected: Simcenter Femap vers:intdot/",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Siemens Simcenter Nastran",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-230-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25324",
+    "published": "2026-08-18T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition or execute arbitrary code. The following versions of CISA Malcolm are affected: Malcolm",
+    "tags": [],
+    "title": "CISA Malcolm",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-230-01"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/university-of-texas-forced-to-take-systems-offline-cyberattack-san-antonio",
+    "published": "2026-08-18T16:20:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The University of Texas at San Antonio, which serves 40,000 students across six campuses, said its IT team identified threat activity on its academic campus over the weekend and took some systems, including phones, offline in response.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "University of Texas forced to take systems offline in San Antonio after cyberattack",
+    "url": "https://therecord.media/university-of-texas-forced-to-take-systems-offline-cyberattack-san-antonio"
   }
 ]
