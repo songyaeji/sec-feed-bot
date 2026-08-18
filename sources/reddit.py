@@ -22,26 +22,31 @@ HN의 Ask HN 폴백과 같은 결.
 """
 import os
 import sys
+import time
 from datetime import datetime, timezone
 
 import feedparser
 import requests
 
 from common import _safe_exc_str
-from sources.rss import _BROWSER_UA
 
 # Reddit이 요구하는 UA 형식: <platform>:<app id>:<version> (by /u/<user>)
-BOT_UA = "python:sec-feed-bot:1.1 (by /u/sec-feed-bot)"
+BOT_UA = "python:sec-feed-bot:1.1 (by /u/yaejida)"
 
 TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
 OAUTH_URL = "https://oauth.reddit.com/r/{subs}/top?t=day&limit=100&raw_json=1"
 
-# 무인증 폴백 체인 — (호스트, UA). 앞에서부터 200이 날 때까지 시도한다.
+# 무인증 폴백 체인 — (호스트, UA, 사전 대기초). 앞에서부터 '진짜 Atom'이
+# 올 때까지 시도한다. 200 자체는 성공 신호가 아니다: old.reddit.com은
+# 차단 시 200 + HTML 로그인 페이지를 돌려주므로(2026-08-18 실측) 파싱
+# 결과에 entry가 있는지까지 봐야 한다.
+# www+규격 UA가 주 경로이고, 429는 짧은 간격 재요청에서 주로 났으므로
+# (같은 조합이 3분 뒤 재시도에서 429 → 10분 주기 정상 운영에서는 200)
+# 같은 조합을 백오프 후 한 번 더 친다.
 RSS_FALLBACKS = (
-    ("https://www.reddit.com", BOT_UA),
-    ("https://old.reddit.com", _BROWSER_UA),
-    ("https://old.reddit.com", BOT_UA),
-    ("https://www.reddit.com", _BROWSER_UA),
+    ("https://www.reddit.com", BOT_UA, 0),
+    ("https://www.reddit.com", BOT_UA, 5),
+    ("https://old.reddit.com", BOT_UA, 0),
 )
 RSS_PATH = "/r/{subs}/top/.rss?t=day&limit=100"
 
@@ -95,7 +100,9 @@ def _fetch_oauth(subs_path: str, token: str) -> list[dict] | None:
 def _fetch_rss(subs_path: str):
     """무인증 RSS 폴백 체인. 전부 실패하면 마지막 응답으로 raise."""
     last = None
-    for host, ua in RSS_FALLBACKS:
+    for host, ua, backoff in RSS_FALLBACKS:
+        if backoff:
+            time.sleep(backoff)
         url = host + RSS_PATH.format(subs=subs_path)
         try:
             resp = requests.get(url, timeout=20, headers={"User-Agent": ua})
@@ -103,18 +110,26 @@ def _fetch_rss(subs_path: str):
             print(f"[main] Reddit RSS {host} 요청 실패: {_safe_exc_str(exc)}",
                   file=sys.stderr)
             continue
-        if resp.status_code not in BLOCKED_STATUSES:
-            resp.raise_for_status()
-            print(f"[main] Reddit 트렌드: RSS 경로 200 ({host}, "
-                  f"UA={'browser' if ua == _BROWSER_UA else 'bot'})")
-            return feedparser.parse(resp.content)
-        last = resp
-        print(f"[main] Reddit RSS {host} UA="
-              f"{'browser' if ua == _BROWSER_UA else 'bot'} "
-              f"{resp.status_code} — 다음 조합 시도", file=sys.stderr)
-    if last is not None:
+        if resp.status_code in BLOCKED_STATUSES:
+            last = resp
+            print(f"[main] Reddit RSS {host} {resp.status_code} — 다음 조합 시도",
+                  file=sys.stderr)
+            continue
+        resp.raise_for_status()
+        feed = feedparser.parse(resp.content)
+        if not feed.entries:
+            # 200 + HTML 차단 페이지(old.reddit.com 실측) — 성공이 아니다.
+            # 여기서 멈추면 '200인데 0건'으로 조용히 굶는다
+            last = resp
+            print(f"[main] Reddit RSS {host} 200이지만 entry 0건"
+                  "(차단 페이지 추정) — 다음 조합 시도", file=sys.stderr)
+            continue
+        print(f"[main] Reddit 트렌드: RSS 경로 200 ({host}, "
+              f"entry {len(feed.entries)}건)")
+        return feed
+    if last is not None and last.status_code in BLOCKED_STATUSES:
         last.raise_for_status()
-    raise RuntimeError("Reddit RSS 폴백 전 조합 실패")
+    raise RuntimeError("Reddit RSS 폴백 전 조합 실패(차단 또는 빈 피드)")
 
 
 def fetch(source_cfg: dict) -> list[dict]:

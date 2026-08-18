@@ -40,8 +40,9 @@ def _response(status: int, body: bytes = b"") -> requests.Response:
     return resp
 
 
-def test_429_walks_fallback_chain():
+def test_429_walks_fallback_chain(monkeypatch):
     """첫 조합이 429면 다음 (호스트, UA) 조합으로 넘어간다."""
+    monkeypatch.setattr(reddit.time, "sleep", lambda _s: None)
     calls = []
 
     def fake_get(url, **kwargs):
@@ -56,8 +57,9 @@ def test_429_walks_fallback_chain():
         with mock.patch.object(requests, "get", fake_get):
             items = reddit.fetch(_CFG)
 
+    # www 조합(즉시 + 백오프 재시도)이 모두 429면 old 호스트로 내려간다
     assert calls[0][0].startswith("https://www.reddit.com")
-    assert calls[1][0].startswith("https://old.reddit.com")
+    assert calls[-1][0].startswith("https://old.reddit.com")
     # per_subreddit=1 상한 동작까지 확인
     assert len(items) == 1
     assert items[0]["title"] == "First post"
@@ -152,3 +154,47 @@ def test_hard_429_raises():
             pass
         else:
             raise AssertionError("expected HTTPError")
+
+
+def test_200_with_empty_feed_is_not_success(monkeypatch):
+    """old.reddit.com은 차단 시 200 + HTML을 준다 — entry 0건이면 실패 취급.
+
+    이 가드가 없으면 '200인데 수집 0건'으로 조용히 굶는다(2026-08-18 실측).
+    """
+    monkeypatch.setattr(reddit.time, "sleep", lambda _s: None)
+    hosts = []
+
+    def fake_get(url, **kwargs):
+        hosts.append(url.split("/r/")[0])
+        if url.startswith("https://old.reddit.com"):
+            return _response(200, b"<!DOCTYPE html><html>blocked</html>")
+        return _response(200, _ATOM.encode())
+
+    with mock.patch.dict(os.environ, {}, clear=False):
+        os.environ.pop("REDDIT_CLIENT_ID", None)
+        os.environ.pop("REDDIT_CLIENT_SECRET", None)
+        with mock.patch.object(requests, "get", fake_get):
+            items = reddit.fetch(_CFG)
+
+    # www가 진짜 Atom을 주므로 old까지 내려가지 않는다
+    assert hosts[0] == "https://www.reddit.com"
+    assert len(items) == 1
+
+
+def test_all_blocked_or_empty_raises(monkeypatch):
+    """전 조합이 차단 페이지(200+빈 피드)면 조용한 0건이 아니라 예외."""
+    monkeypatch.setattr(reddit.time, "sleep", lambda _s: None)
+
+    def fake_get(url, **kwargs):
+        return _response(200, b"<!DOCTYPE html><html>blocked</html>")
+
+    with mock.patch.dict(os.environ, {}, clear=False):
+        os.environ.pop("REDDIT_CLIENT_ID", None)
+        os.environ.pop("REDDIT_CLIENT_SECRET", None)
+        with mock.patch.object(requests, "get", fake_get):
+            try:
+                reddit.fetch(_CFG)
+            except RuntimeError:
+                pass
+            else:
+                raise AssertionError("expected RuntimeError")
