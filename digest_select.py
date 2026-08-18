@@ -144,3 +144,59 @@ def _issue_no(config: dict, now_kst: datetime) -> int:
     except ValueError:
         epoch = datetime.strptime(DEFAULT_ISSUE_EPOCH, "%Y-%m-%d").date()
     return (now_kst.date() - epoch).days + 1
+
+
+def _backfill_news(to_send_news: list[dict], news_ranked: list[dict],
+                   judged_id_set: set, max_news: int,
+                   excluded_ids: frozenset | set = frozenset()) -> list[dict]:
+    """뉴스 상한이 안 차면 무판정 뉴스 상위로 채운 **새 리스트**를 돌려준다.
+
+    사서 부분 실패·중복 게이트 삭제로 슬롯이 비는 두 경로에서 공용으로
+    쓴다. 표지1+뉴스7+CVE1=9장 유지가 사용자 결정.
+    excluded_ids: 이번 발행에서 이미 탈락한 항목(게이트가 지운 중복) —
+    다시 채우면 게이트가 무의미해진다."""
+    filled = list(to_send_news)
+    selected_ids = {it["id"] for it in filled}
+    for cand in news_ranked:
+        if len(filled) >= max_news:
+            break
+        if cand["id"] in selected_ids or cand["id"] in judged_id_set:
+            continue
+        if cand["id"] in excluded_ids:
+            continue
+        if any(dedup_lib.is_similar_event(cand, s) for s in filled):
+            continue
+        # 백필은 사서 요약 없이 원문 폴백으로 실린다 — 피드 요약이 제목과
+        # 동일한 껍데기(구글뉴스류)는 '제목=본문' 카드가 되므로 제외
+        # (2026-07-24 NO.17 실측 2장). 해당 항목은 이월돼 다음 digest에서
+        # 사서 판정을 다시 받는다.
+        if not cardgen.has_informative_summary(cand):
+            continue
+        filled.append(cand)
+        selected_ids.add(cand["id"])
+    return filled
+
+
+def _apply_dedup_groups(items: list[dict], groups: list[list[int]]) -> list[dict]:
+    """중복 게이트가 준 묶음(1-based)에서 대표 1건만 남긴 새 리스트.
+
+    대표 선정은 카드 정렬 기준과 동일한 (-importance, -heuristic_score).
+    입력 순서는 보존한다 — 정렬은 이미 끝난 뒤 호출된다."""
+    drop: set[int] = set()
+    for group in groups:
+        winner = min(
+            group,
+            key=lambda n: (-(items[n - 1].get("importance") or 0),
+                           -cardgen.heuristic_score(items[n - 1])),
+        )
+        for n in group:
+            if n == winner:
+                continue
+            drop.add(n)
+            print(
+                "[main] 최종 중복 게이트 제외: "
+                f"{items[n - 1].get('title_ko') or items[n - 1].get('title')} "
+                f"(대표: {items[winner - 1].get('title_ko') or items[winner - 1].get('title')})",
+                file=sys.stderr,
+            )
+    return [it for i, it in enumerate(items, start=1) if i not in drop]

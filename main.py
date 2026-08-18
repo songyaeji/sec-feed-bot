@@ -25,8 +25,9 @@ import tagger
 from collect import collect_all, dedup, max_items_per_run
 from common import STATE_DIR, _safe_exc_str
 from digest_select import (
-    _author_penalty, _dedup_by_topic, _dedup_similar, _fallback_keywords,
-    _issue_no, _source_regions, _split_fresh)
+    _apply_dedup_groups, _author_penalty, _backfill_news, _dedup_by_topic,
+    _dedup_similar, _fallback_keywords, _issue_no, _source_regions,
+    _split_fresh)
 from state_store import (  # noqa: F401 -- SEEN_TTL_DAYS는 tests가 main 경유로 참조
     SEEN_TTL_DAYS, append_pending, load_config, load_pending, load_state,
     prune_seen, save_pending, save_state)
@@ -502,26 +503,29 @@ def main() -> None:
                     # 뉴스 상위로 채운다(카드는 원문 제목·요약 폴백) —
                     # 표지1+뉴스7+CVE1=9장 유지가 사용자 결정. 백필분은
                     # 발송되므로 소진(이월 목록에서 제거)한다.
-                    if len(to_send_news) < max_news:
-                        selected_ids = {it["id"] for it in to_send_news}
-                        for cand in news_ranked:
-                            if len(to_send_news) >= max_news:
-                                break
-                            if cand["id"] in selected_ids or cand["id"] in judged_id_set:
-                                continue
-                            if any(dedup_lib.is_similar_event(cand, s) for s in to_send_news):
-                                continue
-                            # 백필은 사서 요약 없이 원문 폴백으로 실린다 —
-                            # 피드 요약이 제목과 동일한 껍데기(구글뉴스류)는
-                            # '제목=본문' 카드가 되므로 제외(2026-07-24 NO.17
-                            # 실측 2장). 해당 항목은 이월돼 다음 digest에서
-                            # 사서 판정을 다시 받는다.
-                            if not cardgen.has_informative_summary(cand):
-                                continue
-                            to_send_news.append(cand)
-                            selected_ids.add(cand["id"])
-                        retained = [
-                            it for it in retained if it["id"] not in selected_ids]
+                    to_send_news = _backfill_news(
+                        to_send_news, news_ranked, judged_id_set, max_news)
+                    # 최종 중복 게이트(3겹의 마지막). 앞선 2겹은 사서 출력에
+                    # 의존한다 — topic slug는 무판정 백필분에 아예 없고,
+                    # _dedup_similar는 제목 토큰이 갈리면 놓친다(NO.19 중복
+                    # 카드). 발송 확정 직전 제목·요약만 LLM 1콜로 재심사하고,
+                    # 지운 만큼 슬롯을 다시 채운다. 실패는 fail-open —
+                    # 중복 심사가 발행 자체를 막으면 안 된다.
+                    groups = librarian.dedup_gate(to_send_news)
+                    if groups:
+                        gated = _apply_dedup_groups(to_send_news, groups)
+                        gate_dropped = (
+                            {it["id"] for it in to_send_news}
+                            - {it["id"] for it in gated})
+                        print(f"[main] 최종 중복 게이트: {len(gate_dropped)}건 제외")
+                        to_send_news = _backfill_news(
+                            gated, news_ranked, judged_id_set, max_news,
+                            excluded_ids=gate_dropped)
+                    # 실린 항목은 이월 목록에서 제거(재발송 방지). 게이트가
+                    # 지운 무판정 항목은 남겨 다음 digest에서 사서 판정을
+                    # 정식으로 받게 한다
+                    sent_ids = {it["id"] for it in to_send_news}
+                    retained = [it for it in retained if it["id"] not in sent_ids]
                     to_send = to_send_news + cve_selected
                     wiki_only = len(news_worthy) - len(to_send_news)
                     if wiki_only > 0:
