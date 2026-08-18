@@ -524,5 +524,17 @@
     "tags": [],
     "title": "2026년 개인정보보호위원회 청년인턴 채용 공고",
     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9TMk5sMTFzRHp1WTNkWHhmelFRaUk3VktJWVYzdFIySkZQVW4yNlB6M1p4WTZFdjExcnFvTnA4SnFtN3FVbkJndW1PQmY0M0RlSXZMN25iOGY4TnhKOE9uWUp3?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-75094",
+    "published": "2026-08-18T02:17:30.757",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in COMFAST CF-N1-S 2.6.0.1. This impacts the function sub_44B438 of the file /cgi-bin/mbox-config?method=SET&section=ptest_ssid of the component CGI Interface. This manipulation of the argument ssid causes os command injection. Remote exploitation of the attack is possible. The exploit has been published and may be used.",
+    "tags": [],
+    "title": "CVE-2026-75094 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75094"
   }
 ]
