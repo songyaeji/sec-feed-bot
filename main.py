@@ -28,9 +28,8 @@ from digest_select import (
     _apply_dedup_groups, _author_penalty, _backfill_news, _dedup_by_topic,
     _dedup_similar, _fallback_keywords, _issue_no, _source_regions,
     _split_fresh)
-from state_store import (  # noqa: F401 -- SEEN_TTL_DAYS는 tests가 main 경유로 참조
-    SEEN_TTL_DAYS, append_pending, load_config, load_pending, load_state,
-    prune_seen, save_pending, save_state)
+from state_store import (append_pending, load_config, load_pending,
+                         load_state, prune_seen, save_pending, save_state)
 from trend_lane import (_publish_trend, _select_trend, _should_send_trend,
                         send_daily_trend)
 from wiki_index import _prune_wiki_index

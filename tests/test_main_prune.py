@@ -2,13 +2,14 @@
 from datetime import datetime, timedelta, timezone
 
 import main
+from common import SEEN_TTL_DAYS
 
 
 def test_prune_seen_ttl_and_garbage():
     now = datetime.now(timezone.utc)
     seen = {
         "fresh": now.isoformat(),
-        "edge-old": (now - timedelta(days=main.SEEN_TTL_DAYS + 1)).isoformat(),
+        "edge-old": (now - timedelta(days=SEEN_TTL_DAYS + 1)).isoformat(),
         "garbage": "not-a-date",
         "none-value": None,
     }
