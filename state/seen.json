@@ -11657,6 +11657,7 @@
     "CVE-2026-65317": "2026-07-21T22:22:26.202048+00:00",
     "CVE-2026-65318": "2026-07-21T22:22:26.202112+00:00",
     "CVE-2026-65321": "2026-08-02T15:21:51.534879+00:00",
+    "CVE-2026-65346": "2026-08-18T11:22:21.548871+00:00",
     "CVE-2026-65400": "2026-08-14T18:22:25.870075+00:00",
     "CVE-2026-65423": "2026-07-30T23:22:32.574691+00:00",
     "CVE-2026-65431": "2026-07-27T17:22:52.133975+00:00",
@@ -13665,6 +13666,8 @@
     "CVE-2026-7522": "2026-07-24T08:12:35.442787+00:00",
     "CVE-2026-75481": "2026-08-17T21:22:10.232876+00:00",
     "CVE-2026-7557": "2026-08-05T16:22:00.087778+00:00",
+    "CVE-2026-75626": "2026-08-18T11:22:21.549082+00:00",
+    "CVE-2026-75627": "2026-08-18T11:22:21.549261+00:00",
     "CVE-2026-7572": "2026-07-24T08:12:35.442113+00:00",
     "CVE-2026-7637": "2026-07-24T08:12:35.442689+00:00",
     "CVE-2026-7654": "2026-07-23T07:12:31.640362+00:00",
@@ -14027,7 +14030,7 @@
     "CVE-2026-9999": "2026-07-21T12:12:55.353860+00:00"
   },
   "last_digest_date": "2026-08-18",
-  "last_run": "2026-08-18T11:12:48.378205+00:00",
+  "last_run": "2026-08-18T11:22:24.284652+00:00",
   "last_trend_date": "2026-08-18",
   "recent_titles": [
     {
@@ -113965,6 +113968,26 @@
     {
       "d": "2026-08-18T11:12:40.697897+00:00",
       "t": "\ub2e8\ub3c5 \uc678\uad50\uad00 \uc815\ubcf4\uc720\ucd9c \uad6d\ub9bd\uc678\uad50\uc6d0 \ud574\ud0b9 24\uc2dc\uac04 \ubcf4\uc548 \uad00\ub9ac \ubabb \ubc1b\uc558\ub2e4"
+    },
+    {
+      "d": "2026-08-18T11:22:21.548871+00:00",
+      "t": "cve 2026 65346 cvss 8 8"
+    },
+    {
+      "d": "2026-08-18T11:22:21.549082+00:00",
+      "t": "cve 2026 75626 cvss 9 3"
+    },
+    {
+      "d": "2026-08-18T11:22:21.549261+00:00",
+      "t": "cve 2026 75627 cvss 9 8"
+    },
+    {
+      "d": "2026-08-18T11:22:21.559943+00:00",
+      "t": "microsoft tests faster windows file explorer new context menu"
+    },
+    {
+      "d": "2026-08-18T11:22:21.570900+00:00",
+      "t": "\ud55c\uc804kdn 2026\ub144 \uc744\uc9c0\uc5f0\uc2b5 \uc2e4\uc2dc ai \ud574\ud0b9 \ub4dc\ub860 \uacf5\uaca9 \ub300\uc751 \ud6c8\ub828"
     }
   ],
   "seen": {
@@ -122098,6 +122121,7 @@
     "CBMiekFVX3lxTE9WWjQ1aVFLckwxaGNPQThoQ2dwLVNNTVBEVlo2dm1YMWMyalc5ZndCdVpIVmdjZDR0SVoxcm12YU5nM3poVDM3V19paG5FWmt3QnVqbnZUMU9wZ0pxeWtJN1YyeGFQdHRBU0lPYlRlN2Y3VUt4cEQ0Q1V30gGAAUFVX3lxTE9qX2V3T1FVQnVpdEE1d0kzWDl0TUJ6cVlwXzBuVC1YZDBGaGN2UVNJOHBGN2NHYmlkcEg5aXdjSk9qRDdKb1ZWOVU0UjVJOUZjSWx0YUxYUGdLU3JLZmpzd1AwaXdUYUF6RmhpX1BoVEwzS00wVFMzXzVKYkRFaEZ2": "2026-08-10T02:13:15.213789+00:00",
     "CBMiekFVX3lxTE9oQUJzMThhUlREQU5rbnlUSWpOQXpLRnZvQWdmS1pIQTc4OHVhYnFnRkNIWWc5dDFUTmNHcVNnZWtnUWJwaXYyQlpuM3dmUnRNSHRuX3B3RzV6czZ2QVhsSkYyU1NYYzFBQlBfWDhLYmZzYUZaN0NhYVVR": "2026-08-07T07:52:41.332219+00:00",
     "CBMiekFVX3lxTE9sVnVOVmZEVXZtcTM5cWFVNzAxN1oxQ0xrUGl2cHVuOEZCUWFTd1pmejJ6THZYR2xjdndFYjNENkRoT0RObGdrOWdtUTltZlZodUx1dW1tQmhKQ0dkZ05SNHo3aENfTWFROG9xLThMZTFfcVNsQmQ4cXJ3": "2026-07-30T05:14:24.223598+00:00",
+    "CBMiekFVX3lxTE9zR3hOUGNvdXU1TDBPQ0xaUndrN1JwME51OUJJSDV0YjlqQU1zLUlrYTZodUE5ay04eld2blZlYWQwRVh4NkpXQ3V5cnVoQ2RzazJqM3RITzRMOTlNMmRMQzFWZHBteHZEcnZjZTRnMU5rNWo2M0wtV2xB": "2026-08-18T11:22:24.284652+00:00",
     "CBMiekFVX3lxTFA4NEtsbXVacUI1RU9JMFltUjB5aTY3Zlk5Vng1dExKaklmUHNaNnZqbG1lQnU1S1liQktjQjY3aHJjUDRZUHZjV21PNmUtM1hpM2dDOC1xUWdjbDJ0TlZ3cXBxR1VBV0UzVGVhZ3NLdm4xTzJCUnJMTUxR": "2026-07-09T06:57:03.423215+00:00",
     "CBMiekFVX3lxTFAwejF0RDQ2Uk4xSzBJTUJmRGEtb0JYSkFfLWI0LTUzQUZyaWJ1NFhNWk83REt6Y0JmMnk4QVlGR1NFR0hSMW9FdWRlQkUySVB0cGswVXFkb25RRU5EdzNQNmJZTEcxUU1teTUweHdMYzc3VWIwdkd5c2hR0gGAAUFVX3lxTE1jcjBuQjZNdVlsaEJBS2MwZ3V6SmNvclpiSDM5akl5eHItOGFmUW1qU2hkemVqc1BtTlVIQjcxOEhRY1otOXZkOXlkblZJeTBEUDF4SkhUay1nazM5NzNFaktGbjFHZlN2TGtzeXJkRGpFX0pXaVFIdU43MkxQS042": "2026-08-10T02:13:15.213789+00:00",
     "CBMiekFVX3lxTFAyaFVyMzhLU1l5MXlwaDRhMUJFWFoyS29ad3pJclVWUnRTZmkzc2drWW8xcUpXQVcwY3VMVVZqOTdQOENDbVVqcHFkMVVqMy15bndmZGZrOVI3X1RFT3VIYlZvYmxOOWVCTmNLMi0wX0Z1UWFqdXluM29B": "2026-07-21T23:12:25.815682+00:00",
@@ -136213,6 +136237,7 @@
     "CVE-2026-65317": "2026-07-21T22:22:29.671697+00:00",
     "CVE-2026-65318": "2026-07-21T22:22:29.671697+00:00",
     "CVE-2026-65321": "2026-08-02T15:21:54.403928+00:00",
+    "CVE-2026-65346": "2026-08-18T11:22:24.284652+00:00",
     "CVE-2026-65400": "2026-08-14T18:22:28.823761+00:00",
     "CVE-2026-65423": "2026-07-30T23:22:36.504008+00:00",
     "CVE-2026-65431": "2026-07-27T17:22:52.150437+00:00",
@@ -138214,6 +138239,8 @@
     "CVE-2026-7522": "2026-07-24T08:12:40.094326+00:00",
     "CVE-2026-75481": "2026-08-17T21:22:13.397108+00:00",
     "CVE-2026-7557": "2026-08-05T16:22:04.783754+00:00",
+    "CVE-2026-75626": "2026-08-18T11:22:24.284652+00:00",
+    "CVE-2026-75627": "2026-08-18T11:22:24.284652+00:00",
     "CVE-2026-7572": "2026-07-24T08:12:40.094326+00:00",
     "CVE-2026-7637": "2026-07-24T08:12:40.094326+00:00",
     "CVE-2026-7654": "2026-07-23T07:12:43.302363+00:00",
@@ -142525,6 +142552,7 @@
     "https://www.bleepingcomputer.com/news/microsoft/microsoft-shares-manual-fix-for-wsus-sync-delays-and-timeouts/": "2026-07-21T09:13:27.931025+00:00",
     "https://www.bleepingcomputer.com/news/microsoft/microsoft-some-dell-devices-shut-down-after-windows-update/": "2026-07-15T08:32:08.152624+00:00",
     "https://www.bleepingcomputer.com/news/microsoft/microsoft-starts-testing-cleaner-windows-search-without-ads/": "2026-07-14T10:52:19.445094+00:00",
+    "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-faster-windows-explorer-customizable-context-menu/": "2026-08-18T11:22:24.284652+00:00",
     "https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-bug-behind-microsoft-365-search-issues/": "2026-08-18T09:32:47.202567+00:00",
     "https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-exchange-online-mailbox-quarantine-issue/": "2026-07-23T09:22:25.651303+00:00",
     "https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-wsus-server-sync-delays-and-timeouts/": "2026-07-20T10:52:16.690179+00:00",
