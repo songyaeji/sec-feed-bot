@@ -548,5 +548,17 @@
     "tags": [],
     "title": "카스퍼스키, AI 에이전트용 악성코드·백도어 탐지 기능 발표",
     "url": "http://www.boannews.com/media/view.asp?idx=145184&kind=&sub_kind="
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-73053",
+    "published": "2026-08-15T22:16:55.157",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SiYuan versions before v3.7.4 contain a cross-site scripting vulnerability in the unicode2Emoji function that fails to sanitize codepoint branch output. Attackers can craft document icons with hex-encoded markup that executes in the renderer with Node integration enabled, achieving arbitrary code execution on the host system.",
+    "tags": [],
+    "title": "CVE-2026-73053 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73053"
   }
 ]
