@@ -1,25 +1,120 @@
-"""Reddit 멀티레딧 일간 top RSS (trend source).
+"""Reddit 멀티레딧 일간 top (trend source).
 
-JSON API(top.json)는 봇·브라우저 UA 모두 403(2026-07-24 실측: www·old
-공통 차단)이라 RSS(Atom)로 간다. 서브레딧별 개별 요청은 레딧 rate
-limit(429)에 걸리므로(기존 'Reddit 보안 커뮤니티' 소스의 교훈) 멀티레딧
-(r/a+b+c)으로 한 요청에 몰아 받는다.
+수집 경로는 두 겹이다:
 
-RSS에는 upvote 점수가 없지만 top?t=day 정렬 자체가 업보트 순위이므로
-피드 순서 = 화제성 순위로 쓴다. 멀티레딧 top은 절대 점수로 섞여 대형
-서브레딧(LocalLLaMA)이 목록을 독식하므로(2026-07-24 실측: 100건 중 50건)
-서브레딧별 상한을 코드에서 건다. 링크는 원문이 아니라 레딧 스레드로
-간다 — 토론·맥락이 트렌드 소스의 가치라 HN의 Ask HN 폴백과 같은 결.
+① OAuth2 client_credentials(REDDIT_CLIENT_ID/SECRET secret 등록 시).
+   무인증 요청은 데이터센터 IP에서 상시 429였다(2026-07-25~08-18 Actions
+   실측: 전 run 실패, 브라우저 UA 재시도까지 429). 인증 요청은 클라이언트
+   단위 한도를 받아 IP 평판에 좌우되지 않는다. JSON이라 upvote 실점수도
+   함께 온다.
+② 무인증 RSS 폴백(secret 미등록 또는 OAuth 실패 시). 호스트·UA 조합을
+   순서대로 시도한다 — 같은 IP라도 www/old 호스트와 UA에 따라 판정이
+   갈린다(2026-08-18 가정용 IP 실측: www+bot-UA 200, www+브라우저 UA 429,
+   old+브라우저 UA 200). 어느 경로로 통했는지 로그에 남겨 Actions 환경의
+   실제 판정을 다음 튜닝의 근거로 쓴다.
+
+서브레딧별 개별 요청은 rate limit에 걸리므로(기존 'Reddit 보안 커뮤니티'
+소스의 교훈) 멀티레딧(r/a+b+c)으로 한 요청에 몰아 받는다. 멀티레딧 top은
+절대 점수로 섞여 대형 서브레딧(LocalLLaMA)이 목록을 독식하므로
+(2026-07-24 실측: 100건 중 50건) 서브레딧별 상한을 코드에서 건다. 링크는
+원문이 아니라 레딧 스레드로 간다 — 토론·맥락이 트렌드 소스의 가치라
+HN의 Ask HN 폴백과 같은 결.
 """
+import os
+import sys
 from datetime import datetime, timezone
 
 import feedparser
 import requests
 
+from common import _safe_exc_str
 from sources.rss import _BROWSER_UA
 
-FEED_URL = "https://www.reddit.com/r/{subs}/top/.rss?t=day&limit=100"
+# Reddit이 요구하는 UA 형식: <platform>:<app id>:<version> (by /u/<user>)
+BOT_UA = "python:sec-feed-bot:1.1 (by /u/sec-feed-bot)"
+
+TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
+OAUTH_URL = "https://oauth.reddit.com/r/{subs}/top?t=day&limit=100&raw_json=1"
+
+# 무인증 폴백 체인 — (호스트, UA). 앞에서부터 200이 날 때까지 시도한다.
+RSS_FALLBACKS = (
+    ("https://www.reddit.com", BOT_UA),
+    ("https://old.reddit.com", _BROWSER_UA),
+    ("https://old.reddit.com", BOT_UA),
+    ("https://www.reddit.com", _BROWSER_UA),
+)
+RSS_PATH = "/r/{subs}/top/.rss?t=day&limit=100"
+
+BLOCKED_STATUSES = (401, 403, 406, 429, 500, 502, 503)
 DEFAULT_PER_SUB = 3
+
+
+def _oauth_token() -> str | None:
+    """client_credentials 토큰 발급. secret 미등록·실패는 None(폴백)."""
+    client_id = os.environ.get("REDDIT_CLIENT_ID")
+    client_secret = os.environ.get("REDDIT_CLIENT_SECRET")
+    if not client_id or not client_secret:
+        return None
+    try:
+        resp = requests.post(
+            TOKEN_URL,
+            auth=(client_id, client_secret),
+            data={"grant_type": "client_credentials"},
+            headers={"User-Agent": BOT_UA},
+            timeout=20,
+        )
+        resp.raise_for_status()
+        return resp.json().get("access_token")
+    except Exception as exc:
+        # 토큰 발급 실패가 소스 전체를 죽이면 안 된다 — RSS 폴백으로 계속.
+        # 자격증명 자체는 절대 로그에 넣지 않는다(_safe_exc_str이 URL/헤더
+        # 노출을 막지 못하는 예외 타입이 있어 메시지도 최소화)
+        print(f"[main] Reddit OAuth 토큰 발급 실패(RSS 폴백): "
+              f"{_safe_exc_str(exc)}", file=sys.stderr)
+        return None
+
+
+def _fetch_oauth(subs_path: str, token: str) -> list[dict] | None:
+    """oauth.reddit.com JSON listing. 실패 시 None(폴백)."""
+    try:
+        resp = requests.get(
+            OAUTH_URL.format(subs=subs_path),
+            headers={"Authorization": f"bearer {token}", "User-Agent": BOT_UA},
+            timeout=20,
+        )
+        resp.raise_for_status()
+        children = resp.json()["data"]["children"]
+    except Exception as exc:
+        print(f"[main] Reddit OAuth listing 실패(RSS 폴백): "
+              f"{_safe_exc_str(exc)}", file=sys.stderr)
+        return None
+    print(f"[main] Reddit 트렌드: OAuth 경로 200 ({len(children)}건)")
+    return children
+
+
+def _fetch_rss(subs_path: str):
+    """무인증 RSS 폴백 체인. 전부 실패하면 마지막 응답으로 raise."""
+    last = None
+    for host, ua in RSS_FALLBACKS:
+        url = host + RSS_PATH.format(subs=subs_path)
+        try:
+            resp = requests.get(url, timeout=20, headers={"User-Agent": ua})
+        except requests.RequestException as exc:
+            print(f"[main] Reddit RSS {host} 요청 실패: {_safe_exc_str(exc)}",
+                  file=sys.stderr)
+            continue
+        if resp.status_code not in BLOCKED_STATUSES:
+            resp.raise_for_status()
+            print(f"[main] Reddit 트렌드: RSS 경로 200 ({host}, "
+                  f"UA={'browser' if ua == _BROWSER_UA else 'bot'})")
+            return feedparser.parse(resp.content)
+        last = resp
+        print(f"[main] Reddit RSS {host} UA="
+              f"{'browser' if ua == _BROWSER_UA else 'bot'} "
+              f"{resp.status_code} — 다음 조합 시도", file=sys.stderr)
+    if last is not None:
+        last.raise_for_status()
+    raise RuntimeError("Reddit RSS 폴백 전 조합 실패")
 
 
 def fetch(source_cfg: dict) -> list[dict]:
@@ -27,16 +122,15 @@ def fetch(source_cfg: dict) -> list[dict]:
     if not subs:
         return []
     per_sub = int(source_cfg.get("per_subreddit", DEFAULT_PER_SUB))
+    subs_path = "+".join(subs)
 
-    url = FEED_URL.format(subs="+".join(subs))
-    resp = requests.get(url, timeout=20, headers={"User-Agent": "sec-feed-bot/1.0"})
-    if resp.status_code in (403, 406, 429):
-        # 레딧이 데이터센터 IP + 봇 UA 조합을 429로 상시 차단(2026-07-25
-        # Actions 실측: 25/25 run 실패) — rss.py와 같은 브라우저 UA 1회
-        # 재시도. 정상 응답이면 이 분기를 안 탄다.
-        resp = requests.get(url, timeout=20, headers={"User-Agent": _BROWSER_UA})
-    resp.raise_for_status()
-    feed = feedparser.parse(resp.content)
+    token = _oauth_token()
+    if token:
+        children = _fetch_oauth(subs_path, token)
+        if children is not None:
+            return _items_from_json(children, source_cfg, per_sub)
+
+    feed = _fetch_rss(subs_path)
 
     counts: dict[str, int] = {}
     items = []
@@ -71,6 +165,54 @@ def fetch(source_cfg: dict) -> list[dict]:
             "trend_note": f"r/{sub} 일간 {counts[sub]}위",
         })
     return items
+
+
+def _items_from_json(children: list[dict], source_cfg: dict,
+                     per_sub: int) -> list[dict]:
+    """OAuth listing(JSON) -> 항목. RSS 경로와 같은 스키마를 낸다.
+
+    RSS와 다른 점은 실제 upvote 수(`score`)가 온다는 것뿐이다. trend_note를
+    순위가 아니라 업보트 수로 표기해 '왜 핫한지'의 근거를 강화한다."""
+    counts: dict[str, int] = {}
+    items = []
+    for child in children:
+        post = child.get("data") or {}
+        post_id = post.get("name") or post.get("id")
+        title = post.get("title") or ""
+        permalink = post.get("permalink") or ""
+        if not post_id or not title or not permalink:
+            continue
+        # 링크는 레딧 스레드(토론·맥락이 트렌드 소스의 가치). permalink는
+        # 레딧이 주는 경로라 스킴 주입 여지가 없지만, 경계에서 형태를 강제
+        url = "https://www.reddit.com" + permalink
+        if not url.startswith("https://www.reddit.com/"):
+            continue
+        sub = post.get("subreddit") or "?"
+        if counts.get(sub, 0) >= per_sub:
+            continue
+        counts[sub] = counts.get(sub, 0) + 1
+        score = int(post.get("score") or 0)
+        items.append({
+            "id": f"reddit-{post_id}",
+            "source": source_cfg.get("name", "Reddit"),
+            "category": source_cfg.get("category", "trend"),
+            "title": title,
+            "url": url,
+            "summary": f"r/{sub} 일간 top",
+            "severity": "info",
+            "published": _parse_created(post.get("created_utc")),
+            "score": score,
+            "trend_note": f"r/{sub} ▲{score}",
+        })
+    return items
+
+
+def _parse_created(created_utc) -> str:
+    try:
+        return datetime.fromtimestamp(
+            float(created_utc), tz=timezone.utc).isoformat()
+    except (TypeError, ValueError):
+        return datetime.now(timezone.utc).isoformat()
 
 
 def _entry_subreddit(entry) -> str:

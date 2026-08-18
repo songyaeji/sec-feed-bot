@@ -168,6 +168,11 @@ jobs:
           # 트렌드 픽 전용 웹훅 — 미등록이면 notify.send_trend가 본 채널로 폴백
           DISCORD_TREND_WEBHOOK_URL: ${{ secrets.DISCORD_TREND_WEBHOOK_URL }}
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          # Reddit OAuth(client_credentials) — 무인증 요청은 Actions
+          # 데이터센터 IP에서 상시 429다(2026-07-25~08-18 실측). 미등록이면
+          # sources/reddit.py가 무인증 RSS 폴백 체인으로 내려간다
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           RUN_MODE: ${{ steps.run_mode.outputs.mode }}
           # 'true'일 때만 main.py 시간창 가드 우회 — workflow_dispatch 수동
           # 재발송 전용(위 allow_offhour input 주석 참조)
