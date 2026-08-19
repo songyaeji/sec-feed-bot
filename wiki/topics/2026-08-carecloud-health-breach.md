@@ -11,5 +11,6 @@ cves: []
 
 - 2026-08-02 [Security Affairs](https://securityaffairs.com/?p=196480) — CareCloud 침해로 345,000명 의료·재정 정보 유출 공개, AWS 시스템 악의적 접근 확인
 - 2026-08-02 [TechCrunch](https://techcrunch.com/2026/08/02/carecloud-breach/) — CareCloud 3월 침해 사건 최종 통보, 45,000개 의료 기관 환자 영향
+- 2026-08-19 [BleepingComputer](https://www.bleepingcomputer.com/news/security/healthtech-firm-carecloud-data-breach-impacts-37-million-patients/) — 피해 규모 확대 확인, 3.7명 개인정보 유출
 
 ## 관련

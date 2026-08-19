@@ -11,6 +11,6 @@ cves: []
 
 - 2025-03 [CISA/FBI](https://www.cisa.gov) — Medusa 랜섬웨어 그룹 초기 권고 발표
 - 2026-04 [CISA/FBI](https://www.cisa.gov) — 피해자 규모 업데이트: 500명 이상 확인
-- 2026-08-18 [The Record](https://therecord.media/more-than-200-medusa-ransomware-victims-in-last-year-cisa) — CISA 권고 갱신 보도, 연간 피해 확대 추세 분석
+- 2026-08-18 [The Record](https://therecord.media/more-than-200-medusa-ransomware-victims-in-last-year-cisa) — CISA/FBI 권고 재갱신 발표: 지난 1년간 200명 이상 추가 피해 확인
 
 ## 관련
