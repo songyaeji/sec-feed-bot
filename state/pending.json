@@ -955,5 +955,17 @@
     "tags": [],
     "title": "Simple Scans for Cloud Metadata Service, (Wed, Aug 19th)",
     "url": "https://isc.sans.edu/diary/rss/33260"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25313",
+    "published": "2026-08-19T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "Executive summary Note: This advisory relates to an active threat to Siemens S7 Series programmable logic controllers (PLCs). However, ongoing PLC targeting activity is broader than Siemens PLCs. All PLC owners and operators should apply relevant mitigations to reduce the risk to their devices and systems. The Siemens-specific content in this advisory should be understood and applied as one subset of the wider threat landscape. Top Mitigations Inventory all Siemens S7 Series programmable logic controllers (PLCs) Apply critical security patches Ensure PLCs are not accessible from the Internet Strengthen access controls Monitor for unauthorized activity Harden PLC services, protocols, and ladder logic integrity Hunt for anomalies that may indicate a compromise The National Security Agency (NSA), Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Department of Energy (DOE), and Environmental Protection Agency (EPA)—hereafter referred to as the authoring agencies—are releasing this Cybersecurity Advisory to warn owners and operators of industrial control systems (ICSs) of an active cyber threat to Siemens S7 Series PLCs and provide relevant mitigations to protect and defend them. The threat actors are conducting reconnaissance and capability development against U.S.-based Siemens PLC installations using AI-generated exploitation scripts disguised as legitimate monitoring tools. The actors leverage Internet scanning services to find Int",
+    "tags": [],
+    "title": "Defending Against an Active Threat to Siemens S7 Series PLCs",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
   }
 ]
