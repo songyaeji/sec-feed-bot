@@ -1644,5 +1644,41 @@
     "tags": [],
     "title": "AI 개발에 개인정보 활용 길 넓어진다…\"공익적 필요\" 땐 허용",
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5NMnFxV2ZzOURmU0NBQ1l3S0lPR1MwOWhaRk5CRmJ4c0RXX01BTHRpaUNWY0hjbzdhVm9KZ1RVcXA2aVdqNlRMbENGYzNNQ0E2UmxReTIwOE8zbmVJS1E?oc=5"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-72530",
+    "kev": true,
+    "published": "2026-08-20T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "TrueConf Server contains a code injection vulnerability that could allow an unauthorized remote attacker with network access via port 4307/TCP to use a specially crafted script to break out of the isolated environment and execute arbitrary code on the host system.",
+    "tags": [],
+    "title": "CVE-2026-72530: TrueConf Server Code Injection Vulnerability (TrueConf Server)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72530"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-72529",
+    "kev": true,
+    "published": "2026-08-20T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "TrueConf Server contains a missing authentication for critical function vulnerability which could allow a remote unauthorized attacker with network access via port 4307/TCP to execute an arbitrary script.",
+    "tags": [],
+    "title": "CVE-2026-72529: TrueConf Server Missing Authentication for Critical Function Vulnerability (TrueConf Server)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72529"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25335",
+    "published": "2026-08-20T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a local attacker with low privileges to extract user credentials (passwords and authentication tokens) from system memory, potentially leading to unauthorized access to the application and connected systems. The following versions of Johnson Controls Simplex Incident Manager are affected: Simplex Incident Manager",
+    "tags": [],
+    "title": "Johnson Controls Simplex Incident Manager",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-232-01"
   }
 ]
