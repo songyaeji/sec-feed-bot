@@ -827,5 +827,19 @@
     "tags": [],
     "title": "Ransom & Dark Web Issues Week 3, August 2026",
     "url": "https://asec.ahnlab.com/en/95046/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html",
+    "published": "2026-08-20T06:04:34+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of a critical flaw in the Elementor Pro WordPress plugin that, if successfully exploited, could lead to remote code execution. The vulnerability, tracked as CVE-2026-32475, carries a CVSS score of 9.0 out of 10.0. It has been described as a case of unrestricted upload of a file with a dangerous type. \"The flaw lives in the Forms module's File",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code",
+    "url": "https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html"
   }
 ]
