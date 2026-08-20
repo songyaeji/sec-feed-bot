@@ -1265,5 +1265,61 @@
     "tags": [],
     "title": "AI 개발에 원본 개인정보 사용···개정 개인정보 보호법 국회 본회의 통과",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5HS2RObkZrclhVQmk0T20xekdMNWg2QWlLaWZjWWNfYVVLTzNlV09yTXJhckhNMl9oTnE4Q1Q0VnUzc2VRTF9MRm9kdjg3WnZ0eUdZUGFXbFlvdXhraTF2dTVwN0R3NW1ZM09Z?oc=5"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html",
+    "published": "2026-08-20T11:05:11+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Security researchers at Cycode have disclosed a chain of flaws in AIT-GUI, the browser-based operator console for NASA/JPL's open-source AMMOS Instrument Toolkit, that allow an unauthenticated attacker to issue arbitrary commands to the software's spacecraft and instrument command bus. The chain, tracked as GHSA-p9r8-2q67-fp86 and rated 9.4 on the CVSS v3.1 scoring system, impacts AIT-GUI",
+    "tags": [
+      "RCE"
+    ],
+    "title": "NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands",
+    "url": "https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html",
+    "published": "2026-08-20T10:38:28+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have shed light on an updated version of ToxicPanda (aka TgToxic) that comes with \"significant enhancements,\" including a set of 167 remote commands and expands its targeting footprint globally. Zimperium zLabs, in a Wednesday report, said the Android malware also features a PIN harvesting workflow targeting more than 140 banking and cryptocurrency applications.",
+    "tags": [
+      "금융"
+    ],
+    "title": "ToxicPanda 2.0 and GoldDigger Expand Android Banking Attacks with On-Device Fraud",
+    "url": "https://thehackernews.com/2026/08/toxicpanda-20-and-golddigger-expand.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/40-malicious-firefox-extensions-pose-as.html",
+    "published": "2026-08-20T08:42:03+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A set of 40 Mozilla Firefox extensions has been found to engage in cryptocurrency wallet theft by masquerading as OKX, Rabby Wallet, TronLink, and other Web3 products. According to the Socket Threat Research team, the extensions are part of a broader set of 77 browser add-ons that share source code and infrastructure overlaps. The campaign, dubbed Offside Wallet Theft Factory, is believed to",
+    "tags": [
+      "RCE"
+    ],
+    "title": "40 Malicious Firefox Extensions Pose as Web3 Products to Steal Wallet Secrets",
+    "url": "https://thehackernews.com/2026/08/40-malicious-firefox-extensions-pose-as.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/",
+    "published": "2026-08-20T11:06:14+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that threat actors are now exploiting a critical vulnerability in the MLflow open-source AI engineering platform. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CISA warns of hackers exploiting critical MLflow vulnerability",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/"
   }
 ]
