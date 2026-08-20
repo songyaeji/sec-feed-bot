@@ -12,3 +12,6 @@ AI 엔지니어링 플랫폼 **MLflow** 3.15.0 이전 버전의 인증 없는 PO
 ## 타임라인
 
 - 2026-08-17 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-64849) — CVE-2026-64849 CVSS 9.3 공개, 웹훅 테스트 SSRF 취약점 확인
+- 2026-08-20 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/) — CISA 연방기관 대상 해킹 공격 경고
+
+## 관련

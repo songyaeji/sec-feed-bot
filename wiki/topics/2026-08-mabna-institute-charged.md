@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-19 [BleepingComputer](https://www.bleepingcomputer.com/news/security/us-charges-iranian-hackers-over-34-billion-intellectual-property-theft/) — 미국 이란 해킹 집단 Mabna Institute 17명 기소 발표, 34억 달러 지재산권 침해
+- 2026-08-20 [Security Affairs](https://securityaffairs.com/197551/intelligence/us-indicts-17-iranians-over-years-long-cyber-espionage-campaign.html) — 기소 재보도
 
 ## 관련

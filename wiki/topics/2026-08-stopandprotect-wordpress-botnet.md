@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-19 [The Hacker News](https://thehackernews.com/2026/08/stopandprotect-uses-nearly-2000-hacked.html) — 2,000개 WordPress 사이트 악용 봇넷 작전 적발
+- 2026-08-20 [Security Affairs](https://securityaffairs.com/197537/hacking/stopandprotect-turns-2000-hacked-wordpress-sites-into-a-criminal-network.html) — Check Point Research 조사 결과 재보도
 
 ## 관련
