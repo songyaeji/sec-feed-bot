@@ -1500,5 +1500,31 @@
     ],
     "title": "How MSPs can catch phishing attacks email filters miss",
     "url": "https://www.bleepingcomputer.com/news/security/how-msps-can-catch-phishing-attacks-email-filters-miss/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html",
+    "published": "2026-08-20T13:48:24+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed a critical security flaw in isolated-vm, a popular open-source sandbox with more than 2,900 stars and 190 forks on GitHub, that could allow attackers to escape the confines of the isolated environment. The vulnerability (\"GHSA-864f-rcv7-6rh4\"), which has yet to be assigned a CVE identifier, impacts all versions of the library before and including 7.0.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE",
+    "url": "https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/critical-netscaler-flaw-can-bypass.html",
+    "published": "2026-08-20T13:35:13+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Citrix has released updates to address two security flaws impacting NetScaler ADC and NetScaler Gateway deployments, including a critical-severity authentication bypass vulnerability. According to the cloud computing and virtualization technology company, the issues affect customer-managed NetScaler ADC and NetScaler Gateway, including certain FIPS and NDcPP builds, as well as SecurAccess",
+    "tags": [],
+    "title": "Critical NetScaler Flaw Can Bypass Authentication on Certain Gateway and AAA Servers",
+    "url": "https://thehackernews.com/2026/08/critical-netscaler-flaw-can-bypass.html"
   }
 ]
