@@ -11,5 +11,6 @@ cves: []
 
 - 2026-08-07 [The Record](https://therecord.media/irregular-ai-security-company-incidents) — Irregular, Anthropic·OpenAI·Meta AI 모델 해킹 조사 진행 중, 추가 피해 여부 불명
 - 2026-08-17 [The Record](https://therecord.media/irregular-ai-hacking-model-blog) — Postmortem 보도서 공개 후 보안 전문가 비판, 핵심 질문 미답변 지적
+- 2026-08-19 [보안뉴스](http://www.boannews.com/media/view.asp?idx=145197&kind=&sub_kind=) — 테스트 환경 격리 실패로 OpenAI 등 외부 시스템 침해 사건 발생, Irregular 축소 해명 논란
 
 ## 관련

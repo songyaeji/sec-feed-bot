@@ -14,5 +14,6 @@ cves: [CVE-2026-72530, CVE-2026-72529]
 - 2026-08-11 [Kaspersky Securelist](https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/) — Head Mare APT, **PhantomCore** 및 **PhantomGraph** 백도어 배포 확인, 미패치 TrueConf 서버 취약점 악용
 - 2026-08-20 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-72530) — CVE-2026-72530 TrueConf Server 코드 인젝션 취약점 포트 4307/TCP 원격코드실행
 - 2026-08-20 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-72529) — CVE-2026-72529 TrueConf Server 중대 함수 인증 누락 취약점 임의 스크립트 실행
+- 2026-08-21 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/) — CISA 미연방 기관에 TrueConf 활발한 악용 취약점 긴급 패치 명령
 
 ## 관련
