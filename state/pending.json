@@ -1251,5 +1251,19 @@
     "tags": [],
     "title": "시스코 크로스워크·시큐어 워크로드서 치명적 취약점 9건…즉시 업데이트 권고",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=208149"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=197689",
+    "published": "2026-08-22T08:04:09+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A critical flaw (CVSS 9.4) in NASA/JPL’s AIT-GUI let anyone send unauthenticated commands to spacecraft instruments. Cycode researchers found that AIT-GUI, the browser-based operator console in NASA/JPL open-source AMMOS Instrument Toolkit, shipped with no authentication, no session checks, and no CSRF protection on any of its state-changing endpoints. “AIT-GUI, the web front end of NASA/JPL’s […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Critical Flaw in NASA/JPL Open-Source Spacecraft Command Software Allowed Unauthenticated Command Execution",
+    "url": "https://securityaffairs.com/197689/hacking/critical-flaw-in-nasa-jpl-open-source-spacecraft-command-software.html"
   }
 ]
