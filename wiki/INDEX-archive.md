@@ -51,3 +51,4 @@
 - [sanitize-html-xss-xmp](topics/2026-06-sanitize-html-xss-xmp.md) sanitize-html XMP 요소 우회 XSS 취약점 (최종갱신일: 2026-06-12)
 - [tenda-ac7-rce](topics/2026-07-tenda-ac7-rce.md) Tenda AC7 스택 버퍼 오버플로우 RCE (최종갱신일: 2026-06-19)
 - [angular-host-allowlist](topics/2026-07-angular-host-allowlist.md) Angular SSR 호스트 allowlist 우회 (최종갱신일: 2026-06-22)
+- [jackson-databind-array-bypass](topics/2026-06-jackson-databind-array-bypass.md) jackson-databind 배열 타입 검증 우회 (최종갱신일: 2026-06-23)

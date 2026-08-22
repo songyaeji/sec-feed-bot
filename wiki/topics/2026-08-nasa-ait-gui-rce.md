@@ -12,5 +12,6 @@ NASA/JPL의 AMMOS Instrument Toolkit(AIT) 웹 기반 오퍼레이터 콘솔 **AI
 ## 타임라인
 
 - 2026-08-20 [The Hacker News](https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html) — Cycode 보안 연구팀 AIT-GUI 취약점 공개, GHSA-p9r8-2q67-fp86 (CVSS 9.4)
+- 2026-08-22 [Security Affairs](https://securityaffairs.com/197689/hacking/critical-flaw-in-nasa-jpl-open-source-spacecraft-command-software.html) — AIT-GUI 미인증 명령 실행 세부 분석, 개방 저장소 배포 영향
 
 ## 관련
