@@ -11,6 +11,7 @@ KT와 LGU+가 개인정보 침해 사건 조사 과정에서 해킹 증거(로�
 
 - 2026-08-20 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiZEFVX3lxTE81eUlsa3hJVWhXczdLV1poOGtPRzBFSWVISFlNSWxXN21CdWhJQndabEktNE1SQ1VWRFVMQkdSRkNFUzdpSVdfcktld1YyYi02eUt4WWpYUlRvakZ4U3FSTTNPeTM?oc=5) — KT의 해킹 로그 삭제·거짓 제출 사실 적발, 추가 제재 논의
 - 2026-08-20 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiakFVX3lxTFBUOXJ2MWE3Z0JLQjVYUHhOZUZNaVYySDNfeUtkQjE2V2NoWHIwNERpblpnWkJrY2gySGhEUS1iSUZNSDg4aHhHTl9rUmMtb3hiNVpEbWdoMFduckpvNWk2ZFhET2NVTnB0cEE?oc=5) — LGU+의 침해 서버 폐기 의혹 적발, 위약금 면제·영업정지 요구
+- 2026-08-21 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiU0FVX3lxTE4wWWpMTE5lWGdtU1cwWkhKbmhGSmdBZk50azJ1XzBLMXdfVEFYUjN6UHZLZm5PMXNsYW0xUXp6UGxiMVNiUjB0dXhDV0RIT1VKQTNr?oc=5) — KT 개인정보위 고발, 증거 없이 비신고·로그 삭제 의혹 심화
 
 ## 관련
 
