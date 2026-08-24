@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-18 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208097) — FLY 배달 플랫폼 4,790만 건 고객 개인정보 유출 주장, 다크포럼 판매 글 확인
+- 2026-08-23 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208155) — FLY 공식 확인 유출 의심 건수 33만 건, 공격자 주장 4,790만 건과 차이
 
 ## 관련
