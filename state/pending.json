@@ -1388,5 +1388,43 @@
     "tags": [],
     "title": "Microsoft PowerToys adds Alt+Tab-style switching for an app's windows",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-powertoys-adds-alt-plustab-style-switching-for-an-apps-windows/"
+  },
+  {
+    "author": "Sponsored by Specops Software",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/from-fake-workers-to-account-recovery-the-growing-identity-verification-risk/",
+    "published": "2026-08-25T14:01:11+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Attackers are increasingly targeting the processes used to establish or recover identity rather than attacking the login itself. Specops explains how stronger identity verification can help organizations prevent fake workers and social engineering attacks from gaining legitimate access. [...]",
+    "tags": [],
+    "title": "From Fake Workers to Account Recovery: The Growing Identity Verification Risk",
+    "url": "https://www.bleepingcomputer.com/news/security/from-fake-workers-to-account-recovery-the-growing-identity-verification-risk/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25334",
+    "published": "2026-08-25T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "Advisory at a Glance Title A Tale of Two SOCs: Insights From Two Red Team Assessments Original Publication August 25, 2026 Executive Summary The Cybersecurity and Infrastructure Security Agency (CISA) conducted simultaneous red team assessments at two organizations and observed different defensive outcomes. In both environments, the red team achieved full domain compromise and accessed sensitive business systems (SBSs) and cloud resources. Organization A failed to detect or contain the activity, but Organization B rapidly identified initial compromise attempts, isolated affected systems, and forced the red team into an assume breach model. This advisory details the red team’s activity and organizations’ defensive actions, offering lessons learned and mitigations to help critical infrastructure organizations strengthen detection, response, and protections in IT, cloud, and operational technology (OT) environments. Lessons Learned Untuned detection tools lead to missed threats . Without well-defined baselines and alert filtering, false positives and routine alerts overwhelm network defenders. Organizational silos and bureaucratic hurdles prevent effective incident response . Detection tools are only as effective as the people, processes, and procedures supporting them; fragmented communication, unclear responsibilities, and limited defender authority hinder effective incident response. Cloud environments are often an underestimated risk . Organizations often lack security contr",
+    "tags": [
+      "RCE"
+    ],
+    "title": "A Tale of Two SOCs: Insights From Two Red Team Assessments",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/ukraine-uk-ai-drone-data",
+    "published": "2026-08-25T14:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Ukraine will give Britain access to a vast trove of battlefield data collected during the war with Russia, allowing U.K. companies and researchers to use it to train and test artificial intelligence systems.",
+    "tags": [],
+    "title": "Ukraine to give Britain access to battlefield data to train AI",
+    "url": "https://therecord.media/ukraine-uk-ai-drone-data"
   }
 ]
