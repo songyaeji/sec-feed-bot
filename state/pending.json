@@ -1438,5 +1438,29 @@
     "tags": [],
     "title": "Hospital operator Nutex Health says data stolen in cyberattack",
     "url": "https://www.bleepingcomputer.com/news/security/hospital-operator-nutex-health-says-data-stolen-in-cyberattack/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/08/a-malicious-webpage-could-poison-your.html",
+    "published": "2026-08-25T14:07:37+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Oasis Security has disclosed a weakness in NVIDIA NemoClaw that could let an attacker-controlled webpage take unauthenticated control of the local Ollama instance serving an AI agent and plant hidden instructions inside the model itself. The findings were shared with The Hacker News ahead of publication, and the report says Oasis Security reported them to NVIDIA's Product Security Incident",
+    "tags": [],
+    "title": "A Malicious Webpage Could Poison Your Local AI Model Behind NVIDIA NemoClaw",
+    "url": "https://thehackernews.com/2026/08/a-malicious-webpage-could-poison-your.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33280",
+    "published": "2026-08-25T15:03:33+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "It is pretty obvious that hostnames can replace IP addresses. Pretty much any software accepting an IP address will also accept a hostname as an argument. Last week, I wrote about scans for the cloud metadata service listening at 169.254.169.254. These scans attempted to exploit Server Side Request Forgery (SSRF) vulnerability. One way to prevent these types of exploits is to filter requests that contain the string \"169.254.169.254\" or to add this IP to a blocklist of URLs that should not be accessed.",
+    "tags": [],
+    "title": "Obfuscating IP Addresses as Hostnames, (Tue, Aug 25th)",
+    "url": "https://isc.sans.edu/diary/rss/33280"
   }
 ]
