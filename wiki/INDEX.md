@@ -2,6 +2,16 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [nvidia-nemoclaw-model-poisoning](topics/2026-08-nvidia-nemoclaw-model-poisoning.md) NVIDIA NemoClaw — 웹페이지 LLM 모델 중독 공격 (최종갱신일: 2026-08-25)
+- [nutex-health-data-breach](topics/2026-08-nutex-health-data-breach.md) Nutex Health 병원 운영사 고객 정보 유출 (최종갱신일: 2026-08-25)
+- [marimo-notebook-mcp-rce](topics/2026-08-marimo-notebook-mcp-rce.md) Marimo Notebook — 편집 모드 MCP 명령 실행 취약점 (최종갱신일: 2026-08-25)
+- [npm-unpkg-clickfix-campaign](topics/2026-08-npm-unpkg-clickfix-campaign.md) npm 24개 패키지 — unpkg 미러 악용 ClickFix 피싱 (최종갱신일: 2026-08-25)
+- [mirage2fa-phishing-campaign](topics/2026-08-mirage2fa-phishing-campaign.md) Mirage2FA — PhaaS 피싱 캠페인 4,500개 회사 표적 (최종갱신일: 2026-08-25)
+- [zimbra-rce-active-exploitation](topics/2026-08-zimbra-rce-active-exploitation.md) Zimbra 중대 원격코드 실행 취약점 활발한 악용 270여 서버 침해 (최종갱신일: 2026-08-25)
+- [lockbit-us-bancorp-supply-chain](topics/2026-08-lockbit-us-bancorp-supply-chain.md) 록빗 미 대형은행 공급망 공격 협력사 침해 (최종갱신일: 2026-08-25)
+- [paylogix-data-breach](topics/2026-08-paylogix-data-breach.md) Paylogix 혜택 관리 플랫폼 금융·의료정보 유출 (최종갱신일: 2026-08-25)
+- [ebyte-ne2-d11-auth-bypass](topics/2026-08-ebyte-ne2-d11-auth-bypass.md) Ebyte NE2-D11 — 웹 관리 인터페이스 미인증 접근 (최종갱신일: 2026-08-25)
+- [ai-system-security-bypass](topics/2026-08-ai-system-security-bypass.md) AI 시스템 보안 우회 의혹 미국 조사 (최종갱신일: 2026-08-25)
 - [oracle-weblogic-improper-access](topics/2026-08-oracle-weblogic-improper-access.md) Oracle Weblogic Server — 접근제어 우회 취약점 (최종갱신일: 2026-08-24)
 - [operation-quicsilver](topics/2026-08-operation-quicsilver.md) 중국 APT Operation QUICSILVER 미얀마 정부 표적 QUICAgent 백도어 (최종갱신일: 2026-08-24)
 - [wordlistloader-amatera](topics/2026-08-wordlistloader-amatera.md) 신규 악성코드 WordlistLoader·SynkLoader 발견 랜섬웨어 그룹 판매 (최종갱신일: 2026-08-24)
@@ -38,7 +48,6 @@
 - [offside-wallet-theft-factory](topics/2026-08-offside-wallet-theft-factory.md) Offside Wallet Theft Factory 40개 악성 Firefox 확장 Web3 사칭 (최종갱신일: 2026-08-20)
 - [nasa-ait-gui-rce](topics/2026-08-nasa-ait-gui-rce.md) NASA AIT-GUI 우주선 제어 명령 원격실행 CVSS 9.4 (최종갱신일: 2026-08-22)
 - [manic-android-malware](topics/2026-08-manic-android-malware.md) Manic 안드로이드 말웨어 근처 기기 릴레이 데이터 탈취 (최종갱신일: 2026-08-20)
-- [zimbra-rce-active-exploitation](topics/2026-08-zimbra-rce-active-exploitation.md) Zimbra 중대 원격코드 실행 취약점 활발한 악용 CISA 긴급 패치 지시 (최종갱신일: 2026-08-24)
 - [elementor-pro-rce](topics/2026-08-elementor-pro-rce.md) Elementor Pro 미인증 원격코드 실행 CVE-2026-32475 (최종갱신일: 2026-08-20)
 - [mlflow-ssrf-webhook-test](topics/2026-08-mlflow-ssrf-webhook-test.md) MLflow 웹훅 테스트 SSRF 내부 서비스 접근 (최종갱신일: 2026-08-20)
 - [ransom-busters-recovery-scam](topics/2026-08-ransom-busters-recovery-scam.md) 랜섬웨어 피해자 가짜 복구 데이터 삭제 사기 (최종갱신일: 2026-08-19)
