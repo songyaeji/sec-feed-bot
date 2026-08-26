@@ -2120,5 +2120,69 @@
     "tags": [],
     "title": "US takes down alleged Chinese hacking tools used against Federal Reserve, DOJ and Senate",
     "url": "https://therecord.media/qscan-qtrouter-us-takedown-alleged-china-hacking-tools"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2021-23758",
+    "kev": true,
+    "published": "2026-08-26T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2021-23758: Ajax.NET Professional Deserialization of Untrusted Data Vulnerability (Ajax.NET Professional Ajax.NET Professional)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23758"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2015-3246",
+    "kev": true,
+    "published": "2026-08-26T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation. ",
+    "tags": [],
+    "title": "CVE-2015-3246: Red Hat Libuser Race Condition Vulnerability (Red Hat Libuser)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3246"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2015-5287",
+    "kev": true,
+    "published": "2026-08-26T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). U",
+    "tags": [],
+    "title": "CVE-2015-5287: Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability (Red Hat Automatic Bug Reporting Tool)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5287"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2022-0995",
+    "kev": true,
+    "published": "2026-08-26T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.",
+    "tags": [],
+    "title": "CVE-2022-0995: Linux Kernel Out-of-Bounds Write Vulnerability (Linux Kernel)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0995"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2019-1068",
+    "kev": true,
+    "published": "2026-08-26T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-1068: Microsoft SQL Server Remote Code Execution Vulnerability (Microsoft SQL Server)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-1068"
   }
 ]
