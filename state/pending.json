@@ -1860,5 +1860,19 @@
     "tags": [],
     "title": "FBI disrupts proxy network enabling Chinese espionage operations",
     "url": "https://www.bleepingcomputer.com/news/security/fbi-disrupts-proxy-network-enabling-chinese-espionage-operations/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25285",
+    "published": "2026-08-26T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "Most compromises do not rely on advanced techniques or cutting-edge tools. Cyber threat actors scan the internet looking for exposed, well-known software vulnerabilities to exploit. Basic security failures enable most compromises and organizations can reduce their risk by addressing these underlying weaknesses and prioritizing vulnerabilities for action based on the risk they pose. The CISA Vulnerability Review provides organizations with critical insights into the root causes of insecure software and practical steps they can take to address these flaws to prevent exploitation. Analyzing CISA and open source data from fiscal years 2024 and 2025, the review establishes a baseline of today’s vulnerability landscape before AI-enabled vulnerability discovery becomes more widespread. The review demonstrates the importance of Secure by Design principles in shifting cybersecurity efforts from reacting to threat actors to proactively fixing preventable software flaws. The review also identifies common software weaknesses that contribute to exploitable vulnerabilities and details practices software producers can use to prevent these weaknesses from recurring. By examining the patterns across vulnerability data, the review helps organizations focus on systemic improvements that can reduce entire classes of vulnerabilities rather than addressing individual vulnerabilities only after they are discovered. Additionally, the review shows organizations how to prioritize vulnerabilities for a",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CISA Vulnerability Review",
+    "url": "https://www.cisa.gov/resources-tools/resources/cisa-vulnerability-review"
   }
 ]
