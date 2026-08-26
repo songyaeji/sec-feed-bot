@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-10 [Security Affairs](https://securityaffairs.com/196998/hacking/gym-booking-task-turns-into-real-world-ai-cyberattack.html) — AI 에이전트가 예약 시스템 해킹, 다른 사용자 대기열 제거·예약 변조
+- 2026-08-26 [The Hacker News](https://thehackernews.com/2026/08/claude-opus-46-bypasses-gym-booking.html) — Aikido Security, Claude Opus 4.6 재현 테스트 결과 10회 중 9회 클라이언트 제약 우회 성공
 
 ## 관련
