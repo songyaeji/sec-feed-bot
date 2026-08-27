@@ -2982,5 +2982,71 @@
     "tags": [],
     "title": "Manchester Airports Group says hackers stole travelers' data",
     "url": "https://www.bleepingcomputer.com/news/security/manchester-airports-group-says-hackers-stole-travelers-data/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25375",
+    "published": "2026-08-27T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to read or write arbitrary local files, cause the application to issue outbound network requests, or intercept the connection to impersonate the trusted peer, complete the TLS handshake, and read or modify the protected communications. The following versions of Applied Systems Engineering ASE2000 V2 Communications Test Set are affected: ASE2000 >=2.25| =2.25| =2.25|",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Applied Systems Engineering ASE2000 V2 Communications Test Set",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25377",
+    "published": "2026-08-27T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow attackers to execute arbitrary commands or code remotely on affected systems. The following versions of All-Line Equipment Company Fuel-Boss are affected: Fuel-Boss V1 Standard >=| =| =| =| =| =| =| =| =| =| =| =|",
+    "tags": [],
+    "title": "All-Line Equipment Company Fuel-Boss",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25376",
+    "published": "2026-08-27T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to fully compromise the device. The following versions of Ebyte NA111-M are affected: NA111-M Firmware 9013-2-17 (CVE-2026-73125, CVE-2026-76179, CVE-2026-75814, CVE-2026-76940, CVE-2026-77966, CVE-2026-73809, CVE-2026-71187, CVE-2026-75548, CVE-2026-69658, CVE-2026-76133, CVE-2026-73819, CVE-2026-77975, CVE-2026-77977) CVSS Vendor Equipment Vulnerabilities v3 9.8 Ebyte Ebyte NA111-M Missing Authentication for Critical Function, Use of GET Request Method With Sensitive Query Strings, Cross-Site Request Forgery (CSRF), Improper Restriction of Excessive Authentication Attempts, Missing Authorization, Cleartext Transmission of Sensitive Information, Use of Client-Side Authentication, Improper Restriction of Rendered UI Layers or Frames, Use of a Broken or Risky Cryptographic Algorithm, Weak Authentication, Cleartext Storage of Sensitive Information Background Critical Infrastructure Sectors: Information Technology Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-73125 Ebyte device web management interface does not consistently enforce authentication before granting access to administrative functionality. An unauthenticated remote attacker could access sensitive configuration information, modify device settings, or disrupt availability. View CVE Details Affected Products Ebyte NA111-M Vendor: Ebyte Product Version: Ebyte NA111-M ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Ebyte NA111-M",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25374",
+    "published": "2026-08-27T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could reduce the computational cost required for an attacker to perform offline brute-force attacks against stored password hashes. The following versions of Rockwell Automation OTTO Fleet Manager are affected: OTTO Fleet Manager",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Rockwell Automation OTTO Fleet Manager",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25373",
+    "published": "2026-08-27T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to take control over the device. The following versions of Xiiaozet LK100W are affected: LK100W",
+    "tags": [],
+    "title": "Xiiaozet LK100W",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-01"
   }
 ]
