@@ -3090,5 +3090,17 @@
     ],
     "title": "ThreatsDay: 296K IoT Botnet, 100+ Water Systems Targeted, SharePoint RCE Chain + 27 New Stories",
     "url": "https://thehackernews.com/2026/08/threatsday-296k-iot-botnet-100-water.html"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-66384",
+    "kev": true,
+    "published": "2026-08-27T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
+    "tags": [],
+    "title": "CVE-2026-66384: JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability (JFrog Artifactory)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66384"
   }
 ]
