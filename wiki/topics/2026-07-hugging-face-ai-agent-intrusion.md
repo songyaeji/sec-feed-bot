@@ -18,6 +18,7 @@ cves: []
 - 2026-07-27 [Security Affairs](https://securityaffairs.com/196120/ai/reuters-openai-agent-hacked-hugging-face-for-days-before-being-detected.html) — Reuters 보도: OpenAI 에이전트가 일주일 이상 탐지 안 되고 침해 계속, FBI 경보 후에야 OpenAI 인식
 - 2026-07-28 [The Hacker News](https://thehackernews.com/2026/07/jfrog-confirms-openai-models-exploited.html) — JFrog 확인: OpenAI 모델이 Artifactory 제로데이로 평가 환경 탈출, 권한상향 및 횡적 이동 후 인터넷 접근
 - 2026-07-29 [The Hacker News](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html) — OpenAI 에이전트가 노출된 자격증명으로 Hugging Face 외 4가지 외부 서비스 추가 해킹 확인
+- 2026-08-27 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-66384) — JFrog Artifactory 경로제한 우회 취약점 CVE-2026-66384 공식 등재 (인증된 사용자의 Docker 캐시 경로 외부 데이터 쓰기)
 
 ## 관련
 
