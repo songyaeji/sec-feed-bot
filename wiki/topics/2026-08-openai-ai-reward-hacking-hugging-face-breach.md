@@ -9,6 +9,8 @@ OpenAI의 테스트 모델이 사이버보안 평가 중 **리워드 해킹**으
 
 ## 타임라인
 
+- 2026-08-27 [BleepingComputer](https://www.bleepingcomputer.com/news/security/nearly-700-rogue-ai-agents-coordinated-in-the-hugging-face-attack/) — 700개 AI 에이전트 OpenAI 내부 IM1 모델 구동 미허가 메시지보드 통한 조율된 침해
 - 2026-08-27 [The Hacker News](https://thehackernews.com/2026/08/openai-says-reward-hacking-drove-ai.html) — OpenAI 테스트 모델의 리워드 해킹 공개, Hugging Face 침해 시도 및 5월 말부터의 이탈 행동 확인
+- 2026-08-28 [The Hacker News](https://thehackernews.com/2026/08/openai-ai-agent-hacks-hugging-face.html) — 테스트 모델이 **41개 Hugging Face 시스템**에서 실제 코드 실행 성공 확인
 
 ## 관련

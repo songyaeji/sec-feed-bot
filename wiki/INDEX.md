@@ -2,6 +2,13 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [manchester-airports-breach](topics/2026-08-manchester-airports-breach.md) Manchester Airports 870만 고객 데이터 유출 영국 공항 3개 (최종갱신일: 2026-08-28)
+- [apt28-hookedge-backdoor](topics/2026-08-apt28-hookedge-backdoor.md) APT28 HOOKEDGE 백도어 유럽 정부·외교 기관 표적 (최종갱신일: 2026-08-28)
+- [openai-ai-reward-hacking-hugging-face-breach](topics/2026-08-openai-ai-reward-hacking-hugging-face-breach.md) OpenAI 테스트 모델 700개 AI 에이전트 리워드 해킹 Hugging Face 침해 (최종갱신일: 2026-08-28)
+- [nextjs-critical-rce](topics/2026-08-nextjs-critical-rce.md) Next.js AVIF·Windows 경로 취약점 미인증 RCE CVE-2026-75604 (최종갱신일: 2026-08-27)
+- [dark-caracal-gocaracal](topics/2026-08-dark-caracal-gocaracal.md) Dark Caracal 새 Go 악성코드 GoCaracal 베네수엘라 Ethereum C2 (최종갱신일: 2026-08-27)
+- [carhartt-shinyhunters-breach](topics/2026-08-carhartt-shinyhunters-breach.md) Carhartt 의류사 ShinyHunters 침해 1,290만 건 개인정보 유출 (최종갱신일: 2026-08-27)
+- [spark-rat-cambodia-opswat](topics/2026-08-spark-rat-cambodia-opswat.md) Spark RAT 캄보디아 캠페인 OPSWAT 드라이버 악용 (최종갱신일: 2026-08-27)
 - [safepay-ransomware-korea-gas](topics/2026-08-safepay-ransomware-korea-gas.md) SAFEPAY 랜섬웨어 한국 산업 가스 회사 공격 (최종갱신일: 2026-08-27)
 - [ebyte-na111-m-multi-vuln](topics/2026-08-ebyte-na111-m-multi-vuln.md) Ebyte NA111-M 13개 중대 취약점 기기 완전 침해 (최종갱신일: 2026-08-27)
 - [xiiaozet-lk100w-rce](topics/2026-08-xiiaozet-lk100w-rce.md) Xiiaozet LK100W 산업용 라우터 다중 취약점 (최종갱신일: 2026-08-27)
@@ -10,10 +17,9 @@
 - [ase2000-v2-rce](topics/2026-08-ase2000-v2-rce.md) Applied Systems Engineering ASE2000 V2 파일 읽기쓰기·MITM (최종갱신일: 2026-08-27)
 - [mitsubishi-electric-cnc-oob](topics/2026-08-mitsubishi-electric-cnc-oob.md) Mitsubishi Electric CNC 제어기 경계 초과 읽기 (최종갱신일: 2026-08-27)
 - [mitsubishi-electric-fa-dos](topics/2026-08-mitsubishi-electric-fa-dos.md) Mitsubishi Electric FA 제품군 UDP 거부 서비스 (최종갱신일: 2026-08-27)
-- [teampcp-redis-supply-chain](topics/2026-08-teampcp-redis-supply-chain.md) TeamPCP 위협 행위자 호주 기소 공급망 공격 (최종갱신일: 2026-08-27)
+- [teampcp-redis-supply-chain](topics/2026-08-teampcp-redis-supply-chain.md) TeamPCP 위협 행위자 호주 기소 50만+ 자격증명 탈취 공급망 공격 (최종갱신일: 2026-08-27)
 - [kakao-phishing-zero-click-ios](topics/2026-08-kakao-phishing-zero-click-ios.md) 카카오톡 사칭 피싱 제로클릭 iOS 익스플로잇 (최종갱신일: 2026-08-27)
 - [korea-financial-ssn-policy-reform](topics/2026-08-korea-financial-ssn-policy-reform.md) 금융권 불필요 주민번호 수집 규제 강화 (최종갱신일: 2026-08-27)
-- [openai-ai-reward-hacking-hugging-face-breach](topics/2026-08-openai-ai-reward-hacking-hugging-face-breach.md) OpenAI 테스트 모델 리워드 해킹으로 Hugging Face 침해 시도 (최종갱신일: 2026-08-27)
 - [papercut-ng-mf-zero-day](topics/2026-08-papercut-ng-mf-zero-day.md) PaperCut NG/MF 제로데이 취약점 활발한 악용 (최종갱신일: 2026-08-27)
 - [amazon-kiro-prompt-injection](topics/2026-08-amazon-kiro-prompt-injection.md) Amazon Kiro IDE 프롬프트 인젝션 데이터 유출 (최종갱신일: 2026-08-27)
 - [fbi-qtfy-qscan-qtrouter](topics/2026-08-fbi-qtfy-qscan-qtrouter.md) FBI·DOJ QTFY 중국 APT QScan·QTRouter 해킹 플랫폼 무력화 (최종갱신일: 2026-08-26)
