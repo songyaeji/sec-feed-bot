@@ -10,5 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-08-18 [The Record](https://therecord.media/berlin-cuts-two-state-ministries-off-government-breach) — 베를린 정부 2개 부처 네트워크 격리 조치
+- 2026-08-28 [The Hacker News](https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html) — 정부 거부 성명 및 교통·환경 부처에서 추가 데이터 유출 발견
+- 2026-08-29 [Security Affairs](https://securityaffairs.com/198064/cyber-crime/rhysida-ransomware-group-targets-berlin-government-ahead-of-vote.html) — Rhysida 랜섬웨어 그룹 지목, 5.79TB 데이터 탈취 주장 및 선거 직전 정치적 타이밍
 
 ## 관련

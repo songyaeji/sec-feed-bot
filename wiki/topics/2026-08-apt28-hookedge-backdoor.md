@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-28 [The Hacker News](https://thehackernews.com/2026/08/apt28-linked-hookedge-backdoor-targets.html) — APT28 HOOKEDGE 백도어 유럽 정부·외교 기관 표적 캠페인
+- 2026-08-28 [Security Affairs](https://securityaffairs.com/197996/apt/russian-apt-bluedelta-uses-hookedge-to-target-defense-and-diplomatic-organizations.html) — webhook.site·Microsoft Edge로 HOOKEDGE 첩보 트래픽 위장, Recorded Future 분석
 
 ## 관련
