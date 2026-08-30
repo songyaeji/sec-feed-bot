@@ -93,3 +93,6 @@
 - [linux-drm-ttm-swapout-lru](topics/2026-06-linux-drm-ttm-swapout-lru.md) Linux drm/ttm swapout 무한 LRU 순회 (최종갱신일: 2026-06-24)
 - [linux-drm-idr-prime](topics/2026-06-linux-drm-idr-prime.md) Linux drm DMA-buf IDR 포인터 교체 오류 (최종갱신일: 2026-06-24)
 - [linux-smb-symlink-data-loop](topics/2026-06-linux-smb-symlink-data-loop.md) Linux SMB 클라이언트 symlink_data 무한루프 및 OOB (최종갱신일: 2026-06-24)
+- [pacsgear-pacs-rce](topics/2026-07-pacsgear-pacs-rce.md) PACSgear 의료 영상 관리 시스템 RCE (최종갱신일: 2026-07-01)
+- [pacsgear-mediawriter-rce](topics/2026-07-pacsgear-mediawriter-rce.md) PACSgear MediaWriter 미디어 도구 RCE (최종갱신일: 2026-07-01)
+- [foreman-role-privilege](topics/2026-07-foreman-role-privilege.md) Foreman 자산 관리 역할 권한 검증 부재 (최종갱신일: 2026-07-01)

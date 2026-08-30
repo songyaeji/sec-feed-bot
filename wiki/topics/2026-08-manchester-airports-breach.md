@@ -11,5 +11,6 @@ cves: []
 
 - 2026-08-27 [BleepingComputer](https://www.bleepingcomputer.com/news/security/manchester-airports-group-says-hackers-stole-travelers-data/) — Manchester Airports Group 침해 공개, 여행객 데이터 탈취
 - 2026-08-28 [Security Affairs](https://securityaffairs.com/197966/data-breach/cyberattack-on-uk-airport-operator-mag-exposes-data-of-8-7-million-customers-across-three-airports.html) — MAG 침해 870만 건 고객정보 유출 확인
+- 2026-08-30 [BleepingComputer](https://www.bleepingcomputer.com/news/security/fulcrumsec-claims-manchester-airports-hack-theft-of-86-gb-of-data/) — FulcrumSec이 86GB 탈취 주장, 클라이언트 JavaScript의 노출된 API 자격증명 이용
 
 ## 관련
