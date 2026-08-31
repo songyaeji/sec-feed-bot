@@ -13754,8 +13754,10 @@
     "CVE-2026-8093": "2026-07-15T01:22:13.092106+00:00",
     "CVE-2026-8094": "2026-07-15T01:22:13.092156+00:00",
     "CVE-2026-8147": "2026-07-06T17:32:30.415343+00:00",
+    "CVE-2026-81578": "2026-08-31T14:43:14.738391+00:00",
     "CVE-2026-8182": "2026-08-05T19:22:03.260295+00:00",
     "CVE-2026-8206": "2026-07-22T19:12:10.219878+00:00",
+    "CVE-2026-82078": "2026-08-31T14:43:14.738140+00:00",
     "CVE-2026-8234": "2026-07-24T07:11:59.038758+00:00",
     "CVE-2026-8247": "2026-08-13T19:29:44.404996+00:00",
     "CVE-2026-8260": "2026-07-23T20:11:57.979305+00:00",
@@ -14079,21 +14081,9 @@
     "CVE-2026-9999": "2026-07-21T12:12:55.353860+00:00"
   },
   "last_digest_date": "2026-08-31",
-  "last_run": "2026-08-31T14:32:11.829706+00:00",
+  "last_run": "2026-08-31T14:43:14.754610+00:00",
   "last_trend_date": "2026-08-31",
   "recent_titles": [
-    {
-      "d": "2026-08-24T14:33:19.835891+00:00",
-      "t": "questionable email of content report i never did"
-    },
-    {
-      "d": "2026-08-24T14:42:17.757749+00:00",
-      "t": "tata s b2b platform returned otps in api responses"
-    },
-    {
-      "d": "2026-08-24T14:42:17.761846+00:00",
-      "t": "\ucda9\uccad\uad8c \uc815\ubcf4 \ubcf4\uc548 \uc0dd\ud0dc\uacc4 \uc138\uc885 \uc5d0 \uc870\uc131"
-    },
     {
       "d": "2026-08-24T14:51:53.643960+00:00",
       "t": "breaking news 17 year old discovers 55 critical vulnerabilities in pseb portal government silent for 25 days student data at risk certin 39087726"
@@ -20741,6 +20731,18 @@
     {
       "d": "2026-08-31T14:32:11.817030+00:00",
       "t": "what questions do you have about securing al systems or breaking them black hat 2026 speaker is answering them"
+    },
+    {
+      "d": "2026-08-31T14:43:14.738140+00:00",
+      "t": "cve 2026 82078 papercut ng mf unsafe reflection vulnerability papercut ng mf"
+    },
+    {
+      "d": "2026-08-31T14:43:14.738391+00:00",
+      "t": "cve 2026 81578 papercut ng mf missing authentication for critical function vulnerability papercut ng mf"
+    },
+    {
+      "d": "2026-08-31T14:43:14.742612+00:00",
+      "t": "166\ub9cc\uba85 \uc815\ubcf4 \uc0dc\ub294\ub370 \uc774\uc0c1\uc9d5\ud6c4 \ubab0\ub790\ub2e4 gs\ub9ac\ud14c\uc77c 128\uc5b5 \uacfc\uc9d5\uae08 \ucca0\ud1f4"
     }
   ],
   "seen": {
@@ -26150,6 +26152,7 @@
     "CBMiYEFVX3lxTE8tRWcxdi1kUE01a0VBZlFPZ2xBOHFfUk1JOGVldlBiWWVicmZlREcxU1ZxV0lBNE91THhzM1pzRDdtcDYyV0t5cXhKbFZKRkJnU0lHYkMwWXBkbzRVbjRMWg": "2026-08-05T06:44:22.135643+00:00",
     "CBMiYEFVX3lxTE8tSXpsS1N6cDNMZjRfNlhYb0ZaZkZHUjRHZndQX24zMEFCOS1ZajF0RlpUZ1YtM2dXLVNyd0dKREFna2xacHFHM0xuZGQ5MGFVRldyNWQ2NEtmUmg1ZzFxUQ": "2026-07-24T11:23:25.028695+00:00",
     "CBMiYEFVX3lxTE8tVWdZbjNPNzdJNDFXUWtDR01YVmROakUyeXB2ZUpHcFZyR3BVaUdYTEh3UkxDTjM1bkl0OUZ5OGM0dUpnclVrM0FIc25BdXhDU0xrYWpDM3hVSnBwbnR5RQ": "2026-08-14T03:13:15.643608+00:00",
+    "CBMiYEFVX3lxTE8tWXRZWlRsR2ZYU1FDMzZqY0ZESG1wUlZlZXo5bEp0cHF6eWgzZElsSHlVZW9lQTdtSllCSGRUa2NvazNiV29GV0l1bWZQMkNPdjc4STlMU3YwSE9GYTVWNQ": "2026-08-31T14:43:14.754610+00:00",
     "CBMiYEFVX3lxTE8wN25uZ2xsYVVsRVZaZi1KTndPcWJIeTZrdjJfQkZIQTlqeEIyMEVCWVFWNnk4emlEU2tKYllGMy1yOVlfV3ktU3ZPWW5VRGw5TnpTS0xPQ0NuQzFzU2o1btIBeEFVX3lxTFA1M2s3OGhNUmNYS29FU0xZYjJxT2g4VUk5WlRXM2ZpTXJGbTFqZWZMWEFRV3ctclRZbnowSTc4Ym42aENjbnhwcEFXbVE5eHVlaWNTSVVybWVtMVBOUzB3TmNjRUl4YVRwNkhkZ0N4dktQYVpidEdBWg": "2026-08-12T09:52:47.119956+00:00",
     "CBMiYEFVX3lxTE8wRTcwNDZNVDBIalJGTHNQS2NmNEZIWVFZRUFwc0Y0d010VkxmUWdvNWdYQUxEbzY4b25nNWRGb2l3RTJPNUsxcm51ektmZmdSUi13NjZKS0dpeXVOZHZtStIBeEFVX3lxTE1oLU5ybl9WdEtFOVRZd0lWcjN3Q2tPSmN6eTFGbGgwQUZjTmc0ZFpJdkxtV2dLWC1sS2Y2cVZLekIxQnZESmVEMmhVU0hBOGdlU2xSSzNOb2RNZF9tand4ODNKR1dMWmtzX09rME5nVUdZV3VlNHJjMg": "2026-08-05T04:42:28.431223+00:00",
     "CBMiYEFVX3lxTE8wWENEZnpYbzduYlUwUE5vQTREQkVJMUxmQ25fSDVRVFRaSlVmbTJLenVUQVRiMVl6c3kyTVBHNXF5VURNYmR4ZVVPRk1FTWxJckhBQmlRMmRyaDhqV0tFYg": "2026-07-08T08:33:25.479501+00:00",
@@ -47462,8 +47465,10 @@
     "CVE-2026-8093": "2026-07-15T01:22:17.011990+00:00",
     "CVE-2026-8094": "2026-07-15T01:22:17.011990+00:00",
     "CVE-2026-8147": "2026-07-06T17:32:32.524276+00:00",
+    "CVE-2026-81578": "2026-08-31T14:43:14.754610+00:00",
     "CVE-2026-8182": "2026-08-05T19:22:07.287124+00:00",
     "CVE-2026-8206": "2026-07-22T19:12:10.239589+00:00",
+    "CVE-2026-82078": "2026-08-31T14:43:14.754610+00:00",
     "CVE-2026-8234": "2026-07-24T07:12:02.202241+00:00",
     "CVE-2026-8247": "2026-08-13T19:29:44.429841+00:00",
     "CVE-2026-8260": "2026-07-23T20:12:12.640995+00:00",
