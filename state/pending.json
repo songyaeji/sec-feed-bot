@@ -1916,5 +1916,19 @@
     "tags": [],
     "title": "ValleyRAT: When Legitimate Software Becomes a Malware Delivery Tool",
     "url": "https://securityaffairs.com/198191/security/valleyrat-when-legitimate-software-becomes-a-malware-delivery-tool.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33298",
+    "published": "2026-08-31T20:00:34+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "One of my internet-exposed inference honeypots was discovered, relabeled with sought-after model names, and incorporated into infrastructure apparently used to provide \"free\" LLM backends. It then received a real coding-agent session &#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x94; history, filesystem output, working paths, and the agent&#;x26;#;39;s local tool manifest. The honeypot did not request or cause any tool execution; what the request exposed is what a malicious operator in that position could do.",
+    "tags": [
+      "AI"
+    ],
+    "title": "The Coding-Agent Trap: When a \"Free\" LLM Endpoint Is the Adversary, (Mon, Aug 31st)",
+    "url": "https://isc.sans.edu/diary/rss/33298"
   }
 ]
