@@ -11,5 +11,6 @@ cves: []
 
 - 2026-07-07 [GBHackers](https://gbhackers.com/silverfox-expands-valleyrat-attack/) — SilverFox의 ValleyRAT 다단계 루트킷 체인 분석 공개
 - 2026-07-30 [The Hacker News](https://thehackernews.com/2026/07/silverfox-targets-japanese-manufacturer.html) — 일본 제조업체 표적, 3가지 BYOVD 드라이버 활용 새로운 공격 기법 공개
+- 2026-08-31 [Kaspersky Securelist](https://securelist.com/valleyrat-backdoor-adware/121175/) — ValleyRAT 광고웨어로 위장해 배포, 감염 체인 분석
 
 ## 관련
