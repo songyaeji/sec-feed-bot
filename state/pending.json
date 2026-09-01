@@ -2082,5 +2082,81 @@
     "tags": [],
     "title": "Healthcare facilities operator Nutex says patient, employee data stolen in August incident",
     "url": "https://therecord.media/nutex-health-data-breach"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25387",
+    "published": "2026-09-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition on the affected product. The following versions of Rockwell Automation RSLinx Classic are affected: RSLinx Classic",
+    "tags": [],
+    "title": "Rockwell Automation RSLinx Classic",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25392",
+    "published": "2026-09-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could crash the device being accessed; an out-of-bounds write condition may allow remote code execution. The following versions of Rockwell Automation Historian ME are affected: Series B 5.202 (CVE-2025-12768, CVE-2026-12661) Series C 7.101 (CVE-2025-12768, CVE-2026-12661) CVSS Vendor Equipment Vulnerabilities v3 8 Rockwell Automation Rockwell Automation Historian ME Out-of-bounds Write, Stack-based Buffer Overflow Background Critical Infrastructure Sectors: Chemical, Critical Manufacturing, Food and Agriculture, Healthcare and Public Health, Water and Wastewater Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2025-12768 A security issue exists within FactoryTalk® Historian Machine Edition. An attacker with low-level authentication could exploit this vulnerability to achieveremote code execution on the affected device. View CVE Details Affected Products Rockwell Automation Historian ME Vendor: Rockwell Automation Product Version: Rockwell Automation Series B: 5.202, Rockwell Automation Series C: 7.101 Product Status: known_affected Remediations Mitigation Customers using the affected software, who are not able to upgrade to one of the corrected versions, should use Rockwell Automations security best practices found at https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_US#__highlight. https://support.rockwe",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Rockwell Automation Historian ME",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25391",
+    "published": "2026-09-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary The following versions of Rockwell Automation ControlLogix, CompactLogix, CompactLogix 5480, GuardLogix, Compact GuardLogix are affected: ControlLogix 5580",
+    "tags": [],
+    "title": "Rockwell Automation ControlLogix, CompactLogix, CompactLogix 5480, GuardLogix, Compact GuardLogix",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25389",
+    "published": "2026-09-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary The following versions of Rockwell Automation Logix Platform are affected: ControlLogix 5580",
+    "tags": [],
+    "title": "Rockwell Automation Logix Platform",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25388",
+    "published": "2026-09-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow for an attacker to escalate and execute processes with administrator privileges. The following versions of Rockwell Automation Redundancy Module Configuration Tool are affected: Redundancy Module Configuration Tool 10.00.00 (CVE-2026-9633) Redundancy Module Configuration Tool >=9.00.00| =9.00.00|",
+    "tags": [],
+    "title": "Rockwell Automation Redundancy Module Configuration Tool",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25390",
+    "published": "2026-09-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary The following versions of Rockwell Automation FactoryTalk Activation Manager are affected: FactoryTalk Activation Manager V5.02_and_below (CVE-2026-16675) CVSS Vendor Equipment Vulnerabilities v3 7.8 Rockwell Automation Rockwell Automation FactoryTalk Activation Manager Improper Restriction of Excessive Authentication Attempts Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-16675 A privilege escalation vulnerability exists within FactoryTalk Activation Manager. The vulnerability stems from custom actions in the installer that spawn visible console windows running with SYSTEM privileges during installation or repair operations. An authenticated attacker with Windows credentials could hijack these console windows to obtain a SYSTEM-level command prompt, allowing full access to all files, processes, and system resources. View CVE Details Affected Products Rockwell Automation FactoryTalk Activation Manager Vendor: Rockwell Automation Product Version: Rockwell Automation FactoryTalk Activation Manager V5.02_and_below Product Status: known_affected Remediations Vendor fix Rockwell Automation recommends users update to software version V5.03. Mitigation Customers using the affected software who are not able to upgrade to one of the corrected versions should use Rockwell Automation's security best practices. Relevant CWE: CWE-307 ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Rockwell Automation FactoryTalk Activation Manager",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-244-04"
   }
 ]
