@@ -96,3 +96,4 @@
 - [pacsgear-pacs-rce](topics/2026-07-pacsgear-pacs-rce.md) PACSgear 의료 영상 관리 시스템 RCE (최종갱신일: 2026-07-01)
 - [pacsgear-mediawriter-rce](topics/2026-07-pacsgear-mediawriter-rce.md) PACSgear MediaWriter 미디어 도구 RCE (최종갱신일: 2026-07-01)
 - [foreman-role-privilege](topics/2026-07-foreman-role-privilege.md) Foreman 자산 관리 역할 권한 검증 부재 (최종갱신일: 2026-07-01)
+- [woori-bank-nft-data-leak](topics/2026-07-woori-bank-nft-data-leak.md) 우리은행 NFT 플랫폼 고객정보 유출 (최종갱신일: 2026-07-03)

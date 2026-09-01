@@ -10,3 +10,5 @@ cves: []
 ## 타임라인
 
 - 2026-08-13 [The Hacker News](https://thehackernews.com/2026/08/north-korean-remote-workers-are.html) — FBI, 북한 원격 IT 근로자의 정부·기업 침투 조사 진행
+- 2026-09-01 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208290) — 11개국 공동경보, IT 넘어 의료·영업·금융 분야까지 확산 확인, AI 활용한 신분사칭 및 원격 조작 수법 고도화
+- 2026-09-01 [Security Affairs](https://securityaffairs.com/198227/apt/north-korea-linked-it-workers-are-getting-hired-inside-western-companies.html) — Huntress, 2026년 5명의 DPRK 연계 원격 근로자 확인, 가짜 신분·원격 접속 도구 악용

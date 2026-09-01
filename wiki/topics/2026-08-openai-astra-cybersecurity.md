@@ -10,5 +10,6 @@ OpenAI는 개발 중인 차세대 **Astra AI** 모델이 사이버보안 및 에
 ## 타임라인
 
 - 2026-08-10 [The Hacker News](https://thehackernews.com/2026/08/openais-next-ai-model-astra-shows-cyber.html) — OpenAI가 **Astra** 모델의 사이버보안·에이전트 능력 발전에 따라 내부 활동 일시 중단, 고격리 테스트 환경 도입
+- 2026-09-01 [Google News](https://news.google.com/rss/articles/CBMid0FVV95cUxPdnZYM0JhZUNNYVRFdU5FNzh4aEVXaEJGY05TVUZOTUpUWlpsOW9BNUl4Mk9odUhMa2RYd0M2anZ0d0ZaWVNOMkI3V3kxVFJ5Yml3RWVMLVZBcUlFbXNuM2tiTkk0VDZ0bGJKWmFwS3dPZVJrSERlWkYtUFBJeGtnOQ?oc=5) — 익스플로잇 위험으로 **Astra** 모델의 사이버보안 기능 제한
 
 ## 관련
