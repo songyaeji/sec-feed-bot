@@ -1466,5 +1466,32 @@
     "tags": [],
     "title": "GS리테일, 해커 공격에 개인정보 166만 명 유출…과징금 128억",
     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9GZDh3SndnNnBGaUpGUFVLMzQxUXVCcjIyZ3hNRldITnJKSUR4M09Ja1pJUUtHcS1TV082QzIxdENOZ0QzemxPX2QyVnBUV00?oc=5"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/",
+    "published": "2026-09-01T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Introduction Beginning in 2024 Mandiant investigated a string of compromises affecting Brazilian financial services, retail, and eCommerce organizations. Google Threat Intelligence Group (GTIG) tracks this activity as BREEZE COMET (formerly UNC5669), a financially motivated threat actor specializing in manipulating payment systems and banking software in Brazil to conduct fraudulent transfers. This activity overlaps with operations publicly reported as Plump Spider and SHADOW-AETHER-064 . In this blog, we detail BREEZE COMET’s tactics and toolkit, and provide mitigation recommendations and detections to support organizations in defending against this active and developing threat. BREEZE COMET tactics have evolved over time to leverage a customized malware suite and compromised, trusted websites to facilitate initial access, command and control (C2), and to interact with financial software and payment APIs. BREEZE COMET’s operational infrastructure may also indicate intent to expand their infrastructure footprint to other countries in Latin America and Africa. Additionally, we have evidence that BREEZE COMET is using generative artificial intelligence (AI) to support malware development, which may further increase the scale, speed, and sophistication of their operations in the future. BREEZE COMET Targets Brazilian Financial Technology BREEZE COMET operations target organizations with permission to conduct transactions through banking software, APIs, and payment systems such a",
+    "tags": [
+      "금융",
+      "RCE"
+    ],
+    "title": "Financially Motivated Threat Actor BREEZE COMET Targets Brazil",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMioAFBVV95cUxQTG5pWTlwSVVrYXQteTB6NHo1d0dZRkZSU0VBem1ORXo5Wkd2cWxySmJ1T3pyelc5TUZLWl9FMl80d0tKMVJRcUhUVmxJNU9sTnZ3aXJCclFqc0RCMk9UblVJTmNDOFIwZjQwN2FGR25mUThSLWxzNVByb0h6V3o5ZWtIc296eUwwdHczdDRLeEhWdFh0WTE1bmFOQmNsZ2M2",
+    "published": "2026-08-31T17:58:53+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "CCTV 계열 계정, Anthropic 비난… 미중 AI 협상 조건 제시",
+    "tags": [],
+    "title": "CCTV 계열 계정, Anthropic 비난… 미중 AI 협상 조건 제시",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTG5pWTlwSVVrYXQteTB6NHo1d0dZRkZSU0VBem1ORXo5Wkd2cWxySmJ1T3pyelc5TUZLWl9FMl80d0tKMVJRcUhUVmxJNU9sTnZ3aXJCclFqc0RCMk9UblVJTmNDOFIwZjQwN2FGR25mUThSLWxzNVByb0h6V3o5ZWtIc296eUwwdHczdDRLeEhWdFh0WTE1bmFOQmNsZ2M2?oc=5"
   }
 ]
