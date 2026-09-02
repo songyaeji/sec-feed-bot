@@ -2438,5 +2438,55 @@
     ],
     "title": "New pro-Ukraine hacker group targets Russian companies with custom ransomware",
     "url": "https://therecord.media/new-pro-ukraine-hacker-group-custom-ransomware-russia"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-48710",
+    "kev": true,
+    "published": "2026-09-02T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Kludex Starlette contains a HTTP request/response smuggling vulnerability that could allow attackers to inject paths into the host part, prepending the actual path leading to issues such as authentication bypass when the authentication depends on the reconstructed URL’s path. This vulnerability coul",
+    "tags": [],
+    "title": "CVE-2026-48710: Kludex Starlette HTTP Request/Response Smuggling Vulnerability (Kludex Starlette)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48710"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-49869",
+    "kev": true,
+    "published": "2026-09-02T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Kestra OSS contains an OS command injection vulnerability that could allow an unauthenticated remote attacker to create and execute arbitrary workflows without credentials.",
+    "tags": [],
+    "title": "CVE-2026-49869: Kestra OSS OS Command Injection Vulnerability (Kestra Kestra OSS)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49869"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-83549",
+    "kev": true,
+    "published": "2026-09-02T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "SonicWall SMA1000 Appliances contains an OS command injection vulnerability that could enable a remote authenticated attacker as administrator to execute arbitrary OS commands, resulting in remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-83549: SonicWall SMA1000 Appliances OS Command Injection Vulnerability (SonicWall SMA1000 Appliances)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83549"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/health-data-aesto-cyberattack-leak",
+    "published": "2026-09-02T17:15:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The healthcare data company Aesto informed federal regulators this week that more than 9.5 million people had sensitive information leaked during a cyberattack last December.",
+    "tags": [],
+    "title": "Health data of more than 9.5 million people leaked from Aesto record system",
+    "url": "https://therecord.media/health-data-aesto-cyberattack-leak"
   }
 ]
