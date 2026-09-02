@@ -10,3 +10,4 @@ cves: []
 ## 타임라인
 
 - 2026-09-01 [Kaspersky Securelist](https://securelist.com/mirage-kitten-new-backdoors-noderabbit-pollcat/121244/) — Kaspersky, Mirage Kitten의 새로운 백도어 NodeRabbit·PollCat 발견 및 분석 공개
+- 2026-09-02 [Security Affairs](https://securityaffairs.com/198289/apt/iran-linked-apt-mirage-kitten-uses-fake-job-tests-to-spread-malware.html) — Mirage Kitten, LinkedIn 위조 채용 시험으로 악성코드 배포 중 (AI 도구 사용 제한으로 탐지 우회 시도)
