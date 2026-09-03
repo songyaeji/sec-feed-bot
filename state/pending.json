@@ -2414,5 +2414,119 @@
     "tags": [],
     "title": "Microsoft: KB5120998 mouse reset bug affects only non-English PCs",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-kb5120998-mouse-reset-bug-affects-only-non-english-pcs/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25404",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to perform remote code execution on the computer running the client with elevated privileges. The following versions of IXON VPN Client are affected: VPN Client",
+    "tags": [
+      "RCE"
+    ],
+    "title": "IXON VPN Client",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25407",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could crash the module. The device requires a restart to recover. The following versions of Rockwell Automation 1756-ENBT Module are affected: 1756-ENBT module vers:all/* (CVE-2025-10478) CVSS Vendor Equipment Vulnerabilities v3 7.5 Rockwell Automation Rockwell Automation 1756-ENBT Module Improper Check for Unusual or Exceptional Conditions Background Critical Infrastructure Sectors: Critical Manufacturing, Food and Agriculture, Transportation Systems, Water and Wastewater Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2025-10478 A denial-of-service security issue exists in the Rockwell Automation 1756-ENBT module which is a ControlLogix EtherNet/IP bridge that enables communication between Logix 5000 controllers and Ethernet devices. An attacker could exploit this vulnerability by sending a crafted CIP packet, causing the module to crash. The device requires a restart to recover. View CVE Details Affected Products Rockwell Automation 1756-ENBT Module Vendor: Rockwell Automation Product Version: Rockwell Automation 1756-ENBT module: vers:all/* Product Status: known_affected Remediations Mitigation Rockwell Automation recommends that users upgrade to 1756-EN2T or 1756-EN4TR. Users who are not able to upgrade should use Rockwell Automation's security best practices. https://support.rockwellautomation.com/app/answers/answer_view/a_id/1085012/loc/en_U",
+    "tags": [],
+    "title": "Rockwell Automation 1756-ENBT Module",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25403",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take control of a high-privilege terminal during installation and run arbitrary commands. The following versions of OPCFoundation OPC UA LocalDiscoveryServer (LDS) are affected: UA-LDS-Installers",
+    "tags": [],
+    "title": "OPCFoundation OPC UA LocalDiscoveryServer (LDS)",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25408",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow any authenticated user to create projects. The following versions of Inductive Automation Ignition are affected: Ignition",
+    "tags": [],
+    "title": "Inductive Automation Ignition",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25410",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow for an attacker to perform a man-in-the-middle (MitM) attack, cause a factory reset, wipe credentials, or retrieve sensitive information. The following versions of Tycon Systems TPDIN-Monitor-WEB3 are affected: TPDIN-Monitor-WEB3",
+    "tags": [],
+    "title": "Tycon Systems TPDIN-Monitor-WEB3",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-08"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25406",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could result in a loss of webserver availability or allow an attacker to inject malicious scripts that will be executed when other users access the affected page. The following versions of Rockwell Automation ArmorStart LT are affected: ArmorStart LT",
+    "tags": [],
+    "title": "Rockwell Automation ArmorStart LT",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25409",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in memory corruption, a device crash, or a potential remote attack vector without the originating device receiving a CIP error indicating that the request could not be processed. The following versions of Pyramid Solutions NetStaX EtherNet/IP Stack are affected: EtherNet/IP Adapter DLL Kit (EIPA) EtherNet/IP Adapter DLL Kit with CIP Security (EIPA-SECURE) EtherNet/IP Adapter Development Kit (EADK) EtherNet/IP Adapter Development Kit with CIP Security (EADK-SECURE) EtherNet/IP Scanner DLL Kit (EIPS) EtherNet/IP Scanner DLL Kit with CIP Security (EIPS-SECURE) EtherNet/IP Scanner Development Kit (ESDK) EtherNet/IP Scanner Development Kit with CIP Security (ESDK-SECURE) CVSS Vendor Equipment Vulnerabilities v3 9.8 Pyramid Solutions Pyramid Solutions NetStaX EtherNet/IP Stack Stack-based Buffer Overflow Background Critical Infrastructure Sectors: Critical Manufacturing, Energy, Water and Wastewater, Chemical Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-78012 An issue in the NetStaX EtherNet/IP Stack prior to v5.6.1 could allow a large Class 3 explicit-message request to exceed the application-side receive buffer without generating an error or warning. The result could be memory corruption, a device crash, or a potential remote attack vector without the originating device receiving a CIP error indicating that the request could not be",
+    "tags": [
+      "APT"
+    ],
+    "title": "Pyramid Solutions NetStaX EtherNet/IP Stack",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25405",
+    "published": "2026-09-03T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could give an attacker the ability to run any commands or code of the attacker's choice on a target machine at the logged-in user's permission level. The following versions of Rockwell Automation ControlFLASH are affected: ControlFLASH",
+    "tags": [],
+    "title": "Rockwell Automation ControlFLASH",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-246-03"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE5BQlRWNjg5WTVyZ3hid1lqbnMzSFZuMnN4VTNVbF9NMVUyT2dKamFLYVFoNTltVnQ3Y2I1UVp5VFdFRHZnVVIxQ3dlTkxzdWplTE5YY3ZuUTVQYVc3eEFpOU5hNXktNEpUMmNDemdhbFZyNTDSAXNBVV95cUxOQUJUVjY4OVk1cmd4YndZam5zM0hWbjJzeFUzVWxfTTFVMk9nSmphS2FRaDU5bVZ0N2NiNVFaeVRXRUR2Z1VSMUN3ZU5Mc3VqZUxOWGN2blE1UGFXN3hBaTlOYTV5LTRKVDJjQ3pnYWxWcjUw",
+    "published": "2026-09-03T06:10:13+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "제2차 망분리 규제 완화 조치 확정…전자금융업자도 AI 보안테스트 참여",
+    "tags": [
+      "금융"
+    ],
+    "title": "제2차 망분리 규제 완화 조치 확정…전자금융업자도 AI 보안테스트 참여",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BQlRWNjg5WTVyZ3hid1lqbnMzSFZuMnN4VTNVbF9NMVUyT2dKamFLYVFoNTltVnQ3Y2I1UVp5VFdFRHZnVVIxQ3dlTkxzdWplTE5YY3ZuUTVQYVc3eEFpOU5hNXktNEpUMmNDemdhbFZyNTDSAXNBVV95cUxOQUJUVjY4OVk1cmd4YndZam5zM0hWbjJzeFUzVWxfTTFVMk9nSmphS2FRaDU5bVZ0N2NiNVFaeVRXRUR2Z1VSMUN3ZU5Mc3VqZUxOWGN2blE1UGFXN3hBaTlOYTV5LTRKVDJjQ3pnYWxWcjUw?oc=5"
   }
 ]
