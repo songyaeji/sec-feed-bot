@@ -9,6 +9,6 @@ cves: []
 
 ## 타임라인
 
-- 2026-09-04 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTE4tNmNBaWN6dkxuU2tyZENYMkRqeUJLUUN2cUdkUmQ1YWhFRFR3Z3Nqakp5N1docERqS3JkZ1BYNkNEUG9JSWFYTFNuS0JZMm50aVdTWGlXZzRCTldJSHR2Uw) — 개인정보위 2027 예산 37% 증액 996억원, AI 안전·예방체계 구축에 중점
+- 2026-09-04 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTE4tNmNBaWN6dkxuU2tyZENYMkRqeUJLUUN2cUdkUmQ1YWhFRFR3Z3Nqakp5N1docERqS3JkZ1BYNkNEUG9JSWFYTFNuS0JZMm50aVdTWGlXZzRCTldJSHR2Uw) — 개인정보위 2027 예산 37% 증액 996억원, AI 안전·예방체계 구축 중점. 신고포상금 94억원, 소송 지원비 2배 확대
 
 ## 관련

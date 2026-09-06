@@ -10,6 +10,7 @@ Magento Open Source와 Adobe Commerce의 미패치 제로데이 취약점이 공
 ## 타임라인
 
 - 2026-09-05 [The Hacker News](https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html) — Magento·Adobe Commerce 제로데이 StyleSmuggler 발견, 실제 악용 진행 중
+- 2026-09-07 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208346) — Magento 오픈소스·Adobe Commerce 제로데이 공격 악용, 최신 버전 2.4.9에서도 재현 가능
 
 ## 관련
 
