@@ -10,6 +10,8 @@ cves: []
 ## 타임라인
 
 - 2026-09-03 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208328) — 네이버클라우드 컨소시엄 최종 선정, 사이버보안 특화 AI 파운데이션 모델 개발 본격화
+- 2026-09-07 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208353) — 이스트시큐리티가 컨소시엄 참여, 악성코드 데이터와 위협 인텔리전스 제공
+- 2026-09-07 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208356) — 테이텀시큐리티도 컨소시엄 참여, CNAPP 및 보안 위협 분석 기술 제공
 
 ## 관련
 
