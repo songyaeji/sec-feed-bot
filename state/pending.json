@@ -1196,5 +1196,17 @@
     "tags": [],
     "title": "‘White hat’ hackers take $47 million bounty after $320 million crypto theft",
     "url": "https://therecord.media/liquid-network-blockstream-crypto-theft-hackers-keep-reward"
+  },
+  {
+    "author": "Jann Horn",
+    "category": "research",
+    "id": "https://projectzero.google/2026/09/maccconc-race-condition",
+    "published": "2026-09-08T07:00:00+00:00",
+    "severity": "info",
+    "source": "Project Zero Blog",
+    "summary": "Many security bugs are race conditions, where multi-threaded execution has to occur with the right interleaving for a negative effect to appear. This creates challenges for several use cases: Confirming bug candidates that have been discovered manually or through static analysis. Regression tests: After fixing a race condition bug, there is often no good way to write a regression test that reliably triggers the bug as part of a test suite. Automatic bug discovery, such as fuzzing: It is hard for a fuzzer to exercise all interesting interleavings of concurrent operations, or reach code paths that are only exercised when operations are racing.",
+    "tags": [],
+    "title": "Testing race conditions with memory access tracing and stack-based delay injection",
+    "url": "https://projectzero.google/2026/09/maccconc-race-condition.html"
   }
 ]
