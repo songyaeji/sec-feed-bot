@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-04 [The Hacker News](https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html) — Ted 백도어 발견, South Korea 2개 조직 감염, HAProxy 바이너리에 컴파일되어 삽입, 웹 트래픽 가로채기·선택 방문자 대상 페이지 변조, 호스트 코드 실행 필요
+- 2026-09-08 [Security Affairs](https://securityaffairs.com/198656/apt/north-korea-linked-hackers-hide-a-backdoor-inside-haproxy.html) — 북한 연계 해커 귀속 확인, Rapid7 분석
 
 ## 관련
