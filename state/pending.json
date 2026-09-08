@@ -1134,5 +1134,17 @@
     "tags": [],
     "title": "August updates trigger 0xc0000409 errors on Windows Server 2016",
     "url": "https://www.bleepingcomputer.com/news/microsoft/august-updates-trigger-0xc0000409-errors-on-windows-server-2016/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25420",
+    "published": "2026-09-08T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to take full control of the device. The following versions of CareCam Pro IP Cameras are affected: ANJIA AJL33PC0801 Firmware linux_linux_202008261138_svn13796_/_Bootloader_U-Boot_2010.06_compiled_2020-08-26 (CVE-2026-85083) CVSS Vendor Equipment Vulnerabilities v3 6.8 CareCam CareCam Pro IP Cameras Use of Hard-coded Credentials Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-85083 The ANJIA AJL33PC0801 IP camera uses a hard-coded credential for bootloader authentication. An attacker with physical access to the device may leverage this weakness to gain privileged bootloader access, allowing unauthorized modification of firmware and system configuration and potentially resulting in complete device compromise. View CVE Details Affected Products CareCam Pro IP Cameras Vendor: CareCam Product Version: CareCam ANJIA AJL33PC0801 Firmware: linux_linux_202008261138_svn13796_/_Bootloader_U-Boot_2010.06_compiled_2020-08-26 Product Status: known_affected Remediations Mitigation CareCam has not responded to CISA's attempts for coordination. Users are encouraged to reach out to CareCam. Relevant CWE: CWE-798 Use of Hard-coded Credentials Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.8 MEDIUM CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H 4.0 7 HIGH CVSS:4.0/",
+    "tags": [],
+    "title": "CareCam Pro IP Cameras",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-251-01"
   }
 ]
