@@ -1549,5 +1549,43 @@
     "tags": [],
     "title": "Over 36,000 Plex servers unpatched against recently disclosed flaws",
     "url": "https://www.bleepingcomputer.com/news/security/over-36-000-plex-servers-unpatched-against-recently-disclosed-flaws/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html",
+    "published": "2026-09-09T11:17:07+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A flaw in DeepSeek Harness, DeepSeek's open-source tool for running AI coding agents on a developer's machine, let a sandboxed agent turn off its own sandbox with a single command. The tool runs an agent's commands inside an operating-system sandbox, so that an agent working on untrusted files cannot write outside its workspace. The agent could remove that limit by calling the tool's own web",
+    "tags": [
+      "RCE"
+    ],
+    "title": "DeepSeek Harness Flaw Let AI Agents Disable Their Own File Sandbox Without Approval",
+    "url": "https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/alby-hub-critical-flaw-could-let.html",
+    "published": "2026-09-09T10:43:04+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Bitcoin wallet company Alby has warned of a critical flaw in Alby Hub that could have let an attacker take over a wallet and send its funds, but only where the owner had made the Hub reachable from the internet. Alby Hub is a self-hosted Lightning wallet, meaning the owner runs it on their own computer or server, and it holds their bitcoin. The flaw affects versions v1.7.0 through",
+    "tags": [],
+    "title": "Alby Hub Critical Flaw Could Let Attackers Take Over Internet-Exposed Bitcoin Wallets",
+    "url": "https://thehackernews.com/2026/09/alby-hub-critical-flaw-could-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html",
+    "published": "2026-09-09T09:32:26+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "U.S. cybersecurity and intelligence agencies have accused China-based artificial intelligence (AI) companies of conducting \"systematic extraction\" of proprietary functionalities and capabilities of American frontier models through distillation attacks. The activity has been described as occurring at an industrial-scale and one that forms the \"core\" of their AI development strategy, according to",
+    "tags": [],
+    "title": "U.S. Agencies Accuse China AI Firms of Distilling Claude, GPT, Gemini, and Grok",
+    "url": "https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html"
   }
 ]
