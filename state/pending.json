@@ -1317,5 +1317,83 @@
     "tags": [],
     "title": "제19회 전체회의 주재하는 송경희 개인정보보호위원장",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1yaTdWeUFoSFhSM0xYSTEwdnYyeGd5QVRLQ2RYakVtNnpKMkE2Z0VPVzNxamhNaEpWNERva0JuaVdtM1kyd014QkNoWUIyVEpIaTI1WmVONjVmVVZFdWVhZw?oc=5"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208389",
+    "published": "2026-09-09T18:12:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아우토크립트의 김덕수 대표가 서울 웨스틴조선호텔에서 열린 '2026 글로벌 모빌리티 콘퍼런스'의 ITF 특별세션에 패널로 참석해 미래 모빌리티의 핵심 경쟁력으로 신뢰를 제시했다.김 대표는 자동차 산업이 기계 중심에서 연결형 플랫폼을 거쳐 AI 기반으로 진화하고 있다고 설명했다. 자동차가 소프트웨어와 네트워크, AI가 결합된 지능형 시스템으로 바뀌면서 기술 성능만으로 경쟁력을 평가하기 어렵다는 진단이다. 이어 모빌리티 혁신이 현실화될수록 AI가 움직이는 현실 세계를 얼마나 안전하고 신뢰할 수 있게 만드는지가 중요하다고 강조했다.AI와",
+    "tags": [],
+    "title": "아우토크립트 김덕수 대표 \"미래 모빌리티 핵심은 기술 넘어선 '신뢰'\"",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208389"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208388",
+    "published": "2026-09-09T18:07:30+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국마이크로소프트가 오는 9월 30일 서울 코엑스 그랜드볼룸에서 '마이크로소프트 인더스트리 서밋'을 개최한다.이번 행사는 금융, 리테일, 제조, 헬스케어, 교육 분야의 AI 활용 경험과 프론티어 트랜스포메이션 방향을 공유하기 위해 마련됐다. 업무 생산성과 고객 경험 혁신부터 연구개발, 제조, 보안, 거버넌스에 이르기까지 AI와 에이전트를 실제 업무에 적용하고 조직 전반으로 확장하는 방안을 다룬다.행사에서는 Microsoft 365 Copilot, Microsoft Foundry, Azure 등 주요 제품과 서비스를 활용한 산업별 고",
+    "tags": [
+      "금융"
+    ],
+    "title": "한국마이크로소프트, '인더스트리 서밋' 개최...산업별 AI 전환 전략 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208388"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
+    "published": "2026-09-09T09:11:03+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Google on Thursday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild. The medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491 (CVSS score: N/A), has been described as an out-of-bounds bug in V8, Chrome's JavaScript and WebAssembly engine. \"Out-of-bounds write in V8 in Google Chrome prior to",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
+    "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account.html",
+    "published": "2026-09-09T08:19:32+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "cPanel has patched a flaw that it says lets a single hosting account take control of an entire server. An authenticated account holder with mail-related privileges can create files of their choosing on the server through EmailTrack and, from there, run code as the root user. cPanel published the advisory on September 8 and says every supported version of cPanel and WHM is affected.",
+    "tags": [],
+    "title": "New cPanel Flaw Lets a Hosting Account With Mail Privileges Run Code as Root",
+    "url": "https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/f5-big-ip-apm-malware-injects-php-web.html",
+    "published": "2026-09-09T07:36:49+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Malware linked to break-ins at F5 BIG-IP Access Policy Manager appliances hides a PHP web shell in memory instead of in a file on disk, Sophos said in an analysis published on September 7. When Apache loads any of the three appliances' own PHP scripts, the malware adds the web shell to the copy held in memory, so a check of the file on disk can come back clean. Those three scripts are",
+    "tags": [],
+    "title": "F5 BIG-IP APM Malware Injects a PHP Web Shell Into Memory, Evading Disk Scans",
+    "url": "https://thehackernews.com/2026/09/f5-big-ip-apm-malware-injects-php-web.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/sap-patches-cvss-100-kernel-flaw.html",
+    "published": "2026-09-09T06:25:45+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "SAP has released security updates to address multiple vulnerabilities, including a maximum-severity flaw in SAP Extended Passport (EPP) Processing that could have a severe impact on the confidentiality, integrity, and availability of the application The vulnerability, tracked as CVE-2026-44756 (CVSS score: 10.0), has been described as a case of memory corruption. Discovered and reported by SAP",
+    "tags": [
+      "RCE"
+    ],
+    "title": "SAP Patches CVSS 10.0 Kernel Flaw Enabling Unauthenticated Remote Code Execution",
+    "url": "https://thehackernews.com/2026/09/sap-patches-cvss-100-kernel-flaw.html"
   }
 ]
