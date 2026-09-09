@@ -2,6 +2,13 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [chrome-v8-oob-exploit](topics/2026-09-chrome-v8-oob-exploit.md) Chrome V8 경계초과쓰기 제로데이 CVE-2026-87491 중국 해킹그룹 악용 중 (최종갱신일: 2026-09-09)
+- [fortinet-multiple-rce](topics/2026-09-fortinet-multiple-rce.md) Fortinet 제품군 힙 버퍼 오버플로우 미인증 원격코드 실행 CVE-2025-25249 (최종갱신일: 2026-09-09)
+- [google-ai-threat-tracker-q2](topics/2026-09-google-ai-threat-tracker-q2.md) Google GTIG 2분기 AI 위협 추적 보고서 에이전틱 AI 악용 증가 (최종갱신일: 2026-09-09)
+- [kojimotor-ransomware](topics/2026-09-kojimotor-ransomware.md) 고진모터스 아우디 딜러사 랜섬웨어 감염 고객 개인정보 유출 가능성 (최종갱신일: 2026-09-09)
+- [microsoft-patch-tuesday-sept](topics/2026-09-microsoft-patch-tuesday-sept.md) Microsoft September Patch Tuesday 사상 최대 974개 취약점 2개 제로데이 포함 (최종갱신일: 2026-09-09)
+- [nordvpn-phishing-report](topics/2026-09-nordvpn-phishing-report.md) NordVPN 소비자 보안 보고서 피싱 공격 99% 유명 브랜드 사칭 (최종갱신일: 2026-09-09)
+- [shieldcrash-defender-zerodday](topics/2026-09-shieldcrash-defender-zerodday.md) Microsoft Defender SYSTEM 권한 제로데이 ShieldCrash PoC 공개 (최종갱신일: 2026-09-09)
 - [microsoft-windows-update-stack-link-following](topics/2026-09-microsoft-windows-update-stack-link-following.md) Microsoft Windows Update Stack 링크 팔로우 취약점 로컬 권한상향 CVE-2026-81963 (최종갱신일: 2026-09-08)
 - [microsoft-windows-alpc-heap-overflow](topics/2026-09-microsoft-windows-alpc-heap-overflow.md) Microsoft Windows ALPC 힙 버퍼 오버플로우 취약점 로컬 권한상향 CVE-2026-85880 (최종갱신일: 2026-09-08)
 - [ai-multiagent-credential-theft-framework](topics/2026-09-ai-multiagent-credential-theft-framework.md) 위협 행위자 다중 에이전트 AI 프레임워크로 자격증명 대규모 탈취 자동화 (최종갱신일: 2026-09-08)
@@ -14,7 +21,7 @@
 - [freeipa-kerb-cred-creation](topics/2026-09-freeipa-kerb-cred-creation.md) FreeIPA 미인증 Kerberos 자격증명 생성 취약점 관리자 권한 획득 (최종갱신일: 2026-09-08)
 - [grindr-uk-settlement-hiv-data](topics/2026-09-grindr-uk-settlement-hiv-data.md) Grindr UK 합의 £26M HIV 민감정보 공유 (최종갱신일: 2026-09-08)
 - [liquid-network-bitcoin-breach](topics/2026-09-liquid-network-bitcoin-breach.md) Liquid Network 거의 4,000 BTC 도난 Elements 버그 악용 (최종갱신일: 2026-09-08)
-- [pg-payment-gateway-breach](topics/2026-09-pg-payment-gateway-breach.md) 국내 전자결제 업체 해킹 카드정보 유출 코엠페이먼츠 공지 (최종갱신일: 2026-09-08)
+- [pg-payment-gateway-breach](topics/2026-09-pg-payment-gateway-breach.md) 국내 전자결제 업체 해킹 인증키 탈취로 API 호출 결제내역 조회 (최종갱신일: 2026-09-09)
 - [sap-overpass-kernel-memory-corruption](topics/2026-09-sap-overpass-kernel-memory-corruption.md) SAP Kernel OVERPASS 메모리 손상 최대 심각도 취약점 (최종갱신일: 2026-09-08)
 - [shinyhunters-florida-dmv-david-breach](topics/2026-09-shinyhunters-florida-dmv-david-breach.md) ShinyHunters 플로리다 DMV DAVID 플랫폼 20만명 운전자 정보 유출 (최종갱신일: 2026-09-08)
 - [ted-backdoor-haproxy](topics/2026-09-ted-backdoor-haproxy.md) Ted 백도어 HAProxy 로드밸런서 바이너리 내 컴파일 북한 귀속 (최종갱신일: 2026-09-08)
@@ -734,10 +741,6 @@
 - [shinyhunters-oauth-saas](topics/2026-07-shinyhunters-oauth-saas.md) ShinyHunters의 SaaS 대상 OAuth 악용 (최종갱신일: 2026-07-13)
 - [apt37-capsule-vault](topics/2026-07-apt37-capsule-vault.md) APT37 오퍼레이션 캡슐 볼트 외교안보 연구진 다단계 침투 (최종갱신일: 2026-07-13)
 - [atlasrat-loader-chain-analysis](topics/2026-07-atlasrat-loader-chain-analysis.md) AtlasRAT 4단계 로더 체인 분석 (최종갱신일: 2026-07-12)
-- [xmrig-coinminer-linux-ssh](topics/2026-07-xmrig-coinminer-linux-ssh.md) Linux SSH 서버 대상 XMRig 코인마이너 캠페인 (최종갱신일: 2026-07-11)
-- [dell-bios-password-extraction](topics/2026-07-dell-bios-password-extraction.md) Dell BIOS 평문 패스워드 추출 취약점 (최종갱신일: 2026-07-11)
-- [visual-studio-project-backdoor](topics/2026-07-visual-studio-project-backdoor.md) Visual Studio 프로젝트 파일 다단계 백도어 배포 (최종갱신일: 2026-07-11)
-- [aws-govcloud-cisa-credential-leak](topics/2026-07-aws-govcloud-cisa-credential-leak.md) AWS GovCloud 자격증명 유출 CISA 공개 (최종갱신일: 2026-07-11)
 - [progress-sharefile-critical](topics/2026-07-progress-sharefile-critical.md) Progress ShareFile 스토리지 존 컨트롤러 보안 위협 (최종갱신일: 2026-07-14)
 - [comfast-cf-wr631ax-rce](topics/2026-07-comfast-cf-wr631ax-rce.md) Comfast CF-WR631AX V3 원격 명령 실행 (최종갱신일: 2026-07-12)
 - [microsoft-edge-cve-2026-58596](topics/2026-07-microsoft-edge-cve-2026-58596.md) Microsoft Edge 포인터 역참조 권한상향 취약점 (최종갱신일: 2026-07-12)

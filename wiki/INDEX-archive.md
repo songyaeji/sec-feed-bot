@@ -341,3 +341,7 @@
 - [linux-ksmbd-durable-uaf](topics/2026-07-linux-ksmbd-durable-uaf.md) Linux ksmbd SMB 사용 후 해제 (최종갱신일: 2026-07-10)
 - [linux-ocfs2-dlm-bounds](topics/2026-07-linux-ocfs2-dlm-bounds.md) Linux OCFS2 DLM 범위 검증 (최종갱신일: 2026-07-10)
 - [linux-wireguard-napi](topics/2026-07-linux-wireguard-napi.md) Linux WireGuard 스레드 NAPI 버그 (최종갱신일: 2026-07-10)
+- [xmrig-coinminer-linux-ssh](topics/2026-07-xmrig-coinminer-linux-ssh.md) Linux SSH 서버 대상 XMRig 코인마이너 캠페인 (최종갱신일: 2026-07-11)
+- [dell-bios-password-extraction](topics/2026-07-dell-bios-password-extraction.md) Dell BIOS 평문 패스워드 추출 취약점 (최종갱신일: 2026-07-11)
+- [visual-studio-project-backdoor](topics/2026-07-visual-studio-project-backdoor.md) Visual Studio 프로젝트 파일 다단계 백도어 배포 (최종갱신일: 2026-07-11)
+- [aws-govcloud-cisa-credential-leak](topics/2026-07-aws-govcloud-cisa-credential-leak.md) AWS GovCloud 자격증명 유출 CISA 공개 (최종갱신일: 2026-07-11)

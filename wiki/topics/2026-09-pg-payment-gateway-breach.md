@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-09-08 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208370) — 국내 PG 업체들 해킹 정황 확인, 코엠페이먼츠 카드정보 유출 공지
+- 2026-09-09 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208379) — PG 사고 원인 분석: 가맹점 외부 노출 결제 연동 인증키를 제3자가 확보해 정상 API로 결제내역 조회
 
 ## 관련
 
