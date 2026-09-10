@@ -2020,5 +2020,43 @@
     "tags": [],
     "title": "IDScan confirms breach tied to 153 million stolen driver’s licenses",
     "url": "https://www.bleepingcomputer.com/news/security/idscan-confirms-breach-tied-to-153-million-stolen-drivers-licenses/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25436",
+    "published": "2026-09-10T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an authenticated remote attacker to write past the end of a heap allocation when Orthanc decodes an attacker-supplied PNG or JPEG image, resulting in a crash of the Orthanc process and a denial-of-service condition. The following versions of Orthanc DICOM Server are affected: Orthanc DICOM Server",
+    "tags": [],
+    "title": "Orthanc DICOM Server",
+    "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-253-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25435",
+    "published": "2026-09-10T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to exfiltrate date or cause a denial-of-service condition. The following versions of NextGen Healthcare Mirth Connect are affected: Mirth Connect",
+    "tags": [],
+    "title": "NextGen Healthcare Mirth Connect",
+    "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-253-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25434",
+    "published": "2026-09-10T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to disclose information, brute-force hashes, or run arbitrary code in a browser session. The following versions of AVEVA Pipeline Integrity Monitor are affected: AVEVA Pipeline Integrity Monitor",
+    "tags": [
+      "RCE"
+    ],
+    "title": "AVEVA Pipeline Integrity Monitor",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-253-01"
   }
 ]
