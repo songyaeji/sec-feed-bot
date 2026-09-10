@@ -11,5 +11,6 @@ cves: []
 
 - 2026-09-01 [Krebs on Security](https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/) — FBI, 153백만 건 운전면허증 판매 서비스 조사 개시, 신원 검증 회사 유출 의심
 - 2026-09-04 [BleepingComputer](https://www.bleepingcomputer.com/news/security/idscan-sued-over-alleged-data-breach-affecting-153-million-drivers/) — IDScan을 상대로 다건 소송 제기, 153백만 건 이상 운전면허증 유출 혐의
+- 2026-09-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/idscan-confirms-breach-tied-to-153-million-stolen-drivers-licenses/) — IDScan 클라우드 플랫폼 침해 공식 확인, 1억5300만 건 운전면허 스캔 유출
 
 ## 관련

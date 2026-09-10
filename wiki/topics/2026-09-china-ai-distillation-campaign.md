@@ -10,6 +10,7 @@ NSA·CISA·FBI 공동 권고: 중국 AI 회사들이 미국 프론티어 AI 모�
 ## 타임라인
 
 - 2026-09-08 [CISA](https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a) — NSA/CISA/FBI 공동 권고 AA26-251A 발표
+- 2026-09-09 [Security Affairs](https://securityaffairs.com/198770/security/us-agencies-warn-chinese-ai-firms-are-extracting-advanced-ai-models.html) — NSA/CISA/FBI 6개 중국 AI 회사(DeepSeek, Moonshot AI, Alibaba 등) 수십억 토큰 대규모 추출 캠페인 경고
 
 ## 관련
 

@@ -11,3 +11,4 @@ Microsoft가 2026년 9월 Patch Tuesday를 통해 사상 최대 규모인 974개
 
 - 2026-09-09 [The Hacker News](https://thehackernews.com/2026/09/microsoft-patches-record-974-flaws.html) — Microsoft September Patch Tuesday 기록 갱신, 974개 취약점·2개 제로데이 포함
 - 2026-09-09 [Security Affairs](https://securityaffairs.com/?p=198705) — 974 CVEs·2개 제로데이·20개 웜 가능 취약점 패치
+- 2026-09-10 [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/september-windows-server-updates-break-remote-desktop-services/) — Sept 패치로 Windows Server 2019/2022/2025 RDS 장애 보고

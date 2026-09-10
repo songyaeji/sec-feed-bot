@@ -10,3 +10,4 @@ cves: []
 ## 타임라인
 
 - 2026-08-14 [The Record](https://therecord.media/french-tax-authority-dgfip-confirms-data-breach) — DGFIP 시스템 침해 확인, 60만 명 개인정보 탈취 주장
+- 2026-09-08 [The Record](https://therecord.media/france-hacker-arrest-zerobytes) — ZeroBytes 그룹 용의자 18세 소년 체포, 프랑스 국세청 공격 관련

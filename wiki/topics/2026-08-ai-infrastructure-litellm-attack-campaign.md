@@ -10,6 +10,7 @@ Microsoft Threat Intelligence가 공격자들의 노출된 AI 게이트웨이(�
 ## 타임라인
 
 - 2026-08-26 [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/) — Microsoft Threat Intelligence AI 게이트웨이·제어점 공격 분석, LiteLLM 악용 자격증명 탈취·암호화폐 채굴 활동
+- 2026-09-10 [The Hacker News](https://thehackernews.com/2026/09/nearly-1-in-10-exposed-litellm-gateways.html) — Wiz Research 2월 스캔 결과 발표 노출된 LiteLLM 서버 1/10이 기본 admin 키 sk-1234 수용
 
 ## 관련
 

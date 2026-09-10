@@ -14,5 +14,7 @@ cves: []
 - 2026-08-28 [BleepingComputer](https://www.bleepingcomputer.com/news/security/papercut-releases-second-emergency-patch-for-exploited-flaws/) — 초기 패치 우회 발견 후 2차 긴급 보안 업데이트 공개
 - 2026-08-30 [Security Affairs](https://securityaffairs.com/198107/uncategorized/hackers-are-probing-papercut-servers-and-47-still-have-no-patch.html) — 추적된 설치 환경의 47% 여전히 미패치 상태, 해커들 활발한 공격 진행
 - 2026-09-01 [BleepingComputer](https://www.bleepingcomputer.com/news/security/recently-patched-papercut-zero-days-used-in-data-theft-attacks/) — 패치 후에도 데이터 탈취 공격에 악용 계속됨
+- 2026-09-10 [The Hacker News](https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html) — 러시아계 위협 행위자 수백 개 **AI 에이전트**로 익스플로잇 자동화, 440개 이상 인스턴스 침해
+- 2026-09-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations/) — AI 자동화 공격으로 395개 조직 침해
 
 ## 관련
