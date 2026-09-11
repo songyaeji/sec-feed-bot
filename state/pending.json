@@ -2383,5 +2383,31 @@
     "tags": [],
     "title": "The AI Supply Chain Has a Security Problem, and Much of It Is Sitting on the Open Internet",
     "url": "https://securityaffairs.com/198898/ai/the-ai-supply-chain-has-a-security-problem-and-much-of-it-is-sitting-on-the-open-internet.html"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-84869",
+    "kev": true,
+    "published": "2026-09-11T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation.",
+    "tags": [],
+    "title": "CVE-2026-84869: ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability (ConnectWise ScreenConnect)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84869"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-42018",
+    "kev": true,
+    "published": "2026-09-11T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-42018: JFrog Artifactory Improper Authentication Vulnerability (JFrog Artifactory)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42018"
   }
 ]
