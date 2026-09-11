@@ -10,3 +10,5 @@ cves: [CVE-2026-82329]
 ## 타임라인
 
 - 2026-09-01 [The Hacker News](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) — CVE-2026-82329 공개 후 공격자들이 이미 악용 중임 확인
+- 2026-09-11 [The Hacker News](https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html) — Wiz, 2개 Artifactory 취약점 연쇄 악용으로 관리자 권한 탈취·백도어 설치 실제 공격 확인 (8월 15일~9월 8일)
+- 2026-09-11 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-42018) — CVE-2026-42018 인증 우회 취약점 공개, 미인증 호출자에게 익명 토큰 반환

@@ -16,5 +16,6 @@ cves: []
 - 2026-09-01 [BleepingComputer](https://www.bleepingcomputer.com/news/security/recently-patched-papercut-zero-days-used-in-data-theft-attacks/) — 패치 후에도 데이터 탈취 공격에 악용 계속됨
 - 2026-09-10 [The Hacker News](https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html) — 러시아계 위협 행위자 수백 개 **AI 에이전트**로 익스플로잇 자동화, 440개 이상 인스턴스 침해
 - 2026-09-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations/) — AI 자동화 공격으로 395개 조직 침해
+- 2026-09-11 [The Hacker News](https://thehackernews.com/2026/09/papercut-replaces-emergency-patches.html) — PaperCut, 정기 유지보수 릴리스로 모든 비상 패치 대체 (NG 26.0.5, 25.0.13, 24.1.10)
 
 ## 관련

@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-10 [AI 벤더 보안뉴스](https://news.google.com/rss/articles/CBMilAFBVV95cUxNRHVrM3JlMDJnMGU0MHhoOXdjUTFqU1lYd3NYZUpyLTJ3Y1JYRVRmWFNONzkzdElYYmUwdlZuUzlwLVRhUXRJWXF5WXVoV3plczFHMy1uY1puTDZkcGpmc2Y5bEZEQ3JpX1pOTHBlYmtCXzZNMGtfbGMxM0t0MXh3VjEwS19sR1M2NGxBcHhRczM3TXg4?oc=5) — Claude 오용 7가지 해악 영역 차단 상세 내용
+- 2026-09-11 [The Hacker News](https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html) — Anthropic 경고: GTG(Generative Threat Groups) 재정 동기·국가 스파이 그룹 Claude 악용해 사이버 공격·무기 설계·선전·대량 감시 2025년 12월~2026년 8월 활동
 
 ## 관련

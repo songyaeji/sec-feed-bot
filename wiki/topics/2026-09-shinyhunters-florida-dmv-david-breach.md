@@ -10,3 +10,4 @@ ShinyHunters 해킹 그룹이 플로리다 운전면허증 관리 온라인 플�
 ## 타임라인
 
 - 2026-09-08 [BleepingComputer](https://www.bleepingcomputer.com/news/security/shinyhunters-hackers-claim-breach-of-florida-david-dmv-database/) — ShinyHunters 침해 주장 보도
+- 2026-09-11 [BleepingComputer](https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/) — 플로리다 정부 공식 확인: 경찰 직원 자격증명 도용으로 DAVID 데이터베이스 침해

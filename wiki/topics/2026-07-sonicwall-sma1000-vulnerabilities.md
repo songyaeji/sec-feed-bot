@@ -16,5 +16,6 @@ cves: [CVE-2026-15409, CVE-2026-15410]
 - 2026-08-03 [The Hacker News](https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html) — **INC 랜섬웨어**, 8월부터 해당 취약점 집중 악용 시작, 데이터 유출 사이트 다수 피해자 기록
 - 2026-08-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/) — **CISA** 확인, 랜섬웨어 갱단들이 CVE-2026-15409·15410 실제 악용 중
 - 2026-09-02 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-83549) — CVE-2026-83549 SonicWall SMA1000 OS 명령 주입 공개 (관리자 권한 필요 RCE)
+- 2026-09-11 [Security Affairs](https://securityaffairs.com/198864/hacking/uk-council-attack-linked-to-mass-exploitation-of-sonicwall-flaw.html) — 영국 King's Lynn 위원회(7월 17일 공격) Hunt.io 분석, CVE-2026-15409·15410 대량 악용으로 자격증명 탈취·Active Directory 절도 확인
 
 ## 관련
