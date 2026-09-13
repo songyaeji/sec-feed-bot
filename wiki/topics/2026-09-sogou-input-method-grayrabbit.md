@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-11 [The Hacker News](https://thehackernews.com/2026/09/china-linked-unc3569-exploited-sogou.html) — UNC3569, Sogou 입력기 취약점으로 GRAYRABBIT 백도어 배포
+- 2026-09-13 [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/) — 취약점 CVE-2026-51990 확인, 중국 정보수집 그룹 활용 중
 
 ## 관련

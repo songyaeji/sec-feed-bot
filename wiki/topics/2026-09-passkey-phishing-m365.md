@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-11 [BleepingComputer](https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/) — ShinyHunters·Helix 등 범죄 조직의 Passkey/SSO 사칭 피싱, M365 자격증명 탈취
+- 2026-09-13 [The Hacker News](https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html) — Microsoft 공식 공개, 8월 3-5일 백만 건 이상 사기 이메일 발송 제3자 메일 인프라 악용
 
 ## 관련
