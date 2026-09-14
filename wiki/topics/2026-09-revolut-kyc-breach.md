@@ -10,5 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-09-12 [Security Affairs](https://securityaffairs.com/198922/data-breach/revolut-exposed-kyc-data-after-fraudulent-government-email-passed-security-checks.html) — Revolut 공식 확인: 위조 정부 이메일로 고객 KYC 정보 유출
+- 2026-09-14 [BleepingComputer](https://www.bleepingcomputer.com/news/security/revolut-discloses-data-breach-exposing-financial-info-passports/) — Revolut 데이터 침해 공개 재보도
+- 2026-09-14 [The Record](https://therecord.media/revolut-scam-crypto-impersonation) — 정부 이메일 계정으로 긴급 데이터 요청 세부 사항
 
 ## 관련
