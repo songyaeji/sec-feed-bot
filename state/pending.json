@@ -1775,5 +1775,41 @@
     "tags": [],
     "title": "Twitch extension with 30K installs exposes users’ OAuth tokens",
     "url": "https://www.bleepingcomputer.com/news/security/twitch-extension-with-30k-installs-exposes-users-oauth-tokens/"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-76461",
+    "kev": true,
+    "published": "2026-09-14T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
+    "tags": [],
+    "title": "CVE-2026-76461: Cisco Secure Email Gateway SQL Injection Vulnerability (Cisco Secure Email Gateway)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76461"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html",
+    "published": "2026-09-14T18:01:49+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "An attacker was operating inside the network of 3BB, one of Thailand's largest broadband providers, and maintained remote control of internal machines using a legitimate management tool called MeshCentral, threat intelligence firm Hunt.io said. The company uncovered the intrusion by examining a server the attacker had left open on the internet, which held the attacker's own tools and a list of",
+    "tags": [],
+    "title": "3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials",
+    "url": "https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html",
+    "published": "2026-09-14T17:58:16+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A flaw in Telegram Desktop let a bot's message plant hidden JavaScript inside chats that users exported to HTML files, security researchers at ExPatch said in a writeup published on September 12. In Telegram, the message looked ordinary, with a link button, and the script ran only when someone opened the export file in a web browser. It could then copy every message in that file to",
+    "tags": [],
+    "title": "Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports",
+    "url": "https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html"
   }
 ]
