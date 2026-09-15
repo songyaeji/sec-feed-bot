@@ -1636,5 +1636,129 @@
     "tags": [],
     "title": "삼성전자서비스 맡기면 개인정보까지 안전…업계 최초 통합 보안 인증",
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBnT0tRUUdzcTkyZHdLTzVsZ09uMjBwX0ZCaWtWcmFmWk41OXlTY2FfMWJ0MXVxZkg2M2h2TVFFUXhqbnNCYkZvMnFFdFh0SjNwQkY5R09wNUcxenNvQkQyaGtLWXRiY3VwQVE?oc=5"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25480",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could grant full administrative control of the device, allowing an attacker to view live and recorded surveillance, alter device configurations, and use the device as a network pivot point. The following versions of Digital Watchdog VMAX DVR and NVR Product Lineups are affected: VMAX A1 G4 DVRs vers:all/* (CVE-2026-68953, CVE-2026-66890, CVE-2026-68070, CVE-2026-68950, CVE-2026-66887, CVE-2026-66372) VMAX IP G4 NVRs vers:all/* (CVE-2026-68953, CVE-2026-66890, CVE-2026-68070, CVE-2026-68950, CVE-2026-66887, CVE-2026-66372) VMAX A1 PLUS vers:all/* (CVE-2026-68953, CVE-2026-66890, CVE-2026-68070, CVE-2026-68950, CVE-2026-66887, CVE-2026-66372) VA1G4 Recorder vers:all/* (CVE-2026-68953, CVE-2026-66890, CVE-2026-68070, CVE-2026-68950, CVE-2026-66887, CVE-2026-66372) VG4 Recorder vers:all/* (CVE-2026-68953, CVE-2026-66890, CVE-2026-68070, CVE-2026-68950, CVE-2026-66887, CVE-2026-66372) CVSS Vendor Equipment Vulnerabilities v3 9.6 Digital Watchdog Digital Watchdog VMAX DVR and NVR Product Lineups Missing Authentication for Critical Function, Use of Hard-coded Credentials, Missing Authorization, Predictable Seed in Pseudo-Random Number Generator (PRNG) Background Critical Infrastructure Sectors: Commercial Facilities, Government Services and Facilities, Healthcare and Public Health, Transportation Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-",
+    "tags": [],
+    "title": "Digital Watchdog VMAX DVR and NVR Product Lineups",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25482",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to access privileged management functions or send arbitrary SMS messages through the connected GSM modem. The following versions of mySCADA myPRO Manager are affected: mySCADA myPRO Manager",
+    "tags": [],
+    "title": "mySCADA myPRO Manager",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25483",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its SCADAPack x70 products. The SCADAPack 47x, SCADAPack 47xi, SCADAPack 47xd, SCADAPack 470R and SCADAPack 57x products are Remote Terminal Units that provide communication capabilities for remote monitoring and control. Failure to apply the mitigations provided below may increase the risk of unauthorized access to RTU configuration through the Secure Lock functionality, potentially resulting in a loss of confidentiality. The following versions of Schneider Electric SCADAPack x70 Products are affected: SCADAPack 47x vers:all/* (CVE-2026-81861) SCADAPack 47xi vers:all/* (CVE-2026-81861) SCADAPack 47xd vers:all/* (CVE-2026-81861) SCADAPack 470R vers:all/* (CVE-2026-81861) SCADAPack 57x vers:all/* (CVE-2026-81861) SCADAPack 3xx vers:all/* (CVE-2026-81861) SCADAPack 32 vers:all/* (CVE-2026-81861) CVSS Vendor Equipment Vulnerabilities v3 6.5 Schneider Electric Schneider Electric SCADAPack x70 Products Insufficiently Protected Credentials Background Critical Infrastructure Sectors: Critical Manufacturing, Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: France Vulnerabilities Expand All + CVE-2026-81861 There is an insufficiently protected credentials vulnerability that could result in exposure of authentication information and unauthorized access to RTU functionality. View CVE Details Affected Products Schneider Electric SCADAPack x70 Products Vendor: Schneider Electric Product Version: S",
+    "tags": [],
+    "title": "Schneider Electric SCADAPack x70 Products",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25486",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary A reflected cross site scripting vulnerability in the authentication redirect flow (/auth/) of Teamcenter allows an unauthenticated remote attacker to inject JavaScript into an authenticated user's session by crafting a malicious URL. Successful exploitation may enable the attacker to read data or perform actions within the victim's Teamcenter session. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens Teamcenter are affected: Teamcenter V2412 vers:intdot/",
+    "tags": [],
+    "title": "Siemens Teamcenter",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25485",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Mendix SAML module contains a vulnerability that could allow unauthenticated remote attackers to hijack an account in specific SSO configurations. Mendix has provided fix releases for the Mendix SAML module and recommends to update to the latest version. The following versions of Siemens Mendix SAML are affected: Mendix SAML (Mendix 10 compatible) vers:intdot/",
+    "tags": [],
+    "title": "Siemens Mendix SAML",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25481",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to deliver an unauthorized update, execute code, or extract credentials to allow the attacker to impersonate a privileged client. The following versions of Wärtsilä FOS-Onboard are affected: FOS-Onboard 5.07.0923.01 (CVE-2026-78225, CVE-2026-81855) CVSS Vendor Equipment Vulnerabilities v3 9.1 Wärtsilä Wärtsilä FOS-Onboard Use of Hard-coded Cryptographic Key Background Critical Infrastructure Sectors: Transportation Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: Finland Vulnerabilities Expand All + CVE-2026-78225 A hardcoded cryptographic server key vulnerability exists in the deployer-ng Update Controller component of Wärtsilä FOS-Onboard. View CVE Details Affected Products Wärtsilä FOS-Onboard Vendor: Wärtsilä Product Version: Wärtsilä FOS-Onboard: 5.07.0923.01 Product Status: known_affected Remediations Mitigation Wärtsilä states that the vulnerabilities are not exploitable when the product is installed as recommended, and has developed a security patch. Users are also directed to contact Wärtsilä to obtain and install the patch. To obtain and install the latest patch, contact Wärtsilä: https://www.wartsila.com/services-catalogue/engine-services-4-stroke/wartsila-ics-patch-deployment#contact Relevant CWE: CWE-321 Use of Hard-coded Cryptographic Key Metrics CVSS Version Base Score Base Severity Vector String 3.1 9 CRITICAL CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:",
+    "tags": [],
+    "title": "Wärtsilä FOS-Onboard",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25484",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Siemens Reyrolle 7SR5 Before V2.70 is affected by multiple vulnerabilities. Siemens has released a new version for Reyrolle 7SR5 and recommends to update to the latest version. The following versions of Siemens Reyrolle 7SR5 are affected: Reyrolle 7SR5 vers:intdot/",
+    "tags": [],
+    "title": "Siemens Reyrolle 7SR5",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25487",
+    "published": "2026-09-15T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to access live video and sensitive device information, enable unauthorized services, execute arbitrary code, modify device operation, and recover stored credentials. The following versions of CareCam CM2507 are affected: HMT.CM2507 Firmware v251211.1507 (CVE-2026-88259, CVE-2026-84398, CVE-2026-84400, CVE-2026-81305, CVE-2026-85478, CVE-2026-85497, CVE-2026-81321) CVSS Vendor Equipment Vulnerabilities v3 7.5 CareCam CareCam CM2507 Missing Authentication for Critical Function, Empty Password in Configuration File, Inclusion of Functionality from Untrusted Control Sphere, Use of Password Hash With Insufficient Computational Effort, Cleartext Storage of Sensitive Information Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-88259 CareCam CM2507 IP cameras do not require authentication for access to its network video streaming service. An unauthenticated attacker with network access to the affected device could retrieve live camera video. View CVE Details Affected Products CareCam CM2507 Vendor: CareCam Product Version: CareCam HMT.CM2507 Firmware: v251211.1507 Product Status: known_affected Remediations Mitigation CareCam has not responded to CISA's attempts to coordinate. Users are encouraged to reach out to CareCam for more information. Relevant CWE: CWE-306 Miss",
+    "tags": [],
+    "title": "CareCam CM2507",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMikwJBVV95cUxOeFI3TFQ3c21JZVVmYU1zUDVhR1I4T3dLNjZoUFc1ak1tRnRNWWd3S2xIcEJfc0o5cDdLdVhSUHRxdmFzZm1YemVQX0V1b25zWGFjQ0pBeUktYV92bXEyWFNvU1Nhb01id1ZNdU51Z3RIM01YZEdzWUpvc21Qd21wVHdMNHB3czZ1NGZBR2RjV1hIQmwzdWJOb2JoVWFQZGZwSXI4N0hBSjhPcF9aemo5aVlNOGNMM2d6SHNET21LVjZreTJ5S2FSVktUbFBHZldFSldnVXdxQTJnQTd5c0JRSDZYTzNlQU5jSUlJM0R1c3BZbTNIUWU1ai1xd19GWk5TamlHSHZMeXlYeWdWYkdpU05ndw",
+    "published": "2026-09-15T12:42:11+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "자주 쓰는 메뉴를 찾아보는 토토 금융결제원 화면 탐색",
+    "tags": [
+      "금융"
+    ],
+    "title": "자주 쓰는 메뉴를 찾아보는 토토 금융결제원 화면 탐색",
+    "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOeFI3TFQ3c21JZVVmYU1zUDVhR1I4T3dLNjZoUFc1ak1tRnRNWWd3S2xIcEJfc0o5cDdLdVhSUHRxdmFzZm1YemVQX0V1b25zWGFjQ0pBeUktYV92bXEyWFNvU1Nhb01id1ZNdU51Z3RIM01YZEdzWUpvc21Qd21wVHdMNHB3czZ1NGZBR2RjV1hIQmwzdWJOb2JoVWFQZGZwSXI4N0hBSjhPcF9aemo5aVlNOGNMM2d6SHNET21LVjZreTJ5S2FSVktUbFBHZldFSldnVXdxQTJnQTd5c0JRSDZYTzNlQU5jSUlJM0R1c3BZbTNIUWU1ai1xd19GWk5TamlHSHZMeXlYeWdWYkdpU05ndw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMi2AFBVV95cUxQdUhGOUY3cnM2cHR6TlNLXzN0VjNNRWgtUEtjWVdXcHFnLTVNeThFbThoWFd5VmhaWElvMlZwU0dPb0hWUm03VkR3NWxFT2tIdkxZejJrMDU0OEdTRkJ3MzdxbEd1OGJka3dyM2NQRkJEbmlOc0padVVHSW8zbDFETzVrREFkTjRUcjFrNWNtNmFWRDF5R1VRRUo1dW5HdmdoN2prbWZUX21vRy1WN2xMWWk4OXRBNGdza3JUdl9LdDRKQTBPc1drN0ZvNkhUNXRjSjR4NUpyUUU",
+    "published": "2026-09-12T09:26:13+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "댄서 카지노|금융거래정보 제공 사실 통보서 도박",
+    "tags": [
+      "금융"
+    ],
+    "title": "댄서 카지노|금융거래정보 제공 사실 통보서 도박",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQdUhGOUY3cnM2cHR6TlNLXzN0VjNNRWgtUEtjWVdXcHFnLTVNeThFbThoWFd5VmhaWElvMlZwU0dPb0hWUm03VkR3NWxFT2tIdkxZejJrMDU0OEdTRkJ3MzdxbEd1OGJka3dyM2NQRkJEbmlOc0padVVHSW8zbDFETzVrREFkTjRUcjFrNWNtNmFWRDF5R1VRRUo1dW5HdmdoN2prbWZUX21vRy1WN2xMWWk4OXRBNGdza3JUdl9LdDRKQTBPc1drN0ZvNkhUNXRjSjR4NUpyUUU?oc=5"
   }
 ]
