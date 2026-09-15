@@ -1483,5 +1483,19 @@
     "tags": [],
     "title": "How to secure edge AI in customer-owned environments",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/04/secure-edge-ai-customer-owned-environments/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=199127",
+    "published": "2026-09-15T12:19:11+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Critical LiteSpeed Enterprise flaw lets one shared hosting account gain root, bypassing CageFS; patch now to 6.3.7 via forced update. cPanel warned that a critical flaw in LiteSpeed Enterprise can let a low‑privilege website user break out of their account and gain root on the whole server. On a box where dozens or hundreds of […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Shared Hosting at Risk: LiteSpeed Enterprise Bug Can Grant Root from a Single Tenant",
+    "url": "https://securityaffairs.com/199127/security/shared-hosting-at-risk-litespeed-enterprise-bug-can-grant-root-from-a-single-tenant.html"
   }
 ]
