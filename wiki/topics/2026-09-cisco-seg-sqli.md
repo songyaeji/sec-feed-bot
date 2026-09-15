@@ -10,3 +10,4 @@ Cisco AsyncOS for Secure Email Gateway의 SQL 인젝션 취약점으로 미인�
 ## 타임라인
 
 - 2026-09-14 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-76461) — CVE-2026-76461 CISA KEV 공식 등록
+- 2026-09-15 [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root/) — Cisco SEG 제로데이 패치 및 활발한 악용 중 보도

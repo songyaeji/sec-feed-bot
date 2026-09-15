@@ -12,5 +12,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-25 [The Hacker News](https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html) — Marimo 고심각도 MCP 명령 실행 취약점 공개, VulnCheck CNA 기록
+- 2026-09-15 [The Hacker News](https://thehackernews.com/2026/09/human-attacker-exploits-marimo-rce.html) — 실제 공격자가 Marimo RCE 악용해 8초 내 SSH 바스천 접근 사례
 
 ## 관련
