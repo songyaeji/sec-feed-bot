@@ -2573,5 +2573,46 @@
     "tags": [],
     "title": "Using Cyber Decoys to Strengthen Detection and Response",
     "url": "https://www.cisa.gov/resources-tools/resources/using-cyber-decoys-strengthen-detection-and-response"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html",
+    "published": "2026-09-16T15:50:59+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A critical security flaw in Issabel Framework, a web-based framework for the open-source unified communications PBX software, has come under active exploitation. The vulnerability in question is CVE-2026-89026 (CVSS v3.1 score: 9.8/CVSS v4.0 score: 9.3), which can allow an unauthenticated remote attacker to execute arbitrary operating system (OS) commands by taking advantage of a hard-coded",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Attackers Exploit Issabel Framework Flaw Enabling Unauthenticated OS Command Execution",
+    "url": "https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/three-threat-groups-target-russian.html",
+    "published": "2026-09-16T15:27:49+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Enterprises in Russia have emerged as the target of three threat activity clusters tracked as NightEagle, Hacking Cat, and Toy Ghouls, according to multiple reports from Kaspersky. The cybersecurity vendor said it has identified attacks mounted by NightEagle (aka APT-Q-95), a threat actor known to be active since at least 2023, that involve new techniques for persistence and lateral movement.",
+    "tags": [
+      "랜섬웨어",
+      "APT"
+    ],
+    "title": "Three Threat Groups Target Russian Enterprises With Backdoors, Ransomware, and Wipers",
+    "url": "https://thehackernews.com/2026/09/three-threat-groups-target-russian.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/one-extension-could-hijack-ai.html",
+    "published": "2026-09-16T14:36:44+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Security researchers at Forever Security have shown that one ordinary browser extension could take control of the AI assistants built into five Chromium-based products: Gemini Live in Chrome, Perplexity Comet, Microsoft Edge, Opera Neon and the Claude in Chrome extension. Once the extension was installed, it could access each product's built-in AI with a single click. On Comet, Edge,",
+    "tags": [],
+    "title": "One Extension Could Hijack AI Assistants Across Chrome, Comet, Edge, Opera Neon and Claude",
+    "url": "https://thehackernews.com/2026/09/one-extension-could-hijack-ai.html"
   }
 ]
