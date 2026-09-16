@@ -12,5 +12,6 @@ Acronis가 cPanel, WebHost Manager(WHM), Plesk용 백업 플러그인에서 고�
 ## 타임라인
 
 - 2026-09-15 [BleepingComputer](https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/) — Acronis cPanel 백업 플러그인 권한상향 취약점 야생 악용
+- 2026-09-16 [The Hacker News](https://thehackernews.com/2026/09/acronis-cpanel-backup-plugin.html) — CVE-2026-87886 (CVSS 7.8) cPanel·WHM·Plesk 플러그인 권한상향 활발한 악용
 
 ## 관련
