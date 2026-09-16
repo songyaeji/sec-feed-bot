@@ -2473,5 +2473,57 @@
     "tags": [],
     "title": "Flock camera use by internal affairs unit puts DC police at odds with officers’ union",
     "url": "https://therecord.media/dc-police-union-opposes-flock-camera-use-probing-officers"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208519",
+    "published": "2026-09-16T23:04:02+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "워드프레스 기반 온라인 쇼핑몰에서 사용하는 우커머스 도매 리드 캡처 플러그인의 치명적 취약점을 노린 실제 공격이 이어지고 있다. 공격자는 별도의 로그인 과정 없이 악성 PHP 파일을 서버에 올린 뒤 웹셸을 설치해 사이트를 장악할 수 있다.문제가 된 취약점은 CVE-2026-27540으로, CVSS 위험도는 9.8점이다. 2026년 2월 20일 공개됐으며 우커머스 도매 리드 캡처 2.0.3.1 이하 버전이 영향을 받는다. 보안 패치는 2.0.3.2 버전에 적용됐다. 이 플러그인은 약 6,000개 워드프레스 사이트에서 사용되는 것으로",
+    "tags": [],
+    "title": "우커머스 플러그인 치명적 취약점 실제 악용…PHP 웹셸 심어 사이트 장악",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208519"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html",
+    "published": "2026-09-16T13:37:07+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Mandiant says an attacker hijacked an active AI coding-assistant session at an unnamed software-as-a-service provider and later spread Shai-Hulud across about 100 internal code repositories. Before the repository spread, the assistant recommended software that the attacker had poisoned, and the recommendation was accepted. The worm stole repository secrets and source code for the",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Attacker Hijacks AI Coding Assistant Session, Spreads Shai-Hulud Across About 100 Repositories",
+    "url": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/parallels-desktop-flaw-lets-non-admin.html",
+    "published": "2026-09-16T13:14:05+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Parallels Desktop for Mac has a flaw that lets an ordinary local account run code as root, the highest level of access on a Mac, software company JFrog said this week. The attack needs code already running on the machine as a normal user, so it does not work over the network. JFrog says the fix is in Parallels Desktop 27, a version that Intel Macs cannot install. Yuval Moravchick, who leads",
+    "tags": [],
+    "title": "Parallels Desktop Flaw Lets Non-Admin Mac Users Gain Root, but Intel Macs Can't Install Fix",
+    "url": "https://thehackernews.com/2026/09/parallels-desktop-flaw-lets-non-admin.html"
+  },
+  {
+    "author": "Sponsored by Datto",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/the-true-cost-of-a-ransomware-attack-with-and-without-bcdr/",
+    "published": "2026-09-16T14:00:10+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The ransom itself can be only a fraction of the total cost of a ransomware attack, with downtime, recovery, remediation, and legal obligations adding millions to the bill. Datto explains how a mature BCDR strategy can reduce downtime and provide a faster, more predictable path to recovery. [...]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "The true cost of a ransomware attack, with and without BCDR",
+    "url": "https://www.bleepingcomputer.com/news/security/the-true-cost-of-a-ransomware-attack-with-and-without-bcdr/"
   }
 ]

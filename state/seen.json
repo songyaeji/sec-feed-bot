@@ -6450,6 +6450,7 @@
     "CVE-2026-27446": "2026-07-15T02:24:13.499697+00:00",
     "CVE-2026-27459": "2026-07-15T02:24:13.500526+00:00",
     "CVE-2026-27489": "2026-07-15T02:24:13.502098+00:00",
+    "CVE-2026-27540": "2026-09-16T14:13:17.456589+00:00",
     "CVE-2026-27543": "2026-08-13T14:22:23.367499+00:00",
     "CVE-2026-27544": "2026-08-13T14:22:23.367701+00:00",
     "CVE-2026-2757": "2026-07-15T02:24:13.497747+00:00",
@@ -14144,17 +14145,9 @@
     "CVE-2026-9999": "2026-07-21T12:12:55.353860+00:00"
   },
   "last_digest_date": "2026-09-16",
-  "last_run": "2026-09-16T14:04:54.379282+00:00",
+  "last_run": "2026-09-16T14:13:17.486127+00:00",
   "last_trend_date": "2026-09-16",
   "recent_titles": [
-    {
-      "d": "2026-09-09T14:13:08.934146+00:00",
-      "t": "mfa s weakest link account recovery is the new attack path"
-    },
-    {
-      "d": "2026-09-09T14:13:08.939008+00:00",
-      "t": "techflow \uc815\ubcf4\uae30 openai \ucc9c\ub144 \uc218\ud559 \ubb38\uc81c \ud574\uacb0\ud588\ub2e4\uace0 \uc8fc\uc7a5\ud558\uba70 ai\uac00 \uc778\ub958 \uba78\uc885\uc2dc\ud0a8\ub2e4 \ub294 \uacf5\ud3ec anthropic \uc5f0\uad6c\uc6d0 \ud1f4\uc0ac"
-    },
     {
       "d": "2026-09-09T14:35:00.232511+00:00",
       "t": "infostealer logs expose replayable ai tokens that can bypass mfa"
@@ -21350,6 +21343,26 @@
     {
       "d": "2026-09-16T14:04:54.365231+00:00",
       "t": "brevo delivered clickfix through its own infrastructure"
+    },
+    {
+      "d": "2026-09-16T14:13:17.456589+00:00",
+      "t": "\uc6b0\ucee4\uba38\uc2a4 \ud50c\ub7ec\uadf8\uc778 \uce58\uba85\uc801 \ucde8\uc57d\uc810 \uc2e4\uc81c \uc545\uc6a9 php \uc6f9\uc178 \uc2ec\uc5b4 \uc0ac\uc774\ud2b8 \uc7a5\uc545"
+    },
+    {
+      "d": "2026-09-16T14:13:17.461663+00:00",
+      "t": "attacker hijacks ai coding assistant session spreads shai hulud across about 100 repositories"
+    },
+    {
+      "d": "2026-09-16T14:13:17.466524+00:00",
+      "t": "parallels desktop flaw lets non admin mac users gain root but intel macs can t install fix"
+    },
+    {
+      "d": "2026-09-16T14:13:17.471332+00:00",
+      "t": "the true cost of a ransomware attack with and without bcdr"
+    },
+    {
+      "d": "2026-09-16T14:13:17.476019+00:00",
+      "t": "negativland culture jamming and the art of making something new"
     }
   ],
   "seen": {
@@ -55602,6 +55615,7 @@
     "hn-49719938": "2026-09-16T06:43:35.377743+00:00",
     "hn-49720164": "2026-09-16T11:03:57.662700+00:00",
     "hn-49721322": "2026-09-16T05:23:55.548365+00:00",
+    "hn-49721548": "2026-09-16T14:13:17.486127+00:00",
     "hn-49723408": "2026-09-16T11:54:12.757407+00:00",
     "hn-49723873": "2026-09-16T13:03:49.355481+00:00",
     "hn-49724141": "2026-09-16T11:13:28.441462+00:00",
@@ -58169,6 +58183,7 @@
     "https://thehackernews.com/2026/09/anthropic-ai-models-breached-real.html": "2026-09-10T08:53:37.854609+00:00",
     "https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html": "2026-09-11T17:23:34.680622+00:00",
     "https://thehackernews.com/2026/09/attack-chains-not-just-attack-surfaces.html": "2026-09-15T12:23:48.538737+00:00",
+    "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html": "2026-09-16T14:13:17.486127+00:00",
     "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html": "2026-09-05T17:02:45.318327+00:00",
     "https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html": "2026-09-11T07:43:48.191541+00:00",
     "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html": "2026-09-01T18:12:11.941362+00:00",
@@ -58244,6 +58259,7 @@
     "https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html": "2026-09-04T09:42:23.276605+00:00",
     "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html": "2026-09-10T13:13:35.032307+00:00",
     "https://thehackernews.com/2026/09/papercut-replaces-emergency-patches.html": "2026-09-11T07:43:48.191541+00:00",
+    "https://thehackernews.com/2026/09/parallels-desktop-flaw-lets-non-admin.html": "2026-09-16T14:13:17.486127+00:00",
     "https://thehackernews.com/2026/09/peep-turns-chrome-and-edge-into-post.html": "2026-09-07T18:34:04.483576+00:00",
     "https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html": "2026-09-03T10:02:20.951371+00:00",
     "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html": "2026-09-04T16:13:53.374316+00:00",
@@ -58991,6 +59007,7 @@
     "https://www.bleepingcomputer.com/news/security/the-replicant-in-your-directory-ai-agents-and-the-identity-security-gap/": "2026-07-13T02:33:15.653913+00:00",
     "https://www.bleepingcomputer.com/news/security/the-threat-hiding-in-your-hiring-process-how-fake-remote-workers-get-in/": "2026-08-12T14:12:45.202273+00:00",
     "https://www.bleepingcomputer.com/news/security/the-top-4-threats-we-found-by-investigating-every-alert-for-a-quarter/": "2026-09-10T14:13:41.798955+00:00",
+    "https://www.bleepingcomputer.com/news/security/the-true-cost-of-a-ransomware-attack-with-and-without-bcdr/": "2026-09-16T14:13:17.486127+00:00",
     "https://www.bleepingcomputer.com/news/security/these-near-mint-asus-chromebook-refurbs-are-only-145/": "2026-07-29T11:23:28.575241+00:00",
     "https://www.bleepingcomputer.com/news/security/toxicpanda-android-malware-uses-vpn-permissions-to-block-google-play/": "2026-08-23T14:32:00.772763+00:00",
     "https://www.bleepingcomputer.com/news/security/toy-making-giant-hasbro-disclose-data-breach-affecting-employees/": "2026-08-28T11:51:53.673925+00:00",
@@ -60145,6 +60162,7 @@
     "https://www.dailysecu.com/news/articleView.html?idxno=208516": "2026-09-16T13:43:39.633807+00:00",
     "https://www.dailysecu.com/news/articleView.html?idxno=208517": "2026-09-16T13:43:39.633807+00:00",
     "https://www.dailysecu.com/news/articleView.html?idxno=208518": "2026-09-16T13:53:29.783042+00:00",
+    "https://www.dailysecu.com/news/articleView.html?idxno=208519": "2026-09-16T14:13:17.486127+00:00",
     "https://www.genians.co.kr/blog/2026-rsac": "2026-07-13T02:33:15.653913+00:00",
     "https://www.genians.co.kr/blog/ai-as-weapon-and-target": "2026-08-07T00:52:09.875907+00:00",
     "https://www.genians.co.kr/blog/aisoc": "2026-07-13T02:33:15.653913+00:00",
