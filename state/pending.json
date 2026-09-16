@@ -2642,5 +2642,31 @@
     ],
     "title": "Spain's data agency gets first report of AI-powered data breach",
     "url": "https://www.bleepingcomputer.com/news/security/spains-data-agency-gets-first-report-of-ai-powered-data-breach/"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-76460",
+    "kev": true,
+    "published": "2026-09-16T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+    "tags": [],
+    "title": "CVE-2026-76460: Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability (Cisco Identity Services Engine)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76460"
+  },
+  {
+    "author": "BrianKrebs",
+    "category": "research",
+    "id": "https://krebsonsecurity.com/?p=74300",
+    "published": "2026-09-16T18:14:22+00:00",
+    "severity": "info",
+    "source": "Krebs on Security",
+    "summary": "The consumer data broker Radaris.com has long had a reputation for ignoring requests to remove personal information from its vast empire of people-search services online. That reputation caught up with the company recently in a lawsuit alleging Radaris violated a New Jersey privacy law that provides for hefty fines against data brokers that publish personal information on state law enforcement officials. In the face of repeated stonewalling and prevarication by attorneys for Radaris, the judge in the case ordered that radaris.com and more than a dozen other data broker domains be transferred to the plaintiffs.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Data Broker Radaris Loses Domains in Privacy Fight",
+    "url": "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
   }
 ]
