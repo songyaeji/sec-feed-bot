@@ -2915,5 +2915,107 @@
     "tags": [],
     "title": "SilkParasite Infrastructure Links SpiceRAT to Central Asian Targets",
     "url": "https://securityaffairs.com/199267/apt/silkparasite-infrastructure-links-spicerat-to-central-asian-targets.html"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25507",
+    "published": "2026-09-17T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Schneider Electric is aware of vulnerabilities in its PowerChute Serial Shutdown product. The PowerChute Serial Shutdown product is a UPS management software enabling graceful system shutdown and energy management capabilities for desktops, servers and workstations. Failure to apply the remediation provided below may risk improper authentication validation which could result in disruption of operations and access to system data. The following versions of Schneider Electric PowerChute Serial Shutdown are affected: PowerChute Serial Shutdown vers:intdot/",
+    "tags": [],
+    "title": "Schneider Electric PowerChute Serial Shutdown",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25502",
+    "published": "2026-09-17T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow a local attacker to successfully authenticate even with an invalid block password by executing the affected product and modify part of the executable module in memory, and thereby allows the attacker to view, tamper with, destroy, or delete control programs. The following versions of Mitsubishi Electric GX Works3 and Motion Control Settings are affected: Mitsubishi Electric GX Works3 vers:all/* (CVE-2026-15688) Mitsubishi Electric Motion Control Settings (Software packaged with GX Works3) vers:all/* (CVE-2026-15688) CVSS Vendor Equipment Vulnerabilities v3 8.8 Mitsubishi Electric Mitsubishi Electric GX Works3 and Motion Control Settings Incorrect Implementation of Authentication Algorithm Background Critical Infrastructure Sectors: Critical Manufacturing Countries/Areas Deployed: Worldwide Company Headquarters Location: Japan Vulnerabilities Expand All + CVE-2026-15688 Incorrect Implementation of Authentication Algorithm (CWE-303) vulnerability in the affected products allows a local attacker to successfully authenticate even with an invalid block password by executing the affected product and modify part of the executable module in memory, and thereby allows the attacker to view, tamper with, destroy, or delete control programs. View CVE Details Affected Products Mitsubishi Electric GX Works3 and Motion Control Settings Vendor: Mitsubishi Electric Product Version: Mitsubishi Electric GX Works3: vers:",
+    "tags": [],
+    "title": "Mitsubishi Electric GX Works3 and Motion Control Settings",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25506",
+    "published": "2026-09-17T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary ABB is aware of public reports of a vulnerability CVE‑2026‑31431 (Copy Fail) in the product versions listed as affected in the advisory. An update is available that resolves a publicly reported vulnerability. CVE‑2026‑31431 (Copy Fail) is a Linux kernel vulnerability that may allow a locally authenticated user or compromised container workload to gain elevated (root) privileges on affected systems. Once root access is obtained, the attacker can effectively gain complete control of the system The following versions of ABB Ability Edgenius are affected: Ability Edgenius >=3.2.0.0| =3.2.0.0|",
+    "tags": [],
+    "title": "ABB Ability Edgenius",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25505",
+    "published": "2026-09-17T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Schneider Electric is aware of multiple vulnerabilities in its NetBotz 5 – 750/755 products.The NetBotz 5 – 750/755 products are security and environmental monitors providing temperature, humidity, leak, smoke, vibration, door contact, and video monitoring capabilities. Failure to apply the remediation provided below may risk arbitrary or remote code execution over the local network, which could result in device manipulation and unauthorized data access. The following versions of Schneider Electric NetBotz 5 750/755 are affected: NetBotz 5 750 vers:intdot/",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Schneider Electric NetBotz 5 750/755",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25504",
+    "published": "2026-09-17T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Schneider Electric is aware of a vulnerability in its Modicon M340 https://www.se.com/ww/en/product-range/1468-modicon-m340-pac/ , BMXNOR0200H https://www.se.com/us/en/product/BMXNOR0200H/communication-module-modicon-m340-iec-608705101-104-dnp3-for-severe-environments/ : Modicon M340 X80 Ethernet Communication Modules, BMXNGD0100 https://www.se.com/us/en/product/BMXNGD0100/communication-module-modicon-m580-global-data-service/ : M580 Global Data module, BMXNOC0401 https://www.se.com/us/en/product/BMXNOC0401/network-module-modicon-m340-ethernet-ip-and-modbus-tcp-4-x-rj45/?pageType=product&sourceId=BMXNOC0401 : Modicon M340 X80 Ethernet Communication modules, BMXNOE0100 https://www.se.com/ww/en/product/BMXNOE0100/network-module-modicon-m340-modbus-tcp-1-x-rj45-flash-memory-card/?pageType=product&sourceId=BMXNOE0100 : Modbus/TCP Ethernet Modicon M340 module, BMXNOE0110 https://www.se.com/ww/en/product/BMXNOE0110/ethernet-tcp-ip-network-module-modicon-m340-automation-platform-flash-memory-card-internal-ram-16-mb-1-x-rj45-10-100/ : Modbus/TCP Ethernet Modicon M340 FactoryCast module product(s). Failure to apply the fix provided below may risk Denial Of Service attack, which could result in the unavailability of the devices. The following versions of Schneider Electric Modicon M340 Controller and Communication Modules are affected: Schneider Electric Ethernet/Serial RTU Module: vers:generic/",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Schneider Electric Modicon M340 Controller and Communication Modules",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25503",
+    "published": "2026-09-17T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Hitachi Energy is aware of vulnerabilities that affect the FACTS Control systems with GWS component listed in this document. An attacker exploiting these vulnerabilities can cause impact on confidentiality, integrity and availability of the product. Following FACTS Control systems with GWS component deployed from year 2020 onwards are likely affected by the above vulnerabilities. Product deployments without GWS component are not affected. • SVC Light (STATCOM) • Fixed Series Capacitor • Thyristor Controlled Series Capacitor • Static Var Compensator • Static Watt Compensator • Hybrid Synchronous Condensers Please refer to the Recommended Immediate Actions for information about the mitigation/remediation. The affected FCP versions are only applicable if GWS component is present. The following versions of Hitachi Energy FACTS Control Platform (FCP) are affected: FACTS Control Platform (FCP) 3.4.0, 3.7.0, 3.8.0, 3.10.0, 3.12.0, 3.14.0, 3.15.0, 4.0.0, 4.0.1, 4.1.0, 4.1.1 (CVE-2024-4872, CVE-2024-3980, CVE-2024-3982, CVE-2024-7940, CVE-2024-7941) CVSS Vendor Equipment Vulnerabilities v3 9.9 Hitachi Energy Hitachi Energy FACTS Control Platform (FCP) Improper Neutralization of Special Elements in Data Query Logic, Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'), Authentication Bypass by Capture-replay, Missing Authentication for Critical Function, URL Redirection to Untrusted Site ('Open Redirect') Background Critical Infrastructure Se",
+    "tags": [
+      "APT"
+    ],
+    "title": "Hitachi Energy FACTS Control Platform (FCP)",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25501",
+    "published": "2026-09-17T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow unauthorized access to telemetry data and firmware. The following versions of Bransys ELD are affected: Android",
+    "tags": [],
+    "title": "Bransys ELD",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFA4RHhGZV9vbkxTd3hwM2prNnhsUUNKUGhKcWFGU3BfNEh1VVd3a3ZtS004ZUg2czFyNzNEWHk5clNnUkNfQndPRTZZcXNBaGFWazVTc1E4RFJLMV9mX090NXZnay1sSmx5eDRv0gFuQVVfeXFMT3BTTXpCSmZmWldIWVFra2NJRFZfNS10QmtHUnpRNHZVVUxHRVlYZlQ5UVlRVF9CZUdBRVIzamgxUF83ZDNJWEQ2RWVtaUczSHhPd0h0MFpjdHlHZmpLUmNoRTU2YTNnU18tbm9FSmc",
+    "published": "2026-09-17T05:00:14+00:00",
+    "severity": "info",
+    "source": "국가사이버안보센터",
+    "summary": "국정원, ‘사이버 서밋 코리아(CSK 2026)’ 개막",
+    "tags": [],
+    "title": "국정원, ‘사이버 서밋 코리아(CSK 2026)’ 개막",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA4RHhGZV9vbkxTd3hwM2prNnhsUUNKUGhKcWFGU3BfNEh1VVd3a3ZtS004ZUg2czFyNzNEWHk5clNnUkNfQndPRTZZcXNBaGFWazVTc1E4RFJLMV9mX090NXZnay1sSmx5eDRv0gFuQVVfeXFMT3BTTXpCSmZmWldIWVFra2NJRFZfNS10QmtHUnpRNHZVVUxHRVlYZlQ5UVlRVF9CZUdBRVIzamgxUF83ZDNJWEQ2RWVtaUczSHhPd0h0MFpjdHlHZmpLUmNoRTU2YTNnU18tbm9FSmc?oc=5"
   }
 ]
