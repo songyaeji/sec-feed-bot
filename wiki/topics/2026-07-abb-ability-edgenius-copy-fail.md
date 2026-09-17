@@ -10,5 +10,6 @@ cves: [CVE-2026-31431]
 ## 타임라인
 
 - 2026-07-14 [CISA ICS Advisories](https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02) — ABB Ability Edgenius에서 Linux kernel CVE-2026-31431 영향 및 보안 업데이트
+- 2026-09-17 [CISA ICS Advisory ICSA-26-260-06](https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06) — Copy Fail 취약점 공개 보안 업데이트 이용 가능
 
 ## 관련

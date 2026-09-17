@@ -2,6 +2,13 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [openai-model-mismatch-framework](topics/2026-09-openai-model-mismatch-framework.md) OpenAI 모델 불일치 보고 프레임워크 6건 사고 사례 공개 (최종갱신일: 2026-09-17)
+- [abb-ability-edgenius-copy-fail](topics/2026-07-abb-ability-edgenius-copy-fail.md) ABB Ability Edgenius Linux kernel 권한상향 CVE-2026-31431 공개 보안 업데이트 (최종갱신일: 2026-09-17)
+- [hitachi-facts-control-multi-vuln](topics/2026-09-hitachi-facts-control-multi-vuln.md) 히타치 FACTS Control 다중 취약점 CVSS 9.9 전력계통 영향 (최종갱신일: 2026-09-17)
+- [schneider-modicon-m340-rce](topics/2026-09-schneider-modicon-m340-rce.md) Schneider Modicon M340 통신 모듈 거부 서비스 취약점 (최종갱신일: 2026-09-17)
+- [schneider-netbotz-rce](topics/2026-09-schneider-netbotz-rce.md) Schneider NetBotz 5 환경 모니터링 시스템 RCE 취약점 (최종갱신일: 2026-09-17)
+- [schneider-powerchute-auth-bypass](topics/2026-09-schneider-powerchute-auth-bypass.md) Schneider PowerChute Serial Shutdown UPS 관리 인증우회 (최종갱신일: 2026-09-17)
+- [mitsubishi-gx-works3-auth-bypass](topics/2026-09-mitsubishi-gx-works3-auth-bypass.md) Mitsubishi GX Works3 인증우회 제어 프로그램 조작 CVE-2026-15688 (최종갱신일: 2026-09-17)
 - [windows-11-kb5124008-domain-trust](topics/2026-09-windows-11-kb5124008-domain-trust.md) Windows 11 KB5124008 업데이트 도메인 신뢰 손상 (최종갱신일: 2026-09-16)
 - [cisco-ise-privileged-api-bypass](topics/2026-09-cisco-ise-privileged-api-bypass.md) Cisco ISE 특권 API 접근제어 우회 취약점 (최종갱신일: 2026-09-16)
 - [chosen-brick-iranian-malware](topics/2026-09-chosen-brick-iranian-malware.md) 이란 정부 CHOSEN BRICK 멀웨어 반체제인사 감시 (최종갱신일: 2026-09-16)
@@ -713,11 +720,6 @@
 - [tycon-tpdin-auth-bypass](topics/2026-07-tycon-tpdin-auth-bypass.md) Tycon Systems 산업기기 인증 우회 취약점 (최종갱신일: 2026-07-21)
 - [hugging-face-ai-agent-intrusion](topics/2026-07-hugging-face-ai-agent-intrusion.md) 허깅페이스 침해, 오픈AI가 GPT-5.6 솔 등 모델 공식 인정·Artifactory 제로데이 악용·탐지 1주일 지연·외부 4개 서비스 추가 침해 (최종갱신일: 2026-08-27)
 - [oracle-platform-security-rce](topics/2026-07-oracle-platform-security-rce.md) Oracle Platform Security for Java 미인증 원격 접근 CVSS 10.0 (최종갱신일: 2026-07-22)
-- [uac-0145-clickfix-ukraine](topics/2026-07-uac-0145-clickfix-ukraine.md) 러시아 APT UAC-0145, ClickFix로 우크라이나 표적 정보탈취 (최종갱신일: 2026-07-19)
-- [vipnet-update-abuse-russia](topics/2026-07-vipnet-update-abuse-russia.md) ViPNet 업데이트 메커니즘 악용 러시아 정부기관 공격 (최종갱신일: 2026-07-19)
-- [onsetlink-voicephishing-sanction](topics/2026-07-onsetlink-voicephishing-sanction.md) 온세텔링크 보이스피싱 차단 불이행으로 등록취소 처분 (최종갱신일: 2026-07-19)
-- [google-gtig-ai-malware-deployment](topics/2026-07-google-gtig-ai-malware-deployment.md) Google GTIG, AI 악성코드 실제 배포 단계 진입 확인 (최종갱신일: 2026-07-19)
-- [ai-research-institute-security](topics/2026-07-ai-research-institute-security.md) 한국 정부 AI 연구소 보안 요건 강화 (최종갱신일: 2026-07-19)
 - [sonicwall-sma1000-vulnerabilities](topics/2026-07-sonicwall-sma1000-vulnerabilities.md) SonicWall SMA1000 SSRF·코드 인젝션·OS 명령 주입 다중 취약점 (최종갱신일: 2026-09-02)
 - [kt-personal-info-breach](topics/2026-07-kt-personal-info-breach.md) KT 개인정보 유출 과징금 539억원 결정 및 보안 관리 부실 지적 (최종갱신일: 2026-08-02)
 - [ernst-young-support-breach](topics/2026-07-ernst-young-support-breach.md) Ernst & Young 침해 ShinyHunters 갱단 데이터 유출 협박 (최종갱신일: 2026-07-29)

@@ -434,3 +434,8 @@
 - [7zip-rce](topics/2026-07-7zip-rce.md) 7-Zip 26.02 RCE 취약점 패치 특제 아카이브 악용 (최종갱신일: 2026-07-18)
 - [wordpress-wp2shell-rce](topics/2026-07-wordpress-wp2shell-rce.md) WordPress 핵심 wp2shell 미인증 RCE 취약점 (최종갱신일: 2026-07-18)
 - [acr-stealer-clickfix-campaign](topics/2026-07-acr-stealer-clickfix-campaign.md) ACR Stealer ClickFix 피싱 캠페인 4월-6월 증가 (최종갱신일: 2026-07-18)
+- [uac-0145-clickfix-ukraine](topics/2026-07-uac-0145-clickfix-ukraine.md) 러시아 APT UAC-0145, ClickFix로 우크라이나 표적 정보탈취 (최종갱신일: 2026-07-19)
+- [vipnet-update-abuse-russia](topics/2026-07-vipnet-update-abuse-russia.md) ViPNet 업데이트 메커니즘 악용 러시아 정부기관 공격 (최종갱신일: 2026-07-19)
+- [onsetlink-voicephishing-sanction](topics/2026-07-onsetlink-voicephishing-sanction.md) 온세텔링크 보이스피싱 차단 불이행으로 등록취소 처분 (최종갱신일: 2026-07-19)
+- [google-gtig-ai-malware-deployment](topics/2026-07-google-gtig-ai-malware-deployment.md) Google GTIG, AI 악성코드 실제 배포 단계 진입 확인 (최종갱신일: 2026-07-19)
+- [ai-research-institute-security](topics/2026-07-ai-research-institute-security.md) 한국 정부 AI 연구소 보안 요건 강화 (최종갱신일: 2026-07-19)
