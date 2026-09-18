@@ -2524,5 +2524,41 @@
     "tags": [],
     "title": "Hacking group ‘NightEagle’ targeting China’s high-tech sector expands operations to Russia",
     "url": "https://therecord.media/hacking-group-nighteagle-expands-russia-china"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html",
+    "published": "2026-09-18T12:47:04+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Microsoft has released fixes for a maximum-severity security flaw in Azure AI Foundry that could be exploited to achieve privilege escalation. No customer action is required. The vulnerability, tracked as CVE-2026-85889, carries a CVSS score of 10.0. \"Missing authentication for critical function in Azure AI Foundry allows an unauthorized attacker to elevate privileges over a network,\"",
+    "tags": [],
+    "title": "Microsoft Patches CVSS 10.0 Azure AI Foundry Flaw Enabling Unauthorized Privilege Escalation",
+    "url": "https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/an-abandoned-cdn-domain-was-re.html",
+    "published": "2026-09-18T11:01:16+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "In July 2025, someone registered a domain that used to belong to a content delivery network. The CDN had been wound down years earlier, and the domain it served assets from was allowed to expire. What it had not lost were its callers. Thousands of websites, code repositories, and documentation pages still carry hard-coded references to hostnames beneath it. The new owner holds",
+    "tags": [],
+    "title": "An Abandoned CDN Domain Was Re-Registered. Thousands of Sites Still Call It.",
+    "url": "https://thehackernews.com/2026/09/an-abandoned-cdn-domain-was-re.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html",
+    "published": "2026-09-18T11:01:01+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A flaw in four widely used AI coding agents lets someone who controls a plugin's code repository swap the plugin an agent installs for a malicious one, even when the agent locked that plugin to a specific reviewed version, security firm Air Security said on Thursday. The firm said Anthropic has patched the flaw in Claude Code 2.1.179 and OpenAI in Codex 0.146.0, that GitHub Copilot has no",
+    "tags": [],
+    "title": "Plugin4Shell Lets Repository Owners Swap Pinned Plugin Code Across Four AI Coding Agents",
+    "url": "https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html"
   }
 ]
