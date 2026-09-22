@@ -1620,5 +1620,48 @@
     "tags": [],
     "title": "Reducing shadow IT visibility gaps with Wazuh",
     "url": "https://www.bleepingcomputer.com/news/security/reducing-shadow-it-visibility-gaps-with-wazuh/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html",
+    "published": "2026-09-22T17:03:31+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Microsoft on Tuesday announced the takedown of the EvilTokens device code phishing service that it said used artificial intelligence (AI) \"at every step of the attack chain.\" The action, carried out with authorization from the U.S. District Court for the Eastern District of Virginia, involved the efforts of Health-ISAC, alongside Cloudflare, Coinbase, OpenAI, Railway, SpyCloud, The Shadowserver",
+    "tags": [
+      "피싱"
+    ],
+    "title": "Microsoft Takes Down EvilTokens Device-Code Phishing Service Tied to 12,000 Inbox Compromises",
+    "url": "https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html",
+    "published": "2026-09-22T16:41:12+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A critical vulnerability in Bifrost, an open-source AI gateway that routes requests to more than 20 LLM providers, allows an unauthenticated attacker to run arbitrary commands on the gateway server with a single HTTP request. The flaw, tracked as CVE-2026-90898 (CVSS score: 9.8), affects all versions of the Bifrost HTTP transport before 2.1.0 when management authentication is",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "Critical Bifrost AI Gateway Flaw Lets Attackers Run Commands Without Credentials",
+    "url": "https://thehackernews.com/2026/09/critical-bifrost-ai-gateway-flaw-lets.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html",
+    "published": "2026-09-22T16:14:04+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A zero-day proof-of-concept tool that stops Microsoft Defender from installing platform and signature updates by filling all available disk space was published on GitHub on September 19. The tool, called BigDiskBuster, has no patch, no CVE, and no Microsoft advisory. Its author, Abdelhamid Naceri, is a former Microsoft security researcher whose earlier Defender exploits were used in",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates",
+    "url": "https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html"
   }
 ]
