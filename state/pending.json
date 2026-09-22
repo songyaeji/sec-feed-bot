@@ -1458,5 +1458,117 @@
     "tags": [],
     "title": "EvilTokens PhaaS disrupted after compromising 12,000 Microsoft accounts",
     "url": "https://www.bleepingcomputer.com/news/security/eviltokens-phaas-disrupted-after-compromising-12-000-microsoft-accounts/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25529",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to hijack session cookies and issue state-changing requests as an operator which would allow the attacker to control the programmable logic controller and the physical processes it drives. The following versions of OpenPLC Runtime v3 are affected: OpenPLC 3 (CVE-2026-88020) CVSS Vendor Equipment Vulnerabilities v3 6.1 Autonomy Logic OpenPLC Runtime v3 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Background Critical Infrastructure Sectors: Critical Manufacturing, Energy, Transportation Systems, Water and Wastewater Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-88020 The affected product is susceptible to an improper neutralization of input during web page generation vulnerability when the web interface attempts to route the program based on a query string parameter with no encoding. View CVE Details Affected Products OpenPLC Runtime v3 Vendor: Autonomy Logic Product Version: Autonomy Logic OpenPLC: 3 Product Status: known_affected Remediations Vendor fix Autonomy Logic recommends users upgrade to OpenPLC v4 as OpenPLC v3 is end-of-life and is no longer receiving patches, bug fixes, or security updates. Relevant CWE: CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Metrics CVSS Version Base Score Base Severity Vector String 3.1 6.",
+    "tags": [],
+    "title": "OpenPLC Runtime v3",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-09"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25522",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could result in a system crash, a DoS, or memory corruption, which could lead to code execution on the victim system. The following versions of lwIP (Lightweight IP) are affected: API >=2.0.1| =2.0.1|",
+    "tags": [],
+    "title": "lwIP (Lightweight IP)",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25528",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary The products listed below contain a denial of service vulnerability that could allow an attacker to force the devices into protection mode under certain conditions. This disables remote connectivity functions (Web Access) to the devices. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens WTV676 and WTV776 are affected: WTV676-HB6035 Web Interface vers:intdot/",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Siemens WTV676 and WTV776",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25524",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Multiple Siemens products are vulnerable to the \"Copy Fail\" vulnerability. Siemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available. The following versions of Siemens SIPLUS and SIMATIC Products are affected: SIMATIC AX Runtime Core Linux Common Debian vers:all/* (CVE-2026-31431) SIMATIC AX Runtime Core Linux Common Debian arm64 vers:all/* (CVE-2026-31431) SIMATIC AX Runtime Core Linux Platform Container Common Debian Development vers:all/* (CVE-2026-31431) SIMATIC AX Runtime Core Linux VMWare Development vers:all/* (CVE-2026-31431) SIMATIC CN 4100 vers:intdot/",
+    "tags": [],
+    "title": "Siemens SIPLUS and SIMATIC Products",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25525",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary A Client Code Execution (CCE) vulnerability has been identified in Desigo CC, potentially allowing malicious actors to execute arbitrary code on client devices through specially crafted graphics documents. This vulnerability leverages user-defined graphics containing embedded scripts that are executed on client application instances. Successful exploitation could lead to compromise of the client operating system and potential lateral movement within the organization. The following versions of Siemens Desigo CC family are affected: Desigo CC family V6 vers:all/* (CVE-2026-34223) Desigo CC family V7 vers:all/* (CVE-2026-34223) CVSS Vendor Equipment Vulnerabilities v3 8.2 Siemens Siemens Desigo CC family Improper Control of Generation of Code ('Code Injection') Background Critical Infrastructure Sectors: Critical Manufacturing, Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: Germany Vulnerabilities Expand All + CVE-2026-34223 The affected application is vulnerable to Client Code Execution (CCE) due to insufficient input validation when handling scripts embedded within user-defined graphics documents. Specifically, when the script within a graphics document is designed or modified by an attacker to include malicious commands. When a user opens a compromised graphics document, the embedded script is executed on the client application instance, allowing an attacker to write arbitrary files to the client's operating system. ",
+    "tags": [],
+    "title": "Siemens Desigo CC family",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25527",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary SIMOVE Fleetmanager and SIPLANT contain a path traversal vulnerability that could allow an attacker to access files outside of intended scope. Siemens has released new versions for the affected products and recommends to update to the latest versions. The following versions of Siemens SIMOVE Fleetmanager and SIPLANT are affected: SIMOVE Fleetmanager V3.1 vers:intdot/",
+    "tags": [],
+    "title": "Siemens SIMOVE Fleetmanager and SIPLANT",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25523",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary A vulnerability has been identified in the Open Interface Services (OIS) web module affecting Siveillance Control and Siveillance Control Pro (versions OIS 3.x.y and OIS 4.x.y) . This vulnerability allows an attacker to upload arbitrary files, which can lead to unauthorized root-level access on the OIS server. Siemens has released patches and updates for Siveillance OIS to apply to the products that incorporate the OIS service, and recommends to update to the latest versions. The following versions of Siemens Siveillance Control are affected: Siveillance Control Pro V3.0 vers:intdot/",
+    "tags": [],
+    "title": "Siemens Siveillance Control",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25521",
+    "published": "2026-09-22T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to gain full code execution on the device. The following versions of lwIP TCP/IP Stack MQTT Client Application are affected: MQTT Client Application >=2.0.1| =2.0.1|",
+    "tags": [],
+    "title": "lwIP TCP/IP Stack MQTT Client Application",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01"
+  },
+  {
+    "author": "Microsoft Threat Intelligence, Microsoft Defender Experts and Microsoft Security Research",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=149499",
+    "published": "2026-09-22T15:00:00+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "EvilTokens has quickly become one of the top PhaaS platforms, enabling device code phishing attacks through AI-assisted lures, automated infrastructure, and token theft. In collaboration with partners, Microsoft Digital Crimes Unit (DCU) facilitated a disruption of EvilTokens infrastructure and operations. The post Unmasking EvilTokens: Getting to the root of device code phishing appeared first on Microsoft Security Blog .",
+    "tags": [
+      "피싱"
+    ],
+    "title": "Unmasking EvilTokens: Getting to the root of device code phishing",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
   }
 ]
