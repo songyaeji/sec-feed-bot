@@ -1741,5 +1741,19 @@
     ],
     "title": "ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach",
     "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-94127",
+    "kev": true,
+    "published": "2026-09-22T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-94127: F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability (F5 BIG-IP APM)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94127"
   }
 ]
