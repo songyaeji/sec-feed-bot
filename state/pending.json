@@ -1746,5 +1746,29 @@
     "tags": [],
     "title": "Latvia arrests suspected hacker for electronics repair company breach",
     "url": "https://therecord.media/latvia-hacker-arrest-cyberattack"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html",
+    "published": "2026-09-23T13:52:46+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Unknown threat actors have managed to compromise two legitimate MemTensor packages across the npm and Python Package Index (PyPI) repositories to push a platform-specific Go-based implant dubbed sckit designed for Windows, Linux, and macOS. According to reports from Aikido, SafeDep, Socket, and StepSecurity, the libraries in question below - @memtensor/memos-cloud-openclaw-plugin versions",
+    "tags": [],
+    "title": "Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI",
+    "url": "https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html"
+  },
+  {
+    "author": "Sponsored by Varonis",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/how-one-kubernetes-yaml-can-hand-over-a-gcp-organization/",
+    "published": "2026-09-23T14:01:11+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A Kubernetes user with limited permissions can potentially gain control of an entire Google Cloud organization by exploiting the authority granted to Google Kubernetes Config Connector. Varonis explains how this confused deputy problem can turn a single Kubernetes YAML file into a path to organization-wide privilege escalation. [...]",
+    "tags": [],
+    "title": "How One Kubernetes YAML Can Hand Over a GCP Organization",
+    "url": "https://www.bleepingcomputer.com/news/security/how-one-kubernetes-yaml-can-hand-over-a-gcp-organization/"
   }
 ]
