@@ -1479,5 +1479,19 @@
     "tags": [],
     "title": "개인정보위, 청년인턴의 시선으로 개인정보 정책을 더 가깝게!",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5YTzZMdGNVbTVlUTRYa1ZmTVR2MURXOUhETFF3UHBUX3ZMNUk3VXJYS2UyYkRUZ1pqS2hlYkRuZE8wc1hqSEFPUVNCVU9kQ0gyLXdCM1ZiVW9rOGwy?oc=5"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=199564",
+    "published": "2026-09-23T07:36:14+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "WordPress 7.1.2 fixes an unauthenticated file inclusion bug active since version 4.7, patchable but exploitable into remote code execution. WordPress 7.1.2 shipped on September 22 address an unauthenticated local file inclusion, tracked as CVE-2026-87902 (CVSS score of 9.2), which stems of how the CMS resolves page templates, with a real path to remote code execution. […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-87902: how close is your WordPress to remote code execution?",
+    "url": "https://securityaffairs.com/199564/hacking/cve-2026-87902-how-close-is-your-wordpress-to-remote-code-execution.html"
   }
 ]
