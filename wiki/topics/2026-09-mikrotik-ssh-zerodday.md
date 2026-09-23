@@ -9,6 +9,7 @@ MikroTik RouterOS의 SSH 서비스에 사전 인증 취약점(MikroTrick 체인)
 
 ## 타임라인
 
+- 2026-09-23 [The Hacker News](https://thehackernews.com/2026/09/mikrotrick-chain-let-attackers-take.html) — CERT Polska MikroTrick 명명, CVE-2026-67279·CVE-2026-86060 체인 공격 구체화
 - 2026-09-06 [Security Affairs](https://securityaffairs.com/198538/security/your-mikrotik-router-may-already-be-compromised-look-for-ssh-user-2.html) — MikroTik RouterOS SSH 제로데이 MikroTrick 활성 악용 중, 패치 권장
 
 ## 관련

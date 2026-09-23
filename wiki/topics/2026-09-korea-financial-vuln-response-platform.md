@@ -12,4 +12,6 @@ cves: []
 - 2026-09-20 [금융보안원](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5IWEhCLU40VHlCRkcwMVBCdTBmaU1QZFRUVzlBcjR2Z3RJTXFVTDBCOUFrUkxhTVdJVmxxdkhHNjl6VDZkcTFWWFVVV2V4WXNjaFlhRVVoMGRLTHJhRFZFbkxLb0ZDUFk?oc=5) — SW 취약점 공동 대응체계 본격 가동 178개 금융사 참여
 - 2026-09-21 [머니투데이](https://news.google.com/rss/articles/CBMia0FVX3lxTFBQaEQyZ0tBT2JwemUzWjhCc003cHY0d0p1M3pGOTR0emlXQjh3ekp5WW5WNnQ5aVZmUV9jSS1kQmRBNFlNbEcxNExfeS13Q2RWa2lJYl9uclpucm9uLXNUcTBvME1jMFkzV3lR?oc=5) — 성과 지표 발표 취약점 조치 요청 3.1배 증가
 
+- 2026-09-23 [금융보안원](https://news.google.com/rss/articles/CBMiZkFVX3lxTE80RG4wNGdsTjBOWEtia2RRVTRrWnBLNG9jSW9DUVlYa1BlcXVrRkJ6bHE4MXFudHFPUG94Zkxyb09mblUxeGg1dnFsQ1VUeU50MmJpcDhhQ2I4N1Y0R1hIS19TbEF6Zw?oc=5) — 금융권 SW 취약점 1316건 조치
+
 ## 관련

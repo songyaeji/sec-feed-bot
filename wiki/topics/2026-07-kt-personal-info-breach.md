@@ -21,6 +21,7 @@ KT가 약 2만 명의 고객 개인정보 유출로 정부 제재 대상에 올�
 - 2026-07-31 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMNlR5VHplN1hINnVjclgzSVpZNkN3RmdZdGo5VjRqR0ZaYnBHM09MMW5nX1hYVFcxek1PTGhjWGg0OWd6YTZxNXA1eHNsR2VTbGVheF85TnVSWi10UGl3d9IBeEFVX3lxTE0xdGN5a2FxVlpXM1BnM1NlN1NGLUhWYUc1NkdpZTZ4UWw4NmVlVHBqWUhSUURrbEFFak0yYnpKVVlqVFBNZy1yRHVjZi1RUGZ2RWdVWWpjRHMxOWpRcTVXYkNSVEszd1VEQXJjZjkxVnp1YXRXVl9NRQ?oc=5) — 펨토셀 우회 접속 11개월 탐지 실패 문제 지적, KT에 540억원 과징금
 - 2026-07-31 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiaEFVX3lxTE9adGFwcl9tM2ZvdWFVQTZjSjg3UnlxSUExVFE1anRZNDlmUXBmcWlyZFRqeHZhS1FUdk9fVFFZZk9CdC1tbXZvaEtiblJZd0lKQXhnZG1PdF9GOTMyRDlLUy1OeTl3WHJk?oc=5) — KT 과징금 539억원 결정, LG유플러스는 수사의뢰
 - 2026-07-31 [구글뉴스](https://news.google.com/rss/articles/CBMicEFVX3lxTE05cW1McnBOTGQ4eWY5RFdUV2N6WDNfOHRPZmxWUGVZd1N0UkM5eEZDdFY3DJzWE9OZDlLbVJSZ01SakRiM2ZzT3JrLXoxeG1GTGpxajlqN21xOXJMMlJ5Q2Y1TFRmbktkdTVaZk9EQWg?oc=5) — KT 처분이 흔든 과징금 형평성, SKT 소송 새 변수로
+- 2026-09-21 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiTkFVX3lxTE90czlGR0FuRmRUZ1RkdmZXNFhGRzdQaENzY21Gb0lnQ0ZsamVMOU1yNnBEWVN2ZE9lZl9IRmswa1RNS1NncnJmTGk2RXA0UQ?oc=5) — KT 펨토셀 과징금 행정소송 본격 검토, 개인정보위 의결서 수령
 
 ## 관련
 
