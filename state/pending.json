@@ -1576,5 +1576,29 @@
     "tags": [],
     "title": "Kyiv internet providers report major outages after Russian attacks damage data centers",
     "url": "https://therecord.media/kyiv-internet-providers-report-outages-after-russian-strikes"
+  },
+  {
+    "author": "Sponsored by Anecdotes",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/fedramp-vdr-and-ver-daily-scans-are-only-the-beginning/",
+    "published": "2026-09-24T14:02:12+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "FedRAMP's new VDR and VER requirements make vulnerability management more continuous, with faster scanning, tighter remediation deadlines, and stronger evidence requirements. Anecdotes explains why the December 7 deadline is just the beginning of a broader shift toward continuous, automated compliance validation. [...]",
+    "tags": [],
+    "title": "FedRAMP VDR & VER: Daily Scans Are Only the Beginning",
+    "url": "https://www.bleepingcomputer.com/news/security/fedramp-vdr-and-ver-daily-scans-are-only-the-beginning/"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/hardening-code-pipelines-and-ci-cd-infrastructure/",
+    "published": "2026-09-24T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Introduction The landscape of software supply chain security has undergone a significant shift. Recent campaigns demonstrate that sophisticated threat actors are systematically targeting the engineering lifecycle by compromising trusted security and programming tools. These intrusions reveal three key tactics: Attackers target trusted security scanners, utility libraries, and AI developer tools to exploit the elevated privileges granted to these systems within build pipelines. Adversaries target developer workstations and Integrated Development Environments (IDEs) via highly tailored social engineering, malicious extensions, or typosquatted local dependencies to exfiltrate private cryptographic keys, API tokens, and active session credentials directly from local engineering environments. Rather than relying solely on compromised static credentials, attackers have escalated to advanced pipeline manipulation techniques, including GitHub Actions cache poisoning, OpenID Connect ( OIDC) token extraction, and the subversion of mutable action tags to publish compromised packages that still carry legitimate cryptographic provenance. Building upon prior guidance ( here , and here ), this blog provides an actionable blueprint for software and platform architects designed to safeguard the software supply chain against threat vectors that are actively being exploited, third-party risks, and architectural vulnerabilities throughout the entire Software Development Lifecycle (SDLC). Read on",
+    "tags": [],
+    "title": "Proactive Defense: Hardening Code Pipelines and CI/CD Infrastructure",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/hardening-code-pipelines-and-ci-cd-infrastructure/"
   }
 ]
