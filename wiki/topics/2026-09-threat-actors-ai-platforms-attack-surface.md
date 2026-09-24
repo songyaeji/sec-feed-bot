@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-11 [BleepingComputer](https://www.bleepingcomputer.com/news/security/how-threat-actors-are-turning-trusted-ai-platforms-into-an-attack-surface/) — Huntress 분석: Claude Artifacts·AI 검색 중독·ClickFix 스타일 루어로 사용자 기만, 악성 콘텐츠 배포
+- 2026-09-23 [BleepingComputer](https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/) — 개발 문서 placeholder domain(third-party.com)이 가짜 Cloudflare 검증 페이지로 ClickFix 공격 호스팅
 
 ## 관련

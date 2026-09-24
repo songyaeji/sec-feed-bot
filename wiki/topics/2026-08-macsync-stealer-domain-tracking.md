@@ -10,5 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-08-18 [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/08/18/hunting-macsync-stealer-infrastructure-through-behavioral-pivots/) — 도메인 회전에도 불구하고 동작 특성으로 30개 이상 관련 도메인 추적 가능 입증
+- 2026-09-24 [BleepingComputer](https://www.bleepingcomputer.com/news/security/macsync-malware-uses-public-icloud-calendars-to-deliver-new-payloads/) — MacSync 새 변형 공개 iCloud 캘린더 이벤트로 네이티브 페이로드 전달
+- 2026-09-24 [Kaspersky Securelist](https://securelist.com/macsync-new-version/121383/) — 새로운 배포 방법과 백도어 모듈을 포함한 새 버전 발견
 
 ## 관련

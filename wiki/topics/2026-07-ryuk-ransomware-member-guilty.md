@@ -10,3 +10,4 @@ Ryuk 랜섬웨어 멤버인 아르메니아 국적의 Karen Serobovich Vardanyan
 ## 타임라인
 
 - 2026-07-12 [Security Affairs](https://securityaffairs.com/195216/uncategorized/ryuk-ransomware-member-pleads-guilty-over-attacks-on-u-s-organizations.html) — Ryuk 랜섬웨어 멤버 Karen Serobovich Vardanyan 유죄 인정, 최대 15년 징역형 예상
+- 2026-09-24 [Security Affairs](https://securityaffairs.com/?p=199692) — Karen Vardanyan 24개월 징역형 선고 및 120만 달러 배상 명령
