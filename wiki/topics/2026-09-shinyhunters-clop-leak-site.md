@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-19 [BleepingComputer](https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/) — 해킹 및 협박 시도 보도
+- 2026-09-25 [BleepingComputer](https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/) — Grav CMS 경로 조작 취약점 이용 방식 규명
 
 ## 관련
