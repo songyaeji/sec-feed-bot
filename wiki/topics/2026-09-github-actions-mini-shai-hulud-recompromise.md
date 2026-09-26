@@ -13,5 +13,6 @@ cves: []
 
 - 2026-05 — 초기 Mini Shai-Hulud 캠페인으로 actions-cool 저장소 침해
 - 2026-09-25 [The Hacker News](https://thehackernews.com/2026/09/compromised-github-actions-came-back.html) — 재차 악성코드 실행 보도
+- 2026-09-26 [BleepingComputer](https://www.bleepingcomputer.com/news/security/github-actions-re-enabled-with-mini-shai-hulud-payload-still-active/) — GitHub Actions 재감염 저장소 재사용자에 의해 다시 활성화, 악성코드 일주일 이상 실행 상태
 
 ## 관련

@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-23 [금융보안원](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBQWXlnbjBVclpnQ2NycWtOZUdwLUREbzlnWUxjbUR4bElaZ29ucXJDOUItcGNpck5rOGthdUE4bERMSm9vQ1ZSYWl0ckNiZHhrNWYzd29xcXl4dlJhVVBCUdIBeEFVX3lxTE1ib3dQVmp5UWRZcjQycTdGVkpvQzRVNDJ2T1E3SHVwam9QWTZpMnltVGZuZVV5ZTRNNHBfMU9WQ0ROYjItTDM0bzh2NGxCNER0S1lNUHV0TnkyMWtqTFRTOGptYTFMLTN5bW5WTmJDSlFoRXdicFFzNQ?oc=5) — 추석 연휴 사이버 위협 대응 강화 '주의' 수준 비상태세 운영
+- 2026-09-23 보도 — 은행권 거래 차단·AI 판독 등 추가 조치 사항 보도
 
 ## 관련

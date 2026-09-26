@@ -12,6 +12,7 @@ WordPress 페이지 빌더 플러그인 **Elementor**에서 교차 사이트 요
 ## 타임라인
 
 - 2026-09-25 [BleepingComputer](https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/) — CSRF 취약점 공개
+- 2026-09-26 [The Hacker News](https://thehackernews.com/2026/09/elementor-csrf-flaw-lets-attackers-take.html) — CSRF 취약점 관리자 계정 생성 세부 내용 보도
 
 ## 관련
 

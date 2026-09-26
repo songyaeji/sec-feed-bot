@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-09-24 [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/) — Carbonato 봇넷 Docker 호스트 표적, Hermes Agent AI 설치로 제어 탈취
+- 2026-09-25 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208602) — Carbonato 8월 발견 상세 분석, ThreatDown 추적, 도커 이미지 저장소 조사, 가짜 암호화폐 지갑 도구 확인
 
 ## 관련
 
