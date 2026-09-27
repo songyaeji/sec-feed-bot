@@ -448,5 +448,20 @@
     ],
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25552",
+    "published": "2026-09-27T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "CISA is amplifying Citrix’s disclosure of eight new vulnerabilities affecting Citrix NetScaler ADC and Citrix NetScaler Gateway products: CVE-2026-88771 , CVE-2026-88772 , CVE-2026-88773 , CVE-2026-88774 , CVE-2026-88775 , CVE-2026-88776 , CVE-2026-88777 , and CVE-2026-88778 . CISA has added CVE-2026-88771 and CVE-2026-88772 to its Known Exploited Vulnerabilities (KEV) Catalog . Both are critical, zero-day vulnerabilities that can independently enable remote code execution. CISA has received reports and partner threat intelligence confirming that threat actors are actively exploiting these vulnerabilities globally. Because updating Citrix NetScaler appliances can be complex and may require downtime, CISA is issuing this Alert to help organizations assess exposure, prioritize mitigation, and account for these vulnerabilities into their risk-management activities. Given the potential consequences of successful exploitation and the fact that malicious actors are exploiting at least some of these vulnerabilities, CISA urges users and administrators to review Citrix’s advisories. If possible, users are encouraged to check for indication of compromise prior to patching. Citrix has made indicators of compromise available through NetScaler Console and published additional guidance in their recent publication, Security Bulletin for CVE-2026-88771 through CVE-2026-88778 , to support organizations in assessing potential compromise. Should your organization suspect compromise, it is impo",
+    "tags": [
+      "RCE",
+      "제로데이"
+    ],
+    "title": "Critical Zero-Day Vulnerabilities Exploited in Citrix NetScaler ADC, Gateway",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway"
   }
 ]
