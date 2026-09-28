@@ -13,5 +13,7 @@ cves: []
 
 - 2026-09-24 — Bitget 무단 송금 탐지
 - 2026-09-25 [Security Affairs](https://securityaffairs.com/199754/cyber-crime/cryptocurrency-exchange-bitget-says-north-korea-linked-hackers-stole-351-6-million.html) — 침해 공식 발표 보도
+- 2026-09-28 [The Hacker News](https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html) — 공격자 제3자 보안제품 취약점 악용해 관리자 자격증명 탈취 후 지갑 시스템으로 위장 인출 명령 발송
+- 2026-09-28 [BleepingComputer](https://www.bleepingcomputer.com/news/security/bitget-resumes-bitcoin-withdrawals-after-3875-million-crypto-heist/) — Bitcoin 인출 재개 중지 조치 해제
 
 ## 관련
