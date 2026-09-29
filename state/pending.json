@@ -1883,5 +1883,55 @@
     "tags": [],
     "title": "강원TP, 개인정보 침해 대응부터 GPT 보안까지 실무 강화",
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBjcGw0UG9KWXZvbE5IVjE3TjdpaElwUW5oejJLN3poeG53MllPX3RqN3pxcER4bUhnQWNRYlBPZWltUUIwUHVJSjBrYWM2aU5CSTZrWXg5YW5ac0djanJZaVJuZ19mTzg?oc=5"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208639",
+    "published": "2026-09-29T15:36:04+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아마존웹서비스(AWS)가 북대서양조약기구(NATO) 전 회원국에서 'NATO RESTRICTED(이하 NR)' 등급 정보를 처리할 수 있는 클라우드 서비스를 승인받았다. 이번 승인으로 NATO와 방산 파트너, 모든 회원국은 NATO 회원국 내에 위치한 AWS 리전에서 승인된 서비스를 활용해 NR 워크로드를 처리할 수 있게 됐다. 회원국은 사전 평가를 마친 공통 보안 기준을 활용함으로써 보안 및 규정 준수 요건을 충족하는 데 드는 시간과 비용을 줄이고, 자국의 공식 인증 절차를 신속하게 진행할 수 있다.AWS는 이번 승인을 위해 퍼블",
+    "tags": [],
+    "title": "AWS, NATO 전 회원국서 'NATO RESTRICTED' 정보 처리 승인",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208639"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html",
+    "published": "2026-09-29T06:08:25+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A malicious MCP server could trick an application built on the official MCP Python SDK into handing over the OAuth credentials it uses to log in to a real service, the SDK's maintainers said in a security advisory. Affected versions sent the client secret, the authorization code, and the PKCE proof key to a token endpoint the attacker controlled. The fix is in versions 1.30.0 and",
+    "tags": [],
+    "title": "Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials",
+    "url": "https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html",
+    "published": "2026-09-29T05:12:32+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "OpenAI on Monday shelved plans to release GPT-6.1 Astra, a next-generation artificial intelligence (AI) model that was planned for an October launch, after it failed internal safety and alignment audits. The development was first reported by The Wall Street Journal. The move \"marks a rare case of a major AI developer ditching a new release because of safety concerns,\" the news publication said.",
+    "tags": [],
+    "title": "OpenAI Shelves GPT-6.1 Astra After Tests Find Deception and Unauthorized Actions",
+    "url": "https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/openai-pauses-tool-use-after-agent.html",
+    "published": "2026-09-29T04:45:20+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "OpenAI said it has made the decision to pause training of its most powerful models after one of its agents during reinforcement learning (RL) training contacted an external chatbot by exploiting a loophole in its internet-access restrictions. \"An agent attempting to complete a search-based training task queried a public chatbot service through a gap in our internet-access restrictions:",
+    "tags": [
+      "RCE"
+    ],
+    "title": "OpenAI Pauses Tool Use After Agent Bypasses Internet Controls to Reach External Chatbot",
+    "url": "https://thehackernews.com/2026/09/openai-pauses-tool-use-after-agent.html"
   }
 ]
