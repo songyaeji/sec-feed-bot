@@ -2405,5 +2405,105 @@
     ],
     "title": "101 Malicious npm Packages Add Developers' WhatsApp Accounts to Groups Without Consent",
     "url": "https://thehackernews.com/2026/09/101-malicious-npm-packages-add.html"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/automated-ai-agent-used-to-breach-cybersecurity-nonprofit-divd/",
+    "published": "2026-09-29T15:39:19+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The Dutch Institute for Vulnerability Disclosure (DIVD) suffered an AI-driven cyberattack that the organization described as \"loud and very, very messy.\" [...]",
+    "tags": [],
+    "title": "Automated AI agent used to breach cybersecurity nonprofit DIVD",
+    "url": "https://www.bleepingcomputer.com/news/security/automated-ai-agent-used-to-breach-cybersecurity-nonprofit-divd/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25561",
+    "published": "2026-09-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to inject malformed messages which may lead to a denial-of-service condition. The following versions of Baicells Nova 430H are affected: Nova 430H eNodeB (model pBS3101SH)",
+    "tags": [],
+    "title": "Baicells Nova 430H",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25563",
+    "published": "2026-09-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to achieve remote code execution or cause a denial of service. The following versions of MikroTik RouterOS are affected: RouterOS",
+    "tags": [
+      "RCE"
+    ],
+    "title": "MikroTik RouterOS",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25560",
+    "published": "2026-09-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability may allow attackers to achieve remote command execution on affected devices, potentially with root privileges, leading to full compromise of the camera system. The following versions of VIVOTEK Camera Firmware are affected: V Series model_FD9187 (CVE-2026-22755) V Series model_FD9189 (CVE-2026-22755) V Series model_FD9365 (CVE-2026-22755) V Series model_FD9387 (CVE-2026-22755) V Series model_FD9389 (CVE-2026-22755) V Series model_FD9391 (CVE-2026-22755) C Series model_FE9180 (CVE-2026-22755) V Series model_FE9191 (CVE-2026-22755) V Series model_FE9382 (CVE-2026-22755) V Series model_FE9391 (CVE-2026-22755) V Series model_IB9365 (CVE-2026-22755) V Series model_IB9387 (CVE-2026-22755) V Series model_IB9389 (CVE-2026-22755) V Series model_IB939 (CVE-2026-22755) V Series model_IP9165 (CVE-2026-22755) V Series model_IP9171 (CVE-2026-22755) S Series model_IP9172 (CVE-2026-22755) V Series model_IP9181 (CVE-2026-22755) V Series model_IP9191 (CVE-2026-22755) V Series model_IT9389 (CVE-2026-22755) V Series model_MA9321 (CVE-2026-22755) V Series model_MA9322 (CVE-2026-22755) S Series model_MS9321 (CVE-2026-22755) V Series model_MS9390 (CVE-2026-22755) S Series model_TB9330 (CVE-2026-22755) Dome model_FD8365 (CVE-2026-22755) Dome model_FD8365v2 (CVE-2026-22755) Dome model_FD9165 (CVE-2026-22755) Dome model_FD9171 (CVE-2026-22755) Dome model_FD9371 (CVE-2026-22755) Dome model_FD9381 (CVE-2026-22755) Panoramic model_FE9181 (CV",
+    "tags": [],
+    "title": "VIVOTEK Camera Firmware",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25562",
+    "published": "2026-09-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to access sensitive information, access user accounts, execute OS-level commands, or take full control over the device. The following versions of Anjvision YSSD-RTMP-H5 are affected: YSSD-RTMP-H5 firmware 3.3.2.4_build_2024-12-26 (CVE-2026-100291, CVE-2026-100292, CVE-2026-100293, CVE-2026-100294, CVE-2026-100295, CVE-2026-100296, CVE-2026-100297, CVE-2026-100298, CVE-2026-100299) CVSS Vendor Equipment Vulnerabilities v3 9.8 Anjvision Anjvision YSSD-RTMP-H5 Initialization of a Resource with an Insecure Default, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Improper Verification of Cryptographic Signature, Use of Hard-coded Credentials, Active Debug Code, Improper Check for Unusual or Exceptional Conditions, Server-Side Request Forgery (SSRF), Insufficiently Protected Credentials, Use of Weak Credentials Background Critical Infrastructure Sectors: Commercial Facilities Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-100291 In Anjvision YSSD‑RTMP‑H5 firmware version 3.3.2.4, several ONVIF service endpoints process management requests without enforcing required authentication. This could allow an unauthorized attacker to access sensitive device operations. View CVE Details Affected Products Anjvision YSSD-RTMP-H5 Vendor: Anjvision Product Version: Anjvision YSSD-RTMP-H5 firmware: 3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Anjvision YSSD-RTMP-H5",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25564",
+    "published": "2026-09-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow attackers to access, modify, or delete sensitive user data and critical system files, potentially compromising the operation of the entire platform. The following versions of Viidure Dashcam Android Application are affected: Dashcam Android Application",
+    "tags": [],
+    "title": "Viidure Dashcam Android Application",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25559",
+    "published": "2026-09-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to access critical data or execute arbitrary code. The following versions of Toptech TMS7 and TopHAT are affected: TMS7 7.6.3 (CVE-2026-71379, CVE-2026-70356, CVE-2026-72510, CVE-2026-63713, CVE-2026-68954, CVE-2026-68068, CVE-2026-72507, CVE-2026-71302, CVE-2026-69662, CVE-2026-71189) TopHAT 7.6.3 (CVE-2026-71379, CVE-2026-70356, CVE-2026-72510, CVE-2026-63713, CVE-2026-68954, CVE-2026-68068, CVE-2026-72507, CVE-2026-71302, CVE-2026-69662, CVE-2026-71189) CVSS Vendor Equipment Vulnerabilities v3 10 Toptech Systems Toptech TMS7 and TopHAT Files or Directories Accessible to External Parties, Unrestricted Upload of File with Dangerous Type, Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'), Session Fixation, Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection'), Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') Background Critical Infrastructure Sectors: Energy, Chemical, Transportation Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-71379 The file export endpoint allows any unauthenticated attacker to export arbitrary database tables by sending a crafted POST request. View CVE Details Affected Products Toptech TMS7 and TopHAT Vendor: Toptech Systems Product Version: Toptech Systems TMS7: 7.6.3, Toptech System",
+    "tags": [],
+    "title": "Toptech TMS7 and TopHAT",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25558",
+    "published": "2026-09-29T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to replace software and execute arbitrary code with root privileges. The following versions of Lantronix G520 Series Cellular Gateway are affected: G520 Series 2.6.0.4R6_stable (CVE-2026-84409, CVE-2026-91191) CVSS Vendor Equipment Vulnerabilities v3 7.5 Lantronix Lantronix G520 Series Cellular Gateway Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Improper Verification of Cryptographic Signature Background Critical Infrastructure Sectors: Transportation Systems, Energy, Water and Wastewater Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-84409 The device's update mechanism retrieves metadata for software updates over an unencrypted HTTP connection and stores portions of that metadata for later use. A management interface subsequently returns this stored value in a JSON response, and the web interface responsible for displaying update information inserts that value directly into the page as HTML. This behavior allows attacker‑controlled metadata to be interpreted as script content. In addition, the same authenticated origin provides an interface capable of executing system‑level commands with root privileges. An attacker able to influence update metadata could exploit these conditions to execute arbitrary code within the administrative context of the device. View CVE Det",
+    "tags": [],
+    "title": "Lantronix G520 Series Cellular Gateway",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
   }
 ]
