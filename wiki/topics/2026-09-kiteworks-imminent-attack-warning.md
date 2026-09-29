@@ -12,5 +12,7 @@ cves: []
 ## 타임라인
 
 - 2026-09-26 [The Hacker News](https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html) — Kiteworks 연방 정보 기관으로부터 임박한 공격 위협 정보 받고 시스템 종료 권고
+- 2026-09-29 [BleepingComputer](https://www.bleepingcomputer.com/news/security/kiteworks-lifts-shutdown-warning-after-patching-critical-flaw/) — Kiteworks 치명 취약점 발견·패치 완료, 예방 종료 권고 해제, 전체 고객의 1% 미만에만 영향
+- 2026-09-29 [The Hacker News](https://thehackernews.com/2026/09/kiteworks-fixes-critical-flaw-found.html) — 9시간 종료 중 미공개 치명 취약점 발견, 연방 정보 기관과 협력하여 식별·해결
 
 ## 관련
