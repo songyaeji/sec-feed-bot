@@ -3003,5 +3003,46 @@
     "tags": [],
     "title": "‘제6회 개인정보 보호의 날’ 맞아… “사전예방 강화하고 AI데이터 활용 넓힌다”",
     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBQYjFfZDRZVUZSRXQtUTloWmRnNGhGU3NIalpoZlJuSmlDVzd3dE5Jc3ZaS09rSWtORzhoMVUxQXRUdjcwTFQ4MU1ublI5Zw?oc=5"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/attackers-exploit-netscaler-flaw-for.html",
+    "published": "2026-09-30T08:24:35+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Unknown threat actors have been observed exploiting a newly patched security flaw in Citrix NetScaler ADC and NetScaler Gateway appliances to target organizations in North America and Europe. The activity, observed by Mandiant Consulting and Google Threat Intelligence Group (GTIG) in September 2026, has targeted government, financial services, technology, education, and legal and professional",
+    "tags": [
+      "금융"
+    ],
+    "title": "Attackers Exploit NetScaler Flaw for Root Access, Deploy WHIPSHOT and SLAPSHOT",
+    "url": "https://thehackernews.com/2026/09/attackers-exploit-netscaler-flaw-for.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/09/openssl-fixes-high-severity-dtls-flaw.html",
+    "published": "2026-09-30T08:09:28+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A High-severity OpenSSL flaw can leak heap memory to the other side of a DTLS connection or crash the program, OpenSSL said on September 29 as it released fixes. DTLS, the TLS variant used for UDP traffic, resends a handshake message if no reply arrives before the timer expires. The leak or crash can happen when such a resend starts while a larger handshake message is stuck part-way",
+    "tags": [],
+    "title": "OpenSSL Fixes High-Severity DTLS Flaw That Can Leak Heap Memory Unencrypted",
+    "url": "https://thehackernews.com/2026/09/openssl-fixes-high-severity-dtls-flaw.html"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/95649/",
+    "published": "2026-09-29T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Overview AhnLab monitored APT (Advanced Persistent Threat) attacks targeting entities in Korea using its own infrastructure. This report summarizes the types and statistics on domestic APT attacks identified during the month of August 2026. Trends of APT Attacks in South Korea Most of the APT attacks detected in South Korea were distributed via spear phishing […]",
+    "tags": [
+      "APT",
+      "피싱"
+    ],
+    "title": "August 2026 Threat Trend Report on APT Attacks (South Korea)",
+    "url": "https://asec.ahnlab.com/en/95649/"
   }
 ]
