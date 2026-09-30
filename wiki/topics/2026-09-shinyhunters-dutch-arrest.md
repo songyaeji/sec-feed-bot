@@ -13,6 +13,7 @@ cves: []
 
 - 2026-09-28 [BleepingComputer](https://www.bleepingcomputer.com/news/security/dutch-police-confirm-arrest-in-shinyhunters-hacking-investigation/) — 네덜란드 경찰 ShinyHunters 조사 관련 체포 공식 확인
 - 2026-09-29 [Security Affairs](https://securityaffairs.com/199979/cyber-crime/24-year-old-arrested-in-dutch-investigation-into-shinyhunters.html) — 암스테르담 24세 용의자가 로테르담 구역재판소에 출석
+- 2026-09-29 [BleepingComputer](https://www.bleepingcomputer.com/news/security/fbi-tells-shinyhunters-members-to-turn-themselves-in-after-recent-arrest/) — FBI가 ShinyHunters 그룹원들의 자수를 공식 권유
 
 ## 관련
 

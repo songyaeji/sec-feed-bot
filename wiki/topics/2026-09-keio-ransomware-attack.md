@@ -12,5 +12,6 @@ cves: []
 ## 타임라인
 
 - 2026-09-28 [BleepingComputer](https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/) — Keio 철도 회사 주말 랜섬웨어 공격 업무시스템 마비 공식 확인
+- 2026-09-29 [Security Affairs](https://securityaffairs.com/200027/data-breach/japanese-railway-operators-keio-corporation-and-tokyo-metro-disclose-security-breaches.html) — Keio와 Tokyo Metro 양사 모두 동일 주말 랜섬웨어 피격 확인
 
 ## 관련

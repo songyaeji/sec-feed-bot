@@ -10,3 +10,4 @@ cves: []
 ## 타임라인
 
 - 2026-09-25 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiT0FVX3lxTE5wSXNNS21aejQ4bWJMNTNQY1Y1a1BEd3VVcjM0LWVDZ2NHRWFZZmZMSUd1TVluNkF0eFpJcEh1bE9PakVtMHFYYlFibG1TUEA) — 정부24 개인정보 유출 확인, 행안부 과징금·과태료 제재
+- 2026-09-30 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208642) — 8월 17일 어린이포털 취약점 공격으로 메모리 덤프파일 11개·개인정보 유출
