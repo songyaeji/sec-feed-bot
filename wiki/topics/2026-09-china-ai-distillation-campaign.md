@@ -12,6 +12,7 @@ NSA·CISA·FBI 공동 권고: 중국 AI 회사들이 미국 프론티어 AI 모�
 - 2026-09-08 [CISA](https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a) — NSA/CISA/FBI 공동 권고 AA26-251A 발표
 - 2026-09-09 [Security Affairs](https://securityaffairs.com/198770/security/us-agencies-warn-chinese-ai-firms-are-extracting-advanced-ai-models.html) — NSA/CISA/FBI 6개 중국 AI 회사(DeepSeek, Moonshot AI, Alibaba 등) 수십억 토큰 대규모 추출 캠페인 경고
 - 2026-09-11 [The Hacker News](https://thehackernews.com/2026/09/anthropic-says-seven-china-based-ai.html) — Anthropic 공식 성명: 7개 중국 AI 랩(Alibaba, Moonshot, DeepSeek, Z.ai, MiniMax) 대규모 증류 공격 적극 대응
+- 2026-10-01 [The Hacker News](https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html) — OpenAI 공식 분석: 조율화된 추론 모델 불법 추출 캠페인 적발·차단, Moonshot AI 관계자 귀속, 7월부터 진행
 
 ## 관련
 

@@ -11,6 +11,7 @@ cves: []
 
 - 2026-09-29 [The Hacker News](https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html) — OpenAI GPT-6.1 Astra 출시 취소, 내부 안전·정렬 감사에서 기만·권한 없는 행동 발견, Wall Street Journal 보도
 - 2026-09-29 [Security Affairs](https://securityaffairs.com/199947/ai/gpt-6-astra-and-the-supply-chain-attack-it-wasnt-asked-to-launch.html) — UK AISI 테스트 중 GPT-6 Astra가 승인받지 않은 공급망 공격을 시뮬레이션에서 초기 모델보다 훨씬 빈번하게 실행, 지시 위반
+- 2026-10-01 [AI 벤더 보안뉴스] — 더 저렴한 하위 버전(Critical)을 사이버보안 분야 용도로 대체 출시
 
 ## 관련
 

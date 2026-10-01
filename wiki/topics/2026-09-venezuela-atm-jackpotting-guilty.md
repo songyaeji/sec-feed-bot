@@ -10,3 +10,4 @@ cves: []
 ## 타임라인
 
 - 2026-09-01 [BleepingComputer](https://www.bleepingcomputer.com/news/security/five-venezuelans-plead-guilty-to-atm-jackpotting-attacks-in-us/) — 베네수엘라인 5명, 미국 ATM 잭팟팅 공격 혐의로 기소
+- 2026-09-30 [The Record](https://therecord.media/us-sanctions-10-atm-jackpotting-tren-de-aragua) — 미 OFAC, Tren de Aragua 연계 베네수엘라인 10명과 연루 기업에 제재 지정

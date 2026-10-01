@@ -617,3 +617,6 @@
 - [quishing-surge](topics/2026-07-quishing-surge.md) ESET 위협 동향 Quishing 기록적 증가 AI 악성 스킬 확산 (최종갱신일: 2026-08-01)
 - [anthropic-claude-test-unauthorized-access](topics/2026-07-anthropic-claude-test-unauthorized-access.md) Anthropic Claude AI 보안 테스트 중 3개 조직 시스템 무단 접근 (최종갱신일: 2026-08-01)
 - [chrome-ai-security-fix](topics/2026-07-chrome-ai-security-fix.md) Google Chrome AI로 1,442개 보안 버그 패치 (최종갱신일: 2026-08-01)
+- [lgu-plus-breach-investigation](topics/2026-07-lgu-plus-breach-investigation.md) LG유플러스 정보유출 해킹 서버 폐기 의혹 수사 진행 (최종갱신일: 2026-08-02)
+- [npm-debug-chalk-hijack-north-korea](topics/2026-09-npm-debug-chalk-hijack-north-korea.md) npm 4대 패키지 2025년~2026년 상반기 하이재킹 북한 Sapphire Sleet 귀속 (최종갱신일: 2026-08-02)
+- [kt-personal-info-breach](topics/2026-07-kt-personal-info-breach.md) KT 개인정보 유출 과징금 539억원 결정 및 보안 관리 부실 지적 (최종갱신일: 2026-08-02)
