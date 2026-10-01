@@ -4297,5 +4297,93 @@
     ],
     "title": "Police disrupt KillSec ransomware, arrest suspected teenage leader",
     "url": "https://therecord.media/killsec-ransomware-raas-arrests-europe"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25569",
+    "published": "2026-10-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorized access to the database, execute arbitrary code on the host with the highest level of privilege, or gain control of the physical access-control system. The following versions of Armatura LLC Armatura One are affected: Armatura One",
+    "tags": [],
+    "title": "Armatura LLC Armatura One",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25570",
+    "published": "2026-10-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could enable attackers to gain unauthorized administrative control over vulnerable charging stations or disrupt charging services through denial-of-service attacks. The following versions of Monta monta.app are affected: monta.app vers:all/* (CVE-2026-95102, CVE-2026-97363, CVE-2026-97212, CVE-2026-93474) CVSS Vendor Equipment Vulnerabilities v3 9.4 Monta Monta monta.app Missing Authentication for Critical Function, Improper Restriction of Excessive Authentication Attempts, Insufficient Session Expiration, Insufficiently Protected Credentials Background Critical Infrastructure Sectors: Energy, Transportation Systems Countries/Areas Deployed: Worldwide Company Headquarters Location: Netherlands Vulnerabilities Expand All + CVE-2026-95102 WebSocket endpoints lack proper authentication mechanisms, enabling attackers to impersonate charging stations. As a result, attackers can exploit this weakness to gain unauthorized access to sensitive data or perform unauthorized actions. Given that no authentication is required, this can lead to privilege escalation and potentially compromise the security of the entire system. View CVE Details Affected Products Monta monta.app Vendor: Monta Product Version: Monta monta.app: vers:all/* Product Status: known_affected Remediations Mitigation Monta states that they are actively working to increase adoption of authenticated connections across their network and to deprecate unauthe",
+    "tags": [],
+    "title": "Monta monta.app",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25572",
+    "published": "2026-10-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker to gain access to sensitive information that could be used to conduct further attacks against the system. The following versions of Johnson Controls EasyIO Neo Series EC and CW Controllers are affected: EasyIO Neo Series EC Controllers V3.3b63 (CVE-2026-64892) EasyIO Neo Series EC Controllers V3.3b62 (CVE-2026-64892) EasyIO Neo Series CW Controllers V3.3b25 (CVE-2026-64892) EasyIO Neo Series CW Controllers V3.3b24 (CVE-2026-64892) CVSS Vendor Equipment Vulnerabilities v3 3.5 Johnson Controls Johnson Controls EasyIO Neo Series EC and CW Controllers Exposure of Sensitive Information to an Unauthorized Actor Background Critical Infrastructure Sectors: Critical Manufacturing, Commercial Facilities, Government Services and Facilities, Transportation Systems, Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Ireland Vulnerabilities Expand All + CVE-2026-64892 Johnson Controls is aware of a vulnerability in EasyIO Neo Series EC and CW Controllers relating to an attacker gaining access to sensitive information that could be used to conduct further attacks against the system. The EC and CW are programmable edge controllers designed for building automation and control systems, used to manage and automate various building functions including HVAC, lighting, and energy management, supporting open protocols such as BACnet and Modbus for adaptable system connections. View CVE Det",
+    "tags": [
+      "APT"
+    ],
+    "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25575",
+    "published": "2026-10-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow attackers to manipulate device configurations, trigger unauthorized behaviors, and access sensitive information such as device credentials, owner details, and network data without proper authorization. The following versions of Meari IoT Cloud Platform OpenAPI Service are affected: IoT Cloud Platform OpenAPI Service vers:all/* (CVE-2026-101104, CVE-2026-96613) CVSS Vendor Equipment Vulnerabilities v3 7.7 Meari Meari IoT Cloud Platform OpenAPI Service Missing Authorization Background Critical Infrastructure Sectors: Commercial Facilities, Information Technology Countries/Areas Deployed: Worldwide Company Headquarters Location: China Vulnerabilities Expand All + CVE-2026-101104 The Meari IoT Cloud Platform OpenAPI Service is vulnerable to an authorization flaw that allows authenticated users to manipulate the configurations of devices they do not own. This vulnerability enables attackers to perform unauthorized actions, such as altering device settings or triggering unintended behaviors, without verifying ownership or permissions. View CVE Details Affected Products Meari IoT Cloud Platform OpenAPI Service Vendor: Meari Product Version: Meari IoT Cloud Platform OpenAPI Service: vers:all/* Product Status: known_affected Remediations No fix planned Meari did not respond to CISA's coordination attempts. IoT Cloud Platform OpenAPI users are advised to contact Meari for support https://www.meari.com/en/dow",
+    "tags": [],
+    "title": "Meari IoT Cloud Platform OpenAPI Service",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25571",
+    "published": "2026-10-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to escalate privileges or overwrite files. The following versions of ABB Protection and Control IED Manager PCM600 are affected: Protection and Control IED Manager PCM600",
+    "tags": [],
+    "title": "ABB Protection and Control IED Manager PCM600",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25574",
+    "published": "2026-10-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an attacker tointercept and read sensitive information, including credentials andsession data. The following versions of Johnson Controls EasyIO Neo Series EC and CW Controllers are affected: EasyIO Neo Series EC Controllers V3.3b62 (CVE-2026-64893) EasyIO Neo Series EC Controllers V3.3b63 (CVE-2026-64893) EasyIO Neo Series CW Controllers V3.3b24 (CVE-2026-64893) EasyIO Neo Series CW Controllers V3.3b25 (CVE-2026-64893) CVSS Vendor Equipment Vulnerabilities v3 5.4 Johnson Controls Johnson Controls EasyIO Neo Series EC and CW Controllers Cleartext Transmission of Sensitive Information Background Critical Infrastructure Sectors: Critical Manufacturing, Commercial Facilities, Government Services and Facilities, Transportation Systems, Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: Ireland Vulnerabilities Expand All + CVE-2026-64893 Johnson Controls is aware of a vulnerability in EasyIO Neo which may allow an attacker to intercept and read sensitive information, including credentials and session data, transmitted in cleartext over the network. Successful exploitation could result in technical or operational impact. EasyIO Neo is a programmable building automation edge controller used to manage and automate HVAC, lighting, and energy systems in commercial buildings through a web-based interface. View CVE Details Affected Products Johnson Controls EasyIO Neo Series EC and CW Contr",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Johnson Controls EasyIO Neo Series EC and CW Controllers",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25576",
+    "published": "2026-10-01T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary The following versions of CISA Malcolm are affected: Malcolm CVSS Vendor Equipment Vulnerabilities v3 8.8 CISA CISA Malcolm Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection'), Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal'), Server-Side Request Forgery (SSRF), Authentication Bypass by Spoofing, Missing Authorization, Missing Authentication for Critical Function, Incorrect Authorization, Use of Default Credentials, Improper Certificate Validation, URL Redirection to Untrusted Site ('Open Redirect'), Dependency on Vulnerable Third-Party Component, Use of Password Hash With Insufficient Computational Effort Background Critical Infrastructure Sectors: Energy, Information Technology, Water and Wastewater Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-90443 A web interface reflects a portion of the request URL into a script context and a hyperlink attribute without adequate encoding, and does not require authentication to reach. This allows an unauthenticated network attacker to craft a link that, when visited by a user, executes arbitrary script in the context of the affected application and can redirect the user's browser to an arbitrary external site. Successful exploitation could allow an attacker to act with the compromised user's ses",
+    "tags": [],
+    "title": "CISA Malcolm",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
   }
 ]
