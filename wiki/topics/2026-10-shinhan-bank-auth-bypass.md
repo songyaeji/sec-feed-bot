@@ -16,6 +16,9 @@ cves: []
 - 2026-10-04 [금융보안원](https://news.google.com/rss/articles/CBMilgFBVV95cUxONjdPODZJWUFYU0NzWEZRRzVBTTM0dmQ4V0ZBQ3h1czluaW5LR052SDRhaVFlWjFoZS1yYkt0WVd0eXhnX0NPRWRFYmx4Rk82LU5MQlhWODdWcU1EMWtkbU01Um00TnFReG5zS3NDeEwzQVpLeFBIRGpneDczN1JxZlpUUEJMX2dVaDVXM053SFRxdzd1VXc?oc=5) — 금융보안원 '조회 권한' 허점 사전 경고, 규제당국의 감시 강화 권고
 - 2026-10-04 [금융위원회](https://news.google.com/rss/articles/CBMigAFBVV95cUxQckdCMS00WGcxN3BDdTRKcERyVzNqMFB5YjBuNlFlc2VhOWRlRGJMSjdCUl9mdWRKazBCOERNbG1TUlpIRHU1aFZFMldoY1ZnaVI4Y0dDcE5sUElaRXcyVHRVQzROdEZvcWRmWF9rRlo4Wm03alJuM0x2NWJRUGNyRw?oc=5) — 금융권 해킹 7곳 확산, AI 자동화 공격 권한 조회 허점 악용 확인
 - 2026-10-04 [금융보안원](https://news.google.com/rss/articles/CBMibEFVX3lxTE1jMnpkaHo5Mzk5anRBNDFIR0l6YXV2VVBsT1NOd2UwNzJLRmFxNWtWeFNrM0lqQ3RJaHZrTWpDMVlhQ0hab21HbmdxNWV2VVBnMk03RlI3dTVwRkQ5dzVYSTJFZXVqWGhBcncxTw?oc=5) — 은행 넘어 2금융권까지 인증우회 공격 확산 확인, 금융당국 전 금융권 긴급소집
+- 2026-10-05 [매체]() — 금융권 망분리 보안체계 효과성 논쟁, 기술적·정책적 재검토 촉발
+- 2026-10-05 [금융보안원]() — 화이트해커 투입에도 불구하고 공격 지속, 위협 고도화 확인
+- 2026-10-05 [매체]() — 피해 규모 6만6천명으로 확대, 신용정보 노출로 2차 피해 우려
 
 ## 관련
 
