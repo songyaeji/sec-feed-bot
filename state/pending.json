@@ -1053,5 +1053,341 @@
     "tags": [],
     "title": "[김승주 교수 칼럼] AI 에이전트 시대의 사이버보안, 새로운 답보다 밀린 숙제부터",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=208728"
+  },
+  {
+    "author": "Kimberly Samra (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-820776653483778595",
+    "published": "2026-04-23T21:38:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Thomas Brunner, Yu-Han Liu, Moni Pande At Google, our Threat Intelligence teams are dedicated to staying ahead of real-world adversarial activity, proactively monitoring emerging threats before they can impact users. Right now, Indirect Prompt Injection (IPI) is a top priority for the security community, anticipating it as a primary attack vector for adversaries to target and compromise AI agents. But while the danger of IPI is widely discussed, are threat actors actually exploiting this vector today – and if so, how? To answer these questions and to uncover real-world abuse, we initiated a broad sweep of the public web to monitor for known indirect prompt injection patterns. This is what we found. The threat of indirect prompt injection Unlike a direct injection where a user \"jailbreaks\" a chatbot, IPI occurs when an AI system processes content—like a website, email, or document—that contains malicious instructions. When the AI reads this poisoned content, it may silently follow the attacker's commands instead of the user's original intent. This is not a new area of concern for us and Google has been working tirelessly to combat these threats. Our efforts involve cross-functional collaboration between researchers at Google DeepMind (GDM) and defenders like the Google Threat Intelligence Group (GTIG). We have previously detailed our work in this area and researchers have further highlighted the evolving nature of these vulnerabilities. Despite this collective focus,",
+    "tags": [
+      "AI",
+      "제로데이"
+    ],
+    "title": "AI threats in the wild: The current state of prompt injections on the web",
+    "url": "http://security.googleblog.com/2026/04/ai-threats-in-wild-current-state-of.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-1469360228826887140",
+    "published": "2026-04-10T15:12:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Jiacheng Lu, Software Engineer, Google Pixel Team Google is continuously advancing the security of Pixel devices. We have been focusing on hardening the cellular baseband modem against exploitation. Recognizing the risks associated within the complex modem firmware, Pixel 9 shipped with mitigations against a range of memory-safety vulnerabilities. For Pixel 10, Google is advancing its proactive security measures further. Following our previous discussion on \"Deploying Rust in Existing Firmware Codebases\" , this post shares a concrete application: integrating a memory-safe Rust DNS(Domain Name System) parser into the modem firmware. The new Rust-based DNS parser significantly reduces our security risk by mitigating an entire class of vulnerabilities in a risky area, while also laying the foundation for broader adoption of memory-safe code in other areas. Here we share our experience of working on it, and hope it can inspire the use of more memory safe languages in low-level environments. Why Modem Memory Safety Can’t Wait In recent years, we have seen increasing interest in the cellular modem from attackers and security researchers. For example, Google's Project Zero gained remote code execution on Pixel modems over the Internet. Pixel modem has tens of Megabytes of executable code. Given the complexity and remote attack surface of the modem, other critical memory safety vulnerabilities may remain in the predominantly memory-unsafe firmware code. Why DNS? The DNS pro",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Bringing Rust to the Pixel Baseband",
+    "url": "http://security.googleblog.com/2026/04/bringing-rust-to-pixel-baseband.html"
+  },
+  {
+    "author": "Google (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-3718049046001981559",
+    "published": "2026-04-09T17:07:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Ben Ackerman, Chrome team, Daniel Rubery, Chrome team and Guillaume Ehinger, Google Account Security team Following our April 2024 announcement , Device Bound Session Credentials (DBSC) is now entering public availability for Windows users on Chrome 146, and expanding to macOS in an upcoming Chrome release. This project represents a significant step forward in our ongoing efforts to combat session theft, which remains a prevalent threat in the modern security landscape. Session theft typically occurs when a user inadvertently downloads malware onto their device. Once active, the malware can silently extract existing session cookies from the browser or wait for the user to log in to new accounts, before exfiltrating these tokens to an attacker-controlled server. Infostealer malware families, such as LummaC2, have become increasingly sophisticated at harvesting these credentials. Because cookies often have extended lifetimes, attackers can use them to gain unauthorized access to a user’s accounts without ever needing their passwords; this access is then often bundled, traded, or sold among threat actors. Crucially, once sophisticated malware has gained access to a machine, it can read the local files and memory where browsers store authentication cookies. As a result, there is no reliable way to prevent cookie exfiltration using software alone on any operating system. Historically, mitigating session theft relied on detecting the stolen credentials after the fact usin",
+    "tags": [],
+    "title": "Protecting Cookies with Device Bound Session Credentials",
+    "url": "http://security.googleblog.com/2026/04/protecting-cookies-with-device-bound.html"
+  },
+  {
+    "author": "Kimberly Samra (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-7611943504123181983",
+    "published": "2026-04-02T16:00:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Adam Gavish, Google GenAI Security Team Indirect prompt injection (IPI) is an evolving threat vector targeting users of complex AI applications with multiple data sources, such as Workspace with Gemini. This technique enables the attacker to influence the behavior of an LLM by injecting malicious instructions into the data or tools used by the LLM as it completes the user’s query. This may even be possible without any input directly from the user. IPI is not the kind of technical problem you “solve” and move on. Sophisticated LLMs with increasing use of agentic automation combined with a wide range of content create an ultra-dynamic and evolving playground for adversarial attacks. That’s why Google takes a sophisticated and comprehensive approach to these attacks. We’re continuously improving LLM resistance to IPI attacks and launching AI application capabilities with ever-improving defenses. Staying ahead of the latest indirect prompt injection attacks is critical to our mission of securing Workspace with Gemini. In our previous blog “ Mitigating prompt injection attacks with a layered defense strategy ”, we reviewed the layered architecture of our IPI defenses. In this blog, we’ll share more detail on the continuous approach we take to improve these defenses and to solve for new attacks. New attack discovery By proactively discovering and cataloging new attack vectors through internal and external programs, we can identify vulnerabilities and deploy robust defense",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "Google Workspace’s continuous approach to mitigating indirect prompt injections",
+    "url": "http://security.googleblog.com/2026/04/google-workspaces-continuous-approach.html"
+  },
+  {
+    "author": "Kimberly Samra (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-8477748289206662812",
+    "published": "2026-03-31T16:55:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Dirk G ö hmann, Tony Mendez, and the Vulnerability Rewards Program Team 2025 marked a special year in the history of vulnerability rewards and bug bounty programs at Google: our 15th anniversary 🎉🎉🎉! Originally started in 2010 , our vulnerability reward program (VRP) has seen constant additions and expansions over the past decade and a half, clearly indicating the value the programs under this umbrella contribute to the safety and security of Google and its users, but also highlighting their acceptance by the external research community, without which such programs cannot function. Coming back to 2025 specifically, our VRP once again confirmed the ongoing value of engaging with the external security research community to make Google and its products safer. This was more evident than ever as we awarded over $17 million (an all-time high and more than 40% increase compared to 2024!) to over 700 researchers based in countries around the globe – across all of our programs . Vulnerability Reward Program 2025 in Numbers Want to learn more about who’s reporting to the VRP? Check out our Leaderboard on the Google Bug Hunters site . VRP Highlights in 2025 In 2025 we made a series of changes and improvements to our VRP and related initiatives, and continued to invest in the security research community through a series of focused events: The new, dedicated AI VRP was launched , underscoring the importance of this space to Google and its relevance for external researchers. Prev",
+    "tags": [],
+    "title": "VRP 2025 Year in Review",
+    "url": "http://security.googleblog.com/2026/03/vrp-2025-year-in-review.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-7888989345228003839",
+    "published": "2026-03-25T13:00:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Eric Lynch, Product Manager, Android and Dom Elliott, Group Product Manager, Google Play Modern digital security is at a turning point. We are on the threshold of using quantum computers to solve \"impossible\" problems in drug discovery, materials science, and energy—tasks that even the most powerful classical supercomputers cannot handle. However, the same unique ability to consider different options simultaneously also allows these machines to bypass our current digital locks. This puts the public-key cryptography we’ve relied on for decades at risk, potentially compromising everything from bank transfers to trade secrets. To secure our future, it is vital to adopt the new Post-Quantum Cryptography (PQC) standards National Institute of Standards and Technology (NIST) is urging before large-scale, fault-tolerant quantum computers become a reality. To stay ahead of the curve, the technology industry must undertake a proactive, multi-year migration to Post-Quantum Cryptography (PQC). We have been preparing for a post-quantum world since 2016 , conducting pioneering experiments with post-quantum cryptography, rolling out post-quantum capabilities in our products, and sharing our expertise through threat models and technical papers. For Android, the objective extends beyond patching individual applications or transport protocols. The imperative is to ensure that the entire platform architecture is resilient for the decades to come. We are beginning tests of PQC enhancem",
+    "tags": [],
+    "title": "Security for the Quantum Era: Implementing Post-Quantum Cryptography in Android",
+    "url": "http://security.googleblog.com/2026/03/post-quantum-cryptography-in-android.html"
+  },
+  {
+    "author": "Google (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-231893256514002226",
+    "published": "2026-02-27T17:01:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Chrome Secure Web and Networking Team Today we're announcing a new program in Chrome to make HTTPS certificates secure against quantum computers. The Internet Engineering Task Force (IETF) recently created a working group, PKI, Logs, And Tree Signatures (“PLANTS”), aiming to address the performance and bandwidth challenges that the increased size of quantum-resistant cryptography introduces into TLS connections requiring Certificate Transparency (CT). We recently shared our call to action to secure quantum computing and have written about challenges introduced by quantum-resistant cryptography and some of the steps we’ve taken to address them in earlier blog posts . To ensure the scalability and efficiency of the ecosystem, Chrome has no immediate plan to add traditional X.509 certificates containing post-quantum cryptography to the Chrome Root Store . Instead, Chrome, in collaboration with other partners, is developing an evolution of HTTPS certificates based on Merkle Tree Certificates (MTCs), currently in development in the PLANTS working group. MTCs replace the heavy, serialized chain of signatures found in traditional PKI with compact Merkle Tree proofs . In this model, a Certification Authority (CA) signs a single \"Tree Head\" representing potentially millions of certificates, and the \"certificate\" sent to the browser is merely a lightweight proof of inclusion in that tree. Why MTCs? MTCs enable the adoption of robust post-quantum algorithms without incurring t",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Cultivating a robust and efficient quantum-safe HTTPS",
+    "url": "http://security.googleblog.com/2026/02/cultivating-robust-and-efficient.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-9139985917438838370",
+    "published": "2026-02-25T15:17:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Lyubov Farafonova, Product Manager, Phone by Google; Alberto Pastor Nieto, Sr. Product Manager Google Messages and RCS Spam and Abuse We’ve shared how Android’s proactive, multi-layered scam defenses utilize Google AI to protect users around the world from over 10 billion suspected malicious calls and messages every month 1 . While that scale is significant, the true impact of these protections is best understood through the stories of the individuals they help keep safe every day. This includes people like Majik B., an IT professional in Sunnyvale, California. Despite his technical background, Majik recently found himself on a call that felt dangerously legitimate. While using his Pixel, he received a call that appeared to be from his bank. The number looked correct, the caller knew his name and his address, and the story about a \"suspicious charge\" made perfect sense. \"I’m usually pretty careful about this stuff,\" Majik recalled, \"but I stayed on the line longer than I normally would. Even knowing how these scams work, it was convincing in the moment.\" The turning point came when his phone displayed a Scam Detection warning during the call, which provided a critical moment to pause and reflect. Majik hung up, checked his bank app directly, and confirmed there was no fraudulent charge. For Majik, Scam Detection was the intervention he needed: “The warning is what made me pause and avoid a bad situation”. While stories like Majik’s show how our existing protections ",
+    "tags": [],
+    "title": "Staying One Step Ahead: Strengthening Android’s Lead in Scam Protection",
+    "url": "http://security.googleblog.com/2026/02/strengthening-android-lead-in-scam-protection.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-2142782193808667108",
+    "published": "2026-02-19T17:00:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Vijaya Kaza, VP and GM, App & Ecosystem Trust The Android ecosystem is a thriving global community built on trust, giving billions of users the confidence to download the latest apps. In order to maintain that trust, we’re focused on ensuring that apps do not cause real-world harm, such as malware, financial fraud, hidden subscriptions, and privacy invasions. As bad actors leverage AI to change their tactics and launch increasingly sophisticated attacks, we’ve deepened our investments in AI and real-time defenses over the last year to maintain the upper hand and stop these threats before they reach users. Upgrading Google Play’s AI-powered, multi-layered user protections We’ve seen a clear impact from these safety efforts on Google Play. In 2025, we prevented over 1.75 million policy-violating apps from being published on Google Play and banned more than 80,000 bad developer accounts that attempted to publish harmful apps. These figures demonstrate how our proactive protections and push for a more accountable ecosystem are discouraging bad actors from publishing malicious apps, while our new tools help honest developers build compliant apps more easily. Initiatives like developer verification, mandatory pre-review checks, and testing requirements have raised the bar for the Google Play ecosystem, significantly reducing the paths for bad actors to enter. User safety is at the core of everything we build. Over the years, we’ve continually introduced ways to help users",
+    "tags": [
+      "금융"
+    ],
+    "title": "Keeping Google Play & Android app ecosystems safe in 2025",
+    "url": "http://security.googleblog.com/2026/02/keeping-google-play-android-app-ecosystem-safe-2025.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-1964027891567384535",
+    "published": "2026-01-27T16:59:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Nataliya Stanetsky, Fabricio Ferracioli, Elliot Sisteron, Irene Ang of the Android Security Team Phone theft is more than just losing a device; it's a form of financial fraud that can leave you suddenly vulnerable to personal data and financial theft. That’s why we're committed to providing multi-layered defenses that help protect you before, during, and after a theft attempt. Today, we're announcing a powerful set of theft protection feature updates that build on our existing protections , designed to give you greater peace of mind by making your device a much harder target for criminals. Stronger Authentication Safeguards We've expanded our security to protect you against an even wider range of threats. These updates are now available for Android devices running Android 16+. More User Control for Failed Authentications: In Android 15, we launched Failed Authentication Lock, a feature that automatically locks the device's screen after excessive failed authentication attempts. This feature is now getting a new dedicated enable/disable toggle in settings, giving you more granular control over your device's security. Expanding Identity Check to cover more: Early in 2025 , we enabled Identity Check for Android 15+, which requires the user to utilize biometrics when performing certain actions outside of trusted places. Later in the year, we extended this safeguard to cover all features and apps that use the Android Biometric Prompt. This means that critical tools that u",
+    "tags": [
+      "금융"
+    ],
+    "title": "New Android Theft Protection Feature Updates: Smarter, Stronger",
+    "url": "http://security.googleblog.com/2026/01/android-theft-protection-feature-updates.html"
+  },
+  {
+    "author": "Google (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-4435347292960683010",
+    "published": "2025-12-10T20:00:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Chrome Root Program Team Secure connections are the backbone of the modern web, but a certificate is only as trustworthy as the validation process and issuance practices behind it. Recently, the Chrome Root Program and the CA/Browser Forum have taken decisive steps toward a more secure internet by adopting new security requirements for HTTPS certificate issuers. These initiatives, driven by Ballots SC-080 , SC-090 , and SC-091 , will sunset 11 legacy methods for Domain Control Validation. By retiring these outdated practices, which rely on weaker verification signals like physical mail, phone calls, or emails, we are closing potential loopholes for attackers and pushing the ecosystem toward automated, cryptographically verifiable security. To allow affected website operators to transition smoothly, the deprecation will be phased in, with its full security value realized by March 2028. This effort is a key part of our public roadmap, “ Moving Forward, Together, ” launched in 2022. Our vision is to improve security by modernizing infrastructure and promoting agility through automation. While \"Moving Forward, Together\" sets the aspirational direction, the recent updates to the TLS Baseline Requirements turn that vision into policy. This builds on our momentum from earlier this year, including the successful advocacy for the adoption of other security enhancing initiatives as industry-wide standards. What’s Domain Control Validation? Domain Control Validation is a secur",
+    "tags": [],
+    "title": "HTTPS certificate industry phasing out less secure domain validation methods",
+    "url": "http://security.googleblog.com/2025/12/https-certificate-industry-phasing-out.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-2153697136642714777",
+    "published": "2025-12-09T17:00:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Liz Prucka, Hamzeh Zawawy, Rishika Hooda, Android Security and Privacy Team Last year, Google's Android Red Team partnered with Arm to conduct an in-depth security analysis of the Mali GPU, a component used in billions of Android devices worldwide. This collaboration was a significant step in proactively identifying and fixing vulnerabilities in the GPU software and firmware stack. While finding and fixing individual bugs is crucial, and progress continues on eliminating them entirely , making them unreachable by restricting attack surface is another effective and often faster way to improve security. This post details our efforts in partnership with Arm to further harden the GPU by reducing the driver's attack surface. The Growing Threat: Why GPU Security Matters The Graphics Processing Unit (GPU) has become a critical and attractive target for attackers due to its complexity and privileged access to the system. The scale of this threat is significant: since 2021, the majority of Android kernel driver-based exploits have targeted the GPU. These exploits primarily target the interface between the User-Mode Driver (UMD) and the highly privileged Kernel-Mode Driver (KMD), where flaws can be exploited by malicious input to trigger memory corruption. Partnership with Arm Our goal is to raise the bar on GPU security, ensuring the Mali GPU driver and firmware remain highly resilient against potential threats. We partnered with Arm to conduct an analysis of the Mali driver",
+    "tags": [],
+    "title": "Further Hardening Android GPUs",
+    "url": "http://security.googleblog.com/2025/12/further-hardening-android-gpus.html"
+  },
+  {
+    "author": "Google (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-5444043768676554819",
+    "published": "2025-12-08T18:03:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Nathan Parker, Chrome security team Chrome has been advancing the web’s security for well over 15 years, and we’re committed to meeting new challenges and opportunities with AI. Billions of people trust Chrome to keep them safe by default, and this is a responsibility we take seriously. Following the recent launch of Gemini in Chrome and the preview of agentic capabilities , we want to share our approach and some new innovations to improve the safety of agentic browsing. The primary new threat facing all agentic browsers is indirect prompt injection . It can appear in malicious sites, third-party content in iframes, or from user-generated content like user reviews, and can cause the agent to take unwanted actions such as initiating financial transactions or exfiltrating sensitive data. Given this open challenge, we are investing in a layered defense that includes both deterministic and probabilistic defenses to make it difficult and costly for attackers to cause harm. Designing safe agentic browsing for Chrome has involved deep collaboration of security experts across Google. We built on Gemini's existing protections and agent security principles and have implemented several new layers for Chrome. We’re introducing a user alignment critic where the agent’s actions are vetted by a separate model that is isolated from untrusted content. We’re also extending Chrome’s origin-isolation capabilities to constrain what origins the agent can interact with, to just those that",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "Architecting Security for Agentic Capabilities in Chrome",
+    "url": "http://security.googleblog.com/2025/12/architecting-security-for-agentic.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-4705416576555757437",
+    "published": "2025-12-03T16:59:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Aden Haussmann, Associate Product Manager and Sumeet Sharma, Play Partnerships Trust & Safety Lead Android uses the best of Google AI and our advanced security expertise to tackle mobile scams from every angle. Over the last few years, we’ve launched industry-leading features to detect scams and protect users across phone calls, text messages and messaging app chat notifications . These efforts are making a real difference in the lives of Android users. According to a recent YouGov survey 1 commissioned by Google, Android users were 58% more likely than iOS users to report they had not received any scam texts in the prior week 2 . But our work doesn’t stop there. Scammers are continuously evolving, using more sophisticated social engineering tactics to trick users into sharing their phone screen while on the phone to visit malicious websites, reveal sensitive information, send funds or download harmful apps. One popular scam involves criminals impersonating banks or other trusted institutions on the phone to try to manipulate victims into sharing their screen in order to reveal banking information or make a financial transfer. To help combat these types of financial scams, we launched a pilot earlier this year in the UK focused on in-call protections for financial apps. How the in-call scam protection works on Android When you launch a participating financial app while screen sharing and on a phone call with a number that is not saved in your contacts, your Android ",
+    "tags": [
+      "금융"
+    ],
+    "title": "Android expands pilot for in-call scam protection for financial apps",
+    "url": "http://security.googleblog.com/2025/12/android-expands-pilot-in-call-scam-protection-financial-apps.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-7820274380222945755",
+    "published": "2025-11-20T17:00:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Dave Kleidermacher, VP, Platforms Security & Privacy, Google Technology should bring people closer together, not create walls. Being able to communicate and connect with friends and family should be easy regardless of the phone they use. That’s why Android has been building experiences that help you stay connected across platforms. As part of our efforts to continue to make cross-platform communication more seamless for users, we've made Quick Share interoperable with AirDrop, allowing for two-way file sharing between Android and iOS devices, starting with the Pixel 10 Family. This new feature makes it possible to quickly share your photos, videos, and files with people you choose to communicate with, without worrying about the kind of phone they use. Most importantly, when you share personal files and content, you need to trust that it stays secure. You can share across devices with confidence knowing we built this feature with security at its core, protecting your data with strong safeguards that have been tested by independent security experts. Secure by Design We built Quick Share’s interoperability support for AirDrop with the same rigorous security standards that we apply to all Google products. Our approach to security is proactive and deeply integrated into every stage of the development process. This includes: Threat Modeling: We identify and address potential security risks before they can become a problem. Internal Security Design and Privacy Reviews: Our",
+    "tags": [],
+    "title": "Android Quick Share Support for AirDrop: A Secure Approach to Cross-Platform File Sharing",
+    "url": "http://security.googleblog.com/2025/11/android-quick-share-support-for-airdrop-security.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-8619085627823664385",
+    "published": "2025-11-13T16:59:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Jeff Vander Stoep, Android Last year, we wrote about why a memory safety strategy that focuses on vulnerability prevention in new code quickly yields durable and compounding gains. This year we look at how this approach isn’t just fixing things, but helping us move faster . The 2025 data continues to validate the approach, with memory safety vulnerabilities falling below 20% of total vulnerabilities for the first time. Updated data for 2025. This data covers first-party and third-party (open source) code changes to the Android platform across C, C++, Java, Kotlin, and Rust. This post is published a couple of months before the end of 2025, but Android’s industry-standard 90-day patch window means that these results are very likely close to final. We can and will accelerate patching when necessary. We adopted Rust for its security and are seeing a 1000x reduction in memory safety vulnerability density compared to Android’s C and C++ code . But the biggest surprise was Rust's impact on software delivery. With Rust changes having a 4x lower rollback rate and spending 25% less time in code review , the safer path is now also the faster one. In this post, we dig into the data behind this shift and also cover: How we’re expanding our reach: We're pushing to make secure code the default across our entire software stack. We have updates on Rust adoption in first-party apps, the Linux kernel, and firmware. Our first rust memory safety vulnerability...almost: We'll analyze a n",
+    "tags": [
+      "RCE",
+      "제로데이"
+    ],
+    "title": "Rust in Android: move fast and fix things",
+    "url": "http://security.googleblog.com/2025/11/rust-in-android-move-fast-fix-things.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-7932683105161627836",
+    "published": "2025-10-30T16:59:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Lyubov Farafonova, Product Manager, Phone by Google; Alberto Pastor Nieto, Sr. Product Manager Google Messages and RCS Spam and Abuse; Vijay Pareek, Manager, Android Messaging Trust and Safety As Cybersecurity Awareness Month wraps up, we’re focusing on one of today's most pervasive digital threats: mobile scams. In the last 12 months, fraudsters have used advanced AI tools to create more convincing schemes, resulting in over $400 billion in stolen funds globally. ¹ For years, Android has been on the frontlines in the battle against scammers, using the best of Google AI to build proactive, multi-layered protections that can anticipate and block scams before they reach you. Android’s scam defenses protect users around the world from over 10 billion suspected malicious calls and messages every month 2 . In addition, Google continuously performs safety checks to maintain the integrity of the RCS service. In the past month alone, this ongoing process blocked over 100 million suspicious numbers from using RCS, stopping potential scams before they could even be sent. To show how our scam protections work in the real world, we asked users and independent security experts to compare how well Android and iOS protect you from these threats. We're also releasing a new report that explains how modern text scams are orchestrated, helping you understand the tactics fraudsters use and how to spot them. Survey shows Android users’ confidence in scam protections Google and YouGov 3 ",
+    "tags": [],
+    "title": "How Android provides the most effective protection to keep you safe from mobile scams",
+    "url": "http://security.googleblog.com/2025/10/how-android-protects-you-from-scams.html"
+  },
+  {
+    "author": "Google (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-4907567766138533594",
+    "published": "2025-10-28T17:01:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "One year from now, with the release of Chrome 154 in October 2026, we will change the default settings of Chrome to enable “Always Use Secure Connections”. This means Chrome will ask for the user's permission before the first access to any public site without HTTPS. The “Always Use Secure Connections” setting warns users before accessing a site without HTTPS Chrome Security's mission is to make it safe to click on links. Part of being safe means ensuring that when a user types a URL or clicks on a link, the browser ends up where the user intended. When links don't use HTTPS, an attacker can hijack the navigation and force Chrome users to load arbitrary, attacker-controlled resources, and expose the user to malware, targeted exploitation, or social engineering attacks. Attacks like this are not hypothetical—software to hijack navigations is readily available and attackers have previously used insecure HTTP to compromise user devices in a targeted attack. Since attackers only need a single insecure navigation, they don't need to worry that many sites have adopted HTTPS—any single HTTP navigation may offer a foothold. What's worse, many plaintext HTTP connections today are entirely invisible to users, as HTTP sites may immediately redirect to HTTPS sites. That gives users no opportunity to see Chrome's \"Not Secure\" URL bar warnings after the risk has occurred, and no opportunity to keep themselves safe in the first place. To address this risk, we launched the “Always Use Secure ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "HTTPS by default",
+    "url": "http://security.googleblog.com/2025/10/https-by-default.html"
+  },
+  {
+    "author": "Kimberly Samra (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-2736122330672757952",
+    "published": "2025-09-24T18:42:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Elie Bursztein and Marianna Tishchenko, Google Privacy, Safety and Security Team Empowering cyber defenders with AI is critical to tilting the cybersecurity balance back in their favor as they battle cybercriminals and keep users safe. To help accelerate adoption of AI for cybersecurity workflows, we partnered with Airbus at DEF CON 33 to host the GenSec Capture the Flag (CTF) , dedicated to human-AI collaboration in cybersecurity. Our goal was to create a fun, interactive environment, where participants across various skill levels could explore how AI can accelerate their daily cybersecurity workflows. At GenSec CTF, nearly 500 participants successfully completed introductory challenges, with 23% of participants using AI for cybersecurity for the very first time. An overwhelming 85% of all participants found the event useful for learning how AI can be applied to security workflows. This positive feedback highlights that AI-centric CTFs can play a vital role in speeding up AI education and adoption in the security community. The CTF also offered a valuable opportunity for the community to use Sec-Gemini , Google’s experimental Cybersecurity AI, as an optional assistant available in the UI alongside major LLMs. And we received great feedback on Sec-Gemini, with 77% of respondents saying that they had found Sec-Gemini either “very helpful” or “extremely helpful” in assisting them with solving the challenges. We want to thank the DEF CON community for the enthusiastic ",
+    "tags": [
+      "AI",
+      "APT"
+    ],
+    "title": "Accelerating adoption of AI for cybersecurity at DEF CON 33",
+    "url": "http://security.googleblog.com/2025/09/accelerating-adoption-of-ai-for.html"
+  },
+  {
+    "author": "Kimberly Samra (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-3851265404022501335",
+    "published": "2025-09-15T17:01:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Daniel Moghimi Rowhammer is a complex class of vulnerabilities across the industry. It is a hardware vulnerability in DRAM where repeatedly accessing a row of memory can cause bit flips in adjacent rows, leading to data corruption. This can be exploited by attackers to gain unauthorized access to data, escalate privileges, or cause denial of service. Hardware vendors have deployed various mitigations, such as ECC and Target Row Refresh (TRR) for DDR5 memory, to mitigate Rowhammer and enhance DRAM reliability. However, the resilience of those mitigations against sophisticated attackers remains an open question. To address this gap and help the ecosystem with deploying robust defenses, Google has supported academic research and developed test platforms to analyze DDR5 memory. Our effort has led to the discovery of new attacks and a deeper understanding of Rowhammer on the current DRAM modules, helping to forge the way for further, stronger mitigations. What is Rowhammer? Rowhammer exploits a vulnerability in DRAM. DRAM cells store data as electrical charges, but these electric charges leak over time, causing data corruption. To prevent data loss, the memory controller periodically refreshes the cells. However, if a cell discharges before the refresh cycle, its stored bit may corrupt. Initially considered a reliability issue, it has been leveraged by security researchers to demonstrate privilege escalation attacks. By repeatedly accessing a memory row, an attacker can ",
+    "tags": [],
+    "title": "Supporting Rowhammer research to protect the DRAM ecosystem",
+    "url": "http://security.googleblog.com/2025/09/supporting-rowhammer-research-to.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-4299395041248125272",
+    "published": "2025-09-10T15:59:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Eric Lynch, Senior Product Manager, Android Security, and Sherif Hanna, Group Product Manager, Google C2PA Core At Made by Google 2025, we announced that the new Google Pixel 10 phones will support C2PA Content Credentials in Pixel Camera and Google Photos . This announcement represents a series of steps towards greater digital media transparency: The Pixel 10 lineup is the first to have Content Credentials built in across every photo created by Pixel Camera. The Pixel Camera app achieved Assurance Level 2 , the highest security rating currently defined by the C2PA Conformance Program. Assurance Level 2 for a mobile app is currently only possible on the Android platform . A private-by-design approach to C2PA certificate management, where no image or group of images can be related to one another or the person who created them. Pixel 10 phones support on-device trusted time-stamps, which ensures images captured with your native camera app can be trusted after the certificate expires, even if they were captured when your device was offline. These capabilities are powered by Google Tensor G5 , Titan M2 security chip, the advanced hardware-backed security features of the Android platform, and Pixel engineering expertise. In this post, we’ll break down our architectural blueprint for bringing a new level of trust to digital media, and how developers can apply this model to their own apps on Android. A New Approach to Content Credentials Generative AI can help us all to be",
+    "tags": [
+      "APT"
+    ],
+    "title": "How Pixel and Android are bringing a new level of trust to your images with C2PA Content Credentials",
+    "url": "http://security.googleblog.com/2025/09/pixel-android-trusted-images-c2pa-content-credentials.html"
+  },
+  {
+    "author": "Edward Fernandez (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-2555722234356785489",
+    "published": "2025-08-12T16:00:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Dave Kleidermacher, VP Engineering, Android Security & Privacy Today marks a watershed moment and new benchmark for open-source security and the future of consumer electronics. Google is proud to announce that protected KVM (pKVM), the hypervisor that powers the Android Virtualization Framework, has officially achieved SESIP Level 5 certification . This makes pKVM the first software security system designed for large-scale deployment in consumer electronics to meet this assurance bar. Supporting Next-Gen Android Features The implications for the future of secure mobile technology are profound. With this level of security assurance, Android is now positioned to securely support the next generation of high-criticality isolated workloads. This includes vital features, such as on-device AI workloads that can operate on ultra-personalized data, with the highest assurances of privacy and integrity. This certification required a hands-on evaluation by Dekra , a globally recognized cybersecurity certification lab, which conducted an evaluation against the TrustCB SESIP scheme , compliant to EN-17927 . Achieving Security Evaluation Standard for IoT Platforms (SESIP) Level 5 is a landmark because it incorporates AVA_VAN.5, the highest level of vulnerability analysis and penetration testing under the ISO 15408 (Common Criteria) standard. A system certified to this level has been evaluated to be resistant to highly skilled, knowledgeable, well-motivated, and well-funded attacke",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Android’s pKVM Becomes First Globally Certified Software to Achieve Prestigious SESIP Level 5 Security Certification",
+    "url": "http://security.googleblog.com/2025/08/Android-pKVM-Certified-SESIP-Level-5.html"
+  },
+  {
+    "author": "Kimberly Samra (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-9038653691227621808",
+    "published": "2025-07-21T21:34:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Matthew Suozzo, Google Open Source Security Team (GOSST) Today we're excited to announce OSS Rebuild, a new project to strengthen trust in open source package ecosystems by reproducing upstream artifacts. As supply chain attacks continue to target widely-used dependencies, OSS Rebuild gives security teams powerful data to avoid compromise without burden on upstream maintainers. The project comprises: Automation to derive declarative build definitions for existing PyPI (Python), npm (JS/TS), and Crates.io (Rust) packages. SLSA Provenance for thousands of packages across our supported ecosystems, meeting SLSA Build Level 3 requirements with no publisher intervention. Build observability and verification tools that security teams can integrate into their existing vulnerability management workflows. Infrastructure definitions to allow organizations to easily run their own instances of OSS Rebuild to rebuild, generate, sign, and distribute provenance. Challenges Open source software has become the foundation of our digital world. From critical infrastructure to everyday applications, OSS components now account for 77% of modern applications. With an estimated value exceeding $12 trillion , open source software has never been more integral to the global economy. Yet this very ubiquity makes open source an attractive target: Recent high-profile supply chain attacks have demonstrated sophisticated methods for compromising widely-used packages. Each incident erodes trust in ",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Introducing OSS Rebuild: Open Source, Rebuilt to Last",
+    "url": "http://security.googleblog.com/2025/07/introducing-oss-rebuild-open-source.html"
+  },
+  {
+    "author": "Google (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-1495335074080890598",
+    "published": "2025-07-08T17:36:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by David Adrian, Javier Castro & Peter Kotwicz, Chrome Security Team Android recently announced Advanced Protection , which extends Google’s Advanced Protection Program to a device-level security setting for Android users that need heightened security—such as journalists, elected officials, and public figures. Advanced Protection gives you the ability to activate Google’s strongest security for mobile devices, providing greater peace of mind that you’re better protected against the most sophisticated threats. Advanced Protection acts as a single control point for at-risk users on Android that enables important security settings across applications, including many of your favorite Google apps, including Chrome. In this post, we’d like to do a deep dive into the Chrome features that are integrated with Advanced Protection, and how enterprises and users outside of Advanced Protection can leverage them. Android Advanced Protection integrates with Chrome on Android in three main ways: Enables the “Always Use Secure Connections” setting for both public and private sites, so that users are protected from attackers reading confidential data or injecting malicious content into insecure plaintext HTTP connections. Insecure HTTP represents less than 1% of page loads for Chrome on Android. Enables full Site Isolation on mobile devices with 4GB+ RAM, so that potentially malicious sites are never loaded in the same process as legitimate websites. Desktop Chrome clients already have ",
+    "tags": [],
+    "title": "Advancing Protection in Chrome on Android",
+    "url": "http://security.googleblog.com/2025/07/advancing-protection-in-chrome-on.html"
+  },
+  {
+    "author": "Kimberly Samra (noreply@blogger.com)",
+    "category": "research",
+    "id": "tag:blogger.com,1999:blog-1176949257541686127.post-1436003009998740920",
+    "published": "2025-06-13T16:03:00+00:00",
+    "severity": "info",
+    "source": "Google Security Blog",
+    "summary": "Posted by Adam Gavish, Google GenAI Security Team With the rapid adoption of generative AI, a new wave of threats is emerging across the industry with the aim of manipulating the AI systems themselves. One such emerging attack vector is indirect prompt injections. Unlike direct prompt injections, where an attacker directly inputs malicious commands into a prompt, indirect prompt injections involve hidden malicious instructions within external data sources. These may include emails, documents, or calendar invites that instruct AI to exfiltrate user data or execute other rogue actions. As more governments, businesses, and individuals adopt generative AI to get more done, this subtle yet potentially potent attack becomes increasingly pertinent across the industry, demanding immediate attention and robust security measures. At Google, our teams have a longstanding precedent of investing in a defense-in-depth strategy, including robust evaluation, threat analysis, AI security best practices , AI red-teaming , adversarial training, and model hardening for generative AI tools. This approach enables safer adoption of Gemini in Google Workspace and the Gemini app (we refer to both in this blog as “Gemini” for simplicity). Below we describe our prompt injection mitigation product strategy based on extensive research, development, and deployment of improved security mitigations. A layered security approach Google has taken a layered security approach introducing security measures design",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "Mitigating prompt injection attacks with a layered defense strategy",
+    "url": "http://security.googleblog.com/2025/06/mitigating-prompt-injection-attacks.html"
   }
 ]
