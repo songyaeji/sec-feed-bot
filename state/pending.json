@@ -1417,5 +1417,289 @@
     ],
     "title": "[보안 칼럼] 금융권 뚫은 ‘AI 해킹’, 답은 소스코드에 있다",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=208754"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208755",
+    "published": "2026-10-06T16:19:23+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "구글 클라우드 기술 파트너인 루카스메타(대표 한예원)는 금융, 공공, 제조, 병원, 대학 등 전 산업군이 안전한 원격 업무 환경을 구현하고 AI를 도입할 수 있도록 지원하는 ‘PQCSAFE 제로트러스트 팩토리 게이트웨이(PQCSAFE Zero-Trust Factory Gateway)’를 구글 클라우드 마켓플레이스에 출시했다고 밝혔다.이번 출시는 구글 본사 마켓플레이스 승인 위원회의 기술 검증을 거쳐, 글로벌 마켓플레이스 엔터프라이즈 승인 규격인 'Pattern 2(하이브리드 SaaS 연동 아키텍처)' 승인을 획득하면서 기술적 공신력",
+    "tags": [
+      "금융"
+    ],
+    "title": "루카스메타, ‘PQCSAFE’ 구글 클라우드 마켓플레이스 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208755"
+  },
+  {
+    "author": "Unit 42",
+    "category": "research",
+    "id": "https://unit42.paloaltonetworks.com/?p=187630",
+    "published": "2026-10-06T10:00:33+00:00",
+    "severity": "info",
+    "source": "Unit 42",
+    "summary": "Analysis of Blinder Tunnel, an Iran-nexus campaign using fake Dubai Airports recruitment lures and GitHub C2 malware to target critical infrastructure. The post Blinder Tunnel Campaign Targets Iraqi Infrastructure appeared first on Unit 42 .",
+    "tags": [],
+    "title": "Blinder Tunnel Campaign Targets Iraqi Infrastructure",
+    "url": "https://unit42.paloaltonetworks.com/blinder-tunnel-targets-critical-infrastructure/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/google-pauses-oss-product-bug-bounty.html",
+    "published": "2026-10-06T09:21:47+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Google has stopped accepting product vulnerability reports through its bug bounty program for its open-source software. The change, in effect since October 1, means researchers can no longer submit security flaws in the code of projects such as Go, Angular, and Protocol Buffers there for a reward. Reports about supply chain compromises are still accepted, and reports filed before October 1 are",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Google Pauses OSS Product Bug Bounty Rewards After Surge in Invalid Automated Reports",
+    "url": "https://thehackernews.com/2026/10/google-pauses-oss-product-bug-bounty.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html",
+    "published": "2026-10-06T06:58:56+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A critical flaw in 8 Atlassian Data Center products, which customers host themselves, allows an attacker with no login access to read specific files in each product's web application root directory. The attacker must already know a file's exact name and path and cannot list what the directory holds. Atlassian disclosed the flaw, CVE-2026-21589, on October 5, rated it 9.3 out of 10, and",
+    "tags": [],
+    "title": "Critical Atlassian Flaw Lets Unauthenticated Attackers Read Known Files Across 8 Products",
+    "url": "https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html",
+    "published": "2026-10-06T06:56:57+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The U.S. Federal Bureau of Investigation (FBI) has removed an Accenture contractor for their alleged role in a ShinyHunters-breach that led to the theft of personal details of thousands of bureau employees. That's according to a report from Reuters, citing two sources familiar with the matter. \"To date, our review has determined that the incident occurred as the result of a security failure ​",
+    "tags": [
+      "RCE"
+    ],
+    "title": "FBI Removes Accenture Contractor After Patch Failure Led to ShinyHunters Breach",
+    "url": "https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-breaches-of-employees-microsoft-google-email-accounts/",
+    "published": "2026-10-06T09:25:50+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Over the weekend, Japanese publishing giant Nikkei disclosed that unknown attackers recently breached two employee email accounts and used one to send thousands of phishing emails. [...]",
+    "tags": [
+      "피싱"
+    ],
+    "title": "Nikkei discloses breaches of employees’ Microsoft, Google email accounts",
+    "url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-breaches-of-employees-microsoft-google-email-accounts/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/engineer-sentenced-for-locking-thousands-of-devices-on-employer-network/",
+    "published": "2026-10-06T08:19:24+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A former core infrastructure engineer at an industrial company headquartered in New Jersey was sentenced to 32 months in prison for locking thousands of devices on his employer's network in a ransomware-style attack. [...]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Engineer sentenced for locking over 3,000 devices on employer network",
+    "url": "https://www.bleepingcomputer.com/news/security/engineer-sentenced-for-locking-thousands-of-devices-on-employer-network/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=200468",
+    "published": "2026-10-06T09:27:57+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Accenture lost an FBI contract after a missed security patch exposed sensitive employee data, raising serious concerns over operational security. The FBI pulled an Accenture contractor off its account on Monday, and the reason is almost mundane compared to the damage it caused. One update didn’t get installed on time. “The ‌Federal Bureau of Investigation […]",
+    "tags": [],
+    "title": "FBI Drops Accenture Contractor After Sensitive Data Breach",
+    "url": "https://securityaffairs.com/200468/data-breach/fbi-drops-accenture-contractor-after-sensitive-data-breach.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=200458",
+    "published": "2026-10-06T07:01:46+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Dell warns that a critical DSU flaw lets attackers run code as root. Customers should patch affected PowerEdge systems as soon as possible. Dell urged customers to patch a critical flaw, tracked as CVE-2026-86360 (CVSS score of 9.6), in its System Update (DSU) tool. The vulnerability is a path traversal issue that can let attackers […]",
+    "tags": [],
+    "title": "Dell Urges Customers to Patch Critical DSU Flaw That Can Give Attackers Root Access",
+    "url": "https://securityaffairs.com/200458/security/dell-urges-customers-to-patch-critical-dsu-flaw-that-can-give-attackers-root-access.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33400",
+    "published": "2026-10-06T09:34:56+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "It seems that a trend started&#xe2;&#x80;&#xa6; I continue my journey discovering more RMM (\"Remote Management & Monitoring\") tools abused by threat actors! A few days ago, I wrote a diary[ 1 ] about ScreenConnect used in the wild. Today, I found another one.",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "More RMM Tools In the Wild, (Tue, Oct 6th)",
+    "url": "https://isc.sans.edu/diary/rss/33400"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiT0FVX3lxTE9rXzIzV2NFekpGLWJTN2RLOURtNFpHWURZaXQ3bE1ON3B1ekxaRW9ZVE1Qbkh1a2NPWjE0Z21LYmRCQ0xBVHAwMDF3RjktVUE",
+    "published": "2026-10-06T09:27:03+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 관리 받고도 은행 해킹 위험 못잡아",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 관리 받고도 은행 해킹 위험 못잡아",
+    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9rXzIzV2NFekpGLWJTN2RLOURtNFpHWURZaXQ3bE1ON3B1ekxaRW9ZVE1Qbkh1a2NPWjE0Z21LYmRCQ0xBVHAwMDF3RjktVUE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE1OUGpqaFVPVDJyNXVNX094R3JrUDhreEV3MURvMkpBRWRoME1mQmZBZWlUeFo0ZW1oWHE3MEtFQmQwVlhRa1JaZ1ZLejlZSTFONUdsNWd2d0lvcHZLdkFvYmxR",
+    "published": "2026-10-06T08:24:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[단독]현대캐피탈, 신한보다 먼저 털리고도 5일간 ‘깜깜이’…보안원 지적에 ‘첫 인지‘",
+    "tags": [],
+    "title": "[단독]현대캐피탈, 신한보다 먼저 털리고도 5일간 ‘깜깜이’…보안원 지적에 ‘첫 인지‘",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1OUGpqaFVPVDJyNXVNX094R3JrUDhreEV3MURvMkpBRWRoME1mQmZBZWlUeFo0ZW1oWHE3MEtFQmQwVlhRa1JaZ1ZLejlZSTFONUdsNWd2d0lvcHZLdkFvYmxR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTFBZUnpKUVBEQ3BuN1p6TmhFdXYyaVM3MTV3VXc0V3ltaWRqT0dENkUzdmRtQjVhSlJLQWRSYkl6aTBNZG56OGN1OF8tOGp0UkRSVUJyMk43S2xpMnhraVRRTGNEX1UwX3o1eXVFVnpkX3hyWjA",
+    "published": "2026-10-06T07:44:33+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "정부 금융보안 '선제대응' 체제로 전환, AI해킹 막을 '튼튼한 방패' 실행력 힘 실리나",
+    "tags": [
+      "금융"
+    ],
+    "title": "정부 금융보안 '선제대응' 체제로 전환, AI해킹 막을 '튼튼한 방패' 실행력 힘 실리나",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBZUnpKUVBEQ3BuN1p6TmhFdXYyaVM3MTV3VXc0V3ltaWRqT0dENkUzdmRtQjVhSlJLQWRSYkl6aTBNZG56OGN1OF8tOGp0UkRSVUJyMk43S2xpMnhraVRRTGNEX1UwX3o1eXVFVnpkX3hyWjA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE1VT3NrQ2NzRzRDODFUZjNMb0l0MFJjNlBzbjg5QXFOcWNLQWVSdU0weWRfR1d2Z0NheVBVcE9LUGluT3NfcXRnNVdXalI5VDM4Nm92Q0RDb3dfS252d2w5dHYtT2hTNy1Ub2hpT2M5NXNGYm8",
+    "published": "2026-10-06T08:20:22+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "AI 해킹 위협 점검은 자율에…징벌적 과징금 추진도 '뭉그적'",
+    "tags": [],
+    "title": "AI 해킹 위협 점검은 자율에…징벌적 과징금 추진도 '뭉그적'",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1VT3NrQ2NzRzRDODFUZjNMb0l0MFJjNlBzbjg5QXFOcWNLQWVSdU0weWRfR1d2Z0NheVBVcE9LUGluT3NfcXRnNVdXalI5VDM4Nm92Q0RDb3dfS252d2w5dHYtT2hTNy1Ub2hpT2M5NXNGYm8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTFAxX0JyR2ZOQWVIN0xnTDNkVHM2TkZ3c0REMERaeFB6QmVEU2pteWpoeHdZN0hJMUxiekpHaGFWc3FJUUZWcEgzeXNZVQ",
+    "published": "2026-10-06T07:36:46+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[금융 보안 비상③] 업무망 전수점검⋯은행권 인증·접근통제 '수술'",
+    "tags": [
+      "금융"
+    ],
+    "title": "[금융 보안 비상③] 업무망 전수점검⋯은행권 인증·접근통제 '수술'",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAxX0JyR2ZOQWVIN0xnTDNkVHM2TkZ3c0REMERaeFB6QmVEU2pteWpoeHdZN0hJMUxiekpHaGFWc3FJUUZWcEgzeXNZVQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE8xMVJzMXhBTmg0YnVxN0lud1V6b0luQzV6c0NNNjNhUjl3NDRnUFc3XzdfVGQwa19JVE52RTBVU1B3Q2lpd3JfSURUaFhYLXhpSkpValZKalNiYjNGdDFfYWVjSEQ",
+    "published": "2026-10-06T09:13:35+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[이슈플러스] AI 해킹에 뚫린 금융권…보안 투자 무색",
+    "tags": [
+      "금융"
+    ],
+    "title": "[이슈플러스] AI 해킹에 뚫린 금융권…보안 투자 무색",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xMVJzMXhBTmg0YnVxN0lud1V6b0luQzV6c0NNNjNhUjl3NDRnUFc3XzdfVGQwa19JVE52RTBVU1B3Q2lpd3JfSURUaFhYLXhpSkpValZKalNiYjNGdDFfYWVjSEQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE91elFFRGZxdUdUZnctNkZoSEN0RkJCTWxsUkdjQkZvQzdpQW9sYVU2Ykg0UHJPZW54MVk1aWt4ak5fSnFQc3JjcEFvMkdseU13Rk1ZX3ROWl9PUlRRNkVRQmFTaUQ",
+    "published": "2026-10-06T07:56:42+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡 CISO “개인정보 유출 후 키 관리·모니터링 개선…보안 투자 지속”[2026 국감]",
+    "tags": [],
+    "title": "쿠팡 CISO “개인정보 유출 후 키 관리·모니터링 개선…보안 투자 지속”[2026 국감]",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE91elFFRGZxdUdUZnctNkZoSEN0RkJCTWxsUkdjQkZvQzdpQW9sYVU2Ykg0UHJPZW54MVk1aWt4ak5fSnFQc3JjcEFvMkdseU13Rk1ZX3ROWl9PUlRRNkVRQmFTaUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVEFVX3lxTE9IRk5ic3B1NTg0X3R6cWxOYUJ3MlpDdUQycW1VbG5ndzZubWZZWllfQTAtTkVFNV9KRE1uNWdfYWlXanF5SXZKeGtIM2lEUm1LWGQ3WA",
+    "published": "2026-10-06T00:01:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "한총리 “AI 해킹에 기존 보안체계 한계…개인정보보호 인증 전면 검토”",
+    "tags": [],
+    "title": "한총리 “AI 해킹에 기존 보안체계 한계…개인정보보호 인증 전면 검토”",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IRk5ic3B1NTg0X3R6cWxOYUJ3MlpDdUQycW1VbG5ndzZubWZZWllfQTAtTkVFNV9KRE1uNWdfYWlXanF5SXZKeGtIM2lEUm1LWGQ3WA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFBpVWxLZ1NpV2ZjeWRPQmw3V3MtTE9DVjVMQjg3RWpRUWFDNWMtQWNyQkcyTWhVRVk4NjJMTjJBX3dSYnZIbFc0MUF5R29JR2FBTEgxaG5wekVsUVRia2ZQRS1qY1VIWXROd1IwN3RLYUvSAXRBVV95cUxPTjVTanZndW55YmRQdzZod0poelktaGkwc05FREI2NEVrZkcwaE9SSUNYeXBaVmFxam1RbENzVml1UzFUM2pOa3BRWGpWQThwMDNLeklrQU5WRjRJMm9RQWFteFZPaUZEZ1M4Vk1fb1gyU3lpaQ",
+    "published": "2026-10-06T08:29:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "추가 보상 묻자 “보안 강화”… 티빙 국감 답변은 기존 입장 [국감2026]",
+    "tags": [],
+    "title": "추가 보상 묻자 “보안 강화”… 티빙 국감 답변은 기존 입장 [국감2026]",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBpVWxLZ1NpV2ZjeWRPQmw3V3MtTE9DVjVMQjg3RWpRUWFDNWMtQWNyQkcyTWhVRVk4NjJMTjJBX3dSYnZIbFc0MUF5R29JR2FBTEgxaG5wekVsUVRia2ZQRS1qY1VIWXROd1IwN3RLYUvSAXRBVV95cUxPTjVTanZndW55YmRQdzZod0poelktaGkwc05FREI2NEVrZkcwaE9SSUNYeXBaVmFxam1RbENzVml1UzFUM2pOa3BRWGpWQThwMDNLeklrQU5WRjRJMm9RQWFteFZPaUZEZ1M4Vk1fb1gyU3lpaQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBNN1otZFNYaFpPTGt2VDZ2ZU0wY2k0R2VXN0FKRFhDNUtqVUktd3JOU1BjQUU2TkZEVjZudk9rTXczdUJLSDN2YXRHSmVnLVBXLXJxTWd3eUh0Si0tRGxHYjBGT2JEbkduX1JsYzhmRdIBc0FVX3lxTE9ZVFFoclVrTktaSUc2QjJBbl9ydkJuWWxOejZsWlNnajY4TUtZMWMxLTlqTGxFTkQ0UG16ZHg2Nzhtem00T3Z6Nmk0VWZUdGpseUpUdFZxaHg4OFNQZXNNYy1xZHBKTGVlYWtpYmVWbW9QOUU",
+    "published": "2026-10-06T07:23:29+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡 개인정보 유출 후속조치 국감서 점검…'키 관리·모니터링 개선'",
+    "tags": [],
+    "title": "쿠팡 개인정보 유출 후속조치 국감서 점검…'키 관리·모니터링 개선'",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBNN1otZFNYaFpPTGt2VDZ2ZU0wY2k0R2VXN0FKRFhDNUtqVUktd3JOU1BjQUU2TkZEVjZudk9rTXczdUJLSDN2YXRHSmVnLVBXLXJxTWd3eUh0Si0tRGxHYjBGT2JEbkduX1JsYzhmRdIBc0FVX3lxTE9ZVFFoclVrTktaSUc2QjJBbl9ydkJuWWxOejZsWlNnajY4TUtZMWMxLTlqTGxFTkQ0UG16ZHg2Nzhtem00T3Z6Nmk0VWZUdGpseUpUdFZxaHg4OFNQZXNNYy1xZHBKTGVlYWtpYmVWbW9QOUU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE5MOXRPVS01a0NVR3g1TnpqZk00VGZnbXB3dkNqTDFyUTlZMFlEWHB4TFVTZHdNaXR6VHhjR0pqYmUyNkRTRlluaUJwdFJGLUI3eXZKaFJHeEM3QdIBWEFVX3lxTE85SkRxbDRNd05sNEFfV25FX08teDJ4T19MQ21HOUF6OFZ3QTFtV04tVVJWeTk1VUJUdjlndnlJdzV1V1I4aFFKWDJrOXdJSGJKbjYtbEtXQk4",
+    "published": "2026-10-06T09:07:44+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "매티스 쿠팡 CISO 개인정보 유출 죄송…정부와 정보보안체계 강화 위해 노력",
+    "tags": [],
+    "title": "매티스 쿠팡 CISO 개인정보 유출 죄송…정부와 정보보안체계 강화 위해 노력",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MOXRPVS01a0NVR3g1TnpqZk00VGZnbXB3dkNqTDFyUTlZMFlEWHB4TFVTZHdNaXR6VHhjR0pqYmUyNkRTRlluaUJwdFJGLUI3eXZKaFJHeEM3QdIBWEFVX3lxTE85SkRxbDRNd05sNEFfV25FX08teDJ4T19MQ21HOUF6OFZ3QTFtV04tVVJWeTk1VUJUdjlndnlJdzV1V1I4aFFKWDJrOXdJSGJKbjYtbEtXQk4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE1zWHVKdWxiYkN1WUZsN3hMSG1pQWhnZlpIdkloLWRISzJvRGZPSEkzZUVYeVU3MjA2T2FmNmQ3TW5RVS1JYnJPaVdsU3hmN241WVhVRU1pTWMzYUZPdkZPRC13WTFPcVhyclhENU1B",
+    "published": "2026-10-06T07:07:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡 CISO “보안 모니터링 구축·자문위 설립…정보보호 투자 지속” [국감]",
+    "tags": [],
+    "title": "쿠팡 CISO “보안 모니터링 구축·자문위 설립…정보보호 투자 지속” [국감]",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1zWHVKdWxiYkN1WUZsN3hMSG1pQWhnZlpIdkloLWRISzJvRGZPSEkzZUVYeVU3MjA2T2FmNmQ3TW5RVS1JYnJPaVdsU3hmN241WVhVRU1pTWMzYUZPdkZPRC13WTFPcVhyclhENU1B?oc=5"
   }
 ]
