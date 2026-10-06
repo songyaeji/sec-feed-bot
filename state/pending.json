@@ -1004,5 +1004,29 @@
     "tags": [],
     "title": "AI스페라, 싱가포르 '거브웨어 2026' 참가...AI 기반 위협 노출 관리 플랫폼 공개",
     "url": "https://www.dailysecu.com/news/articleView.html?idxno=208738"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-53266",
+    "kev": true,
+    "published": "2026-09-18T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The impacted product(s) could be end-of-life (EoL) and/or end-of",
+    "tags": [],
+    "title": "CVE-2026-53266: Linux Kernel Out-of-Bounds Write Vulnerability (Linux Kernel)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53266"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208739",
+    "published": "2026-10-06T13:43:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "엔피코어가 지난달 30일 서울 양재 엘타워에서 열린 ‘SECUi MAX SUMMIT 2026’에 참가해 SOC Prime의 주요 기술과 Enterprise License를 선보였다.엔피코어는 이번 행사를 통해 국내 기업과 기관이 조직 단위로 SOC Prime의 탐지 콘텐츠를 활용할 수 있는 Enterprise License를 중심으로 최신 위협 대응 방안과 AI 기반 탐지 엔지니어링 기술을 소개했다.SOC Prime은 Sigma 기반 탐지 콘텐츠와 위협 인텔리전스를 활용해 최신 위협에 빠르게 대응하도록 돕는 플랫폼이다. MITRE",
+    "tags": [],
+    "title": "엔피코어, SECUi MAX SUMMIT 2026 참가...SOC Prime Enterprise License 소개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208739"
   }
 ]
