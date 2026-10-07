@@ -10,3 +10,4 @@ cves: [CVE-2026-59822]
 ## 타임라인
 
 - 2026-07-08 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-59822) — CVE-2026-59822 공개 (CVSS N/A)
+- 2026-09-02 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-59822) — CISA 악용확인 목록에 등재, 미인증 공격자의 실제 악용 위험

@@ -20,6 +20,22 @@ cves: []
 - 2026-10-05 [금융보안원]() — 화이트해커 투입에도 불구하고 공격 지속, 위협 고도화 확인
 - 2026-10-05 [매체]() — 피해 규모 6만6천명으로 확대, 신용정보 노출로 2차 피해 우려
 
+- 2026-10-06 02:05 [금융감원](https://news.google.com/rss/articles/CBMiZEFVX3lxTFBwQzBRNVhMT2hQY1poVV9vSnJ2Z1lZUkNRYzBIWEcxWEJsQUMzQl9MZE5CMmRjRFVmUFgyWmFpNEhDSTJ5S2hkUEtCZEtrU0dtXzVCVHdHUjJZT1lFcXRFXzBPTTI?oc=5) — 공격 IP 19개 특정, 12개국 IP로 우회 침투 추적
+- 2026-10-06 07:36 [금융보안원](https://news.google.com/rss/articles/CBMiS0FVX3lxTFAxX0JyR2ZOQWVIN0xnTDNkVHM2TkZ3c0REMERaeFB6QmVEU2pteWpoeHdZN0hJMUxiekpHaGFWc3FJUUZWcEgzeXNZVQ?oc=5) — 은행권 인증·접근통제 대대적 점검 대응 강화
+- 2026-10-06 07:44 [금융보안원](https://news.google.com/rss/articles/CBMic0FVX3lxTFBZUnpKUVBEQ3BuN1p6TmhFdXYyaUM3MTV3VXc0V3ltaWRqT0dENkUzdmRtQjVhSlJLQWRSYkl6aTBNZG56OGN1OF8tOGp0UkRSVUJyMk43S2xpMnhraVRRTGNEX1UwX3o1eXVFVnpkX3hyWjA?oc=5) — 정부 금융보안 '선제대응' 체제로 전환
+- 2026-10-06 09:13 [금융보안원](https://news.google.com/rss/articles/CBMiZEFVX3lxTE8xMVJzMXhBTmg0YnVxN0lud1V6b0luQzV6c0NNNjNhUjl3NDRnUFc3XzdfVGQwa19JVE52RTBVU1B3Q2lpd3JfSURUaFhYLXhpSkpValZKalNiYjNGdDFfYWVjSEQ?oc=5) — AI 해킹으로 보안 투자 무색화되는 현실 지적
+- 2026-10-06 09:27 [금융보안원](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9rXzIzV2NFekpGLWJTN2RLOURtNFpHWURZaXQ3bE1ON3B1ekxaRW9ZVE1Qbkh1a2NPWjE0Z21LYmRCQ0xBVHAwMDF3RjktVUE?oc=5) — 금융보안원 감시 체계 부실 지적, 해킹 위험 적발 실패
+- 2026-10-06 10:13 [금융보안원](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5fb01Xak0yclc4dDRrZjhmSEI0R3ljbUNhbDJ0ZDZwdldManlQaTFHR0xHR0tRbURTRGcxRGdVWnJUMEVTbWtpd2J0enc1TVpYdENfblFlWDJTV1pNc0pjRjc0WHZrUGs?oc=5) — 금융보안원 보호망 효과성 논쟁, 서비스 받는 은행 피격
+- 2026-10-06 10:52 [금융보안원](https://news.google.com/rss/articles/CBMic0FVX3lxTFBPbHpJLTQ4TldUcXpZY1lHRTV1ZG9LZDY5LThyaVNtaUplbjNvQTQ4d0ZDYVZXUXNFaHhTa0pDd3V4VDd6VXJhUzYzcFBRbXpWN1BabVJSSlBKZ1NuX3cxZldlVTZvMmk2SkFXaHVoejliRHM?oc=5) — 해킹 공격 IP 금융사에 전파, 2차 피해 방지책 실천 주문
+- 2026-10-06 10:57 [금융보안원](https://news.google.com/rss/articles/CBMibkFVX3lxTE5IMnFBSDhickFmVGFSZUhUYThmUTVsNnBxLVBzNE12QjlVT0l3NU9zdkg3b3JQcnJZVlRWb1Y1ZGdYQXNweHRZM1djY1F3YmFXSi1jR25VRTdhV3ZEdGVpckVWeXhqcktaQXdiZGJB?oc=5) — 해킹 공격 IP 28개 특정, 전 금융사 긴급 점검 지시
+- 2026-10-06 15:29 [The Record](https://therecord.media/south-korean-bank-hacks-ai-agents) — 한국 금융당국 중국 사이버보안 도구로 은행 7곳 피격 확인, 6만8천명 개인정보 유출
+- 2026-10-06 15:47 [금융보안원](https://news.google.com/rss/articles/CBMijgFBVV95cUxQNi04NVhIeG1sNV9CS3NMZ1ByaEQ0ZEJzNm1YNXRlWDJNcWhhM2VEWHhYMklvNkNnQVV0MzRHNEFPU0FKdEZIX05NSWR4QmJwVVYzSTdwOUFIYmFNallpUV9nTlZmNi1BOVMtUWRpT1Z5SzR1UmJiTy1HLTltUkZvSDVaS1VqTGJSS3h4WFRR?oc=5) — 1월부터 AI 해커 공격 시작, 금융사 공동 보안 경보 미흡 지적
+- 2026-10-06 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208754) — 금융권 침해 확산 확인, KB국민·하나·BNK부산·예가람·웰컴저축·현대캐피탈 등 7개 기관 피격, 유출 규모 약 6만8천건
+- 2026-10-07 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208767) — 에버스핀 에버세이프 웹으로 ARTEX 탐지 확인, 대출모집인용 시스템·보조 업무서비스 주요 표적, API 직접 호출로 인증 우회 수초 내 완료
+- 2026-10-05 [금융보안원](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1rbDJROGg0RGRXYnVuNFY4WTlUTE94RDk5ZmdtUVVaeU5ubFBZVXRoY2puODhPMXRaTlZNNWN0QzN0NkJ2RTBpdDBIOHpCOVFXWFdF0gFYQVVfeXFMTXJTVW4tMzZLaW9ybFE2RkpNMnVpUTJyVDZPTkRWcjNmM0NrbXFoSkpzX0wzc2ZaYjk4dDhPVkh6S0FnWk1Vc1R1OEJacFZwZ2VMT3NNSnFDOA?oc=5) — 과학기술정보통신부 공공기관·민간 정보통신서비스제공자 2만8천 곳 보안점검 권고
+- 2026-10-06 [금융감원](https://news.google.com/rss/articles/CBMia0FVX3lxTE82cXBTMGZ2SWRnZ1ZkMXZELVByc25lNjBoUkVmb1dMdVVGOEJJZnFRVlNMNWlWb1Q1bDJkYlBRYjEtbFBGRG4wbWNvVzMyc1E1b18wbUVpUGhMejBfRjdRTzFYWWtqeDB4TUo40gFvQVVfeXFMTnE0THN0MF9ObUpaX3o1Y1hteFc4LVhRZkRZTmRObXEwY29yVlh0UHRhaDNhaE1zNlEzV3RyTUw2TzBDcThHUm15c0lOSU43dmYxcTREbWZHWVRfUWY4U3A2YlpnSHEyYTFoSVJKWFpZ?oc=5) — 금융권 개인정보 유출 관련 소비자경보 발령
+- 2026-10-06 [금융위원회](https://news.google.com/rss/articles/CBMibkFVX3lxTE5CQmVWSG9DcUtSa2xwTTFVZWpHOURYMDRveDl0RGo4MklIbjRpY01fUVNIRUJjRGFKcHl0Z24wY19ubTlOWm0yYjdPNnd4MFAwYW8zMWh4N0pLSlJqaThFRnQxUGxsX2lYOTFhLTJB?oc=5) — 사이버위협 종합상황실 24시간 비상 가동, 사이버 대응체계 강화
+
 ## 관련
 
 [[financial-ai-agent-attack-real]]
