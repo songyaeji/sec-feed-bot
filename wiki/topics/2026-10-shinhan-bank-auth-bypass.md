@@ -5,7 +5,7 @@ tags: [인증우회, 금융권, 국내]
 cves: []
 ---
 
-신한은행 고객 2만5천여 명이 외부 제3자의 인증 우회 공격으로 대출신청 관련 개인정보와 신분증 사본이 유출됐다. 금융당국은 현장조사에 나섰다.
+신한은행 포함 7개 금융기관 6만8천여 명의 고객이 AI 자동화 공격 도구로 인한 인증 우회 공격을 받아 개인정보가 유출됐다. 국내 금융권 최대 규모 연쇄 침해사고로, 외부 노출 시스템과 API 권한검증 허점이 표적이 되었다.
 
 ## 타임라인
 
@@ -35,6 +35,13 @@ cves: []
 - 2026-10-05 [금융보안원](https://news.google.com/rss/articles/CBMiU0FVX3lxTE1rbDJROGg0RGRXYnVuNFY4WTlUTE94RDk5ZmdtUVVaeU5ubFBZVXRoY2puODhPMXRaTlZNNWN0QzN0NkJ2RTBpdDBIOHpCOVFXWFdF0gFYQVVfeXFMTXJTVW4tMzZLaW9ybFE2RkpNMnVpUTJyVDZPTkRWcjNmM0NrbXFoSkpzX0wzc2ZaYjk4dDhPVkh6S0FnWk1Vc1R1OEJacFZwZ2VMT3NNSnFDOA?oc=5) — 과학기술정보통신부 공공기관·민간 정보통신서비스제공자 2만8천 곳 보안점검 권고
 - 2026-10-06 [금융감원](https://news.google.com/rss/articles/CBMia0FVX3lxTE82cXBTMGZ2SWRnZ1ZkMXZELVByc25lNjBoUkVmb1dMdVVGOEJJZnFRVlNMNWlWb1Q1bDJkYlBRYjEtbFBGRG4wbWNvVzMyc1E1b18wbUVpUGhMejBfRjdRTzFYWWtqeDB4TUo40gFvQVVfeXFMTnE0THN0MF9ObUpaX3o1Y1hteFc4LVhRZkRZTmRObXEwY29yVlh0UHRhaDNhaE1zNlEzV3RyTUw2TzBDcThHUm15c0lOSU43dmYxcTREbWZHWVRfUWY4U3A2YlpnSHEyYTFoSVJKWFpZ?oc=5) — 금융권 개인정보 유출 관련 소비자경보 발령
 - 2026-10-06 [금융위원회](https://news.google.com/rss/articles/CBMibkFVX3lxTE5CQmVWSG9DcUtSa2xwTTFVZWpHOURYMDRveDl0RGo4MklIbjRpY01fUVNIRUJjRGFKcHl0Z24wY19ubTlOWm0yYjdPNnd4MFAwYW8zMWh4N0pLSlJqaThFRnQxUGxsX2lYOTFhLTJB?oc=5) — 사이버위협 종합상황실 24시간 비상 가동, 사이버 대응체계 강화
+- 2026-10-08 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208781) — CrowdStrike 보고서로 공격 서버 ARTEX 설정·AI 대화 기록 분석, 국내 유출정보 판매처 검색 시도 확인
+- 2026-10-07 [금융보안원](https://news.google.com/rss/articles/CBMigAFBVV95cUxQRjM2WlFNQWNnTEVIN055S0oyOFdTT3poTWZIMXY2MWVKMUNMWHVOd0dMZmRGWnhsOTE2LWNfb09MYkJyak9TeElobXcwV3NGNmg5UWdjRVdOem50Rkpzd0ljSjEtc0YxcTBndEplQ1BRckUzeGx5U21ISTVsZFQ3bA?oc=5) — 1월부터 같은 IP로 금융권 반복 공격, 위험 IP 차단 체계 미흡
+- 2026-10-07 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208773) — 엔키화이트햣 분석 보고서, 공격자가 코어뱅킹이 아닌 주변 시스템·인증·인가 허점 악용, API 권한검증 미흡
+- 2026-10-07 [금융보안원]() — 보안점검 분석 결과 일부 금융사가 침해 탐지 실패, 점검·감시 체계 강화 권고
+- 2026-10-07 [금융보안원](https://news.google.com/rss/articles/CBMibkFVX3lxTE1DQnV1NUhReTg2YzZWNldEdjFkZGtBRUFNaXAwTkp1YVVMa2VQVVY3UEx6MkNWYVN6TEdRTWNYQUlwUERFelFYakc4Q21VejhQemV1bVF5OFVpODJrY21QRXNQQ1d0NnFOX3ZwUkpn?oc=5) — 금융권 겨냥한 사이버 공격 급증, 금감원 8월부터 보안경고·대응 강화
+- 2026-10-08 [펜타시큐리티](https://www.dailysecu.com/news/articleView.html?idxno=208791) — 금융권 연쇄 침해 대응 보안 3원칙(가시성·다층인증·권한최소화) 배포
+- 2026-10-08 [SK쉴더스](https://www.dailysecu.com/news/articleView.html?idxno=208786) — AI 자동화 공격 시대 섀도우 IT·API 보안이 핵심, 기존 공격기법 AI로 자동화
 
 ## 관련
 

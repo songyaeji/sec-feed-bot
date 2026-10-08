@@ -10,6 +10,7 @@ KT가 개인정보보호위원회의 개인정보 과징금 처분을 둘러싼 
 ## 타임라인
 
 - 2026-09-22 [뉴스 매체](https://news.google.com/) — KT 개인정보 과징금 소송 제기
+- 2026-10-07 [개인정보보호위원회](https://news.google.com/rss/articles/CBMicEFVX3lxTE9yOUcxSnFHQWNRUzN1bFJQVXFNZjY0YjZqMlpESzJXQlp6dmlabTBnNEVoM20yYzdpOG11em9MMENQSDJjdmczV0VOU3pDWTRpNmhRM1JidDhCdEZEVUtsNHlhdk5yUm4waW5Gbk44cTfSAXRBVV95cUxPeWpuT0VLT2hFWktQNFkzRlgzUWk1S2x4emJCbXRaWFE1LXRRN0Zpcm84R050SE9aRlBfZFI1ZUJURmlTNUV6ckVrWlFxcGxvTHVibzhyNVB4MHcyUUlJcnlxeGNRam9FZ0xrUUlKVXlfMzVpLQ?oc=5) — KT 홈페이지에 개인정보보호법 위반 공표
 
 ## 관련
 
