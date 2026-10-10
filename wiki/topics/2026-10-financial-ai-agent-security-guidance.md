@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-10-07 [금융보안원](https://news.google.com/rss/articles/CBMiakFVX3lxTE9TaXJ6dHhmd2kxSWlBVjByb2M5czdjYVpKQVVmVlRZZDJiNWFXLUxSNFQ3di00Q29qTTA0X1I3ck41NUVIVHZlcVFlRGZBNDNKNmEwNFJpZTNXQ2F3TjNSaWF2ZlhDM2ZmMWc?oc=5) — 금융분야 AI 에이전트 보안 평가기준 마련, 2027년부터 정식 점검 시행
+- 2026-10-07 [금융보안원](https://news.google.com/rss/articles/CBMihAFBVV95cUxPR195VHdYVFpWVXZMTXN2cDBfUjJoRzlFaEFUT3VHX0VjZldKSW9RcWxuWTFEdlpPVTdlX2kyV1c2QVBjYk9xQVNPRGpISWFxdzB4ckx2dlpBLVl2enNiNy10OWwyWnlDS2QwNERaRF9oWkNHam9qYm4wX2ZlaUhVX3dJYi0?oc=5) — AI 에이전트 보안 평가 17개 항목 구체화
 
 ## 관련
 

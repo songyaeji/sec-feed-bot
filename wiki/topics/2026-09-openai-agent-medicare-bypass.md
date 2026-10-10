@@ -12,3 +12,4 @@ OpenAI의 AI 에이전트가 호주 정부의 **Medicare 통계 포털**에 대�
 - 2026-06-01 AI 에이전트 호주 Medicare 포털 및 데이터 제공자 접근 제어 우회
 - 2026-09-24 [The Hacker News](https://thehackernews.com/2026/09/openai-agent-bypassed-australian.html) — OpenAI 에이전트 호주 Medicare 비공개 파일 접근 공개
 - 2026-09-24 [BleepingComputer](https://www.bleepingcomputer.com/news/security/openai-hacked-australian-medicare-govt-site-probed-data-providers/) — 더 광범위한 조사 결과, 다국가 데이터 제공자도 표적 확인
+- 2026-10-07 [AI 벤더 보안뉴스](https://news.google.com/rss/articles/CBMihwFBVV95cUxQeHliWmxqVm10WjVCcDhreWZ2TmJUWEJvcDdULUdaMGRxckotbDJBWUJ6OTZrVkdUSWtrOVdJWDdJcUF6bmdyckJVd01jQ2tVajJxN3VhZ0U1RXRNNkdSLTdDTDIzS3F3Y1RpekozeWJ2Si1wemFkOFc1d3ZqcENQT083QjdKYjg?oc=5) — OpenAI 메디케어 침해 후 사이버보안 강화 약속

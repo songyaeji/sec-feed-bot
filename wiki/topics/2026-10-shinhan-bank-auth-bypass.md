@@ -42,6 +42,13 @@ cves: []
 - 2026-10-07 [금융보안원](https://news.google.com/rss/articles/CBMibkFVX3lxTE1DQnV1NUhReTg2YzZWNldEdjFkZGtBRUFNaXAwTkp1YVVMa2VQVVY3UEx6MkNWYVN6TEdRTWNYQUlwUERFelFYakc4Q21VejhQemV1bVF5OFVpODJrY21QRXNQQ1d0NnFOX3ZwUkpn?oc=5) — 금융권 겨냥한 사이버 공격 급증, 금감원 8월부터 보안경고·대응 강화
 - 2026-10-08 [펜타시큐리티](https://www.dailysecu.com/news/articleView.html?idxno=208791) — 금융권 연쇄 침해 대응 보안 3원칙(가시성·다층인증·권한최소화) 배포
 - 2026-10-08 [SK쉴더스](https://www.dailysecu.com/news/articleView.html?idxno=208786) — AI 자동화 공격 시대 섀도우 IT·API 보안이 핵심, 기존 공격기법 AI로 자동화
+- 2026-10-08 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208784) — 유출 개인정보를 악용한 보이스피싱·스미싱 2차 금융사기 우려, 금융감독원·금융위원회 소비자경보 발령
+- 2026-10-09 [Security Affairs](https://securityaffairs.com/200661/hacking/ai-driven-tool-artex-used-in-attacks-against-south-korean-banks.html) — CrowdStrike ARTEX 분석 보고서 공개, 공격자 설정·AI 대화 기록 노출, 국내 유출정보 판매처 검색 시도 확인
+- 2026-10-08 [금융보안원](https://news.google.com/rss/articles/CBMiXEFVX3lxTE9rVUJTbmxXeFk0M0hSV3NGT2ZDZHpkVkxJSWxmU1UzWFI5VzVrYW5RZWNjZzFqSUpTVC14WkF4ZmVWREduNjR3a3ZJM1RMNUQyYWpXbFc2cHNveUhh?oc=5) — 중국산 무료 AI 도구를 악용한 금융권 공격, 보안 투자 효과성 논쟁
+- 2026-10-06 [금융위원회](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9INVEwbURYT1dCMVd0TUlsMkJ3ZXc1dW93ZVlYYjBGdmJpZG1GSzVIcXlfNzVpZHVld1VBVm5lcEdhVHUxblNZTGJhcFZJTmPSAV9BVV95cUxPWWNGRnYzOElvZUo0bXdKSUp2SlJxamJGZWdJYXF4cEtoSGdIWHFsXzdVbDl5b0JjTUdvUDg2Zm1SbGtrdXhLZkZKWVVWdDE4Wk5OMzQyMTl0OGQ1Mjdmbw?oc=5) — 금융위 전 금융권 비상점검 지시, 보안체계 원점 재검토 명령
+- 2026-10-08 [금융보안원](https://news.google.com/rss/articles/CBMie0FVX3lxTE0yS0RfcV9JUk5jNjdodGFUUXg1TGdSZE9wVmw5RF9EOHNJck1jTEhUdHNEcWJCRlFzMXNSbDg2cXUxVVVxbjRYVEdtUGxtUFFpTlRuNWhBdGY1Z0hWQno3ZklROGxrVG41RVpTb1BYd0ZISEdNT0dtS3g3Z9IBgAFBVV95cUxQaXptVGNEQkFzaURQdEw5MTBaU0dkNTZkZy1VOEJ0LTYxeC1wa1pjSTlPNjhzTTBRSDIwcFg0WVZlR255d25fdVhvck9FY21DYWpxb3pzbDBlRUhRQ2JOSEludmt3YkZYWlVVdXRKT0I0QnY2WklKNENadmFhTTVUNQ?oc=5) — 국감에서 이억원 금융위원장 '관리 공백' 인정, 감독 강화 시사
+- 2026-10-09 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208810) — 금융감독원의 긴급 자체점검 기준 허점 지적, 최근 3개월만 확인하는 금융사 다수, 1년치 기록 조사한 인터넷전문은행에서는 과거 해킹 의심 IP 접속 흔적 발견
+- 2026-10-08 [금융보안원](https://news.google.com/rss/articles/CBMia0FVX3lxTE9GUXRtNUl4QkEzUm5WR25lZHhsTWRKZVdVRFNtRnhIY0xSbTVXdUNkb2dqVmZsdVlmMmJvR0RveDBSN3o0bEVOTThDV1B3RFZZWEYwQmlTam1tbUhtWE9JOUplUy1QcXFQWVRJ?oc=5) — 국감 지적 '해킹 인지까지 5일 걸려' 감시체계 허술 확인
 
 ## 관련
 
