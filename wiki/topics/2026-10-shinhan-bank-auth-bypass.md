@@ -49,6 +49,8 @@ cves: []
 - 2026-10-08 [금융보안원](https://news.google.com/rss/articles/CBMie0FVX3lxTE0yS0RfcV9JUk5jNjdodGFUUXg1TGdSZE9wVmw5RF9EOHNJck1jTEhUdHNEcWJCRlFzMXNSbDg2cXUxVVVxbjRYVEdtUGxtUFFpTlRuNWhBdGY1Z0hWQno3ZklROGxrVG41RVpTb1BYd0ZISEdNT0dtS3g3Z9IBgAFBVV95cUxQaXptVGNEQkFzaURQdEw5MTBaU0dkNTZkZy1VOEJ0LTYxeC1wa1pjSTlPNjhzTTBRSDIwcFg0WVZlR255d25fdVhvck9FY21DYWpxb3pzbDBlRUhRQ2JOSEludmt3YkZYWlVVdXRKT0I0QnY2WklKNENadmFhTTVUNQ?oc=5) — 국감에서 이억원 금융위원장 '관리 공백' 인정, 감독 강화 시사
 - 2026-10-09 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208810) — 금융감독원의 긴급 자체점검 기준 허점 지적, 최근 3개월만 확인하는 금융사 다수, 1년치 기록 조사한 인터넷전문은행에서는 과거 해킹 의심 IP 접속 흔적 발견
 - 2026-10-08 [금융보안원](https://news.google.com/rss/articles/CBMia0FVX3lxTE9GUXRtNUl4QkEzUm5WR25lZHhsTWRKZVdVRFNtRnhIY0xSbTVXdUNkb2dqVmZsdVlmMmJvR0RveDBSN3o0bEVOTThDV1B3RFZZWEYwQmlTam1tbUhtWE9JOUplUy1QcXFQWVRJ?oc=5) — 국감 지적 '해킹 인지까지 5일 걸려' 감시체계 허술 확인
+- 2026-10-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/) — 중국 해커 ARTEX AI·**Claude agents** 사용 한국 금융기관 공격 사실 확인
+- 2026-10-10 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208814) — 용의자 추적 범위 확대, 텔레그램 계정 관련 중국어권 사이버범죄 커뮤니티 19개 계정 역할 분석, 전화번호 2개·IP 주소 3개 등 신원 추적 단서 확보
 
 ## 관련
 
