@@ -9,6 +9,7 @@ cves: []
 
 ## 타임라인
 
+- 2026-06-29 [watchTowr Labs](https://labs.watchtowr.com/enterprise-tech-in-shell-out-progress-kemp-loadmaster-uninitialized-heap-to-pre-auth-rce-cve-2026-8037/) — watchTowr, Progress Kemp LoadMaster 미초기화 힙 메모리 RCE CVE-2026-8037 심층 분석
 - 2026-08-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-progress-loadmaster-flaw-exploited-in-attacks/) — CISA, Progress LoadMaster 명령 주입 critical 취약점의 실제 악용 경고
 
 ## 관련
