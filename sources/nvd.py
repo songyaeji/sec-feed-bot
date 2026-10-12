@@ -4,6 +4,7 @@ Only pulls CVEs modified since the last successful run, then keeps
 the ones that look either severe (CVSS) or relevant (keyword hit).
 """
 import os
+import sys
 import time
 from datetime import datetime, timedelta, timezone
 
@@ -42,6 +43,15 @@ def fetch(source_cfg: dict, state: dict, global_cfg: dict) -> list[dict]:
             "startIndex": start_index,
         }
         resp = requests.get(url, params=params, headers=headers, timeout=60)
+        if api_key and _is_invalid_api_key(resp):
+            # 만료·폐기된 키는 NVD가 404로 거부해 소스 전체가 조용히 빠진다
+            # (2026-10 실측). 무키 요청은 rate limit만 낮을 뿐 결과는 같으므로
+            # 키 없이 재시도하고, 이후 페이지 간 무키 throttle을 적용한다.
+            print("[nvd] NVD_API_KEY 거부됨(Invalid apiKey) — 키 없이 재시도. "
+                  "secret 재발급 또는 삭제 필요", file=sys.stderr)
+            api_key = None
+            headers = {}
+            resp = requests.get(url, params=params, headers=headers, timeout=60)
         resp.raise_for_status()
         data = resp.json()
 
@@ -94,6 +104,10 @@ def _to_item(cve: dict, category: str, min_cvss: float, keywords: list[str], sou
         "cvss": score,
         "published": cve.get("published", datetime.now(timezone.utc).isoformat()),
     }
+
+
+def _is_invalid_api_key(resp) -> bool:
+    return resp.status_code == 404 and "invalid apikey" in resp.headers.get("message", "").lower()
 
 
 def _extract_cvss(cve: dict):
