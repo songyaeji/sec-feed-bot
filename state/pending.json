@@ -1194,5 +1194,1375 @@
     "tags": [],
     "title": "박성훈 \"정부 로봇청소기 안전 발표, '졸속 검증' 논란 자초\"",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1XUFJVNTA2cTBwbDVNcUlYckwwUFR6LWhCdkJfQnVKeUdPM1Zfby1Oa1lTOEJIVTRBSWVvVFg3bzNsUDBxQkc4T2Zfdkx2STRCR1RPZW1UYjJVcUJENjN5aEliTFdmTkFBaFBwd0F3?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-68932",
+    "published": "2025-12-27T00:15:42.633",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FreshRSS is a free, self-hostable RSS aggregator. Prior to version 1.28.0, FreshRSS uses cryptographically weak random number generators (mt_rand() and uniqid()) to generate remember-me authentication tokens and challenge-response nonces. This allows attackers to predict valid session tokens, leading to account takeover through persistent session hijacking. The remember-me tokens provide permanent authentication and are the sole credential for \"keep me logged in\" functionality. This issue has been patched in version 1.28.0.",
+    "tags": [],
+    "title": "CVE-2025-68932 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68932"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-68952",
+    "published": "2025-12-27T01:15:42.853",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Eigent is a multi-agent Workforce. In version 0.0.60, a 1-click Remote Code Execution (RCE) vulnerability has been identified in Eigent. This vulnerability allows an attacker to execute arbitrary code on the victim's machine or server through a specific interaction (1-click). This issue has been patched in version 0.0.61.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-68952 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68952"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-65570",
+    "published": "2025-12-29T15:16:01.763",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A type confusion in jsish 2.0 allows incorrect control flow during execution of the OP_NEXT opcode. When an “instanceof” expression uses an array element access as the left-hand operand inside a for-in loop, the instructions implementation leaves an additional array reference on the stack rather than consuming it during OP_INSTANCEOF. As a result, OP_NEXT interprets the array as an iterator object and reads the iterCmd function pointer from an invalid structure, potentially causing a crash or enabling code execution depending on heap layout.",
+    "tags": [],
+    "title": "CVE-2025-65570 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-65570"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2025-68929",
+    "published": "2025-12-29T15:16:02.033",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Frappe is a full-stack web application framework. Prior to versions 14.99.6 and 15.88.1, an authenticated user with specific permissions could be tricked into accessing a specially crafted link. This could lead to a malicious template being executed on the server, resulting in remote code execution. Versions 14.99.6 and 15.88.1 fix the issue. No known workarounds are available.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-68929 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68929"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-68860",
+    "published": "2025-12-29T22:15:43.597",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Mobile Builder Mobile builder mobile-builder allows Authentication Abuse.This issue affects Mobile builder: from n/a through <= 1.4.2.",
+    "tags": [],
+    "title": "CVE-2025-68860 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68860"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71914",
+    "published": "2026-08-24T18:17:03.497",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Multiple DrayTek VigorAP models contain a command injection vulnerability in the dray_apm component. The vulnerability is caused by insufficient validation of UDP message content after START_SPEED_TEST before command execution. A remote attacker can trigger this vulnerability via a crafted message to execute arbitrary commands with root privileges.",
+    "tags": [],
+    "title": "CVE-2026-71914 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71914"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-71921",
+    "published": "2026-08-24T18:17:07.060",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Multiple DrayTek VigorSwitch models contain a pre-authentication command injection vulnerability in the setget.cgi interface. The vulnerability is caused by insufficient filtering of the pass field before command execution. A remote attacker can trigger this vulnerability via crafted input to execute arbitrary commands with root privileges.",
+    "tags": [],
+    "title": "CVE-2026-71921 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71921"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-76835",
+    "published": "2026-08-24T18:17:21.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OAuth2 Proxy honours a client-supplied X-Forwarded-Uri header when deciding whether a request may skip authentication, because the guard added for CVE-2026-40575 is inert in the default reverse-proxy configuration. GetRequestURI in pkg/requests/util/util.go prefers that header over the real request URI whenever CanTrustForwardedHeaders returns true, and isAllowedPath in oauthproxy.go matches the skip_auth_routes and skip_auth_regex allow list against the resulting path. CanTrustForwardedHeaders in pkg/apis/middleware/scope.go grants that trust when the caller's address is in the trusted proxy set, and buildTrustedProxyNetSet falls back to defaultTrustedProxyIPs, which is 0.0.0.0/0 and ::/0, whenever reverse proxy mode is enabled without trusted_proxy_ip configured. Every client is therefore treated as a trusted proxy. An unauthenticated attacker can request a protected upstream path while setting X-Forwarded-Uri to a value matching an allow-listed route, so the skip-auth decision is made against the spoofed value while the upstream receives the protected path unchanged.",
+    "tags": [],
+    "title": "CVE-2026-76835 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76835"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-42696",
+    "published": "2026-10-10T20:16:35.313",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Control of Generation of Code ('Code Injection') vulnerability in Royal Plugins SiteVault – Backup, Restore, Migration &amp; Cloning sitevault-backup-restore-migration allows Remote Code Inclusion.This issue affects SiteVault – Backup, Restore, Migration &amp; Cloning: from n/a through 1.5.19.",
+    "tags": [],
+    "title": "CVE-2026-42696 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42696"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-108971",
+    "published": "2026-10-13T06:16:50.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in D-Link DCS-930L B1.08B4. This impacts the function mpfd_decode of the file bootloader_region.bin of the component Emergency HTTP Recovery Server. Executing a manipulation of the argument firmware can lead to improper verification of cryptographic signature. The attack may be performed from remote. The exploit has been published and may be used.",
+    "tags": [],
+    "title": "CVE-2026-108971 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108971"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-109108",
+    "published": "2026-10-13T08:16:59.917",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in Wavlink WL-WN530BE1-A 251117. This affects the function popen of the file /cgi-bin/uploadVpn.cgi. Such manipulation of the argument Type leads to os command injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-109108 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109108"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-109109",
+    "published": "2026-10-13T08:17:00.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in Wavlink WL-WN530BE1-A 251117. This vulnerability affects the function strcpy of the file /cgi-bin/ExportAllSettings.cgi of the component Settings Export CGI. Performing a manipulation of the argument HTTP_COOKIE/X-Cmd results in stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-109109 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109109"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-109110",
+    "published": "2026-10-13T09:17:15.370",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in Wavlink WL-WN592AX6 250422. This issue affects the function system of the component wmapd Daemon. Executing a manipulation can lead to os command injection. It is possible to launch the attack remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-109110 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109110"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2024-11218",
+    "published": "2025-01-22T05:15:08.903",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in `podman build` and `buildah.` This issue occurs in a container breakout by using --jobs=2 and a race condition when building a malicious Containerfile. SELinux might mitigate it, but even with SELinux on, it still allows the enumeration of files and directories on the host.",
+    "tags": [],
+    "title": "CVE-2024-11218 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-11218"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-68948",
+    "published": "2025-12-27T01:15:42.720",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SiYuan is self-hosted, open source personal knowledge management software. In versions 3.5.1 and prior, the SiYuan Note application utilizes a hardcoded cryptographic secret for its session store. This unsafe practice renders the session encryption ineffective. Since the sensitive AccessAuthCode is stored within the session cookie, an attacker who intercepts or obtains a user's encrypted session cookie (e.g., via session hijacking) can locally decrypt it using the public key. Once decrypted, the attacker can retrieve the AccessAuthCode in plain text and use it to authenticate or take over the session.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-68948 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68948"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-67255",
+    "published": "2025-12-29T19:15:56.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In NagiosXI 2026R1.0.1 build 1762361101, Dashboard parameters lack proper filtering, allowing any authenticated user to exploit a SQL Injection vulnerability.",
+    "tags": [],
+    "title": "CVE-2025-67255 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67255"
+  },
+  {
+    "category": "high",
+    "cvss": 7.7,
+    "id": "CVE-2025-69217",
+    "published": "2025-12-30T01:15:41.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "coturn is a free open source implementation of TURN and STUN Server. Versions 4.6.2r5 through 4.7.0-r4 have a bad random number generator for nonces and port randomization after refactoring. Additionally, random numbers aren't generated with openssl's RAND_bytes but libc's random() (if it's not running on Windows). When fetching about 50 sequential nonces (i.e., through sending 50 unauthenticated allocations requests) it is possible to completely reconstruct the current state of the random number generator, thereby predicting the next nonce. This allows authentication while spoofing IPs. An attacker can send authenticated messages without ever receiving the responses, including the nonce (requires knowledge of the credentials, which is e.g., often the case in IoT settings). Since the port randomization is deterministic given the pseudorandom seed, an attacker can exactly reconstruct the ports and, hence predict the randomization of the ports. If an attacker allocates a relay port, they know the current port, and they are able to predict the next relay port (at least if it is not used before). Commit 11fc465f4bba70bb0ad8aae17d6c4a63a29917d9 contains a fix.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-69217 (CVSS 7.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-69217"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-15382",
+    "published": "2026-01-06T18:15:42.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap buffer over-read vulnerability exists in the wolfSSH_CleanPath() function in wolfSSH. An authenticated remote attacker can trigger the issue via crafted SCP path input containing '/./' sequences, resulting in a heap over read by 1 byte.",
+    "tags": [],
+    "title": "CVE-2025-15382 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-15382"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-76836",
+    "published": "2026-08-24T18:17:21.733",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AzuraCast exposes the Liquidsoap custom configuration fields through an endpoint that does not require the permission guarding them. The backend_config property in backend/src/Entity/Station.php is annotated with GROUP_GENERAL, and PUT /api/station/{station_id}/profile/edit in backend/src/Controller/Api/Stations/ProfileEditController.php deserializes with that group while requiring only StationPermissions::Profile. AbstractArrayEntity::fromArray() then assigns every public property with no field-level permission check, so custom_config_top, custom_config, custom_config_pre_playlists, custom_config_pre_live, custom_config_pre_fade and custom_config_bottom are writable through it. ConfigWriter::writeCustomConfigurationSection() emits those values verbatim into the generated Liquidsoap .liq script, where the process.run() and process.exec() built-ins execute operating system commands when the backend restarts, which the built-in sync task triggers automatically once needs_restart is set. The dedicated endpoint for the same data, PUT /api/station/{id}/liquidsoap-config, requires StationPermissions::Broadcasting, so a station manager holding only the profile permission reaches configuration that the intended boundary reserves for broadcasting operators.",
+    "tags": [],
+    "title": "CVE-2026-76836 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76836"
+  },
+  {
+    "category": "high",
+    "cvss": 6.3,
+    "id": "CVE-2026-108957",
+    "published": "2026-10-13T03:16:40.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in TinyLLaVA TinyLLaVA_Factory up to 1abc6ac5e76a68d0fd087a071b56da968e69ca9b. The impacted element is the function _load_text_config of the file tinyllava/model/configuration_tinyllava.py of the component TinyLlavaConfig. Performing a manipulation of the argument llm_model_name_or_path results in code injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be used for attacks. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The project was informed of the problem early through an issue report but has not responded yet.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-108957 (CVSS 6.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108957"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-101020",
+    "published": "2026-10-13T09:17:13.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An incorrect permission assignment for critical resource issue exists in AssetView, AssetView CLOUD, and AssetView Cloud +. If this vulnerability is exploited, a local authenticated attacker who can log in to the Windows system where Management Console or Client Terminal for the product is running may gain SYSTEM privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-101020 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101020"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-13138",
+    "published": "2026-10-13T09:17:17.127",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Client-Side Enforcement of Server-Side Security vulnerability in Divasoft Software and E-Commerce Inc. Biletiva Ticketing Platform allows Manipulating State.\n\nThis issue affects Biletiva Ticketing Platform: through 2026-07-23.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13138 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13138"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208861",
+    "published": "2026-10-13T13:25:55+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "방산 관련 자료 유출에서 사이버 공격이 주요 원인으로 나타났다. 협력사 해킹으로 무기체계 관련 기술자료가 유출됐으며, 일부 신고 사건은 사고 기록이 없어 실제 유출 여부를 확인하지 못했다. 방산업체뿐 아니라 협력사의 보안 관리와 기록 보존 체계를 함께 점검해야 한다는 지적이다.13일 국회 국방위원회 소속 유용원 국민의힘 의원이 방위사업청에서 제출받은 자료에 따르면, 2024년 이후 방산 관련 자료 유출 가운데 사이버 공격에 따른 사례는 41건이었다. 연도별로는 2024년 16건, 지난해 14건, 올해 11건으로 집계됐다. 협력사 해",
+    "tags": [],
+    "title": "방산 협력사 해킹에 기술자료 유출…로그 없어 피해 확인도 어려워",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208861"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208860",
+    "published": "2026-10-13T13:09:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국세청을 겨냥한 외부 해킹 시도가 올해 9개월 동안 지난해 연간 건수의 약 7.6배에 달한 것으로 나타났다. 국세청은 실제 침해 사례는 없다고 밝혔지만, 국민의 소득과 재산 등 민감한 정보를 관리하는 만큼 공격 증가 원인을 분석하고 보안 대응을 강화해야 한다는 지적이 제기됐다.13일 국회 재정경제기획위원회 소속 이종욱 국민의힘 의원이 국세청에서 제출받은 자료에 따르면, 올해 1월부터 9월까지 외부 해킹 시도는 7만3,283건으로 집계됐다. 지난해 연간 9,643건의 약 7.6배이며, 2021년부터 2025년까지 5년간 누적 2만6,",
+    "tags": [],
+    "title": "국세청 해킹 시도 9개월간 7만3,283건…지난해 연간의 7.6배",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208860"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208859",
+    "published": "2026-10-13T12:01:05+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "올해 개인정보 유출 신고가 8개월 만에 지난해 연간 규모를 넘어선 가운데, 신고 사건 중 현장조사가 실시된 비율은 5.7%로 나타났다. 유출 신고 증가에 맞춰 조사와 사고 초기 대응이 충분히 이뤄지고 있는지가 국정감사 쟁점으로 떠올랐다.13일 국회 정무위원회 소속 박성훈 국민의힘 의원이 개인정보보호위원회에서 제출받은 자료를 인용한 보도에 따르면, 올해 1~8월 접수된 개인정보 유출 신고는 579건이었다. 이 가운데 9월 말까지 현장조사가 실시된 사건은 33건이다. 신고 접수 기간과 현장조사 집계 시점이 다른 통계다. 올해 1~8월",
+    "tags": [],
+    "title": "박성훈 의원, 개인정보 유출 신고 579건 중 현장조사 33건… “유출 대응 재점검해야”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208859"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208858",
+    "published": "2026-10-13T11:37:03+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "시스코가 AI로 빨라지는 사이버 위협에 대응하려면 보안 기술 도입과 함께 부서 간 협업, 의사결정 절차, 데이터 접근성을 개선해야 한다는 조사 결과를 발표했다.시스코는 13일 전 세계 30개국 보안 전문가 8,000명을 대상으로 조사한 ‘릴렌트리스 디펜스 보고서’를 공개했다. 조사에 따르면 전 세계 응답 조직의 91%, 국내 응답 조직의 80%가 최근 1년간 비즈니스에 실질적인 영향을 미친 사이버 보안 사고를 경험했다. 보고서는 사고 3건 중 1건 이상이 AI를 활용한 공격과 연관됐다고 밝혔다.보고서가 평가한 사이버 방어 역량은 전",
+    "tags": [],
+    "title": "시스코 “AI 위협 대응 막는 건 조직 단절”…국내 기업 80% 보안사고 경험",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208858"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208857",
+    "published": "2026-10-13T11:12:29+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "송경희 개인정보보호위원장이 최근 금융권과 공공기관의 개인정보 유출 사고에 대해 조사와 대응을 강화하겠다고 밝혔다. 중요 사건에는 전담 조사단을 구성하고, 조사 비협조와 증거 은닉에 대한 제재 수단도 보강한다는 방침이다.송 위원장은 13일 국회 정무위원회 국정감사 인사말에서 최근 유출 사고에 책임감을 표했다. 금융·보안 관계부처와 협력해 유출 정보가 국민 피해로 이어지는 것을 막겠다는 취지다. 중요 사건 신속 조사…사전 예방 점검 확대조사 강화의 핵심은 중요 사건에 조사 역량을 집중하고, 조사 방해 행위에 대응할 수단을 마련하는 것이",
+    "tags": [
+      "금융"
+    ],
+    "title": "송경희 개인정보위원장 “금융·공공 유출 엄정 조사”…피해구제 강화 추진",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208857"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/attackers-heat-french-supermarket.html",
+    "published": "2026-10-13T08:48:41+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Attackers took remote control of fridges and freezers at hundreds of French supermarkets on the night of October 11 and warmed them, forcing stores to throw food away, several retail chains said. The attackers reached them through the controller that runs all of a store's fridges and freezers, a device made by Danish company Danfoss that maintenance firms can manage remotely. Les Mousquetaires",
+    "tags": [],
+    "title": "Attackers Heat French Supermarket Fridges Up to 50°C by Hijacking Danfoss Controllers",
+    "url": "https://thehackernews.com/2026/10/attackers-heat-french-supermarket.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/two-critical-marklogic-flaws-could-give.html",
+    "published": "2026-10-13T08:44:01+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Two of 31 newly disclosed flaws in Progress Software's MarkLogic Server database could let an account given only some management privileges take administrator control of the server, the company says. Progress published all 31 on October 12 and scored five of them critical. Fixes have been available since September 10, in MarkLogic 11.3.7 and MarkLogic 12.1.0. Affected",
+    "tags": [],
+    "title": "Two Critical MarkLogic Flaws Could Give Delegated Managers Persistent Admin Control",
+    "url": "https://thehackernews.com/2026/10/two-critical-marklogic-flaws-could-give.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html",
+    "published": "2026-10-13T08:43:37+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "GitLab has released patches for a maximum-severity security flaw impacting its Community Edition (CE) and Enterprise Edition (EE) software that could result in arbitrary code execution. \"GitLab has remediated an issue that, under certain conditions, could have allowed an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD",
+    "tags": [],
+    "title": "GitLab Patches CVSS 10.0 Flaw That Could Let Unauthenticated Users Run Server Code",
+    "url": "https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/low-cost-android-phones-ship-with.html",
+    "published": "2026-10-13T06:00:11+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Low-cost Android smartphones have been shipped with malicious software baked into the device firmware, allowing bad actors to covertly install apps, conduct ad fraud, and turn devices into residential proxies. The activity, which targets Android devices built on MediaTek platforms across several brands, is being tracked by Bitdefender under the moniker Midnight Mimosa. The preinstalled",
+    "tags": [],
+    "title": "Low-Cost Android Phones Ship With Preinstalled Malware That Turns Them Into Residential Proxies",
+    "url": "https://thehackernews.com/2026/10/low-cost-android-phones-ship-with.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=200863",
+    "published": "2026-10-13T07:50:08+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Hackers hit French supermarkets via unpatched Danfoss refrigeration systems, remote-heating freezers and destroying stock worth millions. Overnight from Sunday to Monday, a large cyberattack hit the refrigeration systems of hundreds of French supermarkets, BFMTV revealed. The attackers targeted equipment from the Danish maker Danfoss that many French stores use to regulate their cold. Fresh and […]",
+    "tags": [],
+    "title": "Hackers cranked French supermarkets’ freezers up to 50 degrees, causing hundreds of stores to lose their stock",
+    "url": "https://securityaffairs.com/200863/hacking/hackers-cranked-french-supermarkets-freezers-up-to-50-degrees-causing-hundreds-of-stores-to-lose-their-stock.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5BOG5BUk0yNVl4T2l2YlczS2ZpcDNjaHp1b3VfU1JBZnh5SnM3OTlQR2NPRXU1TEdzbWZZY29JWG9iaTdUZm5WSEJpMGVLSWx3azBzSUJId3BjZFJ6UXVuN21VRkRVVDVIZTNj",
+    "published": "2026-10-13T06:45:25+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, ‘FISCON 2026’ 콘퍼런스 개최... AI로 재편될 미래 금융 대비",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, ‘FISCON 2026’ 콘퍼런스 개최... AI로 재편될 미래 금융 대비",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5BOG5BUk0yNVl4T2l2YlczS2ZpcDNjaHp1b3VfU1JBZnh5SnM3OTlQR2NPRXU1TEdzbWZZY29JWG9iaTdUZm5WSEJpMGVLSWx3azBzSUJId3BjZFJ6UXVuN21VRkRVVDVIZTNj?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE15ZlJDR3E1UGo4RWp5YzNMY1d3VEF3bkhUTDVfa3ZiNjZzT0RDaHBubWktV1R2S1J6N01UazhWbjVRUzRGQ2JzQldjTHN3VlJWcHlBSEpn",
+    "published": "2026-10-13T02:24:52+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안 최대 행사 '피스콘 2026' 다음달 12일 열린다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안 최대 행사 '피스콘 2026' 다음달 12일 열린다",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE15ZlJDR3E1UGo4RWp5YzNMY1d3VEF3bkhUTDVfa3ZiNjZzT0RDaHBubWktV1R2S1J6N01UazhWbjVRUzRGQ2JzQldjTHN3VlJWcHlBSEpn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE51WFh6UFhnOG5YRUxMY2NfOXVDb2FZNzBjUTh3cDNXSnNCOV9tbFdyeDl2cW1EUnVJRllueGFmWmdkbE5HSGt0RVZEVV8wQ19HblVtemF0MXJfZ19aMnFzQ2E1aVRDVHF3Mkd1Nw",
+    "published": "2026-10-13T05:30:33+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 11월 12일 금융권 정보보호 컨퍼런스 ‘FISCON 2026’ 개최",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, 11월 12일 금융권 정보보호 컨퍼런스 ‘FISCON 2026’ 개최",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE51WFh6UFhnOG5YRUxMY2NfOXVDb2FZNzBjUTh3cDNXSnNCOV9tbFdyeDl2cW1EUnVJRllueGFmWmdkbE5HSGt0RVZEVV8wQ19HblVtemF0MXJfZ19aMnFzQ2E1aVRDVHF3Mkd1Nw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE1jbWx5RXktcy1RZ2NQNUVXT0pVQml2a1YwUWZWZkNTeVp3NExDSlFXUjB5N3hWUFJjVzFlTHFfVVN2WldlQkRUS2tfX0E4OVVvZ3RQNnBSUUVkemZSZnQtWnJSSUY0ZEdLUVE",
+    "published": "2026-10-13T09:00:51+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, AI 보안 위협 대응 콘퍼런스 'FISCON 2026' 11월 개최",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, AI 보안 위협 대응 콘퍼런스 'FISCON 2026' 11월 개최",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1jbWx5RXktcy1RZ2NQNUVXT0pVQml2a1YwUWZWZkNTeVp3NExDSlFXUjB5N3hWUFJjVzFlTHFfVVN2WldlQkRUS2tfX0E4OVVvZ3RQNnBSUUVkemZSZnQtWnJSSUY0ZEdLUVE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTFBHcmZ4Y0dFNXBPdUQzX25ydnBtS21aQV93V1pOUGhvQzRyb0lnVFNtZS1jNkJ3M3pCRzZOcDlYUF9CUVJfWjFaYXAyb1BqVHByNURJdHFvMGhmR3BWVVNsbG04TmhZTGFCanl3VDNRX05mTzJX",
+    "published": "2026-10-13T02:29:26+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 내달 12일 'FISCON 2026' 개최…AI 보안 대응 전략 논의",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, 내달 12일 'FISCON 2026' 개최…AI 보안 대응 전략 논의",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBHcmZ4Y0dFNXBPdUQzX25ydnBtS21aQV93V1pOUGhvQzRyb0lnVFNtZS1jNkJ3M3pCRzZOcDlYUF9CUVJfWjFaYXAyb1BqVHByNURJdHFvMGhmR3BWVVNsbG04TmhZTGFCanl3VDNRX05mTzJX?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9WTEtKcG5tdVMwTHF1Vk91YVNmWHF2X1d2ZWNBc250RHVOcUJxdVdjcldDcjRrNnpLbGUwM0F5MHdkdGQ4ci10SmJoSEFXVUw2TWRGVll1YkxpaW1uTDBNOV9WekZmUjJBajN1ZW5TMA",
+    "published": "2026-10-13T02:13:34+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 잇단 사이버공격에 AI 보안 대응 논의…금융보안원, FISCON 2026 개최",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 잇단 사이버공격에 AI 보안 대응 논의…금융보안원, FISCON 2026 개최",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9WTEtKcG5tdVMwTHF1Vk91YVNmWHF2X1d2ZWNBc250RHVOcUJxdVdjcldDcjRrNnpLbGUwM0F5MHdkdGQ4ci10SmJoSEFXVUw2TWRGVll1YkxpaW1uTDBNOV9WekZmUjJBajN1ZW5TMA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9WRXdOV1FRNW4wbWR0WVFLdUxqZFNCYmFhUW9iR0FDSTdVUTVGVjBpZThzUUh5ZjZldGJJcmo5dnA3VmxqZVNYSW8zYzJ1LUJOUENuekFJV1pLOGk1VlMtTEl2YUpJallGVkJ1MWpmMA",
+    "published": "2026-10-13T02:39:51+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위 \"망분리 완화 AI 보안테스트, 사전점검 거쳐 진행\"…'내부망 해킹 위험' 보도 반박",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위 \"망분리 완화 AI 보안테스트, 사전점검 거쳐 진행\"…'내부망 해킹 위험' 보도 반박",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9WRXdOV1FRNW4wbWR0WVFLdUxqZFNCYmFhUW9iR0FDSTdVUTVGVjBpZThzUUh5ZjZldGJJcmo5dnA3VmxqZVNYSW8zYzJ1LUJOUENuekFJV1pLOGk1VlMtTEl2YUpJallGVkJ1MWpmMA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9wMHd1djZyQXNHUThjQ0tIWHBjbDVLQmkzcndOV2VhbVdHYUMxUUdwUW1VUjhTZDlzMEdwUHEtdm95enJlaHFUTXU5ZWZhM0VKMzl4dmVja3ZwNExFRnBIag",
+    "published": "2026-10-13T01:43:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[해킹에 뚫린 금융보안] 보안투자 수천억…방어체계 점검해야",
+    "tags": [
+      "금융"
+    ],
+    "title": "[해킹에 뚫린 금융보안] 보안투자 수천억…방어체계 점검해야",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9wMHd1djZyQXNHUThjQ0tIWHBjbDVLQmkzcndOV2VhbVdHYUMxUUdwUW1VUjhTZDlzMEdwUHEtdm95enJlaHFUTXU5ZWZhM0VKMzl4dmVja3ZwNExFRnBIag?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFBpV2ROSU9FUk5hVUZhNExldEp6NXhUdV9tUXdrWTZGM3E5LVFEM05KalZ5QlU3N3pVanhmRmU4R3A0TnQzU2MwQ0c1WVlma0tFTmpobVE2SEQtTnlUc2tnbHVTaTA4QnRw",
+    "published": "2026-10-13T08:29:18+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹사태에 망분리 완화 ‘일시정지’…AI 보안 시계 멈췄다",
+    "tags": [],
+    "title": "해킹사태에 망분리 완화 ‘일시정지’…AI 보안 시계 멈췄다",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBpV2ROSU9FUk5hVUZhNExldEp6NXhUdV9tUXdrWTZGM3E5LVFEM05KalZ5QlU3N3pVanhmRmU4R3A0TnQzU2MwQ0c1WVlma0tFTmpobVE2SEQtTnlUc2tnbHVTaTA4QnRw?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:240529",
+    "published": "2026-10-13T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "부동산 프로젝트 금융(PF) 상황 점검회의 겸 주택공급 촉진을 위한 금융지원 대책 점검회의 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=240529&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:240528",
+    "published": "2026-10-13T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "투자자들이 공시정보를 손쉽게 분석, 활용할 수 있도록 Open DART 개선 및 XBRL 택사노미 정비를 추진합니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=240528&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNN3dmdjRldUN0VjZubmhzb1Vsb2xTZTJKbDlUZkc1U1F0cTJVWngwWXJNelNHa2QzMHFqVEZqbVJkUWpSTlVDd3NiclM0YjcwMjhJWlRYNmdWbGFqN1BrWE5FemN5WmJoVXF2ZVJHY195MEVUd3FSODdVbHZ6T2ZfNA",
+    "published": "2026-10-13T07:29:28+00:00",
+    "severity": "info",
+    "source": "국가사이버안보센터",
+    "summary": "해킹 시도 늘어난 한은…국정원 사이버보안 평가 2년 연속 '미흡'",
+    "tags": [],
+    "title": "해킹 시도 늘어난 한은…국정원 사이버보안 평가 2년 연속 '미흡'",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNN3dmdjRldUN0VjZubmhzb1Vsb2xTZTJKbDlUZkc1U1F0cTJVWngwWXJNelNHa2QzMHFqVEZqbVJkUWpSTlVDd3NiclM0YjcwMjhJWlRYNmdWbGFqN1BrWE5FemN5WmJoVXF2ZVJHY195MEVUd3FSODdVbHZ6T2ZfNA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTE9iSVdzNWs5dTFnWS1namlGelJhc2ctdUgzRVdidHU3bnhLbWVoSVpjaGE4VTJnejZnT3U5YXhCbEU2dzJzVWllVnQxbGxCTDNrLVA3VXB5ZkVMOHUzdDRKT1l3cHd2UQ",
+    "published": "2026-10-12T14:04:32+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "부가 설명이 필요한 심벌을 모은 금융 결제원 블록 체인 참고 페이지",
+    "tags": [
+      "금융"
+    ],
+    "title": "부가 설명이 필요한 심벌을 모은 금융 결제원 블록 체인 참고 페이지",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9iSVdzNWs5dTFnWS1namlGelJhc2ctdUgzRVdidHU3bnhLbWVoSVpjaGE4VTJnejZnT3U5YXhCbEU2dzJzVWllVnQxbGxCTDNrLVA3VXB5ZkVMOHUzdDRKT1l3cHd2UQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE5qSXlVSnRXRW1LeWZ2Um1EODI5RDZ1dng0VVhsZzBpZEk2WWQ3VzBpSFJITjJ5NVRoTmtOZktwazNUcl9yM2tUMjhHcUlrLU5mOFlTZjZUc1YxZ2kxZU8yMDhiYkpfaUtqQ1E",
+    "published": "2026-10-13T05:23:27+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원 등기 토토 : 전문가들의 조언",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원 등기 토토 : 전문가들의 조언",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5qSXlVSnRXRW1LeWZ2Um1EODI5RDZ1dng0VVhsZzBpZEk2WWQ3VzBpSFJITjJ5NVRoTmtOZktwazNUcl9yM2tUMjhHcUlrLU5mOFlTZjZUc1YxZ2kxZU8yMDhiYkpfaUtqQ1E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTFBDalBZSWdJU3VoWU5yVGN3cFJUSlpqNUhHbGlxMGduaUtCVURrSUhEc0c3X2pmaVlpYndJWGJRdnpMNXRNQW4zNml3cThMTFB2TEVzYjg4V2hEVFJLZ0gwUkkzWGs",
+    "published": "2026-10-12T10:00:50+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원 등기 토토 터치 가능한 영역 확인",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원 등기 토토 터치 가능한 영역 확인",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBDalBZSWdJU3VoWU5yVGN3cFJUSlpqNUhHbGlxMGduaUtCVURrSUhEc0c3X2pmaVlpYndJWGJRdnpMNXRNQW4zNml3cThMTFB2TEVzYjg4V2hEVFJLZ0gwUkkzWGs?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMitAFBVV95cUxQUDFBQjNMU0tMN1U5ZVdkZngxYzh4bEs4Q2FwWGNwMFpUc1RmSnBGUzVTc016MnJ6UUlocDBmLXhBOWM0NVBhY2l4VXAzSEdyYW1jNDFBbzJna01WOWh2eExETE9jR0lJNk5JRmFMYTRRRFVJQmd3VWpLNWRYbno0UmJLTnd5WndSbnI0NGx0eWhXLUVwT0pzVmRjRmF2OUYwSGZ0NHNsNnYtc19waW9GZVFwcXI",
+    "published": "2026-10-12T07:19:55+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "기본 설명부터 질문 답변까지 이어지는 mage 토토",
+    "tags": [],
+    "title": "기본 설명부터 질문 답변까지 이어지는 mage 토토",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUDFBQjNMU0tMN1U5ZVdkZngxYzh4bEs4Q2FwWGNwMFpUc1RmSnBGUzVTc016MnJ6UUlocDBmLXhBOWM0NVBhY2l4VXAzSEdyYW1jNDFBbzJna01WOWh2eExETE9jR0lJNk5JRmFMYTRRRFVJQmd3VWpLNWRYbno0UmJLTnd5WndSbnI0NGx0eWhXLUVwT0pzVmRjRmF2OUYwSGZ0NHNsNnYtc19waW9GZVFwcXI?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiowFBVV95cUxPYVROWnZnR2hNTGVpZVFkT0h3MC13cF9yUXNrQ0ZDX1d6VkFKSEhSZ2cyR3ZtV0NMR2VBbkVPY3J2djhsTXlyY0JMTjRULXlBV1Frc0NiNVRfR1c1NTZpTVZXS28zZ0VMc3VFOHcwYTRkSzJqM2pVME56OXotWDNTLV9YWjdfbHJkUER4TThycUdLV1NFYi1NZERGdzlqeTZEVnZJ",
+    "published": "2026-10-12T08:03:44+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "게임 설명이 짧다면 어디를 더 볼까? 토토 은행 등기",
+    "tags": [
+      "금융"
+    ],
+    "title": "게임 설명이 짧다면 어디를 더 볼까? 토토 은행 등기",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYVROWnZnR2hNTGVpZVFkT0h3MC13cF9yUXNrQ0ZDX1d6VkFKSEhSZ2cyR3ZtV0NMR2VBbkVPY3J2djhsTXlyY0JMTjRULXlBV1Frc0NiNVRfR1c1NTZpTVZXS28zZ0VMc3VFOHcwYTRkSzJqM2pVME56OXotWDNTLV9YWjdfbHJkUER4TThycUdLV1NFYi1NZERGdzlqeTZEVnZJ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMitwFBVV95cUxPZGl1ZE1SbkNFRnhPN1h2aUJwV2M4cmpidHc1RFlkY1BnV1ZIWDR6dHdSc3VNNC1IZmJTRzVqM1RmZUhWaFpHNE8xU2YwNEtpemkzN1MxSnY0NkFtN0RsZThESmxWNWdWQm11eDVzVTIwV25YNTNJTWw4cXpqZEMxWFoySnQ1YlE5enN4QnN0VktOSUZ0eTg4VVIwb21sRkFMU2xQMWV0RnVpRVpMNnFpdEFwUXZyMGM",
+    "published": "2026-10-12T11:57:57+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원 토토 디시 결과 확인 버튼 유무",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원 토토 디시 결과 확인 버튼 유무",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZGl1ZE1SbkNFRnhPN1h2aUJwV2M4cmpidHc1RFlkY1BnV1ZIWDR6dHdSc3VNNC1IZmJTRzVqM1RmZUhWaFpHNE8xU2YwNEtpemkzN1MxSnY0NkFtN0RsZThESmxWNWdWQm11eDVzVTIwV25YNTNJTWw4cXpqZEMxWFoySnQ1YlE5enN4QnN0VktOSUZ0eTg4VVIwb21sRkFMU2xQMWV0RnVpRVpMNnFpdEFwUXZyMGM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidkFVX3lxTFBJNjFGd3QxWHVHX1ZoUUh1dzczY2ZVNzBuYWp2ZTEzQ1NXWXRBSGdXRHloanQ2N3d1dVhkVnFaRHV5cE9GYzZxTlhtdDJIT25hR1I1anRwS2pCelh6VmhDaXJZUzA1SnNZT2g2Y3dYUHhLdEtURGc",
+    "published": "2026-10-13T08:53:04+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "티빙 대표 \"AI 기반 해킹 추정\"…개인정보위 \"연내 처분 마무리\"",
+    "tags": [],
+    "title": "티빙 대표 \"AI 기반 해킹 추정\"…개인정보위 \"연내 처분 마무리\"",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJNjFGd3QxWHVHX1ZoUUh1dzczY2ZVNzBuYWp2ZTEzQ1NXWXRBSGdXRHloanQ2N3d1dVhkVnFaRHV5cE9GYzZxTlhtdDJIT25hR1I1anRwS2pCelh6VmhDaXJZUzA1SnNZT2g2Y3dYUHhLdEtURGc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBZM0o4ZmtwSHdYeHVKNHRTcEkyWlFlOWlMRzVjQVF6djJtLTZURFpoV1VBTVIwVm8yUlhJbm9Id0VZNGZnVHQ1UnIwLTItdVpCbzIwNlNUTXJYM1JiZ3p1aA",
+    "published": "2026-10-13T06:11:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보보호위원회, 2027년 상반기 세종 이전 추진",
+    "tags": [],
+    "title": "개인정보보호위원회, 2027년 상반기 세종 이전 추진",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZM0o4ZmtwSHdYeHVKNHRTcEkyWlFlOWlMRzVjQVF6djJtLTZURFpoV1VBTVIwVm8yUlhJbm9Id0VZNGZnVHQ1UnIwLTItdVpCbzIwNlNUTXJYM1JiZ3p1aA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE96N1RYa3lDek5PdmtFVm1tQ1oxdTJteW9obGRhTmFkN1dNUE9HYmg2azE3SGFWUkpTR3ZJdkpUREVQdk9HR0ZmM0psdEpnQjJVZmhuTEN3U1o1MWvSAWBBVV95cUxOb0c3MFFMUDc0QVd3TGYwbXVuUGlHWWVuTkotdGhBNWU2dEQ2Y2tZNFBVNGNWZ2pXMVNydTZUcndDOHFERmwzYll6dnFfQW5TcVhadVlwT2dPeHR3UElTLXQ",
+    "published": "2026-10-13T07:03:02+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "송경희 \"韓 개인정보 보호체계 상당히 뒤처져…보안 투자 부족\" 연합뉴스 개인정보위원장 \"금융권·공공기관 개인정보 유출 엄정 조사\" MBC 뉴스 정부24 유출 늑장 통지에 AI 해킹 대응까지...개인정보위 국감서 뭇매 MTN 머니투데이방송",
+    "tags": [
+      "금융"
+    ],
+    "title": "송경희 \"韓 개인정보 보호체계 상당히 뒤처져…보안 투자 부족\"",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE96N1RYa3lDek5PdmtFVm1tQ1oxdTJteW9obGRhTmFkN1dNUE9HYmg2azE3SGFWUkpTR3ZJdkpUREVQdk9HR0ZmM0psdEpnQjJVZmhuTEN3U1o1MWvSAWBBVV95cUxOb0c3MFFMUDc0QVd3TGYwbXVuUGlHWWVuTkotdGhBNWU2dEQ2Y2tZNFBVNGNWZ2pXMVNydTZUcndDOHFERmwzYll6dnFfQW5TcVhadVlwT2dPeHR3UElTLXQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5LREVvRFhiRUxtNmxqVXNkTFlINzdwV3VJd3M2SkJiV3lhYS1TWG94cGhEbTVHR1BTeXBVZzVqd0JnbzRxVWx3R1dhYk9LNmM3VmNPcHhiNVBrRV90aXVFSG9nZ3EtSjczWno4",
+    "published": "2026-10-13T08:26:51+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 내년 상반기 세종 간다... 44개 기관 9929명 이전",
+    "tags": [],
+    "title": "개인정보위, 내년 상반기 세종 간다... 44개 기관 9929명 이전",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5LREVvRFhiRUxtNmxqVXNkTFlINzdwV3VJd3M2SkJiV3lhYS1TWG94cGhEbTVHR1BTeXBVZzVqd0JnbzRxVWx3R1dhYk9LNmM3VmNPcHhiNVBrRV90aXVFSG9nZ3EtSjczWno4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFA1VHlKOExIOUxsSDZZeVhoalhDNXVpeTVEYUwyM2psMkJGbnhGeFZhTWw4ZklrUWpMdXNiSDF2ZWpXdnIwMHFKelRCZmtTS2FwSFBqNU02QjMyMmdMNFp1TkUwaEVIX2N4SGY4LXFn0gFyQVVfeXFMT3N3MXUyNVUybGpRSkxQVm5udkc1cnE2YkI1dzFocmVtUi1sSGRRZTJ6VE1vLXlwcThhejg4Skh5ZEw5ZDdPNWFQTllZMnlsZEE2VHYxZ1lzZTBTQXRRX3MzazhIbTN6ZzJaQ0NXZzFMWjNB",
+    "published": "2026-10-13T02:44:56+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 조사체계 개편",
+    "tags": [],
+    "title": "개인정보위 조사체계 개편",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA1VHlKOExIOUxsSDZZeVhoalhDNXVpeTVEYUwyM2psMkJGbnhGeFZhTWw4ZklrUWpMdXNiSDF2ZWpXdnIwMHFKelRCZmtTS2FwSFBqNU02QjMyMmdMNFp1TkUwaEVIX2N4SGY4LXFn0gFyQVVfeXFMT3N3MXUyNVUybGpRSkxQVm5udkc1cnE2YkI1dzFocmVtUi1sSGRRZTJ6VE1vLXlwcThhejg4Skh5ZEw5ZDdPNWFQTllZMnlsZEE2VHYxZ1lzZTBTQXRRX3MzazhIbTN6ZzJaQ0NXZzFMWjNB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9fQkZVU2pBa0IzZmZuWVE2b0VobnRPWUEtcjVWbmR1ZlJMTjFJa3hXQzRyMEtpa3pxR2xzcXlpM05zRHk2RkkzanZHek9nZ29KdnhxcGRiV0tMdkplR053aQ",
+    "published": "2026-10-13T07:07:58+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "송경희 개보위원장 \"개인정보 보호 뒤처진 것 사실…체계 바꿔나갈 것\"",
+    "tags": [],
+    "title": "송경희 개보위원장 \"개인정보 보호 뒤처진 것 사실…체계 바꿔나갈 것\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9fQkZVU2pBa0IzZmZuWVE2b0VobnRPWUEtcjVWbmR1ZlJMTjFJa3hXQzRyMEtpa3pxR2xzcXlpM05zRHk2RkkzanZHek9nZ29KdnhxcGRiV0tMdkplR053aQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFBNcXVhZE1sRlR4TXhWZmNZc2tVUzlFODJEeEpXbjRzcWQtVzRaMjZCTWZNVTVnYmVOaENmV29iZmxfOWtGcmFpel9jU2NJZHlKeWhMMkUwQ2V5MVk4OHZqNWVMbjA3eHhL",
+    "published": "2026-10-13T06:28:35+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[국감] 송경희 개보위원장 “개인정보 유출에 무거운 책임감…철저히 조사”",
+    "tags": [],
+    "title": "[국감] 송경희 개보위원장 “개인정보 유출에 무거운 책임감…철저히 조사”",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBNcXVhZE1sRlR4TXhWZmNZc2tVUzlFODJEeEpXbjRzcWQtVzRaMjZCTWZNVTVnYmVOaENmV29iZmxfOWtGcmFpel9jU2NJZHlKeWhMMkUwQ2V5MVk4OHZqNWVMbjA3eHhL?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE9ldTNnSGpWWnBKdmRWd05ITE90M21oNERVTG1aZVp5V3ZacWZlN204SE5FRFlnQS02NUdOcnhSN3ZaNExaREk3S0dQb1JnSHhEY0VnalZ3",
+    "published": "2026-10-13T06:32:24+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보보호위원회 이름 변경을?...박민규 의원 \"보호 떼라\"고 제안",
+    "tags": [],
+    "title": "개인정보보호위원회 이름 변경을?...박민규 의원 \"보호 떼라\"고 제안",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ldTNnSGpWWnBKdmRWd05ITE90M21oNERVTG1aZVp5V3ZacWZlN204SE5FRFlnQS02NUdOcnhSN3ZaNExaREk3S0dQb1JnSHhEY0VnalZ3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE1rTjJRdEVsMm9DbjdfazZpaGN0bkRPV0dMb2VDRlNqeE4tZkw2SEk5bkh3VjRTTS0yU3F1NkRzbTVobVUwV1JIMXZwNWplQUpEYS00eW1yWHRJb1YzNEdZSkthcllhQXfSAWxBVV95cUxOTG9SU250U1JSZE96WDZsVVotdGtjLV9hdnd4bXpVY1YxcGxTT19wX251Q1c2MzAxclZJVExZNU1nQnZNdS1KM0gyRzBiaW9uRm8ySjUyWXpickhWY0J1YkJ5VW83ck4xSGpDaTY",
+    "published": "2026-10-13T06:54:09+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 공공기관 개인정보 평가 강화…유출사고 감점 10→20점 - 머니투데이",
+    "tags": [],
+    "title": "개인정보위, 공공기관 개인정보 평가 강화…유출사고 감점 10→20점 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1rTjJRdEVsMm9DbjdfazZpaGN0bkRPV0dMb2VDRlNqeE4tZkw2SEk5bkh3VjRTTS0yU3F1NkRzbTVobVUwV1JIMXZwNWplQUpEYS00eW1yWHRJb1YzNEdZSkthcllhQXfSAWxBVV95cUxOTG9SU250U1JSZE96WDZsVVotdGtjLV9hdnd4bXpVY1YxcGxTT19wX251Q1c2MzAxclZJVExZNU1nQnZNdS1KM0gyRzBiaW9uRm8ySjUyWXpickhWY0J1YkJ5VW83ck4xSGpDaTY?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE1ZSWFJTTlEd1JXSmg0SnVnRWp4VWNfMDBoU0pwSUF4S2NrQ1JxUUdVX0NkcHp3Rlo2Z0x6cjBVU0FFMDJSdWw0d0hEc05SOXVJODFFTXdwTFFORVZtY0tROEQ5T2FMUlZvcm9NV3d1dw",
+    "published": "2026-10-13T06:34:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "(보도설명) 공공기관 개인정보 보호수준 평가는 평가 실효성을 단계적으로 강화하고 있습니다",
+    "tags": [],
+    "title": "(보도설명) 공공기관 개인정보 보호수준 평가는 평가 실효성을 단계적으로 강화하고 있습니다",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ZSWFJTTlEd1JXSmg0SnVnRWp4VWNfMDBoU0pwSUF4S2NrQ1JxUUdVX0NkcHp3Rlo2Z0x6cjBVU0FFMDJSdWw0d0hEc05SOXVJODFFTXdwTFFORVZtY0tROEQ5T2FMUlZvcm9NV3d1dw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTFBZMzdXc2dfck9hSnJiWXgzcjE2cHlic1ZMeGdISlpHSUZrV1JieDRIRmZtXy1PTTY2MG5JVzRMQ2hQQWtlZ19WSy1RM21NUi1TWWdFMXZaWWMtZEZpZ0s0ZUZPS0RScG8yQnlUVUxoRG9aT3ox",
+    "published": "2026-10-13T06:53:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위원장 \"개인정보 유출에 무거운 책임감…보안 투자 부족해\" |",
+    "tags": [],
+    "title": "개보위원장 \"개인정보 유출에 무거운 책임감…보안 투자 부족해\" |",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBZMzdXc2dfck9hSnJiWXgzcjE2cHlic1ZMeGdISlpHSUZrV1JieDRIRmZtXy1PTTY2MG5JVzRMQ2hQQWtlZ19WSy1RM21NUi1TWWdFMXZaWWMtZEZpZ0s0ZUZPS0RScG8yQnlUVUxoRG9aT3ox?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5oQmFWTFdIVjlmVU1YclY4dFEzNzJ3N2UzU3RwdmFEbEMwcHZ2VF82NEN6Y1ZMZnFfcWVBUkc1UldiWHRyQllXOUR4WGxNWWFqeW9YOWlHNEFGZjFNOVdWLXNOeHY",
+    "published": "2026-10-13T06:47:41+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, `보호` 떼고 개인정보위원회로 바꾸자 제안 나왔다…송경희 \"신중 검토\" [2026 국감]",
+    "tags": [],
+    "title": "개보위, `보호` 떼고 개인정보위원회로 바꾸자 제안 나왔다…송경희 \"신중 검토\" [2026 국감]",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5oQmFWTFdIVjlmVU1YclY4dFEzNzJ3N2UzU3RwdmFEbEMwcHZ2VF82NEN6Y1ZMZnFfcWVBUkc1UldiWHRyQllXOUR4WGxNWWFqeW9YOWlHNEFGZjFNOVdWLXNOeHY?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE9JQm9odU5wTl9sS0xkRmFlQl9FRWlXSldWN1FjS1owdG5qaGVobHVsSzl1WFhwcUkzNFpIdGRpd0pfd05SejVxRmROZTBDZw",
+    "published": "2026-10-13T07:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[미래포럼] 공공 개인정보보호, 분산된 소관과 공백의 책임",
+    "tags": [],
+    "title": "[미래포럼] 공공 개인정보보호, 분산된 소관과 공백의 책임",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9JQm9odU5wTl9sS0xkRmFlQl9FRWlXSldWN1FjS1owdG5qaGVobHVsSzl1WFhwcUkzNFpIdGRpd0pfd05SejVxRmROZTBDZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE85TW14UlBOQlc5N2RUTk02ZWs3NnVOaDFyZ3dEOUJFYWFKTkFiUjV4T0drVk9lY1FxcVZsaU9TV1dNZFlhb3phcHlUa1Y3c0d3M1JEMTNFaFlVQWNPazFYR3NsU2U2SkRwa1otb9IBbEFVX3lxTE85TW14UlBOQlc5N2RUTk02ZWs3NnVOaDFyZ3dEOUJFYWFKTkFiUjV4T0drVk9lY1FxcVZsaU9TV1dNZFlhb3phcHlUa1Y3c0d3M1JEMTNFaFlVQWNPazFYR3NsU2U2SkRwa1otbw",
+    "published": "2026-10-13T02:44:13+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"유출 왜 많냐\" 묻자…개인정보위원장 \"IT 인프라 수준이 높아서\" - 머니투데이",
+    "tags": [],
+    "title": "\"유출 왜 많냐\" 묻자…개인정보위원장 \"IT 인프라 수준이 높아서\" - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE85TW14UlBOQlc5N2RUTk02ZWs3NnVOaDFyZ3dEOUJFYWFKTkFiUjV4T0drVk9lY1FxcVZsaU9TV1dNZFlhb3phcHlUa1Y3c0d3M1JEMTNFaFlVQWNPazFYR3NsU2U2SkRwa1otb9IBbEFVX3lxTE85TW14UlBOQlc5N2RUTk02ZWs3NnVOaDFyZ3dEOUJFYWFKTkFiUjV4T0drVk9lY1FxcVZsaU9TV1dNZFlhb3phcHlUa1Y3c0d3M1JEMTNFaFlVQWNPazFYR3NsU2U2SkRwa1otbw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE15S2pnR2UzQlFVcjYtVFcwVzZ4MHJFcC14MzV4SFJsak96a2pWaUlESDNuUnMyemk1VGFJUk4xVmhodHRvZ3RnOWV5Z3BlVHkwVVZ5TlV0RFh4SmlsdzNlRjFzREpaUjU5QWpxZkR30gFyQVVfeXFMTUw5ZGRXN3V4aTJRb0RBU0VlOHNyaUFDeUItanhnLVhwdVpWWXZTZ2UwSFp2TXY2VTlhd0I4ejN1UTZOajBnSTUzSlI3N2JCWTh0TGpRemE1d2NUbXZTMkV6MGFSWXJTNnpVMGcwS2NqTG5R",
+    "published": "2026-10-13T04:22:47+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 보호법상 ‘AI 개발을 위한 개인정보 활용 특례’ 도입",
+    "tags": [],
+    "title": "개인정보 보호법상 ‘AI 개발을 위한 개인정보 활용 특례’ 도입",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE15S2pnR2UzQlFVcjYtVFcwVzZ4MHJFcC14MzV4SFJsak96a2pWaUlESDNuUnMyemk1VGFJUk4xVmhodHRvZ3RnOWV5Z3BlVHkwVVZ5TlV0RFh4SmlsdzNlRjFzREpaUjU5QWpxZkR30gFyQVVfeXFMTUw5ZGRXN3V4aTJRb0RBU0VlOHNyaUFDeUItanhnLVhwdVpWWXZTZ2UwSFp2TXY2VTlhd0I4ejN1UTZOajBnSTUzSlI3N2JCWTh0TGpRemE1d2NUbXZTMkV6MGFSWXJTNnpVMGcwS2NqTG5R?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE1oVEt0MkpXSVBtdGxVQXM3dXM3WnlSMVJ6bmN6STlUVTVUYjdWcW1NLU1xTVNmWlZmMGFoY3JMR1pjZ21sZzh0UUwtUnVkUy14THhjNnlyV1FfVGV1eElTbA",
+    "published": "2026-10-13T08:25:10+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 급증에 AI 해킹까지…송경희 \"보호체계 바꿔나갈 것\"",
+    "tags": [],
+    "title": "개인정보 유출 급증에 AI 해킹까지…송경희 \"보호체계 바꿔나갈 것\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1oVEt0MkpXSVBtdGxVQXM3dXM3WnlSMVJ6bmN6STlUVTVUYjdWcW1NLU1xTVNmWlZmMGFoY3JMR1pjZ21sZzh0UUwtUnVkUy14THhjNnlyV1FfVGV1eElTbA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxQeGxOaTlRa2pLaHpPV0tHUktmRGhUa2I1enpReHgtM2tObmp5c0ZMaWtiWGJGYUVBeXNNel9XZExrdGRxZlpwSDZnc19neEgxQ3BaUXRoaDVNdlRjTU5IQWo5dDVDdjQ1VEUxNlF5eTg4dlo0UVF4Z21qLWxJTUdkdg",
+    "published": "2026-10-13T06:36:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보보호위원회, 명칭서 '보호' 빼자 제안…송경희 \"신중론\"",
+    "tags": [],
+    "title": "개인정보보호위원회, 명칭서 '보호' 빼자 제안…송경희 \"신중론\"",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeGxOaTlRa2pLaHpPV0tHUktmRGhUa2I1enpReHgtM2tObmp5c0ZMaWtiWGJGYUVBeXNNel9XZExrdGRxZlpwSDZnc19neEgxQ3BaUXRoaDVNdlRjTU5IQWo5dDVDdjQ1VEUxNlF5eTg4dlo0UVF4Z21qLWxJTUdkdg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFAwcnlJb3ozclRPLTk2NmFaVFhoNVpUMTMzM2loTkp0YlJ4ZXF5UnNEWmpaaW96ODB6LVl6TndiOGE0cWVROTk0VmU1SnVrV2ExcVdLWWhxX2hJek1ua0hTUdIBeEFVX3lxTE9QRHpIX1ZDNl9hYzdKVG4zeE1Vd1MtSFVTelQzYnEzdzJsM2NEMHN6Y1JNa1ZsWm1qWkV6RnBwUTQtclM1M0d0aDdxb05FbWNxMEs2MUE1V3QzRWxoNXE1MGV2QkJlQTNiSVh2bGxwd0RDUnhkME1oRQ",
+    "published": "2026-10-13T07:16:12+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위원장 \"공공기관도 AI 공격 증가…부처 평가에 정보보호 반영 검토\"",
+    "tags": [],
+    "title": "개인정보위원장 \"공공기관도 AI 공격 증가…부처 평가에 정보보호 반영 검토\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAwcnlJb3ozclRPLTk2NmFaVFhoNVpUMTMzM2loTkp0YlJ4ZXF5UnNEWmpaaW96ODB6LVl6TndiOGE0cWVROTk0VmU1SnVrV2ExcVdLWWhxX2hJek1ua0hTUdIBeEFVX3lxTE9QRHpIX1ZDNl9hYzdKVG4zeE1Vd1MtSFVTelQzYnEzdzJsM2NEMHN6Y1JNa1ZsWm1qWkV6RnBwUTQtclM1M0d0aDdxb05FbWNxMEs2MUE1V3QzRWxoNXE1MGV2QkJlQTNiSVh2bGxwd0RDUnhkME1oRQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE1Dd1JYTjI5Vm9ZeUd3UWNCNGgxWG9mR2pQY0lZcVVKb09mczRoa0FQZmYtWW9MNFBWeEF0QUhwQ3BtYzA1ZjJSQkFEbUxpb2MwbkFLdVA1N1JHZw",
+    "published": "2026-10-13T05:30:45+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"징벌적 과징금만으론 개인정보 유출 못 막는다\" 국감서 질타",
+    "tags": [],
+    "title": "\"징벌적 과징금만으론 개인정보 유출 못 막는다\" 국감서 질타",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1Dd1JYTjI5Vm9ZeUd3UWNCNGgxWG9mR2pQY0lZcVVKb09mczRoa0FQZmYtWW9MNFBWeEF0QUhwQ3BtYzA1ZjJSQkFEbUxpb2MwbkFLdVA1N1JHZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9LSlg0RnRYTEdfam1nSWRVUGpiX2lUU1QzRzZ0dV9PRHFfYzhuTEt6a3gzZmE5bnRyd0N4Z2xNT0pfTWNHUm1WTkxqdm1NUHhEM01vRUpJMjhwQdIBVEFVX3lxTE1YdW00OUoxU09hTmxLS040T3pWSDgtWEk1TjQ0Rm5RUkhlbk5JMHAwVE9HYXJIWjIyeUJFRnlOR0JJcnl5bVNUaERvcTE4aEdEOEY4Zg",
+    "published": "2026-10-13T08:04:46+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감] AI 해킹·개인정보 유출에 데이터 활용까지…개보위 과제 부각",
+    "tags": [],
+    "title": "[2026 국감] AI 해킹·개인정보 유출에 데이터 활용까지…개보위 과제 부각",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9LSlg0RnRYTEdfam1nSWRVUGpiX2lUU1QzRzZ0dV9PRHFfYzhuTEt6a3gzZmE5bnRyd0N4Z2xNT0pfTWNHUm1WTkxqdm1NUHhEM01vRUpJMjhwQdIBVEFVX3lxTE1YdW00OUoxU09hTmxLS040T3pWSDgtWEk1TjQ0Rm5RUkhlbk5JMHAwVE9HYXJIWjIyeUJFRnlOR0JJcnl5bVNUaERvcTE4aEdEOEY4Zg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE4xczlJU3MtdnBLenQ2LVpZUU4wRlJ3ZGJsa2pwb3ZaeEd2QVJ4MWI2Q296NzFoR3dlR3pVcTB3N0h5VlNhcnl0ZDBUcENPb2NDd3R4Q2ZpdnZjN1FJeWRZcF9uMmVQcnc3TG5mMFllRTVMNU0",
+    "published": "2026-10-13T06:34:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 코스콤 중심 가명정보 지원체계 재편, 기존 7개 지역센터와 기능 중복 논란",
+    "tags": [],
+    "title": "개인정보위 코스콤 중심 가명정보 지원체계 재편, 기존 7개 지역센터와 기능 중복 논란",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE4xczlJU3MtdnBLenQ2LVpZUU4wRlJ3ZGJsa2pwb3ZaeEd2QVJ4MWI2Q296NzFoR3dlR3pVcTB3N0h5VlNhcnl0ZDBUcENPb2NDd3R4Q2ZpdnZjN1FJeWRZcF9uMmVQcnc3TG5mMFllRTVMNU0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE8yOWhpdjlqTDBSRlNsa2hEaG1SZm9xQ1FFa2JWMFJuTXdhZW9ZdVd2aDI3MUpVRElPVEdBT2czUDExcFQwM1pJZFdidWRnRkUxbzdkaWpoajZZZ0k5WW03QXBfakF4RnY1",
+    "published": "2026-10-13T08:12:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 신고 시스템 일원화 추진",
+    "tags": [],
+    "title": "개인정보 유출 신고 시스템 일원화 추진",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8yOWhpdjlqTDBSRlNsa2hEaG1SZm9xQ1FFa2JWMFJuTXdhZW9ZdVd2aDI3MUpVRElPVEdBT2czUDExcFQwM1pJZFdidWRnRkUxbzdkaWpoajZZZ0k5WW03QXBfakF4RnY1?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTFBJZDRWOWVxMkMyekpUTG1ORjFJcHVjUEVmeEJpUFVQNjZwTjJITVJXU3VTSF9qREhRNHFoc09GVGxVNzVVTFVvMldzQ0thRVdLT0VMOHl6eDV1ekkzUFdJ",
+    "published": "2026-10-13T05:08:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 신고, 현장조사는 6%도 안이뤄져",
+    "tags": [],
+    "title": "개인정보 유출 신고, 현장조사는 6%도 안이뤄져",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBJZDRWOWVxMkMyekpUTG1ORjFJcHVjUEVmeEJpUFVQNjZwTjJITVJXU3VTSF9qREhRNHFoc09GVGxVNzVVTFVvMldzQ0thRVdLT0VMOHl6eDV1ekkzUFdJ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFBwNVR4V08zLXVVU1lLQm1tUXVOMG1wSndnbUxfQS1fY2lHYVBwSjJEOTk1bGhIVGxLdTc5WnZpdTFQMjJIRmNvbnp3cnB2aVBrdHRyX1BqSHdkdVBRbHE5SDRGQkd0VC1QUzdv0gFUQVVfeXFMUGEyVEU4UHZITjU5UV9yQjEtSmdVam5uTEhoc0JUdC04ZFh1aFdQM0s2U2hGTHcwZjFFNmNkc1h4Z1ZZNmZ6RmlWVGJCMmtaNnBOSUct",
+    "published": "2026-10-13T02:45:59+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "송경희 개인정보위원장 “개인정보 유출에 무거운 책임감…철저히 조사·대응할 것”",
+    "tags": [],
+    "title": "송경희 개인정보위원장 “개인정보 유출에 무거운 책임감…철저히 조사·대응할 것”",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBwNVR4V08zLXVVU1lLQm1tUXVOMG1wSndnbUxfQS1fY2lHYVBwSjJEOTk1bGhIVGxLdTc5WnZpdTFQMjJIRmNvbnp3cnB2aVBrdHRyX1BqSHdkdVBRbHE5SDRGQkd0VC1QUzdv0gFUQVVfeXFMUGEyVEU4UHZITjU5UV9yQjEtSmdVam5uTEhoc0JUdC04ZFh1aFdQM0s2U2hGTHcwZjFFNmNkc1h4Z1ZZNmZ6RmlWVGJCMmtaNnBOSUct?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE1UQnVTVGhNazdhcGdPX3Y1eW9DbkFPRnNFOTU0MmtqRENFS2dBNXFvV2lEcjhBSUpaTDBCM0t3eDQwSzQ2QTBJbXhYY1Vmb3otY2ZfVlZiXzhFVHMxVTg2ZmFvUExNZm8",
+    "published": "2026-10-13T05:53:01+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, 출범 16년 만에 세종 이전",
+    "tags": [],
+    "title": "개보위, 출범 16년 만에 세종 이전",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1UQnVTVGhNazdhcGdPX3Y1eW9DbkFPRnNFOTU0MmtqRENFS2dBNXFvV2lEcjhBSUpaTDBCM0t3eDQwSzQ2QTBJbXhYY1Vmb3otY2ZfVlZiXzhFVHMxVTg2ZmFvUExNZm8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE9EU0NzQmRYVDZKRzA1OHQxOGtWUjZ2WkYwTlUydTN0ZzBwcmVDalQ4SE5JZENsbTlQWTZybTlYUEh3VDBMTmQxWndMdGVkSml6MG5xMERtRVozY0hpV2JBMFRMS0xhbHVFWWhhT1Q5RDLSAXRBVV95cUxPcGxLTXFLb25OTV9feDVoMDNwcmhLU2NxTmFjYVRhSEdsMEszZi15VndNWldVNFBCT3FxV19kSEJGaTRUM3p3UUhteXlFck5wM25aREkyMHNoSWtyLXRNWkVXQW9uZ01tcW4tb1NzTngzRGxrTA",
+    "published": "2026-10-13T06:39:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "해커 여러 명 몫 하는 AI… 개인정보위 대응체계는 ‘미흡’ [국감2026]",
+    "tags": [],
+    "title": "해커 여러 명 몫 하는 AI… 개인정보위 대응체계는 ‘미흡’ [국감2026]",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9EU0NzQmRYVDZKRzA1OHQxOGtWUjZ2WkYwTlUydTN0ZzBwcmVDalQ4SE5JZENsbTlQWTZybTlYUEh3VDBMTmQxWndMdGVkSml6MG5xMERtRVozY0hpV2JBMFRMS0xhbHVFWWhhT1Q5RDLSAXRBVV95cUxPcGxLTXFLb25OTV9feDVoMDNwcmhLU2NxTmFjYVRhSEdsMEszZi15VndNWldVNFBCT3FxV19kSEJGaTRUM3p3UUhteXlFck5wM25aREkyMHNoSWtyLXRNWkVXQW9uZ01tcW4tb1NzTngzRGxrTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE8wcDBURHd1NzAwTWxiOE1ORUxpb05BQzRwT0VCNlpsZUNqUGVIYXRvM1hXLXI4UHo0UmxNcEFwdWdXRDJ2czhtZDZIRXZPQm4xX25tQm9tZVh3T1XSAWBBVV95cUxQaXJHVFZLSzZ2ODNyYnJNcGZEVXRmSzB0TkFRa1lqZ1ZyZklOdU5nR0pHZTc3YTRtaHRDUzd2Z3licERyNXBnM2VDTFdSSnpYNW5DLUlKTUZsVVRzaFRxWTk",
+    "published": "2026-10-13T08:42:02+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"당장 영업정지 때려야\"…여야, '정보유출' 기업 한목소리 질타",
+    "tags": [],
+    "title": "\"당장 영업정지 때려야\"…여야, '정보유출' 기업 한목소리 질타",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8wcDBURHd1NzAwTWxiOE1ORUxpb05BQzRwT0VCNlpsZUNqUGVIYXRvM1hXLXI4UHo0UmxNcEFwdWdXRDJ2czhtZDZIRXZPQm4xX25tQm9tZVh3T1XSAWBBVV95cUxQaXJHVFZLSzZ2ODNyYnJNcGZEVXRmSzB0TkFRa1lqZ1ZyZklOdU5nR0pHZTc3YTRtaHRDUzd2Z3licERyNXBnM2VDTFdSSnpYNW5DLUlKTUZsVVRzaFRxWTk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTFBfZjg5aHNlSmpPeHl2N0kxQTRFUTBWZ09YT2hGbHhXSzlnUjlIeGxQV3RiT2pYVnBYNTY2a1I0T1N4cWJILS1ac1RORUM4eXM0NlFpVFVyMDhKMlpBX3U1LTNsTkI",
+    "published": "2026-10-13T06:07:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "정부24 늑장 통지에 개보위 책임론…송경희 \"보안 뒤처진 것 사실\" [2026 국감]",
+    "tags": [],
+    "title": "정부24 늑장 통지에 개보위 책임론…송경희 \"보안 뒤처진 것 사실\" [2026 국감]",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBfZjg5aHNlSmpPeHl2N0kxQTRFUTBWZ09YT2hGbHhXSzlnUjlIeGxQV3RiT2pYVnBYNTY2a1I0T1N4cWJILS1ac1RORUM4eXM0NlFpVFVyMDhKMlpBX3U1LTNsTkI?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9WNGNmWVRJQzJqdHplNlJycGdBOENRTUdReWxRVXZJVTYwNWJ2VzVkZk04MlI5VkxGYnhlQWE0R2J5RXkwdC1zR0lxdm4xVHFaVTI2YWEyR2hPd2wyTkM5ZtIBeEFVX3lxTE1JbkxWRjBnbWo5dHByeDNNZ3JKNndVQ2VaQm1pMEJ3ZVJIRUVMYVZLMTlCQ3ZCX0N5RC1feVBMVkVWcDFXQUxWSkxRZDM3Yl9SM1JnYkVqR2lTQlBScjc5WGJIYUR3YmE2dHdhOW5DMnJPZEpaMmxCNg",
+    "published": "2026-10-13T07:52:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "금융권 유출 사고 신고 어디에? '우왕좌왕'…원스톱 신고체계 구축 목소리",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 유출 사고 신고 어디에? '우왕좌왕'…원스톱 신고체계 구축 목소리",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9WNGNmWVRJQzJqdHplNlJycGdBOENRTUdReWxRVXZJVTYwNWJ2VzVkZk04MlI5VkxGYnhlQWE0R2J5RXkwdC1zR0lxdm4xVHFaVTI2YWEyR2hPd2wyTkM5ZtIBeEFVX3lxTE1JbkxWRjBnbWo5dHByeDNNZ3JKNndVQ2VaQm1pMEJ3ZVJIRUVMYVZLMTlCQ3ZCX0N5RC1feVBMVkVWcDFXQUxWSkxRZDM3Yl9SM1JnYkVqR2lTQlBScjc5WGJIYUR3YmE2dHdhOW5DMnJPZEpaMmxCNg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFBPOFVzWnU0WEdxNDRwV2w0LV9YYWhPR1p6SU9WMS0xRlpBUUtWUHBScmpzMjRTSlBzQm1rMWFEaGMtdF90dTZHMi1GVm84djBsQWM3akRPcWphMU5PNU5FWkpFSlVpcHPSAWxBVV95cUxPbkVQZDZhSUZlQW9IY2lIeEw5RzF2QWY4azZFOXdJcEVlVGY4VHNOdHBzcVRuSzF0UXgxdzJidkVCVi1YRTVJXzdWcFpyeXYzTXJmRjVZZWtwNW1OYmZzTVA2MENncC05Y09tSmg",
+    "published": "2026-10-13T06:04:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"보안은 국정원·과기부\"…개인정보위 \"사전 예방 투자 땐 처분 감경\" - 머니투데이",
+    "tags": [],
+    "title": "\"보안은 국정원·과기부\"…개인정보위 \"사전 예방 투자 땐 처분 감경\" - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBPOFVzWnU0WEdxNDRwV2w0LV9YYWhPR1p6SU9WMS0xRlpBUUtWUHBScmpzMjRTSlBzQm1rMWFEaGMtdF90dTZHMi1GVm84djBsQWM3akRPcWphMU5PNU5FWkpFSlVpcHPSAWxBVV95cUxPbkVQZDZhSUZlQW9IY2lIeEw5RzF2QWY4azZFOXdJcEVlVGY4VHNOdHBzcVRuSzF0UXgxdzJidkVCVi1YRTVJXzdWcFpyeXYzTXJmRjVZZWtwNW1OYmZzTVA2MENncC05Y09tSmg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE82Q3k0N2NHaHNpMmNlR2pkVGdzR3V2WUlQQi1iRDNibktlODZ3ckpjMXRZVEphWFBrRHctSHR5d2tFZGJNX29ZOEd2VQ",
+    "published": "2026-10-13T07:04:03+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, 공공기관 개인정보 유출 땐 평가 '최대 20점' 감점⋯페널티 강화",
+    "tags": [],
+    "title": "개보위, 공공기관 개인정보 유출 땐 평가 '최대 20점' 감점⋯페널티 강화",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE82Q3k0N2NHaHNpMmNlR2pkVGdzR3V2WUlQQi1iRDNibktlODZ3ckpjMXRZVEphWFBrRHctSHR5d2tFZGJNX29ZOEd2VQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1waE5NMF9VVDBWaTdRQ25udTNNb2hxOTlsYzF0NEYwbjVsbERkdzV4UEc2WTU0a0Nia0xPcVJWNGlCN1Z2N0U5RzI4NGRIMXJ4aGw0U0VvbXdmTVFFTzBaMXZET29STlVkQnFV",
+    "published": "2026-10-13T05:11:14+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, 대규모 유출사고 전담 조사단 구성…징벌적 과징금 강화",
+    "tags": [],
+    "title": "개보위, 대규모 유출사고 전담 조사단 구성…징벌적 과징금 강화",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1waE5NMF9VVDBWaTdRQ25udTNNb2hxOTlsYzF0NEYwbjVsbERkdzV4UEc2WTU0a0Nia0xPcVJWNGlCN1Z2N0U5RzI4NGRIMXJ4aGw0U0VvbXdmTVFFTzBaMXZET29STlVkQnFV?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE1YcDUzZ1kySWhjaTEtRGdjM3cyTmlPTlBzd091LVFETjdWUHMzdms1VjJwZzB6eWxjYWxmdXpmTlNrdGxIVllZd3F3ME9XeGhHOVZpMVdRMEd5UUZVeVVtbFc5alZEUXla",
+    "published": "2026-10-13T06:15:30+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 신고 579건에 현장조사 33건뿐…해킹 급증 속 '현장 확인율' 5.7%는 왜?",
+    "tags": [],
+    "title": "개인정보 유출 신고 579건에 현장조사 33건뿐…해킹 급증 속 '현장 확인율' 5.7%는 왜?",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1YcDUzZ1kySWhjaTEtRGdjM3cyTmlPTlBzd091LVFETjdWUHMzdms1VjJwZzB6eWxjYWxmdXpmTlNrdGxIVllZd3F3ME9XeGhHOVZpMVdRMEd5UUZVeVVtbFc5alZEUXla?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5UOWV2RDREdEotVk9tZ0Z4TzIxSDh0NTlVNk9aekotSXExY3p6RTZNVUxkTXlST1NGeElua3RoRWttQnA4UnJTQVY3d3ZDaUVlVjdnNVNuMGJhWVVJUVo2V9IBeEFVX3lxTFBhQzRFY3N6NGpUTno3SUJXcWVrSEJsQ2FfS1h2UENzaGhmRk4zZ2RVVy05THA1X2NwWHhBcnhMV3dWNDE3N3BkS3QyYTNSM2VFMW5yc051S3JIdGF3cFNtd1JxX1Q4QURKM0N3TGFWWjFHMHYzSDZSQQ",
+    "published": "2026-10-13T06:09:19+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"로펌에 뺏길라\"…개인정보위·방미통위, 내년 상반기 세종 이전 소식에 '뒤숭숭'",
+    "tags": [],
+    "title": "\"로펌에 뺏길라\"…개인정보위·방미통위, 내년 상반기 세종 이전 소식에 '뒤숭숭'",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5UOWV2RDREdEotVk9tZ0Z4TzIxSDh0NTlVNk9aekotSXExY3p6RTZNVUxkTXlST1NGeElua3RoRWttQnA4UnJTQVY3d3ZDaUVlVjdnNVNuMGJhWVVJUVo2V9IBeEFVX3lxTFBhQzRFY3N6NGpUTno3SUJXcWVrSEJsQ2FfS1h2UENzaGhmRk4zZ2RVVy05THA1X2NwWHhBcnhMV3dWNDE3N3BkS3QyYTNSM2VFMW5yc051S3JIdGF3cFNtd1JxX1Q4QURKM0N3TGFWWjFHMHYzSDZSQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFBnWmE3OU1rUGRxVWFUSVVZTW45RlFCY2VrSDRKY1VKb3J0TC0tWkZHdmNYZEpYaVlTbFdFSS1iSmdJdDRlWGlqZjZoMG9aeF80MlBYRjNFNnJmWmliQ0RWb0p3Q0pCYkVVOGNyME5B",
+    "published": "2026-10-13T02:52:50+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 신고 100건당 현장조사 6건도 안 돼…5.7% 그쳐",
+    "tags": [],
+    "title": "개인정보 유출 신고 100건당 현장조사 6건도 안 돼…5.7% 그쳐",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBnWmE3OU1rUGRxVWFUSVVZTW45RlFCY2VrSDRKY1VKb3J0TC0tWkZHdmNYZEpYaVlTbFdFSS1iSmdJdDRlWGlqZjZoMG9aeF80MlBYRjNFNnJmWmliQ0RWb0p3Q0pCYkVVOGNyME5B?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE85RGMyQS1tc05neVh2bWIyNXhXay1CNDVjQ3VDOFFtWi1CTXp1WHZKNkhTbXJER1R4UlM3dV9ILVRLRzU5d1dyczdhTQ",
+    "published": "2026-10-13T09:05:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "티빙 대표 AI 해킹 추정 개인정보위 감경 어려워 : 기업·산업",
+    "tags": [],
+    "title": "티빙 대표 AI 해킹 추정 개인정보위 감경 어려워 : 기업·산업",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE85RGMyQS1tc05neVh2bWIyNXhXay1CNDVjQ3VDOFFtWi1CTXp1WHZKNkhTbXJER1R4UlM3dV9ILVRLRzU5d1dyczdhTQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiggFBVV95cUxNYW1OQWdSak9DYWM2TVdkWWFrZThZUE94RGNBUmJfVWdMNkZPMzhNdVprbF9yZXdjT1VzeTlRcmdMNjR6ZllPdzZqVUkzc0l4dkdnS2tmNUJQTkNpMzZkNk5XLV8yRVRZdUxYYWtIMXBJeG4yRWZfTVNMZURqNVBGTmpB",
+    "published": "2026-10-13T07:28:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "송경희 개보위원장 \"조사 비협조시 이행 강제금, 증거 은닉·폐기에는 과징금 추진\"",
+    "tags": [],
+    "title": "송경희 개보위원장 \"조사 비협조시 이행 강제금, 증거 은닉·폐기에는 과징금 추진\"",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYW1OQWdSak9DYWM2TVdkWWFrZThZUE94RGNBUmJfVWdMNkZPMzhNdVprbF9yZXdjT1VzeTlRcmdMNjR6ZllPdzZqVUkzc0l4dkdnS2tmNUJQTkNpMzZkNk5XLV8yRVRZdUxYYWtIMXBJeG4yRWZfTVNMZURqNVBGTmpB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE5JZFdvNUpJNm1IdDBSTFRZZFdubnplRWl5ZElDeFdwU2hXSmg1aFcweUZ2V2xOZTVFZEpuVGpIdkZ6Z2dfMVFkeVpiUmticXVPd3o2ejBONF9wSE1wNFFWZDJMTFBMemxPWmdXcHUwVlbSAXRBVV95cUxOVTZfbGh1NjJYMlp3UUlYV25IeXQ4NWlIVzlJT3pHMEZtS0FHbmNCd0dyR1VKVl91M2x4eTZtV2VKZ0JsSnFZcHdnazFRXzZYaDZZSTBFeUVXTWkxNTA5Nnl6cDhwbFBZOVBSMlUwQ3JZYVYzVw",
+    "published": "2026-10-13T04:43:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 대규모 유출 전담조사단 투입… 피해자 손해배상 지원",
+    "tags": [],
+    "title": "개인정보위, 대규모 유출 전담조사단 투입… 피해자 손해배상 지원",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5JZFdvNUpJNm1IdDBSTFRZZFdubnplRWl5ZElDeFdwU2hXSmg1aFcweUZ2V2xOZTVFZEpuVGpIdkZ6Z2dfMVFkeVpiUmticXVPd3o2ejBONF9wSE1wNFFWZDJMTFBMemxPWmdXcHUwVlbSAXRBVV95cUxOVTZfbGh1NjJYMlp3UUlYV25IeXQ4NWlIVzlJT3pHMEZtS0FHbmNCd0dyR1VKVl91M2x4eTZtV2VKZ0JsSnFZcHdnazFRXzZYaDZZSTBFeUVXTWkxNTA5Nnl6cDhwbFBZOVBSMlUwQ3JZYVYzVw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE53akxJNnNLMG9vN3Bvd29rLUpwRFBrVzZXcEoycFFGdHRSUHFMSXdGampPYWpsd21VaEM4SzdfMnA4Mmg4QTg3elZjT3dnTURsZ0t1dmdpYktmd9IBVEFVX3lxTE0zdnlhNDNjbHpuSUNvMzdXRk1NNmJNV1JWSVZnd0djcUtpVTdKalM0eHBoZ0RmLTlvV2l2Yk8tTXdkc2QyQndtazRvWmZSVmtjbmQxYg",
+    "published": "2026-10-13T03:39:41+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감] 송경희 개보위원장 \"개인정보 유출, 보안 투자 부족 등 문제 누적\"",
+    "tags": [],
+    "title": "[2026 국감] 송경희 개보위원장 \"개인정보 유출, 보안 투자 부족 등 문제 누적\"",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE53akxJNnNLMG9vN3Bvd29rLUpwRFBrVzZXcEoycFFGdHRSUHFMSXdGampPYWpsd21VaEM4SzdfMnA4Mmg4QTg3elZjT3dnTURsZ0t1dmdpYktmd9IBVEFVX3lxTE0zdnlhNDNjbHpuSUNvMzdXRk1NNmJNV1JWSVZnd0djcUtpVTdKalM0eHBoZ0RmLTlvV2l2Yk8tTXdkc2QyQndtazRvWmZSVmtjbmQxYg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFBldUZ3T2ttQ01sWDVHZkFPUFplUDNndmwweVJHWjVZOWY3VlNORlc0eU9mU1RHQmRMcnlKSFM5MUJNWFlOQ0NyTy1LXzROdUMxOUtpemZTb3hlT0xieXMyYnR0WWZLcmRkMTFFRFBOb3PSAXRBVV95cUxQMnhyWGhxZnlRVk1EckphcGxhRGdUbkRnNzhDRlMxVWtHMl9haWdQQkZrWUF1S2d1TF9yMHNRcjVZQ3NqLUhOS1BON0gyRXI4bjRkS3BmaHpLSzV3bVFVUWFpcHFTLTJ5b3IxYWxCZVNOMF9aNg",
+    "published": "2026-10-13T03:42:09+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[국감2026] 송경희 개인정보위원장 “주요 공공기관·금융권 유출 사고 중점 조사할 것”",
+    "tags": [
+      "금융"
+    ],
+    "title": "[국감2026] 송경희 개인정보위원장 “주요 공공기관·금융권 유출 사고 중점 조사할 것”",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBldUZ3T2ttQ01sWDVHZkFPUFplUDNndmwweVJHWjVZOWY3VlNORlc0eU9mU1RHQmRMcnlKSFM5MUJNWFlOQ0NyTy1LXzROdUMxOUtpemZTb3hlT0xieXMyYnR0WWZLcmRkMTFFRFBOb3PSAXRBVV95cUxQMnhyWGhxZnlRVk1EckphcGxhRGdUbkRnNzhDRlMxVWtHMl9haWdQQkZrWUF1S2d1TF9yMHNRcjVZQ3NqLUhOS1BON0gyRXI4bjRkS3BmaHpLSzV3bVFVUWFpcHFTLTJ5b3IxYWxCZVNOMF9aNg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE1XYXFkUVVPY0NYZWhDbXJ2dUE3NXlPMHkyd0hxTm53SE5OaDFaTlhFOWFzWXVvVkFocW1oNmFzUmFsWVlLMFpvb1d1ZHY5bElYUXZlVEtja2o4LVA4d1p5TnNTTWk",
+    "published": "2026-10-13T07:32:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "공공기관 5년간 772만명 개인정보 유출…서일준 \"기업과 비교하면 사실상 특혜\" [2026 국감]",
+    "tags": [],
+    "title": "공공기관 5년간 772만명 개인정보 유출…서일준 \"기업과 비교하면 사실상 특혜\" [2026 국감]",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1XYXFkUVVPY0NYZWhDbXJ2dUE3NXlPMHkyd0hxTm53SE5OaDFaTlhFOWFzWXVvVkFocW1oNmFzUmFsWVlLMFpvb1d1ZHY5bElYUXZlVEtja2o4LVA4d1p5TnNTTWk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE1ZWWVTMzJyMU0xUmcxTGoxWUhUN0d0LUFvMmZZcDNYREFaSDVka0xTc2RjdktIMlBreUVsYUFLVnhFY0FHdGhKTUI4Ym5LLUl1TU1FdV9NRUV0dw",
+    "published": "2026-10-13T05:44:28+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "금융위·개보위 내년 세종행…44개 기관·공무원 1만명 이전 추진",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위·개보위 내년 세종행…44개 기관·공무원 1만명 이전 추진",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ZWWVTMzJyMU0xUmcxTGoxWUhUN0d0LUFvMmZZcDNYREFaSDVka0xTc2RjdktIMlBreUVsYUFLVnhFY0FHdGhKTUI4Ym5LLUl1TU1FdV9NRUV0dw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9OOW1nek1rbTRTVGg2UkZzTGJxQ0JBOU9fNUdLb1RfNDl5OGZBOWJDZTlqRVY1c0V3NDNHOXhELVVpNmZ0dGRobzNlMFZIRHlYOVo1N2pOekxYM0xLSVdadw",
+    "published": "2026-10-13T03:22:08+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026국감]개인정보위 유출사고 대응 도마…송경희 \"조사·제재 실효성 강화\"",
+    "tags": [],
+    "title": "[2026국감]개인정보위 유출사고 대응 도마…송경희 \"조사·제재 실효성 강화\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9OOW1nek1rbTRTVGg2UkZzTGJxQ0JBOU9fNUdLb1RfNDl5OGZBOWJDZTlqRVY1c0V3NDNHOXhELVVpNmZ0dGRobzNlMFZIRHlYOVo1N2pOekxYM0xLSVdadw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE1HcUVFVVdoVEZyVHgtNm5aVTdWZmRVUXpXcHhLUmQtMnlFTGFtX0VQZWNzblUwTkpETzdzYXhIT1M3SDdJM1RXVGNOTUwyLUpuMlBMUjZtcHY1UVJQdmVBTUMyT2pOb2gyd3hZNWdOaWRDMmhS",
+    "published": "2026-10-13T07:22:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "여야, 개인정보 유출 대응 질타…정부 “보안 투자 부족” [국감]",
+    "tags": [],
+    "title": "여야, 개인정보 유출 대응 질타…정부 “보안 투자 부족” [국감]",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1HcUVFVVdoVEZyVHgtNm5aVTdWZmRVUXpXcHhLUmQtMnlFTGFtX0VQZWNzblUwTkpETzdzYXhIT1M3SDdJM1RXVGNOTUwyLUpuMlBMUjZtcHY1UVJQdmVBTUMyT2pOb2gyd3hZNWdOaWRDMmhS?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9HQmZ6R0gzU3JSTm5RTS1ISnM2enNMWU50QXZ5YTZWdUdUbFg3aU9yVTcwRE51TkdjM1R2NHVzR0ZDVUJqZVdDVGNwTGFjNURXaXc3ZGRzVUVZZ2luRXZvNQ",
+    "published": "2026-10-13T05:34:29+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감] 개보위, 뚫린 금융권 정조준...매출액 최대 10% 과징금",
+    "tags": [
+      "금융"
+    ],
+    "title": "[2026 국감] 개보위, 뚫린 금융권 정조준...매출액 최대 10% 과징금",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9HQmZ6R0gzU3JSTm5RTS1ISnM2enNMWU50QXZ5YTZWdUdUbFg3aU9yVTcwRE51TkdjM1R2NHVzR0ZDVUJqZVdDVGNwTGFjNURXaXc3ZGRzVUVZZ2luRXZvNQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE4yS1FZdFBoNmJXYWNnVW5NQVgzVXpGWjVYQjRBMVRQaUdRRmJRd3IxMFdLd0xPS3ZRaUU4Z3RNUTEwUFJxTkJRMmVUbw",
+    "published": "2026-10-13T04:39:19+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감] 개보위원장 \"개인신용정보 유출에 무거운 책임감⋯금융·공공기관 중점 조사\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "[2026 국감] 개보위원장 \"개인신용정보 유출에 무거운 책임감⋯금융·공공기관 중점 조사\"",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4yS1FZdFBoNmJXYWNnVW5NQVgzVXpGWjVYQjRBMVRQaUdRRmJRd3IxMFdLd0xPS3ZRaUU4Z3RNUTEwUFJxTkJRMmVUbw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE03a2EzOGx5UWU5VzVTRlhWRWdlOHFkR1JwZGdxdG1VUnpELUNRVnlveWNxMzVqcEJSQl81U3JKaEQyWEhSNzRNajc4Q0hYb0NXQmM0MkJYOTBxcWRYRThXbtIBeEFVX3lxTE02ZzZrb2FQU2dtY3h2LXdRX29QcWc5SG9DY25CSDNzWXl3RGlzMkNENUl5MWVuQmJHZUVFZVVfOUk2Y3Q3MkJsWVFkcHdYeE9tdFdOejNyWldjVkV1SUxXNkNCZnZiX0lNTHRENXkzT2ZHNGFUTUg3eg",
+    "published": "2026-10-13T08:24:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"성범죄 피해자 정보, 인적 오류로 유출\" 해명한 구글…'꼬리 자르기' 질타",
+    "tags": [],
+    "title": "\"성범죄 피해자 정보, 인적 오류로 유출\" 해명한 구글…'꼬리 자르기' 질타",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE03a2EzOGx5UWU5VzVTRlhWRWdlOHFkR1JwZGdxdG1VUnpELUNRVnlveWNxMzVqcEJSQl81U3JKaEQyWEhSNzRNajc4Q0hYb0NXQmM0MkJYOTBxcWRYRThXbtIBeEFVX3lxTE02ZzZrb2FQU2dtY3h2LXdRX29QcWc5SG9DY25CSDNzWXl3RGlzMkNENUl5MWVuQmJHZUVFZVVfOUk2Y3Q3MkJsWVFkcHdYeE9tdFdOejNyWldjVkV1SUxXNkNCZnZiX0lNTHRENXkzT2ZHNGFUTUg3eg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE85RmJQdlJhVVpkc1d1aFphcUdmVEJROTJuVzJWU2tCdXB2dFB2Y2lDX3dKX1JoNGQ5VENzOFA1d0lmV3V3NXdoZWhwYVB0d3VBUF9vM0txTnZ1alBLblpxd0FTOFJISXZlYWc",
+    "published": "2026-10-13T06:51:04+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026국감] “AI 기업들, 데이터 없어 해외로”… 개보위 명칭 변경 제안도",
+    "tags": [],
+    "title": "[2026국감] “AI 기업들, 데이터 없어 해외로”… 개보위 명칭 변경 제안도",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE85RmJQdlJhVVpkc1d1aFphcUdmVEJROTJuVzJWU2tCdXB2dFB2Y2lDX3dKX1JoNGQ5VENzOFA1d0lmV3V3NXdoZWhwYVB0d3VBUF9vM0txTnZ1alBLblpxd0FTOFJISXZlYWc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE85SWdNUzJ5NnlQQ01PNDMxVUdkc1pzSG9Ddk5XVE5sRkNYN1l3NnNSc0FvQWpBX2NxZk9XbFpka2dCUnFmUUk4eFRTUDVaU3FzbVRFNGgtdGNiek9hREHSAWNBVV95cUxOZEJ4NU5USlB2cmFnZElqek83dGJubGYxcVdjZjF3OVJHeloyR3pQbUVtY3RwVkozZFRzZzFKNXBaVnJYeFZnMWFhT0dGMmNFLXpxbUhoX2ZyVEtoSzlGdlBNRVE",
+    "published": "2026-10-13T05:09:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "중앙행정기관 44곳, 공무원 9929명 세종 이전…27곳 내년 우선 추진",
+    "tags": [],
+    "title": "중앙행정기관 44곳, 공무원 9929명 세종 이전…27곳 내년 우선 추진",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE85SWdNUzJ5NnlQQ01PNDMxVUdkc1pzSG9Ddk5XVE5sRkNYN1l3NnNSc0FvQWpBX2NxZk9XbFpka2dCUnFmUUk4eFRTUDVaU3FzbVRFNGgtdGNiek9hREHSAWNBVV95cUxOZEJ4NU5USlB2cmFnZElqek83dGJubGYxcVdjZjF3OVJHeloyR3pQbUVtY3RwVkozZFRzZzFKNXBaVnJYeFZnMWFhT0dGMmNFLXpxbUhoX2ZyVEtoSzlGdlBNRVE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE1YSlNMbTB1RFdDdVQ2SU1vX0ZvVDZQWEdoRlA0TzYwc2xnRWJHRjhpcVpmejZzdkdjZjh4UUhCZlNvLV84ZWttR3AzMm1RRFNEdlhXeFZjSTVpdlA2WksxWGF6S2lsNXliQWZoLWE1ZUY",
+    "published": "2026-10-13T08:37:05+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감-개보위] '동네북' 티빙, 3번째 국감행…여야 '보상안 강화' 한목소리 질타",
+    "tags": [],
+    "title": "[2026 국감-개보위] '동네북' 티빙, 3번째 국감행…여야 '보상안 강화' 한목소리 질타",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1YSlNMbTB1RFdDdVQ2SU1vX0ZvVDZQWEdoRlA0TzYwc2xnRWJHRjhpcVpmejZzdkdjZjh4UUhCZlNvLV84ZWttR3AzMm1RRFNEdlhXeFZjSTVpdlA2WksxWGF6S2lsNXliQWZoLWE1ZUY?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE9KWW9mQ1dHR0JRUjhCS2x4UmNtOW4zYWNlOVNnTWN0YUFwTTQ5ajBnenhjdFd0OWdfaXJaZXNDS2ZFWUIyRjl2OTh2T3VyZ2NJeXJlS3hYUFFXUTZ3d01JT3k1d0Y0VjRRMGFtVUtROUVLZw",
+    "published": "2026-10-13T06:25:03+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "정부기관 세종 이전 추진…내년 상반기 6곳 1천여 명 이동",
+    "tags": [],
+    "title": "정부기관 세종 이전 추진…내년 상반기 6곳 1천여 명 이동",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9KWW9mQ1dHR0JRUjhCS2x4UmNtOW4zYWNlOVNnTWN0YUFwTTQ5ajBnenhjdFd0OWdfaXJaZXNDS2ZFWUIyRjl2OTh2T3VyZ2NJeXJlS3hYUFFXUTZ3d01JT3k1d0Y0VjRRMGFtVUtROUVLZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE42N0ItOC14R2JsTDRTbXFaNTRSaS13MFlnampqZGFqNzhQU3FXcnJ5LS1UUjBadk1MS3RmeUh3U21ycV9Ea0NGVVpsaHJHTGVHalRSc184MDVOeFItME9xWHlodkV5WmxwZVdaU9IBb0FVX3lxTE5TaFNmaEdnTnJ0TU82WXgxMEZ3T1ItZUxqUF83RlNtdlBMc1M4cG52bk5MRms4d2x5RTQ2TWZyQkxJenU1TXF5MUU5dUZvQXpkQjdpT1RwbUV0NFdMNzQySXotOFhyY3lQZ0FYaUlvYw",
+    "published": "2026-10-13T07:28:56+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "금융위·개인정보위 등 44곳 세종 이전…2031년까지 단계 추진",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위·개인정보위 등 44곳 세종 이전…2031년까지 단계 추진",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE42N0ItOC14R2JsTDRTbXFaNTRSaS13MFlnampqZGFqNzhQU3FXcnJ5LS1UUjBadk1MS3RmeUh3U21ycV9Ea0NGVVpsaHJHTGVHalRSc184MDVOeFItME9xWHlodkV5WmxwZVdaU9IBb0FVX3lxTE5TaFNmaEdnTnJ0TU82WXgxMEZ3T1ItZUxqUF83RlNtdlBMc1M4cG52bk5MRms4d2x5RTQ2TWZyQkxJenU1TXF5MUU5dUZvQXpkQjdpT1RwbUV0NFdMNzQySXotOFhyY3lQZ0FYaUlvYw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTFBlMEpQRld2MVdHWk1ETzQ1cUZ4RkwzaGVMZjZpdXdyRHV4UjhRTnl6QmlsRk9WYUNkTXdLTEhXQUFvTExoejh4Sm9DR3QteTFXa29HdjktQldtc3Zj",
+    "published": "2026-10-13T02:55:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "업무보고하는 송경희 개인정보위원장",
+    "tags": [],
+    "title": "업무보고하는 송경희 개인정보위원장",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBlMEpQRld2MVdHWk1ETzQ1cUZ4RkwzaGVMZjZpdXdyRHV4UjhRTnl6QmlsRk9WYUNkTXdLTEhXQUFvTExoejh4Sm9DR3QteTFXa29HdjktQldtc3Zj?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE9xNERfeHJOWndia1NTT2tWeF8xeXV3cUxvUkhMUURZcGVKdUJyMzN2TUJwM2NDUG5wbTlpblhuampKcnpQcURCbk1GTWhOX196TmxYdlhfSk5xbFRBSm9JSV9xaGtJaWxGVkZR",
+    "published": "2026-10-13T05:10:26+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국감 2주차, 정책 검증부터 사법기관 공방까지 여야 격돌",
+    "tags": [],
+    "title": "국감 2주차, 정책 검증부터 사법기관 공방까지 여야 격돌",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9xNERfeHJOWndia1NTT2tWeF8xeXV3cUxvUkhMUURZcGVKdUJyMzN2TUJwM2NDUG5wbTlpblhuampKcnpQcURCbk1GTWhOX196TmxYdlhfSk5xbFRBSm9JSV9xaGtJaWxGVkZR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE05eFVOU216ODhoX1FSTDJSSW9YR3VsRGlBd3NidEJ1UktVTzJBZGc0d2l4dmRpWmgyUTFfVFRxeHp2bXZVdENoUWtLRVp1SG5jQmVFbTVJRFZIckE",
+    "published": "2026-10-13T06:32:12+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "김현정 의원 “티빙 개인정보 유출 보상안, 피해 구제보다 자사 결제 유도”…과징금 감경 배제 촉구",
+    "tags": [
+      "금융"
+    ],
+    "title": "김현정 의원 “티빙 개인정보 유출 보상안, 피해 구제보다 자사 결제 유도”…과징금 감경 배제 촉구",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE05eFVOU216ODhoX1FSTDJSSW9YR3VsRGlBd3NidEJ1UktVTzJBZGc0d2l4dmRpWmgyUTFfVFRxeHp2bXZVdENoUWtLRVp1SG5jQmVFbTVJRFZIckE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE1vM04xaFJYUVFJN1QxNEZMdjVNTmxHa1dsZm1xdWlOeHdMR1Q3dGN6Q2tSRkl2c09yejYyWVlXUlVpSG5wWUpLNkVNbE9VUQ",
+    "published": "2026-10-13T08:28:15+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“공공기관, 개인정보 관리 사각지대…외부 설문·API 보안 허점”",
+    "tags": [],
+    "title": "“공공기관, 개인정보 관리 사각지대…외부 설문·API 보안 허점”",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1vM04xaFJYUVFJN1QxNEZMdjVNTmxHa1dsZm1xdWlOeHdMR1Q3dGN6Q2tSRkl2c09yejYyWVlXUlVpSG5wWUpLNkVNbE9VUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE1yZWVVdlEyeGVIQkpSaDdRb3p5dnFhVFZYQ3BBb0RUSkl4U1ZLMk0yX3JVQ2U5SE9yVllFSHNwNVRPSW9jWjdHQnFMOTEzQQ",
+    "published": "2026-10-13T06:18:01+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감]송경희 “韓 개인정보 유출 취약…IT 발전 대비 보안 투자 부족”",
+    "tags": [],
+    "title": "[2026 국감]송경희 “韓 개인정보 유출 취약…IT 발전 대비 보안 투자 부족”",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1yZWVVdlEyeGVIQkpSaDdRb3p5dnFhVFZYQ3BBb0RUSkl4U1ZLMk0yX3JVQ2U5SE9yVllFSHNwNVRPSW9jWjdHQnFMOTEzQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMijgFBVV95cUxNOTN3dDhFQzBSMEc0UHVwOEs4d1hCa205eTdDV3p3MGxpYWpxOGdNRXd6REFWOEdYanB2aERaSHBTc0thN011RFNSTzkxRDVaZ0ZNZnJkVjM4U3dyNEpKY193RW1zNXlYOTUxRGh1c3g1YTVMOTd4bHFxbWtoZDZLTzZ5bk1abmxNelZjYmhB",
+    "published": "2026-10-13T05:02:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "부산이 원했던 금융위원회, 결국 세종으로 간다… 지역 반발 거셀 듯",
+    "tags": [
+      "금융"
+    ],
+    "title": "부산이 원했던 금융위원회, 결국 세종으로 간다… 지역 반발 거셀 듯",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNOTN3dDhFQzBSMEc0UHVwOEs4d1hCa205eTdDV3p3MGxpYWpxOGdNRXd6REFWOEdYanB2aERaSHBTc0thN011RFNSTzkxRDVaZ0ZNZnJkVjM4U3dyNEpKY193RW1zNXlYOTUxRGh1c3g1YTVMOTd4bHFxbWtoZDZLTzZ5bk1abmxNelZjYmhB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMifEFVX3lxTE5HZGxtR2Q5b0tVQ1Y5eDgwOUViNFc1T1RXQ1pqbVVmUDcyYVVLOC1aYjBVX2NhUVpMUThhMzdUNXg4dXJiWmprTGNxUmlTSFdMdW51Y2JtV3dGOEExUmVNMDBsWTE3R29UTzFrUHh0YV9CMlczd0dlOGJFTGQ",
+    "published": "2026-10-13T05:19:11+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "법무부 금융위원회 등 중앙행정기관 44곳, 내년부터 2031년까지 순차적으로 세종시로 이전...대상 공무원 9929명",
+    "tags": [
+      "금융"
+    ],
+    "title": "법무부 금융위원회 등 중앙행정기관 44곳, 내년부터 2031년까지 순차적으로 세종시로 이전...대상 공무원 9929명",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5HZGxtR2Q5b0tVQ1Y5eDgwOUViNFc1T1RXQ1pqbVVmUDcyYVVLOC1aYjBVX2NhUVpMUThhMzdUNXg4dXJiWmprTGNxUmlTSFdMdW51Y2JtV3dGOEExUmVNMDBsWTE3R29UTzFrUHh0YV9CMlczd0dlOGJFTGQ?oc=5"
   }
 ]
