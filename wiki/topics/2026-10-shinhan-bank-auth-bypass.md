@@ -51,6 +51,8 @@ cves: []
 - 2026-10-08 [금융보안원](https://news.google.com/rss/articles/CBMia0FVX3lxTE9GUXRtNUl4QkEzUm5WR25lZHhsTWRKZVdVRFNtRnhIY0xSbTVXdUNkb2dqVmZsdVlmMmJvR0RveDBSN3o0bEVOTThDV1B3RFZZWEYwQmlTam1tbUhtWE9JOUplUy1QcXFQWVRJ?oc=5) — 국감 지적 '해킹 인지까지 5일 걸려' 감시체계 허술 확인
 - 2026-10-10 [BleepingComputer](https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/) — 중국 해커 ARTEX AI·**Claude agents** 사용 한국 금융기관 공격 사실 확인
 - 2026-10-10 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208814) — 용의자 추적 범위 확대, 텔레그램 계정 관련 중국어권 사이버범죄 커뮤니티 19개 계정 역할 분석, 전화번호 2개·IP 주소 3개 등 신원 추적 단서 확보
+- 2026-10-11 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208831) — 경찰청 사건 정식 수사로 전환, 43명 투입해 초동 수사 대응 및 수사기관 간 역할 분담 조정 중
+- 2026-10-11 [매체] — 신한은행 해킹 사전 경고에도 정보유출 확인, 보안예산 10% 축소 논란
 
 ## 관련
 
