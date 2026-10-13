@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-10-02 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4OWhCNjNEczdOQXRLWEk3TXV6VWFaUGZ5RmhUSF9HM1BNMGZ3X1F6eUEzM3FlNnRndkQtMEZiYW5RVkw5eVhmUkRBaFVmeHVzMURFVlhzYmtTcThnNVVrSk16d0I1bXc?oc=5) — 유출·침해사고 신속 조사체계 가동, 중요사건 집중관리 및 전담조사단 신설
+- 2026-10-13 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208857) — 개인정보위원장 중요 사건 신속 조사, 조사 비협조·증거 은닉 제재 수단 강화
 
 ## 관련
 
