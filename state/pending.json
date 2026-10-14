@@ -2226,5 +2226,372 @@
     "tags": [],
     "title": "국회 정무위, 개인정보위 ㆍ국무총리 비서실 ㆍ출연연구기관 국감 실시",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5SNjdWdlVqcUxETVljVlBobGlKVjR0UV9fRnpXZV9VRkFhSElNMEJ1aVhDd2RDbFFSMFpWb2VGRThDS2l1cUdSVjZTa2Fvc0ctSFBtSkRMUlFlUDVvRzF1c2NrbldwZ3FhQ1BEYVBkOHhvbGVZ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-84256",
+    "published": "2026-09-07T08:17:13.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An argument parsing issue in OpenVPN 2.1_rc10 through 2.6.22 and 2.7_alpha1 through 2.7.7 on Windows allows remote authenticated users to execute arbitrary commands via a crafted certificate subject",
+    "tags": [],
+    "title": "CVE-2026-84256 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84256"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-105390",
+    "published": "2026-10-13T23:17:26.470",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper synchronization in the OpenVPN ovpn-dco-win for Windows versions 0.6.5 through 1.3.5 and 2.4.0 through 2.8.7 allows local attackers to trigger a deadlock via a crafted write to the ovpn-dco device, causing the host to become unresponsive.",
+    "tags": [],
+    "title": "CVE-2026-105390 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105390"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-15468",
+    "published": "2026-10-13T23:17:32.437",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Authorization bypass through User-Controlled key vulnerability in HYPR Passwordless on Windows allows Privilege Escalation.\n\nThis issue affects HYPR Passwordless: before 11.3.3.",
+    "tags": [],
+    "title": "CVE-2026-15468 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15468"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-88964",
+    "published": "2026-10-13T23:19:13.687",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An integer underflow in OpenVPN version 2.7_alpha3 through 2.7.7 on Windows and Android allows remote authenticated servers to cause a denial of service or memory disclosure via crafted domain search options",
+    "tags": [],
+    "title": "CVE-2026-88964 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88964"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-92817",
+    "published": "2026-10-14T00:17:13.290",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Ignition Perspective module does not properly validate session privileges when determining Designer-level access. An authenticated user with access to a Vision project could provide their valid Vision session identifier and gain Designer-level privileges. An attacker could exploit these elevated privileges to execute arbitrary code in the context of the Ignition Gateway process.",
+    "tags": [],
+    "title": "CVE-2026-92817 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92817"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-110359",
+    "published": "2026-10-14T01:17:06.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hyland Desktop Host for Windows before 25.1.1 is vulnerable to local privilege escalation. This is caused by a privileged service running from the %PROGRAMDATA%\\Hyland\\DesktopHost\\bin folder with weak permissions. A local user can exploit this to escalate privileges.",
+    "tags": [],
+    "title": "CVE-2026-110359 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110359"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208865",
+    "published": "2026-10-14T10:38:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국제 해킹보안 컨퍼런스 'POC(Power of Community) 2026'이 오는 11월 12일부터 13일까지 서울 강남구 더 웨스틴 서울 파르나스에서 개최된다.2006년 국내 최초의 국제 해킹 컨퍼런스로 출발한 POC는 주최사 피오씨시큐리티(POC Security, 대표 정진욱)가 매년 11월에 운영해 온 행사로, 취약점 발견과 고급 익스플로잇 기법, 신규 보안 인사이트를 다루는 연구 중심 컨퍼런스로 자리매김해 왔다. 올해는 장소를 더 웨스틴 서울 파르나스로 옮겨 진행되며, 정규 발표와 함께 특별 패널 토론 세션도 마련될 예정",
+    "tags": [],
+    "title": "글로벌 해킹보안 컨퍼런스 'POC2026'…11월 12~13일 서울 개최",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208865"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208863",
+    "published": "2026-10-14T10:20:45+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "누구에게, 어떤 데이터를, 어디까지 열 것인가1편에서는 AI를 위해 데이터를 연결하고 정리하고 의미를 부여할수록 AI가 활용하기 좋은 데이터가 되지만, 잘못된 접근권한을 획득한 공격자에게도 그만큼 가치 있는 정보가 될 수 있다는 역설을 이야기했다.그렇다면 이제 다음 질문이 남는다.AI Ready Data를 어떻게 만들어야 하는가.모든 데이터를 하나의 플랫폼에 모으고 AI와 Agent가 자유롭게 찾아 쓰게 하면 되는 것일까.그렇게 단순한 문제는 아니다.AI가 활용하기 좋은 데이터 환경을 만드는 것과 기업의 모든 데이터를 AI에게 열어",
+    "tags": [],
+    "title": "[전문가 칼럼-10] 잘 정리된 데이터의 역설: AI Ready Data가 바꾸는 보안의 기준",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208863"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208862",
+    "published": "2026-10-14T08:48:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "최근 AI를 활용한 사이버공격이 현실화되면서 정부와 보안업계가 다시 분주해졌다. AI 에이전트가 사람을 대신해 취약점을 찾아내고 공격을 수행하는 시대가 도래했다며 대응체계 구축을 서둘러야 한다는 목소리가 높다. 정부 역시 AI 기반 사이버위협에 대응하기 위한 대책 마련에 나서고 있다.그런데 우리는 정말 이러한 공격이 등장할 것이라는 사실을 예측하지 못했던 것일까?과거 정부 발표와 관련 보고서들을 살펴보면 그렇지만은 않다.2017년 3월 20일, 당시 행정자치부 정부통합전산센터는 「정부통합전산센터, 인공지능으로 사이버공격 자동 방어」",
+    "tags": [
+      "AI"
+    ],
+    "title": "[김승주 교수 칼럼] 반복되는 사이버보안 종합대책, 이제는 이행 성적표를 공개할 때다",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208862"
+  },
+  {
+    "author": "BrianKrebs",
+    "category": "research",
+    "id": "https://krebsonsecurity.com/?p=74474",
+    "published": "2026-10-13T23:24:53+00:00",
+    "severity": "info",
+    "source": "Krebs on Security",
+    "summary": "Microsoft today issued updates to fix more than 1,400 security vulnerabilities in its Windows operating systems and other software. Today's epic patch batch dwarfs September's record of nearly 1,000 fixes, which was already about ten times the normal monthly patch load from Redmond.",
+    "tags": [],
+    "title": "Microsoft Patches More Than 1,400 Security Flaws",
+    "url": "https://krebsonsecurity.com/2026/10/microsoft-patches-more-than-1400-security-flaws/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25613",
+    "published": "2026-10-13T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of this vulnerability could allow an authenticated low-level user to escalate their privileges to a higher level. The following versions of Inductive Automation Ignition Software are affected: Ignition >=8.1.0| =8.3.0| =8.1.0| =8.3.0|",
+    "tags": [],
+    "title": "Inductive Automation Ignition Software",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/95808/",
+    "published": "2026-10-07T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Contents The AhnLab SEcurity intelligence Center (ASEC) collected attack logs targeting poorly managed Linux SSH servers through honeypots. This report compiles statistics by categorizing the attack sources identified in the third quarter of 2026, the attacks carried out from those sources, and the malware used. Purpose and Scope This report focuses on cases where scanning […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Statistical Report on Malware Targeting Linux SSH Servers in the Third Quarter of 2026",
+    "url": "https://asec.ahnlab.com/en/95808/"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/95809/",
+    "published": "2026-10-07T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Content The AhnLab SEcurity intelligence Center (ASEC) observed and classified attacks targeting MS-SQL servers and MySQL servers installed on Windows operating systems via the ASD infrastructure. This report summarizes the damage status, attack status, and the types of malware used in the attacks, based on logs identified in the third quarter of 2026. Purpose and […]",
+    "tags": [],
+    "title": "Q3 2026 Statistical Report on Malware Targeting Windows Database Servers",
+    "url": "https://asec.ahnlab.com/en/95809/"
+  },
+  {
+    "author": "Matthew Thomas",
+    "category": "research",
+    "id": "https://blogs.microsoft.com/on-the-issues/2026/10/01/preparing-governments-for-an-era-of-interconnected-cyber-risk/",
+    "published": "2026-10-01T14:00:00+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "According to this year’s Microsoft Digital Defense Report, government agencies and services were the sector most impacted by cyber threats in 2026, accounting for 27% of observed activity, up from 17% in 2025. The post Preparing governments for an era of interconnected cyber risk appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "Preparing governments for an era of interconnected cyber risk",
+    "url": "https://blogs.microsoft.com/on-the-issues/2026/10/01/preparing-governments-for-an-era-of-interconnected-cyber-risk/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9IOHZZa0hlQWdNaVlJLXZ3eFZWWWZMSndnWFNKQkNBb0hUV1F3U1BZdkhNMDZjQlExdG5ieEtQRG5GX3RjLVpoejNWSGxJSzZWNTZDM1c5cWpKdDVudC16ZtIBeEFVX3lxTE5NSjNvUURJR3p3UXVqUEkyc2xnOUxycWdWT2dVbDVfQ1E5SFhqbWJfQWNxMXRNYmlxNWRkYUNYQUF0d2RrTGVuM0N1eE9jd29XWXJIMzRYcFN5LV9qSFc1ZEhyS0xMS0xZY1NmU296dXJ0WjRqRWNfNQ",
+    "published": "2026-10-14T00:38:46+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융당국, 잇단 해킹에 보안 대응체계 점검…후속 대책 논의",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국, 잇단 해킹에 보안 대응체계 점검…후속 대책 논의",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9IOHZZa0hlQWdNaVlJLXZ3eFZWWWZMSndnWFNKQkNBb0hUV1F3U1BZdkhNMDZjQlExdG5ieEtQRG5GX3RjLVpoejNWSGxJSzZWNTZDM1c5cWpKdDVudC16ZtIBeEFVX3lxTE5NSjNvUURJR3p3UXVqUEkyc2xnOUxycWdWT2dVbDVfQ1E5SFhqbWJfQWNxMXRNYmlxNWRkYUNYQUF0d2RrTGVuM0N1eE9jd29XWXJIMzRYcFN5LV9qSFc1ZEhyS0xMS0xZY1NmU296dXJ0WjRqRWNfNQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE16M1pKdG9TTGRkeGJSVmc5bHJPaFhUZm41N0wzWjFaNlNhemlYSzBhclVKYTFhal9sM3pzbUhLbzZ4bXJpc1N2U3lJVzA1UVktd19j",
+    "published": "2026-10-14T00:40:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 오늘 금융권 해킹 점검회의…추가 유출 사고도 살핀다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 오늘 금융권 해킹 점검회의…추가 유출 사고도 살핀다",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE16M1pKdG9TTGRkeGJSVmc5bHJPaFhUZm41N0wzWjFaNlNhemlYSzBhclVKYTFhal9sM3pzbUhLbzZ4bXJpc1N2U3lJVzA1UVktd19j?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE84RWtWV2wyb2c4VkpqdDc2U0lHam5yczR2UHhhaS1FTHR3TkFNTzliYzg1YlBwcmh3Q3hPNGRuc2xTby1nbTRYcUhlRHllaWhnLWRYNUpmeDJHVW9BRV9Rcw",
+    "published": "2026-10-14T01:01:44+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[해킹에 뚫린 금융보안] 취약점 찾고도…은행권 해킹 방어망 '허점'",
+    "tags": [
+      "금융"
+    ],
+    "title": "[해킹에 뚫린 금융보안] 취약점 찾고도…은행권 해킹 방어망 '허점'",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84RWtWV2wyb2c4VkpqdDc2U0lHam5yczR2UHhhaS1FTHR3TkFNTzliYzg1YlBwcmh3Q3hPNGRuc2xTby1nbTRYcUhlRHllaWhnLWRYNUpmeDJHVW9BRV9Rcw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFA0ZXVrbTN5cnFPSmhSVEJKb3h0d0Y5d0txbnBGdXBHWjVlLUlkbENOLXVnNER6TWd5ODJuVFY0cC13cGlpbW8tVmlON21TaGpuMVlYVWF0akFiTzJ4aTRXVw",
+    "published": "2026-10-14T01:36:33+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "새마을금고·OK저축은행까지 해킹…금융위, 보안 대응 총점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "새마을금고·OK저축은행까지 해킹…금융위, 보안 대응 총점검",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA0ZXVrbTN5cnFPSmhSVEJKb3h0d0Y5d0txbnBGdXBHWjVlLUlkbENOLXVnNER6TWd5ODJuVFY0cC13cGlpbW8tVmlON21TaGpuMVlYVWF0akFiTzJ4aTRXVw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUEFVX3lxTE83Y3VEQmtaMzRxYmlfVFNPNjhvVURpOWxpdm1FcHlXRmpRQjRNUjF5NFFVLTJqYkxjbEd3a2Z3VGVzcU83YTVmQlctZjg3WW9F",
+    "published": "2026-10-14T00:30:45+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "“쉿! 표적 될라”… 금융가 ‘해커 포비아’[소소한 복도통신]",
+    "tags": [
+      "금융"
+    ],
+    "title": "“쉿! 표적 될라”… 금융가 ‘해커 포비아’[소소한 복도통신]",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE83Y3VEQmtaMzRxYmlfVFNPNjhvVURpOWxpdm1FcHlXRmpRQjRNUjF5NFFVLTJqYkxjbEd3a2Z3VGVzcU83YTVmQlctZjg3WW9F?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:241461",
+    "published": "2026-10-14T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "바젤은행감독위원회의 단순기본자본비율 규제이행평가(RCAP) 결과",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=241461&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE5rYmI3eG14T19scTg4ajNYbi00SDhudEJJck5rVjJ5STBDQXBCVC1hNUtxRk1yTk9Icl9uX0pRV2RFQzdMbTdCczdJZ2gxYzEwd1YtSFJzc044aGJ0Q19rWFRYUXozWWlsZV9tQ2Z0WkvSAXRBVV95cUxNMGdjckxuUF8xSDVjWGRMNkxRc0ozaTd1SG1aVkFCN1BCOXpIbGVaZEZKQU1Jc29JVEl1WUI5NFN1VmNtdkFmUEppSmNHUTNJR1YyM2xXMFd2OTRPdi1mQ1ctX0dKbmIwWlU1SzhndFVOVFBzUQ",
+    "published": "2026-10-13T22:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "해킹 과징금 7004억원 걷고도… 피해자 몫은 ‘0원’",
+    "tags": [],
+    "title": "해킹 과징금 7004억원 걷고도… 피해자 몫은 ‘0원’",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5rYmI3eG14T19scTg4ajNYbi00SDhudEJJck5rVjJ5STBDQXBCVC1hNUtxRk1yTk9Icl9uX0pRV2RFQzdMbTdCczdJZ2gxYzEwd1YtSFJzc044aGJ0Q19rWFRYUXozWWlsZV9tQ2Z0WkvSAXRBVV95cUxNMGdjckxuUF8xSDVjWGRMNkxRc0ozaTd1SG1aVkFCN1BCOXpIbGVaZEZKQU1Jc29JVEl1WUI5NFN1VmNtdkFmUEppSmNHUTNJR1YyM2xXMFd2OTRPdi1mQ1ctX0dKbmIwWlU1SzhndFVOVFBzUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTE51ZzRreDZCUnkzRDJjSzFIblhHMl9aamxadUM0Snl6NkpxcFZ6ek5hYXpYbHhxbWVOYmdXS0RoUzlHeGhoRXVSWXNkT1JoeUlqYllwd3NDQlZtYklLSXBr",
+    "published": "2026-10-14T00:29:51+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "정보보호 인증기업 침해사고 531건…이훈기 “ISMS-P 사후관리 실효성 의문”",
+    "tags": [],
+    "title": "정보보호 인증기업 침해사고 531건…이훈기 “ISMS-P 사후관리 실효성 의문”",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE51ZzRreDZCUnkzRDJjSzFIblhHMl9aamxadUM0Snl6NkpxcFZ6ek5hYXpYbHhxbWVOYmdXS0RoUzlHeGhoRXVSWXNkT1JoeUlqYllwd3NDQlZtYklLSXBr?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE96ZjlVZURSdVBhcUdfX0JYU2RyRE4tbDQ1UFA0RUpFa1AwV0trVjdPZnBBRDd6VDJMQkQyclhuUmJXUlFteEJjTFRzVHBFdDFTOXROa1ZyMzRxWlVlNU1ic9IBYEFVX3lxTE96ZjlVZURSdVBhcUdfX0JYU2RyRE4tbDQ1UFA0RUpFa1AwV0trVjdPZnBBRDd6VDJMQkQyclhuUmJXUlFteEJjTFRzVHBFdDFTOXROa1ZyMzRxWlVlNU1icw",
+    "published": "2026-10-13T02:52:52+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국정감사에서 답변하는 송경희 개인정보보호위원장",
+    "tags": [],
+    "title": "국정감사에서 답변하는 송경희 개인정보보호위원장",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE96ZjlVZURSdVBhcUdfX0JYU2RyRE4tbDQ1UFA0RUpFa1AwV0trVjdPZnBBRDd6VDJMQkQyclhuUmJXUlFteEJjTFRzVHBFdDFTOXROa1ZyMzRxWlVlNU1ic9IBYEFVX3lxTE96ZjlVZURSdVBhcUdfX0JYU2RyRE4tbDQ1UFA0RUpFa1AwV0trVjdPZnBBRDd6VDJMQkQyclhuUmJXUlFteEJjTFRzVHBFdDFTOXROa1ZyMzRxWlVlNU1icw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE80MkFOandxejZOb2ZrQ2F6X3Y3eEgzRnZPdWxmdy1GN251R0M0eThZWXMyTXNQWk9wTDg1ZGIwTWZjM3QyVXE4SXREQ3FKYUpGYkVfY0NUZkhlYVhSVUJRRWJWWmtRVkxlT242Y9IBb0FVX3lxTE1WT3JKT3c1UzNTUm5xNG9VOEhILWtBY2RBRVZPVmV4Q2lYekhMU2JjaDR4SmJiY1hWZDNGaDJHaDlQZC10Z0k4Wl9vWlg3dkVtLXVJRUdNY2h4MWVJb1VsTWlOSnhBOWFDUE1YS0Rfcw",
+    "published": "2026-10-13T23:30:51+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "유동수 정무위원장, 사이버보안 체계·개인정보 보호 강화 주문",
+    "tags": [],
+    "title": "유동수 정무위원장, 사이버보안 체계·개인정보 보호 강화 주문",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE80MkFOandxejZOb2ZrQ2F6X3Y3eEgzRnZPdWxmdy1GN251R0M0eThZWXMyTXNQWk9wTDg1ZGIwTWZjM3QyVXE4SXREQ3FKYUpGYkVfY0NUZkhlYVhSVUJRRWJWWmtRVkxlT242Y9IBb0FVX3lxTE1WT3JKT3c1UzNTUm5xNG9VOEhILWtBY2RBRVZPVmV4Q2lYekhMU2JjaDR4SmJiY1hWZDNGaDJHaDlQZC10Z0k4Wl9vWlg3dkVtLXVJRUdNY2h4MWVJb1VsTWlOSnhBOWFDUE1YS0Rfcw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFB1dmxpWjFqZlZ3MVdEdWJsR1MtNWQzYkNXVlVwQVVwMzltLVA2STg0c0FiekRYdG1YU2RCU3hTS1pEc3c3ZjJtMWZkT085WTFDdFJwMzJUU3dYcE1xZ3pXRDlwb0xUNlZU",
+    "published": "2026-10-14T01:21:14+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "카카오 브랜드메시지 스팸 신고 13만 건…개인정보위 판단은 왜 1년째 멈췄나",
+    "tags": [],
+    "title": "카카오 브랜드메시지 스팸 신고 13만 건…개인정보위 판단은 왜 1년째 멈췄나",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB1dmxpWjFqZlZ3MVdEdWJsR1MtNWQzYkNXVlVwQVVwMzltLVA2STg0c0FiekRYdG1YU2RCU3hTS1pEc3c3ZjJtMWZkT085WTFDdFJwMzJUU3dYcE1xZ3pXRDlwb0xUNlZU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9iMlFXT2hzMlZkdW81QmtLRHZSQ0pla0JQaUNwOEEwUEhZMnRuOVhXUkJULTV4dGlhaE1sVFRCeTJydElGeGlRT0ZnS2tKOHVvM3o5akhJVDdzUQ",
+    "published": "2026-10-13T07:18:59+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡, '역대 최대' 6247억 과징금 2년간 6번 나눠 낸다",
+    "tags": [],
+    "title": "쿠팡, '역대 최대' 6247억 과징금 2년간 6번 나눠 낸다",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9iMlFXT2hzMlZkdW81QmtLRHZSQ0pla0JQaUNwOEEwUEhZMnRuOVhXUkJULTV4dGlhaE1sVFRCeTJydElGeGlRT0ZnS2tKOHVvM3o5akhJVDdzUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9NOWVsR0RCd000WUZpdG1tZXBfb1ZqZ1BUMHVHNHhKaUt1MS1vUGdINHpBNVg1RFF3ZUNUQkdKZEJzczEwTVE5SDFZSVJRRTI2TENfcVc4TDU2eDJnbWFLeg",
+    "published": "2026-10-12T08:20:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "(통신 보안비용)③보안 안건은 보고뿐…2.4조 투자 감독은 누가",
+    "tags": [],
+    "title": "(통신 보안비용)③보안 안건은 보고뿐…2.4조 투자 감독은 누가",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9NOWVsR0RCd000WUZpdG1tZXBfb1ZqZ1BUMHVHNHhKaUt1MS1vUGdINHpBNVg1RFF3ZUNUQkdKZEJzczEwTVE5SDFZSVJRRTI2TENfcVc4TDU2eDJnbWFLeg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9JZjZiTGoySHl4S3hMQXdLRXI5dVVJdXBDeTdXTVQ3SWZsS1VHRjVNRTIwUWlnaWN3c2RSRTNPQ0wxZnlUTHN5T0VyM0dQU05QY2JFbWlHamd1TWlQRjlxbS1BNjJmbDJwR0NMMw",
+    "published": "2026-10-14T01:33:34+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 금융권 해킹 대응 점검···추가 보안 대책 논의",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융권 해킹 대응 점검···추가 보안 대책 논의",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9JZjZiTGoySHl4S3hMQXdLRXI5dVVJdXBDeTdXTVQ3SWZsS1VHRjVNRTIwUWlnaWN3c2RSRTNPQ0wxZnlUTHN5T0VyM0dQU05QY2JFbWlHamd1TWlQRjlxbS1BNjJmbDJwR0NMMw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE1NbzJHMmFWOW1LaHVTdGpDQ2xHNlpGMU4zczAzQnRsNlIyZXc5ellfb0tVelM1QzUyQVl3UVQ1NGotVnE3bXlucVlEeEo4V0FPRGRuSEU3RzRmak8tLUpxY1VvOC15ZDRKWGEtaERpWVVFWkdk",
+    "published": "2026-10-13T23:37:37+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융당국, 잇단 해킹 사고에 보안점검 결과 점검…추가 대응책 논의",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국, 잇단 해킹 사고에 보안점검 결과 점검…추가 대응책 논의",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1NbzJHMmFWOW1LaHVTdGpDQ2xHNlpGMU4zczAzQnRsNlIyZXc5ellfb0tVelM1QzUyQVl3UVQ1NGotVnE3bXlucVlEeEo4V0FPRGRuSEU3RzRmak8tLUpxY1VvOC15ZDRKWGEtaERpWVVFWkdk?oc=5"
   }
 ]
