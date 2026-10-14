@@ -11,6 +11,7 @@ cves: [CVE-2026-104935]
 
 - 2026-10-13 [The Hacker News](https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html) — 보안회사 Volexity, 세 개 제로데이 체인화해 루트 명령 실행 공격 발표. Ivanti 두 개만 패치, 세 번째 미패치 상태
 - 2026-10-13 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-104935) — CVE-2026-104935 스푸핑을 통한 인증우회 CISA KEV 추가
+- 2026-10-14 [CISA](https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/) — CISA, 관리자에게 10월 1일부터 제로데이 악용 중인 Ivanti 취약점 긴급 패치 경고
 
 ## 관련
 

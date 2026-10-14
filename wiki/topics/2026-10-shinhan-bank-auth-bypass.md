@@ -53,6 +53,7 @@ cves: []
 - 2026-10-10 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208814) — 용의자 추적 범위 확대, 텔레그램 계정 관련 중국어권 사이버범죄 커뮤니티 19개 계정 역할 분석, 전화번호 2개·IP 주소 3개 등 신원 추적 단서 확보
 - 2026-10-11 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208831) — 경찰청 사건 정식 수사로 전환, 43명 투입해 초동 수사 대응 및 수사기관 간 역할 분담 조정 중
 - 2026-10-11 [매체] — 신한은행 해킹 사전 경고에도 정보유출 확인, 보안예산 10% 축소 논란
+- 2026-10-14 [금융위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTFA0ZXVrbTN5cnFPSmhSVEJKb3h0d0Y5d0txbnBGdXBHWjVlLUlkbENOLXVnNER6TWd5ODJuVFY0cC13cGlpbW8tVmlON21TaGpuMVlYVWF0akFiTzJ4aTRXVw?oc=5) — 새마을금고·OK저축은행까지 피해 확대 확인, 금융위 보안 대응 총점검 재지시
 
 ## 관련
 
