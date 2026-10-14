@@ -2593,5 +2593,1350 @@
     ],
     "title": "금융당국, 잇단 해킹 사고에 보안점검 결과 점검…추가 대응책 논의",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1NbzJHMmFWOW1LaHVTdGpDQ2xHNlpGMU4zczAzQnRsNlIyZXc5ellfb0tVelM1QzUyQVl3UVQ1NGotVnE3bXlucVlEeEo4V0FPRGRuSEU3RzRmak8tLUpxY1VvOC15ZDRKWGEtaERpWVVFWkdk?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2016-4658",
+    "published": "2016-09-25T10:59:02.343",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "xpointer.c in libxml2 before 2.9.5 (as used in Apple iOS before 10, OS X before 10.12, tvOS before 10, and watchOS before 3, and other products) does not forbid namespace nodes in XPointer ranges, which allows remote attackers to execute arbitrary code or cause a denial of service (use-after-free and memory corruption) via a crafted XML document.",
+    "tags": [],
+    "title": "CVE-2016-4658 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-4658"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-16931",
+    "published": "2017-11-23T21:29:00.390",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "parser.c in libxml2 before 2.9.5 mishandles parameter-entity references because the NEXTL macro calls the xmlParserHandlePEReference function in the case of a '%' character in a DTD name.",
+    "tags": [],
+    "title": "CVE-2017-16931 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16931"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-7375",
+    "published": "2018-02-19T19:29:00.703",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw in libxml2 allows remote XML entity inclusion with default parser flags (i.e., when the caller did not request entity substitution, DTD validation, external DTD subset loading, or default DTD attributes). Depending on the context, this may expose a higher-risk attack surface in libxml2 not usually reachable with default parser flags, and expose content from local files, HTTP, or FTP servers (which might be otherwise unreachable).",
+    "tags": [],
+    "title": "CVE-2017-7375 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-7375"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2017-7376",
+    "published": "2018-02-19T19:29:00.767",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Buffer overflow in libxml2 allows remote attackers to execute arbitrary code by leveraging an incorrect limit for port values when handling redirects.",
+    "tags": [],
+    "title": "CVE-2017-7376 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-7376"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2018-18928",
+    "published": "2018-11-04T20:29:00.247",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "International Components for Unicode (ICU) for C/C++ 63.1 has an integer overflow in number::impl::DecimalQuantity::toScientificString() in i18n/number_decimalquantity.cpp.",
+    "tags": [],
+    "title": "CVE-2018-18928 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18928"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-9169",
+    "published": "2019-02-26T02:29:00.497",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In the GNU C Library (aka glibc or libc6) through 2.29, proceed_next_node in posix/regexec.c has a heap-based buffer over-read via an attempted case-insensitive regular-expression match.",
+    "tags": [],
+    "title": "CVE-2019-9169 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-9169"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-9636",
+    "published": "2019-03-08T21:29:00.703",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Python 2.7.x through 2.7.16 and 3.x through 3.7.2 is affected by: Improper Handling of Unicode Encoding (with an incorrect netloc) during NFKC normalization. The impact is: Information disclosure (credentials, cookies, etc. that are cached against a given hostname). The components are: urllib.parse.urlsplit, urllib.parse.urlparse. The attack vector is: A specially crafted URL could be incorrectly parsed to locate cookies or authentication data and send that information to a different host than when parsed correctly. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.7, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.3, v3.7.3rc1, v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9.",
+    "tags": [],
+    "title": "CVE-2019-9636 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-9636"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2019-3859",
+    "published": "2019-03-21T16:01:04.843",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An out of bounds read flaw was discovered in libssh2 before 1.8.1 in the _libssh2_packet_require and _libssh2_packet_requirev functions. A remote attacker who compromises a SSH server may be able to cause a Denial of Service or read data in the client memory.",
+    "tags": [],
+    "title": "CVE-2019-3859 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-3859"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2019-9948",
+    "published": "2019-03-23T18:29:02.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "urllib in Python 2.x through 2.7.16 supports the local_file: scheme, which makes it easier for remote attackers to bypass protection mechanisms that blacklist file: URIs, as demonstrated by triggering a urllib.urlopen('local_file:///etc/passwd') call.",
+    "tags": [],
+    "title": "CVE-2019-9948 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-9948"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-8457",
+    "published": "2019-05-30T16:29:01.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQLite3 from 3.6.0 to and including 3.27.2 is vulnerable to heap out-of-bound read in the rtreenode() function when handling invalid rtree tables.",
+    "tags": [],
+    "title": "CVE-2019-8457 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-8457"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-10160",
+    "published": "2019-06-07T18:29:00.280",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security regression of CVE-2019-9636 was discovered in python since commit d537ab0ff9767ef024f26246899728f0116b1ec3 affecting versions 2.7, 3.5, 3.6, 3.7 and from v3.8.0a4 through v3.8.0b1, which still allows an attacker to exploit CVE-2019-9636 by abusing the user and password parts of a URL. When an application parses user-supplied URLs to store cookies, authentication credentials, or other kind of information, it is possible for an attacker to provide specially crafted URLs to make the application locate host-related information (e.g. cookies, authentication data) and send them to a different host than where it should, unlike if the URLs had been correctly parsed. The result of an attack may vary based on the application.",
+    "tags": [],
+    "title": "CVE-2019-10160 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10160"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-12900",
+    "published": "2019-06-19T23:15:09.910",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "BZ2_decompress in decompress.c in bzip2 through 1.0.6 has an out-of-bounds write when there are many selectors.",
+    "tags": [],
+    "title": "CVE-2019-12900 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12900"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-5481",
+    "published": "2019-09-16T19:15:10.587",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Double-free vulnerability in the FTP-kerberos code in cURL 7.52.0 to 7.65.3.",
+    "tags": [],
+    "title": "CVE-2019-5481 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5481"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-5482",
+    "published": "2019-09-16T19:15:10.633",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.",
+    "tags": [],
+    "title": "CVE-2019-5482 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5482"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-18224",
+    "published": "2019-10-21T17:15:09.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "idn2_to_ascii_4i in lib/lookup.c in GNU libidn2 before 2.1.1 has a heap-based buffer overflow via a long domain string.",
+    "tags": [],
+    "title": "CVE-2019-18224 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-18224"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-107699",
+    "published": "2026-10-08T19:17:01.853",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ppt2png through 0.0.6 contains an OS command injection vulnerability that allows attackers to execute operating system commands by supplying unsanitized input or output path arguments. Attackers can append shell metacharacters such as ';' to file names passed to child_process.exec() in ppt2png.js, running commands with Node.js process privileges.",
+    "tags": [],
+    "title": "CVE-2026-107699 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107699"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-104075",
+    "published": "2026-10-08T20:17:29.377",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TVU Networks Receiver/Transceiver devices running firmware before version 7.9 contain an authentication bypass vulnerability in the web management login endpoint POST /tvu/Login that allows remote unauthenticated attackers to obtain an administrative session by submitting an empty or absent UserName parameter. Attackers can send a crafted HTTP request directly, bypassing client-side JavaScript validation, to receive a valid session cookie regardless of the password value and gain full administrative control of the device's web management interface.",
+    "tags": [],
+    "title": "CVE-2026-104075 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104075"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-78797",
+    "published": "2026-10-09T20:17:11.117",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in iStoreOS istoreos-24.10.7 and before allows a remote attacker to execute arbitrary code via the task_id in tasks-lib.lua.",
+    "tags": [],
+    "title": "CVE-2026-78797 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78797"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-108540",
+    "published": "2026-10-11T07:17:23.303",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in OpenSpug Spug up to 3.4.0/4.0.1. This impacts an unknown function of the file /exec/transfer of the component File Transfer. Executing a manipulation can lead to os command injection. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-108540 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108540"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-89309",
+    "published": "2026-10-13T09:17:22.140",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The authorization middleware of the WMS MobileServer\nfails to require authentication in two distinct cases. First, it\nonly requires an Authorization header for GET and HEAD requests; requests\nusing any other HTTP method are processed without an authentication check.\nSecond, for any HTTP method including GET and HEAD, a request carrying a\nmalformed or non-bearer Authorization header is passed through without\na valid token being required.\n\n\n\n\n\nThe middleware does validate a token whenever a\nwell-formed one is present, but in these two cases it does not\nrequire one. A remote attacker with network access to the service can\ntherefore invoke API functionality without valid credentials.",
+    "tags": [],
+    "title": "CVE-2026-89309 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89309"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-110392",
+    "published": "2026-10-14T02:16:59.653",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in Samsung Open Source QA-Board allows : OS Command Injection.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-110392 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110392"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-92097",
+    "published": "2026-10-14T02:17:01.397",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Click to Chat for WhatsApp plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in versions up to, and including, 4.44 This is due to the greetings_dialog() function building the {url} template placeholder from a sanitize_text_field()-filtered $_SERVER['REQUEST_URI'] on archive pages and then passing the substituted greeting content to do_shortcode() in the greetings-1 and greetings-2 templates, without stripping shortcode delimiters. Because wp_kses() runs against main_content BEFORE the {url} substitution, the attacker-controlled URL bytes reach do_shortcode() unfiltered. This makes it possible for unauthenticated attackers to execute arbitrary shortcodes registered by WordPress core, the active theme, or any other plugin (e.",
+    "tags": [],
+    "title": "CVE-2026-92097 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92097"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-93388",
+    "published": "2026-10-14T02:17:01.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Printcart Store (PCDesigner / NB Designer) plugin for WooCommerce is vulnerable to unauthenticated arbitrary file upload leading to remote code execution in all versions up to, and including, 2.9.1 The nbdesigner_copy_image_from_url AJAX action is registered for logged-out callers (wp_ajax_nopriv_), and its Google Drive branch rebuilds the destination filename from the raw, attacker-supplied gapi[name] parameter — bypassing the jpg/jpeg/png/gif allow-list applied on the other branch — and writes the fetched bytes to a web-accessible directory (wp-content/uploads/nbdesigner/temp/). This makes it possible for unauthenticated attackers to write a .php file to a web-served, PHP-executing location and, by supplying their own Google Drive file and OAuth token as the content source, execute arbitrary code on the server. The required save-design nonce is handed to anonymous callers by the nbd_check_use_logged_in endpoint, so it presents no barrier.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-93388 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93388"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-110002",
+    "published": "2026-10-14T03:17:20.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Snazzy Social Media Feed plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.5 via the (file scope) function. This is due to missing WordPress bootstrap, authentication, capability, and nonce checks in the standalone save-to-cache.php script, combined with insufficient sanitization of the pluginURL parameter before it is written to a web-executable PHP file. This makes it possible for authenticated attackers, with subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. The save-to-cache.php script is directly reachable without loading WordPress; FILTER_SANITIZE_URL — the only filter applied to the pluginURL value — preserves the characters required to craft a valid PHP payload, which is then written verbatim into cached-content/cached-feed.php and immediately executable via a single GET request.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-110002 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110002"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-97657",
+    "published": "2026-10-14T03:17:37.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Abandoned Cart Pro for WooCommerce plugin for WordPress is vulnerable to Authentication Bypass via Malleable Encryption and Bypassable HMAC in all versions up to, and including, 10.8.0. This is due to the use of MAC-free AES-CTR encryption for cart-recovery link tokens — where the 8-byte CTR nonce is carried inside the ciphertext blob and the encryption key is looked up using the attacker-supplied `user_email` GET parameter — combined with an HMAC nonce check in `wcap_email_track_links()` that is only enforced when the `wcap_nonce` parameter is non-empty, allowing complete bypass by omission, and an insecure direct object reference on the decrypted `abandoned_id` with no ownership verification confirming the cart belongs to the email used for decryption. This makes it possible for unauthenticated attackers who possess a single legitimate cart-recovery link (obtained from their own reminder email) to recover the keystream, forge a ciphertext that decrypts to any victim's cart ID, and trigger a call to `wp_set_auth_cookie()` for the victim user — achieving full account takeover of any user who has ever abandoned a cart, including administrators. The auto-login feature defaults to enabled and is forced on during plugin upgrades, meaning all affected installations are exploitable without any additional configuration.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-97657 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97657"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-97668",
+    "published": "2026-10-14T03:17:37.797",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Abandoned Cart Pro for WooCommerce plugin for WordPress is vulnerable to SQL Injection via the guest cart persistent meta_value in all versions up to, and including, 10.8.0 due to insufficient escaping on user supplied data and lack of sufficient preparation on the existing SQL query in the update_guest_persistent_cart() function. The abandoned_cart_info value, populated from attacker-controlled checkout fields such as the SMS consent field, is passed through stripslashes() and concatenated directly into an UPDATE statement while the adjacent SELECT and INSERT use prepared statements. This makes it possible for unauthenticated attackers to append additional SQL to the query. Because the sink is an UPDATE ... SET on the wp_usermeta table, the injection can both extract sensitive information from the database via time-based blind techniques and modify usermeta rows; it has been demonstrated to escalate an arbitrary account to administrator by writing a wp_capabilities row that shadows the legitimate one.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-97668 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97668"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-104800",
+    "published": "2026-10-14T04:18:12.563",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The AGE-GATE plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.0 via the 'width (and height)' parameter parameter. This is due to missing authentication, capability checks, and nonce verification on the standalone admin.php endpoint, combined with unsanitized injection of POST parameters directly into generated PHP source written to an included file. This makes it possible for unauthenticated attackers to execute code on the server. This is possible because admin.php does not load WordPress and carries no ABSPATH guard, making it a fully unauthenticated entry point regardless of the decorative capability arguments registered via the plugin's simulated menu API.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-104800 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104800"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-87855",
+    "published": "2026-10-14T04:18:52.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The JTL-Connector for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.4.3 via the saveImage() function. This is due to the startSession() function accepting an empty jtlauth parameter as a valid credential, combined with insufficient file type validation in handleImagePush(). This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-87855 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87855"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-89310",
+    "published": "2026-10-14T07:17:04.650",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A parameter taken from the request body is inserted into\na T-SQL statement without parameterization or escaping, allowing\na remote attacker to execute arbitrary SQL statements in the context of the\napplication's database account.",
+    "tags": [],
+    "title": "CVE-2026-89310 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89310"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2016-5131",
+    "published": "2016-07-23T19:59:13.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use-after-free vulnerability in libxml2 through 2.9.4, as used in Google Chrome before 52.0.2743.82, allows remote attackers to cause a denial of service or possibly have unspecified other impact via vectors related to the XPointer range-to function.",
+    "tags": [],
+    "title": "CVE-2016-5131 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-5131"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2017-17512",
+    "published": "2017-12-11T06:29:00.270",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "sensible-browser in sensible-utils before 0.0.11 does not validate strings before launching the program specified by the BROWSER environment variable, which allows remote attackers to conduct argument-injection attacks via a crafted URL, as demonstrated by a --proxy-pac-file argument.",
+    "tags": [],
+    "title": "CVE-2017-17512 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17512"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2019-3855",
+    "published": "2019-03-21T21:29:00.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An integer overflow flaw which could lead to an out of bounds write was discovered in libssh2 before 1.8.1 in the way packets are read from the server. A remote attacker who compromises a SSH server may be able to execute code on the client system when a user connects to the server.",
+    "tags": [],
+    "title": "CVE-2019-3855 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-3855"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2019-3856",
+    "published": "2019-03-25T19:29:01.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An integer overflow flaw, which could lead to an out of bounds write, was discovered in libssh2 before 1.8.1 in the way keyboard prompt requests are parsed. A remote attacker who compromises a SSH server may be able to execute code on the client system when a user connects to the server.",
+    "tags": [],
+    "title": "CVE-2019-3856 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-3856"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2019-3857",
+    "published": "2019-03-25T19:29:01.837",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An integer overflow flaw which could lead to an out of bounds write was discovered in libssh2 before 1.8.1 in the way SSH_MSG_CHANNEL_REQUEST packets with an exit signal are parsed. A remote attacker who compromises a SSH server may be able to execute code on the client system when a user connects to the server.",
+    "tags": [],
+    "title": "CVE-2019-3857 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-3857"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2019-5018",
+    "published": "2019-05-10T19:29:07.747",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An exploitable use after free vulnerability exists in the window function functionality of Sqlite3 3.26.0. A specially crafted SQL command can cause a use after free vulnerability, potentially resulting in remote code execution. An attacker can send a malicious SQL command to trigger this vulnerability.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-5018 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5018"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2018-12886",
+    "published": "2019-05-22T19:29:00.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "stack_protect_prologue in cfgexpand.c and stack_protect_epilogue in function.c in GNU Compiler Collection (GCC) 4.1 through 8 (under certain circumstances) generate instruction sequences when targeting ARM targets that spill the address of the stack protector guard, which allows an attacker to bypass the protection of -fstack-protector, -fstack-protector-all, -fstack-protector-strong, and -fstack-protector-explicit against stack overflow by controlling what the stack canary is compared against.",
+    "tags": [],
+    "title": "CVE-2018-12886 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-12886"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2019-5443",
+    "published": "2019-07-02T19:15:10.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A non-privileged user or program can put code and a config file in a known non-privileged path (under C:/usr/local/) that will make curl <= 7.65.1 automatically run the code (as an openssl \"engine\") on invocation. If that curl is invoked by a privileged user it can do anything it wants.",
+    "tags": [],
+    "title": "CVE-2019-5443 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5443"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2019-17543",
+    "published": "2019-10-14T02:15:10.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LZ4 before 1.9.2 has a heap-based buffer overflow in LZ4_write32 (related to LZ4_compress_destSize), affecting applications that call LZ4_compress_fast with a large input. (This issue can also lead to data corruption.) NOTE: the vendor states \"only a few specific / uncommon usages of the API are at risk.\"",
+    "tags": [],
+    "title": "CVE-2019-17543 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17543"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2019-17498",
+    "published": "2019-10-21T22:15:10.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In libssh2 v1.9.0 and earlier versions, the SSH_MSG_DISCONNECT logic in packet.c has an integer overflow in a bounds check, enabling an attacker to specify an arbitrary (out-of-bounds) offset for a subsequent memory read. A crafted SSH server may be able to disclose sensitive information or cause a denial of service condition on the client system when a user connects to the server.",
+    "tags": [],
+    "title": "CVE-2019-17498 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17498"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-54099",
+    "published": "2026-06-22T14:17:40.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. The WICD CSR auto-approver validates that a Certificate Signing Request contains the organization system:wicd-nodes but does not reject additional organization values such as system:masters. A compromised Windows worker node that holds WICD credentials can submit a CSR that is auto-approved and signed by the cluster, yielding a client certificate that grants cluster-administrator privileges and enabling full cluster takeover.",
+    "tags": [],
+    "title": "CVE-2026-54099 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54099"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-54100",
+    "published": "2026-06-22T14:17:40.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Windows Machine Config Operator (WMCO) for Red Hat OpenShift Container Platform. WMCO establishes SSH connections to Windows worker nodes without verifying the remote server host key. An adjacent-network attacker who can intercept or redirect WMCO's SSH session can capture WICD and kubelet bootstrap credentials transferred during node configuration, enabling compromise of Windows node identities in the cluster.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-54100 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54100"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-74580",
+    "published": "2026-08-21T17:16:44.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nvhost: reset the vring metadata cache on vring reconfiguration\n\nvq->meta_iotlb[] caches the vhost_iotlb_map that backs each vring\nmetadata region, and iotlb_access_ok() returns early on a cache hit,\ntaking the hit as proof that the region has already been validated:\n\n\tif (vhost_vq_meta_fetch(vq, addr, len, type))\n\t\treturn true;\n\nThe cache is reset on VHOST_IOTLB_UPDATE and VHOST_IOTLB_INVALIDATE, on\ndevice IOTLB (re)initialisation and on vq reset, but not when\nVHOST_SET_VRING_ADDR replaces vq->desc, vq->avail and vq->used, nor when\nVHOST_SET_VRING_NUM changes the region sizes.\n\nWith a device IOTLB attached both ioctls are accepted while the vq is\nlive, and neither validates the addresses at ioctl time: vq_access_ok()\nand vq_log_used_access_ok() return true early because the addresses are\nGIOVAs, deferring validation to prefetch time.  Once the cache has been\npopulated that deferred validation no longer runs -- vq_meta_prefetch()\nhits the stale entry and returns true -- and vhost_vq_meta_fetch() keeps\ntranslating through the old mapping as\n\n\tmap->addr + addr - map->start\n\nfor an address the mapping no longer covers.  vhost_copy_to_user() and\nvhost_copy_from_user() consume the result with __copy_to_user() and\n__copy_from_user(), which do not check it either, so a subsequent used\nring update or descriptor fetch accesses memory outside the region the\nIOTLB actually maps.\n\nReset the metadata cache whenever the vr",
+    "tags": [],
+    "title": "CVE-2026-74580 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74580"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-77532",
+    "published": "2026-08-26T11:16:38.343",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor with access to an adjacent network could exploit a Buffer Overflow vulnerability found in a DHCPv6-enabled EdgeMAX EdgeSwitch to initiate a Remote Code Execution on such device.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-77532 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77532"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-107723",
+    "published": "2026-10-08T22:17:28.623",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "fast-jwt provides fast JSON Web Token (JWT) implementation. Prior to 6.3.0, fast-jwt createVerifier accepts a validly signed JWT whose payload is a JSON array because src/decoder.js checks that the payload is an object but does not reject arrays. The claim validator loop then finds no named exp, nbf, iss, aud, sub, jti, or nonce properties and silently skips those configured checks, returning the array as a successfully verified payload. An attacker who can produce or influence a validly signed token may bypass expiry, issuer, audience, subject, revocation, and replay protections. The opt-in requiredClaims option can block missing claims, and signature verification itself is not bypassed. This issue is fixed in version 6.3.0.",
+    "tags": [],
+    "title": "CVE-2026-107723 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107723"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-107733",
+    "published": "2026-10-08T23:16:59.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SumatraPDF is a multi-format reader for Windows. In 3.6.1 and earlier, FrameOnCommand() handles CmdExec by passing a null current-tab pointer to RunWithExe(), which dereferences WindowTab::filePath. A local process in the same interactive Windows session, at an integrity level greater than or equal to SumatraPDF's under Windows UIPI, can dispatch CmdExec over DDE or WM_COPYDATA while no document tab is open, causing abrupt process termination and loss of unsaved state. No broader impact is claimed beyond the advisory-supported conditions. No fixed version is available as of this review.",
+    "tags": [],
+    "title": "CVE-2026-107733 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107733"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-107738",
+    "published": "2026-10-08T23:16:59.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SumatraPDF is a multi-format reader for Windows. In 3.6.1 and earlier, ChmFile::GetCharZ() narrows file-controlled unsigned string offsets from /#WINDOWS and /#IVB to signed integers without a lower-bound check. An offset that becomes negative can make the function read before the /#STRINGS buffer, causing deterministic application termination. No broader impact is claimed beyond the advisory-supported conditions. No fixed version is available as of this review.",
+    "tags": [],
+    "title": "CVE-2026-107738 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107738"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-107811",
+    "published": "2026-10-09T16:17:25.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, ordinary authenticated users can access /api/nodes and /api/nodes/:id, whose responses serialize the node token field. The same token is accepted as X-Node-Secret by AuthRequired and maps the request to initUser, allowing the user to impersonate a trusted node against a reachable cluster member. This cross-node authentication bypass can expose sensitive management operations, including configuration synchronization and service restart. This issue is fixed in version 2.5.0.",
+    "tags": [],
+    "title": "CVE-2026-107811 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107811"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-108259",
+    "published": "2026-10-09T21:17:04.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Tina is a headless content management system. Prior to 3.0.0, @tinacms/cli reads Git branch values from VERCEL_GIT_COMMIT_REF, GITHUB_BRANCH, or HEAD, incorporates the raw value into the API URL, and interpolates that URL into JavaScript string literals in packages/@tinacms/cli/src/next/codegen/index.ts and packages/@tinacms/cli/src/next/codegen/codegen/plugin.ts. A crafted Git-valid branch name containing a quote can terminate the generated string and inject an expression that executes when the generated client module is imported during a preview build. The injected code runs with the build process privileges and can read environment credentials, modify deployment artifacts, or make network requests. This issue is fixed in version 3.0.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-108259 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108259"
+  },
+  {
+    "category": "high",
+    "cvss": 3.3,
+    "id": "CVE-2026-108603",
+    "published": "2026-10-10T20:16:32.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "slide-maker through 5.8.0 contains a path traversal vulnerability in generate_images_openai.py that allows attackers to write image files outside the output directory via manifest-supplied filenames. Attackers can influence deck source material so the image prompt manifest contains ../ or symlinked filenames, creating directories and overwriting existing files at arbitrary paths.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-108603 (CVSS 3.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108603"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-108708",
+    "published": "2026-10-11T02:16:39.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wukong_HRM through commit 186115e contains a missing authorization vulnerability because EmployeeAspect assigns every caller the HR administrator role and EmployeeUtil data-scope checks return all employees. Any authenticated low-privileged employee can read payslips, salary records, bank cards and personal data, edit bank cards, and delete employees, departments and contracts company-wide.",
+    "tags": [],
+    "title": "CVE-2026-108708 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108708"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-104995",
+    "published": "2026-10-14T02:16:56.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The BP Profile Search plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 5.9 via the 'ajax_template' value parsed from the client-controlled 'bps_directory' cookie during BuddyPress AJAX directory requests. The bps_directory_ajax() filter (hooked onto bp_legacy_object_template_path and bp_nouveau_object_template_path) reads the cookie, applies only a referer-derived 'page' comparison in bps_get_directory_data() (where bps_current_page() uses HTTP_REFERER during AJAX and is therefore also attacker-controlled), and then suffixes the attacker-controlled template value with '.php' and passes it to bp_locate_template() with no basename restriction, no whitelist, and no path-traversal check. This makes it possible for unauthenticated attackers to include arbitrary PHP files on the server, which can lead to remote code execution when PHP files can be uploaded or when images such as the default wordpress:php8.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-104995 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104995"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-17092",
+    "published": "2026-10-14T02:16:59.783",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Directorist: AI-Powered Business Directory, Listings & Classified Ads plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 8.10.2.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary business directory listings, including those owned by other users and posts in publish, draft, or private status. The nonces guarding the endpoint do not constitute an authorization barrier because both directorist_nonce and atbdp_nonce_js are exposed to all logged-in users via wp_localize_script.",
+    "tags": [],
+    "title": "CVE-2026-17092 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17092"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110444",
+    "published": "2026-10-14T03:17:20.363",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TeamPlus Messenger developed by Teamplus Technology has a Code Injection vulnerability. Unauthenticated remote attackers can trick users into opening a crafted link to inject and execute arbitrary JavaScript. After the user confirms a Windows security warning, attackers can execute arbitrary code with the privileges of the current user.",
+    "tags": [],
+    "title": "CVE-2026-110444 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110444"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110445",
+    "published": "2026-10-14T03:17:20.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TeamPlus Messenger developed by Teamplus Technology has a Code Injection vulnerability. Unauthenticated remote attackers can trick users into interacting with crafted content to inject and execute arbitrary JavaScript. After the user confirms a Windows security warning, attackers can execute arbitrary code with the privileges of the current user.",
+    "tags": [],
+    "title": "CVE-2026-110445 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110445"
+  },
+  {
+    "category": "high",
+    "cvss": 7.7,
+    "id": "CVE-2026-14765",
+    "published": "2026-10-14T03:17:21.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Epic Games Unreal Engine versions up to and including 5.8.0 ship with an insecure default configuration for the LaunchURL Blueprint node (UKismetSystemLibrary::LaunchURL). The URL scheme filter (FURLRequestFilter) is empty by default, which permits all URL schemes. On Windows, this results in a call to ShellExecuteW() with the open verb, so a supplied file:/// URI causes the referenced file to be executed. Any Unreal Engine game that loads user-generated content containing Blueprints is vulnerable to command execution via a malicious local file or a remote file on a WebDAV share. This is an instance of CWE-1188 (Initialization of a Resource with an Insecure Default).",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-14765 (CVSS 7.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14765"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-105429",
+    "published": "2026-10-14T05:16:42.487",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements in the NetBird client SSH configuration manager (client/ssh/config/manager.go) in NetBird versions 0.60.0 through 0.74.6 allows a malicious or compromised peer to execute arbitrary commands on other NetBird client hosts. The client writes a system-wide OpenSSH drop-in file (/etc/ssh/ssh_config.d/99-netbird.conf, or the equivalent under %PROGRAMDATA%\\ssh\\ssh_config.d on Windows) that embeds each peer FQDN or hostname inside a double-quoted Match host directive without escaping. A peer name containing a double quote breaks out of the quoted context and injects arbitrary SSH configuration directives, including exec commands, which run locally as any user on the host the next time that user runs ssh. Desktop clients on Linux, macOS, Windows and FreeBSD are affected; the Android and iOS apps are not. The issue is fixed in version 0.74.7, which accepts a peer FQDN or hostname only if it is a valid DNS name.",
+    "tags": [],
+    "title": "CVE-2026-105429 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105429"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-110450",
+    "published": "2026-10-14T05:16:42.917",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nix before 2.35.3 and Lix before 2.95.4 allow privilege escalation via a repair operation because it could destroy and then replace a store path before content verification.",
+    "tags": [],
+    "title": "CVE-2026-110450 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110450"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-110455",
+    "published": "2026-10-14T05:16:43.647",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network and under certain conditions could exploit an Improper Input Validation vulnerability found in UniFi Protect AI Key to execute a Command Injection on the device.",
+    "tags": [],
+    "title": "CVE-2026-110455 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110455"
+  },
+  {
+    "category": "high",
+    "cvss": 4.4,
+    "id": "CVE-2026-50215",
+    "published": "2026-10-14T05:16:44.260",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free exists in the Windows WFP packet-capture driver shipped with Akamai Guardicore Platform Agent (GPA) before 7.4. When an IPv6 proxy/redirect rule is active, a local attacker with Administrator privileges can send a single crafted outbound IPv6 packet via a raw IPV6_HDRINCL socket to trigger this at DISPATCH_LEVEL, resulting in an immediate system crash.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-50215 (CVSS 4.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50215"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-110459",
+    "published": "2026-10-14T06:17:06.260",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the network could exploit an Improper Access Control vulnerability found in UniFi Protect AI Key to obtain information, make unauthorized changes, and execute a Denial of Service (DoS) attack on the device.",
+    "tags": [],
+    "title": "CVE-2026-110459 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110459"
+  },
+  {
+    "category": "high",
+    "cvss": 4.7,
+    "id": "CVE-2026-50217",
+    "published": "2026-10-14T06:17:06.760",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free vulnerability in the Windows WFP callout driver of Akamai Guardicore Platform Agent (GPA) allows a local low-privileged user to cause a denial of service (system crash / BSOD) via an outbound ICMPv6 packet containing an IPv6 Hop-by-Hop extension header. When the IPv6 ICMP redirect policy is active, the packet is copied into a buffer that is freed but subsequently passed to a downstream filter. The size of the freed allocation is attacker-controlled (via packet length), enabling kernel pool grooming. Exploitation requires that the non-default IPv6 ICMP capture/redirect policy is enabled for the endpoint.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-50217 (CVSS 4.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50217"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-50218",
+    "published": "2026-10-14T06:17:06.900",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Akamai GPA (Guardicore Platform Agent) client on all platforms before 7.4 improperly validates JWT tokens used for seeding. By convincing a user to interact with a malicious link, an attacker can use a spoofed JWT token to inject arbitrary parameters into the client software, resulting in unauthorized reconfiguration and full compromise of the application's functionality. This attack can also be targeted against an already seeded client if the attacker knows the URL of the IDP that the client used for enrollment.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-50218 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50218"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72215",
+    "published": "2026-10-14T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [],
+    "title": "GitLab 제품 보안 업데이트 권고",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72215"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208871",
+    "published": "2026-10-14T15:28:18+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "팔로알토 네트웍스는 14일 서울 강남구 웨스틴 파르나스 하모니볼룸에서 ‘이그나이트 온 투어 서울’을 개최하고 AI 시대 기업의 보안 대응 전략을 공유했다. 행사에서는 AI 기반 위협에 대응하기 위한 선제적 방어, 제로 트러스트, 보안관제 자동화, 아이덴티티 보안 등이 주요 과제로 제시됐다.‘프론티어 AI 디펜스’를 주제로 열린 이번 행사에는 BJ 젠킨스 팔로알토 네트웍스 사장이 방한해 기조연설을 진행했다. 회사는 AI 시스템의 설계 단계부터 보안을 반영하는 ‘시큐어 AI 바이 디자인(Secure AI by Design)’과 통합 보",
+    "tags": [],
+    "title": "팔로알토 네트웍스 “AI 공격 속도 대응하려면 보안 통합·자동화 필요”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208871"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208870",
+    "published": "2026-10-14T14:26:20+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인섹시큐리티(대표 김종광)는 국내 총판을 맡고 있는 옵스왓(OPSWAT)이 국가망보안체계(N²SF) 전환에 대응하기 위한 ‘소프트웨어 공급망 통합 보안 플랫폼’을 발표했다고 14일 밝혔다.이번 플랫폼은 소프트웨어를 개발하고 배포하는 과정부터 업무 파일 전송, 서로 다른 보안 수준의 네트워크 간 데이터 이동까지 보안 검증을 연계하는 것이 핵심이다. 소프트웨어의 구성요소와 위험을 확인하고, 이동하는 파일을 검사한 뒤 정책에 따라 전송을 허용하거나 차단하는 방식이다.N²SF는 국가·공공기관의 업무 정보를 기밀·민감·공개로 분류하고, 정보",
+    "tags": [],
+    "title": "옵스왓, N²SF 전환 대응…소프트웨어 개발부터 망간 전송까지 보안 연계",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208870"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208869",
+    "published": "2026-10-14T13:53:18+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "도브러너(Doverunner)가 오는 11월 25일 서울 양재 EL타워 2층 안단테홀에서 ‘도브러너 CSI 컨퍼런스 2026’을 개최한다. ‘AI 시대, 콘텐츠의 신뢰와 가치를 설계하다’를 슬로건으로, 미디어·콘텐츠 산업의 AI 활용 방안과 콘텐츠 보호 전략을 공유한다.-CSI 2026 사전등록: 클릭CSI는 ‘콘텐츠 전략 인사이트(Content Strategy Insight)’의 약자다. OTT와 미디어 등 콘텐츠 산업의 주요 변화와 기업의 과제를 살펴보고, 사업과 서비스 운영에 적용할 수 있는 전략과 기술을 논의하는 기업 대상",
+    "tags": [],
+    "title": "도브러너, 11월 25일 ‘CSI 컨퍼런스 2026’ 개최…AI 콘텐츠 활용·보호 전략 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208869"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208868",
+    "published": "2026-10-14T11:17:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "프랑스 전역의 대형마트 수백 곳이 사이버공격을 받아 냉장·냉동설비가 마비되고 대규모 식품 폐기와 화재 피해가 발생했다. 공격자는 인터넷에 연결된 냉장설비의 원격 제어 기능을 악용해 냉장고 내부 온도를 최대 50도까지 끌어올린 것으로 파악됐다.이번 공격은 개인정보 탈취나 랜섬웨어 감염이 아닌, 냉장설비의 정상적인 제어 기능을 악용해 실제 물리적 피해를 일으킨 운영기술(OT) 공격이라는 점에서 주목된다.로이터, AFP, 르몽드 등 현지 보도에 따르면 공격은 지난 10월 11일 밤부터 12일 새벽 사이 발생했다. 피해 업체는 프랑스 주요",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "프랑스 대형마트 500여 곳 사이버공격…냉장고 온도 50도까지 상승, 식품 폐기·화재 피해",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208868"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208867",
+    "published": "2026-10-14T11:08:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "더불어민주당 이훈기 의원이 14일 오전 9시 20분 국회 소통관에서 '쿠팡 개인정보 유출 과징금 불복소송 규탄 기자회견'을 개최하는 것으로 국회 일정에 공지됐다. 이번 사안은 대규모 개인정보 유출과 무단 수집에 대한 행정제재에 쿠팡이 불복하면서 기업의 개인정보 보호 책임과 피해자 권리 보호 문제가 다시 쟁점으로 떠오른 것이다.개인정보보호위원회는 지난 6월 10일 전체회의에서 쿠팡의 개인정보 유출 및 타사 온라인 활동기록 무단 수집 등 개인정보 보호법 위반행위를 확인하고 총 6,246억8,100만원의 과징금과 1,680만원의 과태료",
+    "tags": [],
+    "title": "이훈기 의원, 쿠팡 개인정보 유출 과징금 불복소송 문제 제기",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208867"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208866",
+    "published": "2026-10-14T10:56:45+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "최근 금융권을 중심으로 해킹과 개인정보 유출 사고가 잇따르고 있는 가운데, 오픈소스 보안 및 소프트웨어 공급망 관리 전문기업 오에스비씨(OSBC, 대표 김택완)가 금융권을 대상으로 리버싱랩스(ReversingLabs)의 ‘반입 파일 검증 체계’ 솔루션 공급과 기술 지원에 본격 나선다고 14일 밝혔다.오에스비씨는 파일 정밀 분석 및 소프트웨어 공급망 보안 전문기업 리버싱랩스의 국내 총판으로, 외부에서 반입되는 파일의 위·변조 여부와 무결성을 사전에 검증해 공급망을 통한 악성코드 유입과 해킹 위협에 대응하는 방안을 제시하고 있다.최근",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI 해킹·공급망 공격 시대…오에스비씨, 외부 ‘반입 파일 검증 체계’ 구축 방안 제시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208866"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/four-byte-write-and-timing-bug-let.html",
+    "published": "2026-10-14T05:52:28+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Security researchers ran their own code inside a protected part of Windows that is meant to stay sealed off even when the rest of the computer is taken over. The protected area is a VBS enclave, an isolated slice of memory the operating system uses to guard secrets, and the one they broke into handles passwords for a Windows anti-phishing feature. The work was done in a lab as a proof of",
+    "tags": [
+      "피싱"
+    ],
+    "title": "Four-Byte Write and Timing Bug Let Researchers Run Code in Windows SmartScreen Enclave",
+    "url": "https://thehackernews.com/2026/10/four-byte-write-and-timing-bug-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html",
+    "published": "2026-10-14T04:34:43+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Microsoft on Tuesday shattered its own Patch Tuesday record by shipping patches for a whopping 1,413 vulnerabilities, including one that it said has come under active exploitation. These include 1,102 flaws in Windows, 134 in Office, 61 in Developer Tools, 36 in SharePoint Server, and 22 in SQL Server. Of these, more than 670 relate to privilege escalation, followed by over 300 remote code",
+    "tags": [],
+    "title": "Microsoft Patches Record 1,413 Flaws, Including Exploited Windows Shell Bug",
+    "url": "https://thehackernews.com/2026/10/microsoft-patches-record-1413-flaws.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/openai-employee-arrested-for-allegedly.html",
+    "published": "2026-10-14T01:59:25+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A Saudi National and employee of OpenAI has been arrested for allegedly planting a hidden recording device in an executive conference room at the company's San Francisco offices to covertly record sensitive conversations. Abdulrahman Alfozan, 35, has been charged with using or endeavoring to use an electronic, mechanical, or other device to intercept oral communications. He was arrested by",
+    "tags": [
+      "RCE"
+    ],
+    "title": "OpenAI Employee Arrested for Allegedly Planting Hidden Recorder in Executive Conference Room",
+    "url": "https://thehackernews.com/2026/10/openai-employee-arrested-for-allegedly.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=200910",
+    "published": "2026-10-14T05:46:19+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Netskope tracks four XWorm versions in the wild, 46 plugins, and new tools for location, audio and live browser control, with detections up fourfold. Netskope Threat Labs has been following XWorm since September 2024, and its latest report shows the malware has changed a lot. Over the past year the team identified four distinct versions […]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "How a leaked builder of XWorm turned a remote access trojan into a surveillance kit",
+    "url": "https://securityaffairs.com/200910/malware/how-a-leaked-builder-of-xworm-turned-a-remote-access-trojan-into-a-surveillance-kit.html"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/95823/",
+    "published": "2026-10-13T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "ASEC Blog publishes Ransom & Dark Web Issues Week 3, October 2026 n0n Ransomware Attacks on 12 South Korean Port and Logistics Companies Cyberattack Targets Refrigeration Systems at Major French Supermarket Chains Payment and Transaction Data Leak Claimed at a Saudi Fintech Company",
+    "tags": [
+      "금융",
+      "랜섬웨어"
+    ],
+    "title": "Ransom & Dark Web Issues Week 3, October 2026",
+    "url": "https://asec.ahnlab.com/en/95823/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33420",
+    "published": "2026-10-14T06:49:46+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "Years ago I wrote diary entries about VBA code stored inside AutoCAD drawing files (.dwg).",
+    "tags": [],
+    "title": "Orphaned VBA Projects Inside DWG Files, (Wed, Oct 14th)",
+    "url": "https://isc.sans.edu/diary/rss/33420"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFBKNlpYci0tZFRoUENDaEFWQzFtT1N2MmxRODRQOU1KYzVuU1ljWFZyMGd6MmhQbEdNaU04dkpTZG1OTXotVVpoLXVBc2ZuSVZ3dGVEcy1oeGZfczdiQWE5MDFjUFprLWdXMjZB0gFwQVVfeXFMT21nVVlXdTFRaU9jMWhaN1NqTnhFd3JSUV9RVlUzR1ZXMFZwdTI4ZXAxQ1hTdi1hLWk3UGFwVDktTWNRRncwdURiQnd5d21fb0pHTlVFOEZCdWFYcHlHSHYtcUdIRUtzYnNNUTRmZXJ2eA",
+    "published": "2026-10-14T06:50:14+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "AI 사이버위협 '최전선' 금융보안원, 조직 확대 힘받나 - 머니투데이",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI 사이버위협 '최전선' 금융보안원, 조직 확대 힘받나 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBKNlpYci0tZFRoUENDaEFWQzFtT1N2MmxRODRQOU1KYzVuU1ljWFZyMGd6MmhQbEdNaU04dkpTZG1OTXotVVpoLXVBc2ZuSVZ3dGVEcy1oeGZfczdiQWE5MDFjUFprLWdXMjZB0gFwQVVfeXFMT21nVVlXdTFRaU9jMWhaN1NqTnhFd3JSUV9RVlUzR1ZXMFZwdTI4ZXAxQ1hTdi1hLWk3UGFwVDktTWNRRncwdURiQnd5d21fb0pHTlVFOEZCdWFYcHlHSHYtcUdIRUtzYnNNUTRmZXJ2eA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9VT19acmtsbnVWamFCYzdBNG9oc2FmZUl2S2JtaVVJYllUQ25NZUNDTlBfaDF5Zmg4Mmo3bERjaVo2WU9LLTNoa1AtLWVQTlNQdzR2SndyZ0x3QdIBVEFVX3lxTFBlUC1OQlluMldEdGNhNkZmVXlLWFlDcjdLTjJOaGJHTElweUFVWkR4WjJ0SGNCenZuLTVTYWpDOUs4eDZHdXBZeVRyZzZIN1l6SHlqMw",
+    "published": "2026-10-14T07:30:46+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹 16곳서 10만건…금융위, 보안체계 전면 점검 예고",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 16곳서 10만건…금융위, 보안체계 전면 점검 예고",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VT19acmtsbnVWamFCYzdBNG9oc2FmZUl2S2JtaVVJYllUQ25NZUNDTlBfaDF5Zmg4Mmo3bERjaVo2WU9LLTNoa1AtLWVQTlNQdzR2SndyZ0x3QdIBVEFVX3lxTFBlUC1OQlluMldEdGNhNkZmVXlLWFlDcjdLTjJOaGJHTElweUFVWkR4WjJ0SGNCenZuLTVTYWpDOUs4eDZHdXBZeVRyZzZIN1l6SHlqMw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTFBDMDhHeGxMelg3V2F3UFVxU0ZFZEdRMTlGT1pEcmpXR1R1dk5nZWJOMEZOODJ2bzFoUFlqS0JNXzV2SVFqLVI3cWRSSGZoNWpXc3FXUF9xelBPdw",
+    "published": "2026-10-14T01:40:18+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "라온시큐어 AI보안 '원쉴드', 공공-금융시장 공략 나선다",
+    "tags": [
+      "금융"
+    ],
+    "title": "라온시큐어 AI보안 '원쉴드', 공공-금융시장 공략 나선다",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBDMDhHeGxMelg3V2F3UFVxU0ZFZEdRMTlGT1pEcmpXR1R1dk5nZWJOMEZOODJ2bzFoUFlqS0JNXzV2SVFqLVI3cWRSSGZoNWpXc3FXUF9xelBPdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFAzU0ExN3dkcmhQci1welJYa29wd1pTSUJSUUd3MWgyN0J4QWJxek5UeHE0dTVITzM1Q3hkY0V4bkhaWUROZUVzV3VhWlJ2MkFROEppQjNiem5uMGFyMjh2ZdIBeEFVX3lxTE5CdWN6M01XYTNFc2s5Ym1ZV0MwS3VHQ2UtZUpjZnNJSWdXMjBwVkNYY1NjeEwxRG1CbTg1VnRvUGV5cl91azZaVkNqSFFUX0ZET1hkVUQtbUdmR2c5ek8wbHpPalh6ZG5qZ2J5c0E5RDZSeldhc0ptQQ",
+    "published": "2026-10-14T06:49:29+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "'금융사 해킹' 16곳으로 확대, 10만건 정보유출…\"130곳 보안 미흡\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "'금융사 해킹' 16곳으로 확대, 10만건 정보유출…\"130곳 보안 미흡\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzU0ExN3dkcmhQci1welJYa29wd1pTSUJSUUd3MWgyN0J4QWJxek5UeHE0dTVITzM1Q3hkY0V4bkhaWUROZUVzV3VhWlJ2MkFROEppQjNiem5uMGFyMjh2ZdIBeEFVX3lxTE5CdWN6M01XYTNFc2s5Ym1ZV0MwS3VHQ2UtZUpjZnNJSWdXMjBwVkNYY1NjeEwxRG1CbTg1VnRvUGV5cl91azZaVkNqSFFUX0ZET1hkVUQtbUdmR2c5ek8wbHpPalh6ZG5qZ2J5c0E5RDZSeldhc0ptQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE01M0RSVzJFRlBZV2FPSHNMMzM2RDB4NXJCQld5OEN2RjlFcGxiWUdRcTZiQXd4Q1o1WEl2Y0VvTVhkV3ZJLVRyNjkteGp0Q205azZVZWcwcTllNWJTbjV3eWdaX3JTSDNPdHJmaHBtWWPSAXRBVV95cUxPT2hwS29aVkItaDI4SzMwbW5MOGRWMmdHVkdpZUlRZjdiQk5KaGZKelV0TGs2ZWF3a1JOcUlVa2QwdnlkRUg2ZGs4d0dLakpfOXlHTk90UDBlVEdxeFgtcGdZRndCajJlWUpycG1nMnBYS3dObQ",
+    "published": "2026-10-14T06:57:51+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융사 130곳 보안 허술… 해킹된 개인 정보 10만건",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융사 130곳 보안 허술… 해킹된 개인 정보 10만건",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE01M0RSVzJFRlBZV2FPSHNMMzM2RDB4NXJCQld5OEN2RjlFcGxiWUdRcTZiQXd4Q1o1WEl2Y0VvTVhkV3ZJLVRyNjkteGp0Q205azZVZWcwcTllNWJTbjV3eWdaX3JTSDNPdHJmaHBtWWPSAXRBVV95cUxPT2hwS29aVkItaDI4SzMwbW5MOGRWMmdHVkdpZUlRZjdiQk5KaGZKelV0TGs2ZWF3a1JOcUlVa2QwdnlkRUg2ZGs4d0dLakpfOXlHTk90UDBlVEdxeFgtcGdZRndCajJlWUpycG1nMnBYS3dObQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE9tbHgwWU9qdTlyYjBJNWk4QjdBVTA3cE1EcGF0OTg1OFNkdDVuWnZ1UEtiTnFDemFEN1phU3RqdTZwbHBYSXB2eDF3RFZyNlY4bkNvRG5ZMmp3OFZ2RHI4S0VtQmcxRkFhcnowbC1Yald0T1nSAXdBVV95cUxNU19DY3Q4WmJhWC1HeVctNUdPaFFGaEpBcFB4WTRJcFFQbE1yT3RreFIzOGtXSDVubXpNTVd6aklXdTZrTFRfMlE4UXVvWG9DenhOOXM1TUhzOHdjWGFieFl3bTdjVGNubGxZU1YyaU0yZ2x5a25iQQ",
+    "published": "2026-10-14T06:41:34+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹 피해 16개사로 확대···10만건 개인정보 유출",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 피해 16개사로 확대···10만건 개인정보 유출",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9tbHgwWU9qdTlyYjBJNWk4QjdBVTA3cE1EcGF0OTg1OFNkdDVuWnZ1UEtiTnFDemFEN1phU3RqdTZwbHBYSXB2eDF3RFZyNlY4bkNvRG5ZMmp3OFZ2RHI4S0VtQmcxRkFhcnowbC1Yald0T1nSAXdBVV95cUxNU19DY3Q4WmJhWC1HeVctNUdPaFFGaEpBcFB4WTRJcFFQbE1yT3RreFIzOGtXSDVubXpNTVd6aklXdTZrTFRfMlE4UXVvWG9DenhOOXM1TUhzOHdjWGFieFl3bTdjVGNubGxZU1YyaU0yZ2x5a25iQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE5oNlVsZm0yTklfTmItT0IzVjlCV2p6bGVGZzhGcUZMcVdBcVhEZTZma1dNV2Eyb3pEVURXbkh5c2VHSEhhZGc3WkE2cV8zUXg3Wlhnb3J3bVdqdnpCRmNXckZCWS1tVlVEaDl2V0t3",
+    "published": "2026-10-14T02:46:07+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹 신고 새마을금고까지…금융위, 전 금융권 보안점검 결과 놓고 후속책 논의",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 신고 새마을금고까지…금융위, 전 금융권 보안점검 결과 놓고 후속책 논의",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5oNlVsZm0yTklfTmItT0IzVjlCV2p6bGVGZzhGcUZMcVdBcVhEZTZma1dNV2Eyb3pEVURXbkh5c2VHSEhhZGc3WkE2cV8zUXg3Wlhnb3J3bVdqdnpCRmNXckZCWS1tVlVEaDl2V0t3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFAzUGxCR0IybElUY1MtMWJrU3NJT1Azek1RVjl2eExIZFBjX2pmT1NwalAyYXJXUWRkLWh0TXluQkRtVmNZTVltaDVvS0MyNzRaMW9HSG1JTkJyTExlNy1zUHVsR2RQT3c",
+    "published": "2026-10-13T23:32:06+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹 사고 잇따라...금융당국, 전 금융권 보안 대응체계 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 사고 잇따라...금융당국, 전 금융권 보안 대응체계 점검",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAzUGxCR0IybElUY1MtMWJrU3NJT1Azek1RVjl2eExIZFBjX2pmT1NwalAyYXJXUWRkLWh0TXluQkRtVmNZTVltaDVvS0MyNzRaMW9HSG1JTkJyTExlNy1zUHVsR2RQT3c?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:241504",
+    "published": "2026-10-14T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 침해사고 재발방지를 위해 금융보안 관리체계를 전면 강화하겠습니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=241504&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:241493",
+    "published": "2026-10-14T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "증권사의 영업점 개설 계좌와 관련한 매매수수료 차등 부과 관행을 바로 잡겠습니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=241493&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:241492",
+    "published": "2026-10-14T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "금감원, 중소금융업권과 함께 준법제보 활성화 방안을 마련하여 시행합니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=241492&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE56aXRBWlRaWVZBTjJpdGpxd2k3bXdTc0lmNkhZT1FfLWNGR1p4ZUNZUVp4dVBsZ1FPUlI5RnMybGI3dEFNUE5OM0dZdkZWeVFWbFljQVkzekNjWjQ5aVFkSEFHcWZVRHFRYlVzcdIBb0FVX3lxTE82UHVETDIyeWZGT0tNdEt0bTNNZmdiVDJYcUtrUVQyTE9GVVdoNDg5NmhVRlFtdlBTdjhkMHY1WWxnXzhMM3FibTEwOWo5UHJVZ01pMGtOYXpTcC1yLXg3cFV1My12TjJBdldCUVo4VQ",
+    "published": "2026-10-14T02:00:36+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원, 창립 40주년 2026 Payment Insight 세미나 23일 개최",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원, 창립 40주년 2026 Payment Insight 세미나 23일 개최",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE56aXRBWlRaWVZBTjJpdGpxd2k3bXdTc0lmNkhZT1FfLWNGR1p4ZUNZUVp4dVBsZ1FPUlI5RnMybGI3dEFNUE5OM0dZdkZWeVFWbFljQVkzekNjWjQ5aVFkSEFHcWZVRHFRYlVzcdIBb0FVX3lxTE82UHVETDIyeWZGT0tNdEt0bTNNZmdiVDJYcUtrUVQyTE9GVVdoNDg5NmhVRlFtdlBTdjhkMHY1WWxnXzhMM3FibTEwOWo5UHJVZ01pMGtOYXpTcC1yLXg3cFV1My12TjJBdldCUVo4VQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMizAFBVV95cUxOMUQtX3lBMVg3RmJ2Vzctd21ydTBuZGtpc0hyVFJ3VmViQnhYYUg2T1M4NE9JOG01bVZfekIwMHlwQU56Vk5FODJ4UHR5XzRxdHB3ZW5xVU9Mbm1Rak5QT2E0bDZjeXowYU5kY2ZJR3Z2a2QxM3JLNllUckVmdHVWTVl6LU9ETGQtTUpsRWswbjMzel9SM3pOYTBXSHdoVWVlQnBjd3ZMT1RlOEt0ZlhkUWR4U2I4QnZYTllSNzhhMFFXUEFhVk1hZ3VCWHQ",
+    "published": "2026-10-13T18:39:45+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융 결제원 블록 체인 기본 배경과 특수 화면 비교",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융 결제원 블록 체인 기본 배경과 특수 화면 비교",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOMUQtX3lBMVg3RmJ2Vzctd21ydTBuZGtpc0hyVFJ3VmViQnhYYUg2T1M4NE9JOG01bVZfekIwMHlwQU56Vk5FODJ4UHR5XzRxdHB3ZW5xVU9Mbm1Rak5QT2E0bDZjeXowYU5kY2ZJR3Z2a2QxM3JLNllUckVmdHVWTVl6LU9ETGQtTUpsRWswbjMzel9SM3pOYTBXSHdoVWVlQnBjd3ZMT1RlOEt0ZlhkUWR4U2I4QnZYTllSNzhhMFFXUEFhVk1hZ3VCWHQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiT0FVX3lxTE1OSjBYY3hLSHYtSWNIam9Yd0NRZWZ1VERGYXExcXJSYU9hdjBKRC1sV3RZY0htdTU5ZzB4Sm1oR0JLMXFWaGlNQURycGQ4eDA",
+    "published": "2026-10-14T06:13:11+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "뉴스핌",
+    "tags": [],
+    "title": "뉴스핌",
+    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1OSjBYY3hLSHYtSWNIam9Yd0NRZWZ1VERGYXExcXJSYU9hdjBKRC1sV3RZY0htdTU5ZzB4Sm1oR0JLMXFWaGlNQURycGQ4eDA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE1CbEJqVC16MEVucnRlQWdMNkhyQVFTak1sTGtXbnJEbmZ0a3d0QXNtWTJSNGM4QUw2SW95RUdMTDctNkZzaEJqOE9HU1pCSW05YWhTbUhya0tYajhlLVYweFZVWk4yNHNv",
+    "published": "2026-10-14T05:24:44+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "中지커차 국내 출시 차질 생기나?…개인정보보호위원회, \"현장조사 실시\"",
+    "tags": [],
+    "title": "中지커차 국내 출시 차질 생기나?…개인정보보호위원회, \"현장조사 실시\"",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CbEJqVC16MEVucnRlQWdMNkhyQVFTak1sTGtXbnJEbmZ0a3d0QXNtWTJSNGM4QUw2SW95RUdMTDctNkZzaEJqOE9HU1pCSW05YWhTbUhya0tYajhlLVYweFZVWk4yNHNv?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTE1tZy1hS2FMSUdnWi1oRFRmSUhPN0VqYkRTVlJvZVpaTkRXWTEzUFJ5LXF1TnhPTUptNGwxTW56TG5GSlpBc2d5ZUpmSWxrd01WZUpleVhhMzRHbUFJOFo0",
+    "published": "2026-10-13T04:56:48+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "송경희 개인정보위원장 \"개인정보 유출사고 무거운 책임감...과징금 최대 10%\"",
+    "tags": [],
+    "title": "송경희 개인정보위원장 \"개인정보 유출사고 무거운 책임감...과징금 최대 10%\"",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1tZy1hS2FMSUdnWi1oRFRmSUhPN0VqYkRTVlJvZVpaTkRXWTEzUFJ5LXF1TnhPTUptNGwxTW56TG5GSlpBc2d5ZUpmSWxrd01WZUpleVhhMzRHbUFJOFo0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE81RVhucXhkRktLYVNkV0NhdDdaVjN6THdNOEhvUjBPQUVUbmVhSWJtRi1PQTBKYjZLWlhEM21iZzg4dEpuVk5ZbjFDY1h4akt2ZFRlQ3pMU19ZSW1PUGJqMQ",
+    "published": "2026-10-14T05:16:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 대책 내놓은 개보위…실효성은 '물음표'",
+    "tags": [],
+    "title": "개인정보 유출 대책 내놓은 개보위…실효성은 '물음표'",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE81RVhucXhkRktLYVNkV0NhdDdaVjN6THdNOEhvUjBPQUVUbmVhSWJtRi1PQTBKYjZLWlhEM21iZzg4dEpuVk5ZbjFDY1h4akt2ZFRlQ3pMU19ZSW1PUGJqMQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE5ualREM3B1MFNUbk5Jc0xNczVjQ0hZUHYwQjRiV0hFSXMwRldVYy1odXpKOXZXdk40X2xPb1RTY2VlRUd2VGx3OTVDRlM0ck0tSEl0RHdTZl9rWEhW",
+    "published": "2026-10-14T06:06:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보보호위원회 전체회의 주재하는 송경희 위원장",
+    "tags": [],
+    "title": "개인정보보호위원회 전체회의 주재하는 송경희 위원장",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5ualREM3B1MFNUbk5Jc0xNczVjQ0hZUHYwQjRiV0hFSXMwRldVYy1odXpKOXZXdk40X2xPb1RTY2VlRUd2VGx3OTVDRlM0ck0tSEl0RHdTZl9rWEhW?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTFAtUWNCRWpiSl9KVTlBbVV0T0ViOXN4TkJzbUVoMDBDTnhCcmZZcDgxZGxuTkI5ME1pbFRnMUtfc2VXVkxpeUZqQVd0RThIa1RfanQyRktqbFNrcUVI",
+    "published": "2026-10-14T06:06:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "전체회의 주재하는 송경희 개인정보보호위원장",
+    "tags": [],
+    "title": "전체회의 주재하는 송경희 개인정보보호위원장",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAtUWNCRWpiSl9KVTlBbVV0T0ViOXN4TkJzbUVoMDBDTnhCcmZZcDgxZGxuTkI5ME1pbFRnMUtfc2VXVkxpeUZqQVd0RThIa1RfanQyRktqbFNrcUVI?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE41anZOamNiQ0wwSDVaUXJfQnh3NFlXM0dIZjlCM2wzZGRSVXY1Q1ZpUUpiVUhEVkF0TDZzSURBMzhrSHp6eW5MUDZzN3RxTV84X2dlb3RTRlN0MG41",
+    "published": "2026-10-14T06:05:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국기에 경례하는 송경희 위원장과 3기 위원들",
+    "tags": [],
+    "title": "국기에 경례하는 송경희 위원장과 3기 위원들",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE41anZOamNiQ0wwSDVaUXJfQnh3NFlXM0dIZjlCM2wzZGRSVXY1Q1ZpUUpiVUhEVkF0TDZzSURBMzhrSHp6eW5MUDZzN3RxTV84X2dlb3RTRlN0MG41?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE9oU1AyWUlyQ0cwMi1hQmpaQUJVUEI0WjJHWDRKQmdpSkhzMVZFOUF5NmNXb0RRSkJUa3NBUVNGWW9WUTA5bzlFU0oyaDk3MlFDck1QNV8wQm9COUc4",
+    "published": "2026-10-14T07:17:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감] 900만건 넘게 털린 개인정보…범인은 해커보다 '내부 부실'",
+    "tags": [],
+    "title": "[2026 국감] 900만건 넘게 털린 개인정보…범인은 해커보다 '내부 부실'",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9oU1AyWUlyQ0cwMi1hQmpaQUJVUEI0WjJHWDRKQmdpSkhzMVZFOUF5NmNXb0RRSkJUa3NBUVNGWW9WUTA5bzlFU0oyaDk3MlFDck1QNV8wQm9COUc4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUkFVX3lxTE1RODBoY0Ytc0NjSFVsY2V1eVJ5QkViNGpuY2puTjNlenRTcWcydUlyWEZOdGFwYXI4eVdaSk1RMFdlZlA1QTlnWkFxVkhpYS1ENFHSAVNBVV95cUxNQjF5N2IyWUk4azVUNWxlQjEtZlM5SlpBbjJUODFRYjZxY0JRNWxRMS1TMnRleDQwNTVEUExFTmJhTFJ4NUd4NlZZRTRDQnM0UVg1aw",
+    "published": "2026-10-13T09:12:35+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국감장 선 개인정보위원장 “韓 보호체계 뒤처져…엄정 대응”",
+    "tags": [],
+    "title": "국감장 선 개인정보위원장 “韓 보호체계 뒤처져…엄정 대응”",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1RODBoY0Ytc0NjSFVsY2V1eVJ5QkViNGpuY2puTjNlenRTcWcydUlyWEZOdGFwYXI4eVdaSk1RMFdlZlA1QTlnWkFxVkhpYS1ENFHSAVNBVV95cUxNQjF5N2IyWUk4azVUNWxlQjEtZlM5SlpBbjJUODFRYjZxY0JRNWxRMS1TMnRleDQwNTVEUExFTmJhTFJ4NUd4NlZZRTRDQnM0UVg1aw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTFBGTlVUWlhhRXlMazNnMC1BSlh4bUxNcUVZaDA4b2ZnZHFheWFjQ3dqRlV5SG5uM2JTVGVpVzJrMWRwSVZVck5RSGx2ZUtrVzUwREFEeHlmSHFZdHYyeXc",
+    "published": "2026-10-14T07:29:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "유동수 국회 정무위원장 “원스톱 체계 구축해야”... 정보유출 사고에 기관마다 중복 신고",
+    "tags": [],
+    "title": "유동수 국회 정무위원장 “원스톱 체계 구축해야”... 정보유출 사고에 기관마다 중복 신고",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBGTlVUWlhhRXlMazNnMC1BSlh4bUxNcUVZaDA4b2ZnZHFheWFjQ3dqRlV5SG5uM2JTVGVpVzJrMWRwSVZVck5RSGx2ZUtrVzUwREFEeHlmSHFZdHYyeXc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBBMXkzdENGNkRRYVpqT21oaUQwMUZWYkZvbzlZUVh3bUdiUm13NDJLZXdCa1BkeFhRemt2NGxfQy1rcEI0NmZ1SF84Mk1HWlYtbWg1SkZwV0tiYTdZdTNXa9IBeEFVX3lxTE1UMGxjS2U5VjkyN3pCNnZhNWJFaXJXaXhlYkoxa3RwdkVOMWV2SlBaUl9GcHE5TU5pR2pFSU1WaDZYQnVUZUtrZUJpaElCcWFsSTZScmkybXhNQm5heloyQmliMnpMalByckY0RXc3eXZqR1JjbFVHNQ",
+    "published": "2026-10-14T05:48:25+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "에너지公, 에너지분야 중계전문기관 지정…에너지 마이데이터 시대 개막",
+    "tags": [],
+    "title": "에너지公, 에너지분야 중계전문기관 지정…에너지 마이데이터 시대 개막",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBMXkzdENGNkRRYVpqT21oaUQwMUZWYkZvbzlZUVh3bUdiUm13NDJLZXdCa1BkeFhRemt2NGxfQy1rcEI0NmZ1SF84Mk1HWlYtbWg1SkZwV0tiYTdZdTNXa9IBeEFVX3lxTE1UMGxjS2U5VjkyN3pCNnZhNWJFaXJXaXhlYkoxa3RwdkVOMWV2SlBaUl9GcHE5TU5pR2pFSU1WaDZYQnVUZUtrZUJpaElCcWFsSTZScmkybXhNQm5heloyQmliMnpMalByckY0RXc3eXZqR1JjbFVHNQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE9kLTd5VHMwRGhCbnp5QXNIWlN0Um83S0hidTloWVJfamdnSUljWHpDdmVSem5TeWZ6b1ZHVkVhTGt2T0ZCZzhQalZRVzB5eDgwNkpfRVNVWXExenNHemRYdGhVR0J6Q2JfZTcteXlR",
+    "published": "2026-10-14T06:15:06+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감-정무위] 최은석 \"보안 인증에 1800만원, 과징금 최대 30% 감경\"···제도개선 촉구",
+    "tags": [],
+    "title": "[2026 국감-정무위] 최은석 \"보안 인증에 1800만원, 과징금 최대 30% 감경\"···제도개선 촉구",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9kLTd5VHMwRGhCbnp5QXNIWlN0Um83S0hidTloWVJfamdnSUljWHpDdmVSem5TeWZ6b1ZHVkVhTGt2T0ZCZzhQalZRVzB5eDgwNkpfRVNVWXExenNHemRYdGhVR0J6Q2JfZTcteXlR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5hNkxrazFSLW1RbUdiOXBOUWc4S3d5cnRYaE1fdGllR1RINS1fOXBWWVNIY0RDMWNlNFUtd1NWN19INXg2Vm5VTnVuMlZzUmdJYXhUQUgzZEZvMDdET0w5OURxOGZBQms",
+    "published": "2026-10-14T02:14:58+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "2025년 공무원 공채 과학기술직 24.3%…5년새 8.4%p↑",
+    "tags": [],
+    "title": "2025년 공무원 공채 과학기술직 24.3%…5년새 8.4%p↑",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5hNkxrazFSLW1RbUdiOXBOUWc4S3d5cnRYaE1fdGllR1RINS1fOXBWWVNIY0RDMWNlNFUtd1NWN19INXg2Vm5VTnVuMlZzUmdJYXhUQUgzZEZvMDdET0w5OURxOGZBQms?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE9GSHhpY29NNlZibnFNMUNkeVZPajNUZkxjMUNDVm1qNFlOXzJodXlBYkozVndxZDAyUGp1eS1VZENBQndaQlRaZFAwUjlidHl5ek9xbHMtc09OWWU5ZXZZX25sRzcyNV9KQXhR",
+    "published": "2026-10-14T01:59:33+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡, 개보위 과징금 '6247억원' 2년간 분할 납부",
+    "tags": [],
+    "title": "쿠팡, 개보위 과징금 '6247억원' 2년간 분할 납부",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GSHhpY29NNlZibnFNMUNkeVZPajNUZkxjMUNDVm1qNFlOXzJodXlBYkozVndxZDAyUGp1eS1VZENBQndaQlRaZFAwUjlidHl5ek9xbHMtc09OWWU5ZXZZX25sRzcyNV9KQXhR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE16bkFoTVA2WDVLblpwcHpRMkV0UUMya2dLWDNHSDl5dEx5VllldGtjV25ySGZvVm1zYWU2R1FtUWI5cUtiRVBPRUZjb202T2I4ck5WSFNicjZFVkx4bUJUQ2xfRE0",
+    "published": "2026-10-13T07:53:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "탈퇴에도 내 정보는 그대로?…미파기 개인정보 유출 '316만건'",
+    "tags": [],
+    "title": "탈퇴에도 내 정보는 그대로?…미파기 개인정보 유출 '316만건'",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE16bkFoTVA2WDVLblpwcHpRMkV0UUMya2dLWDNHSDl5dEx5VllldGtjV25ySGZvVm1zYWU2R1FtUWI5cUtiRVBPRUZjb202T2I4ck5WSFNicjZFVkx4bUJUQ2xfRE0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUkFVX3lxTE4yeGhYN0tVNmpJN2NjXzAwSW1UVFR3YkNnTUR3el9BSUpHZllRa1BoT3ROZEU5eTZ4UmltREFKLUd0NjZtc2RiTWZIc3I5aDdIWUHSAVNBVV95cUxQUUhxdVZYSDJraFdUd1B0TVF1V1RjQWNUS05FOFRLZmhIdnRucy1nNk04dF9kY3k2UjJFRWxYSS1YejhPNmk5dXBFUmhBc05SNzVxSQ",
+    "published": "2026-10-13T11:05:48+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "티빙 대표 “개인정보 유출, AI 해킹 추정”…보안 투자 미흡 인정",
+    "tags": [],
+    "title": "티빙 대표 “개인정보 유출, AI 해킹 추정”…보안 투자 미흡 인정",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yeGhYN0tVNmpJN2NjXzAwSW1UVFR3YkNnTUR3el9BSUpHZllRa1BoT3ROZEU5eTZ4UmltREFKLUd0NjZtc2RiTWZIc3I5aDdIWUHSAVNBVV95cUxQUUhxdVZYSDJraFdUd1B0TVF1V1RjQWNUS05FOFRLZmhIdnRucy1nNk04dF9kY3k2UjJFRWxYSS1YejhPNmk5dXBFUmhBc05SNzVxSQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE9VaS1OZXV1ekM5SGIxSHM3b2p0Wm12dkZzTzBpY0lfMXhTV3RJWGNpRndSclpPd092V1lkUEt0ZXBteVZmbUhqR2NRZUJ1NkFyd3lyVWxpV2JZS0hIeUFJVzNkX0RsV3FkRkM5NUtYZEk",
+    "published": "2026-10-14T02:21:34+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"내 전기·가스 데이터로 요금 아낀다\"…에너지공단, '에너지 마이데이터' 중계기관 지정",
+    "tags": [],
+    "title": "\"내 전기·가스 데이터로 요금 아낀다\"…에너지공단, '에너지 마이데이터' 중계기관 지정",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9VaS1OZXV1ekM5SGIxSHM3b2p0Wm12dkZzTzBpY0lfMXhTV3RJWGNpRndSclpPd092V1lkUEt0ZXBteVZmbUhqR2NRZUJ1NkFyd3lyVWxpV2JZS0hIeUFJVzNkX0RsV3FkRkM5NUtYZEk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE5yQTA2Mlo5SEZKN2hjUDFFYUliVEhBQ1Z1U0plbHRLOWFuN2FTZ0tYbnV5NVdOMjkwN2ZfQlU2SkJpcTEwbzdPa2h4WnJoUQ",
+    "published": "2026-10-14T06:24:01+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융사 16곳 해킹·개인정보 10만건 유출…130곳 보안관리 부실",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융사 16곳 해킹·개인정보 10만건 유출…130곳 보안관리 부실",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5yQTA2Mlo5SEZKN2hjUDFFYUliVEhBQ1Z1U0plbHRLOWFuN2FTZ0tYbnV5NVdOMjkwN2ZfQlU2SkJpcTEwbzdPa2h4WnJoUQ?oc=5"
   }
 ]
