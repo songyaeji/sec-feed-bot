@@ -10,5 +10,6 @@ cves: [CVE-2026-90443]
 ## 타임라인
 
 - 2026-10-01 [CISA Advisories](https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01) — 12개 취약점 공개 (ICSA-26-254-01, CVSS 8.8)
+- 2026-10-15 [CISA Advisories](https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01) — 추가 취약점 공개 (ICSA-26-280-01)
 
 ## 관련

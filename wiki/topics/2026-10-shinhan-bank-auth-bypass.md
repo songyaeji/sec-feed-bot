@@ -54,6 +54,9 @@ cves: []
 - 2026-10-11 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208831) — 경찰청 사건 정식 수사로 전환, 43명 투입해 초동 수사 대응 및 수사기관 간 역할 분담 조정 중
 - 2026-10-11 [매체] — 신한은행 해킹 사전 경고에도 정보유출 확인, 보안예산 10% 축소 논란
 - 2026-10-14 [금융위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTFA0ZXVrbTN5cnFPSmhSVEJKb3h0d0Y5d0txbnBGdXBHWjVlLUlkbENOLXVnNER6TWd5ODJuVFY0cC13cGlpbW8tVmlON21TaGpuMVlYVWF0akFiTzJ4aTRXVw?oc=5) — 새마을금고·OK저축은행까지 피해 확대 확인, 금융위 보안 대응 총점검 재지시
+- 2026-10-15 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208884) — 티오리 ARTEX 심층 분석 백서 발간, 공격 AI 고유 행위 패턴·식별 정보 노출 확인, 탐지 룰셋 무료 공개
+- 2026-10-15 [금융보안원](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBoYVhwZUVaR2tSMC1GbFd3cUVTMlFTY1E5S2NZNmo5QUVESnVCRV85TjAzdHBhRTNaRC0zaTdmY1A2dHNoaVJBMllTNjBFYThzVUREQ2sxOWpjUQ?oc=5) — 화이트해커 투입해 AI 해킹 대응, 은행권 인증·접근통제 대대적 점검
+- 2026-10-16 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208898) — OK저축은행 고객 250명 정보유출 추가 확인, 피해 대상 67명 증가 포함
 
 ## 관련
 
