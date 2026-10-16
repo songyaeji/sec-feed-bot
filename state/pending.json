@@ -3632,5 +3632,680 @@
     "tags": [],
     "title": "에너지 데이터 빗장 풀린다…한국에너지공단, 중계전문기관 지정",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQOHJUdUJLX1pqMVJsNk1RNDFzYkdMcHNZQXpjWGZPQ1BUNTBVS0YySkR3MUludW5wZjBJOVl4U0NNNHp5VWJDaWlsT1BsMVYzTG5EVFRtLTBrMmZVbVhTVHNtSkdaY2MzZzJxUzRDWDdFb3Y0Vm93Unk5ZllaVkFTVVEzbjZIb1pJU0E?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-111444",
+    "published": "2026-10-16T04:18:30.353",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Wheels through 4.1.2 allows SQL injection on MySQL/MariaDB with backslash escaping enabled (NO_BACKSLASH_ESCAPES absent) when an application supplies request data to inline-literal paths. These include opt-in parameterize=false queries and IN lists, and positions in developer-written where strings that the parser does not bind, such as BETWEEN bounds, function arguments and LIKE ESCAPE literals. Doubling single quotes without accounting for backslash escapes allows a value to alter the query. Bound paths are not affected; whereBetween() is bound from 4.1.2. This is fixed in 4.2.0.",
+    "tags": [],
+    "title": "CVE-2026-111444 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111444"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-104798",
+    "published": "2026-10-16T05:17:28.580",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The My Calendar – Accessible Event Manager plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 3.8.7. The public `mcs` GET parameter is reflected into post content unsanitized before WordPress core's `do_shortcode` filter runs, allowing an unauthenticated attacker to inject a nested `[my_calendar above=...]` shortcode; `mc_generate_calendar_nav()` then splits the `above` attribute on commas and dispatches each element via `call_user_func()` with no authentication, authorization, or callable allowlist check. This makes it possible for unauthenticated attackers to invoke arbitrary loaded PHP functions, enabling a call chain in which the shortcode `$params` array is passed to `edit_user()` — which PHP coerces to integer `1` as the `$user_id` argument — overwriting the credentials of the initial Administrator account (user ID 1) and granting the attacker full wp-admin access. Exploitation is trivially reachable via the plugin's auto-generated `/my-calendar/` page, which is publicly accessible by default upon plugin activation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-104798 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104798"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-109219",
+    "published": "2026-10-16T05:17:29.100",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Mang Board plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.4.4 via the mbw_file_upload function. This is due to missing file extension validation on the attacker-supplied image_path parameter, whose basename-derived file name bypasses the extension allowlist applied only to the separate file_name parameter. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. Exploitation requires the board to be configured to allow guest posts, which is the plugin's default mode; the required nonce is printed on every public board page, making it readable by any unauthenticated visitor without a WordPress login.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-109219 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109219"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-109515",
+    "published": "2026-10-16T05:17:29.597",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The MailOptin – Popup, Optin Forms & Email Newsletters for Mailchimp, HubSpot, AWeber Etc. plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.2.78.6 This is due to the `subscribe_to_email_list` endpoint accepting an attacker-supplied `optin_data[form_custom_field_mappings]` parameter without any allow-list validation on destination keys, allowing the attacker-controlled mapping to override the administrator's saved mapping and pass arbitrary `wp_users` column names — including `ID` and `user_pass` — directly into `wp_insert_user()` via the `subscribe()` function. This makes it possible for unauthenticated attackers to force `wp_insert_user()` into UPDATE mode on any existing account by supplying a target user's numeric `ID`, overwrite that account's password with a pre-hashed value of their choosing, and thereby take over any WordPress user account — including administrators — leading to full site compromise. Exploitation requires that a WordPress User Registration opt-in form is published somewhere on the site, though the form's UUID is visible in page source and no authentication, nonce, or capability check is required to reach the vulnerable endpoint.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-109515 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109515"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-103768",
+    "published": "2026-10-16T06:17:03.060",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The ELEX WordPress HelpDesk & Customer Ticketing System plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.3.7 via the initMailPart function. This is due to insufficient file type validation when saving IMAP email attachments. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-103768 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103768"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-89079",
+    "published": "2026-10-16T06:17:12.410",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Theme My Login plugin for WordPress is vulnerable to privilege escalation via account takeover in versions up to, and including, 7.2.1. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user's passwords on multi-site setups in certain configurations.",
+    "tags": [],
+    "title": "CVE-2026-89079 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89079"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110913",
+    "published": "2026-10-15T22:19:26.620",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory corruption in DOM in Google Chrome prior to 155.0.8059.84 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-110913 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110913"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110914",
+    "published": "2026-10-15T22:19:26.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory corruption in Workers in Google Chrome prior to 155.0.8059.84 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-110914 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110914"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110915",
+    "published": "2026-10-15T22:19:26.843",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Compositing in Google Chrome prior to 155.0.8059.84 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-110915 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110915"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110919",
+    "published": "2026-10-15T22:19:27.267",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in V8 in Google Chrome prior to 155.0.8059.84 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-110919 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110919"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110920",
+    "published": "2026-10-15T22:19:27.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory corruption in V8 in Google Chrome prior to 155.0.8059.84 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-110920 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110920"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110921",
+    "published": "2026-10-15T22:19:27.473",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in V8 in Google Chrome prior to 155.0.8059.84 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-110921 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110921"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110922",
+    "published": "2026-10-15T22:19:27.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Prerender in Google Chrome prior to 155.0.8059.84 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
+    "tags": [],
+    "title": "CVE-2026-110922 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110922"
+  },
+  {
+    "category": "high",
+    "cvss": 4.8,
+    "id": "CVE-2026-111375",
+    "published": "2026-10-16T03:18:04.363",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeRDP from 3.0.0 before 3.32.0 contains an out-of-bounds read vulnerability in the Windows RAIL client that allows malicious RDP servers to trigger heap over-reads by sending non-NUL-terminated window titles. Attackers can send a full-length WINDOW_ORDER_FIELD_TITLE update that wf_rail_window_common passes to SetWindowTextW, corrupting titles or crashing the client.",
+    "tags": [],
+    "title": "CVE-2026-111375 (CVSS 4.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111375"
+  },
+  {
+    "category": "high",
+    "cvss": 5.0,
+    "id": "CVE-2026-111376",
+    "published": "2026-10-16T03:18:04.510",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeRDP from 3.30.0 before 3.32.0 contains a heap out-of-bounds read vulnerability in the Windows client's CliprdrStream_New that allows malicious RDP servers to trigger invalid memory reads via short clipboard responses. Attackers can answer a FILECONTENTS_SIZE request with a cbRequested of fewer than eight bytes when a user pastes a remote file, crashing the client or corrupting the stream size.",
+    "tags": [],
+    "title": "CVE-2026-111376 (CVSS 5.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111376"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-111380",
+    "published": "2026-10-16T03:18:05.123",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeRDP from 3.29.0 before 3.32.0 contains an integer overflow in the Apple audin backends (audin_mac.m, audin_ios.m), which compute the audio queue buffer size as FramesPerPacket * 2 * nChannels in UINT32 arithmetic, bypassing the CVE-2026-91962 fix. A malicious RDP server can send FramesPerPacket of 2^30 in the audin Open PDU to wrap the multiplication, causing undersized AudioQueueAllocateBuffer allocations and a heap out-of-bounds write in macOS and iOS clients.",
+    "tags": [],
+    "title": "CVE-2026-111380 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111380"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-111382",
+    "published": "2026-10-16T03:18:05.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FreeRDP before 3.32.0 contains a client-side heap out-of-bounds write vulnerability in general_LumaToYUV444 and general_ChromaV2ToYUV444 that allows malicious RDP servers to corrupt client memory. Attackers can send RDPGFX AVC444 or AVC444v2 frames with odd-height region rects ending at surface height to write past U/V planes, enabling heap corruption and potential code execution.",
+    "tags": [],
+    "title": "CVE-2026-111382 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111382"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-104745",
+    "published": "2026-10-16T04:18:21.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Customer Email Verification for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation via the `alg_wc_ev_verify_email` parameter in versions up to, and including, 3.3.0. The vulnerability exists because `alg_wc_ev_generate_user_code()` generates the per-user activation secret using `wp_rand(100)` when the plugin's 'Encoding method' is set to 'hashids', producing only ~101 possible values (~7 bits of entropy); the resulting token is a reversible Hashids encoding with no cryptographic MAC, and the unauthenticated `verify()` handler — hooked to `init` at `PHP_INT_MAX` with no nonce check and no rate limiting — accepts and acts on the attacker-controlled `?alg_wc_ev_verify_email=` GET parameter directly. This makes it possible for unauthenticated attackers to gain authentication as any unverified WordPress account, including administrator-level accounts, by brute-forcing the trivially small activation code space via a forged verification URL. Exploitation requires that the 'Encoding method' setting be changed to 'hashids' (non-default), that the attacker recover or brute-force the Hashids salt (which defaults to an `md5(time())` value set at first initialization), and that the target account's email address remain unverified.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-104745 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104745"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-111445",
+    "published": "2026-10-16T04:18:30.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wheels 4.0.0 through 4.1.2 before 4.2.0 replaces incoming scope conditions with a primary-key condition in findByKey() and exists(key=). For exists(key=), production with error information disabled returns true for an out-of-scope key instead of throwing. Applications relying on scopes for ownership or tenant authorization can therefore load and subsequently modify or delete another user's or tenant's record when the key comes from a request. The 4.2.0 fix combines key conditions with incoming scope, query-builder or where conditions in findByKey(), exists(key=), updateByKey() and deleteByKey(). Other scope-aware finders, aggregates, updateAll() and deleteAll() are not affected.",
+    "tags": [],
+    "title": "CVE-2026-111445 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111445"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-111446",
+    "published": "2026-10-16T04:18:30.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wheels 4.0.0 through 4.1.2 exposes password-less development tools under /wheels/* to remote clients when enablePublicComponent=true, as it is by default in development. Before 4.1.2 these tools have no local-access restriction; in 4.1.2 the restriction trusts client-supplied headers without checking the connecting peer. Remote clients can obtain application settings, environment/datasource details and routes, and start test runs. Where application tests use the primary datasource, those runs can write to the real application database. The separately protected migrator and CLI endpoints are not affected. This is fixed in 4.2.0.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-111446 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111446"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-111447",
+    "published": "2026-10-16T04:18:30.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wheels 1.1 through 4.1.2 resolves nestedProperties() records by posted primary key without checking that they belong to the parent being saved. A user able to submit a nested form for their own parent can update and reassign another parent's hasMany or hasOne rows, or delete them when allowDelete=true. Nested belongsTo records can also be edited by posting another associated record's key. New child rows with composite primary keys not made up of foreign keys retain posted key values, allowing the request to choose their identity. This is fixed in 4.2.0.",
+    "tags": [],
+    "title": "CVE-2026-111447 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111447"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-93953",
+    "published": "2026-10-16T04:18:43.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Backuply – Backup, Restore, Migrate and Clone plugin for WordPress is vulnerable to SQL Injection via the Biographical Info field (second-order, via restore) in all versions up to, and including, 1.5.8 due to insufficient escaping on the user supplied parameter and the lack of sufficient preparation on an existing SQL query. Backuply exports the Biographical Info value verbatim inside an INSERT statement written to the backup's SQL dump (wp_usermeta). When an Administrator later restores such a backup, the crafted payload breaks out of that INSERT statement and appends attacker-controlled SQL that executes with full database privileges. This makes it possible for authenticated attackers, with subscriber-level access and above, to write arbitrary data to the database — in particular to update the default_role option in wp_options to administrator (and enable open user registration) — so that a subsequently registered account is automatically granted the Administrator role, resulting in privilege escalation and full site takeover. Because the injection executes inside an INSERT during restore with no response returned to the attacker, the primitive is used to modify database records rather than to read existing data directly.",
+    "tags": [],
+    "title": "CVE-2026-93953 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93953"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-103895",
+    "published": "2026-10-16T05:17:28.333",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The miniOrange OTP Login, Verification and SMS Notifications plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 5.5.8 via the `mo_by_pass_login()` function. This is due to `mo_delay_otp_process()` short-circuiting the authentication flow before password validation or the administrator intent gate (added in 5.5.6) can run, combined with the Delay OTP grace flag (`mov_last_verified_dttm`) being stored as a `user_meta` row keyed solely by target user ID with no binding to the originating session, cookie, IP address, or device. This makes it possible for unauthenticated attackers to authenticate as any WordPress user — including administrators — by submitting only a known username with the `mo_wp_login_intent=otp` parameter and any non-empty password, thereby inheriting a legitimate user's open Delay OTP grace window without ever supplying correct credentials. Exploitation requires the site to have OTP-only login (`wp_login_skip_password=1`, `wp_login_skip_password_fallback=0`) and Delay OTP Verification (`wp_login_delay_otp=1`) enabled, and the target account must currently be within its configured Delay OTP interval.",
+    "tags": [],
+    "title": "CVE-2026-103895 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103895"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-109221",
+    "published": "2026-10-16T05:17:29.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Groundhogg — CRM, Newsletters, and Marketing Automation plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the copy_file function in all versions up to, and including, 4.9.3 This makes it possible for authenticated attackers, with Sales Representative-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This is exploitable by any user holding the plugin-defined import_contacts capability, which is granted by default to the plugin's custom Sales Representative role.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-109221 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109221"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-104932",
+    "published": "2026-10-16T06:17:05.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Search Regex plugin for WordPress is vulnerable to PHP Object Injection in version 3.5 via deserialization of untrusted input in the replace_all function. This allows authenticated attackers, with subscriber-level access and above, to inject a PHP Object. The additional presence of a POP chain allows attackers to execute code.",
+    "tags": [],
+    "title": "CVE-2026-104932 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104932"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-109447",
+    "published": "2026-10-16T06:17:08.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The User Profile Builder – Beautiful User Registration Forms, User Profiles & User Role Editor plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.0.3 via the `role` parameter handled by the `wppb_add_meta_to_user_on_activation()` function. The vulnerability exists because the activation handler passes the attacker-supplied role value directly to `WP_User::set_role()` with no allow-list validation, and the 4.0.3 reserved-name check exempts pre-existing form fields from the block, allowing a legacy field with meta-name `role` to persist and bridge attacker-controlled request input into the serialized signup record stored in `wp_signups`. This makes it possible for unauthenticated attackers to gain a fully activated WordPress administrator account by submitting `role=administrator` through the public `[wppb-register]` shortcode form and subsequently clicking the confirmation activation link. Exploitation requires the site to have a legacy form field with meta-name `role` carried over from before the 4.0.3 upgrade, email confirmation enabled, and open user registration — all stable site-state conditions once established.",
+    "tags": [],
+    "title": "CVE-2026-109447 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109447"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-85659",
+    "published": "2026-10-16T06:17:11.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The PilotPress plugin for WordPress is vulnerable to Privilege Escalation via Account Takeover in all versions up to, and including, 2.0.43. The vulnerability exists because the `update_cc_details()` AJAX handler forwards an attacker-supplied `username` parameter to ONTRAPORT via `api_call('update_cc_details', ...)` before performing the local `username_exists()` collision check, and aborts without rolling back the remote rename when a collision is detected — leaving the remote ONTRAPORT contact renamed to an existing WordPress Administrator's login. On a subsequent login attempt, `user_login()` (hooked to `wp_authenticate`) authenticates against ONTRAPORT using the renamed login and the attacker's own password, resolves the local WordPress user row via `get_user_by('login', $username)` — which now selects the real Administrator's row — and calls `wp_set_password()` against that Administrator's user ID; because the `user_level != 10` guard only suppresses PilotPress's own cookie issuance rather than returning a `WP_Error` to core, WordPress proceeds to validate the newly-synchronized password and issues a full Administrator authentication cookie to the attacker. This makes it possible for authenticated attackers with Subscriber-level access and above — specifically any PilotPress member holding a valid ONTRAPORT contact and the Customer Center nonce — to fully take over an Administrator account.",
+    "tags": [],
+    "title": "CVE-2026-85659 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-85659"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208914",
+    "published": "2026-10-16T15:54:23+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "시청자미디어재단이 직원 10명에게 보내려던 내부 감사자료를 외부 수신자 5,857명에게 잘못 발송한 것으로 나타났다. 자료에는 개인정보 3,000여 건과 예산·계약 관련 내부정보가 포함돼 있었다.더불어민주당 이연희 의원은 10월 16일 이 같은 사고를 지적하고, 이메일 수신자 선택 실수가 대규모 정보 유출로 이어지지 않도록 내부통제와 기술적 차단장치를 개선해야 한다고 요구했다. 사고는 지난 4월 30일 발생했다. 서울시청자미디어센터에서 직원들에게 감사자료를 전달하는 과정에서 이메일 수신자를 잘못 지정하면서 외부로 자료가 발송됐다.오",
+    "tags": [],
+    "title": "직원 10명에게 보낼 감사자료, 외부 5,857명에…시청자미디어재단 오발송",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208914"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208913",
+    "published": "2026-10-16T15:41:45+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "연세대학교 바른ICT연구소(소장 김범수 정보대학원 교수)는 10월 16일 서울 여의도 FKI타워 컨퍼런스센터에서 한국CPO포럼, 싱가포르경영대학교와 공동으로 ‘제15회 아시아 개인정보보호 협력 포럼 2026’을 개최했다.이번 포럼은 ‘자율형 AI 시대의 회복탄력성과 책임성 확보’를 주제로 열렸다. 국내외 학계·연구기관·기업·법률·정책 전문가들이 참여해 AI의 자율적인 판단과 여러 AI 시스템이 연결된 의사결정 과정에서 개인정보를 보호할 방안을 논의했다.주요 쟁점은 AI에 부여할 권한의 범위와 책임 소재였다. AI가 데이터를 축적하고",
+    "tags": [],
+    "title": "연세대 바른ICT연구소, 아시아 전문가들과 AI 개인정보보호 과제 논의",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208913"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208912",
+    "published": "2026-10-16T15:13:53+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈AI가 국내 기업 경영진을 대상으로 AI를 활용해 취약점 발견부터 수정과 검증까지 이어가는 사이버 방어 전략을 제시했다. AI가 찾아낸 문제를 나열하는 데 그치지 않고, 실제 보안 위험을 줄이는 운영 체계를 갖춰야 한다는 설명이다.오픈AI는 16일 웨스틴 서울 파르나스에서 ‘오픈AI 사이버 CXO 라운드테이블’을 개최했다고 밝혔다. 최고정보보호책임자(CISO)를 비롯한 국내 기업 임원급 60여명을 초청한 이번 행사에서는 AI에 따른 사이버 위협 변화와 기업 보안 업무 적용 방안을 다뤘다.김경훈 오픈AI 코리아 총괄 대표가 행사를",
+    "tags": [],
+    "title": "오픈AI, 국내 CISO 대상 사이버 방어 전략 공유…“실제 위험 감소가 핵심”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208912"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208911",
+    "published": "2026-10-16T15:09:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈AI는 16일 챗GPT 음성 기능을 업데이트하고 한국어 목소리 ‘한울’과 ‘햇살’을 추가했다고 밝혔다.이번 업데이트에 적용된 음성 모델 ‘GPT-Live-1.1’은 여러 언어의 억양과 음성 표현을 개선했다. 한국어 이용자는 남성 목소리 ‘한울’과 여성 목소리 ‘햇살’을 선택해 대화할 수 있다.정보를 검색하는 동안에도 상황에 맞는 다양한 표현을 사용하도록 개선했다. 답변을 기다리는 과정에서 “확인 중”과 같은 표현이 반복되는 것을 줄였다는 설명이다.챗GPT 음성 기능은 말하면서 동시에 들을 수 있는 ‘풀 듀플렉스’ 구조를 사용한다",
+    "tags": [],
+    "title": "오픈AI, 챗GPT 음성 기능 업데이트…한국어 목소리 ‘한울·햇살’ 추가",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208911"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208910",
+    "published": "2026-10-16T15:06:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아우토크립트(대표 이석우·김덕수)는 오는 10월 19일부터 23일까지 강릉에서 열리는 ‘제32회 2026 ITS 세계총회’에 참가해 차량 사이버보안 기술과 연구 성과를 발표한다고 밝혔다.학술세션에서는 임직원 3명이 발표한다. 19일 박훈용 기술기획팀장은 익명 토큰 기반 인증과 개인정보 분리 정산 기술을 활용한 V2X 기반 전자 통행료 징수 과정의 개인정보 보호 방안을 소개한다.20일에는 조현준 북미사업그룹장이 차량과 도로 인프라 간 안전한 데이터 교환을 위한 암호화·데이터 무결성 검증 기술을 발표한다. 주기호 전장솔루션사업본부장은",
+    "tags": [],
+    "title": "아우토크립트, 강릉 ITS 세계총회서 차량 사이버보안 기술 발표",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208910"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208909",
+    "published": "2026-10-16T15:03:16+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "금융보안원(원장 박상원)은 이용자가 필요한 정보와 서비스를 쉽게 찾을 수 있도록 대표 홈페이지를 개편했다고 밝혔다.이번 개편은 메인페이지의 정보 구성과 디자인을 이용자 관점에서 정비하고, 주요 업무 콘텐츠와 메뉴를 현행 업무체계에 맞게 재구성하는 데 중점을 뒀다.메인페이지는 공지사항·보도자료, 주요 업무, 조사·연구자료 등을 영역별로 구분한 포털형 구조로 바꿨다. 공지사항과 보도자료는 카드형으로 배치하고 연구자료에는 시각적 요소를 적용해 주요 정보를 쉽게 확인하도록 했다.금융보안 업무에 익숙하지 않은 이용자를 위해 16개 주요 업무",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, 대표 홈페이지 개편…주요 업무·연구자료 접근성 높여",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208909"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208908",
+    "published": "2026-10-16T14:34:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "넷스카우트(한국지사장 김재욱)는 서비스·애플리케이션·네트워크 성능 모니터링 플랫폼 ‘엔지니어스원’에 대화형 AI 기능을 확장한 ‘엔지니어스 코파일럿’을 발표했다고 16일 밝혔다.엔지니어스 코파일럿은 네트워크 패킷에서 추출한 넷스카우트의 ‘스마트 데이터’를 기반으로 장애 조사와 영향 분석을 지원한다. 사용자가 자연어로 질문하면 관련 데이터를 분석해 답변과 시각화, 근거 데이터, 후속 질문을 제공한다.예를 들어 응답 속도가 느려진 애플리케이션이나 영향을 받는 사용자·지역·서비스를 질문할 수 있다. 장애에 영향을 미칠 수 있는 네트워크·",
+    "tags": [],
+    "title": "넷스카우트, 장애 분석 돕는 대화형 AI ‘엔지니어스 코파일럿’ 발표",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208908"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208907",
+    "published": "2026-10-16T14:11:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "병원정보보안협회(회장 김진응)와 스패로우(대표 장일수)가 병원 정보시스템의 보안 취약점 개선과 정보보호 역량 강화를 위해 협력한다.양측은 10월 15일 연세대학교 의료원 에비슨의생명연구원에서 병원 정보시스템 보안 강화와 안전한 정보보호 환경 조성을 위한 업무협약을 체결했다고 16일 밝혔다.이번 협약은 의료기관의 보안 취약점을 예방·개선하고 병원 현장에 필요한 정보보호 활동을 지원하기 위해 마련됐다. 주요 협력 분야는 병원 정보시스템의 보안 취약점 진단·개선을 위한 기술 지원, 회원 병원의 정보보호 현황과 수요에 기반한 보안 강화·투",
+    "tags": [],
+    "title": "병원정보보안협회–스패로우, 병원 정보시스템 취약점 개선 협력",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208907"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208905",
+    "published": "2026-10-16T14:02:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "샌즈랩(대표 김기홍)은 지난 9월 29일부터 30일까지 싱가포르 마리나 베이 샌즈에서 열린 ‘테크 위크 싱가포르 2026’에 참가해 온디바이스 기반 AI 위·변조 탐지·분석 기술을 선보였다고 밝혔다.이번 참가는 과학기술정보통신부와 한국인터넷진흥원(KISA)의 ‘2026년 AI 역기능 대응 기술 실증·확산사업’의 일환이다. 샌즈랩은 비대면 고객확인(eKYC) 과정의 인증 우회와 디지털 사기 등에 대응하기 위한 기술을 개발하고 있다.전시에서는 ‘페이크체크’를 활용해 PC 브라우저와 모바일에서 얼굴 이미지의 위·변조 징후와 판단 근거를",
+    "tags": [
+      "금융"
+    ],
+    "title": "샌즈랩, 싱가포르서 온디바이스 AI 위·변조 탐지 기술 시연",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208905"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208904",
+    "published": "2026-10-16T13:30:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "해외 온라인 포럼에 한국 국방부와 국군방첩사령부를 해킹해 확보했다며 데이터 1테라바이트(TB)를 판매한다는 게시물이 등장했다. 게시자는 해킹그룹 ‘샤이니헌터스(ShinyHunters)’의 창립자를 자칭했지만, 실제 해당 조직과의 관계나 데이터의 진위는 확인되지 않았다.16일 데일리시큐가 확보한 PwsForums 게시 화면과 제보 내용에 따르면, ‘ShinyHunters’라는 계정은 한국 국방부와 국군방첩사령부를 언급한 제목으로 데이터 판매글을 올렸다. 게시자는 자신을 샤이니헌터스의 창립자 ‘이지스(Aegis)’라고 소개하며, 202",
+    "tags": [],
+    "title": "[단독] ‘샤이니헌터스 창립자 Aegis’ 계정, 한국 국방부ㆍ방첩사 관련 데이터 1TB 30만 달러에 판매 주장글 게시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208904"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208903",
+    "published": "2026-10-16T12:40:34+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "데일리시큐는 7월부터 장삼봉 작가(필명)의 정보보안 소설《로그아웃되지 않는 밤》을 매주 4편씩 연재한다. 화려한 디지털 서비스 뒤에서 보이지 않는 위협과 맞서는 보안 담당자들의 현실과 고뇌, 성장을 생생하게 담았다. 수많은 오탐 속에 숨은 단 하나의 진짜 공격을 추적하는 이들의 잠들지 못하는 밤이 시작된다. -어디에 쓰는가-그날 아침, 전 세계가 같은 비명을 질렀다.도윤이 출근하기도 전에, 스마트워치가 쉬지 않고 울렸다. 보안 업계 단체 대화방이 폭주하고 있었다. 전 세계 거의 모든 시스템이 가져다 쓰는 한 공개 소프트웨어 라이브러",
+    "tags": [],
+    "title": "[정보보안 연재소설-로그아웃되지 않는 밤] 제53화 '전 세계가 터진 날'",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208903"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208902",
+    "published": "2026-10-16T10:52:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "미국 수사당국이 북한 IT 인력의 위장 취업을 지원한 현지 거점을 대규모로 단속했다. 해외에서 미국 기업 직원으로 일하는 것처럼 위장할 수 있도록 회사 지급 노트북을 대신 받아 관리해 주던 이른바 ‘노트북 팜’이 대상이다.미 법무부는 10월 13일(현지시간) 북한 원격 IT 인력의 불법 수익 활동에 대응해 텍사스주 거점 단속과 오하이오주 연방 기소 등 일련의 조치를 발표했다. 전체 조치에는 14명 기소, 미국인 2명 체포, 노트북과 원격제어 장비 약 187대 압수가 포함됐다. 체포된 2명은 오하이오 기소 사건의 피고인이다. 미국에",
+    "tags": [],
+    "title": "FBI, 북한 IT 인력 ‘노트북 팜’ 대규모 단속…미국인 조력자 2명 체포",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208902"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html",
+    "published": "2026-10-16T04:59:36+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A suspected advanced threat actor has been observed exploiting a security flaw in Fortinet FortiOS to deliver a previously unreported memory-resident ARM64 malware known as PEERSTITCH. The attack involves the exploitation of CVE-2025-61624 (CVSS score: 5.4), a path traversal flaw in the command line interpreter of FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager that could allow a",
+    "tags": [],
+    "title": "PEERSTITCH Malware Deployed via FortiOS Flaw Bypasses Checks on Tagged VPN Sessions",
+    "url": "https://thehackernews.com/2026/10/attackers-exploit-fortios-flaw-to.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/",
+    "published": "2026-10-16T06:18:08+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "BeyondTrust warned customers on Thursday to patch a critical flaw in its Remote Support (RS) that has been exploited in zero-day attacks since late August. [...]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "BeyondTrust patches zero-day exploited in attacks since August",
+    "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/95883/",
+    "published": "2026-10-15T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Purpose and Scope APT cases disclosed in September 2026 demonstrate that attacks have evolved to exploit the developer ecosystem, cloud services, and network management infrastructure as trust layers. Legitimate software installers, GitHub repositories, Microsoft 365, OneDrive, Telegram, Nostr, routers, and authentication servers were all included in the attack chain. Key Trends Supply chain attacks have […]",
+    "tags": [
+      "APT"
+    ],
+    "title": "September 2026 Threat Trend Report on APT Groups",
+    "url": "https://asec.ahnlab.com/en/95883/"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/95879/",
+    "published": "2026-10-13T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Overview. This report summarizes cases in which Suo5 (an HTTP/HTTPS-based tunneling tool) was exploited for pivoting—a technique used to expand the scope of an attack to other systems or networks by passing through a system that has already been compromised—by using compromised web servers as relay points to access internal networks for lateral movement. It […]",
+    "tags": [],
+    "title": "An Analysis of Suo5-Based Tunneling and Pivoting Attack Techniques Through Case Studies",
+    "url": "https://asec.ahnlab.com/en/95879/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiSkFVX3lxTE5FMTVNOS1jUG9tLVpvVE1BTTZiR2lhUnJfQzk3bzhXTUhPYy1JbE9JOE5aNzZabVUyWGMtLWNoOFBRb3VxajBDZ2t3",
+    "published": "2026-10-16T04:58:41+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Anthropic, 스마트가전 AI 자율복제 경고…가전·반도체·클라우드 업계 보안 비용 재편 불가피",
+    "tags": [],
+    "title": "Anthropic, 스마트가전 AI 자율복제 경고…가전·반도체·클라우드 업계 보안 비용 재편 불가피",
+    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5FMTVNOS1jUG9tLVpvVE1BTTZiR2lhUnJfQzk3bzhXTUhPYy1JbE9JOE5aNzZabVUyWGMtLWNoOFBRb3VxajBDZ2t3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5VNVpVN1JhS3kwSk1oLVFLZWM4aUEyM2ZHTzE4dUZSN3hQak93YU1GR2xXbUEyNWloYTladmVVbThnZWZrRng4YXhRSkJvVEk3MmxTbGFkTmFWUnZaOThvUnlZcy1xMWhTSkM0",
+    "published": "2026-10-16T04:55:44+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금보원, 홈페이지 개편... 가시성·편의성 향상",
+    "tags": [
+      "금융"
+    ],
+    "title": "금보원, 홈페이지 개편... 가시성·편의성 향상",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5VNVpVN1JhS3kwSk1oLVFLZWM4aUEyM2ZHTzE4dUZSN3hQak93YU1GR2xXbUEyNWloYTladmVVbThnZWZrRng4YXhRSkJvVEk3MmxTbGFkTmFWUnZaOThvUnlZcy1xMWhTSkM0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTFBwSWkwQ3RQSzhFVENIc3dzQXpUdExTbFROVnJGaEVjbXpCZ0VRQkdsaGhBZFVXMHZJc0dWaHRBd0djNmRsb0hyaDRWWjJSVDlXOFk1ODZjN21mWWtRVlI4RWtR",
+    "published": "2026-10-16T02:46:52+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[단독]침해사고 금융사 16곳 중 6곳, 금융보안원 미가입…중소사 보안 공백",
+    "tags": [
+      "금융"
+    ],
+    "title": "[단독]침해사고 금융사 16곳 중 6곳, 금융보안원 미가입…중소사 보안 공백",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBwSWkwQ3RQSzhFVENIc3dzQXpUdExTbFROVnJGaEVjbXpCZ0VRQkdsaGhBZFVXMHZJc0dWaHRBd0djNmRsb0hyaDRWWjJSVDlXOFk1ODZjN21mWWtRVlI4RWtR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE5PWHN4ODBpWlc1SFF5b084Y3haY1ZWUUJxem83QXVmVDN2ZG1yWDZETl83QVJnbEJkZWRBSXc3b0dEQnNkRDdyNkU0SjdQb0gwZVJ6Rjl2SGt1X3JIX0pGdlYtYVhxYndFM1JZdGsySlU1NmR2",
+    "published": "2026-10-16T04:31:24+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 대표 홈페이지 전면 개편…이용자 편의성 강화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, 대표 홈페이지 전면 개편…이용자 편의성 강화",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5PWHN4ODBpWlc1SFF5b084Y3haY1ZWUUJxem83QXVmVDN2ZG1yWDZETl83QVJnbEJkZWRBSXc3b0dEQnNkRDdyNkU0SjdQb0gwZVJ6Rjl2SGt1X3JIX0pGdlYtYVhxYndFM1JZdGsySlU1NmR2?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:241777",
+    "published": "2026-10-16T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "‘무기한 선물’ 이용자 유의사항 안내",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=241777&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFBVamNnOW1LcFNpMkhqeUI4WU5mZTV1bkJSSDBiVEhQdU1hM0hvMmJWalNnQ1lTSE5OZ2tPeEpydVpaLTRMLXN4T1hiaV85VlhMVFRKeTh2akxWa0otVFdlVlhFcjcxTWxYWTZZcWZxMUzSAXRBVV95cUxNOVFlRUFXTU56NmlnaFFUSFFfZlBWb1hMNU1DVll1eGx2U0Fhc0ZEaTFCUG1PcGRsQ0dmdmNVaDBqTzdyV0hEOFR0Wkp5ZDc5NmdRUTVRNkhBX2ZaTGRpNjlodGdmdG5ZTFEwNU1Ta2ZCTmxjTw",
+    "published": "2026-10-16T06:52:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "라이더 개인정보 유출은 배민에?…개인정보위 “위탁관계 따져봐야”",
+    "tags": [],
+    "title": "라이더 개인정보 유출은 배민에?…개인정보위 “위탁관계 따져봐야”",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBVamNnOW1LcFNpMkhqeUI4WU5mZTV1bkJSSDBiVEhQdU1hM0hvMmJWalNnQ1lTSE5OZ2tPeEpydVpaLTRMLXN4T1hiaV85VlhMVFRKeTh2akxWa0otVFdlVlhFcjcxTWxYWTZZcWZxMUzSAXRBVV95cUxNOVFlRUFXTU56NmlnaFFUSFFfZlBWb1hMNU1DVll1eGx2U0Fhc0ZEaTFCUG1PcGRsQ0dmdmNVaDBqTzdyV0hEOFR0Wkp5ZDc5NmdRUTVRNkhBX2ZaTGRpNjlodGdmdG5ZTFEwNU1Ta2ZCTmxjTw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTFA5dlBwa3ZPaU5TS3lGYnBWTWREYk50TWhDT2N4bzhRdkxNbzlWLWVJWTZ5MmxxeFF5emlDTHF6Y20zd0J6dVp6dl9zSTF2ZF80Z1Y0Smx1RW5hWnZyM0FZemxxTEFTZw",
+    "published": "2026-10-16T04:08:05+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "치과계 온라인 교육사이트 ‘보안 비상’",
+    "tags": [],
+    "title": "치과계 온라인 교육사이트 ‘보안 비상’",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA5dlBwa3ZPaU5TS3lGYnBWTWREYk50TWhDT2N4bzhRdkxNbzlWLWVJWTZ5MmxxeFF5emlDTHF6Y20zd0J6dVp6dl9zSTF2ZF80Z1Y0Smx1RW5hWnZyM0FZemxxTEFTZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1ZWWJmWWdUMzlLdGpJd29CN2RTNGhNMlQzNndqdTluZjY4NUhvWXoxWWM4djBzRXVEZEg0THhWX1dCeXdEZmJkVkkzOUpLeVFjb2l0bTlOQjdnem9VSUlLRFRWMTFNeUJ5S2pz",
+    "published": "2026-10-16T06:49:45+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "‘병원 의료정보보호 컨퍼런스’, 11월19일 개최",
+    "tags": [],
+    "title": "‘병원 의료정보보호 컨퍼런스’, 11월19일 개최",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ZWWJmWWdUMzlLdGpJd29CN2RTNGhNMlQzNndqdTluZjY4NUhvWXoxWWM4djBzRXVEZEg0THhWX1dCeXdEZmJkVkkzOUpLeVFjb2l0bTlOQjdnem9VSUlLRFRWMTFNeUJ5S2pz?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE02N01QN3RNZlM4ODhuSVVtdk5Ka0pLNmEyOWVlS3RGeWh3eHpQNHpyc3pwT3VEX0xZMEE0TlhXeVRpejdVY2ZCYXdQWWp6WHE4a2hsTUJtNjQybGktZU84eQ",
+    "published": "2026-10-16T02:31:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[현장너머]위상 달라진 개인정보위, 존재 가치 증명할 때",
+    "tags": [],
+    "title": "[현장너머]위상 달라진 개인정보위, 존재 가치 증명할 때",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE02N01QN3RNZlM4ODhuSVVtdk5Ka0pLNmEyOWVlS3RGeWh3eHpQNHpyc3pwT3VEX0xZMEE0TlhXeVRpejdVY2ZCYXdQWWp6WHE4a2hsTUJtNjQybGktZU84eQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5uME9rTjVDMG9VQmRXOTJzSVh3ZndCQXhEY3NqMTFHc3YxZURRRldHT21wb3g5UG1MZlp0OXNicFNsSzZQeWpxN21USV9LU3pGTlhpMkkwMkU4V1JSa3JFbFUzVFk1OXBLeW9j0gFvQVVfeXFMTXNmdjA5VVhqNl9YbFQ0Wk5KWVNnalhEYmZSR29FSlBrLWJjTjlkNWpCbkFBUVBSck1OMHZHZnhBa2h2ZTRLVTlsajZuOEpZNzVkekJzeGV1RFQzYjZtUVVUMEVoT05uUUZkR1p5S1kw",
+    "published": "2026-10-14T09:03:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "넷마블, 개인정보 보호 및 보안 체계 강화 과제",
+    "tags": [],
+    "title": "넷마블, 개인정보 보호 및 보안 체계 강화 과제",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5uME9rTjVDMG9VQmRXOTJzSVh3ZndCQXhEY3NqMTFHc3YxZURRRldHT21wb3g5UG1MZlp0OXNicFNsSzZQeWpxN21USV9LU3pGTlhpMkkwMkU4V1JSa3JFbFUzVFk1OXBLeW9j0gFvQVVfeXFMTXNmdjA5VVhqNl9YbFQ0Wk5KWVNnalhEYmZSR29FSlBrLWJjTjlkNWpCbkFBUVBSck1OMHZHZnhBa2h2ZTRLVTlsajZuOEpZNzVkekJzeGV1RFQzYjZtUVVUMEVoT05uUUZkR1p5S1kw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE01ckx4WFlac2xSUFJiOTl1ZFRpZGMtQ04tWWZSYm5yQmhtTG9iYWtsMjQyUkZFTy1neWJ3MUdiaFdXSmRrY2cxai1yUFhiaE5SQUNfcEZmTHlPREtkazRtLWZqenhBWVYwZ3F4eENn",
+    "published": "2026-10-15T19:42:09+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "한국에너지공단, 에너지 분야 단독 중계전문기관 지정…'에너지 마이데이터' 시대 연다",
+    "tags": [],
+    "title": "한국에너지공단, 에너지 분야 단독 중계전문기관 지정…'에너지 마이데이터' 시대 연다",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE01ckx4WFlac2xSUFJiOTl1ZFRpZGMtQ04tWWZSYm5yQmhtTG9iYWtsMjQyUkZFTy1neWJ3MUdiaFdXSmRrY2cxai1yUFhiaE5SQUNfcEZmTHlPREtkazRtLWZqenhBWVYwZ3F4eENn?oc=5"
   }
 ]
