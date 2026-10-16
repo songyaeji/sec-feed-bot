@@ -4307,5 +4307,399 @@
     "tags": [],
     "title": "한국에너지공단, 에너지 분야 단독 중계전문기관 지정…'에너지 마이데이터' 시대 연다",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE01ckx4WFlac2xSUFJiOTl1ZFRpZGMtQ04tWWZSYm5yQmhtTG9iYWtsMjQyUkZFTy1neWJ3MUdiaFdXSmRrY2cxai1yUFhiaE5SQUNfcEZmTHlPREtkazRtLWZqenhBWVYwZ3F4eENn?oc=5"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-63030",
+    "kev": true,
+    "published": "2026-07-21T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "WordPress Core contains an interpretation conflict vulnerability that could allow an attacker to perform SQL Injection and achieve Remote Code Execution. This vulnerability can be chained with CVE-2026-60137.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63030: WordPress Core Interpretation Conflict Vulnerability (WordPress Core)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63030"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-104730",
+    "published": "2026-10-16T07:17:08.267",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Sunshine Photo Cart – Client Photo Gallery & Photo Proofing for Photographers plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 3.7.4 via deserialization of untrusted input . This makes it possible for unauthenticated attackers to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present. If a POP chain is present via an additional plugin or theme installed on the target system, the attacker can store the malicious payload unauthenticated via the public favorites page and trigger deserialization by viewing any image in a non-viewable or private gallery.",
+    "tags": [],
+    "title": "CVE-2026-104730 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104730"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-94169",
+    "published": "2026-10-16T07:17:14.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Control of Generation of Code ('Code Injection') vulnerability in Theme-one The Grid the-grid allows Command Injection.This issue affects The Grid: from n/a through 2.8.1.",
+    "tags": [],
+    "title": "CVE-2026-94169 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94169"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-94388",
+    "published": "2026-10-16T07:17:14.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in halfdata Green Popups halfdata-green-popups allows Blind SQL Injection.This issue affects Green Popups: from n/a before 7.6.3.",
+    "tags": [],
+    "title": "CVE-2026-94388 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94388"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2024-0858",
+    "published": "2024-03-18T19:15:06.530",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Innovs HR WordPress plugin before 1.0.3.7.1 does not have CSRF checks in some places, which could allow attackers to make logged in users perform unwanted actions via CSRF attacks such as adding them as employees.",
+    "tags": [],
+    "title": "CVE-2024-0858 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0858"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-5987",
+    "published": "2025-07-07T15:15:28.180",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in libssh when using the ChaCha20 cipher with the OpenSSL library. If an attacker manages to exhaust the heap space, this error is not detected and may lead to libssh using a partially initialized cipher context. This occurs because the OpenSSL error code returned aliases with the SSH_OK code, resulting in libssh not properly detecting the error returned by the OpenSSL library. This issue can lead to undefined behavior, including compromised data confidentiality and integrity or crashes.",
+    "tags": [],
+    "title": "CVE-2025-5987 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5987"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-76648",
+    "published": "2026-09-23T19:19:15.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CopyAPIView (awx/awx/api/generics.py:873) sets permission_classes =\n(IsAuthenticated,), so DRF's get_object() performs no object-level\nRBAC. The get() handler (lines 988–991) explicitly guards with\nrequest.user.can_access(obj._class_, 'read', obj) — but post()\n(lines 1001–1010) does not. POST only checks:\n\ncan_access(model, 'add', create_kwargs_check)\n\ncan_access(model, 'copy_related', obj)\n\nFor JobTemplate, can_add (awx/awx/main/access.py:1465–1520) gates on\n\ninventory.use_role + project.use_role +\nexecution_environment.read_role — resource-level roles that do not\nimply read on the source JT — and can_copy_related (1522–1534) checks\nonly credentials.use_role. None of these imply the caller can read the\nsource JT.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-76648 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76648"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-92115",
+    "published": "2026-10-16T07:17:13.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Photo Album Plus plugin for WordPress is vulnerable to authenticated Command Injection in all versions up to, and including, 9.3.02.002 via the `value` parameter of the `update-photo` AJAX action. This is due to insufficient shell escaping within the `wppa_image_magick_a()` function, where the attacker-controlled `value` parameter is concatenated raw — without `escapeshellarg()` — into an ImageMagick command string before being passed to `exec()`; further, `wppa_decode()` actively restores percent-encoded shell metacharacters (e.g., `%26`→`&`, `%23`→`#`) rather than stripping them, allowing crafted payloads to survive sanitization and break out of the ImageMagick argument context. This makes it possible for authenticated attackers holding the plugin-defined `wppa_upload` capability to execute arbitrary operating-system commands as the web-server user, achieving full remote code execution on the underlying server. Exploitation requires ImageMagick to be enabled on the server; the `wppa_upload` capability is a plugin-level privilege that site administrators may grant to lower-privileged WordPress roles via the plugin's Users settings, broadening the pool of potential attackers beyond administrators.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-92115 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92115"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-92553",
+    "published": "2026-10-16T07:17:14.150",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The YaySMTP – WP Mail SMTP with Email Logs, Tracking & Reports plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.7.7 via the putFile function. This is due to insufficient file type validation in the putFile function, as sanitize_file_name() does not strip executable extensions and no allow-list, MIME check, or safe-extension rename is applied. This makes it possible for authenticated attackers, with subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. The only server-side guard is a .htaccess file containing 'Require all denied' written by writeGuards(), which is silently ignored by nginx and by Apache configured with AllowOverride None, meaning RCE is fully achievable on those server configurations.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-92553 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92553"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-97296",
+    "published": "2026-10-16T07:17:14.693",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in Rocketgenius, Inc Gravity Forms gravityforms allows Object Injection.This issue affects Gravity Forms: from n/a before 3.1.1.",
+    "tags": [],
+    "title": "CVE-2026-97296 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97296"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-75903",
+    "published": "2026-10-16T08:17:13.513",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Vulnity Security plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.4.3 This is due to insufficient protection of the delegated-login pairing credential file on Nginx-based installations, where the plugin's generated server configuration snippet guards the wrong directory path. This makes it possible for unauthenticated attackers to retrieve the stored credentials, forge signed REST API requests, and log in as an administrator.",
+    "tags": [],
+    "title": "CVE-2026-75903 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75903"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-111311",
+    "published": "2026-10-16T09:17:04.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The DoubleScale | All-in-One CRM – Sales, Multi-Channel Marketing, Newsletter, Booking, Helpdesk, Automation, MCP & More plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 1.5.1 via the store_upload function. This is due to a fail-open extension allow-list in extension_is_allowed() that returns true when wp_check_filetype() yields an empty type for unrecognized extensions such as .php, combined with magic-byte-only MIME detection and no capability check beyond is_user_logged_in(). This makes it possible for authenticated attackers, with subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. Exploitation requires the Helpdesk module to be enabled, as the vulnerable REST endpoint is only registered when that module is active.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-111311 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111311"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-106030",
+    "published": "2026-10-16T10:18:03.327",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "NordVPN for Windows allows local attackers to stop unprotected Windows system services and change their startup type to Manual via named pipes. The NordVPN user-mode application allows a low-privileged attacker to act as a trusted process and connect to the named pipe \"\\\\.\\pipe\\nord-security\\v1\\NordVpnService\\Server\". The attacker can then invoke the \"ISettingsGrpc.StopService\" and \"ISettingsGrpc.ChangeServiceStartType\" methods with an arbitrary service name, allowing them to stop any unprotected Windows service and change its startup type. This leads to denial of service of critical system services. Services protected by Windows (PPL processes, Windows Tamper Protection), such as Windows Defender, cannot be stopped or reconfigured.\n\n\nThis issue was fixed in version 8.12",
+    "tags": [],
+    "title": "CVE-2026-106030 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106030"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-109119",
+    "published": "2026-10-16T11:17:00.927",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Privilege Management in the user management API endpoint (/api/users/{username_or_id}) in Rdiffweb allows authenticated users to elevate their privileges to administrator by modifying the role parameter in a POST request.",
+    "tags": [],
+    "title": "CVE-2026-109119 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109119"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-111391",
+    "published": "2026-10-16T12:16:33.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SGLang 0.5.10 through 0.5.22 contains a code injection vulnerability in _evaluate_filter() that allows remote attackers to execute Python code by escaping the eval() sandbox through re.search __globals__. Attackers can send a crafted filter expression to the unauthenticated /dumper/configure endpoint when DUMPER_SERVER_PORT is set, running code in the scheduler process on the next forward pass.",
+    "tags": [],
+    "title": "CVE-2026-111391 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111391"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72219",
+    "published": "2026-10-16T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [
+      "피싱"
+    ],
+    "title": "코인 탈취를 위한 악성URL 유포에 따른 스미싱 주의",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72219"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208915",
+    "published": "2026-10-16T16:13:07+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "우리은행과 신한은행의 올해 정보보호 편성 예산이 지난해보다 각각 21.7%, 10.4% 감소한 것으로 나타났다. 국민의힘 박대출 의원은 금융회사가 정보보호 투자를 확대할 수 있도록 정책적 유인을 마련해야 한다고 지적했다.박 의원이 금융감독원에서 제출받아 10월 16일 공개한 자료에 따르면, 올해 5대 은행 가운데 정보보호 예산을 가장 많이 편성한 곳은 KB국민은행으로 860억7,500만원이었다.이어 NH농협은행 801억3,400만원, 하나은행 636억3,500만원, 우리은행 615억6,600만원, 신한은행 405억9,100만원 순이",
+    "tags": [
+      "금융"
+    ],
+    "title": "박대출 의원  “우리은행 21.7%·신한은행 10.4% 감액…5대 은행 정보보호 예산 공개“",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208915"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/ai-decision-models-and-their-impact-on.html",
+    "published": "2026-10-16T11:30:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "In the space of a month, a new category of AI model went from nonexistent to everywhere. TypeSafe AI released Jev on September 15 and called it a System One model, a nod to Kahneman's fast, intuitive thinking. OpenAI announced its own Decisions API at DevDay and opened a public beta on October 6. Cribl published cribl-decision, an open LoRA adapter you can run locally. Others, like Laya, are",
+    "tags": [
+      "APT"
+    ],
+    "title": "AI Decision Models and Their Impact on AI SOC Platforms",
+    "url": "https://thehackernews.com/2026/10/ai-decision-models-and-their-impact-on.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html",
+    "published": "2026-10-16T06:53:09+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "AI agents being tested online reached the live systems of Indian organizations and read business records, including personal data and confidential material, CERT-In said in an advisory on October 15. The agents went beyond their assigned tasks, and none of the organizations detected the unauthorized access. After internal reviews, the AI companies whose models were being tested",
+    "tags": [],
+    "title": "CERT-In Warns AI Agents Accessed Sensitive Data at Indian Organizations During Testing",
+    "url": "https://thehackernews.com/2026/10/cert-in-warns-ai-agents-accessed.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/",
+    "published": "2026-10-16T08:44:22+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Microsoft says some users may have trouble turning on Smart App Control after installing this month's KB5127648 Windows 11 security update. [...]",
+    "tags": [],
+    "title": "Microsoft: October Windows update may break Smart App Control",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/kb5127648-windows-security-update-may-break-smart-app-control/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/",
+    "published": "2026-10-16T07:37:35+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The Administrative Office of the US Courts says a cyberattack on government contractor BAE Systems has taken down the notice system used by federal bankruptcy courts. [...]",
+    "tags": [],
+    "title": "BAE Systems cyberattack disrupts US federal court operations",
+    "url": "https://www.bleepingcomputer.com/news/security/bae-systems-cyberattack-disrupts-us-federal-court-operations/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=201077",
+    "published": "2026-10-16T09:08:57+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "PEERSTITCH malware exploited FortiManager to expose 500+ firewalls, evade detection inside FortiOS memory, and maintain stealthy access. PEERSTITCH, a stealthy implant deployed during a prolonged intrusion, helped attackers maintain access to a telecom managed service provider after compromising its FortiManager appliance. Palo Alto Networks Unit 42 documented the operation, which began in September 2024 and […]",
+    "tags": [],
+    "title": "PEERSTITCH malware: How Attackers Compromised 500 Firewalls Through FortiManager",
+    "url": "https://securityaffairs.com/201077/malware/peerstitch-malware-how-attackers-compromised-500-firewalls-through-fortimanager.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=201054",
+    "published": "2026-10-16T07:31:41+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "The regulated utility company CenterPoint Energy says a data breach exposed the personal information of more than 1 million people in Texas. CenterPoint Energy is a regulated utility company used to deliver natural gas and electricity infrastructure, maintain power grids and pipelines, and restore service across parts of Texas, Indiana, Ohio, and Minnesota. The organization […]",
+    "tags": [],
+    "title": "CenterPoint Energy Data Breach: More Than 1 Million Texans Affected",
+    "url": "https://securityaffairs.com/201054/cyber-crime/centerpoint-energy-data-breach-more-than-1-million-texans-affected.html"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMijgFBVV95cUxOOUotSDJZc0tNOXVzSmg0MDkwSXJxVmZ5aDNFbWhmQWhJemdCVWxPaGJOaDd5VkJBekhtSm92Uko5TmFiN09HNllaekYxbW1LeVZLN3B1eDhPRU1UVFpsYk5PRjJXWTRaSEpralB5X2JKOHBPYkJQUHpJaXFpWV9LaXpBN2lTeDFGZm5qWExn",
+    "published": "2026-10-14T09:05:24+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Anthropic, 신규 사무소 개소와 함께 싱가포르 정부와 양해각서 체결",
+    "tags": [],
+    "title": "Anthropic, 신규 사무소 개소와 함께 싱가포르 정부와 양해각서 체결",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOUotSDJZc0tNOXVzSmg0MDkwSXJxVmZ5aDNFbWhmQWhJemdCVWxPaGJOaDd5VkJBekhtSm92Uko5TmFiN09HNllaekYxbW1LeVZLN3B1eDhPRU1UVFpsYk5PRjJXWTRaSEpralB5X2JKOHBPYkJQUHpJaXFpWV9LaXpBN2lTeDFGZm5qWExn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBocFlXMzBPNTk5TkdHOTViRkpQLTNpa0g1emkzLTN4SHNia0Z5S3ZpOFBrNnlOUGk3TXd0WUd5TXYwV2tjQTVFd18wQTVUNWN0WmRFQ2dNSVJFRUZqYmQ5eNIBeEFVX3lxTE05ZkhDa0hCNFVUMFp2X21WTWlDOVBQbXU2cnMtdTJYYmhzTlVsYWZtcnViU1Fqa2JlYmt1X1ZaSFNVdDBRWW9oeHU4MUJCVFpPbWdZTEFsS2tBQlhfUENDVjZqbXJuUjRYTmVGaWlHNjJLNFJhWXRBMA",
+    "published": "2026-10-16T07:23:23+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹 피해 16곳 중 6곳 금융보안원 미가입…중소 금융권 '보안 공백'",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 피해 16곳 중 6곳 금융보안원 미가입…중소 금융권 '보안 공백'",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBocFlXMzBPNTk5TkdHOTViRkpQLTNpa0g1emkzLTN4SHNia0Z5S3ZpOFBrNnlOUGk3TXd0WUd5TXYwV2tjQTVFd18wQTVUNWN0WmRFQ2dNSVJFRUZqYmQ5eNIBeEFVX3lxTE05ZkhDa0hCNFVUMFp2X21WTWlDOVBQbXU2cnMtdTJYYmhzTlVsYWZtcnViU1Fqa2JlYmt1X1ZaSFNVdDBRWW9oeHU4MUJCVFpPbWdZTEFsS2tBQlhfUENDVjZqbXJuUjRYTmVGaWlHNjJLNFJhWXRBMA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE5wVXdab29hcERQQkVhQUhWLUppUTRRYklaT05kXzdrS3dKWnBoc1dNaWxhWkVSRGo1WGZPMjFUR2xwTTZUYnBoWVBJSXBVNi1jS016elR2ZnpGVG1RRkIzZEZOTTNLUy1fZEE",
+    "published": "2026-10-16T09:01:03+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 포털형 홈페이지로 개편…16개 주요업무 콘텐츠 재구성",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, 포털형 홈페이지로 개편…16개 주요업무 콘텐츠 재구성",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5wVXdab29hcERQQkVhQUhWLUppUTRRYklaT05kXzdrS3dKWnBoc1dNaWxhWkVSRGo1WGZPMjFUR2xwTTZUYnBoWVBJSXBVNi1jS016elR2ZnpGVG1RRkIzZEZOTTNLUy1fZEE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBPX2w1OXdiM05HaW5telhNUjN6R0lSQVV0Q2pJUUZVUjUwZFBXRFd3SG8tZE5FMV9KNjRiYjNxV1AzZUk4OC00VUgyWlZSVzcyX1BDRFJsUXlJUFU0TDFoOQ",
+    "published": "2026-10-16T08:54:32+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "OK저축은행 또 해킹…고객 268명 정보 유출, 금보원 공유 의심 IP와 달라(종합)",
+    "tags": [
+      "금융"
+    ],
+    "title": "OK저축은행 또 해킹…고객 268명 정보 유출, 금보원 공유 의심 IP와 달라(종합)",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBPX2w1OXdiM05HaW5telhNUjN6R0lSQVV0Q2pJUUZVUjUwZFBXRFd3SG8tZE5FMV9KNjRiYjNxV1AzZUk4OC00VUgyWlZSVzcyX1BDRFJsUXlJUFU0TDFoOQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiY0FVX3lxTE1Dc2ZGT0NKbUM1WWFNVVRvYWUxQnBfSDBpQ2lrbFpVMi0yUFJtMmJ1OTJPOW9GOFRIeHpvclpYanEzNGlZY0w1RDVvR2w4NVBhNDhCQ1BBdGJZd2JIcTEtRVZhSQ",
+    "published": "2026-10-12T10:00:50+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "테마 이미지와 플레이 화면을 비교하는 바카라 예측 분석기",
+    "tags": [],
+    "title": "테마 이미지와 플레이 화면을 비교하는 바카라 예측 분석기",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1Dc2ZGT0NKbUM1WWFNVVRvYWUxQnBfSDBpQ2lrbFpVMi0yUFJtMmJ1OTJPOW9GOFRIeHpvclpYanEzNGlZY0w1RDVvR2w4NVBhNDhCQ1BBdGJZd2JIcTEtRVZhSQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiR0FVX3lxTE9sTHUzcTd0TS14RHJOTHA1c1Nmenl6Zkp5RmdfNFlWV2FSWGRIa2F0NVlqZ0x3S3BrZFVuUEh3UUktcDNzQ0RF",
+    "published": "2026-10-16T08:21:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[성명] 정부는 광고성 스팸문자 등 개인정보 침해 실태 전수 조사하고 제도 개선에 나서라",
+    "tags": [],
+    "title": "[성명] 정부는 광고성 스팸문자 등 개인정보 침해 실태 전수 조사하고 제도 개선에 나서라",
+    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE9sTHUzcTd0TS14RHJOTHA1c1Nmenl6Zkp5RmdfNFlWV2FSWGRIa2F0NVlqZ0x3S3BrZFVuUEh3UUktcDNzQ0RF?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFAzRnVkYnBXTWQ2SkNCdGdEak14UDFhMUFzS1BiU3kyQ1gyQ3JiTXYzamN6a2R1SXFjVnNDOG80SEdaSmhEc0NUVjMwNTNEMHpmQjJJbzd6ZTNFRXlIdGdFddIBeEFVX3lxTE55WHZVYVdfY3hWS2c3TlRtN2FGcWlDc3Rpajh4VHVRZndYMkthSF9kd1F3Mjc2bzFxbEthTTVLWU1tcHY5NDM2akJXSDlwRUl0TlFjX1JFSDlSdDZ3bXpEb1I1U1VGS09wRFIzM0NkdUVJRGIzOEptdA",
+    "published": "2026-10-16T09:47:01+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "경실련 \"광고성 스팸문자 개인정보 처리 실태 전수조사해야\"",
+    "tags": [],
+    "title": "경실련 \"광고성 스팸문자 개인정보 처리 실태 전수조사해야\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzRnVkYnBXTWQ2SkNCdGdEak14UDFhMUFzS1BiU3kyQ1gyQ3JiTXYzamN6a2R1SXFjVnNDOG80SEdaSmhEc0NUVjMwNTNEMHpmQjJJbzd6ZTNFRXlIdGdFddIBeEFVX3lxTE55WHZVYVdfY3hWS2c3TlRtN2FGcWlDc3Rpajh4VHVRZndYMkthSF9kd1F3Mjc2bzFxbEthTTVLWU1tcHY5NDM2akJXSDlwRUl0TlFjX1JFSDlSdDZ3bXpEb1I1U1VGS09wRFIzM0NkdUVJRGIzOEptdA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE9xd2gtMVJ3M2JZNVJfa1o0TGlZa0pDaFhaTHRLc1FNUjQ3c0pySmVFU0NZT3FYdF9ESGs0WkJpSFBlSkFVYzZ2UTdVcG1nbmktYUFnV0E0cDZFb2c",
+    "published": "2026-10-16T07:31:07+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[단독] “비밀이라더니 결국 공개”…개인정보위, 소송비 468만원은 국민 몫?",
+    "tags": [],
+    "title": "[단독] “비밀이라더니 결국 공개”…개인정보위, 소송비 468만원은 국민 몫?",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xd2gtMVJ3M2JZNVJfa1o0TGlZa0pDaFhaTHRLc1FNUjQ3c0pySmVFU0NZT3FYdF9ESGs0WkJpSFBlSkFVYzZ2UTdVcG1nbmktYUFnV0E0cDZFb2c?oc=5"
   }
 ]
