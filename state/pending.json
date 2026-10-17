@@ -2231,5 +2231,129 @@
     ],
     "title": "다른 게임과 기능 구성을 맞춰 보는 금융결제원 등기 토토",
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOaFU1V0FkWUJvUWhLeEhka3BEaWNnY2pRLVRZdTlWczZ6OVpVVUlyLWwyanl2ekdxSzB2bDZDT0xzUU82TGotT0dKcGVJTXExTmJ3Vk9oZWVvN2IwOUZabkpZX2swNk91VS1oZDhlSUVQaF91TVRXVmNad2tsbVNiV3lGTWJrNmtTQVVLTGU5SDlnNjhoZ2J6ZkZUMXV1dUdMWnNOMTJ3X1lJZlFQRXlNQV8tYTd4Q195c19qMUV0LUlCanVxMFlWakFB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-111911",
+    "published": "2026-10-17T19:16:33.500",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "phpMyFAQ 4.0.0 before 4.1.9 contains an authentication bypass vulnerability where WebAuthn registration endpoints attach credentials to any account without authentication or challenge validation. Attackers can stage a victim username, submit a forged fmt=none attestation to register a passkey, then log in bypassing passwords and TOTP for account takeover.",
+    "tags": [],
+    "title": "CVE-2026-111911 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111911"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-111882",
+    "published": "2026-10-17T19:16:29.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpMyFAQ 3.2.0-alpha before 4.1.9 and 4.2.0-alpha before 4.2.0-beta contains an authentication bypass vulnerability that allows IdP-authenticated users to skip TOTP two-factor authentication through the Keycloak and Entra ID SSO callbacks. Attackers holding a valid or phished IdP identity linked to a 2FA-enabled account can complete the OIDC flow and obtain a fully authenticated session, including administrator accounts.",
+    "tags": [],
+    "title": "CVE-2026-111882 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111882"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-111884",
+    "published": "2026-10-17T19:16:29.450",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpMyFAQ before 4.1.9 and 4.2.0-alpha before 4.2.0-beta does not require the current password when changing an account e-mail in the user control panel (UserController::updateData, api/user/data/update), checking only the session and CSRF token. An attacker with a hijacked session can set the e-mail to their own mailbox and use the password-reset flow to take over non-2FA accounts, including superadmin.",
+    "tags": [],
+    "title": "CVE-2026-111884 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111884"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-111908",
+    "published": "2026-10-17T19:16:33.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpMyFAQ 4.0.0 before 4.1.9 and 4.2.0-alpha before 4.2.0-beta contains a broken object-level authorization vulnerability in the PUT /api/v3.1/faq/update endpoint, which checks only the global edit_faq permission and does not verify access to the target FAQ. Authenticated users with edit_faq permission can supply the ID of a restricted FAQ they cannot view to modify its content, bypass moderation, and change its publication state.",
+    "tags": [],
+    "title": "CVE-2026-111908 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111908"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-111909",
+    "published": "2026-10-17T19:16:33.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpMyFAQ before 4.1.9 contains a missing authorization vulnerability in the deleteUser() API that allows authenticated non-superadmin users with delete_user permission to delete superadmin accounts. Attackers can send a DELETE request to /admin/api/user/delete with a superadmin's userId other than 1, removing administrative access and accountability.",
+    "tags": [],
+    "title": "CVE-2026-111909 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111909"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2026-111917",
+    "published": "2026-10-17T19:16:34.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vikunja 2.3.0 before 2.7.0 contains an improper session validation vulnerability that allows attackers to keep WebSocket access after revocation because handleAuth never checks the JWT sid claim against the sessions table. Attackers holding a stolen access token can open or maintain connections to /api/v2/ws after session deletion or TOTP enrollment, continuing to receive the victim's notification.created pushes, including comment, task and project content.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-111917 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111917"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-111923",
+    "published": "2026-10-17T19:16:35.117",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Fleet before 4.89.0 contains an unbounded recursion vulnerability in Apple MDM enrollment property list parsing that allows unauthenticated attackers to crash the server. Attackers can send a crafted binary plist payload of about 150 bytes to the enrollment endpoints, triggering exponential allocation or infinite recursion that exhausts CPU and memory.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-111923 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111923"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiqwFBVV95cUxPUWFfTmZaWHkzQ3JiZ3ZlNS1pd3FGV0s2bFRjV3lueXprWWc1YXdwZ1IxYjhpTFI3UTJZb0JYUGJvYkJRMGMwZVhrVzY5aXlBMlQxM0Z1eUVTbVBZRzlOT3FobFVpM2JaQzUwNDRFVUxMcHQ1UVh5U1N6VVJvWGZ2SGFiZjYtY3FhdjJuWS1yS3dQZm5vUW00ejB4cnFfUi1kczRJMElfX01QcXc",
+    "published": "2026-10-17T17:00:00+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Anthropic, 발전소 보안에 현장 지원…검증은 사람 몫",
+    "tags": [],
+    "title": "Anthropic, 발전소 보안에 현장 지원…검증은 사람 몫",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPUWFfTmZaWHkzQ3JiZ3ZlNS1pd3FGV0s2bFRjV3lueXprWWc1YXdwZ1IxYjhpTFI3UTJZb0JYUGJvYkJRMGMwZVhrVzY5aXlBMlQxM0Z1eUVTbVBZRzlOT3FobFVpM2JaQzUwNDRFVUxMcHQ1UVh5U1N6VVJvWGZ2SGFiZjYtY3FhdjJuWS1yS3dQZm5vUW00ejB4cnFfUi1kczRJMElfX01QcXc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMitAFBVV95cUxON055d2Y1X3JQNkpUcnlwaTFhb2ZCcFc0VldLZ2tMVFJ5aHFWUi1oLVNoRGx5YVAtaGdnV3J3cE9DMEJ3a1lJRjExY095amk5Z3ZuUWFYU3l0QllHOXhURmNzSGRRSEJRai1JZU1iMWRGbzVYOVNPWE92dzhjRk1lWTIyWUF2LWNLQUp3NzRtOUZ1Wll3OHpnc1l0T0szTFhJRzdzLTRTRndVYTdlTmJ1d1NRWXk",
+    "published": "2026-10-15T04:50:08+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "그물이 쳐진 카지노 에 대한 진실: 흥미로운 사실과 통찰력 있는 분석",
+    "tags": [],
+    "title": "그물이 쳐진 카지노 에 대한 진실: 흥미로운 사실과 통찰력 있는 분석",
+    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxON055d2Y1X3JQNkpUcnlwaTFhb2ZCcFc0VldLZ2tMVFJ5aHFWUi1oLVNoRGx5YVAtaGdnV3J3cE9DMEJ3a1lJRjExY095amk5Z3ZuUWFYU3l0QllHOXhURmNzSGRRSEJRai1JZU1iMWRGbzVYOVNPWE92dzhjRk1lWTIyWUF2LWNLQUp3NzRtOUZ1Wll3OHpnc1l0T0szTFhJRzdzLTRTRndVYTdlTmJ1d1NRWXk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE5BLXJTVGJraFA0emJsNmEybjhmd0E1allFeGl0dVVnY0ktbGE1NHdUOENtQk4wWTBhZUZocVF5cTFBbm9DSGd5Y1R4NDJtODBGTWFuWWtXUTA5NDI5cUpwTUwxYUx0VjV1",
+    "published": "2026-10-17T11:09:43+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "스팸문자 연간 4,481만 건…정부, 개인정보 유통 실태 전수조사해야",
+    "tags": [],
+    "title": "스팸문자 연간 4,481만 건…정부, 개인정보 유통 실태 전수조사해야",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5BLXJTVGJraFA0emJsNmEybjhmd0E1allFeGl0dVVnY0ktbGE1NHdUOENtQk4wWTBhZUZocVF5cTFBbm9DSGd5Y1R4NDJtODBGTWFuWWtXUTA5NDI5cUpwTUwxYUx0VjV1?oc=5"
   }
 ]
