@@ -2050,5 +2050,44 @@
     "tags": [],
     "title": "CVE-2026-92798 (CVSS 8.1)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92798"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-94177",
+    "published": "2026-09-30T13:17:25.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Ruben Garcia GamiPress gamipress allows Blind SQL Injection.This issue affects GamiPress: from n/a through 8.0.2.",
+    "tags": [],
+    "title": "CVE-2026-94177 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94177"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208916",
+    "published": "2026-10-17T13:54:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 네트워크 통합 및 정보보안 기업 태광네트웍정보가 국제 랜섬웨어 조직 에베레스트(Everest)의 공격 대상으로 지목됐다. 공격자는 약 263.71GB에 달하는 데이터를 탈취했다고 주장하며 다크웹 유출 사이트에 관련 내용을 게시했다. 특히 공개된 자료가 사실이라면, 국내 의료기관, 금융회사, 공공기관, 교육기관, 게임사 등의 네트워크 구성과 보안장비 설정 관련 정보가 포함된 것으로 나타나 공급망 보안 위험에 대한 우려가 커지고 있다.데일리시큐가 17일 확보한 사이버위협 인텔리전스 자료에 따르면, 에베레스트는 자체 다크웹 유출 사",
+    "tags": [
+      "금융",
+      "랜섬웨어"
+    ],
+    "title": "[단독] 에베레스트 랜섬웨어 조직, 국내 네트워크 보안기업 263GB 데이터 탈취 주장…75개 기관·기업 관련 자료 노출 우려",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208916"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html",
+    "published": "2026-10-17T06:16:46+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers are sounding the alarm related to an active campaign in which unknown threat actors are abusing a compromised Microsoft 365 (M365) credential belonging to ConnectWise Cloud Backup (formerly SkyKick) to gain unauthorized access to customers' M365 environments. ConnectWise Cloud Backup is a cloud-based backup and recovery service built for managed service providers (MSPs",
+    "tags": [],
+    "title": "Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants",
+    "url": "https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html"
   }
 ]
