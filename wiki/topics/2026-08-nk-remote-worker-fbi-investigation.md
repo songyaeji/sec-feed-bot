@@ -13,3 +13,4 @@ cves: []
 - 2026-09-01 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208290) — 11개국 공동경보, IT 넘어 의료·영업·금융 분야까지 확산 확인, AI 활용한 신분사칭 및 원격 조작 수법 고도화
 - 2026-09-01 [Security Affairs](https://securityaffairs.com/198227/apt/north-korea-linked-it-workers-are-getting-hired-inside-western-companies.html) — Huntress, 2026년 5명의 DPRK 연계 원격 근로자 확인, 가짜 신분·원격 접속 도구 악용
 - 2026-09-18 [The Record](https://therecord.media/nations-take-action-on-north-korean-it-worker-schemes) — UN 보고서 후 베트남·라오스·파키스탄·아르헨티나 정부 의미 있는 조치 시행
+- 2026-10-14 [The Hacker News](https://thehackernews.com/2026/10/us-shuts-down-over-40-laptop-farms.html) — 美 사법부, 14명 기소·187대 컴퓨터 압수, 北 IT 노동자 네트워크 와해·40개 이상 laptop farm 폐쇄, 70개 이상 미국 기업 영향

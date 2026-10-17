@@ -11,6 +11,7 @@ cves: []
 
 - 2026-10-08 [금융보안원](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9oYWJua3FyWUlSY1d0a0d6T1dpWUwxdVNKOVRBU090dUI3S0hxYmNtY3NoQW5xMTRpOFR2T3FscEJXM1EtaWQybnIwdHdmdW5taDY5UUFwVjZxdw?oc=5) — 4300만건 공격 쏟아지는 가운데 금융사 보안책임자 인력 부족 '1인 3역' 지적
 - 2026-10-09 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208809) — 국감 지적: 금융권 보안 컨설팅 지출 급감, 보험사 6곳 보안 교육비 별도 집계 '0원', 은행들의 정보보호 예산 편성 후 실제 집행률 낮음
+- 2026-10-16 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208915) — 5대 은행 정보보호 예산 감소 확인: 우리은행 21.7%, 신한은행 10.4% 감소, KB국민은행 861억 원 최고액 편성
 
 ## 관련
 

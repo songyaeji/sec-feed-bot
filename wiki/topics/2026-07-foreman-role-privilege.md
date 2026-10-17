@@ -12,3 +12,4 @@ cves: [CVE-2026-5136]
 ## 타임라인
 
 - 2026-07-01 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-5136) — CVE-2026-5136: Foreman Usergroup 모델 역할 검증 부재
+- 2026-10-01 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-96658) — CVE-2026-96658: Foreman 템플릿 엔진 샌드박스 우회로 저권한 인증 사용자 RCE (CVSS 9.9)
