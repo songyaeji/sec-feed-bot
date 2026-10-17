@@ -12,6 +12,7 @@ cves: []
 ## 타임라인
 
 - 2026-09-15 [BleepingComputer](https://www.bleepingcomputer.com/news/security/centerpoint-energy-confirms-customer-data-stolen-in-cyberattack/) — 개인정보 유출 공식 공인, 공격자 데이터 게시 확인
+- 2026-10-16 [Security Affairs](https://securityaffairs.com/201054/cyber-crime/centerpoint-energy-data-breach-more-than-1-million-texans-affected.html) — 영향 규모 115만 명 이상(텍사스) 공식 확인
 
 ## 관련
 
