@@ -1976,5 +1976,79 @@
     "tags": [],
     "title": "법무부·성평등·외교부 등 44개 기관 세종 이전 확정",
     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1VZTRaT2I5LVl5V1hzb2drWmd4dVhpOURoZVVTR3ZFaWNGZDVuREZENFc5WG5lQTJmUnNvVGFPdXd6SHhvWmx5WjNYaHRMVjFIM2ZUOFpfMVlJaVdjLUdKVTNFQQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-111823",
+    "published": "2026-10-17T02:17:18.470",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Mage OSS through 0.9.80 before 76c4f46 can proceed with session creation upon encountering an unknown OAuth provider.",
+    "tags": [],
+    "title": "CVE-2026-111823 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111823"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-110653",
+    "published": "2026-10-17T03:16:28.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Appointment Booking Plugin – LatePoint | Calendar & Scheduling for WordPress plugin for WordPress is vulnerable to Authentication Bypass via Race Condition in all versions up to, and including, 5.7.4. This is due to a non-atomic read-modify-write on the OTP verification attempts counter in the `verifyOTP` function: the counter is incremented using a stale in-memory value with no conditional `WHERE attempts < 10` guard on the `UPDATE` and no `SELECT ... FOR UPDATE` row lock, creating a TOCTOU window that allows concurrent requests to bypass the 10-attempt lockout. This makes it possible for unauthenticated attackers — who know a target customer's registered email address or phone number — to fire concurrent requests to the `auth__verify_otp` endpoint, defeat the lockout cap, brute-force the 6-digit OTP code, and authenticate as the targeted LatePoint customer, gaining full access to their account, bookings, and personal data. The nonce check present on the endpoint (`otp_verify_otp_nonce`) does not mitigate this issue, as the nonce is publicly emitted by the unauthenticated `request_otp` and `resend_otp` endpoints and is trivially obtainable by any unauthenticated attacker prior to launching the race.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-110653 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110653"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-104736",
+    "published": "2026-10-17T04:16:47.780",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The LearnPress plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 4.4.10 via deserialization of untrusted input from the 'checkout-email' request parameter during the checkout AJAX action. The value is passed through sanitize_text_field(), which does not strip serialized object syntax, then stored in the LearnPress session table and later fed to LP_Helper::maybe_unserialize() → unserialize() (without an allowed_classes restriction) by LP_Session_Handler::get() on subsequent requests. This makes it possible for unauthenticated attackers to inject a PHP Object.",
+    "tags": [],
+    "title": "CVE-2026-104736 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104736"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-111853",
+    "published": "2026-10-17T02:17:18.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered on Tektronix 3 Series MDO devices before 1.21.1. An OS command injection vulnerability exists in the FILESystem:MOUNT:DRIve SCPI command handler. Insufficient neutralization of user-supplied input allows remote attackers to execute arbitrary operating system commands with elevated privileges.",
+    "tags": [],
+    "title": "CVE-2026-111853 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111853"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-111854",
+    "published": "2026-10-17T02:17:18.750",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered on Tektronix 3 Series MDO devices before 1.21.1. A path traversal vulnerability in the SCPI FILESystem command interface allows remote attackers to read or modify arbitrary files on the device through insufficient validation of file paths supplied to filesystem access commands.",
+    "tags": [],
+    "title": "CVE-2026-111854 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111854"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-92798",
+    "published": "2026-10-17T04:17:10.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The User Registration & Membership plugin for WordPress is vulnerable to Arbitrary Shortcode Execution in versions up to, and including, 5.2.8 This is due to insufficient input sanitization in the 'referrer_url' branch of UR_Smart_Tags::process(), where the attacker-controlled HTTP_REFERER header is only passed through sanitize_text_field() — which does not strip WordPress shortcode delimiters — before being substituted into a Content Restriction message that is subsequently executed via apply_shortcodes()/do_shortcode(). This makes it possible for unauthenticated attackers to execute arbitrary registered shortcodes on any restricted page whose message uses the supported {{referrer_url}} smart tag.",
+    "tags": [],
+    "title": "CVE-2026-92798 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92798"
   }
 ]
