@@ -13,6 +13,7 @@ cves: []
 - 2026-10-14 [금융감독원](https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=241504&menuNo=200218) — 금융권 침해사고 재발방지를 위해 금융보안 관리체계 전면 강화 발표
 - 2026-10-14 [금융위원회](https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1Y0ZvWHBOTlIzbjFqRHpKWTR3RDZiUl9BNWJ5cy15MHhyVHJhLUFtTUlPUDliX2s3aC1HMnNtdnEwWHRxY3ZFRDlMYTZCanRNMDc0VHluUFZtQQ?oc=5) — 2차 긴급 대응 회의 개최, CEO 책임 강화 검토
 - 2026-10-16 [금융보안원](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBwSWkwQ3RQSzhFVENIc3dzQXpUdExTbFROVnJGaEVjbXpCZ0VRQkdsaGhBZFVXMHZJc0dWaHRBd0djNmRsb0hyaDRWWjJSVDlXOFk1ODZjN21mWWtRVlI4RWtR?oc=5) — 침해사고 금융사 16곳 중 6곳이 금융보안원 미가입 상태 확인, 중소금융 보안 공백 지적
+- 2026-10-19 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208917) — 레코디드 퓨처 분석, 공격자 TAG-217이 8월부터 공격 인프라 준비, AI 활용해 취약점 탐색 확인
 
 ## 관련
 
