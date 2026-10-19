@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-10-10 [개인정보보호위원회](https://news.google.com/rss/articles/CBMibEFVX3lxTE84alJlU01vMlBXZU03UjJQNzNOWjVuUHV0MEZPZzkxZnNjellCQXhOeTRsa3RRekJEaWpvQ01LMlNKZmdFTzFmX29pMmFOT0t1TUg5dENnX2NETW40ZlNWSzhLRG8wZDFDR1JWRA?oc=5) — 예가람저축은행 고객 개인정보 5만건 유출 사실 확인, 전체 고객의 약 1/4 규모
+- 2026-10-19 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208934) — 박상혁 의원 국감 지적, 개인정보 수정·이용자 안내 지연 문제 및 계열사 전산업무 위탁 보안관리 감독 강화 촉구
 
 ## 관련
 
