@@ -14,6 +14,7 @@ cves: []
 - 2026-10-14 [금융위원회](https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1Y0ZvWHBOTlIzbjFqRHpKWTR3RDZiUl9BNWJ5cy15MHhyVHJhLUFtTUlPUDliX2s3aC1HMnNtdnEwWHRxY3ZFRDlMYTZCanRNMDc0VHluUFZtQQ?oc=5) — 2차 긴급 대응 회의 개최, CEO 책임 강화 검토
 - 2026-10-16 [금융보안원](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBwSWkwQ3RQSzhFVENIc3dzQXpUdExTbFROVnJGaEVjbXpCZ0VRQkdsaGhBZFVXMHZJc0dWaHRBd0djNmRsb0hyaDRWWjJSVDlXOFk1ODZjN21mWWtRVlI4RWtR?oc=5) — 침해사고 금융사 16곳 중 6곳이 금융보안원 미가입 상태 확인, 중소금융 보안 공백 지적
 - 2026-10-19 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208917) — 레코디드 퓨처 분석, 공격자 TAG-217이 8월부터 공격 인프라 준비, AI 활용해 취약점 탐색 확인
+- 2026-10-20 [금융감독원](https://www.dailysecu.com/news/articleView.html?idxno=208937) — 국정감사에서 금융감독원장 "금융권 외부 노출 시스템 전수 재점검 지시"
 
 ## 관련
 

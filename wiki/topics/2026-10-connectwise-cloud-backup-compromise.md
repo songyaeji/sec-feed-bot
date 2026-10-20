@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-10-18 [The Hacker News](https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html) — **ConnectWise** Cloud Backup 7개 애플리케이션 아이디 손상, 미인증 공격자가 M365 테넌트 접근
+- 2026-10-20 [The Hacker News](https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html) — 관리 접근 보호 강화, 계정·애플리케이션 자격증명 전체 재설정, 서비스 여전히 오프라인
 
 ## 관련
 

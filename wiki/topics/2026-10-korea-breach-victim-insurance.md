@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-10-02 [개인정보보호위원회](https://news.google.com/rss/articles/CBMic0FVX3lxTE1GaENvZEJPUmYtZzFtS2FSeDVlSENhOVVGWDBmNXFsQjVfc3pSY3diZXJESEJ3ZWg2MUZjSmRtZUZpUEsyUTBUcGRhSWZPXzgyWFZzMGIwbkhWbDJKaHdQcXlHZzF1Zm1oOFREdkpQSlJwcUE?oc=5) — 피해자 보험금 과징금의 0.19%만 지급, 배상 제도 개선 필요
+- 2026-10-20 [한병도 의원](https://www.dailysecu.com/news/articleView.html?idxno=208962) — 국정감사에서 개인정보 유출 고객 피해 입증 책임 문제 지적, 피해자 보호 입법 추진
 
 ## 관련
 

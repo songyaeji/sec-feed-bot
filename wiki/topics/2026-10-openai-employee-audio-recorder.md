@@ -9,4 +9,5 @@ OpenAI 경영진 회의실 TV 뒤에 몰래 숨겨진 음성 녹음 장치가 �
 
 ## 타임라인
 
+- 2026-10-20 [The Hacker News](https://thehackernews.com/2026/10/ex-openai-engineer-detained-in-spy.html) — 미국 법원이 용의자 Abdulrahman Alfozan(35세, 사우디)의 구금 요청 승인, 중동 왕실 연락처와 통신 기록 드러남
 - 2026-09-30 [Security Affairs](https://securityaffairs.com/200933/cyber-crime/hidden-audio-recorder-found-at-openai-as-employee-faces-federal-charges.html) — OpenAI San Francisco 사무실 경영진 회의실 TV 뒷면 USB 포트에 음성 녹음 장치 발견, 직원 기소 진행
