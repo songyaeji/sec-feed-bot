@@ -410,5 +410,308 @@
     "tags": [],
     "title": "Two more Serbian opposition figures targeted with spyware, researchers say",
     "url": "https://therecord.media/serbia-spyware-pegasus-elections"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-101307",
+    "published": "2026-10-15T07:17:57.890",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "When the PCM sample array needs to grow, the RACK stack doubles a 16-bit allocation counter.  Repeated doublings caused the counter to wrap to zero, resulting in a near-zero-length allocation followed by a copy of the existing samples into the undersized buffer.  A remote peer can trigger the expansion by sending a sufficient number of ACKs on an established connection.\n\nA remote attacker who can establish a TCP connection to a system using the RACK stack can trigger an out-of-bounds write of approximately 512 KB in the kernel heap possibly resulting in a kernel panic.",
+    "tags": [],
+    "title": "CVE-2026-101307 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101307"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-112370",
+    "published": "2026-10-19T23:17:35.817",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in H3C Magic NX15 100R017. This issue affects the function sub_416874 of the file /usr/bin/usrlist. Performing a manipulation results in os command injection. Remote exploitation of the attack is possible. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-112370 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112370"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-112371",
+    "published": "2026-10-19T23:17:36.000",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in H3C Magic NX15 NX15V100R017. Impacted is the function write of the file /api/esps of the component RPC Interface. Executing a manipulation of the argument path can lead to code injection. The attack can be executed remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-112371 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112371"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-109395",
+    "published": "2026-10-20T01:17:09.957",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ning compress-lzf before 1.2.0 contains an out-of-bounds memory access vulnerability in the sun.misc.Unsafe based UnsafeChunkDecoder that fails to validate back-references and literal runs. Attackers can supply crafted LZF streams to applications using the default LZFDecoder to leak unrelated JVM heap memory into decompressed output or crash the JVM.",
+    "tags": [],
+    "title": "CVE-2026-109395 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109395"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-109442",
+    "published": "2026-10-20T01:17:10.383",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "piflow 2.0.0 through 2.0.1 contains a remote code execution vulnerability in its DeepAgents chat agent, whose POST /chat and POST /chat/stream endpoints lack authentication. Attackers can instruct the agent to call the exec_shell tool, which runs arbitrary commands via subprocess.run without human approval or an allow-list, exposing environment secrets such as LLM API keys and database credentials.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-109442 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109442"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-75128",
+    "published": "2026-10-20T01:17:19.063",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Langchain-Chatchat through 0.3.1.3 exposes a POST /tools/call API endpoint that invokes any registered tool by name without authentication, leaving the always-registered shell tool callable. Remote attackers can send a single request naming the shell tool to execute arbitrary OS commands as the server user (root in the shipped Docker image).",
+    "tags": [],
+    "title": "CVE-2026-75128 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75128"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-77932",
+    "published": "2026-10-20T01:17:19.503",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DB-GPT through 0.8.2 contains an unauthenticated remote code execution vulnerability because the /api/v1/chat/react-agent endpoint relies on a mock get_user_from_headers function that grants every caller the admin role. Unauthenticated attackers can send prompts that make the ReAct agent's unsandboxed code_interpreter and shell_interpreter tools run arbitrary Python or bash as root in the webserver container, including reaching the bundled database with default credentials.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-77932 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77932"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-77933",
+    "published": "2026-10-20T01:17:19.670",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "DB-GPT through 0.8.2 contains a hardcoded credentials vulnerability in its default docker-compose.yml that sets a static MYSQL_ROOT_PASSWORD and publishes port 3306 on all interfaces. Attackers reaching port 3306 or the shared dbgptnet network can authenticate as root@% to gain full database access including FILE and SUPER privileges.",
+    "tags": [],
+    "title": "CVE-2026-77933 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77933"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-77936",
+    "published": "2026-10-20T01:17:20.107",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Letta through 0.16.8 ships a compose.yaml that does not enable LETTA_SERVER_SECURE, so the password middleware is never added and all API routes are unauthenticated, and it exposes a superuser PostgreSQL port with default credentials. Remote attackers can execute arbitrary Python via POST /v1/tools/run, manage /v1/admin users, or run OS commands via COPY PROGRAM.",
+    "tags": [],
+    "title": "CVE-2026-77936 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77936"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-105453",
+    "published": "2026-10-20T00:17:23.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Sterling Connect Direct for Unix 6.3.0.0 through 6.3.0.7 and 6.4.0.0 through 6.4.0.6 could allow a local attacker to gain elevated privileges due to improper privilege management.",
+    "tags": [],
+    "title": "CVE-2026-105453 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105453"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-107366",
+    "published": "2026-10-20T00:17:25.640",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 contains three message endpoints that perform no ownership verification. Any authenticated user can bulk-delete another user's messages, overwrite message content to inject malicious prompts, or hijack an entire conversation session by reassigning its session ID.",
+    "tags": [],
+    "title": "CVE-2026-107366 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107366"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-107400",
+    "published": "2026-10-20T00:17:25.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM TRIRIGA Application Platform 5.0.0 through 5.0.8 could allow a remote authenticated attacker to execute arbitrary code due to improper authentication.",
+    "tags": [],
+    "title": "CVE-2026-107400 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107400"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-109126",
+    "published": "2026-10-20T00:17:30.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "IBM Verify Identity Access 11.0.3.1 and IBM Security Verify Access 10.0.9.3 Appliance could allow a physically proximate attacker to gain elevated privileges due to the use of hard-coded credentials.",
+    "tags": [],
+    "title": "CVE-2026-109126 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109126"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-109440",
+    "published": "2026-10-20T01:17:10.103",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LangAlpha through 2026.09.07 contains an indirect prompt injection vulnerability that allows remote attackers to execute shell commands or Python by planting instructions in web content retrieved by the agent. Because Bash and ExecuteCode lack an allow-list and human-in-the-loop approval, attackers can run code in the workspace sandbox and exfiltrate vault secrets from _internal/.vault_secrets.json.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-109440 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109440"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-109443",
+    "published": "2026-10-20T01:17:10.527",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "JoySafeter through 1.0.0 contains a remote code execution vulnerability that allows authenticated users to run operating system commands via an unsandboxed execute tool in Copilot standard mode. Attackers can self-register, select standard mode in the WebSocket chat.start extension, and have the agent invoke subprocess.run with shell=True on the host to access other tenants' data and server secrets.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-109443 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109443"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-109444",
+    "published": "2026-10-20T01:17:10.673",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenSRE through 0.1.2026.10.19 contains an approval gate bypass vulnerability that allows attackers to execute shell_run commands without confirmation because the headless presenter's execution_allowed() always returns True. Attackers can inject instructions into alerts or Slack messages triaged by the agent to run commands on the host and exfiltrate LLM, Slack and cloud credentials.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-109444 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109444"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-77926",
+    "published": "2026-10-20T01:17:19.213",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Aix-DB 1.2.4 contains a remote code execution vulnerability that allows authenticated non-admin users to run operating system commands through the ChatBI common agent's ungated deepagents execute tool. Attackers can send crafted chat input to POST /dify/get_answer or upload documents with malicious text to run host commands, exposing datasource credentials and model API keys.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-77926 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77926"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-77930",
+    "published": "2026-10-20T01:17:19.360",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "EvoScientist 0.1.0 before 0.2.5 contains an approval bypass vulnerability that allows attackers to run host shell commands by delegating them to async sub-agents lacking an interrupt_on gate. Attackers can plant instructions in ingested content such as fetched web pages, so the agent calls start_async_task and runs commands with user privileges and environment secrets.",
+    "tags": [],
+    "title": "CVE-2026-77930 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77930"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-77934",
+    "published": "2026-10-20T01:17:19.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coze Studio before 0.5.0 contains an insecure default configuration that allows any registered user to execute commands by running workflow code nodes in an unsandboxed python3 subprocess. Attackers can bypass the regex import filter with __import__('subprocess') to run commands, stealing environment variables, model API keys, and accessing MySQL, MinIO, Redis and etcd.",
+    "tags": [],
+    "title": "CVE-2026-77934 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77934"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-77935",
+    "published": "2026-10-20T01:17:19.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Coze Studio through 0.5.1 contains an insecure direct object reference vulnerability in workflow.go that allows authenticated users to access other spaces' workflows by supplying foreign workflowIDs. Attackers can pair their own spaceID with another tenant's workflowID in save, update_meta, batch_delete, canvas, test_run and nodeDebug routes to read, run, overwrite or delete workflows.",
+    "tags": [],
+    "title": "CVE-2026-77935 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77935"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-77937",
+    "published": "2026-10-20T01:17:20.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Letta through 0.16.8 contains an authentication bypass vulnerability that allows API callers to impersonate other users by supplying a self-asserted user_id HTTP header. Attackers can set user_id to another tenant's ID, even with LETTA_SERVER_SECURE enabled, to read and modify that user's agents, memory and configuration.",
+    "tags": [],
+    "title": "CVE-2026-77937 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77937"
+  },
+  {
+    "author": "Andy Piazza and Unit 42",
+    "category": "research",
+    "id": "https://unit42.paloaltonetworks.com/?p=182026",
+    "published": "2026-10-19T22:35:42+00:00",
+    "severity": "info",
+    "source": "Unit 42",
+    "summary": "Ransomware operators including Spikey Scorpius (aka Qilin) and Tarnished Scorpius (aka Inc) are exploiting PAN-OS vulnerability CVE-2026-0257. The post Threat Brief: Active Exploitation of PAN-OS CVE-2026-0257 (Updated October 19) appeared first on Unit 42 .",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Threat Brief: Active Exploitation of PAN-OS CVE-2026-0257 (Updated October 19)",
+    "url": "https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiXkFVX3lxTE94OU9vWVRDQk91c3hkN2ZHUWFjcTRYTV9JUzZxczN4bkRJcUxhX0NVYWgwSmtrUjc1UFUyblFZSG9iNGlOZjV0TVFySnU2QzU5LURONnYxMlJvcFUzT1E",
+    "published": "2026-10-17T19:50:08+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Gemini vs Coinbase 2026: 수수료·보안·코인 비교",
+    "tags": [],
+    "title": "Gemini vs Coinbase 2026: 수수료·보안·코인 비교",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE94OU9vWVRDQk91c3hkN2ZHUWFjcTRYTV9JUzZxczN4bkRJcUxhX0NVYWgwSmtrUjc1UFUyblFZSG9iNGlOZjV0TVFySnU2QzU5LURONnYxMlJvcFUzT1E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE9yNUIxQThOX280UE1OX3R2SzVISER3S0Q0eDM0WmlQRmV3MGZrbUlLZnpxV3ljMldRSUhuN1dCMzdjN01zMGR2aVpjeVRMdw",
+    "published": "2026-10-20T00:02:47+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "카카오만 문제인가…시민단체, 통신사 광고 문자도 조사 요구",
+    "tags": [],
+    "title": "카카오만 문제인가…시민단체, 통신사 광고 문자도 조사 요구",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9yNUIxQThOX280UE1OX3R2SzVISER3S0Q0eDM0WmlQRmV3MGZrbUlLZnpxV3ljMldRSUhuN1dCMzdjN01zMGR2aVpjeVRMdw?oc=5"
   }
 ]
