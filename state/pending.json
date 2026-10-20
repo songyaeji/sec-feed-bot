@@ -713,5 +713,439 @@
     "tags": [],
     "title": "카카오만 문제인가…시민단체, 통신사 광고 문자도 조사 요구",
     "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9yNUIxQThOX280UE1OX3R2SzVISER3S0Q0eDM0WmlQRmV3MGZrbUlLZnpxV3ljMldRSUhuN1dCMzdjN01zMGR2aVpjeVRMdw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-104586",
+    "published": "2026-10-15T15:17:21.067",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "AUTOM8N (WHM/cPanel plugin) through commit 82821f7 contains an OS Command Injection in borg_restore.cgi.",
+    "tags": [],
+    "title": "CVE-2026-104586 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104586"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-81029",
+    "published": "2026-08-26T16:16:45.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenMetadata accepts a caller-supplied post-authentication redirect target and appends the issued token to it. SamlLoginServlet reads the callback request parameter and stores it in the HTTP session without comparing it against any configured or registered destination, and the assertion consumer servlet later formats that stored value into a URL carrying the freshly issued JWT together with the account's email and name before sending the redirect. The OIDC and OAuth2 handler follows the same pattern with its own redirect parameter and the issued identity token. A request naming a destination the attacker controls therefore causes the server to deliver a valid token for whoever completes the login to that destination. Because the token authenticates API calls as that account, a user who follows such a link and authenticates hands over control of their account. Version 2.0.0 removes the caller-supplied callback parameter; no 1.x release validates it.",
+    "tags": [],
+    "title": "CVE-2026-81029 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-81029"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-105299",
+    "published": "2026-10-20T02:17:08.703",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Summary\n\n\n\nBefore version 0.9.0, the HTTP/1 upstream path in pingora-proxy passed the downstream request through upstream_request_filter and wrote it to the upstream without removing the client's Connection header, other hop-by-hop headers, or the headers Connection nominated, although RFC 9110 Section 7.6.1 requires intermediaries to remove them. The HTTP/2 upstream path already removed Connection and related HTTP/1-specific headers. A client could therefore nominate a header that the application adds in upstream_request_filter (for example, Connection: keep-alive, X-Forwarded-For). A downstream HTTP/1 intermediary that honors Connection would then strip the Pingora-added header before it reached the origin.\n\n\n\n\nImpact\n\n\n\nSpecifically affects chained deployments where an HTTP/1 intermediary between Pingora and the origin processes Connection nominations (for example, Go's net/http/httputil.ReverseProxy) and the origin trusts headers added by that intermediary (for example, X-Forwarded-For for IP-based authorization). A remote, unauthenticated attacker can have those headers removed, potentially bypassing authorization. The reporter demonstrated access to an IP-restricted endpoint using X-Forwarded-For for IP validation on the origin. This is the same class of issue as CVE-2022-31813 in Apache HTTP Server.\n\n\n\n\nNote that Cloudflare CDN customers were unaffected, as no such chained deployment as described above exists with internal Pingora services, and Connection headers are s",
+    "tags": [],
+    "title": "CVE-2026-105299 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105299"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-113404",
+    "published": "2026-10-20T07:17:09.783",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WebITR developed by Uniong has a Insecure Deserialization vulnerability. Authenticated remote attackers can use the hard-coded cryptographic key to craft and submit malicious serialized data, thereby executing arbitrary code on the server.",
+    "tags": [],
+    "title": "CVE-2026-113404 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113404"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208961",
+    "published": "2026-10-20T16:32:10+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "마이크로소프트가 기업 내부에서 시스템과 데이터에 접근해 업무를 수행하는 AI 에이전트를 '에이전틱 내부자(Agentic Insider)'로 규정하고, 이들을 지속적으로 감독하고 보호하기 위한 보안 접근법을 제시했다.최근 기업들은 AI 에이전트를 대규모로 도입하고 있으나, 내부 조직이 배포했다는 이유로 별도의 검증 없이 신뢰하는 경우가 많다. 그러나 AI 모델은 결과 달성을 중심으로 학습하는 과정에서 의도하지 않은 수단을 선택하는 '보상 해킹(reward hacking)'이 발생할 수 있으며, 변화하는 상황에 적응하는 과정에서 예측하",
+    "tags": [],
+    "title": "마이크로소프트, 기업 내부 AI 에이전트 보호 위한 ‘에이전틱 내부자’ 보안 접근법 제시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208961"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208960",
+    "published": "2026-10-20T16:25:46+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "글로벌 영상 AI 플랫폼 모픽(Morphic)이 외부 AI 및 개발 도구에서 이미지와 영상, 오디오 제작 기능을 바로 사용할 수 있는 ‘모픽 MCP(Model Context Protocol)’를 출시했다.MCP는 AI 서비스와 개발 도구가 외부 서비스의 기능과 데이터를 연결해 활용할 수 있도록 지원하는 표준 규약이다. 모픽 이용자는 추가 과금 없이 스튜디오 설정 페이지에서 서버 주소를 복사해 연동할 수 있다. 클로드(Claude), 클로드 코드(Claude Code), VS Code, ChatGPT 코덱스(Codex), 코덱스 CL",
+    "tags": [
+      "금융"
+    ],
+    "title": "모픽, 클로드·ChatGPT에서 바로 이미지·영상 만드는 ‘모픽 MCP’ 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208960"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208959",
+    "published": "2026-10-20T16:21:23+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "엠클라우드브리지가 다음 달 25일 포스코타워 역삼 이벤트홀에서 '기업 AI 통합 업무 플랫폼 전환의 시작' 세미나를 개최한다.이번 세미나는 마이크로소프트 AI ERP를 중심으로 기업의 전사적자원관리(ERP), 데이터, AI 에이전트, 그룹웨어를 하나의 업무 환경으로 연결하는 통합 전략을 소개하기 위해 마련됐다.엠클라우드브리지는 생성형 인공지능(AI)을 개별 도구로 도입하는 방식을 넘어, 기업의 핵심 업무 프로세스를 담당하는 Microsoft Dynamics 365 ERP를 AI 전환의 출발점으로 삼는 전략을 공개한다. 기존 ERP를",
+    "tags": [
+      "AI"
+    ],
+    "title": "엠클라우드브리지, 11월 25일 마이크로소프트 AI ERP 기반 통합 업무 플랫폼 세미나 개최",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208959"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208957",
+    "published": "2026-10-20T16:16:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "에이전틱 보안 기업 스렛북(ThreatBook)이 인공지능(AI) 기반 침투 테스트 통합 플랫폼인 'RedAgents'를 출시했다.이번에 선보인 플랫폼은 보안 운영(SecOps) 팀이 자체 네트워크를 대상으로 다중 에이전트 공격을 수행해 숨겨진 취약점을 찾아내고 사이버 방어 역량을 강화할 수 있도록 돕는다.기존에는 침투 테스트에 오랜 시간과 많은 인력이 필요했으나, 고성능 AI 침투 테스트 에이전트들이 등장하면서 지속적이고 정기적인 점검이 가능해졌다. 스렛북은 단일 공급업체의 에이전트만으로는 다양한 사이버 위험을 모두 파악하기 어렵",
+    "tags": [
+      "AI"
+    ],
+    "title": "스렛북, AI 기반 침투 테스트 플랫폼 ‘RedAgents’ 출시...다중 에이전트 연동 지원",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208957"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208958",
+    "published": "2026-10-20T16:16:01+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국가 핵심 연구개발을 수행하는 정부출연연구기관의 서버 상당수에 보안 백신이 설치되지 않은 것으로 나타났다. 일부 연구기관에서는 실제 악성프로그램이 검출됐으며, 국가보안과제 관련 자료가 저장된 하드디스크를 연구자가 무단 반출한 사례까지 확인돼 국가 연구정보 보호체계의 허점이 국정감사에서 도마에 올랐다.국회 과학기술정보방송통신위원회 소속 서천호 국민의힘 의원과 이훈기 더불어민주당 의원은 10월 20일 열린 과학기술정보통신부 산하 연구기관 국정감사에서 정부출연연구기관의 정보보안 관리 실태를 지적하고, 보안점검과 평가체계의 실효성 확보를",
+    "tags": [],
+    "title": "정부출연연 서버 91.3% 백신 미설치, 악성프로그램 38종 검출에도 보안평가 '매우 양호'",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208958"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208956",
+    "published": "2026-10-20T15:51:08+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인섹시큐리티가 옵스왓의 AI 모델 보안 분석 솔루션인 '메타디펜더 이더(MetaDefender Aether)' v3.3.0을 출시했다. 이번 버전은 AI 모델의 파일 내부 위협과 실제 동작 과정의 보안 위험을 분석하는 대규모 언어 모델(LLM) 스캐닝 기능을 새롭게 탑재했다.기존 5단계 제로데이 위협 탐지 체계 중 정적 분석과 동적 분석에 LLM 스캐닝 기능이 추가됐다. 정적 분석은 모델 파일에 숨겨진 악성 코드나 변조된 데이터를 확인하고, 동적 분석은 모델에 적대적 프롬프트를 입력해 프롬프트 인젝션과 민감정보 노출 등 응답 과정의",
+    "tags": [
+      "AI",
+      "제로데이"
+    ],
+    "title": "인섹시큐리티, 옵스왓 '메타디펜더 이더' v3.3.0 출시...LLM 보안 분석 기능 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208956"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208954",
+    "published": "2026-10-20T15:42:29+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "씨큐비스타가 네트워크 탐지 및 대응(NDR) 솔루션 패킷사이버를 정부 중앙부처와 공기업 등 주요 공공기관에 공급했다. 이번 공급을 통해 국내 공공 보안시장에서의 입지를 넓혀가고 있다.패킷사이버는 국제 사이버 공격 표준 분류 체계인 MITRE ATT&CK 프레임워크를 기반으로 작동한다. 이 솔루션은 14개 전술과 14개의 공격 기법을 정밀 탐지하며, 초기 침투부터 권한 상승, 방어 회피, 내부 확산, 데이터 유출에 이르는 공격 주기를 실시간으로 감시한다. 단일 보안 이벤트 탐지를 넘어 여러 이상 징후를 연계 분석해 지능형 지속 위협(",
+    "tags": [],
+    "title": "씨큐비스타, 중앙부처 및 공공기관에 NDR 보안 솔루션 '패킷사이버' 공급",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208954"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208953",
+    "published": "2026-10-20T15:35:18+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "클라우드 IT 인프라 및 네트워크 통합 솔루션 전문 기업 일에이엔이 시스코(Cisco)의 공식 파트너로 등재되며 아시아 전역을 아우르는 시스템 통합(SI) 및 네트워크 통합(NI) 사업 확대에 나섰다.이번 시스코 파트너 자격은 한국 본사를 비롯해 태국 법인과 인도 법인 등 3개국 거점에 동시에 적용됐다. 일에이엔은 이를 바탕으로 동남아시아에 생산 기지나 지사를 둔 기업들이 겪는 본사와 해외 지사 간의 IT 인프라 파편화 문제를 원스톱으로 해결할 방침이다.일에이엔은 각 기업의 업무 환경에 맞춘 차세대 SI와 NI 통합 솔루션을 전개한",
+    "tags": [],
+    "title": "일에이엔, 시스코 공식 파트너 등재...아시아 3개국 잇는 SI·NI 통합 솔루션 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208953"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208952",
+    "published": "2026-10-20T15:08:10+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "케이사인이 21일부터 3일간 일산 킨텍스에서 열리는 제23회 국제 모빌리티 산업전(KOAA SHOW)에 참가해 전기차 충전 인프라 보안 솔루션을 선보인다.이번 전시에서 선보인 '전기차 충전 인프라 보안 취약점 자동 분석 솔루션'은 과학기술정보통신부와 정보통신기획평가원(IITP)의 정보보호 핵심원천기술개발사업을 통해 개발됐다. 해당 솔루션은 충전 프로토콜 퍼징과 AI 기반 소프트웨어 코드 분석으로 충전 인프라의 숨은 보안 위협을 찾고, BAS(침해 및 공격 시뮬레이션)를 통해 실제 위협도를 검증한다.소프트웨어 취약점 분석 플랫폼은 충",
+    "tags": [],
+    "title": "케이사인, 'KOAA SHOW' 참가해 전기차 충전 인프라 보안 솔루션 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208952"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208951",
+    "published": "2026-10-20T14:51:34+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "세일포인트 테크놀로지 홀딩스가 연례 컨퍼런스 '내비게이트 2026'에서 AI 에이전트와 인간을 모두 보호하는 신규 기능을 발표했다.이번 업데이트는 세일포인트 아틀라스를 기반으로 한 세일포인트 에이전틱 패브릭과 세일포인트 휴먼 패브릭을 중심으로 이루어졌다.최근 보고서에 따르면 전 세계 기업의 79%가 AI 에이전트를 운영하고 있지만, 이를 보호할 보안 도구를 갖춘 곳은 2%에 불과하다. 기업들은 갱신 주기가 빠른 정적 접근 권한 검토와 실제 문제를 해결하기 어려운 대시보드의 한계에 부딪혀 왔다.세일포인트는 이에 대응해 AI 에이전트를",
+    "tags": [],
+    "title": "세일포인트, 자율형 아이덴티티 보안 솔루션 공개...AI 에이전트 보호 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208951"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208950",
+    "published": "2026-10-20T14:32:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "코헤시티가 매튜 존스턴(Matthew Johnston)을 아시아태평양 및 일본(APJ) 지역 파트너 영업 수석 디렉터로 임명했다.존스턴 수석 디렉터는 앞으로 APJ 지역의 파트너와 채널 시장 공략 전략을 지휘한다. 특히 코헤시티 어스파이어 파트너 프로그램(Cohesity Aspire Partner Programme)을 바탕으로 역내 성장을 이끌어갈 계획이다.이번 인사는 기업들이 데이터 레질리언스와 보안을 디지털 전환의 핵심 과제로 삼고 있는 시점에 이루어졌다. 최근 데이터 주권 규제 준수와 비즈니스 레질리언스가 기업 이사회의 주요",
+    "tags": [],
+    "title": "코헤시티, 아태지역 파트너 영업 수석 디렉터에 매튜 존스턴 선임",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208950"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208948",
+    "published": "2026-10-20T14:29:05+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인공지능(AI)이 사이버 공격과 방어 기술을 동시에 빠르게 변화시키고 있는 가운데, AI 시대의 새로운 보안 위협과 실질적인 대응 전략을 공유하는 ‘2026 인공지능 보안 컨퍼런스(AIS 2026)’가 오는 11월 3일 서울 한국과학기술회관 국제회의실에서 개최된다.정보보안 전문매체 데일리시큐가 주최하는 AIS 2026은 ‘인공지능 기반 정보보호 기술 및 신종 사이버위협 정보 공유’를 주제로, AI를 활용한 사이버 공격의 진화와 위협 인텔리전스, AI 기반 보안 운영, 기업용 브라우저 보안, AI 코딩 에이전트와 소프트웨어 공급망 보",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "국내 최대 인공지능 보안 컨퍼런스 AIS 2026 개최...11월 3일, 최근 금융사 연쇄 해킹 분석 및 AI 기반 공격과 대응 방안 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208948"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208949",
+    "published": "2026-10-20T14:23:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "레드햇이 오라클 클라우드 인프라스트럭처(Oracle Cloud Infrastructure, 이하 OCI) 환경에서 자사 하이브리드 클라우드 플랫폼의 제공 범위를 넓힌다. 이에 따라 레드햇 엔터프라이즈 리눅스(Red Hat Enterprise Linux, 이하 RHEL)를 OCI 콘솔에서 퍼스트파티 제품으로 이용할 수 있게 됐다.이번 협력으로 OCI 고객은 인프라에 최적화된 RHEL 이미지를 퍼블릭 클라우드 전반에 손쉽게 배포할 수 있다. RHEL 인스턴스는 오라클의 통합 모니터링 서비스와 CLI, API, 콘솔에 직접 연결되어 일관",
+    "tags": [],
+    "title": "레드햇, 오라클 클라우드 인프라스트럭처에 'RHEL' 퍼스트파티 제공 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208949"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208947",
+    "published": "2026-10-20T14:19:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아우토크립트가 글로벌 자동차 및 운송 기술 분야 시상식인 '2026 오토테크 브레이크스루 어워즈(AutoTech Breakthrough Awards)'에서 '올해의 자동차 사이버보안 기업(Automotive Cybersecurity Company of the Year)'에 선정됐다.미국 기술 산업정보 조사기관 테크 브레이크스루(Tech Breakthrough)가 주관하는 오토테크 브레이크스루 어워즈는 자율주행과 통신 기술 발전 속에서 혁신적인 기술을 선보인 기업을 선정한다. 아우토크립트는 지난 2020년과 2021년에 이어 이번에",
+    "tags": [],
+    "title": "아우토크립트, '2026 오토테크 브레이크스루 어워즈'서 올해의 자동차 사이버보안 기업 선정",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208947"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208946",
+    "published": "2026-10-20T14:13:38+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "에버스핀이 웹 보안 솔루션 '에버세이프 웹(Eversafe for Web)'을 통해 한 달여 동안 21만 개가 넘는 해킹 위협 IP를 탐지했다고 밝혔다.에버스핀은 100여 곳 이상의 고객사 중 분석이 완료된 7곳을 대상으로 지난 9월 1일부터 10월 17일까지 집계한 결과, 위협 IP 21만 784개와 공격 시도 6204만여 건을 확인했다. 이는 최근 금융권 해킹과 관련해 공개된 위협 IP 27개와 비교해 약 7,800배에 달하는 규모다. 집계 대상 7곳은 금융권 3곳, 공공기관 2곳, 민간기업 2곳으로 나타나 자동화 공격이 전방위",
+    "tags": [
+      "금융"
+    ],
+    "title": "에버스핀, 웹 보안 솔루션 '에버세이프 웹'으로 AI 해킹 위협 IP 21만 개 탐지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208946"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208944",
+    "published": "2026-10-20T13:54:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "SK쉴더스의 물리보안 브랜드 ADT캡스가 출동대원을 대상으로 심폐소생술(CPR) 교육을 확대하며 현장 응급 대응 체계를 다진다.ADT캡스는 서울 삼성동 사옥에서 대한적십자사 전문 강사진을 초청해 출동대원 교육을 진행했다. 올해 다섯 번째로 열린 이번 교육은 심폐소생술 이론과 실습, 자동심장충격기(AED) 사용법, 기도폐쇄 응급처치 등 실전 위주 과정으로 꾸려졌다. 대원들은 실제 응급상황을 가정해 심정지 환자 발생 시 초기 대처 방법을 익혔다.ADT캡스는 지난 2023년부터 신입 출동대원을 대상으로 벌여오던 응급처치 교육을 올해부터",
+    "tags": [],
+    "title": "ADT캡스, 출동대원 대상 심폐소생술 교육 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208944"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208942",
+    "published": "2026-10-20T13:32:08+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "카스퍼스키가 최근 1년간 전 세계 중소중견기업(SMB)의 사이버 보안 현황을 분석한 글로벌 조사 결과를 발표했다.이번 조사에 따르면 전 세계 SMB의 IT 및 보안 담당자 중 86%가 지난 1년간 최소 한 차례 사이버 사고를 경험한 것으로 나타났다.가장 심각한 피해를 초래한 주요 위협으로는 피싱 공격, 소프트웨어 취약점 악용, 대규모 악성코드, 랜섬웨어, AI 취약점 관련 공격 등이 꼽혔다. 사고로 인한 피해는 재정적 손실이 22%로 가장 많았고, 고객 데이터 도난, 서비스 중단, IT 인프라 통제력 상실 등이 뒤를 이었다. 특히",
+    "tags": [
+      "랜섬웨어",
+      "피싱"
+    ],
+    "title": "전세계 중소중견기업(SMB) 86%, 최근 1년간 최소 한 차례 사이버 사고 경험",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208942"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208941",
+    "published": "2026-10-20T13:07:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "에스투더블유(S2W)는 스페인 세비야에서 열린 글로벌 정보기술 보안 컨퍼런스 'VB 2026(Virus Bulletin 2026)'에 초청돼 소프트웨어 공급망 공격 사례와 AI 기반 탐지 기술을 발표했다. S2W는 지난 2021년부터 6년 연속으로 이 행사에 참여하고 있다.바이러스 불러틴이 1991년부터 개최해 온 VB 컨퍼런스는 악성코드 연구와 위협 인텔리전스(TI) 분야의 세계적인 권위를 지닌 학술행사다. 각국의 보안 연구자와 기업 보안 책임자, 사고대응팀(CSIRT) 등이 참석해 최신 보안 연구 성과와 대응 기술을 공유한다.S",
+    "tags": [],
+    "title": "에스투더블유, 글로벌 보안 학술행사 'VB 2026'서 공급망 공격 대응 전략 발표",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208941"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208940",
+    "published": "2026-10-20T13:00:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "슈프리마가 인천 송도컨벤시아에서 열리는 '2026 국제치안산업대전(KPEX)'에 참가해 AI 영상보안 기술과 자율주행 로봇을 결합한 순찰로봇 솔루션 '큐페이스 가디언(Q-Face Guardian)'을 선보인다.큐페이스 가디언은 슈프리마의 AI 안면인식 기반 실시간 수색자 검색 솔루션 '큐페이스 파인더(Q-Face Finder)'와 자율주행 로봇 기업 뉴빌리티의 순찰로봇 및 사족보행 로봇을 연동한 관제 솔루션이다. 기존 CCTV와 자율주행 로봇이 수집한 영상을 실시간으로 AI 분석해 감시 사각지대를 해소하고 실종자 수색 골든타임을 확",
+    "tags": [
+      "금융"
+    ],
+    "title": "슈프리마, AI 영상보안 접목한 순찰로봇 솔루션 '큐페이스 가디언' 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208940"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208939",
+    "published": "2026-10-20T12:55:11+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "스틸리언이 인도네시아 국영은행 BTN과 북부수마트라 지방은행 Bank Sumut에 모바일 앱 보안 솔루션 '앱수트(AppSuit)'를 공급했다.이번 계약은 두 금융기관이 진행한 비교검증 과정을 거쳐 성사됐다. BTN은 글로벌 보안 제품과의 성능 비교에서 주요 보안 요구사항을 충족한 앱수트의 기술력을 높이 평가했다. Bank Sumut 역시 기존 솔루션의 보안성과 오작동 문제를 개선하기 위해 대체 제품으로 앱수트를 선택했다.BTN은 주택금융 서비스를 제공하는 인도네시아 주요 국영은행이다. 이번에 가맹점용 모바일 앱에 앱수트를 우선 적",
+    "tags": [
+      "금융"
+    ],
+    "title": "스틸리언, 인도네시아 국영·지방은행에 모바일 보안 솔루션 '앱수트' 공급",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208939"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208938",
+    "published": "2026-10-20T12:05:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국의 사이버보안 정책과 기술, 사이버위협 대응 경험에 대한 해외 각국의 관심이 높아지면서 아시아·아프리카·중남미 정부 고위급 인사들의 한국인터넷진흥원(KISA) 방문이 잇따르고 있다.한국인터넷진흥원(원장 이상중)은 10월 20일 아시아·아프리카·중남미 국가의 정부 고위급 인사 및 사이버보안 관계자들과 한국의 사이버보안 정책과 기술·운영 경험을 공유하고 국제 협력 확대 방안을 논의했다고 밝혔다.이번 방문은 세계은행과 재정경제부, 과학기술정보통신부가 10월 19일부터 22일까지 서울에서 공동 개최하는 '글로벌 인공지능 및 디지털 서밋",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "세계 각국, 한국 사이버보안에 주목…아시아·아프리카·중남미 고위급 인사 KISA 방문",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208938"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208937",
+    "published": "2026-10-20T11:34:26+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이찬진 금융감독원장이 금융권의 외부 공격 노출 시스템을 대상으로 전수 재점검을 지시했다고 밝혔다. 금융회사 자체점검에서 미흡 사항이 확인된 가운데 기존 점검 결과의 실효성을 다시 검증하겠다는 취지다.이 원장은 10월 19일 국회 정무위원회 국정감사에서 금융권 보안점검과 관련한 질의에 이같이 답했다. 금융회사 자체점검에서는 약 130개사의 미흡 사항이 확인된 것으로 제시됐다.이번 재점검의 핵심은 외부 공격자가 접근할 수 있는 시스템의 보안 상태를 다시 확인하는 데 있다. 자체점검에서 문제가 없다고 보고한 금융회사도 실제 취약점이 없는",
+    "tags": [
+      "금융"
+    ],
+    "title": "금감원장 “금융권 외부 노출 시스템 전수 재점검 지시”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208937"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208936",
+    "published": "2026-10-20T11:25:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "커피전문점 할리스에서 멤버십 고객의 아이디와 비밀번호를 포함한 개인정보 유출 사고가 발생했다. 유출 대상에 과거 가입자의 주소와 중복가입확인정보(DI)까지 포함돼 비밀번호 보호 방식과 회원정보 관리 실태에 대한 확인이 필요하다.할리스가 고객에게 안내한 내용에 따르면, 회사는 지난 10월 16일 멤버십 시스템에 인가되지 않은 접근이 발생해 개인정보가 유출된 사실을 확인했다. 개인정보 유출 추정 기간은 9월 3일부터 10월 7일까지다. 사고를 확인한 날짜와 실제 유출이 발생한 것으로 추정되는 기간에는 차이가 있다.안내 대상은 2020년",
+    "tags": [],
+    "title": "할리스, 비밀번호 포함 멤버십 개인정보 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208936"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html",
+    "published": "2026-10-20T07:11:45+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Siemens has addressed a DLL sideloading vulnerability impacting Siemens Software Center that it said has been exploited in ClickFix attacks. The high-severity vulnerability, tracked as CVE-2026-110936 (CVSS v4 score: 8.4), could allow an attacker to place a specially-crafted DLL in a directory the application searches, resulting in execution of malicious code with the same privileges as the",
+    "tags": [],
+    "title": "ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan",
+    "url": "https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/ex-openai-engineer-detained-in-spy.html",
+    "published": "2026-10-20T05:53:16+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A U.S. court on Monday granted the U.S. government's request to detain a former OpenAI engineer accused of planting a recording device in an executive conference room at the company's San Francisco office to allegedly steal sensitive secrets. In a new court filing Sunday, prosecutors revealed that Abdulrahman Alfozan, a 35-year-old Saudi national, was \"in frequent communications via WhatsApp",
+    "tags": [],
+    "title": "Ex-OpenAI Engineer Detained in Spy Device Case as Saudi Royal Contacts Emerge",
+    "url": "https://thehackernews.com/2026/10/ex-openai-engineer-detained-in-spy.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html",
+    "published": "2026-10-20T04:05:58+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of a ClickFix delivery platform called ROMULUS that's being used to distribute malware such as Legion Loader. According to Forescout Research - Vedere Labs, ROMULUS is akin to a malware delivery service that employs ClickFix-style lures on bogus landing pages to trick unsuspecting users into running malicious commands and infecting their own",
+    "tags": [],
+    "title": "Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware",
+    "url": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html"
+  },
+  {
+    "author": "Sergey Sidorov, Haidar Kabibo, Victor Zvarykin, Kaspersky Security Services",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?p=121537",
+    "published": "2026-10-20T07:00:45+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "Kaspersky experts explain the security issues affecting warehouse environments. We break down initial access vectors specific to warehouses, and discuss the impact of a compromise.",
+    "tags": [],
+    "title": "The journey of a paper unicorn: adventures inside a modern warehouse",
+    "url": "https://securelist.com/paper-unicorn-warehouse-security/121537/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33436",
+    "published": "2026-10-20T02:00:03+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Tuesday, October 20th, 2026 https://isc.sans.edu/podcastdetail/10142, (Tue, Oct 20th)",
+    "url": "https://isc.sans.edu/diary/rss/33436"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE5YZ1VPU2w5LVQwcFNUME1yTnY2Z3VYLTc3MTl0RkJJdjY0dWtrWTREaWpqX3lORTlPZXlqa3pQZlBQUGJJMGhGSFlFZVJEc3lKZm5GYld4TU85V1dBZDY4MFkyRmliUGVDNDlTSUZRR0FLQW8",
+    "published": "2026-10-20T01:14:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[김재섭의 뒤집어보기] 개인정보보호위원장 \"실효적 보상 아니면 감경 쉽지 않다\", 엉터리 보상안 내놓고 과징금 감경받는 행태 사라질까",
+    "tags": [],
+    "title": "[김재섭의 뒤집어보기] 개인정보보호위원장 \"실효적 보상 아니면 감경 쉽지 않다\", 엉터리 보상안 내놓고 과징금 감경받는 행태 사라질까",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5YZ1VPU2w5LVQwcFNUME1yTnY2Z3VYLTc3MTl0RkJJdjY0dWtrWTREaWpqX3lORTlPZXlqa3pQZlBQUGJJMGhGSFlFZVJEc3lKZm5GYld4TU85V1dBZDY4MFkyRmliUGVDNDlTSUZRR0FLQW8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE1qTzZVQ19VWVcyOElvY3BRUXJ4NFlMdDhYa2pISHBnRmNkZkx0SGFRUXlDQ2RIWTB4RFljay1aQmRodkZnOGF5S2hIV01HazgxS3M4WmVlbHU4SXBfVVJ4eDY2Unc",
+    "published": "2026-10-20T03:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[기획] 대기업부터 중소기업까지… 개인정보 유출 사각지대",
+    "tags": [],
+    "title": "[기획] 대기업부터 중소기업까지… 개인정보 유출 사각지대",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1qTzZVQ19VWVcyOElvY3BRUXJ4NFlMdDhYa2pISHBnRmNkZkx0SGFRUXlDQ2RIWTB4RFljay1aQmRodkZnOGF5S2hIV01HazgxS3M4WmVlbHU4SXBfVVJ4eDY2Unc?oc=5"
   }
 ]
