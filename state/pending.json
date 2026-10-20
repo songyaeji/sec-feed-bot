@@ -1626,5 +1626,801 @@
     "tags": [],
     "title": "BI KOREA",
     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1BVVEwTE5YTVY2WGIxRDNOZEx1dFNPQlBMOGxORHhRc1ZwWDFlTC1PUnVhN1pDbF8wa0lveWROb2l3OWJ2M2tFSEF2MkRTcTUzTnRxX0NzS2xFM3Q0WTF1NkNlQ2dERlRWVGdhZVZJYUtNcXBX?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2023-4659",
+    "published": "2023-10-02T15:15:15.017",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery vulnerability, whose exploitation could allow an attacker to perform different actions on the platform as an administrator, simply by changing the token value to \"admin\". It is also possible to perform POST, GET and DELETE requests without any token value. Therefore, an unprivileged remote user is able to create, delete and modify users within theapplication.",
+    "tags": [],
+    "title": "CVE-2023-4659 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-4659"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-41050",
+    "published": "2026-05-13T08:16:16.780",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Fleet's Helm deployer did not fully apply ServiceAccount impersonation in two code paths, allowing a tenant with git push access to a Fleet-monitored repository to read secrets from any namespace on every downstream cluster targeted by their `GitRepo`.",
+    "tags": [],
+    "title": "CVE-2026-41050 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41050"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-107460",
+    "published": "2026-10-13T15:17:31.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Server-Side Request Forgery (SSRF) protection in the UrlImageConverter component of Apache Fesod (Incubating) fesod-sheet 2.0.2-incubating can be bypassed through DNS rebinding. When an application accepts an attacker-controlled image URL for spreadsheet writing, the converter checks the hostname's resolved IP addresses and then opens a separate connection that can resolve the hostname again. An attacker who controls DNS responses for the URL hostname may cause the connection to reach a restricted address after validation. CVE-2026-49328 covers SSRF in releases before 2.0.2-incubating; this issue is a DNS rebinding bypass of the protection in 2.0.2-incubating. Apache Fesod (Incubating) 2.1.0-incubating addresses the reported default-fetch scenario by disabling remote URL image fetching by default and requiring an explicit exact-host allowlist when the feature is enabled. Users should upgrade to 2.1.0-incubating. Applications enabling remote URL image fetching should allowlist only hostnames whose DNS and HTTP services are trusted.",
+    "tags": [],
+    "title": "CVE-2026-107460 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107460"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-79608",
+    "published": "2026-10-13T16:17:23.040",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The workaround for XSA-433 (Zenbleed, CVE-2023-20593) was later\nre-worked to better integrate with other manipulations of the same MSR.\nIn this rework an inverted conditional was introduced, resulting in the\nworkaround to not be applied when needed and vice versa.\n\nFor more details, see:\n  http://xenbits.xen.org/xsa/advisory-433.html",
+    "tags": [],
+    "title": "CVE-2026-79608 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79608"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-63619",
+    "published": "2026-10-16T13:16:57.250",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Missing Authorization vulnerability in Apache Kylin. A backend metadata dump API misses the enough authorization and the path-confinement. Impact most to the kylin services that are directly exposed to public network, which is not common. In-house kylin deployments are mostly not impacted.\n\n\n\nThis issue affects Apache Kylin: from 4 through 5.0.4.\n\n\n\nUsers are recommended to upgrade to version 5.0.5, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-63619 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63619"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64610",
+    "published": "2026-10-16T13:16:57.367",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in Apache Kylin. Unsafe Java deserialization could happen from a broken external cache service.\n\n\n\nThis issue affects Apache Kylin: from 4 through 5.0.4.\n\n\n\nUsers are recommended to upgrade to version 5.0.5, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-64610 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64610"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64959",
+    "published": "2026-10-16T13:16:57.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'), Missing Authentication for Critical Function vulnerability in Apache Kylin. Impact most to the kylin services that are directly exposed to public network, which is not common. In-house kylin deployments are mostly not impacted.\n\n\n\nThis issue affects Apache Kylin: from 5 through 5.0.4. Certain backend cache API misses required authentication and can cause execution of injected SQL.\n\n\n\nUsers are recommended to upgrade to version 5.0.5, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-64959 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64959"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-68573",
+    "published": "2026-10-16T20:17:24.233",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Authentication vulnerability in Apache Kylin. Unauthenticated user may access to system cleanup actions. Impact most to the kylin services that are directly exposed to public network, which is not common. In-house kylin deployments are mostly not impacted. \n\n\n\nThis issue affects Apache Kylin: from 4 through 5.0.4.\n\n\n\nUsers are recommended to upgrade to version 5.0.5, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-68573 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68573"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-103119",
+    "published": "2026-10-20T14:16:56.087",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Buffer under-read vulnerability in Apache Tomcat meant that a large non-blocking write could result in the response body being split between the current request and the next request received on that connection leading most likely to failure of the second request and possibly leakage of data from the first response to the second.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0-M25 through 11.0.26.\n\n\n\nUsers are recommended to upgrade to version 11.0.27, which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-103119 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103119"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-113678",
+    "published": "2026-10-20T16:17:12.613",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Froxlor before 2.3.15 contains a symlink following vulnerability in Statistics::makeChownWithNewStats that allows authenticated customers to take ownership of arbitrary host directories by abusing the root-run traffic cron. Attackers can replace the goaccess statistics directory in their document root with a symlink, causing chown -R to hand root-owned trees to them and enabling root escalation.",
+    "tags": [],
+    "title": "CVE-2026-113678 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113678"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-113703",
+    "published": "2026-10-20T16:17:13.507",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SuggestArr before 3.0.0 contains an authentication bypass vulnerability in its local_bypass authentication mode where enforce_authentication() in api_service/auth/middleware.py trusts the client-controlled request.remote_addr value, which is derived from the spoofable X-Forwarded-For header due to ProxyFix(x_for=1) configuration in api_service/app.py. Attackers can send a request with X-Forwarded-For set to a trusted CIDR address such as 127.0.0.1 to be granted an unauthenticated admin session via _load_bypass_user_context(), gaining full administrative access to endpoints like /api/users and /api/jobs without providing any credentials.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-113703 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113703"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-113506",
+    "published": "2026-10-20T18:17:18.633",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in aaPanel up to 8.25.0. The affected element is the function ExecShell of the file class/public/common.py of the component File Manager. The manipulation of the argument sfile/dfile/access/user leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor confirms: \"The reported RCE and LFI vulnerabilities require authentication.\"",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-113506 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113506"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-113672",
+    "published": "2026-10-20T18:17:20.950",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. From 0.9.0 until 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2, the repo-server evaluates .jsonnet files with an importer that does not confine import, importstr, or importbin to the repository root. Absolute paths, parent-directory traversal, and repository symlinks can open any file readable by the repo-server, including /proc/self/environ, projected service-account tokens, mounted private keys, and repository credentials. Although generated Secrets are redacted, placing imported contents in a ConfigMap returns the data to the caller. Using importstr on a non-terminating device such as /dev/zero can exhaust repo-server memory. An attacker can commit a .jsonnet file to a Git repository used by an Application or upload the file through POST /api/v1/applications/manifestsWithFiles, also exposed by argocd app diff --local --server-side-generate. Directory applications evaluate every .jsonnet file in the application directory. The upload path requires only Application get permission on an existing directory Application, without Application update or sync permission or repository write access. This issue is fixed in versions 3.3.15, 3.4.10, 3.5.4, and 3.6.0-rc2.",
+    "tags": [],
+    "title": "CVE-2026-113672 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113672"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-113802",
+    "published": "2026-10-20T18:17:21.430",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Wavlink WL-WN530BE1-A firmware through M30BE1_V251117 contains an OS command injection vulnerability in the sub_23B54 function of the ioos binary, which passes the unsanitized file_id parameter of /protocol.csp?opt=ovpn_file requests with type=del to popen(). A remote unauthenticated attacker can send a forged IP-FROM: 127.0.0.1 header to bypass login and execute arbitrary commands as root.",
+    "tags": [],
+    "title": "CVE-2026-113802 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113802"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-1961",
+    "published": "2026-03-26T13:16:27.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Foreman. A remote attacker could exploit a command injection vulnerability in Foreman's WebSocket proxy implementation. This vulnerability arises from the system's use of unsanitized hostname values from compute resource providers when constructing shell commands. By operating a malicious compute resource server, an attacker could achieve remote code execution on the Foreman server when a user accesses VM VNC console functionality. This could lead to the compromise of sensitive credentials and the entire managed infrastructure.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-1961 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1961"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-44938",
+    "published": "2026-07-07T14:16:30.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability has been identified in Fleet's agent-side deployer, which did not filter security-sensitive keys from namespaceLabels in fleet.yaml (or BundleDeployment.spec.options.namespaceLabels) when applying them to the target namespace.\n\n\n\n\nAn attacker with git push access to a\n Fleet-monitored repository could overwrite Pod Security Standards (PSS)\n enforcement labels on a target namespace. This allows the attacker to \nweaken admission controls and deploy workloads that PSS policies would \notherwise block.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-44938 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44938"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-62895",
+    "published": "2026-09-08T18:18:08.877",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Permissive cross-domain policy with untrusted domains in Azure Arc allows an unauthorized attacker to elevate privileges over a network.",
+    "tags": [],
+    "title": "CVE-2026-62895 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62895"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-101292",
+    "published": "2026-09-28T13:17:21.267",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Apache ActiveMQ Artemis before 2.34.0 contains an unsafe reflection vulnerability in FederationStreamConnectMessage.getFederationPolicy(). The method calls Class.forName(clazz).getConstructor().newInstance() where clazz is read directly from the CORE protocol wire buffer without type validation. An authenticated federation peer can send a FEDERATION_DOWNSTREAM_CONNECT packet with a crafted class name, causing the broker to load and instantiate arbitrary classes visible to the Artemis module classloader. Static initializers (<clinit>) and no-argument constructors (<init>()) execute as side effects before the type cast, enabling denial of service via system-property poisoning, out-of-memory conditions via classloading, or broker state manipulation.",
+    "tags": [],
+    "title": "CVE-2026-101292 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-101292"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-107807",
+    "published": "2026-10-09T16:17:25.087",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, Nginx UI accepts the Node.Secret master credential through the node_secret query parameter in HTTP and WebSocket authentication paths instead of requiring the X-Node-Secret header. The credential can consequently appear in access logs, proxy logs, browser history, Referer headers, configuration URLs, and deployment environment data. A party that obtains the secret can bypass normal password, JWT, session, and second-factor checks and obtain persistent administrative API access, including access to configuration and secret material. This issue is fixed in version 2.5.0.",
+    "tags": [],
+    "title": "CVE-2026-107807 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107807"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-107808",
+    "published": "2026-10-09T16:17:25.237",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, POST /api/login checks EnabledOTP but does not require a WebAuthn assertion when EnabledPasskey is true and no TOTP secret is configured. A passkey-only account is therefore issued a session after password verification, despite Enabled2FA reporting that the account has a second factor. An attacker who obtains the password can take over the account and reach administrative functionality without the registered passkey. This issue is fixed in version 2.5.0.",
+    "tags": [],
+    "title": "CVE-2026-107808 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107808"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-107809",
+    "published": "2026-10-09T16:17:25.387",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, AuthRequired accepts a browser-managed token cookie as an API credential after the front end stores the JWT in that cookie. Because management endpoints do not universally require a CSRF token or perform Origin or Referer validation, a remote attacker can induce a logged-in administrator's browser to submit authenticated cross-site state-changing requests, including POST /api/configs. The attack requires an administrator account without OTP/Passkey or a target endpoint that does not require secure-session proof. The attacker cannot read the cross-origin response but can modify Nginx configuration, trigger reloads, or invoke other management operations reachable with the victim's session. This issue is fixed in version 2.5.0.",
+    "tags": [],
+    "title": "CVE-2026-107809 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107809"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-107813",
+    "published": "2026-10-09T16:17:26.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Nginx UI is a web user interface for the Nginx web server. From 2.0.0 until 2.5.0, the api/cluster router exposes node and namespace mutation operations and cluster-wide Nginx reload or restart operations with AuthRequired but without RequireSecureSession. An authenticated OTP-enabled user possessing a stolen or persisted JWT can therefore perform node CRUD, read or replace node credentials, change namespaces, and invoke nodes/reload_nginx or nodes/restart_nginx without a fresh second-factor step-up. This issue is an incomplete fix for CVE-2026-84315 and is fixed in version 2.5.0.",
+    "tags": [],
+    "title": "CVE-2026-107813 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107813"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-79609",
+    "published": "2026-10-13T16:17:23.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "XPTI (Xen Page Table Isolation) was introduced to mitigate Meltdown\n(CVE-2017-5754, one aspect of XSA-254).  This involves copying 64-bit PV\nguest page table entries from guest-chosen root page tables to the Xen-\nchosen one which is in actual use by hardware.  To read the guest root\npage table, the directmap is used.  PV guests, however, have a directmap\nwhich may not cover all memory; in particular this is the case if any\nmemory extends beyond the 5 TiB (CONFIG_BIGMEM=y: 3.5 TiB) address\nboundary.",
+    "tags": [],
+    "title": "CVE-2026-79609 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79609"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-79610",
+    "published": "2026-10-13T16:17:23.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "XSA-501 was about issues with v1 -> v2 and v2 -> v1 changes racing certain\nother grant table operations.  Sadly a v2 -> v1 -> v2 change has yet\nanother effect which wasn't accounted for: During the first change, status\npages would be freed.  During the second change they would be allocated\nagain.  Hence across the full pair of change the addresses of the status\npages may change, rendering stale previously calculated pointers into the\nstatus array.",
+    "tags": [],
+    "title": "CVE-2026-79610 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79610"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-104937",
+    "published": "2026-10-13T19:17:56.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Shopware version 6.7 allows the upload of attacker‑controlled HTML files and serves them as text/html without effective security headers, enabling stored cross-site scripting (XSS). When a malicious uploaded file containing an embedded JavaScript payload is viewed by an administrator, the attacker can access and exfiltrate the administrator's authentication token.\r\n\r\nThe compromised token enables unauthorized access to the Shopware Administration API. If the affected administrator account possesses extension‑management privileges, an attacker can upload, install, and activate malicious plugins to achieve arbitrary PHP code execution on the underlying OS with the privileges of the Shopware process.",
+    "tags": [],
+    "title": "CVE-2026-104937 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104937"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-110247",
+    "published": "2026-10-13T19:18:49.493",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Several buffer-growth sites in libmime performed size arithmetic in 32-bit types without overflow checks. On a sufficiently large message the growth guard could fail open, or the buffer could be reallocated smaller than required, and a subsequent memcpy would then write attacker-controlled data across adjacent heap allocations. This vulnerability was fixed in Thunderbird 158.",
+    "tags": [],
+    "title": "CVE-2026-110247 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110247"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-110249",
+    "published": "2026-10-13T19:18:49.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious, compromised, or MITM-controlled Exchange server can return a single well-formed SOAP response containing an element with enough attributes to keep Thunderbird's main thread CPU-bound for seconds to hours. This vulnerability was fixed in Thunderbird 158 and Thunderbird 153.5.",
+    "tags": [],
+    "title": "CVE-2026-110249 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110249"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-110005",
+    "published": "2026-10-13T20:17:25.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The `periphery` agent's container-management functionality of Komodo version 2.2.0 contains an OS command injection vulnerability. An authenticated low-privileged user with `Execute`, or `Read` plus `Logs`, permission on a managed server can supply shell metacharacters in a container name processed by the `DestroyContainer` or `SearchContainerLog` operations. The container name is interpolated without escaping into a command executed using `sh -c`, allowing arbitrary commands to execute as root on the managed host. This permits a user without Komodo's `Terminal` permission to obtain unrestricted host-level command execution.",
+    "tags": [],
+    "title": "CVE-2026-110005 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110005"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16753",
+    "published": "2026-10-13T20:17:28.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect authorization in the library-query execution endpoint in Lowcoder version, up to and including 2.4.10, allows an authenticated administrator or developer in one organization to execute a library query belonging to another organization via a crafted request containing the victim library-query identifier.",
+    "tags": [],
+    "title": "CVE-2026-16753 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16753"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-107082",
+    "published": "2026-10-19T17:17:00.543",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Slims (Senayan Library Management Systems) 9 Bulian 9.8.0 allows an authenticated staff user to perform SQL injection via the opac_hide and promoted GET parameters of admin/modules/bibliography/index.php, because escape_string() is applied but the values are concatenated into an unquoted numeric SQL context, leading to error-based information disclosure and arbitrary data extraction.",
+    "tags": [],
+    "title": "CVE-2026-107082 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107082"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-86919",
+    "published": "2026-10-20T01:17:27.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stack overflow was addressed with improved input validation. This issue is fixed in iOS 26.7 and iPadOS 26.7, iOS 27 and iPadOS 27, macOS Golden Gate 27, macOS Sequoia 15.8, macOS Tahoe 26.7, visionOS 27. An attacker with a paired Bluetooth device may be able to execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-86919 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86919"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-86949",
+    "published": "2026-10-20T01:17:28.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "This issue was addressed by enforcing library validation on the affected binaries. This issue is fixed in Xcode 27. A malicious app may be able to break out of its sandbox.",
+    "tags": [],
+    "title": "CVE-2026-86949 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86949"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-74048",
+    "published": "2026-10-20T14:17:00.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Not Failing Securely ('Failing Open') vulnerability in Apache Tomcat. If the OpenSSLLifecycleListener is configured to use FIPS mode but FIPS activation fails, Tomcat logs and error but continues to use JSSE in non-FIPS mode with the provided configuration.\n\n\n\nThis issue affects Apache Tomcat: from 11.0.0-M14 through 11.0.26, from 10.1.22 through 10.1.60, from 9.0.92 through 9.0.122.\n\n\n\nUsers are recommended to upgrade to version 11.0.27, 10.1.61 or 9.0.123, which fix the issue.",
+    "tags": [],
+    "title": "CVE-2026-74048 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74048"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-112942",
+    "published": "2026-10-20T15:17:17.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "launch-editor allows users to open files with line numbers in editor from Node.js. Prior to 2.14.2, launch-editor-middleware processes an attacker-controlled Windows file argument where the file argument ends in a parent-directory component plus a line-and-column suffix: the path is resolved while the suffix is still present, and launch-editor removes the suffix before its existsSync check, leaving the existing parent directory for existsSync and allowing the attacker-controlled file argument to pass filename existence validation without requiring the malicious filename to exist. The bypass can lead to OS command injection when combined with the separately described Windows percent-expansion flaw. This issue is fixed in version 2.14.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-112942 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112942"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-112943",
+    "published": "2026-10-20T15:17:17.643",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "launch-editor allows users to open files with line numbers in editor from Node.js. Prior to 2.14.2, launch-editor did not escape % on Windows when passing an argument to cmd. When an environment variable contained a malicious value, it was possible that that content to be executed. This vulnerability is fixed in 2.14.2.",
+    "tags": [],
+    "title": "CVE-2026-112943 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112943"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-112836",
+    "published": "2026-10-20T16:17:04.017",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in e4jvikwp VikRentCar vikrentcar allows Cross Site Request Forgery.This issue affects VikRentCar: from n/a through 1.4.8.",
+    "tags": [],
+    "title": "CVE-2026-112836 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112836"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-112946",
+    "published": "2026-10-20T16:17:05.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vite is a frontend tooling framework for JavaScript. Prior to 6.4.4, 7.3.7, 8.1.6, 8.2.4, and 8.3.3, import analysis can record a root-relative browser URL in safeModulePaths instead of the cleaned resolved module identifier. On a network-accessible, non-Windows development server, an imported project file whose URL matches an absolute host path can authorize a later raw-filesystem request for that host file, provided server.fs.deny does not block it. The request can disclose the matching file outside the project root, but it does not allow arbitrary path traversal because the host path must correspond to a project-relative URL authorized by the application graph. This issue is fixed in versions 6.4.4, 7.3.7, 8.1.6, 8.2.4, and 8.3.3.",
+    "tags": [],
+    "title": "CVE-2026-112946 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112946"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-112950",
+    "published": "2026-10-20T16:17:05.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vitest is a Vite-native testing framework for JavaScript and TypeScript projects. From 4.1.11 until 4.1.12 and 5.0.3, isFileLoadingAllowed and the filesystem read interpret backslashes differently on Windows in packages/mocker/src/node/interceptorPlugin.ts. When a client can reach the Vite dev server on Windows and register a redirect mock containing backslash traversal, POSIX joining preserves a Windows backslash traversal that the later filesystem read interprets as a path separator, so the client can read a file outside server.fs.allow that the Vitest process can access. This issue is fixed in versions 4.1.12 and 5.0.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-112950 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112950"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-113613",
+    "published": "2026-10-20T16:17:11.933",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FlexGet before 3.20.7 contains a path traversal vulnerability in the decompress plugin that allows remote attackers to write arbitrary files by supplying malicious archive member paths. Attackers can deliver zip or rar archives with ../ sequences or absolute paths through a feed, writing Python files into the plugins directory for code execution.",
+    "tags": [],
+    "title": "CVE-2026-113613 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113613"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-28328",
+    "published": "2026-10-20T17:17:38.910",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SolarWinds Observability Self-Hosted was found to be affected by a broken authorization schema that can allow low-privileged users to access and modify information beyond their assigned permissions.",
+    "tags": [],
+    "title": "CVE-2026-28328 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28328"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208970",
+    "published": "2026-10-20T23:20:26+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "러시아와 연계된 사이버 첩보조직 APT28이 북대서양조약기구(NATO) 회원국의 군함 건조업체와 방산업체 등을 대상으로 사이버 공격을 수행한 정황이 확인됐다. 공격자들은 기존 백도어와 새롭게 발견된 악성코드 로더를 활용해 내부망에 접근하고 인증정보를 탈취하는 등 조직적인 침투 활동을 벌인 것으로 나타났다.브로드컴 산하 시만텍 위협헌팅팀은 10월 20일 발표한 분석 보고서에서 러시아 연계 해킹조직 APT28의 공격 활동을 확인했다고 밝혔다. 시만텍은 해당 활동을 '스왈로테일(Swallowtail)'이라는 이름으로 추적하고 있다.APT",
+    "tags": [
+      "APT"
+    ],
+    "title": "러시아 해킹조직 APT28, NATO 회원국 방산업체 침투…신종 악성코드로 내부망 접근",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208970"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+    "published": "2026-10-20T17:09:53+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The private keys of eight eMudhra intermediate certificate authority (CA) certificates are compromised, Mozilla and Google's Chrome Root Program confirms on October 20. An intermediate CA signs the certificates that websites present, so anyone holding one of these keys could issue a certificate for any website that a browser would accept. A researcher reported the",
+    "tags": [],
+    "title": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
+    "url": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+    "published": "2026-10-20T14:07:17+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A Chinese-speaking criminal pointed autonomous AI agents at company websites and let them break in with almost no help, and a security researcher watched it happen because the operators left their control panels open on the internet. The agents tried more than 1,200 sites and reached websites belonging to more than 100 companies, including farm-equipment maker Deere, appliance company",
+    "tags": [],
+    "title": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
+    "url": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html",
+    "published": "2026-10-20T12:59:44+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The iPhone of Vladan Đokić, rector of the University of Belgrade and a prominent supporter of Serbia's student protest movement, was infected with NSO Group's Pegasus spyware in 2026, the Citizen Lab said on October 19. The finding came six days before Serbia's October 25 snap parliamentary election. The infection used a zero-click exploit, meaning Đokić did not have to tap a link or",
+    "tags": [],
+    "title": "Pegasus Spyware Infection Confirmed on Serbian University Rector's iPhone Days Before Election",
+    "url": "https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html"
+  },
+  {
+    "author": "Mayank Parmar",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/",
+    "published": "2026-10-20T18:11:03+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "OpenAI confirmed that its newer models are much better at writing and migrating software in older programming languages. [...]",
+    "tags": [],
+    "title": "OpenAI says GPT-6.1 Sol is dramatically better at migrating legacy code",
+    "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-gpt-61-sol-is-dramatically-better-at-migrating-legacy-code/"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/",
+    "published": "2026-10-20T14:19:05+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The U.S. Department of Homeland Security (DHS) is ordering federal civilian agencies to stop using DeepSeek products and remove them from government systems. [...]",
+    "tags": [],
+    "title": "DHS bans DeepSeek products across US federal civilian agencies",
+    "url": "https://www.bleepingcomputer.com/news/security/dhs-bans-deepseek-products-across-us-federal-civilian-agencies/"
+  },
+  {
+    "author": "Sponsored by Specops Software",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/",
+    "published": "2026-10-20T13:51:00+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "CJIS v6.1 requires agencies to maintain strong authentication, account security, and audit controls while demonstrating ongoing compliance. Specops outlines five practical priorities covering MFA, account management, passwords, logging, and audit readiness. [...]",
+    "tags": [],
+    "title": "CJIS v6.1 Compliance: 5 Practical Priorities for Agencies",
+    "url": "https://www.bleepingcomputer.com/news/security/cjis-v61-compliance-5-practical-priorities-for-agencies/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25650",
+    "published": "2026-10-20T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could crash the Windows kernel. The following versions of HMS Networks PEAK-System PCAN Windows drivers are affected: PEAK-System Device Driver Setup",
+    "tags": [],
+    "title": "HMS Networks PEAK-System PCAN Windows drivers",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25654",
+    "published": "2026-10-20T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Two vulnerabilities in the Web-Based Management (WBM) interface of WAGO CC100, PFC100 G2, PFC200 G2, TP600, Edge Controller and WP400 devices allow an authenticated low-privileged user to bypass intended privilege boundaries. The issues affect both the routing configuration functionality and the authorization model for PROFIBUS configuration management. The following versions of WAGO OS Linux are affected: WAGO Firmware (vers:semver/>=1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0| =1.0.0|",
+    "tags": [],
+    "title": "WAGO OS Linux",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25653",
+    "published": "2026-10-20T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Hitachi Energy is aware of vulnerabilities that affect RTU500 product versions listed in this document. These vulnerabilities if exploited can have impact on confidentiality, integrity and availability of the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation. The following versions of Hitachi Energy RTU500 Product are affected: RTU500 series CMU Firmware vers:RTU500_series_CMU_Firmware/>=13.5.1| =13.6.1| =13.7.1| =13.8.1| =12.7.1|",
+    "tags": [],
+    "title": "Hitachi Energy RTU500 Product",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25651",
+    "published": "2026-10-20T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to obtain and disclose sensitive information. The following versions of Moxa AIG-302 ThingsPro Edge are affected: Moxa AIG-302 ThingsPro Edge firmware Software Upgrades, and click Check for upgrades to check for and obtain the update. Mitigation Users can download the v1.4.1 patch manually from either the official AIG-302 product website or the Moxa Software Release Service. Then, log in to the AIG-302 Web Console, navigate to Maintenance > Software Upgrades, and select Package Upload to upload the patch. Mitigation Users can download the v1.4.1 patch manually from either the official AIG-302 product website or the Moxa Software Release Service. Then, log in to the AIG-302 Web Console, navigate to Maintenance > Software Upgrades, and select Package Upload to upload the patch. Mitigation For more information refer to Moxa's security advisory MPSA-262560 Additional Metrics Relevant CWE: CWE-862 Missing Authorization CVSS Version Base Score Base Severity Vector String 3.1 6.8 MEDIUM CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N 4.0 6.9 MEDIUM CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N View CVE Details CVE-2026-109813 A hard-coded cryptographic key vulnerability exists in the /usr/bin/sysman for some of Moxa's industrial computing products. An unauthenticated attacker with adjacent network access could exploit the exposed private key material to compromise the confidenti",
+    "tags": [],
+    "title": "Moxa AIG-302 ThingsPro Edge",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25652",
+    "published": "2026-10-20T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "View CSAF Summary Hitachi Energy is aware of multiple vulnerabilities that affect MicroSCADA X SYS600 product versions listed in this document. These vulnerabilities can be exploited to carry out various attacks on the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation. The following versions of Hitachi Energy MicroSCADA X SYS600 Product are affected: MicroSCADA X SYS600 vers:MicroSCADA_X_SYS600/",
+    "tags": [],
+    "title": "Hitachi Energy MicroSCADA X SYS600 Product",
+    "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/nigerian-given-8-year-sentenc-tax-hacks",
+    "published": "2026-10-20T17:14:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "A Nigerian national who worked with a group to hack tax prep businesses and conduct millions of dollars in fraud using customer data was sentenced this week.",
+    "tags": [],
+    "title": "Nigerian national given 8-year sentence for tax business hacks",
+    "url": "https://therecord.media/nigerian-given-8-year-sentenc-tax-hacks"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/eu-cyber-law-wont-force-fixes-for-fridges-in-french-attack",
+    "published": "2026-10-20T14:55:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The EU’s Cyber Resilience Act that took effect last month only requires companies to fix vulnerabilities and issue free updates during a product's support period, which manufacturers define.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "EU cyber law won’t force fixes for fridge controllers hit in French attack",
+    "url": "https://therecord.media/eu-cyber-law-wont-force-fixes-for-fridges-in-french-attack"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/aomei-yet-to-notify-customers-hijack-software",
+    "published": "2026-10-20T14:11:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "In an email, the Hong Kong-registered company confirmed to Recorded Future News that hackers repeatedly altered configuration files on its update servers between April and July, redirecting the software to download malware for minutes at a time.",
+    "tags": [],
+    "title": "AOMEI yet to notify customers after hackers hijacked its software updates",
+    "url": "https://therecord.media/aomei-yet-to-notify-customers-hijack-software"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/anti-putin-messages-disrupt-russian-education-platform",
+    "published": "2026-10-20T14:05:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "A pro-Ukraine group that says it operates within Russia took responsibility for anti-Putin messages appearing on an education assessment platform. Authorities said they had restored systems.",
+    "tags": [],
+    "title": "Anti-Putin messages disrupt nationwide school assessments in Russia",
+    "url": "https://therecord.media/anti-putin-messages-disrupt-russian-education-platform"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=201358",
+    "published": "2026-10-20T15:45:42+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Google Cloud’s London outage disrupted Revolut payments and ATM withdrawals, while ING Germany reported online banking issues. Multiple Google Cloud services went offline in the London region this morning, according to Google’s status page, and the disruption didn’t stay contained to infrastructure dashboards. British digital bank Revolut reported a widespread service outage at roughly the […]",
+    "tags": [
+      "금융"
+    ],
+    "title": "Google Cloud Outage in London Disrupts Revolut Banking Services",
+    "url": "https://securityaffairs.com/201358/breaking-news/google-cloud-outage-in-london-disrupts-revolut-banking-services.html"
+  },
+  {
+    "author": "Kri Dontje",
+    "category": "high",
+    "id": "6ad760e2bfc9520001b38dfe",
+    "published": "2026-10-20T15:31:22+00:00",
+    "severity": "info",
+    "source": "Cisco Talos",
+    "summary": "The September Microsoft Patch Tuesday release included 975 vulnerability advisories. This month, 1,415 vulnerabilities were just dropped. Compared to a pre-June average of 100 a month, that increase is staggering. Where did they come from? And what does the future look like?",
+    "tags": [],
+    "title": "There's only so much code: the rise in vulnerability numbers",
+    "url": "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/"
+  },
+  {
+    "author": "Terrell Cox",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/2026/10/01/insights-from-the-2026-microsoft-digital-defense-report/",
+    "published": "2026-10-01T14:00:00+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "Read highlights from the 2026 Microsoft Digital Defense Report, which reflects a security environment that continues to grow more interconnected. The post Insights from the 2026 Microsoft Digital Defense Report appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "Insights from the 2026 Microsoft Digital Defense Report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/01/insights-from-the-2026-microsoft-digital-defense-report/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMitgJBVV95cUxNdTB6Snp6dlRvcGZGRzUtR0FVOEF4VXFaOTI3cWI1QXNfU0l3eUNTZzZ1U0Z2RGsza1ZkdEJCMjhWdHFvSnBmejl6Ukt5S1hWaVZINU5CQWxSaUJSMGxSUm9sQ1VTTFZiRklsOXAyZWNYZ19UZW9CdUZYei1SSjEwNUx4UWprSWRTTEdMLVdJcTlnalh6aWgzZFduQnJFUktxM3Y1T09nZ2s2QUZScnVYRHVUcVF3alNHSy1ZRW9DNS1rOEVZMkNiLWxFUV9KV3pzR3Zra2FKWGY4dzFIYUVSdnloUTJUOXRYV01hRUVNQUVQaHpHelFzTVR0X1hkWGp0Q0Z6OEVhRjFFeUNUODNMSVJKOEhVLUNsTXFWRU5rQkozZFdQM1R2M2xNVzd3Q19nX2ZvNGtB",
+    "published": "2026-10-20T08:56:42+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "버튼 색상이 바뀌는 순간을 이해하는 금융결제원 등기 토토",
+    "tags": [
+      "금융"
+    ],
+    "title": "버튼 색상이 바뀌는 순간을 이해하는 금융결제원 등기 토토",
+    "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNdTB6Snp6dlRvcGZGRzUtR0FVOEF4VXFaOTI3cWI1QXNfU0l3eUNTZzZ1U0Z2RGsza1ZkdEJCMjhWdHFvSnBmejl6Ukt5S1hWaVZINU5CQWxSaUJSMGxSUm9sQ1VTTFZiRklsOXAyZWNYZ19UZW9CdUZYei1SSjEwNUx4UWprSWRTTEdMLVdJcTlnalh6aWgzZFduQnJFUktxM3Y1T09nZ2s2QUZScnVYRHVUcVF3alNHSy1ZRW9DNS1rOEVZMkNiLWxFUV9KV3pzR3Zra2FKWGY4dzFIYUVSdnloUTJUOXRYV01hRUVNQUVQaHpHelFzTVR0X1hkWGp0Q0Z6OEVhRjFFeUNUODNMSVJKOEhVLUNsTXFWRU5rQkozZFdQM1R2M2xNVzd3Q19nX2ZvNGtB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiywFBVV95cUxNYUNyVHhVV2x3MV9YTWYxemxRdEtsMjkwdDBOU09XckNubjhBR1NLUE9qeXlrSV8tM2FIT0kxQWJYeUdpMzVYZUdFQTZPZlFZTFJpeWtIVTZqd1YzY05FQUJwSFRVcC1XejNWcDlEc2xyNHIxOUg4V1VhbnFObTdmbzExcFEyVjBIV2ZUNlFBVzFmUUE4NFNEMWIzb3kzaUdMbTViVUUxRWt6cEpoQl92NXlLamlHazI2NjlJRE5QcDdIUjZ1Ykh0V2NfRQ",
+    "published": "2026-10-20T04:01:38+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "게임별 화면 구성을 비교하는 금융결제원 카톡 토토 관찰 포인트",
+    "tags": [
+      "금융"
+    ],
+    "title": "게임별 화면 구성을 비교하는 금융결제원 카톡 토토 관찰 포인트",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYUNyVHhVV2x3MV9YTWYxemxRdEtsMjkwdDBOU09XckNubjhBR1NLUE9qeXlrSV8tM2FIT0kxQWJYeUdpMzVYZUdFQTZPZlFZTFJpeWtIVTZqd1YzY05FQUJwSFRVcC1XejNWcDlEc2xyNHIxOUg4V1VhbnFObTdmbzExcFEyVjBIV2ZUNlFBVzFmUUE4NFNEMWIzb3kzaUdMbTViVUUxRWt6cEpoQl92NXlLamlHazI2NjlJRE5QcDdIUjZ1Ykh0V2NfRQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMieEFVX3lxTE1PM0s1cTZaOEtqTUpMOUt5RHJLVDB4bGh6ZndvRTgtbzNVSDUwcWRQYXlDd2VBQ1R3ekhTdlJMQzdXZUxhMTNSazNzLXBVZk5sS0t1ZHhfUWswbmZzcUowWkIxYk9jbUpmMVBqS3RUTkVKVnBSV25MMg",
+    "published": "2026-10-19T22:54:14+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "게임 구성의 차이를 말로 풀어보는 금융 결제원 블록 체인",
+    "tags": [
+      "금융"
+    ],
+    "title": "게임 구성의 차이를 말로 풀어보는 금융 결제원 블록 체인",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1PM0s1cTZaOEtqTUpMOUt5RHJLVDB4bGh6ZndvRTgtbzNVSDUwcWRQYXlDd2VBQ1R3ekhTdlJMQzdXZUxhMTNSazNzLXBVZk5sS0t1ZHhfUWswbmZzcUowWkIxYk9jbUpmMVBqS3RUTkVKVnBSV25MMg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMi9AFBVV95cUxOUjFMQm5kY2pJRkVaY3FDQVNlaFVrUVhUZ0kzWVZNaW5wMWZrQnUtWUxGWUNGOTNqOXNMTTNTOGxOVnM5MkZ1QzBhcl91V1pEUWdBcXB3U05SU0lQbnlCQXFHWEloVmgtN1hFeDZ2VTdBdFVyQUJrdTFYQkNhcVhGTjhyRTIwZHU5RWNIb18zbnlQOWs0RmJfY3BlM2U3WHZaZWJScFdoM2FUMkw3LUpWaHBCUno3eUZuQVRpbXRCdkxXbzZyMHV2QWR5ZlEwazEwSUlOcFR5Y0RnaW40VE9KN08yajl0dVpPazA5d3dzVGZYRWt6",
+    "published": "2026-10-19T23:23:18+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융 결제원 토토 디시 릴 수와 행 수를 읽는 법",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융 결제원 토토 디시 릴 수와 행 수를 읽는 법",
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOUjFMQm5kY2pJRkVaY3FDQVNlaFVrUVhUZ0kzWVZNaW5wMWZrQnUtWUxGWUNGOTNqOXNMTTNTOGxOVnM5MkZ1QzBhcl91V1pEUWdBcXB3U05SU0lQbnlCQXFHWEloVmgtN1hFeDZ2VTdBdFVyQUJrdTFYQkNhcVhGTjhyRTIwZHU5RWNIb18zbnlQOWs0RmJfY3BlM2U3WHZaZWJScFdoM2FUMkw3LUpWaHBCUno3eUZuQVRpbXRCdkxXbzZyMHV2QWR5ZlEwazEwSUlOcFR5Y0RnaW40VE9KN08yajl0dVpPazA5d3dzVGZYRWt6?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiuAFBVV95cUxPb0wxdk9Ec01FRzQ5dHdtbmhXYXBUNWZGUk5PU1RnN2ltNDRaTUo3OGN4eThwZHVkU00zZTJ6RWMzY1lJX1pwQjFaYU9hN2U3T213dXZ1bThCNktDTHdwRmlwcWQyd0hCZkkwandyakxuSkN3Ty1GaE9aUk1LaFozRGJDNzB5ZnptWnBvdnZtVzVUSGI5S0k0Qm1NZUxiSVJ3QmV1ekx5WWU3SEFGQzk1dzBGWHBacmZt",
+    "published": "2026-10-20T04:53:37+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원 등기 토토 소리 없이 이용할 때 필요한 표시",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원 등기 토토 소리 없이 이용할 때 필요한 표시",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPb0wxdk9Ec01FRzQ5dHdtbmhXYXBUNWZGUk5PU1RnN2ltNDRaTUo3OGN4eThwZHVkU00zZTJ6RWMzY1lJX1pwQjFaYU9hN2U3T213dXZ1bThCNktDTHdwRmlwcWQyd0hCZkkwandyakxuSkN3Ty1GaE9aUk1LaFozRGJDNzB5ZnptWnBvdnZtVzVUSGI5S0k0Qm1NZUxiSVJ3QmV1ekx5WWU3SEFGQzk1dzBGWHBacmZt?oc=5"
   }
 ]
