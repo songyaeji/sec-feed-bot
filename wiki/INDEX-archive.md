@@ -904,3 +904,6 @@
 - [citrix-netscaler-auth-bypass](topics/2026-08-citrix-netscaler-auth-bypass.md) Citrix NetScaler — 인증우회 공격 CVE-2026-19490 CVSS 9.3 (최종갱신일: 2026-08-21)
 - [zombie-cards-nfc-expiry-tampering](topics/2026-08-zombie-cards-nfc-expiry-tampering.md) 비자카드 "좀비 카드" NFC 유효기간 조작 공격 (최종갱신일: 2026-08-21)
 - [trueconf-backdoor](topics/2026-08-trueconf-backdoor.md) Head Mare 그룹 TrueConf 서버 침해 설치 프로그램 백도어 변조·CVE-2026-72530/72529 공개 (최종갱신일: 2026-08-21)
+- [toxicpanda-2-0](topics/2026-08-toxicpanda-2-0.md) ToxicPanda 2.0 금융 앱 349개 표적 16개국 확대 (최종갱신일: 2026-08-22)
+- [tiktok-child-privacy-settlement](topics/2026-08-tiktok-child-privacy-settlement.md) TikTok 미국 아동 개인정보 침해 4억 달러 합의 (최종갱신일: 2026-08-22)
+- [nasa-ait-gui-rce](topics/2026-08-nasa-ait-gui-rce.md) NASA AIT-GUI 우주선 제어 명령 원격실행 CVSS 9.4 (최종갱신일: 2026-08-22)

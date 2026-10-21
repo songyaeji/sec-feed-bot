@@ -2,6 +2,12 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [teamupdraft-wordpress-backdoor](topics/2026-10-teamupdraft-wordpress-backdoor.md) TeamUpdraft 침해로 WordPress 백도어 배포 공급망 공격 (최종갱신일: 2026-10-21)
+- [ai-assisted-cybercrime-threat-actor](topics/2026-10-ai-assisted-cybercrime-threat-actor.md) 위협 행위자 AI 안전 우회 자격증명탈취·VoIP사기·DB유출 계획 (최종갱신일: 2026-10-21)
+- [new-infostealer-illicit-software](topics/2026-10-new-infostealer-illicit-software.md) 새로운 정보탈취 악성코드 불법소프트웨어 위장 8월 발견 9월 광범위 확산 (최종갱신일: 2026-10-21)
+- [php-critical-rce-vulnerability](topics/2026-10-php-critical-rce-vulnerability.md) PHP 2개 치명적 취약점 70% 웹사이트 원격코드실행 CVE-2026-109618/109619 (최종갱신일: 2026-10-21)
+- [litellm-pypi-supply-chain-compromise](topics/2026-10-litellm-pypi-supply-chain-compromise.md) LiteLLM 1.107.0 PyPI·Docker 공급망 공격 자격증명탈취기·백도어 배포 (최종갱신일: 2026-10-21)
+- [lazarus-operation-flashhole](topics/2026-10-lazarus-operation-flashhole.md) Lazarus Operation FlashHole 금융보안 소프트웨어 악용 워터홀 공격 (최종갱신일: 2026-10-21)
 - [oracle-ebusiness-workflow-rce](topics/2026-10-oracle-ebusiness-workflow-rce.md) Oracle E-Business Suite Workflow 미인증 원격코드실행 CVSS 10.0 (최종갱신일: 2026-10-20)
 - [h3c-magic-nx15-rce](topics/2026-10-h3c-magic-nx15-rce.md) H3C Magic NX15 네트워크 기기 명령 주입 2건 공개 익스플로잇 (최종갱신일: 2026-10-20)
 - [kubernetes-strimzi-cross-tenant-rce](topics/2026-10-kubernetes-strimzi-cross-tenant-rce.md) Kubernetes Strimzi 테넌트 간 경계 침투 Kafka 사용자 정보 탈취 (최종갱신일: 2026-10-20)
@@ -563,9 +569,6 @@
 - [slovakia-speed-camera-cyberrisks](topics/2026-08-slovakia-speed-camera-cyberrisks.md) 슬로바키아 도로 속도 카메라 민감 데이터 유출·네트워크 침입 위험 (최종갱신일: 2026-08-24)
 - [nhis-phishing-malware](topics/2026-08-nhis-phishing-malware.md) 국민건강보험공단 사칭 악성앱 삼성·한국어 환경 정밀 공격 (최종갱신일: 2026-08-24)
 - [kt-lgu-breach-evidence-tampering](topics/2026-08-kt-lgu-breach-evidence-tampering.md) KT·LGU+ 침해 증거 훼손 적발, 추가 제재 논의 (최종갱신일: 2026-09-23)
-- [toxicpanda-2-0](topics/2026-08-toxicpanda-2-0.md) ToxicPanda 2.0 금융 앱 349개 표적 16개국 확대 (최종갱신일: 2026-08-22)
-- [tiktok-child-privacy-settlement](topics/2026-08-tiktok-child-privacy-settlement.md) TikTok 미국 아동 개인정보 침해 4억 달러 합의 (최종갱신일: 2026-08-22)
-- [nasa-ait-gui-rce](topics/2026-08-nasa-ait-gui-rce.md) NASA AIT-GUI 우주선 제어 명령 원격실행 CVSS 9.4 (최종갱신일: 2026-08-22)
 - [openai-cyber-training-pause](topics/2026-08-openai-cyber-training-pause.md) OpenAI 강화학습 중 에이전트 인터넷 제어 우회 사건 공개 (최종갱신일: 2026-09-29)
 - [macsync-stealer-domain-tracking](topics/2026-08-macsync-stealer-domain-tracking.md) MacSync Stealer — 새로운 배포 방법과 백도어 페이로드 버전 발견 (최종갱신일: 2026-09-24)
 - [fly-delivery-app-data-breach](topics/2026-08-fly-delivery-app-data-breach.md) FLY 배달 앱 — 33만 건 유출 공식 확인 (최종갱신일: 2026-08-23)
