@@ -4682,5 +4682,403 @@
     "tags": [],
     "title": "원주시, 시민 개인정보 무더기 유출 ‘파장’",
     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9hbmtxMHZXbWNxNGlkbUt6OTQ2Q3l6bEgzc2MyQnRMZ21MRE96eHV2cTlJckNYc0hsUU5KeU5tM2xXTnFYRENtc1pZeG5pMW5lWHVHYkVpbHo1bTI4eGJ1LTdrRGxBLTg?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-26846",
+    "published": "2026-10-16T16:17:06.357",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Buffer Overflow vulnerability in WEINVEIW CO.,LTD EBPro v.6.10.01.510_20251022 allows a remote attacker to execute arbitrary code via the UtilityManagerEx.exe component",
+    "tags": [],
+    "title": "CVE-2026-26846 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26846"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-113744",
+    "published": "2026-10-21T02:17:07.053",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in Tenda AC19 16.03.10.07. The impacted element is the function formSetFirewallCfg of the file /goform/SetFirewallCfg of the component httpd Web Management Service. Such manipulation of the argument firewallEn leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed publicly and may be used.",
+    "tags": [],
+    "title": "CVE-2026-113744 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113744"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-71195",
+    "published": "2026-10-21T06:16:49.393",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In OpenStack Manila before 23.0.1, multiple Manila API operations on public shares do not verify that the caller owns the share. The API controllers authorize operations against the caller's own project context, then load a foreign public share without re-authorizing against the share's actual owner. This affects the following operations: allow_access: grant data-plane read/write access to another tenant's share; deny_access: revoke the owner's existing access rules; update_access: escalate access level (e.g., ro to rw); create_share_backup: exfiltrate share data via a backup created under the attacker's project; soft_delete: move a foreign share to the recycle bin; restore: interfere with the owner's deletion workflow; export location metadata: create, update, and delete metadata on foreign export locations; access rule listing: disclose IPs, usernames, and CephFS keys. Any authenticated project member can exploit these operations on any public share. The share UUID is visible since the share is public.",
+    "tags": [],
+    "title": "CVE-2026-71195 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71195"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-80110",
+    "published": "2026-09-21T15:17:32.060",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in pki-core. The v2 REST ACL filter selects a tie-breaking permission for colliding literal and wildcard ACL keys using lexicographic string comparison rather than specificity, causing a wildcard-mapped permission to override a more specific literal-mapped permission when both match. In the CA's profile-management REST API this allows a request to POST /v2/profiles/raw -- intended to require Administrator-level profiles.create permission -- to instead be authorized under the lower-privileged profiles.approve permission held by the default Certificate Manager Agents group. The highest threat from this vulnerability is to confidentiality and integrity of the certificate authority's issuance policy.",
+    "tags": [],
+    "title": "CVE-2026-80110 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80110"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-95183",
+    "published": "2026-10-16T15:17:37.050",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in the context-compaction feature of DeepSeek Harness (dsh) commit c291e796 allows attackers to execute a prompt injection attack via crafted external content.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-95183 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95183"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-82814",
+    "published": "2026-10-21T02:17:07.423",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Duplicator and Duplicator Pro plugins for WordPress are vulnerable to PHP Object Injection in all versions up to, and including, 1.5.17 and 4.6.10, respectively, via deserialization of untrusted database content in DUPX_UpdateEngine::unserializeTest() during migration. This allows unauthenticated attackers to store a serialized object in public site content before an administrator builds a package and later performs a migration or import that runs database search-and-replace. Duplicator Free bundles a Requests 1.7 POP chain that permits attacker-selected callbacks, resulting in direct operating-system command execution. Duplicator Pro bundles an IndexList destructor gadget that permits deletion of an attacker-selected existing file when its containing directory is writable by the installer PHP process; deletion of wp-config.php can expose the setup wizard and lead to site takeover and code execution if the attacker reaches it first and supplies a reachable database they control. The package must be created after the carrier is stored, and a later administrator migration action is required.",
+    "tags": [],
+    "title": "CVE-2026-82814 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82814"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208976",
+    "published": "2026-10-21T14:53:54+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "시스코가 에이전틱 AI(Agentic AI) 확산에 따른 기업의 비용 관리 및 운영 과제를 담은 '2026 스플렁크 옵저버빌리티 현황 보고서: AI 시대의 예측 가능성 회복'을 발표했다.이번 보고서는 전 세계 10개국의 IT 운영 및 엔지니어링 전문가 2,050명을 대상으로 진행한 조사 결과를 바탕으로 작성됐다.조사에 따르면, 기업들이 AI 에이전트를 도입하는 속도에 비해 이를 효과적으로 모니터링하고 관리할 수 있는 역량은 충분하지 않은 것으로 나타났다. 응답자의 83%는 AI 에이전트 활용에 따른 예상치 못한 결과를 우려했으며,",
+    "tags": [],
+    "title": "시스코, ‘2026 스플렁크 옵저버빌리티 현황 보고서’ 발표...AI 에이전트 비용 통제와 신뢰 확보 과제 대두",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208976"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208975",
+    "published": "2026-10-21T14:39:43+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "독일 형사경찰청과 검찰청이 주도하고 유럽형사경찰기구(Europol)와 유럽사법기구(Eurojust)가 지원한 국제 공조 수사 오퍼레이션 킬스위치(Operation KillSwitch)를 통해 랜섬웨어 서비스형(RaaS) 조직 킬섹(KillSec)의 핵심 인프라가 통제됐다. 이번 작전은 전 세계 약 1,000건의 의심 공격과 연관된 킬섹을 겨냥해 진행됐다.법 집행기관은 지난 2026년 9월 30일 킬섹의 데이터 유출 사이트를 장악하고 최소 110TB의 탈취 데이터를 확보했다. 그리스, 루마니아, 스페인, 영국에서 용의자 3명이 잠정",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "랜섬웨어 조직 킬섹 국제 공조 수사로 서버 차단 및 용의자 검거",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208975"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208974",
+    "published": "2026-10-21T14:07:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "솔트웨어가 데이터브릭스, 데이터독과 함께 AI 에이전트 구축부터 운영까지 전 과정을 다루는 공동 세미나 'AI Agent End-to-End, 데이터에서 운영까지'를 개최했다.이번 세미나는 기업이 AI 에이전트를 도입하는 과정에서 겪는 데이터 연결, 성능 모니터링, 운영 관리 등의 과제를 해결하기 위해 마련됐다.기업의 AI 에이전트 도입이 늘어나면서 분산된 데이터를 연결하고 성능과 응답 품질을 관리하는 것이 주요 과제로 꼽힌다. 세미나에 참여한 3사 기술 전문가들은 데이터 활용부터 AI 에이전트 구축, 모니터링, 운영으로 이어지는",
+    "tags": [],
+    "title": "솔트웨어, 데이터브릭스-데이터독과 AI 에이전트 공동 세미나 개최",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208974"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208973",
+    "published": "2026-10-21T13:49:09+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "코헤시티가 2026년 파트너 어워드 수상 기업을 발표했다. 이번 어워드는 제휴, 총판, 리셀러, 글로벌 시스템 통합업체(GSI), 관리형 서비스 제공업체(MSP) 등 파트너 생태계 전반의 우수 성과를 조명하기 위해 마련됐다.코헤시티는 2026 회계연도에 탁월한 성과를 거두고 고객에게 효과적인 영향을 준 파트너를 선정했다. 최근 조직들이 전통적인 데이터 보호를 넘어 사이버 레질리언스, 보안, AI 이니셔티브에 대응하면서 파트너의 역할이 한층 확대되는 추세다.아시아태평양 및 일본(APJ) 지역 부문에서는 국내 기업인 에티버스가 '올해의",
+    "tags": [],
+    "title": "코헤시티, 2026년 파트너 어워드 수상 기업 발표...국내 총판에 에티버스 선정",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208973"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html",
+    "published": "2026-10-21T04:57:50+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "PHP will ship an out-of-cycle security release at 14:00 UTC today, October 21, for two critical vulnerabilities that its security team has rated 9.2 on the CVSS v4.0 scale but has not described. Security researchers at watchTowr say the two flaws allow remote code execution. Only the four supported PHP branches, 8.2 through 8.5, can receive the fix, and no exploitation has been reported so far.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
+    "url": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=201389",
+    "published": "2026-10-21T05:57:29+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Citizen Lab confirmed Pegasus on a Serbian rector’s iPhone 6 days before elections, raising the known civil society spyware target count to 16. The Citizen Lab published a research note confirming that the iPhone of Vladan Đokić, Rector of the University of Belgrade, was infected with NSO Group’s Pegasus spyware sometime in 2026. The infection […]",
+    "tags": [],
+    "title": "NSO Spyware Pegasus Hit a Serbian University Rector Six Days Before Snap Elections",
+    "url": "https://securityaffairs.com/201389/intelligence/nso-spyware-pegasus-hit-a-serbian-university-rector-six-days-before-snap-elections.html"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/95933/",
+    "published": "2026-10-20T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "ASEC Blog publishes Ransom & Dark Web Issues Week 4, October 2026 The Seven Deadly Sins Claims Data Leaks from Seven Organizations Worldwide HYFLOCK Ransomware Attack on a Saudi ERP Software Company Qilin Ransomware Attack on a Japanese Investment Management Company",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Ransom & Dark Web Issues Week 4, October 2026",
+    "url": "https://asec.ahnlab.com/en/95933/"
+  },
+  {
+    "author": "Sojun Ryu",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?p=121541",
+    "published": "2026-10-21T02:07:29+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "Kaspersky researchers analyze Operation FlashHole – a recent complex attack by Lazarus, involving a sophisticated malware set, watering-hole technique and abuse of CrossWeb EX financial security software.",
+    "tags": [
+      "금융",
+      "APT"
+    ],
+    "title": "Operation FlashHole: Lazarus breaks security, defies control",
+    "url": "https://securelist.com/lazarus-operation-flashhole/121541/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33438",
+    "published": "2026-10-21T02:00:03+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Wednesday, October 21st, 2026 https://isc.sans.edu/podcastdetail/10144, (Wed, Oct 21st)",
+    "url": "https://isc.sans.edu/diary/rss/33438"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9vdFZKS1JoNm5feURJUnUzS2tYRGUzQ1dKbXZoSmpyWmRMRUtWcVdoRFo3bzJjZHRpQmxOVWFuM1g3V3QxWkRmXzFLMjRXNzVYTEgyampuOE5FQQ",
+    "published": "2026-10-21T07:22:40+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "4.3만명 정보 유출된 예가람저축銀, 금보원 가입·보안체계 재정비",
+    "tags": [],
+    "title": "4.3만명 정보 유출된 예가람저축銀, 금보원 가입·보안체계 재정비",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9vdFZKS1JoNm5feURJUnUzS2tYRGUzQ1dKbXZoSmpyWmRMRUtWcVdoRFo3bzJjZHRpQmxOVWFuM1g3V3QxWkRmXzFLMjRXNzVYTEgyampuOE5FQQ?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:243111",
+    "published": "2026-10-21T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "신용정보법 과징금 부과의 예측 가능성을 한층 높였습니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=243111&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:243107",
+    "published": "2026-10-21T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "군 장병의 경제관 확립과 금융역량 향상을 위해 국방(부)과 금융(위)이 손을 맞잡다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=243107&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:243106",
+    "published": "2026-10-21T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "안정적인 노후생활을 위한 소비자 유의사항 안내",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=243106&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMi-AFBVV95cUxQeGVuTHNMNDFGVzNUcXJFUkY4SzFHeXZtdlJ3ekJpMWUwTXpiVU1QNlRJWFUxRnE3ZnY1Y0hTY1k4SmlSV1FmYTJYOU0tSHB2R0RPVHg5aVcxOWttUGhHUzdGY0FfbldZa1Y0ZHp0VVd3d1pGUDJ0b0RSODUtNVN0aFdOa0FVVUlTUXh3M2oxVTVKR01FS2E1a3d1OWhJTFhYZ1RjYmdpaGFRVnhfZTE5LXphYnZxNG83dGdyTnlBSHZjenBGVjZOT1BtRTd6aGNnNVd5UDUxMmxLWlA1QTBDX1FoYW5Jc3UtSzljREE5VXdGemNRdmlhZA",
+    "published": "2026-10-20T16:45:47+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "기능 이름을 몰라도 찾아볼 수 있는 금융결제원 등기 토토",
+    "tags": [
+      "금융"
+    ],
+    "title": "기능 이름을 몰라도 찾아볼 수 있는 금융결제원 등기 토토",
+    "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQeGVuTHNMNDFGVzNUcXJFUkY4SzFHeXZtdlJ3ekJpMWUwTXpiVU1QNlRJWFUxRnE3ZnY1Y0hTY1k4SmlSV1FmYTJYOU0tSHB2R0RPVHg5aVcxOWttUGhHUzdGY0FfbldZa1Y0ZHp0VVd3d1pGUDJ0b0RSODUtNVN0aFdOa0FVVUlTUXh3M2oxVTVKR01FS2E1a3d1OWhJTFhYZ1RjYmdpaGFRVnhfZTE5LXphYnZxNG83dGdyTnlBSHZjenBGVjZOT1BtRTd6aGNnNVd5UDUxMmxLWlA1QTBDX1FoYW5Jc3UtSzljREE5VXdGemNRdmlhZA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMizwFBVV95cUxNWUVaYWFUcV85WXRURy03akVTQTU5bEZsc1Z2eXpkYi0zRFVkZ0ljckYxZU5LaWVtMC1pcmowQ0Y4Q0tJQXFwTXRGdXlWSC11NU1XR3c0S1MzYm1PWXRuRzdmN2hrWkEzbnRuRTNGb2ZtMGxwbU1mVVR6d0FnZlhrY1NlclBxbGg3am1vQ3lMUHNUTWxZUzd4c1hNR3A2QnVNV0R2Y1BCZjJnajU2Qmd2NU96cUZTMjB4OExjeE1vb1NJLUJEOUhmd0lMOEptTmM",
+    "published": "2026-10-20T11:31:41+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "중복해서 누르기 전 확인할 마작 카페 소소 마장 진행 신호",
+    "tags": [],
+    "title": "중복해서 누르기 전 확인할 마작 카페 소소 마장 진행 신호",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWUVaYWFUcV85WXRURy03akVTQTU5bEZsc1Z2eXpkYi0zRFVkZ0ljckYxZU5LaWVtMC1pcmowQ0Y4Q0tJQXFwTXRGdXlWSC11NU1XR3c0S1MzYm1PWXRuRzdmN2hrWkEzbnRuRTNGb2ZtMGxwbU1mVVR6d0FnZlhrY1NlclBxbGg3am1vQ3lMUHNUTWxZUzd4c1hNR3A2QnVNV0R2Y1BCZjJnajU2Qmd2NU96cUZTMjB4OExjeE1vb1NJLUJEOUhmd0lMOEptTmM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiygFBVV95cUxQaWdaRXBqZkFFTnNQVW55OUtKRzFnS2MzdXlLWHRZb1FrdElFWVlfYko5b0d2Si01RW9mN2lLYWR4NDJ3Y2lxc0dFR1R6cDhnVXBQbGdsT0FjNGxJT2NoS05QQ3pyUDRmNTkzdGhfd0lKRkxfdlJpbDNKWncxT3NIUW92Z3BXaWQ3NC1nZFRNU0Uwc3FKLS1pekVtUmI4U2FtU3loRzZybFdYVWd5T0hHb0FpR0Z6Q2RoUTVYQ1I1ZU5hM1BKLVItZkZR",
+    "published": "2026-10-20T15:40:11+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "소리가 꺼져 있어도 이해할 수 있을까? 금융결제원 토토 표시 방식",
+    "tags": [
+      "금융"
+    ],
+    "title": "소리가 꺼져 있어도 이해할 수 있을까? 금융결제원 토토 표시 방식",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQaWdaRXBqZkFFTnNQVW55OUtKRzFnS2MzdXlLWHRZb1FrdElFWVlfYko5b0d2Si01RW9mN2lLYWR4NDJ3Y2lxc0dFR1R6cDhnVXBQbGdsT0FjNGxJT2NoS05QQ3pyUDRmNTkzdGhfd0lKRkxfdlJpbDNKWncxT3NIUW92Z3BXaWQ3NC1nZFRNU0Uwc3FKLS1pekVtUmI4U2FtU3loRzZybFdYVWd5T0hHb0FpR0Z6Q2RoUTVYQ1I1ZU5hM1BKLVItZkZR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE5IS1l1TnpFRmNGWXBldGRlbjFDRndFX2R5eTRwaTJaV1U3bzVaVFpPbkVVR2NfR0NybW5kZDJLU0R4MzktNWdGUUNMREVPTWFnRUduX0x0VWdSVWVM",
+    "published": "2026-10-21T03:06:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "질의 답하는 송경희 개인정보보호위원장",
+    "tags": [],
+    "title": "질의 답하는 송경희 개인정보보호위원장",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5IS1l1TnpFRmNGWXBldGRlbjFDRndFX2R5eTRwaTJaV1U3bzVaVFpPbkVVR2NfR0NybW5kZDJLU0R4MzktNWdGUUNMREVPTWFnRUduX0x0VWdSVWVM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTFBGbUJ4UGdFdlotbHRQZmNMbXBnOW9MYzJpVUctTnlkSWJvUlMtU3lQMzdpRGVzakFOMGpWYUozRUNTWEdpVnRSRGJlXzUzaV9YcnNWcWhVVWlnUGZPUHpfSHl1MUs",
+    "published": "2026-10-21T06:53:43+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "유출 조사 전 증거 없애면 끝?…개보위원장 \"추정 사건 더 많을 것\" [2026 국감]",
+    "tags": [],
+    "title": "유출 조사 전 증거 없애면 끝?…개보위원장 \"추정 사건 더 많을 것\" [2026 국감]",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBGbUJ4UGdFdlotbHRQZmNMbXBnOW9MYzJpVUctTnlkSWJvUlMtU3lQMzdpRGVzakFOMGpWYUozRUNTWEdpVnRSRGJlXzUzaV9YcnNWcWhVVWlnUGZPUHpfSHl1MUs?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE5ldVNzbjNYVm1xWHRMNXg3dnBnQ1FiaFl1VGxjSXhrUFVmX3ZCaDVsalhfRTBLNXh0cTJ6NC04T2VNTHF3UkFzTnJuN25aSHJIUE1NQVU0VTFES2JEOHUxdnhEOHFMOUpf0gFsQVVfeXFMUGJWV1ZCZEdqanpidUxJNUhiMHNqb05HYldNTUtUamZ5Y0RFaDJnMnJHVjQ3dk05MmJaRVprZkt4dm5fVl9XSTFfeFpFS09teWhneE5Da1NvUlNPN0pxR21vZnpuNTJOLUUxQzN3",
+    "published": "2026-10-21T06:54:28+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 유출 조사 업무 급증에 '인력·예산 확충' 호소",
+    "tags": [],
+    "title": "개인정보위, 유출 조사 업무 급증에 '인력·예산 확충' 호소",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ldVNzbjNYVm1xWHRMNXg3dnBnQ1FiaFl1VGxjSXhrUFVmX3ZCaDVsalhfRTBLNXh0cTJ6NC04T2VNTHF3UkFzTnJuN25aSHJIUE1NQVU0VTFES2JEOHUxdnhEOHFMOUpf0gFsQVVfeXFMUGJWV1ZCZEdqanpidUxJNUhiMHNqb05HYldNTUtUamZ5Y0RFaDJnMnJHVjQ3dk05MmJaRVprZkt4dm5fVl9XSTFfeFpFS09teWhneE5Da1NvUlNPN0pxR21vZnpuNTJOLUUxQzN3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE91NDVRYkhHY080NE1QQlRtaktwalVkOUNEN3dFVDBOLVJIdlgyT0VuanlwRnloeGs2TzhPeE9leFdWSjVybkQycVZNMS00RWYxeTVTVTRhem90THZLajZBbVYtN2JDVVYyQTBabW81QmE3Yk11",
+    "published": "2026-10-21T05:31:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "리멤버, 3500명 개인정보 유출…개인정보위 조사 착수",
+    "tags": [],
+    "title": "리멤버, 3500명 개인정보 유출…개인정보위 조사 착수",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE91NDVRYkhHY080NE1QQlRtaktwalVkOUNEN3dFVDBOLVJIdlgyT0VuanlwRnloeGs2TzhPeE9leFdWSjVybkQycVZNMS00RWYxeTVTVTRhem90THZLajZBbVYtN2JDVVYyQTBabW81QmE3Yk11?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE96SlBnOWp3elY5WkVzT3lLR2R2TFZHdkFvX0I5aWZteE9HX0tubUI3UnhHQ05MbVd6S29RVFZtdUdqanFEcC1ROVlFck5fNmFrbXphS3JSSnJGVUFpWXdZT0xxNGU",
+    "published": "2026-10-21T07:27:11+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "롯데케미칼·권익배움터도 정보 유출…개보위원장 \"엄격히 보겠다\" [2026 국감]",
+    "tags": [],
+    "title": "롯데케미칼·권익배움터도 정보 유출…개보위원장 \"엄격히 보겠다\" [2026 국감]",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE96SlBnOWp3elY5WkVzT3lLR2R2TFZHdkFvX0I5aWZteE9HX0tubUI3UnhHQ05MbVd6S29RVFZtdUdqanFEcC1ROVlFck5fNmFrbXphS3JSSnJGVUFpWXdZT0xxNGU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE81bEl5QnlZZ19NZHpYSDF5N1FJeWZpNGk4Ty1pNkhCN3h2UENraTJ3NFFYeTZQUzYwNnlXbEtaS1p2N000X3lTRWt3NFdDQU9yZUEzSzFycWlqR3dTNklfMnI1QWlPZ2VBVlFkcl9wQnFsMG8",
+    "published": "2026-10-21T06:13:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "정부 'AI 에이전트' 확산에 개인정보 동의제도 바꾼다, 네이버·카카오 등 기업들 사업 영향에 '촉각'",
+    "tags": [],
+    "title": "정부 'AI 에이전트' 확산에 개인정보 동의제도 바꾼다, 네이버·카카오 등 기업들 사업 영향에 '촉각'",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE81bEl5QnlZZ19NZHpYSDF5N1FJeWZpNGk4Ty1pNkhCN3h2UENraTJ3NFFYeTZQUzYwNnlXbEtaS1p2N000X3lTRWt3NFdDQU9yZUEzSzFycWlqR3dTNklfMnI1QWlPZ2VBVlFkcl9wQnFsMG8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE1vbEE1c0czS1IzWmppejE4Y0NVT0hjeG42MzRmRmc2NDVaaDUzMUZfazNkaFBMaEFwRkQzMlFkWmw4c0xQWGM2OEh0LWtyWjBKU0VRY1lJTXRmRUxJaEJjem9Udy1zMXd0b2tyODBB",
+    "published": "2026-10-21T06:07:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[2026 국감] 송경희 “공공기관 개인정보 유출, 입법 확정되면 배상해야”",
+    "tags": [],
+    "title": "[2026 국감] 송경희 “공공기관 개인정보 유출, 입법 확정되면 배상해야”",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1vbEE1c0czS1IzWmppejE4Y0NVT0hjeG42MzRmRmc2NDVaaDUzMUZfazNkaFBMaEFwRkQzMlFkWmw4c0xQWGM2OEh0LWtyWjBKU0VRY1lJTXRmRUxJaEJjem9Udy1zMXd0b2tyODBB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5OdWlSREsxYldxQjFLRVNNcl9lMWI1SlMyekh6WlFsMWlqMnJhYTdFbGxVczM3U0VZVFdaVFktR1ZETmtsYWFITVA2OFJrNEdQTFpzb3pCc3N1UlhtR211YdIBeEFVX3lxTE1yQlVJNkQtN0tzWm5FeHhlV3o0QnVINXZTOUt2WGxWOXB4eXFvVFFFT181UUJnZmVETGl5OGxZcUZVOXVrR0syS21IV0gzbVZsTE9jenQ2WHpsUEJTTC1URk9Ma1hyci1yV2psbjFPem4wM2VmT0lscw",
+    "published": "2026-10-21T02:50:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "원주시민 1014명 개인정보 유출…아파트 개발 의혹 재점화",
+    "tags": [],
+    "title": "원주시민 1014명 개인정보 유출…아파트 개발 의혹 재점화",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5OdWlSREsxYldxQjFLRVNNcl9lMWI1SlMyekh6WlFsMWlqMnJhYTdFbGxVczM3U0VZVFdaVFktR1ZETmtsYWFITVA2OFJrNEdQTFpzb3pCc3N1UlhtR211YdIBeEFVX3lxTE1yQlVJNkQtN0tzWm5FeHhlV3o0QnVINXZTOUt2WGxWOXB4eXFvVFFFT181UUJnZmVETGl5OGxZcUZVOXVrR0syS21IV0gzbVZsTE9jenQ2WHpsUEJTTC1URk9Ma1hyci1yV2psbjFPem4wM2VmT0lscw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE54cFFHU0hoenVMdUJGb3gzMTA4SktoZ0J2WjVXUUxfNngzMGZqNXFhRjZrOTZTS3hXTnViaFZaVmp1RmdBZVhLTm5BdnV4dUFkc3NsdXdEV181LWFDWFdNWXc0S2IySUFxVzdkb3MtSUTSAXRBVV95cUxOakRmU3BSLWlqeHFPYklzNnpicGxCc0ZUMTcwWE5IdEZJeGZtWmFsUDl4S1ZfNENJY3dWa0IxUUNtcEhQVGZ6ZUptWW5iY3I1c0NwQWVhODhBTjRaYkFDUTN0ZVRFYUwzU016SzVuTXA1R3hiMw",
+    "published": "2026-10-21T07:02:24+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "772만건 유출에 과징금 45억…공공기관 제재 도마에 [국감2026]",
+    "tags": [],
+    "title": "772만건 유출에 과징금 45억…공공기관 제재 도마에 [국감2026]",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54cFFHU0hoenVMdUJGb3gzMTA4SktoZ0J2WjVXUUxfNngzMGZqNXFhRjZrOTZTS3hXTnViaFZaVmp1RmdBZVhLTm5BdnV4dUFkc3NsdXdEV181LWFDWFdNWXc0S2IySUFxVzdkb3MtSUTSAXRBVV95cUxOakRmU3BSLWlqeHFPYklzNnpicGxCc0ZUMTcwWE5IdEZJeGZtWmFsUDl4S1ZfNENJY3dWa0IxUUNtcEhQVGZ6ZUptWW5iY3I1c0NwQWVhODhBTjRaYkFDUTN0ZVRFYUwzU016SzVuTXA1R3hiMw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5rR1cxdGFfdll2LWhzazR2c3lpY1duUmc0Q2NoOFJBcllGbGh3TUtOaE9tdWRiNUU2dUZQdExMdElNamtBWUlHWmgxWTZBYTRPRnNfZndqOXBtZWJsb0hzaQ",
+    "published": "2026-10-21T01:44:47+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“여행가방 이름표에 주소까지?”…연락처는 가려 최소한만",
+    "tags": [],
+    "title": "“여행가방 이름표에 주소까지?”…연락처는 가려 최소한만",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5rR1cxdGFfdll2LWhzazR2c3lpY1duUmc0Q2NoOFJBcllGbGh3TUtOaE9tdWRiNUU2dUZQdExMdElNamtBWUlHWmgxWTZBYTRPRnNfZndqOXBtZWJsb0hzaQ?oc=5"
   }
 ]
