@@ -1432,5 +1432,186 @@
     ],
     "title": "Tech trio launches $10 million initiative to help under-resourced utilities bolster cybersecurity",
     "url": "https://therecord.media/utilities-cybersecurity-initiative-accenture"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-114575",
+    "published": "2026-10-22T01:16:58.533",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in TOTOLINK A950RG 4.1.2cu.5268_B20221104. Affected by this issue is the function UploadCustomModule of the file lib/cste_modules/product.so. Executing a manipulation of the argument FileMd5 can lead to command injection. The attack can be launched remotely. The exploit has been published and may be used.",
+    "tags": [],
+    "title": "CVE-2026-114575 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114575"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-103090",
+    "published": "2026-10-21T23:17:24.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing Authentication for Critical Function (CWE-306) and Insufficiently Protected Credentials (CWE-522) in the control plane enrollment status handler (HandleEnrollStatus at GET /enroll/status in internal/controlplane/server.go) in Google OSS Agent Mesh (SAM) versions 0.1.0-alpha.1 through 0.1.0-alpha.8 allow an unauthenticated remote attacker to retrieve an approved bootstrap-enrolled peer's signed Biscuit identity token by supplying a peer_id obtainable from the unauthenticated GET /info endpoint. A related flaw in POST /enroll allowed any bootstrap-token holder to re-fetch another peer's credential. An attacker can replay the disclosed Biscuit token as a bearer credential on /policies to read mesh authorization policies and on /routers/lease to overwrite advertised router multiaddrs. Users should upgrade to version 0.1.0-alpha.9 or later, which requires cryptographic proof of possession of the enrollment private key on credential-releasing endpoints, enforces rate limiting, and validates router lease addresses.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-103090 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103090"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-76291",
+    "published": "2026-10-21T23:17:26.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Splunk Enterprise versions below 10.4.4, 10.2.8, 10.0.11, and 9.4.16, a user that holds a role with the schedule_search capability could bypass the expected safeguards in the scheduled search workflow. The user could then run risky Search Processing Language (SPL) commands that disclose or alter Splunk Enterprise data or disrupt Splunk Enterprise availability.\nThe vulnerability is possible because the Splunk Enterprise search scheduler does not apply SPL safeguards for risky commands to scheduled searches.\nFor more information see SPL safeguards for risky commands (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.6/best-practices-for-splunk-platform-security/spl-safeguards-for-risky-commands) in the Splunk documentation.\nFor more information see authorize.conf (https://help.splunk.com/en/data-management/splunk-enterprise-admin-manual/10.6/configuration-file-reference/10.6.0-configuration-file-reference/authorize.conf) in the Splunk documentation.",
+    "tags": [],
+    "title": "CVE-2026-76291 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76291"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-76298",
+    "published": "2026-10-21T23:17:27.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Splunk Enterprise versions below 10.4.4 and 10.2.8, a user who does not hold the \"admin\" or \"power\" Splunk roles could derive the PostgreSQL sidecar database superuser password and run arbitrary operating system commands as the user account running Splunk Enterprise on search head cluster members.\nThe vulnerability is possible because the PostgreSQL sidecar service derives a privileged database password from the search head cluster identifier that appears in search job logs.\nFor more information see About configuring role-based user access (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.2/manage-splunk-platform-users-and-roles/about-configuring-role-based-user-access), server.conf (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/10.2/configuration-file-reference/10.2.0-configuration-file-reference/server.conf), and Sidecar configuration settings (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/10.4/splunk-sidecars/sidecar-configuration-settings) in the Splunk documentation.",
+    "tags": [],
+    "title": "CVE-2026-76298 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76298"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-15723",
+    "published": "2026-10-22T01:16:59.477",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 10.1 before 19.3.6, 19.4 before 19.4.3, and 19.5 before 19.5.1 that, when OmniAuth SAML and LDAP auto-linking were both enabled, an authenticated user could have taken over an existing LDAP-backed account without any interaction from the targeted user, due to improper input sanitization in the LDAP email lookup path used during OmniAuth identity linking.",
+    "tags": [],
+    "title": "CVE-2026-15723 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15723"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208984",
+    "published": "2026-10-22T09:13:38+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "농협·수협·산림조합의 중앙회와 은행이 2025년 편성한 정보보호 예산 가운데 약 28%를 집행하지 않았다는 지적이 제기됐다. 고객정보와 금융거래를 보호하기 위해 확보한 예산이 실제 보안 투자와 운영에 얼마나 반영됐는지 점검해야 한다는 문제 제기다.윤준병 더불어민주당 의원은 농협·수협·산림조합의 중앙회·은행을 대상으로 정보보호 예산 축소와 집행 부진 문제를 지적했다. 제시된 수치에 따르면 이들 기관의 2025년 정보보호 예산 편성액은 합계 1,230억 원, 집행액은 887억 원으로 집행률은 72.1%였다.편성액과 집행액의 차이는 34",
+    "tags": [
+      "금융"
+    ],
+    "title": "농협·수협·산림조합 정보보호 예산 집행 부진",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208984"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208983",
+    "published": "2026-10-22T09:03:29+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "롯데케미칼 개인정보 유출 사고로 퇴직자 5,022명의 정보가 노출된 가운데, 일부 퇴직자는 유출 사실을 제때 통지받지 못한 것으로 나타났다. 퇴직 이후에도 개인정보를 보관한 근거와 함께 사고 발생 후 피해자에게 안내하는 과정의 적정성이 도마에 올랐다.손명수 더불어민주당 의원은 롯데케미칼 공사관리시스템 ‘ECOMS’ 유출 피해자 1만5,631명 가운데 퇴직자 5,022명이 포함된 점을 지적했다. 전체 피해자의 약 32.1%다. 손 의원은 보관 필요성이 사라진 개인정보를 계속 보유한 것은 아닌지, 일부 퇴직자에게 유출 사실을 뒤늦게 알",
+    "tags": [],
+    "title": "손명수 의원, 롯데케미칼 퇴직자 5,022명 정보 유출 지적…일부 통지도 누락",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208983"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208982",
+    "published": "2026-10-22T08:49:51+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "공공기관의 개인정보 유출 사고에 대해 관리 잘못에 따른 손해배상 책임을 분명히 하고, 피해구제를 뒷받침할 수단으로 사이버보험 가입 의무화를 검토해야 한다는 주장이 국정감사에서 제기됐다. 공공기관도 개인정보를 맡아 관리하는 주체인 만큼 사고 이후 제재뿐 아니라 피해 회복에 책임 있게 나서야 한다는 취지다.조정훈 국민의힘 의원은 10월 21일 국회 정무위원회 종합국정감사에서 공공기관의 개인정보 유출과 피해 배상 문제를 지적하고, 공공·민간의 위험 분담 방안으로 사이버보험 가입 의무화를 제안했다.조 의원은 최근 5년간 공공기관에서 개인정",
+    "tags": [
+      "금융"
+    ],
+    "title": "조정훈 의원, 공공기관 개인정보 유출 배상책임 강조…사이버보험 의무화 제안",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208982"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208981",
+    "published": "2026-10-22T08:40:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "개인정보 유출 사고가 발생한 기업이 당국의 조사 착수 전에 관련 자료를 숨기거나 폐기하는 행위에 대해 제재 근거를 보완해야 한다는 지적이 나왔다. 사고를 정상적으로 신고하고 조사에 협조한 기업이 오히려 불리해질 수 있어 제도 개선이 필요하다는 취지다.강준현 더불어민주당 의원은 개인정보 유출 사고와 관련해 개인정보보호위원회가 조사에 착수하기 전에 이뤄지는 자료 은닉·폐기 행위를 직접 제재할 근거가 부족하다고 지적했다. 사고 원인과 책임을 확인하는 데 필요한 자료를 미리 없애더라도 이에 대한 제재가 충분하지 않다면, 기업의 성실한 신고",
+    "tags": [],
+    "title": "강준현 의원, 개인정보 유출 조사 전 자료 은닉·폐기 ‘제재 공백’ 지적",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208981"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208979",
+    "published": "2026-10-22T08:14:55+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "홈페이지와 온라인 서비스를 구동하는 PHP에서 공격자가 로그인하지 않고도 서버에 악성 코드를 실행할 수 있는 치명적 취약점이 발견됐다. ‘PHP2Shell’로 불리는 이번 문제가 심각한 이유는 개별 홈페이지의 기능이나 플러그인이 아닌, 서비스를 실행하는 PHP 자체에 결함이 있기 때문이다. 일부 환경에서는 홈페이지 프로그램이 보안 검사를 시작하기 전에도 공격이 가능해, 운영체제와 웹서버를 관리하는 단계에서 대응해야 한다. 공격이 성공하면 PHP 프로세스의 권한 범위에서 서비스와 데이터가 위험해질 수 있다. PHP 프로젝트는 PHP-",
+    "tags": [
+      "금융"
+    ],
+    "title": "[긴급] PHP2Shell 취약점에 웹서버 보안 비상…긴급 설정 점검과 업데이트 필수",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208979"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMimwFBVV95cUxNb1pOUFZ2SjM5UHFXNEowMlNNQ1NBREU1OGJZdFlYT3U0eTNWbVZnYWQ4M0dLZWpjZDh6eWxMbktwVkx6SWxHZjBsRkk4WkJBdTBuazNwaTlTd1FwbmNoXzUzRlE5MWpNUnNwOGotc3lWTFpkaWF1OXkzMUg0TDNNaGE3MU1hWGpoa3VNZjVxaGc1TkR1U29pYkVQRQ",
+    "published": "2026-10-21T18:04:06+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Anthropic, Claude Security에 지속적인 스캔과 수정 추적 기능 추가",
+    "tags": [],
+    "title": "Anthropic, Claude Security에 지속적인 스캔과 수정 추적 기능 추가",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNb1pOUFZ2SjM5UHFXNEowMlNNQ1NBREU1OGJZdFlYT3U0eTNWbVZnYWQ4M0dLZWpjZDh6eWxMbktwVkx6SWxHZjBsRkk4WkJBdTBuazNwaTlTd1FwbmNoXzUzRlE5MWpNUnNwOGotc3lWTFpkaWF1OXkzMUg0TDNNaGE3MU1hWGpoa3VNZjVxaGc1TkR1U29pYkVQRQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE83U2FjSDhSTV9BeG54R1E0eTRXTzl4c0x4Xzg3QlhzaW8tZ2xjRDVSM3pDUGpWOExROHc5czlLU2RRc1Y1QmExTjdaemEzUENPMWFHbjFfeTY4VGI1amFzTUdRN00yd2ZnNXY3YlA1LU8",
+    "published": "2026-10-21T23:42:45+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "예가람·OK저축銀, 해킹에 혼쭐나서야…금융보안원 가입 검토",
+    "tags": [
+      "금융"
+    ],
+    "title": "예가람·OK저축銀, 해킹에 혼쭐나서야…금융보안원 가입 검토",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE83U2FjSDhSTV9BeG54R1E0eTRXTzl4c0x4Xzg3QlhzaW8tZ2xjRDVSM3pDUGpWOExROHc5czlLU2RRc1Y1QmExTjdaemEzUENPMWFHbjFfeTY4VGI1amFzTUdRN00yd2ZnNXY3YlA1LU8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTE1jYnZyN3pfV1RDcHozYV9LS3lEaTRWMGt5NjNWSU4zaU1PcGs4VHJjZldlMEJhRnVyUzF6Njg5UmN4X3Q4c0tqa2MzTG0tT3M5Q0NGVmxPdzNCYm83TEsw",
+    "published": "2026-10-22T00:12:05+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[개인정보 정책, 변화의 1년①]과징금 7470억 시대...개인정보 유출 반대급부가 달라졌다",
+    "tags": [],
+    "title": "[개인정보 정책, 변화의 1년①]과징금 7470억 시대...개인정보 유출 반대급부가 달라졌다",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1jYnZyN3pfV1RDcHozYV9LS3lEaTRWMGt5NjNWSU4zaU1PcGs4VHJjZldlMEJhRnVyUzF6Njg5UmN4X3Q4c0tqa2MzTG0tT3M5Q0NGVmxPdzNCYm83TEsw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBsTWFrVEoyb2dOTjFuUjBMcFVIR2J2eDFjR2RiSExCQW40U21heEZKa2QxNE1oTjNmbkdhQW5qS2h2OVlEOE4zN2VtZVNaOTRJeDEyZjlncDc2TmVRR3B3YUkxRmlfOE9oZ252cGh4UQ",
+    "published": "2026-10-22T00:24:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국립항공박물관 개인정보 1만1029명 유출·스미싱 1980건 발송…염태영 의원 “사후관리 미흡”",
+    "tags": [
+      "피싱"
+    ],
+    "title": "국립항공박물관 개인정보 1만1029명 유출·스미싱 1980건 발송…염태영 의원 “사후관리 미흡”",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBsTWFrVEoyb2dOTjFuUjBMcFVIR2J2eDFjR2RiSExCQW40U21heEZKa2QxNE1oTjNmbkdhQW5qS2h2OVlEOE4zN2VtZVNaOTRJeDEyZjlncDc2TmVRR3B3YUkxRmlfOE9oZ252cGh4UQ?oc=5"
   }
 ]
