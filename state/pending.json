@@ -1613,5 +1613,725 @@
     ],
     "title": "국립항공박물관 개인정보 1만1029명 유출·스미싱 1980건 발송…염태영 의원 “사후관리 미흡”",
     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBsTWFrVEoyb2dOTjFuUjBMcFVIR2J2eDFjR2RiSExCQW40U21heEZKa2QxNE1oTjNmbkdhQW5qS2h2OVlEOE4zN2VtZVNaOTRJeDEyZjlncDc2TmVRR3B3YUkxRmlfOE9oZ252cGh4UQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-107081",
+    "published": "2026-10-19T16:17:01.347",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SQL injection via identifier injection in the tableName and tableFields POST parameters of admin AJAX endpoints (admin/AJAX_lookup_handler.php, admin/AJAX_check_id.php, admin/AJAX_vocabolary_control.php) in SENAYAN Library Management System (SLiMS) Bulian 9.8.0 allows any authenticated staff user to extract arbitrary database contents.",
+    "tags": [],
+    "title": "CVE-2026-107081 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107081"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-114220",
+    "published": "2026-10-22T05:16:50.020",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "NT OneAPP developed by NewType Infortech has an Improper Certificate Validation vulnerability. Unauthenticated network-adjacent attackers can perform a man-in-the-middle attack by failing to validate the server certificate and the hostname, thereby intercepting or modifying communications between the application and the server.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-114220 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114220"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-114635",
+    "published": "2026-10-22T02:16:56.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik before v2.11.58 and v3.7.14 contains an authentication bypass vulnerability in its SNI check, which is skipped when request TLS state is nil. Unauthenticated clients can send HTTP/2 requests with the :scheme http pseudo-header over TLS on Go 1.27 builds to reach routers requiring client certificates without presenting one.",
+    "tags": [],
+    "title": "CVE-2026-114635 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114635"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-114636",
+    "published": "2026-10-22T02:16:56.310",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik v3.7.13 before v3.7.14 contains an access-control bypass in the Kubernetes Ingress NGINX provider, where the HTTP router generated for ssl-passthrough Ingresses on non-TLS entry points never applies the Ingress's access-control annotations. Unauthenticated attackers reaching the HTTP entry point with the Ingress host can access backends protected by auth-type, auth-url, or whitelist-source-range annotations, with nothing logged.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-114636 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114636"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-114637",
+    "published": "2026-10-22T02:16:56.503",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik from v3.2.0 before v3.7.14 contains an authentication bypass vulnerability in the experimental FastProxy connection pool, which fails to pin NTLM/Negotiate-authenticated backend connections to their frontend connection. Unauthenticated clients can be handed a pooled keep-alive backend connection where a victim completed an NTLM or Negotiate handshake, letting them read victim data and act as that victim.",
+    "tags": [],
+    "title": "CVE-2026-114637 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114637"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-114638",
+    "published": "2026-10-22T02:16:56.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik v3.7.0 before v3.7.14 contains an improper authentication vulnerability in the Kubernetes Ingress NGINX provider that merges client CAs when auth-tls-secret names collide after dot-to-dash normalization. Attackers holding certificates from another host's CA can access a host requiring its own client CA, while that host's legitimate clients are refused.",
+    "tags": [],
+    "title": "CVE-2026-114638 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114638"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-114639",
+    "published": "2026-10-22T02:16:56.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik 2.11.0 before 2.11.58 and 3.0.0 before 3.7.14 contains an authentication bypass because a first request preauthenticated with an Authorization: Negotiate token authenticates a socket in the globally shared backend connection pool, which is never isolated. Unauthenticated attackers on separate frontend connections can be assigned that NTLM/Kerberos-bound socket and perform reads or writes with the victim's identity.",
+    "tags": [],
+    "title": "CVE-2026-114639 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114639"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-114640",
+    "published": "2026-10-22T02:16:56.947",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik from v3.7.0 before v3.7.14 contains an authentication bypass vulnerability in its Kubernetes Ingress-NGINX provider that forwards client-supplied Ssl-Client-* headers on the plaintext HTTP router. When ssl-redirect is disabled alongside auth-tls-pass-certificate-to-upstream, unauthenticated attackers can send Ssl-Client-Verify: SUCCESS with a chosen certificate subject and issuer to impersonate mTLS identities.",
+    "tags": [],
+    "title": "CVE-2026-114640 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114640"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-114642",
+    "published": "2026-10-22T02:16:57.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik 2.11.0 before 2.11.58 and 3.0.0 before 3.7.14 stores its NTLM/Kerberos backend round tripper in a client-connection slot not keyed by ServersTransport, so one service's TLS client configuration is reused for another service's backend. An unauthenticated client can arm the slot via a backend issuing an NTLM or Negotiate challenge, then reach another service on the same keep-alive connection, bypassing its root CAs, server name, and certificate verification.",
+    "tags": [],
+    "title": "CVE-2026-114642 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114642"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-114658",
+    "published": "2026-10-22T02:16:57.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Grav Login plugin from 3.6.0 before 3.9.13 contains a missing authorization vulnerability in the login.invite task that allows page authors to obtain super user accounts. Attackers can define an invitation form granting super access in page frontmatter, submit it unauthenticated, and register the invited address for full site control.",
+    "tags": [],
+    "title": "CVE-2026-114658 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114658"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-114661",
+    "published": "2026-10-22T02:16:58.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenRemote 1.2.0 before 1.31.0 contains a missing authorization vulnerability in GatewayServiceResource that allows any authenticated user to start, stop and query gateway tunnels without an administrative role. Attackers can send POST or DELETE requests to the gateway tunnel endpoint to open persistent bidirectional TCP circuits into an edge gateway's network or tear down operator tunnels.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-114661 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114661"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-114662",
+    "published": "2026-10-22T02:16:58.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Obot before 0.26.0 contains an authentication bypass vulnerability in the CLI login flow that allows unauthenticated attackers to steal API keys by choosing token request IDs. Attackers can create a token request via POST /api/token-request, send the login link to a signed-in user, and fetch the resulting non-expiring API key to take over the victim's account.",
+    "tags": [],
+    "title": "CVE-2026-114662 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114662"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-114663",
+    "published": "2026-10-22T02:16:58.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vyper 0.4.0b1 through 0.5.0b1 miscompiles unfoldable constants and omitted default arguments from imported modules, because parse_Name resolves their names in the using function's scope rather than at declaration. When a contract's parameter, local, or loop variable shares such a name, attacker-influenced input can replace the intended value, including out-of-range values for narrow types such as uint8, corrupting validation or accounting logic.",
+    "tags": [],
+    "title": "CVE-2026-114663 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114663"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-114716",
+    "published": "2026-10-22T02:16:59.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Roundcube Webmail before 1.6.20 and 1.7.x before 1.7.5 is affected by a mail header injection vulnerability. rcmail_sendmail::extract_inline_images() used the media type taken from an inline image data URI without validating it, so a remote authenticated attacker could inject arbitrary MIME part headers into the outgoing message by placing CRLF sequences in that media type. Upstream fixed this in the commit “Fix mail header injection via media type in an inline image data URI”, which validates the media type with rcube_mime::is_mimetype_valid().",
+    "tags": [],
+    "title": "CVE-2026-114716 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114716"
+  },
+  {
+    "category": "high",
+    "cvss": 3.7,
+    "id": "CVE-2026-114723",
+    "published": "2026-10-22T02:17:00.190",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Roundcube Webmail before 1.6.20 and 1.7.x before 1.7.5 allows the ImageMagick resource limits to be bypassed during thumbnail generation. When rcube_image falls back to GD, the available-memory check was applied only on Windows, so on other platforms a crafted image with large dimensions was processed by GD without any resource limit and could exhaust server memory. Upstream fixed this in the commit “Fix ImageMagick resource limits bypass by GD fallback during thumbnail generation”, which applies the memory check on all platforms.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-114723 (CVSS 3.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114723"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-114727",
+    "published": "2026-10-22T02:17:00.797",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Roundcube Webmail before 1.6.20 and 1.7.x before 1.7.5 passes potentially unsafe content into ImageMagick when resizing images. SVG and EPS were accepted as valid image types for contact photo upload and conversion, and both formats can reference external resources and invoke ImageMagick delegates when processed. Upstream fixed this in the commit “Fix passing potentally unsafe attachment content into ImageMagick on image resize”, which removes svg and eps from the accepted types.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-114727 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114727"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-84911",
+    "published": "2026-10-22T02:17:01.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal AI (Artificial Intelligence) allows Stored XSS. This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.3.13, from 1.4.0 to 1.4.8.",
+    "tags": [],
+    "title": "CVE-2026-84911 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84911"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-84912",
+    "published": "2026-10-22T02:17:01.607",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Missing Authorization vulnerability in Drupal AI (Artificial Intelligence) allows Forceful Browsing. This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.3.13, from 1.4.0 to 1.4.8.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-84912 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84912"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-114177",
+    "published": "2026-10-22T07:16:41.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in Xpro Xpro Elementor Addons xpro-elementor-addons allows Cross Site Request Forgery.This issue affects Xpro Elementor Addons: from n/a through 1.7.10.",
+    "tags": [],
+    "title": "CVE-2026-114177 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114177"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72230",
+    "published": "2026-10-22T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [],
+    "title": "PHP 보안취약점(PHP2Shell) 관련 기업 보안 대응 수칙",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72230"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209004",
+    "published": "2026-10-22T16:35:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "정보보호 전문기업 에프원시큐리티(대표 이대호)는 정보통신산업진흥원(NIPA)의 지원으로 지난 10월 20일부터 21일까지 서울 그랜드 하얏트 호텔에서 열린 ‘Global AI & Digital Summit 2026(GADS 2026)’ 기업 전시에 참가해 자사의 웹 보안 기술을 소개하고 글로벌 사업 협력 기회를 모색했다고 밝혔다.이번 행사는 세계은행그룹(World Bank Group)과 대한민국 재정경제부, 과학기술정보통신부가 공동 주최한 국제행사로, 10월 19일부터 22일까지 나흘간 개최됐다. 세계 각국의 정부 및 국제기구 관계",
+    "tags": [
+      "금융"
+    ],
+    "title": "에프원시큐리티, ‘글로벌 AI & 디지털 서밋 2026’ 참가…글로벌 웹 보안 시장 공략 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209004"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209003",
+    "published": "2026-10-22T15:28:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "브레인즈컴퍼니의 자회사 에이프리카가 기관과 기업의 운영·보안 기준에 맞춰 AI 서비스 접근 권한과 요청 처리 과정을 통합 관리할 수 있는 '치타 AI Gateway'를 출시했다.기업과 공공기관에서 업무에 활용하는 AI 서비스와 모델이 늘면서 사용자 권한, 사용량, 보안 기준을 일관되게 관리하는 필요성이 커지고 있다. 정책을 서비스마다 따로 적용하면 운영자가 현황과 이력을 각각 확인해야 하므로, AI 요청이 오가는 공통 경로에서 접근 권한과 보안 정책을 적용하는 AI Gateway 역할이 주목받고 있다.에이프리카가 선보인 치타 AI",
+    "tags": [],
+    "title": "에이프리카, AI 운영 및 보안 관리 지원 '치타 AI Gateway' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209003"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209002",
+    "published": "2026-10-22T15:22:36+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국인공지능·소프트웨어산업협회(KOSA)와 메가존클라우드가 파키스탄 정보기술통신부 장관 방한을 계기로 소버린 AI 협력을 위한 간담회를 개최했다.이번 행사는 사우디아라비아 리야드에서 열린 글로벌 기술 전시회 LEAP 2026에서 시작된 협력 논의의 연장선에서 마련됐다.간담회에는 샤자 파티마 카와자 파키스탄 정보기술통신부 연방장관과 사예드 모아잠 후세인 샤 주한 파키스탄 대사 등 정부 관계자들이 참석했다. 한국 측에서는 이주완 메가존클라우드 의장 겸 KOSA 해외진출위원장과 유라클, 퓨리오사AI, NC AI, LG AI연구원, 브레인",
+    "tags": [
+      "AI"
+    ],
+    "title": "KOSA-메가존클라우드, 파키스탄 정보기술통신부와 소버린 AI 협력 논의",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209002"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209001",
+    "published": "2026-10-22T15:13:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈AI가 구글 클라우드와 협력해 자사의 프런티어 AI 모델과 코덱스를 활용한 에이전트 작업 기능을 구글 클라우드의 '모델 가든(Model Garden)'에서 제공한다. 정식 서비스는 향후 수주 내 시작될 예정이다.이번 통합으로 구글 클라우드 고객은 AI 모델 선택 폭을 넓히게 된다. 개발자와 데이터 과학자는 기존에 사용하던 개발 환경에서 오픈AI 모델을 활용해 소프트웨어 개발 과정을 개선하고 복잡한 업무를 수행하는 AI 에이전트를 구축할 수 있다.오픈AI의 모델은 구글 안티그래비티와 제미나이 에이전트에서도 제공된다. 이를 통해 기",
+    "tags": [],
+    "title": "오픈AI, 구글 클라우드와 손잡고 AI 모델 공급 채널 다변화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209001"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209000",
+    "published": "2026-10-22T15:07:36+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "위드네트웍스가 자산 및 보안 취약점 통합 관리 플랫폼 'withVTM'을 통해 서비스 기준으로 IT 자산과 소프트웨어 구성 명세서(SBOM), API를 연결하고, AI 기반 '취약점 조합 상관분석'을 통한 보안관리 방안을 제시했다.금융권을 중심으로 외부에 노출된 시스템 전반에 대한 점검 요구가 커지는 가운데, 점검 대상 자산을 파악하고 실제 위험이 높은 문제부터 조치하도록 돕는다는 취지다.금융권 침해사고가 이어지면서 금융당국은 전 금융권을 대상으로 긴급 점검에 나섰다. 외부에 노출된 IT 자산과 서비스를 모두 파악해 보안 취약점과",
+    "tags": [
+      "금융"
+    ],
+    "title": "위드네트웍스, 서비스·SBOM·API 연계한 '취약점 조합 상관분석' 제시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209000"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208999",
+    "published": "2026-10-22T15:01:24+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이노그리드가 5G 기반 이동형 유연의료 플랫폼 사업을 통해 의료 현장에서의 인프라와 서비스 통합 운용 기술을 개발하고 있다. 재난 발생지와 의료 취약지에 투입되는 이동형 병원에서 의료기기와 AI 소프트웨어, 진료 데이터를 안정적으로 연결·운영하는 기술이다.본 사업은 2022년부터 5년간 다부처 방식으로 추진되고 있다. 이노그리드는 한국전자통신연구원(ETRI)이 주관하는 유연의료 5G 엣지 컴퓨팅 소프트웨어 개발 과제에 참여해 유연의료 서비스 시스템 통합 운용 프레임워크와 이동형 병원 소프트웨어 라이프사이클 관리 기술 등을 맡고 있다",
+    "tags": [],
+    "title": "이노그리드, 이동형 유연의료 플랫폼 개발...AI 인프라 영역 의료 현장으로 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208999"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208997",
+    "published": "2026-10-22T14:43:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국딥러닝이 SK텔레콤과 협업해 AI 에이전트의 적용 범위를 커머스 콘텐츠 제작 영역으로 넓히는 실증을 진행하고 있다. 이번 실증은 부산창조경제혁신센터의 'SK텔레콤 스타트업 오픈이노베이션 챌린지 2026' 협업 과제로 추진됐다.한국딥러닝은 'DEEP Agent'를 기반으로 상품정보와 이미지 등 비정형 데이터를 이해하고, 실제 광고 제작과 검증 업무까지 연결하는 자동화 가능성을 확인하고 있다. SK텔레콤의 광고 및 커머스 콘텐츠 제작 환경에서 AI가 상품페이지의 이미지와 텍스트를 분석해 후속 콘텐츠 제작에 활용하는 방식이다.VLM",
+    "tags": [
+      "금융"
+    ],
+    "title": "한국딥러닝, SK텔레콤과 커머스 영역 AI 에이전트 실증 진행",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208997"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208998",
+    "published": "2026-10-22T14:40:19+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI 보안 전문기업 스틸리언(대표 박찬암)은 웹사이트 주소(URL)만 입력하면 ‘PHP2Shell’ 취약점의 영향 여부를 확인할 수 있는 무료 온라인 점검 서비스를 공개했다고 22일 밝혔다.이번 서비스는 기업·기관의 보안 담당자와 웹사이트 운영자가 별도의 복잡한 절차 없이 운영 중인 웹서비스의 취약 여부를 확인하고 신속하게 대응할 수 있도록 마련됐다.이용자는 스틸리언 홈페이지 내 전용 페이지(클릭)에 접속해 점검 대상 웹사이트 주소를 입력하면 된다. 특히 보안 전문인력이 부족한 중소기업이나 기관에서도 간편하게 활용할 수 있다는 점이",
+    "tags": [
+      "금융"
+    ],
+    "title": "스틸리언, ‘PHP2Shell’ 취약점 무료 점검 서비스 공개…URL 입력만으로 확인",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208998"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208996",
+    "published": "2026-10-22T14:32:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "베스핀글로벌이 미국 샌프란시스코에서 열린 클라우드플레어 커넥트 파트너 서밋에서 '2026 Asia Pacific Cloudflare One Partner of the Year'를 수상했다. 이번 수상으로 아태지역 최우수 클라우드플레어 원 파트너에 2년 연속 선정됐다.이번 수상은 국내 주요 항공사에서 수행한 ZTNA 및 WAF 프로젝트에 이은 연속 성과다. 베스핀글로벌은 국내 항공사 4개사와 클라우드플레어 기반 보안 서비스 계약을 체결했다. 서비스 범위는 DNS 보안 필터링을 비롯해 WAF, ZTNA 등 제로 트러스트 보안 전 영역을",
+    "tags": [],
+    "title": "베스핀글로벌, 클라우드플레어 'APAC 파트너 오브 더 이어' 2년 연속 수상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208996"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208995",
+    "published": "2026-10-22T14:06:27+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "GS네오텍이 클라우드 보안 통합 플랫폼 '시큐리티 렌즈(Security Lens)'의 지원 범위를 네이버클라우드플랫폼(NCP)까지 넓혔다.이번 업데이트로 기존 AWS, GCP, Microsoft Azure에 더해 네이버클라우드플랫폼까지 아우르는 지원 체계를 갖췄다. 이에 따라 국내외 다양한 클라우드 서비스를 함께 사용하는 기업과 기관은 파편화된 보안 현황을 단일 플랫폼에서 통합 관리할 수 있다.시큐리티 렌즈는 기존 CNAPP의 기능을 넘어선 CNAPP+ 형태로 종합적인 위협 분석과 대응을 지원한다. 클라우드 환경의 취약점과 설정 오",
+    "tags": [],
+    "title": "GS네오텍, 클라우드 보안 통합 플랫폼에 네이버클라우드플랫폼 추가",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208995"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208994",
+    "published": "2026-10-22T13:30:24+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "전 세계 기업의 75%가 향후 1년 내 IT 보안 기능을 강화할 계획인 것으로 나타났다. 카스퍼스키는 최근 전 세계 18개국의 IT 보안 전문가와 의사결정권자 1,800명을 대상으로 실시한 조사 결과를 발표했다. 사이버 위협의 규모와 복잡성이 커지면서 기업의 IT 보안 역량 강화가 중요한 과제로 부상했다.조사에 따르면 99%의 기업이 IT 보안을 핵심 비즈니스 기능으로 인식하고 있다. 향후 12개월 동안 IT 보안 기능을 강화하겠다고 응답한 비율은 중견기업이 78%, 대기업이 83%로 집계됐다.산업별로는 IT 분야 기업의 79%,",
+    "tags": [],
+    "title": "카스퍼스키, 글로벌 기업 보안 투자 현황 발표...75%가 보안 강화 계획",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208994"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208993",
+    "published": "2026-10-22T12:58:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "레드햇이 엔비디아와의 협력을 확대해 '레드햇 AI 팩토리 위드 엔비디아'를 기반으로 오픈 하이브리드 클라우드 전반에서 에이전틱 AI 보안 역량을 강화한다. 양사는 에이전트 안전성과 오픈 웨이트 모델 추론 레퍼런스 아키텍처를 결합한 공동 혁신을 발표했다. 기업은 이를 통해 보안과 통제력을 확보한 상태에서 자율형 AI 에이전트를 구축하고 확장할 수 있다.AI 도입이 자율형 에이전틱 워크플로우로 전환되면서 보안과 안전성은 핵심 요건으로 자리 잡았다. 에이전트가 복잡한 IT 환경에서 작업을 수행하려면 보안이 강화된 에이전트 런타임 환경과",
+    "tags": [],
+    "title": "레드햇-엔비디아, 오픈 하이브리드 클라우드 AI 보안 역량 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208993"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208992",
+    "published": "2026-10-22T12:52:20+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "메가존클라우드는 아마존웹서비스(AWS)의 'Authorized Government Reseller' 자격을 획득해 미국 공공부문 및 규제 산업 고객을 대상으로 AWS GovCloud (US)를 공급할 수 있는 자격을 확보했다. 이를 위해 현지 전문 인력을 바탕으로 GovCloud 운영 체계를 마련하고 요건을 충족했다.이번 자격 획득을 계기로 미국법인을 중심으로 현지 정부·공공기관과 방산·필수 기간산업 등 규제 수준이 높은 시장을 대상으로 AWS 사업을 확대한다. AWS GovCloud (US) 도입을 검토하거나 이용하는 현지 고객을",
+    "tags": [],
+    "title": "메가존클라우드, AWS GovCloud 리셀러 자격 획득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208992"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208991",
+    "published": "2026-10-22T12:33:30+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "미국 사이버보안·인프라보안국(CISA)이 미디어 관리 소프트웨어인 플렉스 미디어 서버(Plex Media Server)의 취약점 4개를 연계한 사이버 공격이 실제 발생하고 있다며 긴급 보안 조치를 권고했다.10월 21일 공개된 내용에 따르면, 이번 공격은 ‘Plex2Shell’로 불리며, 공격자가 별도의 로그인 없이 서버 내부 기능을 악용해 관리자 인증 토큰을 탈취하고 원격에서 악성코드를 실행할 수 있는 것이 특징이다.플렉스는 영화, 음악, 사진 등 개인 미디어를 저장하고 인터넷을 통해 여러 기기에서 이용하도록 지원하는 소프트웨어다",
+    "tags": [],
+    "title": "플렉스 미디어 서버 취약점 4개 연계 공격 확산…CISA, 실제 악용 경고",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208991"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208990",
+    "published": "2026-10-22T12:24:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "미국 사이버보안·인프라보안국(CISA)과 연방수사국(FBI)이 SafePay(세이프페이) 랜섬웨어 조직의 공격으로 전 세계 최소 600개 조직이 피해를 입었다고 공식 발표했다. 공격 대상에는 여러 핵심 인프라 분야의 기업과 기관이 포함돼 있으며, 공격자들은 네트워크에 침투해 중요 정보를 빼돌리고 시스템을 암호화하는 방식으로 금전을 요구한 것으로 확인됐다.CISA와 FBI는 10월 20일 미국 비밀경호국(USSS), 독일 라인란트팔츠주 형사청, 영국 국가범죄청(NCA) 등과 함께 SafePay 랜섬웨어에 관한 공동 사이버보안 권고문(",
+    "tags": [
+      "금융",
+      "랜섬웨어"
+    ],
+    "title": "미 CISA·FBI “SafePay 랜섬웨어, 전 세계 600개 이상 조직 공격”…핵심 인프라 보안 비상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208990"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208989",
+    "published": "2026-10-22T11:54:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국정보보호산업협회(KISIA, 회장 김진수)는 유망 정보·물리보안 스타트업의 투자유치 역량 강화를 위해 지난 10월 14일 판교 정보보호 클러스터에서 ‘2026년 유망 보안 스타트업 투자상담회’를 개최했다고 밝혔다.이번 행사에는 투자유치를 희망하는 보안 스타트업 8개사와 사이버보안 펀드 운용사 2개사가 참여했다. 스타트업과 투자 전문가 간 1:1 맞춤형 상담을 통해 기업별 투자유치 전략과 사업화 방향을 논의했다.참여 기업들은 투자기관으로부터 기업설명(IR) 자료 작성과 개선 방향, 투자유치 과정에서의 애로사항 등에 대한 조언을 받",
+    "tags": [],
+    "title": "KISIA, 유망 보안 스타트업 투자유치 지원…투자상담회 개최",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208989"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208988",
+    "published": "2026-10-22T11:51:26+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "보안 전문기업 체크멀(CheckMAL)은 자사의 안티랜섬웨어 솔루션 ‘앱체크 프로(AppCheck Pro)’와 ‘앱체크 프로 포 윈도우 서버(AppCheck Pro for Windows Server)’가 아마존웹서비스(AWS)의 마켓플레이스(AWS Marketplace)에 공식 등록됐다고 21일 밝혔다.이번 등록으로 체크멀은 기존 파트너 중심의 유통망을 글로벌 클라우드 플랫폼으로 확대하고, 북미를 비롯한 해외 기업 고객에 대한 접근성을 높일 수 있는 기반을 마련했다.AWS 마켓플레이스는 기업이 소프트웨어와 보안 솔루션, 데이터 분석",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "체크멀, 안티랜섬웨어 ‘앱체크 프로’ AWS 마켓플레이스 등록…글로벌 시장 공략 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208988"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=208987",
+    "published": "2026-10-22T11:44:07+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "공공기관의 국가 망 보안체계(N2SF) 전환이 본격화되고 있지만, 상당수 기관은 여전히 도입을 위한 내부 검토와 정보 수집 단계에 머물러 있는 것으로 나타났다. 특히 기존 망분리 환경을 새로운 보안체계로 전환하는 과정에서 정보자산의 보안등급을 분류하고 기관별 운영정책을 수립하는 것이 가장 큰 어려움으로 꼽혔다.통합 IT보안 전문기업 SGA솔루션즈(대표이사 최영철)는 지난 9월 개최된 ‘Cyber Summit Korea 2026(CSK 2026)’ 현장에서 실시한 설문조사 결과를 분석해 21일 발표했다.이번 조사는 전체 응답자 146",
+    "tags": [],
+    "title": "SGA솔루션즈, 공공 N2SF 전환 현황 분석…“보안등급 분류·정책 수립이 최대 난관”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=208987"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html",
+    "published": "2026-10-22T04:21:26+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Microsoft on Wednesday disclosed that a China state-aligned actor dubbed Storm-0940 was behind the recent supply chain compromise of the ConnectWise Cloud Backup application. During the incident, Storm-0940 used ARTEX, a Go-based agentic AI penetration testing framework that was made closed-source in the wake of its abuse against South Korean financial institutions, to speed up scanning and",
+    "tags": [
+      "금융",
+      "RCE"
+    ],
+    "title": "China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack",
+    "url": "https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=201464",
+    "published": "2026-10-22T06:48:43+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "SafePay ransomware has hit 600+ organizations since 2024, using stolen credentials, VPN access and double extortion to pressure victims into paying. CISA, the FBI, the US Secret Service, Germany’s Landeskriminalamt Rheinland-Pfalz, and two UK law enforcement agencies jointly published an advisory this week on SafePay, a ransomware group they describe as one of the most […]",
+    "tags": [
+      "RCE",
+      "랜섬웨어"
+    ],
+    "title": "FBI and CISA Warn of SafePay Ransomware Attacks on 600 Organizations",
+    "url": "https://securityaffairs.com/201464/cyber-crime/fbi-and-cisa-warn-of-safepay-ransomware-attacks-on-600-organizations.html"
+  },
+  {
+    "author": "Georgy Kucherin, Vladimir Nestor, Vasily Berdnikov",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?p=121539",
+    "published": "2026-10-22T06:00:48+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "Kaspersky GReAT experts discovered a new UEFI bootkit, BlackX. It exploits the Baton Drop vulnerability (CVE-2022-21894) and is similar to the BlackLotus bootkit.",
+    "tags": [
+      "APT"
+    ],
+    "title": "How APT41 revived the BlackLotus bootkit to attack diplomatic organizations in Central Asia",
+    "url": "https://securelist.com/uefi-bootkit-blackx/121539/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33446",
+    "published": "2026-10-22T02:00:02+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Thursday, October 22nd, 2026 https://isc.sans.edu/podcastdetail/10146, (Thu, Oct 22nd)",
+    "url": "https://isc.sans.edu/diary/rss/33446"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiS0FVX3lxTE1IQnNRZjhrbW1iYmlYeElLazUySlQtWTlpdGFJRzFhakhOOW44TjlDa21Bb05Ibnd1ZGlkYThLUVBNblpQN3N6ZWhVYw",
+    "published": "2026-10-21T20:33:47+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI ‘Patch the Planet’, AI가 발견하는 취약점에 대응할 5단계 공조 체계 제안",
+    "tags": [],
+    "title": "OpenAI ‘Patch the Planet’, AI가 발견하는 취약점에 대응할 5단계 공조 체계 제안 - GeekNews - 개발/기술/스타트업 뉴스 서비스",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1IQnNRZjhrbW1iYmlYeElLazUySlQtWTlpdGFJRzFhakhOOW44TjlDa21Bb05Ibnd1ZGlkYThLUVBNblpQN3N6ZWhVYw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUkFVX3lxTE1zcWVwY2cwMXc5aERaYmMtQVBEd2FWTE40ZFJjWkF4VEZjQWZLOXNoNExBVmxJQnA0SGN4Zi1ELWFteUl6UEU0MjNaR005emRXZHfSAVNBVV95cUxQY1daZ3VINVN1ZGVTSlBoTXpIY1QzdnRGbFF0bkI3bnU4TWJWMnBKeWl0bzRTb1F0N2d2djNhVmlDU01KU0hjN0NJbDhwSkRtYXBpWQ",
+    "published": "2026-10-22T06:27:48+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "중소금융사 300곳…금보원, 무료 보안지원",
+    "tags": [
+      "금융"
+    ],
+    "title": "중소금융사 300곳…금보원, 무료 보안지원",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1zcWVwY2cwMXc5aERaYmMtQVBEd2FWTE40ZFJjWkF4VEZjQWZLOXNoNExBVmxJQnA0SGN4Zi1ELWFteUl6UEU0MjNaR005emRXZHfSAVNBVV95cUxQY1daZ3VINVN1ZGVTSlBoTXpIY1QzdnRGbFF0bkI3bnU4TWJWMnBKeWl0bzRTb1F0N2d2djNhVmlDU01KU0hjN0NJbDhwSkRtYXBpWQ?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:243282",
+    "published": "2026-10-22T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "유명 가상자산거래소의 블록체인 네트워크를 사칭한 가짜 체인 사기에 주의하세요",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=243282&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFB4OFJiSF9CN3hleExRSmVhZ2pHVEgySUFXcFlDMTQ3cVRjd251ZzdTMmllbEg0b3l6T1Q4RkxIcDl3U1hQNXFEcWllVW9TQXRfS3ZFLW1yM2pvUHhhQXBVYtIBeEFVX3lxTE5zVnpMTkFtZWFaM3kwMjZJa3U0R1BKRDd0R1NWY1ZVdDFtMHdCandQNVVyQ2k3WVVtQVRtLUZWczA0VUtjQVc1NndnV2dlQjZNY3FpQVJLcUsyVnVXVGpHZjVILUE2Y2pFTktZQjN6YTNscWZ6U1ZSMQ",
+    "published": "2026-10-22T07:21:14+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 \"PHP 취약점, 개인정보 대량유출 우려…DB 접근도 점검해야\"",
+    "tags": [],
+    "title": "개인정보위 \"PHP 취약점, 개인정보 대량유출 우려…DB 접근도 점검해야\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB4OFJiSF9CN3hleExRSmVhZ2pHVEgySUFXcFlDMTQ3cVRjd251ZzdTMmllbEg0b3l6T1Q4RkxIcDl3U1hQNXFEcWllVW9TQXRfS3ZFLW1yM2pvUHhhQXBVYtIBeEFVX3lxTE5zVnpMTkFtZWFaM3kwMjZJa3U0R1BKRDd0R1NWY1ZVdDFtMHdCandQNVVyQ2k3WVVtQVRtLUZWczA0VUtjQVc1NndnV2dlQjZNY3FpQVJLcUsyVnVXVGpHZjVILUE2Y2pFTktZQjN6YTNscWZ6U1ZSMQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE8tT21qMWhURVJfZ0ZBRnRYUHB2RHA0QUdENDNlOGhkN0U3QXU3bHplSmlmRVNXVk9EOFprOEV1Z1ZOajVzZFNuZzR4Unh6Zw",
+    "published": "2026-10-22T07:24:30+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, PHP 취약점 개인정보 유출 경고",
+    "tags": [],
+    "title": "개인정보위, PHP 취약점 개인정보 유출 경고",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8tT21qMWhURVJfZ0ZBRnRYUHB2RHA0QUdENDNlOGhkN0U3QXU3bHplSmlmRVNXVk9EOFprOEV1Z1ZOajVzZFNuZzR4Unh6Zw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE5GbDJzLU1xWEVMQWlsR1NOeFlDMlR0S0loQUg1YURqWGFKbmxXT1JHMDFPTFBTNXUtanA3cVR5ZGRzc2pxdF82MVBQRzhGaWdnZFhTZTk5VS1CakdKVWNFZG42NEZyb1lGQ1E",
+    "published": "2026-10-22T07:14:39+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 ‘PHP 보안 취약점’ 관련 개인정보 유출 예방조치 당부",
+    "tags": [],
+    "title": "개인정보위 ‘PHP 보안 취약점’ 관련 개인정보 유출 예방조치 당부",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5GbDJzLU1xWEVMQWlsR1NOeFlDMlR0S0loQUg1YURqWGFKbmxXT1JHMDFPTFBTNXUtanA3cVR5ZGRzc2pxdF82MVBQRzhGaWdnZFhTZTk5VS1CakdKVWNFZG42NEZyb1lGQ1E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1MVEtFeFQwZWN0ek53eGtzOGkzd1BWamd2ZnhWc2dvdVd3VVFDOU90LTRxdWIwekVITlFRM1RWdk0xLWxCVEttM24yMlNqYXNtYzZfWHZ0SnUwbTA",
+    "published": "2026-10-22T06:45:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 연세대 개인정보 유출 신고 접수…약 ‘만 5천 명’ 유출",
+    "tags": [],
+    "title": "개인정보위, 연세대 개인정보 유출 신고 접수…약 ‘만 5천 명’ 유출",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MVEtFeFQwZWN0ek53eGtzOGkzd1BWamd2ZnhWc2dvdVd3VVFDOU90LTRxdWIwekVITlFRM1RWdk0xLWxCVEttM24yMlNqYXNtYzZfWHZ0SnUwbTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1KbmZWZ3JaeDE4N3ZSMFoxeXUzcHhFMm95ODhRdTVrbXdzaTBoQWNkSllJRTI3bDlvY1hEWlFQdVhTdmpYN0kzNXUyUW14UEs2LWo5WGFZZGdiUU3SAWBBVV95cUxQeE1SYUo5V0JmaHUyWnZMVW1xUHJoX1FON25YOVItWnlaeFd6VUZwVEU3X1lJY2RhWUxyb1VmT3BQTWEzakFzZnM4VWtONEVCcklBNnR4TGRKVmhOX1FZcnU",
+    "published": "2026-10-22T07:28:39+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위 \"PHP 보안 취약점 주의…보안 업데이트·접근통제 필요\"",
+    "tags": [],
+    "title": "개보위 \"PHP 보안 취약점 주의…보안 업데이트·접근통제 필요\"",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KbmZWZ3JaeDE4N3ZSMFoxeXUzcHhFMm95ODhRdTVrbXdzaTBoQWNkSllJRTI3bDlvY1hEWlFQdVhTdmpYN0kzNXUyUW14UEs2LWo5WGFZZGdiUU3SAWBBVV95cUxQeE1SYUo5V0JmaHUyWnZMVW1xUHJoX1FON25YOVItWnlaeFd6VUZwVEU3X1lJY2RhWUxyb1VmT3BQTWEzakFzZnM4VWtONEVCcklBNnR4TGRKVmhOX1FZcnU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTFAtS0FkZl93cnJ1bS1XNUZ0ZWZyWmVZQm00aDhScklXM0RfTEJXWmpjTFBuN0NVV3AyYjNaZ3VxVG03TkhHOFE3NHRoVTBQR0RXNEtPRDNDa2NXOGdndEFuSWt5QTU",
+    "published": "2026-10-22T07:32:04+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"개인정보 유출 위험 주의\"…정부, `PHP 취약점` 예방 조치 당부",
+    "tags": [],
+    "title": "\"개인정보 유출 위험 주의\"…정부, `PHP 취약점` 예방 조치 당부",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAtS0FkZl93cnJ1bS1XNUZ0ZWZyWmVZQm00aDhScklXM0RfTEJXWmpjTFBuN0NVV3AyYjNaZ3VxVG03TkhHOFE3NHRoVTBQR0RXNEtPRDNDa2NXOGdndEFuSWt5QTU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFBTbGZxZmxFdzR5aWhISThMT3BiSXpKRlljUldxSG9BXzVtelp5dlAtZGlRRW5kSzh2UDF1NVZTeHd3SGMxTWFUZklfWVZZMmRDdDRiNkt0RkYyTjV2M011cTRYQkV6RTd3T3Y5bGRaQ3rSAXRBVV95cUxOSkVVSUpjZ0lDd29zS05FOW9jaGljSkYyMUVXR2RDNEJXUDFHQVY3WVhTRktVZmhYQnpxRzA1eUZZVWxSVnRyZjZ2emVPRklQRUFJcm1WMVhySGF4UHNmZXN4VENPV2Q4OTg1NnMxSjZ5czlfSw",
+    "published": "2026-10-22T06:31:23+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "김종철 방미통위 위원장, 해킹 피해 보상 미흡 땐 개입 시사 [국감2026]",
+    "tags": [],
+    "title": "김종철 방미통위 위원장, 해킹 피해 보상 미흡 땐 개입 시사 [국감2026]",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBTbGZxZmxFdzR5aWhISThMT3BiSXpKRlljUldxSG9BXzVtelp5dlAtZGlRRW5kSzh2UDF1NVZTeHd3SGMxTWFUZklfWVZZMmRDdDRiNkt0RkYyTjV2M011cTRYQkV6RTd3T3Y5bGRaQ3rSAXRBVV95cUxOSkVVSUpjZ0lDd29zS05FOW9jaGljSkYyMUVXR2RDNEJXUDFHQVY3WVhTRktVZmhYQnpxRzA1eUZZVWxSVnRyZjZ2emVPRklQRUFJcm1WMVhySGF4UHNmZXN4VENPV2Q4OTg1NnMxSjZ5czlfSw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE9zZkt6OWlFa1Q4V3N1Y3lGTmxEX0RDLVptNGZuRXV2U0RDOENpRlV0eHFneXRLS0lJcDk2bFpWaS1RTVN0UVRDb192OFNxbWxiUHlhZUxpZ21xT0ZSOE5WY3BxejVEUzZQMnNIMktB",
+    "published": "2026-10-22T02:43:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "대한병원협회, 의료정보보호 컨퍼런스 개최…병원 사이버보안 대응 논의",
+    "tags": [],
+    "title": "대한병원협회, 의료정보보호 컨퍼런스 개최…병원 사이버보안 대응 논의",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9zZkt6OWlFa1Q4V3N1Y3lGTmxEX0RDLVptNGZuRXV2U0RDOENpRlV0eHFneXRLS0lJcDk2bFpWaS1RTVN0UVRDb192OFNxbWxiUHlhZUxpZ21xT0ZSOE5WY3BxejVEUzZQMnNIMktB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFBEbFFnWkZ6dGMxMlVMNGtVYVhVMjdCVTRGeVo4Z0FIQjVkb1dFYTFFbklPU2czV3M5SW96V25zOUJ3ZFJFLU1iZDhzMGdNVnF6QUo4SDdwcktReU9QaTdIdldoS0c5XzVi",
+    "published": "2026-10-22T05:13:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 조사 딛고…지커코리아, '7X' 국내 인도 개시",
+    "tags": [],
+    "title": "개인정보위 조사 딛고…지커코리아, '7X' 국내 인도 개시",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBEbFFnWkZ6dGMxMlVMNGtVYVhVMjdCVTRGeVo4Z0FIQjVkb1dFYTFFbklPU2czV3M5SW96V25zOUJ3ZFJFLU1iZDhzMGdNVnF6QUo4SDdwcktReU9QaTdIdldoS0c5XzVi?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE9ETGNxS29mV2RCYlcySjdCalJ4OVZ3MHZqYk03a1B2dmRaTjFJcnBmVkU5LWdPWE52bVJqTVZCcFdQZlNENkhBckpCUQ",
+    "published": "2026-10-22T07:36:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[PHP 취약점 파장] 개인정보위 \"DB 개인정보 유출 막아야\"...'긴급 보안 패치' 촉구",
+    "tags": [],
+    "title": "[PHP 취약점 파장] 개인정보위 \"DB 개인정보 유출 막아야\"...'긴급 보안 패치' 촉구",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ETGNxS29mV2RCYlcySjdCalJ4OVZ3MHZqYk03a1B2dmRaTjFJcnBmVkU5LWdPWE52bVJqTVZCcFdQZlNENkhBckpCUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE5MMjFPZEE1Rjk4VUpJcDVyVWJtcFhHN1NWMTJKOVEtc2tPOHJYdDZQNm4xdVE2Z253Q1ZIeG5Bejg0NGEwXzR5emNLSUdkcC1xVzE2b1lJM3ZIQdIBWEFVX3lxTE9LTmNwMm9FMXp3ZUMxWXF1MVpiSTVoUzlfdnNzajUxMk03ay16YkE5RjRsRzJnM1JsN1NEN0N2QXl3SE9xZC1vaEFOUWh3RzI2dTZNamwxUno",
+    "published": "2026-10-22T07:27:56+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, PHP 취약점 악용한 개인정보 유출 주의 당부",
+    "tags": [],
+    "title": "개인정보위, PHP 취약점 악용한 개인정보 유출 주의 당부",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MMjFPZEE1Rjk4VUpJcDVyVWJtcFhHN1NWMTJKOVEtc2tPOHJYdDZQNm4xdVE2Z253Q1ZIeG5Bejg0NGEwXzR5emNLSUdkcC1xVzE2b1lJM3ZIQdIBWEFVX3lxTE9LTmNwMm9FMXp3ZUMxWXF1MVpiSTVoUzlfdnNzajUxMk03ay16YkE5RjRsRzJnM1JsN1NEN0N2QXl3SE9xZC1vaEFOUWh3RzI2dTZNamwxUno?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1zTGowNmw0ZmVKbnJJQ1NEZU5aN0ZaOEZSR091Y2xrM09CcEJlY2szRFpPVjJPbGZ2YUI2SU9BYjVYZ04zd0Y1b3BkTlZCbXBRdEVKaDZrcHNtWWfSAWBBVV95cUxQWVpyYkVib0UzaTJJZTNWT1NENUQ3bW95R2FtaDNjWmp3U01uSEo1R0lNRzNfQVliWjMwWGJrZTNnN01hS0VZTjM0dFlWMENadGlGVlFkN3l5bXNuU2JJNzU",
+    "published": "2026-10-22T05:38:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "KF, 이메일시스템 통해 개인정보 유출…차단조치·조사중",
+    "tags": [],
+    "title": "KF, 이메일시스템 통해 개인정보 유출…차단조치·조사중",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1zTGowNmw0ZmVKbnJJQ1NEZU5aN0ZaOEZSR091Y2xrM09CcEJlY2szRFpPVjJPbGZ2YUI2SU9BYjVYZ04zd0Y1b3BkTlZCbXBRdEVKaDZrcHNtWWfSAWBBVV95cUxQWVpyYkVib0UzaTJJZTNWT1NENUQ3bW95R2FtaDNjWmp3U01uSEo1R0lNRzNfQVliWjMwWGJrZTNnN01hS0VZTjM0dFlWMENadGlGVlFkN3l5bXNuU2JJNzU?oc=5"
   }
 ]
