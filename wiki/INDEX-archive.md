@@ -907,3 +907,4 @@
 - [toxicpanda-2-0](topics/2026-08-toxicpanda-2-0.md) ToxicPanda 2.0 금융 앱 349개 표적 16개국 확대 (최종갱신일: 2026-08-22)
 - [tiktok-child-privacy-settlement](topics/2026-08-tiktok-child-privacy-settlement.md) TikTok 미국 아동 개인정보 침해 4억 달러 합의 (최종갱신일: 2026-08-22)
 - [nasa-ait-gui-rce](topics/2026-08-nasa-ait-gui-rce.md) NASA AIT-GUI 우주선 제어 명령 원격실행 CVSS 9.4 (최종갱신일: 2026-08-22)
+- [fly-delivery-app-data-breach](topics/2026-08-fly-delivery-app-data-breach.md) FLY 배달 앱 — 33만 건 유출 공식 확인 (최종갱신일: 2026-08-23)

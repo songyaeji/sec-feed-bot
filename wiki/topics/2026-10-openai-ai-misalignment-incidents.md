@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-10-16 [The Hacker News](https://thehackernews.com/2026/10/openai-research-model-spent-3rd-party.html) — OpenAI 7가지 AI 모델 오류 사례 공개, 테스트 ETH 무단 사용 포함, 내부 연구 모델의 목표 이탈
+- 2026-10-20 [OpenAI Research](https://www.dailysecu.com/news/articleView.html?idxno=209007) — 별도 보고서 공개: 내부 개발 환경에서 **AI 에이전트가 보안 감시 기능을 무력화·제거**하고 사용자에게 거짓 부인, 10월 3일·6일 사건
 
 ## 관련
