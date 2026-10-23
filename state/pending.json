@@ -2731,5 +2731,831 @@
     ],
     "title": "금융권 AI 전환 본격화! 금융분야 망분리 규제를 완화하여 혁신은 넓게, 보안은 더 단단하게 하겠습니다. - ｢고성능 AI 관련 금융권 보안위협 대응 간담회｣ 실시",
     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5pd1BmRFExRmJtSXRtTHpkYkxnNGFJbk9TbVFTRFhGWjd3aXZTZTd4bENvTFhqa2ZSWWV1MUpCQUgyMUVDT1Y5bXQxV09KcUlLOWlnVjlGZllEYlJLOXNxdkVqdEJUc2FHaDl2bmFqd1Y0Rk8tNkNKdE13?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2019-15598",
+    "published": "2019-12-18T21:15:12.523",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A Code Injection exists in treekill on Windows which allows a remote code execution when an attacker is able to control the input into the command.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2019-15598 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-15598"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73487",
+    "published": "2026-08-13T12:17:24.083",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Flowise before 3.1.3 contains a regex-based Python code validator bypass in CSV and Airtable Agent nodes that allows unauthenticated attackers to inject malicious code via prompt injection. Attackers can exploit unblocked pandas functions like pd.read_json() to exfiltrate datasets, perform SSRF against internal services, or achieve code execution through the unauthenticated prediction API.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-73487 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73487"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-73602",
+    "published": "2026-08-13T12:17:24.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Flowise before 3.1.3 contains a sandbox escape vulnerability in the vm2 JavaScript sandbox that allows authenticated users to execute arbitrary code by exploiting moment locale validation bypass. Attackers can craft a fake String object with a match function that bypasses path traversal checks to load and execute malicious JavaScript files stored in the document store outside the sandbox.",
+    "tags": [],
+    "title": "CVE-2026-73602 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73602"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-50770",
+    "published": "2026-08-17T18:17:08.990",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in Squirro Cognitive Search before v.3.14.2 allows a remote attacker to escalate privileges via a crafted request.",
+    "tags": [],
+    "title": "CVE-2026-50770 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50770"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-50772",
+    "published": "2026-08-17T18:17:09.207",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in Squirro Cognitive Search < 3.14.2 allows a remote attacker to execute arbitrary code via a crafted payload to the password reset function.",
+    "tags": [],
+    "title": "CVE-2026-50772 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50772"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-50774",
+    "published": "2026-08-17T19:16:31.767",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue in GAPTEQ Designer v.3.5 allows a remote attacker to escalate privileges via the Company Manger role.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-50774 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50774"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67678",
+    "published": "2026-08-17T20:16:45.137",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "File Upload vulnerability in RainyGao-Hithub DocSys v.2.02.80 allows a remote attacker to execute arbitrary code",
+    "tags": [],
+    "title": "CVE-2026-67678 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67678"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-67967",
+    "published": "2026-08-17T21:16:47.840",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Buffer Overflow vulnerability in Tenda W20E V16.01.0.6(2782) allows an attacker to execute arbitrary code. This is an incomplete fix for CVE-2025-44867 and CVE-2026-36819",
+    "tags": [],
+    "title": "CVE-2026-67967 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67967"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-100886",
+    "published": "2026-09-27T23:16:59.020",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Seetong T8108, T8108P, T8116 and T8232 4.6.1.4-build202604241011. The affected element is an unknown function of the component Debug Service. Such manipulation leads to improper authentication. The attack may be launched remotely. The exploit is publicly available and might be used. Upgrading to version 4.6.2.0 is sufficient to fix this issue. It is suggested to upgrade the affected component. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-100886 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100886"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-114607",
+    "published": "2026-10-22T17:16:58.577",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Better Auth is an authentication and authorization library for TypeScript. From 1.4.0-beta.18 until 1.7.7, deployments that enable Magic Link with storeToken set to plain, or with storeToken set to hashed and the global verification.storeIdentifier setting also set to hashed, enable a built-in social or Generic OAuth provider, and use account.storeStateStrategy set to database can accept an OAuth sign-in state value as a Magic Link token. These settings can cause Magic Link verification records and OAuth state to resolve to the same stored identifier, allowing an unauthenticated attacker to start OAuth sign-in for a known email address and redeem the returned state through Magic Link without controlling the mailbox or completing the provider callback. The attacker can obtain a normal session for an existing user, or create an account incorrectly marked as email verified when sign-up is enabled. This issue is fixed in version 1.7.7.",
+    "tags": [],
+    "title": "CVE-2026-114607 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114607"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-94267",
+    "published": "2026-10-23T06:17:08.200",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Advanced Custom Fields: Extended WordPress plugin before 0.9.2.8, Advanced Custom Fields: Extended PRO WordPress plugin before 0.9.2.8 does not perform any capability check when updating a post through one of its front-end form actions, allowing unauthenticated visitors to overwrite arbitrary posts, including the ones in which the site stores its own field definitions, which in turn leads to arbitrary code execution on the server. Exploitation requires the site to publish a form whose post-update action maps both its target and its content to visitor-submitted values.",
+    "tags": [],
+    "title": "CVE-2026-94267 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94267"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-112860",
+    "published": "2026-10-23T09:17:06.280",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in xnau webdesign Participants Database participants-database allows Blind SQL Injection.This issue affects Participants Database: from n/a through 2.7.8.5.",
+    "tags": [],
+    "title": "CVE-2026-112860 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112860"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112862",
+    "published": "2026-10-23T09:17:06.393",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in xnau webdesign Participants Database participants-database allows Object Injection.This issue affects Participants Database: from n/a through 2.7.8.5.",
+    "tags": [],
+    "title": "CVE-2026-112862 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112862"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112846",
+    "published": "2026-10-23T13:17:06.057",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in ThemeREX Group Save Life save-life allows Object Injection.This issue affects Save Life: from n/a through 1.2.14.",
+    "tags": [],
+    "title": "CVE-2026-112846 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112846"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112847",
+    "published": "2026-10-23T13:17:06.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in ThemeREX ZenSoul zensoul allows Object Injection.This issue affects ZenSoul: from n/a through 1.13.",
+    "tags": [],
+    "title": "CVE-2026-112847 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112847"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112848",
+    "published": "2026-10-23T13:17:06.310",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in AivahThemes Hostme v2 hostmev2 allows Object Injection.This issue affects Hostme v2: from n/a through 7.0.",
+    "tags": [],
+    "title": "CVE-2026-112848 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112848"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112851",
+    "published": "2026-10-23T13:17:06.697",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in ThemeREX Group HotLock hotlock allows Object Injection.This issue affects HotLock: from n/a through 1.3.9.",
+    "tags": [],
+    "title": "CVE-2026-112851 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112851"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112853",
+    "published": "2026-10-23T13:17:06.940",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in axiomthemes Hallelujah hallelujah allows Object Injection.This issue affects Hallelujah: from n/a through 1.1.1.",
+    "tags": [],
+    "title": "CVE-2026-112853 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112853"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112854",
+    "published": "2026-10-23T13:17:07.070",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in axiomthemes Holistic Center holistic-center allows Object Injection.This issue affects Holistic Center: from n/a through 1.2.6.",
+    "tags": [],
+    "title": "CVE-2026-112854 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112854"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112855",
+    "published": "2026-10-23T13:17:07.197",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in axiomthemes Redy redy allows Object Injection.This issue affects Redy: from n/a through 1.3.5.",
+    "tags": [],
+    "title": "CVE-2026-112855 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112855"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112856",
+    "published": "2026-10-23T13:17:07.323",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in ThemeREX Group Vagabonds vagabonds allows Object Injection.This issue affects Vagabonds: from n/a through 1.3.10.",
+    "tags": [],
+    "title": "CVE-2026-112856 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112856"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112857",
+    "published": "2026-10-23T13:17:07.447",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in axiomthemes Reprizo reprizo allows Object Injection.This issue affects Reprizo: from n/a through 1.0.8.",
+    "tags": [],
+    "title": "CVE-2026-112857 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112857"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112858",
+    "published": "2026-10-23T13:17:07.573",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in axiomthemes Rhodos rhodos allows Object Injection.This issue affects Rhodos: from n/a through 1.3.3.",
+    "tags": [],
+    "title": "CVE-2026-112858 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112858"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-112859",
+    "published": "2026-10-23T13:17:07.700",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in ThemeREX Group Little Birdies little-birdies allows Object Injection.This issue affects Little Birdies: from n/a through 1.3.16.",
+    "tags": [],
+    "title": "CVE-2026-112859 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112859"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-46651",
+    "published": "2026-10-23T15:17:31.453",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 24.03 to before version 26.05, the DownloadTaskEndpoint WebSocket endpoint (/tasks/download/monitor.socket) in goobi-viewer-core accepts download requests from unauthenticated users. This issue has been patched in version 26.05.",
+    "tags": [],
+    "title": "CVE-2026-46651 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46651"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-46652",
+    "published": "2026-10-23T15:17:31.593",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 24.03 to before version 26.05, ExternalFilesDownloader.getFilename() extracts the destination filename from a server-supplied Content-Disposition response header and passes it directly to Path.resolve() without stripping directory components. This allows for a malicious HTTP server that the viewer fetches from to supply an absolute path or ../ traversal sequences as the filename, writing attacker-controlled content to an arbitrary path writable by the Tomcat process. When targeting the deployed web-application directory, this yields remote code execution as the tomcat OS user. This issue has been patched in version 26.05.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-46652 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46652"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-53942",
+    "published": "2026-10-23T15:17:32.157",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Conda Organization Infrastructure is a centralized location for infrastructure codes. Prior to commit 9c0f238, a GitHub Actions Pwn Request vulnerability appears to remain present in conda/conda. The affected workflow is .github/workflows/update.yml. It is triggered by issue_comment events containing @conda-bot render or @conda-bot recreate. For the render path, the workflow obtains the pull request head repository and branch from the PR API, checks out that PR-controlled repository/ref using secrets.SYNC_TOKEN, and then runs conda/actions/template-files@7f6830b1428a9bd47f0b068892c77eae95207037. The external template-files action reads its default configuration and templates from the checked-out working directory. In the confirmed finding, that action uses an unsandboxed Jinja2 environment to render attacker-controlled template content. This creates a Pwn Request chain in which an untrusted PR/comment path can reach template rendering in a privileged token context. This issue has been patched via commit 9c0f238.",
+    "tags": [],
+    "title": "CVE-2026-53942 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53942"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-55486",
+    "published": "2026-10-23T15:17:33.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Goobi viewer is a web application that allows digitised material to be displayed in a web browser. From version 25.08 to before version 26.05, the IIIF Auth 2.0 endpoints auth/login and auth/token in AuthorizationFlowResource accept an origin query parameter without validation and then (1) embed it into the Content-Security-Policy: frame-ancestors response header and (2) embed it into an HTML response body as a JavaScript single-quoted postMessage argument. Because the attacker controls both the login and token calls that initiate the flow, the unescaped value yields reflected XSS. This issue has been patched in version 26.05.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-55486 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55486"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-115812",
+    "published": "2026-10-23T18:17:21.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Relative path traversal during model archive extraction in Amazon Web Services Multi Model Server 1.1.11 and earlier might allow remote actors to execute arbitrary code via a crafted model archive.\n\n\n\nMulti Model Server is end of life and no fixed version is available. Users should discontinue use of Multi Model Server and migrate to a supported model serving solution.",
+    "tags": [],
+    "title": "CVE-2026-115812 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115812"
+  },
+  {
+    "category": "high",
+    "cvss": 6.2,
+    "id": "CVE-2023-6915",
+    "published": "2024-01-15T10:15:26.627",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A Null pointer dereference problem was found in ida_free in lib/idr.c in the Linux Kernel. This issue may allow an attacker using this library to cause a denial of service problem due to a missing check at a function return.",
+    "tags": [],
+    "title": "CVE-2023-6915 (CVSS 6.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6915"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73485",
+    "published": "2026-08-13T12:17:23.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise before 3.1.3 contains a code injection vulnerability in the Airtable Agent node that allows unauthenticated attackers to execute arbitrary Python code by bypassing the pythonCodeValidator blocklist through obfuscation techniques. Attackers can send crafted prompts to a chatflow using the Airtable Agent node to inject malicious Python code that executes in an unsandboxed pyodide environment with full access to the host operating system.",
+    "tags": [],
+    "title": "CVE-2026-73485 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73485"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73486",
+    "published": "2026-08-13T12:17:23.947",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise before 3.1.3 contains a code injection vulnerability in the CSV Agent node's customReadCSV parameter that allows authenticated attackers to execute arbitrary Python code. The validator uses a static regex blocklist that can be bypassed through obfuscation techniques, enabling attackers to execute code in the unsandboxed pyodide environment with full system access.",
+    "tags": [],
+    "title": "CVE-2026-73486 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73486"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-73601",
+    "published": "2026-08-13T12:17:24.353",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Flowise versions before 3.1.3 contain a remote code execution vulnerability in the Custom MCP node when CUSTOM_MCP_PROTOCOL is set to stdio, allowing authenticated users to execute arbitrary commands by manipulating environment variables and command arguments. Attackers can abuse PYTHONWARNINGS and BROWSER environment variables with python3, or leverage the root working directory with node to bypass validation and execute system commands.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73601 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73601"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2026-17545",
+    "published": "2026-09-25T21:17:23.253",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "On Windows, PHP's filesystem and stream APIs do not reject reserved device names such as CON, PRN, AUX, NUL, COM1 to COM9, LPT1 to LPT9, CONIN$ and CONOUT$ when they appear as a component of a path. An attacker-controlled filename therefore reaches CreateFileW() and opens a device instead of the regular file the application expected, which can block or hang the request and exhaust worker processes.",
+    "tags": [],
+    "title": "CVE-2026-17545 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17545"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-106486",
+    "published": "2026-10-06T21:17:17.323",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Backstage is an open framework for building developer portals. Prior to 0.3.10 in @backstage/plugin-scaffolder-backend-module-bitbucket-cloud and 0.2.25 in @backstage/plugin-scaffolder-backend-module-bitbucket-server, the Bitbucket pull-request Scaffolder actions did not sufficiently validate filesystem paths. An authenticated user who can execute an eligible template and influence an allowed Bitbucket repository could affect paths outside the expected working area, potentially compromising backend confidentiality, integrity, or availability. This issue is fixed in @backstage/plugin-scaffolder-backend-module-bitbucket-cloud 0.3.10 and @backstage/plugin-scaffolder-backend-module-bitbucket-server 0.2.25.",
+    "tags": [],
+    "title": "CVE-2026-106486 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106486"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-112778",
+    "published": "2026-10-19T20:17:55.187",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Traefik before 2.11.46, 3.x before 3.6.17, and 3.7.0 lack namespace validation for Ingress and Service annotations in the Kubernetes Ingress provider, allowing references to Middlewares, ServersTransports, and TLSOptions in other namespaces. Attackers able to create or update Ingress or Service resources in one namespace can set router.middlewares or service.serverstransport annotations to obtain another tenant's injected credentials or reuse its client certificates, bypassing namespace-based tenant isolation.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-112778 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112778"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-71434",
+    "published": "2026-10-22T11:17:06.373",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Weaver E-cology 8.0, 9.0, and 10.0 prior to 10.76 contains an unauthenticated SQL injection vulnerability in the /api/doc/out/more/list endpoint via the elementmore parameter with srcType=2. Attackers can inject SQL through doc_datefrom/doc_dateto fields and read results via /api/ec/dev/table/counts to extract database information. Exploitation evidence was first observed by the Shadowserver Foundation on 2026-07-19.",
+    "tags": [],
+    "title": "CVE-2025-71434 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71434"
+  },
+  {
+    "category": "high",
+    "cvss": 7.4,
+    "id": "CVE-2026-111079",
+    "published": "2026-10-22T11:17:15.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Goose. When the terminal integration feature is enabled, the application captures shell command history and sends it verbatim without sanitization to configured Large Language Model (LLM) provider endpoints during queries. If a user enters sensitive data—such as API tokens, passwords, or environment variables containing secrets—in the terminal, this unredacted information is transmitted across trust boundaries. This can lead to sensitive information disclosure, exposing confidential credentials to external service providers and logs.",
+    "tags": [
+      "AI",
+      "APT"
+    ],
+    "title": "CVE-2026-111079 (CVSS 7.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111079"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-115325",
+    "published": "2026-10-22T11:17:51.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Netmaker through 1.7.0 contains an authorization bypass vulnerability in the updateExtClient handler that allows network-scoped users to modify external clients on other networks. Attackers with external client permissions on one network can send PUT requests to /api/extclients/{network}/{clientid} to replace public keys, disable clients, and obtain WireGuard private keys.",
+    "tags": [],
+    "title": "CVE-2026-115325 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115325"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-113874",
+    "published": "2026-10-22T18:17:27.237",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SmileCDR HAPI FHIR allows an untrusted bundle body to replace a partition identity previously established by a trusted source, and does not enforce storage partition entitlement by default. An attacker authorized for one tenant can read from or write to another tenant's partition.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-113874 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113874"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-97635",
+    "published": "2026-10-22T18:17:32.337",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Agent Zero Web UI before 1.15 does not correctly sanitize user-provided input in chat messages or file uploads. When Agent Zero reproduces content in the chat interface, any injected JavaScript is executed in the context of the victim’s authenticated Agent Zero Web UI session.",
+    "tags": [],
+    "title": "CVE-2026-97635 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97635"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-94262",
+    "published": "2026-10-23T06:17:08.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Advanced Custom Fields: Extended WordPress plugin before 0.9.2.8, Advanced Custom Fields: Extended PRO WordPress plugin before 0.9.2.8 does not verify that the requester is authorised to edit the targeted user account in the update-user action of its front-end Forms module, performing that check only when the target account holds an administrator role, which allows unauthenticated visitors to overwrite any non-administrator account's credentials and obtain a session for that account. Exploitation requires the site to publish a form whose user-update action maps its target to a visitor-submitted value rather than to the default current user.",
+    "tags": [],
+    "title": "CVE-2026-94262 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94262"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-94268",
+    "published": "2026-10-23T06:17:08.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Advanced Custom Fields: Extended WordPress plugin before 0.9.2.8, Advanced Custom Fields: Extended PRO WordPress plugin before 0.9.2.8 does not resolve the target of the update-user action in its front-end Forms module consistently between the stage that authorises the request and the stage that carries it out, which allows unauthenticated visitors to bypass the guard protecting administrator accounts, take over the site administrator's account and be issued a valid session for it. Exploitation requires the site to publish two separate front-end form configurations whose targets are mapped to visitor-submitted values.",
+    "tags": [],
+    "title": "CVE-2026-94268 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94268"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-112837",
+    "published": "2026-10-23T09:17:06.043",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Ruben Garcia GamiPress gamipress allows Blind SQL Injection.This issue affects GamiPress: from n/a through 8.0.7.",
+    "tags": [],
+    "title": "CVE-2026-112837 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112837"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-115727",
+    "published": "2026-10-23T12:18:13.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AgenticSeek before commit 409840c contains a remote code execution vulnerability because llm_server/app.py hardcodes Flask debug mode while binding to all interfaces. Attackers who reach the server port and obtain the derivable Werkzeug debugger PIN can execute Python code and operating system commands with llm_server privileges.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-115727 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115727"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-112850",
+    "published": "2026-10-23T13:17:06.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in AncoraThemes Your Dress your-dress allows PHP Local File Inclusion.This issue affects Your Dress: from n/a through 1.4.1.",
+    "tags": [],
+    "title": "CVE-2026-112850 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112850"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-112852",
+    "published": "2026-10-23T13:17:06.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in ThemeREX Group Helion helion allows Object Injection.This issue affects Helion: from n/a through 1.1.12.",
+    "tags": [],
+    "title": "CVE-2026-112852 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112852"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-57113",
+    "published": "2026-10-23T13:17:10.373",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. From version 2.6.0 to before version 4.6.59, PraisonAI's template loader accepts GitHub template URIs with refs, for example github:owner/repo/template@v1.0.0. The resolver stores the user-controlled template path and ref verbatim, and the cache layer later joins those values into ~/.praison/cache/templates/github/<owner>/<repo>/<template>/<ref> without normalizing each segment or checking that the final path remains inside the template cache root. A crafted ref such as ../../../../../../outside-delete-target therefore escapes the cache directory. The first load can write .cache_meta.json outside the cache. If the normal cache hierarchy for the same owner/repo/template has already been created, the same path reaches shutil.rmtree(cache_path) and removes an attacker-selected outside directory before replacing it with cache metadata. This issue has been patched in version 4.6.59.",
+    "tags": [],
+    "title": "CVE-2026-57113 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57113"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-57121",
+    "published": "2026-10-23T13:17:11.057",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PraisonAI is a multi-agent teams system. From version 0.1.4 to before version 0.1.5 in praisonai-platform, a workspace member can permanently delete any resource — projects, agents, issues, labels, issue dependencies, and issue-label attachments — created by the workspace owner or other members. All six content DELETE endpoints enforce workspace membership but perform no ownership or role check. A single malicious or compromised member account can wipe an entire workspace's content irreversibly. This issue has been patched in version 0.1.5.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-57121 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57121"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-63120",
+    "published": "2026-10-23T13:17:12.010",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "pghoard is a PostgreSQL backup daemon and restore tooling that stores backup data in cloud object stores. Prior to version 2.7.2, an incomplete path traversal fix in pghoard allows an attacker with write access to the backup object storage (such as S3, GCS, or Azure) to execute arbitrary file writes and directory creation outside the designated PostgreSQL data directory (pgdata). When a database administrator executes a restore operation (via pghoard_restore get-basebackup), a maliciously crafted delta backup manifest with path traversal sequences (e.g., ../../../../etc/cron.d/backdoor) will write arbitrary payloads to the host system. This issue has been patched in version 2.7.2.",
+    "tags": [],
+    "title": "CVE-2026-63120 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63120"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-10632",
+    "published": "2026-10-23T14:17:31.107",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A reflected cross-site scripting vulnerability in the Classic Web Client of Zimbra Collaboration Suite (ZCS) allows an attacker to inject JavaScript through the packages parameter of the /h/rest document editor. The editor inserts package names into script attributes without HTML encoding. When combined with CVE-2026-50053, an attacker with an ordinary Zimbra account can supply their own authentication token and document identifiers in a URL and execute JavaScript in another signed-in user's Zimbra browser session when that user opens the URL. This permits reading mailbox data and performing authenticated actions as the victim. The issue affects ZCS 10.1.16 and was remediated in 10.1.17.",
+    "tags": [],
+    "title": "CVE-2026-10632 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10632"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-114621",
+    "published": "2026-10-23T14:17:51.143",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "baserCMS is a website development framework. In versions 5.0.0 before 5.3.2 and 5.4.0 before 5.4.2, list and detail actions in the Admin and Api/Admin prefixes pass request query parameters, including contain, conditions, fields, finder, and order, directly to the ORM as options. A user able to log into the admin panel can embed SQL fragments in those options to execute arbitrary SQL against the application's database, including reading password hashes from the users table. Public-page and public-API fixes released in 5.3.1 and 5.4.1 did not protect these administrative paths. Setting USE_CORE_ADMIN_API to false does not prevent access through an authenticated browser session. This issue has been patched in versions 5.3.2 and 5.4.2.",
+    "tags": [],
+    "title": "CVE-2026-114621 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114621"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-93639",
+    "published": "2026-10-23T14:17:57.640",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A missing authorization vulnerability in Zimbra Collaboration Suite (ZCS) allows a delegated administrator with no explicit administrative grants to overwrite global Zimlet configuration through ConfigureZimletRequest. The uploaded configuration can also add an attacker-controlled domain to the proxy allowlist of the default class of service. If a signed-in user in that class opens a crafted /service/proxy URL, Zimbra serves attacker-controlled HTML under its own origin. The resulting JavaScript can read mailbox data and perform authenticated actions as the victim. Exploitation requires a delegated-administrator account and access to the admin SOAP service; the browser compromise additionally requires the victim to open the crafted URL. ZCS 10.1.16 and 10.1.20 are affected.",
+    "tags": [],
+    "title": "CVE-2026-93639 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93639"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-57845",
+    "published": "2026-10-23T16:16:52.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hugging Face Datasets through 5.1.0 contains an insecure deserialization vulnerability that allows attackers to execute arbitrary Python code by crafting a malicious pickle file loaded through the deprecated pandas packaged builder. Attackers can supply a pickle-backed dataset that is processed by Pandas._generate_tables via pandas.read_pickle() without validation, so when a victim calls datasets.load_dataset(\"pandas\", data_files=...), the embedded __reduce__ payload executes code with the victim process's privileges.",
+    "tags": [],
+    "title": "CVE-2026-57845 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57845"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-87901",
+    "published": "2026-10-23T17:17:22.137",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper sanitization in the registration module allows reflected Cross-Site Scripting.",
+    "tags": [],
+    "title": "CVE-2026-87901 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87901"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html",
+    "published": "2026-10-23T17:54:08+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Ruby has released versions 4.0.9, 3.4.12, and 3.3.13 to fix three bugs in Onigmo, the regular expression engine built into the language. The bugs lie behind four critical security flaws that GitLab patched over the past month. GitLab found that a specially crafted pattern could corrupt memory while Ruby compiles it, potentially leading to code execution on its own servers. Ruby says any",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws",
+    "url": "https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
+    "published": "2026-10-23T17:50:47+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have discovered an artificial intelligence (AI)-driven intrusion ecosystem run by affiliates of the INC and The Gentlemen ransomware groups. Central to the operation is an \"Autonomous Red Team Kill Chain Framework\" referred to as Phantom. The threat actor is assessed to be Russian-speaking and functions both as an intrusion and data-extortion operator, as well as an",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions",
+    "url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html",
+    "published": "2026-10-23T13:50:56+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of a large-scale campaign that has targeted exposed network edge devices such as Fortinet FortiGate and Palo Alto Networks GlobalProtect firewalls. \"Artifacts from this investigation also indicate that operators in this campaign have obtained access to numerous organizations worldwide, and have attempted to further compromise some victims,",
+    "tags": [],
+    "title": "Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials",
+    "url": "https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/",
+    "published": "2026-10-23T17:05:07+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Microsoft says Windows Server 2016 will stop receiving security updates after it reaches the end of support in January 2027. [...]",
+    "tags": [],
+    "title": "Microsoft: Windows Server 2016 reaches end of support in January",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-windows-server-2016-reaches-end-of-support-in-january/"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
+    "published": "2026-10-23T16:40:07+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "American clinical laboratory company Quest Diagnostics disclosed that patient records have been exposed after a threat actor gained unauthorized access to its Quanum LSM system. [...]",
+    "tags": [],
+    "title": "Quest Diagnostics confirms data breach exposed patient records",
+    "url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/",
+    "published": "2026-10-23T15:38:05+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The PHP security team has shared mitigation measures for a new remote code execution vulnerability that affects systems with non-default configurations and has no patch. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "PHP shares mitigation for new RCE vulnerability with no patch",
+    "url": "https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/"
+  },
+  {
+    "author": "Sponsored by Gen Digital",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/",
+    "published": "2026-10-23T14:00:10+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "AI agents can be manipulated through malicious emails, websites, and plugins into executing commands, stealing data, or deleting files using their legitimate permissions. Gen Digital explains how its Agent Trust Hub helps protect agents through skill verification, secure connectivity, and runtime controls that intercept dangerous act [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "You gave your AI agent access, but who is giving it orders?",
+    "url": "https://www.bleepingcomputer.com/news/security/you-gave-your-ai-agent-access-but-who-is-giving-it-orders/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/fcc-bans-devices-huawei-surveillance-chips",
+    "published": "2026-10-23T17:28:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The banned items — a wireless video transmitter and dashboard camera — are made with chips manufactured by Huawei subsidiary HiSilicon, which markets its products as “designed for the surveillance market.”",
+    "tags": [],
+    "title": "FCC bans two devices with surveillance chips linked to Huawei",
+    "url": "https://therecord.media/fcc-bans-devices-huawei-surveillance-chips"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/php-php2shell-exploitation-attempts-pocs",
+    "published": "2026-10-23T04:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The headline-grabbing bugs known colloquially as PHP2Shell are giving cyber analysts a lot to track — and a lot to debunk.",
+    "tags": [],
+    "title": "Reports of PHP bug exploitation attempts grow as experts downplay viability of exploits",
+    "url": "https://therecord.media/php-php2shell-exploitation-attempts-pocs"
+  },
+  {
+    "author": "Microsoft Security Research, Mahesh Mandava, Srinivasan Govindarajan, Sagar Patil and Suriyaraj Natarajan",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=150238",
+    "published": "2026-10-23T18:12:19+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "Microsoft Threat Intelligence analyzes the LiteLLM 1.107.0 compromise, including Python startup hooks, credential theft, remote code loading, detections, and mitigations. The post Inside the LiteLLM 1.107.0 supply chain compromise: Credential theft through Python startup hooks appeared first on Microsoft Security Blog .",
+    "tags": [
+      "AI"
+    ],
+    "title": "Inside the LiteLLM 1.107.0 supply chain compromise: Credential theft through Python startup hooks",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiXEFVX3lxTE5HYUVwdkNSaVFfdXppU3dYUm5FSWNUb1VWN1FWVEg4WDE2LTV4ZURmOHNkWTBYVjAtSnh6eXg0UWZrTlZpalg4RHpkU3g1T2kwZy0zX200ZVdNNTRy",
+    "published": "2026-10-21T21:46:45+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI로 취약점 탐지부터 방어까지 연결하는 Cloudflare",
+    "tags": [],
+    "title": "OpenAI로 취약점 탐지부터 방어까지 연결하는 Cloudflare",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5HYUVwdkNSaVFfdXppU3dYUm5FSWNUb1VWN1FWVEg4WDE2LTV4ZURmOHNkWTBYVjAtSnh6eXg0UWZrTlZpalg4RHpkU3g1T2kwZy0zX200ZVdNNTRy?oc=5"
   }
 ]
