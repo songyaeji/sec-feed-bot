@@ -2104,5 +2104,409 @@
     "tags": [],
     "title": "국가아동권리보장원, 실종아동·입양인 117만명 개인정보 분실… 수사 의뢰도 안 해",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pVnh0d3hLNHBsbjNTcHpCR2hZOVhFaGRLeFo3WDlJOUxFY2o3YUFCUjE2SjhkVFVLdUxZUnBhNnRzZXI5dVVudTh4LTFEY2tkdWhvWkRiVXZUbHQtYXp0RUdDZ0hCYUhLSUhpSA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-96355",
+    "published": "2026-10-22T02:17:05.433",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements Used in a Template Engine vulnerability in Drupal Webform allows Code Injection. This issue affects Webform versions: from 0.0.0 to 6.2.12, from 6.3.0 to 6.3.1.",
+    "tags": [],
+    "title": "CVE-2026-96355 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96355"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-115547",
+    "published": "2026-10-23T04:18:16.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An input validation issue in the Okta Access Gateway (OAG) Admin Console allows the processing of specially formatted configuration values. An authenticated administrator can leverage this to execute system commands within the context of the OAG service account.",
+    "tags": [],
+    "title": "CVE-2026-115547 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115547"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-54630",
+    "published": "2026-10-23T04:18:17.007",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Part-DB is an open source inventory management system for electronic components. Prior to version 2.12.1, the part attachment upload handler stores uploaded files under the web-served media directory using the client-supplied file extension, and its extension blocklist does not include phar. AttachmentSubmitHandler::renameBlacklistedExtensions() rewrites dangerous extensions (php, phtml, sh, cgi, py, js, html, htaccess, ...) to .txt, but phar is absent from the list, so a .phar file keeps its extension. Public attachments (the default) are written into public/media/, which is the Apache document root. The shipped Apache configuration routes .phar to PHP-FPM, so the stored file is executed as PHP on request. The per-attachment-type extension filter is empty by default and is not consulted by the upload handler in a way that blocks this, and a non-admin user in the default users group can create an attachment type with no filter and attach files to parts. Any authenticated user in the default users group uploads a .phar attachment to a part and fetches it under /media/, executing arbitrary PHP as the www-data web user. Ability to exploit depends on the webserver config, docker image contained the vulnerability by default. This issue has been patched in version 2.12.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-54630 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54630"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-55981",
+    "published": "2026-10-23T07:16:38.420",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A firmware verification vulnerability in Creative Sound\nBlaster Katana could allow an attacker to modify a legitimate firmware image\nand upload the modified firmware to an affected device.",
+    "tags": [],
+    "title": "CVE-2026-55981 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55981"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-87351",
+    "published": "2026-10-20T22:20:12.817",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vulnerability in Oracle GoldenGate (component: Admin Server Executable).  Supported versions that are affected are 19.1.0.0.0-19.32.0.0,   21.3-21.23 and   23.4-23.26.3.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTPS to compromise Oracle GoldenGate.  Successful attacks of this vulnerability can result in takeover of Oracle GoldenGate. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H).",
+    "tags": [],
+    "title": "CVE-2026-87351 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87351"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-115546",
+    "published": "2026-10-23T04:18:15.047",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Okta Access Gateway (OAG) does not validate the selected authentication source during sign-on. An authenticated user with an active session can modify the authentication source parameter, which may generate a SAML assertion granting access to the Admin Console.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-115546 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115546"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72236",
+    "published": "2026-10-23T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [],
+    "title": "Node.js 제품 보안 업데이트 권고",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72236"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209030",
+    "published": "2026-10-23T16:32:28+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈AI가 서울 라움 아트센터에서 국내 개발자 행사 '오픈AI 데브데이 익스체인지: 서울(OpenAI DevDay Exchange: Seoul)'을 진행했다. 이번 행사에는 국내 개발자와 업계 종사자 600여 명이 참석해 오픈AI 기술진과 AI 제품 및 서비스 구현 방안을 논의했다.데브데이 익스체인지는 미국 데브데이의 기술과 경험을 각 지역 개발자 커뮤니티로 확장하는 글로벌 행다. 올해는 서울을 비롯한 전 세계 8개 도시에서 열린다. 서울 행사에서는 개발자가 AI에 업무를 맡기고 서비스를 구축하며 실제 업무 환경에 적용하는 방법이",
+    "tags": [],
+    "title": "오픈AI, '데브데이 익스체인지 서울' 진행...한국 개발자들과 AI 서비스 논의",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209030"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209028",
+    "published": "2026-10-23T15:27:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "탈레스가 AI를 활용한 리버스 엔지니어링과 자동화된 취약점 분석으로부터 소프트웨어를 지키는 보안 솔루션 '센티넬 엔벨로프 플러스(Sentinel Envelope Plus)'를 선보였다. 이 솔루션은 개발자가 소스 코드를 바꾸거나 별도의 개발 환경을 구축하지 않아도 컴파일된 애플리케이션에 다중 보안 계층을 적용할 수 있는 것이 특징이다.최근 AI 도구가 발전하면서 소프트웨어의 취약점을 분석하는 시간이 크게 줄어들었다. 특히 기업의 손이 닿지 않는 외부 환경이나 온프레미스, 임베디드, 엣지 디바이스에 설치된 소프트웨어는 공격자가 오프라",
+    "tags": [],
+    "title": "탈레스, AI 리버스 엔지니어링 막는 소프트웨어 보호 솔루션 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209028"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209027",
+    "published": "2026-10-23T15:20:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "부산·인천·울산·여수광양 등 국내 4대 항만공사가 민간터미널의 사이버보안 실태를 직접 점검할 권한이 없어 국가 핵심 물류시설의 보안관리 체계에 공백이 발생하고 있다는 문제가 국정감사에서 제기됐다. 정부가 민간터미널 보안점검 가이드라인을 마련하고도 2년 넘게 관련 제도에 반영하지 않은 사실도 지적됐다.국회 농림축산식품해양수산위원회 소속 이재관 더불어민주당 의원은 23일 해양수산부 종합국정감사에서 민간 항만터미널의 사이버보안 관리 실태와 정부의 제도 개선 지연 문제를 집중 질의했다.항만 민간터미널은 터미널 운영시스템(TOS)을 통해 선",
+    "tags": [],
+    "title": "부산·인천·울산·여수광양 4대 항만, 민간터미널 사이버보안 점검 사각지대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209027"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209026",
+    "published": "2026-10-23T15:19:17+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이글루코퍼레이션이 클라우드 환경에서 네트워크 장애가 발생해도 로그 데이터를 끊김 없이 모으고 순서대로 쌓아 올리는 '클라우드 기반의 로그 관리 서버' 특허를 취득했다고 23일 밝혔다. 이번 기술로 클라우드 데이터의 연속성을 지키고 보안 분석의 정확도를 한층 끌어올릴 수 있게 됐다.수많은 서버가 네트워크로 얽혀 있는 클라우드 환경에서는 잠시만 네트워크가 끊겨도 로그 전송이 멈춘다. 특히 장애가 복구된 뒤에 예전 로그와 새로운 로그가 꼬이면서 빅데이터 분석 시스템이 사건의 전후 관계를 제대로 파악하기 어렵다는 문제가 있었다.이번에 개발",
+    "tags": [],
+    "title": "이글루코퍼레이션, 클라우드 장애 시에도 로그 유실 막는 기술 특허 취득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209026"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209025",
+    "published": "2026-10-23T15:06:00+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "더존비즈온이 법무법인 세종과 인공지능(AI) 거버넌스 및 컴플라이언스 분야 협력을 위한 업무협약(MOU)을 체결했다. 양사는 지난 22일 서울 종로구 세종 사무실에서 협약식을 열고 공동 대응에 나섰다.이번 협약은 기업들이 AI 전환(AX)을 추진하는 과정에서 요구되는 보안 체계 구축, 규제 분석, 법률 리스크 관리 수요에 대응하기 위해 마련됐다. 양사는 사업 제안과 수행을 함께 진행하며 시장 내 협력 범위를 넓혀갈 계획이다.세종은 AI 관련 법률과 규제 분석, 컴플라이언스, 보안 체계 수립, 위험평가 및 통제 체계에 대한 법률 자문",
+    "tags": [
+      "AI"
+    ],
+    "title": "더존비즈온-법무법인 세종, AI 거버넌스 및 컴플라이언스 시장 공동 공략",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209025"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209024",
+    "published": "2026-10-23T14:46:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 스타트업 넘즈에이아이가 자체 개발한 정형 데이터 파운데이션 모델(TFM) '코실로(Causilo)'가 젠슨 황 엔비디아 최고경영자(CEO)의 기조연설에 등장했다.지난 21일 독일 베를린에서 열린 'NVIDIA GTC Berlin 2026'에서 엔비디아는 정형 데이터 AI 모델을 소개하며 넘즈에이아이의 코실로를 엔비디아의 'Kumo-Tabular', 독일 Prior Labs의 'TabPFN-3.5'와 함께 나란히 언급했다. 엔비디아를 비롯한 글로벌 기업들은 LLM에 이은 차세대 AI 소프트웨어로 정형 데이터 모델에 주목하고 있다",
+    "tags": [
+      "AI"
+    ],
+    "title": "넘즈에이아이 정형 데이터 AI '코실로', 젠슨 황 GTC 기조연설 등장",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209024"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209023",
+    "published": "2026-10-23T14:28:25+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한컴의 AI 워크포스 플랫폼 '노마디안'이 미국 기업설명회(NDR)에서 현지 기관투자자들의 긍정적인 평가를 받았다.한컴 경영진은 이달 미국 뉴욕과 시카고를 방문해 기관투자자들과 일대일 미팅을 열고 노마디안을 시연했다. 현지 투자자들은 노마디안을 메타의 소상공인용 AI 에이전트 뮤즈와 나란히 비교하며 관심을 보였다. 메타의 뮤즈가 하나의 에이전트로 마케팅과 운영을 돕는 방식이라면, 노마디안은 영업, 마케팅, 리서치 등 역할별로 AI 팀을 꾸려 업무를 수행하는 구조다.투자자들은 노마디안의 자체 기술 스택에 주목했다. 노마디안은 한컴 에",
+    "tags": [],
+    "title": "한컴, AI 워크포스 '노마디안' 미국 NDR서 호평...12월 베타 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209023"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209021",
+    "published": "2026-10-23T14:21:28+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI·ICT 전문기업 쿠도커뮤니케이션이 창립 26주년을 맞아 재능교육연수원에서 전사 임직원이 참석한 가운데 기념행사를 개최했다.이번 행사는 지난 26년간 회사의 성장에 기여한 구성원의 노고를 격려하고 소통과 화합을 다지기 위해 마련됐다. 행사는 1부와 2부로 나누어 진행됐다. 1부에서는 전사 임직원이 참여하는 명랑운동회를 열어 단체 프로그램과 팀별 활동으로 협동심과 유대감을 높였다.2부 기념식에서는 회사의 발전에 헌신해 온 장기근속자를 시상했다. 아울러 한 해 동안 뛰어난 성과와 모범적인 자세로 조직에 기여한 직원을 '쿠도영웅'으로",
+    "tags": [],
+    "title": "쿠도커뮤니케이션, 창립 26주년 기념행사 개최...사람 중심 기업문화 다져",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209021"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209020",
+    "published": "2026-10-23T14:13:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "넷스카우트가 '2026년 상반기 분산 서비스 거부(DDoS) 위협 인텔리전스 보고서'를 발표했다.이번 보고서에 따르면 2026년 1월부터 6월까지 전 세계에서 관측된 DDoS 공격은 910만 건을 넘어섰다.특히 1Tbps 또는 1Gpps를 초과하는 대규모 공격은 전년 동기 대비 1,286% 급증했다. 대용량 공격이 예외적인 사건이 아니라 일상적인 위협으로 자리 잡았다는 분석이다. 넷스카우트는 검사 트래픽 규모, 공격 완화 배포 지점, 서비스 중단 공격 비중이 모두 증가하고 있다고 설명했다.주요 특징으로는 IPv6 공격에서 처음으로",
+    "tags": [],
+    "title": "넷스카우트, 2026년 상반기 DDoS 위협 보고서 발표...1Tbps 이상 대형 공격 급증",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209020"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209019",
+    "published": "2026-10-23T13:51:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "안랩은 지난 22일 서울 양재동 엘타워에서 기술 컨퍼런스 '안랩 테크 서밋 2026'을 개최했다.이번 행사는 안랩의 제품과 서비스를 활용해 최신 위협 대응 노하우를 나누는 자리로 마련됐다. 공공, 금융, 엔터프라이즈, 제조, IT 분야 고객사 보안 실무자 160여 명이 참석했다.행사에서 안랩은 AI를 중심으로 한 보안 강화 전략을 소개하고 보안 운영 효율성을 높이기 위한 기술 교류를 진행했다. 2027년 제품 및 서비스 로드맵을 비롯해 최신 위협 동향, 안랩 AI 플러스, XDR, 운영기술(OT) 보안, 제로트러스트 등 주요 보안",
+    "tags": [
+      "금융"
+    ],
+    "title": "안랩, 테크 서밋 2026 개최...고객사 AI 보안 역량 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209019"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209018",
+    "published": "2026-10-23T12:54:07+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국정보보호산업협회(KISIA)가 과학기술정보통신부와 함께 일본 도쿄에서 '한-일 사이버보안 기업 교류회(Security Connect Tokyo 2026)'를 개최했다.이번 행사는 일본의 IT 전시회인 Japan IT Week Autumn과 연계해 대한무역투자진흥공사(KOTRA) 도쿄IT지원센터와 공동으로 마련했다. 양국 사이버보안 산업의 최신 동향을 공유하고, 국내 정보보호 기업과 일본 기업 간의 기술 교류와 비즈니스 네트워크 구축을 지원하기 위한 목적이다. 이번 교류회에는 국내 정보보호 기업 31개사와 일본 기업 44개사가 참",
+    "tags": [],
+    "title": "KISIA-KOTRA, 도쿄에서 한·일 사이버보안 기업 교류회 개최",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209018"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209017",
+    "published": "2026-10-23T11:38:52+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이원태 국가인공지능전략위원회 보안특별위원회 위원장(국민대학교 특임교수)은 10월 22일 서울 삼성SDS 웨스트캠퍼스에서 열린 '2026 KIISC 제6회 AI x RMF 워크숍'에서 '최근 AI 지정학 동향과 대한민국 AI 사이버보안 정책 방향'을 주제로 키노트강연을 진행했다.이 위원장은 AI 기술을 둘러싼 국제 경쟁이 단순한 개발 속도 경쟁에서 접근권과 통제 규칙을 선점하기 위한 경쟁으로 바뀌고 있다고 진단했다.그는 “지금까지는 미국과 중국의 AI 패권 경쟁 속에서 누가 더 빠르게 우수한 모델을 개발하느냐가 중요했다면, 이제는 A",
+    "tags": [
+      "AI"
+    ],
+    "title": "[AIxRMF 워크숍] 이원태 위원장 “AI 패권 경쟁, 개발 속도에서 통제 능력으로 이동”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209017"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209016",
+    "published": "2026-10-23T11:22:31+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI를 활용한 사이버공격이 빠르게 진화하면서 기업의 소프트웨어 취약점을 자동으로 찾아 수정하고 검증하는 '자가 복구(Self-Healing)' 기술의 중요성이 커지고 있다. 그러나 AI 에이전트가 생성한 보안 패치를 다른 AI 에이전트가 검증하는 방식만으로는 안전성을 보장하기 어려우며, 독립적인 검증 체계와 조직 내 IT 자산에 대한 정확한 가시성 확보가 선행돼야 한다는 지적이 나왔다.삼성SDS 조지훈 마스터는 10월 22일 서울 삼성SDS 웨스트캠퍼스에서 열린 한국정보보호학회(KIISC) '2026 AI x RMF 워크숍'에서 '",
+    "tags": [],
+    "title": "[AIxRMF 워크숍] 삼성SDS 조지훈 마스터 “AI 시대 보안 핵심은 취약점 자동 복구와 IT 자산 가시성 확보”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209016"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=201500",
+    "published": "2026-10-23T06:08:00+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "INTERPOL’s Operation Serengeti III led to 1,462 arrests, disrupted 10,909 malicious networks and recovered $105 million across 21 countries. INTERPOL announced the results of Operation Serengeti III, a multinational cybercrime crackdown that led to 1,462 arrests, disrupted 10,909 malicious networks and recovered more than $105 million in illicit funds. The operation brought together law enforcement […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "INTERPOL Operation Serengeti III Nets 1,462 Arrests and Recovers $105 Million in Cybercrime Crackdown",
+    "url": "https://securityaffairs.com/201500/cyber-crime/interpol-operation-serengeti-iii-nets-1462-arrests-and-recovers-105-million-in-cybercrime-crackdown.html"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMimgFBVV95cUxNRm02aTFBTU1JV2o3SllwUVFKdS1yeWlKMHZLY3VTWUJKYVp4bUNsX2lwVXRnamFvZlJMOGtRN1hmbDFKM21kc215MFVqb2RCa2plYjhTeUEyVUF4WGUxems1U1NYR2ExYWlOM0ZhZndCaXR5Zmw2NmRMSTNBTS1vdTFrYlJEaFc2RUxBOUpRenBoU2J6YTF6UFNn",
+    "published": "2026-10-22T22:24:14+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Anthropic, Claude가 123개 라이브러리의 보안 속성을 증명했다고 밝혀",
+    "tags": [],
+    "title": "Anthropic, Claude가 123개 라이브러리의 보안 속성을 증명했다고 밝혀",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRm02aTFBTU1JV2o3SllwUVFKdS1yeWlKMHZLY3VTWUJKYVp4bUNsX2lwVXRnamFvZlJMOGtRN1hmbDFKM21kc215MFVqb2RCa2plYjhTeUEyVUF4WGUxems1U1NYR2ExYWlOM0ZhZndCaXR5Zmw2NmRMSTNBTS1vdTFrYlJEaFc2RUxBOUpRenBoU2J6YTF6UFNn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUEFVX3lxTE1mNjhva1pJaGlxSDRtOGJhSm5YZXcxTmMtbWZYWXBzVFpkaUJId3EydF9SNWNNVkMtMXRmbEk4VUxrWTRkeDhFRjlZeWFRVGRC",
+    "published": "2026-10-23T05:20:24+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원 \"AI·디지털자산, 금융산업 변화 이끌 것\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원 \"AI·디지털자산, 금융산업 변화 이끌 것\"",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1mNjhva1pJaGlxSDRtOGJhSm5YZXcxTmMtbWZYWXBzVFpkaUJId3EydF9SNWNNVkMtMXRmbEk4VUxrWTRkeDhFRjlZeWFRVGRC?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxPTVdBNHN0N1JyR0FDX05RUnhpSktMUE5xOVhxZEowRC05b0E0WnlLN1FlVWR5RmhkVGlaOHc4Y0d6b0VGemVPRWQ4ZnJ6ZkhkYUxTc1pYYk5kVGQxXzBnSm5KUFNUYVJLWFpCVDN6SG1RREhxSDhmekxXWVNtNkJteg",
+    "published": "2026-10-23T06:05:44+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "네이버페이 \"AX시대, 韓금융에 기회…인증·위임한도 규칙마련 시급\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "네이버페이 \"AX시대, 韓금융에 기회…인증·위임한도 규칙마련 시급\"",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTVdBNHN0N1JyR0FDX05RUnhpSktMUE5xOVhxZEowRC05b0E0WnlLN1FlVWR5RmhkVGlaOHc4Y0d6b0VGemVPRWQ4ZnJ6ZkhkYUxTc1pYYk5kVGQxXzBnSm5KUFNUYVJLWFpCVDN6SG1RREhxSDhmekxXWVNtNkJteg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE5JMTBiTU1YZDVITEstYnUzT0hwaFVobGVCQjFrR2RHU2R6TS1xcFFobzBkX04yTXh2cDQwYmZyTUprQ0p4VUlTMF9CS0ZxTVdKdWZGVVM2YkFzRnPSAWBBVV95cUxPc1lXVlJ3VUMwRDJpNVBrR2U3T3Q5S2huUDdCSWlxbm01OFJYNkpCMVZYWXo1SE9jdEM0Xzc2R29FcXdTakJpUGlqOEtlMGZEUzlfUGFTaFU0QXZENVJqeEQ",
+    "published": "2026-10-23T01:49:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "대구디지털혁신진흥원, '개인정보 이노베이션 존' 운영",
+    "tags": [],
+    "title": "대구디지털혁신진흥원, '개인정보 이노베이션 존' 운영",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JMTBiTU1YZDVITEstYnUzT0hwaFVobGVCQjFrR2RHU2R6TS1xcFFobzBkX04yTXh2cDQwYmZyTUprQ0p4VUlTMF9CS0ZxTVdKdWZGVVM2YkFzRnPSAWBBVV95cUxPc1lXVlJ3VUMwRDJpNVBrR2U3T3Q5S2huUDdCSWlxbm01OFJYNkpCMVZYWXo1SE9jdEM0Xzc2R29FcXdTakJpUGlqOEtlMGZEUzlfUGFTaFU0QXZENVJqeEQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5rVUdNRVRGd1dRc0oyaUpsRzFQUEZPdU5VUGVmZkhtNW9qdDhIZmVQVWowZXBRaEs0My05OXZXWE4wUVhRdmJNVWw1LTBERDBTZzF6OENYU2xfS1YzOTdLU1d2aks",
+    "published": "2026-10-23T03:59:07+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국내 학회·협회도 해킹 피해…개인정보 유출 규모 3만~5만명 추정",
+    "tags": [],
+    "title": "국내 학회·협회도 해킹 피해…개인정보 유출 규모 3만~5만명 추정",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5rVUdNRVRGd1dRc0oyaUpsRzFQUEZPdU5VUGVmZkhtNW9qdDhIZmVQVWowZXBRaEs0My05OXZXWE4wUVhRdmJNVWw1LTBERDBTZzF6OENYU2xfS1YzOTdLU1d2aks?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMijgFBVV95cUxOOFNsWk5MaUFsaEhGclFacXZaQ21VSWNjMmtPc1d4WVRLbEs0WmdGMjg5SnhPelJnaWc4c3cxV2EtcmlOeVZoYmR3d2lnTlVza0JDYlhwY0I5Y1RwUURXakxqRUlTSDAtLXk0eGswR1hjdnM5ZjVuNjdqM1B6S1JoRS1pMDZCYktKRUVDWUlB",
+    "published": "2026-10-23T01:44:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "한전, 개인정보 유출 1만1000명 추가 “조사 과정서 발견”",
+    "tags": [],
+    "title": "한전, 개인정보 유출 1만1000명 추가 “조사 과정서 발견”",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOFNsWk5MaUFsaEhGclFacXZaQ21VSWNjMmtPc1d4WVRLbEs0WmdGMjg5SnhPelJnaWc4c3cxV2EtcmlOeVZoYmR3d2lnTlVza0JDYlhwY0I5Y1RwUURXakxqRUlTSDAtLXk0eGswR1hjdnM5ZjVuNjdqM1B6S1JoRS1pMDZCYktKRUVDWUlB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9XQzFCdUZrTUdzTFpQR0JPSzNZd056VU9McURyRkdGRkVSYzZUUE9HbVdfaHVNUWxVRUFNS2JVWVdoTHBKRmZvR0tYcjcxU2UwWmZSMzNDWjhwNERhNFZYaHlDRkdZM0VfUGowNg",
+    "published": "2026-10-23T03:21:45+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[국정감사] 이달희 의원 “국가아동권리보장원 117만 여 명의 개인정보가 담긴 외장하드와 CD 분실 수사의뢰 없어”",
+    "tags": [],
+    "title": "[국정감사] 이달희 의원 “국가아동권리보장원 117만 여 명의 개인정보가 담긴 외장하드와 CD 분실 수사의뢰 없어”",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9XQzFCdUZrTUdzTFpQR0JPSzNZd056VU9McURyRkdGRkVSYzZUUE9HbVdfaHVNUWxVRUFNS2JVWVdoTHBKRmZvR0tYcjcxU2UwWmZSMzNDWjhwNERhNFZYaHlDRkdZM0VfUGowNg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE1iT3RucFdNcVRQSXJrYkluWkRzQXA5bWFaZTRWMzRrUG5PSVpmMWhpMVJ3ZUI4RHpBYXFocGZGb21XTy1oLU1HWXdVVW53RjhUMXZta1NKQWN2YVNjcFM3OEFEZXpVcmUyOWN1cQ",
+    "published": "2026-10-23T04:15:17+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, PHP 취약점 악용한 개인정보 유출 경고…보안 점검 강화 당부",
+    "tags": [],
+    "title": "개인정보위, PHP 취약점 악용한 개인정보 유출 경고…보안 점검 강화 당부",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1iT3RucFdNcVRQSXJrYkluWkRzQXA5bWFaZTRWMzRrUG5PSVpmMWhpMVJ3ZUI4RHpBYXFocGZGb21XTy1oLU1HWXdVVW53RjhUMXZta1NKQWN2YVNjcFM3OEFEZXpVcmUyOWN1cQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE9PbTkxTG1FUlJPSkx5dXJodGJxQmZRekwtRlU4RnJ3YWE5RmwybGtCM1dPNkc0eG51VE5FdkhSMFZidmVMa3Z4MUpNdw",
+    "published": "2026-10-23T01:03:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "한전 개인정보 유출 3만5528명으로 확대…퇴직자·협력사 직원 포함 : 기업·산업",
+    "tags": [],
+    "title": "한전 개인정보 유출 3만5528명으로 확대…퇴직자·협력사 직원 포함 : 기업·산업",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9PbTkxTG1FUlJPSkx5dXJodGJxQmZRekwtRlU4RnJ3YWE5RmwybGtCM1dPNkc0eG51VE5FdkhSMFZidmVMa3Z4MUpNdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9pUHRsb2ZMRGl4RE5JQnVRWF8zNjBDSU9iZkdmN1RPdWw5MmtlTXVNS0NyNDJxNU84VVNiakRIZU1qalh6cFI4SUdjTGJ0VE8tVUcxWGgwOHVtYXFqcmlwbmw0ekxScms4QlE",
+    "published": "2026-10-23T03:43:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "홈페이지 뚫리면 고객정보까지…PHP 취약점에 개인정보위 경고",
+    "tags": [
+      "금융"
+    ],
+    "title": "홈페이지 뚫리면 고객정보까지…PHP 취약점에 개인정보위 경고",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9pUHRsb2ZMRGl4RE5JQnVRWF8zNjBDSU9iZkdmN1RPdWw5MmtlTXVNS0NyNDJxNU84VVNiakRIZU1qalh6cFI4SUdjTGJ0VE8tVUcxWGgwOHVtYXFqcmlwbmw0ekxScms4QlE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTFByeFg3YjVOMVRNQnpPWkRKaXByYTF3YzFqSGRXbXZIQ293R0tTVkRkdnRTTkxJRkN4Umk4OVpIQlNxa2hrNUItc2hjbGw0N0FOYzRyeFJ3",
+    "published": "2026-10-23T03:25:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[국감] 이달희 \"국가아동권리보장원, 117만 명 개인정보 담긴 외장하드·CD 분실하고 수사 의뢰 안 해\"",
+    "tags": [],
+    "title": "[국감] 이달희 \"국가아동권리보장원, 117만 명 개인정보 담긴 외장하드·CD 분실하고 수사 의뢰 안 해\"",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFByeFg3YjVOMVRNQnpPWkRKaXByYTF3YzFqSGRXbXZIQ293R0tTVkRkdnRTTkxJRkN4Umk4OVpIQlNxa2hrNUItc2hjbGw0N0FOYzRyeFJ3?oc=5"
   }
 ]
