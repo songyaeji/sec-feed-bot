@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-08-26 [AhnLab ASEC](https://asec.ahnlab.com/en/95141/) — SAFEPAY 랜섬웨어 한국 산업 가스 제조업체 침해 보도
+- 2026-10-22 [Security Affairs](https://securityaffairs.com/201464/cyber-crime/fbi-and-cisa-warn-of-safepay-ransomware-attacks-on-600-organizations.html) — FBI, CISA 등 국제 법집행기관 SafePay 경고, 2024년 이후 600개 조직 피격, 자격증명 탈취·VPN 접근·이중 협박
 
 ## 관련
 

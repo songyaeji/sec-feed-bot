@@ -10,3 +10,5 @@ eMudhra의 8개 Intermediate CA 키가 손상되어 Mozilla·Google Chrome Root 
 ## 타임라인
 
 - 2026-10-20 [The Hacker News](https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html) — **eMudhra** 8개 Intermediate CA 키 손상, Mozilla·Google 확인, 브라우저·소프트웨어 긴급 대응
+- 2026-10-21 [Cisco Talos](https://blog.talosintelligence.com/compromised-intermediate-certificates/) — Cisco Talos 분석 보고 공개, 8개 중간 인증 기관 키 손상 확인
+- 2026-10-22 [The Hacker News](https://thehackernews.com/2026/10/emudhra-to-exit-global-ssltls-business.html) — **eMudhra** 이사회 결정으로 글로벌 SSL/TLS 사업 철수, 영향받은 고객에 파트너 무료 인증서 제공
