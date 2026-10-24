@@ -10,5 +10,6 @@ cves: [CVE-2022-21894]
 ## 타임라인
 
 - 2026-10-22 [Kaspersky Securelist](https://securelist.com/uefi-bootkit-blackx/121539/) — APT41 BlackLotus 리브랜딩 부트킷 BlackX 발견, Baton Drop 취약점 악용, 중앙아시아 외교 표적
+- 2026-10-24 [BleepingComputer](https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/) — BlackX Baton Drop(CVE-2022-21894) 악용해 Secure Boot 우회, Kaspersky·Avast 보안 솔루션 무력화 악성 드라이버 로드
 
 ## 관련

@@ -11,6 +11,7 @@ LiteLLM Python 패키지 1.107.0 버전이 공급망 공격으로 손상되어 �
 
 - 2026-10-21 [The Hacker News](https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html) — LiteLLM 1.107.0 PyPI wheels·Docker 이미지 공급망 공격, 자격증명 탈취기·백도어 배포, PyPI 격리
 - 2026-10-22 [BleepingComputer](https://www.bleepingcomputer.com/news/security/litellm-release-pipeline-hacked-to-distribute-info-stealer-malware/) — 멀웨어 배포 분석 재확인
+- 2026-10-24 [The Hacker News](https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html) — 5월 27일 실수로 공개된 마스터 키가 10월 공격자에게 악용돼 악성 배포판 생성, GitHub 토큰 탈취 및 릴리스 파이프라인 공격 가능
 
 ## 관련
 
