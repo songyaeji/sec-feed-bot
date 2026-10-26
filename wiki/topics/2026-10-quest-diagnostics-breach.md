@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-10-23 [BleepingComputer](https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/) — Quest Diagnostics Quanum LSM 시스템 위협 행위자 침해, 환자기록 유출 확인
+- 2026-10-23 [The Record](https://therecord.media/quest-diagnostics-network-intrusion) — Quest Diagnostics 침해로 환자정보 대량 유출 경고
 
 ## 관련

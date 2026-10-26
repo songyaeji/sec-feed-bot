@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-28 [개인정보보호위원회](https://news.google.com/rss/articles/CBMibkFVX3lxTE5GWk1xTnFwV0FxbV9pUUZ6cHktNlZ3dDNNVmh4OVA1c3pXSjgtOGFjM2JiaXM0TnJfZlZ2MVVjZnpMZFM4TEh3MVp2bWpaRU53TWRRWktmQjNJUThVbUFLemVmcExLOXVyc0JvbnN3) — 복지부·아동권리보장원 대규모 개인정보 유출 고개 숙여
+- 2026-10-23 [개인정보보호위원회](https://news.google.com/rss/articles/CBMibEFVX3lxTE9XQzFCdUZrTUdzTFpQR0JPSzNZd056VU9McURyRkdGRkVSYzZUUE9HbVdfaHVNUWxVRUFNS2JVWVdoTHBKRmZvR0tYcjcxU2UwWmZSMzNDWjhwNERhNFZYaHlDRkdZM0VfUGowNg) — 국정감사에서 117만명 개인정보 담긴 외장하드·CD 분실했으나 수사의뢰 안 한 사실 확인
 
 ## 관련
