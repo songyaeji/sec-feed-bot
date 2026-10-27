@@ -848,5 +848,327 @@
     "tags": [],
     "title": "배경훈 부총리가 보안을 대하는 태도 [줌인IT]",
     "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBkaW93a1ZGc0pDVnNjMVhkUTJzR29qRTBHRE5LdFFHYUxrejNrVTBpX2k1dlQ0WVRwYzFPX1ljWWJmbjN4ZFA4THBVblpDZl9hLTNJRm00OVJKWmUzTlNVRE1IWWxTcF9zTWVLVlhEQXDSAXRBVV95cUxQYjRtNFNCaDZzNWZmUFc3NGhSWkRHeUtIMXpmekxQZ2NzSXRYS2MwSi1nUkpGU29PMGUwQUh0M0czU29zVE5oMmFtWWZoSDI5M3VwU09yTUctdlp5LWtSNzBKTGYzbjVPVWhwNEoxVDV5X2w0bQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 3.7,
+    "id": "CVE-2025-8556",
+    "published": "2025-08-06T09:15:28.173",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in CIRCL's implementation of the FourQ elliptic curve. This vulnerability allows an attacker to compromise session security via low-order point injection and incorrect point validation during Diffie-Hellman key exchange.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2025-8556 (CVSS 3.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8556"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-83361",
+    "published": "2026-10-20T22:19:52.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vulnerability in the Oracle Contract Lifecycle Management for Public Sector product of Oracle E-Business Suite (component: Award/PO).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Contract Lifecycle Management for Public Sector.  Successful attacks of this vulnerability can result in  unauthorized creation, deletion or modification access to critical data or all Oracle Contract Lifecycle Management for Public Sector accessible data as well as  unauthorized access to critical data or complete access to all Oracle Contract Lifecycle Management for Public Sector accessible data. CVSS 3.1 Base Score 8.1 (Confidentiality and Integrity impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N).",
+    "tags": [],
+    "title": "CVE-2026-83361 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83361"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-83393",
+    "published": "2026-10-20T22:19:55.743",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vulnerability in the Oracle Product Hub product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Difficult to exploit vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Product Hub.  While the vulnerability is in Oracle Product Hub, attacks may significantly impact additional products (scope change).  Successful attacks of this vulnerability can result in takeover of Oracle Product Hub. CVSS 3.1 Base Score 8.5 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H).",
+    "tags": [],
+    "title": "CVE-2026-83393 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83393"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2024-58400",
+    "published": "2026-10-27T01:19:03.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "llama.cpp before b3701 contains an out-of-bounds read vulnerability in llama_decode_internal and llama_encode_internal that allows remote unauthenticated attackers to read memory by supplying unvalidated token IDs. Attackers can send integer-array prompts to the llama-server /completion endpoint with IDs outside 0 to n_vocab to read embedding memory out of bounds or crash the process.",
+    "tags": [],
+    "title": "CVE-2024-58400 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-58400"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2026-116816",
+    "published": "2026-10-27T01:19:06.437",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "llama.cpp b5899 before b10261 contains a heap out-of-bounds write vulnerability in llm_tokenizer_plamo2::build that allows attackers to corrupt heap memory via crafted GGUF models. Attackers can supply BYTE-typed token text like <0x-1> whose negative parsed value writes token ids before the bytes_ buffer during model loading, causing crashes or potential code execution.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-116816 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116816"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-116836",
+    "published": "2026-10-27T01:19:06.733",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the adjacent network and under certain conditions could exploit a Stored Cross-Site Scripting (XSS) vulnerability found in airMAX M devices to escalate privileges on the device.",
+    "tags": [],
+    "title": "CVE-2026-116836 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116836"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-116837",
+    "published": "2026-10-27T01:19:06.860",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor with access to the adjacent network could exploit a Heap-based Buffer Overflow vulnerability found in airMAX M, LTU, SolarPoint, and SolarSwitch devices to execute arbitrary code on the device.",
+    "tags": [],
+    "title": "CVE-2026-116837 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116837"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-116838",
+    "published": "2026-10-27T01:19:06.973",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A malicious actor who lures an authenticated user to a malicious page could exploit a Cross-Site Request Forgery (CSRF) vulnerability found in airMAX M devices to execute a Command Injection on the device.",
+    "tags": [],
+    "title": "CVE-2026-116838 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116838"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-116843",
+    "published": "2026-10-27T01:19:07.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mistral Vibe before 3.0.3 contains a remote code execution vulnerability that allows attackers to run commands by defining git filter drivers in an untrusted repository's .git/config. When started with --worktree, git worktree add applies .gitattributes and runs filter smudge, clean, or process commands before the trusted-folder check, executing attacker commands with user privileges.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-116843 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116843"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209090",
+    "published": "2026-10-27T14:10:33+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한화손해보험이 지난 23일 해양 및 선박 사이버보안 전문기업 싸이터와 해양 사이버보험 공동사업 추진을 위한 상호 협력을 체결했다.이번 협약은 해양 사이버보험 역량과 선박 보안기술을 결합한 통합 서비스를 제공하고 관련 시장을 육성하기 위해 마련됐다.최근 선박의 운영기술(OT) 해킹과 위성통신 교란 등 해운 공급망을 겨냥한 사이버 위협이 현실화되고 있다. 국제해사기구(IMO)와 국제선급협회(IACS)의 사이버 복원력 규제도 강화되고 있으나, 기존 선박보험은 일반적인 사이버 손해를 면책하고 있어 선사들의 보장 공백이 큰 상황이다.양사는",
+    "tags": [
+      "금융"
+    ],
+    "title": "한화손해보험, 싸이터와 손잡고 해양 사이버보험 공동사업 추진",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209090"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209089",
+    "published": "2026-10-27T14:00:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "쿤텍이 AI 시대의 사이버 보안 위협에 대응하기 위한 중장기 보안 전략과 핵심 솔루션을 공개했다.쿤텍은 AI 모델 도입부터 에이전트 운영, 데이터 활용까지 각 단계에 보안 기술을 적용해 IT와 OT 인프라의 위협 가시화, 탐지, 대응 시간을 단축하는 것을 목표로 제시했다.AI가 기업 업무에 도입되고 AI 에이전트가 자율적으로 판단하는 환경이 확대되면서 새로운 보안 위협이 나타나고 있다. AI 에이전트가 정상적인 권한을 사용하면서도 의도하지 않은 행동을 수행하거나 민감한 정보를 외부로 전송할 수 있기 때문이다.쿤텍은 위협을 빠르게 발",
+    "tags": [],
+    "title": "쿤텍, AI 전주기 통합 보안 전략 발표...모델부터 데이터까지 안전하게 보호",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209089"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209088",
+    "published": "2026-10-27T13:52:00+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI 솔루션 전문기업 지미션이 지난 21일부터 23일까지 일본 지바현 마쿠하리 메세에서 열린 ‘재팬 IT 위크 오텀 2026(Japan IT Week Autumn 2026)’에 참가해 지능형 문서 플랫폼 ‘AX 인텔리전트 문서(AX Intelligent Document)’를 선보였다.재팬 IT 위크는 알엑스 재팬(RX Japan)이 주최하는 일본의 대표 IT 전시회다. 지미션은 대한무역투자진흥공사(KOTRA)와 한국정보보호산업협회(KISIA)가 운영한 한국관에서 부스를 열었다.이번에 선보인 AX 인텔리전트 문서는 팩스, 이메일, 스",
+    "tags": [],
+    "title": "지미션, ‘재팬 IT 위크 오텀 2026’ 참가...일본 문서 DX 시장 공략 나선다",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209088"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209086",
+    "published": "2026-10-27T13:18:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이지서티가 K공사에 개인정보 필터링 솔루션 'U-PRIVACY SAFER V4.0'을 기반으로 한 사용자 중심의 개인정보 비식별 지원 체계를 구축했다.이번 체계 구축은 임직원이 직접 참여하는 비식별 처리 시스템 마련에 초점을 맞췄다. 콘텐츠 등록 단계에서 제공되는 자동 탐지 및 마스킹 기능뿐만 아니라, 사용자가 직접 문서 내 개인정보 포함 여부를 확인하고 세밀하게 비식별 조치를 수행할 수 있도록 기능을 강화했다.새롭게 도입된 솔루션은 K공사의 홈페이지와 B2B 업무시스템에서 사용자가 콘텐츠를 등록할 때 성명과 연락처 등 개인정보를",
+    "tags": [
+      "금융"
+    ],
+    "title": "이지서티, K공사에 임직원 참여형 개인정보 비식별 체계 구축",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209086"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209085",
+    "published": "2026-10-27T12:57:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "쿠도커뮤니케이션이 오픈소스 보안 전문기업 턱스케어(TuxCare)의 PHP 보안 지원 솔루션을 통해 지원이 종료된(EOL) PHP를 운영하는 국내 기업의 보안 공백 해소에 나선다.최근 웹서비스 개발에 널리 사용되는 PHP에서 원격 코드 실행으로 이어질 수 있는 'PHP2Shell' 취약점이 공개되면서 신속한 보안 업데이트 필요성이 커졌다. 이후 신규 취약점까지 추가로 확인되면서 기존 패치 적용 여부뿐 아니라 운영 환경과 서버 설정에 대한 지속적인 점검이 요구되는 상황이다.특히 지원이 종료된 PHP를 사용하는 기업은 보안 업데이트와",
+    "tags": [
+      "RCE"
+    ],
+    "title": "쿠도커뮤니케이션, 턱스케어로 구버전 PHP 보안 공백 차단 지원",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209085"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNY2JDanUwM3MyVmNabUhBc28td01aQU83T1RfY0h6Qk1LenpXVW53ejNWaXFOTXRQUXF2MEg5TG9SWW44aFRFRnhUMlhGanJnV05XVEwxMHRVbE1LUVhGSGRVVmlyM2FfZjREcHdPMkRHT0VqQXdXNkNhYWFfM2NXSdIBlAFBVV95cUxPYm1USl93VUhXRFAyVUNqcjdHNGtTemdZZllGSlZvX295aHhYN0hLX3lfLXhEUzhzRjI0d19pTDdTQk52cV9mNFd2SlE5bERtdVQ1VUZUM0FHS1o1NXNsS2s0WlRJNHBMc2R0ZHVDVzdkbmlZaFp2SG0xOXNmNkFWaGRoZEpCM0kxS2xDZHkyTkRhU3FL",
+    "published": "2026-10-27T01:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "“회원 가입비 부담 커” 중소 금융사 호소에… 금보원, 인하 검토",
+    "tags": [
+      "금융"
+    ],
+    "title": "“회원 가입비 부담 커” 중소 금융사 호소에… 금보원, 인하 검토",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNY2JDanUwM3MyVmNabUhBc28td01aQU83T1RfY0h6Qk1LenpXVW53ejNWaXFOTXRQUXF2MEg5TG9SWW44aFRFRnhUMlhGanJnV05XVEwxMHRVbE1LUVhGSGRVVmlyM2FfZjREcHdPMkRHT0VqQXdXNkNhYWFfM2NXSdIBlAFBVV95cUxPYm1USl93VUhXRFAyVUNqcjdHNGtTemdZZllGSlZvX295aHhYN0hLX3lfLXhEUzhzRjI0d19pTDdTQk52cV9mNFd2SlE5bERtdVQ1VUZUM0FHS1o1NXNsS2s0WlRJNHBMc2R0ZHVDVzdkbmlZaFp2SG0xOXNmNkFWaGRoZEpCM0kxS2xDZHkyTkRhU3FL?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE8xNlpLWG00WjNzSkx3UXBMWGg2NU04bzdzUV9FUndxUGtueS1TWmk3VkdDTnYwQXFmcWNsaFpWamxDOFFYOU9UekZSZ0hQQ2ZHUUhSdXdPX3BaNzDSAWBBVV95cUxOMkNDTnp3VGllN2VqXzl4dXJlNUpWNm1GSHBSMktmQ3NkaEtOY2JyZDhvUlV6SnZybV9lT0JBTHB2NU5iS2ZUdVQxblhTZUw4UV9nWUlFVkNXdUl5c2NEYXg",
+    "published": "2026-10-27T00:22:53+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[임기범의 AI 혁신 스토리] AI 해킹 시대, 금융보안의 과제",
+    "tags": [
+      "금융"
+    ],
+    "title": "[임기범의 AI 혁신 스토리] AI 해킹 시대, 금융보안의 과제",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8xNlpLWG00WjNzSkx3UXBMWGg2NU04bzdzUV9FUndxUGtueS1TWmk3VkdDTnYwQXFmcWNsaFpWamxDOFFYOU9UekZSZ0hQQ2ZHUUhSdXdPX3BaNzDSAWBBVV95cUxOMkNDTnp3VGllN2VqXzl4dXJlNUpWNm1GSHBSMktmQ3NkaEtOY2JyZDhvUlV6SnZybV9lT0JBTHB2NU5iS2ZUdVQxblhTZUw4UV9nWUlFVkNXdUl5c2NEYXg?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:245254",
+    "published": "2026-10-27T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "투자한도 100%는 상품의 원리금 보장성 표시가 아닙니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=245254&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:244991",
+    "published": "2026-10-27T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "증권업계 신용융자 자율관리 강화를 위한 증권사 CRO 간담회 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=244991&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE9rcHBGRl9nbW00S1pvSVVLdVVRQXEyNy05MndoZlU3UFl5V2R1NDFEWmxmRjB1Y18xNXVUcmZPY24xQ0lKRmxJNFgybkptUG1nZXVHaGZ2eVNXMU9UM0wxaWR3",
+    "published": "2026-10-27T06:02:51+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "업종 가리지 않는 개인정보 유출에 과징금 1조원 육박…배상 문턱은 여전히 높아",
+    "tags": [],
+    "title": "업종 가리지 않는 개인정보 유출에 과징금 1조원 육박…배상 문턱은 여전히 높아",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9rcHBGRl9nbW00S1pvSVVLdVVRQXEyNy05MndoZlU3UFl5V2R1NDFEWmxmRjB1Y18xNXVUcmZPY24xQ0lKRmxJNFgybkptUG1nZXVHaGZ2eVNXMU9UM0wxaWR3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTE1ORWlKWjFFaEcyVVJINE95VWFTcEpyTjZSWDhUWUpDT0xlTzJTUXBINkdXNnRJM05PUTFtSGN4M0pUVzRIWkM2OUNJZkx3YjVidXlvaGJuQ0hOVHNMQ2I4",
+    "published": "2026-10-27T01:23:32+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[개인정보 정책, 변화의 1년③] AI 학습에 개인정보 원본도 활용...데이터 규제의 변화",
+    "tags": [],
+    "title": "[개인정보 정책, 변화의 1년③] AI 학습에 개인정보 원본도 활용...데이터 규제의 변화",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ORWlKWjFFaEcyVVJINE95VWFTcEpyTjZSWDhUWUpDT0xlTzJTUXBINkdXNnRJM05PUTFtSGN4M0pUVzRIWkM2OUNJZkx3YjVidXlvaGJuQ0hOVHNMQ2I4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9VRklfa1lfMlIzM2lESC1kNE9ac0ZUTW1nT3Y2UjAwVHhsRmFpamVlanhBOGx0dUE3RUl2ekRLOGFHd3YwdFRsTDhydGI0UzJzVGNCd3llV2diTklGMjFONkxyclhiWGFJUkhwLTdQdw",
+    "published": "2026-10-26T22:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "메타, 개인정보 보호 약속 어겨 35조 원 제재…네이버·카카오에 던진 과제",
+    "tags": [],
+    "title": "메타, 개인정보 보호 약속 어겨 35조 원 제재…네이버·카카오에 던진 과제",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9VRklfa1lfMlIzM2lESC1kNE9ac0ZUTW1nT3Y2UjAwVHhsRmFpamVlanhBOGx0dUE3RUl2ekRLOGFHd3YwdFRsTDhydGI0UzJzVGNCd3llV2diTklGMjFONkxyclhiWGFJUkhwLTdQdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE9uSEFTQ3R0VnBHQ1ZVQTJrVFVmTTE4Qi04cURud0d3MEFmZ2ZRa3J5bFJXclhxZ3drbnc3Wll6REJtVS12QkZaR1pnVnhud3EzR2VkLThGNkRjWVVLUGdjVTBqM0JUR3RMdExKMzl3",
+    "published": "2026-10-27T05:59:37+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "[포커스] 금융사 555곳 보안점검 했는데···미래에셋생명 해킹 막지 못해",
+    "tags": [
+      "금융"
+    ],
+    "title": "[포커스] 금융사 555곳 보안점검 했는데···미래에셋생명 해킹 막지 못해",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9uSEFTQ3R0VnBHQ1ZVQTJrVFVmTTE4Qi04cURud0d3MEFmZ2ZRa3J5bFJXclhxZ3drbnc3Wll6REJtVS12QkZaR1pnVnhud3EzR2VkLThGNkRjWVVLUGdjVTBqM0JUR3RMdExKMzl3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMihAFBVV95cUxQZENmRVVMYkg0YmxMNUxDQjZpREZGVjBfREw4TjVsVEdZQ2hOcThYQ2lmY0NaQ19oZ1ktQWlXcXF4Z3RfeGtRWkZvN0daOG1aQ2dRcC1laUFVVW5sZlFGQlFvM2Z1cXJtcmFHZUVzQWZiLVhic1ZyU3JlWV9ZaWNUOHFFMEQ",
+    "published": "2026-10-27T05:49:30+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "[AI해킹 속수무책] 한달새 은행·보험 全금융권 유출… \"대한민국 금융안보 뚫렸다\" 당국 책임론",
+    "tags": [
+      "금융"
+    ],
+    "title": "[AI해킹 속수무책] 한달새 은행·보험 全금융권 유출… \"대한민국 금융안보 뚫렸다\" 당국 책임론",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZENmRVVMYkg0YmxMNUxDQjZpREZGVjBfREw4TjVsVEdZQ2hOcThYQ2lmY0NaQ19oZ1ktQWlXcXF4Z3RfeGtRWkZvN0daOG1aQ2dRcC1laUFVVW5sZlFGQlFvM2Z1cXJtcmFHZUVzQWZiLVhic1ZyU3JlWV9ZaWNUOHFFMEQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE9wR3hxa1ZRMXBFWUF5cGMtajctSzVDQzkyeTM2OUdsa2poT3BzNmxTTE9DWTJmd0RjbjdKczl2aHZZVlJUaElPNnNRYTl5WG05VEU3VW03X1B4VTZI",
+    "published": "2026-10-27T01:43:50+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "[T나는 보안] AI 해킹 왜 못 막나…해킹 속도는 날고 방패는 제자리",
+    "tags": [],
+    "title": "[T나는 보안] AI 해킹 왜 못 막나…해킹 속도는 날고 방패는 제자리",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9wR3hxa1ZRMXBFWUF5cGMtajctSzVDQzkyeTM2OUdsa2poT3BzNmxTTE9DWTJmd0RjbjdKczl2aHZZVlJUaElPNnNRYTl5WG05VEU3VW03X1B4VTZI?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE5EWkFxb2lzN1c2Y0pZSXp1NVQ2TEZhWFBsakxHT3JKR21jMXluNVgyRm8yRVVMc2FkcTlxMGRrWWNPUVdBTzVwaVM2YWlHOUE0cFNuTDhnYmZtVnlqbmZsOU1FM2ZRZEtEUlFuc2RCYS3SAXRBVV95cUxNdHZPYjQxZ05JYzBVMkc1bDhING9TSEtDbGNWWC1KZzVRNHlOV3JFdzJvajBiSWxlYk11SGpXTkc2YTlrdXBZQkN1b1czU3h5T3l3TDJPVEVZQ3VHRml6Mm5Ia2w4Ny1JMUxhMldlR0Q5Q0ZuYw",
+    "published": "2026-10-27T04:52:07+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "해킹 한 달, 금융사 16곳 털려… 수습 커녕 확산 중",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 한 달, 금융사 16곳 털려… 수습 커녕 확산 중",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5EWkFxb2lzN1c2Y0pZSXp1NVQ2TEZhWFBsakxHT3JKR21jMXluNVgyRm8yRVVMc2FkcTlxMGRrWWNPUVdBTzVwaVM2YWlHOUE0cFNuTDhnYmZtVnlqbmZsOU1FM2ZRZEtEUlFuc2RCYS3SAXRBVV95cUxNdHZPYjQxZ05JYzBVMkc1bDhING9TSEtDbGNWWC1KZzVRNHlOV3JFdzJvajBiSWxlYk11SGpXTkc2YTlrdXBZQkN1b1czU3h5T3l3TDJPVEVZQ3VHRml6Mm5Ia2w4Ny1JMUxhMldlR0Q5Q0ZuYw?oc=5"
   }
 ]
