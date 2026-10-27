@@ -58,6 +58,7 @@ cves: []
 - 2026-10-15 [금융보안원](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBoYVhwZUVaR2tSMC1GbFd3cUVTMlFTY1E5S2NZNmo5QUVESnVCRV85TjAzdHBhRTNaRC0zaTdmY1A2dHNoaVJBMllTNjBFYThzVUREQ2sxOWpjUQ?oc=5) — 화이트해커 투입해 AI 해킹 대응, 은행권 인증·접근통제 대대적 점검
 - 2026-10-16 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208898) — OK저축은행 고객 250명 정보유출 추가 확인, 피해 대상 67명 증가 포함
 - 2026-10-16 [금융보안원](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBPX2w1OXdiM05HaW5telhNUjN6R0lSQVV0Q2pJUUZVUjUwZFBXRFd3SG8tZE5FMV9KNjRiYjNxV1AzZUk4OC00VUgyWlZSVzcyX1BDRFJsUXlJUFU0TDFoOQ?oc=5) — OK저축은행 또 해킹으로 고객 268명 정보 유출, 이번 공격 IP는 금융보안원 공유 IP와 상이
+- 2026-10-26 [금융보안원](https://news.google.com/rss/articles/CBMiWkFVX3lxTE05Q0VEVlRTcFdiMWNhY1J3Zlh3SXhBSnptVVBMSjExdnpqMFZBaEhUcnpDVFpjdjdPbU1teGdqWDRkUFREU20zWGJMRVJqbTZHd1djNjgxNzFqQQ?oc=5) — 보험업권 해킹 확대 확인, 미래에셋생명 포함 보험사 첫 정보 유출
 
 ## 관련
 

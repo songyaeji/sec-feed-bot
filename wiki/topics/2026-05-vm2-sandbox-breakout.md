@@ -2,7 +2,7 @@
 slug: vm2-sandbox-breakout
 first_seen: 2026-05-04
 tags: [VM2, 샌드박스, RCE, Node.js]
-cves: [CVE-2026-24781, CVE-2026-43997, CVE-2026-44005, CVE-2026-44006, CVE-2026-43999]
+cves: [CVE-2026-24781, CVE-2026-43997, CVE-2026-44005, CVE-2026-44006, CVE-2026-43999, CVE-2026-47131, CVE-2026-47137, CVE-2026-47140, CVE-2026-47208, CVE-2026-47686]
 ---
 
 # VM2 샌드박스 탈출 및 원격 코드 실행
@@ -16,4 +16,8 @@ Node.js 샌드박스 **VM2** v3.11.0 이전 버전에서 여러 경로의 샌드
 - 2026-05-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-44005) — CVE-2026-44005 프로토타입 오염 (CVSS 10.0)
 - 2026-05-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-44006) — CVE-2026-44006 BaseHandler.getPrototypeOf (CVSS 10.0)
 - 2026-05-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-43999) — CVE-2026-43999 module builtin 우회 (CVSS 9.9)
+- 2026-06-12 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-47131) — CVE-2026-47131 Buffer.call을 이용한 프로토타입 오염 (CVSS 10.0, v3.11.4에서 패치)
+- 2026-06-12 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-47137) — CVE-2026-47137 CVE-2023-37903 패치 우회 strict equality 바이패스 (CVSS 10.0, v3.11.4에서 패치)
+- 2026-06-12 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-47140) — CVE-2026-47140 위험한 빌트인 누락 process, inspector/promises (CVSS 10.0, v3.11.4에서 패치)
+- 2026-06-12 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-47208) — CVE-2026-47208 추가 샌드박스 탈출 (CVSS 10.0, v3.11.4에서 패치)
 - 2026-08-17 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-47686) — CVE-2026-47686 Error.cause 검증 누락 호스트 객체 접근 (CVSS 9.9)
