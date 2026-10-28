@@ -840,5 +840,486 @@
     "tags": [],
     "title": "US indicts Malaysian national after Madagascar scam operation uncovered",
     "url": "https://therecord.media/malaysian-national-indicted-after-scam-centers-raid-madagascar"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-20316",
+    "kev": true,
+    "published": "2026-07-29T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impa",
+    "tags": [],
+    "title": "CVE-2026-20316: Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability (Cisco Secure Firewall Management Center (FMC))",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20316"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-110879",
+    "published": "2026-10-28T01:16:55.180",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "jackson-databind validates the outer class of a class-name type ID but accepts attacker-selected classes inside its generic arguments, even when those classes violate the declared type or would be rejected as direct type IDs. This bypasses the generic-argument validation added for CVE-2026-54512 (GHSA-j3rv-43j4-c7qm), of which this is an incomplete fix.\n\n\n\nDatabindContext._resolveAndValidateGeneric() checks the outer class against the declared base type and then passes each argument from the type ID to _validateTypeParameter(), which validates the argument against the outer base type rather than enforcing its corresponding declared generic binding. It also invokes validators with arguments that have not passed the subtype check those validators expect. Under the default DefaultBaseTypeLimitingValidator this accepts an unrelated class inside a generic subtype even when the same class is rejected as a direct type ID. Where an allowIfBaseType(...) rule approves the outer type, Jackson substitutes LaissezFaireSubTypeValidator, so the configured validator no longer restricts the embedded arguments. The element type of a plain array type ID such as [Lpkg.Gadget; is likewise left unvalidated once the array's base type is approved.\n\n\n\nAffected paths include annotation-based class-name polymorphism with a default Jackson 3.x JsonMapper, configured default typing in both Jackson 2.x and 3.x, and integrations that expose that default typing. The default-validator case requires no applic",
+    "tags": [],
+    "title": "CVE-2026-110879 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110879"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-106013",
+    "published": "2026-10-28T02:17:01.303",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Jupiter X Core plugin for WordPress is vulnerable to Authentication Bypass via the Twitter/X Social Login handler in all versions up to and including 4.61.0. The vulnerability exists within the verify_twitter_callback function because after exchanging the visitor's oauth_verifier for their access token, the handler never calls setOauthToken() to reassign the returned credentials to the TwitterOAuth client, causing the subsequent account/verify_credentials API call to remain signed with the site operator's stored Access Token and Access Token Secret rather than the authenticating visitor's token. This causes the X API to return the profile of the X application owner instead of the signing-in visitor, and the plugin then resolves and authenticates a WordPress account solely by matching that owner's email address via wp_set_auth_cookie(), allowing unauthenticated attackers to gain authenticated access as the WordPress user whose email corresponds to the X app owner, who is typically the site administrator.",
+    "tags": [],
+    "title": "CVE-2026-106013 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106013"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-5821",
+    "published": "2026-07-02T06:16:14.220",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Image Optimizer plugin for WordPress is vulnerable to arbitrary file deletion in versions up to and including 1.7.4. This is due to insufficient path validation in the Image_Backup::remove() function where backup file paths stored in post meta are used directly in file deletion operations without verifying they are within the uploads directory. The plugin stores backup file paths in the image_optimizer_metadata post meta field and trusts these paths completely when deleting backups on the delete_attachment hook. An authenticated attacker with Author-level access can edit the image_optimizer_metadata post meta on their own attachments via WordPress's Custom Fields interface, injecting arbitrary absolute file paths into the backups array. When the attacker subsequently deletes the attachment, the plugin calls File_System::delete() on each path without validation. This makes it possible for authenticated attackers, with Author-level access and above, to delete arbitrary files on the server within the web server's filesystem permissions, potentially leading to denial of service, data loss, or security degradation.",
+    "tags": [],
+    "title": "CVE-2026-5821 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5821"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209105",
+    "published": "2026-10-28T11:08:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "가상자산 거래소 빗썸의 사내 모바일 그룹웨어 시스템에서 외부 침입에 따른 개인정보 유출 사고가 발생했다. 임직원 개인정보 유출이 확인된 가운데, 회사는 업무 과정에서 주고받은 자료에 회원정보가 포함됐는지 조사하고 있다. 현재까지 공개된 내용만으로는 회원정보 유출 여부나 전체 피해 규모를 확정하기 어렵다.28일 공개된 빗썸 측 설명을 종합하면, 회사는 지난 27일 사내 모바일 그룹웨어에 외부 비인가자가 비정상적으로 접근해 개인정보가 유출된 사실을 인지했다. 사고를 인지한 당일 한국인터넷진흥원(KISA)과 개인정보보호위원회에 신고했다.",
+    "tags": [],
+    "title": "빗썸 사내 그룹웨어 해킹…임직원 개인정보 유출, 회원정보도 조사",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209105"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209103",
+    "published": "2026-10-28T08:54:43+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "클라우드 인프라 관리에 사용되는 하시코프(HashiCorp)의 콘술(Consul)에서 접근권한을 우회해 서비스 인증서와 개인키를 확보할 수 있는 보안 취약점이 공개됐다.하시코프는 10월 26일 보안 권고 HCSEC-2026-46을 발표하고 콘술과 콘술 엔터프라이즈(Consul Enterprise)에서 발견된 CVE-2026-105765 취약점의 영향을 설명했다.취약점은 CVSS 3.1 기준 7.5점으로 평가됐다. 영향을 받는 버전은 콘술과 콘술 엔터프라이즈 1.17.0부터 2.0.4까지다.콘술은 여러 서버와 응용서비스가 서로를 찾고",
+    "tags": [],
+    "title": "하시코프 콘술 접근통제 우회 취약점…서비스 인증서·개인키 노출 위험",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209103"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209102",
+    "published": "2026-10-28T08:53:20+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈소스 협업 플랫폼 예스위키(YesWiki)에서 내부 시스템이나 클라우드 인증정보에 접근할 수 있는 고위험 취약점이 공개됐다.취약점은 CVE-2026-116827로 등록됐으며, CVSS 4.0 기준 8.2점이다. 예스위키 4.7.0 미만 버전이 영향을 받는다.이번 문제는 예스위키의 바자르(Bazar) 데이터 가져오기 기능에서 발생한다.관리자 권한을 가진 사용자가 외부 파일을 가져오는 과정에서 조작된 인터넷주소를 입력하면 서버가 원래 허용되지 않아야 할 내부 주소로 요청을 보낼 수 있다.이를 서버 측 요청 위조(SSRF) 취약점이라",
+    "tags": [],
+    "title": "예스위키 고위험 취약점 공개…내부망·클라우드 인증정보 노출 가능",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209102"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209101",
+    "published": "2026-10-28T08:51:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "텔레그램과 위챗 등 모바일 메신저를 위장해 사용자 계정과 인증정보를 탈취하는 안드로이드 악성코드가 분석됐다.보안연구자 오비(Ovi)가 공개한 분석에 따르면 '유크리에이터(uCreator)'는 정상 메신저 응용프로그램에 악성 기능을 삽입해 재배포하는 방식으로 작동한다.공격자는 정상 텔레그램과 위챗 앱을 변조한 뒤 공식 앱 장터가 아닌 외부 경로를 통해 사용자에게 설치하도록 유도한다.변조된 앱은 기존 메신저 기능을 대부분 유지하기 때문에 사용자가 악성 기능의 존재를 알아차리기 어렵다.분석에 따르면 공격자는 이러한 앱을 이용해 메신저 계",
+    "tags": [],
+    "title": "텔레그램·위챗 위장 안드로이드 악성코드…메신저 계정·2단계 인증정보 탈취",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209101"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209099",
+    "published": "2026-10-28T08:48:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "구글 클라우드의 인공지능(AI) 데이터 연결도구에서 외부 공격자가 서버 파일을 탈취하거나 변조할 수 있는 치명적인 취약점이 공개됐다.구글 클라우드가 등록한 취약점 CVE-2026-93328은 데이터베이스용 모델 컨텍스트 프로토콜 도구인 'MCP 툴박스'에서 발생하는 문제다. CVSS 4.0 기준 위험도는 9.3점이다.영향을 받는 버전은 1.2.0부터 1.5.0 미만까지다.MCP는 AI 에이전트가 데이터베이스와 외부 서비스에 연결해 필요한 정보를 조회하거나 작업을 수행하도록 지원하는 기술이다.이번 취약점은 구글 클라우드 저장소와 연결",
+    "tags": [
+      "AI"
+    ],
+    "title": "구글 클라우드 AI 연결도구에 치명적 취약점…서버 파일 탈취·변조 가능",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209099"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209097",
+    "published": "2026-10-28T08:44:20+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "전 세계 냉장·냉동 설비를 관리하는 수많은 제어시스템이 인터넷에 노출돼 식품과 의약품 공급망의 보안 위협으로 떠오르고 있다.사이버보안 기업 포어스카우트 위협연구 조직 베데레 랩스(Vedere Labs)는 전 세계 99개 국가와 지역에서 인터넷에 노출된 냉장·냉동 설비 관련 서비스 1만2,976건을 식별한 것으로 보고됐다.연구진은 인터넷 연결 장비 검색 서비스를 통해 6,017개의 공인 인터넷주소(IP)에 연결된 냉장설비 관련 서비스를 조사했다.이러한 장비는 슈퍼마켓과 대형 유통시설, 식품 물류센터, 의약품 보관시설 등에서 온도와 냉",
+    "tags": [],
+    "title": "전 세계 99개국 냉장·냉동 제어시스템 약 1만3천 건 인터넷 노출, 식품·의약품 공급망 보안 비상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209097"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209096",
+    "published": "2026-10-28T08:41:34+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "브라질 전자상거래 결제 플랫폼 컨버트르(Convertr)에서 고객의 신용카드 정보를 탈취하는 공급망 공격이 확인됐다.전자상거래 보안기업 산섹(Sansec)은 10월 26일 발표한 위협 분석에서 공격자가 컨버트르의 웹사이트 이용 분석 프로그램을 변조해 결제 과정에서 입력되는 개인정보와 카드정보를 외부 서버로 전송하도록 했다고 밝혔다.산섹에 따르면 악성코드는 24일부터 컨버트르의 결제 화면에 삽입됐다. 공격자가 탈취하도록 설계한 정보는 카드번호, 유효기간, 카드 보안코드(CVV), 카드 소유자 이름, 브라질 납세자 식별번호(CPF) 등",
+    "tags": [
+      "금융"
+    ],
+    "title": "브라질 전자상거래 결제 플랫폼 해킹, 고객 카드번호·보안코드 탈취",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209096"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209093",
+    "published": "2026-10-28T08:40:27+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "덴마크 코펜하겐대학교가 대규모 개인정보 유출 사고를 조사하던 중 추가 해킹 공격을 받아 주요 행정시스템 운영을 중단했다.코펜하겐대학교는 10월 26일(현지시간) 공식 공지를 통해 이날 새로운 사이버공격이 발생했으며, 피해 확산을 막기 위해 워크존(Workzone), 님버스(Nimbus) 등 일부 행정시스템을 예방적으로 중단했다고 밝혔다. 대학 홈페이지의 일부 서비스에도 접속 장애가 발생할 수 있다고 안내했다.앞서 대학 측은 23일 발생한 침해사고와 관련해 약 52만5천 명의 개인정보가 노출 위험에 처했다고 발표했다. 침해 대상에는",
+    "tags": [
+      "금융"
+    ],
+    "title": "덴마크 코펜하겐대, 개인정보 52만5천 명 유출 이어 또 해킹…행정시스템 긴급 중단",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209093"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+    "published": "2026-10-27T23:35:51+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The GMO Group has urged customers to disconnect their systems from the internet and shut down computers after a threat actor who breached the company's Onamae Desktop Cloud threatened to launch a ransomware attack today. [...]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
+    "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/96151/",
+    "published": "2026-10-26T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "While tracking infrastructure related to ValleyRAT, numerous suspicious websites were identified that impersonated companies and brands from Korea such as Doosan Robotics and Cheonjeong. The identified sites used the actual companies’ logos, promotional videos, and descriptions to disguise themselves as official websites. The websites offered features such as invitation-code-based registration, login, fee history inquiries, VIP […]",
+    "tags": [],
+    "title": "RATatouille: Today’s Special: Impersonating Companies in Korea, Payments in Cryptocurrency",
+    "url": "https://asec.ahnlab.com/en/96151/"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/96155/",
+    "published": "2026-10-11T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Statistics on Malware Distributed to the Financial Sector In Attack Stage 1, phishing (attacks that trick users into revealing information) had the highest rate at 2.1, Up from 1.8 The previous month. In Attack Stage 2, “Dropper/Downloader” (a type that downloads additional malware) was the most common at 1.1, Though this was a decrease from […]",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "Security Issues in the Korean & Global Financial Sector in September 2026",
+    "url": "https://asec.ahnlab.com/en/96155/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMikwFBVV95cUxOeC1VUXNQT2xzRHNGdmItNGt2NG1WdHo5bjBjUW1LS2M0X3RuNkFCVTV5TDJYU2V5enhPQWxmSkxleUhOa2NGWmZJWkdvZ0s2cEJpY1Y0eHN1T3BtZ29lOFRvNllTdmtxSUlhTjBwZVd4WXNyVjZtbVN5cU9kNmI5dXM2MkpibUdLLTB4bWd6Nzg0LWM",
+    "published": "2026-10-27T16:12:33+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "오라클, OpenAI 기반 AI 보안 메시 출시",
+    "tags": [],
+    "title": "오라클, OpenAI 기반 AI 보안 메시 출시",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOeC1VUXNQT2xzRHNGdmItNGt2NG1WdHo5bjBjUW1LS2M0X3RuNkFCVTV5TDJYU2V5enhPQWxmSkxleUhOa2NGWmZJWkdvZ0s2cEJpY1Y0eHN1T3BtZ29lOFRvNllTdmtxSUlhTjBwZVd4WXNyVjZtbVN5cU9kNmI5dXM2MkpibUdLLTB4bWd6Nzg0LWM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMimAFBVV95cUxObEdnV3dhaEJjVDJHdEMwNFpMcE5hdFJWdXRIMHhJeXJWSzhaOVEtQTNTUWYwS1NMUGNTSnVfTERqdVFTOHc2VW9GdFZyYUJuVFBxVlNINVlORUVhb0FaM05vb0l3NTMzNUVrdEc0R2JTd1R0V2dlUFhuV0NkUzJpaVZReGd2NUtmZEVuSVpwalJiellIQmZfQQ",
+    "published": "2026-10-27T17:06:01+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Invesco와 Anthropic, Claude에서 자문가용 포트폴리오 도구 연결",
+    "tags": [],
+    "title": "Invesco와 Anthropic, Claude에서 자문가용 포트폴리오 도구 연결",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObEdnV3dhaEJjVDJHdEMwNFpMcE5hdFJWdXRIMHhJeXJWSzhaOVEtQTNTUWYwS1NMUGNTSnVfTERqdVFTOHc2VW9GdFZyYUJuVFBxVlNINVlORUVhb0FaM05vb0l3NTMzNUVrdEc0R2JTd1R0V2dlUFhuV0NkUzJpaVZReGd2NUtmZEVuSVpwalJiellIQmZfQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMilwFBVV95cUxPTEt0TXZOWVdMZDh5MktiZnNTcExrRExhSVl6bG04VXdRYVM3Z29xS190Mm1TZzVkZ21LZm1xQVZwUW9RaTBBbzAzcmVsZ0k5VFB4TUZvaXA1RVN6TEVGbXVJeG95TnIwLWV2U0JTTHZ5dTZ4N3Q5d0xsUkE5c0xUWl9DZl90VTE2ZDZNeGQ2d1BJZmRWTm1N",
+    "published": "2026-10-27T16:40:01+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Oracle, OpenAI와의 협력 확대를 통해 기업용 AI 솔루션 4종 선보여",
+    "tags": [],
+    "title": "Oracle, OpenAI와의 협력 확대를 통해 기업용 AI 솔루션 4종 선보여",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTEt0TXZOWVdMZDh5MktiZnNTcExrRExhSVl6bG04VXdRYVM3Z29xS190Mm1TZzVkZ21LZm1xQVZwUW9RaTBBbzAzcmVsZ0k5VFB4TUZvaXA1RVN6TEVGbXVJeG95TnIwLWV2U0JTTHZ5dTZ4N3Q5d0xsUkE5c0xUWl9DZl90VTE2ZDZNeGQ2d1BJZmRWTm1N?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUkFVX3lxTE5kbmVObXBOMVViVER6M2U2WFVVQUR0US1QSHQwOUJ0RTdOdFF2ZlF2N2VPbVJMLUJhZHltbFNzUFZnTGZPMmJFVndtQWVnSWFKV2c",
+    "published": "2026-10-28T02:13:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "증권사·운용사·코인거래소까지 줄줄이 뚫렸다…금융권 보안 ‘비상’",
+    "tags": [
+      "금융"
+    ],
+    "title": "증권사·운용사·코인거래소까지 줄줄이 뚫렸다…금융권 보안 ‘비상’",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5kbmVObXBOMVViVER6M2U2WFVVQUR0US1QSHQwOUJ0RTdOdFF2ZlF2N2VPbVJMLUJhZHltbFNzUFZnTGZPMmJFVndtQWVnSWFKV2c?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE82Qjg3SzAwbWFtRmN0eExyTE1NVS1NbUFseTFjTkMyNUJxZFRldDZ4c0lYZm5FUmlKclpwVEJGYnI0NXU0V2RmVXRSNXgzNFQyRS1GcUdxVGxXdw",
+    "published": "2026-10-28T01:32:11+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "빗썸·대신증권·미래에셋운용 뚫렸다…금융권 '보안 참사' [종합]",
+    "tags": [
+      "금융"
+    ],
+    "title": "빗썸·대신증권·미래에셋운용 뚫렸다…금융권 '보안 참사' [종합]",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE82Qjg3SzAwbWFtRmN0eExyTE1NVS1NbUFseTFjTkMyNUJxZFRldDZ4c0lYZm5FUmlKclpwVEJGYnI0NXU0V2RmVXRSNXgzNFQyRS1GcUdxVGxXdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE80U2ZfeU5zZ3RWXzl4ZmM5bm9CQUd6NTBGOVp1bGw3YXNRdkJJMWxnZEp3d0VpQUdxbUdZQTNpZWFOWDBDakVnN1p4aVhjb3Fqb01YdjZLSHpLRWNLTURPOVB3NC1uaWNQZXlB",
+    "published": "2026-10-28T01:54:37+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "고객정보 3만8000건 털린 대신증권…금융 보안 책임 어디 갔나",
+    "tags": [
+      "금융"
+    ],
+    "title": "고객정보 3만8000건 털린 대신증권…금융 보안 책임 어디 갔나",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE80U2ZfeU5zZ3RWXzl4ZmM5bm9CQUd6NTBGOVp1bGw3YXNRdkJJMWxnZEp3d0VpQUdxbUdZQTNpZWFOWDBDakVnN1p4aVhjb3Fqb01YdjZLSHpLRWNLTURPOVB3NC1uaWNQZXlB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWEFVX3lxTFBWZzZ2TXJPWFFrWURNY2xvWVpzc2lxZlhGWXhZdFZBMUVnWWpiVms5cFpFakJtWUpHLVFORkZYckdpVmt3akVpdnF5YXd5Ykt0NFhRZE9na24",
+    "published": "2026-10-27T23:54:44+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "대신증권, 고객정보 유출 긴급 대응…보안 강화·피해 예방 조치",
+    "tags": [
+      "금융"
+    ],
+    "title": "대신증권, 고객정보 유출 긴급 대응…보안 강화·피해 예방 조치",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWZzZ2TXJPWFFrWURNY2xvWVpzc2lxZlhGWXhZdFZBMUVnWWpiVms5cFpFakJtWUpHLVFORkZYckdpVmt3akVpdnF5YXd5Ykt0NFhRZE9na24?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiY0FVX3lxTE5pZEh6aU43V3ZmZHd3Vm5BcFhWNGJ1dmhTOVYwZ3RBU0M2NFRaM1ZNZTJhbnQySXlHaWN5UzdQSVVGa3dOckV3bHN1Ti1zUnFpVEVCZnB5aVpXR3Z2VFBGSWxfdw",
+    "published": "2026-10-28T00:04:11+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[전문가 칼럼] 국민권익위원회 재결 사례로 본 개인정보 보호의 시사점",
+    "tags": [],
+    "title": "[전문가 칼럼] 국민권익위원회 재결 사례로 본 개인정보 보호의 시사점",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5pZEh6aU43V3ZmZHd3Vm5BcFhWNGJ1dmhTOVYwZ3RBU0M2NFRaM1ZNZTJhbnQySXlHaWN5UzdQSVVGa3dOckV3bHN1Ti1zUnFpVEVCZnB5aVpXR3Z2VFBGSWxfdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1qY2hkNlRCT1RRTnBrQWViZkFPdTc5MlZ6WXRoWFhxUnpwUHR1dGVNUEVrUkh6aXY4VHJuV1dIbnh5WWRaSnNXdjVxNkJJbFluUTFITTBMQ01ib2fSAWBBVV95cUxPbFdIdzU2RnBDd0dCSmpUdVNpX203UjBfVDc0X19pX19ab3lpQVZHenNkQ2tCQnZCNU5ZUVRuc1hlbWZ5N1FDcXM2OU5aNzBvUEl4SW42bHlKZ2wtOXpGSDE",
+    "published": "2026-10-28T00:20:02+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "빗썸, 사내 모바일 시스템 침해로 개인정보 유출…\"분석 중\"",
+    "tags": [],
+    "title": "빗썸, 사내 모바일 시스템 침해로 개인정보 유출…\"분석 중\"",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1qY2hkNlRCT1RRTnBrQWViZkFPdTc5MlZ6WXRoWFhxUnpwUHR1dGVNUEVrUkh6aXY4VHJuV1dIbnh5WWRaSnNXdjVxNkJJbFluUTFITTBMQ01ib2fSAWBBVV95cUxPbFdIdzU2RnBDd0dCSmpUdVNpX203UjBfVDc0X19pX19ab3lpQVZHenNkQ2tCQnZCNU5ZUVRuc1hlbWZ5N1FDcXM2OU5aNzBvUEl4SW42bHlKZ2wtOXpGSDE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE1FYlQ0czRiVV8yWU9UalFybzRlNUFRSjU5M2NPVEJRcTU3S3RUUHlOdDdmeE90NklQZ3Fqc05IQjhxWDlPYWowOW9jbmlNdFBsZ1pxUExHZ3BSS1pK",
+    "published": "2026-10-28T00:46:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "빗썸, 사내 시스템 해킹에 개인정보 유출...\"피해 범위 조사\"",
+    "tags": [],
+    "title": "빗썸, 사내 시스템 해킹에 개인정보 유출...\"피해 범위 조사\"",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1FYlQ0czRiVV8yWU9UalFybzRlNUFRSjU5M2NPVEJRcTU3S3RUUHlOdDdmeE90NklQZ3Fqc05IQjhxWDlPYWowOW9jbmlNdFBsZ1pxUExHZ3BSS1pK?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5zbWlCS2VWbzhnTWVSOHpheHpIMFg2U2x5UlBBMmlHa3ZTWXV6Yjk4V1RoVTlGbXJFMzhvdHhWT0l0UTl4Q0lwM3JHb0FWdDFuUmpId05DWkxxeUdCYlVpeg",
+    "published": "2026-10-28T00:58:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "빗썸도 해킹에 뚫렸다…사내 모바일 시스템서 개인정보 유출 확인",
+    "tags": [],
+    "title": "빗썸도 해킹에 뚫렸다…사내 모바일 시스템서 개인정보 유출 확인",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5zbWlCS2VWbzhnTWVSOHpheHpIMFg2U2x5UlBBMmlHa3ZTWXV6Yjk4V1RoVTlGbXJFMzhvdHhWT0l0UTl4Q0lwM3JHb0FWdDFuUmpId05DWkxxeUdCYlVpeg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiowJBVV95cUxOYUdwcklpMHNsVXd0MDVXUmVaZXVJZVpTbVhtZUJFN1VQUGdISGVGMnctTENCeWNoRUlUTnNaMVRXMzdoSElMWXpvQ0JqbXh3LWx0dDJPUXFCTjc5VVRyN21NejdlZGFwa1lqeU5RVXBWbUY1VVI1R180anRsVXFDTnBGQ3c4Mnc3ZjZQUW1jWTU2SkY2cWNzVTMxTmpIeTVIWGxYOW5LdDR1cHN5SHZ2d0gyNHZYbVhHbkFlVHo3ZHF2NHZ4ZE15ZGV6S3ZLYnI4VkNUU1ZXWVZTMWRHNDhFNXVoSFlpLU1wcXZ1a3o0dUlMa19XV2VFWXlJa1h6eDQxRnlBXzdmc1JoUlE3cUZRMmx6Zm9LMFhRVk5URVpMaVJzSG8",
+    "published": "2026-10-28T00:40:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "빗썸 사내 시스템 해킹…회원정보도 유출됐나",
+    "tags": [],
+    "title": "빗썸 사내 시스템 해킹…회원정보도 유출됐나",
+    "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOYUdwcklpMHNsVXd0MDVXUmVaZXVJZVpTbVhtZUJFN1VQUGdISGVGMnctTENCeWNoRUlUTnNaMVRXMzdoSElMWXpvQ0JqbXh3LWx0dDJPUXFCTjc5VVRyN21NejdlZGFwa1lqeU5RVXBWbUY1VVI1R180anRsVXFDTnBGQ3c4Mnc3ZjZQUW1jWTU2SkY2cWNzVTMxTmpIeTVIWGxYOW5LdDR1cHN5SHZ2d0gyNHZYbVhHbkFlVHo3ZHF2NHZ4ZE15ZGV6S3ZLYnI4VkNUU1ZXWVZTMWRHNDhFNXVoSFlpLU1wcXZ1a3o0dUlMa19XV2VFWXlJa1h6eDQxRnlBXzdmc1JoUlE3cUZRMmx6Zm9LMFhRVk5URVpMaVJzSG8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUkFVX3lxTE1NcDEzOXpaOVAzVVJ1a3FYVzlwTFJ3UkNURUNrU3BUMktaeEMyMXQyN0s4dXppak04TVhRc3laeF9idjV6MHVFY1VPT0FmRHF3OHfSAVNBVV95cUxPdmJ1ZnBHODNpTFJEanlra2pObjhVWTYtYXhIQmpTU2lmeEVBdGtWSWlsNUxaMGQ2cjVGeEswV3g4ZURJVDBJZlBfTUR4ZjZXSnVtRQ",
+    "published": "2026-10-28T01:34:03+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋운용도 해킹 발생… “일반 투자자 고유식별정보 유출 없어”",
+    "tags": [],
+    "title": "미래에셋운용도 해킹 발생… “일반 투자자 고유식별정보 유출 없어”",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1NcDEzOXpaOVAzVVJ1a3FYVzlwTFJ3UkNURUNrU3BUMktaeEMyMXQyN0s4dXppak04TVhRc3laeF9idjV6MHVFY1VPT0FmRHF3OHfSAVNBVV95cUxPdmJ1ZnBHODNpTFJEanlra2pObjhVWTYtYXhIQmpTU2lmeEVBdGtWSWlsNUxaMGQ2cjVGeEswV3g4ZURJVDBJZlBfTUR4ZjZXSnVtRQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE9aMXJ2M0lPSkttakU2dWNGSzZjVjI5NWZ2RWpmY0c5S0NMc3VrN0RTek5XbGxvamY4WW5HM0VReDl3TkVSbm96cHV0RmpaMklCQU9WQ2R4SWNrY1k5aVlzTmktYTA",
+    "published": "2026-10-28T02:00:17+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "빗썸·대신증권 이어 미래에셋자산운용도…금융투자업계 해킹 피해 잇따라",
+    "tags": [
+      "금융"
+    ],
+    "title": "빗썸·대신증권 이어 미래에셋자산운용도…금융투자업계 해킹 피해 잇따라",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9aMXJ2M0lPSkttakU2dWNGSzZjVjI5NWZ2RWpmY0c5S0NMc3VrN0RTek5XbGxvamY4WW5HM0VReDl3TkVSbm96cHV0RmpaMklCQU9WQ2R4SWNrY1k5aVlzTmktYTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE11VnAyMGNmdHNCcTRGblF4Vk4zNWJ5bFR0YVgzTi1xTU44ZzRyNXBPMDAtMFVVOGo0TmVzNTVSLVhCd1FoTjQ5T25LRENDSFJ6c281bjhPd21VTWxmOHlfSNIBeEFVX3lxTE1NS3ZDcWc2UEQ4WlM4aThwd0FGSlhIUFAtUTExYTVPNnR3V2FyMkNkWGFaT1VRdmpZM08zSTIzdzNDMHhJeEMyTFA5aDNFN3RhVFA4MjFiRUNzeHZRLXFHSHhUUVJHSzRldUw2NjIzUE1lcUo3MjRZRw",
+    "published": "2026-10-28T01:20:16+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋운용, 일부 웹시스템 비정상 접근 확인…\"고객·민감정보 유출 없어\"",
+    "tags": [],
+    "title": "미래에셋운용, 일부 웹시스템 비정상 접근 확인…\"고객·민감정보 유출 없어\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE11VnAyMGNmdHNCcTRGblF4Vk4zNWJ5bFR0YVgzTi1xTU44ZzRyNXBPMDAtMFVVOGo0TmVzNTVSLVhCd1FoTjQ5T25LRENDSFJ6c281bjhPd21VTWxmOHlfSNIBeEFVX3lxTE1NS3ZDcWc2UEQ4WlM4aThwd0FGSlhIUFAtUTExYTVPNnR3V2FyMkNkWGFaT1VRdmpZM08zSTIzdzNDMHhJeEMyTFA5aDNFN3RhVFA4MjFiRUNzeHZRLXFHSHhUUVJHSzRldUw2NjIzUE1lcUo3MjRZRw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE1XcUFtWExSSUNnaURqNWhyTVVRSlA5TzFsZWdEMUFQMWdEM282UVdjd004TFVjRVdLQnVNbWg5LVBtYlpiMV8zVGp2ZUJlczlsb0w2cHE1MEpKeVhOMUZyY1hudHFmX0c2aDdPcHg1bklXUQ",
+    "published": "2026-10-28T01:42:26+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋자산운용도 해킹에 정보 유출…웹 시스템 무단 접근(종합)",
+    "tags": [],
+    "title": "미래에셋자산운용도 해킹에 정보 유출…웹 시스템 무단 접근(종합)",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1XcUFtWExSSUNnaURqNWhyTVVRSlA5TzFsZWdEMUFQMWdEM282UVdjd004TFVjRVdLQnVNbWg5LVBtYlpiMV8zVGp2ZUJlczlsb0w2cHE1MEpKeVhOMUZyY1hudHFmX0c2aDdPcHg1bklXUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE53cG9ZOEhhU3A4UGg2azVvZGo4WWxqUDJ0QzJfclBsdWlTajFOUWxIck9KQUVTci1BUndRZUtUUE92X2ZQSkNROU1tYVBLcF9zbjNydDl3",
+    "published": "2026-10-28T01:17:12+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "대신증권 서버 뚫렸다…3만8490명 고객 개인정보 유출",
+    "tags": [
+      "금융"
+    ],
+    "title": "대신증권 서버 뚫렸다…3만8490명 고객 개인정보 유출",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE53cG9ZOEhhU3A4UGg2azVvZGo4WWxqUDJ0QzJfclBsdWlTajFOUWxIck9KQUVTci1BUndRZUtUUE92X2ZQSkNROU1tYVBLcF9zbjNydDl3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTFB1QUY2ZUJUVUFxSGlMR1MzWEZ5UENfZ0tWVldOcWljTlF5Ynd6Y2NJTWZJOUs1eFk1Xy1xM0t0RXNEUU1yX0xiazJmSURoSFlLS1pRV25UdnpHV2dTTnhUOG9ackk",
+    "published": "2026-10-28T02:15:53+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋자산운용, 해킹 피해 발생 ...외부서 업무자료 무단 열람",
+    "tags": [],
+    "title": "미래에셋자산운용, 해킹 피해 발생 ...외부서 업무자료 무단 열람",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB1QUY2ZUJUVUFxSGlMR1MzWEZ5UENfZ0tWVldOcWljTlF5Ynd6Y2NJTWZJOUs1eFk1Xy1xM0t0RXNEUU1yX0xiazJmSURoSFlLS1pRV25UdnpHV2dTTnhUOG9ackk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNRzF0dVBEbWVoRDNieFVWeUMxcXVEdXB4S08xSl9IRkJKeGllZnItMzdaVXdSOGk3eUJpRWM2eXpOVklDSGd5MmZBNFRtcGJ6cF9rdFpXQy14V2drbkQ0aXBPNHpoMnlFelRkR01NZU10NnVTWVd3OGtCaUk5bHAtZw",
+    "published": "2026-10-28T01:45:45+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋운용 “고객 정보 유출 없어”…금투업권 해킹 잇따라(종합)",
+    "tags": [],
+    "title": "미래에셋운용 “고객 정보 유출 없어”…금투업권 해킹 잇따라(종합)",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNRzF0dVBEbWVoRDNieFVWeUMxcXVEdXB4S08xSl9IRkJKeGllZnItMzdaVXdSOGk3eUJpRWM2eXpOVklDSGd5MmZBNFRtcGJ6cF9rdFpXQy14V2drbkQ0aXBPNHpoMnlFelRkR01NZU10NnVTWVd3OGtCaUk5bHAtZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTE9DaGY5aWpKZkctV0xVMVJycWJ0WFllUVVtSjFEd2kwcm9ob2xyOUtkUDBHT2RZa1Nqc1BBREdtQkRLV3BRdnpRbnhiWEVPMzBVMzN2WHRSdkJCTmk0eF94OV9BNkhVQQ",
+    "published": "2026-10-28T01:50:46+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "대신증권·빗썸 이어 미래에셋운용까지…금융권 해킹 비상",
+    "tags": [
+      "금융"
+    ],
+    "title": "대신증권·빗썸 이어 미래에셋운용까지…금융권 해킹 비상",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9DaGY5aWpKZkctV0xVMVJycWJ0WFllUVVtSjFEd2kwcm9ob2xyOUtkUDBHT2RZa1Nqc1BBREdtQkRLV3BRdnpRbnhiWEVPMzBVMzN2WHRSdkJCTmk0eF94OV9BNkhVQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE5ySTl5LUlEWDNlSmF1aVdBeFBLRlpBSEluRC1RbTQxUEF6MWZvNWFVSmMxSGk2UHhWOG5VTVExQm05U0NqQXgxdDNnZ2w3ckdJa2o0ZVdNdDFlWi1HNEJUaGNHdTZySS00T2REVFBHRUU1VTQ",
+    "published": "2026-10-28T02:00:26+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋운용 \"웹 시스템 침해로 정보 유출...고객정보·금전피해 없어\"",
+    "tags": [],
+    "title": "미래에셋운용 \"웹 시스템 침해로 정보 유출...고객정보·금전피해 없어\"",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ySTl5LUlEWDNlSmF1aVdBeFBLRlpBSEluRC1RbTQxUEF6MWZvNWFVSmMxSGk2UHhWOG5VTVExQm05U0NqQXgxdDNnZ2w3ckdJa2o0ZVdNdDFlWi1HNEJUaGNHdTZySS00T2REVFBHRUU1VTQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFAwS0lfS1JCenlUSlZ6ZU5fUFhlSnZNMkxMREQweEZ1UktSS0V0emd5anFHUU9xLVhYOHNaS0tGR1NCaFNlVG1xWkEyRFdnanE0eEY0ZnY2bjVEdWViRVAxS1Z3V2N3RzR5ajJCNG5aN2XSAXRBVV95cUxNWjlPdXc4bW1XNzJKN0xBQS1rbmI1UENzSnJPVXgwSXlhNzlBaEYwZHVNa0dnekNvZDBrNks4VHNhSm15RHZYSGU0RkFoX1A3dFBiRi1BLW1uZ1dzc1JtZ3IxY1dnbTRlcUFDU0xtSHVFNkJnLQ",
+    "published": "2026-10-28T01:17:41+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋운용, 업무자료 무단 열람 확인…'투자자 정보 유출 없어'",
+    "tags": [],
+    "title": "미래에셋운용, 업무자료 무단 열람 확인…'투자자 정보 유출 없어'",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAwS0lfS1JCenlUSlZ6ZU5fUFhlSnZNMkxMREQweEZ1UktSS0V0emd5anFHUU9xLVhYOHNaS0tGR1NCaFNlVG1xWkEyRFdnanE0eEY0ZnY2bjVEdWViRVAxS1Z3V2N3RzR5ajJCNG5aN2XSAXRBVV95cUxNWjlPdXc4bW1XNzJKN0xBQS1rbmI1UENzSnJPVXgwSXlhNzlBaEYwZHVNa0dnekNvZDBrNks4VHNhSm15RHZYSGU0RkFoX1A3dFBiRi1BLW1uZ1dzc1JtZ3IxY1dnbTRlcUFDU0xtSHVFNkJnLQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE02MV82bHpabHg2b0VWWUpoYnpTWEpRTDlFNEVCM2FCajNkX1lRYUJEU0N5TkQtem54UzNwVm9lSS1Mc0ZfUGdiUGZ1Vzl1cmFwcFlLRDJIemZKTklsTGc",
+    "published": "2026-10-28T01:21:06+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋운용 \"외부 IP 접근…업무용 시스템 해킹\"",
+    "tags": [],
+    "title": "미래에셋운용 \"외부 IP 접근…업무용 시스템 해킹\"",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE02MV82bHpabHg2b0VWWUpoYnpTWEpRTDlFNEVCM2FCajNkX1lRYUJEU0N5TkQtem54UzNwVm9lSS1Mc0ZfUGdiUGZ1Vzl1cmFwcFlLRDJIemZKTklsTGc?oc=5"
   }
 ]
