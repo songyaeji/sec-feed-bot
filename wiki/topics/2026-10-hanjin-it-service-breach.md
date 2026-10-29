@@ -11,6 +11,7 @@ cves: []
 
 - 2026-10-21 [n0n 랜섬웨어](https://www.dailysecu.com/news/articleView.html?idxno=209036) — 다크웹에서 한진정보통신 침해 주장, 직원 고객사 계정정보 등 대량 데이터 확보 게시
 - 2026-10-23 [한진정보통신](https://www.dailysecu.com/news/articleView.html?idxno=209036) — 공식 입장: ITSM 시스템 이용자 980명 이름·이메일 주소 유출 확인
+- 2026-10-28 [소크레이더](https://www.dailysecu.com/news/articleView.html?idxno=209146) — n0n 랜섬웨어 글로벌 활동 분석 보고서 발표, 14개국 23개 조직 공격 AI 코딩 도구 수백 개 공격 스크립트 생성 몸값 요구액 약 4천억원
 
 ## 관련
 

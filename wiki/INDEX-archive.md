@@ -984,3 +984,4 @@
 - [unitree-g1-edu-robot-rce](topics/2026-08-unitree-g1-edu-robot-rce.md) Unitree G1 EDU 로봇 Bluetooth·네트워크 루트 RCE (최종갱신일: 2026-08-28)
 - [apt28-hookedge-backdoor](topics/2026-08-apt28-hookedge-backdoor.md) APT28 HOOKEDGE 백도어 webhook.site·Microsoft Edge 트래픽 위장 (최종갱신일: 2026-08-28)
 - [gitea-code-injection-exploit](topics/2026-08-gitea-code-injection-exploit.md) Gitea 코드 인젝션 취약점 8,300개 이상 미패치 서버 활발한 악용 (최종갱신일: 2026-08-28)
+- [philippine-nuclear-naval-breach](topics/2026-08-philippine-nuclear-naval-breach.md) 필리핀 핵연구·해양공학 시설 중국 의심 공격 ownCloud·WordPress 취약점 악용 (최종갱신일: 2026-08-29)

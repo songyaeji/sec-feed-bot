@@ -59,6 +59,7 @@ cves: []
 - 2026-10-16 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208898) — OK저축은행 고객 250명 정보유출 추가 확인, 피해 대상 67명 증가 포함
 - 2026-10-16 [금융보안원](https://news.google.com/rss/articles/CBMiYEFVX3lxTFBPX2w1OXdiM05HaW5telhNUjN6R0lSQVV0Q2pJUUZVUjUwZFBXRFd3SG8tZE5FMV9KNjRiYjNxV1AzZUk4OC00VUgyWlZSVzcyX1BDRFJsUXlJUFU0TDFoOQ?oc=5) — OK저축은행 또 해킹으로 고객 268명 정보 유출, 이번 공격 IP는 금융보안원 공유 IP와 상이
 - 2026-10-26 [금융보안원](https://news.google.com/rss/articles/CBMiWkFVX3lxTE05Q0VEVlRTcFdiMWNhY1J3Zlh3SXhBSnptVVBMSjExdnpqMFZBaEhUcnpDVFpjdjdPbU1teGdqWDRkUFREU20zWGJMRVJqbTZHd1djNjgxNzFqQQ?oc=5) — 보험업권 해킹 확대 확인, 미래에셋생명 포함 보험사 첫 정보 유출
+- 2026-10-27 [금융위원회](https://news.google.com/rss/articles/CBMihAFBVV95cUxQZENmRVVMYkg0YmxMNUxDQjZpREZGVjBfREw4TjVsVEdZQ2hOcThYQ2lmY0NaQ19oZ1ktQWlXcXF4Z3RfeGtRWkZvN0daOG1aQ2dRcC1laUFVVW5sZlFGQlFvM2Z1cXJtcmFHZUVzQWZiLVhic1ZyU3JlWV9ZaWNUOHFFMEQ?oc=5) — 한 달 만에 은행·보험 전금융권 유출 확산 확인, 68,000명 이상 개인정보 유출 '대한민국 금융안보 뚫렸다' 지적
 
 ## 관련
 
