@@ -3763,5 +3763,433 @@
     "tags": [],
     "title": "日서 4월 이후 2억6천만명분 개인정보 유출…민관 전방위 피해",
     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE94RDdVcEhlV1FSQzBLZTRPZXRCb0dYeU9YdFNjLUw3b1UzdGZBRW9GdENqN2t5b0xtWnZ1NWI3Q0lDTnVHbUwwWG5FYy1zNjUtVGQ1dGFIV0RIYXc?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-92574",
+    "published": "2026-09-21T10:17:17.360",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in CRI-O checkpoint restore allows a user who can create a pod from a malicious checkpointed container to bypass the destination Kubernetes security context. The restored process may retain credentials, Linux capabilities, no_new_privs, and seccomp state from the checkpoint instead of enforcing the destination configuration. This can allow execution with elevated privileges across the container security boundary.\nAffected upstream supported versions are CRI-O 1.34 and later. Downstream Red Hat products are affected from OCP 4.17 onward. Fixes have been applied to supported branches but are not yet released.\nExploitation requires permission to create a pod from a malicious checkpoint image and checkpoint restore functionality to be available.",
+    "tags": [],
+    "title": "CVE-2026-92574 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92574"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-20586",
+    "published": "2026-10-05T02:16:53.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In vdec, there is a possible out of bounds write due to a missing bounds check. This could lead to remote escalation of privilege with no additional execution privileges needed. User interaction is needed for exploitation. Patch ID: ALPS11383899; Issue ID: MSV-9614.",
+    "tags": [],
+    "title": "CVE-2026-20586 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20586"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118545",
+    "published": "2026-10-30T04:18:19.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal AI (Artificial Intelligence) allows Cross-Site Scripting (XSS). This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [],
+    "title": "CVE-2026-118545 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118545"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118546",
+    "published": "2026-10-30T04:18:19.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal AI (Artificial Intelligence) allows Cross-Site Scripting (XSS). This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [],
+    "title": "CVE-2026-118546 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118546"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118548",
+    "published": "2026-10-30T04:18:19.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Incorrect Authorization vulnerability in Drupal AI (Artificial Intelligence) allows Resource Injection. This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-118548 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118548"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118549",
+    "published": "2026-10-30T04:18:20.100",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal AI (Artificial Intelligence) allows Cross-Site Scripting (XSS). This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [],
+    "title": "CVE-2026-118549 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118549"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118550",
+    "published": "2026-10-30T04:18:20.257",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use of Web Browser Cache Containing Sensitive Information vulnerability in Drupal AI (Artificial Intelligence) allows Exploiting Incorrectly Configured Access Control Security Levels. This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [],
+    "title": "CVE-2026-118550 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118550"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118551",
+    "published": "2026-10-30T04:18:20.397",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Insecure Storage of Sensitive Information vulnerability in Drupal AI (Artificial Intelligence) allows Retrieve Embedded Sensitive Data. This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [],
+    "title": "CVE-2026-118551 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118551"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118552",
+    "published": "2026-10-30T04:18:20.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal AI (Artificial Intelligence) allows Cross-Site Scripting (XSS). This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [],
+    "title": "CVE-2026-118552 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118552"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-118553",
+    "published": "2026-10-30T04:18:20.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Input During Web Page Generation (\"Cross-site Scripting\") vulnerability in Drupal AI (Artificial Intelligence) allows Stored XSS. This issue affects AI (Artificial Intelligence) versions: from 0.0.0 to 1.4.11, from 1.5.0 to 1.5.2.",
+    "tags": [],
+    "title": "CVE-2026-118553 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118553"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-104368",
+    "published": "2026-10-30T05:16:57.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Export and Import Users and Customers plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.7.5 via the plugin's own export and re-import workflow. The vulnerability exists because of a CSV escape-character mismatch between the exporter and the importer: class-csvwriter.php writes cells with fputcsv() using PHP's default backslash (\\) escape character, while class-csvreader.php parses the same file with fgetcsv() using a double-quote (\") as the escape character. As a result, a crafted value stored in a Subscriber's Biographical Info field — containing a backslash-quote sequence followed by a newline — is written as a single quoted CSV field but parsed back as two separate rows on import. The injected second row is then processed by hf_create_customer() as a new user record whose user_login, user_pass, user_email, and role are entirely attacker-controlled, allowing the creation of an arbitrary Administrator account. This makes it possible for authenticated attackers with Subscriber-level access and above to escalate their privileges to Administrator.",
+    "tags": [],
+    "title": "CVE-2026-104368 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104368"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209190",
+    "published": "2026-10-30T15:40:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "GS네오텍이 아마존웹서비스(AWS)의 'AWS Agentic AI 컴피턴시'를 취득했다고 밝혔다. 이번 취득으로 기존 '생성형 AI 컴피턴시'에 이어 에이전틱 AI 분야까지 AWS 공인 전문성을 확보했다.AWS AI 컴피턴시의 'Agentic AI 컨설팅 서비스' 부문은 상황을 스스로 이해하고 목표에 따라 자율 추론하며 사람의 개입을 최소화해 실행을 완수하는 엔터프라이즈급 AI 솔루션 파트너를 인증하는 자격이다. 비즈니스 정합성과 거버넌스 요건을 충족하는 동시에 복잡한 배포 과정을 해결하는 전략 수립부터 실질적 구현, 지속적 지원",
+    "tags": [
+      "AI"
+    ],
+    "title": "GS네오텍, AWS '에이전틱 AI 컴피턴시' 취득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209190"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209188",
+    "published": "2026-10-30T14:22:34+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인공지능(AI)과 디지털 전환이 산업현장 전반으로 확산하면서 국가기반시설과 스마트공장의 사이버물리시스템(CPS), 운영기술(OT), 산업제어시스템(ICS)의 안전한 운영을 위한 보안 전략을 논의하는 자리가 마련된다.K-ICS 협의회와 데일리시큐가 주최하고 앤앤에스피(NNSP)가 주관하는 ‘CPS(OT/ICS) Secure AX Summit 2026’이 오는 11월 13일(금) 오전 11시 20분부터 오후 5시까지 서울 양재 엘타워 2층 안단테홀에서 개최된다. 한국기계전기전자시험연구원(KTC)과 호서대학교가 후원한다. 참석 대상은 공",
+    "tags": [
+      "AI"
+    ],
+    "title": "‘CPS(OT/ICS) 시큐어 AX 서밋 2026’ 11월 13일 개최…AI 시대 산업제어시스템 보안 전략 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209188"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209186",
+    "published": "2026-10-30T13:43:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "두산 디지털이노베이션BU(DDI)가 미국 국방부 사이버 보안 인증(CMMC) 컨설팅 기관 자격을 취득하고 국내 기업의 미국 방산 공급망 진출 지원에 나선다.DDI는 CMMC의 공식 인정기구인 사이버 AB(The Cyber AB)로부터 컨설팅 기관(RPO) 자격을 취득했다고 밝혔다. CMMC는 미국 방산 공급망에 참여하는 기업의 사이버 보안 역량을 의무적으로 평가·인증하는 제도로, 핵심 기술 데이터 유출을 방지하기 위해 도입되어 단계적으로 적용되고 있다.RPO는 기업이 CMMC 요건을 충족하도록 준비 과정과 개선 활동을 지원하는 공식",
+    "tags": [],
+    "title": "두산 디지털이노베이션BU, CMMC 컨설팅 기관 자격 취득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209186"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209185",
+    "published": "2026-10-30T13:38:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인증 없이 원격에서 시스템 제어권을 탈취할 수 있는 보안 취약점 'PHP2Shell'과 관련해 외부 웹서버보다 기업 내부망에 숨어 있는 장비의 보안 위협이 더 심각하다는 분석 결과가 나왔다.지니언스는 인터넷 접점이나 내부망에 연결된 NAS, 공유기 등 네트워크 장비와 방화벽이 사이버 공격의 다음 타깃이 될 가능성이 높다고 경고하며 기업들의 선제적 조치를 촉구했다.PHP2Shell 취약점은 지난 10월 미국 사이버안보·인프라보안국(CISA)의 알려진 악용 취약점 목록에 등재됐다. 공격자들은 내부 사설 IP 대역의 취약 장비를 장악한",
+    "tags": [],
+    "title": "지니언스, PHP2Shell 취약점 경고...내부망 장비 96%가 위험에 노출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209185"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209184",
+    "published": "2026-10-30T13:16:18+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "피앤피시큐어는 오는 11월 12일 서울 여의도 콘래드 서울 호텔에서 열리는 금융정보보호 컨퍼런스 'FISCON 2026'에 참가해 'FaceLocker'를 활용한 화면정보 유출 방지와 안면인증 기반 업무시스템 연동 방안을 소개한다.올해 20주년을 맞는 FISCON 2026은 'Now for Next Finance'를 주제로 AI로 재편될 미래 금융의 보안 전략을 모색하는 행사다. 피앤피시큐어는 이번 행사에서 금융회사 업무 환경에 적용할 수 있는 화면 보안과 사용자 인증 방안을 제시한다.금융회사의 업무 화면에는 고객 개인정보와 거래정",
+    "tags": [
+      "금융"
+    ],
+    "title": "피앤피시큐어, 'FISCON 2026'서 FaceLocker 활용 화면정보 유출 방지 및 SSO 연동 방안 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209184"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209182",
+    "published": "2026-10-30T13:04:40+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "포티투닷은 대규모 언어 모델 기반 차량용 음성 AI 에이전트 '글레오 AI'에 고객 피드백을 반영한 첫 번째 무선 소프트웨어 업데이트(OTA)를 제공한다.글레오 AI는 지난 5월 현대자동차 더 뉴 그랜저를 통해 처음 선보인 기술이다. 현대자동차의 플레오스 커넥트 OTA를 통해 진행되는 이번 업데이트는 내비게이션 검색, 전화, 문자 메시지 읽기 등 차량 내 자주 사용하는 기능의 개선에 초점을 맞췄다.포티투닷은 글레오 AI와 내비게이션의 연계 검색 기능을 강화했다. 주행 중 원하는 장소를 음성으로 요청하면 LLM이 사용자의 의도와 맥락",
+    "tags": [
+      "AI"
+    ],
+    "title": "포티투닷, 무선 업데이트로 '글레오 AI' 차량 내 음성 제어 기능 고도화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209182"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209181",
+    "published": "2026-10-30T12:46:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "시큐리티스코어카드는 최근 국내 금융권을 겨냥한 인공지능(AI) 에이전트 기반 해킹 사례를 계기로, 공급망 보안 관리 방안을 발표했다.최근 금융권 대상 공격에서는 딥시크 기반 AI 에이전트가 오라클 웹로직 자산을 탐색하고 원격 명령 실행 취약점을 악용해 웹셸을 설치했다. 이와 함께 대출모집인 조회 페이지 등 외부 연결 시스템을 노린 연쇄 공격도 발생했다. 기업은 직접 관리하는 시스템뿐만 아니라 협력업체와 위탁업체 등 외부로 연결된 자산까지 지속적으로 파악해야 한다.기존의 제3자 위험 관리(TPRM)는 정기 평가 사이의 공백이나 파악되",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "AI 해킹에 속도 맞춘 공급망 보안…시큐리티스코어카드가 제시하는 '타이탄 시큐어'",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209181"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209180",
+    "published": "2026-10-30T11:07:11+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "북한 정보기술(IT) 인력들이 신분을 속이고 미국 등 해외 기업에 취업해 벌어들인 수익을 가상자산으로 이동시키고, 러시아 조력자들을 통해 현금화한 사실이 미국 정부의 제재 조치와 블록체인 거래 분석을 통해 드러났다. 북한은 이러한 위장 취업 조직을 통해 매년 수억 달러의 외화를 확보하고 있으며, 일부 인력은 기업 내부망에 접근해 악성코드를 설치하거나 민감한 정보를 탈취하는 활동에도 관여한 것으로 파악됐다.미국 재무부 해외자산통제국(OFAC)은 10월 28일 북한 정부가 운영하는 IT 인력 위장 취업 조직과 관련해 개인 10명과 기관",
+    "tags": [],
+    "title": "미 재무부, 북한 IT 인력 위장 취업·가상자산 세탁 조직 제재",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209180"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209179",
+    "published": "2026-10-30T10:41:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인공지능(AI)을 활용해 탈취한 정보를 실시간으로 분석하고, 감염된 컴퓨터를 원격으로 제어하거나 금전을 요구할 수 있는 신종 해킹도구가 발견됐다. 기존 정보탈취 악성코드에 AI 분석 기능과 랜섬웨어 기능까지 결합돼 기업들의 주의가 요구된다.글로벌 보안기업 시스코의 위협분석 조직 탈로스(Cisco Talos)는 10월 29일 새로운 명령제어(C2) 도구인 ‘NIK C2’를 실제 공격 환경에서 발견하고 분석 결과를 공개했다.NIK C2는 윈도 운영체제를 대상으로 제작된 원격접속 악성코드와 공격자 관리서버로 구성된다. 공격자는 감염된 컴",
+    "tags": [
+      "AI",
+      "랜섬웨어"
+    ],
+    "title": "AI 활용 신종 해킹도구 ‘NIK C2’ 발견…탈취정보 실시간 분석에 랜섬웨어 기능까지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209179"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209177",
+    "published": "2026-10-30T10:29:31+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "일본 이메일 발송 서비스 기업 아라라(Arara)가 외부 해킹 공격을 받아 약 301만 건의 고객 이메일 주소가 유출되는 사고가 발생했다. 여러 기업의 고객정보를 위탁 관리하는 이메일 발송 서비스가 공격받았다는 점에서 피해 확산 우려가 제기된다.아라라는 10월 29일 공식 공지를 통해 자사 이메일 발송 서비스 ’아라라 메시지(Arara Message)’의 서버 시스템 한 곳에서 비인가 접근이 발생해 약 301만 건의 이메일 주소가 외부로 반출됐다고 밝혔다.회사는 10월 28일 비인가 접근을 확인하고 해당 서버를 즉시 네트워크에서 분",
+    "tags": [],
+    "title": "일본 이메일 발송 서비스 아라라 해킹당해 고객 이메일 주소 301만 건 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209177"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
+    "published": "2026-10-30T04:14:59+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cryptocurrency giant Binance said on Thursday that a \"security incident\" on its platform has impacted about $6.3 billion worth of assets. The world's biggest cryptocurrency exchange said nearly $3 billion of those assets have been frozen on-chain so far. Tether and Circle said they have frozen more than 1.567 billion USDT and 800 million related to the incident, respectively. The",
+    "tags": [],
+    "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
+    "url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202103",
+    "published": "2026-10-30T06:26:27+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A hacker leaks personal data on more than 40,000 DHS employees, including CBP, ICE and CISA staff, after an undisclosed breach. Personal details of thousands of U.S. Department of Homeland Security (DHS) employees are now online after a hacker stole reams of data in a data breach that occurred earlier this year and nobody had […]",
+    "tags": [],
+    "title": "Hacker leaks data on more than 40,000 Homeland Security employees",
+    "url": "https://securityaffairs.com/202103/data-breach/hacker-leaks-data-on-more-than-40000-homeland-security-employees.html"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiqwFBVV95cUxNeEt2MUs4ZHBMTnNnaEZXQlJiWUYzM0ZBbkFYOHZLTkZzT2pFYnJ1Y2VXZXRQcnV6a080NGg0bGJ3WkxzZk5NUmZlMkpfSVZqVmwtTkhNODNlRk8zZ3AtWi1lTlFHS1U1ZWhQR1RuTGlhNnc2ZUo3V3VNLVFYMkRFNlhUaV9mV056TU1tMjd4QklueXIwbU5YMXA2RXR5NkF1WklpYWF0elRHSkU",
+    "published": "2026-10-29T08:07:45+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "구글은 프로그래밍 및 사이버 보안에 초점을 맞춘 제미니 4 카본 AI 모델(Gemini 4 Carbon)을 발표했습니다.",
+    "tags": [],
+    "title": "구글은 프로그래밍 및 사이버 보안에 초점을 맞춘 제미니 4 카본 AI 모델(Gemini 4 Carbon)을 발표했습니다.",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeEt2MUs4ZHBMTnNnaEZXQlJiWUYzM0ZBbkFYOHZLTkZzT2pFYnJ1Y2VXZXRQcnV6a080NGg0bGJ3WkxzZk5NUmZlMkpfSVZqVmwtTkhNODNlRk8zZ3AtWi1lTlFHS1U1ZWhQR1RuTGlhNnc2ZUo3V3VNLVFYMkRFNlhUaV9mV056TU1tMjd4QklueXIwbU5YMXA2RXR5NkF1WklpYWF0elRHSkU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMic0FVX3lxTFBKTklpQlNvZmpLMGlaZ0N5TFFnR09EMWFMdkxSQnZsd2pjYTF1RGZqaENVclhSaFpCZW1CeFBXVHE2UzNuYldhRnp1NV9oQ1FsZ3pWbXdhcWRSR0R0OGUtc2hCcS1tOUR0UHMyU09ncDZwQms",
+    "published": "2026-10-28T21:44:07+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "구글, 사이버 보안 성능 높인 '제미나이 4 카본' 출시",
+    "tags": [],
+    "title": "구글, 사이버 보안 성능 높인 '제미나이 4 카본' 출시",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBKTklpQlNvZmpLMGlaZ0N5TFFnR09EMWFMdkxSQnZsd2pjYTF1RGZqaENVclhSaFpCZW1CeFBXVHE2UzNuYldhRnp1NV9oQ1FsZ3pWbXdhcWRSR0R0OGUtc2hCcS1tOUR0UHMyU09ncDZwQms?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5hZ2xFN3dZM0d2QTFTOGV6SExSQnppTjhtZEd1NmVkQ1JOSFp4YnE2bUJfYUQ2VVpkbTVDbHRIZGZYbkQ2ZkdzbDRHejhmTi1GZXlWQkw1cVZzVXluT1NiZGZmN2Q",
+    "published": "2026-10-30T00:40:18+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 무너뜨린 `도미노 해킹`…보안업계, `FISCON 26`서 해법 찾는다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 무너뜨린 `도미노 해킹`…보안업계, `FISCON 26`서 해법 찾는다",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hZ2xFN3dZM0d2QTFTOGV6SExSQnppTjhtZEd1NmVkQ1JOSFp4YnE2bUJfYUQ2VVpkbTVDbHRIZGZYbkQ2ZkdzbDRHejhmTi1GZXlWQkw1cVZzVXluT1NiZGZmN2Q?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE9yMlJESUZCQTh2ZkRQakJJUmNJMTR6ZzlwX3FURGNhNG1qSGhHOUhKNFZPRXhNZ2hUZlJTSUFzdlZyZkxaZmpxV0lIek5sdkhFTUJwdHdn",
+    "published": "2026-10-30T02:47:36+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "KISIA, 'FISCON' 정보보호 기업 전시회 개최",
+    "tags": [],
+    "title": "KISIA, 'FISCON' 정보보호 기업 전시회 개최",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9yMlJESUZCQTh2ZkRQakJJUmNJMTR6ZzlwX3FURGNhNG1qSGhHOUhKNFZPRXhNZ2hUZlJTSUFzdlZyZkxaZmpxV0lIek5sdkhFTUJwdHdn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFA3d0FobUxCVk5ERlhpbGhVMmlfVU1GOWpuRG01RHN3RlNJUVIzNWYzTXJza1c5bERLUzVwTmJPd1o4STV3S1dKdEJqYkYyTzJWQjNyLTVHc3FIU1N0ZjhKX0VKUGp1ZGxEWjg3WTBB0gFyQVVfeXFMTlI3QlJ3RGsyTUE3dk1BWWxUbGIwN1gxS0U0MGh1UUN6SFJFZmtndnc1UTlVbWdhM0t1TEFLVlAtbkJhamVPLXhpRGpXamFLeS1ZZ256ZGdyYmF3Wm1SSGFRZ2Vrd1hnWjByZnlwYXFOUzNR",
+    "published": "2026-10-30T06:35:31+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 보호 책임 커진다…태평양·암참, 개정법 대응 세미나",
+    "tags": [],
+    "title": "개인정보 보호 책임 커진다…태평양·암참, 개정법 대응 세미나",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFA3d0FobUxCVk5ERlhpbGhVMmlfVU1GOWpuRG01RHN3RlNJUVIzNWYzTXJza1c5bERLUzVwTmJPd1o4STV3S1dKdEJqYkYyTzJWQjNyLTVHc3FIU1N0ZjhKX0VKUGp1ZGxEWjg3WTBB0gFyQVVfeXFMTlI3QlJ3RGsyTUE3dk1BWWxUbGIwN1gxS0U0MGh1UUN6SFJFZmtndnc1UTlVbWdhM0t1TEFLVlAtbkJhamVPLXhpRGpXamFLeS1ZZ256ZGdyYmF3Wm1SSGFRZ2Vrd1hnWjByZnlwYXFOUzNR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTFBqd1E5aUdVbE5oV2kwempBX0RoWkY1NGlXVUYwRktzcWVFN1BFZVVNRDN1VVZXZFgtbUlwNkkzV18wOEdhbFhCZnNjMA",
+    "published": "2026-10-30T02:14:31+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "털리미 – 국내 개인정보 유출 사건을 기업별로 모은 공개 데이터",
+    "tags": [],
+    "title": "털리미 – 국내 개인정보 유출 사건을 기업별로 모은 공개 데이터",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBqd1E5aUdVbE5oV2kwempBX0RoWkY1NGlXVUYwRktzcWVFN1BFZVVNRDN1VVZXZFgtbUlwNkkzV18wOEdhbFhCZnNjMA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE5xbTN4R0JUVnFvNl9ORE5HdnNQTGFtMm1TSjhXX2FMeWtQS1prSHlNMFc2UXIyeEdnLWw1aFVmQ3p4Ml9kb0VmVkNYQUpLRTNFaGRVd0JR",
+    "published": "2026-10-30T05:31:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "수천억 과징금 폭탄…개보위 제재 기준 논란",
+    "tags": [],
+    "title": "수천억 과징금 폭탄…개보위 제재 기준 논란",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5xbTN4R0JUVnFvNl9ORE5HdnNQTGFtMm1TSjhXX2FMeWtQS1prSHlNMFc2UXIyeEdnLWw1aFVmQ3p4Ml9kb0VmVkNYQUpLRTNFaGRVd0JR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1JQ1B1MlhDY1VGVWN4NGFBbEpJTlhtVy1tdkJJRVh5cTYyTEkxZWV1dWFpOTRGdUpZTFFUR2ZXUklTTzRheXZfME1KbkJmMVJROF93UVgzM09xZzRIZHRsU0xHLUM4Zno5VkRv0gFwQVVfeXFMTVJteUFMRHpacTRPdnpSRlNLRjIwbC1qYlh0UmVUN0ZnaEVKZW0yaUlyQmNBUXdtbUxsYUhyTlFLZmVST3FldGRPVktzWmRFaS1OTTV3bWZneTZIT1VVMTZuSTdzZ19IMVhDWlJHbVE5NQ",
+    "published": "2026-10-30T02:24:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "법무법인 태평양, AMCHAM과 개인정보 보호법 관련 세미나 성료 - 머니투데이",
+    "tags": [],
+    "title": "법무법인 태평양, AMCHAM과 개인정보 보호법 관련 세미나 성료 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1JQ1B1MlhDY1VGVWN4NGFBbEpJTlhtVy1tdkJJRVh5cTYyTEkxZWV1dWFpOTRGdUpZTFFUR2ZXUklTTzRheXZfME1KbkJmMVJROF93UVgzM09xZzRIZHRsU0xHLUM4Zno5VkRv0gFwQVVfeXFMTVJteUFMRHpacTRPdnpSRlNLRjIwbC1qYlh0UmVUN0ZnaEVKZW0yaUlyQmNBUXdtbUxsYUhyTlFLZmVST3FldGRPVktzWmRFaS1OTTV3bWZneTZIT1VVMTZuSTdzZ19IMVhDWlJHbVE5NQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE55MExEWUtOaDlJOW1KbFZPdkdXdXNPZUxLUk10a1JINmJsWUxoYnhIc24zS2s5V0JaR05CWnVvdVpfaTJtUDQ3ZzJVTVZYSi1seENwX1B1Qm5DQdIBWEFVX3lxTFAxc3pUcUcxOTVtZFVUY3F0T19samk5RE83V3hwWmFQMkRBRHVkMzJXR0EtS2w0bm9FTzZBay1sQzYtaTRmWENpU3ZkYmF1NEd6aDUtVFFfQmw",
+    "published": "2026-10-30T01:03:06+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[로펌라운지] 태평양, 암참과 개인정보보호법 개정·규제 대응 전략 집중 점검",
+    "tags": [],
+    "title": "[로펌라운지] 태평양, 암참과 개인정보보호법 개정·규제 대응 전략 집중 점검",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE55MExEWUtOaDlJOW1KbFZPdkdXdXNPZUxLUk10a1JINmJsWUxoYnhIc24zS2s5V0JaR05CWnVvdVpfaTJtUDQ3ZzJVTVZYSi1seENwX1B1Qm5DQdIBWEFVX3lxTFAxc3pUcUcxOTVtZFVUY3F0T19samk5RE83V3hwWmFQMkRBRHVkMzJXR0EtS2w0bm9FTzZBay1sQzYtaTRmWENpU3ZkYmF1NEd6aDUtVFFfQmw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5aZ0ZBcUZwLXZDLVhHNjZ2NHBrWkR5OERZNElMcTNqWGFUdHF6TDVtYWltN2h6YmZ5SGlYOXAyRXFUSWl4bHhxdHB2QmNzNEF0WEpYa0lmdGg0WEU2Y25zVw",
+    "published": "2026-10-29T16:18:49+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "김홍이기자=송경희 위원장의 개인정보보호위원회 29일, 전체회의에서 '대교와 영훈의료재단'에 대해 총 38억 8,500만 원의 과징금 부과!",
+    "tags": [],
+    "title": "김홍이기자=송경희 위원장의 개인정보보호위원회 29일, 전체회의에서 '대교와 영훈의료재단'에 대해 총 38억 8,500만 원의 과징금 부과!",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5aZ0ZBcUZwLXZDLVhHNjZ2NHBrWkR5OERZNElMcTNqWGFUdHF6TDVtYWltN2h6YmZ5SGlYOXAyRXFUSWl4bHhxdHB2QmNzNEF0WEpYa0lmdGg0WEU2Y25zVw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE5pVzZ1UXlpTzlOZ0haYWdNcWVIczdQcW9nZ0lNeHZkdjhTdVhYUEs2a29PUzVlQU02WkZzNHhBYmlSRjlScVlIUlZVcWFWUHp1OG9mWG01NlJteTl4dzVTNTh4eTBWanhWWDJxYw",
+    "published": "2026-10-30T02:01:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위원회, 2차 망분리 완화 재개에 외부망 노출 둔 보안 공방 가열",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위원회, 2차 망분리 완화 재개에 외부망 노출 둔 보안 공방 가열",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5pVzZ1UXlpTzlOZ0haYWdNcWVIczdQcW9nZ0lNeHZkdjhTdVhYUEs2a29PUzVlQU02WkZzNHhBYmlSRjlScVlIUlZVcWFWUHp1OG9mWG01NlJteTl4dzVTNTh4eTBWanhWWDJxYw?oc=5"
   }
 ]
