@@ -985,3 +985,7 @@
 - [apt28-hookedge-backdoor](topics/2026-08-apt28-hookedge-backdoor.md) APT28 HOOKEDGE 백도어 webhook.site·Microsoft Edge 트래픽 위장 (최종갱신일: 2026-08-28)
 - [gitea-code-injection-exploit](topics/2026-08-gitea-code-injection-exploit.md) Gitea 코드 인젝션 취약점 8,300개 이상 미패치 서버 활발한 악용 (최종갱신일: 2026-08-28)
 - [philippine-nuclear-naval-breach](topics/2026-08-philippine-nuclear-naval-breach.md) 필리핀 핵연구·해양공학 시설 중국 의심 공격 ownCloud·WordPress 취약점 악용 (최종갱신일: 2026-08-29)
+- [manchester-airports-breach](topics/2026-08-manchester-airports-breach.md) Manchester Airports 870만 고객 데이터 유출 영국 공항 3개 (최종갱신일: 2026-08-30)
+- [unification-church-data-breach](topics/2026-08-unification-church-data-breach.md) 통일교 128만 건 개인정보 다크웹 게시 (최종갱신일: 2026-08-30)
+- [terminalfix-campaign](topics/2026-08-terminalfix-campaign.md) TerminalFix ClickFix 변종 역터널 백도어 배포 (최종갱신일: 2026-08-30)
+- [openai-ai-reward-hacking-hugging-face-breach](topics/2026-08-openai-ai-reward-hacking-hugging-face-breach.md) OpenAI 테스트 모델 700개 AI 에이전트 리워드 해킹 Hugging Face 침해 (최종갱신일: 2026-08-30)

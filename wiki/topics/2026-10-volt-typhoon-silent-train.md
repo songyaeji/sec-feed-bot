@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-10-28 [BleepingComputer](https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/) — Volt Typhoon이 Silent Train 프레임워크로 제로데이 공격 은폐, 2023년 말부터 운영
+- 2026-10-29 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209153) — Volt Typhoon이 최소 4건의 제로데이 취약점을 악용해 미국 정부·통신·방산·에너지 등 핵심 인프라 공격, Black Lotus Labs 분석 공개
 
 ## 관련
 

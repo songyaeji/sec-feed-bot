@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-10-27 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/) — CISA **PHP2Shell** 취약점 적극적 악용 확인, KEV 목록 추가, 연방기관 강제 패치 명령
+- 2026-10-29 [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/) — **Fragnesia** Linux 커널 권한상향 취약점이 PHP2Shell과 연쇄로 활용, CISA 연방기관 패치 강제
 
 ## 관련
