@@ -3929,5 +3929,479 @@
     ],
     "title": "“3만8490명 정보 털리자 정부 등판”…靑, 금융권 연쇄 해킹에 긴급회의",
     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE50T3NPSjNLVFpXb1ZuSlNhMEFzZDBLdUw1Q0ZHbnhfSGhFWHVNM1FSVXJjaXZrZ210X3NfYVJUZ3M2ZF9xZnNDUDdqdExrWHd3bHk1clBTa0xMWl9JSVl1eWpsVnA?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-109220",
+    "published": "2026-10-31T07:16:34.367",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The PDF Invoice for WooCommerce + Drag and Drop Template Builder plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 7.1.1 via the 'customer_note' parameter parameter. This is due to insufficient sanitization of the customer_note checkout field, which is inlined verbatim into invoice HTML, entity-decoded back into a live tag by simplehtmldom, reassembled into raw bytes by mPDF, and passed to unserialize() in _getObjAttr without validation. This makes it possible for unauthenticated attackers to execute code on the server. An unauthenticated attacker can trigger the vulnerable code path on a default install by placing an anonymous WooCommerce checkout via the public Store API (POST /wc/store/v1/checkout) using a Direct Bank Transfer or cheque payment method, which automatically transitions the order to 'on-hold' status and fires the plugin's invoice-generation hook.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-109220 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109220"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-116557",
+    "published": "2026-10-31T07:16:35.857",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The WP Booking System - Booking Calendar plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the wpbs_action_ajax_calendar_remove_note() function in versions up to, and including, 2.1.0.5 This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary calendar notes belonging to any calendar.",
+    "tags": [],
+    "title": "CVE-2026-116557 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116557"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-89270",
+    "published": "2026-10-31T07:16:37.707",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Popup Builder – Create highly converting, mobile friendly marketing popups. plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.4.5 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to trash all published popups on the site with a single unauthenticated GET request. The attack is amplified by a second flaw in SGPopup::find(), which returns false for every normally published popup when the sg_popup_preview_id parameter is present, causing the trash branch to fire against every popup on the site simultaneously.",
+    "tags": [],
+    "title": "CVE-2026-89270 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89270"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-116512",
+    "published": "2026-10-31T08:16:48.603",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Project Manager – AI Powered Project Management, Task Management, Kanban Board & Time Tracker plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.1.1 via the 'id' parameter parameter. This is due to unsanitized 'id' parameter value concatenated directly into the pipe-delimited validation rule string, which is then split and each token invoked as a dynamic PHP function with no allowlist check. This makes it possible for unauthenticated attackers to execute code on the server. This is exploitable by unauthenticated attackers because WordPress core executes the route argument's validate_callback inside WP_REST_Server::dispatch() before the route's permission_callback is invoked, meaning the Project_Manage_Capability authorization gate is never reached on the vulnerable code path.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-116512 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116512"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-119096",
+    "published": "2026-10-31T08:16:49.043",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Uncanny Toolkit for LearnDash plugin for WordPress is vulnerable to Authentication Bypass in versions up to, and including, 3.8.2 via the `email` parameter of the `uo_login_action()` function. This is due to a parser-differential flaw in which the plugin's account-verification gate resolves the submitted `email` value using the raw, unsanitized string passed to `get_user_by()`, while the subsequent `wp_signon()` call relies on WordPress core's internal `sanitize_user()` to strip appended junk characters — causing the gate lookup to fail and be skipped entirely while the real account is still resolved and authenticated. This makes it possible for unauthenticated attackers to log in to unverified or administrator-suspended accounts whose credentials they already possess, obtaining a valid `wordpress_logged_in` session cookie and defeating the plugin's account-approval and account-suspension controls. The nonce required to reach the handler is freely obtainable in the same request from the unauthenticated `ult-refresh-nonce` endpoint, making exploitation trivial for any attacker with network access to the site and knowledge of a target account's credentials.",
+    "tags": [],
+    "title": "CVE-2026-119096 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119096"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-103882",
+    "published": "2026-10-31T09:16:32.510",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Acadlix LMS – AI Quiz Maker, Online Exam & Course Plugin for WordPress plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the post_delete_assessment_file_by_id function in all versions up to, and including, 1.1.9. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). The route's permission callback only verifies a generic wp_rest nonce that the plugin itself emits inside the public acadlixOptions JavaScript object on every frontend page, effectively reducing the authentication requirement to unauthenticated.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-103882 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103882"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-118235",
+    "published": "2026-10-31T09:16:33.620",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The SimpleForm – Form Maker to Chat Apps with Quiz, Poll and Multi Lead Notifications plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.10.2 via the handle_upload function. This is due to missing server-side file key allowlist and pre-sanitization extension derivation that allows a trailing-dot filename to bypass all extension and MIME validation in handle_upload. This makes it possible for unauthenticated attackers to upload files that may be executable, which makes remote code execution possible. The only access control is a nonce that is printed into every public form's data-nonce attribute, making it trivially obtainable by any unauthenticated visitor on a page embedding the form shortcode.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-118235 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118235"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-2241",
+    "published": "2025-03-17T17:15:40.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Hive, a component of Multicluster Engine (MCE) and Advanced Cluster Management (ACM). This vulnerability causes VCenter credentials to be exposed in the ClusterProvision object after provisioning a VSphere cluster. Users with read access to ClusterProvision objects can extract sensitive credentials even if they do not have direct access to Kubernetes Secrets. This issue can lead to unauthorized VCenter access, cluster management, and privilege escalation.",
+    "tags": [],
+    "title": "CVE-2025-2241 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2241"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-93834",
+    "published": "2026-09-25T14:17:24.063",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free vulnerability was found in QEMU's 9pfs subsystem. A race condition between the main thread and a worker thread when processing concurrent Tlcreate and Twalk requests allows a malicious guest user to craft a fid path containing stale heap data, bypassing directory traversal restrictions and escaping the shared directory boundary. This can lead to arbitrary host file read/write and code execution (VM escape) as the QEMU process user.",
+    "tags": [],
+    "title": "CVE-2026-93834 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93834"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-119977",
+    "published": "2026-10-31T06:16:34.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "WordPress Core is vulnerable to Remote Code Execution in versions 4.7 through 7.1.3. This is due to predictable, web-accessible staging paths used during full-package core upgrades. This makes it possible for unauthenticated attackers to execute code on the server during the upgrade window.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-119977 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119977"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2026-119166",
+    "published": "2026-10-31T07:16:36.750",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Welcart e-Commerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.12.5 via the 'member[ID]' parameter due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to overwrite any existing Welcart shop-member account's email address and password by supplying that member's numeric ID, then authenticate as that member to achieve full account takeover. The only authentication barrier is a wp_verify_nonce() check against a nonce printed to every unauthenticated visitor on the auto-published New Enrollment Form, meaning no existing account, no WordPress login, and no non-default configuration is required to exploit this vulnerability.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-119166 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119166"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-103898",
+    "published": "2026-10-31T08:16:47.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Wp Social Login and Register Social Counter plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 3.2.2. This is due to the social login REST callback registered at `/wp-json/wslu-social-login/type/{provider}/` with `permission_callback => __return_true` locating an existing WordPress account solely by the email string returned from the OAuth provider and calling `wp_set_auth_cookie()` without a password check, while the only verification guard — `!empty($getProfile->emailVerified)` in `inc/admin-create-user.php` — is a no-op for the bundled Hybridauth Facebook and Twitter adapters, both of which assign the raw email string rather than a boolean verified flag to `emailVerified`. This makes it possible for unauthenticated attackers to obtain a fully authenticated session as any existing WordPress user, including Administrators, whose registered email address can be presented through a configured Facebook or Twitter login on the target site. Exploitation requires only that the attacker control an OAuth account whose provider-returned email matches the target account's registered WordPress email address; no local credentials, nonce, or prior foothold is needed.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-103898 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103898"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-104012",
+    "published": "2026-10-31T08:16:47.893",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Rox Appointment Booking – Appointment Booking Scheduling Solution plugin for WordPress is vulnerable to Privilege Escalation via Mass Assignment in all versions up to, and including, 1.3.1 This is due to the public `/rox-appointment-booking/v1/public/booking` REST endpoint performing mass-assignment of the raw request body into a new customer row while `CustomerModel::$fillable` includes the internal `wp_user_id` column, allowing an unauthenticated attacker to persist an arbitrary WordPress user ID alongside an attacker-controlled email address with no authorization check. When an administrator subsequently opens the poisoned customer record and clicks Update Customer, `SaveCustomer::handleRequest()` passes the stored `wp_user_id` and attacker-supplied email to `wp_update_user()` — succeeding because `LinkedAccount::canChange()` unconditionally returns true when the acting user holds the `edit_users` capability — thereby overwriting the targeted administrator's email address and enabling full account takeover via a standard WordPress password-reset request. Successful exploitation requires an administrator to open and save the poisoned record, and the attacker must know or guess a valid administrator user ID (such as the default user ID 1).",
+    "tags": [],
+    "title": "CVE-2026-104012 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104012"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120070",
+    "published": "2026-10-31T08:16:49.183",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The User Frontend – Membership, User Registration, User Profile, User Directory & Content Restriction with Frontend Post Submission plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.3.13 via the `post_content` parameter of the `submit_post()` function. The vulnerability exists because the protected-shortcode blocklist guard inspects the `sanitize_textarea_field()` copy of the submitted `post_content`, while the copy actually persisted to the database is processed through `wp_kses()`, whose `wp_kses_no_null()` step strips C0 control bytes — allowing an attacker to inject a single `\\x01` byte inside the `[wpuf-registration]` tag name to defeat the `strpos()` blocklist check while the clean, functional shortcode is stored verbatim; `strip_shortcodes()` does not neutralize the stored shortcode either, because the Frontend container that registers it via `add_shortcode()` is only instantiated when `is_admin()` is false, and `admin-ajax` requests have `is_admin() === true`. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a `[wpuf-registration role=\"editor\"]` shortcode into a published post, causing a live Editor-role registration form to be rendered publicly on the frontend that any visitor — or the attacker themselves — can submit to mint a WordPress Editor account with an immediately active privileged session when the default `autologin_after_registration` setting is enabled.",
+    "tags": [],
+    "title": "CVE-2026-120070 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120070"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-114217",
+    "published": "2026-10-31T09:16:33.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in konflux-ci. Continuous Integration (CI) automation scripts store sensitive GitHub access tokens in plaintext on the runner without cleaning them up after execution. A local attacker with access to the CI environment can read these stored credentials to gain unauthorized repository access, potentially allowing them to modify source code or release artifacts.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-114217 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114217"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-116086",
+    "published": "2026-10-31T09:16:33.223",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in konflux-ci. An attacker with permission to trigger automated workflow runs can cause an information disclosure by providing crafted issue titles to workflow scripts. The affected script incorporates user-provided titles directly into data queries without adequate sanitization, allowing the attacker to inject malicious filter commands. As a result, sensitive information such as API credentials, deployment keys, and internal notes returned from repository queries may be exposed in workflow logs.",
+    "tags": [],
+    "title": "CVE-2026-116086 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116086"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-116964",
+    "published": "2026-10-31T09:16:33.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in konflux-ci. An attacker with repository write access can achieve arbitrary code execution within the Continuous Integration and Continuous Delivery (CI/CD) workflow environment. By injecting shell commands into environment export scripts, the attacker causes manifest synchronization scripts to dynamically evaluate unvalidated script output. Successful exploitation allows the attacker to compromise CI/CD pipelines, steal sensitive authentication tokens and deployment credentials, and gain unauthorized access to production systems.",
+    "tags": [],
+    "title": "CVE-2026-116964 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116964"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-117681",
+    "published": "2026-10-31T09:16:33.487",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in konflux-ci. This vulnerability allows privilege escalation when the user interface proxy automatically disables Transport Layer Security (TLS) certificate verification for connections to internal backend services in environments lacking a default service certificate authority. Because the proxy attaches a cluster-scoped authentication token with user impersonation rights to these requests, an adjacent network attacker capable of intercepting traffic can capture the credentials to gain full administrative control of the cluster.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-117681 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117681"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-76010",
+    "published": "2026-10-31T10:16:38.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 4.4.1 via the render_image function. This is due to unrestricted mass assignment of caller-supplied meta_data keys onto the image model combined with missing realpath containment in path construction and a bypassable signature check on the public image delivery route. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server. Exploitation requires the authenticated attacker to own at least one NextGEN gallery — a condition that can be satisfied by any Subscriber who was ever granted the 'NextGEN Manage gallery' capability, and that access is retained indefinitely due to the stored gallery-author equality fallback in _can_manage_gallery() even after the capability is revoked.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-76010 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76010"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209215",
+    "published": "2026-10-31T21:31:02+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "화장품 브랜드 브이티코스메틱(VT Cosmetics)에서 해킹으로 고객과 과거 임직원, 개인사업자 거래처의 개인정보가 유출되는 사고가 발생했다. 유출 정보에는 고객 주문·배송정보뿐 아니라 주민등록번호와 계좌번호 등도 포함됐다.브이티코스메틱은 10월 30일 공식 홈페이지에 개인정보 유출 사과문을 게시하고, 외부 공격자가 탈취한 임직원 계정을 이용해 전사적자원관리(ERP) 시스템에 무단접속했다고 밝혔다.개인정보 유출 시점은 10월 22~23일이며, 회사가 사고를 인지한 시점은 10월 27일이다.고객 주문정보부터 주민등록번호·계좌정보까지",
+    "tags": [
+      "금융"
+    ],
+    "title": "브이티코스메틱 해킹…고객·퇴직 임직원·거래처 개인정보 유출, 주민번호·계좌정보도 포함",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209215"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209214",
+    "published": "2026-10-31T18:59:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국여자프로골프협회(KLPGA)가 더존비즈온의 백업서비스 침해사고로 회원들의 개인정보가 유출됐을 가능성이 있다고 공식 공지했다. 유출 가능성이 있는 정보에는 성명과 주민등록번호, 주소 등이 포함돼 있어 실제 유출 여부와 영향 범위에 대한 조사가 진행되고 있다.KLPGA는 10월 30일 공식 홈페이지에 '더존비즈온 고객사 개인정보 유출 가능성 관련 안내'를 게시하고, 전날인 29일 더존비즈온으로부터 회계시스템 APO 백업서비스와 관련한 보안사고 통지문을 수신했다고 밝혔다.KLPGA 회원정보 영향 가능성…주민등록번호 포함KLPGA가 받",
+    "tags": [
+      "금융"
+    ],
+    "title": "[단독] KLPGA, 더존비즈온 해킹 영향 공식 공지…회원 개인정보 유출 가능성 조사",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209214"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209213",
+    "published": "2026-10-31T18:55:23+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "식품기업 재원푸드가 더존비즈온 백업서비스 침해사고로 임직원과 점주의 개인정보가 유출됐을 가능성이 있다고 공식 공지했다. 유출 가능성이 있는 정보에는 성명과 생년월일, 연락처, 계좌번호 등이 포함돼 있으며, 정확한 피해 대상과 실제 유출 여부는 아직 확인되지 않았다.재원푸드는 최근 자사 홈페이지에 '개인정보 유출 가능성에 대해 임직원 및 점주님들께 안내드립니다'라는 공지를 게시하고, 지난 10월 28일 오후 10시 25분 더존비즈온으로부터 백업서버에 저장된 개인정보가 유출됐을 가능성이 있다는 통보를 받았다고 밝혔다.더존비즈온 백업 솔",
+    "tags": [
+      "금융"
+    ],
+    "title": "재원푸드, 더존비즈온 해킹 여파로 임직원·가맹점주 개인정보 유출 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209213"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209212",
+    "published": "2026-10-31T18:50:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 대형 통신사 관계사 위드유가 더존비즈온의 백업서비스 침해사고로 임직원 개인정보가 유출됐을 가능성이 있다고 공식 안내했다. 유출 가능성이 있는 정보에는 이름과 전화번호, 계좌정보 등이 포함돼 있으며, 실제 개인정보 유출 여부와 피해 인원은 아직 확인되지 않았다.위드유는 최근 자사 홈페이지를 통해 임직원 인사정보처리시스템으로 이용 중인 더존비즈온 전사적자원관리(ERP) 백업서비스에서 외부의 불법적인 접근이 발생했다는 사실을 통보받았다고 밝혔다.더존 Argos 2.0 EDM 백업서비스 침해…임직원 정보 영향 가능성위드유에 따르면 회",
+    "tags": [
+      "금융"
+    ],
+    "title": "대형 통신사 관계사 위드유도 더존비즈온 해킹 여파로 임직원 개인정보 유출 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209212"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209211",
+    "published": "2026-10-31T18:45:04+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "반려동물 서비스 기업 펫닥이 더존비즈온의 백업서버 침해사고로 과거 합병한 기업의 임직원과 거래처 개인정보가 유출됐을 가능성이 있다고 공식 공지했다. 유출 가능성이 있는 정보에는 주민등록번호와 계좌번호가 포함돼 있으며, 현재 실제 유출 여부와 피해 규모는 확인되지 않았다.펫닥은 10월 30일 자사 홈페이지에 '더존비즈온 백업서버 침해사고에 따른 舊 하이루 개인정보 유출 가능성 안내'를 게시하고, 2022년 4월 합병한 옛 하이루(현 포포즈 김포점)의 과거 데이터가 영향을 받았을 가능성이 있다고 밝혔다.합병 이전 직원·거래처 정보 영향",
+    "tags": [
+      "금융"
+    ],
+    "title": "펫닥도 더존비즈온 해킹 영향…옛 하이루 직원·거래처 개인정보 유출 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209211"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209210",
+    "published": "2026-10-31T18:41:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "참존오토모티브가 회계·백업서비스 제공업체인 더존비즈온의 서버 침해사고로 고객 개인정보가 유출됐을 가능성이 있다고 공식 공지했다. 더존비즈온의 백업서버에 외부 공격자가 불법 접근해 암호화된 데이터 일부를 반출한 것으로 확인되면서 관련 서비스를 이용하는 기업으로 피해 우려가 확대되고 있다.참존오토모티브는 10월 30일 '더존비즈온 개인정보 유출 가능성 안내 및 통지서'를 게시하고, 백업 업무 수탁업체인 더존비즈온의 'APO 백업서비스' 서버에서 보안 취약점에 따른 침해사고가 발생했다고 밝혔다.회사 측은 지난 10월 28일 오후 10시",
+    "tags": [],
+    "title": "벤틀리 공식 딜러 참존오토모티브, 고객 개인정보 유출 가능성…더존비즈온 해킹 여파",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209210"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209209",
+    "published": "2026-10-31T18:35:08+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "교육출판기업 창비교육이 더존비즈온의 백업서비스 침해사고로 저자와 거래처 관계자의 개인정보가 유출됐을 가능성이 있다고 공식 공지했다. 앞서 출판사 창비에 이어 창비교육도 개인정보 유출 가능성을 알리면서 더존비즈온 해킹 사고의 영향 범위가 추가로 확인됐다.창비교육은 10월 30일 자사 홈페이지에 '더존비즈온 백업서비스 침해사고에 따른 개인정보 유출 가능성 안내'를 게시하고, 회계프로그램 제공사인 더존비즈온으로부터 일부 개인정보가 유출됐을 가능성이 있다는 통보를 받았다고 밝혔다.외부 백업시스템 침해…저자·거래처 정보 영향 가능성창비교육에",
+    "tags": [
+      "금융"
+    ],
+    "title": "창비교육, 더존비즈온 해킹 영향 공식 확인…저자·거래처 정보 유출 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209209"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209207",
+    "published": "2026-10-31T18:30:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 주요 출판사인 창비가 더존비즈온의 백업서비스 침해사고로 저자와 거래처 관계자의 개인정보가 유출됐을 가능성이 있다고 공식 공지했다. 더존비즈온 해킹 사고의 영향이 출판업계에도 미치고 있는 것으로 확인됐다.창비는 10월 30일 자사 홈페이지에 '더존비즈온 백업서비스 침해사고에 따른 개인정보 유출 가능성 안내'를 게시하고, 회계프로그램 제공사인 더존비즈온으로부터 개인정보 유출 가능성을 통보받았다고 밝혔다.창비 자체 시스템 아닌 더존비즈온 백업서버에서 침해 발생창비에 따르면 이번 사고는 회사 내부 정보시스템이 아닌 외부 서비스 제공사",
+    "tags": [
+      "금융"
+    ],
+    "title": "[단독] 출판사 창비도 더존비즈온 해킹 영향…저자·거래처 개인정보 유출 가능성 공지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209207"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209206",
+    "published": "2026-10-31T18:24:21+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "행정중심복합도시 국립박물관단지 통합운영지원센터가 더존비즈온의 백업서비스 관련 서버에 저장된 개인정보의 유출 가능성을 확인하고 조사에 착수했다. 유출 가능성이 있는 정보에는 주민등록번호와 계좌번호 등이 포함돼 있어 조사 결과에 관심이 집중된다.국립박물관단지 통합운영지원센터(이하 지원센터)는 10월 30일 공식 홈페이지에 '개인정보 유출 가능성에 대한 안내'를 게시하고, 지난 28일 더존비즈온에 위탁해 운영 중인 회계관리 프로그램의 백업서버에 저장된 일부 개인정보가 유출됐을 가능성이 있다는 신고를 접수했다고 밝혔다.주민등록번호·계좌번호",
+    "tags": [
+      "금융"
+    ],
+    "title": "[단독] 국립박물관단지 개인정보 유출 가능성 공지…더존비즈온 해킹 사고 여파",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209206"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209205",
+    "published": "2026-10-31T18:18:38+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "온라인 쇼핑 플랫폼 G마켓에서 고객이 구매한 전자쿠폰(e쿠폰)의 핀번호가 제3자에 의해 무단으로 사용된 정황이 확인됐다. 회사는 외부의 비인가 접근 가능성을 파악하고 긴급 보안 조치를 시행했으며, 개인정보 유출 여부와 정확한 피해 규모를 조사하고 있다.G마켓은 10월 30일 일부 고객의 전자쿠폰 핀번호가 본인 의사와 관계없이 등록·사용된 사실을 확인하고 한국인터넷진흥원(KISA)에 침해사고를 신고했다고 밝혔다.구매해 보관하던 상품권이 제3자에 의해 사용이번 사고는 이용자들이 구매 후 보관하고 있던 전자쿠폰의 사용 내역에서 이상 징후",
+    "tags": [],
+    "title": "G마켓, 전자쿠폰 무단 사용 사고 발생…개인정보 유출 가능성 조사",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209205"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+    "published": "2026-10-31T12:01:56+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "American blockchain analysis firm Chainalysis said it was the target of a cybersecurity incident in which an external actor accessed non-sensitive customer data. However, the company noted that the breach did not result in unauthorized access to its investigation content, authentication credentials, or session tokens. \"This month, Chainalysis detected an external actor using offensive agentic",
+    "tags": [],
+    "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
+    "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+    "published": "2026-10-31T05:33:41+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A malicious ChatGPT share link could run an attacker's code in the logged-in session of anyone who opened it, allowing them to read their private conversations, researchers at the security firm Parameter showed. The researchers reported the flaw through OpenAI's bug bounty program on October 18, and OpenAI fixed it eight days later and rated it P1, its most serious category.",
+    "tags": [],
+    "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
+    "url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html",
+    "published": "2026-10-31T04:56:12+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday. The web infrastructure and security company said it autonomously mitigated 18.2 million network-layer (L3) DDoS attacks and 14.4 trillion HTTP DDoS requests in the third quarter of 2026. That amounts to 197,400 attacks per day, or one attack every 0.44",
+    "tags": [],
+    "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
+    "url": "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html"
+  },
+  {
+    "author": "Ryan Fetterman",
+    "category": "high",
+    "id": "6ae49fc11bed380001492138",
+    "published": "2026-10-31T12:00:00+00:00",
+    "severity": "info",
+    "source": "Cisco Talos",
+    "summary": "The self-deleting VOLTA infostealer steals credentials, sessions, and cryptocurrency wallets. Then, it uses LLMs to profile victims and rank their most valuable assets.",
+    "tags": [
+      "AI"
+    ],
+    "title": "Appraisal by AI: Model-driven victim prioritization in the VOLTA infostealer",
+    "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33476",
+    "published": "2026-10-31T10:52:53+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "Wireshark Release Candidate 5.0.0 was published : soon we can expect a new major version of Wireshark.",
+    "tags": [],
+    "title": "Wireshark 5.0.0rc1 Release, (Sat, Oct 31st)",
+    "url": "https://isc.sans.edu/diary/rss/33476"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33474",
+    "published": "2026-10-31T10:48:17+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "YARA-X&#;x26;#;39;s 1.22.1 is a bugfix version, it brings 2 bugfixes.",
+    "tags": [],
+    "title": "YARA-X 1.22.1 Release, (Sat, Oct 31st)",
+    "url": "https://isc.sans.edu/diary/rss/33474"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE80YWllRERCSHNrbTRVTTR1NGMtR2xjSlg4UTFGZjVxemlieGVTMFdIWkJacGxXUW1GOHVGWlVLbTU1T2dMYlZxZ29JSHJoOXdfYmNVd2lpcHhNQQ",
+    "published": "2026-10-28T08:53:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "靑, 금융권 연쇄 해킹 긴급점검…관계기관 공조 강화",
+    "tags": [
+      "금융"
+    ],
+    "title": "靑, 금융권 연쇄 해킹 긴급점검…관계기관 공조 강화",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80YWllRERCSHNrbTRVTTR1NGMtR2xjSlg4UTFGZjVxemlieGVTMFdIWkJacGxXUW1GOHVGWlVLbTU1T2dMYlZxZ29JSHJoOXdfYmNVd2lpcHhNQQ?oc=5"
   }
 ]
