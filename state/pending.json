@@ -4513,5 +4513,131 @@
     "tags": [],
     "title": "개인정보보호위원회 전체회의",
     "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5nMWFnYk1TX3pGdzFuLUxrbl80TW9JeVllNWQycEtFSTNoV3lEWEhLczRKSV9nbmFpbE55MVUwZF9menZNeENtZTRCZw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-120201",
+    "published": "2026-10-31T18:17:07.890",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Jpom 2.10.0 through 2.11.12 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain super-administrator access by injecting query conditions into the JPOM-USER-TOKEN header. Attackers can send a value like 'is not null', which Hutool's Condition parser treats as an operator, then execute commands through Jpom's script features.",
+    "tags": [],
+    "title": "CVE-2026-120201 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120201"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-120209",
+    "published": "2026-10-31T18:17:09.263",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "AJ-Report through 1.7.1 signs share tokens with a hard-coded JWT secret, allowing attackers to forge valid Share-Tokens offline. Attackers can mint a token with reportCode 'dataSet' to access the testTransform endpoint, which passes scripts to GroovyClassLoader for unauthenticated remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-120209 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120209"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-118636",
+    "published": "2026-10-31T21:16:53.203",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "**UNSUPPORTED WHEN ASSIGNED** \n\nJavaNativeMessageDecoder in the MINA 3.0 codec module calls ObjectInputStream.readObject() on frame bytes with no class filter, so an\napplication that puts it in front of an untrusted peer is open to gadget-chain RCE.\n\nAs the 3.0.0 branch is inactive, we do not plan to release a version that fixes this issue. \n\nUsers are recommended to use the latest Apache MINA 2.2.X branch.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-118636 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118636"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120203",
+    "published": "2026-10-31T18:17:08.237",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ShowDoc 2.8.14 before 3.9.6 contains a code injection vulnerability in its Mock feature that allows authenticated users to execute shell commands through mockjs templates. Attackers can store a template via MockController::add with escaped parentheses that mockjs evaluates with eval(), then trigger it through MockController::infoByKey to run commands, as root in the official Docker image.",
+    "tags": [],
+    "title": "CVE-2026-120203 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120203"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-120205",
+    "published": "2026-10-31T18:17:08.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Thelia before 3.1.0 contains a stored cross-site scripting vulnerability in ForSomeCustomers::getSummary() that allows unauthenticated attackers to inject scripts via unescaped customer names. Attackers can register with a script payload as their name that executes when administrators view related coupons, stealing CSRF tokens to create administrator accounts.",
+    "tags": [],
+    "title": "CVE-2026-120205 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120205"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+    "published": "2026-10-31T18:01:12+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys. [...]",
+    "tags": [],
+    "title": "Northflank security breach leads to abuse of customers' AI API keys",
+    "url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202175",
+    "published": "2026-10-31T19:33:36+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "U.S. Cybersecurity and Infrastructure Security Agency (CISA) adds Ivanti Connect Secure flaws to its Known Exploited Vulnerabilities catalog. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added the following Ivanti Connect Secure vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog: The vulnerabilities are part of an exploit chain that cybersecurity firm Volexity first documented in mid-October. “Volexity […]",
+    "tags": [],
+    "title": "U.S. CISA adds Ivanti Connect Secure flaws to its Known Exploited Vulnerabilities catalog",
+    "url": "https://securityaffairs.com/202175/security/u-s-cisa-adds-ivanti-connect-secure-flaws-to-its-known-exploited-vulnerabilities-catalog.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE9nZzNiSUl1b0FuUnJWYVBTNUlLempocjZBcDVGOGpHYWdFOURrdWtTVUVrQ0tRR0ZZZXBaaDR6aGpNcXhQMjBpVUViU3RZRDJNd3BMZFZBU0x0cjDSAWBBVV95cUxNdFBUZktmRmpQY1FzOWl5VFVwUFgyRTlHT25NSHJWeW5semJVQ0RabENFZEFUb0MwSXc4YlBlREdQLTZNTnJNMGhPMWhWX1FpOURXbVZWV05IYzZzSzN3U3U",
+    "published": "2026-10-31T21:08:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 분쟁조정 5년새 3배로…처리기간도 2배로 늘어",
+    "tags": [],
+    "title": "개인정보 분쟁조정 5년새 3배로…처리기간도 2배로 늘어",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nZzNiSUl1b0FuUnJWYVBTNUlLempocjZBcDVGOGpHYWdFOURrdWtTVUVrQ0tRR0ZZZXBaaDR6aGpNcXhQMjBpVUViU3RZRDJNd3BMZFZBU0x0cjDSAWBBVV95cUxNdFBUZktmRmpQY1FzOWl5VFVwUFgyRTlHT25NSHJWeW5semJVQ0RabENFZEFUb0MwSXc4YlBlREdQLTZNTnJNMGhPMWhWX1FpOURXbVZWV05IYzZzSzN3U3U?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFBrcFQzOTJQY0pQVzg0YmpvN016QXJfN2JSODBLeU5zVElpTEgyaDVkYmhXR1cyZWNlWURFbGNKMU9kbElaRUpkNDZrejJuSGdzVG43SnpZXzJkYldLaVp6dU01SnVLMEhzYnRz",
+    "published": "2026-10-31T13:58:39+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "빗썸도 뚫렸다…내 코인과 개인정보는 괜찮을까?",
+    "tags": [],
+    "title": "빗썸도 뚫렸다…내 코인과 개인정보는 괜찮을까?",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBrcFQzOTJQY0pQVzg0YmpvN016QXJfN2JSODBLeU5zVElpTEgyaDVkYmhXR1cyZWNlWURFbGNKMU9kbElaRUpkNDZrejJuSGdzVG43SnpZXzJkYldLaVp6dU01SnVLMEhzYnRz?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxON2RTaUJUSkRyQnlmakhVU1J2MFd6VFlKejRXTW9iQ1ZUVDFvWUttcmV5X0pOU0FHb1gxY1JzWXRvT0M3MEUzdjJDV254cEUxajUyTEpEd01EdVdKZ2lma2VYSWx5TTdCa2lsRVhUUHpJR1NxdjdaRFc1OUZpZHY1TQ",
+    "published": "2026-10-29T06:24:33+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "[단독]당국, 연이은 해킹 사고에 555개 全 금융사 2차 전수조사 착수",
+    "tags": [
+      "금융"
+    ],
+    "title": "[단독]당국, 연이은 해킹 사고에 555개 全 금융사 2차 전수조사 착수",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxON2RTaUJUSkRyQnlmakhVU1J2MFd6VFlKejRXTW9iQ1ZUVDFvWUttcmV5X0pOU0FHb1gxY1JzWXRvT0M3MEUzdjJDV254cEUxajUyTEpEd01EdVdKZ2lma2VYSWx5TTdCa2lsRVhUUHpJR1NxdjdaRFc1OUZpZHY1TQ?oc=5"
   }
 ]
