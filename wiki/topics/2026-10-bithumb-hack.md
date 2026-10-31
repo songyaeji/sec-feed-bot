@@ -18,6 +18,7 @@ cves: []
 - 2026-10-28 [금융위원회](https://news.google.com/rss/articles/CBMicEFVX3lxTFBzdWR5eDdPalNUSDRheGQzcGFKNGtEM05aVExILXA1TGh6NlB5MGNLWXZQUXI2OFNTcVRZem5WM052Q3Zlc2lqWnp3VVpBa29nTzlCRUlPWTlTbnBxNUFjU0dHWFVJdElraklBS0lzcWo?oc=5) — 전 업권 보안점검 간담회 소집
 - 2026-10-28 [금융위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTE12TGhQSkdWcDNfakhZRXdGbjBMY09WVXg2di1HQjNBUzRld2d2eUgyTFhuY3Nud19hOTh6Ty01Y05La1Z5RmIxang3ZXN4MXR6dHM3VE1HUlVjVVRjaFgtc9IBeEFVX3lxTE83SVYyQWFrLTI3MXFLMGFRWmd6bVZkXzh3M2hlUWl0SVplY3ViX2JDVkNRbVdjSEVFVy1hbmhQT2RNWDZTaVRySVRBanJkaFVubVJQYTFYV1Z5aE5rVExCVUpraU4xOTV4Z0RrSU5NdlRkV19PbGpPTA?oc=5) — 내주 AI 보안 총점검 및 긴급 보안점검 회의 개최
 - 2026-10-28 [금융위원회](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FbFRPd1dTbzRMVldNLXVuVHU3Wk4xZ281bFFWcWtUNDByRkFkUmpxZWJINlFLV09SXzdhYmxBQmRCZDhRVFZGU3plNXNVV2VmdHQzU2Rpak9Rd9IBWEFVX3lxTE9yU0xjWi1nZmtEUkJmVkR4ZGk0SFRrQVRQaVNLZzNNSmhWVGhFNUtwWTJndUZrb0ZDSkF5MjBMVzNNek1qQ29iZ09DUG44X2VveF9raHJKbkI?oc=5) — 금융기관에 금융사급 보안 강화 권고
+- 2026-10-29 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209174) — 빗썸 해킹 피해 확정: 고객 6,444명, 임직원 715명 개인정보 유출, 주민등록번호·신분증 사본 포함
 
 ## 관련
 
