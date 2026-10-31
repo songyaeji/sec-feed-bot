@@ -3642,5 +3642,292 @@
     "tags": [],
     "title": "‘AI 시대’ 개인정보 활용 어디까지…‘모두의 토론회’서 의견 쏟아진다",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9HVDNtcDZYMEVJcXY5M2NiYUNkb1NyRTFfSVdVVG81OE4zeHdSeFNaakp3SUtoTmdPdm01UWZvQ1pFendMR2x3MGkwbjNZZmhBaGc1VHhB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-89078",
+    "published": "2026-09-24T00:17:22.060",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to a double free issue when parsing a specially crafted regular expression in a CI/CD configuration.",
+    "tags": [],
+    "title": "CVE-2026-89078 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89078"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-93577",
+    "published": "2026-09-24T00:17:22.850",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.2.7, 19.3 before 19.3.3, and 19.4 before 19.4.1 that under certain conditions could have allowed an authenticated user to execute arbitrary code on the GitLab server due to an integer overflow issue when compiling a specially crafted regular expression in a CI/CD configuration.",
+    "tags": [],
+    "title": "CVE-2026-93577 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93577"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-78845",
+    "published": "2026-10-27T15:17:00.003",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Aidot products Linkind Matter Smart Plug 1.01.32, OREiN Matter Smart Light Bulb 3.15.21, and Linkind Wi-Fi Smart Light Bulb 3.30.17 are vulnerable to Remote Code Execution (RCE) via UPnP root description parsing.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-78845 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78845"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-119261",
+    "published": "2026-10-30T01:16:44.797",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper input validation in Skia in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119261 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119261"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-119263",
+    "published": "2026-10-30T01:16:45.047",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Memory corruption in GarbageCollection in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119263 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119263"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119260",
+    "published": "2026-10-30T01:16:44.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Frames in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119260 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119260"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119262",
+    "published": "2026-10-30T01:16:44.920",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper input validation in V8 in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119262 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119262"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119264",
+    "published": "2026-10-30T01:16:45.177",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory corruption in Dawn in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119264 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119264"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119265",
+    "published": "2026-10-30T01:16:45.303",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory corruption in Quota in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119265 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119265"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119266",
+    "published": "2026-10-30T01:16:45.430",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Quota in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119266 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119266"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119267",
+    "published": "2026-10-30T01:16:45.553",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Memory corruption in DOM in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119267 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119267"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119268",
+    "published": "2026-10-30T01:16:45.680",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Integer overflow in Editing in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119268 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119268"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119269",
+    "published": "2026-10-30T01:16:45.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in Blink in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119269 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119269"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-119270",
+    "published": "2026-10-30T01:16:45.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper input validation in CacheStorage in Google Chrome prior to 156.0.8078.79 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
+    "tags": [],
+    "title": "CVE-2026-119270 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119270"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209204",
+    "published": "2026-10-31T14:39:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "기업복지 서비스 전문기업 현대이지웰에서 외부 해킹으로 고객 개인정보가 유출되는 사고가 발생했다. 공격자는 회원정보 조회용 응용프로그램 인터페이스(API)에 비정상적으로 접근했으며, 회사는 조사 결과 실제 개인정보 유출 사실을 확인했다고 밝혔다.현대이지웰은 10월 30일 박종선 대표이사 명의의 공식 사과문을 통해 회원정보 조회 API를 대상으로 외부의 비정상적인 접근이 발생했으며, 고객 개인정보가 유출됐다고 공지했다.유출된 개인정보는 이름, 생년월일, 성별, 휴대전화번호, 아이디, 이메일, 주소 등 총 7개 항목이다. 구체적인 피해",
+    "tags": [
+      "금융"
+    ],
+    "title": "현대이지웰 해킹으로 고객 개인정보 유출…이름·생년월일·아이디·주소 등 7개 항목",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209204"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209203",
+    "published": "2026-10-31T12:06:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "전 세계 웹사이트에서 널리 사용되는 콘텐츠 관리시스템(CMS) 워드프레스(WordPress)에서 원격코드실행(RCE) 취약점이 발견돼 보안 업데이트가 배포됐다. 특히 취약점 공개 이후 대규모 공격 시도가 보고되면서 워드프레스 기반 기업 홈페이지와 쇼핑몰 운영자들의 주의가 요구된다.워드프레스 개발팀은 지난 10월 28일 보안 업데이트 7.1.4를 공개하고, 프로그램 업데이트 과정에서 공격자가 서버에 악성코드를 실행할 수 있는 취약점을 수정했다고 밝혔다. 해당 취약점은 보안 연구원 우무트 바이람(Umut Bayram)이 발견해 제보했다",
+    "tags": [
+      "금융",
+      "RCE"
+    ],
+    "title": "워드프레스 원격코드실행 취약점 공격 급증…24시간 동안 약 6만3천 건 시도",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209203"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209202",
+    "published": "2026-10-31T11:57:07+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "글로벌 항공 예약시스템 공급업체인 아마데우스(Amadeus IT Group)의 시스템이 해킹당하면서 일본항공(JAL) 승객 약 9만2천 명의 개인정보가 외부에 노출된 것으로 확인됐다. 국내 대한항공과 아시아나항공도 같은 업체로부터 침해사고를 통보받은 것으로 알려져 항공업계 전반으로 개인정보 유출 우려가 확산되고 있다.일본항공은 10월 30일 공식 공지를 통해 항공권 예약·발권·탑승수속을 처리하는 아마데우스의 여객서비스시스템(PSS)에 비인가 접근이 발생했으며, 일본항공과 일본트랜스오션항공 승객 약 9만2천 명의 예약정보가 외부에서",
+    "tags": [],
+    "title": "글로벌 항공 예약시스템 ‘아마데우스’ 해킹…일본항공 9만2천 명 개인정보 노출, 최근 대한항공·아시아나도 피해",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209202"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209201",
+    "published": "2026-10-31T11:41:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "글로벌 예측시장 플랫폼 폴리마켓(Polymarket)이 외부 서비스 공급업체를 통한 해킹으로 이용자들의 가상자산이 탈취된 사실을 확인하고, 총 390만 달러(약 56억 원)를 피해 이용자에게 보상하겠다고 발표했다.폴리마켓은 10월 30일(현지시간) 공개한 공식 사고 분석 보고서에서 외부 업체가 제공하는 웹사이트 성능 모니터링 프로그램이 공격자에 의해 변조되면서 사고가 발생했다고 밝혔다.공격자는 폴리마켓 웹사이트에 삽입된 정상적인 자바스크립트를 악성코드로 교체했다. 해당 프로그램은 웹사이트 성능을 측정하기 위해 이용자의 브라우저에서",
+    "tags": [],
+    "title": "폴리마켓 해킹으로 이용자 가상자산 탈취…390만 달러 피해 보상 발표",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209201"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209200",
+    "published": "2026-10-31T11:35:34+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI 모델 공유 플랫폼 허깅페이스(Hugging Face)에서 가상자산 채굴 악성코드와 원격접속용 백도어가 포함된 AI 모델이 유포된 사실이 확인됐다. 관련 모델의 누적 다운로드가 3만2천 회를 넘어서면서 AI 개발기업과 연구기관의 주의가 요구된다.AI 보안기업 플루토 시큐리티(Pluto Security)는 10월 29일 공개한 연구 결과에서 허깅페이스 계정 7개를 통해 유포된 악성 AI 모델 저장소 31개를 발견했다고 밝혔다.공격자는 정상적인 소형 AI 모델로 위장한 파일을 게시하고, 사용자가 모델을 불러오는 과정에서 악성 파이썬",
+    "tags": [
+      "금융"
+    ],
+    "title": "허깅페이스 AI 모델에 채굴 악성코드 삽입…3만2천 회 이상 다운로드",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209200"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209199",
+    "published": "2026-10-31T11:26:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "세계 최대 가상자산 거래소 바이낸스(Binance)가 대규모 해킹 공격을 받아 약 63억 달러(약 9조 원) 상당의 가상자산을 탈취당했다. 블록체인 분석기업은 이번 공격의 배후로 북한 연계 해커조직을 지목했다. 단일 가상자산 해킹 사건으로는 역대 최대 규모다.바이낸스는 10월 30일 공식 보안 사고 공지를 통해 한국시간 30일 오전 5시 5분경 온라인 지갑인 핫월렛(Hot Wallet)이 침해돼 약 63억 달러 상당의 가상자산이 유출됐다고 확인했다.블록체인 분석기업 티알엠랩스(TRM Labs)에 따르면 공격자는 비트코인, 이더리움,",
+    "tags": [],
+    "title": "바이낸스 해킹으로 가상자산 63억 달러 탈취…북한 해커조직 ‘트레이더트레이터’ 배후 지목",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209199"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209198",
+    "published": "2026-10-31T10:12:36+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "기업용 소프트웨어 업체 더존비즈온의 백업서버 침해사고와 관련해 의료기관의 거래처 정보까지 유출됐을 가능성이 제기됐다. 충남 지역에서 아산충무병원과 천안충무병원을 운영하는 의료법인 영서의료재단이 더존비즈온으로부터 정보 유출 가능성을 통보받고 공식 안내문을 게시한 사실이 확인됐다.이번 사고는 병원 내부 전산망에 대한 직접적인 해킹이 아니라 외부 회계프로그램 제공업체의 백업서비스에서 발생한 침해사고다. 그러나 병원이 외부 업체에 맡겨 관리하던 거래처 정보와 계좌번호 등이 영향을 받았을 가능성이 있다는 점에서 의료기관의 외부 정보처리 서비",
+    "tags": [],
+    "title": "[단독] 더존비즈온 해킹 여파, 아산·천안충무병원까지…거래처 계좌정보 등 유출 가능성 공식 공지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209198"
+  },
+  {
+    "author": "Microsoft Security Research",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=150709",
+    "published": "2026-10-31T01:02:57+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "Microsoft analyzes a malicious Claude Code–branded extension, its persistent SSH backdoor, and guidance to detect and remediate it. The post Inside a malicious Claude Code-branded extension and its persistent SSH backdoor appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "Inside a malicious Claude Code-branded extension and its persistent SSH backdoor",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE50T3NPSjNLVFpXb1ZuSlNhMEFzZDBLdUw1Q0ZHbnhfSGhFWHVNM1FSVXJjaXZrZ210X3NfYVJUZ3M2ZF9xZnNDUDdqdExrWHd3bHk1clBTa0xMWl9JSVl1eWpsVnA",
+    "published": "2026-10-28T07:15:47+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "“3만8490명 정보 털리자 정부 등판”…靑, 금융권 연쇄 해킹에 긴급회의",
+    "tags": [
+      "금융"
+    ],
+    "title": "“3만8490명 정보 털리자 정부 등판”…靑, 금융권 연쇄 해킹에 긴급회의",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE50T3NPSjNLVFpXb1ZuSlNhMEFzZDBLdUw1Q0ZHbnhfSGhFWHVNM1FSVXJjaXZrZ210X3NfYVJUZ3M2ZF9xZnNDUDdqdExrWHd3bHk1clBTa0xMWl9JSVl1eWpsVnA?oc=5"
   }
 ]
