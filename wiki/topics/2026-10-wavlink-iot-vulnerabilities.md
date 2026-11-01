@@ -11,6 +11,7 @@ Wavlink IP 카메라 및 무선 제품에서 CVSS 10.0의 다중 취약점이 �
 
 - 2026-10-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-109109) — CVE-2026-109109 WL-WN530BE1-A strcpy 버퍼오버플로우 공개 (CVSS 10.0)
 - 2026-10-13 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-109110) — CVE-2026-109110 WL-WN592AX6 wmapd 명령 인젝션 공개 (CVSS 10.0)
+- 2026-11-01 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-120195) — 5개 제품에 추가 명령 인젝션 취약점 (CVE-2026-120195/120196/120197/120198/120227, CVSS 9.9~10.0)
 
 ## 관련
 
