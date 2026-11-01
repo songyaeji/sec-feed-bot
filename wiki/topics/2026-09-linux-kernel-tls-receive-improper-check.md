@@ -10,5 +10,6 @@ Linux Kernel TLS 수신 경로에서 0바이트 레코드 검색 시 의도된 �
 ## 타임라인
 
 - 2026-09-18 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2025-39682) — CVE-2025-39682 공개, TLS rx_list zero-length record 우회
+- 2026-10-29 [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) — Linux Kernel 취약점 CISA 실악용 취약점 카탈로그에 추가, 실제 악용 확인
 
 ## 관련

@@ -10,5 +10,6 @@ Broadcom VMware ESX에서 관리자 권한을 가진 악의적 행위자가 로�
 ## 타임라인
 
 - 2026-10-28 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-41709) — CVE-2026-41709 공개, admin 권한 작업 로깅 미흡
+- 2026-10-29 [CISA KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) — Broadcom VMware ESX 취약점 CISA 실악용 취약점 카탈로그 추가, 실제 악용 확인
 
 ## 관련
