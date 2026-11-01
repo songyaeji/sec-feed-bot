@@ -2576,5 +2576,199 @@
     ],
     "title": "보안점검에도 해킹 잇따라…금융당국, 5일 추가 대책회의",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBWakY5RUdNcTJaRGRXTzZQc1lRanZCNnljcG1hVzdNVGZ5ZWxkLWVlVzBfeXhWUU1oZjRiM01CeXdmZXAzc3NmQkpJS3UxNTQxejJiQjFyeVdBUWFuV0NWNUNiOWlDamNBRGVHaQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120338",
+    "published": "2026-11-01T16:18:14.970",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Prefab UI's Generative UI sandbox runs caller-supplied Python inside Pyodide, Python compiled to WebAssembly, in a Deno subprocess. The feature is documented as isolation for untrusted code, including LLM-written UI. From prefab-ui 0.14.0 through 0.20.2 the launcher starts Deno with unrestricted --allow-read, --allow-write, and --allow-net, and the runner leaves the Deno API on the JavaScript global object. Pyodide's js module proxies that global, so the Python can call Deno.readTextFileSync and Deno.writeTextFileSync. A caller who can supply the code can read and write files as the server OS user, and can persist code execution by writing a .pth file into the server virtualenv's site-packages. The usual remote path is FastMCP's GenerativeUI provider, which registers the MCP tool generate_prefab_ui and forwards that tool's code argument into this sandbox. On a FastMCP server with no authentication configured, any client who can reach the server can call the tool. With authentication, any client allowed to call tools can. Generative UI is opt-in, and the host must have Deno installed. Confirmed on prefab-ui 0.20.2. Fixed in 0.21.0: after the runtime and Prefab sources load, the runner revokes Deno read, write, and network permission before it accepts code, the process is started with --no-prompt so a permission request cannot grant them again, and bootstrap network access is limited to cdn.jsdelivr.net. The fix is commit 030f074 (pull request 538).",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-120338 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120338"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-62048",
+    "published": "2026-11-01T16:18:15.170",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Liquid Web / StellarWP BookIt bookit allows SQL Injection.This issue affects BookIt: from n/a through 2.6.0.6.",
+    "tags": [],
+    "title": "CVE-2026-62048 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62048"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120238",
+    "published": "2026-11-01T18:17:13.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in WAVLINK WN553X1-B 260403_2.0.0. This affects the function sub_4162A8 of the file /bin/ioos of the component ovpn_file Handler. Such manipulation of the argument file_id leads to os command injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120238 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120238"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120239",
+    "published": "2026-11-01T18:17:13.920",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in WAVLINK WN553X1-B V260403_2.0.0. This vulnerability affects the function sub_419DA8 of the file /bin/ioos of the component WireGuard CLI Handler. Performing a manipulation of the argument file_id results in os command injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120239 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120239"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120240",
+    "published": "2026-11-01T19:16:57.950",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in WAVLINK WN553X1-B V260403_2.0.0. This issue affects the function sub_41A748 of the file /bin/ioos of the component WireGuard CLI Group Handler. Executing a manipulation of the argument group_id/group_name can lead to os command injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120240 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120240"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209242",
+    "published": "2026-11-02T02:05:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "성격검사와 직업심리검사, 조직·팀 진단 및 관련 교육프로그램을 제공하는 림스연구소(LCSI)가 홈페이지 해킹에 따른 개인정보 유출 가능성을 안내했다. 실제 정보 반출 흔적은 확인되지 않았으며, 피해 범위는 조사 중이다.연구소는 지난 10월 25일 공지를 통해 지난 23일 홈페이지의 불법 침입을 확인하고 즉시 차단했다고 밝혔다. 조사 결과 10월 21일부터 23일 사이 홈페이지 보안 취약점을 통해 회원정보 데이터베이스에 외부에서 접근할 수 있었던 것으로 파악됐다.유출 가능 항목은 개인 회원의 아이디, 암호화된 비밀번호, 이름, 연락처",
+    "tags": [
+      "금융"
+    ],
+    "title": "림스연구소 해킹 확인, 회원 개인정보·검사 이용정보 유출 우려",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209242"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209241",
+    "published": "2026-11-02T01:57:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "마사지 예약·할인 서비스 하이타이에서 지난 9월 해킹으로 이용자 16만3,743명의 개인정보가 유출됐다. 이에 운영사 앱튜브는 10월 23일 후속 공지를 통해 피해 고객에게 총 2만원 상당의 서비스 할인쿠폰을 제공하겠다고 밝혔다.앱튜브의 9월 10일 안내문에 따르면 사고는 9월 3일 오후 2시경 발생했으며, 회사는 9월 7일 오후 5시경 유출 사실을 인지했다. 공격자는 하위 버전 앱 사용자를 지원하기 위해 유지하던 응용프로그램 인터페이스(API)의 보안 취약점을 악용해 개인정보를 비인가 조회한 것으로 확인됐다.유출 정보는 닉네임,",
+    "tags": [
+      "금융"
+    ],
+    "title": "하이타이 해킹으로 16만3,743명 개인정보 유출, 피해 고객에 2만원 할인쿠폰 보상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209241"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209240",
+    "published": "2026-11-02T01:32:52+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "반도체 장비 유지보수 기업 티앤에스엔지니어링이 더존비즈온의 APO 백업서버 침해사고와 관련해 거래처 관계자의 개인정보가 유출됐을 가능성이 있다고 안내했다.회사는 전사적자원관리(ERP) 시스템 데이터 백업을 위해 더존비즈온 APO 백업서비스를 이용해 왔으며, 지난 10월 28일 백업서버의 외부 불법 접근과 개인정보 유출 가능성을 통보받았다고 밝혔다.유출 가능성이 있는 항목은 거래처 관계자의 성명, 전화번호, 이메일 주소, 사업자등록번호, 주민등록번호, 계좌번호다. 현재까지 실제 개인정보 유출은 확인되지 않았다. 회사는 백업데이터 전체",
+    "tags": [],
+    "title": "티앤에스엔지니어링, 더존비즈온 해킹으로 개인정보 유출 가능성 공지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209240"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209239",
+    "published": "2026-11-02T01:26:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국킨볼협회가 이용 중인 더존비즈온 서비스의 해킹 사고와 관련해 전·현직 직원의 개인정보가 유출됐을 가능성이 있다고 안내했다.협회는 더존비즈온 발표를 인용해 신원불상자의 시스템 무단 침입으로 스마트A10(Smart A 10)과 백업서버에 보관된 데이터 일부가 조회되거나 외부로 반출된 정황이 확인됐다고 밝혔다.유출 가능성이 있는 항목은 성명, 연락처, 이메일, 주소와 암호화된 주민등록번호·계좌정보다. 실제 유출 여부와 정확한 대상자는 조사 중이다.협회는 이번 안내가 전·현직 직원에게만 해당한다고 명시했다. 협회를 사칭해 금전이나 비밀",
+    "tags": [],
+    "title": "한국킨볼협회, 더존비즈온 해킹 관련 전·현직 직원 개인정보 유출 가능성 공지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209239"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209238",
+    "published": "2026-11-02T01:19:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "중부발전서비스가 더존비즈온의 APO 백업서버 침해사고와 관련해 임직원들에게 개인정보 유출 가능성을 안내했다. 회사는 자사도 영향 가능 대상에 포함돼 관련 조사가 진행되고 있으며, 현재까지 실제 개인정보 유출은 확인되지 않았다고 밝혔다.중부발전서비스는 10월 30일 오전 홈페이지에 ‘더존 측 보안사고 관련 임직원 안내사항’을 게시했다.회사에 따르면 사용 중인 전사적자원관리(ERP) 시스템 관리업체인 더존의 APO 백업서버에서 개인정보 유출 가능성이 확인됐다. 중부발전서비스는 해당 백업데이터에 대한 접근 여부와 개인정보 포함 여부, 구",
+    "tags": [
+      "금융"
+    ],
+    "title": "중부발전서비스도 더존비즈온 해킹 영향…임직원 개인정보 유출 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209238"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209237",
+    "published": "2026-11-02T01:14:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "온라인 강의와 오프라인 학원을 통해 공무원·자격시험, 어학교육 등의 서비스를 제공하는 에스티유니타스가 더존비즈온의 백업서버 해킹 사고와 관련해 거래 상대방의 개인정보가 유출됐을 가능성이 있다고 밝혔다.회사는 10월 31일 공식 공지를 통해 회계시스템의 외부 백업을 맡긴 더존비즈온으로부터 백업서버에 외부 침입 흔적이 발견됐다는 통보를 받았다고 안내했다. 유출 가능성이 있는 정보는 회계자료에 포함된 거래 상대방의 성명, 계좌번호, 주민등록번호다.해당 자료는 암호화된 상태였으며, 암호화 키가 유출된 정황은 발견되지 않았다고 설명했다. 에",
+    "tags": [],
+    "title": "더존비즈온 해킹 여파, 에스티유니타스도 개인정보 유출 우려…주민번호·계좌정보 포함",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209237"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209234",
+    "published": "2026-11-02T00:29:04+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "LG유플러스가 교육부, 사이버보안 전문기업 티오리한국과 협력해 인공지능(AI) 시대를 이끌 청소년 정보보안 인재 육성에 나선다. 통신·AI·보안 분야의 전문성과 교육 인프라를 결합해 이론 중심 교육을 넘어 실습과 현장 경험을 강화한다는 계획이다.LG유플러스는 지난 10월 31일 서울 강서구 LG사이언스파크에서 교육부, 티오리한국과 'AI·정보보호 영재교육원 운영 지원을 위한 업무협약'을 체결했다고 밝혔다.협약식에는 홍관희 LG유플러스 정보보안센터장(CISO/CPO·전무), 김도완 교육부 인공지능인재지원국장, 천호진 티오리한국 GTM",
+    "tags": [
+      "AI"
+    ],
+    "title": "LG유플러스, 교육부·티오리와 손잡고 AI 시대 사이버보안 인재 육성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209234"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202216",
+    "published": "2026-11-01T18:02:24+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Security Affairs AI-CYBERSECURITY newsletter includes a collection of the best articles and research on AI in the international landscape Artificial intelligence is rapidly changing cybersecurity, reshaping both the techniques used by attackers and the tools available to defenders. AI agents can automate tasks, analyze large amounts of data, discover vulnerabilities and accelerate offensive operations. At […]",
+    "tags": [],
+    "title": "SECURITY AFFAIRS AI-CYBERSECURITY NEWSLETTER ROUND 6",
+    "url": "https://securityaffairs.com/202216/ai/security-affairs-ai-cybersecurity-newsletter-round-6.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202209",
+    "published": "2026-11-01T17:25:24+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Security Affairs Malware newsletter includes a collection of the best articles and research on malware in the international landscape Malware Newsletter uCreator: virtualization-based Android spyware platform targeting WeChat, Telegram and other messaging apps deepveindrilling.com: Magento CMS block loader hits 953 stores CLAUDE CODE FOUND SPYWARE ON MY FAMILY’S PHONES AND A BACKDOOR ON MY MAC […]",
+    "tags": [],
+    "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 121",
+    "url": "https://securityaffairs.com/202209/malware/security-affairs-malware-newsletter-round-121.html"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks/",
+    "published": "2026-10-30T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Aurora Blum, David Mainor, Rohit Nambiar, Omar ElAhdan, Matthew McWhirt, Will Silverstone, Bhavesh Dhake, Chris Busse Introduction Recent intrusions in which threat actors have been observed weaponizing agentic frameworks to execute highly-automated intrusions has put a spotlight on evolving adversarial use of LLMs. In our September 2026 report , Google Threat Intelligence Group (GTIG) noted that forward leaning adversaries were beginning to transition from basic prompting to agentic workflows and LLM-enabled automation. Since this publication, GTIG and Mandiant have observed multiple threat actors abusing the open-source, agentic pentesting frameworks ARTEX, Hexstrike and CAIRN in incident response engagements to conduct a broad range of actions across multiple phases of the attack life cycle. This activity has been seen across the threat landscape, as noted in a recent Wiz report . The emergence of Artex and similar agentic offensive intrusion frameworks underscores a broader shift toward threat actor adoption of open source multi-agent offensive frameworks, as well as potentially custom agentic harnesses. This represents a paradigm shift towards intrusions occurring at machine speed, with the automated chaining of complex attack paths scaling intrusions exponentially. While the mechanics of the intrusions remain the same, such as using compromised credentials and targeting unpatched systems, the speed and scale at which frameworks can exploit these known weakne",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "ARTEX and Friends: Enter Agentic Offensive Frameworks",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks/"
   }
 ]
