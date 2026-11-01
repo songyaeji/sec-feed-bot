@@ -2268,5 +2268,313 @@
     ],
     "title": "금융당국, AI 해킹 확산에 대응책 촉구…내주 보안대책 회의",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1uSHV6Y3J3V1Z1eldtbUpYV01ONlhNVnZVX21mTnZNWkxNd3QzczF0RzdhVGFNWDNWQU1Sbk56RVBxTVVMdU1ZQ0lyeDB4SEhUWFZOdkJQMXhuZ251X0ZqS3pteEpUb1JsdEROMkItLTR0cW1SYU9fWtIBeEFVX3lxTE1uSHV6Y3J3V1Z1eldtbUpYV01ONlhNVnZVX21mTnZNWkxNd3QzczF0RzdhVGFNWDNWQU1Sbk56RVBxTVVMdU1ZQ0lyeDB4SEhUWFZOdkJQMXhuZ251X0ZqS3pteEpUb1JsdEROMkItLTR0cW1SYU9fWg?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120224",
+    "published": "2026-11-01T11:18:57.437",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in Oray Pugongying X5 Pro up to 7.6.1. Affected is the function run_apis_by_json/run_async_task of the component API Authorization. The manipulation results in improper authorization. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-120224 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120224"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-120225",
+    "published": "2026-11-01T11:18:57.843",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A weakness has been identified in Oray Pugongying X5 Pro up to 7.6.1. Affected by this vulnerability is the function config_restore_ex of the file /etc/openwrt_release. This manipulation of the argument filename causes relative path traversal. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-120225 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120225"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120227",
+    "published": "2026-11-01T13:18:00.643",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in WAVLINK WN701AE M01AE_V260105. This affects the function del_staticrule of the file static_route_setting.sh of the component ioos Web Backend. Performing a manipulation of the argument rule_name results in os command injection. Remote exploitation of the attack is possible. The exploit is now public and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120227 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120227"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120306",
+    "published": "2026-11-01T13:18:01.300",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Beta9 turns each shell command in a tenant image definition into a Dockerfile RUN line and executes it with Buildah on the build worker. The worker image sets BUILDAH_ISOLATION=chroot, and no buildah invocation passes --isolation, so the step only changes its filesystem root. It keeps the worker pod's PID, network, IPC, and user namespaces, runs as uid 0, and holds CAP_DAC_OVERRIDE. PID 1 in that procfs is the worker entrypoint, so /proc/1/root is the worker container's filesystem and is writable. That filesystem contains the runc, buildah, and runsc binaries the worker uses to start tenant containers, the worker's Kubernetes service account token, and the host directories mounted into the pod. Worker pods are privileged. Clip v2 layered builds are the default, so a tenant with a workspace token reaches this by submitting one image build. The read-only proof confirmed the shared namespaces, CAP_DAC_OVERRIDE, and that the worker's runc binary is visible at /proc/1/root. Fixed in worker 0.1.756: Buildah RUN steps, including the WORKDIR mkdir, use OCI isolation with private PID, IPC, and network namespaces, and tenant ARG values are passed only into the build container.",
+    "tags": [],
+    "title": "CVE-2026-120306 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120306"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120307",
+    "published": "2026-11-01T13:18:01.497",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Beta9 worker serves the sandbox file API from outside the container. getHostPathFromContainerPath turns the tenant's container path into a worker path. If the unresolved path starts with a mount destination, including the default upload mount at /tmp/.beta9, the remainder is joined onto that mount's source with filepath.Join, which cleans parent-directory segments after the prefix check. A long enough run of those segments names any absolute path on the worker. A path that matches no mount is joined onto the container root and opened in the worker's own filesystem, so an absolute symbolic link such as /var/run pointing at /run is followed against the worker root. Upload, download, stat, list, find-in-files, replace-in-files, and delete-file all call this helper. A tenant with a workspace token and one running sandbox can read, write, list, and delete files on the hosting worker as root, including files of other tenants on that machine. A read-only proof downloaded the worker pod's Kubernetes service account token through the file API for a path that did not exist inside the sandbox. In the shipped remote-node manifests that service account is bound to cluster-admin. Fixed in worker 0.1.756: sandbox file operations and workspace sync open paths with os.OpenRoot, so parent-directory and symlink lookups stay inside the container root or the mount source.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-120307 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120307"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120308",
+    "published": "2026-11-01T13:18:01.670",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A Beta9 tenant can attach a volume when deploying a function, endpoint, or task queue. The gateway builds the host path by joining the shared volumes root, the workspace name, and the volume identifier from the stub configuration. Nothing checks that the identifier names a volume that workspace owns. Parent-directory segments in the identifier collapse the joined path to the worker's filesystem root, and the worker bind-mounts that path into the sandbox read-write unless the volume was explicitly marked read-only. A tenant with a workspace token can therefore read and write the worker's files, including other tenants' volumes stored on that machine. Confirmed against gateway 0.1.769 and worker 0.1.745. Fixed in gateway 0.1.776 and worker 0.1.756: volume identifiers and mount paths are validated before a mount is built, including for stubs saved before the check existed, and the gateway rejects a volume that does not exist or is not owned by the workspace.",
+    "tags": [],
+    "title": "CVE-2026-120308 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120308"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120228",
+    "published": "2026-11-01T14:18:52.883",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in WAVLINK WN553X1-B V260403_2.0.0. This vulnerability affects the function sub_416D88 of the file /bin/ioos of the component ioos Service. Executing a manipulation of the argument group_id/group_name can lead to os command injection. The attack can be executed remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120228 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120228"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-120229",
+    "published": "2026-11-01T14:18:53.123",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in WAVLINK WN553X1-B 260403_2.0.0. This issue affects the function sub_416B50 of the file /bin/ioos. The manipulation of the argument file_id leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120229 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120229"
+  },
+  {
+    "category": "high",
+    "cvss": 4.4,
+    "id": "CVE-2023-42756",
+    "published": "2023-09-28T14:15:21.037",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Netfilter subsystem of the Linux kernel. A race condition between IPSET_CMD_ADD and IPSET_CMD_SWAP can lead to a kernel panic due to the invocation of `__ip_set_put` on a wrong `set`. This issue may allow a local user to crash the system.",
+    "tags": [],
+    "title": "CVE-2023-42756 (CVSS 4.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42756"
+  },
+  {
+    "category": "high",
+    "cvss": 3.3,
+    "id": "CVE-2026-120226",
+    "published": "2026-11-01T12:17:09.640",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in Hangzhou Xiongmai Technology P2PAPI.dll 1.3.3.32 on Windows. Affected by this issue is the function P2PAPI_Connect of the component P2P SDK. Such manipulation of the argument input as part of String leads to buffer overflow. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-120226 (CVSS 3.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120226"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209231",
+    "published": "2026-11-01T23:19:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "미국 이민생활 중 가족이 함께 성경을 읽으며 경험한 변화와 신앙의 여정을 담은 구은주 작가의 신간이 태인문화사에서 출간됐다.이 책은 낯선 미국 땅에서 13년간 생활한 저자가 사춘기 자녀들과 함께 1,000일 넘게 성경을 읽으며 경험한 가족의 회복과 하나님의 은혜를 진솔하게 기록한 신앙 에세이다.저자 가족은 매일 밤 10시 30분 식탁에 모여 성경을 읽기 시작했다. 처음에는 대화를 거부하고 방문을 닫아걸던 자녀들이 점차 마음을 열고 자신의 이야기를 나누기 시작했다. 신앙이 없던 남편도 성경 통독에 적극적으로 참여하면서 가족의 신앙생활",
+    "tags": [],
+    "title": "[책소개] 매일 밤 10시 30분, 가족에게 찾아온 기적…1,000일의 특별한 여정",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209231"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209230",
+    "published": "2026-11-01T23:04:26+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "글로벌 반도체 산업 현장에서 기술 혁신과 경영을 이끌어 온 김성진 박사가 자신의 삶과 신앙, 가족과 리더십에 대한 성찰을 담은 신간 《구름 뒤에도 태양은 빛나고 있다》를 출간했다.지난 10월 26일 테라코타에서 출간된 이 책은 젊은 엔지니어에서 글로벌 기업의 최고기술책임자(CTO)와 경영자로 성장한 저자가 성공의 이면에서 마주한 삶의 균열과 신앙을 통한 변화를 진솔하게 기록한 에세이다.책의 부제는 ‘붙잡는 삶에서 맡기는 삶으로, 믿음이 이끈 변화의 여정’이다. 자신의 능력으로 모든 것을 통제하려 했던 한 사람이 하나님을 향한 믿음",
+    "tags": [],
+    "title": "[신간] 반도체 기술 리더 김성진 박사, 성공과 믿음의 여정 담은 《구름 뒤에도 태양은 빛나고 있다》 출간",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209230"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209227",
+    "published": "2026-11-01T16:54:47+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "세계 최대 가상자산 거래소 바이낸스(Binance)에서 발생한 약 64억 달러 규모의 해킹 사건과 관련해 미국 연방수사국(FBI)이 북한을 공격 배후로 공식 지목했다. 블록체인 분석기업 체이널리시스(Chainalysis)는 올해 발생한 전체 가상자산 해킹 피해액의 약 89%가 북한 연계 공격으로 추정된다고 밝혔다. 이번 사건에서는 과거 북한 해킹 사건의 탈취 자금과 연결된 정황뿐 아니라 수천 개의 지갑을 이용한 대규모 자금세탁 활동도 확인됐다.FBI는 10월 31일(현지시간) 바이낸스에서 발생한 60억 달러 이상의 가상자산 탈취 사",
+    "tags": [],
+    "title": "FBI, 바이낸스 64억 달러 해킹 배후로 북한 공식 지목…체이널리시스 “올해 가상자산 해킹 피해 89% 북한 연계”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209227"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209226",
+    "published": "2026-11-01T16:47:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "선박용 엔진 제조기업 한화엔진의 임직원과 협력업체 관계자 개인정보 1,903건이 외부 비인가 접근으로 유출됐을 가능성이 제기됐다.최근 온라인에 공유된 개인정보 유출 안내 내용에 따르면, 한화시스템ICT가 관리하는 서버에서 외부 비인가 IP의 접근 정황이 확인됐으며, 이 과정에서 한화엔진 임직원과 협력업체 관계자의 개인정보가 영향을 받았을 가능성이 있는 것으로 나타났다.임직원·협력업체 정보 1,903건 영향 가능성해당 자료에 기재된 개인정보 항목은 이름, 휴대전화번호, 회사 이메일 주소, 부서, 직위, 사번 등 6개다.사고 인지 시점",
+    "tags": [],
+    "title": "한화엔진, 외부 서버 비인가 접근으로 개인정보 1,903건 유출 가능성…임직원·협력업체 정보 영향 우려",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209226"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
+    "published": "2026-11-01T08:51:31+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacker had to reach their HTTPS API over the network and have the trusted client's public certificate. Once in, the attacker would act as that client, with access to the cluster and its virtual machines. If the impersonated account is",
+    "tags": [],
+    "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
+    "url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+    "published": "2026-11-01T07:25:40+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29. The code had replaced a page-speed script that the site loaded from an outside company. Polymarket says it is refunding about $2.7 million to 726 affected wallets. Blockchain records show crypto worth about $2.64 million reached",
+    "tags": [],
+    "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+    "url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+    "published": "2026-11-01T07:03:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The U.S. Federal Bureau of Investigation (FBI) has officially attributed the theft of more than $6 billion in virtual assets to TraderTraitor, a North Korea-aligned elite hacking group also tracked as Jade Sleet, Pressure Chollima, PUKCHONG, Slow Pisces, and UNC4899. The FBI, along with the U.S. Secret Service (USSS) and the Internal Revenue Service Criminal Investigation (IRS-CI), said it",
+    "tags": [],
+    "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+    "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
+    "published": "2026-11-01T07:02:58+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of what has been described as a \"highly sophisticated infection chain\" targeting government organizations in Asia. The activity, detailed by Kaspersky this week, targeted a custom Windows 10 build used exclusively by government entities in Asia and involves the deployment of a previously undocumented .NET assembly-loading framework codenamed",
+    "tags": [],
+    "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+    "url": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/",
+    "published": "2026-11-01T15:11:21+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Hackers attempted to exploit a critical GitLab vulnerability in Alpine Linux's development infrastructure on October 20-21, prompting the open-source project to rebuild its GitLab server and reset all passwords over concerns of a possible compromise. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Alpine Linux rebuilds GitLab after attempted RCE attack",
+    "url": "https://www.bleepingcomputer.com/news/security/alpine-linux-rebuilds-gitlab-after-attempted-rce-attack/"
+  },
+  {
+    "author": "Mayank Parmar",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-doubling-pro-usage-limits-and-bringing-work-features-to-chat/",
+    "published": "2026-11-01T13:53:11+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "OpenAI has just confirmed that it's rolling out ChatGPT Work capabilities directly into regular Chat, while also combining usage allowances across ChatGPT and Codex. [...]",
+    "tags": [],
+    "title": "OpenAI says it's doubling Pro usage limits and bringing Work features to Chat",
+    "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-says-its-doubling-pro-usage-limits-and-bringing-work-features-to-chat/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202200",
+    "published": "2026-11-01T13:22:58+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box. Enjoy a new round of the weekly SecurityAffairs newsletter, including international press. U.S. CISA adds Ivanti Connect Secure flaws to its Known Exploited Vulnerabilities catalog Attackers Exploit Critical Drupal Commerce […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Security Affairs newsletter Round 602 by Pierluigi Paganini – INTERNATIONAL EDITION",
+    "url": "https://securityaffairs.com/202200/breaking-news/security-affairs-newsletter-round-602-by-pierluigi-paganini-international-edition.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202184",
+    "published": "2026-11-01T12:16:50+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "SMS of Death lets attackers crash Android call services with a hidden, zero-click message, blocking phone calls, even emergency calls too. A specially manipulated SMS message is enough to crash Android’s phone service, interrupt ongoing calls, and temporarily render the smartphone unusable. The attack requires no interaction from the victim and can even compromise the […]",
+    "tags": [],
+    "title": "SMS of Death: Android under attack, an invisible SMS can block calls and emergency services",
+    "url": "https://securityaffairs.com/202184/security/sms-of-death-android-under-attack-an-invisible-sms-can-block-calls-and-emergency-services.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33478",
+    "published": "2026-11-01T09:12:23+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "Recently, I had to extract embedded files from a set of OneNote files (extension .one).",
+    "tags": [],
+    "title": "OneNote File Extraction, (Sun, Nov 1st)",
+    "url": "https://isc.sans.edu/diary/rss/33478"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE83cGFiVS16QkdPQTF3LWRFbmZiNENqNHpzSXJTZWVEakcxY2hXbkhsQ2ppdzRSUUJSM3U3ckdVWE16a3ctQV9DMzhlUUx4dWlRTDI3NzlXUzBjQ01YaXRwYVBNekp2MUpSb3c",
+    "published": "2026-11-01T13:59:45+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "AI 개인정보 ‘매번 동의’ 바뀌나…사전 고지·거부권 놓고 국민 숙의",
+    "tags": [],
+    "title": "AI 개인정보 ‘매번 동의’ 바뀌나…사전 고지·거부권 놓고 국민 숙의",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE83cGFiVS16QkdPQTF3LWRFbmZiNENqNHpzSXJTZWVEakcxY2hXbkhsQ2ppdzRSUUJSM3U3ckdVWE16a3ctQV9DMzhlUUx4dWlRTDI3NzlXUzBjQ01YaXRwYVBNekp2MUpSb3c?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTFBWakY5RUdNcTJaRGRXTzZQc1lRanZCNnljcG1hVzdNVGZ5ZWxkLWVlVzBfeXhWUU1oZjRiM01CeXdmZXAzc3NmQkpJS3UxNTQxejJiQjFyeVdBUWFuV0NWNUNiOWlDamNBRGVHaQ",
+    "published": "2026-11-01T09:33:50+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "보안점검에도 해킹 잇따라…금융당국, 5일 추가 대책회의",
+    "tags": [
+      "금융"
+    ],
+    "title": "보안점검에도 해킹 잇따라…금융당국, 5일 추가 대책회의",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBWakY5RUdNcTJaRGRXTzZQc1lRanZCNnljcG1hVzdNVGZ5ZWxkLWVlVzBfeXhWUU1oZjRiM01CeXdmZXAzc3NmQkpJS3UxNTQxejJiQjFyeVdBUWFuV0NWNUNiOWlDamNBRGVHaQ?oc=5"
   }
 ]
