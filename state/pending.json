@@ -1338,5 +1338,1032 @@
     ],
     "title": "은행부터 가상자산 거래소까지 해킹…금융위, 5일 대책회의",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MSkFLbWVBVDVvc0pUS1hEZk1CR3ZVSHY4aGhuOUtvNkV6MGpvZW5fSlRjYkRxVkR3UE1WOVNmY0VmYXJyNnJrTTVMQXhpdzNzcUV2RFJNUXNTd9IBVEFVX3lxTE1CSjFzLVpTbmg3OW1lZjZRRzZYWmhHbEJCcGFPUXlnTURCbi1hNzl3UDBUTl9VYXRwMklYNlNTN2hkM2QtdnpmZnpMNjhIWFBJVUpFbw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-20702",
+    "published": "2026-08-11T17:17:49.090",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Protection mechanism failure for some Intel(R) Data Center Attestation Primitives (Intel(R) DCAP) may allow information disclosure. Unprivileged software adversary with an unauthenticated user combined with a low complexity attack may enable data exposure. This result may potentially occur via network access when attack requirements are present with special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (high) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (none) and availability (none) impacts.",
+    "tags": [],
+    "title": "CVE-2026-20702 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20702"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-64618",
+    "published": "2026-10-30T09:17:15.337",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command (\"SQL Injection\") vulnerability exists in Apache Fineract (through version 1.15.0). The vulnerability affects the outStandingAmountPercentageCondition parameter of the /fineract-provider/api/v1/search/advance HTTP API endpoint, allowing SQL injection due to insufficient input neutralization. Users are recommended to upgrade to version 1.16.1, which will fix the issue.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-64618 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64618"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2025-11969",
+    "published": "2026-11-02T06:17:42.087",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The System REST APIs do not correctly enforce access control mechanisms, allowing users with lower privilege roles to execute administrative actions that should be restricted. This weakness permits unauthorized operations on the affected product.\n\nSuccessful exploitation could enable a malicious actor to perform unauthorized administrative operations, including executing administrative functions. APIs exposed through the WSO2 API Manager's API Gateway are not affected by this vulnerability.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-11969 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11969"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120345",
+    "published": "2026-11-02T06:17:43.410",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in WAVLINK WN551X3-A M51X3_V251020-WO-182e965. This impacts the function sub_41a430 of the file /bin/ioos of the component DNS Resolution Handler. Performing a manipulation of the argument data results in os command injection. It is possible to initiate the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120345 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120345"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-120213",
+    "published": "2026-11-02T11:17:31.137",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "@fastify/http-proxy is a Fastify plugin that proxies HTTP requests to an upstream server under a configured prefix. In versions 9.0.0 through 11.6.5, when an application uses parameterized prefix and rewritePrefix options to pin clients to a fixed upstream path, the plugin substitutes URL-decoded route parameters into rewritePrefix without re-encoding them. A parameter value that encodes a path separator together with a fragment or query delimiter therefore decodes into real separators and delimiters that inject extra upstream path segments and strip the mandatory suffix the rewritePrefix was meant to enforce, without using any dot-dot traversal. An unauthenticated remote attacker can use this to reach upstream locations outside the intended prefix, leading to path-restriction bypass and, depending on the upstream, server-side request forgery or authorization bypass in the proxied service. The issue is fixed in @fastify/http-proxy 11.6.6, and users should upgrade to 11.6.6 or later. There is no workaround other than upgrading.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-120213 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120213"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-120442",
+    "published": "2026-11-02T15:17:26.490",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "ape-volo-admin before 3.6.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens using a hardcoded JWT signing key in appsettings.json. Attackers can sign tokens offline with the jti claim set to the seeded administrator id to gain full API control over users, roles, permissions and data.",
+    "tags": [],
+    "title": "CVE-2026-120442 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120442"
+  },
+  {
+    "category": "high",
+    "cvss": 9.4,
+    "id": "CVE-2026-120446",
+    "published": "2026-11-02T15:17:27.323",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "madong-admin-saas through 5.1.4 contains a missing authentication vulnerability in the platform tenant management API because the 'platformapi' middleware key never matches the 'platform' application. Unauthenticated remote attackers can call /platformapi/tenant/account, bind-plan and sync-data endpoints to list, create, modify, disable or delete tenants and bind subscription plans.",
+    "tags": [],
+    "title": "CVE-2026-120446 (CVSS 9.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120446"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73695",
+    "published": "2026-11-02T15:17:37.287",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Control Web Panel (CWP) before webpanel_version 1.16 contains a path traversal vulnerability in services/users/index.php, where an attacker-supplied module name is concatenated directly into an include path with no allowlist, basename(), or traversal sanitization. An attacker can supply directory traversal sequences in the module name to include arbitrary local .php files, resulting in local PHP file inclusion.",
+    "tags": [],
+    "title": "CVE-2026-73695 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73695"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73696",
+    "published": "2026-11-02T15:17:37.480",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Control Web Panel (CWP) before webpanel_version 1.12 contains an execution after redirect vulnerability in the user panel authentication flow, where CWPUserIndex's unauthenticatedFlow() calls toLoginWithIntendedUri() which emits a redirect header without exit(), allowing PHP execution to continue and the module dispatcher include to run without authentication. Attackers with nothing more than a valid hosting username can bypass authentication to reach user-panel module code paths, enabling a pre-authentication chain to root access.",
+    "tags": [],
+    "title": "CVE-2026-73696 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73696"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-73697",
+    "published": "2026-11-02T15:17:37.660",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Control Web Panel (CWP) before webpanel_version 1.16 contains an arbitrary file write and OS command injection vulnerability in the phpini_editor user panel module. The acc=update action writes attacker-controlled content to an attacker-supplied path via file_put_contents with no path confinement, and the acc=addlabelphpiniadv action passes unsanitized attacker input into shell_exec without escaping. An attacker with access to the module can write arbitrary files and execute arbitrary OS commands, resulting in remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-73697 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73697"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2024-7358",
+    "published": "2024-08-01T14:15:03.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in Point B Ltd Getscreen Agent up to 2.19.6/3.9.4 on Windows. This affects an unknown function of the file getscreen.msi of the component MSI Installer. The manipulation results in creation of temporary file with insecure permissions. The attack is only possible with local access. The exploit is now public and may be used. Upgrading to version 3.9.5 mitigates this issue. Upgrading the affected component is advised.",
+    "tags": [],
+    "title": "CVE-2024-7358 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7358"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-117612",
+    "published": "2026-10-28T17:18:20.533",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier does not apply its deserialization filter to classes referenced by the `resolves-to` attribute during XStream deserialization.",
+    "tags": [],
+    "title": "CVE-2026-117612 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117612"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-117616",
+    "published": "2026-10-28T17:18:20.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier provides an HTTP endpoint that loads agents by name without validating the name, allowing attackers with Overall/Read permission to load any config.xml file on the controller file system as an agent configuration, and to overwrite an arbitrary config.xml file when that agent is saved, potentially resulting in arbitrary code execution.",
+    "tags": [],
+    "title": "CVE-2026-117616 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117616"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-117617",
+    "published": "2026-10-28T17:18:21.037",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier checks for symbolic links in the path of an extracted file only before creating its parent directories, not immediately before writing it, and allows symbolic links in artifacts to replace existing files or empty directories, allowing attackers with Item/Configure permission to write files to arbitrary locations on the Jenkins controller file system.",
+    "tags": [],
+    "title": "CVE-2026-117617 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117617"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-117618",
+    "published": "2026-10-28T17:18:21.133",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Jenkins 2.587 and earlier, LTS 2.580.1 and earlier, the HTTP endpoint for creating the first user account does not check whether the setup wizard has been completed, resulting in a race condition that allows unauthenticated attackers to create an administrator account while the initial user account is being replaced.",
+    "tags": [],
+    "title": "CVE-2026-117618 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117618"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-117619",
+    "published": "2026-10-28T17:18:21.237",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier allows requests authenticated using HTTP Basic authentication, including with an API token, to obtain a \"remember me\" cookie, allowing attackers who have obtained a user's API token to retain access to Jenkins using a \"remember me\" cookie after the API token is revoked or expires.",
+    "tags": [],
+    "title": "CVE-2026-117619 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117619"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-117620",
+    "published": "2026-10-28T17:18:21.330",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier allows attackers with Overall/Read permission to trigger warnings in the \"Manage Old Data\" feature that can be acted on by administrators to inject attacker-controlled data, overriding existing user account information, including login passwords.",
+    "tags": [],
+    "title": "CVE-2026-117620 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117620"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-117624",
+    "published": "2026-10-28T17:18:21.740",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier does not consistently enforce the restriction on deserializing objects of types marked as storing their configuration in independent top-level configuration files as nested values, allowing attackers to bypass the root element check and potentially inject nested objects.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-117624 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117624"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-65874",
+    "published": "2026-10-30T09:17:15.487",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "This issue affects Apache Fineract versions up to and including 1.15.0. The Center read endpoint (GET /api/v1/centers) and the datatable entry read endpoints (GET /api/v1/datatables/{datatable}/{apptableId} and GET /api/v1/datatables/{datatable}/{apptableId}/{datatableId}) concatenate caller-supplied ordering parameters (orderBy, sortOrder, order) directly into the SQL ORDER BY clause. The existing regex-based input validation can be bypassed, allowing time-based blind SQL injection by any authenticated user with read access to centers or to the targeted datatable.\n\nUsers are recommended to upgrade to 1.16.1 which fixes the issue.",
+    "tags": [],
+    "title": "CVE-2026-65874 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65874"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120232",
+    "published": "2026-11-01T15:17:23.263",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Horizon DataSys Reboot Restore Standard up to 13.2. The impacted element is the function sub_23908 in the library shield.sys of the component Kernel Driver. Such manipulation leads to memory corruption. The attack can only be performed from a local environment. The exploit is publicly available and might be used. A fix is planned for the upcoming release.",
+    "tags": [],
+    "title": "CVE-2026-120232 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120232"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18199",
+    "published": "2026-11-02T08:17:36.083",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zohocorp ManageEngine Password Manager Pro versions before 13236 and PAM360 versions before 8601 are vulnerable to an authenticated Remote Code Execution vulnerability.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18199 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18199"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-117518",
+    "published": "2026-11-02T11:17:30.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "@fastify/reply-from is a Fastify plugin that forwards requests to an upstream HTTP server. In versions up to and including 12.8.0, the plugin validated proxy paths against forward-slash dot-segments only and then built the target with the WHATWG URL parser, which normalizes a backslash and its percent-encoded form to a forward slash on the http, https, ws, and wss schemes. A path that uses backslash dot-segments therefore bypasses the traversal check and resolves to a different upstream path, so an application that scopes proxying to an upstream prefix, or relies on route guards in front of the forwarding call, can have an unauthenticated request escape the intended prefix and reach other upstream endpoints. The resulting access to unintended upstream resources is primarily a confidentiality impact with limited integrity impact. The issue is fixed in @fastify/reply-from 12.8.1, where the path is normalized and any segment resolving to a single or double dot, along with control characters and ambiguous whitespace, is rejected before the URL is constructed, and users should upgrade to 12.8.1 or later. There is no workaround other than upgrading.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-117518 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117518"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-2613",
+    "published": "2026-11-02T11:17:31.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Admin REST API accepts user-supplied input without adequately sanitizing it, allowing it to be included in the structure of SQL statements.\n\nA user with administrator privileges can exploit this by influencing the structure of executed SQL statements, enabling blind SQL injection to infer database information and potentially impact the availability of the database service.",
+    "tags": [],
+    "title": "CVE-2026-2613 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2613"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-8923",
+    "published": "2026-11-02T11:17:33.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zohocorp ManageEngine Eventlog Analyzer and ManageEngine Log360 versions before 13062 are vulnerable to Authenticated Remote Code Execution in Log Forward option.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-8923 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8923"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-94349",
+    "published": "2026-11-02T13:17:41.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A low privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Command execution.",
+    "tags": [],
+    "title": "CVE-2026-94349 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-94349"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-120444",
+    "published": "2026-11-02T15:17:26.917",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GoFound through 1.4.1 contains a path traversal vulnerability that allows unauthenticated attackers to delete arbitrary directories by supplying ../ sequences in the database parameter. Attackers can send GET requests to /api/db/create and /api/db/drop, directly or via a victim's browser, triggering os.RemoveAll on directories outside the data directory.",
+    "tags": [],
+    "title": "CVE-2026-120444 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120444"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120445",
+    "published": "2026-11-02T15:17:27.107",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "madong-admin-saas through 5.1.4 contains an incorrect authorization vulnerability in AccessTokenMiddleware that allows authenticated tenant users to access the platform management API in multi-tenant mode. Attackers can reuse a tenant login JWT against /platformapi controllers to create platform administrator accounts, read tenant database settings, and take control of every tenant.",
+    "tags": [],
+    "title": "CVE-2026-120445 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120445"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-120447",
+    "published": "2026-11-02T15:17:27.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "HotGo through 2.15.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to choose the SMS login verification code by supplying the Code field to /admin/sms/send. Attackers who know a user's mobile number can set a known code and sign in through /admin/site/mobileLogin to take over accounts, including administrators.",
+    "tags": [],
+    "title": "CVE-2026-120447 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120447"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-120448",
+    "published": "2026-11-02T15:17:27.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DoraCMS through 3.1.0 contains a mass assignment vulnerability in the PUT /api/v1/user/api-keys/:id endpoint that allows authenticated low-privileged users to rebind their API key to another user's account. Attackers can set the userId field on their own key to a victim's id, then act as that victim to modify profiles and publish or delete content.",
+    "tags": [],
+    "title": "CVE-2026-120448 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120448"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120460",
+    "published": "2026-11-02T15:17:30.053",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jpom through 2.11.12 contains a cross-workspace authorization bypass vulnerability that allows authenticated users to manage other workspaces' Docker hosts by supplying foreign Docker asset ids. Attackers with Docker permission in any workspace can control containers, images, volumes and networks, including creating privileged containers with host bind mounts.",
+    "tags": [],
+    "title": "CVE-2026-120460 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120460"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120461",
+    "published": "2026-11-02T15:17:30.247",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Jpom through 2.11.12 contains a cross-workspace authorization bypass in POST /node/ssh_command/batch that resolves command templates and SSH nodes by ID without workspace filtering. Authenticated users with SSH command execute permission in one workspace can supply foreign template and node IDs to run commands on other workspaces' SSH hosts using their stored credentials.",
+    "tags": [],
+    "title": "CVE-2026-120461 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120461"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209275",
+    "published": "2026-11-03T00:35:15+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "전북특별자치도문화관광재단이 더존비즈온 백업서버 해킹 사고와 관련해 임직원과 거래처 관계자 등의 개인정보 유출 가능성을 공지했다. 대상 자료에는 주민등록번호와 금융기관 계좌번호, 급여·인사 정보 등이 포함돼 있다. 다만 재단 데이터의 실제 외부 유출 여부는 아직 확정되지 않았다.재단은 11월 2일 홈페이지에 ‘외부 서비스 침해사고에 따른 개인정보 유출 가능성 안내 및 주의 당부’를 게시하고, 외부 회계 프로그램 운영사인 더존비즈온에 위탁 보관하던 일부 데이터에 유출 가능성이 확인됐다고 밝혔다.2016~2025년 회계·인사 자료 대상유",
+    "tags": [
+      "금융"
+    ],
+    "title": "전북문화관광재단, 개인정보 유출 공지…주민번호·급여정보 포함",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209275"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209273",
+    "published": "2026-11-02T23:52:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "일본 뷰티 플랫폼 앳코스메(@cosme)에서 약 300만명의 회원 개인정보가 유출됐다. 이름과 주소 등 신원정보뿐 아니라 피부·모발 유형 등 개인 특성 정보까지 포함된 것으로 확인됐다.운영사 아이스타일(istyle)은 11월 2일 공식 공지를 통해 지난 10월 28일 제3자의 비인가 접근으로 ‘앳코스메 공통 ID’에 등록된 회원정보 일부가 외부로 유출된 사실을 확인했다고 밝혔다. 앳코스메는 화장품 후기와 뷰티 정보를 제공하는 일본 플랫폼이다. 유출 항목은 사용자 ID, 닉네임, 이름, 우편번호, 주소, 전화번호, 이메일 주소, 성별",
+    "tags": [],
+    "title": "일본 @코스메 해킹, 300만명 개인정보 유출…피부·모발 유형까지 노출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209273"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209272",
+    "published": "2026-11-02T23:43:04+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "일본 기업용 이메일 발송 서비스 ‘아라라 메시지(Arara Message)’의 해킹 피해 범위가 크게 확대됐다. 당초 약 301만건으로 발표됐던 이메일 주소 유출 사고에 대한 추가 조사에서 약 7,700만건이 반출됐거나 반출됐을 가능성이 있는 것으로 파악됐다. 이 수치는 이메일 주소 건수로, 피해자 수를 의미하지 않는다.아라라 모회사 페이클라우드홀딩스는 11월 2일 공식 2차 공지를 통해 이같이 밝혔다. 약 7,700만건에는 반출 의심 범위가 포함돼 있으며, 정밀조사 결과에 따라 건수가 달라질 수 있다고 설명했다. 이메일 주소 외",
+    "tags": [
+      "금융"
+    ],
+    "title": "일본 기업용 이메일 발송 서비스 ‘아라라 메시지', 약 7,700만건 유출로 확대...380개사 피해",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209272"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209270",
+    "published": "2026-11-02T21:31:15+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국공항보안이 더존비즈온 백업서버 침해사고와 관련해 임직원 등의 개인정보 유출 가능성을 공지했다. 별도 공지에서는 자사 채용 담당자를 사칭한 악성메일이 실제 발송된 사실을 확인하고 주의를 당부했다. 두 사안의 연관성은 공지에서 확인되지 않았다.주민등록번호·급여계좌·노조 가입 정보 등 유출 가능성 안내한국공항보안은 10월 30일 공지를 통해 같은 달 28일 오전 11시 34분경 더존비즈온으로부터 백업서버에 비인가자의 접근과 일부 암호화된 데이터의 유출이 있었다는 통지를 받았다고 밝혔다.영향을 받을 가능성이 있는 대상은 변경 전 사명인",
+    "tags": [],
+    "title": "한국공항보안, 더존비즈온 해킹으로  개인정보 유출 가능성…채용 사칭 악성메일도 주의",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209270"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209268",
+    "published": "2026-11-02T21:11:45+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "하이브가 전자결재시스템과 비용처리시스템에 대한 외부의 비정상적인 접근으로 내부 문서와 개인정보가 유출됐다고 밝혔다. 유출 정보에는 협력사 관계자와 전·현직 구성원 일부의 주민등록번호, 여권번호, 금융정보, 의료정보 등이 포함됐다.하이브가 공개한 ‘개인정보 유출 관련 사과의 말씀 및 안내’에 따르면, 회사는 최근 사내 보안 점검 과정에서 전자결재시스템에 연동된 외부 업체의 문서 미리보기 솔루션에 비정상적인 접근이 있었던 정황을 발견했다. 추가 조사에서는 비용처리시스템에서도 유사한 방식의 비정상 접근이 확인됐다.회사는 두 시스템에 보관",
+    "tags": [
+      "금융"
+    ],
+    "title": "하이브, 전자결재·비용처리시스템 해킹…주민번호·의료정보 등 개인정보 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209268"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209267",
+    "published": "2026-11-02T21:00:40+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "백종원 대표의 외식 프랜차이즈 기업 더본코리아가 더존비즈온 백업서비스 침해사고로 거래처와 전·현직 임직원, 고객상담 관련 개인정보가 유출됐을 가능성이 있다고 공식 공지했다. 유출 가능 항목에는 주민등록번호와 계좌번호, 고객상담 내용 등이 포함돼 있어 피해 범위에 관심이 집중되고 있다.더본코리아는 11월 2일 홈페이지에 '더존비즈온 개인정보 유출 가능성 및 사전 예방 조치 안내'를 게시하고, 지난 10월 26일 더존비즈온으로부터 백업서비스에 대한 외부 비인가 접근과 개인정보 유출 가능성을 통보받았다고 밝혔다.회사는 이번 사고가 더본코",
+    "tags": [
+      "금융"
+    ],
+    "title": "백종원 더본코리아, 더존비즈온 해킹으로 임직원 주민번호·고객상담 정보 유출 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209267"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209266",
+    "published": "2026-11-02T19:35:21+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "김재귀 롯데호텔앤리조트 정보보호부문장(CISO·CPO)은 10월 29일 더그랜드롯데 호텔에서 열린 ‘트러스트 스피어 2026 코리아(Trust Sphere 2026 Korea)’에서 봇 대응체계를 재검토하게 된 출발점을 이같이 설명했다. 공격이 탐지되지 않았다는 결과를 안전의 근거로 받아들이지 않고, 기존 보안체계가 무엇을 놓치고 있는지 확인하기 시작했다는 것이다.탈레스 주최, 데일리시큐 후원으로 열린 이번 행사에서 김 부문장은 ‘AI 봇 및 지능형 봇 대응전략과 실제운영의 교훈’을 주제로 발표했다. 그는 솔루션 도입에 따른 성과뿐",
+    "tags": [],
+    "title": "김재귀 CISO “AI 봇, 정상 고객처럼 들어왔다”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209266"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209265",
+    "published": "2026-11-02T17:18:47+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "쿼리파이(QueryPie, 대표 황인서)는 기업의 개인정보와 내부 기밀을 분류하는 의사결정 인공지능(AI) 모델 ‘QEV’를 개발했다고 밝혔다. 한국어·영어·일본어 문서를 활용한 자체 평가에서 민감정보 포함 문서 1,281건 중 1,277건을 탐지해 99.69%의 탐지율을 기록했다.QEV는 입력된 문장을 분석해 사전에 정한 기준에 따라 정보를 분류하고, 선택지별 확률을 제시하는 모델이다. 직원이 외부 AI 서비스에 입력하려는 내용에 고객정보나 미공개 사업자료가 포함됐는지 판단해 정보유출방지(DLP) 업무에 활용하는 방식이다.쿼리파이",
+    "tags": [
+      "AI"
+    ],
+    "title": "쿼리파이, 민감정보 분류 AI ‘QEV’ 개발…자체 평가서 탐지율 99.69%",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209265"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209264",
+    "published": "2026-11-02T17:08:55+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아침부터 가랑비가 내린다.초등학생 아이는 집에서 1km 떨어진 학교에 가야 한다. 비가 많이 오는 것은 아니지만, 그렇다고 우산 없이 보내기에는 마음이 놓이지 않는다.부모는 잠시 고민한다.'우산을 들려 보낼까?''우비를 입혀 보낼까?''함께 걸어갈까?''차로 데려다줄까?'어떤 선택이 가장 좋은 선택일까?사실 정답은 하나가 아니다.비의 양, 아이의 나이, 학교까지의 거리, 교통량, 부모의 일정과 비용까지 모든 조건이 다르기 때문이다.정보보호도 크게 다르지 않다.많은 사람들은 정보보호를 이야기할 때 '가장 강력한 보안이 가장 좋은 보안",
+    "tags": [],
+    "title": "[박나룡 보안칼럼] 빗속에서 그려보는 정보보호의 기본",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209264"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209263",
+    "published": "2026-11-02T17:02:04+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "지난 10월 29일, 세계 최대 가상자산 거래소 바이낸스에서 약 63억 달러 규모의 가상자산이 탈취됐다. 미국 연방수사국(FBI)은 북한의 해킹 조직 TraderTraitor를 공격 주체로 지목했다. 역대 최대 규모의 가상자산 탈취 사건이지만, 그 수법이 완전히 새로운 것은 아니다. 사회공학적 접근과 시스템 침투, 권한 탈취, 가상자산의 분산 이동과 자금세탁에 이르는 북한의 범죄 구조는 이미 여러 차례 관찰됐다. 이번에도 탈취 자산을 이더리움으로 전환하고 탈중앙화 금융서비스 등을 통해 세탁하려는 움직임이 포착됐다. 달라진 것은 범죄",
+    "tags": [
+      "금융"
+    ],
+    "title": "[보안칼럼] 63억 달러의 경고: AI 시대 사이버보안의 구조적 격차",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209263"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209262",
+    "published": "2026-11-02T16:55:12+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "최근 한국의 제조업 시장은 글로벌 AI 기업들의 최대 격전지로 부상하며 세계적인 주목을 받고 있다. 오픈AI에 이어 앤트로픽은 한국 지사를 열고 제조 및 자동차 산업 전담 인력 채용에 나섰으며, 프랑스의 미스트랄AI 역시 한국 엔터프라이즈 시장 공략을 본격화하고 있다.글로벌 기업들이 한국에 주목하는 이유는 명확하다. 반도체, 자동차, 배터리 등 세계 최고 수준의 제조 산업이 밀집해 있기 때문이다. 제조 현장에서 쏟아지는 방대한 데이터와 공정 노하우는 AI 기업에게 고부가가치 자산이며, 제조 현장 자체가 AI 적용을 위한 거대한 B2",
+    "tags": [],
+    "title": "[보안칼럼] AI 시대 한국 제조업, 비즈니스 복원력을 위한 아이덴티티 보안 전략",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209262"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209261",
+    "published": "2026-11-02T16:33:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "“암호가 어디에 쓰이는지에 대한 파악부터 필요하다.”김준섭 한국인터넷진흥원(KISA) 양자암호기술팀장은 10월 29일 더그랜드롯데 호텔에서 열린 ‘트러스트 스피어 2026 코리아(Trust Sphere 2026 Korea)’에서 기업의 양자내성암호 전환 준비가 조직 내부의 암호 사용 현황을 확인하는 작업에서 시작돼야 한다고 강조했다.탈레스가 주최하고 데일리시큐가 후원한 이번 행사에서 김 팀장은 ‘양자내성암호 전환 필요성 및 전환 전략’을 주제로 강연했다. 그는 양자내성암호(PQC·Post-Quantum Cryptography) 도입",
+    "tags": [],
+    "title": "김준섭 KISA 팀장 “양자내성암호 전환, 우리 회사 암호 사용 현황부터 파악해야”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209261"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209260",
+    "published": "2026-11-02T16:07:14+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "“AI 도구를 무작정 도입하는 것은 아니에요. 도입하시기 전에 어떻게 통제할 것인가를 반드시 고민해 보셔야 합니다.”곽진 아주대학교 사이버보안학과 교수이자 한국암호포럼 의장은 10월 29일 더그랜드롯데 호텔에서 열린 ‘트러스트 스피어 2026 코리아(Trust Sphere 2026 Korea)’에서 AI 보안의 전제조건으로 통제권 확보를 강조했다. 탈레스가 주최하고 데일리시큐가 후원한 이번 행사에서 곽 교수는 ‘공격하는 AI vs 방어하는 AI: 사이버 위협의 대전환과 보안 패러다임 재설계’를 주제로 강연했다.곽 교수는 AI가 취약",
+    "tags": [],
+    "title": "곽진 교수 “방어용 AI도 탈취되면 공격 무기…권한·행위 통제해야”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209260"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209259",
+    "published": "2026-11-02T15:34:18+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "에프원시큐리티(대표 이대호)는 오는 11월 3일 서울 한국과학기술회관에서 열리는 ‘AIS 2026 인공지능 보안 컨퍼런스’에 참가해 AI 기반 자율 모의침투 솔루션과 기업 보안 업무를 지원하는 AI 솔루션 라인업을 공개한다고 밝혔다.이번에 공개하는 자율 모의침투 솔루션은 자사 모의해킹 전담팀 ‘HLML’이 직접 기획·개발했다. 현장 모의해킹과 취약점 진단 과정에서 축적한 노하우를 반영해 정찰부터 취약점 탐지, 공격 재현, 증거 검증, 보고서 생성까지 자동화하는 것이 특징이다.회사는 ‘AI가 공격하는 시대, AI로 먼저 검증하십시오’",
+    "tags": [
+      "AI"
+    ],
+    "title": "에프원시큐리티, AIS 2026서 ‘AI 자율 모의침투’ 솔루션 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209259"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209258",
+    "published": "2026-11-02T15:21:09+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오라클이 파트너 생태계에 10억 달러를 투자해 AI 기반 솔루션과 서비스 확산에 나선다. 향후 4년 동안 진행되는 이번 투자는 파트너들이 혁신적인 솔루션을 개발하고 전문 역량을 쌓아 고객의 비즈니스 혁신을 돕도록 지원하기 위해 마련됐다.이번 투자에는 교육과 인증, 기술 역량 강화, 테스트 및 시연 환경, 클라우드 마이그레이션 자금, 시장 진출 협력 등을 포함한 오라클 파트너 네트워크(Oracle PartnerNetwork, OPN)의 혜택과 인센티브가 담겼다. 시스템 통합업체, 독립 소프트웨어 공급업체(ISV), 클라우드 및 관리형",
+    "tags": [],
+    "title": "오라클, 파트너 생태계에 10억 달러 투자...AI 현대화 지원 가속",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209258"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209257",
+    "published": "2026-11-02T15:12:24+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "카스퍼스키가 인터폴이 주도한 국제 사이버 범죄 단속 작전 '세렝게티 III 작전(Operation Serengeti III)'을 지원해 성과를 거뒀다. 카스퍼스키 위협 연구 전문 센터는 위협 인텔리전스 데이터와 기술 분석을 제공했다. 이번 작전으로 용의자 1,462명이 검거되었고, 1억 5천만 달러 규모의 자금이 회수되었다.세렝게티 작전은 이번이 세 번째로, 올해 6월 29일부터 8월 31일까지 진행되었다. 인터폴은 아프리카 20개국과 미국 수사기관, 민간 보안 기업들을 결집해 사이버 범죄를 이용한 사기와 랜섬웨어, 기업 이메일 침",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "카스퍼스키, 인터폴 국제 사이버 범죄 단속 작전 지원...용의자 1,462명 검거",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209257"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
+    "published": "2026-11-02T14:46:05+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign targeting Israel and the Kurdistan Region of Iraq by an Iran state-aligned threat actor between August and October 2026. According to a report published by Dream Research Labs, the campaign has led to the compromise of a high-profile individual in Israel, along with additional compromises affecting a government cloud",
+    "tags": [],
+    "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
+    "url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+    "published": "2026-11-02T11:50:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week. Langflow is an open-source tool for building AI agents and workflows, and its vulnerability reports go to IBM. Every release from 1.0.0 through 1.12.8 has the flaws, and the only fix is version 1.13.0. Neither flaw is in CISA's Known",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
+    "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html",
+    "published": "2026-11-02T11:30:00+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Forty percent of security teams now use AI every day, and another 56% are testing it. Only 4% have no plans to adopt it, according to Prophet Security's State of AI in Security Operations 2026 survey of more than 250 CISOs, SOC leaders and practitioners. For the teams still testing, the next decision is whether their own SOC is ready. AI SOC readiness has two parts: whether a SOC has the",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
+    "url": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
+    "published": "2026-11-02T11:08:45+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtain login certificates for privileged accounts, including one for a domain controller. Microsoft said in a report that it investigated two such intrusions, one of which resulted in company",
+    "tags": [],
+    "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
+    "url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
+    "published": "2026-11-02T10:49:59+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign specifically targeting Linux infrastructure associated with government entities and state-affiliated infrastructure. The activity, observed by Palo Alto Networks Unit 42 between October 2025 and April 2026, has been tracked under the moniker CL-UNK-1211, where \"CL\" refers to cluster and \"UNK\" stands for unknown",
+    "tags": [],
+    "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
+    "url": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
+    "published": "2026-11-02T15:03:07+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The maintainer of BTCPay Server, an open-source cryptocurrency payment processor, has urged users to install the latest version as hackers have been draining \"hot wallets\" on instances running older versions. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
+    "url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/"
+  },
+  {
+    "author": "Sponsored by Cape",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/",
+    "published": "2026-11-02T15:01:11+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Mobile carriers can retain years of call and text metadata, exposing sensitive details about customers' relationships, locations, and daily routines if breached. Cape examines the privacy risks of long-term telecom data retention and how its mobile service reduces exposure by automatically deleting call records. [...]",
+    "tags": [],
+    "title": "Your Mobile Carrier Stores Your Call Logs for Years",
+    "url": "https://www.bleepingcomputer.com/news/security/your-mobile-carrier-stores-your-call-logs-for-years/"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/",
+    "published": "2026-11-02T14:28:39+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A cyberattack on refrigeration systems has disrupted stores run by multiple supermarket chains across several European countries after hackers remotely changed temperature settings on freezers and cooling systems. [...]",
+    "tags": [],
+    "title": "Hackers disrupt refrigeration systems at European supermarkets",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-disrupt-refrigeration-systems-at-european-supermarkets/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/",
+    "published": "2026-11-02T13:57:29+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Microsoft has resolved a known issue that prevented some users from activating the Smart App Control security feature after installing the October 2026 KB5127648 Windows 11 security update. [...]",
+    "tags": [],
+    "title": "Microsoft fixes Smart App Control broken by October Windows update",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-smart-app-control-broken-by-october-windows-update/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+    "published": "2026-11-02T12:47:00+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Over 1,000 Internet-exposed GitLab servers are still unpatched against a maximum-severity flaw actively exploited in remote code execution attacks. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+    "published": "2026-11-02T11:28:42+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Taiwanese network-attached storage (NAS) appliance maker Synology warned customers to update their devices immediately due to a surge in C3RB3r ransomware attacks. [...]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
+    "url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
+    "published": "2026-11-02T09:33:26+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Ivanti released security updates to patch two more Connect Secure (ICS) remote access gateway flaws that have been chained in zero-day attacks since at least October 1. [...]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/apple-warns-users-99-countries-mercenary-spyware",
+    "published": "2026-11-02T14:42:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Apple does not attribute attacks or the notices to specific malicious actors or geographical regions, the notification said, due to the “extreme cost, sophistication, and worldwide nature of mercenary spyware attacks [which] make them some of the most advanced digital threats in existence today.”",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Apple warns users in 99 countries of mercenary spyware",
+    "url": "https://therecord.media/apple-warns-users-99-countries-mercenary-spyware"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/ukraine-hackers-russia-alert-system",
+    "published": "2026-11-02T14:30:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "A popular Ukrainian air raid alert system was hacked over the weekend, prompting a cyber group to breach a similar Russian system in retaliation.",
+    "tags": [],
+    "title": "Russian and Ukrainian hackers hijack emergency apps to spread fake nuclear attack warnings",
+    "url": "https://therecord.media/ukraine-hackers-russia-alert-system"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/cyberattack-grocery-freezers-europe",
+    "published": "2026-11-02T13:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Supermarket and grocery store refrigerators across Europe appear to have been hacked early Monday — the second such incident in recent weeks where attackers have manipulated temperature controls and caused stock to spoil.",
+    "tags": [],
+    "title": "Second wave of suspected cyberattacks hits supermarket freezers across Europe",
+    "url": "https://therecord.media/cyberattack-grocery-freezers-europe"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/fbi-blames-tradertraitor-for-binance-hack",
+    "published": "2026-11-02T00:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The FBI and U.S. Secret Service alleged this weekend that North Korean hackers were responsible for stealing more than $6.3 billion from cryptocurrency platform Binance last week.",
+    "tags": [],
+    "title": "FBI blames N. Korea’s TraderTraitor for Binance theft, urges crypto industry to block transactions",
+    "url": "https://therecord.media/fbi-blames-tradertraitor-for-binance-hack"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202260",
+    "published": "2026-11-02T12:09:08+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A new wave of fridge cyberattacks hit supermarket refrigeration systems across five European countries, raising temperatures and causing food losses. A new wave of fridge cyberattacks has affected supermarket refrigeration systems in several European countries. Fridges and freezers suddenly rose in temperature overnight, with some incidents suspected to be caused by hackers. On Monday, November […]",
+    "tags": [],
+    "title": "New wave of fridge cyberattacks hits European supermarkets, this time in Belgium, Luxembourg, Sweden and Estonia",
+    "url": "https://securityaffairs.com/202260/security/another-fridge-cyberattack-hits-european-supermarkets-this-time-in-belgium-luxembourg-sweden-and-estonia.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202248",
+    "published": "2026-11-02T10:20:46+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Hackers reportedly hit Ukraine ‘s and Russia ‘s emergency alert apps, sending fake nuclear and attack warnings and raising concerns over public safety. Ukraine and Russia both said on Sunday night that hackers had compromised their emergency alert apps and used them to send fake warnings about air raids and other attacks, including nuclear threats. […]",
+    "tags": [],
+    "title": "Hackers Send Fake Nuclear Threat Alerts to Ukrainian and Russian Citizens",
+    "url": "https://securityaffairs.com/202248/security/hackers-send-fake-nuclear-threat-alerts-to-ukrainian-and-russian-citizens.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202241",
+    "published": "2026-11-02T08:25:46+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Chainalysis suffered a cyberattack exposing customer names, emails and user IDs, while investigation data and passwords remain safe. Blockchain analytics firm Chainalysis says it was the target of a cybersecurity incident. A threat actor accessed its systems and internal tools and stole some non-sensitive customer data. “This month, Chainalysis detected an external actor using offensive […]",
+    "tags": [],
+    "title": "Chainalysis Investigates Security Incident Involving AI-Driven Attack Techniques",
+    "url": "https://securityaffairs.com/202241/ai/chainalysis-investigates-security-incident-involving-ai-driven-attack-techniques.html"
+  },
+  {
+    "author": "Kirill Antonov, Vladislav Vlasov, Dmitry Chizhmak",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?post_type=threat_response&p=121715",
+    "published": "2026-11-02T08:00:24+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "We analyze a series of attacks on educational institutions that were fully automated during the post-exploitation phase using the CyberStrikeAI penetration testing framework.",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "CyberStrikeAI in the wild: the use of AI in real-world attacks on organizations",
+    "url": "https://securelist.com/tr/cyberstrikeai-attacks/121715/"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/",
+    "published": "2026-11-02T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Christopher Romano, Codi Starks, Garrett Mahoney, John Wolfram, Josh Murchie, K Singh, Mathew Potaczek, Mike Lombardi, Rik Dolfing Introduction Mandiant responded to multiple incidents in 2026 in which threat actors hijacked enterprise access to Large Language Models (LLMs), a tactic known as \"LLMJacking.\" Spanning a variety of cloud and LLM providers, these intrusions impacted organizations in North America, South America, and Asia Pacific across the financial services, retail, technology, and transportation sectors. Unlike the gradual resource consumption associated with cryptojacking, LLMJacking can generate large spikes in fraudulent cloud charges in a matter of hours. Across individual incidents, we observed fraudulent charges associated with resource consumption exceeding $100,000 USD in a single day, with cumulative charges at some organizations reaching $1 million USD before access was revoked. Figure 1: Usage chart showing LLMJacking generating a spike in API requests Analyzing the criminal ecosystem behind these frontline compromises, and building upon previous reporting on the growing underground market for LLM credentials, Google Threat Intelligence Group (GTIG) has identified a diverse set of financially motivated threat clusters operating out of multiple regions globally. As the LLMJacking ecosystem matures, we are also tracking a division of labor between threat actors establishing initial access to compromised environments and operators managing do",
+    "tags": [
+      "금융",
+      "AI",
+      "RCE"
+    ],
+    "title": "The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models/"
+  },
+  {
+    "author": "Google Threat Intelligence Group",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet/",
+    "published": "2026-11-02T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Introduction Last week, Google and industry partners dismantled the XCPE backdoor which enrolled more than 1.3 million set-top boxes into a botnet. We assess with high confidence that the backdoor and botnet were intentionally developed, deployed, and operated for financial gain by Videostrong Technology Co., an Android Original Equipment Manufacturer (OEM) and Original Design Manufacturer (ODM). Videostrong monetized the backdoor by selling access to criminal affiliates and loading those affiliates’ malware modules onto infected devices. These secondary modules were conducting ad-fraud; silently enrolling infected devices into residential proxy networks; and loading additional malware onto XCPE-compromised devices. We also took action to disrupt the command and control (C2) domains that operate these affiliate modules. Because these affiliates each have diversified distribution channels for their modules beyond XCPE, we assess that taking down their C2 domains will sever access to at least 10 million additional compromised devices. We found this malicious software built directly into many different device models and brands over multiple years, supported by dedicated infrastructure and constantly evolving configurations to evade detection and manage their affiliates. We believe this campaign wasn’t an isolated rogue insider or a development oversight. As a result, Google has cut ties with Videostrong and banned them from making devices with preloaded Google apps. Google requi",
+    "tags": [
+      "금융"
+    ],
+    "title": "Shutting the Door on the XCPE Botnet",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMifEFVX3lxTE5MYUh6aWw5bVpxYUdUQzdROWtvcmFuQkJGZjRxWmVPMVdndzJEZlg2SjVTb1FHMkpwMUI4WWltT0g5Z1NBd3NqWERXbmo0aW5qODYyXzFhNEVGaUZUbDdhQkhpWUNvdm16Sl9IVUZudnJZWi0ycjBteVp4YU8",
+    "published": "2026-11-02T07:03:32+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "바이낸스 해킹에 금융위 긴급 대응…가상자산 넘어 전 금융권 보안 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "바이낸스 해킹에 금융위 긴급 대응…가상자산 넘어 전 금융권 보안 점검",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5MYUh6aWw5bVpxYUdUQzdROWtvcmFuQkJGZjRxWmVPMVdndzJEZlg2SjVTb1FHMkpwMUI4WWltT0g5Z1NBd3NqWERXbmo0aW5qODYyXzFhNEVGaUZUbDdhQkhpWUNvdm16Sl9IVUZudnJZWi0ycjBteVp4YU8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9LT3FoZ3JaZ3lPZVU5VjdTTUw1SFBPNmIxbmktX3VrMU90YU50R1o2QVUwbGN3VERfSXRYclFyTnFjOXd5aUN0ZVY3OEU1NUZqdUVUeDJqanRQS3Y1bzBoUXNuRWY0dUdkby1icEx0MNIBc0FVX3lxTE5oVEtadWVYRzk0ZGxVMm1lTFNvM0VOSy1NZ3pIOW1IdV91VHZpY0UyRDZzWm9qa3JZT0kyQWRpTVV0azVCd2hIWFN0dmd1R1RFVmdNejBnUi13MTNYT2lLZ2lXVUZxbmdwcjdvd3RrTHJfX2s",
+    "published": "2026-11-02T10:03:15+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "바이낸스 8조원대 해킹 사고에 금융당국 긴급 점검…국내 거래소 보안 강화 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "바이낸스 8조원대 해킹 사고에 금융당국 긴급 점검…국내 거래소 보안 강화 주문",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9LT3FoZ3JaZ3lPZVU5VjdTTUw1SFBPNmIxbmktX3VrMU90YU50R1o2QVUwbGN3VERfSXRYclFyTnFjOXd5aUN0ZVY3OEU1NUZqdUVUeDJqanRQS3Y1bzBoUXNuRWY0dUdkby1icEx0MNIBc0FVX3lxTE5oVEtadWVYRzk0ZGxVMm1lTFNvM0VOSy1NZ3pIOW1IdV91VHZpY0UyRDZzWm9qa3JZT0kyQWRpTVV0azVCd2hIWFN0dmd1R1RFVmdNejBnUi13MTNYT2lLZ2lXVUZxbmdwcjdvd3RrTHJfX2s?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiY0FVX3lxTE1mSW51MUpMYlJuQzN5UExLVk1oaWF4YU1wT2ZXd2NFdFJEU2hzeTlQS1VkMmhaNHNBSDdndmVLQmpOak5mcm4xZzlzeGlxUllJRHBzZmN2SlNCaHB6NUdieWVvYw",
+    "published": "2026-11-02T06:29:37+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "'바이낸스 해킹'에 금융위 긴급회의…콜드월렛 확대·준비금 추가 적립 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "'바이낸스 해킹'에 금융위 긴급회의…콜드월렛 확대·준비금 추가 적립 주문",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1mSW51MUpMYlJuQzN5UExLVk1oaWF4YU1wT2ZXd2NFdFJEU2hzeTlQS1VkMmhaNHNBSDdndmVLQmpOak5mcm4xZzlzeGlxUllJRHBzZmN2SlNCaHB6NUdieWVvYw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE82V1B1T0NqdDR2SThjdnVGOUduZ2RVWW1FU2R2QW9lelRRbWhSVHFGdUFCZGVTS1VVT0xRb0JZSkxrQWY3WXlVNUJlNU1wZGxqaUJxOHg5cDBYY0lDLW45aUNpMXNKSDJxT0dScE5abw",
+    "published": "2026-11-02T08:12:11+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "바이낸스 8조 원 해킹에 금융당국 긴급 점검…국내 코인거래소 전자지갑 보안 강화",
+    "tags": [
+      "금융"
+    ],
+    "title": "바이낸스 8조 원 해킹에 금융당국 긴급 점검…국내 코인거래소 전자지갑 보안 강화",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE82V1B1T0NqdDR2SThjdnVGOUduZ2RVWW1FU2R2QW9lelRRbWhSVHFGdUFCZGVTS1VVT0xRb0JZSkxrQWY3WXlVNUJlNU1wZGxqaUJxOHg5cDBYY0lDLW45aUNpMXNKSDJxT0dScE5abw?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249686",
+    "published": "2026-11-02T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "글로벌 해킹 위협에 대비한 국내 가상자산사업자의 사고대응력 제고를 위해 긴밀하고 신속하게 대응해 나가겠습니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249686&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE5vUUt6Q0FRVnZxOUUxQXFKd0wtVFFKbWlrSHBWLW0zXzhtcXFYb3FGYUM5ZnFQWExCZ2h6YzUwbjNNZllPQVg0ZTIzbFlpWVpLWUM0VDRYZDFpcWMwc2tlcG5PcmRTTzY3Q1E",
+    "published": "2026-11-02T12:45:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[터질 게 터진 API 보안사고]③API 부실을 '법 위반'으로 본 일본…한국은 '당부' 한 장",
+    "tags": [],
+    "title": "[터질 게 터진 API 보안사고]③API 부실을 '법 위반'으로 본 일본…한국은 '당부' 한 장",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5vUUt6Q0FRVnZxOUUxQXFKd0wtVFFKbWlrSHBWLW0zXzhtcXFYb3FGYUM5ZnFQWExCZ2h6YzUwbjNNZllPQVg0ZTIzbFlpWVpLWUM0VDRYZDFpcWMwc2tlcG5PcmRTTzY3Q1E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9oM2UxMFd6Y1h1bGMtMGZwUlMzQ2l4MURha0tuSTI1SkFrcDlIcTQwTjZjbkRwMWFQVVpNS3N4S0dVbXB2UmhGdkd0Y05OcXNPUXBrZnYybDNmaE96QmpfYtIBeEFVX3lxTE9QOGhQTTdMNUFWQjBhaEVtUGVhQURyOVdIaWhUc3J1NmhmYXZYWUFubmxSMkhjSzJOcDgycHdTS0dycFBfVlFnaV9PX1Nyd0xsV2ZHMXFTNjg4SXFRVjBxQ3psLVI0NDU3TExnNUhnSk95aURCV2VIeQ",
+    "published": "2026-11-02T06:12:13+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "하이브 사내 시스템 외부 비정상 접근…\"일부 협력사·임직원 개인정보 유출\"",
+    "tags": [],
+    "title": "하이브 사내 시스템 외부 비정상 접근…\"일부 협력사·임직원 개인정보 유출\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oM2UxMFd6Y1h1bGMtMGZwUlMzQ2l4MURha0tuSTI1SkFrcDlIcTQwTjZjbkRwMWFQVVpNS3N4S0dVbXB2UmhGdkd0Y05OcXNPUXBrZnYybDNmaE96QmpfYtIBeEFVX3lxTE9QOGhQTTdMNUFWQjBhaEVtUGVhQURyOVdIaWhUc3J1NmhmYXZYWUFubmxSMkhjSzJOcDgycHdTS0dycFBfVlFnaV9PX1Nyd0xsV2ZHMXFTNjg4SXFRVjBxQ3psLVI0NDU3TExnNUhnSk95aURCV2VIeQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5oeU1HVmNwTFJwMGM5ZEhqWi1vZDNZeFA4UmtsWUt0Mk4tcDJOU1hrdVg3RFlPcExONG5TLVFQZXRrNlVXYjF0N3VhRXRCSV9QTmhjb1hZVXYwbmRxbmVYMGtiaUNpZWM",
+    "published": "2026-11-02T12:08:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[개인정보 유출] 하이브, 전·현직 임직원 및 협력사 개인정보 유출…주민번호·여권번호 등 포함",
+    "tags": [],
+    "title": "[개인정보 유출] 하이브, 전·현직 임직원 및 협력사 개인정보 유출…주민번호·여권번호 등 포함",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5oeU1HVmNwTFJwMGM5ZEhqWi1vZDNZeFA4UmtsWUt0Mk4tcDJOU1hrdVg3RFlPcExONG5TLVFQZXRrNlVXYjF0N3VhRXRCSV9QTmhjb1hZVXYwbmRxbmVYMGtiaUNpZWM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBfX095eDZOWVVwSlNvNnNXVmFNaFg5aG1vdGwwMUpsUV9yVTEwWDAxak5CbXJ0SzBUSzNNejlsR0VIYzdOQ2VKdkR2UnViMzA3SUl1TjduczlGSUllU3J0OGhZRUp5NFp4eVBUd0FVSdIBc0FVX3lxTE85emdnUXJsenZNOVlNQ3ZRd0xMc2NGMTk3MFZIck5INEtNLVB6djVIQXl6bnlPd0FjOWRVb1llajJuRzFzN3AySUtlUDM1MndIMlA5U29MSTl0UlJoR0JXRHBOeEtKcC1uTUNMRHpWWGlFc2M",
+    "published": "2026-11-02T10:47:22+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위 '국내 거래소 보안 대응체계 강화'",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위 '국내 거래소 보안 대응체계 강화'",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBfX095eDZOWVVwSlNvNnNXVmFNaFg5aG1vdGwwMUpsUV9yVTEwWDAxak5CbXJ0SzBUSzNNejlsR0VIYzdOQ2VKdkR2UnViMzA3SUl1TjduczlGSUllU3J0OGhZRUp5NFp4eVBUd0FVSdIBc0FVX3lxTE85emdnUXJsenZNOVlNQ3ZRd0xMc2NGMTk3MFZIck5INEtNLVB6djVIQXl6bnlPd0FjOWRVb1llajJuRzFzN3AySUtlUDM1MndIMlA5U29MSTl0UlJoR0JXRHBOeEtKcC1uTUNMRHpWWGlFc2M?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBtWFNKTjhiejkwSmRTS3A2NG5NTHl4ak9GcWdoa1YwajNDa2piMGhQZE5XOTlBYkZveEZycktQMzEwZkpsZUZPN0dvZVZnXzVvU1RBTGlqMy14dzhRTXBGUQ",
+    "published": "2026-11-02T06:27:30+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "\"내년 IT·보안 예산 늘려라\"…금융당국 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"내년 IT·보안 예산 늘려라\"…금융당국 주문",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBtWFNKTjhiejkwSmRTS3A2NG5NTHl4ak9GcWdoa1YwajNDa2piMGhQZE5XOTlBYkZveEZycktQMzEwZkpsZUZPN0dvZVZnXzVvU1RBTGlqMy14dzhRTXBGUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5FUWdJSjJ5eW5VbVhXMXlUemdGU1Q1bElxMWRCNEVQN1hEY0dSb3R3NXp4ZUNpQ1c2NjF1cVhfVGR6OWRuUGxzNE5DbElDMDJjbS1wUUY5ZTZ0cmdHYWdpbVpuVmNKSlE",
+    "published": "2026-11-02T06:59:43+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 바이낸스 8조원 해킹에 가상자산거래소 긴급 소집...보안 강화 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 바이낸스 8조원 해킹에 가상자산거래소 긴급 소집...보안 강화 주문",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5FUWdJSjJ5eW5VbVhXMXlUemdGU1Q1bElxMWRCNEVQN1hEY0dSb3R3NXp4ZUNpQ1c2NjF1cVhfVGR6OWRuUGxzNE5DbElDMDJjbS1wUUY5ZTZ0cmdHYWdpbVpuVmNKSlE?oc=5"
   }
 ]
