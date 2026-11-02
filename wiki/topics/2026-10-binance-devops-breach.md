@@ -12,5 +12,6 @@ cves: []
 - 2026-10-30 [BleepingComputer](https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/) — Binance, 63억 달러 암호화폐 도난이 DevOps 엔지니어의 손상된 노트북과 연결, 블록체인 분석가들이 북한 해커 연계 지적
 - 2026-10-30 [Security Affairs](https://securityaffairs.com/202119/cyber-crime/6-3-billion-stolen-from-binance-in-attack-attributed-to-north-korea.html) — Binance, 63억 달러 도난이 손상된 DevOps 노트북 통해 발생, 북한 정부 해커 속성 분석
 - 2026-11-01 [The Hacker News](https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html) — **FBI·USSS·IRS-CI** **북한 해킹 그룹 TraderTraitor(Jade Sleet·Pressure Chollima·PUKCHONG·Slow Pisces·UNC4899)**에 **$64.3억 도난 공식 귀속**, 보도 기준 최대 규모
+- 2026-11-02 — 국내 금융위 바이낸스 해킹 대응 긴급 소집 및 가상자산 거래소 보안 점검 실시, 콜드월렛 확대·준비금 추가 적립 주문
 
 ## 관련
