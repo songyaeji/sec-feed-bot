@@ -846,5 +846,497 @@
     "tags": [],
     "title": "AI 해킹, 일상까지 침범…‘쪽문 보안 강화’ 시급",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzNnpOY1ZWNTVCbnF6ci01eUtyQzhVWUlsV0toNWd6SlA2Z0Z5dHFIYWZsbnZxUmh5Y2x3eEVCYlh3eGVWN0RTVzBsSTR5c2NUNHFaVm9sWlV0a2NDVk02Ug?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120276",
+    "published": "2026-11-02T00:18:09.897",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A weakness has been identified in WAVLINK WN536AX6-A V260507_2.0.0. This vulnerability affects the function sub_416760 of the file /bin/ioos of the component Web Management Interface. This manipulation of the argument group_name causes os command injection. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120276 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120276"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120277",
+    "published": "2026-11-02T00:18:10.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in WAVLINK WN536AX6-A V260507_2.0.0. This issue affects the function sub_41a1d8 of the file /bin/ioos of the component WireGuard CLI Group Handler. Such manipulation of the argument group_name leads to os command injection. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120277 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120277"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120279",
+    "published": "2026-11-02T01:17:26.677",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in WAVLINK WN536AX6-A V260507. The affected element is an unknown function of the file /protocol.csp of the component openvpn_cli Handler. Executing a manipulation of the argument file_id can lead to os command injection. The attack can be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120279 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120279"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120280",
+    "published": "2026-11-02T01:17:26.873",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in WAVLINK WN536AX6-A V260507. The impacted element is the function wireguard_cli_group handler of the file /protocol.csp of the component WireGuard. The manipulation of the argument group_id/group_name leads to os command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120280 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120280"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120281",
+    "published": "2026-11-02T01:17:27.070",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in WAVLINK WN536AX6-A V260507. This affects the function strcpy of the file /protocol.csp of the component OpenVPN Handler. The manipulation of the argument openvpn_ip results in stack-based buffer overflow. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120281 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120281"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120282",
+    "published": "2026-11-02T01:17:27.293",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in WAVLINK WN536AX6-A V260507. This impacts the function host_black of the file /protocol.csp. This manipulation of the argument mac causes os command injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120282 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120282"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120283",
+    "published": "2026-11-02T01:17:27.500",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Linksys E8450 1.2.00.360516. Affected is the function strcpy of the file /www/cgi-bin/portal.cgi. Such manipulation of the argument hidden_timezone leads to stack-based buffer overflow. The attack can be executed remotely. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-120283 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120283"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-120322",
+    "published": "2026-11-02T02:18:47.550",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Termix-SSH Termix up to 2.9.2. This issue affects some unknown processing of the file /plugin-api/file-manager/transferToHost. The manipulation of the argument destPath leads to path traversal. The attack may be initiated remotely. The exploit is publicly available and might be used. The shortcut was removed in the standalone File Manager plugin v1.0.0 (transfer engine now always writes over SFTP) and in core v26.10.0. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-120322 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120322"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-120344",
+    "published": "2026-11-02T05:18:25.450",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability has been found in WAVLINK WN551X3-A M51X3_V251020-WO-182e965. This affects the function system of the file /bin/ioos of the component WireGuard CLI Group Handler. Such manipulation of the argument group_name leads to os command injection. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.",
+    "tags": [],
+    "title": "CVE-2026-120344 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120344"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120311",
+    "published": "2026-11-02T03:17:28.663",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Network-AI from 5.13.4 before 5.15.5 contains a path traversal vulnerability in FileJobStore that allows attackers to read or delete arbitrary .json files by supplying traversal sequences in the job id. Attackers controlling the id passed to FileJobStore.get(), FileJobStore.delete(), or JobQueue.getJob() can disclose credentials and grant tokens or delete configuration files to weaken AuthGuardian authorization.",
+    "tags": [],
+    "title": "CVE-2026-120311 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120311"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120312",
+    "published": "2026-11-02T03:17:28.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Network-AI from 5.13.4 before 5.15.5 contains a path traversal vulnerability in AgentVCR that allows attackers controlling the cassette name to read or write arbitrary .json files. Attackers can pass traversal sequences to load() or save() to disclose sensitive JSON data or overwrite policy files such as AuthGuardian trust-level configuration.",
+    "tags": [],
+    "title": "CVE-2026-120312 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120312"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-120315",
+    "published": "2026-11-02T03:17:29.457",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "LobeHub Chat from 1.84.26 before 2.1.49 contains a path traversal vulnerability that allows authenticated users to write arbitrary files by supplying unsanitized file names to writeTempFile(). Attackers can create a file record via file.createFile with a traversal name, then trigger document parsing to overwrite application files like startServer.js for code execution or denial of service.",
+    "tags": [],
+    "title": "CVE-2026-120315 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120315"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-120324",
+    "published": "2026-11-02T03:17:30.157",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A weakness has been identified in Aklivity Zilla up to 1.3.4/2.4.7/2.5.0-rc2. The affected element is the function Path.resolve of the file FileSystemServerFactory of the component http-filesystem Binding. This manipulation of the argument params causes path traversal. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. Upgrading to version 2.5.0-rc3 is sufficient to fix this issue. Patch name: 46a8b15cbea157f7ae8b7cb865809a02fd6b1988. You should upgrade the affected component.",
+    "tags": [],
+    "title": "CVE-2026-120324 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120324"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209256",
+    "published": "2026-11-02T15:05:28+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "체크멀이 인프라 테크 기업 신성이넥스와 데이터센터 플랫폼 담(DAM) 비즈니스 파트너 계약을 맺었다.양사는 이번 협약을 통해 데이터센터 인프라 구축 시장으로 안티랜섬웨어 솔루션 공급 채널을 넓힌다. AI데이터센터(AIDC)와 일반 데이터센터(IDC) 인프라 구축 사업에서 솔루션을 공동 제안하고 마케팅과 영업 활동을 함께 펼친다.신성이넥스는 정부가 주도하는 AI데이터센터 얼라이언스에 참여해 DC운영 SW 분과에서 활동하고 있다. 체크멀은 이번 협력을 계기로 AI데이터센터 시장에 진입해 기업과 데이터센터 고객과의 접점을 확대할 방침이다",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "체크멀, 신성이넥스와 손잡고 데이터센터 안티랜섬웨어 공급 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209256"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209255",
+    "published": "2026-11-02T14:52:15+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국정보보호산업협회(KISIA)가 과학기술정보통신부와 정보통신기획평가원(IITP))의 지원을 받는 사이버보안 국제협력기반기술개발사업 성과를 바탕으로 인도네시아와의 협력을 넓힌다.이 사업에 참여 중인 엘에스웨어 컨소시엄은 최근 인도네시아 자카르타에서 수코핀도와 함께 SuSEC 2026을 개최했다. 이번 행사에는 인도네시아 정부기관, 군, 공공기관, 국영기업 관계자 등 200여 명이 참석해 사이버보안 정책과 기술 협력 방안을 나눴다.1일차 메인 콘퍼런스에서는 AI 시대의 사이버보안 정책과 국방·공공 분야의 보안 발전 방향을 다뤘다. 인",
+    "tags": [],
+    "title": "KISIA, 해외진출 R&D 성과 바탕 한-인도네시아 사이버보안 협력 다져",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209255"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209254",
+    "published": "2026-11-02T14:17:25+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "LG CNS가 인도네시아 자카르타에 30MW급 하이퍼스케일 AI데이터센터 구축을 끝냈다.이번 프로젝트는 지난해 인도네시아 시나르마스 그룹과 한국투자리얼에셋운용의 합작법인 KMG가 발주했다. LG CNS는 설계와 구축, 운영을 뜻하는 DBO 역량을 바탕으로 이번 사업을 완수했다. 이 센터는 차세대 GPU 기반 고성능 컴퓨팅을 안정적으로 지원하도록 설계했다.고발열 AI 서버 특성을 반영해 1단계에서는 공랭식 냉각 시스템을 도입했다. 후속 단계에서는 GPU 발열을 효율적으로 다루는 액체냉각 시스템을 추가해 고밀도 환경에 대응한다. 랙당",
+    "tags": [],
+    "title": "LG CNS, 인도네시아 자카르타에 30MW급 AI 데이터센터 완공",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209254"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209253",
+    "published": "2026-11-02T14:08:21+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "포티넷이 올해 3분기에 20억 8천만 달러, 우리 돈으로 약 2조 7,872억 원의 매출을 기록했다. 이는 전년 동기 대비 20% 늘어난 수치다. 향후 매출을 가늠할 수 있는 청구액은 23억 4천만 달러로 지난해 같은 기간보다 29% 증가했다. 특히 제품 매출이 37% 급증하며 전체 실적 성장을 이끌었다.이 같은 실적 호조에 힘입어 포티넷은 올해 연간 매출 전망치를 전년 대비 20% 성장으로 상향 조정했다. 청구액 전망치 역시 올해 들어 세 번째로 높여 잡았다. 4분기 예상 매출은 21억 5,500만 달러에서 22억 4,500만 달",
+    "tags": [],
+    "title": "포티넷, 3분기 매출 2조 7천억 원 기록...전년 대비 20% 성장",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209253"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209251",
+    "published": "2026-11-02T13:55:52+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "테이텀 시큐리티가 영남 지역 주요 모빌리티와 조선업 기업의 IT 리더 및 실무자를 대상으로 보안 전략을 발표했다.이번 발표는 TDG 부산지사가 주최한 '모빌리티 IT 리더스 포럼'과 'KSITC' 행사에서 진행됐다. 테이텀 시큐리티는 클라우드 활용 확대와 생성형 AI 도입에 따른 변화된 보안 환경을 진단하고 주요 보안 위협과 대응 전략을 소개했다.클라우드 인프라의 복잡성이 커지고 AI 도입으로 관리 영역이 넓어지면서, 기업이 보안 상태를 지속해서 점검하고 위험 요소를 선제적으로 관리해야 한다는 점을 강조했다. 행사 현장에서는 클라우",
+    "tags": [
+      "AI"
+    ],
+    "title": "테이텀 시큐리티, 영남 지역 모빌리티·조선업 IT 리더 대상 보안 전략 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209251"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209250",
+    "published": "2026-11-02T13:47:16+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "그룹아이비가 인터폴이 주도한 아프리카 지역 사이버 범죄 소탕 작전인 '세렝게티 III 작전'을 지원했다. 이번 작전은 21개국 법 집행기관이 참여해 아프리카 전역에서 활동하는 범죄 조직을 단속했다.인터폴이 조율한 이번 작전으로 용의자 1,462명이 체포되었고, 악성 네트워크 1만 909개가 차단되었으며 1억 500만 달러 이상의 불법 자금이 회수되었다. 참여 기관들은 피싱, 기업 이메일 침해(BEC), 랜섬웨어, 온라인 사기 등을 집중적으로 단속했다. 당국은 피해자 6만 5,929명을 확인하고 범죄 활동과 관련된 피해액이 3억 8,",
+    "tags": [
+      "랜섬웨어",
+      "피싱"
+    ],
+    "title": "그룹아이비, 인터폴 아프리카 사이버 범죄 소탕 작전 지원",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209250"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209249",
+    "published": "2026-11-02T13:38:09+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "메가존클라우드와 한국인공지능·소프트웨어산업협회(KOSA)가 국내 중소기업의 아세안 시장 진출을 지원했다.양 기관은 태국 방콕에서 열린 '게임스컴 아시아 x 태국 게임쇼 2026'에 참가해 '한국 게임 이노베이션 허브' 공동관을 운영했다.이번 행사는 게임 개발사와 퍼블리셔, 투자사 등 글로벌 게임산업 관계자가 모이는 자리다. 메가존클라우드와 KOSA는 국내 게임산업 밸류체인을 구성하는 중소기업 10개사를 선정해 태국을 비롯한 아세안 시장 진출을 도왔다. 참가기업들이 태국 현지 게임기업 및 퍼블리셔 등 잠재 고객과 1:1 비즈니스 미팅",
+    "tags": [
+      "AI"
+    ],
+    "title": "메가존클라우드와 KOSA, 중소기업 아세안 판로 개척 지원",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209249"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209248",
+    "published": "2026-11-02T13:31:09+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "시큐아이가 인공지능(AI) 기반 위협 인텔리전스 서비스인 '스틱(STIC, SECUi Threat Intelligence Center)'을 선보였다.이번에 출시된 서비스는 보안 위협 정보의 수집부터 분석, 배포, 활용까지 전 과정을 하나의 플랫폼에서 지원하는 웹 포털 기반 솔루션이다.스틱은 글로벌 위협 정보와 회사가 독자적으로 수집한 데이터를 결합해 국내외 최신 보안 위협 인텔리전스를 실시간으로 제공한다. 악성코드와 인터넷 주소(URL), 취약점 분석 정보는 물론 다크웹과 텔레그램에서 수집한 각종 유출 정보까지 다룬다. 개별 정보만",
+    "tags": [
+      "AI"
+    ],
+    "title": "시큐아이, AI 기반 위협 인텔리전스 서비스 스틱 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209248"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209247",
+    "published": "2026-11-02T10:48:15+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈소스 코드 저장소 관리 플랫폼 기티아(Gitea)에서 비밀번호 없이 다른 사용자의 계정에 접근할 수 있는 취약점이 공개됐다. 관리자 계정도 탈취 대상이 될 수 있어 외부 로그인 연동 기능을 사용하는 기업의 점검이 필요하다.기티아는 11월 1일 계정 탈취 취약점 CVE-2026-120263을 비롯한 여러 보안 문제를 수정한 28.3.0 버전을 공개하고 신속한 업데이트를 권고했다. Gitea Blog외부 계정 연결 과정에서 사용자 신원 검증 오류CVE-2026-120263은 외부 로그인 방식인 OAuth2의 계정 연결 과정에서 발생",
+    "tags": [],
+    "title": "오픈소스 코드 저장소 관리 플랫폼 기티아, 관리자 계정 탈취 가능한 취약점 주의",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209247"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209246",
+    "published": "2026-11-02T10:39:21+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "워드프레스 예약관리 플러그인 북잇(BookIt)에서 인증되지 않은 공격자가 데이터베이스 질의를 조작할 수 있는 SQL 삽입 취약점이 공개됐다. 영향받는 버전은 2.6.0.6 이하이며, 운영자는 보안 수정이 적용된 2.6.0.7 이상으로 업데이트해야 한다. OpenCVE북잇은 웹사이트에 예약 양식과 일정 관리 기능을 추가하는 플러그인이다. 운영자가 서비스와 담당자, 영업시간, 가격을 설정하면 방문자가 날짜와 시간을 선택해 예약할 수 있다. 예약 알림 이메일과 결제 연동 기능도 제공한다. WordPress.org인증·사용자 조작 없이",
+    "tags": [
+      "금융"
+    ],
+    "title": "[주의] 워드프레스 북잇, 인증 없는 SQL 삽입 취약점…2.6.0.7 업데이트 필수",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209246"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209244",
+    "published": "2026-11-02T10:19:43+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "최근 국내 금융권에서 연이어 발생한 침해사고는 금융회사들이 그동안 구축해 온 보안체계에 대해 다시 한번 생각해 볼 필요가 있음을 보여준다.금융위원회가 지난 10월 14일 발표한 자료에 따르면 은행, 저축은행, 캐피탈사 등 총 16개 금융회사에서 침해사고가 확인되었으며, 정보유출 규모는 약 10만 건에 이르는 것으로 파악되었다. 또한 전체 금융권 555개 회사를 대상으로 실시한 긴급 보안점검에서는 130개 회사가 일부 보안관리 미흡 사항을 보고한 것으로 나타났다. 주요 미흡 사항으로는 보안패치 미적용, 기술지원이 종료된 시스템의 관리",
+    "tags": [
+      "금융"
+    ],
+    "title": "[보안칼럼] 금융권 연쇄 침해사고가 드러낸 API 보안의 사각지대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209244"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209243",
+    "published": "2026-11-02T09:01:27+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 대형 온라인 쇼핑몰 G마켓이 일부 고객의 개인정보 유출 정황을 공식 확인하고 피해 고객에 대한 금전적 보상을 완료했다고 밝혔다. 정확한 개인정보 유출 규모와 사고 원인은 아직 조사 중이다.G마켓은 11월 1일 공식 홈페이지에 ‘개인정보 유출 관련 고객분들께 사과 및 안내 말씀드립니다’라는 제목의 공지를 게시하고, 최근 자사 서비스에서 일부 고객의 개인정보가 유출된 정황을 확인했다고 밝혔다.개인정보 유출 정황 확인…피해 고객에 전액 보상G마켓에 따르면 회사는 사고를 인지한 즉시 관련 시스템에 대한 긴급 보안 점검을 실시하고, 취",
+    "tags": [
+      "금융"
+    ],
+    "title": "G마켓, 고객 개인정보 유출 정황 공식 인정…“피해 금액 전액 선제 보상”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209243"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+    "published": "2026-11-02T05:51:07+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Cybersecurity researchers have discovered a new Windows infostealer malware called VOLTA-AUTODOXER (aka VOLTA) that makes use of a large language model (LLM) to rank a victim's stolen data by their monetization value. Like other typical stealer families, VOLTA is equipped to harvest passwords and cookies from Chromium-based web browsers; data from Outlook profiles and Slack workspaces;",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
+    "url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33480",
+    "published": "2026-11-02T02:00:03+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Monday, November 2nd, 2026 https://isc.sans.edu/podcastdetail/10160, (Mon, Nov 2nd)",
+    "url": "https://isc.sans.edu/diary/rss/33480"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249682",
+    "published": "2026-11-02T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "생산적 금융의 온기를 지방과 중소기업까지 이어갑니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249682&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249670",
+    "published": "2026-11-02T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "사회초년생 청년 운전자가 자동차보험 할인혜택을 쉽게 받을 수 있도록 가입 절차를 개선합니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249670&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE9KMFRLRmpHOHlRTVB4cVNwcFV3SlNRbWlCRkxHSkEydnViQTN0NUR0SG5nQmlVU2xxNGNxMlFZWGhXSjJVS3BMS1dsX1cxQjFKeVo5TktrTnBKUmZFN0p0RVM5VE9YdVNvVkRnTVRMTzA",
+    "published": "2026-11-02T00:23:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "G마켓, 개인정보 유출 보상 완료... 개인정보보호위원회 신고",
+    "tags": [],
+    "title": "G마켓, 개인정보 유출 보상 완료... 개인정보보호위원회 신고",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9KMFRLRmpHOHlRTVB4cVNwcFV3SlNRbWlCRkxHSkEydnViQTN0NUR0SG5nQmlVU2xxNGNxMlFZWGhXSjJVS3BMS1dsX1cxQjFKeVo5TktrTnBKUmZFN0p0RVM5VE9YdVNvVkRnTVRMTzA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE96RXE0TUtkNjh5dG1qS2o2YmUwX25CM1dwWXpHNV9HSlVKalIzMGxNdGVDVHFmUmJ4dU5ublFGSEFzZjc0ZlhjOVdYMElKMHVQT1dKT2JBWmVMek1sZ1lXNVZ0Z2NidXMxTGxB",
+    "published": "2026-11-02T02:31:59+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "AI가 개인정보를 쓸 때, 동의 버튼만으로 충분할까",
+    "tags": [],
+    "title": "AI가 개인정보를 쓸 때, 동의 버튼만으로 충분할까",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96RXE0TUtkNjh5dG1qS2o2YmUwX25CM1dwWXpHNV9HSlVKalIzMGxNdGVDVHFmUmJ4dU5ublFGSEFzZjc0ZlhjOVdYMElKMHVQT1dKT2JBWmVMek1sZ1lXNVZ0Z2NidXMxTGxB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTFBwTW13eTAzMkVQODA2XzhXYTdZR0JkTE4zR2JhQUd0bnY0N3RUeU5kZlRBRjVabzNFcGNJaXhZV09PUzQ2NjZJWko3cFRmakhvakVCcmdnemtlZ2xLOEhXa2RpZXQxanp5S1dLQw",
+    "published": "2026-11-02T00:48:53+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 해킹 전방위 확산…당국, 보안대책 총점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 전방위 확산…당국, 보안대책 총점검",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBwTW13eTAzMkVQODA2XzhXYTdZR0JkTE4zR2JhQUd0bnY0N3RUeU5kZlRBRjVabzNFcGNJaXhZV09PUzQ2NjZJWko3cFRmakhvakVCcmdnemtlZ2xLOEhXa2RpZXQxanp5S1dLQw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUEFVX3lxTFBiQ1hKS1VyaE0yOGhmdVYxc3N4RW9VM0FDd2RfT2RzV0hmc0JwSkxUSFhtME5NSWN4ZE1oNmkwaWFYY0g3Wml6ZzI4ZldwT29G",
+    "published": "2026-11-02T01:36:16+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 바이낸스 해킹에 국내 거래소 긴급 소집…콜드월렛 보관 확대 논의",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 바이낸스 해킹에 국내 거래소 긴급 소집…콜드월렛 보관 확대 논의",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBiQ1hKS1VyaE0yOGhmdVYxc3N4RW9VM0FDd2RfT2RzV0hmc0JwSkxUSFhtME5NSWN4ZE1oNmkwaWFYY0g3Wml6ZzI4ZldwT29G?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9jcVo0X3BPdUVzRmgwVDVNWm5haktLTmlmSDV3dTNadmtnaG85X1VOWmFIWFliTGxLN1FwdE5RSjJveWdTampLWVhjdjJ6ZTdaNDdxSUpXeUl1QdIBVEFVX3lxTE9oNlBadlNmVy1IM1ViUjRoSllYTzFITThCV1c4c3dmNzRuMDVaYTA1WnRna0JLLTFoME1wZGhDLUJJZ3lxNkJMOVBmc2o5ZWxTLTZMQg",
+    "published": "2026-11-02T06:03:24+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 코인 거래소 비상 점검…바이낸스 해킹에 보안 강화 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 코인 거래소 비상 점검…바이낸스 해킹에 보안 강화 주문",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jcVo0X3BPdUVzRmgwVDVNWm5haktLTmlmSDV3dTNadmtnaG85X1VOWmFIWFliTGxLN1FwdE5RSjJveWdTampLWVhjdjJ6ZTdaNDdxSUpXeUl1QdIBVEFVX3lxTE9oNlBadlNmVy1IM1ViUjRoSllYTzFITThCV1c4c3dmNzRuMDVaYTA1WnRna0JLLTFoME1wZGhDLUJJZ3lxNkJMOVBmc2o5ZWxTLTZMQg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMilwJBVV95cUxOR1lvSHQ1ZkpHUTF6WWtRY09zaWNaWEJIR3NobTJ2aS1YMFp2dk1Yb3hXdXhlVkhpaTVrYS1PQ2JmekNlb0E5MVR1TVp6a2R0NG5RNTNDUGl4S2VJUzkydkkydG1qQXBnSjlwU2d2T2RLcXpHYUN6ZFp5eURVRnNLWDhIRGFnWU9LejJLN2VwNDI4N0tfZTNuV1lsajBhZXlYOE5ybnFtbUViLXlnQm9qa1k5UU9CQUxvUVZURmJLSU8wRzZsNk5MQmZULU5jX3lMQTVacXhDdDBoeUp2d2xTLTNvTDBtcUpLcngxVUt0VDR2TkEtUVFNZERXb2dncnlfWUpWRkZKUjdMdU5JcV9jYWFqMWRreWc",
+    "published": "2026-11-02T05:30:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "해킹 공포 커지자…금융위, 코인 거래소 ‘비상 점검’",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 공포 커지자…금융위, 코인 거래소 ‘비상 점검’",
+    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOR1lvSHQ1ZkpHUTF6WWtRY09zaWNaWEJIR3NobTJ2aS1YMFp2dk1Yb3hXdXhlVkhpaTVrYS1PQ2JmekNlb0E5MVR1TVp6a2R0NG5RNTNDUGl4S2VJUzkydkkydG1qQXBnSjlwU2d2T2RLcXpHYUN6ZFp5eURVRnNLWDhIRGFnWU9LejJLN2VwNDI4N0tfZTNuV1lsajBhZXlYOE5ybnFtbUViLXlnQm9qa1k5UU9CQUxvUVZURmJLSU8wRzZsNk5MQmZULU5jX3lMQTVacXhDdDBoeUp2d2xTLTNvTDBtcUpLcngxVUt0VDR2TkEtUVFNZERXb2dncnlfWUpWRkZKUjdMdU5JcV9jYWFqMWRreWc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE85VUU5eDQwNkFKQV9SaWZhaFg3bl9oQTk0d0xfSmJYazRuTGp2clE3eUY4MVhoU0xDa19DZFE4VjM2LWFYVm1PZ0pkaUg1blFmUzFmeWtR",
+    "published": "2026-11-02T02:06:48+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "바이낸스 대규모 해킹에 금융위 긴급 소집…국내 가상자산 거래소 보안 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "바이낸스 대규모 해킹에 금융위 긴급 소집…국내 가상자산 거래소 보안 점검",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE85VUU5eDQwNkFKQV9SaWZhaFg3bl9oQTk0d0xfSmJYazRuTGp2clE3eUY4MVhoU0xDa19DZFE4VjM2LWFYVm1PZ0pkaUg1blFmUzFmeWtR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE1kQ0pVaVhTOVVlUW5URGhFS1lsMjBSeXFfc3o2VldYdDhrb1pZODEya1BTZ1dzZjk2LU5mQ2NDdWtOYVVZakREZVo4RVI0SXJHMk1iRnhR",
+    "published": "2026-11-02T01:00:03+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위 가상자산 거래소 긴급 소집…해킹 대비 이용자보호 강화 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위 가상자산 거래소 긴급 소집…해킹 대비 이용자보호 강화 주문",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1kQ0pVaVhTOVVlUW5URGhFS1lsMjBSeXFfc3o2VldYdDhrb1pZODEya1BTZ1dzZjk2LU5mQ2NDdWtOYVVZakREZVo4RVI0SXJHMk1iRnhR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE5MSkFLbWVBVDVvc0pUS1hEZk1CR3ZVSHY4aGhuOUtvNkV6MGpvZW5fSlRjYkRxVkR3UE1WOVNmY0VmYXJyNnJrTTVMQXhpdzNzcUV2RFJNUXNTd9IBVEFVX3lxTE1CSjFzLVpTbmg3OW1lZjZRRzZYWmhHbEJCcGFPUXlnTURCbi1hNzl3UDBUTl9VYXRwMklYNlNTN2hkM2QtdnpmZnpMNjhIWFBJVUpFbw",
+    "published": "2026-11-01T07:12:49+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "은행부터 가상자산 거래소까지 해킹…금융위, 5일 대책회의",
+    "tags": [
+      "금융"
+    ],
+    "title": "은행부터 가상자산 거래소까지 해킹…금융위, 5일 대책회의",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MSkFLbWVBVDVvc0pUS1hEZk1CR3ZVSHY4aGhuOUtvNkV6MGpvZW5fSlRjYkRxVkR3UE1WOVNmY0VmYXJyNnJrTTVMQXhpdzNzcUV2RFJNUXNTd9IBVEFVX3lxTE1CSjFzLVpTbmg3OW1lZjZRRzZYWmhHbEJCcGFPUXlnTURCbi1hNzl3UDBUTl9VYXRwMklYNlNTN2hkM2QtdnpmZnpMNjhIWFBJVUpFbw?oc=5"
   }
 ]
