@@ -11,5 +11,6 @@ cves: []
 
 - 2026-10-31 [The Hacker News](https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html) — **Chainalysis**, 외부 행위자의 사이버보안 사건으로 내부 도구 및 고객 신원 데이터 접근 확인, 조사 콘텐츠·인증·토큰 접근 없음
 - 2026-10-31 [BleepingComputer](https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/) — **Chainalysis** 침해에 **"offensive agentic techniques"** 공격자 기법 사용 확인, 고객 이름·이메일·사용자ID·조직 역할 노출
+- 2026-11-02 [Security Affairs](https://securityaffairs.com/202241/ai/chainalysis-investigates-security-incident-involving-ai-driven-attack-techniques.html) — **Chainalysis** 침해 수사 진행, **AI 에이전트** 기반 공격 기법 사용 확인
 
 ## 관련

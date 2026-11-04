@@ -10,5 +10,6 @@ CyberStrikeAI 펜테스팅 프레임워크가 교육기관을 대상으로 침�
 ## 타임라인
 
 - 2026-11-02 [Kaspersky Securelist](https://kasperskycontenthub.com/securelist/?post_type=threat_response&p=121715) — 카스퍼스키, 교육기관 표적 공격에서 CyberStrikeAI 펜테스팅 프레임워크의 자동화 악용 분석 발표
+- 2026-11-03 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209280) — CyberStrikeAI 악용 공격 세부 분석. 공격자가 도구 설치 후 3~4일 내 도메인 관리자 계정 탈취, 2026년 9~10월 아프리카·중남미 교육기관 관측
 
 ## 관련

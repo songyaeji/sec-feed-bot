@@ -10,3 +10,5 @@ cves: []
 ## 타임라인
 
 - 2026-08-15 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208066) — 애플 110개국 사용자 대상 용병 스파이웨어 경고
+- 2026-10-29 Apple 스파이웨어 알림 Bundestag 도달 (사건 발생)
+- 2026-11-03 [Security Affairs](https://securityaffairs.com/202297/intelligence/apples-spyware-notifications-reach-the-bundestag-what-the-bsi-says-to-do-now.html) — Apple 경고 독일 Bundestag 의원 전달, BSI 완전 침해 가정 권고
