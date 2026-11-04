@@ -1743,5 +1743,697 @@
     "tags": [],
     "title": "쿠팡, 6200억 개인정보 과징금 2년간 6회 분할 납부",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1TbzZpTEhCdHZHa1J5a09kV0p1MFJDQk1TM2dya3dQc1NrYkxsZXlDd3dzVmphdTdsb3AySUVUMjFlVG9wQUxCRXF2UFM2bzZWdWN4ZE42Zk40Z21GV3lqSUJnSmQ0WThWbXdR?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-39892",
+    "published": "2026-04-08T21:17:01.547",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "cryptography is a package designed to expose cryptographic primitives and recipes to Python developers. From 45.0.0 to before 46.0.7, if a non-contiguous buffer was passed to APIs which accepted Python buffers (e.g. Hash.update()), this could lead to buffer overflows. This vulnerability is fixed in 46.0.7.",
+    "tags": [],
+    "title": "CVE-2026-39892 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-39892"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-13214",
+    "published": "2026-08-25T05:17:20.060",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The OCPP 1.6 client in subsys/net/lib/ocpp/ocpp_j.c contains a stack buffer overflow in parse_getconfig_msg(). When handling a GetConfiguration request from the central system, the handler copied the attacker-controlled JSON \"key\" string into the caller's fixed 50-byte stack buffer (skey[CISTR50], declared in subsys/net/lib/ocpp/ocpp.c) using an unbounded strcpy(). The parsed key value points directly into the receive buffer, so its length is bounded only by the message size (CONFIG_OCPP_RECV_BUFFER_SIZE, default 2048).\n\nThe GetConfiguration message is delivered over the WebSocket connection that the charge point opens to its configured central system. The reader thread ocpp_wsreader() reads the message into ui->recv_buf and dispatches it to parse_getconfig_msg() via the PDU function table. An attacker who controls the central system endpoint, or a man-in-the-middle on an unencrypted connection, can send a GetConfiguration request whose \"key\" field exceeds 50 bytes and overflow the reader thread's stack with attacker-chosen bytes.\n\nThe consequence is a remotely triggerable stack smash on the OCPP reader thread: at minimum a denial of service, and plausibly remote code execution depending on build-time hardening such as stack canaries and MPU configuration. The fix replaces the strcpy() with a bounded strncpy(key, payload.key[0], CISTR50 - 1) followed by explicit NUL termination, matching the bounded copies already used by the sibling handlers.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-13214 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13214"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-49602",
+    "published": "2026-10-30T17:17:11.740",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in Keyfactor EJBCA 9. When an administrator is removed from its administrator role while having a valid TLS session, EJBCA may, in certain circumstances, cache authentication for longer than the configured maximum time (default: 30 seconds), which results in the former administrator retaining access that they should no longer have.",
+    "tags": [],
+    "title": "CVE-2025-49602 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49602"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-121607",
+    "published": "2026-11-04T02:17:19.753",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in Qihoo 360 D603-2, D600-2, D606-6 and D706 up to 6.4.9. This affects the function testspeed_command of the file /fs2/bin/iscm. Performing a manipulation of the argument host results in os command injection. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-121607 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121607"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-121609",
+    "published": "2026-11-04T02:17:20.243",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Qihoo 360 Whole Home Router M5 4.0.17.1566. This issue affects the function Home of the file /etc/init.d/mpt of the component Boot Script. The manipulation leads to hard-coded credentials. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-121609 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121609"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-121615",
+    "published": "2026-11-04T03:17:14.810",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was determined in Linksys E5600 1.1.0.26. Affected is an unknown function of the file /cgi-bin/mesh_login.cgi of the component Login Handler. Executing a manipulation can lead to improper authentication. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [],
+    "title": "CVE-2026-121615 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121615"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-121802",
+    "published": "2026-11-04T03:17:15.730",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "@better-auth/expo before 1.7.16 allows certain account-takeover outcomes (e.g., unauthenticated changes of any account's email address), because it signs a caller-supplied state value without checking whether that value had been issued by the server. NOTE: the application secret must be rotated after updating to a fixed version.",
+    "tags": [],
+    "title": "CVE-2026-121802 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121802"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-10849",
+    "published": "2026-08-03T22:16:47.963",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The hawkBit device management client in subsys/mgmt/hawkbit accumulates the body of an HTTP response from the update server into a heap buffer in response_json_cb() (subsys/mgmt/hawkbit/hawkbit.c). The buffer is sized to hold the received body bytes but reserves no space for a terminating NUL. When the full response has arrived, the code writes response_data[downloaded_size] = '\\0' — and whenever the accumulated body length equals the allocation, that terminator lands one byte past the end of the heap object (a heap-based out-of-bounds write, CWE-122 / CWE-787).\n\nThe body length and fragmentation are taken directly from the parsed HTTP response (rsp->body_frag_start / rsp->body_frag_len) and are fully controlled by the remote hawkBit server, which chooses its own response length. The precise trigger depends on how the buffer grows, and both forms are remotely reachable. Since v4.0.0 the reallocation is sized to exactly downloaded_size + body_len, so any response body larger than the 1100-byte initial buffer makes the out-of-bounds write deterministic; such response sizes are normal for hawkBit deployment metadata. Before v4.0.0 the buffer grew by doubling and the growth check ((downloaded_size + body_len) > response_buffer_size) is false at equality, so a response body whose length is exactly the current allocation — 1100 bytes with the default initial buffer — skips the reallocation entirely and writes the terminator at response_data[1100] of an 1100-byte object. The HTTP le",
+    "tags": [],
+    "title": "CVE-2026-10849 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10849"
+  },
+  {
+    "category": "high",
+    "cvss": 6.4,
+    "id": "CVE-2026-12520",
+    "published": "2026-08-18T20:17:11.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Sierra Wireless HL7800 cellular modem driver (drivers/modem/vendor_standalone/hl7800.c, located at drivers/modem/hl7800.c in v4.4.0 and earlier) parses AT responses with roughly twenty handlers that call net_buf_linearize(value, sizeof(value), *buf, 0, len) into a 128-byte stack buffer and then write value[out_len] = 0. Because net_buf_linearize() (lib/net_buf/buf.c) can return a count equal to its destination-length argument, a field that exactly fills the buffer makes the terminating NUL land one byte past the end, a single-byte out-of-bounds write into adjacent stack memory.\n\nThe +KCELLMEAS cell-measurement handler on_cmd_atcmdinfo_rssi() is worse: it passed the wire length len as the destination size (net_buf_linearize(value, len, *buf, 0, len)), so a response line longer than 128 bytes overflows the value stack buffer with attacker-influenceable content. The line length comes from net_buf_findcrlf(), which accumulates bytes across the whole net_buf fragment chain and is not bounded to 128, so an over-long line reaches the defect.\n\nThe data originates from the cellular modem over UART, driven by the network: operator-scan results, +CGCONTRDP IP/DNS info, socket indications, and +KCELLMEAS neighbour-cell reports. An attacker able to shape what the modem emits — a rogue base station, a compromised modem baseband, or a remote peer feeding oversized response framing — can drive a line past 128 bytes. The handlers run in the driver's RX thread in kernel context, so the cor",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-12520 (CVSS 6.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12520"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12522",
+    "published": "2026-08-19T21:16:53.507",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The HL7800 cellular modem driver's +CGCONTRDP: response handler on_cmd_atcmdinfo_ipaddr() in drivers/modem/vendor_standalone/hl7800.c parses the PDP-context dynamic parameters (local address, subnet mask, gateway, and DNS servers) that the cellular network assigns to the device. The response is linearized into a 256-byte stack buffer, after which each address field length is computed from comma/. delimiter positions in the network-supplied data and used directly as the length argument to strncpy() into the fixed 64-byte stack buffer temp_addr_str (and the 16-byte iface_ctx.dns_v4_string).\n\nBecause the field length is derived from attacker-controlled delimiter positions and was not bounded against the destination buffer, a single field can be far larger than 64 bytes. A malicious or impersonated cellular network (for example a rogue base station) can return a crafted +CGCONTRDP response with an overlong address field, causing strncpy() to write past temp_addr_str on the modem worker thread's stack, plus an out-of-bounds NUL write at temp_addr_str[addr_len].\n\nNo device-side privileges or user interaction are required: the device itself issues the AT+CGCONTRDP=1 query during normal network attach and parses whatever the network returns. The overflow corrupts adjacent stack memory in supervisor context, yielding at minimum a remotely triggerable crash and potentially control-flow hijacking on targets without stack protection.\n\nThe fix bounds every field length against its destina",
+    "tags": [],
+    "title": "CVE-2026-12522 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12522"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-12633",
+    "published": "2026-08-19T21:16:53.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The IPv6 neighbor-discovery code in subsys/net/ip/ipv6_nbr.c processes the 6LoWPAN Context Option (6CO, RFC 6775) carried inside ICMPv6 Router Advertisements. In handle_ra_6co() the 8-bit context_len field is taken directly from the packet and was never bounded to the RFC maximum of 128. The function computes context->context_len / 8 and then performs memset(context->prefix + context_len, 0, sizeof(context->prefix) - context_len), where context->prefix is a fixed 16-byte array.\n\nWith context_len between 136 and 255 (and the option length field set to 3, which the pre-fix validation accepts), context_len / 8 evaluates to 17..31, so the memset length 16 - context_len/8 underflows the unsigned size_t argument to roughly SIZE_MAX. This produces an unbounded out-of-bounds memset that zeroes kernel memory well past the 6lo context structure.\n\nThe defect is reachable from unauthenticated, link-local input: any host on the same link can send a crafted Router Advertisement with a 6CO option. The RA handler validates only the option length field before calling handle_ra_6co(), so a single packet triggers the wild write. The code is compiled when CONFIG_NET_6LO_CONTEXT is enabled.\n\nThe impact is a reliable remote (adjacent) denial of service via memory corruption, with collateral integrity loss as the memset zeroes contiguous memory before the system faults. Router Advertisements are link-scoped and not forwarded, so the attacker must be on the same link (AV:A). The fix rejects any cont",
+    "tags": [],
+    "title": "CVE-2026-12633 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12633"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-19184",
+    "published": "2026-10-05T09:17:12.907",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The NXP GAU ADC driver (drivers/adc/adc_mcux_gau_adc.c) validated the caller-supplied sequence->buffer_size, which is expressed in bytes, against the number of active channels, which is a sample count. It then stored that byte count directly in data->results_length and used it in mcux_gau_adc_read_samples() as the number of uint16_t slots available. Because each conversion result occupies sizeof(uint16_t) bytes, a buffer that was accepted as \"large enough\" could be written with up to twice its size in bytes, so every sample past the buffer's midpoint was written out of bounds.\n\nadc_read() and adc_read_async() are Zephyr system calls. The syscall verifier in drivers/adc/adc_handlers.c only confirms that the caller owns buffer_size writable bytes (K_SYSCALL_MEMORY_WRITE); deciding whether that size is sufficient for the requested channels and extra_samplings is delegated entirely to the driver. On a build with CONFIG_USERSPACE=y, a user-mode thread that has been granted the ADC device object could therefore submit a deliberately half-sized buffer and cause the driver's work-queue handler — which runs in supervisor mode, outside the caller's MPU restrictions — to write ADC conversion results past the end of that buffer, at an address and for a length of the caller's choosing.\n\nThe overrun is bounded by the requested sequence: with sequence->options->extra_samplings set, the sampling loop walks the buffer pointer forward across every sampling, so the total overrun can reach the f",
+    "tags": [],
+    "title": "CVE-2026-19184 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19184"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-15894",
+    "published": "2026-10-07T09:17:05.157",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Bluetooth Mesh On-Demand Private Proxy solicitation handler in subsys/bluetooth/mesh/solicitation.c copies a received Solicitation PDU into a fixed 17-byte stack buffer without bounding the source length. In sol_pdu_decrypt(), out is allocated as NET_BUF_SIMPLE(17) and then filled with net_buf_simple_add_mem(out, in->data, in->len); net_buf_simple_add() guards its tailroom only with __ASSERT_NO_MSG, which is compiled out in production builds, so when in->len > 17 the underlying memcpy writes attacker-controlled bytes past the 17-byte stack buffer. The copy occurs before any decryption or authentication, so no key material is required to trigger it.\n\nThe oversized length arises because the mesh scan callback in subsys/bluetooth/mesh/adv.c calls net_buf_simple_restore() before dispatching to bt_mesh_sol_recv(), leaving buf->len covering the entire remaining advertising payload rather than just the Solicitation Service Data. After the parser locates the Service Data AD and consumes the Identification Type byte, the remaining buf->len is the 17-octet Network PDU plus any trailing advertising bytes, and prior to this fix there was no maximum-length check (only a minimum). An attacker can therefore append extra AD structures or padding after the Solicitation Service Data to make buf->len exceed 17.\n\nbt_mesh_scan_cb() is registered directly as the BLE scan callback, so buf is raw, unauthenticated advertising data received over the air. Any device in radio range can send a non-co",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-15894 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15894"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19569",
+    "published": "2026-10-09T08:16:54.563",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "dynamic_object_create() in kernel/userspace/userspace.c computed the backing allocation for a dynamically allocated kernel object as obj_size_get(otype) + size, and for thread stack elements as STACK_ELEMENT_DATA_SIZE(size) (a round-up plus fixed overhead), without checking either expression for unsigned wrap-around. A size close to SIZE_MAX makes the computed total wrap to a very small value, so the heap chunk handed out is a few bytes while the object descriptor is still tagged with the full requested type and registered in the kernel object table.\n\nThe size argument reaches that arithmetic directly from user mode. k_object_alloc_size() is declared __syscall in include/zephyr/sys/kobject.h, its verifier z_vrfy_k_object_alloc_size() in kernel/userspace/userspace_handler.c is a bare pass-through, and z_object_alloc() only range-checks otype — nothing bounds size. The stack-element branch is additionally reachable through the k_thread_stack_alloc() syscall via kernel/dynamic.c. Because subsequent kernel-object validation checks only the object's type and initialization state, the undersized handle passes K_SYSCALL_OBJ_INIT()/K_SYSCALL_OBJ_NEVER_INIT(), and the matching init syscall (for example k_mutex_init(), k_sem_init(), or k_thread_create()) then writes a complete object over the truncated allocation.\n\nAn unprivileged user-mode thread can therefore trigger a supervisor-mode out-of-bounds write into the kernel resource-pool heap, of a size and content it substantially contr",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19569 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19569"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19570",
+    "published": "2026-10-09T08:16:54.693",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The LE Audio Broadcast Sink in subsys/bluetooth/audio/bap_broadcast_sink.c copies subgroup metadata from a received Basic Audio Announcement (BASE) into the static Broadcast Audio Scan Service parameter structure mod_src_param without any bounds check. In base_subgroup_meta_cb() the destination element was selected as mod_src_param.subgroups[mod_src_param.num_subgroups] with no test against ARRAY_SIZE(mod_src_param.subgroups) (sized by CONFIG_BT_BAP_BASS_MAX_SUBGROUPS, default 1), and the metadata was copied with memcpy() using the raw on-air length returned by bt_bap_base_get_subgroup_codec_meta() into a metadata array sized by CONFIG_BT_AUDIO_CODEC_CFG_MAX_METADATA_SIZE (default 4). The BASE validator bt_bap_base_get_base_from_ad() only checks structural consistency and permits up to ~24 subgroups and metadata LTVs of ~240 octets.\n\nThe defect is reached from the periodic advertising receive callback: pa_recv() → bt_data_parse() → pa_decode_base() → update_recv_state_base() → bt_bap_base_foreach_subgroup() → base_subgroup_meta_cb(). Every broadcast sink registers a scan-delegator receive state at creation (bt_bap_broadcast_sink_create() calls broadcast_sink_add_src()), and CONFIG_BT_BAP_BROADCAST_SINK depends on CONFIG_BT_BAP_SCAN_DELEGATOR, so the path is active in every broadcast-sink build once the device is periodic-advertising-synced. An attacker in radio range who operates a broadcast source the device syncs to — or who impersonates the advertiser address and SID of on",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-19570 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19570"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-16511",
+    "published": "2026-11-04T06:17:04.140",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Two RTIO syscall verifiers, in subsys/rtio/rtio_syscalls.c (subsys/rtio/rtio_handlers.c before v4.3.0), did not validate user-supplied pointers before the kernel wrote through them.\n\nz_vrfy_rtio_sqe_cancel() performed no validation at all. It passed the caller's struct rtio_sqe pointer straight to z_impl_rtio_sqe_cancel(), which converts it with CONTAINER_OF to a struct rtio_iodev_sqe, ORs RTIO_SQE_CANCELED (BIT(3)) into its 16-bit flags field in supervisor mode, then loads its next pointer and repeats until that pointer is NULL. The syscall takes no RTIO context argument, so it needs no object grant: any user-mode thread on a CONFIG_USERSPACE build can set that bit in a 16-bit word at an address of its choosing in kernel memory, and the kernel continues the write along whatever pointer chain it finds at the corresponding offset. Setting chosen bits in kernel data structures, such as object permission or thread state fields, can be used to escalate privilege from user mode.\n\nz_vrfy_rtio_sqe_copy_in_get_handles() validated its RTIO context and the input SQE array, but only NULL-checked the handle out-parameter before writing a kernel SQE pointer through it, with no K_SYSCALL_MEMORY_WRITE check. A user thread that holds a granted RTIO context can therefore make the kernel store a pointer value at an arbitrary address.\n\nThe fixes validate the handle out-parameter as writable, bound the cancel handle to real submission-pool storage, and require permission on the RTIO context that",
+    "tags": [],
+    "title": "CVE-2026-16511 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16511"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-77690",
+    "published": "2026-11-04T06:17:05.940",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ZohoCorp ManageEngine Key Manager Plus versions before 7151 were vulnerable to a Command Injection vulnerability that allowed authenticated users with certificate deployment privileges to execute arbitrary commands through specially crafted input when configuring a deployment target.",
+    "tags": [],
+    "title": "CVE-2026-77690 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77690"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-87040",
+    "published": "2026-11-04T06:17:06.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The nRF link-layer receive paths of the open-source Bluetooth LE Controller did not validate the on-air LENGTH field of a received PDU against the maximum receive length that was used to program the radio. isr_rx_pdu() in subsys/bluetooth/controller/ll_sw/nordic/lll/lll_conn.c enqueued any non-empty data PDU after only the sequence-number and (for encrypted links) MIC checks, and the corresponding isr_rx() handlers in lll_central_iso.c, lll_peripheral_iso.c, lll_sync_iso.c and lll_scan_aux.c did the same for ISO and extended-advertising PDUs. The nRF radio stores the received header verbatim and truncates only the payload at PCNF1.MAXLEN, so a frame declaring more octets than were configured leaves a node buffer whose len field describes more data than the buffer holds.\n\nAn attacker within radio range that can emit a hand-crafted link-layer PDU — for a connection, any peer that establishes an unencrypted LE connection to a connectable advertiser; for CONFIG_BT_CTLR_SYNC_ISO, any broadcaster the device is synchronised to — can set the length byte up to 255 while the controller has programmed a much smaller maximum (lll->dle.eff.max_rx_octets, which is 27 until a Data Length Update, or the negotiated cis_lll->rx.max_pdu). No pairing, authentication or user interaction is required. On encrypted links the CCM MIC check normally rejects such a frame first, so the exposure is on unencrypted traffic, which is why the added check is placed after decryption.\n\nThe unchecked length reac",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-87040 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-87040"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-121816",
+    "published": "2026-11-04T07:17:11.973",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Herowatch Mini developed by About Time Technologies has a Missing Authentication vulnerability. Unauthenticated remote attackers can connect to the affected device's ADB service and obtain an ADB shell, thereby accessing device resources or performing related operations.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-121816 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121816"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209306",
+    "published": "2026-11-04T14:43:23+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "기업들이 자율형 에이전트와 프런티어 LLM 도입을 늘리면서 AI 접근 권한을 노린 공격이 고개를 들고 있다. 맨디언트와 구글 위협 인텔리전스 그룹(GTIG)이 기업의 AI 모델 접근 권한을 탈취해 악용하는 'LLM재킹(LLMJacking)' 분석 보고서를 발표했다.LLM재킹은 공격자가 기업의 AI 모델 접근 권한을 훔쳐 악성 활동에 쓰거나 이를 암시장에서 되파는 수법이다. 타인의 자원을 몰래 써서 암호화폐를 채굴하는 크립토재킹과 달리, LLM재킹은 단기간에 막대한 사용 비용을 발생시킨다. 최근 조사에서 하루 만에 10만 달러 이상의",
+    "tags": [
+      "AI"
+    ],
+    "title": "하루 1억 넘는 요금 폭탄...AI 모델 권한 탈취하는 'LLM재킹' 비상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209306"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209305",
+    "published": "2026-11-04T14:23:32+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "보안 지식이 없는 비전공자도 AI를 쓰면 불과 40일 만에 국내 기업 60곳을 침투할 수 있는 것으로 나타났다. 공격 속도가 이처럼 빨라지면서, 침투 이후 외부와 이루어지는 통신을 실시간으로 잡아내는 기술의 필요성이 커지고 있다.씨큐비스타가 암호화된 트래픽을 복호화하지 않고도 명령·제어(C2) 통신과 데이터 유출을 찾아내는 암호화 트래픽 분석(ETA) 신제품 '패킷사이버 EVA'를 4일 선보였다.서울경찰청 사이버수사과에 따르면, 총책 A씨는 AI 자율 침투 테스트 도구인 아르텍스를 이용해 40여 일 동안 국내 기업 60곳을 공격했다",
+    "tags": [],
+    "title": "씨큐비스타, 복호화 없이 C2 통신 잡는 '패킷사이버 EVA' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209305"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209304",
+    "published": "2026-11-04T13:58:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "모니터랩이 AI 기술을 대폭 적용한 위협 인텔리전스 플랫폼 신버전인 'AILabs v6.0'을 4일 선보였다. 이번 버전은 분석 속도와 위협 대응력, 실무 활용도를 높이는 데 집중했다.새롭게 추가된 'Pivot Search' 기능은 위협 간의 연관 관계를 시각화하여 보여준다. 'AI Bot' 기능을 통해 보안 담당자가 대화형으로 간편하게 검색할 수 있도록 지원한다. 악성 파일과 URL 분석 엔진인 MAD와 MUD 성능도 개선됐다.탐지된 위협은 글로벌 보안 표준인 MITRE ATT&CK 프레임워크에 자동으로 매핑된다. 이를 통해 공격",
+    "tags": [],
+    "title": "모니터랩, AI 기능 강화한 위협 인텔리전스 플랫폼 'AILabs v6.0' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209304"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209301",
+    "published": "2026-11-04T13:33:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "카스퍼스키가 물류 창고와 소매업에서 널리 쓰이는 무선 바코드 스캐너에서 새로운 사이버 공격 경로를 발견했다. 이번 연구 결과는 발리에서 열린 시큐리티 애널리스트 서밋(Security Analyst Summit) 2026에서 공개됐다.현대 물류 창고는 다양한 기기와 시스템이 긴밀하게 연결된 디지털 생태계다. 카스퍼스키 보안 서비스 연구진은 창고 인프라의 잠재적 위험을 파악하기 위해 여러 공격 경로를 조사했다. 그 결과 주요 제조업체의 특정 바코드 스캐너 기지국과 스캐너 사이에 인증 절차가 없다는 취약점을 확인했다.일반적으로 휴대용 스",
+    "tags": [],
+    "title": "무선 바코드 스캐너 취약점 발견...물류 창고 OT 네트워크 침투 가능",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209301"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209300",
+    "published": "2026-11-04T13:22:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "크라우드스트라이크(CrowdStrike)의 위협 헌팅 조직 오버워치는 중국 연계 해킹 그룹 'VAPOR PANDA'가 대규모 언어 모델(LLM)과 AI 에이전트 프레임워크를 활용해 전 세계를 상대로 동시다발적인 사이버 스파이 활동을 벌인 정황을 포착했다.이번 공격은 2026년 10월 17일부터 시작됐다. 공격자들은 중국에서 개발된 딥시크(DeepSeek)와 '아르텍스(ARTEX)' 프레임워크를 결합해 단 11일 동안 중남미, 유럽, 아시아, 중동 등 최소 14개국의 외교부와 주요 기관을 겨냥했다. 피해 대상에는 미국의 반도체, 제약",
+    "tags": [
+      "AI"
+    ],
+    "title": "중국 해커 그룹, AI 에이전트 결합해 글로벌 사이버 공격 대폭 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209300"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html",
+    "published": "2026-11-04T08:17:11+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Russian authorities have arrested three suspected members of a threat group known as VasyGrek and dismantled its criminal infrastructure. Also known as Fluffy Wolf, the threat actor has a history of targeting Russian and international companies since 2016. The Ministry of Internal Affairs of the Russian Federation (MVD) said members of the group are \"suspected of embezzling funds from the",
+    "tags": [],
+    "title": "Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure",
+    "url": "https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html",
+    "published": "2026-11-04T07:46:15+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A critical Android flaw could allow an attacker to run code on a phone without any user action remotely, Google said in its November security bulletin. The flaw, CVE-2026-58868, affects Android 14 through 17. Phones get the fix with security patch level 2026-11-01 or later, which phone makers and carriers send on their own schedules. As of November 4, Google's bulletin did not report",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Google Issues Patches for Critical Android Flaw That Could Allow RCE Without User Interaction",
+    "url": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html"
+  },
+  {
+    "author": "Genians",
+    "category": "research",
+    "id": "https://www.genians.co.kr/blog/caasm-asset-intelligence",
+    "published": "2026-11-04T05:57:51+00:00",
+    "severity": "info",
+    "source": "지니언스 위협인텔",
+    "summary": "기업의 IT 환경이 복잡해지면서 보안 관리의 출발점도 달라지고 있습니다. 클라우드와 원격근무 환경이 확대되고, 네트워크 장비부터 IoT 기기까지 보호해야 할 자산의 종류와 범위가 빠르게 늘어나고 있기 때문입니다. 문제는 기업이 보유한 모든 IT 자산을 정확하게 파악하기 어렵다는 점입니다. 보안 솔루션을 통해 일부 자산을 관리하고 있더라도, 관리 체계에서 누락된 장비나 오래된 소프트웨어, 알려지지 않은 취약점은 여전히 보안 사각지대로 남을 수 있습니다. 이러한 환경에서 주목받는 개념이 CAASM(Cyber Asset Attack Surface Management) 입니다. CAASM은 분산된 자산 정보를 통합해 기업의 사이버 자산에 대한 가시성을 확보하고, 보안 관리의 공백을 식별하는 접근 방식입니다. 최근에는 여기에 AI 기반 분석 기술을 결합해 단순한 자산 식별을 넘어 자산의 특성과 보안 위험을 맥락적으로 이해하려는 시도도 확대되고 있습니다.",
+    "tags": [],
+    "title": "CAASM이 주목받는 이유 - 이제 자산 식별을 넘어 맥락을 파악할 때",
+    "url": "https://www.genians.co.kr/blog/caasm-asset-intelligence"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33486",
+    "published": "2026-11-04T02:10:02+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Wednesday, November 4th, 2026 https://isc.sans.edu/podcastdetail/10164, (Wed, Nov 4th)",
+    "url": "https://isc.sans.edu/diary/rss/33486"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiggFBVV95cUxNSmJVWFpQaE9tTXFVR2FHUlM2M3FHdm4zdGpPbzRMRlZpQ3ZLOXU4UkZHaU1mSWV1aVBTai1jU25QVlcwdTZZWVRwcmxXTWpRQXVGalgzYWFqbTFUYWJybHVNX1B1R01hQ0M4TzRhaXVHaTBkazhXZlZ3aDd5bnVEUWJn",
+    "published": "2026-11-02T08:00:00+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "보안을 지키는 이들에게 더 큰 버그 바운티 보상을",
+    "tags": [],
+    "title": "보안을 지키는 이들에게 더 큰 버그 바운티 보상을",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSmJVWFpQaE9tTXFVR2FHUlM2M3FHdm4zdGpPbzRMRlZpQ3ZLOXU4UkZHaU1mSWV1aVBTai1jU25QVlcwdTZZWVRwcmxXTWpRQXVGalgzYWFqbTFUYWJybHVNX1B1R01hQ0M4TzRhaXVHaTBkazhXZlZ3aDd5bnVEUWJn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMicEFVX3lxTE42YlR6NUZnNDYyS21JZ2hEa1lwUEFaMG9mblJ5NVg1bVpmQlJvTU1MNHVMRW9EOVU2WVNFQnVPSnFESWdzSHF1SGpNdGhHcTUya2tBbGJGYU9zaDN1cTMwUUo5aTNlYkUzbUZTRm9FN20",
+    "published": "2026-11-04T02:35:37+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "오픈AI, DOGE 출신 해킹 스타트업과 보안 강화 손잡았다",
+    "tags": [],
+    "title": "오픈AI, DOGE 출신 해킹 스타트업과 보안 강화 손잡았다",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE42YlR6NUZnNDYyS21JZ2hEa1lwUEFaMG9mblJ5NVg1bVpmQlJvTU1MNHVMRW9EOVU2WVNFQnVPSnFESWdzSHF1SGpNdGhHcTUya2tBbGJGYU9zaDN1cTMwUUo5aTNlYkUzbUZTRm9FN20?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMikAFBVV95cUxNUWdmUFZQQkVESVFyM09CNGxhdUtsTXN2MllvLS1qU0lKYUk0bklRdVJ1bEc0SENoMnRhWTN6R2swZFVHUFU0TnVYZ3VWdTluTUdialcyaTRsSHBZSjdWLU5YZ2VZT2ttTHVPZWlVWGQ4UEl6OXRycUZQTjl0VEdJUVpac1I3ZlgzX2pPZmgtWE0",
+    "published": "2026-11-03T20:14:09+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "시스코와 OpenAI는 기계 속도의 엔터프라이즈 사이버 방어를 상세히 설명합니다",
+    "tags": [],
+    "title": "시스코와 OpenAI는 기계 속도의 엔터프라이즈 사이버 방어를 상세히 설명합니다",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNUWdmUFZQQkVESVFyM09CNGxhdUtsTXN2MllvLS1qU0lKYUk0bklRdVJ1bEc0SENoMnRhWTN6R2swZFVHUFU0TnVYZ3VWdTluTUdialcyaTRsSHBZSjdWLU5YZ2VZT2ttTHVPZWlVWGQ4UEl6OXRycUZQTjl0VEdJUVpac1I3ZlgzX2pPZmgtWE0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMilwFBVV95cUxQcFMzQ1I2U3V6SU1SMFNFSjhwbkVaNjVKTTZkZG1kN1phVG5lLWhfNnc4NDBTYm9sVDFBQnV5eDhWNzJFZ1BVMjNCd3Z4NUNLN24tTjJwYmVHSkEzbFhiRHQ0TGl2V3lBLXF1QV9WdEJMa2ZmSUhVYTV6amtrd0F6ZWJYYXNfdTZ1SkVheXc5VFFaM0kxR3c4",
+    "published": "2026-11-03T03:15:08+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI, 보안 연구원들을 위한 버그 현상금 인상",
+    "tags": [],
+    "title": "OpenAI, 보안 연구원들을 위한 버그 현상금 인상",
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcFMzQ1I2U3V6SU1SMFNFSjhwbkVaNjVKTTZkZG1kN1phVG5lLWhfNnc4NDBTYm9sVDFBQnV5eDhWNzJFZ1BVMjNCd3Z4NUNLN24tTjJwYmVHSkEzbFhiRHQ0TGl2V3lBLXF1QV9WdEJMa2ZmSUhVYTV6amtrd0F6ZWJYYXNfdTZ1SkVheXc5VFFaM0kxR3c4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMibEFVX3lxTE5ITVBFYmVfem1fN09tMXBhTTNzUWt4MjRvOHllRDZqdFFuajZHb3VDdGM0ZTN1aXBTVjBaWnpWNWdqN1dpV3JXaHJldUZPN2plRVRVU0hSTHFRUEhPWU13LVJVNW00Ty1UUGdrMg",
+    "published": "2026-11-03T10:37:51+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "이더리움, 거래소 내 이더리움 공급량 두 차례 감소… 비상장화 가능성 시사 (+ETH, 공급량, 거래소, 보안)",
+    "tags": [],
+    "title": "이더리움, 거래소 내 이더리움 공급량 두 차례 감소… 비상장화 가능성 시사 (+ETH, 공급량, 거래소, 보안)",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ITVBFYmVfem1fN09tMXBhTTNzUWt4MjRvOHllRDZqdFFuajZHb3VDdGM0ZTN1aXBTVjBaWnpWNWdqN1dpV3JXaHJldUZPN2plRVRVU0hSTHFRUEhPWU13LVJVNW00Ty1UUGdrMg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5ob1NiZlRhcmlCQnkxdVlRLUtZak9MVWRFeDVxemltYjl6WU1FZ25uanpoM2N3MUJNLW9pYnllck81ZVljaEFVUE52MV90MF90aWZNWVNlenV0N21RM1BKY2s3ZEMzMF9YUFBF0gFwQVVfeXFMTjBKU29ZZDFHQkgwWklfakFvOWN0ZV9pTjQxdkh1Rk9NUkhlRnNheEdmS000V2gtUXVDdHRqNEtoZEEwMUV0TVdPRHpReVRYNHN3SjdNLXR4ejlUM2FEMlByWm5INVR3SmJtd3Q0MDRVYw",
+    "published": "2026-11-04T08:09:06+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"금융보안, 이사회 심의·의결사안으로…체크리스트 점검 불충분\" - 머니투데이",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"금융보안, 이사회 심의·의결사안으로…체크리스트 점검 불충분\" - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ob1NiZlRhcmlCQnkxdVlRLUtZak9MVWRFeDVxemltYjl6WU1FZ25uanpoM2N3MUJNLW9pYnllck81ZVljaEFVUE52MV90MF90aWZNWVNlenV0N21RM1BKY2s3ZEMzMF9YUFBF0gFwQVVfeXFMTjBKU29ZZDFHQkgwWklfakFvOWN0ZV9pTjQxdkh1Rk9NUkhlRnNheEdmS000V2gtUXVDdHRqNEtoZEEwMUV0TVdPRHpReVRYNHN3SjdNLXR4ejlUM2FEMlByWm5INVR3SmJtd3Q0MDRVYw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE5TM09CMEt0UXVrSkJUMGFidGZfaV84aTFhejFnWUp0WXItd0gzcmkxMXptdWJzN3lJNWRFNW45R1RPSkg1eVFWYmItYjFBaUgyZS1fZTBEdXoxY3RaYzBLUmxrODQzU3JFY3lCTXVzWWLSAXRBVV95cUxPalpyandTVmFqSjdqMW13MTc4d3BrTVlKM0todHZMRmZhZFhBdmdIekpqQkgzSTBreElMTnpRSDNKNUZmRmwxQi1nZk9YZHY4VjdwNU5PZzU1ZU9Pd1RjNW5lYS12YjVKU0E5ZDRBOXcyYWVkSw",
+    "published": "2026-11-04T05:30:40+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "보안 취약 핀테크, 해킹에 고객정보 이어 돈까지 털려",
+    "tags": [
+      "금융"
+    ],
+    "title": "보안 취약 핀테크, 해킹에 고객정보 이어 돈까지 털려",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TM09CMEt0UXVrSkJUMGFidGZfaV84aTFhejFnWUp0WXItd0gzcmkxMXptdWJzN3lJNWRFNW45R1RPSkg1eVFWYmItYjFBaUgyZS1fZTBEdXoxY3RaYzBLUmxrODQzU3JFY3lCTXVzWWLSAXRBVV95cUxPalpyandTVmFqSjdqMW13MTc4d3BrTVlKM0todHZMRmZhZFhBdmdIekpqQkgzSTBreElMTnpRSDNKNUZmRmwxQi1nZk9YZHY4VjdwNU5PZzU1ZU9Pd1RjNW5lYS12YjVKU0E5ZDRBOXcyYWVkSw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE9ZcVVmVWhvM3Y1ZUlJMmgtUmFWRmI3YTJ2QndNQ1pDTlpnMHcyNlZndS1qdGV2Ni15czcyOGRmNEN5U0xVSG43Z0R4MXBrRkVsejFtR0c3d3g1WUY3czUzdjkwN0VBV3c0TEFKdC1nYzc3RjhV",
+    "published": "2026-11-04T07:38:45+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[현장] 'AI가 금융 판단' 천지개벽...\"소비자 피해·보안 관리 체계 정비 시급\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "[현장] 'AI가 금융 판단' 천지개벽...\"소비자 피해·보안 관리 체계 정비 시급\"",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ZcVVmVWhvM3Y1ZUlJMmgtUmFWRmI3YTJ2QndNQ1pDTlpnMHcyNlZndS1qdGV2Ni15czcyOGRmNEN5U0xVSG43Z0R4MXBrRkVsejFtR0c3d3g1WUY3czUzdjkwN0VBV3c0TEFKdC1nYzc3RjhV?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE81bHR5NF9QZDNyd1QtSXRoZE4yTWNpNEVqaXFVYlBPeG5sT3Q2UjNkbnNCdVZzZ0hyYzdlYjNkNGxPcnNoX1dXMHdCTEkzd3BkN1o4Y09BMDBUZw",
+    "published": "2026-11-04T05:59:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "“해킹 터지면 CEO 문책”…임기 말 5대 은행장 덮친 ‘보안 청구서’",
+    "tags": [
+      "금융"
+    ],
+    "title": "“해킹 터지면 CEO 문책”…임기 말 5대 은행장 덮친 ‘보안 청구서’",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE81bHR5NF9QZDNyd1QtSXRoZE4yTWNpNEVqaXFVYlBPeG5sT3Q2UjNkbnNCdVZzZ0hyYzdlYjNkNGxPcnNoX1dXMHdCTEkzd3BkN1o4Y09BMDBUZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVEFVX3lxTE9sS1BLLXB3Tk9Hd0xnLVUxVHBPTGFxUy1kb21QV29lMEJnWm9xS05fcFE5MVVWbVNRWXZleG5mbVVKdnZRN0hzaGpsbVBPeXE0NlRVaA",
+    "published": "2026-11-04T07:30:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "망분리해도 뚫린 금융권⋯“보안체계 전환ㆍ이사회 책임 강화해야” [현장]",
+    "tags": [
+      "금융"
+    ],
+    "title": "망분리해도 뚫린 금융권⋯“보안체계 전환ㆍ이사회 책임 강화해야” [현장]",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9sS1BLLXB3Tk9Hd0xnLVUxVHBPTGFxUy1kb21QV29lMEJnWm9xS05fcFE5MVVWbVNRWXZleG5mbVVKdnZRN0hzaGpsbVBPeXE0NlRVaA?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249736",
+    "published": "2026-11-04T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "홍콩 H지수 ELS 관련 은행, 증권사 검사 결과 조치",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249736&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249734",
+    "published": "2026-11-04T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "계리가정보고서 도입 등 보험업감독규정 개정안 금융위원회 의결",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249734&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiigFBVV95cUxOdzVXd1NsNExNUTBpb0pEYlppSFZoYy1rYUlZSVY1RzdOSGZFZndLWVlKLXA3ajd0MXhCYTBaVnZPTVozTXU0MTdGaDVtc3BJZnI1U0VtTi1kLVFhQ1l5RERBcnl0ajl0anhuNG9RZ05JNUdqZ2w5UzZIdHZIZ0NGZkFIUEVUTHVESlE",
+    "published": "2026-11-04T09:10:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "'모두의 토론회'에서 살펴본 'AI 시대, 내 개인정보'",
+    "tags": [],
+    "title": "'모두의 토론회'에서 살펴본 'AI 시대, 내 개인정보'",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdzVXd1NsNExNUTBpb0pEYlppSFZoYy1rYUlZSVY1RzdOSGZFZndLWVlKLXA3ajd0MXhCYTBaVnZPTVozTXU0MTdGaDVtc3BJZnI1U0VtTi1kLVFhQ1l5RERBcnl0ajl0anhuNG9RZ05JNUdqZ2w5UzZIdHZIZ0NGZkFIUEVUTHVESlE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE45Mnh1RnVKVDlfcElpaGNUWlF6WmFKbUs0Q0pnUHpKSEp2OWp5TWFwaUp4RHJyTVBieHRYYnowc0NNcFlHa1VyU0ZzbWNJQQ",
+    "published": "2026-11-04T06:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "GA업계, 개인정보 보호 역량 높인다...보안책임자 선임 의무화",
+    "tags": [],
+    "title": "GA업계, 개인정보 보호 역량 높인다...보안책임자 선임 의무화",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE45Mnh1RnVKVDlfcElpaGNUWlF6WmFKbUs0Q0pnUHpKSEp2OWp5TWFwaUp4RHJyTVBieHRYYnowc0NNcFlHa1VyU0ZzbWNJQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE85OWVkZUhQM2Uxajd3bVZLT3k0aENVT2tIa29qc3BEM3J1ZUhxRllqSW5kMzl6bjVmSmNiTW1Mb1dTT1FfTUxWQ09wSXp5N2FQU3ZNYnJZX2dVejRqUXA4UXRNLWZkSTZ0akQ2RtIBb0FVX3lxTE1mTTBQWHdQS2dNbUNTQ1lvbEk1TnZONnN3SEJNdVE3b0d6aTRweDR6ZTdyZURFZjQyZGpIVjhJYjNyNjl3Ny1rNm1IZklCRzZOakVZWUY3cmJ6VE9URFQ0QXJUcHBLQXB2dm8yWVRUcw",
+    "published": "2026-11-04T08:52:24+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 조사 전 기록 삭제도 제재…법 개정 추진",
+    "tags": [],
+    "title": "개인정보 유출 조사 전 기록 삭제도 제재…법 개정 추진",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE85OWVkZUhQM2Uxajd3bVZLT3k0aENVT2tIa29qc3BEM3J1ZUhxRllqSW5kMzl6bjVmSmNiTW1Mb1dTT1FfTUxWQ09wSXp5N2FQU3ZNYnJZX2dVejRqUXA4UXRNLWZkSTZ0akQ2RtIBb0FVX3lxTE1mTTBQWHdQS2dNbUNTQ1lvbEk1TnZONnN3SEJNdVE3b0d6aTRweDR6ZTdyZURFZjQyZGpIVjhJYjNyNjl3Ny1rNm1IZklCRzZOakVZWUY3cmJ6VE9URFQ0QXJUcHBLQXB2dm8yWVRUcw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE52QXE4WjBWcmZsbXZnalJZVlpPQ2JxT1lrNFYxTEZSeUxidmlLbEFIeTVPWG9TM291NTMzY2JnZDU4cXI2UndaUWdEd3BldE1Ddno3bHRLWC1zT25C",
+    "published": "2026-11-04T01:52:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "김인제 시의원 \"서울시 개인정보 관리체계 구멍 뚫렸다\"",
+    "tags": [],
+    "title": "김인제 시의원 \"서울시 개인정보 관리체계 구멍 뚫렸다\"",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE52QXE4WjBWcmZsbXZnalJZVlpPQ2JxT1lrNFYxTEZSeUxidmlLbEFIeTVPWG9TM291NTMzY2JnZDU4cXI2UndaUWdEd3BldE1Ddno3bHRLWC1zT25C?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMihAFBVV95cUxOOFN6YmhaMWJnRGlLZ0N3enBVOUdiZkZ1QmxSU1R5LU5yQUl2dk5IdkZzNUhsTkpxZ1NPaVpvY2g3YVFjdWlvN21RM0FUVE9aWGs4Ujl4R085TFFjb1ljVVFkQlRRbFdUTXh6cGVQaUdUYUdDWWFBS0VlUTM3eHFHNG41NHI",
+    "published": "2026-11-04T06:36:17+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "금융당국 세종 이전 감독 공백 우려…\"금융사 일상 감독기능 서울에 둬야\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국 세종 이전 감독 공백 우려…\"금융사 일상 감독기능 서울에 둬야\"",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOFN6YmhaMWJnRGlLZ0N3enBVOUdiZkZ1QmxSU1R5LU5yQUl2dk5IdkZzNUhsTkpxZ1NPaVpvY2g3YVFjdWlvN21RM0FUVE9aWGs4Ujl4R085TFFjb1ljVVFkQlRRbFdUTXh6cGVQaUdUYUdDWWFBS0VlUTM3eHFHNG41NHI?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFB4M00tZ3lpWW9COFMxVnEzc2VzTzg1QTQ4WU93cXoyQktZWndhMWFFWng0eUVTaklnZ01DWF9NY0Z5ZmcwdzQxS2RkZWNnOUdsYUZETTFOcmRkV1c4MEhjVGVxaWNES3A3",
+    "published": "2026-11-04T02:39:05+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "에너지공단, ‘에너지 분야 중계전문기관’ 지정",
+    "tags": [],
+    "title": "에너지공단, ‘에너지 분야 중계전문기관’ 지정",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB4M00tZ3lpWW9COFMxVnEzc2VzTzg1QTQ4WU93cXoyQktZWndhMWFFWng0eUVTaklnZ01DWF9NY0Z5ZmcwdzQxS2RkZWNnOUdsYUZETTFOcmRkV1c4MEhjVGVxaWNES3A3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBxQVRlci1nWm55dTJpUFZPS21rblJ6RkZuLVVZSHVkZFdwMm16eHJ3Z0pPS1l3YUJ6OHVqajhZemd2ajRhRVVneXM3WXl3WF9hRFdOdjE5SWN3dUJNbm5xbg",
+    "published": "2026-11-04T07:25:27+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "해킹은 전방위인데 대응은 칸막이…'사이버 차르'가 바꿀까",
+    "tags": [],
+    "title": "해킹은 전방위인데 대응은 칸막이…'사이버 차르'가 바꿀까",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBxQVRlci1nWm55dTJpUFZPS21rblJ6RkZuLVVZSHVkZFdwMm16eHJ3Z0pPS1l3YUJ6OHVqajhZemd2ajRhRVVneXM3WXl3WF9hRFdOdjE5SWN3dUJNbm5xbg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNa184LXJSOEZJaXd6eDlvV2VZaEdHa1FIcmdIMXZxT3NlaVFDeVhhMWRMLVkwX2lySldmZkJWejQwdDBtX2twTHA2NGJkU3NpZ3hob3FXS1o3aEw1ekl4TFZVM0tmVFNCbGtWU1dkYWZnS3pON3N0UWNrTFlOT3ZyS9IBlAFBVV95cUxOSkplaTdUNzhUYjVxMEZPbUdTSk12cmNxN2xIb3lGUUFYTHdwWUMxcEdmcDk5SHZzNDZaOV9UYzh4bTM2QTBSYllRQXNQTmJaZFhXS2EwbWtMMmFqeTU2Y3g1NS1wTXZFODh1eVNDbVYxeml5NWVvWUN5RWptbFA2MlVlQngxQWsybGI4UWFJZzBvWjND",
+    "published": "2026-11-04T01:34:23+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "잇단 정보 유출에도 금융사 보안 공시 저조… 당국, 의무제 준비 착수",
+    "tags": [
+      "금융"
+    ],
+    "title": "잇단 정보 유출에도 금융사 보안 공시 저조… 당국, 의무제 준비 착수",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNa184LXJSOEZJaXd6eDlvV2VZaEdHa1FIcmdIMXZxT3NlaVFDeVhhMWRMLVkwX2lySldmZkJWejQwdDBtX2twTHA2NGJkU3NpZ3hob3FXS1o3aEw1ekl4TFZVM0tmVFNCbGtWU1dkYWZnS3pON3N0UWNrTFlOT3ZyS9IBlAFBVV95cUxOSkplaTdUNzhUYjVxMEZPbUdTSk12cmNxN2xIb3lGUUFYTHdwWUMxcEdmcDk5SHZzNDZaOV9UYzh4bTM2QTBSYllRQXNQTmJaZFhXS2EwbWtMMmFqeTU2Y3g1NS1wTXZFODh1eVNDbVYxeml5NWVvWUN5RWptbFA2MlVlQngxQWsybGI4UWFJZzBvWjND?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1QODR6aU85MElmQnZKbEZGaU9YWjlJa29ST2JKR0l1eEtId0pDd1dwTHd4VkFMcmtibGFTMkFRMnNxaUUybEJBUzgxMWROUFBESWcxWkJPUlZ5NTNQWTdRMXM5YkFKeno2T20w0gFvQVVfeXFMTmFVaU5fUUppVDAzWVROSmY5N0tnOXFIVEFNa3hnUkhWekcyUGUzYjYwdUVqQ1NDYVpEalhHTENqOEtqVXktNDk4WFBzUEJvZ3E3UVFjYmdxenZwdWdfRFFfckRLWDNncnVJMEh1R0pB",
+    "published": "2026-11-04T08:03:33+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "한국금융연구원, 디지털 금융소비자 보호·보안 강화 방안 논의",
+    "tags": [
+      "금융"
+    ],
+    "title": "한국금융연구원, 디지털 금융소비자 보호·보안 강화 방안 논의",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1QODR6aU85MElmQnZKbEZGaU9YWjlJa29ST2JKR0l1eEtId0pDd1dwTHd4VkFMcmtibGFTMkFRMnNxaUUybEJBUzgxMWROUFBESWcxWkJPUlZ5NTNQWTdRMXM5YkFKeno2T20w0gFvQVVfeXFMTmFVaU5fUUppVDAzWVROSmY5N0tnOXFIVEFNa3hnUkhWekcyUGUzYjYwdUVqQ1NDYVpEalhHTENqOEtqVXktNDk4WFBzUEJvZ3E3UVFjYmdxenZwdWdfRFFfckRLWDNncnVJMEh1R0pB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE56UGtVUlV2d3FDSWMwMVNMa3pvMmZSSjJ6U0Q5SVp1SHpTV0xUajAtQ3RxRF9lT21OYl8yN2E0eTVfTGVZSkFtOE1qX2dTVDU1bE1zQVFoM0pOQi1NMXBoMmxn",
+    "published": "2026-11-04T09:07:57+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "47명 CEO 임기 만료 앞둔 금융지주...‘보안 경영’ 시험대",
+    "tags": [
+      "금융"
+    ],
+    "title": "47명 CEO 임기 만료 앞둔 금융지주...‘보안 경영’ 시험대",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE56UGtVUlV2d3FDSWMwMVNMa3pvMmZSSjJ6U0Q5SVp1SHpTV0xUajAtQ3RxRF9lT21OYl8yN2E0eTVfTGVZSkFtOE1qX2dTVDU1bE1zQVFoM0pOQi1NMXBoMmxn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUkFVX3lxTFAzYWJKMC00VnAzWDRmWEV4bHVna2trdjhGSmxlMGoteFUwOGpMOWdIdmdZSW0xS09KXzBOWUMwNXU0MVg1RmtkR0R5N3RYRWFmQVHSAVNBVV95cUxPOXdEQWY4TURVd0hhbHdCYkdoRDcxOW1fVG51Qm1kSTh2THJ2cVpiY21MQXZhakxodEdUTEpQTTVRLVRsZ2VGLVdPM1pVTDZsb0t0UQ",
+    "published": "2026-11-03T08:41:47+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "개인·기업 이어 정부도 뚫리자…李 “사이버 보안 ‘차르’ 만들라”",
+    "tags": [],
+    "title": "개인·기업 이어 정부도 뚫리자…李 “사이버 보안 ‘차르’ 만들라”",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAzYWJKMC00VnAzWDRmWEV4bHVna2trdjhGSmxlMGoteFUwOGpMOWdIdmdZSW0xS09KXzBOWUMwNXU0MVg1RmtkR0R5N3RYRWFmQVHSAVNBVV95cUxPOXdEQWY4TURVd0hhbHdCYkdoRDcxOW1fVG51Qm1kSTh2THJ2cVpiY21MQXZhakxodEdUTEpQTTVRLVRsZ2VGLVdPM1pVTDZsb0t0UQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE9QdjJGS1NIa3hlOFF6NDBMN2Q2azRZY2RRenpGRVlMekRBUGg2Zkw1WmJTcF9HbDZ1a1hod0s3aTBqMlVDYW8zWHZxbWZaWU5mLW1Db000Zmd5c1I4QkkyYVl3",
+    "published": "2026-11-02T09:24:36+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "바이낸스發 공포 확산…금융당국, 국내 가상자산거래소 보안 긴급점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "바이낸스發 공포 확산…금융당국, 국내 가상자산거래소 보안 긴급점검",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9QdjJGS1NIa3hlOFF6NDBMN2Q2azRZY2RRenpGRVlMekRBUGg2Zkw1WmJTcF9HbDZ1a1hod0s3aTBqMlVDYW8zWHZxbWZaWU5mLW1Db000Zmd5c1I4QkkyYVl3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE9HSmhnVWtBZ2xTSDRRMDBFUWJ1TmhkRU1ha1E4U1JDX0pFbTQ5NzRGWDRUdVlnNVVCZ3ZfY3hmcmZTUTZxYTk0Vzg5VzMtdWxSclg2QXZtenVzUUk0amxFQTRCdkExaFNYS2ljLUtn",
+    "published": "2026-11-02T07:55:29+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 업비트 빗썸 등 5개 가상자산사업자 소집해 긴급 보안점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 업비트 빗썸 등 5개 가상자산사업자 소집해 긴급 보안점검",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9HSmhnVWtBZ2xTSDRRMDBFUWJ1TmhkRU1ha1E4U1JDX0pFbTQ5NzRGWDRUdVlnNVVCZ3ZfY3hmcmZTUTZxYTk0Vzg5VzMtdWxSclg2QXZtenVzUUk0amxFQTRCdkExaFNYS2ljLUtn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiggFBVV95cUxQZzA1NVhycUgza3h2eVFadmNKOEpzSjN5ai12d1FWLUhSdFI4SUFyMHQwYmVEUThtbVM2MGtYd3hIMlUzbVlHT0VMWVdkSENNdkt4NU52djQ2YUNUbDh0SjlEYXJoWGYtOXViSWsxYlJqN1EyTmZUYWRQSXhlblJ4bzhn0gGWAUFVX3lxTE41ZmlZWDlGdEdVMzV4aXUyQzdFTzN0dGNVNnBkOHlOcnRGMXJZN041LS02cWNHT1FjbzFwakdOWHFyaWxNRGxwUWpwTjhoSzBrNDN2RW1fd3RzSHRjRjJVYzFMRXhBQ1QycUx5aUZ6b01kSFhNTVBZOUJnUWUtU0ctVDJkb1o5anRiUEg4UFRlajZFRFpnUQ",
+    "published": "2026-11-04T07:52:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "李, 사이버보안 총괄 ‘차르’ 구성 지시에… 쪼개진 국가 보안체계 손볼까",
+    "tags": [],
+    "title": "李, 사이버보안 총괄 ‘차르’ 구성 지시에… 쪼개진 국가 보안체계 손볼까",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZzA1NVhycUgza3h2eVFadmNKOEpzSjN5ai12d1FWLUhSdFI4SUFyMHQwYmVEUThtbVM2MGtYd3hIMlUzbVlHT0VMWVdkSENNdkt4NU52djQ2YUNUbDh0SjlEYXJoWGYtOXViSWsxYlJqN1EyTmZUYWRQSXhlblJ4bzhn0gGWAUFVX3lxTE41ZmlZWDlGdEdVMzV4aXUyQzdFTzN0dGNVNnBkOHlOcnRGMXJZN041LS02cWNHT1FjbzFwakdOWHFyaWxNRGxwUWpwTjhoSzBrNDN2RW1fd3RzSHRjRjJVYzFMRXhBQ1QycUx5aUZ6b01kSFhNTVBZOUJnUWUtU0ctVDJkb1o5anRiUEg4UFRlajZFRFpnUQ?oc=5"
   }
 ]
