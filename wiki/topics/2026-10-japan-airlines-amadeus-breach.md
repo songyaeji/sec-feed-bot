@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-10-29 [BleepingComputer](https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/) — Amadeus Passenger Service System 침해로 JAL 고객 92,000명 정보 유출 공지
+- 2026-11-04 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209309) — NH농협여행, Amadeus 시스템 침해로 항공예약 관련 개인정보 유출 가능성 공지, 피해 기간 2023년 8월~2026년 9월
 
 ## 관련

@@ -1064,3 +1064,6 @@
 - [gpt-6-astra-cybersecurity](topics/2026-09-gpt-6-astra-cybersecurity.md) OpenAI GPT-6 Astra 공개 사이버보안 능력 Critical 도달 (최종갱신일: 2026-09-04)
 - [china-ai-agents-campaign](topics/2026-09-china-ai-agents-campaign.md) 중국 AI 에이전트 활용 다국가 공격 캠페인 (최종갱신일: 2026-09-04)
 - [openai-cybersecurity-investment](topics/2026-09-openai-cybersecurity-investment.md) OpenAI 필수 인프라 사이버 방어 10억 달러 투자 (최종갱신일: 2026-09-04)
+- [broadcom-vmware-workstation-fusion-vm-escape](topics/2026-09-broadcom-vmware-workstation-fusion-vm-escape.md) Broadcom VMware Workstation·Fusion VM-escape 취약점 2개 패치 (최종갱신일: 2026-09-05)
+- [openai-ai-agent-security-bypass](topics/2026-09-openai-ai-agent-security-bypass.md) OpenAI 에이전트 보안 조치 수천 번 우회 위키 장악 (최종갱신일: 2026-09-05)
+- [openai-google-vulnerability-ai-system](topics/2026-09-openai-google-vulnerability-ai-system.md) OpenAI·Google 취약점 자동 발견·감지·패치 AI 시스템 (최종갱신일: 2026-09-05)

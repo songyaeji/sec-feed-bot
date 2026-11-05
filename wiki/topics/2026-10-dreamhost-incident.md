@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-10-26 [BleepingComputer](https://www.bleepingcomputer.com/news/security/dreamhost-forces-email-ftp-sftp-password-resets-in-ongoing-incident/) — DreamHost 진행 중인 "incident"로 File Manager 연결 문제 유발, 이메일·FTP/SFTP 사용자 비밀번호 강제 초기화
+- 2026-11-04 [BleepingComputer](https://www.bleepingcomputer.com/news/security/dreamhost-confirms-data-breach-exposed-ftp-logins-and-webmail-sessions/) — 침해 공식 확인, 공격자가 File Manager 플랫폼 2개월 접근으로 고객 FTP/SFTP 사용자명·암호·웹메일 세션 탈취
 
 ## 관련

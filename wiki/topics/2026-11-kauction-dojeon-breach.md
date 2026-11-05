@@ -15,5 +15,7 @@ cves: []
 - 2026-11-02 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209238) — 중부발전서비스, 더존 백업서버 침해로 임직원 개인정보 유출 가능성 안내
 - 2026-11-02 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209267) — 더본코리아(백종원), 더존 침해로 주민번호·계좌정보·고객상담 정보 유출 가능성
 - 2026-11-03 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209275) — 전북문화관광재단, 더존 침해로 임직원·거래처 개인정보 유출 가능성 공지
+- 2026-11-04 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209308) — 광주여성가족재단, 더존비즈온 APO 백업서버 침해로 주민번호·계좌번호·소득정보 유출 가능성 공지
+- 2026-11-04 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209307) — 서울시육아종합지원센터, 더존비즈온 백업서버 침해로 전·현직 직원과 강사 개인정보 유출 가능성 공지, 2026년 9월 30일 서비스 이용 종료했으나 데이터 삭제 미흡
 
 ## 관련
