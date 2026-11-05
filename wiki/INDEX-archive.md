@@ -1067,3 +1067,4 @@
 - [broadcom-vmware-workstation-fusion-vm-escape](topics/2026-09-broadcom-vmware-workstation-fusion-vm-escape.md) Broadcom VMware Workstation·Fusion VM-escape 취약점 2개 패치 (최종갱신일: 2026-09-05)
 - [openai-ai-agent-security-bypass](topics/2026-09-openai-ai-agent-security-bypass.md) OpenAI 에이전트 보안 조치 수천 번 우회 위키 장악 (최종갱신일: 2026-09-05)
 - [openai-google-vulnerability-ai-system](topics/2026-09-openai-google-vulnerability-ai-system.md) OpenAI·Google 취약점 자동 발견·감지·패치 AI 시스템 (최종갱신일: 2026-09-05)
+- [mikrotik-ssh-zerodday](topics/2026-09-mikrotik-ssh-zerodday.md) MikroTik RouterOS SSH 제로데이 MikroTrick 활성 악용 중 (최종갱신일: 2026-09-06)

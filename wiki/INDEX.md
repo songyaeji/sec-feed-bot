@@ -2,6 +2,9 @@
 
 형식: `- [slug](topics/slug.md) 한줄요약 (최종갱신일: YYYY-MM-DD)`
 
+- [chatgpt-lockdown-mode-bypass](topics/2026-11-chatgpt-lockdown-mode-bypass.md) ChatGPT Lockdown Mode 세션 XSS 취약점 (최종갱신일: 2026-11-05)
+- [meta-ai-dev-environment](topics/2026-11-meta-ai-dev-environment.md) Meta AI 개발환경 인증 토큰 노출 (최종갱신일: 2026-11-05)
+- [zyxel-gs1900-zero-day](topics/2026-11-zyxel-gs1900-zero-day.md) Zyxel GS1900 패치 우회 제로데이 RCE (최종갱신일: 2026-11-05)
 - [wso2-path-traversal-rce](topics/2026-09-wso2-path-traversal-rce.md) WSO2 API 플랫폼 경로 조작 미인증 파일 업로드 원격코드실행 (최종갱신일: 2026-11-04)
 - [rails-active-storage-rce](topics/2026-11-rails-active-storage-rce.md) Ruby on Rails Active Storage ImageMagick 파일쓰기 취약점 긴급 패치 (최종갱신일: 2026-11-04)
 - [xen-hypervisor-vm-escape](topics/2026-11-xen-hypervisor-vm-escape.md) Xen 하이퍼바이저 VM 간 메모리 접근 2개 취약점 (최종갱신일: 2026-11-04)
@@ -36,7 +39,7 @@
 - [ukraine-russia-emergency-alert-breach](topics/2026-11-ukraine-russia-emergency-alert-breach.md) 우크라이나 러시아 긴급경보 앱 침해 가짜 핵 위협 경고 송출 (최종갱신일: 2026-11-02)
 - [synology-c3rb3r-ransomware](topics/2026-11-synology-c3rb3r-ransomware.md) Synology NAS C3RB3R 랜섬웨어 공격 급증 긴급 업데이트 권고 (최종갱신일: 2026-11-03)
 - [european-supermarket-fridge-attacks](topics/2026-11-european-supermarket-fridge-attacks.md) 유럽 슈퍼마켓 냉동고 제어 시스템 사이버공격 온도 비정상 상승 식품 손실 (최종갱신일: 2026-11-02)
-- [artex-ai-pentesting-attacks](topics/2026-10-artex-ai-pentesting-attacks.md) ARTEX·Hexstrike·CAIRN AI 펜테스팅 프레임워크 광범위 악용 (최종갱신일: 2026-11-02)
+- [artex-ai-pentesting-attacks](topics/2026-10-artex-ai-pentesting-attacks.md) ARTEX·Hexstrike·CAIRN AI 펜테스팅 프레임워크 광범위 악용 (최종갱신일: 2026-11-05)
 - [chainalysis-breach](topics/2026-10-chainalysis-breach.md) 블록체인 분석사 Chainalysis 침해 AI 에이전트 공격 기법 확인 (최종갱신일: 2026-11-02)
 - [darkblinders-israel-kurdistan-breach](topics/2026-11-darkblinders-israel-kurdistan-breach.md) 이란 국가행위자 DarkBlinders 이스라엘 고위 인물·이라크 쿠르드 정부 클라우드 침해 (최종갱신일: 2026-11-02)
 - [langflow-unauthenticated-rce](topics/2026-11-langflow-unauthenticated-rce.md) Langflow AI 플랫폼 미인증 원격코드실행 두 개 취약점 1.0.0~1.12.8 영향 (최종갱신일: 2026-11-02)
@@ -108,7 +111,6 @@
 - [chromadb-code-injection-rce](topics/2026-05-chromadb-code-injection-rce.md) ChromaDB 미인증 코드 인젝션 원격코드실행 (최종갱신일: 2026-10-27)
 - [dalfox-xss-scanner-rce](topics/2026-05-dalfox-xss-scanner-rce.md) Dalfox 보안도구 REST API 명령 인젝션 미인증 RCE (최종갱신일: 2026-10-27)
 - [uds-identity-keycloak-auth-bypass](topics/2026-06-uds-identity-keycloak-auth-bypass.md) UDS Identity Keycloak 인증우회 OAuth2 토큰 탈취 (최종갱신일: 2026-10-27)
-- [artex-ai-pentesting-attacks](topics/2026-10-artex-ai-pentesting-attacks.md) 전직 펜테스터 ARTEX AI로 90개 기관 침해 826만 데이터 탈취 (최종갱신일: 2026-10-26)
 - [convertr-payment-supply-chain](topics/2026-10-convertr-payment-supply-chain.md) 브라질 Convertr 결제 플랫폼 공급망 공격 신용카드 탈취 (최종갱신일: 2026-10-28)
 - [university-copenhagen-breach](topics/2026-10-university-copenhagen-breach.md) 코펜하겐대학 테스트 환경 침해 52만5천 명 개인정보 유출 추가 사이버공격 (최종갱신일: 2026-10-28)
 - [spigen-korea-zendesk-breach](topics/2026-10-spigen-korea-zendesk-breach.md) 슈피겐코리아 해외 고객관리 시스템 침해 182명 개인정보 유출 (최종갱신일: 2026-10-28)
@@ -259,7 +261,7 @@
 - [j4care-dcm4che-multi-vuln](topics/2026-10-j4care-dcm4che-multi-vuln.md) dcm4chee-arc-light 의료이미징 시스템 6개 취약점 환자정보 탈취 (최종갱신일: 2026-10-15)
 - [thermo-fisher-torrent-suite-rce](topics/2026-10-thermo-fisher-torrent-suite-rce.md) Torrent Suite Software 염기분석 플랫폼 파일 읽기 RCE (최종갱신일: 2026-10-15)
 - [agenttesla-phishing-campaign](topics/2026-10-agenttesla-phishing-campaign.md) AgentTesla 정보탈취 악성코드 사업제안 위장 피싱 배포 (최종갱신일: 2026-10-13)
-- [korea-finance-breach-16](topics/2026-10-korea-finance-breach-16.md) 금융권 16곳 해킹 10만건 유출, TAG-217 공격 배경 분석·8월부터 AI 활용 취약점 탐색 (최종갱신일: 2026-10-20)
+- [korea-finance-breach-16](topics/2026-10-korea-finance-breach-16.md) 금융권 16곳 해킹 10만건 유출, 클라우드 평가 기준 고도화·보안체계 강화·580개사 전수점검 (최종갱신일: 2026-11-05)
 - [sookyeongja-media-email-breach](topics/2026-10-sookyeongja-media-email-breach.md) 시청자미디어센터 메일 오발송 개인정보·내부자료 유출 (최종갱신일: 2026-10-16)
 - [centerpoint-energy-breach](topics/2026-09-centerpoint-energy-breach.md) 에너지 공급사 CenterPoint 고객 115만 명 개인정보 유출 (최종갱신일: 2026-10-16)
 - [chrome-ai-chain-exploit-25m](topics/2026-10-chrome-ai-chain-exploit-25m.md) Chrome 3개 취약점 연결 공격 체인 개발 25만 달러 포상 (최종갱신일: 2026-10-15)
@@ -590,7 +592,6 @@
 - [n-able-ncentral-unauthenticated-rce-sept2026](topics/2026-09-n-able-ncentral-unauthenticated-rce-sept2026.md) N-able N-central 미인증 원격코드실행 CVE-2026-86218 CISA KEV 공식 등록 (최종갱신일: 2026-09-08)
 - [ai-llm-vuln-surge-2026q2](topics/2026-09-ai-llm-vuln-surge-2026q2.md) AI·LLM 서비스 취약점 10배 급증 카스퍼스키 2분기 보고 (최종갱신일: 2026-09-07)
 - [naver-cloud-ai-foundation](topics/2026-09-naver-cloud-ai-foundation.md) 네이버클라우드 사이버보안 특화 AI 파운데이션 모델 개발사업 참여기관 발표 (최종갱신일: 2026-09-07)
-- [mikrotik-ssh-zerodday](topics/2026-09-mikrotik-ssh-zerodday.md) MikroTik RouterOS SSH 제로데이 MikroTrick 활성 악용 중 (최종갱신일: 2026-09-06)
 - [magento-adobe-commerce-stylesmuggler-rce](topics/2026-09-magento-adobe-commerce-stylesmuggler-rce.md) Magento·Adobe Commerce 제로데이 StyleSmuggler RCE·Linux 백도어 배포 악용 중 (최종갱신일: 2026-09-07)
 - [peep-chrome-edge-backdoor](topics/2026-09-peep-chrome-edge-backdoor.md) PEEP Chrome·Edge 후익스플로잇 북마크 확장 위장 (최종갱신일: 2026-09-07)
 - [prey-0058-microsoft365-vishing](topics/2026-09-prey-0058-microsoft365-vishing.md) PREY-0058 IT Help Desk 음성피싱 M365 자격증명 탈취 (최종갱신일: 2026-09-07)
