@@ -1817,5 +1817,1542 @@
     "tags": [],
     "title": "개인정보 처리 맡겨도 책임 못 피한다…위탁기업 관리·감독 의무는?",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84U3l1VFR2dGNvcmVuQ0tSUzhGby1xZHhOallCVUJ2OVQ3RTVSMU51blc5ZnpHMUtiNjNHZlV6YnVBRFZaNlRmTU13QnEwcTRCSVBmRHM3MGVONHZBd00wQw?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-84474",
+    "published": "2026-09-23T19:19:39.930",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. The provisioning-callback secret (host_config_key) is exposed to\nusers holding only the read-level view_jobtemplate permission -- both in the\njob template API representation and in the activity stream -- and the\nprovisioning callback endpoint trusts a client-supplied X-Forwarded-For\nheader to determine the calling host when the controller is deployed behind\nthe AAP gateway with an empty proxy allow-list. By reading the secret and\nspoofing X-Forwarded-For to match any host in the job template's inventory, a\nminimally privileged or unauthenticated remote attacker can launch the job\ntemplate against arbitrary managed hosts using the job template's credentials,\nresulting in privilege escalation and remote code execution on managed hosts.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-84474 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84474"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-84502",
+    "published": "2026-09-23T19:19:40.377",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. The Project scm_url field is not validated against values that\nbegin with a dash and is stored and passed verbatim to the git SCM module.\nBecause the module runs git ls-remote with the URL as a positional argument and\nwithout a \"--\" separator, a git project URL such as \"--upload-pack=<command>:x\"\nis interpreted by git as the --upload-pack option and executed via a shell. A\nuser with permission to create or modify a project in a single organization can\nthereby execute arbitrary commands on the control-plane task pod, with output\nreflected through the project update stdout endpoint, leading to cross-tenant\ncompromise and in-cluster lateral movement",
+    "tags": [],
+    "title": "CVE-2026-84502 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84502"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-75884",
+    "published": "2026-09-23T20:17:14.637",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in AWX. The container group pod_spec_override field uses an incomplete blocklist that only restricts automountServiceAccountToken, allowing injection of initContainers, serviceAccountName overrides, and projected service account token volumes. An AAP platform administrator can exploit this to escalate privileges to OpenShift namespace-level access and exfiltrate namespace secrets.",
+    "tags": [],
+    "title": "CVE-2026-75884 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75884"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-84719",
+    "published": "2026-09-23T20:17:18.617",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in the Ansible Automation Platform automation-controller. When a\nWorkflowJobTemplate is copied, the deep-copy permission sanitizer validates only the inventory,\nunified_job_template, and credentials of each cloned node and fails to check the instance_groups\n(and execution_environment and labels) that were preserved from the original. A user with\norganization workflow-admin permission but no role on the referenced instance groups can copy a\nworkflow, become its administrator, and launch jobs pinned to instance groups they are not\nauthorized to use — including the control-plane instance group — bypassing the InstanceGroup\nuse_role boundary and causing attacker-influenced automation to run in the control-plane\nexecution context.",
+    "tags": [],
+    "title": "CVE-2026-84719 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84719"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-122051",
+    "published": "2026-11-05T00:17:24.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in Edimax BR-6208AC 1.32. Affected by this vulnerability is an unknown functionality of the file /goform/mp. Executing a manipulation can lead to command injection. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-122051 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122051"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-122302",
+    "published": "2026-11-05T03:17:22.030",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno before 1.19.2 contains a privilege escalation vulnerability that allows namespace admins to create resources beyond their RBAC because generate-rule admission checks verify the controller's permissions, not the author's. Attackers can create a namespaced Policy with generate rules targeting other namespaces or cluster-scoped kinds, making the background controller create or clone resources cluster-wide.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-122302 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122302"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-122303",
+    "published": "2026-11-05T03:17:22.197",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno from 1.17.0 before 1.19.2 contains an authorization bypass vulnerability that allows namespace tenants to overwrite resources in other namespaces via NamespacedMutatingPolicy mutate-existing targetMatchConstraints.expression. Attackers can return a CEL map literal fabricating a target with an attacker-chosen metadata.namespace, causing the privileged background controller to overwrite Secrets, Deployments, or policies cluster-wide.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-122303 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122303"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-122304",
+    "published": "2026-11-05T03:17:22.353",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno from 1.17.0 before 1.19.2 contains an authorization bypass vulnerability that allows namespace admins to escape namespace confinement because the cleanup controller builds its context loader with a nil policy. Attackers can create a namespaced CleanupPolicy with apiCall or globalReference context entries to read cross-namespace Secrets and modify validatingwebhookconfigurations using the cleanup controller's ServiceAccount.",
+    "tags": [],
+    "title": "CVE-2026-122304 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122304"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-122310",
+    "published": "2026-11-05T03:17:23.337",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno from 1.19.1 before 1.19.2 validates a Policy's context.apiCall urlPath after cleaning it but executes the raw path, whose fragment or query the Kubernetes client discards. A namespace-scoped user who can create a Policy can hide ../ segments behind # or ? to reach cluster-scoped endpoints with Kyverno's ServiceAccount, gaining cluster admin.",
+    "tags": [],
+    "title": "CVE-2026-122310 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122310"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-122311",
+    "published": "2026-11-05T03:17:23.497",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno from 1.16.0 before 1.19.2 fails to validate path segments in the resource argument of resource.get() and resource.post(), allowing namespaced CEL policies to escape their namespace. Tenants who can create a NamespacedValidatingPolicy can insert .. segments to read and write arbitrary cluster objects using the admission controller's ServiceAccount, leading to cluster takeover.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-122311 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122311"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-122313",
+    "published": "2026-11-05T03:17:23.853",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno from 1.17.0 before 1.19.2 contains a privilege escalation vulnerability that allows namespace-scoped tenants to modify resources in other namespaces through NamespacedMutatingPolicy targetMatchConstraints.expression CEL output lacking namespace checks. Attackers can emit a literal target such as another tenant's RoleBinding, which the cluster-wide background controller then mutates to add attacker subjects or alter Roles, NetworkPolicies, and ConfigMaps.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-122313 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122313"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-122321",
+    "published": "2026-11-05T03:17:25.023",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno 1.18.0 before 1.19.2 contains a signature verification bypass in verifyImages because cached verification results are keyed by the image reference string (such as a tag) rather than bound to the verified digest, so cache hits skip signature and attestation checks. An attacker who can submit workloads and move a registry tag can warm the cache with a signed image, repoint the tag, and have Kyverno admit the workload and use mutateDigest to pin the unverified digest.",
+    "tags": [],
+    "title": "CVE-2026-122321 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122321"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-84486",
+    "published": "2026-09-23T19:19:40.093",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. Four debug views that trigger the internal task, dependency, and\nworkflow schedulers are configured to allow any user (including unauthenticated\nclients) and are routed in production builds because their URL include is not\ngated on the debug setting. An unauthenticated remote attacker can repeatedly\ninvoke these endpoints to acquire the cluster-wide scheduler advisory lock;\nbecause the legitimate scheduler acquires the same lock without waiting, the\nattacker causes real scheduler runs to be skipped, stalling job dispatch for\nall tenants, while also consuming controller web workers. The debug root view\nadditionally discloses the list of debug endpoints to unauthenticated callers.",
+    "tags": [],
+    "title": "CVE-2026-84486 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84486"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-84683",
+    "published": "2026-09-23T20:17:17.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. The HTML view of job, ad hoc command, project update, and inventory\nupdate standard output escapes HTML metacharacters but does not remove ANSI\nterminal escape sequences before conversion to HTML. An ANSI OSC 8 hyperlink\nsequence in the output is expanded into an HTML anchor whose href is not scheme-\nfiltered or escaped, so a low-privileged user who can produce output -- or an\nexternal party whose data a playbook echoes -- can embed a javascript: link that\nis rendered into a text/html response with no Content-Security-Policy. When a\nhigher-privileged user views the output page and clicks the link, attacker-\ncontrolled JavaScript executes in their authenticated session, allowing actions\nas that user up to full platform takeover.",
+    "tags": [],
+    "title": "CVE-2026-84683 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84683"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-84691",
+    "published": "2026-09-23T20:17:17.537",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in Red Hat Ansible Automation Platform's automation-\ncontroller. The setting that formats the log message emitted for API 4XX errors\nis an administrator-controlled Python format-string template that is rendered\nwith a live user object as an argument. Because Python string formatting permits\nattribute and item traversal on its arguments, an administrator can craft a\ntemplate that walks from the user object into the application settings and reads\nthe Django secret key and the database password. The formatted message is written\nto a logger that can be forwarded to an external log aggregator, whose destination\nis also administrator-controlled, allowing the secrets to be sent off the host. An\nauthenticated administrator can thereby obtain the master encryption key used to\nprotect all stored credentials and the database service password, enabling offline\ndecryption of every stored credential, forgery of user sessions, and direct\naccess to the controller database.",
+    "tags": [],
+    "title": "CVE-2026-84691 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84691"
+  },
+  {
+    "category": "high",
+    "cvss": 6.3,
+    "id": "CVE-2026-122160",
+    "published": "2026-11-05T03:17:21.133",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in myshell-ai AIlice up to 0.4.0. This vulnerability affects the function LoadModel_PEFT of the file ailice/core/llm/AModelCausalLM.py of the component HuggingFace Model Wrapper. The manipulation of the argument base_model_name_or_path leads to inclusion of functionality from untrusted control sphere. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-122160 (CVSS 6.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122160"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-122308",
+    "published": "2026-11-05T03:17:23.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kyverno before 1.19.2 contains an authorization bypass vulnerability in the Generation Handler that allows users with create/update permissions to trigger synchronized generate policies by spoofing internal generate.kyverno.io labels. Attackers can label a ConfigMap as managed-by kyverno with crafted policy, rule, and trigger labels to clone sensitive Secrets from restricted namespaces into their own namespace.",
+    "tags": [],
+    "title": "CVE-2026-122308 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122308"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-122316",
+    "published": "2026-11-05T03:17:24.360",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kyverno from 1.17.0 before 1.19.2 contains a missing authorization vulnerability in the mutate-existing background processor that allows namespaced tenants to modify resources outside their namespace. Attackers can create a NamespacedMutatingPolicy targeting Namespace objects or victim-namespace resources via CEL expressions, making the background-controller ServiceAccount strip Pod Security labels cluster-wide.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-122316 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-122316"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-116617",
+    "published": "2026-11-05T05:18:19.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Motors – Car Dealership & Classified Listings Plugin plugin for WordPress is vulnerable to File Deletion in all versions up to, and including, 1.4.128 The vulnerability exists because `stm_save_user_extra_fields()`, hooked to `personal_options_update`, writes the attacker-controlled `stm_dealer_logo_path` parameter directly to user meta without an ownership check binding the submitted path to the submitting user — unlike the `stm_payment_status` and `stm_lost_password_hash` fields, this field is not gated by a `manage_options` or `edit_users` capability check. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete image files belonging to other users under `wp-content/uploads` — including other users' avatars, dealer logos, and uploaded media — by storing a crafted path via their own profile and then triggering `unlink()` through the become-dealer form on their author page. Note that the two path guards (`stm_mvl_is_path_within_uploads` and `stm_mvl_is_allowed_image_file`) do restrict the attack surface to files with an image extension that resolve within the uploads basedir; files outside that directory, such as `wp-config.php` or plugin PHP files, cannot be reached.",
+    "tags": [],
+    "title": "CVE-2026-116617 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116617"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-118193",
+    "published": "2026-11-05T05:18:19.427",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.19.1 via the `donor_default_user_role` parameter. This is due to the `sanitize_option_donor_default_user_role()` function applying only a narrow literal check against the string `'administrator'` rather than enforcing the plugin's own `give_get_donor_safe_user_roles()` allowlist on save, and due to the `give_core_settings_import_callback()` AJAX handler writing imported JSON directly into the `give_settings` option via `update_option()` without invoking the sanitize filter at all. This makes it possible for authenticated attackers with the GiveWP Manager role (holding the `manage_give_settings` capability) and above to configure donor registration to assign privileged WordPress roles — up to and including Administrator via the import path — to every new donor account created through the platform. Via the settings save path, the Administrator role is blocked but any other elevated role (Editor, Author, etc.) is accepted; via the Tools › Import JSON path, the sanitize filter is bypassed entirely, allowing the Administrator role itself to be stored and subsequently applied to all newly registered donor accounts.",
+    "tags": [],
+    "title": "CVE-2026-118193 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118193"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-93389",
+    "published": "2026-11-05T05:18:40.127",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The LiteSpeed Cache plugin for WordPress is vulnerable to unauthenticated disclosure of sensitive WooCommerce customer data in all versions up to, and including, 7.9.1 With Cache REST enabled (the shipped default cache-rest=1), LiteSpeed stores WooCommerce Store API GET responses (/wc/store/v1/cart and /wc/store/v1/checkout) as PUBLIC cache objects and does not vary the cache on the Cart-Token or WooCommerce session. A shopper's personalized cart/checkout response is therefore served to any later, cookie-less and token-less client as an LSCache HIT. This makes it possible for unauthenticated attackers to read another shopper's billing and shipping details (name, company, street address, email, phone), cart contents and totals, and the shopper's live Cart-Token session JWT and nonce (enabling cart/checkout-session hijack), plus order_key on the checkout endpoint.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-93389 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93389"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72279",
+    "published": "2026-11-05T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [],
+    "title": "Zyxel 제품 보안 업데이트 권고",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72279"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72277",
+    "published": "2026-11-04T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [],
+    "title": "美 CISA 발표 주요 Exploit 정보공유(Update. 2026-11-04)",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72277"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209323",
+    "published": "2026-11-05T15:44:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아마존웹서비스(AWS)가 AI 기술로 소스코드의 보안 취약점을 식별하고 수정 코드까지 전달하는 '코드 취약점용 AWS 컨티뉴엄(이하 AWS 컨티뉴엄)'을 정식 출시했다고 5일 밝혔다.공격자가 AI를 활용해 취약점 발견 직후 익스플로잇 코드를 빠르게 제작하면서 기업의 방어 대응 시간이 크게 줄어들었다. 애플리케이션 규모가 커지면서 기존 보안 스캐너가 대량의 경고를 생성하지만, 실제 외부 접근이 불가능하거나 런타임 제어로 위험이 완화된 경우가 많아 담당자가 수작업으로 가려내는 데 수 시간에서 수일이 소요되는 한계가 있었다.AWS 컨티뉴",
+    "tags": [],
+    "title": "AWS, AI 기반 코드 보안 서비스 'AWS 컨티뉴엄' 정식 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209323"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209322",
+    "published": "2026-11-05T15:40:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI 데이터 인프라 기업 그래파이가 정보보호경영시스템 국제표준인 ISO/IEC 27001:2022 인증을 획득했다고 5일 밝혔다.ISO/IEC 27001은 국제표준화기구(ISO)와 국제전기기술위원회(IEC)가 제정한 정보보호 관리 체계 규격이다. 그래파이는 소프트웨어 개발 및 공급 범위를 대상으로 인증 심사를 통과해, AI 데이터 인프라 연구개발부터 솔루션 납품에 이르는 전 과정의 보안 관리 능력을 검증받았다.최근 기업용 AI가 사내 내부 문서를 직접 탐색하고 결괏값을 도출하는 형태로 고도화되면서 모델 자체의 연산 성능뿐 아니라 사",
+    "tags": [],
+    "title": "그래파이, ISO/IEC 27001 인증 획득...기업용 AI 보안 체계 입증",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209322"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209321",
+    "published": "2026-11-05T15:22:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "최근 API(응용프로그램 인터페이스)를 통한 개인정보 유출 사고가 이어지면서 데이터 접근권한과 처리 과정을 전면 재점검해야 한다는 지적이 나온다.사고 사례를 보면 로그인 여부만 확인하고 실제 정보 조회 권한을 검증하지 않거나, 서비스에 불필요한 개인정보가 API 응답값에 그대로 담긴 문제가 드러났다. 최신 API에 보안 조치를 적용했더라도 보안 관리가 소홀한 이전 버전의 구형 API가 방치돼 무단 접근 통로로 악용되기도 했다.API는 웹과 모바일 앱, 클라우드 환경을 잇는 데이터 통로 역할을 한다. 요청 규격이 올바르거나 초기 로그",
+    "tags": [
+      "금융"
+    ],
+    "title": "피앤피시큐어, API 보안 취약점 대안으로 세밀한 권한 통제 체계 강조",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209321"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209320",
+    "published": "2026-11-05T15:14:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "테이텀이 기업 환경에서 쓰이는 AI 에이전트를 통합 관리하고 보호하는 보안 플랫폼 '클릭(Click)'을 5일 선보였다.AI 기술이 발전하면서 질문에 답하는 수준을 넘어 사내 파일 열람, 코드 수정, 외부 도구 호출, 시스템 명령 실행을 스스로 수행하는 AI 에이전트 활용이 늘고 있다. 에이전트가 직원 권한을 이용해 실제 작업을 처리하는 만큼 기기 접근 권한과 데이터 이동 경로를 통제해야 할 필요성이 커졌다. 사내 승인을 거치지 않은 미승인 도구인 섀도 AI(Shadow AI) 사용, 악의적 명령어로 시스템을 오작동시키는 프롬프트",
+    "tags": [],
+    "title": "테이텀, AI 에이전트 전용 보안 플랫폼 '클릭' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209320"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209319",
+    "published": "2026-11-05T14:58:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "금융보안원이 클라우드 서비스 제공자(CSP)의 보안 위험을 줄이기 위해 안전성 대표평가 체계를 개편하고 2027년부터 전면 적용한다고 5일 밝혔다.금융권의 클라우드 활용이 늘면서 클라우드 사업자의 보안 취약점이 여러 금융사로 번져 연쇄 사고를 낼 위험이 커졌다. 금융보안원은 증적 확인이나 서류 검토 중심의 기존 서면 평가가 지닌 한계를 보완하기 위해 2023년부터 클라우드 가상자원 관리 시스템을 점검하는 기술 평가를 도입해 운영해 왔다.이번 개편은 외부 노출 자산을 노리는 사이버 위협에 선제 대응하는 데 초점을 맞췄다.점검 대상은",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, CSP 안전성 대표평가 개편...연쇄 보안 사고 차단",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209319"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209317",
+    "published": "2026-11-05T14:41:55+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "포티넷이 인라인 AI 보안 서비스와 지점 네트워크용 SASE 서비스를 5일 공개했다.포티가드 인라인 AI 보안 서비스는 포티게이트 사용 기업이 추가 장비를 도입하지 않고도 대규모 언어 모델(LLM)과 자율 에이전트 트래픽을 검사할 수 있도록 지원하는 클라우드 보안 체계다.기존 보안 방식은 IP 주소와 패킷 중심이어서 프롬프트와 응답값에 숨겨진 위험 요소를 차단하는 데 한계가 있었다. 이 서비스는 버추AI 기술을 흡수한 포티AI게이트 엔진을 적용해 프롬프트와 전송 데이터를 실시간으로 감시한다. 허가받지 않은 섀도 AI 사용을 잡아내며",
+    "tags": [
+      "AI"
+    ],
+    "title": "포티넷, 인라인 AI 보안과 지점용 SASE 서비스 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209317"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209316",
+    "published": "2026-11-05T14:20:40+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아울시스템즈가 마이크로컨트롤러(MCU) 펌웨어 전용 암호화 모듈인 '아울에프크립토(OWLfCrypto V1.0)'로 국가정보원 암호모듈 검증(KCMVP)을 통과했다.KCMVP는 공공 정보통신망과 연결되는 정보통신(IT) 기기의 데이터 보호 수준과 암호 구현 안전성을 검증하는 법적 필수 인증이다. 아울시스템즈는 이번 검증을 발판 삼아 스마트 인프라, 국방, 공공 IoT 단말기 제조사를 대상으로 모듈 공급에 나선다.보안 수준 1등급을 획득한 아울에프크립토 V1.0은 메모리와 처리 속도에 제약이 있는 임베디드 기기를 겨냥해 C 언어로 자",
+    "tags": [],
+    "title": "아울시스템즈, 초경량 암호모듈 국정원 검증 통과...IoT 보안 시장 공략",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209316"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209315",
+    "published": "2026-11-05T14:09:01+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인피니언 테크놀로지스가 전력 부품 전문 기업 솔루엠과 AI 데이터센터용 고전압 직류(HVDC) 전력 솔루션 개발을 위한 업무협약(MOU)을 맺었다.양사는 기존 협력 관계를 넓혀 중간 버스 컨버터(IBC), 배터리 백업 유닛(BBU), 서버용 전원공급장치(PSU) 등 데이터센터 핵심 전력 장치 세 분야에 기술 역량을 집중하기로 합의했다.생성형 AI와 고성능컴퓨팅(HPC) 도입 확산으로 전력 소모량이 급증하면서 데이터센터 운영 시 전력 손실을 줄이고 에너지 효율을 높이는 기술이 핵심 화두로 떠올랐다. 고전압 직류(HVDC) 방식은 교류",
+    "tags": [
+      "AI"
+    ],
+    "title": "인피니언-솔루엠, AI 데이터센터용 HVDC 전력 장치 공동 개발",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209315"
+  },
+  {
+    "author": "BrianKrebs",
+    "category": "research",
+    "id": "https://krebsonsecurity.com/?p=74588",
+    "published": "2026-11-05T04:36:17+00:00",
+    "severity": "info",
+    "source": "Krebs on Security",
+    "summary": "Several staffers at the White House are using computers or mobile devices equipped with residential proxy services that render their internet address available for others to rent, security experts warned today. One of the proxy services is a Russian company whose founder's web hosting business was ground zero for cyberattacks against election systems in Arizona and Illinois in 2016.",
+    "tags": [],
+    "title": "Want to Rent an Internet Address at the White House?",
+    "url": "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+    "published": "2026-11-05T04:31:16+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "OpenAI on Wednesday detailed a pipeline that employed an upcoming cyber-focused artificial intelligence (AI) model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2 million in API costs. \"Our prototype identified and analyzed 2,308 candidate Linux kernel findings, dynamically reproduced 1,724 vulnerabilities, and produced 948 local privilege escalation (LPE)",
+    "tags": [],
+    "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
+    "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/96414/",
+    "published": "2026-11-03T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "ASEC Blog publishes Ransom & Dark Web Issues Week 1, November 2026 FBI Seizes Domain of Bulletproof Hosting Service Virtualine Internal Data of a Saudi ERP and IT Solutions Company Offered for Sale Cyberattacks on Supermarket Refrigeration Systems Spread Across 12 European Countries OBSOFT Claims Data Extortion and Data Destruction […]",
+    "tags": [],
+    "title": "Ransom & Dark Web Issues Week 1, November 2026",
+    "url": "https://asec.ahnlab.com/en/96414/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMilAFBVV95cUxOc0QxTGhIcXAxdDJxM2l3djNtVkM1TjlnY0c4Y3lOR3RmTU9vQ2lLQnlSX2tmMDkyM1Y2ZFBsUmNIYXI0UUh3NkZ0dWt3Qy1pYlhXVHRIV0p0ODJ0dHIta2xMX0tIdllMOW10RnV3MHBNSnZfU3ROY3BYLWlFeGlsbW9sVmdTU09ZdHpVckZmS2Z5X28t",
+    "published": "2026-11-05T00:15:04+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI 파이프라인, 리눅스 커널에서 권한 상승 취약점 948건 발견",
+    "tags": [],
+    "title": "OpenAI 파이프라인, 리눅스 커널에서 권한 상승 취약점 948건 발견",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOc0QxTGhIcXAxdDJxM2l3djNtVkM1TjlnY0c4Y3lOR3RmTU9vQ2lLQnlSX2tmMDkyM1Y2ZFBsUmNIYXI0UUh3NkZ0dWt3Qy1pYlhXVHRIV0p0ODJ0dHIta2xMX0tIdllMOW10RnV3MHBNSnZfU3ROY3BYLWlFeGlsbW9sVmdTU09ZdHpVckZmS2Z5X28t?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMilAFBVV95cUxOTG8xVEYyRmkydkU2bDBFZEtFSHUyTlAwcGM5b1ExSks1TUpDdUZUc2VaSlU5VndYNnNNY1lZR3FlRXhKVERSR09XM3ZxNzdBc3laUzJ2VGxCYkZETmYySTFJeTVDWjh6Vy0zR1Noakc3UERiVVBBWnJ3eGdERWEyZ3JISnkwY1p4alpDR0E1VXl0TGJM",
+    "published": "2026-11-04T13:27:00+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "AT&T의 스마트 보안 시스템에 AI 기능을 더하는 Gemini for Home",
+    "tags": [],
+    "title": "AT&T의 스마트 보안 시스템에 AI 기능을 더하는 Gemini for Home",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTG8xVEYyRmkydkU2bDBFZEtFSHUyTlAwcGM5b1ExSks1TUpDdUZUc2VaSlU5VndYNnNNY1lZR3FlRXhKVERSR09XM3ZxNzdBc3laUzJ2VGxCYkZETmYySTFJeTVDWjh6Vy0zR1Noakc3UERiVVBBWnJ3eGdERWEyZ3JISnkwY1p4alpDR0E1VXl0TGJM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMid0FVX3lxTE90aU5sOXlNdWxlM3A2aFljbl9IVl9LS0NaQWZyN1BZSlUxZ09kVHBIODVOUkNqWmwyU21iT2JUOEY4UGNLRld1QzJPcEJoVWdIS3c3aWdzVV9FY0gtQjVLVUFEQ0FrR0Fuc2VCbm5RNGd3NWdpcGhJ",
+    "published": "2026-11-04T15:50:27+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "AWS GovCloud (US-East)에서 사이버 보안을 위한 Daybreak Red 제공",
+    "tags": [],
+    "title": "AWS GovCloud (US-East)에서 사이버 보안을 위한 Daybreak Red 제공",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE90aU5sOXlNdWxlM3A2aFljbl9IVl9LS0NaQWZyN1BZSlUxZ09kVHBIODVOUkNqWmwyU21iT2JUOEY4UGNLRld1QzJPcEJoVWdIS3c3aWdzVV9FY0gtQjVLVUFEQ0FrR0Fuc2VCbm5RNGd3NWdpcGhJ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1Ma3lLNDJhbDRCQ2thNWtQcGRRMDFyQjZ3dlJHcDFJdGR0NzJfbzktZS1ndEhMenhFamo0Zi1feGgxT19PZU4xMDZVc1RRRkNtdWVNbFdCdE1zNV9RNEtHYXNhcHVSWXJ0WWVN",
+    "published": "2026-11-05T02:49:22+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금보원, CSP 안전성 대표 평가 고도화한다... 내년부터 적용",
+    "tags": [],
+    "title": "금보원, CSP 안전성 대표 평가 고도화한다... 내년부터 적용",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Ma3lLNDJhbDRCQ2thNWtQcGRRMDFyQjZ3dlJHcDFJdGR0NzJfbzktZS1ndEhMenhFamo0Zi1feGgxT19PZU4xMDZVc1RRRkNtdWVNbFdCdE1zNV9RNEtHYXNhcHVSWXJ0WWVN?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE9NcGw2am5qeC1nUDQ5a2tvdllYUlM2dmNSNm83ZU02cWdIZFRPYUNjLUhsVzRfMHp1NDNjT042Q0lRZXZRUGZLMkhmUXdFbmlPUHJGMkhn",
+    "published": "2026-11-05T02:12:22+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "580개 금융사, 상담용 웹·직원 관리 시스템까지 보안 점검 돌입 지디넷코리아 보안 취약 핀테크, 해킹에 고객정보 이어 돈까지 털려 IT조선 금융권 해킹 확산에 580여곳 전수점검…‘CEO 책임’ 강화(23%) 주간한국",
+    "tags": [
+      "금융"
+    ],
+    "title": "580개 금융사, 상담용 웹·직원 관리 시스템까지 보안 점검 돌입",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9NcGw2am5qeC1nUDQ5a2tvdllYUlM2dmNSNm83ZU02cWdIZFRPYUNjLUhsVzRfMHp1NDNjT042Q0lRZXZRUGZLMkhmUXdFbmlPUHJGMkhn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE9CeF9YT3ZIcVpXMml6VWx5THRnR2ZWWkRZRkRhLVdDWnFKS1VEc2RLcVI2SkVrUXVVM3FEdlZqM2ZOellMZVczaGtYd0s3U09Db2dabm9HZTNLUk5fNjYzZGwtYzYtX0x2WkhF",
+    "published": "2026-11-05T06:11:12+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "47만건 유출에 털린 금융권... ‘낡은’ 망분리 버리고 ‘AI 방어막’ 짠다",
+    "tags": [
+      "금융"
+    ],
+    "title": "47만건 유출에 털린 금융권... ‘낡은’ 망분리 버리고 ‘AI 방어막’ 짠다",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9CeF9YT3ZIcVpXMml6VWx5THRnR2ZWWkRZRkRhLVdDWnFKS1VEc2RLcVI2SkVrUXVVM3FEdlZqM2ZOellMZVczaGtYd0s3U09Db2dabm9HZTNLUk5fNjYzZGwtYzYtX0x2WkhF?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTFBwT1VGMERfOTJPLUN3TFhheEVkRDRQTzBhRk9XZDFwbTRTaHhNTXA1RXhYdXhEamNvMDdFeVBJdkN3bzZBaVdEWkQ5dVlBUQ",
+    "published": "2026-11-05T04:56:50+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, AI 활용해 클라우드 사업자 보안점검 고도화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, AI 활용해 클라우드 사업자 보안점검 고도화",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBwT1VGMERfOTJPLUN3TFhheEVkRDRQTzBhRk9XZDFwbTRTaHhNTXA1RXhYdXhEamNvMDdFeVBJdkN3bzZBaVdEWkQ5dVlBUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiY0FVX3lxTE9TT29LbG1VQUVibUlwS1FSdjhET0lGam0weXY5ZFNVeEg2UHl2UTZXcGJRZEw5ODBYeWNQRlN1T2Z6eC0tSEZBV2k2ZGV0WncyV3ludzIzbFh6TjF5NHBBaGNuNA",
+    "published": "2026-11-05T00:59:20+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹에 뚫린 금융권, 보안체계 대수술…망분리 규제까지 손본다",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9TT29LbG1VQUVibUlwS1FSdjhET0lGam0weXY5ZFNVeEg2UHl2UTZXcGJRZEw5ODBYeWNQRlN1T2Z6eC0tSEZBV2k2ZGV0WncyV3ludzIzbFh6TjF5NHBBaGNuNA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9IYTVIdk9jUXRCVUNVUFRwZnJRazlNM3FMUDJwbXpSY2pzT2d1S1VjYlRDZFA2dzlBMk5OMEZ5dVZiaDlZQjktRnhHV25KbXNYRV9kNzg0bUlLZXVDcDhrbE1oWWp1UmN4S19vUtIBcEFVX3lxTE5TWk9vZWxxMktpV3Zscm1oMDluU1R3UllDWGN4SjF0S3E3V2dVMzVmMzNxaEg1akJWMy1ZWTVUME9vV2dELXZDUG1qeURsR1IyRFZMN3BKTTMxSXNDdl9PTElHMUtJa2V2QU1SNkZfYno",
+    "published": "2026-11-05T02:34:42+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 보안 빗장 재설계…580여개사 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 보안 빗장 재설계…580여개사 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9IYTVIdk9jUXRCVUNVUFRwZnJRazlNM3FMUDJwbXpSY2pzT2d1S1VjYlRDZFA2dzlBMk5OMEZ5dVZiaDlZQjktRnhHV25KbXNYRV9kNzg0bUlLZXVDcDhrbE1oWWp1UmN4S19vUtIBcEFVX3lxTE5TWk9vZWxxMktpV3Zscm1oMDluU1R3UllDWGN4SjF0S3E3V2dVMzVmMzNxaEg1akJWMy1ZWTVUME9vV2dELXZDUG1qeURsR1IyRFZMN3BKTTMxSXNDdl9PTElHMUtJa2V2QU1SNkZfYno?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE1OT19OZUlFTkRIcE56X3FwTDN1Z0szMmdxTHl4UUJDLU42TDNwblZPZTN5ODhYVlA3aHVLZXlYZHpYVlVsTWxVdHltNUxEUWFldHBaZ3MzXzVic1RocFBHR2Izcmt3M1ctUWJHcVk2Z1lDQQ",
+    "published": "2026-11-05T01:52:35+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권, 보안점검 연 2회로 확대…580개사 전수조사",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권, 보안점검 연 2회로 확대…580개사 전수조사",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1OT19OZUlFTkRIcE56X3FwTDN1Z0szMmdxTHl4UUJDLU42TDNwblZPZTN5ODhYVlA3aHVLZXlYZHpYVlVsTWxVdHltNUxEUWFldHBaZ3MzXzVic1RocFBHR2Izcmt3M1ctUWJHcVk2Z1lDQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE5hTlViODJiYldzblRKWk1DMHVIaHoxdnJ0QTJSSDczbDdNbEN5Z01yRm5ibWR1U3laT015aTJwR294amp0ZmlyM2xXRzJsbGEyVjJpUnN6MU1la3J2Wi1nVUNlUVBjeS1KM0E",
+    "published": "2026-11-05T01:26:55+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 클라우드 보안 위협 선제 대응 클라우드 사업자 평가 고도화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, 클라우드 보안 위협 선제 대응 클라우드 사업자 평가 고도화",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5hTlViODJiYldzblRKWk1DMHVIaHoxdnJ0QTJSSDczbDdNbEN5Z01yRm5ibWR1U3laT015aTJwR294amp0ZmlyM2xXRzJsbGEyVjJpUnN6MU1la3J2Wi1nVUNlUVBjeS1KM0E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5NY2hXbzA2VkRXWXAtR1JHeHNCcVdkWWN3TUxtLWtpaEFzZ2JVVkh3VGZ2UGt1bEZjTzAtd2kxeEdESXR3WGstaW81SXg0Q1VaVVM2UlJHNC1IaE8zak0xVkZ1Yy1pRlJkQU5n",
+    "published": "2026-11-05T00:41:38+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 클라우드 사업자 외부 노출 자산 보안점검 강화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, 클라우드 사업자 외부 노출 자산 보안점검 강화",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5NY2hXbzA2VkRXWXAtR1JHeHNCcVdkWWN3TUxtLWtpaEFzZ2JVVkh3VGZ2UGt1bEZjTzAtd2kxeEdESXR3WGstaW81SXg0Q1VaVVM2UlJHNC1IaE8zak0xVkZ1Yy1pRlJkQU5n?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE5tN1RmX05HQ3NyN3pwd0RiU1YzOEQzcnppMFNHd19qb1RMOWFqeEZmSk4tWXlhMDVURkhsV1VfbURuVi1rcUJuRGlULXB5RDVVUFI0",
+    "published": "2026-11-05T00:55:01+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, AI로 클라우드 보안평가 강화…내년부터",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, AI로 클라우드 보안평가 강화…내년부터",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5tN1RmX05HQ3NyN3pwd0RiU1YzOEQzcnppMFNHd19qb1RMOWFqeEZmSk4tWXlhMDVURkhsV1VfbURuVi1rcUJuRGlULXB5RDVVUFI0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFBoVnRQZ3NGWFdOMW42RXZLSWdUVlRIbUd3T0c4eUdQZERNN21FbElFcjA3U19scnQyY1RTRFFYYTVJU2pFRVJpd0lrRDJHcHYteUhjMUhfSmpVNGtXMUx5ZjBrT3VFWVAwWUN30gFwQVVfeXFMUGNfaEJKVkY5aDNpX203bXRONUVwZXRjcTlxbVA3MG1GVWNWVG1vVmZpXzM1QnExd0tCbWdNS3VSOFg0cGxfVE42NFdwMWpKUENnekJHcTMxN1AwT2x0UmdxTHFJdmtob0djOXZnNmphRA",
+    "published": "2026-11-05T01:14:02+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹 사각지대 없도록…금융권 클라우드서비스 평가 고도화 - 머니투데이",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 사각지대 없도록…금융권 클라우드서비스 평가 고도화 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBoVnRQZ3NGWFdOMW42RXZLSWdUVlRIbUd3T0c4eUdQZERNN21FbElFcjA3U19scnQyY1RTRFFYYTVJU2pFRVJpd0lrRDJHcHYteUhjMUhfSmpVNGtXMUx5ZjBrT3VFWVAwWUN30gFwQVVfeXFMUGNfaEJKVkY5aDNpX203bXRONUVwZXRjcTlxbVA3MG1GVWNWVG1vVmZpXzM1QnExd0tCbWdNS3VSOFg0cGxfVE42NFdwMWpKUENnekJHcTMxN1AwT2x0UmdxTHFJdmtob0djOXZnNmphRA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE5iUnZ5TlNuX0Zhb2F4dXktcDg3VmZPTWdrWmMyYXd2XzZLcEpiWk5yc1ZDMzJiY2pELWNYbEVTaEJ3VkVxd2FfT1lHSlF4Vkc0dUwtbFlURmJ5MnJCWkJaR3haTWRCRmpY",
+    "published": "2026-11-05T04:47:12+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹 한 달 새 40건…47만건 정보 새고 10억원 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 한 달 새 40건…47만건 정보 새고 10억원 탈취",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5iUnZ5TlNuX0Zhb2F4dXktcDg3VmZPTWdrWmMyYXd2XzZLcEpiWk5yc1ZDMzJiY2pELWNYbEVTaEJ3VkVxd2FfT1lHSlF4Vkc0dUwtbFlURmJ5MnJCWkJaR3haTWRCRmpY?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMie0FVX3lxTFB0Z29KUGZINUtxUFhtSmRZR1I1YjBDYmpQc1BESGlCZGp1VEQxYU5PQmJldU9yODA3SU1la2ZobEVSMWN5aHpiQWpTcWl6Q3VGOE1maDdRY1l3NWttaktrcDRXTE9tNGVwQmd0eTFOWVZoMmlVT1UzZFp2a9IBgAFBVV95cUxOU3dwaXhZRWE0TFZRT0owWXNhN3dvbjFFMzNwcnZlTGtncU1BOEtqcmIxOXFEVHp3UXN2ZXBNZENXSHRPX3g0WWM4MGFFbEZMaFlSTEV4R1M0OVQwaktoNGdWeG15czBXSEo1bFRVeDlJeUpjUE50eVhsMVlNTnVTdw",
+    "published": "2026-11-05T00:02:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위 \"37개 금융사서 47만건 정보 유출… 580개사 보안 전수점검\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위 \"37개 금융사서 47만건 정보 유출… 580개사 보안 전수점검\"",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB0Z29KUGZINUtxUFhtSmRZR1I1YjBDYmpQc1BESGlCZGp1VEQxYU5PQmJldU9yODA3SU1la2ZobEVSMWN5aHpiQWpTcWl6Q3VGOE1maDdRY1l3NWttaktrcDRXTE9tNGVwQmd0eTFOWVZoMmlVT1UzZFp2a9IBgAFBVV95cUxOU3dwaXhZRWE0TFZRT0owWXNhN3dvbjFFMzNwcnZlTGtncU1BOEtqcmIxOXFEVHp3UXN2ZXBNZENXSHRPX3g0WWM4MGFFbEZMaFlSTEV4R1M0OVQwaktoNGdWeG15czBXSEo1bFRVeDlJeUpjUE50eVhsMVlNTnVTdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE1qZVQwb3NxNGNLc09reTh2QnA5ZnZ2S3lodnp3dkpnYU1aVm8zVm1Ga1A1TVB4dmMxN0ZCMzRXOU5MNEU4MmsyNFRiUjFEUHN3UDJyb0xJX3BZRVhhTFpESU44T2xGeV9D",
+    "published": "2026-11-05T06:12:42+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권, 한 달 새 47만3000건 털리고 10억원 뜯겨...당국 \"580여개사 전수점검\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권, 한 달 새 47만3000건 털리고 10억원 뜯겨...당국 \"580여개사 전수점검\"",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1qZVQwb3NxNGNLc09reTh2QnA5ZnZ2S3lodnp3dkpnYU1aVm8zVm1Ga1A1TVB4dmMxN0ZCMzRXOU5MNEU4MmsyNFRiUjFEUHN3UDJyb0xJX3BZRVhhTFpESU44T2xGeV9D?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE5weG1qSlgwTDFMaVZmY0ZLRVFOSlh3TWFiQXgyUUp5LTU0UEgtYTBJSng1UnFCYVRfZWtad0pETnZNYVZVS1JHMXJHeGV4OVJ6eVZGX1VNNG1sc3c",
+    "published": "2026-11-05T03:05:19+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "‘47만건 정보 유출’ 칼 빼든 금융당국...금융사 580곳 전수조사",
+    "tags": [
+      "금융"
+    ],
+    "title": "‘47만건 정보 유출’ 칼 빼든 금융당국...금융사 580곳 전수조사",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5weG1qSlgwTDFMaVZmY0ZLRVFOSlh3TWFiQXgyUUp5LTU0UEgtYTBJSng1UnFCYVRfZWtad0pETnZNYVZVS1JHMXJHeGV4OVJ6eVZGX1VNNG1sc3c?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE1UQldFalhkS0E3TTlUeVZ3cW4tSUFObnlPRVZpU3Nnb3dnczdncUNxazJIZHc4NUhyVVA3Ri1LNjR5cEtiR0dBVkJJQjZUeHEyZC1DUlJ2SDFreHVmM2VwWXZCR1ppMmdzcS13QWFHUzR4ME5Q",
+    "published": "2026-11-05T00:26:28+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융당국, 580개 금융사 보안 전수점검…공동 해킹 관제시스템 고도화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국, 580개 금융사 보안 전수점검…공동 해킹 관제시스템 고도화",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1UQldFalhkS0E3TTlUeVZ3cW4tSUFObnlPRVZpU3Nnb3dnczdncUNxazJIZHc4NUhyVVA3Ri1LNjR5cEtiR0dBVkJJQjZUeHEyZC1DUlJ2SDFreHVmM2VwWXZCR1ppMmdzcS13QWFHUzR4ME5Q?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxOMnVaWnN2TE1QdFVkVlpqeE0wdDk3SUItbEtxc3gwRHh6UW1OWVFFZU4zQnV5QmxmdjFHM0loWm82enhvMENKSnVLZ3lGaXhKVGxlQ0JmdFRsSTFTN1BTVE1kM21laGkxMFFUZEFlU3pBRWU2VDdRZ295dV94bzBsMw",
+    "published": "2026-11-04T23:45:14+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "셀렉트스타, 금융 AI 안전성 평가 기술 국제학회 채택…금융보안원 샌드박스 활용",
+    "tags": [
+      "금융"
+    ],
+    "title": "셀렉트스타, 금융 AI 안전성 평가 기술 국제학회 채택…금융보안원 샌드박스 활용",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMnVaWnN2TE1QdFVkVlpqeE0wdDk3SUItbEtxc3gwRHh6UW1OWVFFZU4zQnV5QmxmdjFHM0loWm82enhvMENKSnVLZ3lGaXhKVGxlQ0JmdFRsSTFTN1BTVE1kM21laGkxMFFUZEFlU3pBRWU2VDdRZ295dV94bzBsMw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5ZNW5ORzkxc0tWOWQ4QnAxNWZzWVRsZHE4eFVvT19maVc5ZVk2LW9NUVNBSG9yWDU5TjV5UTNHMGp0aFZBVDB6bVdrdFhfalJpNnpzTXB1anNNU20xQW91NWI2eHM",
+    "published": "2026-11-05T01:30:53+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "이억원 “보안 부실은 경영 실패”… 전 금융권 580곳 외부접점 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "이억원 “보안 부실은 경영 실패”… 전 금융권 580곳 외부접점 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5ZNW5ORzkxc0tWOWQ4QnAxNWZzWVRsZHE4eFVvT19maVc5ZVk2LW9NUVNBSG9yWDU5TjV5UTNHMGp0aFZBVDB6bVdrdFhfalJpNnpzTXB1anNNU20xQW91NWI2eHM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE13Z2dWN2Fsd0tla184d1VBbzZQcUMxelYxNGpQUE1RcjlwUGZxT3BiOGt1WmhvNVZvU1BwVlRHWkVmYmJla1hmWGVleXZwTzRlT2hWV1pLYk5CNnA4M1Flcnp0cldyX21CQ2ZR",
+    "published": "2026-11-05T05:09:46+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "이억원 \"금융당국, 580여개 금융사 보안 전수점검…침해 사고 땐 CEO 책임 묻는다\" [현장]",
+    "tags": [
+      "금융"
+    ],
+    "title": "이억원 \"금융당국, 580여개 금융사 보안 전수점검…침해 사고 땐 CEO 책임 묻는다\" [현장]",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE13Z2dWN2Fsd0tla184d1VBbzZQcUMxelYxNGpQUE1RcjlwUGZxT3BiOGt1WmhvNVZvU1BwVlRHWkVmYmJla1hmWGVleXZwTzRlT2hWV1pLYk5CNnA4M1Flcnp0cldyX21CQ2ZR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5wNExHZk9nYzYxWUw2NXlpWU8xZE1JMUxJVzdBU3RqYUtUNHlxQWRUdWMwMl9kZHVzUHVzZUNXM05NdXc4alhWX2pjajV2OG1WRmN0LUhSNTcyc0JUYWhDVkZSUDE",
+    "published": "2026-11-05T01:36:35+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "한달 새 금융권 해킹 '37개사·40건’…전 금융권 보안 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "한달 새 금융권 해킹 '37개사·40건’…전 금융권 보안 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5wNExHZk9nYzYxWUw2NXlpWU8xZE1JMUxJVzdBU3RqYUtUNHlxQWRUdWMwMl9kZHVzUHVzZUNXM05NdXc4alhWX2pjajV2OG1WRmN0LUhSNTcyc0JUYWhDVkZSUDE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMihgFBVV95cUxNUnhRMmdwSDRYNVB6YkxObEN6b1A5bU5RTktEN3MtNWJjQ1hNMXhGY3JSdzN3T0ZVODRfX2thMl8wV3VGLWdfaGZwVHYwYkh0b3A0LU5LRmlQV3NzRWNRdlV3Sjh2QmthQ2VYenNRWXZ1WUs1N0JFaTdNcnN1TjFTbGlsQTBtQQ",
+    "published": "2026-11-05T01:17:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "37개 금융사 정보유출 47.3만건…10억원 자금 탈취도",
+    "tags": [
+      "금융"
+    ],
+    "title": "37개 금융사 정보유출 47.3만건…10억원 자금 탈취도",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUnhRMmdwSDRYNVB6YkxObEN6b1A5bU5RTktEN3MtNWJjQ1hNMXhGY3JSdzN3T0ZVODRfX2thMl8wV3VGLWdfaGZwVHYwYkh0b3A0LU5LRmlQV3NzRWNRdlV3Sjh2QmthQ2VYenNRWXZ1WUs1N0JFaTdNcnN1TjFTbGlsQTBtQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9naHZYNmZmRWIwVzh6TnRwbDJpR3JReXJWT2dfc2tFQ29NZVctbTc2blY5TThfWFUwejdKN1ZGRk1mRU44djVlQnlWTTdBTC1iaDlzS1RIb2pkVG16cENYTmVZTWlXY1ZqTWc",
+    "published": "2026-11-05T06:24:28+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"내 돈·정보 안전할까\"...한 달 새 금융사 37곳 뚫리고 10억 털렸다",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"내 돈·정보 안전할까\"...한 달 새 금융사 37곳 뚫리고 10억 털렸다",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9naHZYNmZmRWIwVzh6TnRwbDJpR3JReXJWT2dfc2tFQ29NZVctbTc2blY5TThfWFUwejdKN1ZGRk1mRU44djVlQnlWTTdBTC1iaDlzS1RIb2pkVG16cENYTmVZTWlXY1ZqTWc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFB2dUlLSVdnd192Q1pzWVdFdkFLMDR5MWUybVhFZUlMbm1tODF1MGYzZkdyQ0QtSVA1NjhtWmliWC1DcU1VemtHWFBkNHA2TXhOYVViOFg0cFEwYzNsczZEV2o2eVQ1d2PSAWpBVV95cUxPM1I5dWd3QjNaS2NEZkFQZG5ZT3ZzQUJvRHBhcFdKdmNzUFhNNGg1Q01aREVkRU5QR0l2ZmhaelZ3VHpVZkFUdkVoMVg1azhzTnFjSHROWk1MUDRwU0FBMnVPUEFqT19MZDFn",
+    "published": "2026-11-05T05:34:52+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "5주 새 37곳 해킹…금융권 580여곳 보안 총점검 나선다",
+    "tags": [
+      "금융"
+    ],
+    "title": "5주 새 37곳 해킹…금융권 580여곳 보안 총점검 나선다",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB2dUlLSVdnd192Q1pzWVdFdkFLMDR5MWUybVhFZUlMbm1tODF1MGYzZkdyQ0QtSVA1NjhtWmliWC1DcU1VemtHWFBkNHA2TXhOYVViOFg0cFEwYzNsczZEV2o2eVQ1d2PSAWpBVV95cUxPM1I5dWd3QjNaS2NEZkFQZG5ZT3ZzQUJvRHBhcFdKdmNzUFhNNGg1Q01aREVkRU5QR0l2ZmhaelZ3VHpVZkFUdkVoMVg1azhzTnFjSHROWk1MUDRwU0FBMnVPUEFqT19MZDFn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE5KblFfaHFxR29BMWRvSmJQVWxJcXgtT3BpaThXaU8yd3EzeGhLQV9QR2ItRlhCWXpMbXpkb2t4LW54SXluUEo4Y21SeXNCYzR5UEZBdWRWQk93am1oRm9DWlV3",
+    "published": "2026-11-05T01:23:43+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "AI해킹에 개인정보 47만건 유출…당국, 580개 금융사 전수점검·망분리 해제 착수",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI해킹에 개인정보 47만건 유출…당국, 580개 금융사 전수점검·망분리 해제 착수",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5KblFfaHFxR29BMWRvSmJQVWxJcXgtT3BpaThXaU8yd3EzeGhLQV9QR2ItRlhCWXpMbXpkb2t4LW54SXluUEo4Y21SeXNCYzR5UEZBdWRWQk93am1oRm9DWlV3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE1ISC0wclpDS0RvUzRxSnB0Sm1zdE5OLThJYXFxUUE4NmlqV3Y3Nmp3YU9qUHRXU1BTWE1uWE5hdnNqQTdTYWNxdUxkWU9GQm51THNVNS12Xy1DWG1mcV9mV2Iwbko5anlUV2hkMFNtQQ",
+    "published": "2026-11-05T02:28:54+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"금융 보안 전면 쇄신해야\"…금융당국, 580개 금융사 전수 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"금융 보안 전면 쇄신해야\"…금융당국, 580개 금융사 전수 점검",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ISC0wclpDS0RvUzRxSnB0Sm1zdE5OLThJYXFxUUE4NmlqV3Y3Nmp3YU9qUHRXU1BTWE1uWE5hdnNqQTdTYWNxdUxkWU9GQm51THNVNS12Xy1DWG1mcV9mV2Iwbko5anlUV2hkMFNtQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVEFVX3lxTE9mR2FwN21yZ3ZsOTQ4RHZGUmZORWcxYXpmOXZGaXUxWDBMZ045a3pVdUdKMG1aSElIUklLSGNYVndxOHQ2OEJfQVNIZG9iUU5iNmxuOdIBWEFVX3lxTE1NTXVqVTdQa2JTZGYxNXNFLWpfZU1qMl9ZNUhzLUx5Q2VhaWFPa09MRkw4Mk90UFNFYmNDZ3dFSElwOUdmRHNmQ25Jd0MzVlpiOFZSVHVKdmk",
+    "published": "2026-11-05T05:21:47+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 37개사서 정보 47만건 유출…580여개사 보안 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37개사서 정보 47만건 유출…580여개사 보안 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9mR2FwN21yZ3ZsOTQ4RHZGUmZORWcxYXpmOXZGaXUxWDBMZ045a3pVdUdKMG1aSElIUklLSGNYVndxOHQ2OEJfQVNIZG9iUU5iNmxuOdIBWEFVX3lxTE1NTXVqVTdQa2JTZGYxNXNFLWpfZU1qMl9ZNUhzLUx5Q2VhaWFPa09MRkw4Mk90UFNFYmNDZ3dFSElwOUdmRHNmQ25Jd0MzVlpiOFZSVHVKdmk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTFAwclFFMEt2Z2ZpUDFpOGdqQ1ZNSm1KSkl2QWZsRzAzbk9VRmRuVVN2MThYSFZ4Zzg5bXY2ZVk0SlBKT3VOalRONTJVRWRCUGVsMmpuWkFQZDAwZ2JRV0VLTnlKbHk3STdsRmc",
+    "published": "2026-11-05T01:52:01+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 37곳서 한 달 새 47만 건 정보 유출… 10억 원 자금 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37곳서 한 달 새 47만 건 정보 유출… 10억 원 자금 탈취",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAwclFFMEt2Z2ZpUDFpOGdqQ1ZNSm1KSkl2QWZsRzAzbk9VRmRuVVN2MThYSFZ4Zzg5bXY2ZVk0SlBKT3VOalRONTJVRWRCUGVsMmpuWkFQZDAwZ2JRV0VLTnlKbHk3STdsRmc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE1PUWRxTWhDcHQyX0NIcUNxXzdiby10cnJuX2pRYXc0cXRVQnd5ZUdFeVBISnFkcVpDTUZKTm4xek5xLXVqLVdORjhHcGRqSmNsekZtMFlJWGs2aFV0dGFrUTJKSzh3NWvSAWtBVV95cUxQRXhHVkxrN0JTanVvVXZYalFCSkY2NU82ZV94aHNUNVltVHgwRjVRNFA3R2c5eFZfNmhTcExjaW9iR3pBSHJIa2tKQzVZTG1ONUxGSXB4dDFVenE4Wm02ZG83eXJTeG81cWVoMA",
+    "published": "2026-11-05T01:25:54+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 37개사에서 해킹사고 40건…금융당국, 보안 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37개사에서 해킹사고 40건…금융당국, 보안 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1PUWRxTWhDcHQyX0NIcUNxXzdiby10cnJuX2pRYXc0cXRVQnd5ZUdFeVBISnFkcVpDTUZKTm4xek5xLXVqLVdORjhHcGRqSmNsekZtMFlJWGs2aFV0dGFrUTJKSzh3NWvSAWtBVV95cUxQRXhHVkxrN0JTanVvVXZYalFCSkY2NU82ZV94aHNUNVltVHgwRjVRNFA3R2c5eFZfNmhTcExjaW9iR3pBSHJIa2tKQzVZTG1ONUxGSXB4dDFVenE4Wm02ZG83eXJTeG81cWVoMA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTFA2aWU1YXZ2RUV1Yy01R2hZWFlITGs3MTkwN3QzWl9ETGs1bENZTUtpQVhNZjlGQzdheXBiQ0szWEluNnNrbzhGczVtZFFrMXpJWl9TNW00QkNZWUp4OENBZ3Y3b0tBRjc4T0E",
+    "published": "2026-11-05T00:50:01+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "이억원 위원장 \"금융보안은 CEO 책임···관리 부실 땐 엄정 문책\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "이억원 위원장 \"금융보안은 CEO 책임···관리 부실 땐 엄정 문책\"",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA2aWU1YXZ2RUV1Yy01R2hZWFlITGs3MTkwN3QzWl9ETGs1bENZTUtpQVhNZjlGQzdheXBiQ0szWEluNnNrbzhGczVtZFFrMXpJWl9TNW00QkNZWUp4OENBZ3Y3b0tBRjc4T0E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5mQzlMTndFOTFDWHgyNTdlY3paV0YxVkt1WTZWMDBTSXV5MGlGWWNUZm9VT0I3cDBiQ2Rnb0FtYmlfYmkxaHdlWHFJeFdjRS1MVEcxQTJRWEhQN1htRVdxeVZQa2k0SVk",
+    "published": "2026-11-05T06:13:43+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권을 뒤흔든 대규모 정보 유출 사건, 47만 건의 충격적 진실",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권을 뒤흔든 대규모 정보 유출 사건, 47만 건의 충격적 진실",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5mQzlMTndFOTFDWHgyNTdlY3paV0YxVkt1WTZWMDBTSXV5MGlGWWNUZm9VT0I3cDBiQ2Rnb0FtYmlfYmkxaHdlWHFJeFdjRS1MVEcxQTJRWEhQN1htRVdxeVZQa2k0SVk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE12UFktWWRndUlwMDVGdV9WWGhjY3Q4cGlHUGhqa2trTTd3clBQWUZMN2FyclJrWnRUNEZLSGFadG91ZVQyNGs4NlZfcV9UZ0xHa1J6eEpsNWJMaDNmcHZCcWpEY3VoMVhx",
+    "published": "2026-11-05T00:35:47+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[속보] 금융권 한 달 새 47만3000건 정보 유출…37개사 해킹 피해·10억원 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "[속보] 금융권 한 달 새 47만3000건 정보 유출…37개사 해킹 피해·10억원 탈취",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE12UFktWWRndUlwMDVGdV9WWGhjY3Q4cGlHUGhqa2trTTd3clBQWUZMN2FyclJrWnRUNEZLSGFadG91ZVQyNGs4NlZfcV9UZ0xHa1J6eEpsNWJMaDNmcHZCcWpEY3VoMVhx?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE13RG5GV25aRzNtSUNjOW1aSUc0UElQVms3anNPc0ZmZmtpMUYtX0luZEFVMUFZWnJmS0NrbXpSck1QQkVjZEtLanNtNm9jbS02Mm1QUDVjS1dhUjJNaVNPQUp1Q0NHVWtFMGhnaG1wcXVsdw",
+    "published": "2026-11-05T00:35:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보\"...금융당국, 11월 가이드라인 마련",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"가상자산사업자, 해킹 인지 즉시 금감원·금보원 통보\"...금융당국, 11월 가이드라인 마련",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE13RG5GV25aRzNtSUNjOW1aSUc0UElQVms3anNPc0ZmZmtpMUYtX0luZEFVMUFZWnJmS0NrbXpSck1QQkVjZEtLanNtNm9jbS02Mm1QUDVjS1dhUjJNaVNPQUp1Q0NHVWtFMGhnaG1wcXVsdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE1oVHBPODJ1TlQzRk9ocmlWdVQyeTA1Z2x1MEQ4RTlnZUY5TElPMEYtRWxGTlhOWGdMS2k1Vk14VmU0UFNQWjNCdExjdjBjYjJkVkZmX0VkRXJrRGhtM1NqLQ",
+    "published": "2026-11-05T00:53:33+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹에 47만건 정보유출·10억원 탈취…이억원 “보안 부실 CEO 책임 묻겠다”",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹에 47만건 정보유출·10억원 탈취…이억원 “보안 부실 CEO 책임 묻겠다”",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1oVHBPODJ1TlQzRk9ocmlWdVQyeTA1Z2x1MEQ4RTlnZUY5TElPMEYtRWxGTlhOWGdMS2k1Vk14VmU0UFNQWjNCdExjdjBjYjJkVkZmX0VkRXJrRGhtM1NqLQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTFBmSnhmZUVfZGxURUNha3JLWGl1Z1BSa1lKUU96OWpYaEdxSVlVeXppWGZVME1wNkFRVXl5SFV6UWtwNkM3WkJJTlZFMmRER1d1WWJFeWxBcEsxenFJaURhdEFfYUx6VjFRY2lJR01tVVZPQms",
+    "published": "2026-11-05T02:51:23+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "망분리 전면 풀고 AI 보안 강화...금융당국 '해킹 승부수' 통할까",
+    "tags": [
+      "금융"
+    ],
+    "title": "망분리 전면 풀고 AI 보안 강화...금융당국 '해킹 승부수' 통할까",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBmSnhmZUVfZGxURUNha3JLWGl1Z1BSa1lKUU96OWpYaEdxSVlVeXppWGZVME1wNkFRVXl5SFV6UWtwNkM3WkJJTlZFMmRER1d1WWJFeWxBcEsxenFJaURhdEFfYUx6VjFRY2lJR01tVVZPQms?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE0tZ1p1R2ZYQi1Vc0RJQXZBNWpCWHBCb2ZQVUxzNFlUNFh3SkMzQjZybVZUb0tmdDd2UEhyRUdNNjVpTEdJUnNyNERoazh1TEdiemktREZnOUM1NjZ0MzhhTUVtRGkycG44eGY4",
+    "published": "2026-11-05T01:54:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "37개 금융사 정보유출 47.3만건... 금융권 580개사 외부접점·내부통제 전면 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "37개 금융사 정보유출 47.3만건... 금융권 580개사 외부접점·내부통제 전면 점검",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0tZ1p1R2ZYQi1Vc0RJQXZBNWpCWHBCb2ZQVUxzNFlUNFh3SkMzQjZybVZUb0tmdDd2UEhyRUdNNjVpTEdJUnNyNERoazh1TEdiemktREZnOUM1NjZ0MzhhTUVtRGkycG44eGY4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE1MOGpGX3U2U3dxSGhUX2VtNG1rSW0wZGNHbWRGTmNGbXB6WGRxZ0FqQ2Z0cmJfMmNHeDFYaU1jUG1rN0paa3Zna3hHcXMzNU9mRVlLOWZJU1YtTmQtVnllVXJ2R2hBaTR1WHJnYVpB",
+    "published": "2026-11-05T00:35:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 한 달 새 47만건 정보 유출···보안 구멍 전방위 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 한 달 새 47만건 정보 유출···보안 구멍 전방위 점검",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1MOGpGX3U2U3dxSGhUX2VtNG1rSW0wZGNHbWRGTmNGbXB6WGRxZ0FqQ2Z0cmJfMmNHeDFYaU1jUG1rN0paa3Zna3hHcXMzNU9mRVlLOWZJU1YtTmQtVnllVXJ2R2hBaTR1WHJnYVpB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTFBla1dnV1d6UjE1UExKN0dHSjdZNXROSjRmMnBhM3Q2WVMxY0NXNE4taEUydC1RU040Y3lRYzBNSUJVVjBaSXFWZzF2QQ",
+    "published": "2026-11-05T00:48:02+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "37개 금융사 정보유출 47.3만건⋯금융권 580곳 보안 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "37개 금융사 정보유출 47.3만건⋯금융권 580곳 보안 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBla1dnV1d6UjE1UExKN0dHSjdZNXROSjRmMnBhM3Q2WVMxY0NXNE4taEUydC1RU040Y3lRYzBNSUJVVjBaSXFWZzF2QQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigwJBVV95cUxNbHVWVG04SU5TYTNBZllnRktRVGZENUtBalk2b1QzN0l6MVpzMWtWNDVCeGV3WExNVmRyV2dYd2NYT3dsYUtKMXhYRFhBY2VWWFVBbzVuSU1iMHo2aDA5bHNxeTY4VG84WHpwcUZOUzNoRnhPSDRubEctTlRnWjJDbDFhVGlTbTVOdG0wNHhoMDNPazk5SzBjT0tZUUNjSlNYQkQteFNkZ0V2OUFLeFE3LWJYMzdPLTNzR3pNeXlJRXVaQld4TDRfOFozYzFEWXVOV01LRHV1ODFYRmVTWTZKOWRDdXRzd2JoSU5KTUpLVTZqN2lENjhSOUlfbW5IZmd0WTJB",
+    "published": "2026-11-05T00:01:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 금융사 580곳 보안 전수점검…취약점 방치 땐 CEO 책임",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융사 580곳 보안 전수점검…취약점 방치 땐 CEO 책임",
+    "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNbHVWVG04SU5TYTNBZllnRktRVGZENUtBalk2b1QzN0l6MVpzMWtWNDVCeGV3WExNVmRyV2dYd2NYT3dsYUtKMXhYRFhBY2VWWFVBbzVuSU1iMHo2aDA5bHNxeTY4VG84WHpwcUZOUzNoRnhPSDRubEctTlRnWjJDbDFhVGlTbTVOdG0wNHhoMDNPazk5SzBjT0tZUUNjSlNYQkQteFNkZ0V2OUFLeFE3LWJYMzdPLTNzR3pNeXlJRXVaQld4TDRfOFozYzFEWXVOV01LRHV1ODFYRmVTWTZKOWRDdXRzd2JoSU5KTUpLVTZqN2lENjhSOUlfbW5IZmd0WTJB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTFA5WkpYc01qQmlpMUpqZUJWNXgwdzZoMzMtMlhJd2NyREpuU05YOWVBOEhKNWNQRmJhOEdORmdNSDBnQ2toZXZUQms2RFlrbVg0cnhZeWFhdHhLSnNiS0liSUJ6TjE",
+    "published": "2026-11-05T03:00:15+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 37개사서 정보 47만건 유출…10억원 자금 탈취에 보안관리 '비상'",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37개사서 정보 47만건 유출…10억원 자금 탈취에 보안관리 '비상'",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA5WkpYc01qQmlpMUpqZUJWNXgwdzZoMzMtMlhJd2NyREpuU05YOWVBOEhKNWNQRmJhOEdORmdNSDBnQ2toZXZUQms2RFlrbVg0cnhZeWFhdHhLSnNiS0liSUJ6TjE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTFBfY2FyUUNMdUY0QUhsb09XRGNfYkNyajNaRkd6MkxxbDJoTlhCSkNuM0YyTmhZT2RrdmJUXzc5SHotTWhIc1NNME55OV91T00tc1hMd2FBRXFXTHh4MGJsSS16V0R2NmNlY0E",
+    "published": "2026-11-05T00:00:54+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "한달 새 37곳 뚫렸다···금융당국, 全 금융권 '보안·내부통제' 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "한달 새 37곳 뚫렸다···금융당국, 全 금융권 '보안·내부통제' 점검",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfY2FyUUNMdUY0QUhsb09XRGNfYkNyajNaRkd6MkxxbDJoTlhCSkNuM0YyTmhZT2RrdmJUXzc5SHotTWhIc1NNME55OV91T00tc1hMd2FBRXFXTHh4MGJsSS16V0R2NmNlY0E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE11eVRtZDM3SVhsNkF0d1hWVy1xNUVKUUxacl9RcW9SZU84a0daVUVKOWkwd2tYQWM0UEQyQ3BBS2RWSFdhU3Ntdy1xY0p2WHFXSk5wcGFndWloMTBIamVPX2JscFNBWDQ3OV9aSmVkQmlodlE",
+    "published": "2026-11-05T01:38:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹에 정보유출·자금탈취까지... 금융위, 보안체계 전면 쇄신 나선다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹에 정보유출·자금탈취까지... 금융위, 보안체계 전면 쇄신 나선다",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE11eVRtZDM3SVhsNkF0d1hWVy1xNUVKUUxacl9RcW9SZU84a0daVUVKOWkwd2tYQWM0UEQyQ3BBS2RWSFdhU3Ntdy1xY0p2WHFXSk5wcGFndWloMTBIamVPX2JscFNBWDQ3OV9aSmVkQmlodlE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE5CUDdPVDdxb1U1VjJkRkRtNEI1MVk2dmhCQkR0bWQ4TG9sMjRTX19BUTNNb1JIZjMyZU0zU0VIVVZTOVNqNFNaUDZJMWxaTkFMOHNJeDJaQlgzeVc2ZG1CZEVmNVdDT1ZkOXc",
+    "published": "2026-11-05T00:12:16+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "AI發 사이버 위협에 금융권 '보안책임' 강화…580곳 취약점 \"전수점검\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI發 사이버 위협에 금융권 '보안책임' 강화…580곳 취약점 \"전수점검\"",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5CUDdPVDdxb1U1VjJkRkRtNEI1MVk2dmhCQkR0bWQ4TG9sMjRTX19BUTNNb1JIZjMyZU0zU0VIVVZTOVNqNFNaUDZJMWxaTkFMOHNJeDJaQlgzeVc2ZG1CZEVmNVdDT1ZkOXc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9SejFwal9KcHZfa1BqcEp6Tjl2TW10dTIyUS1xYWVndzlSODNQbTl3SjhhV3A0MTI0d0xfSkhILWNjVER6NWQ2cTBuUUFJejRTd0p0TVp3cHIzdG1ZcjVZRXVRUTVlcks2M1YtaHdFUQ",
+    "published": "2026-11-05T04:32:18+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "한달 새 금융권 37곳서 47만건 유출…금융당국 \"CEO 책임 묻겠다\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "한달 새 금융권 37곳서 47만건 유출…금융당국 \"CEO 책임 묻겠다\"",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9SejFwal9KcHZfa1BqcEp6Tjl2TW10dTIyUS1xYWVndzlSODNQbTl3SjhhV3A0MTI0d0xfSkhILWNjVER6NWQ2cTBuUUFJejRTd0p0TVp3cHIzdG1ZcjVZRXVRUTVlcks2M1YtaHdFUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTFBla2N1T3d4QndkdEZUWVRQdnlJLXo3amtLZV8tTWFNRk9CMHc1QVpKdGxQVkNpOVpEMERzcXUtQUo1a3NrWklJQTBaX0JjNzZTT1Nxc1J6VXBBTTZiN3ZLMU0yNm5hdjRqM3fSAW5BVV95cUxNMjhKS0xIRXQwV1Y4cmhGYlBVWk9nWTgxeTRHd0lLS0t4WXR6UE8xWFpONnFhNE83dkx1TTNKY2xITWNYZk95bjlkSTJ0VXNRdl9yV25ILXloMF9ZR3pTZlI2cGtCeVFlcFdhNWxGQQ",
+    "published": "2026-11-05T00:45:46+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹 40건·정보 47만건 유출...580곳 보안체계 전면 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 40건·정보 47만건 유출...580곳 보안체계 전면 점검",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBla2N1T3d4QndkdEZUWVRQdnlJLXo3amtLZV8tTWFNRk9CMHc1QVpKdGxQVkNpOVpEMERzcXUtQUo1a3NrWklJQTBaX0JjNzZTT1Nxc1J6VXBBTTZiN3ZLMU0yNm5hdjRqM3fSAW5BVV95cUxNMjhKS0xIRXQwV1Y4cmhGYlBVWk9nWTgxeTRHd0lLS0t4WXR6UE8xWFpONnFhNE83dkx1TTNKY2xITWNYZk95bjlkSTJ0VXNRdl9yV25ILXloMF9ZR3pTZlI2cGtCeVFlcFdhNWxGQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMipAJBVV95cUxPbVR6d1JkdUE3d1dCR0RsV0FGZWhxNXM0N3FUdmQ5NkdkMVBpcjdRREs4emhpOWdYUzhWMDVJa2Z6cUlKMGRzU20yMTFsc2NPaEZHOVA3V01lQ3BycWlNUXc5dmZHYkVxNE5iaXJIc0lvVEtBNDBxNThMbTBfYVYxRk5MOHM2ZzRuM1VEMjlLbzFZc3hFMThsSDRjcGR1dGVNTDNDaFUwUWF6OFFyQ1I5Qmo2N09uejBYRDUxWEgtTWxwakJyV1ItQVR5NElfSk16MHd6LXlQS3diZ3VrRHAxRlJvbnM3bUV2R2NFbEN0blpNVnZkTHYwU2N5UVkxSGdHWkRFTnVYTnZabHRyaTBWYTAtRUpHMEptMHR6U0RBeV9NVlY2",
+    "published": "2026-11-05T01:15:46+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권서 한 달여간 해킹으로 47.3만건 정보유출",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권서 한 달여간 해킹으로 47.3만건 정보유출",
+    "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPbVR6d1JkdUE3d1dCR0RsV0FGZWhxNXM0N3FUdmQ5NkdkMVBpcjdRREs4emhpOWdYUzhWMDVJa2Z6cUlKMGRzU20yMTFsc2NPaEZHOVA3V01lQ3BycWlNUXc5dmZHYkVxNE5iaXJIc0lvVEtBNDBxNThMbTBfYVYxRk5MOHM2ZzRuM1VEMjlLbzFZc3hFMThsSDRjcGR1dGVNTDNDaFUwUWF6OFFyQ1I5Qmo2N09uejBYRDUxWEgtTWxwakJyV1ItQVR5NElfSk16MHd6LXlQS3diZ3VrRHAxRlJvbnM3bUV2R2NFbEN0blpNVnZkTHYwU2N5UVkxSGdHWkRFTnVYTnZabHRyaTBWYTAtRUpHMEptMHR6U0RBeV9NVlY2?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiSEFVX3lxTE1lTi1qME9XeXVKc25iaVZFZXYwbWF6LWN6bnROY3R3anBVLWRjUEo0X292cHJ5V0dRN1lSbG1xd2tYRjcxUGJ3Zw",
+    "published": "2026-11-05T01:01:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹 비상…37개사서 47만건 개인정보 유출·10억 피해",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 비상…37개사서 47만건 개인정보 유출·10억 피해",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1lTi1qME9XeXVKc25iaVZFZXYwbWF6LWN6bnROY3R3anBVLWRjUEo0X292cHJ5V0dRN1lSbG1xd2tYRjcxUGJ3Zw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE1GcHcxc1M4ckhQWG1PQ3RoY2dqOVpQV0oyR1g1WVQ5SUpfTVV6LWhfN2xmOTRRWEJzSi1UOTViZEw4OU1WTUMxR0NiNDFaWG5MWlk3MlFGeDBadHBaVXJkcV9nOWlYb0lVSVJESkluT0vSAXRBVV95cUxNcmM3c2JNanJ5Q21YMS1hV0RmRDdwUnFwekFZdWpjb2VubWZUX3NhaWpZMnVLRVFfcHdFYXoxNnpnbHhWQlJMTVBRMlkxOUIwbGJObkp3LXVDWmwzeHpZZE5NaERSVHJvMGd6OXFTTlZHbTBBeA",
+    "published": "2026-11-05T01:05:01+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 37곳서 정보 47만건 유출...10억원 규모 자금 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37곳서 정보 47만건 유출...10억원 규모 자금 탈취",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1GcHcxc1M4ckhQWG1PQ3RoY2dqOVpQV0oyR1g1WVQ5SUpfTVV6LWhfN2xmOTRRWEJzSi1UOTViZEw4OU1WTUMxR0NiNDFaWG5MWlk3MlFGeDBadHBaVXJkcV9nOWlYb0lVSVJESkluT0vSAXRBVV95cUxNcmM3c2JNanJ5Q21YMS1hV0RmRDdwUnFwekFZdWpjb2VubWZUX3NhaWpZMnVLRVFfcHdFYXoxNnpnbHhWQlJMTVBRMlkxOUIwbGJObkp3LXVDWmwzeHpZZE5NaERSVHJvMGd6OXFTTlZHbTBBeA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE9hLTFNQUFlMmxNcVZ6M2tfcmNJRDVtdVBIbjB4TTRGVUhMd01OUnFFX1BNQ1RCVVp5WVYzY3FGelM1d0VOV0NLRlNxYzd5VE15S1A1dVJrckk5Zmcz",
+    "published": "2026-11-05T00:22:03+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 정보유출 47만건…580개사 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 정보유출 47만건…580개사 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9hLTFNQUFlMmxNcVZ6M2tfcmNJRDVtdVBIbjB4TTRGVUhMd01OUnFFX1BNQ1RCVVp5WVYzY3FGelM1d0VOV0NLRlNxYzd5VE15S1A1dVJrckk5Zmcz?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE5aYm1lWGJ5Q05GNWRwWjB1NUNfd1BBdjJWNU1rNWstaWZDVTFHMWwtbktGTS0yRl9XSlJRcTlzQ1ZPM3F5UE5LRGFlSE1hVUxDTVFCNDlySzVhNmpnQUhZSmhjaDBTMWJnRTcwRw",
+    "published": "2026-11-05T01:00:05+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "테이텀, 금보원 ‘AI 에이전트 보안 평가 기준’ 만족시키는 통합 플랫폼 출시",
+    "tags": [],
+    "title": "테이텀, 금보원 ‘AI 에이전트 보안 평가 기준’ 만족시키는 통합 플랫폼 출시",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aYm1lWGJ5Q05GNWRwWjB1NUNfd1BBdjJWNU1rNWstaWZDVTFHMWwtbktGTS0yRl9XSlJRcTlzQ1ZPM3F5UE5LRGFlSE1hVUxDTVFCNDlySzVhNmpnQUhZSmhjaDBTMWJnRTcwRw?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249746",
+    "published": "2026-11-05T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "포용금융, 이제 차주의 체감성과도 살펴보겠습니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249746&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249742",
+    "published": "2026-11-05T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI시대, 거세지는 침해위협에 맞서 全 금융권이 튼튼한 보안체계로 무장하도록 혁신적인 정책과제를 적극 추진하겠습니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249742&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBEX3A2RHJUZnYwblllMjkzeDAwYkZubVc3QTJzSGxURVByRWotVk83aVdZNThacE5LdEszd19TUjRCNnhtUW54Y0Nya3RWQkJGLUFydzFTaXFyMWpTOS0ya2lWclRtRzZCRlBwQ0ZqQQ",
+    "published": "2026-11-05T05:29:25+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "(보도설명)개인정보위는 법과 원칙에 따라 위반행위에 비례한 과징금을 산정하고 있습니다.",
+    "tags": [],
+    "title": "(보도설명)개인정보위는 법과 원칙에 따라 위반행위에 비례한 과징금을 산정하고 있습니다.",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBEX3A2RHJUZnYwblllMjkzeDAwYkZubVc3QTJzSGxURVByRWotVk83aVdZNThacE5LdEszd19TUjRCNnhtUW54Y0Nya3RWQkJGLUFydzFTaXFyMWpTOS0ya2lWclRtRzZCRlBwQ0ZqQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiggFBVV95cUxQVC1XVTdTTnFpbWk4bV9YUlg0VHNFam9pZENzMnNubEJ4elpVdnpvQUk2ajFiZWlOQy10WDQ2QlBWc2RVbGo4LS1XNnlCc2lZSEF0N1hvZmo3UmVGcVlRWTcxQzIwd2JrZzdNN1h2WWNPekZFUmMtY0xQSFRUdFdFQ1ZR0gGWAUFVX3lxTE5xVGFjZzZHQkU0cHF1Y29nNFdDQjhvLVRzcGg0b2ZhRW1mVWZ3eEMtRjNUaV9DU091b3R1NDAxZWF4b0UtTGNNbzM3Ri1IcW5JVFVGM0d6dlkzMGJxOGt4T0xEZVhBWDFQNVg5UG95U2JCZzU3TjdtVzRaUDVucl9idFF4SlRVR2dhV2NJeC1IeW9BZWdjQQ",
+    "published": "2026-11-05T05:21:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "공공시스템 연 1회 해킹 취약점 점검 의무…개보위 안내서 개정",
+    "tags": [],
+    "title": "공공시스템 연 1회 해킹 취약점 점검 의무…개보위 안내서 개정",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVC1XVTdTTnFpbWk4bV9YUlg0VHNFam9pZENzMnNubEJ4elpVdnpvQUk2ajFiZWlOQy10WDQ2QlBWc2RVbGo4LS1XNnlCc2lZSEF0N1hvZmo3UmVGcVlRWTcxQzIwd2JrZzdNN1h2WWNPekZFUmMtY0xQSFRUdFdFQ1ZR0gGWAUFVX3lxTE5xVGFjZzZHQkU0cHF1Y29nNFdDQjhvLVRzcGg0b2ZhRW1mVWZ3eEMtRjNUaV9DU091b3R1NDAxZWF4b0UtTGNNbzM3Ri1IcW5JVFVGM0d6dlkzMGJxOGt4T0xEZVhBWDFQNVg5UG95U2JCZzU3TjdtVzRaUDVucl9idFF4SlRVR2dhV2NJeC1IeW9BZWdjQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUEFVX3lxTE55a2VYQmdHQ2RQc0VBZ2l2M01ISUg0LUoxMjVoNkRkX2tYejcyZGFCaUVmM052Qk9DNEtwclRUdVJDbGFyckV1QmhFMGpXVHMx",
+    "published": "2026-11-05T00:52:43+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 국내 대리인 정보 부실 해외사업자 3곳 시정조치",
+    "tags": [],
+    "title": "개인정보위, 국내 대리인 정보 부실 해외사업자 3곳 시정조치",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE55a2VYQmdHQ2RQc0VBZ2l2M01ISUg0LUoxMjVoNkRkX2tYejcyZGFCaUVmM052Qk9DNEtwclRUdVJDbGFyckV1QmhFMGpXVHMx?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE9tUHVfYVNGWnZiaEtvdFZ5dXpGeUVOQks5RzFhQ0Q4dmRtWndSWW5TWC14bkNWdFd4and5dkpxRG5FNHY5YkRhZnhrSjJMcEQ4cjA0amdhdmNlTVpBRVYtZzBwT3M4VlRW",
+    "published": "2026-11-05T04:43:14+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 안전조치 안내서 개정…취약점 점검 의무 등 해설 추가",
+    "tags": [],
+    "title": "개인정보위, 안전조치 안내서 개정…취약점 점검 의무 등 해설 추가",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9tUHVfYVNGWnZiaEtvdFZ5dXpGeUVOQks5RzFhQ0Q4dmRtWndSWW5TWC14bkNWdFd4and5dkpxRG5FNHY5YkRhZnhrSjJMcEQ4cjA0amdhdmNlTVpBRVYtZzBwT3M4VlRW?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE13YmVqMFB5NVlOcTkxNGxkZXNLVmRjaFFMclprVkhFalRpMFJfSVV5S05lY2kxcjc1cTJXY095RHg0dHpwZ0ptYmRhcUVmem5JNWxXeTJoclVYUkNrWlRqYS14ejE",
+    "published": "2026-11-05T02:01:51+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "공공시스템 취약점 점검 방법은?…개인정보위, 안전조치 안내서 개정",
+    "tags": [],
+    "title": "공공시스템 취약점 점검 방법은?…개인정보위, 안전조치 안내서 개정",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE13YmVqMFB5NVlOcTkxNGxkZXNLVmRjaFFMclprVkhFalRpMFJfSVV5S05lY2kxcjc1cTJXY095RHg0dHpwZ0ptYmRhcUVmem5JNWxXeTJoclVYUkNrWlRqYS14ejE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiQ0FVX3lxTE94Z1lIOWtsN1lwLU56eVFOSFBrRFN1NnpRdm5QSmhxTUJnTjdYSHQ3NENNYW5EZlhmM21jSmhaRHdHaHc",
+    "published": "2026-11-05T06:46:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "LG유플러스, 서울여대와 개인정보 보호·AI·데이터 공동연구 및 보안인재 양성 협력",
+    "tags": [],
+    "title": "LG유플러스, 서울여대와 개인정보 보호·AI·데이터 공동연구 및 보안인재 양성 협력",
+    "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE94Z1lIOWtsN1lwLU56eVFOSFBrRFN1NnpRdm5QSmhxTUJnTjdYSHQ3NENNYW5EZlhmM21jSmhaRHdHaHc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5NYjJERl9odTNwd2hwdkx6eDdmcGdwaWFDX3U3czBmcG5sMFNFWFh3dWtaSFUyQ1luUEVUeFRHaXhfOFRqekVOSzc4RE5UamR2Sl91RDJXWF9UcGUzY2NBV1FReHdYYzRlR0lj",
+    "published": "2026-11-05T02:16:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위 “해킹 자체 아닌 안전조치 위반 제재”",
+    "tags": [],
+    "title": "개보위 “해킹 자체 아닌 안전조치 위반 제재”",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5NYjJERl9odTNwd2hwdkx6eDdmcGdwaWFDX3U3czBmcG5sMFNFWFh3dWtaSFUyQ1luUEVUeFRHaXhfOFRqekVOSzc4RE5UamR2Sl91RDJXWF9UcGUzY2NBV1FReHdYYzRlR0lj?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE03WHJjS2JPT2VaOXZHbHBIbkZBNWRhdGNPS0pIMk1BS2ZCaEh4dEFkb3pfWF9neFY5dFowZFFYZjdKZFFacHJ0ZXZiVFNwdw",
+    "published": "2026-11-05T05:49:25+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 안전조치 안내서 개정…AI·패스키·API 보안 반영",
+    "tags": [],
+    "title": "개인정보위, 안전조치 안내서 개정…AI·패스키·API 보안 반영",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE03WHJjS2JPT2VaOXZHbHBIbkZBNWRhdGNPS0pIMk1BS2ZCaEh4dEFkb3pfWF9neFY5dFowZFFYZjdKZFFacHJ0ZXZiVFNwdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTFBzR0RaRVh5dlItM0ZWS2lKWGxsZUtGZnNJbWpJTWZqZWMxdDVsTmRkZFZYWEljWXFQSlRmVnFoTVNHeENQUHdkczdyRlZRZw",
+    "published": "2026-11-05T05:35:50+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 개인정보 안전조치 안내서 개정",
+    "tags": [],
+    "title": "개인정보위, 개인정보 안전조치 안내서 개정",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBzR0RaRVh5dlItM0ZWS2lKWGxsZUtGZnNJbWpJTWZqZWMxdDVsTmRkZFZYWEljWXFQSlRmVnFoTVNHeENQUHdkczdyRlZRZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE4zb0tRRlZyQlhnaGxsRWQ0cXpEZkR1TWtXcHNhZnJILVgwVUZsM3ZKcnUwUzFzWEtMT1RyNnR6VjFHNkJUUDRDZloxN240aTlBVlhyVldPbFZMZGFUUmVsOWFIOFRhOVZLaTdF0gFvQVVfeXFMUHpwZGpESGFWYVBaQVc1Nkw1djJJX2Y0eXFycXNER1FCTkE5ampuUE5ueEhEX0ZTYkZNYmhkNjVPR2E3YXZrZmFva2xrZTlxYVM3QndQZjE1WThCeWphUjlEdHlsTDVjdTJfS1N6TEI4",
+    "published": "2026-11-05T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 전 금융권 580여 곳 보안 전수점검… AI 해킹 대응 강화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 전 금융권 580여 곳 보안 전수점검… AI 해킹 대응 강화",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zb0tRRlZyQlhnaGxsRWQ0cXpEZkR1TWtXcHNhZnJILVgwVUZsM3ZKcnUwUzFzWEtMT1RyNnR6VjFHNkJUUDRDZloxN240aTlBVlhyVldPbFZMZGFUUmVsOWFIOFRhOVZLaTdF0gFvQVVfeXFMUHpwZGpESGFWYVBaQVc1Nkw1djJJX2Y0eXFycXNER1FCTkE5ampuUE5ueEhEX0ZTYkZNYmhkNjVPR2E3YXZrZmFva2xrZTlxYVM3QndQZjE1WThCeWphUjlEdHlsTDVjdTJfS1N6TEI4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE83RDhiN0JaWXJQTmdGNEFXQlRkSWp5Vm9kUURuN0VYTDg0RUtwbUcyN2xkeXNZelZSNlJYME9JVUR0dXJBcWNXZVo2dXpKLUx6emJpalNuZWFCcS1SZ2pSOE1ITTliOEU",
+    "published": "2026-11-05T00:12:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "커지는 AI 해킹 위협…금융권 580여개사 보안 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "커지는 AI 해킹 위협…금융권 580여개사 보안 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE83RDhiN0JaWXJQTmdGNEFXQlRkSWp5Vm9kUURuN0VYTDg0RUtwbUcyN2xkeXNZelZSNlJYME9JVUR0dXJBcWNXZVo2dXpKLUx6emJpalNuZWFCcS1SZ2pSOE1ITTliOEU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTE9fam1CbkV6RXdxZElCSHVPQ0d1MHFfZVpyMUtuYzFTUm5mSThDLWdsbFpaNUlMdUI5Mm4yNlMyc2dwMHFhc21CZnFKZnZkT2dpd1RHbzE5RnVLT295WlZEQ25DRGozZ9IBakFVX3lxTE02ZFpWVF9ja0Y2bWNxTi1CQmJSYWlEX1hUc1dMX2pfRkhudWhQc0xaeXNMTllqQ0VtakZ1ZFYzU0daM3dsVXlYR0E3T21EcXRVY0tOS1gyRmR6dHVELThpVk9qRUlNMU1qVmc",
+    "published": "2026-11-05T06:32:08+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 정보유출 47만3000건...당국, 580여개사 보안 점수점검 나선다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 정보유출 47만3000건...당국, 580여개사 보안 점수점검 나선다",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9fam1CbkV6RXdxZElCSHVPQ0d1MHFfZVpyMUtuYzFTUm5mSThDLWdsbFpaNUlMdUI5Mm4yNlMyc2dwMHFhc21CZnFKZnZkT2dpd1RHbzE5RnVLT295WlZEQ25DRGozZ9IBakFVX3lxTE02ZFpWVF9ja0Y2bWNxTi1CQmJSYWlEX1hUc1dMX2pfRkhudWhQc0xaeXNMTllqQ0VtakZ1ZFYzU0daM3dsVXlYR0E3T21EcXRVY0tOS1gyRmR6dHVELThpVk9qRUlNMU1qVmc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5xS2ExYjNnZWpxeUZadWtXNEQ2SGU5UWh5Nm8tTHZUTjVGVkkwekdUTFo3Z0k0VlJ3Rk9yN3p3N3MtaVdXLXUteTFiR2NvblhYV3FQQy10RE5ROWNNODQwMFhDd1o",
+    "published": "2026-11-05T04:17:46+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융사 37곳 뚫렸다…정보 47만건 유출·10억원 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융사 37곳 뚫렸다…정보 47만건 유출·10억원 탈취",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xS2ExYjNnZWpxeUZadWtXNEQ2SGU5UWh5Nm8tTHZUTjVGVkkwekdUTFo3Z0k0VlJ3Rk9yN3p3N3MtaVdXLXUteTFiR2NvblhYV3FQQy10RE5ROWNNODQwMFhDd1o?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTFB6OEVpQXV1Z0xnZ2VqYlJ0TlJmcy02MG5MdGV1T1N5cjdnMnF3YUJsenZVeFNEVG82R19uS01OVFZia2FjczZ4MS01MHFIalVYNFhpT0FhXzNYclM5S044TFA0TWpiZ2p1NVE",
+    "published": "2026-11-05T01:09:58+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 37개사서 해킹 신고···정보 47만3000건 유출·10억원 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37개사서 해킹 신고···정보 47만3000건 유출·10억원 탈취",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB6OEVpQXV1Z0xnZ2VqYlJ0TlJmcy02MG5MdGV1T1N5cjdnMnF3YUJsenZVeFNEVG82R19uS01OVFZia2FjczZ4MS01MHFIalVYNFhpT0FhXzNYclM5S044TFA0TWpiZ2p1NVE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE5vUjZ5cXRxUy13c3ZWdDNNN0tHN2c1dml0dm9IZ1F6dnlncEVBQ0lTWkVsZkdydTRsNk13eWNaeTh5c0Z2VnVBMGtVcmtsdWw1dVlQVzF5QzZqUdIBVEFVX3lxTFB2RU5LQVBWa05kQmxJX1E0V2xhZUswMVJER3Z2VzhpLVZDblptU0J3Z19zNWl5MkVYUG1aQVlNaTJrTlRKdGd4bTAwd2JJM1NxWWk0NA",
+    "published": "2026-11-05T02:14:12+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 해킹에 정보 47만3000건 유출…당국, 580개사 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹에 정보 47만3000건 유출…당국, 580개사 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5vUjZ5cXRxUy13c3ZWdDNNN0tHN2c1dml0dm9IZ1F6dnlncEVBQ0lTWkVsZkdydTRsNk13eWNaeTh5c0Z2VnVBMGtVcmtsdWw1dVlQVzF5QzZqUdIBVEFVX3lxTFB2RU5LQVBWa05kQmxJX1E0V2xhZUswMVJER3Z2VzhpLVZDblptU0J3Z19zNWl5MkVYUG1aQVlNaTJrTlRKdGd4bTAwd2JJM1NxWWk0NA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE1paW5Ja3FIYUxMZWVBSDlPa1ZRdTdUdTVtZ1dWcGZYT2xIR2c5YnhCXzkxbi0xX1dlY0NFRXNDdE5JUmdMVmM3SVpTMFlpeGtjdmtncjZncEp0TmUzeFlwRG1tdFF0LUhnTUFqVg",
+    "published": "2026-11-05T00:52:04+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융당국, 580개 금융사 보안 전수점검…해킹 사고 CEO 책임 강화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국, 580개 금융사 보안 전수점검…해킹 사고 CEO 책임 강화",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1paW5Ja3FIYUxMZWVBSDlPa1ZRdTdUdTVtZ1dWcGZYT2xIR2c5YnhCXzkxbi0xX1dlY0NFRXNDdE5JUmdMVmM3SVpTMFlpeGtjdmtncjZncEp0TmUzeFlwRG1tdFF0LUhnTUFqVg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE04eEtHaFJzWXJBdVlaOTBaNEoyeDZLWklPTGtqbmhoeXlSWV85bnhIOWxQNjBLREp3YTYtdkppSF9hc2dYc3BPMEZib29lc3NEaVQ5YkpmMG9yQ1oxTHlwUUd3TmppYmx6MDNGMNIBcEFVX3lxTFB0cGF0NndfM2JRaFRjWUY2YUlpNFVqUDNoZVlwX05jckdHQVVQcE5wSVdJZDdTQjN2OWNfSVJTOFFZNEoxTHJzVHFxemE1clJscGRLY2lEdThLNnJWUmJXdnRBU2drX2FYMUtwR213blE",
+    "published": "2026-11-05T02:57:01+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "해킹으로 37개 금융사서 47만건 정보유출…금융당국, 보안 전수점검·제도개편",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹으로 37개 금융사서 47만건 정보유출…금융당국, 보안 전수점검·제도개편",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04eEtHaFJzWXJBdVlaOTBaNEoyeDZLWklPTGtqbmhoeXlSWV85bnhIOWxQNjBLREp3YTYtdkppSF9hc2dYc3BPMEZib29lc3NEaVQ5YkpmMG9yQ1oxTHlwUUd3TmppYmx6MDNGMNIBcEFVX3lxTFB0cGF0NndfM2JRaFRjWUY2YUlpNFVqUDNoZVlwX05jckdHQVVQcE5wSVdJZDdTQjN2OWNfSVJTOFFZNEoxTHJzVHFxemE1clJscGRLY2lEdThLNnJWUmJXdnRBU2drX2FYMUtwR213blE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFAyb3lUQWVQNkxrZXNMNnpfaUVjWmVuZk1OQmMzU0xWYXY3SFFyb0VFN2loLXdJX1liZXJ0MHMzUUtYRTZPT3VKalJiOHdlTWlUdFpnMEt2UmVHa2YycjVCenQ1V2Raa09ZN3lXcEFHSDU",
+    "published": "2026-11-05T04:57:46+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 37개사 ‘해킹’에 정보 47만 건 유출…CEO 보안관리 책임 도마",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37개사 ‘해킹’에 정보 47만 건 유출…CEO 보안관리 책임 도마",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAyb3lUQWVQNkxrZXNMNnpfaUVjWmVuZk1OQmMzU0xWYXY3SFFyb0VFN2loLXdJX1liZXJ0MHMzUUtYRTZPT3VKalJiOHdlTWlUdFpnMEt2UmVHa2YycjVCenQ1V2Raa09ZN3lXcEFHSDU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTFBkTUIyY0RmclYya1A1T2FRUHpHZ0dxOGtCbWdSX05XQml2R09KbHVEU29JSnQzZDBFZzF5cmw3dHNjZWJiZjZfUlB4ekx0TW01dS1KVlpLWWt1b3F3QzIwbjZUM1N0VlFLel9wUXRwQ0RrMGc",
+    "published": "2026-11-05T00:37:04+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 금융권 정보유출 47만건 확인…AI 기반 보안체계 개편한다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융권 정보유출 47만건 확인…AI 기반 보안체계 개편한다",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBkTUIyY0RmclYya1A1T2FRUHpHZ0dxOGtCbWdSX05XQml2R09KbHVEU29JSnQzZDBFZzF5cmw3dHNjZWJiZjZfUlB4ekx0TW01dS1KVlpLWWt1b3F3QzIwbjZUM1N0VlFLel9wUXRwQ0RrMGc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxOa2Z5YU11REg1bWFfZ21lUG5JZGNGR3VpS25KVjJYWjd6WWI5dWVsa2lLOXlQMm43NG1qdm85aVVXWVFyZWRrelFzMksza3Y1YmM5c3dmcnFLOVB3XzV0ZEdjM1JILTZta1N5V0E1dlE2Z2t4VGx4cVEyekpRNXBWMtIBlAFBVV95cUxNeHFTWHdYSzhmeVJsQmpGNG9oWTJUR1gyaERwa2FrcGdEQTVQc2w5TWlyLW5NTnpTMVZUQ0gyLUpBdE9ZUnE2SG05eVdwYjdMNjdXa2o1Zk1pWWQ2ZlRLa2VjSWxRQ19GdEtGM3oxSGI1N05aSjdzTURIQ2l2LWlXcWpuOE5xVTcyNHlwQkJSenlIdG9m",
+    "published": "2026-11-05T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융 당국, 금융사 보안 점검 연 2회로 확대…580개사 전수조사",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융 당국, 금융사 보안 점검 연 2회로 확대…580개사 전수조사",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOa2Z5YU11REg1bWFfZ21lUG5JZGNGR3VpS25KVjJYWjd6WWI5dWVsa2lLOXlQMm43NG1qdm85aVVXWVFyZWRrelFzMksza3Y1YmM5c3dmcnFLOVB3XzV0ZEdjM1JILTZta1N5V0E1dlE2Z2t4VGx4cVEyekpRNXBWMtIBlAFBVV95cUxNeHFTWHdYSzhmeVJsQmpGNG9oWTJUR1gyaERwa2FrcGdEQTVQc2w5TWlyLW5NTnpTMVZUQ0gyLUpBdE9ZUnE2SG05eVdwYjdMNjdXa2o1Zk1pWWQ2ZlRLa2VjSWxRQ19GdEtGM3oxSGI1N05aSjdzTURIQ2l2LWlXcWpuOE5xVTcyNHlwQkJSenlIdG9m?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE83WkcwQzR2NGxURzlrODA5MGRZd1AwQmNUZnNENGpQZkNNeEcydmthc05vS2thNkMyVGFJTVF5cFlCcnd5UWZQbkx1c1c4RzNLdTdXVlJ4UC02VXpGQW44YzZn",
+    "published": "2026-11-05T00:17:38+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "한 달 동안 37개 금융사 정보유출 47만건...10억원 자금 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "한 달 동안 37개 금융사 정보유출 47만건...10억원 자금 탈취",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE83WkcwQzR2NGxURzlrODA5MGRZd1AwQmNUZnNENGpQZkNNeEcydmthc05vS2thNkMyVGFJTVF5cFlCcnd5UWZQbkx1c1c4RzNLdTdXVlJ4UC02VXpGQW44YzZn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxQbGF1SjQ3SFk0UmRiWW4yZXpfX0ZDUTdkajhkamhFbVNVRkl3SkFJb1h2VmJqSFltblN1Tjk4QWhfVXU1Q0swenJwdEw2SFNIZnZ4UE1ZMURmejNJdFh1Z3FYVFI0Zm51YlJJUk5vWGRSd0ZGbkNuSkQtY19mWUJUZQ",
+    "published": "2026-11-05T05:56:39+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권, 해커에 한 달 새 10억 털려…과실 없어도 보이스피싱 배상 추진",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융권, 해커에 한 달 새 10억 털려…과실 없어도 보이스피싱 배상 추진",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQbGF1SjQ3SFk0UmRiWW4yZXpfX0ZDUTdkajhkamhFbVNVRkl3SkFJb1h2VmJqSFltblN1Tjk4QWhfVXU1Q0swenJwdEw2SFNIZnZ4UE1ZMURmejNJdFh1Z3FYVFI0Zm51YlJJUk5vWGRSd0ZGbkNuSkQtY19mWUJUZQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWEFVX3lxTE1xTkJZcVVMaVB5ZHl4TzNFTnhyMjc1UHpRLWtPRHNndU9zaVlGQUlQc3l2WWEwV2NXY2oxalZUOFJLbkRuTGU1VUswYVlMc2VKRjZQcFV3cGE",
+    "published": "2026-11-05T01:36:36+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 침해사고 40건 신고…580개사 보안 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 침해사고 40건 신고…580개사 보안 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1xTkJZcVVMaVB5ZHl4TzNFTnhyMjc1UHpRLWtPRHNndU9zaVlGQUlQc3l2WWEwV2NXY2oxalZUOFJLbkRuTGU1VUswYVlMc2VKRjZQcFV3cGE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9kV3p6M0swbXd0OHZLX0tVTUdGdGg4aVh2eHlJVmJQYlFTLWJvY3N5cHA5SnpRb2tzUlVURUgwYmhJR3BqOVJsYW9KbG5fUEMxR0pXSm9RMzRaOURfRTNfdXlTSXY0RWI5bGc1Y0Raa9IBc0FVX3lxTE9RVnFQcEhzMHNocWUyTk5wZmpzNHNsN2t3bklCaEZlajUtN2hRYVZHYVVqTENEdzRvTEtMTU9EN0NYREN4a2JSaTNvazFRRVpMU0MtbkpPQUpFUkNkN05KM1ZTRm15MXNCdTR1LUJnc3Y5cm8",
+    "published": "2026-11-05T00:46:45+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 37곳서 정보 47만건 유출…당국, 580여곳 보안 전수점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37곳서 정보 47만건 유출…당국, 580여곳 보안 전수점검",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9kV3p6M0swbXd0OHZLX0tVTUdGdGg4aVh2eHlJVmJQYlFTLWJvY3N5cHA5SnpRb2tzUlVURUgwYmhJR3BqOVJsYW9KbG5fUEMxR0pXSm9RMzRaOURfRTNfdXlTSXY0RWI5bGc1Y0Raa9IBc0FVX3lxTE9RVnFQcEhzMHNocWUyTk5wZmpzNHNsN2t3bklCaEZlajUtN2hRYVZHYVVqTENEdzRvTEtMTU9EN0NYREN4a2JSaTNvazFRRVpMU0MtbkpPQUpFUkNkN05KM1ZTRm15MXNCdTR1LUJnc3Y5cm8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9LMDRiTmFLUWFQSnJySmEtYS13c2ptcHFOZ09vYml0NTFPYjFTeHNCU19EaUlHa2VEa1ZyUmRDbWpoWmpaZUxWYWVGM2RYeWx6cFpUelhTWmpwVi1NRFh1R1htTHhJR0FXS2VfTA",
+    "published": "2026-11-05T00:21:14+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "한 달 새 금융사 37곳 뚫렸다···개인정보 47만건 유출·10억원 탈취",
+    "tags": [
+      "금융"
+    ],
+    "title": "한 달 새 금융사 37곳 뚫렸다···개인정보 47만건 유출·10억원 탈취",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9LMDRiTmFLUWFQSnJySmEtYS13c2ptcHFOZ09vYml0NTFPYjFTeHNCU19EaUlHa2VEa1ZyUmRDbWpoWmpaZUxWYWVGM2RYeWx6cFpUelhTWmpwVi1NRFh1R1htTHhJR0FXS2VfTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE5fdlpybnRUOEdnMld1Rmt5bVRocG9rWnVqZC1wTVdwM2VuZnIwbUZUc2p3WXl4OWc5WmxKS3JLMjJHU0Z3TDR4RU9IMmZVYzRFWkFWZFIwcW5tZFkyMlc4TGUzSXg2SzYtQjZqUi130gFyQVVfeXFMTUxDRVBwdk9aRF9FQUVkY1ZjdDVwd0dhYnZsSktrNGlWMEVSbGJzcWQ2aFBzX3RZZGw1MUtOMFo0aUQzYWJ2NnIzVExqSHk2YmxUbGRTamxoNXdHaVRuNV9ObkR5MUQwcDF0U181YlBzZm9B",
+    "published": "2026-11-05T02:06:46+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 37개사서 한 달간 47만건 정보 유출…10억원 탈취 당해",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 37개사서 한 달간 47만건 정보 유출…10억원 탈취 당해",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fdlpybnRUOEdnMld1Rmt5bVRocG9rWnVqZC1wTVdwM2VuZnIwbUZUc2p3WXl4OWc5WmxKS3JLMjJHU0Z3TDR4RU9IMmZVYzRFWkFWZFIwcW5tZFkyMlc4TGUzSXg2SzYtQjZqUi130gFyQVVfeXFMTUxDRVBwdk9aRF9FQUVkY1ZjdDVwd0dhYnZsSktrNGlWMEVSbGJzcWQ2aFBzX3RZZGw1MUtOMFo0aUQzYWJ2NnIzVExqSHk2YmxUbGRTamxoNXdHaVRuNV9ObkR5MUQwcDF0U181YlBzZm9B?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWEFVX3lxTFBnbzk4ZlNNVXJPQ0ZxSEF5eVo3X0RmUEZWVUNqTG1yeEZFWElPQkY3aXdlUFdzNm5qUHFNb2VIell2SjdwdEhwbl9yMUhaNU9zNXdoclNMVHQ",
+    "published": "2026-11-05T00:25:38+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "국내 코인 거래소 등 대상 10억원 탈취 시도, 금융사 37곳서 해킹…정보 47만건 유출",
+    "tags": [
+      "금융"
+    ],
+    "title": "국내 코인 거래소 등 대상 10억원 탈취 시도, 금융사 37곳서 해킹…정보 47만건 유출",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBnbzk4ZlNNVXJPQ0ZxSEF5eVo3X0RmUEZWVUNqTG1yeEZFWElPQkY3aXdlUFdzNm5qUHFNb2VIell2SjdwdEhwbl9yMUhaNU9zNXdoclNMVHQ?oc=5"
   }
 ]
