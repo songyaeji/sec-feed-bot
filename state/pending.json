@@ -4486,5 +4486,636 @@
     "tags": [],
     "title": "당국, 추가 유출에 특별대응 연장…\"고객자금 피해 보고는 없어\"",
     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBQajRXTTZwLW9hdy14X1ljcG9TZ1ZNbFh6ekZSSmRPNWNtR3ppOVpickpUNW9vU0NMMS1XeTVQSVEzS1lhaVpyXzN5dFZtZk40TjVUdHJiSG16bDTSAWBBVV95cUxPempkdEotN0RkX3lGLTJZOXJYTFlSTllWTzhnZE9na21EUnBUSXY3Qnd2UGVublIyNmRHVEhuRWFPVGotdGVYSEo0dklGREFHUW9MbjFyV0xLbjJBX2VSbmo?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-118423",
+    "published": "2026-11-06T08:17:18.550",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The WP Libre Form WordPress plugin 1.5.0.1 does not validate the type of files uploaded through its form submissions, allowing unauthenticated attackers to upload PHP files to a web-accessible location and execute them, leading to remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-118423 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118423"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-119516",
+    "published": "2026-11-06T08:17:19.227",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data vulnerability in Mamunur Rashid Radius Booking — Booking Calendar for Appointments &amp; Services radius-booking allows Object Injection.This issue affects Radius Booking — Booking Calendar for Appointments &amp; Services: from n/a through 1.0.20.",
+    "tags": [],
+    "title": "CVE-2026-119516 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119516"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-120844",
+    "published": "2026-11-06T08:17:19.657",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Incorrect Privilege Assignment vulnerability in miniOrange OAuth Single Sign On – SSO (OAuth Client) miniorange-login-with-eve-online-google-facebook allows Privilege Escalation.This issue affects OAuth Single Sign On – SSO (OAuth Client): from n/a through 7.1.3.",
+    "tags": [],
+    "title": "CVE-2026-120844 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120844"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-88800",
+    "published": "2026-11-06T08:17:38.283",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The MDJM Event Management and Mobile Events Manager WordPress plugins through 1.7.8.7 act on a role deletion request on every page load with no capability check and no nonce, and the guard meant to protect roles that have users assigned reads a different part of the request from the one that selects what is deleted, allowing unauthenticated attackers to remove any WordPress role including administrator, which permanently strips every user of their capabilities.",
+    "tags": [],
+    "title": "CVE-2026-88800 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88800"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-119432",
+    "published": "2026-11-06T05:18:20.830",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stored cross-site scripting (XSS) vulnerability exists in the Foxit Workspace's file share preview functionality. An attacker could upload a crafted file and share it with a victim. When the victim opens or previews the file, the embedded script executes in the application's origin, potentially accessing locally stored credentials and enabling credential theft.",
+    "tags": [],
+    "title": "CVE-2026-119432 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119432"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-83494",
+    "published": "2026-11-06T07:17:57.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the training-operator. An incorrect object casting in the PyTorchJob ValidateUpdate webhook allows users to bypass an immutability check. This vulnerability could enable users to detach a queued job from its quota management system or hijack a running job's controller ownership. The primary impact is a Denial of Service (DoS) condition.",
+    "tags": [],
+    "title": "CVE-2026-83494 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-83494"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-88799",
+    "published": "2026-11-06T08:17:38.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The MDJM Event Management and Mobile Events Manager WordPress plugins through 1.7.8.7 do not check ownership or capability on the identifier supplied to their client profile update, allowing any authenticated user, such as a subscriber, to change the password and email address of any other account including an administrator, resulting in a full account takeover.",
+    "tags": [],
+    "title": "CVE-2026-88799 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88799"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-88801",
+    "published": "2026-11-06T08:17:38.410",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The MDJM Event Management and Mobile Events Manager WordPress plugins through 1.7.8.7 do not check a capability or a nonce before creating a WordPress role from a name supplied in the request, and store that name without escaping it, allowing any authenticated user, such as a subscriber, to inject arbitrary web scripts which execute when an administrator opens one of the standard user management screens.",
+    "tags": [],
+    "title": "CVE-2026-88801 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88801"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-33379",
+    "published": "2026-11-06T10:16:37.943",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A user with any role, including Viewer or a service account with no permissions, can create, externally publish, and delete dashboard snapshots (missing authorization). Only Grafana OSS and Grafana Enterprise 12.4 are affected; earlier versions and Grafana 13 are not.",
+    "tags": [],
+    "title": "CVE-2026-33379 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33379"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209343",
+    "published": "2026-11-06T16:17:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국인터넷진흥원(KISA)이 대전정보보호지원센터 개소를 끝으로 전국 16개 지역정보보호지원센터 구축을 완료했다. 지역 중소기업의 사이버 침해사고 예방·대응을 지원하고, 지역별 정보보호 사각지대를 줄이기 위한 지원 기반을 확대했다.KISA는 과학기술정보통신부, 대전광역시, 대전정보문화산업진흥원과 함께 대전정보문화산업진흥원에서 대전정보보호지원센터 개소식을 개최했다고 11월 6일 밝혔다.지역정보보호지원센터 10개에서 16개로 확대KISA는 지역 중소기업의 정보보호 역량 강화를 위해 올해 지역정보보호지원센터를 기존 10개에서 16개로 늘렸",
+    "tags": [],
+    "title": "KISA, 대전센터 개소로 전국 16개 지역정보보호지원센터 구축 완료",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209343"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209342",
+    "published": "2026-11-06T14:45:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "금융보안원을 사칭해 보이스피싱 피해금을 돌려주겠다며 추가 입금을 요구하는 사기 정황이 확인됐다. 이미 보이스피싱 피해를 입은 사람들의 피해 회복 심리를 악용하는 수법으로, 피해자들의 각별한 주의가 요구된다.금융보안원(원장 박상원)은 최근 보이스피싱 피해자에게 접근해 금융보안원 명의의 허위 안내문을 전달하고, 피해금 일부를 환급해주겠다고 속여 금전 입금을 유도하는 사기 정황을 확인했다고 밝혔다.카카오톡으로 접근…허위 안내문으로 환급 기대감 조성사기범은 보이스피싱 피해자에게 모바일 메신저인 카카오톡으로 먼저 연락했다. 금융보안원을 사칭",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "“보이스피싱 피해금 돌려준다” 금융보안원 사칭 사기…추가 입금 유도",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209342"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209341",
+    "published": "2026-11-06T14:41:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "동형암호 기술 전문기업 크립토랩(대표 천정희)은 데이터베이스(DB)에 저장된 개인정보와 기업 핵심 데이터를 보호하는 보안 솔루션 ‘헤라클레스(HEracles)’를 출시했다고 6일 밝혔다.헤라클레스는 데이터를 복호화하지 않고 암호화된 상태에서 검색과 연산을 수행하는 동형암호 기술을 적용했다. 공격자가 DB 접근 권한을 탈취하더라도 데이터 원문을 확인하기 어렵도록 설계했다.기존 DB 환경의 변경 부담을 낮추기 위해 플러그인과 API, 하이브리드 방식으로 제공한다. 온프레미스와 클라우드 DB 환경을 모두 지원한다.크립토랩에 따르면 가상",
+    "tags": [],
+    "title": "크립토랩, 동형암호 보안 솔루션 ‘헤라클레스’ 출시…암호화 상태로 검색·연산",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209341"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209340",
+    "published": "2026-11-06T14:36:36+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "랜섬웨어 대응 전문 엔드포인트 보안기업 에브리존(대표 홍승균)은 리눅스 서버용 안티랜섬웨어 솔루션 ‘화이트디펜더 리눅스서버(WhiteDefender Linux Server)’가 GS인증 1등급을 획득했다고 밝혔다. 회사 측은 리눅스 서버용 안티랜섬웨어 솔루션으로는 국내 최초라고 설명했다.GS인증은 국제표준을 기반으로 소프트웨어의 기능적합성, 성능효율성, 호환성, 신뢰성, 보안성 등을 시험·평가하는 제도다. 화이트디펜더 리눅스서버는 인증 대상 버전에 대한 시험·평가를 거쳐 제품의 기능과 호환성 등 소프트웨어 품질을 검증받았다.파일 접",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "에브리존 “화이트디펜더 리눅스서버, 국내 최초 GS인증 1등급 획득”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209340"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209339",
+    "published": "2026-11-06T13:48:54+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈AI가 소프트웨어 취약점을 찾아내고 실제 공격 가능성을 검증하는 사이버보안 특화 인공지능(AI) 모델 ‘GPT-6 Cyber’를 공개했다. 기존 AI 모델보다 취약점 분석과 공격 재현 능력이 크게 향상되면서, AI를 활용한 보안 연구의 생산성과 악용 위험이 동시에 주목받고 있다.오픈AI는 11월 5일 GPT-6 Cyber의 시스템 카드를 공개하고, 승인된 보안 연구자를 대상으로 제한적인 서비스를 시작했다고 밝혔다.GPT-6 Cyber는 GPT-6 Astra를 기반으로 취약점 발견, 공격 코드 개발, 웹 애플리케이션 침투시험 등",
+    "tags": [
+      "AI"
+    ],
+    "title": "오픈AI, 해킹 취약점 찾아내는 ‘GPT-6 Cyber’ 공개, 공격 재현 성공률 48.5%",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209339"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209337",
+    "published": "2026-11-06T13:35:55+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "리눅스 웹서버 관리 프로그램에 악성코드를 몰래 삽입해 원격 명령을 실행하고, 공격 흔적까지 숨기는 새로운 백도어가 발견됐다. 정상적인 서버 관리 프로그램 자체를 변조하는 방식이어서 일반적인 로그 분석만으로는 공격을 탐지하기 어려울 수 있다는 경고가 나왔다.중국 사이버보안 기업 치안신 보안연구조직 X랩은 11월 5일 리눅스 웹호스팅 관리 도구인 컨트롤 웹 패널(Control Web Panel, CWP)을 겨냥한 백도어 ‘CWPdoor’를 공개했다.CWP는 웹사이트와 데이터베이스, 이메일, 서버 설정 등을 웹 화면에서 관리할 수 있도록",
+    "tags": [],
+    "title": "해커, 리눅스 서버 관리 프로그램 변조해 백도어 설치하고 공격 흔적까지 은폐",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209337"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
+    "published": "2026-11-06T08:04:49+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Blockchain analysis firm Chainalysis has revealed that its ongoing investigation into the agentic cyber attack targeting its systems also exposed names, usernames, password hashes and live tokens for all users. \"While we investigated, we removed access to Reactor and Data Solutions,\" the company said. \"At this time we continue to have no evidence that any investigations data has been accessed",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Chainalysis Breach Exposes All Users' Credentials, Forces Shutdown of Key Services",
+    "url": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html",
+    "published": "2026-11-06T05:58:54+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A backdoor has been found hiding in the web server that runs Control Web Panel (CWP), a free panel for managing Linux hosting servers, researchers at QiAnXin's XLab said this week. The backdoored web server executes commands that attackers send via web requests, and those requests never appear in its access logs. Installing it takes root access, so the attackers must already control the server.",
+    "tags": [],
+    "title": "Hackers Hide Linux Backdoor in Control Web Panel Server to Execute Commands Without Logs",
+    "url": "https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/metamask-says-recent-attack-didnt-affect-wallet-infrastructure/",
+    "published": "2026-11-06T09:22:28+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Cryptocurrency wallet provider MetaMask said a recent security incident has not affected MetaMask wallets or its wallet infrastructure. [...]",
+    "tags": [],
+    "title": "MetaMask says recent attack didn't affect wallet infrastructure",
+    "url": "https://www.bleepingcomputer.com/news/security/metamask-says-recent-attack-didnt-affect-wallet-infrastructure/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202528",
+    "published": "2026-11-06T09:46:44+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "ENISA warns of cyberattacks on European refrigeration systems, exposing risks to supermarkets, food supplies and industrial controls. The European Union has issued a coordinated cybersecurity warning after a series of attacks hit commercial refrigeration systems in several Member States. The incidents, which began in October and continued with a new wave on November 1 and […]",
+    "tags": [],
+    "title": "ENISA Warns of Cyberattacks Targeting Refrigeration Systems Across Europe",
+    "url": "https://securityaffairs.com/202528/security/enisa-warns-of-cyberattacks-targeting-refrigeration-systems-across-europe.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202515",
+    "published": "2026-11-06T09:20:44+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "OpenAI says GPT-6 Astra sometimes secretly underperformed on safety research, raising concerns about AI reliability and alignment. OpenAI has disclosed that its GPT-6 Astra model sometimes quietly obstructed safety and alignment work. In a report updated on November 4, the company calls it covert underperformance. Astra added unnecessary prerequisites, abandoned working solutions and reported blockers […]",
+    "tags": [],
+    "title": "OpenAI Reports Covert Underperformance in GPT-6 Astra",
+    "url": "https://securityaffairs.com/202515/ai/openai-reports-covert-underperformance-in-gpt-6-astra.html"
+  },
+  {
+    "author": "Rauf Johari",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?p=121819",
+    "published": "2026-11-06T10:00:12+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "A detailed breakdown of misconfigurations in virtual environment cybersecurity as shown by examples of ransomware cases on ESXi and Proxmox environments.",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Virtualization security: attack layers and misconfiguration impact",
+    "url": "https://securelist.com/virtualization-security-esxi-and-proxmox-ransomware-cases/121819/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMiS0FVX3lxTE1ZQlNSZWJqNUhJa1BGQU9GaXljeXpNOEtYbUt4QmRzQk0yeEgtZVRXU1lpdUJoMkozaHJfWUdRSV9ZYUFVY19EdndCcw",
+    "published": "2026-11-05T03:44:54+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI, Linux 커널에서 루트 권한을 탈취할 수 있는 취약점 948개 발견",
+    "tags": [],
+    "title": "OpenAI, Linux 커널에서 루트 권한을 탈취할 수 있는 취약점 948개 발견",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1ZQlNSZWJqNUhJa1BGQU9GaXljeXpNOEtYbUt4QmRzQk0yeEgtZVRXU1lpdUJoMkozaHJfWUdRSV9ZYUFVY19EdndCcw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTFBidFhDYlMyLWVlaHM3SkhoTGJDQkNvZ0doaEdEQVJKckNXVDByQVhBYTVSclpGSmM0TlNCa2JJcTc2M1FEQmROazZybWtVc1VPOFNmcGtaWXJEbTc2WmFIclN4a3JVZw",
+    "published": "2026-11-06T10:36:58+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"피해금 돌려드립니다\"...보이스피싱 피해자 노린 2차 범죄 주의보",
+    "tags": [
+      "피싱"
+    ],
+    "title": "\"피해금 돌려드립니다\"...보이스피싱 피해자 노린 2차 범죄 주의보",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBidFhDYlMyLWVlaHM3SkhoTGJDQkNvZ0doaEdEQVJKckNXVDByQVhBYTVSclpGSmM0TlNCa2JJcTc2M1FEQmROazZybWtVc1VPOFNmcGtaWXJEbTc2WmFIclN4a3JVZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFB1dGdKa1l3aXNGT0NGMTdhUmJpOUViS2xwczltQTVnUE1GVnRzS0VJNXVuSE9HZFdERlFOT0hlR2ZJNFpoSWRKMXB3dUFVdVRFLTN1bjFWLVRyWnAwNmhzUHkxYmpfcUxOeE1j",
+    "published": "2026-11-06T08:37:03+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융당국 580곳 보안점검에도…전문가들 땜질처방 꼬집는 이유",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국 580곳 보안점검에도…전문가들 땜질처방 꼬집는 이유",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB1dGdKa1l3aXNGT0NGMTdhUmJpOUViS2xwczltQTVnUE1GVnRzS0VJNXVuSE9HZFdERlFOT0hlR2ZJNFpoSWRKMXB3dUFVdVRFLTN1bjFWLVRyWnAwNmhzUHkxYmpfcUxOeE1j?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTFBhRWRWZWZVVEVUcEEtU08xamtuM2VqVFNGMWl6SlA1d1U1VnIycGxkdThJdkdlb1pqM2NTVW94SEJQSkY4VHdITGMweU16ZVotNFotM0JqVkNjcVpWX3c",
+    "published": "2026-11-05T21:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "이억원 \"보안 부실은 경영 실패\"…금융권 CEO 책임 묻는다",
+    "tags": [
+      "금융"
+    ],
+    "title": "이억원 \"보안 부실은 경영 실패\"…금융권 CEO 책임 묻는다",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBhRWRWZWZVVEVUcEEtU08xamtuM2VqVFNGMWl6SlA1d1U1VnIycGxkdThJdkdlb1pqM2NTVW94SEJQSkY4VHdITGMweU16ZVotNFotM0JqVkNjcVpWX3c?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE1Zb2ZlbEw1ZUdRUUwyR09MdXVHNS1wZHJzWS1NdjNfTnI3UmhZQXJKZXJGdmh2Tmx5NEZOV09JQUxRdUk4TmhrenM5MnBNczBhdUtBd2tn",
+    "published": "2026-11-05T01:48:12+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "걸어잠갔던 '금융권 망(網)' 전면 풀린다",
+    "tags": [
+      "금융"
+    ],
+    "title": "걸어잠갔던 '금융권 망(網)' 전면 풀린다",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Zb2ZlbEw1ZUdRUUwyR09MdXVHNS1wZHJzWS1NdjNfTnI3UmhZQXJKZXJGdmh2Tmx5NEZOV09JQUxRdUk4TmhrenM5MnBNczBhdUtBd2tn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMieEFVX3lxTE5kMVdERjJaVVg5cXhWdkZJeDc1eXZZUkY3LXRZTXFQcmxiUm02dVVYajNpZVVYZ2JMUDZTeG85V2YtbGI4UEowY19WMVlfV1pwWUZibkhTOGlUNThSSVp0YXlXRWh5SHpVM2w4bFJHNEloa1puNU5LYg",
+    "published": "2026-11-04T09:28:26+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "힘빠지는 산은 이전… 이억원 이어 여권 발언 파문",
+    "tags": [],
+    "title": "힘빠지는 산은 이전… 이억원 이어 여권 발언 파문",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5kMVdERjJaVVg5cXhWdkZJeDc1eXZZUkY3LXRZTXFQcmxiUm02dVVYajNpZVVYZ2JMUDZTeG85V2YtbGI4UEowY19WMVlfV1pwWUZibkhTOGlUNThSSVp0YXlXRWh5SHpVM2w4bFJHNEloa1puNU5LYg?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249765",
+    "published": "2026-11-06T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "정부와 퇴직연금사업자가 함께 안정성과 수익성을 갖춘 퇴직연금 생태계를 만들어 나가겠습니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249765&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249759",
+    "published": "2026-11-06T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "국내외 주식시장 변동성 확대로 단계별 대응조치 가동",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249759&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiigFBVV95cUxOd0JIUjZycjVtTzlja1JlMWhGWkdjLUJpWHA0YmdYcEVXNHg3Z0JXM2RUX1dDRVB6QzdBU0tmanBmdzY3UzU1TFZCSThHR1h1aTRSSGVqeHZicldoY2Fpd3lXR1JBa2VEalhpcTE3VzNOMUZiUVQ2dE9HamxVYUJrallUZkFuQkJGNkE",
+    "published": "2026-11-06T08:44:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 또 털렸다… SSG닷컴에서도 개인정보 유출",
+    "tags": [],
+    "title": "개인정보 또 털렸다… SSG닷컴에서도 개인정보 유출",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOd0JIUjZycjVtTzlja1JlMWhGWkdjLUJpWHA0YmdYcEVXNHg3Z0JXM2RUX1dDRVB6QzdBU0tmanBmdzY3UzU1TFZCSThHR1h1aTRSSGVqeHZicldoY2Fpd3lXR1JBa2VEalhpcTE3VzNOMUZiUVQ2dE9HamxVYUJrallUZkFuQkJGNkE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1ESmNtRlNSbkN6WnY3MWtVRTJhZjNaSmc5MUhpdjB4a1F3N0xReHM3akFiSWk4WFBoYzhlWS15dGtIcUxrY19TU1gybUtxRGhPeTRZbmE2Zk1HQzjSAWBBVV95cUxNdE5ySVhkSXhBbUJld2Q5ejFkUFVkTEVSR21vcjM5Y0JYb1BSMmt0aDEzR0FsSmZNZWxaa3BtbXRyVWQzc3BrWG1qNHB4b0xvb3pzOFN0S3lnUkY3SkVYNjQ",
+    "published": "2026-11-06T05:01:13+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡 6천억대 '개인정보 과징금' 중 2천억원 효력 정지(종합)",
+    "tags": [],
+    "title": "쿠팡 6천억대 '개인정보 과징금' 중 2천억원 효력 정지(종합)",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ESmNtRlNSbkN6WnY3MWtVRTJhZjNaSmc5MUhpdjB4a1F3N0xReHM3akFiSWk4WFBoYzhlWS15dGtIcUxrY19TU1gybUtxRGhPeTRZbmE2Zk1HQzjSAWBBVV95cUxNdE5ySVhkSXhBbUJld2Q5ejFkUFVkTEVSR21vcjM5Y0JYb1BSMmt0aDEzR0FsSmZNZWxaa3BtbXRyVWQzc3BrWG1qNHB4b0xvb3pzOFN0S3lnUkY3SkVYNjQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiUkFVX3lxTE9ncWNJZXJLVm5pQ0QwVm9RVTV2b1A3RG5RU29KbEhtMjJMRmtPVE1sMGhnU1R1XzNEUE5FRUI0RmZIOXRPQi14SjZ6TWlJSkxJSHfSAVNBVV95cUxOa3dUWllONWZaeS1IaVdLdHhHN0xySFBPN2wwaTJ5TzI1RjYtbXhKQWY2MWp3bzVrZFlOMDd6MkhUS1p5Wm9xdnRDU3dOY2F2bHhadw",
+    "published": "2026-11-06T05:38:26+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "법원, ‘개인정보 무단 수집’ 쿠팡 2000억 과징금 효력 정지",
+    "tags": [],
+    "title": "법원, ‘개인정보 무단 수집’ 쿠팡 2000억 과징금 효력 정지",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9ncWNJZXJLVm5pQ0QwVm9RVTV2b1A3RG5RU29KbEhtMjJMRmtPVE1sMGhnU1R1XzNEUE5FRUI0RmZIOXRPQi14SjZ6TWlJSkxJSHfSAVNBVV95cUxOa3dUWllONWZaeS1IaVdLdHhHN0xySFBPN2wwaTJ5TzI1RjYtbXhKQWY2MWp3bzVrZFlOMDd6MkhUS1p5Wm9xdnRDU3dOY2F2bHhadw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE1vY0NoUUFzZll3bXdXZ2JBRWFqYllUdlQ0eGpKc3BvM0R4cjdtVGJFNWF4VExIZXVGS0xUUk1jYmdZQ2NaVm9YSmt1OUJWT3ktSTduLXpIYmZPZzNMOUpXTNIBeEFVX3lxTE1samd5ZWYzcHkwdG5kWklhWUNmRVFMYWVkRGI2cUZkME5vRTRDSEozYXFoOG02SmxEZzB6ZHZ0NVJfeVdsWnhzcU5tb1A3bHdFVVhFdlY3cU04MnZZMHZ4dXVlUzlsWGp4VGJXRWx6dkR5RU81Qk5KVA",
+    "published": "2026-11-06T05:42:12+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "SSG닷컴, 일부 고객 개인정보 유출…성명·내부 식별 번호 조회",
+    "tags": [],
+    "title": "SSG닷컴, 일부 고객 개인정보 유출…성명·내부 식별 번호 조회",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1vY0NoUUFzZll3bXdXZ2JBRWFqYllUdlQ0eGpKc3BvM0R4cjdtVGJFNWF4VExIZXVGS0xUUk1jYmdZQ2NaVm9YSmt1OUJWT3ktSTduLXpIYmZPZzNMOUpXTNIBeEFVX3lxTE1samd5ZWYzcHkwdG5kWklhWUNmRVFMYWVkRGI2cUZkME5vRTRDSEozYXFoOG02SmxEZzB6ZHZ0NVJfeVdsWnhzcU5tb1A3bHdFVVhFdlY3cU04MnZZMHZ4dXVlUzlsWGp4VGJXRWx6dkR5RU81Qk5KVA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBwbzhQcUhfM1EtaUhjODNFdTR5aThrQV9fS2JlQmRMWXh5VkR1Y0NoLVh3aGFjN05xTW1ZaTZjTDVESF81ZkNHVjZjU1Bmd291TmxFM0o1ZlkzekxGN1BadG5MR19JMk5XT3dMM2dHSdIBc0FVX3lxTE9nMkd2cndXSjBUNnR6cmNvRnpLbFBFcTh3R2w5VDJZLWhMLU5jOXpIMGVKSllmbGZsTGJwNHNfbjBxdjZoUkRvWEVRb09nMVZGOVdyMTVVX3VMQnlwM29hM1N1cVlFNGoxcWZDc3VySFpmMTA",
+    "published": "2026-11-06T07:09:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "SSG닷컴, 일부 고객 개인정보 유출…이름·고객식별번호 등",
+    "tags": [],
+    "title": "SSG닷컴, 일부 고객 개인정보 유출…이름·고객식별번호 등",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwbzhQcUhfM1EtaUhjODNFdTR5aThrQV9fS2JlQmRMWXh5VkR1Y0NoLVh3aGFjN05xTW1ZaTZjTDVESF81ZkNHVjZjU1Bmd291TmxFM0o1ZlkzekxGN1BadG5MR19JMk5XT3dMM2dHSdIBc0FVX3lxTE9nMkd2cndXSjBUNnR6cmNvRnpLbFBFcTh3R2w5VDJZLWhMLU5jOXpIMGVKSllmbGZsTGJwNHNfbjBxdjZoUkRvWEVRb09nMVZGOVdyMTVVX3VMQnlwM29hM1N1cVlFNGoxcWZDc3VySFpmMTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTFBRdUVEVFlwWF9NMy14OUNaYnlRVkZLdnE1d2pUdFYtdzJpNWRrZmZlQjhURF9USzlQNEFVeWE5Y25aN3ZUTHBmckZtcHA5Ul9pZzRSbHhfcThoYmxCcWd1RFNKTHlsMHNtS2pWSUFtYXBWNUlj",
+    "published": "2026-11-06T04:35:32+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "법원, '이용자 기록 무단수집' 쿠팡 2천억대 과징금 효력정지",
+    "tags": [],
+    "title": "법원, '이용자 기록 무단수집' 쿠팡 2천억대 과징금 효력정지",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBRdUVEVFlwWF9NMy14OUNaYnlRVkZLdnE1d2pUdFYtdzJpNWRrZmZlQjhURF9USzlQNEFVeWE5Y25aN3ZUTHBmckZtcHA5Ul9pZzRSbHhfcThoYmxCcWd1RFNKTHlsMHNtS2pWSUFtYXBWNUlj?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE03bjNlTFN6eDRFbDVjODZHQlFqWUt6enBzOFRqXzlmV21GXzg5Y1k4eXFNNFE2Q25WQ012ZFotdjNVYnB0eDF3dHFqRGJDdw",
+    "published": "2026-11-06T05:29:21+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡, 개인정보위 과징금 2011억원 효력 정지…4236억원은 유지",
+    "tags": [],
+    "title": "쿠팡, 개인정보위 과징금 2011억원 효력 정지…4236억원은 유지",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE03bjNlTFN6eDRFbDVjODZHQlFqWUt6enBzOFRqXzlmV21GXzg5Y1k4eXFNNFE2Q25WQ012ZFotdjNVYnB0eDF3dHFqRGJDdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE5jRlhIcHk2VGZjQldHNWZfZ3EtakEyV2hHMmRtbExsOENlNUNKUkV0QldEeUczWWkzUkhueG5xOXM3VDMydkJSV19ib19ERl83ck80a2g4ajVIYTlqRkNaVWNMUU9xdndyQmc2cTNNRHnSAXRBVV95cUxNU1FmNVEyakpobHRFVWkxSlRIRGlOU1IycDhsVG14RHNqczQyQWV0Q2VrT2JIdGdrb09SdklzQUVjVE1TMDE1WlBFSEREdmc0cVhKY2F2YVRva3ZVYmE1T0R2a2xlWTcxZXNWbUJZMDQzVHpOag",
+    "published": "2026-11-06T05:06:22+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡, 2천억원대 과징금 집행정지…개인정보 제재 법정 공방",
+    "tags": [],
+    "title": "쿠팡, 2천억원대 과징금 집행정지…개인정보 제재 법정 공방",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5jRlhIcHk2VGZjQldHNWZfZ3EtakEyV2hHMmRtbExsOENlNUNKUkV0QldEeUczWWkzUkhueG5xOXM3VDMydkJSV19ib19ERl83ck80a2g4ajVIYTlqRkNaVWNMUU9xdndyQmc2cTNNRHnSAXRBVV95cUxNU1FmNVEyakpobHRFVWkxSlRIRGlOU1IycDhsVG14RHNqczQyQWV0Q2VrT2JIdGdrb09SdklzQUVjVE1TMDE1WlBFSEREdmc0cVhKY2F2YVRva3ZVYmE1T0R2a2xlWTcxZXNWbUJZMDQzVHpOag?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9weENWVzlqbkl5bFpNSlJ2dmUzbW9HRVN2djZYek43OElLRlZCZmRCZTNPTGp0T3ZYQWctV1lpS2FYbWktVjNMX0RyMHBtNGNENEctSGMxZjVhZ9IBWEFVX3lxTE1nckVsSEFXWlBFbkc5RUxEZjRJVXlYV1VtR28wdjE4YjJIVUdHR2wteE5oNzB3eDJRbUlWSzU0YnBsdEZ1bXhYeW5ZMHh2Sy0wZXVUaUtuOXU",
+    "published": "2026-11-06T08:30:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "SSG닷컴, 일부 고객 개인정보 유출…KISA·개인정보위 신고",
+    "tags": [],
+    "title": "SSG닷컴, 일부 고객 개인정보 유출…KISA·개인정보위 신고",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9weENWVzlqbkl5bFpNSlJ2dmUzbW9HRVN2djZYek43OElLRlZCZmRCZTNPTGp0T3ZYQWctV1lpS2FYbWktVjNMX0RyMHBtNGNENEctSGMxZjVhZ9IBWEFVX3lxTE1nckVsSEFXWlBFbkc5RUxEZjRJVXlYV1VtR28wdjE4YjJIVUdHR2wteE5oNzB3eDJRbUlWSzU0YnBsdEZ1bXhYeW5ZMHh2Sy0wZXVUaUtuOXU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE42MEtaSllGczV1SEpQUUVDdjd4THUxWmRodEs4dHdFVzJvblowWVgyNTd2RW1oRmJna0JjN0x3ZjhJUXZGX0ZDS2RwazhBbUtuVFpwSGx0Z21wc0tMT214Rkk0SGc",
+    "published": "2026-11-06T05:22:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "‘개인정보 무단수집’ 쿠팡 과징금 2011억원 일단 멈췄다…법원 집행정지",
+    "tags": [],
+    "title": "‘개인정보 무단수집’ 쿠팡 과징금 2011억원 일단 멈췄다…법원 집행정지",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE42MEtaSllGczV1SEpQUUVDdjd4THUxWmRodEs4dHdFVzJvblowWVgyNTd2RW1oRmJna0JjN0x3ZjhJUXZGX0ZDS2RwazhBbUtuVFpwSGx0Z21wc0tMT214Rkk0SGc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5yWjlNcDR1Rm1DeU1jaGI1Z05RcGxfa3NPVFl3NUFpZGg2Y3MzdE5CM1VJS0gyV08tcnMzOUI4cHp2Y0I2d1h1ZjVROTBmdi1YN0pmT2lHYldyQkdYcEJ6YtIBeEFVX3lxTE50RlVyVnVvLU9qcDZKRUVwaVU4bXlQZlIzYy1kMW5FbTJ5SGJmeUp6S1NSYUp1NEg2bThKRzVhaS1zcThOYzZtSnk5d0NHZVpSd0NKT0RUU3VuV0tMTDhfblBUQW5ZVC1YbTAzNExQc0lhU1JydWRBbw",
+    "published": "2026-11-06T05:15:32+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "법원, 쿠팡 2천억대 개인정보 '침해' 과징금 집행정지…'유출' 4천억대는 유지",
+    "tags": [],
+    "title": "법원, 쿠팡 2천억대 개인정보 '침해' 과징금 집행정지…'유출' 4천억대는 유지",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5yWjlNcDR1Rm1DeU1jaGI1Z05RcGxfa3NPVFl3NUFpZGg2Y3MzdE5CM1VJS0gyV08tcnMzOUI4cHp2Y0I2d1h1ZjVROTBmdi1YN0pmT2lHYldyQkdYcEJ6YtIBeEFVX3lxTE50RlVyVnVvLU9qcDZKRUVwaVU4bXlQZlIzYy1kMW5FbTJ5SGJmeUp6S1NSYUp1NEg2bThKRzVhaS1zcThOYzZtSnk5d0NHZVpSd0NKT0RUU3VuV0tMTDhfblBUQW5ZVC1YbTAzNExQc0lhU1JydWRBbw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTFBUUGhPWk9XaWdUNUc2QlNRZ29OdEJ2eEs5VC1TOFVhdnJQS1BjeGttVmdiTDgwWlV6SkdxR2ZyOTRkMHdDMzF1LS0wcw",
+    "published": "2026-11-06T08:58:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "법원, 쿠팡 2011억 과징금 효력정지…집행정지 인용 : 사회",
+    "tags": [],
+    "title": "법원, 쿠팡 2011억 과징금 효력정지…집행정지 인용 : 사회",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBUUGhPWk9XaWdUNUc2QlNRZ29OdEJ2eEs5VC1TOFVhdnJQS1BjeGttVmdiTDgwWlV6SkdxR2ZyOTRkMHdDMzF1LS0wcw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE0ybWZ6WkJBRWEwMUxnZnZJY2w4U1YzYUNGTXNlNmlJWDYweVQzYWRtQUU0VjloRmJ2OWs4ai1PQnVKdlhyREk4c2d0eXdKRGxxZG9RRl9VTEZ2LWZfRlM3WXRqVHkwd28",
+    "published": "2026-11-06T05:02:26+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "법원, 쿠팡 2천11억원 과징금 처분 효력 정지...본안 판결까지 집행 중단",
+    "tags": [],
+    "title": "법원, 쿠팡 2천11억원 과징금 처분 효력 정지...본안 판결까지 집행 중단",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE0ybWZ6WkJBRWEwMUxnZnZJY2w4U1YzYUNGTXNlNmlJWDYweVQzYWRtQUU0VjloRmJ2OWs4ai1PQnVKdlhyREk4c2d0eXdKRGxxZG9RRl9VTEZ2LWZfRlM3WXRqVHkwd28?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE1jQmpseFRTU3lENUVDckFqbF9IcHBPbm5wcVphelh4WHVHN3lwTmYzM1hpYnduMVhBSGNDYlkzYUlhVEtxZlRQWTdfalFzdEtveEZuMm5aRGVld3A1emVwOGNIdEhoNl9ZRnhGMg",
+    "published": "2026-11-06T05:50:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡 6천억대 '개인정보 과징금' 중 2천억 효력 정지···4천억은 효력 유지",
+    "tags": [],
+    "title": "쿠팡 6천억대 '개인정보 과징금' 중 2천억 효력 정지···4천억은 효력 유지",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1jQmpseFRTU3lENUVDckFqbF9IcHBPbm5wcVphelh4WHVHN3lwTmYzM1hpYnduMVhBSGNDYlkzYUlhVEtxZlRQWTdfalFzdEtveEZuMm5aRGVld3A1emVwOGNIdEhoNl9ZRnhGMg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5MWnVmc0w4LWlnZUFUU2tuMGNFSE1WcDdITUl0b05UdE1zTF9vbE4zQ1lvV0VvNkVXa3VqWWp6bDY5dUdZZ3hYVzhXbnBoWFlmY3diNWoxaWthbVJjcjlFM0NwSmotYVJBdEJn0gFvQVVfeXFMUG0zbDMyX28tNGc4WDQtYjU5Q3pyMWhZbHRUN2FmVXRsdTJ5dG93V05wQU5ZcEUtMGhnMnl6MTFmM01wckExRzYyVFVtTXJycHVNUUVBOU9ZNHBHeV9ESnRSTVBtWEpRRFAwVE1sRnhj",
+    "published": "2026-11-06T09:43:38+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "잇따른 개인정보 유출사고에 ‘2차 피해 특별대응’ 연말까지",
+    "tags": [],
+    "title": "잇따른 개인정보 유출사고에 ‘2차 피해 특별대응’ 연말까지",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5MWnVmc0w4LWlnZUFUU2tuMGNFSE1WcDdITUl0b05UdE1zTF9vbE4zQ1lvV0VvNkVXa3VqWWp6bDY5dUdZZ3hYVzhXbnBoWFlmY3diNWoxaWthbVJjcjlFM0NwSmotYVJBdEJn0gFvQVVfeXFMUG0zbDMyX28tNGc4WDQtYjU5Q3pyMWhZbHRUN2FmVXRsdTJ5dG93V05wQU5ZcEUtMGhnMnl6MTFmM01wckExRzYyVFVtTXJycHVNUUVBOU9ZNHBHeV9ESnRSTVBtWEpRRFAwVE1sRnhj?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE1yOHgxT2F5Nk13OUxKenM2N1lST192bkxMVHAxVU42ZUhyV2pzUU5abVgtcmttWFVCcE85QzMwbV9Pd3dGZ094TjRSdnhLQTdfN0VhYmptX3c4anpzUW1MekxwZmtRUU41NUE",
+    "published": "2026-11-06T07:09:17+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "무차별적 해킹 충격에 \"금융권 580여 개사 보안 전수점검\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "무차별적 해킹 충격에 \"금융권 580여 개사 보안 전수점검\"",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1yOHgxT2F5Nk13OUxKenM2N1lST192bkxMVHAxVU42ZUhyV2pzUU5abVgtcmttWFVCcE85QzMwbV9Pd3dGZ094TjRSdnhLQTdfN0VhYmptX3c4anpzUW1MekxwZmtRUU41NUE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5hNzkzamc3ZUNrMlVzUGhDZU9KUWp1WDNKX1JpZTI1eWNVM3hCXzZHN0R0ekt4amFCQ3BmNWRKZkVpWEk4dFpWWG13OGROY0p4OXAwREFHc0RIQXd6NUhLSWJwZmhGZUE",
+    "published": "2026-11-06T02:50:25+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 개인정보 유출 추가 확인...금융당국, 특별대응기간 연말까지 연장",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 개인정보 유출 추가 확인...금융당국, 특별대응기간 연말까지 연장",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5hNzkzamc3ZUNrMlVzUGhDZU9KUWp1WDNKX1JpZTI1eWNVM3hCXzZHN0R0ekt4amFCQ3BmNWRKZkVpWEk4dFpWWG13OGROY0p4OXAwREFHc0RIQXd6NUhLSWJwZmhGZUE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE02czJNLXdvUnRnNFVOVU1YZU1NdF9wd3N5Q0U3YW9kekh6N0xlUnhYRnA2UXdGamVuVHFrbHFmaFQxc3MyQ0N3ZzdnSnZ2SWIzdjhOX2otaFRsRTdSWE83bjNZR0RBUnh2ZThVcU5BZ9IBc0FVX3lxTFBINFkyaTBIRnZfRzhGZHgtaTlrNkZCbzFiZ241MDFPVktLMENBRlVtOFM3RWNObEhaRXpMWG01eVZ1UkoxUUc2eG5KNFB4eGhSdm5mTTFwM0s0eElXQnVDUG1pci1laVFvcWJyMFR1ZGpVNGs",
+    "published": "2026-11-06T04:00:14+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 개인정보 유출 2차 피해 아직 없어…특별대응 연말까지 연장",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 개인정보 유출 2차 피해 아직 없어…특별대응 연말까지 연장",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE02czJNLXdvUnRnNFVOVU1YZU1NdF9wd3N5Q0U3YW9kekh6N0xlUnhYRnA2UXdGamVuVHFrbHFmaFQxc3MyQ0N3ZzdnSnZ2SWIzdjhOX2otaFRsRTdSWE83bjNZR0RBUnh2ZThVcU5BZ9IBc0FVX3lxTFBINFkyaTBIRnZfRzhGZHgtaTlrNkZCbzFiZ241MDFPVktLMENBRlVtOFM3RWNObEhaRXpMWG01eVZ1UkoxUUc2eG5KNFB4eGhSdm5mTTFwM0s0eElXQnVDUG1pci1laVFvcWJyMFR1ZGpVNGs?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTFBWY0YtVmhzSVI3UUxjTzEwM2lWeHRhMmZYN3ppTjJYSFY2NkduTVpOa2pnLTB6MFZ0WFVYV1lfODFiQkJfeGgwSGlJdnlueUFlMGh5aXQ0NkZPaVhRVFp1OFg5YmFTUdIBakFVX3lxTE9SNWRoOFo1TUdtT3E0LUwydkdqcXdXUl9taklTRFZITkxTcmY5RXlTQTdQMmlTQnJtSUJQMGdvNDZ5VnB5bFZ0clkwNGtLbTd3c1ZWejFGc3VoMGV1OHBJYzVjVURGaVFXVkE",
+    "published": "2026-11-06T07:02:55+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 정보유출 2차 피해 대응, 연말까지 연장...소비자경보 '주의' 유지",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 정보유출 2차 피해 대응, 연말까지 연장...소비자경보 '주의' 유지",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBWY0YtVmhzSVI3UUxjTzEwM2lWeHRhMmZYN3ppTjJYSFY2NkduTVpOa2pnLTB6MFZ0WFVYV1lfODFiQkJfeGgwSGlJdnlueUFlMGh5aXQ0NkZPaVhRVFp1OFg5YmFTUdIBakFVX3lxTE9SNWRoOFo1TUdtT3E0LUwydkdqcXdXUl9taklTRFZITkxTcmY5RXlTQTdQMmlTQnJtSUJQMGdvNDZ5VnB5bFZ0clkwNGtLbTd3c1ZWejFGc3VoMGV1OHBJYzVjVURGaVFXVkE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9SdmgtNW94RW1adW52Sm5udFFWRDdUT3NWV0NJWVdROVp6M2t5ZnowZWJnRDVmeEx0eWJuMmJydHFabWZqY1M0V1BfZENzMmxSZ1lvSkE0X3ludFhJUlJvYm9xanVDM0lZd19fRQ",
+    "published": "2026-11-06T04:18:59+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 개인정보 유출 2차 피해 특별대응 기간 연장",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 개인정보 유출 2차 피해 특별대응 기간 연장",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9SdmgtNW94RW1adW52Sm5udFFWRDdUT3NWV0NJWVdROVp6M2t5ZnowZWJnRDVmeEx0eWJuMmJydHFabWZqY1M0V1BfZENzMmxSZ1lvSkE0X3ludFhJUlJvYm9xanVDM0lZd19fRQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWEFVX3lxTE1yQWxpcTBsX01PNGNOWHllNUM4eXpXMlBvNUs2c243UE01TDJKSWRJSDVxWTNrTFYwRzFnUzM5NDFldWVOSHYyN3FYRWg2eVB2QkJycTlSYi0",
+    "published": "2026-11-06T04:27:05+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 개인정보 유출 2차 피해 특별대응, 12월 말까지 연장",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 개인정보 유출 2차 피해 특별대응, 12월 말까지 연장",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1yQWxpcTBsX01PNGNOWHllNUM4eXpXMlBvNUs2c243UE01TDJKSWRJSDVxWTNrTFYwRzFnUzM5NDFldWVOSHYyN3FYRWg2eVB2QkJycTlSYi0?oc=5"
   }
 ]
