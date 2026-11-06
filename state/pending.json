@@ -3001,5 +3001,1490 @@
     "tags": [],
     "title": "쿠팡 '개보위 과징금' 4236억원 유지…시정명령은 일단 정지",
     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE56WnlJYTFoVEdhaENKY2JhY21mMVFiamllODJrbEpsS0FfaHhveUc3YVVSR2ZNLUZmYVBOeXdVb3VERGE2aHBKU29rUXR1ZVQzVkZrcEMteVlTc2hjc0NLRHFoR3Q?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-46408",
+    "published": "2025-09-15T14:15:43.257",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in the methods push.lite.avtech.com.AvtechLib.GetHttpsResponse and push.lite.avtech.com.Push_HttpService.getNewHttpClient in AVTECH EagleEyes 2.0.0. The methods set ALLOW_ALL_HOSTNAME_VERIFIER, bypassing domain validation.",
+    "tags": [],
+    "title": "CVE-2025-46408 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46408"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-52053",
+    "published": "2025-09-15T15:15:54.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TOTOLINK X6000R V9.4.0cu.1360_B20241207 was found to contain a command injection vulnerability in the sub_417D74 function via the file_name parameter. This vulnerability allows unauthenticated attackers to execute arbitrary commands via a crafted request.",
+    "tags": [],
+    "title": "CVE-2025-52053 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52053"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-57174",
+    "published": "2025-09-15T17:15:35.020",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in Siklu Communications Etherhaul 8010TX and 1200FX devices, Firmware 7.4.0 through 10.7.3 and possibly other previous versions. The rfpiped service listening on TCP port 555 which uses static AES encryption keys hardcoded in the binary. These keys are identical across all devices, allowing attackers to craft encrypted packets that execute arbitrary commands without authentication. This is a failed patch for CVE-2017-7318. This issue may affect other Etherhaul series devices with shared firmware.",
+    "tags": [],
+    "title": "CVE-2025-57174 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57174"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-56074",
+    "published": "2025-09-22T14:15:49.867",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL Injection vulnerability was discovered in the foreigner-bwdates-reports-details.php file of PHPGurukul Park Ticketing Management System v2.0. This vulnerability allows remote attackers to execute arbitrary SQL code via the fromdate parameter in a POST request.",
+    "tags": [],
+    "title": "CVE-2025-56074 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-56074"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-57432",
+    "published": "2025-09-22T16:15:44.753",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Blackmagic Web Presenter version 3.3 exposes a Telnet service on port 9977 that accepts unauthenticated commands. This service allows remote attackers to manipulate stream settings, including changing video modes and possibly altering device functionality. No credentials or authentication mechanisms are required to interact with the Telnet interface.",
+    "tags": [],
+    "title": "CVE-2025-57432 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57432"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-57601",
+    "published": "2025-09-22T16:15:45.000",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "AiKaan Cloud Controller uses a single hardcoded SSH private key and the username `proxyuser` for remote terminal access to all managed IoT/edge devices. When an administrator initiates \"Open Remote Terminal\" from the AiKaan dashboard, the controller sends this same static private key to the target device. The device then uses it to establish a reverse SSH tunnel to a remote access server, enabling browser-based SSH access for the administrator. Because the same `proxyuser` account and SSH key are reused across all customer environments: - An attacker who obtains the key (e.g., by intercepting it in transit, extracting it from the remote access server, or from a compromised admin account) can impersonate any managed device. - They can establish unauthorized reverse SSH tunnels and interact with devices without the owner's consent. This is a design flaw in the authentication model: compromise of a single key compromises the trust boundary between the controller and devices.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-57601 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57601"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-57437",
+    "published": "2025-09-22T18:15:45.153",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Blackmagic Web Presenter HD firmware version 3.3 exposes sensitive information via an unauthenticated Telnet service on port 9977. When connected, the service reveals extensive device configuration data including: - Model, version, and unique identifiers - Network settings including IP, MAC, DNS - Current stream platform, stream key, and streaming URL - Audio/video configuration This data can be used to hijack live streams or perform network reconnaissance.",
+    "tags": [],
+    "title": "CVE-2025-57437 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57437"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-57441",
+    "published": "2025-09-22T18:15:45.953",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Blackmagic ATEM Mini Pro 2.7 exposes sensitive device and stream configuration information via an unauthenticated Telnet service on port 9990. Upon connection, the attacker can access a protocol preamble that leaks the video mode, routing configuration, input/output labels, device model, and even internal identifiers such as the unique ID. This can be used for reconnaissance and planning further attacks.",
+    "tags": [],
+    "title": "CVE-2025-57441 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57441"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2025-55187",
+    "published": "2025-09-26T15:16:03.650",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In DriveLock 24.1.4 before 24.1.5, 24.2.5 before 24.2.6, and 25.1.2 before 25.1.4, attackers can gain elevated privileges.",
+    "tags": [],
+    "title": "CVE-2025-55187 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55187"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2025-58384",
+    "published": "2025-09-26T18:15:37.647",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In DOXENSE WATCHDOC before 6.1.1.5332, Deserialization of Untrusted Data can lead to remote code execution through the .NET Remoting library in the Watchdoc administration interface.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-58384 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58384"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-57266",
+    "published": "2025-09-29T21:15:38.180",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An issue was discovered in file AssistantController.java in ThriveX Blogging Framework 2.5.9 thru 3.1.3 allowing unauthenticated attackers to gain sensitive information such as API Keys via the /api/assistant/list endpoint.",
+    "tags": [],
+    "title": "CVE-2025-57266 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57266"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-61044",
+    "published": "2025-10-01T15:15:49.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TOTOLINK X18 V9.1.0cu.2053_B20230309 was discovered to contain a command injection vulnerability via the agentName parameter in the setEasyMeshAgentCfg function.",
+    "tags": [],
+    "title": "CVE-2025-61044 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61044"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-61045",
+    "published": "2025-10-01T15:15:49.260",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "TOTOLINK X18 V9.1.0cu.2053_B20230309 was discovered to contain a command injection vulnerability via the mac parameter in the setEasyMeshAgentCfg function.",
+    "tags": [],
+    "title": "CVE-2025-61045 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61045"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-59403",
+    "published": "2025-10-02T17:16:05.530",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Flock Safety Android Collins application (aka com.flocksafety.android.collins) 6.35.31 for Android lacks authentication. It is responsible for the camera feed on Falcon, Sparrow, and Bravo devices, but exposes administrative API endpoints on port 8080 without authentication. Endpoints include but are not limited to: /reboot, /logs, /crashpack, and /adb/enable. This results in multiple impacts including denial of service (DoS) via /reboot, information disclosure via /logs, and remote code execution (RCE) via /adb/enable. The latter specifically results in adb being started over TCP without debugging confirmation, providing an attacker in the LAN/WLAN with shell access.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-59403 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59403"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-59407",
+    "published": "2025-10-02T17:16:07.527",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Flock Safety DetectionProcessing com.flocksafety.android.objects application 6.35.33 for Android (installed on Falcon and Sparrow License Plate Readers and Bravo Edge AI Compute Devices) bundles a Java Keystore (flock_rye.bks) along with its hardcoded password (flockhibiki17) in its code. The keystore contains a private key.",
+    "tags": [],
+    "title": "CVE-2025-59407 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59407"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-57247",
+    "published": "2025-10-06T17:16:05.697",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The BATBToken smart contract (address 0xfbf1388408670c02f0dbbb74251d8ded1d63b7a2, Compiler Version v0.8.26+commit.8a97fa7a) contains incorrect access control implementation in whitelist management functions. The setColdWhiteList() and setSpecialAddress() functions in the base ERC20 contract are declared as public without proper access control modifiers, allowing any user to bypass transfer restrictions and manipulate special address settings. This enables unauthorized users to circumvent cold time transfer restrictions and potentially disrupt dividend distribution mechanisms, leading to privilege escalation and violation of the contract's intended tokenomics.",
+    "tags": [],
+    "title": "CVE-2025-57247 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57247"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2025-60957",
+    "published": "2025-10-06T17:16:06.497",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OS Command Injection vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to execute arbitrary code, cause a denial of service, gain escalated privileges, and gain sensitive information.",
+    "tags": [],
+    "title": "CVE-2025-60957 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60957"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-60964",
+    "published": "2025-10-06T17:16:07.307",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OS Command Injection vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to execute arbitrary code, cause a denial of service, gain escalated privileges, gain sensitive information, and possibly other unspecified impacts.",
+    "tags": [],
+    "title": "CVE-2025-60964 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60964"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2025-60965",
+    "published": "2025-10-06T17:16:07.417",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OS Command Injection vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to execute arbitrary code, cause a denial of service, gain escalated privileges, gain sensitive information, and possibly other unspecified impacts.",
+    "tags": [],
+    "title": "CVE-2025-60965 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60965"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-57515",
+    "published": "2025-10-06T18:15:51.663",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL injection vulnerability has been identified in Uniclare Student Portal v2. This flaw allows remote attackers to inject arbitrary SQL commands via vulnerable input fields, enabling the execution of time-delay functions to infer database responses.",
+    "tags": [],
+    "title": "CVE-2025-57515 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57515"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-52021",
+    "published": "2025-10-07T17:15:33.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A SQL Injection vulnerability exists in the edit_product.php file of PuneethReddyHC Online Shopping System Advanced 1.0. The product_id GET parameter is unsafely passed to a SQL query without proper validation or parameterization.",
+    "tags": [],
+    "title": "CVE-2025-52021 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52021"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-86345",
+    "published": "2026-10-02T00:17:04.180",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw was found in 389-ds-base. The server does not discard plaintext bytes already buffered from a client connection when negotiating StartTLS, allowing an on-path attacker to inject a crafted LDAP message that is processed after the TLS upgrade and whose response is delivered to the client in place of the client's own pending operation's response, due to messageID collision. This can cause a client application to treat a failed authentication (bind) attempt as successful.",
+    "tags": [],
+    "title": "CVE-2026-86345 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86345"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-77596",
+    "published": "2026-11-05T23:17:00.767",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the multi-user HTTP endpoints POST /apis/v2beta1/pipelines/upload and POST /apis/v2beta1/pipelines/upload_version call canUploadVersionedPipeline, which returns without SubjectAccessReview when the target namespace is empty while REQUIRE_NAMESPACE_FOR_PIPELINES defaults to false. A low-privilege tenant can create shared pipelines or inject attacker-controlled versions into existing shared pipelines without the required write permission; if the API server is directly reachable without an authenticating proxy, an unauthenticated caller can exploit the same bypass, while deployments protected by such a proxy do not expose anonymous access. An enabled unpinned recurring run that follows the latest version can then execute the injected specification in another tenant's namespace under that workload's service account, while pinned or embedded-specification runs are not automatically substituted. This issue is fixed in version 2.18.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-77596 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77596"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-63017",
+    "published": "2026-11-06T01:17:50.297",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Incorrect authorization in PowerSYSTEM Center allows a low-privileged, authenticated user to access resources normally limited to administrators.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-63017 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63017"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-63774",
+    "published": "2026-11-06T01:17:50.470",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Insufficient input validation in the PowerSYSTEM Center report designer allows an authenticated user to execute unauthorized SQL commands.",
+    "tags": [],
+    "title": "CVE-2026-63774 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63774"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-50110",
+    "published": "2025-09-15T14:15:43.400",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in the method push.lite.avtech.com.AvtechLib.GetHttpsResponse in AVTECH EagleEyes Lite 2.0.0, the GetHttpsResponse method transmits sensitive information - including internal server URLs, account IDs, passwords, and device tokens - as plaintext query parameters over HTTPS",
+    "tags": [],
+    "title": "CVE-2025-50110 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-50110"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2025-56706",
+    "published": "2025-09-16T12:15:33.707",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Edimax BR-6473AX v1.0.28 was discovered to contain a remote code execution (RCE) vulnerability via the Object parameter in the openwrt_getConfig function.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-56706 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-56706"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-57293",
+    "published": "2025-09-18T21:15:49.203",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A command injection vulnerability in COMFAST CF-XR11 (firmware V2.7.2) exists in the multi_pppoe API, processed by the sub_423930 function in /usr/bin/webmgnt. The phy_interface parameter is not sanitized, allowing attackers to inject arbitrary commands via a POST request to /cgi-bin/mbox-config?method=SET&section=multi_pppoe. When the action parameter is set to \"one_click_redial\", the unsanitized phy_interface is used in a system() call, enabling execution of malicious commands. This can lead to unauthorized access to sensitive files, execution of arbitrary code, or full device compromise.",
+    "tags": [],
+    "title": "CVE-2025-57293 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57293"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-52159",
+    "published": "2025-09-19T20:15:39.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Hardcoded credentials in default configuration of PPress 0.0.9.",
+    "tags": [],
+    "title": "CVE-2025-52159 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52159"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2025-54761",
+    "published": "2025-09-19T20:15:39.580",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in PPress 0.0.9 allowing attackers to gain escilated privlidges via crafted session cookie.",
+    "tags": [],
+    "title": "CVE-2025-54761 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54761"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-54815",
+    "published": "2025-09-19T20:15:39.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Server-side template injection (SSTI) vulnerability in PPress 0.0.9 allows attackers to execute arbitrary code via crafted themes.",
+    "tags": [],
+    "title": "CVE-2025-54815 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54815"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-10854",
+    "published": "2025-09-22T13:16:01.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The txtai framework allows the loading of compressed tar files as embedding indices. While the validate function is intended to prevent path traversal vulnerabilities by ensuring safe filenames, it does not account for symbolic links within the tar file. An attacker is able to write a file anywhere in the filesystem when txtai is used to load untrusted embedding indices",
+    "tags": [],
+    "title": "CVE-2025-10854 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10854"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-57605",
+    "published": "2025-09-22T16:15:45.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Lack of server-side authorisation on department admin assignment APIs in AiKaan IoT Platform allows authenticated users to elevate their privileges by assigning themselves as admins of other departments. This results in unauthorized privilege escalation across the department",
+    "tags": [],
+    "title": "CVE-2025-57605 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57605"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-57431",
+    "published": "2025-09-22T17:16:08.303",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Sound4 PULSE-ECO AES67 1.22 web-based management interface is vulnerable to Remote Code Execution (RCE) via a malicious firmware update package. The update mechanism fails to validate the integrity of manual.sh, allowing an attacker to inject arbitrary commands by modifying this script and repackaging the firmware.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-57431 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57431"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-57434",
+    "published": "2025-09-22T17:16:08.423",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Creacast Creabox Manager contains a critical authentication flaw that allows an attacker to bypass login validation. The system grants access when the username is creabox and the password begins with the string creacast, regardless of what follows.",
+    "tags": [],
+    "title": "CVE-2025-57434 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57434"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-43953",
+    "published": "2025-09-22T18:15:42.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In 2wcom IP-4c 2.16, the web interface allows admin and manager users to execute arbitrary code as root via a ping or traceroute field on the TCP/IP screen.",
+    "tags": [],
+    "title": "CVE-2025-43953 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-43953"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-57439",
+    "published": "2025-09-22T18:15:45.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Creacast Creabox Manager 4.4.4 contains a critical Remote Code Execution vulnerability accessible via the edit.php endpoint. An authenticated attacker can inject arbitrary Lua code into the configuration, which is then executed on the server. This allows full system compromise, including reverse shell execution or arbitrary command execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-57439 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57439"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-57685",
+    "published": "2025-09-22T19:15:44.873",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The LB-Link routers, including the BL-AC2100_AZ3 V1.0.4, BL-WR4000 v2.5.0, BL-WR9000_AE4 v2.4.9, BL-AC1900_AZ2 v1.0.2, BL-X26_AC8 v1.2.8, and BL-LTE300_DA4 V1.2.3 models, are vulnerable to unauthorized command injection. Attackers can exploit this vulnerability by accessing the /goform/set_serial_cfg interface to gain the highest level of device privileges without authorization, enabling them to remotely execute malicious commands.",
+    "tags": [],
+    "title": "CVE-2025-57685 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57685"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2025-46148",
+    "published": "2025-09-25T15:16:12.007",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In PyTorch through 2.6.0, when eager is used, nn.PairwiseDistance(p=2) produces incorrect results.",
+    "tags": [],
+    "title": "CVE-2025-46148 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46148"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2025-46149",
+    "published": "2025-09-25T15:16:12.153",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In PyTorch before 2.7.0, when inductor is used, nn.Fold has an assertion error.",
+    "tags": [],
+    "title": "CVE-2025-46149 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46149"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2025-46150",
+    "published": "2025-09-25T15:16:12.303",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In PyTorch before 2.7.0, when torch.compile is used, FractionalMaxPool2d has inconsistent results.",
+    "tags": [],
+    "title": "CVE-2025-46150 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46150"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2025-46152",
+    "published": "2025-09-25T15:16:12.470",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In PyTorch before 2.7.0, bitwise_right_shift produces incorrect output for certain out-of-bounds values of the \"other\" argument.",
+    "tags": [],
+    "title": "CVE-2025-46152 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46152"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2025-46153",
+    "published": "2025-09-25T15:16:12.603",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "PyTorch before 3.7.0 has a bernoulli_p decompose function in decompositions.py even though it lacks full consistency with the eager CPU implementation, negatively affecting nn.Dropout1d, nn.Dropout2d, and nn.Dropout3d for fallback_random=True.",
+    "tags": [],
+    "title": "CVE-2025-46153 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46153"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2025-55551",
+    "published": "2025-09-25T15:16:12.887",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in the component torch.linalg.lu of pytorch v2.8.0 allows attackers to cause a Denial of Service (DoS) when performing a slice operation.",
+    "tags": [],
+    "title": "CVE-2025-55551 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55551"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2025-55552",
+    "published": "2025-09-25T16:15:34.320",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "pytorch v2.8.0 was discovered to display unexpected behavior when the components torch.rot90 and torch.randn_like are used together.",
+    "tags": [],
+    "title": "CVE-2025-55552 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55552"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2025-55553",
+    "published": "2025-09-25T16:15:34.460",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A syntax error in the component proxy_tensor.py of pytorch v2.7.0 allows attackers to cause a Denial of Service (DoS).",
+    "tags": [],
+    "title": "CVE-2025-55553 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55553"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2025-55554",
+    "published": "2025-09-25T16:15:34.593",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "pytorch v2.8.0 was discovered to contain an integer overflow in the component torch.nan_to_num-.long().",
+    "tags": [],
+    "title": "CVE-2025-55554 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55554"
+  },
+  {
+    "category": "high",
+    "cvss": 6.5,
+    "id": "CVE-2025-55556",
+    "published": "2025-09-25T16:15:34.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "TensorFlow v2.18.0 was discovered to output random results when compiling Embedding, leading to unexpected behavior in the application.",
+    "tags": [],
+    "title": "CVE-2025-55556 (CVSS 6.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55556"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2025-55557",
+    "published": "2025-09-25T16:15:34.833",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A Name Error occurs in pytorch v2.7.0 when a PyTorch model consists of torch.cummin and is compiled by Inductor, leading to a Denial of Service (DoS).",
+    "tags": [],
+    "title": "CVE-2025-55557 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55557"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2025-55558",
+    "published": "2025-09-25T16:15:34.960",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A buffer overflow occurs in pytorch v2.7.0 when a PyTorch model consists of torch.nn.Conv2d, torch.nn.functional.hardshrink, and torch.Tensor.view-torch.mv() and is compiled by Inductor, leading to a Denial of Service (DoS).",
+    "tags": [],
+    "title": "CVE-2025-55558 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55558"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2025-55559",
+    "published": "2025-09-25T16:15:35.077",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered TensorFlow v2.18.0. A Denial of Service (DoS) occurs when padding is set to 'valid' in tf.keras.layers.Conv2D.",
+    "tags": [],
+    "title": "CVE-2025-55559 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55559"
+  },
+  {
+    "category": "high",
+    "cvss": 7.5,
+    "id": "CVE-2025-55560",
+    "published": "2025-09-25T16:15:35.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in pytorch v2.7.0 can lead to a Denial of Service (DoS) when a PyTorch model consists of torch.Tensor.to_sparse() and torch.Tensor.to_dense() and is compiled by Inductor.",
+    "tags": [],
+    "title": "CVE-2025-55560 (CVSS 7.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55560"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-55848",
+    "published": "2025-09-26T17:15:36.353",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue was discovered in DIR-823 firmware 20250416. There is an RCE vulnerability in the set_cassword settings interface, as the http_casswd parameter is not filtered by '&'to allow injection of reverse connection commands.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-55848 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55848"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-55847",
+    "published": "2025-09-26T18:15:36.367",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Wavlink M86X3A_V240730 contains a buffer overflow vulnerability in the /cgi-bin/ExportAllSettings.cgi file. The vulnerability arises because the Cookie parameter does not properly validate the length of input data. Attackers can exploit this to execute arbitrary code or cause a denial of service (DoS) on the system",
+    "tags": [],
+    "title": "CVE-2025-55847 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55847"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2025-56383",
+    "published": "2025-09-26T18:15:36.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Notepad++ v8.8.3 has a DLL hijacking vulnerability, which can replace the original DLL file to execute malicious code. NOTE: this is disputed by multiple parties because the behavior only occurs when a user installs the product into a directory tree that allows write access by arbitrary unprivileged users.",
+    "tags": [],
+    "title": "CVE-2025-56383 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-56383"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-56449",
+    "published": "2025-09-29T15:16:08.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security vulnerability was identified in Obsidian Scheduler's REST API 5.0.0 thru 6.3.0. If an account is locked out due to not enrolling in MFA (e.g. after the 7-day enforcement window), the REST API still allows the use of Basic Authentication to authenticate and perform administrative actions. In particular, the default admin account was found to be locked out via the web interface but still usable through the REST API. This allowed creation of a new privileged user, bypassing MFA protections. This undermines the intended security posture of MFA enforcement.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-56449 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-56449"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-57516",
+    "published": "2025-09-29T15:16:08.767",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OS Command injection vulnerability in PublicCMS PublicCMS-V5.202506.a, and PublicCMS-V5.202506.b allowing attackers to execute arbitrary commands via crafted DATABASE, USERNAME, or PASSWORD variables to the backupDB.bat file.",
+    "tags": [],
+    "title": "CVE-2025-57516 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57516"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-57483",
+    "published": "2025-09-29T18:15:33.600",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A reflected cross-site scripting (XSS) vulnerability in tawk.to chatbox widget v4 allows attackers to execute arbitrary Javascript in the context of the user's browser via injecting a crafted payload into the vulnerable parameter.",
+    "tags": [],
+    "title": "CVE-2025-57483 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57483"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-52039",
+    "published": "2025-10-01T15:15:45.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Frappe ERPNext 15.57.5, the function get_material_requests_based_on_supplier() at erpnext/stock/doctype/material_request/material_request.py is vulnerable to SQL Injection, which allows an attacker to extract all information from databases by injecting a SQL query into the txt parameter.",
+    "tags": [],
+    "title": "CVE-2025-52039 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52039"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-52040",
+    "published": "2025-10-01T15:15:46.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Frappe ERPNext 15.57.5, the function get_blanket_orders() at erpnext/controllers/queries.py is vulnerable to SQL Injection, which allows an attacker can extract all information from databases by injecting a SQL query into the blanket_order_type parameter.",
+    "tags": [],
+    "title": "CVE-2025-52040 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52040"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-52041",
+    "published": "2025-10-01T15:15:46.537",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Frappe ERPNext 15.57.5, the function get_stock_balance_for() at erpnext/stock/doctype/stock_reconciliation/stock_reconciliation.py is vulnerable to SQL Injection, which allows an attacker to extract all information from databases by injecting a SQL query into the inventory_dimensions_dict parameter.",
+    "tags": [],
+    "title": "CVE-2025-52041 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52041"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-52042",
+    "published": "2025-10-01T15:15:46.920",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In Frappe ERPNext 15.57.5, the function get_rfq_containing_supplier() at erpnext/buying/doctype/request_for_quotation/request_for_quotation.py is vulnerable to SQL Injection, which allows an attacker to extract all information from databases by injecting SQL query via the txt parameter.",
+    "tags": [],
+    "title": "CVE-2025-52042 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52042"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-59684",
+    "published": "2025-10-01T15:15:47.583",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "DigiSign DigiSigner ONE 1.0.4.60 allows DLL Hijacking.",
+    "tags": [],
+    "title": "CVE-2025-59684 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59684"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-56515",
+    "published": "2025-10-01T16:15:53.217",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "File upload vulnerability in Fiora chat application 1.0.0 through user avatar upload functionality. The application fails to validate SVG file content, allowing malicious SVG files with embedded foreignObject elements containing iframe tags and JavaScript event handlers (onmouseover) to be uploaded and stored. When rendered, these SVG files execute arbitrary JavaScript, enabling attackers to steal user sessions, cookies, and perform unauthorized actions in the context of users viewing affected profiles.",
+    "tags": [],
+    "title": "CVE-2025-56515 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-56515"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-28357",
+    "published": "2025-10-01T18:15:44.977",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A CRLF injection vulnerability in Neto CMS v6.313.0 through v6.314.0 allows attackers to execute arbitrary code via supplying a crafted HTTP request.",
+    "tags": [],
+    "title": "CVE-2025-28357 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-28357"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-57393",
+    "published": "2025-10-01T18:15:46.390",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stored cross-site scripting (XSS) in Kissflow Work Platform Kissflow Application Versions 7337 Account v2.0 to v4.2vallows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload.",
+    "tags": [],
+    "title": "CVE-2025-57393 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57393"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-60991",
+    "published": "2025-10-01T18:15:46.683",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A reflected cross-site scripted (XSS) vulnerability in Codazon Magento Themes v1.1.0.0 to v2.4.7 allows attackers to execute arbitrary Javascript in the context of a user's browser via a crafted payload injected into the cat parameter.",
+    "tags": [],
+    "title": "CVE-2025-60991 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60991"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2025-46205",
+    "published": "2025-10-01T19:15:35.883",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A heap-use-after free in the PdfTokenizer::ReadDictionary function of podofo v0.10.0 to v0.10.5 allows attackers to cause a Denial of Service (DoS) by supplying a crafted PDF file. NOTE: this is disputed by the Supplier because there is no available file to reproduce the issue.",
+    "tags": [],
+    "title": "CVE-2025-46205 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-46205"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-56588",
+    "published": "2025-10-01T20:18:36.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dolibarr ERP & CRM v21.0.1 were discovered to contain a remote code execution (RCE) vulnerability in the User module configuration via the computed field parameter.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2025-56588 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-56588"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-56551",
+    "published": "2025-10-03T17:15:47.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in DirectAdmin v1.680 allows unauthorized attackers to manipulate the page layout and replace the legitimate login interface with arbitrary attacker-controlled content via supplying a crafted GET request.",
+    "tags": [],
+    "title": "CVE-2025-56551 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-56551"
+  },
+  {
+    "category": "high",
+    "cvss": 8.9,
+    "id": "CVE-2025-61197",
+    "published": "2025-10-06T14:15:42.900",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An issue in Orban Optimod 5950, Optimod 5950HD, Optimod 5750, Optimod 5750HD, Optimod Trio Optimod version 1.0.0.33 - System version 2.5.26 allows a remote attacker to escalate privileges via the application stores user privilege/role information in client-side browser storage",
+    "tags": [],
+    "title": "CVE-2025-61197 (CVSS 8.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61197"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2025-60956",
+    "published": "2025-10-06T17:16:06.373",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cross Site Request Forgery (CSRF) vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to execute arbitrary code, cause a denial of service, gain escalated privileges, and gain sensitive information.",
+    "tags": [],
+    "title": "CVE-2025-60956 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60956"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-60959",
+    "published": "2025-10-06T17:16:06.737",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OS Command Injection vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to gain sensitive information.",
+    "tags": [],
+    "title": "CVE-2025-60959 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60959"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-60960",
+    "published": "2025-10-06T17:16:06.843",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OS Command Injection vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to execute arbitrary code, cause a denial of service, gain escalated privileges, and gain sensitive information.",
+    "tags": [],
+    "title": "CVE-2025-60960 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60960"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-60962",
+    "published": "2025-10-06T17:16:07.080",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OS Command Injection vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to gain sensitive information, and possibly other unspecified impacts.",
+    "tags": [],
+    "title": "CVE-2025-60962 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60962"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-60963",
+    "published": "2025-10-06T17:16:07.193",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OS Command Injection vulnerability in EndRun Technologies Sonoma D12 Network Time Server (GPS) F/W 6010-0071-000 Ver 4.00 allows attackers to execute arbitrary code, cause a denial of service, gain escalated privileges, and gain sensitive information.",
+    "tags": [],
+    "title": "CVE-2025-60963 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-60963"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2025-57564",
+    "published": "2025-10-07T14:15:38.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "CubeAPM nightly-2025-08-01-1 allow unauthenticated attackers to inject arbitrary log entries into production systems via the /api/logs/insert/elasticsearch/_bulk endpoint. This endpoint accepts bulk log data without requiring authentication or input validation, allowing remote attackers to perform unauthorized log injection. Exploitation may lead to false log entries, log poisoning, alert obfuscation, and potential performance degradation of the observability pipeline. The issue is present in the core CubeAPM platform and is not limited to specific deployment configurations.",
+    "tags": [],
+    "title": "CVE-2025-57564 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57564"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-113663",
+    "published": "2026-11-05T23:16:50.523",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AG2 is an open-source AgentOS. From 0.13.2 until ag2 1.1.1, and from autogen 0.13.2 to 0.14.1, SandboxShellTool configurations using allowed=[...] or readonly=True rely on ShellAdapter._filter and contains_shell_operator in ag2/tools/sandbox/filter.py and ag2/tools/sandbox/adapter/shell.py to validate a command prefix and reject selected shell syntax. The filter omits newline and carriage-return separators, while the accepted raw string is passed to sh -c, allowing an attacker-influenced agent command to execute an additional arbitrary statement. With the default LocalEnvironment backend, the injected statement runs as a host subprocess with the privileges of the agent process and can affect confidentiality, integrity, and availability. This issue is fixed in ag2 version 1.1.1.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-113663 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113663"
+  },
+  {
+    "category": "high",
+    "cvss": 5.8,
+    "id": "CVE-2026-88979",
+    "published": "2026-11-05T23:17:01.110",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. From 2.17.0 until 2.18.0, the TensorBoard proxy token introduced by the incomplete remediation for CVE-2026-54745 uses MINIO_SECRET_KEY as its HMAC secret, whose bundled default is publicly known. In an authorization-disabled deployment using that default, an unauthenticated attacker can forge a token containing a chosen viewerName and namespace; the proxy constructs the destination from the viewerName plus the -service suffix, the namespace, and the configured cluster domain, then reads responses on port 80 under the /tensorboard/<viewer>/ path. Resource-name validation and path-traversal rejection remain enforced, authorization-enabled deployments still check access to the selected namespace, and unrestricted metadata access, writes, or service disruption are not established. This issue is fixed in version 2.18.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-88979 (CVSS 5.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88979"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-88980",
+    "published": "2026-11-05T23:17:01.277",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the frontend GET /artifacts/get route accepts source=http or source=https with caller-controlled bucket and key values, and isAllowedResourceName permits an all-digit decimal host that the URL parser converts to an IPv4 address. The default ALLOWED_ARTIFACT_DOMAIN_REGEX and authorization-disabled standalone configuration allow an unauthenticated caller to fetch internal HTTP resources and receive their response body. In the authenticated multi-user configuration, the same destination-validation defect is reachable by a low-privilege tenant with a valid identity and authorized namespace. Cloud credential disclosure depends on reachable metadata services and attached roles, and the issue does not establish IMDSv2 bypass or credential access when metadata is blocked. This issue is fixed in version 2.18.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-88980 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88980"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-88981",
+    "published": "2026-11-05T23:17:01.433",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the frontend artifact download path for source=s3 or source=minio accepts providerInfo.Params.endpoint, and the archived pod-log path accepts S3-compatible endpoint metadata from workflow status, without requiring those endpoints to match operator-controlled storage configuration. In the shipped authorization-disabled standalone configuration, an unauthenticated caller can make the shared ml-pipeline-ui pod connect to arbitrary reachable hosts and return response data; requests may also reveal an access-key identifier when signed with configured object-store credentials. Multi-user secret-backed metadata remains restricted to the server namespace. This issue is fixed in version 2.18.0.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-88981 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88981"
+  },
+  {
+    "category": "high",
+    "cvss": 5.4,
+    "id": "CVE-2026-88982",
+    "published": "2026-11-05T23:17:01.600",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the legacy V1/raw-Argo execution cache mutating webhook and cache-server storage path hash selected template fields without the Kubernetes namespace, use the key alone for lookups and duplicate checks, and trust the mutable pipelines.kubeflow.org/execution_cache_key annotation when publishing outputs. In multi-user deployments where tenant namespaces share the cache service, a tenant with workload-submission privileges can read another namespace's cached outputs or seed matching outputs that are substituted into a later step. Standard KFP V2 component pods bypass this cache, matching requires the selected template fields and staleness policy, and arbitrary code execution or service availability impact is not established. This issue is fixed in version 2.18.0.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-88982 (CVSS 5.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88982"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-88984",
+    "published": "2026-11-05T23:17:01.760",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.16.1, the multi-user API server treats the empty namespace used by shared or global pipelines as an authorization exception for modification and deletion operations. An authenticated user can modify or delete shared pipeline definitions and versions without the required Kubernetes RBAC permissions, compromising their integrity and availability. Read-only access to shared pipelines remains intentional, single-user deployments intentionally bypass multi-user checks, and execution of a modified pipeline is a conditional downstream consequence. The separate shared-pipeline multipart upload authorization path is outside this advisory and is not remediated by version 2.16.1. This issue is fixed in version 2.16.1.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-88984 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88984"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-92693",
+    "published": "2026-11-05T23:17:01.923",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, parse_raw_packet_to_simple_packet_full() in src/simple_packet_parser_ng.cpp dereferences ipv6_extension_header_fragment_t when IpProtocolNumberIPV6_FRAG is present without first verifying that the eight-byte Fragment header remains. A crafted sFlow v5 RAW_PACKET_HEADER record can remotely reach this shared parser with the Fragment bytes omitted, causing an unauthenticated remote out-of-bounds read. The supplied harness detects the read under AddressSanitizer, but the advisory does not establish a production process crash. No fixed release is available as of this review.",
+    "tags": [],
+    "title": "CVE-2026-92693 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92693"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-92695",
+    "published": "2026-11-05T23:17:02.293",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, the live parse_packet() callback in src/pcap_plugin/pcap_collector.cpp is registered through pcap_loop and processes captured frames when pcap = on without checking packethdr->caplen. A short frame or an attacker-controlled IPv4 header length can make the parser dereference IP or transport headers beyond the captured bytes, causing an out-of-bounds read and process termination. No fixed release is available as of this review.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-92695 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92695"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-92698",
+    "published": "2026-11-05T23:17:02.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, process_sflow_flow_sample() in src/sflow_plugin/sflow_collector.cpp passes the attacker-controlled sflow_raw_protocol_header_t.header_size to parse_raw_packet_to_simple_packet_full() as its trusted captured length without comparing it with the bytes remaining in the record. An inflated header_size creates a false end pointer beyond the received sFlow v5 UDP buffer, defeating the nested parser's bounds checks and causing an unauthenticated remote out-of-bounds read and process crash, with possible limited exposure of adjacent bytes through parsed flow fields. No fixed release is available as of this review.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-92698 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92698"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209335",
+    "published": "2026-11-06T09:13:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "해외송금 및 외국인 대상 금융·생활 서비스를 제공하는 핀테크 기업 한패스가 외부 해킹 공격으로 일부 고객의 개인정보가 유출되는 사고를 당했다. 유출 대상에는 고객의 기본 신상정보뿐 아니라 소득금액증명과 외국인등록 사실증명 등 민감한 내용을 포함할 수 있는 증명서 원본도 포함돼 2차 피해 우려가 제기된다.한패스는 개인정보 유출 안내 및 사과문을 통해 2026년 11월 1일 오전 외부 해킹 공격으로 일부 고객의 개인정보가 외부에 유출된 정황을 확인했다고 밝혔다.회사에 따르면 개인정보 유출 추정 시점은 11월 1일 오전 4시 38분경이며",
+    "tags": [
+      "금융"
+    ],
+    "title": "한패스 해킹으로 고객 개인정보 유출…소득금액증명·외국인등록 사실증명까지 노출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209335"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209318",
+    "published": "2026-11-06T09:00:00+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "위드네트웍스가 지난 4일부터 5일까지 부산 벡스코에서 열린 '2026 부산 사이버보안 콘퍼런스'에 참가해 지속적 위협 노출 관리(CTEM) 기반 플랫폼 'withVTM'을 선보였다.이번 행사는 'AI시대 안전한 사이버 해양수도 부산'을 주제로 진행됐으며 보안 업계 관계자 1,000여 명이 참석했다. 위드네트웍스는 현장에서 관리 목록에서 누락된 외부 노출 자산과 단순 취약점이 서로 결합해 실제 침투 경로로 악용되는 위험성을 강조했다. 지난 10월 패치 공개 5일 만에 미국 사이버보안·인프라보안청(CISA)의 실제 악용 취약점(KEV)",
+    "tags": [],
+    "title": "위드네트웍스, 자산·취약점 통합 관리 플랫폼 'withVTM' 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209318"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209334",
+    "published": "2026-11-06T08:48:12+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "데일리시큐는 7월부터 장삼봉 작가(필명)의 정보보안 소설《로그아웃되지 않는 밤》을 매주 4편씩 연재한다. 화려한 디지털 서비스 뒤에서 보이지 않는 위협과 맞서는 보안 담당자들의 현실과 고뇌, 성장을 생생하게 담았다. 수많은 오탐 속에 숨은 단 하나의 진짜 공격을 추적하는 이들의 잠들지 못하는 밤이 시작된다. -다시 새벽 3시-다시, 새벽 3시였다.몇 달이 지나 있었다. 폭풍이 지나간 자리에, 회사는 빠르게 평소를 되찾았다. 사람들은 그 새벽의 일을 거의 잊었다. 반나절 멈췄던 에덴은 몇 번의 업데이트 공지와 이벤트 배너 아래로 금세",
+    "tags": [],
+    "title": "[정보보안 연재소설-로그아웃되지 않는 밤] 에필로그·부록 제64화 '다음 경보'",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209334"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209333",
+    "published": "2026-11-06T08:35:42+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "근래 발생된 금융 및 기업 영역의 보안 사고로 대응 조치를 하면서, 지난 정부24 해킹 사고를 다시 떠올리지 않을 수 없다. 이런 상황에서 보안 전문가 입장에서 가장 먼저 드는 질문이 하나 있고 이런 사유로 이 글을 쓰게 되었다. “지금 지방의 공공기관과 지방자치단체는 과연 안전할까?” 결론부터 말하면, 필자가 아는 한 현재의 인력 구조와 예산 배분 방식으로는 안전하다고 말하기 어렵다. 문제는 사고가 날지 여부가 아니라, 어느 기관에서, 얼마나 큰 규모로 터질 것인가에 가깝다. 물론 지방에 있다는 이유만으로 모든 기관이 취약한 것은",
+    "tags": [
+      "금융"
+    ],
+    "title": "[이혁중 CISO 칼럼] 공공 보안의 약한 고리: 기초지자체가 뚫리면 국가가 흔들린다",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209333"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/",
+    "published": "2026-11-06T00:56:44+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The FBI and CISA warn that hackers are actively targeting industrial refrigeration and cold-chain monitoring systems worldwide, potentially causing food spoilage, equipment damage, and fire hazards. [...]",
+    "tags": [],
+    "title": "FBI, CISA warn of cyberattacks targeting refrigeration systems",
+    "url": "https://www.bleepingcomputer.com/news/security/fbi-cisa-warn-of-cyberattacks-targeting-refrigeration-systems/"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25746",
+    "published": "2026-11-05T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guidance and an accompanying quick-reference list to help organizations assess vendor readiness for transitioning to post-quantum cryptography (PQC). As quantum computing advances, widely used public-key cryptography will become vulnerable to compromise from cryptographically relevant quantum computers (CRQCs). To protect their systems and data, organizations must plan for and transition to PQC—which includes algorithms capable of withstanding both classical computing and quantum-enabled threats—before CRQCs become available. Many organizations rely on third-party vendors for managed services, cloud capabilities, and other cryptography-dependent products and services. Cryptography is also embedded in systems and devices that are difficult to update, tied to long asset lifecycles, and require vendor support or replacement—such as industrial control systems and Internet of Things (IoT) devices. Reliance on vendors means that effective PQC transition depends on vendor readiness, and early, structured engagement with these vendors is critical to planning efforts. Organizations can use the vendor-neutral questions outlined in this guidance to determine whether a vendor understands quantum-related risks, maintains transparency over its cryptographic implementations, and supports a secure, cost-effective and timely transition to PQC. Visit CI",
+    "tags": [],
+    "title": "Post-Quantum Questions to Ask Your Vendors",
+    "url": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors"
+  },
+  {
+    "author": "CISA",
+    "category": "critical",
+    "id": "/node/25744",
+    "published": "2026-11-05T12:00:00+00:00",
+    "severity": "info",
+    "source": "CISA Advisories",
+    "summary": "Overview The Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Health and Human Services (HHS), U.S. Department of Agriculture (USDA), and the Department of Transportation (DoT)—hereafter referred to as “the authoring organizations”—are aware of malicious cyber activity targeting industrial refrigeration and cold chain monitoring systems globally. Organizations in the Healthcare and Public Health , Chemical , Food and Agriculture , and Transportation Systems Sectors widely use these systems, including in refrigerated transport services, for automated and remote monitoring of temperatures, continuous temperature logging, defrost cycle management, and energy optimization. The authoring organizations urge owners and operators to defend against this activity by using strong authentication, keeping systems updated, identifying any systems that are accessible from the internet, removing unnecessary remote access, and securing any necessary remote access. Threat The authoring organizations are aware of malicious cyber actors targeting electronic temperature controllers and commercial refrigeration controllers in retail grocery and cold storage facilities. The actors may exploit vulnerabilities or weaknesses in unpatched or internet-accessible controllers to remotely alter settings and force units into continuous heating and defrost cycles, which can cause widespread inventory loss and equipment hazards. Specifically, the actors may explo",
+    "tags": [
+      "RCE"
+    ],
+    "title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems",
+    "url": "https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/queens-library-ransomware-causes-disruptions",
+    "published": "2026-11-05T22:08:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "The library system, which has 66 branches serving the borough’s 2.3 million residents, published multiple alerts on Wednesday confirming that the disruption was caused by a ransomware attack.",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Queens Public Library says ransomware attack disrupted Wi-Fi, on-site computers",
+    "url": "https://therecord.media/queens-library-ransomware-causes-disruptions"
+  },
+  {
+    "author": "Microsoft Threat Intelligence and Microsoft Security Research",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=150836",
+    "published": "2026-11-05T23:46:50+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "Microsoft Threat Intelligence has observed threat actors using the agentic offensive security framework ARTEX to search GitHub for OAuth application secrets, which can be used to compromise the associated OAuth application and perform authenticated actions in the application’s tenant. Agents operating on behalf of threat actors then used the compromised OAuth applications to perform a variety of subsequent actions within compromised organizations. The post Threat actors use agentic AI tooling to find and abuse exposed secrets appeared first on Microsoft Security Blog .",
+    "tags": [],
+    "title": "Threat actors use agentic AI tooling to find and abuse exposed secrets",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
+  },
+  {
+    "author": "Genians",
+    "category": "research",
+    "id": "https://www.genians.co.kr/blog/zero-trust-verification",
+    "published": "2026-11-06T00:13:37+00:00",
+    "severity": "info",
+    "source": "지니언스 위협인텔",
+    "summary": "데카르트는 확실한 답에 도달하기 위해 먼저 의심했습니다. 그의 의심은 모든 것을 부정하기 위한 태도가 아니었습니다. 당연하다고 여겼던 것들을 하나씩 다시 확인하고, 끝까지 흔들리지 않는 근거를 찾기 위한 과정이었습니다. 보안에서도 비슷한 변화가 일어나고 있습니다. 과거에는 내부망, 사내 계정, 관리 단말 같은 기준이 신뢰의 근거가 되었습니다. 하지만 클라우드, 원격근무, SaaS, BYOD, API, 그리고 AI 도구가 일상화되면서 이런 기준만으로는 충분하지 않습니다. 이제 보안은 계속 질문해야 합니다.",
+    "tags": [],
+    "title": "데카르트로 읽는 AI 시대의 제로트러스트 - 나는 검증한다, 고로 신뢰한다",
+    "url": "https://www.genians.co.kr/blog/zero-trust-verification"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33494",
+    "published": "2026-11-06T02:00:02+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Friday, November 6th, 2026 https://isc.sans.edu/podcastdetail/10168, (Fri, Nov 6th)",
+    "url": "https://isc.sans.edu/diary/rss/33494"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMib0FVX3lxTE0ydlptb3puWkNDem9HWTVNNWhEcTYyaGg2Z21vUkdwcjBvdW9JR1E0a25BYlZvWFFCYU4xQUQtazgzdkkxemN5S0xjR2lWSU93OC1TSVFnMDZHdlhtMjZ1YnlUUG5XU01HYXNaWGJtaw",
+    "published": "2026-11-04T08:00:00+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "루트 권한 탈취 경로 1,000개 줄이기",
+    "tags": [],
+    "title": "루트 권한 탈취 경로 1,000개 줄이기",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0ydlptb3puWkNDem9HWTVNNWhEcTYyaGg2Z21vUkdwcjBvdW9JR1E0a25BYlZvWFFCYU4xQUQtazgzdkkxemN5S0xjR2lWSU93OC1TSVFnMDZHdlhtMjZ1YnlUUG5XU01HYXNaWGJtaw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE11TXVIRjQyWm9xWklocWdWMW04OV9OOTc3Yk5ObmRxWFYtaGdZQ21oaG5GeUZXcjROaWFiRWZ3TEZPVV9JSnBmTXJEcFNKZElRcWtQSTFLLUU0amYxUlRCNzd1OVVDS1dwOWgw0gFwQVVfeXFMTmJEUlk1LXVpM0dOWS1KTkU2QjhGdWJFWURtSU5udGl6b3FOeVJDZll3VE9uWGtRY2VKNDd5S21ybXpNcXpoYkp3UnFOZFYxVm5QVlY0SlBYeEZkRV94RTEwWG1RbGhVS1gtTGsyckxqbg",
+    "published": "2026-11-06T00:04:33+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 사칭해 \"돈 돌려드려요\"…보이스피싱 피해자 두 번 울렸다 - 머니투데이",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원 사칭해 \"돈 돌려드려요\"…보이스피싱 피해자 두 번 울렸다 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE11TXVIRjQyWm9xWklocWdWMW04OV9OOTc3Yk5ObmRxWFYtaGdZQ21oaG5GeUZXcjROaWFiRWZ3TEZPVV9JSnBmTXJEcFNKZElRcWtQSTFLLUU0amYxUlRCNzd1OVVDS1dwOWgw0gFwQVVfeXFMTmJEUlk1LXVpM0dOWS1KTkU2QjhGdWJFWURtSU5udGl6b3FOeVJDZll3VE9uWGtRY2VKNDd5S21ybXpNcXpoYkp3UnFOZFYxVm5QVlY0SlBYeEZkRV94RTEwWG1RbGhVS1gtTGsyckxqbg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE02MFlyZi1WSEV2ZTFmVEhtaWloT3FKVkt6UmVGNGFmc1dOa3FTVGhkeGUzX1BLWk1HMjktbDZkQS1uSjd1NzFJSWJxRmZEa0ZhWTRCVzhRNWdJTWNqMkJORQ",
+    "published": "2026-11-06T01:14:44+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹 취약 고리 GA 74곳, 금융보안원 가입 추진…회비 놓고 '줄다리기'",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 취약 고리 GA 74곳, 금융보안원 가입 추진…회비 놓고 '줄다리기'",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE02MFlyZi1WSEV2ZTFmVEhtaWloT3FKVkt6UmVGNGFmc1dOa3FTVGhkeGUzX1BLWk1HMjktbDZkQS1uSjd1NzFJSWJxRmZEa0ZhWTRCVzhRNWdJTWNqMkJORQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE5aVEJZQTJyeExCZXc5YTNjUUFKemVZY1hLM1k4a2V4NF9GSFFZa0hFNjY0bjBLQmFaUUZRMUFVUlpiYWgxUWVrZWphM0RNeHVFX2NnaE91anhVemtucWxtVEZ5V1VONlFLb2U2ZWlhUmVJTjA",
+    "published": "2026-11-05T23:46:40+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "“보이스피싱 피해금 돌려드립니다”…금융보안원 사칭한 2차 사기 주의보",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "“보이스피싱 피해금 돌려드립니다”…금융보안원 사칭한 2차 사기 주의보",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5aVEJZQTJyeExCZXc5YTNjUUFKemVZY1hLM1k4a2V4NF9GSFFZa0hFNjY0bjBLQmFaUUZRMUFVUlpiYWgxUWVrZWphM0RNeHVFX2NnaE91anhVemtucWxtVEZ5V1VONlFLb2U2ZWlhUmVJTjA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE1IcHY3RWpsd2VKV0FuRklsZ3pjbTM3VVZWa0JPTlhGMkllZjhsanBZQlBQNG1laWJsUnpmQ0M2cXhvVURzQjYyVzh3M1JfRXhvVzMtbzY2N2VRYkdRYndEejhGT1ZqUGw2cWVVaWNVZlo",
+    "published": "2026-11-05T22:52:52+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"AI 보안 위협 상시적\"…증권사 이사회도 금융보안원 '특별 과외' 연합인포맥스 47만건 유출에 털린 금융권... ‘낡은’ 망분리 버리고 ‘AI 방어막’ 짠다 보안뉴스 잇단 정보 유출에 580개사 전수 점검… 국민 피로 해소할까 한겨레21",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"AI 보안 위협 상시적\"…증권사 이사회도 금융보안원 '특별 과외'",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1IcHY3RWpsd2VKV0FuRklsZ3pjbTM3VVZWa0JPTlhGMkllZjhsanBZQlBQNG1laWJsUnpmQ0M2cXhvVURzQjYyVzh3M1JfRXhvVzMtbzY2N2VRYkdRYndEejhGT1ZqUGw2cWVVaWNVZlo?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE41VEhOOGRtZ3huQ0NSUHBMdDV6d3Brejh5SXdSX0FkYVpGNGk0SFFtQlM4SWdjLVZMZVBnaDZuQkF5Sy0yNHZBdmZyeGFpcE1SUXdVU0lGUDg2RFptLUl6QWlibm9pRjRkT3c",
+    "published": "2026-11-06T01:56:01+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 사칭 “보이스피싱 피해금 환급” 100% 사기! \"주의\"",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원 사칭 “보이스피싱 피해금 환급” 100% 사기! \"주의\"",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE41VEhOOGRtZ3huQ0NSUHBMdDV6d3Brejh5SXdSX0FkYVpGNGk0SFFtQlM4SWdjLVZMZVBnaDZuQkF5Sy0yNHZBdmZyeGFpcE1SUXdVU0lGUDg2RFptLUl6QWlibm9pRjRkT3c?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE81ZGlQVVdrMzhUZTV2NDRZc194WlBLbEZRcWp2ZFN6TDRBTDFRMVVoTkFrUWRRek10Y2ZSTVg5S1JpUjFCRk1ETFRFVVFTSW01N0ZjSjd5d0Y4aENRVUJsTEFFaGNOM0hzN29ZdUlyaw",
+    "published": "2026-11-06T01:22:22+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 사칭 '피해금 환급' 사기 등장…피해자 두 번 울린다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 사칭 '피해금 환급' 사기 등장…피해자 두 번 울린다",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE81ZGlQVVdrMzhUZTV2NDRZc194WlBLbEZRcWp2ZFN6TDRBTDFRMVVoTkFrUWRRek10Y2ZSTVg5S1JpUjFCRk1ETFRFVVFTSW01N0ZjSjd5d0Y4aENRVUJsTEFFaGNOM0hzN29ZdUlyaw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE9MNDlta3FFWl8wUkgyUFdDdWxMLXdOQ3l6NnplWVdGU2hYY1BDWTh6RWhoUEViMG83SWNBbERUZlVlZlNjM1VSam4yRG9aVUhqMkFfYzVqTmtXLVVSNTFNaU1kN1NQbEY3d2tqV0RNb3h4Sktj",
+    "published": "2026-11-06T01:18:02+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 \"보이스피싱 피해금 환급해준다며 돈 요구하면 100% 사기\"",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원 \"보이스피싱 피해금 환급해준다며 돈 요구하면 100% 사기\"",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9MNDlta3FFWl8wUkgyUFdDdWxMLXdOQ3l6NnplWVdGU2hYY1BDWTh6RWhoUEViMG83SWNBbERUZlVlZlNjM1VSam4yRG9aVUhqMkFfYzVqTmtXLVVSNTFNaU1kN1NQbEY3d2tqV0RNb3h4Sktj?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE1Deng3T21UR3pFSzU1ajBKaURTZlE2OTNuMFBkR3piQXo2Wk52bXlKTmJod1k0d18yakladDdORFhYeFo0WnIzSDYtRW1ZUVotMHcxSVk3ZHNLOHREWXpWX0FWZkI3LTg",
+    "published": "2026-11-06T01:26:02+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "“금보원 사칭 보이스피싱 피해금 환급” 사기",
+    "tags": [
+      "피싱"
+    ],
+    "title": "“금보원 사칭 보이스피싱 피해금 환급” 사기",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1Deng3T21UR3pFSzU1ajBKaURTZlE2OTNuMFBkR3piQXo2Wk52bXlKTmJod1k0d18yakladDdORFhYeFo0WnIzSDYtRW1ZUVotMHcxSVk3ZHNLOHREWXpWX0FWZkI3LTg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE82TkN1MWRjeFVOUlplRGZndjE2dXBqMTdIYjZmM2F3STVQREx2YURIZFZ1Y3dvMnF3TExZNno5NTBoM0Etb1c1NWVIUmFLVnJXWm1hX1oteGpYVDlTb3R6Nmcxd1ZTdDg",
+    "published": "2026-11-06T01:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹 37곳 번진 금융권…보이스피싱은 금융사가 배상",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "해킹 37곳 번진 금융권…보이스피싱은 금융사가 배상",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE82TkN1MWRjeFVOUlplRGZndjE2dXBqMTdIYjZmM2F3STVQREx2YURIZFZ1Y3dvMnF3TExZNno5NTBoM0Etb1c1NWVIUmFLVnJXWm1hX1oteGpYVDlTb3R6Nmcxd1ZTdDg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE1ibURacUVramd4dF9ESWh0czlrNGRNeWlZWWd3WVZ0akFzUVNMWnJNY3l3UlRhWmc1MlZJNG9OU3VSZHI5b3JHWENIR042eVVUdmdV",
+    "published": "2026-11-06T01:12:55+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "절박한 피해자 노린 덫…'환급 빙자' 신종 피싱 기승",
+    "tags": [
+      "피싱"
+    ],
+    "title": "절박한 피해자 노린 덫…'환급 빙자' 신종 피싱 기승",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1ibURacUVramd4dF9ESWh0czlrNGRNeWlZWWd3WVZ0akFzUVNMWnJNY3l3UlRhWmc1MlZJNG9OU3VSZHI5b3JHWENIR042eVVUdmdV?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1mWWQ1MTlIV2Ita01Bc2VRYW1NV3htazJ6NkNtSW5TTFpWM1dtUk01ZmhmMXNMVEd2bWkzdUpUTkg0NmlXM0tvQ3FjMXVQR3p4VzJsalVWTkdiOUFaWFA5VzF2ZWZQXy1IM0Y0",
+    "published": "2026-11-06T02:09:30+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "보이스피싱 당했다면 ‘환급 사기’도 조심···공격자, 피해금 돌려준다며 돈 요구",
+    "tags": [
+      "피싱"
+    ],
+    "title": "보이스피싱 당했다면 ‘환급 사기’도 조심···공격자, 피해금 돌려준다며 돈 요구",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1mWWQ1MTlIV2Ita01Bc2VRYW1NV3htazJ6NkNtSW5TTFpWM1dtUk01ZmhmMXNMVEd2bWkzdUpUTkg0NmlXM0tvQ3FjMXVQR3p4VzJsalVWTkdiOUFaWFA5VzF2ZWZQXy1IM0Y0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE53WmNsYngtdDVEb1hvX3o1VXgzT2xGUTE3dTZZcTFJVFdFcnBEV3hmMHJNYVBBV0JVa2JocWdfclpYVWtCbkcxNVFMbERyV1kySGVXczd6aXU3MnFVVEZ5V05n",
+    "published": "2026-11-05T00:32:34+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융당국 \"금융사 해킹 37개곳 40건…자금탈취 10억 원\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국 \"금융사 해킹 37개곳 40건…자금탈취 10억 원\"",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE53WmNsYngtdDVEb1hvX3o1VXgzT2xGUTE3dTZZcTFJVFdFcnBEV3hmMHJNYVBBV0JVa2JocWdfclpYVWtCbkcxNVFMbERyV1kySGVXczd6aXU3MnFVVEZ5V05n?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249758",
+    "published": "2026-11-06T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융권은 개인정보 유출 사고에 따른 보이스피싱 예방에 총력 대응하고 있습니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249758&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTFBNMHpCSmt3aFlkNUNSdU02M0RYcGF1dlBLTHoxQmJWaFc1aGdYcjdtbVEydm94YlRmYThQUGJ1ZGRnWU5pNnI3YnRXcmpLazNWNEV5Ui1lU1l5alo5LTl0cXdvbEpub3NtRHc",
+    "published": "2026-11-06T00:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[산업계 해킹 비상④] 플랫폼 몸집 커졌지만 보안은 허점···유통업계, 대응 시험대",
+    "tags": [],
+    "title": "[산업계 해킹 비상④] 플랫폼 몸집 커졌지만 보안은 허점···유통업계, 대응 시험대",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBNMHpCSmt3aFlkNUNSdU02M0RYcGF1dlBLTHoxQmJWaFc1aGdYcjdtbVEydm94YlRmYThQUGJ1ZGRnWU5pNnI3YnRXcmpLazNWNEV5Ui1lU1l5alo5LTl0cXdvbEpub3NtRHc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTFB2UEJ5dEExN3ZnR1h4d0o4SWxabGJ0UnhCdVY4WkVlckFNWHJ0MTRBaVByMWJKeGpib1J4NjBRLVdTalFvUGxEYVh0LXhCQQ",
+    "published": "2026-11-06T00:20:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“AI 해킹 다 막을 수 없다”…침입 전제한 보안체계 필요",
+    "tags": [],
+    "title": "“AI 해킹 다 막을 수 없다”…침입 전제한 보안체계 필요",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB2UEJ5dEExN3ZnR1h4d0o4SWxabGJ0UnhCdVY4WkVlckFNWHJ0MTRBaVByMWJKeGpib1J4NjBRLVdTalFvUGxEYVh0LXhCQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9qaWxVdGtKWkk0b285Y3JfajFvbDQtYzJ0S0lyV0Q3YzY3VFo3a1BEYWlOQ1RSTUhXVHNUaU9NWG1mc3V5aE9DOVFqY2ZBQVNjM0lKNmxGcHJuaGQzQ1hVUmZsU1ZYVUJET0ExWg",
+    "published": "2026-11-06T01:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "반복되는 개인정보 유출, 조직의 대응체계는 작동하는가",
+    "tags": [],
+    "title": "반복되는 개인정보 유출, 조직의 대응체계는 작동하는가",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9qaWxVdGtKWkk0b285Y3JfajFvbDQtYzJ0S0lyV0Q3YzY3VFo3a1BEYWlOQ1RSTUhXVHNUaU9NWG1mc3V5aE9DOVFqY2ZBQVNjM0lKNmxGcHJuaGQzQ1hVUmZsU1ZYVUJET0ExWg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE0xbXpLc3pzaVRRR1pHaVhrc2N3aVdmOW51dkRhSnA2RmNYVHJrblhRSDREZ1kzZFpjUFNQbU1LdGNlb3hqUjlWLXFFNmNHQWZoVkFNbDlWV0NvUdIBVEFVX3lxTE1ybVZCZ2ZIeV9GVEllYnlSUGVHSVppa04zZnI4YU16dVEzeFlRTkRCOWJWUzlhSjhLVG11eENuSlZXV1p2TXY1SUNDcjZ3V0xTalp5aw",
+    "published": "2026-11-06T00:09:26+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡 '4000억원대 과징금' 집행정지 기각…\"결정문 검토 후 대응\"",
+    "tags": [],
+    "title": "쿠팡 '4000억원대 과징금' 집행정지 기각…\"결정문 검토 후 대응\"",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0xbXpLc3pzaVRRR1pHaVhrc2N3aVdmOW51dkRhSnA2RmNYVHJrblhRSDREZ1kzZFpjUFNQbU1LdGNlb3hqUjlWLXFFNmNHQWZoVkFNbDlWV0NvUdIBVEFVX3lxTE1ybVZCZ2ZIeV9GVEllYnlSUGVHSVppa04zZnI4YU16dVEzeFlRTkRCOWJWUzlhSjhLVG11eENuSlZXV1p2TXY1SUNDcjZ3V0xTalp5aw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9qOGM0cjF1ZDZVTEh6Zl84b2lzNzhOUkJ5RWpvelloZjV2U296TDRnQUlQZWxWTXNPQ0ZETGtjY2o4QWU4c284X0daWWlHeVZ6QV9na2FmamJMbW45Z05hWF9Ca3ZkM1g1Vml2ZA",
+    "published": "2026-11-06T00:32:48+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "쿠팡, 개인정보 유출 과징금 4235억 집행정지 불발",
+    "tags": [],
+    "title": "쿠팡, 개인정보 유출 과징금 4235억 집행정지 불발",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9qOGM0cjF1ZDZVTEh6Zl84b2lzNzhOUkJ5RWpvelloZjV2U296TDRnQUlQZWxWTXNPQ0ZETGtjY2o4QWU4c284X0daWWlHeVZ6QV9na2FmamJMbW45Z05hWF9Ca3ZkM1g1Vml2ZA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTFBQajRXTTZwLW9hdy14X1ljcG9TZ1ZNbFh6ekZSSmRPNWNtR3ppOVpickpUNW9vU0NMMS1XeTVQSVEzS1lhaVpyXzN5dFZtZk40TjVUdHJiSG16bDTSAWBBVV95cUxPempkdEotN0RkX3lGLTJZOXJYTFlSTllWTzhnZE9na21EUnBUSXY3Qnd2UGVublIyNmRHVEhuRWFPVGotdGVYSEo0dklGREFHUW9MbjFyV0xLbjJBX2VSbmo",
+    "published": "2026-11-06T02:16:33+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "당국, 추가 유출에 특별대응 연장…\"고객자금 피해 보고는 없어\"",
+    "tags": [],
+    "title": "당국, 추가 유출에 특별대응 연장…\"고객자금 피해 보고는 없어\"",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBQajRXTTZwLW9hdy14X1ljcG9TZ1ZNbFh6ekZSSmRPNWNtR3ppOVpickpUNW9vU0NMMS1XeTVQSVEzS1lhaVpyXzN5dFZtZk40TjVUdHJiSG16bDTSAWBBVV95cUxPempkdEotN0RkX3lGLTJZOXJYTFlSTllWTzhnZE9na21EUnBUSXY3Qnd2UGVublIyNmRHVEhuRWFPVGotdGVYSEo0dklGREFHUW9MbjFyV0xLbjJBX2VSbmo?oc=5"
   }
 ]
