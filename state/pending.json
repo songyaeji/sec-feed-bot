@@ -2297,5 +2297,373 @@
     ],
     "title": "미래에셋증권도 해킹, 3만9000여명 정보유출…금융당국에 신고",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fdnA1cmY3WHpRcGlfYWFCdkR5eVQ4TnczOWZZVWxPYVViNm13SXJ1VVp3Rm84b2pEdGZEUVNQYTg5MmZjeHlYZ0l4Z1J3Qk1RZjZ0Y3lB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-124427",
+    "published": "2026-11-08T14:18:08.517",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Craft CMS from 5.0.0 before 5.11.2 contains an authorization bypass vulnerability that allows anonymous GraphQL clients to read out-of-scope section entries via prev/next fields. Attackers can chain next hops from one visible in-scope entry to enumerate entries and read titles, slugs, and custom-field content from withheld sections.",
+    "tags": [],
+    "title": "CVE-2026-124427 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124427"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-124440",
+    "published": "2026-11-08T14:18:10.633",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Kyverno from 1.19.1 before 1.19.2 contains an authorization bypass vulnerability in the apiCall namespace clamp that allows namespace tenants to issue cross-namespace and cluster-scoped API requests by appending malformed percent-escapes to urlPath. Attackers can create namespaced Policies whose apiCall runs as the admission-controller ServiceAccount to read other namespaces' resources and create mutating webhooks, escalating to cluster admin.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-124440 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124440"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-124445",
+    "published": "2026-11-08T14:18:11.487",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenEMR from 7.0.1 before 8.4.0 contains a flaw in src/Common/Auth/OneTimeAuth.php that ignores the enforce_onetime_use and max_access_count flags, never revokes consumed service_auth tokens, and checks login_pin without rate limiting or strict comparison. Attackers holding a captured token can replay it or brute-force the PIN to open patient-portal sessions exposing PHI.",
+    "tags": [
+      "RCE",
+      "APT"
+    ],
+    "title": "CVE-2026-124445 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124445"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-124450",
+    "published": "2026-11-08T14:18:12.260",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a broken access control and path traversal vulnerability in the fax/sms module disposeDocument action via an unvalidated file_path parameter. Authenticated low-privilege users can read sqlconf.php to recover database credentials and write arbitrary files as the web user, enabling remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-124450 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124450"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-124469",
+    "published": "2026-11-08T14:18:15.130",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains an SQL injection vulnerability in the Fee Sheet drug-inventory lookup (DrugSalesService::sellDrug) that interpolates the prod[N][warehouse] POST field into an ORDER BY clause. Low-privileged authenticated users can submit Fee Sheet product lines with constant subqueries to run a time-based blind oracle, extracting patient data and users_secure bcrypt hashes.",
+    "tags": [],
+    "title": "CVE-2026-124469 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124469"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-124490",
+    "published": "2026-11-08T14:18:18.667",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a path traversal vulnerability in the RingCentral RCFaxClient disposeDocument() method of oe-module-faxsms that allows authenticated attackers to read and write arbitrary files via the file_path parameter. Attackers can use action=download to read credentials and source code, or action=setup with base64 content to write web-executable files for code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-124490 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124490"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124430",
+    "published": "2026-11-08T14:18:08.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Craft CMS from 5.10.0 before 5.11.2 contains a remote code execution vulnerability that allows non-administrator control panel users to obtain HMAC-signed Twig templates via the app/render-elements endpoint. Attackers can submit the signed templated returnUrl as the login redirect parameter, triggering unsandboxed renderObjectTemplate() evaluation and executing OS commands as the PHP worker.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-124430 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124430"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-124436",
+    "published": "2026-11-08T14:18:10.000",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenRemote before 1.32.2 contains an improper authorization vulnerability that allows realm administrators to access and modify global resources by calling admin endpoints lacking super administrator checks. Attackers can change the global keycloakUrl via /configuration/manager to redirect other realms' console authentication for credential phishing, inject CSS, replace map tiles, and delete logs.",
+    "tags": [
+      "RCE",
+      "피싱"
+    ],
+    "title": "CVE-2026-124436 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124436"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124441",
+    "published": "2026-11-08T14:18:10.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Kyverno before 1.19.2 contains an authorization bypass vulnerability that allows namespaced tenants to generate any resource kind in any namespace by templating the generate rule's kind and namespace with variables. Attackers can create a Policy and trigger ConfigMap in their own namespace, causing the privileged background-controller to write NetworkPolicies or RoleBindings into victim or kube-system namespaces.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-124441 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124441"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124446",
+    "published": "2026-11-08T14:18:11.650",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a path traversal vulnerability in the FaxSMS module's RCFaxClient and SignalWireClient disposeDocument functions that allows authenticated low-privilege users to read and overwrite arbitrary files via the unsanitized file_path parameter. Attackers can request action=download to retrieve cleartext files like sqlconf.php database credentials and keys, or use action=setup to overwrite web-server-writable files with ciphertext.",
+    "tags": [],
+    "title": "CVE-2026-124446 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124446"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-124447",
+    "published": "2026-11-08T14:18:11.803",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in OnsitePortalActivityController::Update() that checks the request's patientId instead of the stored record's owner. Authenticated portal patients can send PUT requests to the onsiteportalactivity API with another patient's activity id and their own patientId to disclose tableArgs and checksum data, overwrite narratives and status, and take ownership of the record.",
+    "tags": [],
+    "title": "CVE-2026-124447 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124447"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-124459",
+    "published": "2026-11-08T14:18:13.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in many encounter-form view and save endpoints that lack patient/encounter ownership checks. Authenticated clinical users can enumerate sequential form id values in requests such as soap/view.php and save.php to read and overwrite other patients' clinical records.",
+    "tags": [],
+    "title": "CVE-2026-124459 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124459"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-124461",
+    "published": "2026-11-08T14:18:13.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a missing authorization vulnerability in library/ajax/upload.php that allows any authenticated user to read and overwrite document data by supplying an arbitrary doc_id. Low-privilege users can enumerate doc_id values with the fetch and save actions to disclose patient health information and tamper with medical records across all patients.",
+    "tags": [],
+    "title": "CVE-2026-124461 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124461"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-124463",
+    "published": "2026-11-08T14:18:14.167",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a stored cross-site scripting vulnerability that allows authenticated users with CAMOS access to inject HTML by saving malicious CAMOS content through ajax_save.php. Attackers can store a script payload that executes unencoded when the entry is printed via the non-print_html branch of rx_print.php, performing actions and reading data as the victim user.",
+    "tags": [],
+    "title": "CVE-2026-124463 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124463"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124467",
+    "published": "2026-11-08T14:18:14.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.4.0 contains a local file inclusion in the ESign router (library/ESign/Router.php), which passes the unsanitized module parameter into a require_once of '<module>/Controller.php', and the fax module's faxProcessUploads writes attacker-named files to a predictable temp path without extension checks. Authenticated attackers can upload a PHP file named Controller.php, then request interface/esign/index.php with a traversing module parameter to include it and execute arbitrary code.",
+    "tags": [],
+    "title": "CVE-2026-124467 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124467"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-124471",
+    "published": "2026-11-08T14:18:15.447",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a missing authorization vulnerability in interface/billing/sl_eob_invoice.php that allows any authenticated user to read and modify billing data for any encounter. Attackers can iterate the id parameter to read patient names and billing notes, and post payments, adjustments, deletions, or billing notes against any patient's account.",
+    "tags": [],
+    "title": "CVE-2026-124471 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124471"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-124472",
+    "published": "2026-11-08T14:18:15.610",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a missing authorization vulnerability in interface/billing/sl_eob_patient_note.php that allows any authenticated user to read and modify patient billing notes. Attackers with low-privilege accounts can enumerate the patient_id parameter and submit POST requests using the embedded CSRF token to view or tamper with confidential billing data.",
+    "tags": [],
+    "title": "CVE-2026-124472 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124472"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124477",
+    "published": "2026-11-08T14:18:16.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a missing authorization vulnerability that allows low-privileged authenticated users to delete arbitrary patient recall records via the delete_Recall action. Attackers can send POST requests to /interface/main/messages/save.php with a target pid and r_ID to remove recall data without ACL or ownership checks.",
+    "tags": [],
+    "title": "CVE-2026-124477 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124477"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124480",
+    "published": "2026-11-08T14:18:17.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.4.0 contains an authorization bypass vulnerability that allows low-privileged authenticated users to read cross-patient FHIR QuestionnaireResponse data by sending the APICSRFTOKEN header. Attackers can reuse the session-exposed api_csrf_token_js value to skip FHIR scope checks and call GET /fhir/QuestionnaireResponse, exfiltrating site-wide questionnaire answer PHI.",
+    "tags": [],
+    "title": "CVE-2026-124480 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124480"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-124483",
+    "published": "2026-11-08T14:18:17.617",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.4.0 contains an incorrect authorization vulnerability because the prescription REST API routes check the patients.med ACL instead of patients.rx and request no specific permission bit, so read-only Medical/History access passes the check. Authenticated staff users can reuse the UI-exposed APICSRFTOKEN to enumerate prescription UUIDs, forge prescriptions for arbitrary patients, and deactivate existing prescriptions tenant-wide.",
+    "tags": [],
+    "title": "CVE-2026-124483 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124483"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124484",
+    "published": "2026-11-08T14:18:17.773",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.4.0 contains a missing authorization vulnerability in portal onsite-document APIs that allows any authenticated core user to access cross-patient documents. Attackers can omit the patientId parameter and supply arbitrary record IDs to list, read, and overwrite other patients' portal documents, signatures, and template data.",
+    "tags": [],
+    "title": "CVE-2026-124484 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124484"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-124486",
+    "published": "2026-11-08T14:18:18.073",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains a missing authorization vulnerability in the classic document controller that allows low-privilege authenticated users to recategorize other patients' documents. Attackers can invoke move_action_process to move a document into a patients|demo category, then retrieve it with an empty patient_id to exfiltrate PHI and tamper with charts.",
+    "tags": [],
+    "title": "CVE-2026-124486 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124486"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-124488",
+    "published": "2026-11-08T14:18:18.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenEMR before 8.3.0 contains an authorization bypass vulnerability that allows authenticated clinicians lacking high-sensitivity permission to read and modify encounter-bound forms via load_form.php. Attackers can request the Clinical Notes or Care Plan direct loader to obtain restricted content and a CSRF token, then submit save.php to tamper with clinical records.",
+    "tags": [],
+    "title": "CVE-2026-124488 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124488"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209392",
+    "published": "2026-11-08T23:08:25+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "글로벌 디지털 인증서 발급기업 디지서트(DigiCert)가 내부 업무 시스템의 보안 설정 오류와 접근권한 관리 취약점으로 해킹 피해를 입었다. 공격자는 외부에서 임의로 계정을 생성한 뒤 과거 고객정보가 보관된 시스템에 접근했으며, 일부 고객의 여권과 운전면허증 등 민감한 신원확인 서류까지 노출된 것으로 확인됐다.특히 이번 사고는 2025년 2월 서버 이전 과정에서 발생한 보안 설정 오류가 16개월 넘게 방치된 데다, 디지서트가 2026년 6월 비인가 계정의 존재를 확인하고도 실제 고객정보 접근 여부를 제대로 파악하지 못했다는 점에서",
+    "tags": [],
+    "title": "글로벌 인증서 기업 디지서트 해킹…고객 여권·운전면허증 등 신원확인 서류 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209392"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209388",
+    "published": "2026-11-08T16:52:07+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "디지털자산 운용사 하이퍼리즘(Hyperithm)이 외부 사이버공격을 받아 주민등록번호와 은행 계좌정보를 포함한 개인정보가 유출된 것으로 확인됐다. 공격자는 회사 업무용 서버를 통해 외부 클라우드 저장소에 보관된 업무 자료에 비정상적으로 접근했으며, 회사는 사고 발생 나흘 뒤 이를 인지하고 서버 중단과 계정 차단 등 긴급 대응에 나섰다.하이퍼리즘 유한책임회사(대표 오상록·이원준)는 11월 6일 공식 홈페이지에 '개인정보 유출 관련 안내 및 사과 말씀'을 게시하고, 외부 공격으로 회사가 보관하던 개인정보가 유출된 사실을 확인했다고 밝혔",
+    "tags": [
+      "금융"
+    ],
+    "title": "디지털자산 운용사 '하이퍼리즘' 해킹…주민등록번호·은행 계좌정보까지 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209388"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209387",
+    "published": "2026-11-08T16:42:42+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 대형 엔터테인먼트 기업 SM엔터테인먼트와 팬 소통 플랫폼 '버블(bubble)' 운영사 디어유, 공연기획사 드림메이커에서 개인정보 유출사고가 발생했다. 외부 공격자가 업무시스템에 비인가 접근해 내부 문서와 개인정보를 탈취한 것으로 확인됐으며, 유출 항목에는 주민등록번호와 계좌번호, 계약서 정보, 임직원 인사정보 등이 포함됐다.SM엔터테인먼트와 디어유, 드림메이커가 공식 홈페이지에 게시한 개인정보 유출 안내문을 종합하면, 세 회사 모두 2026년 11월 4일경 개인정보 유출이 발생한 것으로 확인됐다. 각 회사는 현재 관계당국 및",
+    "tags": [
+      "금융"
+    ],
+    "title": "SM엔터테인먼트·디어유·드림메이커…업무시스템 해킹에 주민번호·계좌정보까지 노출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209387"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202649",
+    "published": "2026-11-08T13:48:43+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box. Enjoy a new round of the weekly SecurityAffairs newsletter, including international press. Inside ARTEX: AI Hacking Tools, Exposed Servers and South Korean Bank Breaches One Product Isn’t the Problem: […]",
+    "tags": [],
+    "title": "Security Affairs newsletter Round 603 by Pierluigi Paganini – INTERNATIONAL EDITION",
+    "url": "https://securityaffairs.com/202649/security/security-affairs-newsletter-round-603-by-pierluigi-paganini-international-edition.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202628",
+    "published": "2026-11-08T10:25:47+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "French Bank Crédit Mutuel Arkéa says hackers exploited a service provider to steal up to $133 million using the bank’s own account. French cooperative bank Crédit Mutuel Arkéa was hit by a cyberattack that let attackers make fraudulent transactions of up to $133 million, forcing it to suspend certain systems. Crédit Mutuel Arkéa is a […]",
+    "tags": [],
+    "title": "Attackers Exploit Third-Party Provider to Raid French Bank Crédit Mutuel Arkéa",
+    "url": "https://securityaffairs.com/202628/cyber-crime/attackers-exploit-third-party-provider-to-raid-french-bank-credit-mutuel-arkea.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTFA3Qno1Y0hxV1ZhcFhnOXRfZkdwRUM1MUpiVnF1dTVvNlduNGN2RE81TG41N29yM25vOGRKMnozcVZSMXZwdnl0UnY0UGc4U1NGMXFmbWtacTk4dzVWM19ON2VFY0J5SGdveG9Oel8yc2pTXzFT",
+    "published": "2026-11-08T09:13:25+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "국립부경대 이어 부산외대도 개인정보 외부 유출",
+    "tags": [],
+    "title": "국립부경대 이어 부산외대도 개인정보 외부 유출",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA3Qno1Y0hxV1ZhcFhnOXRfZkdwRUM1MUpiVnF1dTVvNlduNGN2RE81TG41N29yM25vOGRKMnozcVZSMXZwdnl0UnY0UGc4U1NGMXFmbWtacTk4dzVWM19ON2VFY0J5SGdveG9Oel8yc2pTXzFT?oc=5"
   }
 ]
