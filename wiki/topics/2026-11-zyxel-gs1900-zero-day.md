@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-11-05 [The Hacker News](https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html) — **Binarly** 연구자 공개, **Zyxel GS1900** 기존 패치 우회 제로데이 발견, 웹 관리 인터페이스 루트 명령 실행, 10개 모델용 신규 펌웨어 릴리스
+- 2026-11-05 [KISA 보안공지](https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72279) — Zyxel 제품 보안 업데이트 권고, 제로데이 취약점 즉시 패치 필수
 
 ## 관련
