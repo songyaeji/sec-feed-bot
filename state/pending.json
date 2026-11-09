@@ -804,5 +804,893 @@
     "tags": [],
     "title": "부산외대 업무용 PC 악성코드 감염…개인정보 유출 우려",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBJV2NJOW03WnR6QVNCbktyVEI4bmVfc0h3WV8tazNnRUdpX0xzSWphcWZiYmZVZ2JGdi1iR0tBVXNvY0ZYQ1B2MXRGdFNWTnRNZjV5QUxJRGhVNUs0dS1iadIBeEFVX3lxTE8zTGtyV3hLRWNRNjVXaG5VMFVxaVl5NW5PeEhkTUNrS1VlZ1ctN1FQSnYyRGw3Y2s4Vi1YRWJ5TWliSHpkT3pheTNUMkNyaHpqMEdVWm5zdnVJT3UzZ3ZkZmZVTTNXYVFRblVaTWVRa3BHQUhYT3VEYg?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-124560",
+    "published": "2026-11-09T03:16:38.117",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was found in D-Link DIR-878 1.20B05. This affects the function GetCAPTCHAsetting of the file bin/prog.cgi of the component HNAP Handler. Performing a manipulation of the argument uid results in heap-based buffer overflow. The attack can be initiated remotely. The exploit has been made public and could be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-124560 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124560"
+  },
+  {
+    "category": "high",
+    "cvss": 7.0,
+    "id": "CVE-2023-3640",
+    "published": "2023-07-24T16:15:13.063",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A possible unauthorized memory access flaw was found in the Linux kernel's cpu_entry_area mapping of X86 CPU data to memory, where a user may guess the location of exception stacks or other important data. Based on the previous CVE-2023-0597, the 'Randomize per-cpu entry area' feature was implemented in /arch/x86/mm/cpu_entry_area.c, which works through the init_cea_offsets() function when KASLR is enabled. However, despite this feature, there is still a risk of per-cpu entry area leaks. This issue could allow a local user to gain access to some important data with memory in an expected location and potentially escalate their privileges on the system.",
+    "tags": [],
+    "title": "CVE-2023-3640 (CVSS 7.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3640"
+  },
+  {
+    "category": "high",
+    "cvss": 3.7,
+    "id": "CVE-2023-32251",
+    "published": "2025-07-31T21:15:26.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability has been identified in the Linux kernel's ksmbd component (kernel SMB/CIFS server). A security control designed to prevent dictionary attacks, which introduces a 5-second delay during session setup, can be bypassed through the use of asynchronous requests. This bypass negates the intended anti-brute-force protection, potentially allowing attackers to conduct dictionary attacks more efficiently against user credentials or other authentication mechanisms.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2023-32251 (CVSS 3.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32251"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2023-32253",
+    "published": "2025-08-02T23:15:24.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Linux kernel's ksmbd component. A deadlock is triggered by sending multiple concurrent session setup requests, possibly leading to a denial of service.",
+    "tags": [],
+    "title": "CVE-2023-32253 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32253"
+  },
+  {
+    "category": "high",
+    "cvss": 5.3,
+    "id": "CVE-2023-32255",
+    "published": "2025-08-02T23:15:25.820",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A flaw was found in the Linux kernel's ksmbd component. A memory leak can occur if a client sends a session setup request with an unknown NTLMSSP message type,  potentially leading to resource exhaustion.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2023-32255 (CVSS 5.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32255"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-113362",
+    "published": "2026-11-09T04:17:06.133",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Access Control in the program installation folder in NEC Corporation WebSAM Winshare Ver 7.5.0 and earlier (excluding Ver 7.3.3), Ver 7.6.0 and Ver 7.7.0 through 7.7.1 on Windows allows a locally authenticated low-privileged attacker to execute arbitrary code with SYSTEM privileges via a crafted DLL file that is loaded by a SYSTEM-level process.",
+    "tags": [],
+    "title": "CVE-2026-113362 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113362"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-113363",
+    "published": "2026-11-09T05:18:26.107",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Input Validation in the network communication processing in NEC Corporation WebSAM WinShare Ver 7.2.0 through 7.5.0, Ver 7.6.0 and Ver 7.7.0 through 7.7.2 on Windows allows a remote unauthenticated attacker to execute arbitrary commands with SYSTEM privileges via a crafted network packet sent to the computer on which WinShare is running.",
+    "tags": [],
+    "title": "CVE-2026-113363 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113363"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-113364",
+    "published": "2026-11-09T05:18:26.810",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Buffer Overflow in the data receiving process in NEC Corporation WebSAM WinShare Ver 7.5.0 and earlier, Ver 7.6.0 and Ver 7.7.0 through 7.7.2 on Windows allows a remote unauthenticated attacker to execute arbitrary code with SYSTEM privileges via a crafted packet with a malformed data size value in the protocol header.",
+    "tags": [],
+    "title": "CVE-2026-113364 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-113364"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209412",
+    "published": "2026-11-09T16:44:21+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "메가존클라우드가 오픈AI 파트너 네트워크의 셀렉트(Select) 등급 파트너로 선정됐다고 9일 밝혔다.오픈AI 파트너 네트워크는 산업별 전문성과 구축 역량을 갖춘 파트너를 통해 기업 고객의 인공지능(AI) 도입을 돕는 공식 프로그램이다.메가존클라우드는 이번 협력을 바탕으로 챗GPT 엔터프라이즈, Codex, 오픈AI API를 중심으로 국내 기업의 AI 적용을 지원한다. 양사는 공동 영업과 기술 협력을 비롯해 엔지니어 대상 오픈AI 교육·인증 확대, 세미나 등 공동 마케팅을 진행한다.메가존클라우드는 기업의 원활한 도입을 지원하기 위해",
+    "tags": [
+      "AI"
+    ],
+    "title": "메가존클라우드, 오픈AI '셀렉트' 파트너 선정",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209412"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209411",
+    "published": "2026-11-09T16:39:02+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "FIDO 얼라이언스가 오는 12월 1일 서울 강남구 한국과학기술회관에서 '2026 FIDO 얼라이언스 서울 세미나(Passkey Day in Seoul)'를 연다고 9일 밝혔다.전 세계 350여 개 회원사가 참여하는 FIDO 얼라이언스는 비밀번호와 일회용 비밀번호(OTP)의 취약점을 개선하기 위한 국제 표준을 제정하고 보급하는 단체다. 이번 세미나는 패스키(Passkey)의 국내외 도입 현황을 살펴보고, 인공지능(AI) 환경에 맞춘 차세대 디지털 신원 및 인증 표준의 발전 방향을 논의하기 위해 마련됐다.행사는 오전 개발자 워크숍과",
+    "tags": [
+      "AI"
+    ],
+    "title": "FIDO 얼라이언스, 12월 1일 서울서 '패스키 데이' 개최",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209411"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209410",
+    "published": "2026-11-09T16:33:10+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "에스넷시스템이 신재생에너지 플랜트의 산업용 운영기술(OT) 통신과 보안 인프라 구축 경험을 바탕으로 인공지능(AI) 데이터센터(AIDC) 시장 공략에 나선다고 9일 밝혔다.에스넷시스템은 국내외 대형 배터리에너지저장장치(BESS), 태양광, 해상풍력 등 신재생에너지 플랜트 현장에서 발전 설비와 제어 시스템을 연결하는 네트워크 인프라 구축 사업을 수행했다. 이를 통해 글로벌 전력설비 통신 표준인 IEC 61850과 산업제어시스템 보안 표준인 IEC 62443 기반의 설계 경험을 축적하고 통합 엔지니어링 역량을 확보했다.또한 에너지 플랜",
+    "tags": [
+      "AI"
+    ],
+    "title": "에스넷시스템, 신재생에너지 인프라 구축 경험 바탕으로 AI 데이터센터 공략",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209410"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209409",
+    "published": "2026-11-09T16:27:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "쿤텍이 소프트웨어 및 인공지능(AI) 공급망 보안 플랫폼 '이지즈(AEZIZ) v3.0'으로 한국기계전기전자시험연구원(KTC)의 GS인증 1등급을 획득했다고 9일 밝혔다.이번 인증 대상은 AEZIZ v3.0의 소프트웨어 구성 분석(SCA) 기능이다. 제품 문서와 실제 소프트웨어 내 244개 기능 전반에 걸친 검증을 거쳐 1등급 기준을 맞췄다. 이번 인증으로 쿤텍은 공공 조달 시장 진입을 위한 품질 신뢰성을 확보했다.AEZIZ v3.0은 소스코드, 바이너리, AI 모델, 운영 자산 내 소프트웨어 구성 요소를 식별하고 위험을 관리하는",
+    "tags": [
+      "AI"
+    ],
+    "title": "쿤텍, 공급망 보안 플랫폼 '이지즈 v3.0' GS인증 1등급 획득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209409"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209408",
+    "published": "2026-11-09T16:16:46+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국인터넷진흥원(KISA)은 차세대 보안 리더 양성 과정(BoB) 수료생과 교육생으로 구성된 '팀 비오비(TEAM BoB)'가 대만 이지스 해킹대회(AEGIS CTF) 국제 초청전에서 1위를 차지했다고 9일 밝혔다.대만 국가중산과학연구원(NCSIST) 등이 주최하는 이지스 해킹대회는 대만의 주요 사이버 보안 경진 대회다. 올해는 국제 초청전 형태로 11월 7일부터 8일까지 대만 국립성공대학교(NCKU)에서 열렸다.대회에는 대만 대표 10개 팀, 전년도 우승 1개 팀, 국제 초청 5개 팀 등 총 16개 팀이 출전했다. 국제 초청 부문",
+    "tags": [],
+    "title": "차세대 보안 리더 '팀 비오비', 대만 이지스 해킹대회(AEGIS CTF) 초청전 우승",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209408"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209407",
+    "published": "2026-11-09T16:09:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "보안 기술을 다루던 지난 회차들과 달리, 이번에는 잠시 숨을 고르며 보안 사고가 가져오는 ‘현실적인 숫자’와 ‘책임’을 이야기해보려 한다. 보안 투자를 망설이는 경영진은 흔히 보안을 수익 없는 ‘비용(Cost)’으로 여긴다. 하지만 단 한 번의 유출 사고가 터지는 순간, 아끼려던 그 비용은 기업의 존폐와 경영진의 명운을 가르는 치명적인 ‘리스크(Risk)’로 돌변한다.■ 카드 3사 사태부터 AI 해킹까지, ‘솜방망이 처벌’은 끝2014년 1억 건이 넘는 고객 정보가 유출된 카드 3사 사태의 발단은 거창한 해킹이 아니었다. 내부에 상",
+    "tags": [],
+    "title": "[기획연재 7] 1억 건 유출부터 매출 10% 과징금까지… 보안 사고가 기업과 CEO에게 청구하는 현실적 계산서",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209407"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209406",
+    "published": "2026-11-09T16:07:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "엠디에스(MDS)스피어가 융합보안 기업 쿤텍과 소프트웨어 공급망 보안 사업 확대를 위한 공식 파트너십을 맺었다고 9일 밝혔다.MDS스피어는 이번 협력을 통해 쿤텍의 소프트웨어 공급망 보안 솔루션 '이지즈(AEZIZ) v3.0'을 국내 국방, 항공, 자동차 시장에 공급하며 고객사의 보안 관리 체계 구축을 돕는다.양사는 MDS스피어의 소프트웨어 개발·검증 엔지니어링 역량과 쿤텍의 공급망 보안 기술을 결합해 통합 솔루션을 제공한다는 구상이다. 기존 개발·검증 체계와 AEZIZ v3.0의 연동을 넓혀 고객사의 시스템 환경과 규제 요구에 맞",
+    "tags": [],
+    "title": "MDS스피어-쿤텍, 소프트웨어 공급망 보안 사업 협력 맞손",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209406"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209405",
+    "published": "2026-11-09T15:38:30+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "프라이빗에이아이가 정보통신기술(ICT) 전문기업 진인프라와 총판 계약을 체결하고 기업용 보안 솔루션 유통망을 넓힌다고 9일 밝혔다.인공지능(AI) 기술 도입이 늘면서 기업의 데이터와 내부 업무 인프라를 지키기 위한 보안 수요가 함께 증가하고 있다. 양사는 진인프라의 시스템 구축 경험과 영업망에 프라이빗에이아이의 보안 기술을 결합해 제로트러스트 시장 진출에 속도를 낼 방침이다.진인프라는 프라이빗에이아이의 주요 제품인 '패킷고 ZTNA(PacketGo ZTNA)' 공식 총판을 맡는다. 국내 공공, 금융, 일반 기업 고객을 대상으로 솔루",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "프라이빗에이아이, 진인프라와 총판 계약 체결...제로트러스트 보안 공급 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209405"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209404",
+    "published": "2026-11-09T15:29:12+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오내피플이 문화체육관광부가 주최하고 지역문화진흥원이 주관하는 2026년 여가친화인증 공모에서 신규 인증 기업으로 선정됐다고 9일 밝혔다. 여가친화인증은 국민여가활성화기본법 제16조에 따라 근로자가 일과 여가를 조화롭게 병행하도록 돕는 모범 기업과 기관을 선정하는 제도다. 서류 심사, 임직원 설문조사, 심층 면접 등을 거쳐 여가시간 확보, 활동 지원, 조직문화 형성, 경영진 의지 등을 종합 검증한다.오내피플은 체계적인 근태 관리와 유연한 근무 환경 조성, 자유로운 휴가 사용 문화 정착, 임직원 역량 개발 및 여가활동 지원 제도를 운영",
+    "tags": [],
+    "title": "오내피플, 문체부 '2026 여가친화인증' 획득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209404"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209403",
+    "published": "2026-11-09T15:14:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "에이아이딥과 AI 통합 플랫폼 기업 액슬레이터가 6일 '생성형 AI 보안 기술 협력 및 공동 사업화를 위한 업무협약(MOU)'을 체결했다고 9일 밝혔다.기업 내 생성형 AI 도입이 늘면서 내부 정보 유출을 막는 안전한 사용 환경에 대한 요구가 커지고 있다. 양사는 각 사가 보유한 보안 기술과 AI 전환(AX) 플랫폼을 결합해 이러한 시장 수요에 대응할 계획이다.이번 협약으로 양사는 에이아이딥의 생성형 AI 보안 솔루션 '딥젠가드(DeepGenGuard)'와 액슬레이터의 AI 통합 플랫폼 'AXL-AEP'의 연동과 통합을 추진한다.",
+    "tags": [
+      "AI"
+    ],
+    "title": "에이아이딥-액슬레이터, 보안 강화형 AI 전환 솔루션 공동 개발 나선다",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209403"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209402",
+    "published": "2026-11-09T15:05:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내외 인허가 및 인증 컨설팅 기업 씨아이알에스그룹코리아(CIRS Group Korea)가 정보보안경영시스템 국제표준인 'ISO/IEC 27001:2022' 인증을 취득했다고 9일 밝혔다. 6일 서울 본사에서 유재상 코트릭 인증센터 원장 등 관계자들이 참석한 가운데 인증서 수여식을 진행했다.ISO/IEC 27001은 국제표준화기구(ISO)와 국제전기기술위원회(IEC)가 제정한 정보보안 관리체계 표준이다. 조직이 정보자산을 보호하기 위해 위험관리, 접근통제, 보안사고 대응 절차 등을 체계적으로 갖추고 실행하는지 심사해 공인한다.이번",
+    "tags": [],
+    "title": "씨아이알에스그룹코리아, 국제 정보보안 인증 'ISO/IEC 27001:2022' 획득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209402"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209401",
+    "published": "2026-11-09T14:46:10+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "SGA솔루션즈가 금융정보보호 컨퍼런스 'FISCON 2026'에 참가해 글로벌 제로트러스트 기업 일루미오(Illumio)와의 기술 협력을 바탕으로 한 '풀스택 마이크로 세그멘테이션' 전략을 공개한다고 밝혔다.인공지능(AI)과 클라우드 확산으로 금융권 IT 환경이 복잡해지면서 내부 침투 이후 피해를 키우는 공격 위협이 커졌다. 공격자가 서버와 워크로드 간 연결을 악용해 측면으로 침투하는 횡적이동(라테럴 무브먼트)을 시도하는 만큼, 경계 방어를 넘어 내부 통신을 세분화해 통제하는 체계가 요구되는 추세다. 마이크로 세그멘테이션은 침해가",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "SGA솔루션즈, 'FISCON 2026' 참가...풀스택 마이크로 세그멘테이션 제시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209401"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209400",
+    "published": "2026-11-09T14:31:05+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "태니엄이 엔비디아(NVIDIA)와 협력해 기업용 엔드포인트 관리 기능을 엔비디아의 로컬 AI 인프라 영역으로 확장한다고 9일 밝혔다.지원 대상은 엔비디아의 윈도 AI PC 플랫폼인 RTX 스파크(RTX Spark)를 비롯해 데스크사이드 슈퍼컴퓨터인 DGX 스테이션(DGX Station), 윈도용 DGX 스테이션(DGX Station for Windows), 소형 슈퍼컴퓨터 DGX 스파크(DGX Spark)다. 태니엄은 기존 IT 환경에서 제공하던 실시간 가시성과 제어, 규정 준수(컴플라이언스) 관리 기능을 이들 AI 장비에 동일하게",
+    "tags": [],
+    "title": "태니엄, 엔비디아와 협력...로컬 AI 인프라 엔드포인트 관리 지원",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209400"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209399",
+    "published": "2026-11-09T13:59:26+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "시놀로지(Synology)가 자사 NAS에서 사용하는 플렉스 미디어 서버(Plex Media Server)의 보안 취약점 4건을 해결한 업데이트를 공개했다. 해당 취약점은 ‘Plex2Shell’로 불리며, 여러 취약점을 연계해 악용할 경우 공격자가 인증 없이 원격에서 악성 코드를 실행할 수 있어 주의가 요구된다.시놀로지는 11월 8일 공식 보안 권고문 ‘Synology-SA-26:17’을 발표하고, NAS 운영체제인 DSM 버전별 수정 패키지를 공개했다.이번에 수정된 취약점은 서버 측 요청 위조(SSRF) 문제인 CVE-2026-9",
+    "tags": [],
+    "title": "시놀로지 NAS도 ‘Plex2Shell’ 취약점 보안 업데이트, 원격 해킹 위험",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209399"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209398",
+    "published": "2026-11-09T12:50:31+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "카스퍼스키가 글로벌 시장조사 기업 프로스트앤설리번으로부터 '2026 올해의 글로벌 APT 인텔리전스 및 위협 분석 기업'으로 선정됐다고 9일 밝혔다.프로스트앤설리번은 카스퍼스키의 글로벌 위협 인텔리전스(TI) 전문성과 지능형 지속 위협(APT) 배후 분석 역량, 기업 고객 대상 실행 가능한 위협 데이터 제공 성과를 높이 평가했다. 연구 데이터와 특허받은 위협 추적 기술, 인공지능(AI) 기반 분석 및 전문가 검증 역량을 결합해 고객이 공격자의 정체와 의도를 파악하도록 지원한 점이 인정받았다.카스퍼스키는 보안 경보 과부하를 줄이고 파",
+    "tags": [
+      "AI",
+      "APT"
+    ],
+    "title": "카스퍼스키, 프로스트앤설리번 '올해의 글로벌 APT 인텔리전스 기업' 선정",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209398"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209397",
+    "published": "2026-11-09T12:42:46+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "금융보안원이 금융권 보이스피싱 대응 강화를 위해 의심정보 공유 플랫폼인 ASAP에 인공지능(AI) 기반 이상금융거래 탐지 모델을 탑재하고 'AI 피싱지수' 조회 API 서비스를 제공한다고 9일 밝혔다.ASAP은 금융, 통신, 수사 분야의 의심정보를 공유하고 분석해 보이스피싱 예방을 지원하는 플랫폼이다. 이번에 적용된 AI 피싱지수는 보이스피싱 의심 거래의 실제 사기 가능성을 인공지능이 평가해 점수화한 지표다.해당 모델은 인터넷은행 3사인 카카오뱅크, 토스뱅크, 케이뱅크의 사기 탐지 역량을 모아 연합학습 기술로 개발됐다. 데이터 공유",
+    "tags": [
+      "금융",
+      "AI",
+      "피싱"
+    ],
+    "title": "금융보안원, 보이스피싱 대응 플랫폼 'ASAP'에 AI 탐지 모델 탑재",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209397"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209396",
+    "published": "2026-11-09T12:28:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국사회보장정보원이 6일 서울 성신여자대학교에서 한국융합보안학회와 함께 'AI 보안 해커톤 경진대회'를 열었다고 9일 밝혔다.이번 대회는 '2026 한국융합보안학회 추계학술대회' 특별세션으로 마련됐다. 대학생 참가자들의 AI 활용 능력과 정보보안 실무 문제 해결 역량을 검증하고 보안 인재를 양성하기 위한 목적이다.본선에 오른 대학생 팀들은 3시간 동안 AI를 접목한 웹 취약점 분석과 정보보안 문제 풀이(CTF) 과제를 수행했다. 참가자들은 제한 시간 내에 현장 과제를 해결하며 실력을 겨뤘다.대회 대상(한국사회보장정보원장상)은 성신여",
+    "tags": [],
+    "title": "한국사회보장정보원, 대학생 대상 'AI 보안 해커톤' 개최",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209396"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html",
+    "published": "2026-11-09T07:05:48+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The OpenAI engineer who was arrested and charged last month for planting a covert audio recording device in the company's office has pleaded not guilty. According to reports from Bloomberg and CNBC, Saudi national Abdulrahman Alfozan made an appearance in San Francisco federal court on Friday, where he entered the plea. His next hearing is scheduled for November 17, 2026. If proven guilty, the",
+    "tags": [],
+    "title": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
+    "url": "https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+    "published": "2026-11-09T06:15:10+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "U.S. government agencies have warned that threat actors are actively targeting industrial refrigeration and cold-chain monitoring systems globally with an aim to cause service disruptions, fire hazards, and loss of inventory. \"The actors may exploit vulnerabilities or weaknesses in unpatched or internet-accessible controllers to remotely alter settings and force units into continuous heating",
+    "tags": [
+      "RCE"
+    ],
+    "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
+    "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202667",
+    "published": "2026-11-09T07:04:52+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "The BBC plans to use emergency FM radio to keep the UK informed during prolonged blackouts, with a self-sufficient studio ready for 72 hours. If electricity fails across the UK for days, the BBC says it has a plan to keep people informed. David Sillito, the BBC’s media and arts correspondent, explained the strategy in […]",
+    "tags": [],
+    "title": "The BBC has a plan for a Black Sky event, and it runs on FM radio",
+    "url": "https://securityaffairs.com/202667/cyber-warfare-2/the-bbc-has-a-plan-for-a-black-sky-event-and-it-runs-on-fm-radio.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33500",
+    "published": "2026-11-09T02:05:10+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Monday, November 9th, 2026 https://isc.sans.edu/podcastdetail/10170, (Mon, Nov 9th)",
+    "url": "https://isc.sans.edu/diary/rss/33500"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMieEFVX3lxTE50YUpwRGVBNnFhUUVpNHkxRUZFY0FQYWhIRlNJeHlHblhUcnppNVlWS3doOVR2a1JtbDVrcFBtZGs2VDQ5V0dTSDlCVTVzcmhjLTZWQy1CVVNveExtUWcySnhJeDhISy1MNXlPQl9ERkktVUY3NVMtd9IBfkFVX3lxTE4taFNVY1FENmR5aUE2Sk84emJnX28xX1EycEdfSkp1NHlWRHhxMmc3WmpBQWlHd2h1Vk9xUVpxTE1IUFUtR25kZWNfMFZmbWJiTjFvVXhBNlNtaW5SdnNYZWlGc3ZzSnhYS2QxSDl0aFBzU0lWZzhsRGd5NFA5dw",
+    "published": "2026-11-09T02:00:16+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 보이스피싱 의심 거래 위험수준 AI로 점수 매긴다 - 머니투데이",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원, 보이스피싱 의심 거래 위험수준 AI로 점수 매긴다 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE50YUpwRGVBNnFhUUVpNHkxRUZFY0FQYWhIRlNJeHlHblhUcnppNVlWS3doOVR2a1JtbDVrcFBtZGs2VDQ5V0dTSDlCVTVzcmhjLTZWQy1CVVNveExtUWcySnhJeDhISy1MNXlPQl9ERkktVUY3NVMtd9IBfkFVX3lxTE4taFNVY1FENmR5aUE2Sk84emJnX28xX1EycEdfSkp1NHlWRHhxMmc3WmpBQWlHd2h1Vk9xUVpxTE1IUFUtR25kZWNfMFZmbWJiTjFvVXhBNlNtaW5SdnNYZWlGc3ZzSnhYS2QxSDl0aFBzU0lWZzhsRGd5NFA5dw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE11Mmo1YXBRSmd2UUhFTUF1bnNveUdJT0RhTFRnb2Z1dVNlaHR1X0hnQnRxZ1hBekhrQmFPeWhsZ21pbVdYaldzakVMNTFtSXY2d2JQR1FUYzJ3aGxfQm1RRmQ4QUY0LXJKZ0pV",
+    "published": "2026-11-09T01:01:41+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금보원, 보이스피싱 대응 위해 AI 전격 투입",
+    "tags": [
+      "피싱"
+    ],
+    "title": "금보원, 보이스피싱 대응 위해 AI 전격 투입",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE11Mmo1YXBRSmd2UUhFTUF1bnNveUdJT0RhTFRnb2Z1dVNlaHR1X0hnQnRxZ1hBekhrQmFPeWhsZ21pbVdYaldzakVMNTFtSXY2d2JQR1FUYzJ3aGxfQm1RRmQ4QUY0LXJKZ0pV?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE1mMjFFVUxacFBsRk5Fa3A4bjZNRmVySk84b1Q3d013OVE5cFd1dXA1d3dMZW5mNDU3M1A3LTZuYUs2bG82M3FaVmNMRklVS0dVWFRCWWdhUVVoSUNScUUtQ1hB",
+    "published": "2026-11-09T01:35:03+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, AI 기반 보이스피싱 탐지 지원",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원, AI 기반 보이스피싱 탐지 지원",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mMjFFVUxacFBsRk5Fa3A4bjZNRmVySk84b1Q3d013OVE5cFd1dXA1d3dMZW5mNDU3M1A3LTZuYUs2bG82M3FaVmNMRklVS0dVWFRCWWdhUVVoSUNScUUtQ1hB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE1DeWN3ZlZKVlpMX3FDTkIxOXR6QlN3czRROGg4M1JEckx2OHpKcmVJUEtER2tsb3ZlRjJGM0ptenlzWndSdllJQlZaY3ZsUGJFLWppV0RYTnFRc05WUTY0bWtLbVlIS1lISE9faw",
+    "published": "2026-11-09T03:16:40+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, 보이스피싱 탐지 AI 활용…'피싱지수' 조회 서비스 도입",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원, 보이스피싱 탐지 AI 활용…'피싱지수' 조회 서비스 도입",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1DeWN3ZlZKVlpMX3FDTkIxOXR6QlN3czRROGg4M1JEckx2OHpKcmVJUEtER2tsb3ZlRjJGM0ptenlzWndSdllJQlZaY3ZsUGJFLWppV0RYTnFRc05WUTY0bWtLbVlIS1lISE9faw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxQeV9vRktWc2tOTW1iTGhuS1ExdktsWUFlZXRTOXYwQXctUThQZDNHQTFuaUIzaXJCUUowX2J4aWF5U29OWlZOYVE0R2ZOajBseUNQTHN6YWd3emlQLW9YX0tOemZIc2w3Tm9rS05YZ1FQY2c1WmpDdVZOTzF3Y0gwSQ",
+    "published": "2026-11-09T02:56:31+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "중소 금융사도 AI로 보이스피싱 잡는다…금보원, ‘AI 피싱지수’ 제공",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "중소 금융사도 AI로 보이스피싱 잡는다…금보원, ‘AI 피싱지수’ 제공",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeV9vRktWc2tOTW1iTGhuS1ExdktsWUFlZXRTOXYwQXctUThQZDNHQTFuaUIzaXJCUUowX2J4aWF5U29OWlZOYVE0R2ZOajBseUNQTHN6YWd3emlQLW9YX0tOemZIc2w3Tm9rS05YZ1FQY2c1WmpDdVZOTzF3Y0gwSQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE5XQWFfems4RWNqUmtwZEEwUm5XYVA4ZHN4V2JFNzFVQzZmSHNIYzQyeFNFXzl2T2Q2aUltMktVSW9HVjEyczhSeUxSNXlVbXhTNGZTblR1LVJPLW1IeFNXZUZMTDRsM1g5NkhJUg",
+    "published": "2026-11-09T01:22:45+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, AI 기반 보이스피싱 탐지 서비스 확대…중소형 금융사도 활용",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원, AI 기반 보이스피싱 탐지 서비스 확대…중소형 금융사도 활용",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XQWFfems4RWNqUmtwZEEwUm5XYVA4ZHN4V2JFNzFVQzZmSHNIYzQyeFNFXzl2T2Q2aUltMktVSW9HVjEyczhSeUxSNXlVbXhTNGZTblR1LVJPLW1IeFNXZUZMTDRsM1g5NkhJUg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFBFZHlzajlZQ190YkVrVjRTdmY3bnhKcEFZTjFCQXFXTUNzczhKQkw0TVliR3NJWlNRWFV3dnVfS1YwQzdzQVAxZjFhQUw0Y0NHanROLWpzb3o2cWhYUWE1R3JHMjhtdGJ1S0xjb2R3",
+    "published": "2026-11-09T04:52:21+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원. AI로 보이스피싱 위험 수준 판별 … 금융회사 보이스피싱 대응 역량 강화 지원",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "금융보안원. AI로 보이스피싱 위험 수준 판별 … 금융회사 보이스피싱 대응 역량 강화 지원",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBFZHlzajlZQ190YkVrVjRTdmY3bnhKcEFZTjFCQXFXTUNzczhKQkw0TVliR3NJWlNRWFV3dnVfS1YwQzdzQVAxZjFhQUw0Y0NHanROLWpzb3o2cWhYUWE1R3JHMjhtdGJ1S0xjb2R3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE1uVjgtOFVmSDM0aUczYjdITVhDYjdiU2VBdHZrMHN6dHNhcUlCaFhtRnQ1WkwtdGQ1eUpmdjRiN1JKVk5OWEV5THlneEN2czR2OVNB",
+    "published": "2026-11-09T01:44:41+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"구축비 0원\"…금보원, AI 피싱지수로 사기 원천봉쇄",
+    "tags": [
+      "피싱"
+    ],
+    "title": "\"구축비 0원\"…금보원, AI 피싱지수로 사기 원천봉쇄",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1uVjgtOFVmSDM0aUczYjdITVhDYjdiU2VBdHZrMHN6dHNhcUlCaFhtRnQ1WkwtdGQ1eUpmdjRiN1JKVk5OWEV5THlneEN2czR2OVNB?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249776",
+    "published": "2026-11-09T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융",
+      "피싱"
+    ],
+    "title": "보이스피싱 피해로 멈춘 일상, 금융권이 '다시, 일상으로' 이어드립니다",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249776&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249775",
+    "published": "2026-11-09T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "상장사 대상 '2026년도 찾아가는 불공정거래 예방교육' 실시",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249775&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTFBhY3RWVFlzaFlTRWpOT254Wk8yUkZaN3E5Q2RhSjVDTVVsQURqZ0VSbWlCN3ZSY1FvNTlfdlVSSWZZVXRNci1iSUV4aWpReU5QQXJVaEVLdjEyTjNEVmVELUl3",
+    "published": "2026-11-09T07:02:50+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 민간과 함께 인공지능 침해 위협에 대응하는 보호체계 정착방안 모색",
+    "tags": [
+      "AI"
+    ],
+    "title": "개인정보위, 민간과 함께 인공지능 침해 위협에 대응하는 보호체계 정착방안 모색",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBhY3RWVFlzaFlTRWpOT254Wk8yUkZaN3E5Q2RhSjVDTVVsQURqZ0VSbWlCN3ZSY1FvNTlfdlVSSWZZVXRNci1iSUV4aWpReU5QQXJVaEVLdjEyTjNEVmVELUl3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBqZmFSTU0tVEpWcU9oSkh0ejBGX2sxRk1uWWtDczZUUUh1bTEzT1hSM2NsWEJmc195dFVpTVZmREN4dVRqcFZTNkZCUXVTZjFEZmg2OGNLNWplbVUxT1lUVA",
+    "published": "2026-11-09T06:59:31+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 \"신뢰·책임 기반 사전예방 보호 체계 정착\"",
+    "tags": [],
+    "title": "개인정보위 \"신뢰·책임 기반 사전예방 보호 체계 정착\"",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBqZmFSTU0tVEpWcU9oSkh0ejBGX2sxRk1uWWtDczZUUUh1bTEzT1hSM2NsWEJmc195dFVpTVZmREN4dVRqcFZTNkZCUXVTZjFEZmg2OGNLNWplbVUxT1lUVA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiV0FVX3lxTE5wT1ZmLWxOSDFWZVl5YU9Od3JBNy1OMFRxY1JoNDNSQUpiSERoenhjeFJVSTU3b1JiN2xzR2Zub1lpSS1VS2dybTNsMlhXSXRJWFNNU3J1cw",
+    "published": "2026-11-09T06:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 사후 제재에서 사전 예방으로…CPO 450명 모여 개인정보 보호체계 논의",
+    "tags": [],
+    "title": "개인정보위, 사후 제재에서 사전 예방으로…CPO 450명 모여 개인정보 보호체계 논의",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5wT1ZmLWxOSDFWZVl5YU9Od3JBNy1OMFRxY1JoNDNSQUpiSERoenhjeFJVSTU3b1JiN2xzR2Zub1lpSS1VS2dybTNsMlhXSXRJWFNNU3J1cw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTFBZNW02S2paN1ZIbWdsdlR3RVBncnhWaUF5bThVUWtSQ1FoYkltYkpBWklRcVRVa0VkeF9sMVNCemxxbTZ2YzVoOFZVVTZXYVlzNlZvSUdkMkdKSXBiUDdEajJ3",
+    "published": "2026-11-09T02:03:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 스마트 글래스 이용 시 유의사항 당부",
+    "tags": [],
+    "title": "개인정보위, 스마트 글래스 이용 시 유의사항 당부",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBZNW02S2paN1ZIbWdsdlR3RVBncnhWaUF5bThVUWtSQ1FoYkltYkpBWklRcVRVa0VkeF9sMVNCemxxbTZ2YzVoOFZVVTZXYVlzNlZvSUdkMkdKSXBiUDdEajJ3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE4yMTh6NE5MQUFDanlGa1pxY1lvLU1WOTR0N2JEWHc0YXN1RlBiY0EwUE9VYWoyVUdiQXdqMU9LRXFwV3k5dXB6c3E1VGZZSC0tWV9zeXFHZTZ0bkhY",
+    "published": "2026-11-09T06:33:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "내년도 예산안 제안설명 하는 송경희 개인정보보호위원장",
+    "tags": [],
+    "title": "내년도 예산안 제안설명 하는 송경희 개인정보보호위원장",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE4yMTh6NE5MQUFDanlGa1pxY1lvLU1WOTR0N2JEWHc0YXN1RlBiY0EwUE9VYWoyVUdiQXdqMU9LRXFwV3k5dXB6c3E1VGZZSC0tWV9zeXFHZTZ0bkhY?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMimAJBVV95cUxPRVJJbXFLUWZya3ZGSXEzZmlUX01NaTc5SHUzUWNfbkFVMXZNeVN0RUF3eENvWVBvLW9KTDJTUldVaXU0WTAxOVdsX0RnN0tWaXlIRFNXVTh4SHVlSzJUYkVaRm1peEtwckFzN3BvNFQyWmZfUGM3MTNZZnZnbndZaDc1a0ZrMmNZX2doWUpURzlfaVA2bnhGdTQ3bXE5M0stTlFkSUxiVVdXcGxyRVRYckNMeGs5WUpzNWEtMmY3WHBlang5c21Wek9ZUDQyRnNrOXByeVRvdVMyUF9udTJqNjNKNTVyWE54VlRFbEQwNWVnTXl1V3JlYzQ4S0R3RDFZcVhvVDVYNXlES1h4TndYSGpIUjBzUEN4",
+    "published": "2026-11-09T01:31:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "촬영 중인지 알기 어려운 스마트 글래스…개인정보위, 사생활 침해 방지 가이드라인 마련",
+    "tags": [],
+    "title": "촬영 중인지 알기 어려운 스마트 글래스…개인정보위, 사생활 침해 방지 가이드라인 마련",
+    "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPRVJJbXFLUWZya3ZGSXEzZmlUX01NaTc5SHUzUWNfbkFVMXZNeVN0RUF3eENvWVBvLW9KTDJTUldVaXU0WTAxOVdsX0RnN0tWaXlIRFNXVTh4SHVlSzJUYkVaRm1peEtwckFzN3BvNFQyWmZfUGM3MTNZZnZnbndZaDc1a0ZrMmNZX2doWUpURzlfaVA2bnhGdTQ3bXE5M0stTlFkSUxiVVdXcGxyRVRYckNMeGs5WUpzNWEtMmY3WHBlang5c21Wek9ZUDQyRnNrOXByeVRvdVMyUF9udTJqNjNKNTVyWE54VlRFbEQwNWVnTXl1V3JlYzQ4S0R3RDFZcVhvVDVYNXlES1h4TndYSGpIUjBzUEN4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE1rd3ozMEhwaXZLZEJLM2RicW9CVHdZdHFPYzVxX1lJRFd1bkdRMjJtbjZQWW9UV2hRbzZnRkFjZmtkV2Q0VGZ1eEZqbzZVVVEzdDVqWUIzMzVJakp1STFmQg",
+    "published": "2026-11-09T02:05:41+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"무분별한 촬영 금지\"…개인정보위, 스마트글래스 가이드라인 안내",
+    "tags": [],
+    "title": "\"무분별한 촬영 금지\"…개인정보위, 스마트글래스 가이드라인 안내",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rd3ozMEhwaXZLZEJLM2RicW9CVHdZdHFPYzVxX1lJRFd1bkdRMjJtbjZQWW9UV2hRbzZnRkFjZmtkV2Q0VGZ1eEZqbzZVVVEzdDVqWUIzMzVJakp1STFmQg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBoN1dOT1p0aU1DbFVTOEpxYkMxZzQyT1l4SUlEajVqN29FaGRyX0dTcVV6OWxUY2lmWXBlZUZfRWgzZ2I3bkRsSGZFZHdFZ0RfNjZleGhUcmRIRVNfZlVPOF9ySGNoZVFNZ3o2OFVoNNIBc0FVX3lxTFBOXzB5R2NvZ3pzUjRDczVXLWJBX1NLcVhPZnBHNDV5QTFXcXkyQ0ExWXpydU4yR0tPbWJCMk85Vy02RGEzZ3RvcVR6ZFN3RFU5WEVueUd0T05OYVFJYnRvLWM4UnZVbHdkU1Z4NGhUTTlBdVk",
+    "published": "2026-11-09T06:49:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, 피해자 구제 기금으로 개인정보 유출 사고 기업 복구하나",
+    "tags": [],
+    "title": "개보위, 피해자 구제 기금으로 개인정보 유출 사고 기업 복구하나",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoN1dOT1p0aU1DbFVTOEpxYkMxZzQyT1l4SUlEajVqN29FaGRyX0dTcVV6OWxUY2lmWXBlZUZfRWgzZ2I3bkRsSGZFZHdFZ0RfNjZleGhUcmRIRVNfZlVPOF9ySGNoZVFNZ3o2OFVoNNIBc0FVX3lxTFBOXzB5R2NvZ3pzUjRDczVXLWJBX1NLcVhPZnBHNDV5QTFXcXkyQ0ExWXpydU4yR0tPbWJCMk85Vy02RGEzZ3RvcVR6ZFN3RFU5WEVueUd0T05OYVFJYnRvLWM4UnZVbHdkU1Z4NGhUTTlBdVk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE50djRCT2RwVHQzZFhSVkhNOHVmenNkQ045VFVCWk9pSWEtQzJTYmRaenF3cVU4S3dBOGN3azNoOS10SnZKMFRXMHBzSGxjWHJ1dEVRLUtIVlo5Nmp6ZjYyQk9R",
+    "published": "2026-11-09T07:17:18+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"정보보호 투자했어도 중대 사고엔 감경 없다\"…개보위, 과징금 감경 조건 공개",
+    "tags": [],
+    "title": "\"정보보호 투자했어도 중대 사고엔 감경 없다\"…개보위, 과징금 감경 조건 공개",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE50djRCT2RwVHQzZFhSVkhNOHVmenNkQ045VFVCWk9pSWEtQzJTYmRaenF3cVU4S3dBOGN3azNoOS10SnZKMFRXMHBzSGxjWHJ1dEVRLUtIVlo5Nmp6ZjYyQk9R?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTFB3VkotczNFcU0yNFRYS1RxVEZBcFBaX0QxQWNCc0xXbjNiVU9ySnowbVBUNnk0Y0FWZ3MyLUdsVHpfOGZyejlCdXdjMlhuNTFtemk3SlFqZTBlVkJyYlE",
+    "published": "2026-11-09T06:01:16+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "스마트안경 촬영, 상대가 거부하면 즉시 중단⋯개인정보위 연내 지침 마련",
+    "tags": [],
+    "title": "스마트안경 촬영, 상대가 거부하면 즉시 중단⋯개인정보위 연내 지침 마련",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB3VkotczNFcU0yNFRYS1RxVEZBcFBaX0QxQWNCc0xXbjNiVU9ySnowbVBUNnk0Y0FWZ3MyLUdsVHpfOGZyejlCdXdjMlhuNTFtemk3SlFqZTBlVkJyYlE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTFAtYVdGQWpJbmJXaHJvZk4wRlAwSm90ZjNVTFgxU2p6akt1eWNpRjJlQU5rb05XVUJuaUlqZVVnRUpER3pVYmNqYUF1QWViRUowdUczVW83bWpBMkpUOGhBcWlmbjlFZw",
+    "published": "2026-11-09T02:00:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"내 정보가 중국으로?\"…텐센트 '워크버디', 프롬프트 내용까지 가져간다",
+    "tags": [],
+    "title": "\"내 정보가 중국으로?\"…텐센트 '워크버디', 프롬프트 내용까지 가져간다",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFAtYVdGQWpJbmJXaHJvZk4wRlAwSm90ZjNVTFgxU2p6akt1eWNpRjJlQU5rb05XVUJuaUlqZVVnRUpER3pVYmNqYUF1QWViRUowdUczVW83bWpBMkpUOGhBcWlmbjlFZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE5feU9YV2czTV9YRi1rRWdUel83by1qUWM0Yk5scnByVXVwbTRFdUlVVTN4V3VndTBUV1dTNkVENzhhWkVoQWVINm5WU1RONG54eTMwcEdoNDlRemdVVVJlN9IBeEFVX3lxTFBFOUNSbXFKSjJKTEZ5cm80eHdGSmpEb0pyVkpxZjh0czBPb0ZvU2hVLS1wckdXTXlPTThJWkdGQ0huby1teTVBLUJ5eFU5RnBaSHRXSkFiZ1V0Q05SSEwyVjQyX3FidXJyMHVYVzRwZGh4TnhfX0dyNQ",
+    "published": "2026-11-09T07:47:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "앤트로픽, 韓 기업용 계정 100여개 개인정보 유출 신고",
+    "tags": [],
+    "title": "앤트로픽, 韓 기업용 계정 100여개 개인정보 유출 신고",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5feU9YV2czTV9YRi1rRWdUel83by1qUWM0Yk5scnByVXVwbTRFdUlVVTN4V3VndTBUV1dTNkVENzhhWkVoQWVINm5WU1RONG54eTMwcEdoNDlRemdVVVJlN9IBeEFVX3lxTFBFOUNSbXFKSjJKTEZ5cm80eHdGSmpEb0pyVkpxZjh0czBPb0ZvU2hVLS1wckdXTXlPTThJWkdGQ0huby1teTVBLUJ5eFU5RnBaSHRXSkFiZ1V0Q05SSEwyVjQyX3FidXJyMHVYVzRwZGh4TnhfX0dyNQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE9PUTFJcndRWmJUb2t6MVVMZzRCNS1EOVd3RjVQblJidHBkTHlmajdGb2JCbjc1eXQwUTFfd25FSGpOTzBmbWJYb2VmNWIyeFUyVHhUQVExa2xOQTQ",
+    "published": "2026-11-09T06:59:06+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[속보] “나 몰래 찍힐까봐 겁나”…개인정보위, 스마트안경 가이드라인 추진",
+    "tags": [],
+    "title": "[속보] “나 몰래 찍힐까봐 겁나”…개인정보위, 스마트안경 가이드라인 추진",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9PUTFJcndRWmJUb2t6MVVMZzRCNS1EOVd3RjVQblJidHBkTHlmajdGb2JCbjc1eXQwUTFfd25FSGpOTzBmbWJYb2VmNWIyeFUyVHhUQVExa2xOQTQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9sMEU2allRMGFWampLbDdFWlhQTTQ3TXM0V2FkemV6d19wclRyRTR2UlFXRzgxOGJDSXhVeE1IYmNrZ0pwbGVnUDVGb01FTXlGblpvdHBTRFNhUQ",
+    "published": "2026-11-09T07:28:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 “스마트 글래스로 촬영·녹음 시 미리 알려야”",
+    "tags": [],
+    "title": "개인정보위 “스마트 글래스로 촬영·녹음 시 미리 알려야”",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9sMEU2allRMGFWampLbDdFWlhQTTQ3TXM0V2FkemV6d19wclRyRTR2UlFXRzgxOGJDSXhVeE1IYmNrZ0pwbGVnUDVGb01FTXlGblpvdHBTRFNhUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFAtbHM3NF9RckN2bU54VkVfUi1oZURZVlZVVjBXNHZ2b0d5QnBxekFlcUQ0d1ZuaVBzeFhINV9BY1UyS3lZbkxIMFBHQXdxQnVxdWVJRVVQalpHVkFBNm9WNWYyTVRXRUU",
+    "published": "2026-11-09T04:07:49+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "몰래 찍어도 모르는 AI안경…LED 표시등 가리는 편법도",
+    "tags": [],
+    "title": "몰래 찍어도 모르는 AI안경…LED 표시등 가리는 편법도",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAtbHM3NF9RckN2bU54VkVfUi1oZURZVlZVVjBXNHZ2b0d5QnBxekFlcUQ0d1ZuaVBzeFhINV9BY1UyS3lZbkxIMFBHQXdxQnVxdWVJRVVQalpHVkFBNm9WNWYyTVRXRUU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiggFBVV95cUxNM0RVQVNyMmtDeTl2d2xIakRaWm85VjJCWDcwZ2JBTEhHYVBpNTBmS1NxencyejIyd1RXN2dkNUo1V3gzZGRMMHpvUzBjZGNLOWxlR201dHc0Zl9RTkVYR1BZdFB4WTNIclRiajJQdTh5MDBnRW5JTl9qdzgyai1PQVN30gGWAUFVX3lxTFB5WFZlMHItVmxfTG9qLUNFdVJsYjEzOFBtem1BeklMcWZTMEYxSU15QUo1VzhSYkpNMEhvRzBQSlBQYVktamR3TnoydUhKU2Q2cE5RWVdNc1I1c21uUXhQejFuTHR6QjA3SlltbUZUcTdGNlhPZ09FODI4YTNzTVl2LUo5THp5clpXN0ktc1RwNjd0Ui1IQQ",
+    "published": "2026-11-09T07:06:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "스마트안경 몰래 촬영·녹음 우려에…개인정보위, 가이드라인 마련 추진",
+    "tags": [],
+    "title": "스마트안경 몰래 촬영·녹음 우려에…개인정보위, 가이드라인 마련 추진",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNM0RVQVNyMmtDeTl2d2xIakRaWm85VjJCWDcwZ2JBTEhHYVBpNTBmS1NxencyejIyd1RXN2dkNUo1V3gzZGRMMHpvUzBjZGNLOWxlR201dHc0Zl9RTkVYR1BZdFB4WTNIclRiajJQdTh5MDBnRW5JTl9qdzgyai1PQVN30gGWAUFVX3lxTFB5WFZlMHItVmxfTG9qLUNFdVJsYjEzOFBtem1BeklMcWZTMEYxSU15QUo1VzhSYkpNMEhvRzBQSlBQYVktamR3TnoydUhKU2Q2cE5RWVdNc1I1c21uUXhQejFuTHR6QjA3SlltbUZUcTdGNlhPZ09FODI4YTNzTVl2LUo5THp5clpXN0ktc1RwNjd0Ui1IQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9SMEdJRlAtejdmeWFhOURSaVd4M2l6S1N6aWV6a1E3cnZZVnU3Y0ZoMUdBSWdmYTJhSDN5MHA3Z2ExeDJocU51eVVuNUdwbEYxUWp0S1llbGxVaGkxNElOM9IBeEFVX3lxTE1KVWZ2S3dyWGFuTVdJUGR3NkFjX1RIdV80YlEyclJSUy1vTF9xS3ZJTi1nNzI3aHhtOEZQeGI4cXFTNk9BYVY3Z3pHbjZNSGRsWFJ0YURNVXYzTFFrRnpMY1B4VXJ5clhUQnY3VDBja3J4eHNzUU16Xw",
+    "published": "2026-11-09T02:01:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"LED 가리고 찰칵하면 범죄\"…개인정보위, '스마트 글래스' 몰래 촬영 경고",
+    "tags": [],
+    "title": "\"LED 가리고 찰칵하면 범죄\"…개인정보위, '스마트 글래스' 몰래 촬영 경고",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9SMEdJRlAtejdmeWFhOURSaVd4M2l6S1N6aWV6a1E3cnZZVnU3Y0ZoMUdBSWdmYTJhSDN5MHA3Z2ExeDJocU51eVVuNUdwbEYxUWp0S1llbGxVaGkxNElOM9IBeEFVX3lxTE1KVWZ2S3dyWGFuTVdJUGR3NkFjX1RIdV80YlEyclJSUy1vTF9xS3ZJTi1nNzI3aHhtOEZQeGI4cXFTNk9BYVY3Z3pHbjZNSGRsWFJ0YURNVXYzTFFrRnpMY1B4VXJ5clhUQnY3VDBja3J4eHNzUU16Xw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE43RlpJQWxGM0FzVzNtZUExN3llMzF0bkRXZ2Y4QWZMalZMN0ctc1UyUXlLUUpSQjM0bFpERFVPVFByRTVDckc5Q0F0cVVpZG1CNE5wVkNzb0tfV3BwUWo4TG9GUXR3WHc0TFE",
+    "published": "2026-11-09T01:59:56+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "‘스마트글래스’ 사생활 침해 논란에… 개인정보위, 이용 수칙 안내",
+    "tags": [],
+    "title": "‘스마트글래스’ 사생활 침해 논란에… 개인정보위, 이용 수칙 안내",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE43RlpJQWxGM0FzVzNtZUExN3llMzF0bkRXZ2Y4QWZMalZMN0ctc1UyUXlLUUpSQjM0bFpERFVPVFByRTVDckc5Q0F0cVVpZG1CNE5wVkNzb0tfV3BwUWo4TG9GUXR3WHc0TFE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE80bjZaTU42QkZ4NlM2akgyZ3drVE43SXE3RXpheXRRNmoyMkotN0h0REFhZHRaS1VDUFlRaXZSMzFrTm5RUmNzSWFpMU5KUGh3cjNCek5YQWxxMW9kYXfSAWNBVV95cUxPSHA5RXk1UE5hMlFRbDNFb2xpWXBnaDJLdWJURXBPVUFoSWRHcjB3RUJOWC1BSm1jM0p4RDRhaE5iYmdSMmRIaGduY211UXVCWkRNckFnU0k1NjYzNVNFOTBrS3M",
+    "published": "2026-11-09T02:48:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“AI안경, 화장실에선 벗어야”…개인정보위, 지침 마련",
+    "tags": [],
+    "title": "“AI안경, 화장실에선 벗어야”…개인정보위, 지침 마련",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE80bjZaTU42QkZ4NlM2akgyZ3drVE43SXE3RXpheXRRNmoyMkotN0h0REFhZHRaS1VDUFlRaXZSMzFrTm5RUmNzSWFpMU5KUGh3cjNCek5YQWxxMW9kYXfSAWNBVV95cUxPSHA5RXk1UE5hMlFRbDNFb2xpWXBnaDJLdWJURXBPVUFoSWRHcjB3RUJOWC1BSm1jM0p4RDRhaE5iYmdSMmRIaGduY211UXVCWkRNckFnU0k1NjYzNVNFOTBrS3M?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWEFVX3lxTE9pTnMwQWVJMGpXREU5bmxLeWY0YlNENG1OaG0wdU93aEVsWVdqcm1vN1RGUU1BMWlRTTlUU1RCaEk0cElZWnVfSjBoRW5TYzRiSHhPaFBzVk_SAVRBVV95cUxPYkdJTVdVZEN5YUEzYmF0RHpCb2xubGkyYUMwYU05ZXE3OFNKbWhvZzJZQXM4bklXU2U1Vm84REFzbElnd2NJRFprNk8xYUpSd1BDOFU",
+    "published": "2026-11-09T03:03:29+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "‘AI 안경’으로 몰래 촬영?…개인정보위 “시험장·탈의실 착용 자제”",
+    "tags": [],
+    "title": "‘AI 안경’으로 몰래 촬영?…개인정보위 “시험장·탈의실 착용 자제”",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9pTnMwQWVJMGpXREU5bmxLeWY0YlNENG1OaG0wdU93aEVsWVdqcm1vN1RGUU1BMWlRTTlUU1RCaEk0cElZWnVfSjBoRW5TYzRiSHhPaFBzVk_SAVRBVV95cUxPYkdJTVdVZEN5YUEzYmF0RHpCb2xubGkyYUMwYU05ZXE3OFNKbWhvZzJZQXM4bklXU2U1Vm84REFzbElnd2NJRFprNk8xYUpSd1BDOFU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTE1CM1lRbVNpSzh3bG00VDU5QThKT2UwaTIwWnJ1Vy02enlfa092UzRyWTFZMW5GakpwNmpMQldRb2pzamVDNjdWSXBYUkhNWGg3QWplNVNEVkY1a2p6RHg4",
+    "published": "2026-11-09T01:37:47+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "몰래 찍어도 모른다...개인정보위, '스마트 글래스' 사생활 침해 경고",
+    "tags": [],
+    "title": "몰래 찍어도 모른다...개인정보위, '스마트 글래스' 사생활 침해 경고",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1CM1lRbVNpSzh3bG00VDU5QThKT2UwaTIwWnJ1Vy02enlfa092UzRyWTFZMW5GakpwNmpMQldRb2pzamVDNjdWSXBYUkhNWGg3QWplNVNEVkY1a2p6RHg4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE8yemdiRDFrS3JSX1BlUl8tUURWb196R1FtWVBuWUNIaWxzWjNOS0xNa01NVDdaVXdyTFU4d291TVV6b2xNRmx3SUhPWQ",
+    "published": "2026-11-09T05:54:15+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 스마트안경 지침 추진…무단촬영 제재 : 사회",
+    "tags": [],
+    "title": "개인정보위 스마트안경 지침 추진…무단촬영 제재 : 사회",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE8yemdiRDFrS3JSX1BlUl8tUURWb196R1FtWVBuWUNIaWxzWjNOS0xNa01NVDdaVXdyTFU4d291TVV6b2xNRmx3SUhPWQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNeWRZVE9FTDc4dFkzc2NQU2lrV29yYk5XazhXU3l5eFQ4Nmp6M2ZIX3NGa3U1M1laRlNNTWMwdExiMjBRSFBGXzk4RW1NV0NSdDZhaEZLTUxFSi1udW40cXRBMHVZT0gxNDZXSmEwOTZlYjdEMzFuZ2JXQ1RmNnhRWA",
+    "published": "2026-11-09T02:15:34+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "스마트글래스 개인정보 경고등…개인정보위 가이드라인 마련 예고",
+    "tags": [],
+    "title": "스마트글래스 개인정보 경고등…개인정보위 가이드라인 마련 예고",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeWRZVE9FTDc4dFkzc2NQU2lrV29yYk5XazhXU3l5eFQ4Nmp6M2ZIX3NGa3U1M1laRlNNTWMwdExiMjBRSFBGXzk4RW1NV0NSdDZhaEZLTUxFSi1udW40cXRBMHVZT0gxNDZXSmEwOTZlYjdEMzFuZ2JXQ1RmNnhRWA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE52d1JkM3d3WkVjR0l0LWQxODU5ZkpjU0RJamU0aEQzZ3hSSnJKZmVFbV8wZUtWdDFWc011OElQMkpjeWZjOHBCb2NjS0xPc1pQbkxEN0tJbXprT2dMaURSeGVfRDQxekllcUd6eldiZ1VuVjQ",
+    "published": "2026-11-09T02:11:58+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 \"스마트 글래스 활용 시 주변에 알려야\"...연내 가이드라인 마련",
+    "tags": [],
+    "title": "개인정보위 \"스마트 글래스 활용 시 주변에 알려야\"...연내 가이드라인 마련",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE52d1JkM3d3WkVjR0l0LWQxODU5ZkpjU0RJamU0aEQzZ3hSSnJKZmVFbV8wZUtWdDFWc011OElQMkpjeWZjOHBCb2NjS0xPc1pQbkxEN0tJbXprT2dMaURSeGVfRDQxekllcUd6eldiZ1VuVjQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE5fTGxGSEQxT1EzS2d0R1hUR3AyT0VyZHJvUFZNZk5nXzFHbFIxUjlCZnJTVnlXUEJRR01qVTlKalFyMllQRFdMYkp6UHpsZFZvZkF2dElibVpYV1B6T2ZJUjNTSWNjTlhsd044RDFB",
+    "published": "2026-11-09T04:17:17+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위·교육부, 스마트 안경 정조준",
+    "tags": [],
+    "title": "개인정보위·교육부, 스마트 안경 정조준",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5fTGxGSEQxT1EzS2d0R1hUR3AyT0VyZHJvUFZNZk5nXzFHbFIxUjlCZnJTVnlXUEJRR01qVTlKalFyMllQRFdMYkp6UHpsZFZvZkF2dElibVpYV1B6T2ZJUjNTSWNjTlhsd044RDFB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE8yb3JCeWNNSVdadmJvSml2bFo2WDdfOHZCOWZMbDlZU2h6MDY3UHBCS1JVcjF3T0F6dUtqcmdfYWUwNEZUR0YxNklOTzRIeDR5Y1hFc3dib04yZ9IBWEFVX3lxTE1sRmZHbFlEWFdGbV9zdjJJTkI1LTRVaFJ0NUFqeENnYmlqS2llc2thc2JvZ2N2djJwMkhxXzMzOXRwSEd1Z08wY1hTdzU4M29pbElRM3I5Vlg",
+    "published": "2026-11-09T01:35:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "촬영 알아채기 어려운 스마트 글래스…개인정보위, 이용수칙 안내",
+    "tags": [],
+    "title": "촬영 알아채기 어려운 스마트 글래스…개인정보위, 이용수칙 안내",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8yb3JCeWNNSVdadmJvSml2bFo2WDdfOHZCOWZMbDlZU2h6MDY3UHBCS1JVcjF3T0F6dUtqcmdfYWUwNEZUR0YxNklOTzRIeDR5Y1hFc3dib04yZ9IBWEFVX3lxTE1sRmZHbFlEWFdGbV9zdjJJTkI1LTRVaFJ0NUFqeENnYmlqS2llc2thc2JvZ2N2djJwMkhxXzMzOXRwSEd1Z08wY1hTdzU4M29pbElRM3I5Vlg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE04X0pQaWtNbkFITDU0MzVidmZNbDJ6X1BwWlAxbUNlaWc1ZWxtYmxIZTM3SGdGMWtPRGZyYXZUU0xlWDVGc1pPUEtQVmpRZw",
+    "published": "2026-11-09T06:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 정책포럼 개최…AI 침해 대응·사전예방 강화 모색",
+    "tags": [],
+    "title": "개인정보위, 정책포럼 개최…AI 침해 대응·사전예방 강화 모색",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE04X0pQaWtNbkFITDU0MzVidmZNbDJ6X1BwWlAxbUNlaWc1ZWxtYmxIZTM3SGdGMWtPRGZyYXZUU0xlWDVGc1pPUEtQVmpRZw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE52a2tmeW5uY1djVDFXYVcyMm56VU1fdkhlb1VBZ1lyMTBjdEJtMEgyV3BXN3k2djI2c2dvZmE2RXZhRVQ0d0preFkwV1h2dE9UTzFmU1hhQkltbkJZYUVydWJrUjU2NkFq",
+    "published": "2026-11-09T01:21:34+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“그냥 안경인 줄 알았는데”…스마트 글래스 촬영·녹음 주의보",
+    "tags": [],
+    "title": "“그냥 안경인 줄 알았는데”…스마트 글래스 촬영·녹음 주의보",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE52a2tmeW5uY1djVDFXYVcyMm56VU1fdkhlb1VBZ1lyMTBjdEJtMEgyV3BXN3k2djI2c2dvZmE2RXZhRVQ0d0preFkwV1h2dE9UTzFmU1hhQkltbkJZYUVydWJrUjU2NkFq?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE5FeGlLRHZGTFVXaHFzWkxMdGJiaHZFZ0NzZmE1WTV5X1pwRzd6bDRNU0Z0T1BCNzhTYjdOV2hZLVdNVDcycnpIR3BaYw",
+    "published": "2026-11-08T19:16:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "잇따른 거래소 해킹에 금감원, 19일 가상자산사업자 보안회의 연다 : 금융",
+    "tags": [
+      "금융"
+    ],
+    "title": "잇따른 거래소 해킹에 금감원, 19일 가상자산사업자 보안회의 연다 : 금융",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5FeGlLRHZGTFVXaHFzWkxMdGJiaHZFZ0NzZmE1WTV5X1pwRzd6bDRNU0Z0T1BCNzhTYjdOV2hZLVdNVDcycnpIR3BaYw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5uaHlUUjF0N0lDeW5hLUVXeXBKT3JfZlFFcXR1VkdmZDFSNG5jSktHT1Mzd1U4TmhiXzV1aEJkdXBIV2libWxvd0FpOHlVUkgxS2hnWENwU0phWEQxcGRnM2dvTW0",
+    "published": "2026-11-07T05:16:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "미래에셋증권도 해킹 피해 3만9천여 명 정보 유출....해킹 대책 문제 없나",
+    "tags": [
+      "금융"
+    ],
+    "title": "미래에셋증권도 해킹 피해 3만9천여 명 정보 유출....해킹 대책 문제 없나",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5uaHlUUjF0N0lDeW5hLUVXeXBKT3JfZlFFcXR1VkdmZDFSNG5jSktHT1Mzd1U4TmhiXzV1aEJkdXBIV2libWxvd0FpOHlVUkgxS2hnWENwU0phWEQxcGRnM2dvTW0?oc=5"
   }
 ]
