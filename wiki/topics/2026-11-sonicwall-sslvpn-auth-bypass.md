@@ -10,5 +10,6 @@ cves: [CVE-2026-19868]
 ## 타임라인
 
 - 2026-11-06 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-19868) — CVE-2026-19868 공개 (CVSS 9.1)
+- 2026-11-07 [BleepingComputer](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/) — 취약점이 **실제 사이버공격에 악용 중** 확인, SonicOS 방화벽 7개 취약점 보안 업데이트 권고
 
 ## 관련

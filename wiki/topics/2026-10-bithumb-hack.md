@@ -19,6 +19,11 @@ cves: []
 - 2026-10-28 [금융위원회](https://news.google.com/rss/articles/CBMiYEFVX3lxTE12TGhQSkdWcDNfakhZRXdGbjBMY09WVXg2di1HQjNBUzRld2d2eUgyTFhuY3Nud19hOTh6Ty01Y05La1Z5RmIxang3ZXN4MXR6dHM3VE1HUlVjVVRjaFgtc9IBeEFVX3lxTE83SVYyQWFrLTI3MXFLMGFRWmd6bVZkXzh3M2hlUWl0SVplY3ViX2JDVkNRbVdjSEVFVy1hbmhQT2RNWDZTaVRySVRBanJkaFVubVJQYTFYV1Z5aE5rVExCVUpraU4xOTV4Z0RrSU5NdlRkV19PbGpPTA?oc=5) — 내주 AI 보안 총점검 및 긴급 보안점검 회의 개최
 - 2026-10-28 [금융위원회](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FbFRPd1dTbzRMVldNLXVuVHU3Wk4xZ281bFFWcWtUNDByRkFkUmpxZWJINlFLV09SXzdhYmxBQmRCZDhRVFZGU3plNXNVV2VmdHQzU2Rpak9Rd9IBWEFVX3lxTE9yU0xjWi1nZmtEUkJmVkR4ZGk0SFRrQVRQaVNLZzNNSmhWVGhFNUtwWTJndUZrb0ZDSkF5MjBMVzNNek1qQ29iZ09DUG44X2VveF9raHJKbkI?oc=5) — 금융기관에 금융사급 보안 강화 권고
 - 2026-10-29 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209174) — 빗썸 해킹 피해 확정: 고객 6,444명, 임직원 715명 개인정보 유출, 주민등록번호·신분증 사본 포함
+- 2026-11-07 [금융위원회](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fdnA1cmY3WHpRcGlfYWFCdkR5eVQ4TnczOWZZVWxPYVViNm13SXJ1VVp3Rm84b2pEdGZEUVNQYTg5MmZjeHlYZ0l4Z1J3Qk1RZjZ0Y3lB?oc=5) — 미래에셋증券도 해킹, 3만9,000여명 개인정보 유출 금융당국에 신고
+- 2026-11-08 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209388) — 디지털자산 운용사 하이퍼리즘도 침해, 주민등록번호·은행 계좌정보 포함 개인정보 유출
+- 2026-11-08 [금융보안원](https://news.google.com/rss/articles/CBMicEFVX3lxTE9fOXN5d1JtTlFCT3VZdzBvNEdWOFdZSVRBUWE2OHVJUG45UDEzNkRZZGVqX2xSbDFrRG9SbFdLN0tJdERuZDNremV0NHpSNXdSRk1tUXVpejl4cWZkSXBha0pHaU9xdUVSUnhoMXM1Ri3SAXRBVV95cUxNSm1IY1FmQmhIUWIxSXExWmdZdEljZGM0OHgwQ2tPaWRzNGdlQThGS0NJVFlOVS1QdHZ4cFRPUHROQnVFSUs3NmJrQi1yaUE1MEdZeWxuTnV5dndRd092NXItTHUyQnNzZVRJUk5xTXlmSWRhUg?oc=5) — 금융권 전반 해킹 파장, 경영진 교체 등 리더십 변화 가능성
+- 2026-11-07 [금융위원회](https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JTUo5RFBIeHpTbXdnelZtZkVWenFJWHEtZEtTQjNPUjVaUHJOY25mMEtaNThwRExqcDNyc2ZnYzZmZHVCNW14TFBNdUdQQXRVSkwtaTA2UVRBRWfSAWBBVV95cUxQemVhVUQ1UGRWSzg5WEJBbE1veG5kcXRZOGpkVWRIVmY4MXVmdzRPVDd3YkVyVUxNTkVxbTN2UEgwRzdGTER5ZnlMTElOUzFiS2FwNW5TQnBpYzFBYTBqTDU?oc=5) — 가상자산거래소·금융사 잇따른 침해, 금융당국 보안 책임자 소집 회의
+- 2026-11-06 [금융위원회](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5UVDNNMTdZd0lCVm5Fd2ZHOHBIS3BsM25ZQXllX3hYcUI3bS1VVWtQRDIta1JZS2o2Q3ZKSFVBRnc2SFNVbjhOYUxqRWRiNTRURzRKaQ?oc=5) — 빗썸 개인정보 유출로 인한 **보이스피싱 2차 피해** 대응 강화, 특별대응 연말까지 연장
 
 ## 관련
 

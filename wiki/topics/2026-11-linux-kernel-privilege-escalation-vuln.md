@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-05 [AI 벤더 보안뉴스](https://news.google.com/rss/articles/CBMilAFBVV95cUxOc0QxTGhIcXAxdDJxM2l3djNtVkM1TjlnY0c4Y3lOR3RmTU9vQ2lLQnlSX2tmMDkyM1Y2ZFBsUmNIYXI0UUh3NkZ0dWt3Qy1pYlhXVHRIV0p0ODJ0dHIta2xMX0tIdllMOW10RnV3MHBNSnZfU3ROY3BYLWlFeGlsbW9sVmdTU09ZdHpVckZmS2Z5X28t?oc=5) — **OpenAI 파이프라인** 분석, **Linux 커널** 권한 상승 취약점 **948개** 발견, 미패치 상태
+- 2026-11-06 [The Hacker News](https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html) — **OpenAI GPT-6 Cyber** 출시, **81개 Firefox 플로우**·**948개 Linux 익스플로잇** 발견 및 수정 능력 시연
 
 ## 관련
 
