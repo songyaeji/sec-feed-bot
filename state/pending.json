@@ -1382,5 +1382,924 @@
     "tags": [],
     "title": "‘내 개인정보를 지키는 꿀팁’.. 개인정보위, 숏폼 콘텐츠 공모전 개최",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE40VjhKSnBaRXdwUmRuQnB3eS1LVzVCYTlCSGwycVBTeHB2alNXUG9VOEpyRHUyTndQUXljSGdDSTlYeTd3VGRfTzZJRFczeDdZNmNUdWhPTGp0QkJJNHQ0Nk5icFBzYWhjdERN?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-61949",
+    "published": "2026-07-23T12:18:34.680",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Bookly Bookly bookly-responsive-appointment-booking-tool allows Blind SQL Injection.This issue affects Bookly: from n/a through 27.7.",
+    "tags": [],
+    "title": "CVE-2026-61949 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61949"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-72868",
+    "published": "2026-08-10T19:17:35.600",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.29.13, apps/dokploy/server/api/routers/destination.ts interpolates the accessKey, secretAccessKey, region, endpoint, provider, and bucket fields from destination.testConnection into an rclone ls command executed through child_process.exec. The `withPermission(\"destination\", \"create\")` path permits a low-privileged organization member to reach the mutation, close a quoted argument with a crafted field, and execute arbitrary commands in the root Dokploy container, which has access to the host Docker socket. This issue is fixed in version 0.29.13.",
+    "tags": [],
+    "title": "CVE-2026-72868 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72868"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-115646",
+    "published": "2026-11-10T05:17:48.627",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Partial String Comparison Vulnerability in HiRDB.\n\n\nThis issue affects HiRDB Server Version 10: from 10-00 before 10-12-01; HiRDB Server Version 9: from 09-50-06 through 09-66-22; HiRDB Server with Additional Function Version 9: from 09-50-/F through 09-66/V; HiRDB Server Version 9(32): from 09-50-06 through 09-66-22; HiRDB Server with Additional Function Version 9(32): from 09-50-/F through 09-66-/V.",
+    "tags": [],
+    "title": "CVE-2026-115646 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115646"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-13312",
+    "published": "2026-11-10T06:17:08.587",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability that could allow an attacker to compromise a system.",
+    "tags": [],
+    "title": "CVE-2026-13312 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13312"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-60043",
+    "published": "2026-11-10T09:17:24.110",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An unauthenticated remote attacker can perform a XSS attack on a logged in backend user allowing for execution of multiple critical system actions. This could allow an attacker to shutdown the server or restore an uploaded backup. This can result in a loss of integrity and availability.",
+    "tags": [],
+    "title": "CVE-2026-60043 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60043"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-33944",
+    "published": "2026-11-05T22:18:41.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dolibarr is an open-source enterprise resource planning and customer relationship management application. Prior to 22.0.5 and 23.0.1, there is a SQL injection vulnerability in the Third Party company update functionality. The application concatenates the  localtax1_value  and  localtax2_value  properties into an SQL UPDATE statement without numeric conversion or other appropriate sanitization. An authenticated user with Third Party create or edit permission can submit crafted  lt1  or  lt2  POST parameters to read sensitive database information, including password hashes, API keys, and business data, or modify third-party records. This issue is fixed in versions 22.0.5 and 23.0.2.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-33944 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33944"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-125612",
+    "published": "2026-11-10T03:16:42.547",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Deltaww DIAEnergie allows SQL Injection.\n\nThis issue affects DIAEnergie: before 1.11.01.032.",
+    "tags": [],
+    "title": "CVE-2026-125612 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125612"
+  },
+  {
+    "category": "high",
+    "cvss": 7.3,
+    "id": "CVE-2026-86578",
+    "published": "2026-11-10T05:18:11.813",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Link Following Vulnerability in Hitachi Dynamic Link Manager for Windows.\n\nThis issue affects Hitachi Dynamic Link Manager for Windows: from 5.0.0-03 before 9.0.4-01.",
+    "tags": [],
+    "title": "CVE-2026-86578 (CVSS 7.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86578"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-86579",
+    "published": "2026-11-10T05:18:12.020",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Binary Planting Vulnerability in Hitachi Dynamic Link Manager for Windows.\n\nThis issue affects Hitachi Dynamic Link Manager for Windows: from 5.9.5-00 before 9.0.4-01.",
+    "tags": [],
+    "title": "CVE-2026-86579 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86579"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-91754",
+    "published": "2026-11-10T05:18:12.973",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Stack-based Buffer Overflow Vulnerability in Hitachi Dynamic Link Manager for VMware.\n\nThis issue affects Hitachi Dynamic Link Manager for VMware: from 8.7.3-00 before 9.0.4-01.",
+    "tags": [],
+    "title": "CVE-2026-91754 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91754"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-91755",
+    "published": "2026-11-10T05:18:13.297",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Integer Overflow Vulnerability in Hitachi Dynamic Link Manager for VMware.\n\nThis issue affects Hitachi Dynamic Link Manager for VMware: from 8.7.3-00 before 9.0.4-01.",
+    "tags": [],
+    "title": "CVE-2026-91755 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91755"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-91756",
+    "published": "2026-11-10T05:18:13.950",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OS Command Injection Vulnerability in Hitachi Dynamic Link Manager for VMware.\n\nThis issue affects Hitachi Dynamic Link Manager for VMware: from 8.7.3-00 before 9.0.4-01.",
+    "tags": [],
+    "title": "CVE-2026-91756 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91756"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-91761",
+    "published": "2026-11-10T05:18:15.807",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "UNIX Symbolic Link (Symlink) Following Vulnerability in Hitachi Dynamic Link Manager for Linux.\n\nThis issue affects Hitachi Dynamic Link Manager for Linux: from 8.6.2.-00 before 9.0.5-00.",
+    "tags": [],
+    "title": "CVE-2026-91761 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91761"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-91763",
+    "published": "2026-11-10T05:18:16.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "UNIX Symbolic Link (Symlink) Following Vulnerability in Hitachi Dynamic Link Manager for Linux.\nThis issue affects Hitachi Dynamic Link Manager for Linux: from 8.6.2.-00 before 9.0.5-00.",
+    "tags": [],
+    "title": "CVE-2026-91763 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91763"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-91764",
+    "published": "2026-11-10T05:18:16.360",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Improper Link Resolution Before File Access Vulnerability in Hitachi Dynamic Link Manager for Linux.\n\n\nThis issue affects Hitachi Dynamic Link Manager for Linux: from 6.1.1.-00 before 9.0.5-00.",
+    "tags": [],
+    "title": "CVE-2026-91764 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-91764"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-12389",
+    "published": "2026-11-10T06:17:08.200",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability that could lead to a high privileged authenticated user performing a remote code execution attack.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-12389 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12389"
+  },
+  {
+    "category": "high",
+    "cvss": 8.0,
+    "id": "CVE-2026-12964",
+    "published": "2026-11-10T06:17:08.453",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability allowing for privileged escalation of the viewer account to gain administrator privileges.",
+    "tags": [],
+    "title": "CVE-2026-12964 (CVSS 8.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12964"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-4762",
+    "published": "2026-11-10T06:17:09.757",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability to perform a privilege escalation attack on the server as a non-admin user.",
+    "tags": [],
+    "title": "CVE-2026-4762 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4762"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-63288",
+    "published": "2026-11-10T06:17:10.197",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A WebSocket request sent to a specific API endpoint allows unauthorized access to a separate API endpoint. This bypasses the intended authentication layer.",
+    "tags": [],
+    "title": "CVE-2026-63288 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63288"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-8372",
+    "published": "2026-11-10T06:17:10.420",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability that could allow an attacker to gain unauthorized access.",
+    "tags": [],
+    "title": "CVE-2026-8372 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8372"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-120513",
+    "published": "2026-11-10T07:16:51.733",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Everest Forms – Contact Form, Payment Form, Quiz, Survey & Custom Form Builder with AI plugin for WordPress is vulnerable to file deletion due to insufficient file path validation in the remove_csv_file_after_email_send function in all versions up to, and including, 3.6.2 This makes it possible for unauthenticated attackers to delete files within the wp-content/uploads directory on the server, which can lead to loss of uploaded content. On hardened Apache configurations, deletion of uploads/.htaccess can re-enable PHP execution inside the uploads directory. This attack is only possible when the Save-and-Continue addon is active (EVF_SAVE_AND_CONTINUE_VERSION is defined) and the 'Disable storing entry information' setting is enabled on the target form. Escaping the uploads directory and deleting files in the site root can be possible under rare circumstances.",
+    "tags": [],
+    "title": "CVE-2026-120513 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120513"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-76877",
+    "published": "2026-11-10T07:16:52.463",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WPML Multilingual CMS plugin for WordPress is vulnerable to Authentication Bypass via Race Condition in versions up to, and including, 4.9.7. This is due to the `process_iframe_request` function's language-per-domain SSO handler generating the cross-domain sign-in token via `wp_create_nonce('wpml_sso')` on the logout landing page, where the browser has already discarded its authentication cookies — so `wp_get_session_token()` returns an empty string and the token collapses to the shared anonymous nonce for the current 12-hour tick rather than a user-bound secret — and then storing it in the `wpml_sso_user_<token>_<sha256('wpml_sso'.$domain)>` transient mapped to the victim's `user_id` with no binding to the specific sign-out action or requesting client. Because an unauthenticated attacker can independently derive the identical token by triggering the logout confirmation flow on `wp-login.php?action=logout`, and because the `is_iframe_request()` gate conditions (the per-domain SSO `started` transient and domain-hash derived from the public constant `SSO_NONCE`) are fully computable within the 60-second `SSO_TIMEOUT` window, an unauthenticated attacker can submit the forged `wpml_sso_token_domain` parameter with a `wpml_user_signed_in` status to a secondary language-domain endpoint before the legitimate `wpml_user_signed_out` iframe fires, causing WordPress authentication cookies to be issued for the victim. This makes it possible for unauthenticated attackers to gain acces",
+    "tags": [],
+    "title": "CVE-2026-76877 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76877"
+  },
+  {
+    "category": "high",
+    "cvss": 7.2,
+    "id": "CVE-2026-60037",
+    "published": "2026-11-10T09:17:23.133",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A high privileged remote attacker can perform an OpenSSL code injection in the frontends device importer function leading to code execution. This can result in a total loss of confidentiality, integrity and availability.",
+    "tags": [],
+    "title": "CVE-2026-60037 (CVSS 7.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60037"
+  },
+  {
+    "category": "high",
+    "cvss": 7.2,
+    "id": "CVE-2026-60038",
+    "published": "2026-11-10T09:17:23.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A high privileged remote attacker can perform an OpenSSL code injection in the backends ImportPKCS12 function leading to code execution. This can result in a total loss of confidentiality, integrity and availability.",
+    "tags": [],
+    "title": "CVE-2026-60038 (CVSS 7.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60038"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-60041",
+    "published": "2026-11-10T09:17:23.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An unauthenticated remote attacker can perform a CSRF attack on a logged in backend user allowing for execution of multiple critical system actions. This could allow an attacker to shutdown the server or restore an uploaded backup. This can result in a loss of integrity and availability.",
+    "tags": [],
+    "title": "CVE-2026-60041 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60041"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72293",
+    "published": "2026-11-10T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [],
+    "title": "WordPress 플러그인 보안 업데이트 권고",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72293"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209436",
+    "published": "2026-11-10T17:50:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "데일리시큐는 7월부터 장삼봉 작가(필명)의 정보보안 소설《로그아웃되지 않는 밤》을 매주 4편씩 연재한다. 화려한 디지털 서비스 뒤에서 보이지 않는 위협과 맞서는 보안 담당자들의 현실과 고뇌, 성장을 생생하게 담았다. 수많은 오탐 속에 숨은 단 하나의 진짜 공격을 추적하는 이들의 잠들지 못하는 밤이 시작된다. -한 통의 전화-그날 아침, 이정순은 은행에 다녀왔다.번호표를 뽑고 대기 의자에 앉아 있는 동안, 그녀는 몇 번이나 가방 지퍼를 열었다 닫았다. 전광판의 숫자가 하나씩 올라갈 때마다 띵, 하는 소리가 났다. 그 소리가 날 때마다",
+    "tags": [
+      "금융"
+    ],
+    "title": "[정보보안 연재소설-로그아웃되지 않는 밤] 에필로그·부록 제66화 '엄마의 그날'",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209436"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209435",
+    "published": "2026-11-10T17:04:55+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "'운영하고 있는 시스템에 취약점이 발견되었을 경우에, 즉시 패치를 적용하지 않은 것은 시스템 운영자의 책임 방기이며 직무유기이다. 따라서 앞으로는 패치를 적용하지 않은 것이 드러날 경우에 담당자·CEO 문책과 매출 대비 % 과징금 부과 등 엄중한 책임을 묻겠다'요즘 자주 듣게 되는 이야기이다. 그런데 세상 모든 일이 그러하듯 현장의 상황은 생각보다 무척 복잡하다.무엇보다 '패치 적용'은 전산장애를 일으킬 수 있다. '서버 OS를 업그레이드했더니 애플리케이션이 돌아가지 않는다'라는 사례가 있는 것처럼 소프트웨어 모듈은 서로 간에 종속",
+    "tags": [],
+    "title": "[김대환 보안칼럼] 패치적용이 이토록 어려운 이유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209435"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209434",
+    "published": "2026-11-10T15:17:00+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "LG유플러스가 GS네오텍과 업무협약을 맺고 단말부터 네트워크, 클라우드, 서버 전 구간을 보호하는 엔드투엔드(E2E) 보안 포트폴리오 강화에 나섰다.양사는 9일 서울 용산사옥에서 권용현 LG유플러스 엔터프라이즈부문장(부사장)과 남기정 GS네오텍 대표이사 등 주요 관계자가 참석한 가운데 협약식을 진행했다. LG유플러스의 전국 통신망 및 데이터센터 운영 기반 관제 역량과 GS네오텍의 클라우드 인프라 구축·운영 노하우를 결합하는 것이 골자다.협약의 핵심은 LG유플러스의 보안 솔루션 'U+SASE'와 GS네오텍의 클라우드 보안 점검 서비스",
+    "tags": [],
+    "title": "LG유플러스-GS네오텍, 단말부터 클라우드까지 아우르는 E2E 보안 구축 협력",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209434"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209433",
+    "published": "2026-11-10T14:58:36+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아르고스 아이덴티티(대표 이원규)가 기업 서비스 환경에 맞춰 필요한 인증 기능만 골라 쓸 수 있는 '유닛 API(Unit API)'를 10일 선보였다.유닛 API는 신분증 광학문자인식(OCR), 안면 비교, 행정기관 진위확인 등 인증에 쓰이는 세부 기능을 독립된 모듈 형태로 호출하도록 지원하는 도구다. 기업 고객은 신분증 촬영부터 최종 심사까지 전체 화면을 통째로 적용하는 기존 '라이브폼(Liveform)' 방식 대신, 자체 시스템 UI를 유지하면서 필요한 검증 기능만 골라 연동할 수 있다.이번에 공개된 API는 총 14종이다. 이",
+    "tags": [],
+    "title": "아르고스 아이덴티티, 신원인증 모듈 선택 연동하는 '유닛 API' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209433"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209432",
+    "published": "2026-11-10T14:54:53+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "금융보안원이 금융위원회 후원과 시중 금융기관의 공동 주최로 열린 '2026 금융 AI 챌린지(Challenge)'를 마쳤다고 10일 밝혔다.이번 대회는 아이디어 기획서 제출 방식에서 벗어나 참가자가 실제 작동하는 웹 기반 서비스를 개발해 검증받는 방식으로 치러졌다. 총 1380개 팀(2102명)이 참여해 약 200대 1의 경쟁을 거쳤으며, 최종 7개 팀이 수상 명단에 이름을 올렸다.대상인 금융위원회 위원장상은 한화손해보험 직원 1인으로 구성된 '10percent' 팀이 개발한 '모의창구'가 차지했다. 상금은 2000만원이다. 모의창",
+    "tags": [
+      "금융",
+      "RCE"
+    ],
+    "title": "금융보안원, '2026 금융 AI 챌린지' 마무리...실무형 보안·소비자보호 서비스 조명",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209432"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209431",
+    "published": "2026-11-10T14:46:25+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "LG유플러스가 자동차 사이버보안 국제표준인 ISO/SAE 21434 기반 사이버보안 관리체계(CSMS) 레벨 3단계(ML3) 인증을 통과했다. 글로벌 시험인증기관 티유브이 라인란드(TUV Rheinland)가 발급한 이번 인증은 차량용 소프트웨어의 개발과 운영 전반에서 보안 관리체계가 국제 규격에 맞게 작동하는지 검증한다. 인증 유효기간은 3년이다.ISO/SAE 21434는 기획과 설계, 개발부터 사후 유지보수까지 차량 전체 생애주기에 걸친 사이버 위협을 관리하는 국제 표준 규격이다. 지난해 2단계(ML2) 수준을 확보한 LG유플러",
+    "tags": [],
+    "title": "LG유플러스, 자동차 사이버보안 국제표준 관리체계 'ML3' 인증 획득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209431"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209430",
+    "published": "2026-11-10T14:42:14+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI스페라(대표 강병탁)의 보안 솔루션 크리미널 IP(Criminal IP)가 유럽 정보보안 학술대회 'ESORICS 2026'의 부속 워크숍인 'RAISE'에서 소개됐다.ESORICS는 유럽 지역을 중심으로 컴퓨터 보안 분야 연구 성과와 동향을 다루는 국제 학술행사다. 이탈리아 로마에서 열린 올해 행사에는 유럽과 아시아 보안 연구자 50여 명이 참석해 시스템 보안과 프라이버시, 인공지능(AI) 보안 기술을 공유했다.크리미널 IP가 다뤄진 RAISE 워크숍은 실제 현장에서 AI 기반 사이버보안 체계를 구축하고 운영하는 과정의 기술",
+    "tags": [
+      "AI"
+    ],
+    "title": "AI스페라, 유럽 정보보안 학술대회서 AI 기반 공격 대응 위협 인텔리전스 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209430"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209429",
+    "published": "2026-11-10T14:34:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "시스코가 인공지능(AI) 애플리케이션과 에이전트의 보안 검증 및 운영 관리를 위한 신규 기능을 10일 발표했다.호주 멜버른에서 열린 '시스코 라이브 APJC' 행사에서 공개된 이번 기능은 보안 솔루션 '시스코 AI 디펜스'에 앤트로픽의 최신 인공지능 모델 '클로드 미토스(Claude Mythos)'를 탑재하고, '스플렁크 에이전트 옵저버빌리티'와 인프라 관리 도구 '시스코 IQ'의 연동을 대폭 강화한 것이 핵심이다.시스코 AI 디펜스는 운영 환경 배포 전 시스템의 잠재 위험을 찾아내는 적응형 레드팀 테스트 솔루션이다. 이번에 클로드",
+    "tags": [
+      "AI"
+    ],
+    "title": "시스코, AI 보안 검증·비용 관리 결합한 인프라 신기능 발표",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209429"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209428",
+    "published": "2026-11-10T14:29:08+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "구글 클라우드가 데이터 보안을 강화한 가속기 'TPU 8tx'와 대용량 데이터 처리에 맞춘 'TPU 8i 맥스(Max)'를 10일 발표했다. 4월 선보인 'TPU 8t', 'TPU 8i'에 이어 신규 시스템 2종을 더해 8세대 텐서처리장치(TPU) 라인업을 4종으로 늘렸다.구글은 자사 인공지능(AI) 모델 제미나이(Gemini) 운영에 TPU를 투입하고 있으며, 클라우드 인프라 제공뿐만 아니라 기업 데이터센터에 직접 장비를 구축하는 온프레미스 공급도 진행하고 있다. 금융사와 리테일 기업, 인공지능 연구소 등 약 100개 고객사가 이",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "구글 클라우드, 기밀 컴퓨팅 지원 'TPU 8tx'·대용량 'TPU 8i 맥스' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209428"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209427",
+    "published": "2026-11-10T14:10:16+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "레드햇(Red Hat)이 하이브리드 클라우드 애플리케이션 플랫폼 '레드햇 오픈시프트 5(Red Hat OpenShift 5)'를 10일 출시했다.이번 최신 버전은 내장형 운영 인텔리전스와 제로 트러스트(Zero Trust) 보안 아키텍처를 적용하고, 지원 수명 주기를 5년으로 늘려 운영 안정성을 높였다. 기존 오픈시프트 4 사용자는 복잡한 데이터 이전 작업 없이 시스템 내부 업데이트(In-place Update) 방식으로 판올림할 수 있다. 기업 IT 부서는 데이터센터와 퍼블릭 클라우드, 외부망과 단절된 폐쇄망(Air-gapped)",
+    "tags": [],
+    "title": "레드햇, 하이브리드 클라우드 플랫폼 '오픈시프트 5' 공개...제로 트러스트 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209427"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209426",
+    "published": "2026-11-10T13:16:48+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "고려대학교 사이버보안 연구진이 설립한 스타트업 안암145(각자대표 이중희·심준식)가 자체 개발한 안티해킹 솔루션 '싸인트레일(SignTrail)'로 CES 2027 사이버보안 부문 최고혁신상(Best of Innovation)을 받았다. 최고혁신상은 미국소비자기술협회(CTA)가 부문별 평가 점수가 가장 우수한 기술에 수여하는 상이다.싸인트레일은 정상 거래로 위장한 자산 탈취 공격을 차단하는 기술이다. 기존 보안 체계가 자산 이전에 필요한 비밀키 보관에 집중했다면, 싸인트레일은 거래 요청을 생성하고 처리하는 '실행환경' 자체를 검증한",
+    "tags": [],
+    "title": "안암145, '싸인트레일'로 CES 2027 사이버보안 부문 최고혁신상 수상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209426"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209425",
+    "published": "2026-11-10T13:08:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "파수 AI(대표 조규곤)가 공급망 데이터 보안 협업 플랫폼 '랩소디 에코(Wrapsody eCo)'에 미국 암호모듈검증(CMVP)을 통과한 암호 모듈을 탑재했다고 10일 밝혔다.CMVP는 미국 국립표준기술연구소(NIST)와 캐나다 통신보안국(CSE)이 공동 운영하는 검증 체계다. 미국과 캐나다 연방정부 및 공공기관에 IT 제품을 납품하기 위한 기본 규격으로 쓰인다. 북미 정부 기관과 방위산업 분야는 부품과 기술을 납품하는 협력업체에도 해당 기준을 충족하도록 요구하고 있다.랩소디 에코는 기존 국정원 암호모듈검증(KCMVP)에 이어 이",
+    "tags": [],
+    "title": "파수 AI, '랩소디 에코'에 북미 CMVP 암호 모듈 탑재...K-방산 수출 보안 지원",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209425"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
+    "published": "2026-11-10T09:08:20+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "An October cyberattack on refrigeration controllers at about 700 French retail sites was carried out by a cyber unit of Iran's Islamic Revolutionary Guard Corps (IRGC), the French government said yesterday. The attackers broke into controllers on the night of October 11 and changed their defrost settings to high temperatures. That caused food losses and, in at least 15 cases, fires. The unit",
+    "tags": [],
+    "title": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
+    "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/anthropics-claude-fable-52-beats-gpt-6.html",
+    "published": "2026-11-10T08:16:14+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Anthropic on Monday released Claude Fable 5.2 and Claude Mythos 5.2 models, which it said exhibit improvements in coding, reasoning, and vision. During pre-release training, the large language models (LLMs) helped its engineers \"complete otherwise-infeasible software migrations, designed three working electronic devices from scratch, solved two open problems in the physics of black holes, made",
+    "tags": [
+      "AI"
+    ],
+    "title": "Anthropic's Claude Fable 5.2 Beats GPT-6 Cyber in Multi-Stage Cyberattack Benchmark",
+    "url": "https://thehackernews.com/2026/11/anthropics-claude-fable-52-beats-gpt-6.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
+    "published": "2026-11-10T06:52:54+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has been described as a use-after-free bug in the XML component. Use-after-free bugs typically occur when a program attempts to access a memory location after",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+    "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+    "published": "2026-11-10T06:44:36+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "N-able said it has taken N-central Hosted Environments offline and is urging on-premises customers to shut down their servers until further notice following the public disclosure of over 30 vulnerabilities collectively tracked as Able2Shell. \"As a precautionary measure, we are temporarily taking our Hosted N-central environment offline while we take the necessary actions to secure the",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "N-able Takes N-central Cloud Offline After Researcher Discloses 33 Zero-Days with PoC Exploits",
+    "url": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/",
+    "published": "2026-11-10T08:51:25+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Google has released emergency security updates to patch a new Chrome vulnerability exploited in zero-day attacks, the eighth such flaw since the start of the year. [...]",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "Google patches eighth Chrome zero-day exploited in attacks this year",
+    "url": "https://www.bleepingcomputer.com/news/security/google-patches-eighth-chrome-zero-day-exploited-in-attacks-this-year/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/",
+    "published": "2026-11-10T07:49:58+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "AI infrastructure startup Fireworks has disclosed a new security breach in which attackers accessed its development machines after breaching a third-party cloud provider. [...]",
+    "tags": [],
+    "title": "Fireworks AI discloses new breach after cloud provider hack",
+    "url": "https://www.bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=202740",
+    "published": "2026-11-10T06:28:06+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Iris Ohyama warns that a cloud data breach may have exposed personal information of 7.7 million customers, including names and passwords. Japanese household goods manufacturer Iris Ohyama has disclosed that attackers may have accessed personal information belonging to approximately 7.7 million people through an external cloud service used by its online shopping subsidiary, Iris Plaza. […]",
+    "tags": [],
+    "title": "Iris Ohyama data breach may expose personal information of 7.7 million people",
+    "url": "https://securityaffairs.com/202740/data-breach/iris-ohyama-data-breach-may-expose-personal-information-of-7-7-million-people.html"
+  },
+  {
+    "author": "AMR",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?p=121843",
+    "published": "2026-11-10T08:00:37+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "Key trends and statistics on malware targeting Windows and macOS computers and Internet of Things (IoT) devices in Q3 2026.",
+    "tags": [],
+    "title": "IT threat evolution in Q3 2026. Non-mobile statistics",
+    "url": "https://securelist.com/malware-report-q3-2026-pc-iot-statistics/121843/"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMikwFBVV95cUxOblBCWjUzbklPR0pCX0NRLVo0TVhDZDhWRFFXUktqTkFUUXBxRDYwejJmTWlGMEljMVcyYlpZemgwdnRxUHlTbEU2a2FBbmpIQjZQX0NuaXRjZjg0VzRwV2dVZ0pjcXMwX25MT1c3ZUZTUlZTeDB0STUzdmFuRUE1ZEl4Sk5JZl81eS1SREh1ay1qTkE",
+    "published": "2026-11-10T02:05:02+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI 보안 침해 후 호주, AI 안전 권고안 발표",
+    "tags": [],
+    "title": "OpenAI 보안 침해 후 호주, AI 안전 권고안 발표",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOblBCWjUzbklPR0pCX0NRLVo0TVhDZDhWRFFXUktqTkFUUXBxRDYwejJmTWlGMEljMVcyYlpZemgwdnRxUHlTbEU2a2FBbmpIQjZQX0NuaXRjZjg0VzRwV2dVZ0pjcXMwX25MT1c3ZUZTUlZTeDB0STUzdmFuRUE1ZEl4Sk5JZl81eS1SREh1ay1qTkE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE9HWjB1Rm80OTNUUENKNnZBRU1FanBrSU9lR1VjZS1hSjBzVEZieUtoMWlqQy1IQllCdzJDYkRjMlc3NU16WkFBWURyOUhieU81QS1YLXYtWld0RXRVTDFiS0pIMWExZWxDWGVr0gFwQVVfeXFMUFhEcWJ1LWEzRHFyWm9IbFozT3Y0enpIUHRmdlVncnRKazZFN3MxSlNHYzRwWlRBVEkzYUlISF9LREIxREhRNXVLSGY3dEI5NDFaU2hWam1iZmdWQWVwSU5PVWVUUTFSWnZic0Y2bTM0Wg",
+    "published": "2026-11-10T06:00:14+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 '금융 AI 챌린지'…소비자 손실 위험 찾아낸 서비스에 대상 - 머니투데이",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 '금융 AI 챌린지'…소비자 손실 위험 찾아낸 서비스에 대상 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HWjB1Rm80OTNUUENKNnZBRU1FanBrSU9lR1VjZS1hSjBzVEZieUtoMWlqQy1IQllCdzJDYkRjMlc3NU16WkFBWURyOUhieU81QS1YLXYtWld0RXRVTDFiS0pIMWExZWxDWGVr0gFwQVVfeXFMUFhEcWJ1LWEzRHFyWm9IbFozT3Y0enpIUHRmdlVncnRKazZFN3MxSlNHYzRwWlRBVEkzYUlISF9LREIxREhRNXVLSGY3dEI5NDFaU2hWam1iZmdWQWVwSU5PVWVUUTFSWnZic0Y2bTM0Wg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE1NOUdMQ1pkUzg0WnlCYVFzQjNVRktBYUlhUEdKV3h6LVI3N29SVFpEanQyRk5hSTlVMDV0bFBGeHVRNTZnNkl5cFl5bG1wb3A0R25pSzJxckhWNXhvWnE5T29XYjZvblNLSlZwSGp0U29BeERx",
+    "published": "2026-11-10T02:26:35+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 '2026 금융 AI 챌린지' 대상에 한화손보 선정",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 '2026 금융 AI 챌린지' 대상에 한화손보 선정",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1NOUdMQ1pkUzg0WnlCYVFzQjNVRktBYUlhUEdKV3h6LVI3N29SVFpEanQyRk5hSTlVMDV0bFBGeHVRNTZnNkl5cFl5bG1wb3A0R25pSzJxckhWNXhvWnE5T29XYjZvblNLSlZwSGp0U29BeERx?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249795",
+    "published": "2026-11-10T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융감독원, 부동산신탁사 임원 간담회 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249795&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidkFVX3lxTE1jTkxJSHhhSmw3MG5aTm5JbUVvU01SSFc5dlk1YjZnTzBDX2s1blBoTFhza1E1LWtjMUZXVU5QWVFwN0hleHgtOFdMV25fTS02M0NWUVhpOXRaUXNQRnZLY3B4VlNEcXRpaXMxODE5VTN1YXJmLVHSAWZBVV95cUxQaTc2d29xbDRlN1RZT1hUc3E2ajRmNzIzY29rck9EQ240ZDVNbFZ3WldSdld6akQ2MHJ5d2RwZEJORlBMSEhaLTZrT1hzZHl6U0J6bWxwMzdNMDlWZnFWN2hxSU1Bb2c",
+    "published": "2026-11-10T07:52:07+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원 CMS, 사업자의 자금수납 편의성 높인다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원 CMS, 사업자의 자금수납 편의성 높인다",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1jTkxJSHhhSmw3MG5aTm5JbUVvU01SSFc5dlk1YjZnTzBDX2s1blBoTFhza1E1LWtjMUZXVU5QWVFwN0hleHgtOFdMV25fTS02M0NWUVhpOXRaUXNQRnZLY3B4VlNEcXRpaXMxODE5VTN1YXJmLVHSAWZBVV95cUxQaTc2d29xbDRlN1RZT1hUc3E2ajRmNzIzY29rck9EQ240ZDVNbFZ3WldSdld6akQ2MHJ5d2RwZEJORlBMSEhaLTZrT1hzZHl6U0J6bWxwMzdNMDlWZnFWN2hxSU1Bb2c?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigwJBVV95cUxPOHgyTTlaRjFqN2pGZWlackRVcW1UUXhhNWJRQy03ZzR6N0ZmZktvSVlNQlhtZ2JCR2NBS2tjVTBOZWtZYVVEMFJWeE01enVHWi1KQVpFT2Nyd093SEpSSXlsV3hqVjMwNTN1NGZEV21vUmpwT2Uwd3hUamcyM3E0NkdlTFc5ejBDYWw2YmtBR2dTWTZibUZEYWZ1VXZyQ3pILVZ6Y2RGTGJDYWcwLVRtdFM3UzFzWHlOZDdBTlFYYkxMYWlfb1RNc0ozOC0wdXZDVWdtOVJJWU5yVDJWNTlMYWFjSFBNMklnaUdVVU9SVjc2NkUwWC05MW8zN3hZeTFFbnBF",
+    "published": "2026-11-10T07:57:00+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원, CMS에 실시간 출금 도입…연체요금 즉시 수납",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원, CMS에 실시간 출금 도입…연체요금 즉시 수납",
+    "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPOHgyTTlaRjFqN2pGZWlackRVcW1UUXhhNWJRQy03ZzR6N0ZmZktvSVlNQlhtZ2JCR2NBS2tjVTBOZWtZYVVEMFJWeE01enVHWi1KQVpFT2Nyd093SEpSSXlsV3hqVjMwNTN1NGZEV21vUmpwT2Uwd3hUamcyM3E0NkdlTFc5ejBDYWw2YmtBR2dTWTZibUZEYWZ1VXZyQ3pILVZ6Y2RGTGJDYWcwLVRtdFM3UzFzWHlOZDdBTlFYYkxMYWlfb1RNc0ozOC0wdXZDVWdtOVJJWU5yVDJWNTlMYWFjSFBNMklnaUdVVU9SVjc2NkUwWC05MW8zN3hZeTFFbnBF?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE1Pb3ZQeGlBeUlzOTZ0R3N6S3hmYmFwRGtkTks1cm9uOVU2M3dUYVliSXZROHhpT25VMXh0M0RITFZxdWNDUG9CLUMyTmRGQQ",
+    "published": "2026-11-10T06:30:16+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원, CMS 납부수단 확대…실시간 출금·환불 지원",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원, CMS 납부수단 확대…실시간 출금·환불 지원",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1Pb3ZQeGlBeUlzOTZ0R3N6S3hmYmFwRGtkTks1cm9uOVU2M3dUYVliSXZROHhpT25VMXh0M0RITFZxdWNDUG9CLUMyTmRGQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiY0FVX3lxTE83LTNiR3VQWDlqVm84VkFTWHVsWU5Xem4zd2hWVDI3SjZ1V3B4RnZuVkxFZ0RQd2FIaTMzNkEyVVJUem9PZlFOTVJRTmwwWXVSSlZ3NEZsS0tGaDVIdFplN1VSOA",
+    "published": "2026-11-10T08:26:43+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 앤트로픽 정식 조사 착수…국내 클로드 기업용 계정 100여개 유출",
+    "tags": [],
+    "title": "개인정보위, 앤트로픽 정식 조사 착수…국내 클로드 기업용 계정 100여개 유출",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE83LTNiR3VQWDlqVm84VkFTWHVsWU5Xem4zd2hWVDI3SjZ1V3B4RnZuVkxFZ0RQd2FIaTMzNkEyVVJUem9PZlFOTVJRTmwwWXVSSlZ3NEZsS0tGaDVIdFplN1VSOA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTFBneEdVTDk2QkQxdDB0bXpsUkVfbGdPRFdPWWZfaGhUenBJRW1ySjBxdVNLZTk5dmdNTXRkWS1JXzhTWTFaTXRwVXFmbWd0cVZKblBjb0VLN241QnPSAWBBVV95cUxPVmZmOE5JTHp6ZWxGdmRUTTgzb2YydzZ3R2hCX0E0ME1jdUlidkx3MTBMamFfYjNZQWpMTkZaVXJFWDA4MFpFWHNfUEVkNWRfX1FtQkhMNkdzMEJIVzBjZzg",
+    "published": "2026-11-10T07:22:26+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, 앤트로픽 '클로드' 개인정보 유출 사고 정식 조사 착수",
+    "tags": [],
+    "title": "개보위, 앤트로픽 '클로드' 개인정보 유출 사고 정식 조사 착수",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBneEdVTDk2QkQxdDB0bXpsUkVfbGdPRFdPWWZfaGhUenBJRW1ySjBxdVNLZTk5dmdNTXRkWS1JXzhTWTFaTXRwVXFmbWd0cVZKblBjb0VLN241QnPSAWBBVV95cUxPVmZmOE5JTHp6ZWxGdmRUTTgzb2YydzZ3R2hCX0E0ME1jdUlidkx3MTBMamFfYjNZQWpMTkZaVXJFWDA4MFpFWHNfUEVkNWRfX1FtQkhMNkdzMEJIVzBjZzg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5CLU1mVDBWOHhMdTg3T1lYUGdUbUEtX0t0WWNRLVVSMllXSV9ZZjFneEk3SzRlOWV5aldRU0xDRU1lYkI0aGlwektmUDY1RVVfR2YtUFVLQTBrNkF5Z2gwd2dFNlg",
+    "published": "2026-11-10T02:30:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"개인정보 피해구제 이행결과 제출 의무화…미제출시 과태료\"",
+    "tags": [],
+    "title": "\"개인정보 피해구제 이행결과 제출 의무화…미제출시 과태료\"",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5CLU1mVDBWOHhMdTg3T1lYUGdUbUEtX0t0WWNRLVVSMllXSV9ZZjFneEk3SzRlOWV5aldRU0xDRU1lYkI0aGlwektmUDY1RVVfR2YtUFVLQTBrNkF5Z2gwd2dFNlg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE9VOGhrbXVpbFFieDhuWENhMWJXSDhRdzc5MFA2UTNsNlF3ajJOZGxQMXdGYjU2SzFOYlN3WTZPNW5NVEMxbzJ0VjRPWjBWT2RKTzRFTlpsZ3NwWXVCak00Z203SW1hbi10VDcxcVR4aGM",
+    "published": "2026-11-10T04:32:04+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 개인정보 보호 숏폼 공모전 개최",
+    "tags": [],
+    "title": "개인정보위, 개인정보 보호 숏폼 공모전 개최",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9VOGhrbXVpbFFieDhuWENhMWJXSDhRdzc5MFA2UTNsNlF3ajJOZGxQMXdGYjU2SzFOYlN3WTZPNW5NVEMxbzJ0VjRPWjBWT2RKTzRFTlpsZ3NwWXVCak00Z203SW1hbi10VDcxcVR4aGM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNeXNJSW4wQ1FzcWY0ZnR5RWZYNDRKNnJ4UmFoSVFEaTl5ZWJERzFGakxQMGxYSDJyUnYzUlEyclVHQ0hyQV94dk4zMDBfSHNyVk85SkJfVm1ZbTNYMnFQQUJJa0xiaGx3OHVVNkR5MzFCYVUtdHFEQUxnM2xNWlFONg",
+    "published": "2026-11-10T08:03:34+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, 앤스로픽 개인정보 유출 조사 착수",
+    "tags": [],
+    "title": "개보위, 앤스로픽 개인정보 유출 조사 착수",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeXNJSW4wQ1FzcWY0ZnR5RWZYNDRKNnJ4UmFoSVFEaTl5ZWJERzFGakxQMGxYSDJyUnYzUlEyclVHQ0hyQV94dk4zMDBfSHNyVk85SkJfVm1ZbTNYMnFQQUJJa0xiaGx3OHVVNkR5MzFCYVUtdHFEQUxnM2xNWlFONg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTFBzZ0d6Y2xxanVGa0VkLU1pVk82Y0lNOGptbmU5aG9iaXJEMEJXR2V4Z25abDRoajJtTFNNWklSdnYxNHJhYXNzV29jNjNIV3dEZEtmcF9kdENfX2dVeFo5RDNxYU4",
+    "published": "2026-11-10T08:38:45+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 앤트로픽 '클로드' 개인정보 유출 조사 돌입",
+    "tags": [],
+    "title": "개인정보위, 앤트로픽 '클로드' 개인정보 유출 조사 돌입",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBzZ0d6Y2xxanVGa0VkLU1pVk82Y0lNOGptbmU5aG9iaXJEMEJXR2V4Z25abDRoajJtTFNNWklSdnYxNHJhYXNzV29jNjNIV3dEZEtmcF9kdENfX2dVeFo5RDNxYU4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE9Fc2ktQWc5a2M3YlZicU9Ed29oLVlXczlCWVNjdUJXT3JpMnFtVXhBbk1GY1l6b1RHdEZpbHVBanF5OFZ4cHY5cXJJYU53blZJbTdYWHFNdUJaaWdGak9BNmR3MHZPN05UdzIyNVdqVW55TTA",
+    "published": "2026-11-10T08:16:42+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 앤트로픽 '클로드' 국내 기업 계정 정보 유출 사고 조사 착수",
+    "tags": [],
+    "title": "개인정보위, 앤트로픽 '클로드' 국내 기업 계정 정보 유출 사고 조사 착수",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Fc2ktQWc5a2M3YlZicU9Ed29oLVlXczlCWVNjdUJXT3JpMnFtVXhBbk1GY1l6b1RHdEZpbHVBanF5OFZ4cHY5cXJJYU53blZJbTdYWHFNdUJaaWdGak9BNmR3MHZPN05UdzIyNVdqVW55TTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9ldEZkVEhVaUNmWURiaTczWTFMQXAxVlJ1ZHlhbjdvSkhNRDYyYU43d002TXBYQTFqU1VlaU1hVGlWTUs3bUhSZ1NhR0Fxa3BXYUFMdmhNYUkyV0ZnajVxMUxiTGZIcGhPWWc",
+    "published": "2026-11-10T03:48:12+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출, 슬쩍 못 넘긴다…국회, 피해구제 결과 제출 의무화 추진",
+    "tags": [],
+    "title": "개인정보 유출, 슬쩍 못 넘긴다…국회, 피해구제 결과 제출 의무화 추진",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9ldEZkVEhVaUNmWURiaTczWTFMQXAxVlJ1ZHlhbjdvSkhNRDYyYU43d002TXBYQTFqU1VlaU1hVGlWTUs3bUhSZ1NhR0Fxa3BXYUFMdmhNYUkyV0ZnajVxMUxiTGZIcGhPWWc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiR0FVX3lxTE5WZDYtaEdZQkRjVllySTR3N3ZiZjVpLTBFTkh0M2c5enAxb1ZCVFFLdGZTdFNBdHFFR2I1NjQ5TVJxV2JPZkxR",
+    "published": "2026-11-10T06:14:56+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "윤도희 의원, 경기도 개인정보 보호 관리 강화 촉구",
+    "tags": [],
+    "title": "윤도희 의원, 경기도 개인정보 보호 관리 강화 촉구",
+    "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE5WZDYtaEdZQkRjVllySTR3N3ZiZjVpLTBFTkh0M2c5enAxb1ZCVFFLdGZTdFNBdHFFR2I1NjQ5TVJxV2JPZkxR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE9kaWd2VElLUTRLaXRPWnVXZlJzai1wUkdDbEUzY3V3UlNXWXVCWlZCY0MwWmZRQVp6MUk4VFFiOUJJOUxSMWxtZFI3Q0U3eDJUV2E0eDgtM185ZEJpRmItUGhHZVBRdTDSAWxBVV95cUxPYTB3alI1b2dkYV9WRUpSZ2JhcE44VUlOODJmYjI3ak8zMDNBcnJYQXFjXzNPRVZYd1lZbUYwQ1NZOFc0cWREQjNXVmpfSlNtUTBrZkFWemYzWUp5RVJvWllvR0stVzcydXgta2Q",
+    "published": "2026-11-10T07:23:50+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, '클로드 계정정보 유출' 앤트로픽 정식 조사 착수 - 머니투데이",
+    "tags": [],
+    "title": "개인정보위, '클로드 계정정보 유출' 앤트로픽 정식 조사 착수 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9kaWd2VElLUTRLaXRPWnVXZlJzai1wUkdDbEUzY3V3UlNXWXVCWlZCY0MwWmZRQVp6MUk4VFFiOUJJOUxSMWxtZFI3Q0U3eDJUV2E0eDgtM185ZEJpRmItUGhHZVBRdTDSAWxBVV95cUxPYTB3alI1b2dkYV9WRUpSZ2JhcE44VUlOODJmYjI3ak8zMDNBcnJYQXFjXzNPRVZYd1lZbUYwQ1NZOFc0cWREQjNXVmpfSlNtUTBrZkFWemYzWUp5RVJvWllvR0stVzcydXgta2Q?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFB2ZmxVMjVGUkhrYkZCUUd0UDJjcWFYTFJUXzY5NFdBTUpvM3B6Nzk3VUJSYThmLVhQTUJiMVdNSWtaeUhXam52NXRtQWI2TUxjUWxyNkFNTUhMaUcweEI5SWoxRjdMaDQ",
+    "published": "2026-11-10T09:24:16+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "'클로드' 이용 국내 기업 계정 112개 정보유출…개인정보위, 조사 착수",
+    "tags": [],
+    "title": "'클로드' 이용 국내 기업 계정 112개 정보유출…개인정보위, 조사 착수",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB2ZmxVMjVGUkhrYkZCUUd0UDJjcWFYTFJUXzY5NFdBTUpvM3B6Nzk3VUJSYThmLVhQTUJiMVdNSWtaeUhXam52NXRtQWI2TUxjUWxyNkFNTUhMaUcweEI5SWoxRjdMaDQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE9vZ29mQncyMGo3RkhVdTRPSWIyQkpJS25uSkF6N1k3VEJuWHpNQkoyUnlzN2tibkRQN1FCMi12RnlxblBsNmtzOThKZmxmbUE1T3hoUHVqRXhRanZSWGIxd1BDNVdNNzdv",
+    "published": "2026-11-09T22:15:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[개인정보 유출 신고] \"프롬프트·결제정보는 안전하다\" 앤트로픽 해명 속 정확한 피해 규모 조사 촉각",
+    "tags": [
+      "금융"
+    ],
+    "title": "[개인정보 유출 신고] \"프롬프트·결제정보는 안전하다\" 앤트로픽 해명 속 정확한 피해 규모 조사 촉각",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9vZ29mQncyMGo3RkhVdTRPSWIyQkpJS25uSkF6N1k3VEJuWHpNQkoyUnlzN2tibkRQN1FCMi12RnlxblBsNmtzOThKZmxmbUE1T3hoUHVqRXhRanZSWGIxd1BDNVdNNzdv?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE5ZcXIwdmgzRFNicTQ4ZlRfcUZ6SUsyZ2tILTdhVk9YcUphY0NvQ3JQWVNVUGtkSzNVdW5qNDI0elJhTmdzWmh4VFlnZ2JqamJ6X1lQMktB",
+    "published": "2026-11-10T09:45:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“소개팅에 주민번호가 왜 필요해?”…과도한 정보수집, 털려도 배상은 쥐꼬리 [세상&]",
+    "tags": [],
+    "title": "“소개팅에 주민번호가 왜 필요해?”…과도한 정보수집, 털려도 배상은 쥐꼬리 [세상&]",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ZcXIwdmgzRFNicTQ4ZlRfcUZ6SUsyZ2tILTdhVk9YcUphY0NvQ3JQWVNVUGtkSzNVdW5qNDI0elJhTmdzWmh4VFlnZ2JqamJ6X1lQMktB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTFA0N0hqMExqQTBDSVc1R2s3bnRiQllPMFNIN09tbVBVWmpOMnZiQ21kZHllRWdJUU1XeDRuVHZCN1NKQko1X2FVR0hOVjVoZkFUYzJ2d3hvMnRGRnBqcUlvSFdhMUF0bGx2RG5ucA",
+    "published": "2026-11-10T05:09:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "챗GPT 경쟁자 '클로드'도 뚫렸다… 국내 기업 계정 100여 개 정보 유출, AI 보안 논란 확산",
+    "tags": [],
+    "title": "챗GPT 경쟁자 '클로드'도 뚫렸다… 국내 기업 계정 100여 개 정보 유출, AI 보안 논란 확산",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA0N0hqMExqQTBDSVc1R2s3bnRiQllPMFNIN09tbVBVWmpOMnZiQ21kZHllRWdJUU1XeDRuVHZCN1NKQko1X2FVR0hOVjVoZkFUYzJ2d3hvMnRGRnBqcUlvSFdhMUF0bGx2RG5ucA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiRkFVX3lxTE1VRDhKQUJwU09mckh4UHpIc3g2bnd1Y1puWmg0MFl2TGEwSFhpNl8wMzlkSmp2aEcxQllKeGlWQUlTYk9yV1E",
+    "published": "2026-11-10T02:05:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, ‘숏폼 콘텐츠’ 공모",
+    "tags": [],
+    "title": "개인정보위, ‘숏폼 콘텐츠’ 공모",
+    "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1VRDhKQUJwU09mckh4UHpIc3g2bnd1Y1puWmg0MFl2TGEwSFhpNl8wMzlkSmp2aEcxQllKeGlWQUlTYk9yV1E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5yZDY1aU00ekhicE9GcTRCUmFieUZLa2pFUVdJOFRQM2l6cC1OOGVjVFBjOHdxSHllUTU5dnltNWswdlVzLU44WllIYlpLTmFrMzZIRnBnSFhBUTFJWXhKWmdxYzc",
+    "published": "2026-11-10T06:51:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "우리카드, 정보유출 제재에 연체율 부담…진성원 연임 시험대",
+    "tags": [],
+    "title": "우리카드, 정보유출 제재에 연체율 부담…진성원 연임 시험대",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5yZDY1aU00ekhicE9GcTRCUmFieUZLa2pFUVdJOFRQM2l6cC1OOGVjVFBjOHdxSHllUTU5dnltNWswdlVzLU44WllIYlpLTmFrMzZIRnBnSFhBUTFJWXhKWmdxYzc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE1GTHhLMnFyZFhlY2tCeXgySFFlSzFvRDNNSlZlQjdkRFRBZ3pMblZBTThxUTBNcDZTcDVIYkJVbHdlNmRReDk1MmlLaVlIXzhlVXMwSjJWQTVhUQ",
+    "published": "2026-11-10T07:19:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "‘금융권 AI 해킹’ 한달간 40건…개인정보 47만3000건 유출",
+    "tags": [
+      "금융"
+    ],
+    "title": "‘금융권 AI 해킹’ 한달간 40건…개인정보 47만3000건 유출",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1GTHhLMnFyZFhlY2tCeXgySFFlSzFvRDNNSlZlQjdkRFRBZ3pMblZBTThxUTBNcDZTcDVIYkJVbHdlNmRReDk1MmlLaVlIXzhlVXMwSjJWQTVhUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTE5raC1wTGJ4VWllZml0Ui1jbFk5YWZTaEdJdF9YU3JTRXJwUWtIZHJCMFB5LVNLaTZDc2ItMXVUVnVLNkxLV0N2RXd4NkNnbTBhQjQteUUzNWtUMHJFVi1QT0xEdUdoQQ",
+    "published": "2026-11-10T09:23:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "방탄소년단부터 미래에셋까지 [전성인 칼럼]",
+    "tags": [],
+    "title": "방탄소년단부터 미래에셋까지 [전성인 칼럼]",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5raC1wTGJ4VWllZml0Ui1jbFk5YWZTaEdJdF9YU3JTRXJwUWtIZHJCMFB5LVNLaTZDc2ItMXVUVnVLNkxLV0N2RXd4NkNnbTBhQjQteUUzNWtUMHJFVi1QT0xEdUdoQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE0tejE5MWFSZ2dqOGltbkoyMGhjS3ZKYTkxZVduQnNUcTYwTWdTWHlxTExDQmo2eGlrVVhZVS02VFA5WFJ0eXQtVnNxbEtfellRUGhF",
+    "published": "2026-11-10T00:47:38+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "한화손보 직원, 금융 AI 챌린지 대상…‘모의창구' 주목",
+    "tags": [
+      "금융"
+    ],
+    "title": "한화손보 직원, 금융 AI 챌린지 대상…‘모의창구' 주목",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE0tejE5MWFSZ2dqOGltbkoyMGhjS3ZKYTkxZVduQnNUcTYwTWdTWHlxTExDQmo2eGlrVVhZVS02VFA5WFJ0eXQtVnNxbEtfellRUGhF?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE9fUEVkVGNkTEdqVXRyVlZCeWc5ckd3U0VSdzlLcmNZUFBWZ3dDWXJhMTUwYlJPSGhGODlGOXFjakNtRkNSZEN1UUY0MXo2Y1R0LWR0UWg0NlZMN1JMZ2hOUjhGa1hOSTdWYzlv",
+    "published": "2026-11-09T07:13:56+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "BNK금융, 전 계열사 CISO 소집해 정보보호 대응체계 특별점검회의 개최",
+    "tags": [
+      "금융"
+    ],
+    "title": "BNK금융, 전 계열사 CISO 소집해 정보보호 대응체계 특별점검회의 개최",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fUEVkVGNkTEdqVXRyVlZCeWc5ckd3U0VSdzlLcmNZUFBWZ3dDWXJhMTUwYlJPSGhGODlGOXFjakNtRkNSZEN1UUY0MXo2Y1R0LWR0UWg0NlZMN1JMZ2hOUjhGa1hOSTdWYzlv?oc=5"
   }
 ]
