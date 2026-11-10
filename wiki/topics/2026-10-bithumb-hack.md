@@ -24,6 +24,7 @@ cves: []
 - 2026-11-08 [금융보안원](https://news.google.com/rss/articles/CBMicEFVX3lxTE9fOXN5d1JtTlFCT3VZdzBvNEdWOFdZSVRBUWE2OHVJUG45UDEzNkRZZGVqX2xSbDFrRG9SbFdLN0tJdERuZDNremV0NHpSNXdSRk1tUXVpejl4cWZkSXBha0pHaU9xdUVSUnhoMXM1Ri3SAXRBVV95cUxNSm1IY1FmQmhIUWIxSXExWmdZdEljZGM0OHgwQ2tPaWRzNGdlQThGS0NJVFlOVS1QdHZ4cFRPUHROQnVFSUs3NmJrQi1yaUE1MEdZeWxuTnV5dndRd092NXItTHUyQnNzZVRJUk5xTXlmSWRhUg?oc=5) — 금융권 전반 해킹 파장, 경영진 교체 등 리더십 변화 가능성
 - 2026-11-07 [금융위원회](https://news.google.com/rss/articles/CBMiW0FVX3lxTE9JTUo5RFBIeHpTbXdnelZtZkVWenFJWHEtZEtTQjNPUjVaUHJOY25mMEtaNThwRExqcDNyc2ZnYzZmZHVCNW14TFBNdUdQQXRVSkwtaTA2UVRBRWfSAWBBVV95cUxQemVhVUQ1UGRWSzg5WEJBbE1veG5kcXRZOGpkVWRIVmY4MXVmdzRPVDd3YkVyVUxNTkVxbTN2UEgwRzdGTER5ZnlMTElOUzFiS2FwNW5TQnBpYzFBYTBqTDU?oc=5) — 가상자산거래소·금융사 잇따른 침해, 금융당국 보안 책임자 소집 회의
 - 2026-11-06 [금융위원회](https://news.google.com/rss/articles/CBMiVEFVX3lxTE5UVDNNMTdZd0lCVm5Fd2ZHOHBIS3BsM25ZQXllX3hYcUI3bS1VVWtQRDIta1JZS2o2Q3ZKSFVBRnc2SFNVbjhOYUxqRWRiNTRURzRKaQ?oc=5) — 빗썸 개인정보 유출로 인한 **보이스피싱 2차 피해** 대응 강화, 특별대응 연말까지 연장
+- 2026-11-08 [금융감독원](https://news.google.com/rss/articles/CBMiS0FVX3lxTE5FeGlLRHZGTFVXaHFzWkxMdGJiaHZFZ0NzZmE1WTV5X1pwRzd6bDRNU0Z0T1BCNzhTYjdOV2hZLVdNVDcycnpIR3BaYw?oc=5) — 19일 가상자산사업자 보안회의 개최, 금융권 보안강화 방침 수립
 
 ## 관련
 
