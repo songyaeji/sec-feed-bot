@@ -14,3 +14,4 @@ cves: [CVE-2026-72733, CVE-2026-72735, CVE-2026-72736, CVE-2026-72738, CVE-2026-
 - 2026-08-10 [NVD CVE-2026-72736](https://nvd.nist.gov/vuln/detail/CVE-2026-72736) — Dokploy 레지스트리 자격증명 테스트·Swarm 클러스터 관리 명령 인젝션 CVSS 9.9
 - 2026-08-10 [NVD CVE-2026-72738](https://nvd.nist.gov/vuln/detail/CVE-2026-72738) — Dokploy backup.listBackupFiles S3 경로 검색 명령 인젝션 CVSS 9.9
 - 2026-08-10 [NVD CVE-2026-72740](https://nvd.nist.gov/vuln/detail/CVE-2026-72740) — Dokploy customGitUrl SSH 키 설정 ssh-keyscan 명령 인젝션 CVSS 9.9 (모두 0.29.13에서 패치)
+- 2026-08-10 [NVD CVE-2026-72868](https://nvd.nist.gov/vuln/detail/CVE-2026-72868) — Dokploy destination.testConnection에서 rclone 명령 보간 명령 인젝션 CVSS 9.9 저권한 조직 멤버 호스트 Docker 소켓 접근 권한 RCE
