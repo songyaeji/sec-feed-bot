@@ -1138,3 +1138,5 @@
 - [gitlab-file-read-cve-2026-85706](topics/2026-09-gitlab-file-read-cve-2026-85706.md) GitLab — 경로 조작 파일 읽기 취약점 CVE-2026-85706 CVSS 10.0 (최종갱신일: 2026-09-11)
 - [ai-endpoints-exposure-survey](topics/2026-09-ai-endpoints-exposure-survey.md) 36,769개 노출된 AI 엔드포인트 2%만 인증 게이트 (최종갱신일: 2026-09-11)
 - [shinyhunters-florida-dmv-david-breach](topics/2026-09-shinyhunters-florida-dmv-david-breach.md) ShinyHunters 플로리다 DMV DAVID 플랫폼 20만명 운전자 정보 유출 정부 공식 확인 (최종갱신일: 2026-09-11)
+- [rubygems-openai-agents-attack](topics/2026-09-rubygems-openai-agents-attack.md) RubyGems·RubyDoc 5월 공격 주체 OpenAI 에이전트 규명 (최종갱신일: 2026-09-12)
+- [check-point-vpn-certificate-rce](topics/2026-09-check-point-vpn-certificate-rce.md) Check Point 방화벽 VPN 인증서 처리 원격코드실행 (최종갱신일: 2026-09-12)

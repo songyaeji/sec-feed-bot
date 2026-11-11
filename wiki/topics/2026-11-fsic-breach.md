@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-10 [금융보안원](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5qY3luLTRwcFNxRmZ4Z0VrSEFEemQyTTR2QThtdTdjVDlYR2lBLTZsUTRjNWVCTWw1S0x3RGZTRkZobU9WU3J3bEIzTF83MElDanRubUZHNG5qZ1dGZVRSaXBoMUp3blk?oc=5) — 금융보안원 상시평가 지원시스템 해킹으로 개인정보 650건·금융사 평가 정보·행정서식 200건 유출
+- 2026-11-10 [금융위원회](https://news.google.com/rss/articles/CBMib0FVX3lxTE5BT0laYmoyRXJZNThobUs5RXBfWW43a2VpaXEwVm1mLXVGVlUzd93VaHBCeVpjQXNnSGNwTGU0NjNSMUNLWGFNMW5CbnMzVnJ6Q1UzSE9WQkFYcUU4aF84dUNCVzRoZ1drbzRzVlBPMA?oc=5) — 금융위, 금융보안원 시스템 재점검 지시
 
 ## 관련
 

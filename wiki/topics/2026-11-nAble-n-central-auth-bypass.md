@@ -11,6 +11,7 @@ cves: [CVE-2026-18577, CVE-2026-18556]
 
 - 2026-08-03 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-18556) — CVE-2026-18556 인증 우회 공개
 - 2026-11-01 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-18577) — CVE-2026-18577 CVE-2026-18556 미완성 패치의 재우회 공개
+- 2026-11-11 [BleepingComputer](https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/) — N-able 새로운 제로데이 취약점 공개 후 호스트 환경 오프라인 처리 및 긴급 hotfix 배포
 
 ## 관련
 

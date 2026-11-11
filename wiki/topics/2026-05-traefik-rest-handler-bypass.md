@@ -12,3 +12,8 @@ cves: [CVE-2026-44774]
 ## 타임라인
 
 - 2026-05-15 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-44774) — CVE-2026-44774 공개 (CVSS 9.9)
+- 2026-11-11 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-44774) — 취약점 재보도
+
+## 관련
+
+[[traefik-multi-auth-bypass]]
