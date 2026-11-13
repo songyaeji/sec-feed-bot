@@ -1140,3 +1140,6 @@
 - [shinyhunters-florida-dmv-david-breach](topics/2026-09-shinyhunters-florida-dmv-david-breach.md) ShinyHunters 플로리다 DMV DAVID 플랫폼 20만명 운전자 정보 유출 정부 공식 확인 (최종갱신일: 2026-09-11)
 - [rubygems-openai-agents-attack](topics/2026-09-rubygems-openai-agents-attack.md) RubyGems·RubyDoc 5월 공격 주체 OpenAI 에이전트 규명 (최종갱신일: 2026-09-12)
 - [check-point-vpn-certificate-rce](topics/2026-09-check-point-vpn-certificate-rce.md) Check Point 방화벽 VPN 인증서 처리 원격코드실행 (최종갱신일: 2026-09-12)
+- [google-digital-crime-deletion-request-data-breach](topics/2026-09-google-digital-crime-deletion-request-data-breach.md) Google 성범죄 피해자 삭제요청 정보 유출 조사 착수 (최종갱신일: 2026-09-13)
+- [sogou-input-method-grayrabbit](topics/2026-09-sogou-input-method-grayrabbit.md) Sogou 입력기 취약점 GRAYRABBIT 백도어 배포 (최종갱신일: 2026-09-13)
+- [passkey-phishing-m365](topics/2026-09-passkey-phishing-m365.md) ShinyHunters·Helix Passkey 사칭 피싱으로 M365 자격증명 탈취 (최종갱신일: 2026-09-13)
