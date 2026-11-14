@@ -4709,5 +4709,243 @@
     "tags": [],
     "title": "CVE-2026-86356 (CVSS 8.8)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86356"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-129250",
+    "published": "2026-11-14T12:17:44.240",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A security vulnerability has been detected in Edimax BR6478ACV2 1.23. The impacted element is the function formPPTPSetup of the file webs. The manipulation of the argument pptpUserName leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-129250 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129250"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-120522",
+    "published": "2026-11-14T13:17:20.403",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Cloud Storage Manager for Fluent Forms – Google Drive, Dropbox, OneDrive, S3 Uploads plugin for WordPress is vulnerable to Arbitrary File Write in all versions up to, and including, 1.2.0. This is due to missing authorization checks on the `connection/{driver}/save` and `/download/single-file` REST endpoints, combined with insufficient path validation in the Google Drive `downloadFile()` function, where the Google Drive metadata `name` value is concatenated into a local path without `basename()`, `sanitize_file_name()`, or canonical path validation. This makes it possible for unauthenticated attackers to store attacker-controlled Google Drive credentials, trigger a download of an attacker-owned file whose provider-returned filename contains path traversal, and write attacker-controlled content outside the intended `downloads` directory. When the written file has a PHP extension and lands in a web-accessible location, this can lead to remote code execution.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-120522 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120522"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-129433",
+    "published": "2026-11-14T13:17:22.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Dokploy before 0.31.1 contains an OS command injection vulnerability in getComposeContainerCommand() that allows authenticated organization members to execute shell commands via the serviceName parameter. Attackers can store serviceName values with shell metacharacters through backup.create or backup.update tRPC procedures, executing commands as root when scheduled backups run and taking over the host via the mounted Docker socket.",
+    "tags": [],
+    "title": "CVE-2026-129433 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129433"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-19907",
+    "published": "2026-11-14T13:17:23.137",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Shipo plugin for WordPress is vulnerable to Authentication Bypass in versions 1.6 through 1.8.0. This is due to the `authenticate_rest_user()` function parsing the `LOGGED_IN_COOKIE` value and authenticating the named user without verifying the cookie's cryptographic signature. The function's intended `/wp-json/shipo/` route restriction can also be bypassed by placing that substring in the query string of an unrelated REST endpoint. This makes it possible for unauthenticated attackers who know an existing username to impersonate that user, including an administrator, and perform authorized actions through the REST API, including creating another administrator account.",
+    "tags": [],
+    "title": "CVE-2026-19907 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19907"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-129427",
+    "published": "2026-11-14T12:17:44.720",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Stored XSS via avatar upload chained with an authentication bypass in /Attachments leads to ATO\nin Cervantes version v1.3-beta could allow an attacker to execute arbitrary code in another user's browser with elevated privileges",
+    "tags": [],
+    "title": "CVE-2026-129427 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129427"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-129255",
+    "published": "2026-11-14T13:17:21.910",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in CoolerMaster MASTERPLUS+ 1.9.6. This affects the function sub_11504 in the library WinRing0x64.sys of the component Device Driver. The manipulation of the argument PhysicalAddress leads to incorrect default permissions. The attack can only be performed from a local environment. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "tags": [],
+    "title": "CVE-2026-129255 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129255"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-18053",
+    "published": "2026-11-14T13:17:22.990",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The MemberDash plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.8.7. This is due to a mass-assignment vulnerability in the `user_account_manager()` function's edit_profile branch, where all submitted `$_POST` fields are iterated and directly assigned to the current member object via the `MS_Model` `__set()` magic method with no field allowlist and no capability or ownership check on the submitted `id` parameter. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject an arbitrary user ID via the `id` parameter — overwriting any WordPress user's email address and password, including the site administrator's — and subsequently use those modified credentials to gain full administrative access to the site.",
+    "tags": [],
+    "title": "CVE-2026-18053 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18053"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209521",
+    "published": "2026-11-14T19:41:14+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "중소기업중앙회가 운영하는 소기업·소상공인 공제제도 '노란우산' 홈페이지에서 외부 비인가자의 접근으로 일부 고객의 개인정보가 제3자에게 조회됐을 가능성이 확인됐다. 조회 의심 정보에는 성명과 주민등록번호 앞 7자리, 휴대전화번호, 자택 주소 등이 포함돼 있어 실제 유출 여부와 피해 규모에 관심이 집중되고 있다.중소기업중앙회는 11월 14일 노란우산 홈페이지에 '개인정보 유출 가능성 및 침해사고 공지'를 게시하고, 지난 11일 발생한 외부 비정상 접근과 일부 고객정보의 제3자 조회 의심 정황을 공식적으로 알렸다.중소기업중앙회는 공지를",
+    "tags": [
+      "금융"
+    ],
+    "title": "노란우산 홈페이지 해킹, 고객 주민번호 앞자리·주소 등 개인정보 유출 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209521"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209519",
+    "published": "2026-11-14T19:15:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "센스톤 유창훈 대표 부친 故유영옥님 별세.□ 부고링크: 링크□ 빈 소 : 서울아산병원 장례식장 23호□ 입 관 : 2026년 11월 15일 09시 00분□ 발 인 : 2026년 11월 16일 10시 00분□ 장 지 : 성남시장례문화사업소 - 이천 영원사□ 부고링크 : https://www.obituary.co.kr/obt/c56a79750611삼가 弔意를 표하며 故人의 冥福을 빕니다.",
+    "tags": [],
+    "title": "[부고] 유창훈 센스톤 대표 부친상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209519"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE1RQjRHU214SlctcVJIWENYVV8ydE5RcVE3ZlpMRUJiOHV0Y0ZHaVNFVWlhcnN1U20zNEIwTDhTOTZuRHNVQzB2WVNBc2FDWndvNmRMZ1AtR2hNR2xwNTgxQ3hMTkkxSGZ2V3FV",
+    "published": "2026-11-14T00:59:06+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금보원, 해킹 공격 246개 IP 주소 차단 완료... ‘유동 IP 접속 허용’ 원인 지목 보안뉴스 초유의 금융보안원 해킹 사태에 “스스로도 못 지키면서 훈계만 한 셈” 미디어오늘 [단독] 금융보안원 뚫린 이유…\"불편하다고 제한 풀어\" SBS 뉴스 해킹 당한 금융보안원 “공격 IP 246개 차단완료…국적은 한국” 매일경제 마켓 [이호연의 D톡스] 금감원 출신 독식한 금융보안원장…해킹에 인사 관행 도마 디지털데일리 [뉴스7 헤드라인] KBS 뉴스 금융위, 해킹 피해 금융보안원 16일부터 감사 착수 뉴시스 금융보안원 공격한 수백 개 해킹 IP는 '한국' 노컷뉴스 [사설]해킹당한 금융보안원… 도둑에게 털린 경찰서꼴 동아일보",
+    "tags": [
+      "금융"
+    ],
+    "title": "금보원, 해킹 공격 246개 IP 주소 차단 완료... ‘유동 IP 접속 허용’ 원인 지목",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1RQjRHU214SlctcVJIWENYVV8ydE5RcVE3ZlpMRUJiOHV0Y0ZHaVNFVWlhcnN1U20zNEIwTDhTOTZuRHNVQzB2WVNBc2FDWndvNmRMZ1AtR2hNR2xwNTgxQ3hMTkkxSGZ2V3FV?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTE9nVFl0ZUc5NDFscVBhNC10VUpqam5NcVV4b3NPdzM4RnpqU2dILWx3a2E1dXR5TDBMWUp0aUNBUVcxR21ETVE2cUhRZHQ5UUpkUGRldXpRYWRfZFdZYzc0",
+    "published": "2026-11-14T02:06:50+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "\"금융사 편의 봐주다 보안망 허점 키웠다\"...박대출, 금융보안원 해킹 지적",
+    "tags": [
+      "금융"
+    ],
+    "title": "\"금융사 편의 봐주다 보안망 허점 키웠다\"...박대출, 금융보안원 해킹 지적",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9nVFl0ZUc5NDFscVBhNC10VUpqam5NcVV4b3NPdzM4RnpqU2dILWx3a2E1dXR5TDBMWUp0aUNBUVcxR21ETVE2cUhRZHQ5UUpkUGRldXpRYWRfZFdZYzc0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5sZHpscVdvSUFRTGFJYU50SnB3UUFwU0hCeUZJclE4U3FTcTNoQmtQcGd3MXpiMklOdUsxd0NnN2tTTFV3SzE4RV9tYjkxcnpyeEdwYWdRTHBfdFVXWkZUdnJqMTQ",
+    "published": "2026-11-14T08:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안 전담 기관 마저 뚫리는 시대…안전지대 사라진 韓",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안 전담 기관 마저 뚫리는 시대…안전지대 사라진 韓",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sZHpscVdvSUFRTGFJYU50SnB3UUFwU0hCeUZJclE4U3FTcTNoQmtQcGd3MXpiMklOdUsxd0NnN2tTTFV3SzE4RV9tYjkxcnpyeEdwYWdRTHBfdFVXWkZUdnJqMTQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFBRa0NTem0weUZjWWMxdUFQaGUxLWJIbkkzeTJOaVRoY2VnSEVyVHdfcE1ZbFpUUzlrY1ZuQkxLaGdmUEdyQy1PV1oxRHlvcHZzMm5sbkdoUTRxbjk5T2lOZVpFVnFwSmVY",
+    "published": "2026-11-14T00:44:02+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 해킹 공격, 246개 IP 차단... 개인정보 유출 위기 초일기",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 해킹 공격, 246개 IP 차단... 개인정보 유출 위기 초일기",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRa0NTem0weUZjWWMxdUFQaGUxLWJIbkkzeTJOaVRoY2VnSEVyVHdfcE1ZbFpUUzlrY1ZuQkxLaGdmUEdyQy1PV1oxRHlvcHZzMm5sbkdoUTRxbjk5T2lOZVpFVnFwSmVY?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTFBfVGlkSlp3MzJISnppS3F5azNSTE84MEVIMWJuQVJ1Z2NTQUZxVHdPcWJzSVU0Z2Z5U0tHUW5fd2g0Vm82MHkybTl3bTc1Y2UtNE9IZ0V4eFpPcmY2LWxxN1cwOGxGa0hfNGc",
+    "published": "2026-11-14T02:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[기자수첩] 금융보안 문지기마저 해킹에 속수무책",
+    "tags": [
+      "금융"
+    ],
+    "title": "[기자수첩] 금융보안 문지기마저 해킹에 속수무책",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfVGlkSlp3MzJISnppS3F5azNSTE84MEVIMWJuQVJ1Z2NTQUZxVHdPcWJzSVU0Z2Z5U0tHUW5fd2g0Vm82MHkybTl3bTc1Y2UtNE9IZ0V4eFpPcmY2LWxxN1cwOGxGa0hfNGc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMijwFBVV95cUxOTV9wVTR3Q1JLeWpoaE00ZDAySjZqMWZqbHF4d1FTbHFnUVV3RFRRT3R3MFpneUotSU1pV3IzOF9Pd1VtVjlsd0ZqY2R0WGtmUjA0eUdLU05zZ1k1bUVBaTRsMDVRTUtKZHhSc0w3TXI0Qy1jY2gtaExzeGh5c1UxV0poVkRWMnVfcjJUUFhybw",
+    "published": "2026-11-14T05:11:17+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "해킹 의심만으로 입출금 차단…“가상자산사업자 보안, 금융사 수준으로” : 네이버 블로그",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 의심만으로 입출금 차단…“가상자산사업자 보안, 금융사 수준으로” : 네이버 블로그",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTV9wVTR3Q1JLeWpoaE00ZDAySjZqMWZqbHF4d1FTbHFnUVV3RFRRT3R3MFpneUotSU1pV3IzOF9Pd1VtVjlsd0ZqY2R0WGtmUjA0eUdLU05zZ1k1bUVBaTRsMDVRTUtKZHhSc0w3TXI0Qy1jY2gtaExzeGh5c1UxV0poVkRWMnVfcjJUUFhybw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE5BTzloaUtmVXV5Q19jSXVaNW5PVjU3clRWTC1SSDJ4ZURaSUJLMjlsX1lqV0FTUm1MVHVFdTdxVU4zMGlxWWxKWU04bw",
+    "published": "2026-11-13T23:22:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위 거래소 보안 강화 요구…입출금 선제 차단 허용 : 금융",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위 거래소 보안 강화 요구…입출금 선제 차단 허용 : 금융",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BTzloaUtmVXV5Q19jSXVaNW5PVjU3clRWTC1SSDJ4ZURaSUJLMjlsX1lqV0FTUm1MVHVFdTdxVU4zMGlxWWxKWU04bw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiTkFVX3lxTE1zdnlZWGdVTkdsVGhNRDhsSnJiNm5FWTFLSFNhYXlfNW9GR3lJQ2pEVGNjVExHeFk4b0xSUTAzZmUyYXNQZjFDRnpaS05hUQ",
+    "published": "2026-11-12T07:32:28+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 가상자산거래소 보안 강화 주문…“금융사 수준 안전의무 부과 추진”",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 가상자산거래소 보안 강화 주문…“금융사 수준 안전의무 부과 추진”",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1zdnlZWGdVTkdsVGhNRDhsSnJiNm5FWTFLSFNhYXlfNW9GR3lJQ2pEVGNjVExHeFk4b0xSUTAzZmUyYXNQZjFDRnpaS05hUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE80Ums1d3p2WGJrN0kwUUFRbTBVZDFxZmZkLW1RM3pONlB5ajloMC05M3dTODMwS25EQmJTWGJmR0ZVbnh6UGlIb1pBSzMtMFBLTmc5dkxpMV92Q0RhblAzT1BoYWV4V01pd1HSAW5BVV95cUxOUTY2aDZ0RGN4QWxwNk9aXzJFcFcxOS01RlI5UlJIdVcyZ3cxS2hnU0pmTkN0akN2RWpkcmJWSE54Y1hpLWlQQ0FBZG9pVmNwdGx1T1VZMG94Um96LUNMN3RGSXNHckY0b0Q0NFFkQQ",
+    "published": "2026-11-13T04:18:16+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "토스, 금융보안 AI 해킹방어대회 대상…계열사 6년 연속 정상",
+    "tags": [
+      "금융"
+    ],
+    "title": "토스, 금융보안 AI 해킹방어대회 대상…계열사 6년 연속 정상",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE80Ums1d3p2WGJrN0kwUUFRbTBVZDFxZmZkLW1RM3pONlB5ajloMC05M3dTODMwS25EQmJTWGJmR0ZVbnh6UGlIb1pBSzMtMFBLTmc5dkxpMV92Q0RhblAzT1BoYWV4V01pd1HSAW5BVV95cUxOUTY2aDZ0RGN4QWxwNk9aXzJFcFcxOS01RlI5UlJIdVcyZ3cxS2hnU0pmTkN0akN2RWpkcmJWSE54Y1hpLWlQQ0FBZG9pVmNwdGx1T1VZMG94Um96LUNMN3RGSXNHckY0b0Q0NFFkQQ?oc=5"
   }
 ]
