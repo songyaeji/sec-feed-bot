@@ -4947,5 +4947,77 @@
     ],
     "title": "토스, 금융보안 AI 해킹방어대회 대상…계열사 6년 연속 정상",
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE80Ums1d3p2WGJrN0kwUUFRbTBVZDFxZmZkLW1RM3pONlB5ajloMC05M3dTODMwS25EQmJTWGJmR0ZVbnh6UGlIb1pBSzMtMFBLTmc5dkxpMV92Q0RhblAzT1BoYWV4V01pd1HSAW5BVV95cUxOUTY2aDZ0RGN4QWxwNk9aXzJFcFcxOS01RlI5UlJIdVcyZ3cxS2hnU0pmTkN0akN2RWpkcmJWSE54Y1hpLWlQQ0FBZG9pVmNwdGx1T1VZMG94Um96LUNMN3RGSXNHckY0b0Q0NFFkQQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-129258",
+    "published": "2026-11-14T15:16:58.257",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in Tenda AC18 15.03.05.05_multi/15.03.05.19 Build 6318. Affected by this vulnerability is an unknown functionality of the file /cgi-bin/upgrade of the component Firmware Upgrade Handler. Such manipulation of the argument upgradeFile leads to insufficient verification of data authenticity. The attack may be launched remotely. The exploit is publicly available and might be used.",
+    "tags": [],
+    "title": "CVE-2026-129258 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129258"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-129261",
+    "published": "2026-11-14T16:17:04.517",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in Kingston FURY CTRL RGB Control Software up to 2.0.66.0. The impacted element is an unknown function in the library NTIOLib_X64.sys of the component IOCTL Handler. Performing a manipulation results in exposed ioctl with insufficient access control. The attack is only possible with local access.",
+    "tags": [],
+    "title": "CVE-2026-129261 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129261"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209522",
+    "published": "2026-11-15T00:39:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "대학수학능력시험을 닷새 앞두고 해킹 포럼에 국내 대학 31곳의 데이터를 확보해 공개했다는 주장이 올라왔다. 글을 올린 ‘KimJEN’은 앞서 경일대 자료를 공유한다는 게시물을 두 차례 올린 계정이다.경일대는 교직원용 전자문서시스템 침입을, 인제대는 수업용 서버 공격에 따른 개인정보 2만4011건 유출을 각각 공지했다. 대학 두 곳에서 실제 사고가 확인된 상황에서 다른 대학을 지목한 자료 공개 주장까지 나오면서, 수능과 대학별 전형을 앞둔 대학가의 보안 대응이 시급해졌다.데일리시큐가 포럼 게시물과 텔레그램 채널 화면을 대조한 결과,",
+    "tags": [],
+    "title": "[단독] 인제대·경일대 해킹한 해커, 해킹 포럼에 “한국 대학 31곳 데이터 탈취·공개” 주장…수능 앞두고 대학 보안 비상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209522"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+    "published": "2026-11-14T17:27:25+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Cursor confirmed it suffered a security breach that let hackers distribute a malicious Claude Code extension through its marketplace after stealing credentials from AI infrastructure provider Fireworks AI. [...]",
+    "tags": [],
+    "title": "Cursor confirms security breach led to malicious Claude Code extension",
+    "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/"
+  },
+  {
+    "author": "Bill Toulas",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
+    "published": "2026-11-14T15:15:49+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "The U.S. government has disrupted a North Korean social engineering campaign called 'FaceStealer', responsible for stealing more than $400 million in cryptocurrency. [...]",
+    "tags": [],
+    "title": "US disrupts North Korean campaign behind $400 million crypto theft",
+    "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203062",
+    "published": "2026-11-14T16:46:26+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Russian extortion group n0n claims to have stolen nearly one billion Expedia traveler records through a compromised third-party provider. A newly formed Russian cyber extortion group called n0n claims it has hit Expedia, the world’s second-largest online travel agency, and taken data on nearly one billion travelers. Expedia confirmed to Skift on Thursday that attackers […]",
+    "tags": [],
+    "title": "Extortion Group Claims Theft of Nearly One Billion Expedia Traveler Records",
+    "url": "https://securityaffairs.com/203062/cyber-crime/extortion-group-claims-theft-of-nearly-one-billion-expedia-traveler-records.html"
   }
 ]
