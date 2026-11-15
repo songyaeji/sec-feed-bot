@@ -3623,5 +3623,327 @@
     ],
     "title": "[주간금융이슈] 금융위, 금융보안원 특정감사 돌입…금융권 해킹 후속 조치 주목",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1fZGNTcXo1cU5LMmNuYS1LSm0tekdEX1h0Q2JPck9OUjc2V1lGNUIyMTdCand0V3FtX0JPVEtBM29aR0x5d0hDSzR4QmdnS2lMSVp3SlgyLVl2cU9S?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-129444",
+    "published": "2026-11-15T09:16:44.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was identified in D-Link DSL-6740C 20131126. This affects an unknown function of the file /etc/templates/ftpd/ftpd_conf.php of the component FTP Daemon. Such manipulation leads to hard-coded credentials. The attack can be executed remotely. The exploit is publicly available and might be used.",
+    "tags": [],
+    "title": "CVE-2026-129444 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129444"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-110960",
+    "published": "2026-11-15T07:16:53.477",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Auth Armor  WordPress plugin through 1.0.3 does not require authentication on several handlers available to logged-out users, which leak the site's stored API credentials and allow an unauthenticated attacker to reset an administrator's enrollment and take over that administrator account.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-110960 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110960"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-129445",
+    "published": "2026-11-15T10:16:53.970",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A security flaw has been discovered in D-Link DIR-850L FW1.20WWb03. This impacts an unknown function of the file /usr/sbin/consolepwd of the component Console Login. Performing a manipulation results in hard-coded credentials. The attack requires a local approach. The exploit has been released to the public and may be used for attacks.",
+    "tags": [],
+    "title": "CVE-2026-129445 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129445"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209537",
+    "published": "2026-11-15T18:42:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "대구한의대학교 산학협력단이 운영하는 연구행정통합시스템(RERP)이 외부 해킹 공격을 받아 개인정보 1,281건이 유출된 것으로 확인됐다. 유출된 정보에는 연구자와 교직원, 학생 등의 직번 또는 학번, 성명, 부서명, 가입일자 등이 포함됐으며, 이 가운데 30건에는 생년월일도 포함됐다. 대학 측은 사고를 인지한 직후 서버와 네트워크를 차단하고 시스템 운영을 중단했으며, 한국인터넷진흥원(KISA)과 교육부에 관련 자료를 제출하고 피해 범위를 조사하고 있다.대구한의대학교 산학협력단은 11월 15일 공식 홈페이지에 ‘연구행정통합시스템(RE",
+    "tags": [
+      "금융"
+    ],
+    "title": "[단독] 대구한의대 연구행정시스템 해킹…개인정보 1,281건 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209537"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209535",
+    "published": "2026-11-15T17:57:57+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국가안보실이 민간·공공·국방 분야의 정보기술(IT) 자산 관리 현황을 점검하고, 보안 취약점 정보를 정식 공개 전에 확보해 신속히 공유하는 방안을 추진한다. 취약점이 확인되면 어느 기관의 어떤 시스템이 영향을 받는지 빠르게 파악할 수 있도록 시스템·네트워크 구성도를 실제 운영 환경에 맞게 갱신하고, 소프트웨어 구성요소 명세서(SBOM) 도입도 앞당기기로 했다. 실제 운영 환경과 다른 구성도 정비국가안보실은 15일 송기호 국가안보실 3차장 주재로 지난 13일 ‘민·관·군 사이버안보 공동대응 회의’를 열었다고 밝혔다. 회의에서는 지난",
+    "tags": [],
+    "title": "국가안보실, 민·관·군 IT 자산관리 전수 점검…공개 전 취약점 정보 확보 추진",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209535"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209534",
+    "published": "2026-11-15T16:02:03+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "삼성전자가 랜섬웨어 조직 ‘N0n’의 유출 사이트에 피해 기업으로 등록된 사실이 확인됐다. 공격자는 삼성전자(Samsung Electronics Co., Ltd.)의 공식 도메인인 samsung.com을 공개하고 스마트TV 시청 정보와 광고 관련 데이터를 확보했다고 주장했다. 다만 실제 삼성전자 시스템이 해킹됐거나 개인정보가 유출됐는지는 확인되지 않았다.15일 글로벌 위협 인텔리전스 플랫폼 브랜드디펜스(Brandefense)의 랜섬웨어 추적 서비스 ATLAS에 따르면, 삼성전자는 11월 14일 N0n의 유출 사이트에 게시됐다. 브랜",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "삼성전자, 랜섬웨어 조직 ‘N0n’ 해킹 사이트에 등장…스마트TV 광고 데이터 탈취 주장...삼성 측\"해외 협력사 해킹으로 삼성과 무관\"",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209534"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209533",
+    "published": "2026-11-15T13:54:14+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국조폐공사가 운영하는 모바일 지역사랑상품권 플랫폼 '착(chak)'에서 해킹으로 이용자 3,083명의 개인정보가 외부 비인가자에게 무단 조회된 사실이 확인됐다. 이름과 생년월일, 휴대전화번호뿐 아니라 계좌번호와 암호화된 카드번호 등 금융 관련 정보도 포함됐다. 한국조폐공사는 11월 13일 오전 9시 30분경 시스템의 비정상적인 접근 징후를 발견해 긴급 차단 조치를 실시했으며, 한국인터넷진흥원(KISA) 등 관계기관에 사고를 신고하고 정확한 침해 경로와 추가 피해 여부를 조사하고 있다.한국조폐공사가 11월 14일 오전 6시 기준으로",
+    "tags": [
+      "금융"
+    ],
+    "title": "한국조폐공사 지역사랑상품권 '착' 해킹…이용자 3,083명 개인정보 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209533"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209532",
+    "published": "2026-11-15T13:33:16+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 가상자산 거래소 코인원이 고객 상담 업무를 맡긴 수탁업체 메타엠의 서버가 해킹돼 고객 개인정보가 유출됐다고 15일 오전 8시 공지했다.유출 가능 항목에는 고객이 상담 과정에서 남긴 주민등록번호, 계좌번호, 비밀번호, 가상자산 지갑 주소 등 11개가 포함됐다. 코인원은 고객센터 상담 이력이 없는 고객은 이번 사고와 무관하며, 코인원 회원 계정·거래·가상자산 지갑 시스템에 직접 침입한 정황은 현재까지 확인되지 않았다고 밝혔다. 피해 인원 규모는 공지에 공개하지 않았다.12일 오전 4시경 메타엠 서버 침입…코인원은 오전 9시 20분",
+    "tags": [],
+    "title": "코인원 고객센터 수탁사 해킹으로 개인정보 유출…주민번호·계좌번호 등 11개 항목 가능성",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209532"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209531",
+    "published": "2026-11-15T13:28:43+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "현대자동차 울산 전기차(EV) 신공장과 기아 PV5 생산라인에 LS일렉트릭(LS ELECTRIC)이 개발한 산업용 이더넷 ‘라피넷(RAPIEnet)’이 적용됐다.윤건 LS일렉트릭 리더는 13일 서울 양재 엘타워에서 열린 ‘CPS(OT/ICS) Secure AX Summit 2026’에서 울산 EV 신공장의 설비 입출력(I/O)을 제어하는 주 통신망에 라피넷을 적용했다고 밝혔다. 기아 오토랜드의 PV5 생산라인에도 라피넷을 적용했으며, 안전 관련 입출력 신호를 처리하는 세이프티 I/O도 지원한다고 설명했다.외산 PLC 수급 차질이 국",
+    "tags": [],
+    "title": "[CPS 시큐어 AX 서밋 2026] 현대차 울산 EV 공장·기아 PV5 생산라인에 국산 제어망 ‘라피넷’ 적용",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209531"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209530",
+    "published": "2026-11-15T13:20:09+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국기계전기전자시험연구원(KTC)이 LS일렉트릭이 개발한 산업용 이더넷 프로토콜 ‘라피넷(RAPIEnet)’의 시험평가 체계를 개발하고 있다. 통신 규격 준수 여부와 함께 링크가 끊겼다가 복구되거나 대량의 트래픽이 유입됐을 때 장비가 어떻게 동작하는지 검증하는 것이 핵심이다.김성은 KTC 팀장은 13일 서울 양재 엘타워에서 열린 ‘CPS(OT/ICS) Secure AX Summit 2026’에서 이 같은 시험 계획을 공개하고, 산업제어 장비 제조사를 위한 국제표준 IEC 62443 시험과 유럽연합(EU) 사이버복원력법(CRA) 대응",
+    "tags": [],
+    "title": "[CPS 시큐어 AX 서밋 2026] KTC, 국산 산업용 이더넷 ‘라피넷’ 시험평가 체계 개발",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209530"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+    "published": "2026-11-15T08:22:04+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "The compromise of Anthropic's official Claude Code extension on Cursor's extension marketplace was the result of the theft of an access key that was exposed in the wake of a breach targeting Fireworks AI. \"An attacker obtained an access key we had issued to Fireworks,\" Cursor said in a Friday update. \"The key was exposed by Fireworks, and the attacker used it to copy data from a read-only",
+    "tags": [],
+    "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
+    "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTFAzaHRVZnBvM01pR0R5WU54SDZ2UklIb3ppaDR0c2VmU2tXTXZnNTNuSG8zS3lJNEZBR1UyNUI2eWdHUl95YlEzYldYemVmR1FXa3hSZm81ZDJLZjA",
+    "published": "2026-11-11T09:58:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[뉴스7 헤드라인]",
+    "tags": [],
+    "title": "[뉴스7 헤드라인]",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAzaHRVZnBvM01pR0R5WU54SDZ2UklIb3ppaDR0c2VmU2tXTXZnNTNuSG8zS3lJNEZBR1UyNUI2eWdHUl95YlEzYldYemVmR1FXa3hSZm81ZDJLZjA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTE1tTkxLVGJpai11LWJ3WURGc09PTXBMMDdhUy0wcnE1MXZjSXBRcWh0YldRMzgyTkFIN3YyaTdlVno1MElXOVYxT0tkTExoNDB1Qm5GNDNIbnNWemoxR2hrcWJZQ0ZoOWtlMjZWWUVwZWVra1A1",
+    "published": "2026-11-15T02:51:29+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융·대학·공공기관까지 줄줄이 뚫렸다…개인정보 유출 비상",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융·대학·공공기관까지 줄줄이 뚫렸다…개인정보 유출 비상",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1tTkxLVGJpai11LWJ3WURGc09PTXBMMDdhUy0wcnE1MXZjSXBRcWh0YldRMzgyTkFIN3YyaTdlVno1MElXOVYxT0tkTExoNDB1Qm5GNDNIbnNWemoxR2hrcWJZQ0ZoOWtlMjZWWUVwZWVra1A1?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFBSeW9HMlFQeXlTZ2hTamlLNFBXaG9MNU43Y3E4VzlJTi1fSF9WbW1xUEFoZ09LU3dCTWhFQ2dySzhTU0U3OE1qR3FxS21IWWI3RDB1SUxkWktNZ2NxZWMwVElXQmdzeURj",
+    "published": "2026-11-15T10:02:56+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 해킹, 246개 IP 차단…한국발 공격 가능성에 금융권 긴장",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 해킹, 246개 IP 차단…한국발 공격 가능성에 금융권 긴장",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBSeW9HMlFQeXlTZ2hTamlLNFBXaG9MNU43Y3E4VzlJTi1fSF9WbW1xUEFoZ09LU3dCTWhFQ2dySzhTU0U3OE1qR3FxS21IWWI3RDB1SUxkWktNZ2NxZWMwVElXQmdzeURj?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9iMFBYYkIzSFdZUGdicWZmR0pScWdtSnktSnI3UUJOMHZmc0RNX29fWXM4NW5YdkpaQ0I1TEp4ZGtobUZDcHhMdVhSYmZmUDc2cFppN3Vua1dla2xUZzFhWFFZX1pxcUg0M3VyeWk1UQ",
+    "published": "2026-11-15T05:17:40+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권부터 공공기관까지 해킹 확산…외부 협력사 보안도 도마 위",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권부터 공공기관까지 해킹 확산…외부 협력사 보안도 도마 위",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9iMFBYYkIzSFdZUGdicWZmR0pScWdtSnktSnI3UUJOMHZmc0RNX29fWXM4NW5YdkpaQ0I1TEp4ZGtobUZDcHhMdVhSYmZmUDc2cFppN3Vua1dla2xUZzFhWFFZX1pxcUg0M3VyeWk1UQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFBsNHJEdVVDSHJjUHlDbGE0UDc2Z25Qb3RJbXA0Ukk5c0ItaWEwTVRxbGtIV0pmeldLSGpJM1NreVVPWm82RENMMDhjYm1zYUxoaV9DUTZEVUV2dTJmWE8yWGJuMC12ZzdNYmhXVlBXekHSAXRBVV95cUxNaFl2blZjejZ1ajRialV5UnFwem5WYTVxNDNBRU00Z0dYajF1UXlWdEdGV0RlX2wxNGJQeVloN0g2MWwwU0dtLWwzUW1YSDVvaGhfdUtWd0pDS0JnZTZza3dqQ0IzRF9SR2JJeldCUXFTQWNjSg",
+    "published": "2026-11-15T08:32:29+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융·공공기관 개인정보 유출 속출…협력업체 해킹에 피해 확산",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융·공공기관 개인정보 유출 속출…협력업체 해킹에 피해 확산",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBsNHJEdVVDSHJjUHlDbGE0UDc2Z25Qb3RJbXA0Ukk5c0ItaWEwTVRxbGtIV0pmeldLSGpJM1NreVVPWm82RENMMDhjYm1zYUxoaV9DUTZEVUV2dTJmWE8yWGJuMC12ZzdNYmhXVlBXekHSAXRBVV95cUxNaFl2blZjejZ1ajRialV5UnFwem5WYTVxNDNBRU00Z0dYajF1UXlWdEdGV0RlX2wxNGJQeVloN0g2MWwwU0dtLWwzUW1YSDVvaGhfdUtWd0pDS0JnZTZza3dqQ0IzRF9SR2JJeldCUXFTQWNjSg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE5vYXEtQmFhWkN4dS02emxwZzNlSHZrX2xWTXdnWWUya2hYaVRiWkx3VER4VE4xQW8zUUdvVjk4NVFxWndoV2NUV1h1T1RteWJVWG9fS1RlZnpkOFVDeFBNa3UzQWJzZWlM",
+    "published": "2026-11-15T07:28:30+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "협력사 뚫리니 다 털렸다…금융·공공기관 무더기 해킹 비상",
+    "tags": [
+      "금융"
+    ],
+    "title": "협력사 뚫리니 다 털렸다…금융·공공기관 무더기 해킹 비상",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vYXEtQmFhWkN4dS02emxwZzNlSHZrX2xWTXdnWWUya2hYaVRiWkx3VER4VE4xQW8zUUdvVjk4NVFxWndoV2NUV1h1T1RteWJVWG9fS1RlZnpkOFVDeFBNa3UzQWJzZWlM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFBpblBoc3BiNlp2c2R6bkZBVmthajhmbXE5X2VXMUdnMVNpVzNsZ19VOWpNVUV5N1VaY2JSSnpkcHliSVlaOExWa2s4cW1GdXlOaE1ZMG5Odi1Dd2NoVkR4OUgyYjJBT0FQbjlTdW5R",
+    "published": "2026-11-15T08:59:57+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[취재후일담] 금융권 해킹…안일한 대처가 피해 키웠다",
+    "tags": [
+      "금융"
+    ],
+    "title": "[취재후일담] 금융권 해킹…안일한 대처가 피해 키웠다",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBpblBoc3BiNlp2c2R6bkZBVmthajhmbXE5X2VXMUdnMVNpVzNsZ19VOWpNVUV5N1VaY2JSSnpkcHliSVlaOExWa2s4cW1GdXlOaE1ZMG5Odi1Dd2NoVkR4OUgyYjJBT0FQbjlTdW5R?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249859",
+    "published": "2026-11-15T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "금년 세무사시험 수석합격자(한OO씨)의 CPA시험 부정행위 언급과 관련하여 안내드립니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249859&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249857",
+    "published": "2026-11-15T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "불법사금융 원스톱 지원, 이제 센터 방문 없이도 신청 가능합니다.",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249857&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249856",
+    "published": "2026-11-15T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융감독원, 2026 세계투자자주간 실시",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249856&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249855",
+    "published": "2026-11-15T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융소비자 중심의 금융감독 실현을 위한 제5차 금융소비자보호자문위원회 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249855&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTFBSRjZiU081VnFwMDd4X21pSDBkeHBnUTBTcEYtTWtFb0JKb1d6SlN5aE5JZWVWUHl4MU1SOC1Kc0h1RkhMN0lmWFpXbEhHMWJSbUx4WFM1SWRwd9IBWEFVX3lxTFBQaUFjVUc2dTJLcDlBOWpTZlRBLXd4WVY2bDdQRGh1Q1RCb1g0aTROMi05RmRLWFpmdTlEMnV1Xzl0clViS3ExNDU1YmJMX0dFaFFmdWo0RXE",
+    "published": "2026-11-15T09:06:28+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[인터뷰] 송경희 개인정보위위원장 AI 시대, 개인정보 보호부터 산업 지원까지 역할 확대",
+    "tags": [],
+    "title": "[인터뷰] 송경희 개인정보위위원장 AI 시대, 개인정보 보호부터 산업 지원까지 역할 확대",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSRjZiU081VnFwMDd4X21pSDBkeHBnUTBTcEYtTWtFb0JKb1d6SlN5aE5JZWVWUHl4MU1SOC1Kc0h1RkhMN0lmWFpXbEhHMWJSbUx4WFM1SWRwd9IBWEFVX3lxTFBQaUFjVUc2dTJLcDlBOWpTZlRBLXd4WVY2bDdQRGh1Q1RCb1g0aTROMi05RmRLWFpmdTlEMnV1Xzl0clViS3ExNDU1YmJMX0dFaFFmdWo0RXE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE9MRUR2TE01bnZVVXRYcm5CQVNRS3h5cFNTNzFla1d1WWwzV21Pd3dWMERndVRMdUVmbnlJR1VwQW5DUklpYWU1blV5VkgxX0otRGk4a0dZNmhOUQ",
+    "published": "2026-11-15T09:01:49+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[데스크 칼럼] 강한 처벌이 해킹을 없앨까",
+    "tags": [],
+    "title": "[데스크 칼럼] 강한 처벌이 해킹을 없앨까",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MRUR2TE01bnZVVXRYcm5CQVNRS3h5cFNTNzFla1d1WWwzV21Pd3dWMERndVRMdUVmbnlJR1VwQW5DUklpYWU1blV5VkgxX0otRGk4a0dZNmhOUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE5LX3gwbFFWcUFsRTdTS3NLUzBkQ1ZPNFg2Q2VwTVhiWDlfZDFNUFowS2NlNUozdGhzQUtaYUNETVJTQXljZzh3LVR3RndBcWVtS3ZyUXVTQXZnN0lHLXBWQXpMS25ySmFybWNlNg",
+    "published": "2026-11-14T22:33:15+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 아동·청소년이 직접 개인정보 보호 정책 제안",
+    "tags": [],
+    "title": "개인정보위, 아동·청소년이 직접 개인정보 보호 정책 제안",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5LX3gwbFFWcUFsRTdTS3NLUzBkQ1ZPNFg2Q2VwTVhiWDlfZDFNUFowS2NlNUozdGhzQUtaYUNETVJTQXljZzh3LVR3RndBcWVtS3ZyUXVTQXZnN0lHLXBWQXpMS25ySmFybWNlNg?oc=5"
   }
 ]
