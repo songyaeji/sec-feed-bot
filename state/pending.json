@@ -3428,5 +3428,200 @@
     "tags": [],
     "title": "[개인정보 유출 대란] 삼양그룹 15만명 정보 털렸다…이재명정부 출범 1년, 대한민국 보안체계는 안전한가",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1BZWNTNU5xaGpLbS01Wk5xaGZxQ3l5aXhldHNkM0ZsNkQ4R0YyRFlNZFFMRXF4M0w4bzFLQ0pqaE83ZklrSmN0MkRpSDdTOU9Cc2ZLOWNSbVg2azc0anNZZVFGZlltRXg2NEo4?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-129353",
+    "published": "2026-11-15T00:16:51.120",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A vulnerability was detected in D-Link DIR-600L 2.17/2.17b02. Affected by this vulnerability is the function authenticationcgi_main of the file authentication.cgi. Performing a manipulation of the argument id/password results in stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit is now public and may be used.",
+    "tags": [],
+    "title": "CVE-2026-129353 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129353"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-129354",
+    "published": "2026-11-15T01:18:03.043",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function hnap_main of the file htdocs/cgibin of the component HNAP Handler. Executing a manipulation can lead to stack-based buffer overflow. The attack can be executed remotely. The exploit has been published and may be used.",
+    "tags": [],
+    "title": "CVE-2026-129354 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129354"
+  },
+  {
+    "category": "high",
+    "cvss": 5.0,
+    "id": "CVE-2026-129356",
+    "published": "2026-11-15T02:17:20.967",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability was found in vllm-project vllm 0.30.0/0.31.0. This vulnerability affects unknown code of the file single_type_kv_cache_manager.py of the component Common Prefix Handler. The manipulation results in race condition. The attack may be performed from remote. Attacks of this nature are highly complex. It is stated that the exploitability is difficult. The exploit has been made public and could be used. Upgrading to version 0.32.0 is able to resolve this issue. The patch is identified as e687a251bb056fa527846633f7a1b0a6c0f42374. You should upgrade the affected component.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-129356 (CVSS 5.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129356"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-129464",
+    "published": "2026-11-15T02:17:21.597",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zr.Admin.NET commit 0ee1ab8 through commit eb9228a contains a path traversal vulnerability that allows any logged-in user to read arbitrary server files via the path parameter of /common/DownloadFile. Attackers can supply absolute paths or ../ sequences to read appsettings files and use the JwtSettings SecretKey to forge administrator tokens.",
+    "tags": [],
+    "title": "CVE-2026-129464 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129464"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-129465",
+    "published": "2026-11-15T02:17:21.770",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Zr.Admin.NET commit af07ffc through commit eb9228a contains an insecure direct object reference vulnerability in SysProfileController.UpdateProfile that allows any authenticated user to modify other accounts via UserId. Attackers can set the administrator's phone number to one they control, request an SMS code via /checkMobile, and log in through /PhoneLogin to take over the administrator account.",
+    "tags": [],
+    "title": "CVE-2026-129465 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129465"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209529",
+    "published": "2026-11-15T11:19:24+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "2019년 10월 14일, 랜섬웨어 공격을 받은 고려아연은 업무용 PC와 서버 수백 대에 이어 디스크 백업 서버까지 암호화되면서 복구에 약 한 달이 걸렸다. 내부 방화벽 덕분에 공격은 생산 제어망까지 번지지 않았다. 사고 이후 고려아연은 6개월간 공장을 돌며 제어 자산을 파악했고, 공정별 네트워크 점검과 오프라인 백업 체계를 마련했다. 황인구 고려아연 정보보호최고책임자(CISO)는 “생산은 절대 멈추면 안 되겠다”는 판단이 운영기술(OT) 보안의 우선순위를 정하는 기준이었다고 말했다.황 CISO는 13일 서울 양재 엘타워에서 열린",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "[CPS 시큐어 AX 서밋 2026] “생산은 멈추면 안 된다”…황인구 CISO, 랜섬웨어 이후 바꾼 OT 보안",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209529"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209528",
+    "published": "2026-11-15T10:33:51+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "산업제어망에서 수집한 설비 데이터를 인공지능(AI) 분석에 활용하려면 외부로 보낼 데이터의 범위를 정해야 한다. 외부에서 받은 보안 패치를 제어망에 들여올 때는 파일의 안전성과 설비 운영에 미칠 영향을 함께 확인해야 한다. 송재은 앤앤에스피(NNSP) 본부장은 13일 서울 양재 엘타워에서 열린 ‘CPS(OT/ICS) Secure AX Summit 2026’에서 망분리를 유지하면서 허용된 데이터만 검증해 전달하는 망연계 보안 기술(CDS·Cross Domain Solution)을 소개했다.‘AX 시대, 산업현장의 안전한 연결과 안정적",
+    "tags": [
+      "AI"
+    ],
+    "title": "[CPS 시큐어 AX 서밋 2026] 송재은 앤앤에스피 본부장, OT 망연계 기술 소개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209528"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209527",
+    "published": "2026-11-15T10:22:44+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "산업제어망에서 장비 응답이 늦어지거나 통신이 끊기면 보안팀은 공격 가능성을, 설비 운영팀은 장비나 네트워크 장애 가능성을 먼저 살핀다. 원인을 가리려면 두 팀이 같은 시간대의 보안 경보와 통신 품질 데이터를 함께 봐야 한다.김기현 앤앤에스피(NNSP) 최고기술책임자(CTO)는 13일 서울 양재 엘타워에서 열린 ‘CPS(OT/ICS) Secure AX Summit 2026’에서 이 같은 운영기술(OT) 제어망 통합 모니터링 전략을 제시했다. 현장 진단에서는 시험 때 사용한 설정이 실제 운영망에 남아 불필요한 통신을 일으키고, 제어장비",
+    "tags": [],
+    "title": "[CPS 시큐어 AX 서밋 2026] 김기현 앤앤에스피 CTO “제어망 보안 경보와 통신 품질 함께 봐야”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209527"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209526",
+    "published": "2026-11-15T10:07:03+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "김수득 후디스코리아(h00dies Korea) 법인장은 13일 서울 양재 엘타워에서 열린 ‘CPS(OT/ICS) Secure AX Summit 2026’에서 산업제어망 해킹이 생산 중단과 설비 안전 문제로 번질 수 있다며 운영기술(OT) 환경에 맞는 사고 보고·복구 체계를 마련해야 한다고 밝혔다. 정부에는 제어설비 피해를 반영한 보고 기준과 관계기관 공조 체계를, 기업에는 제어망 연결 구조 점검과 업종별 복구 절차 마련을 제안했다.김 법인장은 ‘CPS(OT/ICS) 위협 동향과 국가·기반시설 보안 정책 대응 전략’을 주제로 한 초청",
+    "tags": [],
+    "title": "[CPS 시큐어 AX 서밋 2026] “산업제어망 보안, 솔루션 도입 전 설비 연결 구조부터 파악해야”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209526"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209525",
+    "published": "2026-11-15T09:22:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 고객상담 서비스 전문기업 메타엠(MetaM)이 해킹 공격을 받아 일부 고객상담 시스템에 저장된 전화번호와 상담 대화 내용 등 개인정보가 무단 조회되거나 외부로 반출된 정황이 확인됐다. 메타엠은 11월 12일 오전 6시 3분 고객상담 서비스 장애를 계기로 침해사고를 인지했으며, 조사 과정에서 이전부터 일부 서비스에 비정상적인 접근이 있었던 사실도 파악했다. 회사는 13일 한국인터넷진흥원(KISA)에 사고를 신고하고 피해 고객사와 개인정보 유출 범위를 조사하고 있다.메타엠은 11월 14일 자사 홈페이지에 ‘개인정보 유출 및 유출",
+    "tags": [
+      "금융"
+    ],
+    "title": "메타엠 고객상담 시스템 해킹…전화번호·상담 내용 등 개인정보 유출 확인",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209525"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209524",
+    "published": "2026-11-15T09:06:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국발명진흥회가 운영하는 '아이디어로(IDEARO)' 플랫폼이 해킹 공격을 받아 약 62MB의 데이터가 외부로 전송된 사실이 확인됐다. 공격자는 플랫폼의 파일 등록 기능에 존재하는 보안 취약점을 악용해 서버에 침입한 뒤 악성 프로그램을 설치·실행한 것으로 파악됐다. 특히 이용자들이 제출한 첨부파일이 보관된 저장장치에도 접근할 수 있었던 것으로 확인돼 개인정보뿐 아니라 사업 참여 과정에서 제출한 자료의 유출 가능성도 조사할 필요가 있는 상황이다.한국발명진흥회는 11월 14일 '개인정보 유출 가능성에 대한 안내' 공지를 통해 아이디어로",
+    "tags": [],
+    "title": "[단독] 한국발명진흥회 '아이디어로' 플랫폼 해킹…악성코드 설치 후 62MB 데이터 외부 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209524"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209523",
+    "published": "2026-11-15T08:53:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "전문인력 매칭과 생활 서비스 예약을 제공하는 ‘모두의잡스’ 홈페이지에서 메인 화면이 변조된 정황이 확인됐다. 15일 모두의잡스 대표 도메인(modoojobs.co.kr)을 확인한 결과, 기존 서비스 안내 대신 ‘더 널 소사이어티(The Null Society)’ 명의의 해킹 주장 화면이 표시됐다. 이 화면에 적힌 닉네임은 홈페이지가 연결한 텔레그램 채널의 웹셸 판매 홍보 게시물에도 등장했다. 홈페이지에 ‘CaptainSmok3r’ 닉네임…텔레그램에서 웹쉘 판매자모두의잡스 메인 페이지의 제목은 ‘Hacked By The Null So",
+    "tags": [
+      "금융",
+      "APT"
+    ],
+    "title": "전문인력 매칭 '모두의잡스’ 해킹 당해 홈페이지 변조…해커는 웹쉘 판매자",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209523"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTFB5bnhsRXFrX1g1QUJZdzlocVpxR3VNUjVZQWM3Y0MtYUxUZjBWT0tPS2tMcG55ZlVDTlFhTXJkRFd5RHJZVFVxaEprNERBYk9TNDJ0YmVWVHNPamd6akE",
+    "published": "2026-11-13T08:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "코인마켓 거래소, 금보원 사원 가입 추진…비용 부담 어쩌나",
+    "tags": [],
+    "title": "코인마켓 거래소, 금보원 사원 가입 추진…비용 부담 어쩌나",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB5bnhsRXFrX1g1QUJZdzlocVpxR3VNUjVZQWM3Y0MtYUxUZjBWT0tPS2tMcG55ZlVDTlFhTXJkRFd5RHJZVFVxaEprNERBYk9TNDJ0YmVWVHNPamd6akE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5PUzhGUEM0cU5lMUFqMjd5V1JsbGZuRWFTdmdETGg4VUtzNkJaVlhUMFVhSW5sY1MzT0ZtRjcza0RfMk9jVDZxTk5LMjM0ellrVG1tNXdFRUpmMXkyT3lXakJ6M21YWjQ",
+    "published": "2026-11-15T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[기자수첩] 금융보안원도 해킹…가짜 금감원 계정 몰랐나",
+    "tags": [
+      "금융"
+    ],
+    "title": "[기자수첩] 금융보안원도 해킹…가짜 금감원 계정 몰랐나",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5PUzhGUEM0cU5lMUFqMjd5V1JsbGZuRWFTdmdETGg4VUtzNkJaVlhUMFVhSW5sY1MzT0ZtRjcza0RfMk9jVDZxTk5LMjM0ellrVG1tNXdFRUpmMXkyT3lXakJ6M21YWjQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXEFVX3lxTE1fZGNTcXo1cU5LMmNuYS1LSm0tekdEX1h0Q2JPck9OUjc2V1lGNUIyMTdCand0V3FtX0JPVEtBM29aR0x5d0hDSzR4QmdnS2lMSVp3SlgyLVl2cU9S",
+    "published": "2026-11-13T22:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[주간금융이슈] 금융위, 금융보안원 특정감사 돌입…금융권 해킹 후속 조치 주목",
+    "tags": [
+      "금융"
+    ],
+    "title": "[주간금융이슈] 금융위, 금융보안원 특정감사 돌입…금융권 해킹 후속 조치 주목",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1fZGNTcXo1cU5LMmNuYS1LSm0tekdEX1h0Q2JPck9OUjc2V1lGNUIyMTdCand0V3FtX0JPVEtBM29aR0x5d0hDSzR4QmdnS2lMSVp3SlgyLVl2cU9S?oc=5"
   }
 ]
