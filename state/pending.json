@@ -2085,5 +2085,1208 @@
     ],
     "title": "금융보안원 침해사고 원인 조사…금융위, 전산·업무체계 재점검 지시",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1LVjJ0bVNKb1U1ckhBMFFkRGVuUWdUbVphOXRrYVdvLVVqQ3ZyNHNHeFczZlh1QUxDdEFNNFd6Zm5SZUsyZ3hETC1FMnByM3NSaEh6UzNn0gFbQVVfeXFMT0xhcEh4YkZUUUV4dTRYTGZwZ1AxQm1IQlMzbmF2VG9CRGRxYUI3RV92c09nOVBFN1RWRGZuUEJjcUw4YkVVUWFTeFBrS0JSblJQZW1scFBRSWJqRQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2024-38795",
+    "published": "2024-08-29T15:15:26.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Emraan Cheema ListingPro listingpro-plugin allows SQL Injection.This issue affects ListingPro: from n/a through 2.9.4.",
+    "tags": [],
+    "title": "CVE-2024-38795 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-38795"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-96822",
+    "published": "2026-09-30T13:17:31.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Hossni Mubarak Books Gallery wp-books-gallery allows Blind SQL Injection.This issue affects Books Gallery: from n/a through 4.8.3.",
+    "tags": [],
+    "title": "CVE-2026-96822 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96822"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-82156",
+    "published": "2026-11-16T04:16:44.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Dell PowerStore contains an authorization-bypass vulnerability. A low-privileged attacker could exploit it, potentially leading to elevation of privilege to administrator.",
+    "tags": [],
+    "title": "CVE-2026-82156 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82156"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99289",
+    "published": "2026-11-16T10:17:00.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix app-instance non-durable supersede session UAF\n\nksmbd_close_fd_app_instance_id() supersedes a prior open that has the\nsame AppInstanceId. It reaches that open's session through opinfo->sess.\nThis pointer is not refcounted.\n\nSession teardown detaches durable handles before it frees the session.\nIt does not detach a non-durable open. That open still points at the\nsession through opinfo->sess after the session is freed. Another session\ncan supersede the open at the same time. The supersede then takes a\nwrite lock through the stale pointer, in the freed session's file table.\n\n  BUG: KASAN: slab-use-after-free in _raw_write_lock+0x71/0xd0\n  Call Trace:\n   _raw_write_lock+0x71/0xd0\n   ksmbd_close_fd_app_instance_id+0xd9/0x670 [ksmbd]\n   smb2_open+0x3e10/0xd910 [ksmbd]\n  Freed by task 212:\n   ksmbd_session_destroy+0x38d/0x480 [ksmbd]\n\nFix this by looking the session up by opinfo->session_id. The lookup\nreturns a reference, as smb2_break_collect_channels() does. Recheck that\nopinfo->sess still points at it before using it.\n\nDo the lookup without m_lock held. destroy_previous_session() takes\nm_lock under the session table lock, and taking them in the other order\nhere would deadlock.",
+    "tags": [],
+    "title": "CVE-2026-99289 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99289"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99290",
+    "published": "2026-11-16T10:17:01.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix use-after-free after a failed durable reconnect\n\nksmbd_reopen_durable_fd() republishes a detached durable handle in the\nreconnecting session's file table and takes no reference for that entry.\nIf smb2_open() then fails, cleanup relies on the final ksmbd_fd_put() to\nremove the volatile id.\n\nTwo reconnects of the same handle can both take a lookup reference before\neither attaches it. If the one that reopens first then fails and drops\nits references first, the other request makes the final put through\nksmbd_put_durable_fd(). That frees the handle without removing the first\nsession's table entry, so tearing that session down writes to freed\nmemory.\n\n  BUG: KASAN: slab-use-after-free in __close_file_table_ids+0x14d/0x740 [ksmbd]\n  Call Trace:\n   __close_file_table_ids+0x14d/0x740 [ksmbd]\n   ksmbd_destroy_file_table+0x76/0x100 [ksmbd]\n   ksmbd_session_destroy+0xf8/0x480 [ksmbd]\n   ksmbd_dispose_sessions+0x13e/0x200 [ksmbd]\n   ksmbd_conn_sessions_cleanup+0x4c3/0x6d0 [ksmbd]\n  Freed by task 1030:\n   __ksmbd_close_fd+0x97d/0x1000 [ksmbd]\n   smb2_open+0x14eb/0xd9f0 [ksmbd]\n\nCommit 3515503322f4 (\"ksmbd: fix durable reconnect error path file\nlifetime\") handles a final put made by the reconnecting request, but not\none made by another holder.\n\nRemove the volatile id under the file-table lock on this error path,\nbefore the references are dropped, as ksmbd_close_fd() does on the\nrequest_open path just above. Remo",
+    "tags": [],
+    "title": "CVE-2026-99290 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99290"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99291",
+    "published": "2026-11-16T10:17:01.393",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix SMB2 CREATE response buffer overflow\n\nsmb2_allocate_rsp_buf() uses the MAX_CIFS_SMALL_BUFFER_SIZE\n(448-byte) buffer for a single SMB2_CREATE response. That buffer also\nholds a 4-byte length field, which only leaves 444 bytes for the SMB2\nbody.\n\nThe AAPL response made this buffer too small. After 8f1b796ff113, a\nrequest with AAPL response contexts may need at least 456 bytes. In\nthe 456-byte case, create_aapl_rsp_buf() is appended last, clears 128\nbytes, and writes 12 bytes past the allocation.\n\nKASAN reports:\n\n    BUG: KASAN: slab-out-of-bounds in create_aapl_rsp_buf+0x31/0x6e0\n    Write of size 128 at addr ffff88800370954c by task kworker/0:0/9\n    ...\n    create_aapl_rsp_buf+0x31/0x6e0\n    smb2_open+0x58f9/0xef10\n    ...\n    smb2_allocate_rsp_buf+0x19d/0x370\n    ...\n    The buggy address is located 332 bytes inside of\n     allocated 448-byte region [ffff888003709400, ffff8880037095c0)\n\nReserve enough space for any fixed CREATE response KSMBD can build.\nStore the required allocation size in the per-dialect values table.\nThis keeps the small buffer for other commands and avoids using the max\ntransaction buffer for every CREATE.",
+    "tags": [],
+    "title": "CVE-2026-99291 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99291"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99292",
+    "published": "2026-11-16T10:17:01.647",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: fix slab-out-of-bounds write in id_mode_to_cifs_acl()\n\nIn id_mode_to_cifs_acl(), while the chown branch reserves\nsizeof(struct smb_ntsd) + 2 * sizeof(struct smb_sid) (plus\nsizeof(struct smb_acl) and the worst-case ACE space after\ncommit 0ee150794c75 (\"smb: client: fix heap overflow in DACL owner/group\nrewrite\")), the chmod branch only adds 2 * sizeof(struct smb_ace) or\n5 * sizeof(struct smb_ace) to secdesclen (or 1 * sizeof(struct smb_ace)\non posix).\n\nHowever, the chmod branch also invokes build_sec_desc() ->\ncopy_sec_desc(), which unconditionally writes the Owner SID at\npnntsd + sidsoffset and the Group SID at\npnntsd + sidsoffset + sizeof(struct smb_sid) (2 * 68 = 136 bytes total),\nand set_chmod_dacl() always writes a struct smb_acl header (8 bytes)\neven when the source descriptor has dacloffset == 0. When a security\ndescriptor has compact or overlapping Owner/Group SIDs (or\ndacloffset == 0), calling chmod() under-allocates pnntsd and writes past\nthe end of the slab buffer.\n\nReserve sizeof(struct smb_acl) + 2 * sizeof(struct smb_sid) (plus\nsizeof(struct smb_ntsd) on the posix path) in the chmod branch of\nid_mode_to_cifs_acl().",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-99292 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99292"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99293",
+    "published": "2026-11-16T10:17:01.900",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nfuse: don't BUG when the copy buffer is exhausted\n\nfuse_copy_fill() hits BUG_ON(!err) once the iterator backing the copy\nruns out of pages.  Over io-uring the amount copied is not bounded by the\npayload buffer the server registered, so an unprivileged user can drain\nthe iterator and panic the host - mount a FUSE filesystem with small\npayload buffers, then setxattr() a larger value:\n\n  kernel BUG at fs/fuse/dev.c:1064!\n  Oops: invalid opcode: 0000 [#1] SMP KASAN NOPTI\n  CPU: 1 UID: 0 PID: 148 Comm: exploit Not tainted 7.3.0-rc1 #2\n  RIP: 0010:fuse_copy_fill (fs/fuse/dev.c:1033)\n  Call Trace:\n   <TASK>\n   fuse_copy_args (fs/fuse/dev.c:1354 fs/fuse/dev.c:1380)\n   fuse_uring_args_to_ring (fs/fuse/dev_uring.c:891)\n   fuse_uring_prepare_send (fs/fuse/dev_uring.c:940 fs/fuse/dev_uring.c:1057)\n   fuse_uring_send_in_task (fs/fuse/dev_uring.c:1745)\n   tctx_task_work_run (io_uring/tw.c:96)\n   tctx_task_work (io_uring/tw.c:133)\n   task_work_run (kernel/task_work.c:233)\n   io_run_task_work (io_uring/tw.h:84)\n   io_cqring_wait (io_uring/wait.c:278)\n   __do_sys_io_uring_enter (io_uring/io_uring.c:2676)\n   do_syscall_64 (arch/x86/entry/syscall_64.c:61)\n   entry_SYSCALL_64_after_hwframe (arch/x86/entry/entry_64.S:121)\n\nThe reply path can drain it the same way, via the server-supplied\npayload_sz in fuse_uring_copy_from_ring().\n\nReturn -EIO instead.  All three fuse_copy_fill() callers already\npropagate the error.",
+    "tags": [],
+    "title": "CVE-2026-99293 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99293"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99294",
+    "published": "2026-11-16T10:17:02.157",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_fwd_netdev: use recursion counter in neigh egress path\n\nnft_fwd_neigh can be used in egress chains (NF_NETDEV_EGRESS). When the\nforwarding rule targets the same device or two devices forward to each\nother, neigh_xmit() triggers dev_queue_xmit() which re-enters\nnf_hook_egress(), causing infinite recursion and stack overflow.\n\nMove the nf_get_nf_dup_skb_recursion() accessor and NF_RECURSION_LIMIT\nto the shared header nf_dup_netdev.h as a static inline, so that\nnft_fwd_netdev can use the recursion counter directly without exported\nfunction call overhead. Guard neigh_xmit() with the same recursion\nlimit already used in nf_do_netdev_egress().\n\n[ Updated to cache the nf_get_nf_dup_skb_recursion pointer. --pablo ]",
+    "tags": [],
+    "title": "CVE-2026-99294 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99294"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99295",
+    "published": "2026-11-16T10:17:02.403",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: stop processing a read response after a receive error\n\ncifs_read_iter_from_socket() may call cifs_reconnect() before returning an\nerror.  The reconnect path aborts pending mids and invokes their callbacks.\nThe callback can then release the cifs_io_subrequest containing rdata.\n\ncifs_readv_receive() nevertheless continues after a negative return and may\ndereference rdata in cifs_readv_discard().  KASAN reports the resulting\nUAF:\n\n  BUG: KASAN: slab-use-after-free in cifs_readv_receive\n  Read of size 4 by task cifsd\n  cifs_readv_receive (fs/smb/client/transport.c:1284)\n  cifs_demultiplex_thread (fs/smb/client/connect.c:1355)\n  kthread (kernel/kthread.c:436)\n  ret_from_fork (arch/x86/kernel/process.c:158)\n\n  Freed by task 148:\n  netfs_put_subrequest (fs/netfs/objects.c:267)\n  netfs_read_collection (fs/netfs/read_collect.c:460)\n  netfs_wait_for_in_progress (fs/netfs/misc.c:462)\n\nReturn the socket error immediately, as this path did before the iterator\nconversion.  This also avoids adding a negative length to total_read.",
+    "tags": [],
+    "title": "CVE-2026-99295 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99295"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99296",
+    "published": "2026-11-16T10:17:02.660",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nlibceph: bound mon_command ack decode to front len\n\nhandle_command_ack() bounds the decode with msg->front_alloc_len, the size\nof the reply buffer, instead of msg->front.iov_len, the number of bytes the\nmonitor sent.  mon_alloc_msg() routes every CEPH_MSG_MON_COMMAND_ACK to\nget_generic_reply(), which returns the preallocated ->reply of whichever\ngeneric request carries the same tid, so the buffer keeps its fixed size\nhowever short the reply is.  An ack with hdr.front_len below sizeof(struct\nceph_mon_request_header) + sizeof(u32), including 0, still passes\nceph_decode_need(), and ceph_decode_32() returns four bytes that were never\nreceived: uninitialized slab memory, stale bytes of an earlier message, or\nbytes the peer planted by sending a reply that lands in the same buffer and\nis then rejected.  The read stays within the allocation, so KASAN does not\nflag it.\n\nreq->result reaches userspace through ceph_monc_do_statfs(),\nceph_monc_get_version() and ceph_monc_blocklist_add(); rbd hands it back\nfrom write() on /sys/bus/rbd/add_single_major, and rbd_get_client() passes\nit to ERR_PTR() unchecked, which faults:\n\n  rbd: failed to get latest osdmap: -186318427\n  BUG: unable to handle page fault for address: fffffbfffe9ca034\n  Oops: Oops: 0000 [#1] SMP KASAN NOPTI\n  RIP: 0010:do_rbd_add (drivers/block/rbd.c:7105)\n  Call Trace:\n   ...\n   kernfs_fop_write_iter (fs/kernfs/file.c:345)\n   vfs_write (fs/read_write.c:595 f",
+    "tags": [],
+    "title": "CVE-2026-99296 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99296"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99297",
+    "published": "2026-11-16T10:17:02.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: em28xx: fix double free in em28xx_alloc_urbs\n\nWhen allocation of usb_bufs->buf[i] fails, em28xx_alloc_urbs()\nexplicitly frees all items within usb_bufs->buf before calling\nem28xx_uninit_usb_xfer(), which also frees these items, causing them to be\nfreed twice.\n\nBUG: KASAN: double-free in usb_free_urb.part.0 (drivers/usb/core/urb.c:25 ./include/linux/kref.h:65 drivers/usb/core/urb.c:96)\nFree of addr ffff88802fd37c00 by task kworker/1:2/1182\nWorkqueue: events request_module_async\nCall Trace:\n  kasan_report_invalid_free (mm/kasan/report.c:557)\n  check_slab_allocation (mm/kasan/common.c:235)\n  kfree (./include/linux/kasan.h:199 (discriminator 1) mm/slub.c:2693 (discriminator 1) mm/slub.c:6508 (discriminator 1) mm/slub.c:6801 (discriminator 1))\n  usb_free_urb.part.0 (drivers/usb/core/urb.c:25 ./include/linux/kref.h:65 drivers/usb/core/urb.c:96)\n  usb_free_urb (drivers/usb/core/urb.c:95)\n  em28xx_uninit_usb_xfer (drivers/media/usb/em28xx/em28xx-core.c:964)\n  em28xx_alloc_urbs (drivers/media/usb/em28xx/em28xx-core.c:1076)\n  em28xx_dvb_init (drivers/media/usb/em28xx/em28xx-dvb.c:1734 drivers/media/usb/em28xx/em28xx-dvb.c:1698)\n  em28xx_init_extension (drivers/media/usb/em28xx/em28xx-core.c:1248)\n  request_module_async (drivers/media/usb/em28xx/em28xx-cards.c:3685)\n  process_one_work (kernel/workqueue.c:3396)\n  worker_thread (kernel/workqueue.c:3479 kernel/workqueue.c:3560)\n  kthread (kernel/kthread.c:436)\n  re",
+    "tags": [],
+    "title": "CVE-2026-99297 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99297"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99298",
+    "published": "2026-11-16T10:17:03.210",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ipv4: add zero check for snd_cwnd_clamp\n\nWhen RTAX_CWND is locked, user is able to pass 0 into it.\nThis could lead to writing 0 to tp->snd_cwnd, leading to a\ndivision by zero error.\n\nOops: divide error: 0000 [#1] SMP KASAN NOPTI\nCall Trace:\n <IRQ>\n tcp_reno_cong_avoid (net/ipv4/tcp_cong.c:510 (discriminator 1))\n tcp_ack (net/ipv4/tcp_input.c:3517 net/ipv4/tcp_input.c:3873 net/ipv4/tcp_input.c:4440)\n tcp_rcv_established (net/ipv4/tcp_input.c:6685)\n tcp_v4_do_rcv (net/ipv4/tcp_ipv4.c:1854)\n tcp_v4_rcv (net/ipv4/tcp_ipv4.c:2248)\n ip_protocol_deliver_rcu (net/ipv4/ip_input.c:207 (discriminator 1))\n ip_local_deliver_finish (net/ipv4/ip_input.c:241 (discriminator 1))\n ip_local_deliver (./include/linux/netfilter.h:325 ./include/linux/netfilter.h:319 net/ipv4/ip_input.c:262)\n ip_rcv (./include/net/dst.h:481 (discriminator 6) net/ipv4/ip_input.c:492 (discriminator 6) ./include/linux/netfilter.h:325 (discriminator 6) ./include/li)\n __netif_receive_skb_one_core (net/core/dev.c:6297 (discriminator 4))\n __netif_receive_skb (net/core/dev.c:6410)\n process_backlog (net/core/dev.c:6761)\n __napi_poll.constprop.0 (net/core/dev.c:7830)\n net_rx_action (net/core/dev.c:7893 net/core/dev.c:8050)\n handle_softirqs (kernel/softirq.c:645)\n __irq_exit_rcu (kernel/softirq.c:679 kernel/softirq.c:519 kernel/softirq.c:758)\n irq_exit_rcu (kernel/softirq.c:775)\n sysvec_apic_timer_interrupt (arch/x86/kernel/apic/apic.c:1062 (discriminator",
+    "tags": [],
+    "title": "CVE-2026-99298 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99298"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99299",
+    "published": "2026-11-16T10:17:03.477",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: em28xx: reject audio endpoint with zero packet size\n\nem28xx_audio_urb_init() divides by the audio endpoint's wMaxPacketSize\nwithout checking it, so a USB device that declares a zero-sized audio\nendpoint divides by zero at probe time.\n\nReject a zero-sized audio endpoint like a missing one; the caller already\nunwinds on a negative return.\n\n  Oops: divide error: 0000 [#1] SMP NOPTI\n  Workqueue: usb_hub_wq hub_event\n  RIP: 0010:em28xx_audio_init (drivers/media/usb/em28xx/em28xx-audio.c:718)\n  Call Trace:\n   em28xx_init_extension (drivers/media/usb/em28xx/em28xx-core.c:1248)\n   em28xx_init_dev.isra.0 (drivers/media/usb/em28xx/em28xx-cards.c:3887)\n   em28xx_usb_probe (drivers/media/usb/em28xx/em28xx-cards.c:4258)\n   usb_probe_interface (drivers/usb/core/driver.c:396)\n   ...\n   usb_set_configuration (drivers/usb/core/message.c:2268)\n   usb_generic_driver_probe (drivers/usb/core/generic.c:250)\n   usb_probe_device (drivers/usb/core/driver.c:291)\n   ...\n   usb_new_device (drivers/usb/core/hub.c:2703)\n   hub_event (drivers/usb/core/hub.c:5961)\n   process_one_work (kernel/workqueue.c:3322)\n   worker_thread (kernel/workqueue.c:3486)\n   kthread (kernel/kthread.c:436)\n   ret_from_fork (arch/x86/kernel/process.c:158)\n   ret_from_fork_asm (arch/x86/entry/entry_64.S:245)\n  Kernel panic - not syncing: Fatal exception",
+    "tags": [],
+    "title": "CVE-2026-99299 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99299"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99300",
+    "published": "2026-11-16T10:17:03.730",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmedia: go7007: only set audio_enabled if go7007_snd_init() succeeded\n\ngo7007_register_encoder() sets go->audio_enabled before calling\ngo7007_snd_init() and discards its return value.  go7007_snd_init()\nassigns go->snd_context only on success, so a failed ALSA setup leaves\naudio_enabled set with snd_context still NULL.  The disconnect path tests\naudio_enabled and calls go7007_snd_remove(), which dereferences\nsnd_context unconditionally.\n\ngo7007_snd_init() returns -ENODEV once its never-decremented static card\ncounter reaches SNDRV_CARDS, so SNDRV_CARDS attach/detach cycles arm the\nnext attach; no memory pressure is needed.\n\nSet go->audio_enabled only once go7007_snd_init() has succeeded.\n\n  Oops: general protection fault, probably for non-canonical address ...\n  KASAN: null-ptr-deref in range [0x0000000000000000-0x0000000000000007]\n  Workqueue: usb_hub_wq hub_event\n  RIP: 0010:go7007_snd_remove (drivers/media/usb/go7007/snd-go7007.c:273)\n  Call Trace:\n   go7007_usb_disconnect (drivers/media/usb/go7007/go7007-usb.c:1336)\n   usb_unbind_interface (drivers/usb/core/driver.c:461)\n   device_remove (drivers/base/dd.c:618)\n   device_release_driver_internal (drivers/base/dd.c:1349)\n   bus_remove_device (drivers/base/bus.c:664)\n   device_del (drivers/base/core.c:3965)\n   usb_disable_device (drivers/usb/core/message.c:1478)\n   usb_disconnect\n   hub_event (drivers/usb/core/hub.c:5966)\n   process_one_work (kernel/workqueu",
+    "tags": [],
+    "title": "CVE-2026-99300 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99300"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99301",
+    "published": "2026-11-16T10:17:03.987",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nvirtio_net: atomically disable rx mode work\n\nvirtio-net uses a boolean to gate rx_mode_work during device teardown.\nThe flag is changed under RTNL, but ndo_set_rx_mode checks it under the\naddress-list lock. A callback can therefore pass the check and enqueue work\nafter teardown has flushed it. The work is also enabled before late\nprobe operations that can fail, allowing probe unwind to free the netdev\nwith work still queued.\n\nKASAN reports the worker using a virtqueue that probe unwind already freed:\n\n  BUG: KASAN: slab-use-after-free in virtqueue_add_split\n  Workqueue: events virtnet_rx_mode_work\n  Call Trace:\n   virtqueue_add_split (drivers/virtio/virtio_ring.c:706)\n   virtqueue_add_sgs (drivers/virtio/virtio_ring.c:2839)\n   virtnet_send_command_reply (drivers/net/virtio_net.c:3565)\n   virtnet_rx_mode_work (drivers/net/virtio_net.c:3833)\n   process_one_work (kernel/workqueue.c:3322)\n   worker_thread (kernel/workqueue.c:3405)\n  Freed by task 119:\n   kfree (mm/slub.c:6625)\n   vp_del_vq.isra.0 (drivers/virtio/virtio_pci_common.c:259)\n   vp_del_vqs (drivers/virtio/virtio_pci_common.c:285)\n   virtnet_probe (drivers/net/virtio_net.c:7129)\n\nUse the workqueue disable mechanism to atomically reject new queue attempts\nand drain running work. Keep work disabled until probe succeeds or restore\nhas reattached the netdev, then enable it and replay receive-mode state for\na running interface. Disable it before resource te",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-99301 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99301"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99302",
+    "published": "2026-11-16T10:17:04.250",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnvmet-rdma: reject short connection requests\n\nnvmet_rdma_parse_cm_connect_req() treats RDMA-CM private data as a\nstruct nvme_rdma_cm_req but accepts any nonzero private_data_len.  The\niWARP path allocates exactly the peer-provided length, so a six-byte MPA\nrequest reaches the parser and the hsqsize load reads two bytes past the\nallocation.\n\nRequire the complete request structure before reading any of its fields.\nThe decoded KASAN report is:\n\n  BUG: KASAN: slab-out-of-bounds in nvmet_rdma_cm_handler\n    (drivers/nvme/target/rdma.c:1427 drivers/nvme/target/rdma.c:1475\n     drivers/nvme/target/rdma.c:1614 drivers/nvme/target/rdma.c:1814)\n  Read of size 2 at addr ff1100010459d366 by task kworker/u16:1/41\n  Workqueue: iw_cm_wq cm_work_handler\n  Call Trace:\n   <TASK>\n   dump_stack_lvl (lib/dump_stack.c:94 lib/dump_stack.c:120)\n   print_report (mm/kasan/report.c:378 mm/kasan/report.c:482)\n   kasan_report (mm/kasan/report.c:595)\n   nvmet_rdma_cm_handler\n    (drivers/nvme/target/rdma.c:1427 drivers/nvme/target/rdma.c:1475\n     drivers/nvme/target/rdma.c:1614 drivers/nvme/target/rdma.c:1814)\n   cma_cm_event_handler (drivers/infiniband/core/cma.c:2181)\n   iw_conn_req_handler (drivers/infiniband/core/cma.c:2640)\n   cm_work_handler\n    (drivers/infiniband/core/cm.c:2502\n     drivers/infiniband/core/cm.c:3858)\n   process_one_work (kernel/workqueue.c:3396)\n   worker_thread (kernel/workqueue.c:3479 kernel/workqueue.c:3560)\n",
+    "tags": [],
+    "title": "CVE-2026-99302 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99302"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99303",
+    "published": "2026-11-16T10:17:04.520",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nspeakup: Fix NULL pointer dereference on VT switch + selection\n\nWhen selecting/pasting very quickly after VT switch, the tty is not set\nyet, leading to a NULL dereference. We can just abort the operation.",
+    "tags": [],
+    "title": "CVE-2026-99303 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99303"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99304",
+    "published": "2026-11-16T10:17:04.763",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: fix integer overflow in the snap trace bounds check\n\nceph_update_snap_trace() bounds the two encoded snapid arrays that follow a\nstruct ceph_mds_snap_realm with sizeof(u64) * (num_snaps +\nnum_prior_parent_snaps).  Both counts come straight off the wire as __le32,\nso the addition is evaluated in unsigned int and wraps before sizeof(u64)\npromotes it to size_t: an MDS sending num_snaps = 1 and\nnum_prior_parent_snaps = 0xffffffff makes the sum zero and the check\ndegenerates to ceph_decode_need(&p, e, 0, bad), which always passes.\ndup_array() then reads num_snaps * 8 bytes past the end of the message\nfront, which ceph_msg_new2() allocates at exactly front_len bytes.  An\nunsolicited CEPH_MSG_CLIENT_SNAP reaches this from a malicious or\ncompromised MDS with no client-side action, as do the snaptraces carried in\nan MDS reply and in a cap import.\n\nCompute the length with size_add()/size_mul() so it saturates at SIZE_MAX\ninstead of wrapping, in the style fs/ceph/mdsmap.c already uses for\nnum_export_targets.\n\n  BUG: KASAN: slab-out-of-bounds in dup_array (include/linux/unaligned.h:28 fs/ceph/snap.c:500)\n  Read of size 8 at addr ffff8880102a16c8 by task kworker/1:2/129\n  Workqueue: ceph-msgr ceph_con_workfn\n  Call Trace:\n   dump_stack_lvl (lib/dump_stack.c:94 lib/dump_stack.c:120)\n   print_report (mm/kasan/report.c:378 mm/kasan/report.c:482)\n   kasan_report (mm/kasan/report.c:595)\n   dup_array (include/linux/unali",
+    "tags": [
+      "APT"
+    ],
+    "title": "CVE-2026-99304 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99304"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99305",
+    "published": "2026-11-16T10:17:05.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nfbdev: udlfb: don't rebuild the mode list while the framebuffer is in use\n\ndlfb_setup_modes() frees info->modelist with fb_destroy_modelist() and\nrebuilds it, but fbcon holds raw pointers into that list in\nfb_display[i].mode and nothing un-publishes them the way\ndo_unregister_framebuffer() and store_modes() do with\nfbcon_delete_modelist(). The function does refuse to install a new mode\nwhile the framebuffer has users (dlfb->fb_count != 0), but only after the\nlist is already destroyed. Reached from the 0666 \"edid\" sysfs attribute,\nan unprivileged write to /sys/class/graphics/fb0/edid therefore fails with\n-EINVAL and still leaves every fb_display[i].mode dangling; the next\nconsole switch reads the freed fb_videomode in fb_videomode_to_var().\n\nTest fb_count before touching the list. fbcon takes a reference through\nfbcon_open(), so that condition covers exactly the states in which\nfb_display[] points into the list, and the errno returned to userspace is\nunchanged.\n\n  BUG: KASAN: slab-use-after-free in fb_videomode_to_var (drivers/video/fbdev/core/modedb.c:905)\n  Read of size 4 at addr ffff8880107b449c by task kworker/1:1/47\n  Workqueue: events console_callback\n  Call Trace:\n   fb_videomode_to_var (drivers/video/fbdev/core/modedb.c:905)\n   display_to_var (drivers/video/fbdev/core/fbcon.c:998)\n   fbcon_switch (drivers/video/fbdev/core/fbcon.c:2182)\n   redraw_screen (drivers/tty/vt/vt.c:994)\n   complete_change_cons",
+    "tags": [],
+    "title": "CVE-2026-99305 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99305"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99306",
+    "published": "2026-11-16T10:17:05.293",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: reject mdsmaps that claim more than CEPH_MAX_MDS ranks\n\ncheck_new_map() sizes its export-target bitmap from CEPH_MAX_MDS but walks\nit with newmap->possible_max_rank, which comes straight off the wire:\nceph_mdsmap_decode() sets it to max(m_num_active_mds, m_max_mds), then\noverwrites it with the size of the \"in\" set.  Neither is bounded by\nCEPH_MAX_MDS, only by m_info allocating, so a monitor announcing more ranks\nthan the bitmap holds makes test_bit() read past the end of targets[].  The\nclear_bit() loop above indexes the same bitmap, though it is additionally\nbounded by mdsc->max_sessions.  The map arrives on the monitor connection,\nwhich is unauthenticated in legacy msgr mode.\n\nCEPH_MAX_MDS is a protocol constant from src/mds/mdstypes.h, and the\nreserved inode ranges in super.h are laid out one rank apart over that\nspan, so a map claiming more ranks is corrupt.  Reject it where the rank\nspace is established rather than letting the count reach check_new_map().\n\n  BUG: KASAN: stack-out-of-bounds in check_new_map (fs/ceph/mds_client.c:5968)\n  Read of size 8 at addr ffffc90000ac7798 by task kworker/1:2/127\n  Workqueue: ceph-msgr ceph_con_workfn\n  Call Trace:\n   <TASK>\n   dump_stack_lvl (lib/dump_stack.c:94 lib/dump_stack.c:120)\n   print_report (mm/kasan/report.c:378 mm/kasan/report.c:482)\n   kasan_report (mm/kasan/report.c:595)\n   kasan_check_range (mm/kasan/generic.c:186 mm/kasan/generic.c:200)\n   check_",
+    "tags": [],
+    "title": "CVE-2026-99306 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99306"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99307",
+    "published": "2026-11-16T10:17:05.567",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nceph: require the dentry lease record to cover struct ceph_mds_reply_lease\n\nparse_reply_info_lease() reads a 32-bit struct_len off the wire and only\nchecks that many bytes are present, without requiring struct_len to cover\nsizeof(struct ceph_mds_reply_lease) (10 bytes).  A malicious MDS can\ndeclare a shorter record and still get the pointer published: the\nfollowing *p += sizeof(**lease) overshoot is undone by *p = lend, so\nnothing downstream rejects the reply.  ceph_fill_trace() ->\nupdate_dentry_lease() then reads 10 bytes through that pointer on any\nlookup on a mounted CephFS, running past the end of the message front.\n\nRequire the record to cover the structure, matching the sibling\nparse_reply_info_dir().  A conforming MDS always encodes the full 10\nbytes.\n\n  BUG: KASAN: slab-out-of-bounds in __update_dentry_lease.constprop.0 (fs/ceph/inode.c:1459)\n  Read of size 4 at addr ffff888026c63d65 by task kworker/0:3/2366\n  Workqueue: ceph-msgr ceph_con_workfn\n  Call Trace:\n   __update_dentry_lease.constprop.0 (fs/ceph/inode.c:1459)\n   ceph_fill_trace (fs/ceph/inode.c:1474 fs/ceph/inode.c:1823)\n   mds_dispatch (fs/ceph/mds_client.c:4229 fs/ceph/mds_client.c:7225)\n   ceph_con_process_message (net/ceph/messenger.c:1424)\n   ceph_con_v1_try_read (net/ceph/messenger_v1.c:1430)\n   ceph_con_workfn (net/ceph/messenger.c:1576)\n   process_one_work (kernel/workqueue.c:3396)\n   worker_thread (kernel/workqueue.c:3479 kernel/wo",
+    "tags": [],
+    "title": "CVE-2026-99307 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99307"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99308",
+    "published": "2026-11-16T10:17:05.853",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: xhci: Fix bounce buffer overflow\n\nHigh-speed devices with out of spec 1024 byte bulk endpoints exist and\nare allowed by USB core, but xhci-hcd always sets packet size to 512.\nThe exact nature of these devices isn't documented, commit fb5ee84ea72c\n(\"USB: Accept bulk endpoints with 1024-byte maxpacket\") only states\nthat they \"don't work with xHCI host controllers\", whatever it means.\n\nBut somebody (or a malicious device) can try, and then the driver will\nallocate a 512 byte bounce buffer for this endpoint and may write up to\n1024 bytes into it if particular scatter-gather URBs are used, because\nxhci_align_td() obtains packet size from the descriptor. Fix this.\n\nAs a side effect, TRBs will be aligned to the packet size chosen by the\ndriver on all endpoints of all speeds. Alignment serves the xHC, not\ndevice, so this is fine. Only out of spec devices are affected anyway.",
+    "tags": [],
+    "title": "CVE-2026-99308 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99308"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99309",
+    "published": "2026-11-16T10:17:06.110",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix overflow in dacloffset bounds check in build_sec_desc()\n\nWhen the large dacl_offset is provided, dacl_offset + sizeof(struct\nsmb_acl) overflows on 32-bit builds and the check is passed,\nWhich makes le16_to_cpu(ppdacl_ptr->size) read out-of-bounds. This\nonly happens for dacl_offset in range [0xFFFFFFF8, 0xFFFFFFFF]. So\nthe oob read is max 8 bytes preceding the allocated ppntsd.\n\n    unsigned int dacl_offset = le32_to_cpu(ppntsd->dacloffset);\n    int ppdacl_size, ntacl_size = ppntsd_size - dacl_offset;\n\n    if (!dacl_offset ||\n\t(dacl_offset + sizeof(struct smb_acl) > ppntsd_size))\n\t    goto out;\n\nCommit beff0bc9d69b (\"ksmbd: fix overflow in dacloffset bounds check\")\nfixes similar checks in other functions. But leaves this one out,\nbecause it is only valid for 32-bit builds.\n\nReproduced on 32-bit ARM with KASAN, by a client sending SMB2\nSET_INFO(SEC) with dacloffset=0xfffffff8, then QUERY_INFO(SEC) on the\nsame file:\n\n BUG: KASAN: slab-out-of-bounds in build_sec_desc (fs/smb/server/smbacl.c:1105)\n Read of size 2 at addr c2a273fa by task kworker/1:1/35\n CPU: 1 UID: 0 PID: 35 Comm: kworker/1:1 Not tainted 7.3.0-rc2+ #5\n Workqueue: ksmbd-io handle_ksmbd_work\n Call trace:\n  kasan_check_range from build_sec_desc (fs/smb/server/smbacl.c:1105)\n  build_sec_desc from smb2_query_info (fs/smb/server/smb2pdu.c:7676)\n  smb2_query_info from handle_ksmbd_work (fs/smb/server/server.c:160)\n  handle_ksmbd_work from pro",
+    "tags": [],
+    "title": "CVE-2026-99309 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99309"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99310",
+    "published": "2026-11-16T10:17:06.377",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nnfsd: hold cl_lock in client_has_openowners()\n\nclient_has_openowners() walks clp->cl_openowners and reads so_stateids\nwithout clp->cl_lock. nfs4_put_stateowner() unhashes that openowner under\ncl_lock and then frees it, so a concurrent EXCHANGE_ID with mismatched\ncreds can use-after-free the nfs4_openowner.\n\nBUG: KASAN: slab-use-after-free in client_has_state+0x10a/0x140\n  fs/nfsd/nfs4state.c:3718 client_has_openowners()\n  nfsd4_exchange_id\n  nfsd4_proc_compound\n  nfsd_dispatch\n  svc_process\n\nTake clp->cl_lock while client_has_openowners() walks the openowner\nlist.",
+    "tags": [],
+    "title": "CVE-2026-99310 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99310"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-99311",
+    "published": "2026-11-16T10:17:06.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nudf: fix return value for non-recorded-allocated extents in udf_map_block()\n\nWhen someone creates a corrupted UDF filesystem where symlink contains\nother extent type than EXT_RECORDED_ALLOCATED, it can leads to a crash\nlike:\n\n Oops: general protection fault\n KASAN: maybe wild-memory-access\n RIP: 0010:page_get_link (fs/namei.c:6503)\n Call Trace:\n  vfs_readlink (fs/namei.c:6419)\n  do_readlinkat (fs/stat.c:583)\n  __x64_sys_readlink (fs/stat.c:605 fs/stat.c:602 fs/stat.c:602)\n\nThis is because in this case udf_map_block() fails to convert return\nvalue of inode_bmap() from 1 to 0. Returned '1' propagates through\nudf_bread() all the way up to __page_get_link() where it ends up being\ntreated as a folio pointer with obvious results.\n\nMove the reset to 0 line outside the if, so udf_map_block() returns either\n0 or -errno, even if the extent type is not EXT_RECORDED_ALLOCATED.",
+    "tags": [],
+    "title": "CVE-2026-99311 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-99311"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-129784",
+    "published": "2026-11-16T11:16:45.537",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The httpx Ruby gem parses JSON response bodies through its transcoder layer. HTTPX::Response#json delegates to Transcoder::JSON.decode, and when the oj gem is loaded and multi_json is absent, the decoder falls back to json_load, which calls Oj.load(response.to_s) with no mode option. Oj.load defaults to :object mode, in which a response document can allocate any already-loaded Ruby class (\"^o\":\"ClassName\") and set its instance variables, or resolve a class or module reference (\"^c\":\"Name\"). An attacker who controls, or can influence, the URL an application fetches with HTTPX.get(url).json therefore controls object instantiation in the victim process. With a matching gadget chain, this issue can potentially cause remote code execution. Affects httpx 1.9.0; fixed in 1.9.1.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-129784 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129784"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209551",
+    "published": "2026-11-16T16:41:48+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "강원대학교 산학협력단이 외부 해킹으로 개인정보가 유출된 데 이어 연구통합관리시스템 접속 중단에 따른 연구비 집행 차질 가능성까지 공식 안내했다. 개인정보 유출 사고가 대학 연구행정 업무에 영향을 미칠 수 있는 상황으로 확대되면서 시스템 복구와 연구비 집행 정상화 여부에 관심이 쏠리고 있다.강원대학교 산학협력단은 11월 16일 오후 2시 16분 공식 홈페이지에 ‘[긴급] 연구통합관리시스템 접속 중단 안내’를 게시하고, 외부 해킹 사고에 따른 긴급 점검으로 연구통합관리시스템 이용과 연구비 집행업무에 일부 차질이 발생할 수 있다고 밝혔다",
+    "tags": [
+      "금융"
+    ],
+    "title": "강원대 해킹 여파 연구비 집행까지 확산…연구통합관리시스템 접속 중단",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209551"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209550",
+    "published": "2026-11-16T15:32:40+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "앤트로픽(Anthropic)이 화상회의에 직접 참여해 대화 내용을 파악하고 실시간으로 업무를 처리하는 ‘클로드 미팅(Claude Meetings)’ 기능을 베타 버전으로 공개했다.클로드 미팅은 AI 모델 클로드가 화상회의의 일반 참석자처럼 입장해 대화 맥락을 이해하고 질문에 답하는 기능이다. 회의 참석자들은 음성이나 채팅을 통해 클로드에게 작업을 지시할 수 있으며, 클로드가 회의 도중 만든 문서나 화이트보드를 실시간으로 함께 수정할 수 있다.주요 기능은 실시간 질의응답과 문서 공동 작업이다. 클로드는 회의 중 음성이나 채팅으로 들어",
+    "tags": [],
+    "title": "앤트로픽, 화상회의 실시간 협업 AI 기능 ‘클로드 미팅’ 베타 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209550"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209549",
+    "published": "2026-11-16T13:50:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "SGA솔루션즈(대표 최영철)가 지난 13일 공시를 통해 올해 3분기 누적 연결 매출 1074억원, 영업이익 19억원을 기록했다고 밝혔다.3분기 누적 매출이 1000억원을 넘어선 것은 창사 이래 처음이며, 지난해 연간 매출인 616억원도 이미 웃돌았다. 영업이익은 지난해 같은 기간에 반영된 투자자산 처분이익 기저효과 등으로 줄었으나 누적 기준 흑자를 지켰다.이번 매출 성장은 올해 연결 자회사로 편입된 금융 IT운영 전문기업 크레온유니티 인수 효과 덕분이다. 기존 보안 중심이던 사업 구조를 IT인프라 영역까지 넓히면서 보안 및 솔루션,",
+    "tags": [
+      "금융"
+    ],
+    "title": "SGA솔루션즈, 3분기 누적 매출 1074억원 기록",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209549"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209548",
+    "published": "2026-11-16T13:26:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "안랩클라우드메이트(대표 김형준)가 지난 13일 서울 중구 포스트타워에서 열린 ‘제21회 대한민국 인터넷대상’ 시상식에서 특별상인 코리아스타트업포럼 의장상을 받았다고 16일 밝혔다.과학기술정보통신부가 주최하고 한국정보방송통신대연합이 주관하는 대한민국 인터넷대상은 인터넷 산업 발전과 건전한 인터넷 문화 확산에 기여한 기업과 단체, 개인을 발굴해 포상하는 정부 시상이다. 시상 부문은 단체 대상의 인터넷 비즈니스, 인터넷 기술혁신, 인터넷 사회공헌과 개인 대상의 공로상으로 구성된다.안랩클라우드메이트는 인터넷 신기술 개발과 서비스화, 융복합",
+    "tags": [
+      "AI"
+    ],
+    "title": "안랩클라우드메이트, 생성형 AI 보안 솔루션으로 대한민국 인터넷대상 수상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209548"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209547",
+    "published": "2026-11-16T13:05:54+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "어니스트AI(대표 서상훈)가 사업 확장에 맞춰 금융, 기술, 프로덕트, 보안 등 전 분야에서 인재를 채용한다고 16일 밝혔다.어니스트AI는 인공지능연구소를 중심으로 금융 산업에 특화된 AI 기술을 연구하고 서비스로 구현하는 기업이다. 금융기관에 AI 신용평가모형과 데이터 분석, 전략 수립·운영을 아우르는 AI 의사결정 솔루션을 공급하며 AI 연계대출 플랫폼도 함께 운영하고 있다.이번 채용은 금융권의 AI 전환 수요가 늘어난 데 따른 조치다. 어니스트AI와 협업하는 금융기관이 많아지고 공급 솔루션 범위가 AI 모형 개발, 심사전략 최",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "어니스트AI, 금융 AI 전환 수요 맞춰 전 분야 인재 채용",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209547"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209546",
+    "published": "2026-11-16T12:56:05+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "네트워크 보안 기업 포티넷코리아가 김종덕 신임 지사장을 선임했다.김종덕 신임 지사장은 AI, 데이터 사이언스, 퍼블릭 클라우드, 가상화, 네트워크 보안 등 IT 업계에서 30년 이상 경력을 쌓은 인물이다. 연세대학교 경제학과를 졸업한 뒤 한국IBM을 거쳐 스트라투스테크놀로지스 코리아, 블루코트 코리아, 한국EMC RSA정보보안사업부, 뉴타닉스 코리아, 하시코프 코리아, 데이터이쿠 코리아 등 여러 다국적 IT 기업의 한국 지사장을 맡았다.김 지사장은 2002년부터 2006년까지 포티넷코리아 지사장을 역임하며 한국 사업과 파트너 생태계",
+    "tags": [],
+    "title": "포티넷코리아, 김종덕 신임 지사장 선임",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209546"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209545",
+    "published": "2026-11-16T12:45:28+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "크리미널 IP(Criminal IP)를 운영하는 AI스페라(대표 강병탁)가 서울시의 중소기업 워라밸 포인트제 기업에 선정됐다.서울시 중소기업 워라밸 포인트제는 서울 소재 중소기업의 출산·양육 친화 제도와 일·생활 균형 운영 실적을 평가해 포인트와 등급을 부여하는 제도다. AI스페라는 임직원의 일·생활 균형과 양육을 지원하기 위해 운영해온 사내 제도 실적을 인정받아 워라밸 포인트 기업 증서를 발급받았다.AI스페라는 구성원이 안정적으로 일하고 성장할 수 있는 환경을 만들기 위해 관련 제도를 꾸준히 정비해왔다. 2019년 가족친화 인증을",
+    "tags": [],
+    "title": "AI스페라, 서울시 중소기업 워라밸 포인트제 기업 선정",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209545"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209544",
+    "published": "2026-11-16T12:38:11+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 28개 대학을 포함한 대규모 대학 데이터 유출을 주장한 해커의 명단에 이름을 올렸던 동서울대학교에서 실제 해킹으로 교직원 개인정보 5,885건이 유출된 사실이 확인됐다.동서울대는 11월 14일 오전 9시경 외부 비인가자가 대학 포털서비스에 침입해 교직원 개인정보를 탈취했다고 밝혔다. 유출 정보에는 사번과 성명, 생년월일, 성별코드, 암호화된 주민등록번호가 포함됐다. 앞서 해커 'KimJEN'이 국내 여러 대학의 데이터를 확보했다고 주장하면서 동서울대를 거론한 사실이 있어 두 사건의 연관성에 관심이 쏠리고 있다. 다만 현재까지",
+    "tags": [],
+    "title": "[단독] 동서울대 해킹으로 교직원 개인정보 5,885건 유출…28개 대학 공격 주장한 해커 KimJEN과 연관성 주목",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209544"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html",
+    "published": "2026-11-16T09:32:57+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A financially motivated threat activity cluster tracked as REF3364 has been attributed to a Linux-focused cryptocurrency mining operation that tampers with the readings used to detect high GPU workloads. Central to the intrusion is a toolkit called SANSAR, a Rust-based orchestrator that receives commands over the TOR anonymity network to manage CPU and GPU miners. The activity was observed in",
+    "tags": [
+      "금융"
+    ],
+    "title": "SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity",
+    "url": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
+    "published": "2026-11-16T07:34:21+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Attackers' AI agents have been hunting for weak spots in internet-exposed AI apps such as LiteLLM, One API, and Dify to steal the AI provider keys stored inside, according to the agents' own records. The records, which Amazon's threat intelligence team captured with decoy servers, describe stolen keys being used to run the AI models that powered the search for more keys. The team said this",
+    "tags": [
+      "AI",
+      "APT"
+    ],
+    "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys",
+    "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
+    "published": "2026-11-16T06:53:34+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "An investigation into suspicious activity within a Russian software developer's network has uncovered a months-long compromise of its development infrastructure and a software code-signing server. The activity, documented by Kaspersky's ICS CERT team after it was contacted by the affected developer in June 2025, has been attributed to a threat actor named BO Team (aka Black Owl, Hoody Hyena,",
+    "tags": [],
+    "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
+    "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/australian-retail-giant-coles-investigates-cybersecurity-incident/",
+    "published": "2026-11-16T11:18:09+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Coles Group Limited, Australia's second-largest retailer, is investigating what it described as a \"cyber security incident\" that has not impacted the company's stores. [...]",
+    "tags": [],
+    "title": "Australian retail giant Coles investigates cybersecurity incident",
+    "url": "https://www.bleepingcomputer.com/news/security/australian-retail-giant-coles-investigates-cybersecurity-incident/"
+  },
+  {
+    "author": "Mayank Parmar",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-claude-fable-52-blocks-fewer-security-tasks-while-mythos-gets-better-at-finding-bugs/",
+    "published": "2026-11-16T11:00:00+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Anthropic recently rolled out Claude Mythos 5.2 to selected partners and Fable 5.2 to regular users, with improvements to coding and reasoning. But we also noticed some interesting cybersecurity changes. [...]",
+    "tags": [],
+    "title": "Anthropic’s Claude Fable 5.2 blocks fewer security tasks, while Mythos gets better at finding bugs",
+    "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/anthropics-claude-fable-52-blocks-fewer-security-tasks-while-mythos-gets-better-at-finding-bugs/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/",
+    "published": "2026-11-16T09:30:04+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "An 11-year-old Linux kernel vulnerability, dubbed NoisyTCP, affects almost all Linux distributions and lets attackers crash systems running Nginx, Apache, and SSH servers with default configurations. [...]",
+    "tags": [],
+    "title": "New NoisyTCP vulnerability lets attackers crash Linux servers",
+    "url": "https://www.bleepingcomputer.com/news/linux/new-noisytcp-linux-kernel-flaw-lets-attackers-crash-servers/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-new-windows-emergency-updates-fix-activation-licensing-failures/",
+    "published": "2026-11-16T08:26:52+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Microsoft has released emergency out-of-band updates to fix Windows activation and licensing failures caused by this month's security updates. [...]",
+    "tags": [],
+    "title": "Microsoft pushes Windows emergency updates to fix activation failures",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-new-windows-emergency-updates-fix-activation-licensing-failures/"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203188",
+    "published": "2026-11-16T09:55:32+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Amazon spotted AI agents running on ARTEX steal AI credentials and test deepfake ID bypasses. Amazon’s threat intelligence team published findings on criminals running offensive campaigns with ARTEX, an open-source agentic AI penetration testing framework. Between 3 October and 5 November, Amazon’s MadPot network of decoy sensors caught requests from ARTEX agents. Some sensors posed […]",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "ARTEX: How Cybercriminals Use AI Agents to Scale Their Attacks",
+    "url": "https://securityaffairs.com/203188/ai/artex-how-cybercriminals-use-ai-agents-to-scale-their-attacks.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203085",
+    "published": "2026-11-16T09:06:11+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "German drone maker Quantum Systems confirms a cyberattack that disrupted operations, with reports pointing to a malicious software update. Quantum Systems, a German defense company that builds reconnaissance and interceptor drones and the software that controls them, confirmed an incident in late October. The company says its security teams quickly contained the threat while working […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "German Military Grounds Quantum Systems Drones Following Reported Cyberattack",
+    "url": "https://securityaffairs.com/203085/cyber-crime/german-military-grounds-quantum-systems-drones-following-reported-cyberattack.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203099",
+    "published": "2026-11-16T08:11:01+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Researchers uncover two threat groups, SilentAir and LIMINAL PANDA, exploiting mobile networks to spy on users and intercept calls and text messages. Telecom security firm Enea published research on two threat actors, dubbed SilentAir and LIMINAL PANDA, working inside mobile networks. According to the experts, SilentAir has compromised operators since before 2025; however, a link […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "SilentAir and LIMINAL PANDA Target Telecom Networks to Spy on Subscribers",
+    "url": "https://securityaffairs.com/203099/apt/silentair-and-liminal-panda-target-telecom-networks-to-spy-on-subscribers.html"
+  },
+  {
+    "author": "Oleg Kupreev",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?p=121908",
+    "published": "2026-11-16T07:00:37+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "A new version of CoffeeLoader is spreading through Retadup, an old USB worm whose infrastructure was seized by law enforcement back in 2019.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "A USB worm’s second life: Retadup spreading CoffeeLoader",
+    "url": "https://securelist.com/retadup-delivers-coffeeloader/121908/"
+  },
+  {
+    "author": "Genians",
+    "category": "research",
+    "id": "https://www.genians.co.kr/blog/working-abroad",
+    "published": "2026-11-16T04:26:41+00:00",
+    "severity": "info",
+    "source": "지니언스 위협인텔",
+    "summary": "두바이 인터넷시티에는 구글과 마이크로소프트를 비롯해 3,000개가 넘는 기업이 모여 있습니다. 지니언스의 중동 사무소도 이곳에 있는데요, 해외사업부의 조홍 사원은 이 사무소를 거점으로 중동 고객과 파트너를 만나고 있습니다.",
+    "tags": [],
+    "title": "지니언스는 해외에서 어떻게 일하고 있을까",
+    "url": "https://www.genians.co.kr/blog/working-abroad"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMijwFBVV95cUxPcjF0VDRiWFlsUDdiM01rZm1KUmNWLUpGSVlXcng4NlluSDR3MUllZWJ6U0RVVHVIMHl2SmRoaHd3ejVNN2d1czdha0M5OXZ1NU9EMnlaOHFVZ2otYVBVbnM4RzNTYzB0SEJTQ2dzQXByeGhkR0ZDQ1lBNHoyT2Y5NERXWV9VU2ZBWmpRSXdKYw",
+    "published": "2026-11-16T04:08:00+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Anthropic, Fable 5.2에서 불필요한 사이버 보안 차단이 60% 줄었다고 밝혀",
+    "tags": [],
+    "title": "Anthropic, Fable 5.2에서 불필요한 사이버 보안 차단이 60% 줄었다고 밝혀",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcjF0VDRiWFlsUDdiM01rZm1KUmNWLUpGSVlXcng4NlluSDR3MUllZWJ6U0RVVHVIMHl2SmRoaHd3ejVNN2d1czdha0M5OXZ1NU9EMnlaOHFVZ2otYVBVbnM4RzNTYzB0SEJTQ2dzQXByeGhkR0ZDQ1lBNHoyT2Y5NERXWV9VU2ZBWmpRSXdKYw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFB1SkdQWlExbkp1UDlqZXNNdVdyRWNZeXh5TzVLVzYxTVpsUHJjVzlBX0d3bDM3UENXRnJ6QjRtOUJ5elNJSFdoVTBFaER3VjlHN2NuSHUydHZNQnNCbXRkNWlIVkV6ZVJtYkJr",
+    "published": "2026-11-16T08:33:27+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융당국 ‘580개 금융사 보안 전수점검’ 본격화... 연말 CEO 서명 제출",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국 ‘580개 금융사 보안 전수점검’ 본격화... 연말 CEO 서명 제출",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB1SkdQWlExbkp1UDlqZXNNdVdyRWNZeXh5TzVLVzYxTVpsUHJjVzlBX0d3bDM3UENXRnJ6QjRtOUJ5elNJSFdoVTBFaER3VjlHN2NuSHUydHZNQnNCbXRkNWlIVkV6ZVJtYkJr?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE1aQy00eEtjMGVrZ0FSSDA3bWJmYTdGVWVLMndERGNqeVI3ZGxmdmxnMW5tNmdKRXd3Z1NybjB2TnVObjFaOEpDNVB6Rk9ndkpwM1ItM052bmlyd3Jvb3pQdUhxdXMwRnlXZmlJXzd6XzA",
+    "published": "2026-11-16T00:54:08+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "신진창 \"금융보안원, 업무 전반 근본적으로 쇄신해야\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "신진창 \"금융보안원, 업무 전반 근본적으로 쇄신해야\"",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1aQy00eEtjMGVrZ0FSSDA3bWJmYTdGVWVLMndERGNqeVI3ZGxmdmxnMW5tNmdKRXd3Z1NybjB2TnVObjFaOEpDNVB6Rk9ndkpwM1ItM052bmlyd3Jvb3pQdUhxdXMwRnlXZmlJXzd6XzA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5Ydnc5SDNBQ1FBV2FDbWN6Y0tfY0R2aHhJbVE4R3JWOUR4cE0yVEdXUXc4V1ZpT1NfMEN5aTF3NFZCUTc0cXBpWWN4Y0V3RXBLa2xfX3Bzdm1QTUx4UDMwNEpxWks",
+    "published": "2026-11-16T05:17:02+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 감사 본격화 속 각 금융사 대책 마련 초읽기",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 감사 본격화 속 각 금융사 대책 마련 초읽기",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5Ydnc5SDNBQ1FBV2FDbWN6Y0tfY0R2aHhJbVE4R3JWOUR4cE0yVEdXUXc4V1ZpT1NfMEN5aTF3NFZCUTc0cXBpWWN4Y0V3RXBLa2xfX3Bzdm1QTUx4UDMwNEpxWks?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMie0FVX3lxTFBEMktSUjhsdnVCcDNIMVNNcFo1YTlCcnl2UlJyYXhqRE5YZHgyM3BmQjNaazhYVk5CUENLQ05EMWx3M0E5YUpfdmVUU1R6TF91VnJZREFIVFlOYXZZRWEwZGpJa2o5aWRLUGNCYkVMLVUtS3BycllQLVZERdIBgAFBVV95cUxNR19RcWNtb0lTanZub1ZUOUFPa1JMRk5QRFplMy1RX3pTcVV0UzdmOU1zZUQwQThtb0RUMWN2SFM5UjZ4ZXdIUkNHQ2lfelVoREVqSTdneVBKOV9Tcm1jZUhQdGtid0dyZHZFS2pNV0tZblhZN1owbEJVN0gtcW5Zdw",
+    "published": "2026-11-16T02:51:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 금융보안원 해킹에 유감 표명 … 조직·보안체계 전면 쇄신 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융보안원 해킹에 유감 표명 … 조직·보안체계 전면 쇄신 주문",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBEMktSUjhsdnVCcDNIMVNNcFo1YTlCcnl2UlJyYXhqRE5YZHgyM3BmQjNaazhYVk5CUENLQ05EMWx3M0E5YUpfdmVUU1R6TF91VnJZREFIVFlOYXZZRWEwZGpJa2o5aWRLUGNCYkVMLVUtS3BycllQLVZERdIBgAFBVV95cUxNR19RcWNtb0lTanZub1ZUOUFPa1JMRk5QRFplMy1RX3pTcVV0UzdmOU1zZUQwQThtb0RUMWN2SFM5UjZ4ZXdIUkNHQ2lfelVoREVqSTdneVBKOV9Tcm1jZUhQdGtid0dyZHZFS2pNV0tZblhZN1owbEJVN0gtcW5Zdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFA3WFBRdk9sNzU2VFpmUkN3dXhCOWhJNW84bVpSc1VMRjJOMDJhaHc3N0JOWGRjcWp3a1dtcXpseXpwNWFNYTZkbnhIeFYyMjRseFVPM0dlRHlFREtZbFZkc0hGNUlHdUZpUEp3R1JnQdIBc0FVX3lxTE5yVTRsWnFYWmVpVzB5dkxYaUE4cHlfWWZDVDR3Q0wzbnFESE5iNUJWamt4OHAyRy1Mdldya0dxeUU1TjFVVnRFenFEaVdsYTFWVkFiSkp2cmhTdnJSRHZqY2lPWWloMmk0QWhnd3RtNTNOZjQ",
+    "published": "2026-11-16T08:06:13+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "해킹 뚫린 금융보안원…금융위 “조직·IT 전면 쇄신”",
+    "tags": [
+      "금융"
+    ],
+    "title": "해킹 뚫린 금융보안원…금융위 “조직·IT 전면 쇄신”",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFA3WFBRdk9sNzU2VFpmUkN3dXhCOWhJNW84bVpSc1VMRjJOMDJhaHc3N0JOWGRjcWp3a1dtcXpseXpwNWFNYTZkbnhIeFYyMjRseFVPM0dlRHlFREtZbFZkc0hGNUlHdUZpUEp3R1JnQdIBc0FVX3lxTE5yVTRsWnFYWmVpVzB5dkxYaUE4cHlfWWZDVDR3Q0wzbnFESE5iNUJWamt4OHAyRy1Mdldya0dxeUU1TjFVVnRFenFEaVdsYTFWVkFiSkp2cmhTdnJSRHZqY2lPWWloMmk0QWhnd3RtNTNOZjQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFBnS1ByblIyejRrRXhuczlqQmFpZlQ5YlFqekwwcGNWeVl6alY0aGRDaFhsUzdZalkzNllCeGRQTG1XWDQ5OE9oZVR4WlB0ZzRoYzlydXlZRU5YSW9RZHJYZjI1WEFBZUE",
+    "published": "2026-11-16T01:08:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위 “금융보안원 해킹 사고 유감…근본 쇄신·재발 방지책 지시”",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위 “금융보안원 해킹 사고 유감…근본 쇄신·재발 방지책 지시”",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBnS1ByblIyejRrRXhuczlqQmFpZlQ5YlFqekwwcGNWeVl6alY0aGRDaFhsUzdZalkzNllCeGRQTG1XWDQ5OE9oZVR4WlB0ZzRoYzlydXlZRU5YSW9RZHJYZjI1WEFBZUE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9DemNJLVBPb2x6ZUN6dTh2VGY2aE1pQ05idUFCNEdVd1NnUUNkS29mTFpuSzBQTVRQM0M0ZmJGeW9Da2s5WDBlR2h6WDFiRjUwUlRHNEM4MG1Wd01aM2UybE1wQS1VbWtBMDRBVw",
+    "published": "2026-11-16T04:38:10+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 금융보안원 해킹사고에 전면 쇄신 지시…특정감사 착수 예정",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융보안원 해킹사고에 전면 쇄신 지시…특정감사 착수 예정",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9DemNJLVBPb2x6ZUN6dTh2VGY2aE1pQ05idUFCNEdVd1NnUUNkS29mTFpuSzBQTVRQM0M0ZmJGeW9Da2s5WDBlR2h6WDFiRjUwUlRHNEM4MG1Wd01aM2UybE1wQS1VbWtBMDRBVw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5OYWZ2RXBaanF4N2ZEdmhtT3FPZy1nTTIxQkJKbjNyMTEyU202MjVCdnhxeENlUXI0MVVTNjBvSnEyaXdSbjVFNXNMZVladG5KN0tLeFNWd1p6czVRMlZSbUNKWGQzZ3c",
+    "published": "2026-11-16T07:16:58+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 해킹에 금융위 “업무 전반 쇄신”...재발 방지 대책 마련 지시",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 해킹에 금융위 “업무 전반 쇄신”...재발 방지 대책 마련 지시",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5OYWZ2RXBaanF4N2ZEdmhtT3FPZy1nTTIxQkJKbjNyMTEyU202MjVCdnhxeENlUXI0MVVTNjBvSnEyaXdSbjVFNXNMZVladG5KN0tLeFNWd1p6czVRMlZSbUNKWGQzZ3c?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE51Yll3TXktdVhKVVI3aE1aeW5fUm0zRE9LWTVnYzVRalp2YzdhMVFXYTdvbkM5Y1FidmdFR05UVWFHTzBtSXkxWFpOVXpSOHNnUkxNejNxdHZtTWJ1aGNhOTg1cE1qRDBJM3NLN09Tdjdqc00",
+    "published": "2026-11-16T07:05:34+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위원회, 금융보안원 조직·인력 쇄신 지시",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위원회, 금융보안원 조직·인력 쇄신 지시",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE51Yll3TXktdVhKVVI3aE1aeW5fUm0zRE9LWTVnYzVRalp2YzdhMVFXYTdvbkM5Y1FidmdFR05UVWFHTzBtSXkxWFpOVXpSOHNnUkxNejNxdHZtTWJ1aGNhOTg1cE1qRDBJM3NLN09Tdjdqc00?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFAzalFZMDBySmNSb3p1YnpNNkxsNUZlLWR2QWZOMlFWR1QtRUJIcnluZ1JlbDhMcVdLMk4wTXU0RjRhU2NYUE9CT0VaeW1OR0VSQ1pXek9Sa1Z0RmFDdmNjb3ZzZ3VFa3UwTldN0gFvQVVfeXFMUExXdmlRdTV3VmdjWFFYelQ5YzlpYlhQSXR3dEs5MFpsTlJWbU4zampxNDl6d1U4elplX2QtTUVjc3dzeHd5NGhXbGh0aF94X2ZSYnRPTTR2bzVyM3ZXRjBOa1lVel9qUi0ybzVrN05n",
+    "published": "2026-11-16T09:26:48+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 금융보안원 해킹에 질타…원인조사 착수 “IT·업무체계 전면 쇄신”",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융보안원 해킹에 질타…원인조사 착수 “IT·업무체계 전면 쇄신”",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAzalFZMDBySmNSb3p1YnpNNkxsNUZlLWR2QWZOMlFWR1QtRUJIcnluZ1JlbDhMcVdLMk4wTXU0RjRhU2NYUE9CT0VaeW1OR0VSQ1pXek9Sa1Z0RmFDdmNjb3ZzZ3VFa3UwTldN0gFvQVVfeXFMUExXdmlRdTV3VmdjWFFYelQ5YzlpYlhQSXR3dEs5MFpsTlJWbU4zampxNDl6d1U4elplX2QtTUVjc3dzeHd5NGhXbGh0aF94X2ZSYnRPTTR2bzVyM3ZXRjBOa1lVel9qUi0ybzVrN05n?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE44SGZyLU5DV0tyY2RuZF9uUlNJUWR6bklUQV9KaXJaTFdVQkNSOVVyWkduS3pDSnpadWZyNUJOUnFHTU9JMF9YTEdBOA",
+    "published": "2026-11-16T07:18:29+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 해킹에 금융위 쇄신 주문…조직·인력 확충 : 금융",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 해킹에 금융위 쇄신 주문…조직·인력 확충 : 금융",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE44SGZyLU5DV0tyY2RuZF9uUlNJUWR6bklUQV9KaXJaTFdVQkNSOVVyWkduS3pDSnpadWZyNUJOUnFHTU9JMF9YTEdBOA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9oX1ZlLWNLOWpXaVo4dC10dG9xYm5HOExYYVN1aUVwN1FVRlhvNGxjTThhdzZEY005V2NZcW40UGJhSzlTZ25xUWN2QzFqb2ZPd0FfTF80M3ptRDRfNVNkNXpPYjNQRWZOVUE",
+    "published": "2026-11-16T08:53:57+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 금융보안원 침해사고 원인조사·재발방지 대책 마련 지시",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융보안원 침해사고 원인조사·재발방지 대책 마련 지시",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9oX1ZlLWNLOWpXaVo4dC10dG9xYm5HOExYYVN1aUVwN1FVRlhvNGxjTThhdzZEY005V2NZcW40UGJhSzlTZ25xUWN2QzFqb2ZPd0FfTF80M3ptRDRfNVNkNXpPYjNQRWZOVUE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE5DTDJiQ0QzZXhTendEWUVBbnJEY1REVjA4LTZFdWlYUUI0TXNTQWFCZS16T3pPVEtLQ0dMTDZDeFl0Z1hlblQ5RE9ZSzh3REZUUl9uZnQ0WHdINTJiZnBIOElYZnhXV2pnZmx1OVNDONIBc0FVX3lxTFBuc2d1OHctNjJWbjd1MUhhLVh1WEFvbTVvLWxFT09SNjN0cVJMNVhnSC1JenlEZG5ZUmhPZlpGb3l2QVo3TTRldGg5cjBoWFlFTEoweEVVdERuTFVQeEhraE0xQy1JVGpuYzJadlMtNmJheHc",
+    "published": "2026-11-16T01:15:19+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 해킹에 금융당국 '유감'…조직·IT 시스템 전면 쇄신 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 해킹에 금융당국 '유감'…조직·IT 시스템 전면 쇄신 주문",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5DTDJiQ0QzZXhTendEWUVBbnJEY1REVjA4LTZFdWlYUUI0TXNTQWFCZS16T3pPVEtLQ0dMTDZDeFl0Z1hlblQ5RE9ZSzh3REZUUl9uZnQ0WHdINTJiZnBIOElYZnhXV2pnZmx1OVNDONIBc0FVX3lxTFBuc2d1OHctNjJWbjd1MUhhLVh1WEFvbTVvLWxFT09SNjN0cVJMNVhnSC1JenlEZG5ZUmhPZlpGb3l2QVo3TTRldGg5cjBoWFlFTEoweEVVdERuTFVQeEhraE0xQy1JVGpuYzJadlMtNmJheHc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBQZ09SZXBWYjJWd0tZcWM1MGFWSlhIMDNPUE4tMlpQRU1kazBRcE9xVW1RNHJxRkR2QVp6UTFoT1VOZ191RlZJZFh5NThPVy1SZ1lBRUtzQnhEME8ySDBQRFB0V1BobjlfVC1pWUI2QQ",
+    "published": "2026-11-16T05:20:40+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 해킹 당한 금융보안원에 '전면 쇄신' 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 해킹 당한 금융보안원에 '전면 쇄신' 주문",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBQZ09SZXBWYjJWd0tZcWM1MGFWSlhIMDNPUE4tMlpQRU1kazBRcE9xVW1RNHJxRkR2QVp6UTFoT1VOZ191RlZJZFh5NThPVy1SZ1lBRUtzQnhEME8ySDBQRFB0V1BobjlfVC1pWUI2QQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFBjRWhHdDVjYXg3WmJCNmZYeE9VdDhESHhsdVNNVVMxVU5Hc1lYTnY2YU53YmItNVd3dmFwdDVTcHB4Mi1hOTh1aEJSLUxSUEJLa3A3eWk5MVU5NzdFNWFReFFFQllOakVnTXZMZVNB",
+    "published": "2026-11-16T03:11:04+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "신진창 \"금융보안원, 업무 전반 쇄신해 국민 신뢰 회복해야\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "신진창 \"금융보안원, 업무 전반 쇄신해 국민 신뢰 회복해야\"",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBjRWhHdDVjYXg3WmJCNmZYeE9VdDhESHhsdVNNVVMxVU5Hc1lYTnY2YU53YmItNVd3dmFwdDVTcHB4Mi1hOTh1aEJSLUxSUEJLa3A3eWk5MVU5NzdFNWFReFFFQllOakVnTXZMZVNB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVEFVX3lxTE1ZRGtMdUNnVGZCT1Fldmt4UW9ZME9yN2pxX2U2Rm9aWlRvQWhQTTUxandYSS1iTmI5bjlpT0haTFNOWXlNUk5MREtKdENWY3dMNzlPNQ",
+    "published": "2026-11-16T05:53:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 해킹에 금융사 정보보호 평가 차질⋯복구 시점도 미정",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 해킹에 금융사 정보보호 평가 차질⋯복구 시점도 미정",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ZRGtMdUNnVGZCT1Fldmt4UW9ZME9yN2pxX2U2Rm9aWlRvQWhQTTUxandYSS1iTmI5bjlpT0haTFNOWXlNUk5MREtKdENWY3dMNzlPNQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMihAFBVV95cUxOMl84OUQxV3RyMmVSZmJEY3NqeDE3UWVaUk1OYWhFMmFBM0ZISFJLZjI3U3ZfWTJhWlhqZE1YZzRvMm1VTlA2bzlkUUpHb2YySm1SZm11cHZQM1hRV2RYMm5HSzdIaFpEZ00xbTlCYWluTUVNTUt3cWNZanFhWDdHUm1SUE4",
+    "published": "2026-11-16T07:36:53+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "'AI 해킹 질타' 금융보안원, 정보보호 조직 키우고 보안 대응력 높인다",
+    "tags": [
+      "금융"
+    ],
+    "title": "'AI 해킹 질타' 금융보안원, 정보보호 조직 키우고 보안 대응력 높인다",
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMl84OUQxV3RyMmVSZmJEY3NqeDE3UWVaUk1OYWhFMmFBM0ZISFJLZjI3U3ZfWTJhWlhqZE1YZzRvMm1VTlA2bzlkUUpHb2YySm1SZm11cHZQM1hRV2RYMm5HSzdIaFpEZ00xbTlCYWluTUVNTUt3cWNZanFhWDdHUm1SUE4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE9xdXg3aGhXZ0NJQjFrZVpueTBOei1Ha2FZX192THBRekw0bUtYMy1vTDdlYkhKZVVGMmRxazc5X2hVQVdlOXNTUXRJUkw4M3pFQkY2ZzZMRU1Ed2RackRXWDk1MjhZVkhJd1d2dm5B",
+    "published": "2026-11-16T05:37:02+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 보안 책임지는 금융보안원마저 침해사고…금융위 “조직·IT시스템 전면 쇄신”",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 보안 책임지는 금융보안원마저 침해사고…금융위 “조직·IT시스템 전면 쇄신”",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9xdXg3aGhXZ0NJQjFrZVpueTBOei1Ha2FZX192THBRekw0bUtYMy1vTDdlYkhKZVVGMmRxazc5X2hVQVdlOXNTUXRJUkw4M3pFQkY2ZzZMRU1Ed2RackRXWDk1MjhZVkhJd1d2dm5B?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiREFVX3lxTE0tWkRwb0hlc0JmLW15VnJ4cTlaT25ua0NjS2poX2I1Vm1yLTZvN3ZnUm4wSElUbTVvajVmbWc4YlVyVkVB",
+    "published": "2026-11-16T09:00:06+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "AI로 지키고, AI도 지킨다… 금융보안의 두 전선",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI로 지키고, AI도 지킨다… 금융보안의 두 전선",
+    "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE0tWkRwb0hlc0JmLW15VnJ4cTlaT25ua0NjS2poX2I1Vm1yLTZvN3ZnUm4wSElUbTVvajVmbWc4YlVyVkVB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9DaXRDcjZmU1ZkejJNSXZva1VRV0dhMEdrTWw3Y0VqRk9ySjdOZGtTU1hKcnY5WWtuelBDQ0RDZlhRRVNKaVAwRFlNWFRwQ1JxYW93TnNMOEJMODMzWGdQbElLRFFjR2JIckE",
+    "published": "2026-11-16T06:58:55+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금감원 사칭에 뚫린 '금융권 보안 사령탑'…금융위 \"금융보안원 근본부터 쇄신하라\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금감원 사칭에 뚫린 '금융권 보안 사령탑'…금융위 \"금융보안원 근본부터 쇄신하라\"",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9DaXRDcjZmU1ZkejJNSXZva1VRV0dhMEdrTWw3Y0VqRk9ySjdOZGtTU1hKcnY5WWtuelBDQ0RDZlhRRVNKaVAwRFlNWFRwQ1JxYW93TnNMOEJMODMzWGdQbElLRFFjR2JIckE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9BdEZSUjd6MmFpMEpTcDhLNVhZSEREQnl2MklRVnVHWkxqWVF6cU02QXczQnFOZy1EeTdwVEktREpQYUlfdEpEZTdKaUhZcGpTVEUyVXVHNUtrdWNJQ0FzWUJqNExUTjVOanc",
+    "published": "2026-11-16T06:56:29+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "'해킹 공격' 금융보안원 특정 감사 착수... 금융위 '엄정 문책' 시험대",
+    "tags": [
+      "금융"
+    ],
+    "title": "'해킹 공격' 금융보안원 특정 감사 착수... 금융위 '엄정 문책' 시험대",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9BdEZSUjd6MmFpMEpTcDhLNVhZSEREQnl2MklRVnVHWkxqWVF6cU02QXczQnFOZy1EeTdwVEktREpQYUlfdEpEZTdKaUhZcGpTVEUyVXVHNUtrdWNJQ0FzWUJqNExUTjVOanc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTFBoRmk3SktFdGxjWnhndmVHQTBfVlpNY011aUZJdnlSMUxPS3hPMF9hWm43Q0RXcGdaUXYzYk14SDdjYkRpZ2ZiRkNyOXVaRGgtU1R5ZW16MEp5MkU3QXdXVXZyNHZmanIzZGItaHVDdFXSAXNBVV95cUxNRjN3YTA3ek0zRVRWQTQ0d2dkelZyWTZlX2Q4aXhUbTcwYmt3eFBIMVdLZ2ZqaWQyVV8yVWRlM0hwMVpaUURFWVVBamlyR0FoYlZfalUtT0tQSlNUSmtJQkU2azdJWld2dmZucDdieVB5c0w4",
+    "published": "2026-11-16T07:58:15+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 금융보안원 해킹에 재발방지 현장점검…쇄신 요구",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융보안원 해킹에 재발방지 현장점검…쇄신 요구",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoRmk3SktFdGxjWnhndmVHQTBfVlpNY011aUZJdnlSMUxPS3hPMF9hWm43Q0RXcGdaUXYzYk14SDdjYkRpZ2ZiRkNyOXVaRGgtU1R5ZW16MEp5MkU3QXdXVXZyNHZmanIzZGItaHVDdFXSAXNBVV95cUxNRjN3YTA3ek0zRVRWQTQ0d2dkelZyWTZlX2Q4aXhUbTcwYmt3eFBIMVdLZ2ZqaWQyVV8yVWRlM0hwMVpaUURFWVVBamlyR0FoYlZfalUtT0tQSlNUSmtJQkU2azdJWld2dmZucDdieVB5c0w4?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTFBtVmtmcHVVdGRaWmhkVEdWelUzVU1XWHJpVUgyckhIc280Q25lODFpS2FTQ2J6amZmdURISFlPdEZOUU0yX05ydnpJczYxMEhOTkVWUzh6RFJtNmsxS3RPdUhn",
+    "published": "2026-11-16T02:55:59+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융당국, 금보원 해킹사고 현장점검…\"근본적 쇄신해야\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국, 금보원 해킹사고 현장점검…\"근본적 쇄신해야\"",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBtVmtmcHVVdGRaWmhkVEdWelUzVU1XWHJpVUgyckhIc280Q25lODFpS2FTQ2J6amZmdURISFlPdEZOUU0yX05ydnpJczYxMEhOTkVWUzh6RFJtNmsxS3RPdUhn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWkFVX3lxTE1nY0U1bGduVEpnQ3BtSE1COXE2anBCLXRxQ2dxYmdoWUJPd0dWZkVFSkZCUnJoMGVFaWpCbXMtQ2ZXb0NNblJZdWFmWXFwSWFHRDhFbzZzLUJXZ9IBWEFVX3lxTE55NVAwaldqanY5aXlaMmpGYzhzbXlaNF8ySUt6MTNTTG9Wamp3LVVOTEU4ZmUzaExEUUFqcXZDR3JMakR3UDBFUmRhT3d3Sm5LUVdrSHBKMkQ",
+    "published": "2026-11-16T01:20:27+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위, 해킹당한 금융보안원에 근본적 쇄신 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 해킹당한 금융보안원에 근본적 쇄신 주문",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1nY0U1bGduVEpnQ3BtSE1COXE2anBCLXRxQ2dxYmdoWUJPd0dWZkVFSkZCUnJoMGVFaWpCbXMtQ2ZXb0NNblJZdWFmWXFwSWFHRDhFbzZzLUJXZ9IBWEFVX3lxTE55NVAwaldqanY5aXlaMmpGYzhzbXlaNF8ySUt6MTNTTG9Wamp3LVVOTEU4ZmUzaExEUUFqcXZDR3JMakR3UDBFUmRhT3d3Sm5LUVdrSHBKMkQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTE83NDAwWVFXeGg3SDVRdUQtME1QUkxIU3doTEhiX3dGMjVyeE9JcVFmalVjeXRUSUVSc0pPa1hKSlVyblZfa252QzBMMGNYbVhWbmRuWndZSGVnMjNXVW5ZY2E2SEZ6Zw",
+    "published": "2026-11-16T07:13:28+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "국민 재산을 지키는 금융회사도 해킹 당했다",
+    "tags": [
+      "금융"
+    ],
+    "title": "국민 재산을 지키는 금융회사도 해킹 당했다",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE83NDAwWVFXeGg3SDVRdUQtME1QUkxIU3doTEhiX3dGMjVyeE9JcVFmalVjeXRUSUVSc0pPa1hKSlVyblZfa252QzBMMGNYbVhWbmRuWndZSGVnMjNXVW5ZY2E2SEZ6Zw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE1RTUl0VmQzbldUeU9HTFExcm1ieVR4VnE0YS1DajBwYTcyaHp2YjJLV2wzbWQyQnA3ZEJabktQcmZ6RS14YWxLUVhwRkxHaXFmWGpqZ3NqTXRiX01kcF9La1Nn",
+    "published": "2026-11-16T03:40:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융위원회, '금융보안원 해킹'에 강경 대응 주문...\"조직부터 IT까지 전면 쇄신 요구\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위원회, '금융보안원 해킹'에 강경 대응 주문...\"조직부터 IT까지 전면 쇄신 요구\"",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1RTUl0VmQzbldUeU9HTFExcm1ieVR4VnE0YS1DajBwYTcyaHp2YjJLV2wzbWQyQnA3ZEJabktQcmZ6RS14YWxLUVhwRkxHaXFmWGpqZ3NqTXRiX01kcF9La1Nn?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249868",
+    "published": "2026-11-16T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "흔들리지 않는 노후 준비의 기본 원칙 퇴직연금 가이드북을 적극 활용하세요!",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249868&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249867",
+    "published": "2026-11-16T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "랩 어카운트 관련 주요 분쟁사례 및 투자자 유의사항 안내",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249867&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE05VTM1X1JLQU5FU25HajNyRlFqdlBSeGVsTmx3MGNpakZkbld5eW5LU09zS1ByMFVpTGl4YlBTTGgxMWhwclBvclpZSFpMbDJremlqRExzWXVlMGfSAWBBVV95cUxNT3lIWFU1SDBLMUNpVjRQY3ZWQnpkMkxWZm5Va0FUd0J5TWVTWW5RSFZ2bG9WYllUNlF6M2E2TC0wdjR2MEg2dEctME85MmxQQ2xQUTRCbkZ3MVVFQ21BYnk",
+    "published": "2026-11-16T08:00:02+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "송경희 개인정보위원장, GPA 총회서 AI 개인정보 보호 논의 연합뉴스 개인정보위, 브라질과 개인정보 보호 협력…중남미 첫 협약 전자신문 개보위, 글로벌 프라이버시 리더십 발휘 지디넷코리아 개보위원장, GPA·CoE 총회 참석… 감독기구 역량 강화 방안 등 논의 브릿지경제 개인정보위, 브라질과 개인정보 보호 협력 업무 협약 체결 Chosunbiz 개인정보위, 구글·메타와 AI 프라이버시 보호 방안 논의 뉴스1 개인정보위, 브라질 국가데이터보호청과 첫 업무협약…글로벌 개인정보 침해 공동 대응 뉴시스 개인정보위, 브라질과 첫 MOU…중남미 개인정보 보호 공조 확대 서울경제 개인정보위, 브라질과 개인정보 보호 협력… 중남미로 외연 확대 천지일보",
+    "tags": [],
+    "title": "송경희 개인정보위원장, GPA 총회서 AI 개인정보 보호 논의",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE05VTM1X1JLQU5FU25HajNyRlFqdlBSeGVsTmx3MGNpakZkbld5eW5LU09zS1ByMFVpTGl4YlBTTGgxMWhwclBvclpZSFpMbDJremlqRExzWXVlMGfSAWBBVV95cUxNT3lIWFU1SDBLMUNpVjRQY3ZWQnpkMkxWZm5Va0FUd0J5TWVTWW5RSFZ2bG9WYllUNlF6M2E2TC0wdjR2MEg2dEctME85MmxQQ2xQUTRCbkZ3MVVFQ21BYnk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTE5hdkRoLVp0R05GZjc2RlhKOUhjcngyTkhtRkxjX3dRTWExSFRvalpzV0pKWjVBSDJPODkzSGdSUlB4RHlIMUVtckVGLV8zMFFsSld3TlVFMEJXWld5Vy1tX2Jn",
+    "published": "2026-11-16T04:40:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보보호위원회, 브라질과 파트너십 확대...중남미 최초 업무협약 체결",
+    "tags": [],
+    "title": "개인정보보호위원회, 브라질과 파트너십 확대...중남미 최초 업무협약 체결",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5hdkRoLVp0R05GZjc2RlhKOUhjcngyTkhtRkxjX3dRTWExSFRvalpzV0pKWjVBSDJPODkzSGdSUlB4RHlIMUVtckVGLV8zMFFsSld3TlVFMEJXWld5Vy1tX2Jn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE1KTjVabW5rT0ZFb0dEWnI3QWFlX1RMeF93bjVKalZRYzVUQ3JveThZQTU5cmxMSmE4WmlBcklHYzRReU5wNVRVd2xiMEFyNTdZQy1jNWt0U3RxcW1iWXlRetIBeEFVX3lxTFBIZjFjUE1YUUJfOFY3bWE5VThpbE1uQmlCQ2pUZklGYkFuVHdSZ0NqdjNpY1ZoNTlLejlFRU9PT21ZbnJQSElJdW4wVDNFZUZzYXNRVURxMl85THJqeGhjQjB4NTVSTlBVbjhLclhiODNja3JqMXVPNA",
+    "published": "2026-11-16T08:40:11+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 주요국 감독기구·구글·메타와 AI 개인정보 보호 논의",
+    "tags": [],
+    "title": "개인정보위, 주요국 감독기구·구글·메타와 AI 개인정보 보호 논의",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1KTjVabW5rT0ZFb0dEWnI3QWFlX1RMeF93bjVKalZRYzVUQ3JveThZQTU5cmxMSmE4WmlBcklHYzRReU5wNVRVd2xiMEFyNTdZQy1jNWt0U3RxcW1iWXlRetIBeEFVX3lxTFBIZjFjUE1YUUJfOFY3bWE5VThpbE1uQmlCQ2pUZklGYkFuVHdSZ0NqdjNpY1ZoNTlLejlFRU9PT21ZbnJQSElJdW4wVDNFZUZzYXNRVURxMl85THJqeGhjQjB4NTVSTlBVbjhLclhiODNja3JqMXVPNA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE5NcVRzSmpaelhqa2cyVHVnYi05MXhBZ1A1Nm5fcl93cDdBOWtMdXd2QUd6VWJoQzl2NmJ1VWgxVWZrMUVIMnVFcDRSRHpOWHhqUnZxVUNPRmVhNmt5RTBGUWlRTTBPNkE",
+    "published": "2026-11-16T08:53:44+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 글로벌 프라이버시 총회 참석...AI 개인정보 보호 국제협력 강화",
+    "tags": [],
+    "title": "개인정보위, 글로벌 프라이버시 총회 참석...AI 개인정보 보호 국제협력 강화",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5NcVRzSmpaelhqa2cyVHVnYi05MXhBZ1A1Nm5fcl93cDdBOWtMdXd2QUd6VWJoQzl2NmJ1VWgxVWZrMUVIMnVFcDRSRHpOWHhqUnZxVUNPRmVhNmt5RTBGUWlRTTBPNkE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE0wWnQ1ZEhpU1o2UmJDaGdWTXNqWHBoV0Q4VkFWYm12YTNQbmNzOWlfTjYwcDFVNEhBOFhLTm5ZV0FkdnRNSjVrcjROMHVSVDdqWmxhNDBIcjRjUjRWbFRqeGU2WHlldjZJYVBB",
+    "published": "2026-11-16T06:25:39+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "브라질과 개인정보 보호 협력 강화…중남미 감독기구와 첫 MOU",
+    "tags": [],
+    "title": "브라질과 개인정보 보호 협력 강화…중남미 감독기구와 첫 MOU",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0wWnQ1ZEhpU1o2UmJDaGdWTXNqWHBoV0Q4VkFWYm12YTNQbmNzOWlfTjYwcDFVNEhBOFhLTm5ZV0FkdnRNSjVrcjROMHVSVDdqWmxhNDBIcjRjUjRWbFRqeGU2WHlldjZJYVBB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE4yLUlqeEFFN1c5ZW9pdThpeDhBbjNxVFVjOHVpb29MUkRNRFB0NVV6a0NiZVVaazdxcmRiWm1pN3NfN1A5STU0LTNnU0VvQzZ6ZTMtcy1tbWlZM3AtOG9VUjVGMndKZHJqWGNPWlZR",
+    "published": "2026-11-16T08:58:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "유럽·아태 넘어 중남미로…개인정보위, 브라질과 협력 확대",
+    "tags": [],
+    "title": "유럽·아태 넘어 중남미로…개인정보위, 브라질과 협력 확대",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4yLUlqeEFFN1c5ZW9pdThpeDhBbjNxVFVjOHVpb29MUkRNRFB0NVV6a0NiZVVaazdxcmRiWm1pN3NfN1A5STU0LTNnU0VvQzZ6ZTMtcy1tbWlZM3AtOG9VUjVGMndKZHJqWGNPWlZR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTFBCemJCbnh2S0cxTlA2VU9PcnpkcjhFUno3YlJzSEEyLXN1bFA1T2k0UGtJN2pVVUNwWktRTklPWU5GdlJkZHhHcEc5cw",
+    "published": "2026-11-16T08:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 글로벌 AI 개인정보 규범 논의 주도⋯구글·메타와도 면담",
+    "tags": [],
+    "title": "개인정보위, 글로벌 AI 개인정보 규범 논의 주도⋯구글·메타와도 면담",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBCemJCbnh2S0cxTlA2VU9PcnpkcjhFUno3YlJzSEEyLXN1bFA1T2k0UGtJN2pVVUNwWktRTklPWU5GdlJkZHhHcEc5cw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE9sblg3eGNRQ2tmUWI1ckwzTzVwYTFqaHNmWWRtbzl4ZmZ2dGcxNWRick9CNGN6M2pHWVVoMHo5blU1b01zd3haXzlNSWN5aGc5a2F0TUFnS0FBLVlicU50cWdMeTJ5bWxxMzl6OURCMVJXSDg",
+    "published": "2026-11-16T08:57:58+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "롯데카드 3분기 누적 순이익 1026억으로 5.4% 줄어, 개인정보위 과징금 영향",
+    "tags": [],
+    "title": "롯데카드 3분기 누적 순이익 1026억으로 5.4% 줄어, 개인정보위 과징금 영향",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9sblg3eGNRQ2tmUWI1ckwzTzVwYTFqaHNmWWRtbzl4ZmZ2dGcxNWRick9CNGN6M2pHWVVoMHo5blU1b01zd3haXzlNSWN5aGc5a2F0TUFnS0FBLVlicU50cWdMeTJ5bWxxMzl6OURCMVJXSDg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5UVXgxekMwRWpXdmNkcDc4bUQzQUw0Y1dvUk92a19Ma1NqY0NDa08zWjBLakk5UW84bXd2RUJqOGVqd3lTZ3JqTGtpNjF4amE1Q0NXVFRBVEFtVV92dDRIY1VRd2twRmNNbldF",
+    "published": "2026-11-16T08:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "송경희, 브뤼셀 GPA 총회 참석…AI 개인정보 보호 국제공조 강화",
+    "tags": [],
+    "title": "송경희, 브뤼셀 GPA 총회 참석…AI 개인정보 보호 국제공조 강화",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5UVXgxekMwRWpXdmNkcDc4bUQzQUw0Y1dvUk92a19Ma1NqY0NDa08zWjBLakk5UW84bXd2RUJqOGVqd3lTZ3JqTGtpNjF4amE1Q0NXVFRBVEFtVV92dDRIY1VRd2twRmNNbldF?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE5JX2c1WjZWVXVNVllXaUJDaUdzNU5TVEJEeENBNmdYTC1wM1JhX1pQdFNBemtzYkhZZzdlbXNCbzRWVmdLZWkyRjJvUnlac3BRbDcxTHhoSXhGWnVXemlneVNDbU5JYXoyS3FuSzA4bkd0bTA",
+    "published": "2026-11-16T06:10:54+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "'모두의 창업' 잇단 정보유출에도…기업심사 기준서 '보안' 빠져",
+    "tags": [],
+    "title": "'모두의 창업' 잇단 정보유출에도…기업심사 기준서 '보안' 빠져",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5JX2c1WjZWVXVNVllXaUJDaUdzNU5TVEJEeENBNmdYTC1wM1JhX1pQdFNBemtzYkhZZzdlbXNCbzRWVmdLZWkyRjJvUnlac3BRbDcxTHhoSXhGWnVXemlneVNDbU5JYXoyS3FuSzA4bkd0bTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE1weEI0T2NhZGE0TXdJQjhLRmN0c1VIbWhNZEdoTnJ5TXNleXNzOUxXcENUdmtCMkRjRDhjSHRkVTR0U2RSajNualNyUUt1Z3R1QXNMcjZ2c2xsR28ycURIVEZFajM2My0ySm43QmR3",
+    "published": "2026-11-16T06:56:38+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위,중남미와 개인정보 보호 협력 기반 마련",
+    "tags": [],
+    "title": "개인정보위,중남미와 개인정보 보호 협력 기반 마련",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1weEI0T2NhZGE0TXdJQjhLRmN0c1VIbWhNZEdoTnJ5TXNleXNzOUxXcENUdmtCMkRjRDhjSHRkVTR0U2RSajNualNyUUt1Z3R1QXNMcjZ2c2xsR28ycURIVEZFajM2My0ySm43QmR3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBtT21zdUpGLXJ5aUkxT3p0RU5mMnd1bUY1UUY0cEE2MEw1OHk4YXI1VEtGTHNOel81bl9xeFlzV2NTUGVPRUV2Q1Ntb25XaEMtZjFFbWRMQmJST0JRYVVSZdIBeEFVX3lxTE4tbzBOX0J1M01sUExlelNpdHdUcDE1XzNJcDFNQlhPYmxvYVFWVFRlNk16WG4ySDFzNmFCOFhuZUxkcURlanJvb0tCYldWTWFVdUNiQ3Q1MmlVc1czTDFlRmhaclNSQVVjVlFfbDNGQnd2dEViWm5pOQ",
+    "published": "2026-11-16T08:35:36+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "롯데카드, 3분기 누적 순익 1026억원…과징금 영향에 5.4%↓",
+    "tags": [],
+    "title": "롯데카드, 3분기 누적 순익 1026억원…과징금 영향에 5.4%↓",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBtT21zdUpGLXJ5aUkxT3p0RU5mMnd1bUY1UUY0cEE2MEw1OHk4YXI1VEtGTHNOel81bl9xeFlzV2NTUGVPRUV2Q1Ntb25XaEMtZjFFbWRMQmJST0JRYVVSZdIBeEFVX3lxTE4tbzBOX0J1M01sUExlelNpdHdUcDE1XzNJcDFNQlhPYmxvYVFWVFRlNk16WG4ySDFzNmFCOFhuZUxkcURlanJvb0tCYldWTWFVdUNiQ3Q1MmlVc1czTDFlRmhaclNSQVVjVlFfbDNGQnd2dEViWm5pOQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE1BNUpIWnBMSFEwc3NEUWhDa20wcmswTDJlTXY1N1hoa0RyVDhvQTh3a1NORGowbmJ0bVNEY2pCcTZFeTNhR1FOaHZoNldIeGd3N2pNSlMtelpFdWllR2FGSlp0d09HX3FPQlFqcg",
+    "published": "2026-11-16T05:38:44+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "[포토] 한국·브라질 개인정보 보호 당국, 국제 협력 강화 위한 업무협약",
+    "tags": [],
+    "title": "[포토] 한국·브라질 개인정보 보호 당국, 국제 협력 강화 위한 업무협약",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1BNUpIWnBMSFEwc3NEUWhDa20wcmswTDJlTXY1N1hoa0RyVDhvQTh3a1NORGowbmJ0bVNEY2pCcTZFeTNhR1FOaHZoNldIeGd3N2pNSlMtelpFdWllR2FGSlp0d09HX3FPQlFqcg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE55THRSZEdQWTBObW1XSEpmNUVvb2d3Y3dvUXJCS0RFUVM5aXQ0ZmExUEo3M1h3amVBaWhiSUUwc0JhSXB4UFAtYmZiYlozcENqRTJvU1BZbVRVZnlwajI5czlVZWo",
+    "published": "2026-11-16T08:32:39+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "롯데카드, 3Q 누적 순익 1026억…전년比 5.4% 감소",
+    "tags": [],
+    "title": "롯데카드, 3Q 누적 순익 1026억…전년比 5.4% 감소",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE55THRSZEdQWTBObW1XSEpmNUVvb2d3Y3dvUXJCS0RFUVM5aXQ0ZmExUEo3M1h3amVBaWhiSUUwc0JhSXB4UFAtYmZiYlozcENqRTJvU1BZbVRVZnlwajI5czlVZWo?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1HZU5GdU0tNTBJdDBwTFp6VDlPb0h6T09iYzdzTUMxamJ4WkF1V25DWTBncVViNFhSeW5MbUZVcVVmU2xsSHRXMlpDV0lUOXFOampzQWl3ZTM2ZDDSAWBBVV95cUxOLUJ3d2R3bkdvQllEV25ETGppOUhoNFN6Y1ZWSXdhaVp2RDB3Sml5Z3dyeEhoTnc2Ui0zZ0JDUnVGRjdSbEhKOGI0N3BSOVh4bGFLSXctU01vUi1WR21EdjE",
+    "published": "2026-11-16T07:01:57+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, '침해' 금융보안원에 쇄신 요구…인력·조직 강화 예상(종합)",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, '침해' 금융보안원에 쇄신 요구…인력·조직 강화 예상(종합)",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1HZU5GdU0tNTBJdDBwTFp6VDlPb0h6T09iYzdzTUMxamJ4WkF1V25DWTBncVViNFhSeW5MbUZVcVVmU2xsSHRXMlpDV0lUOXFOampzQWl3ZTM2ZDDSAWBBVV95cUxOLUJ3d2R3bkdvQllEV25ETGppOUhoNFN6Y1ZWSXdhaVp2RDB3Sml5Z3dyeEhoTnc2Ui0zZ0JDUnVGRjdSbEhKOGI0N3BSOVh4bGFLSXctU01vUi1WR21EdjE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE1OUW1mMnRNdnNRNVJxd1lwdnY3VVFqcDJaeEJsaDI3U1hIX1c0c2FtbVBwVWZZblBKak9wa2VMajJxN2R1S2VwblYtcHJNdmhaRlV5STJQVjhoRG5ZVTdJS3U4RkRweHY2R2NDZkVsQnBrNWM",
+    "published": "2026-11-16T08:03:23+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위 금융보안원 해킹사고 현장점검, 부위원장 신진창 \"근본적 쇄신\" 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위 금융보안원 해킹사고 현장점검, 부위원장 신진창 \"근본적 쇄신\" 주문",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1OUW1mMnRNdnNRNVJxd1lwdnY3VVFqcDJaeEJsaDI3U1hIX1c0c2FtbVBwVWZZblBKak9wa2VMajJxN2R1S2VwblYtcHJNdmhaRlV5STJQVjhoRG5ZVTdJS3U4RkRweHY2R2NDZkVsQnBrNWM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTFA5YWl5cE9USGlFTTIyMV94bkNqaExUTTc0TVZZY1AxSHlmUXdHN2FqbWtLZllWaGJQZzRGSXFYNk90NXRfNy02dmpzUQ",
+    "published": "2026-11-16T02:40:53+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "신진창 금융위원회 부위원장, 금융보안원장 면담",
+    "tags": [
+      "금융"
+    ],
+    "title": "신진창 금융위원회 부위원장, 금융보안원장 면담",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFA5YWl5cE9USGlFTTIyMV94bkNqaExUTTc0TVZZY1AxSHlmUXdHN2FqbWtLZllWaGJQZzRGSXFYNk90NXRfNy02dmpzUQ?oc=5"
   }
 ]
