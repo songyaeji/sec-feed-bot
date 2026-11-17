@@ -25,6 +25,9 @@ cves: []
 - 2026-11-13 [금융보안원](https://news.google.com/rss/articles/CBMiZkFVX3lxTE16R05EcVVaQjFxbnI0Zjh6eDVPakxfSUVSaFoyMFJiUUlVOUxadFA0bW1uUVh1UE84M2hfQTNmVy13UUhGNlBIYVBIcklsSXNlTFQteGo4UmJCTGdrajdkOFItdWdJdw?oc=5) — 박상원 금융보안원장 대국민 사과 발표, 피해 규모 48개 금융사 파일 130여건 확인·공격 IP **246개 국내 출처** 확인
 - 2026-11-14 [금융보안원](https://news.google.com/rss/articles/CBMicEFVX3lxTE9EQWdnS2pWYy11RXNuMmRPUzRBSFA5U1RGTnVUYV9uY3ZYUjdfZXpaLVdGaXczeDRvZ2pScEo5UGxSOWpHZGFXZEtoc3BZQWtqMzFpWFY5UXE0U0ZNck5mVGU5UDNkRE8tTUpGSnBwc2zSAXRBVV95cUxPRnpTS3ZLZU02RFVlcHNuUkhzb1F3NVVXTjM3cFNNSzl2N2JyTVdmVkJ6UDJBODNmT2Z1N1V5MFdaM2F0SmZvUEhkVFVYTjVGaE5vbUhpalRCdlEyaTdiRUZrSFdJSUpFTkVIQm45NkZZVHJTRA?oc=5) — 금융보안원 침해에 대한 금융위 책임론 제기, 편의성 위해 보안 기준 완화가 근본 원인으로 지적
 - 2026-11-16 [금융위원회](https://news.google.com/rss/articles/CBMidEFVX3lxTE5tTEVrbjUwZkIwbzJqcUdRYTllMU5sNmU3cjZMakVOd0wyY2d4SUhxcmdBbTE1Wk1OWnI2dUVaWEpnWWNTV1pZU0wwNDZoalpiX3o4bjE2MkUzM0s3N0lFejhnVUs2WXdQempNQlY0QWw?oc=5) — 금융위 현장 점검 실시, 조직·업무 전반 근본 쇄신 주문
+- 2026-11-16 [금융보안원](https://news.google.com/rss/articles/CBMia0FVX3lxTFB1SkdQWlExbkp1UDlqZXNNdVdyRWNZeXh5TzVLVzYxTVpsUHJjVzlBX0d3bDM3UENXRnJ6QjRtOUJ5elNJSFdoVTBFaER3VjlHN2NuSHUydHZNQnNCbXRkNWlIVkV6ZVJtYkJr?oc=5) — 금융당국 580개 금융사 보안 전수점검 본격화, 연말 CEO 서명 제출 예정
+- 2026-11-16 [금융보안원](https://news.google.com/rss/articles/CBMiZEFVX3lxTE5Ydnc5SDNBQ1FBV2FDbWN6Y0tfY0R2aHhJbVE4R3JWOUR4cE0yVEdXUXc4V1ZpT1NfMEN5aTF3NFZCUTc0cXBpWWN4Y0V3RXBLa2xfX3Bzdm1QTUx4UDMwNEpxWks?oc=5) — 금융보안원 감사 본격화, 각 금융사 대책 마련 초읽기
+- 2026-11-16 [뉴스](https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ZRGtMdUNnVGZCT1Fldmt4UW9ZME9yN2pxX2U2Rm9aWlRvQWhQTTUxandYSS1iTmI5bjlpT0haTFNOWXlNUk5MREtKdENWY3dMNzlPNQ?oc=5) — 금융사 정보보호 평가 중단으로 580개 금융사 복구 시점 미정
 
 ## 관련
 

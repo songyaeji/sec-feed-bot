@@ -14,5 +14,6 @@ cves: []
 - 2026-11-06 [Unit 42](https://unit42.paloaltonetworks.com/europes-refrigeration-systems-attacks/) — Palo Alto Networks 분석, 유럽 냉동 시스템 공격 방어·완화 전략 상세 분석
 - 2026-11-06 [Security Affairs](https://securityaffairs.com/202528/security/enisa-warns-of-cyberattacks-targeting-refrigeration-systems-across-europe.html) — ENISA 유럽 냉동 체계 사이버공격 조정 경고, 10월 시작 11월 1일 새 물결
 - 2026-11-09 [BleepingComputer](https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/) — 프랑스 정부 10월 슈퍼마켓·소매점 700개 냉동 시스템 침해를 **이란 국가행위자**에 귀속, 식품 손실·최소 15건 화재 발생
+- 2026-11-17 [Security Affairs](https://securityaffairs.com/203324/security/fridge-controller-attacks-researchers-find-six-zero-days-in-an-hour.html) — Midnight Blue 연구자 Danfoss AK-SM800A·Copeland 냉동고 컨트롤러 1시간 내 6개 미패치 제로데이 발견, 대수억 유로 식품 손실
 
 ## 관련
