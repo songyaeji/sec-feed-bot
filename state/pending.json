@@ -2341,5 +2341,895 @@
     "tags": [],
     "title": "개보위, 중남미 첫 브라질 개인정보 감독기구와 협약",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1aGZnUHFSbFd6Znp6RWM3cjg5XzRaOGplSGFoS1JLd3NIY3NQMF9xREZ1TnRUQlEyNVp3WnpBUWZaZ01IQnprSDFvRnBjTXhyZ1ZIM1BB?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-128027",
+    "published": "2026-11-13T10:18:08.563",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "FrankenPHP Docker images before 1.1.11 were rebuilt only when new base image tags were created, so security fixes that Alpine, PHP, and Go applied under existing tags were not propagated. Remote attackers could exploit known flaws in the stale system libraries, such as CVE-2025-15467 in libcrypto3, to execute code.",
+    "tags": [],
+    "title": "CVE-2026-128027 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128027"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-128049",
+    "published": "2026-11-13T10:18:10.820",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenMage Magento LTS before 20.18.2 and 21.0.0-beta1 before 21.0.0-beta3 contains a cross-site request forgery vulnerability in the admin and storefront OAuth confirm and confirmSimple actions, which accept GET requests without form-key validation. Attackers holding OAuth consumer credentials can lure a logged-in administrator or customer to a crafted confirm URL that authorizes the attacker's request token, then exchange it at /oauth/token for a persistent REST API access token bound to the victim.",
+    "tags": [],
+    "title": "CVE-2026-128049 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128049"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-130070",
+    "published": "2026-11-16T22:18:22.220",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Ghost by muneeb141 on the main branch from commit c731cdf through commit 672dfec contains an authentication bypass vulnerability in the whitelisted ghost.api.ghost.convert_to_real_user method that allows unauthenticated attackers to skip OTP verification by setting the client-supplied bypass_otp parameter. Attackers can obtain a ghost session from the guest-accessible create_ghost_session endpoint, then call convert_to_real_user with an arbitrary real_email and bypass_otp=1 to receive OAuth tokens for existing accounts and take them over.",
+    "tags": [],
+    "title": "CVE-2026-130070 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130070"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-129448",
+    "published": "2026-11-17T11:17:28.190",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Deserialization of Untrusted Data in Apache Roller versions 4.0.0 through 6.1.4 allows an unauthenticated remote attacker to execute arbitrary code. The XML-RPC endpoint accepts vendor extension types and deserializes them before authenticating the requester.\n\nThis is the same vulnerability as CVE-2026-82384, which listed only Apache Roller 6.1.5 as affected. This issue is being actively exploited.\n\nUsers are recommended to upgrade to Apache Roller 6.1.6 or later, which disables the extension types and rejects XML-RPC requests when the XML-RPC feature is disabled.\n\nUsers who cannot upgrade right away should set \"enabledForExtensions\" to \"false\" in WEB-INF/web.xml, or remove the \"/roller-services/xmlrpc\" servlet mapping, and restart Roller. Disabling XML-RPC in the administration UI is not enough, because older versions deserialize the request before checking that setting.",
+    "tags": [],
+    "title": "CVE-2026-129448 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129448"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-130583",
+    "published": "2026-11-17T14:17:44.847",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Rootways Authorize.net CIM Pro extension for Magento 2 before 4.1.5 contains an unauthenticated server-side request forgery vulnerability in the Apple Pay merchant validation controller. Attackers can supply file://, gopher://, or dict:// URLs in the validationUrl parameter to read app/etc/env.php credentials and encryption keys or reach internal services and cloud metadata endpoints.",
+    "tags": [],
+    "title": "CVE-2026-130583 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130583"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-130587",
+    "published": "2026-11-17T14:17:45.317",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OpenFunction through 1.2.0 contains a privilege escalation vulnerability that allows namespace tenants to create privileged host-access pods by supplying unrestricted PodSpec templates in Function and Serving resources. Attackers with only Function or Serving create permissions can set privileged, hostNetwork, hostPID, or hostPath fields to mount the worker node's root filesystem and escalate to node access.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-130587 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130587"
+  },
+  {
+    "category": "high",
+    "cvss": 5.5,
+    "id": "CVE-2025-38050",
+    "published": "2025-06-18T10:15:37.570",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/hugetlb: fix kernel NULL pointer dereference when replacing free hugetlb folios\n\nA kernel crash was observed when replacing free hugetlb folios:\n\nBUG: kernel NULL pointer dereference, address: 0000000000000028\nPGD 0 P4D 0\nOops: Oops: 0000 [#1] SMP NOPTI\nCPU: 28 UID: 0 PID: 29639 Comm: test_cma.sh Tainted 6.15.0-rc6-zp #41 PREEMPT(voluntary)\nRIP: 0010:alloc_and_dissolve_hugetlb_folio+0x1d/0x1f0\nRSP: 0018:ffffc9000b30fa90 EFLAGS: 00010286\nRAX: 0000000000000000 RBX: 0000000000342cca RCX: ffffea0043000000\nRDX: ffffc9000b30fb08 RSI: ffffea0043000000 RDI: 0000000000000000\nRBP: ffffc9000b30fb20 R08: 0000000000001000 R09: 0000000000000000\nR10: ffff88886f92eb00 R11: 0000000000000000 R12: ffffea0043000000\nR13: 0000000000000000 R14: 00000000010c0200 R15: 0000000000000004\nFS:  00007fcda5f14740(0000) GS:ffff8888ec1d8000(0000) knlGS:0000000000000000\nCS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\nCR2: 0000000000000028 CR3: 0000000391402000 CR4: 0000000000350ef0\nCall Trace:\n<TASK>\n replace_free_hugepage_folios+0xb6/0x100\n alloc_contig_range_noprof+0x18a/0x590\n ? srso_return_thunk+0x5/0x5f\n ? down_read+0x12/0xa0\n ? srso_return_thunk+0x5/0x5f\n cma_range_alloc.constprop.0+0x131/0x290\n __cma_alloc+0xcf/0x2c0\n cma_alloc_write+0x43/0xb0\n simple_attr_write_xsigned.constprop.0.isra.0+0xb2/0x110\n debugfs_attr_write+0x46/0x70\n full_proxy_write+0x62/0xa0\n vfs_write+0xf8/0x420\n ? srso_return_thunk+0x5/0x5f\n ? filp_flush+0x86/0xa0",
+    "tags": [],
+    "title": "CVE-2025-38050 (CVSS 5.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-38050"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-97035",
+    "published": "2026-11-11T05:19:57.550",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "When using Clang or GCC, building a malicious package that uses cgo could cause unexpected code execution at build time or write files to arbitrary directories via \"-gen-*\" or \"-gnat*\" flags in \"#cgo\" directives. The \"-g*\" wildcard in the compiler and linker flag allowlists previously matched Clang's two-argument \"-gen-cdb-fragment-path <dir>\" flag and GCC's two-argument \"-gnatO <file>\" flag, permitting compilation database fragments and sidecar output files to be written to arbitrary directories and desynchronizing flag argument parsing between the go command and the compiler driver so that subsequent arguments could be passed as unvalidated positional inputs to the linker. \"-gen-*\" and \"-gnat*\" flags are now disallowed in \"#cgo\" compiler and linker flags.",
+    "tags": [],
+    "title": "CVE-2026-97035 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97035"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-130074",
+    "published": "2026-11-16T22:18:22.847",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "free5GC WebConsole through 1.4.6 contains an authorization flaw in the ChangePasswordInfo handler that allows authenticated tenant users to change other members' passwords. Attackers can send POST /api/change-password with another tenant member's email and a new password, without the current password, to take over that account.",
+    "tags": [],
+    "title": "CVE-2026-130074 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130074"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-130082",
+    "published": "2026-11-16T22:18:24.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "django-tenants 3.4.8 before 4.0.1 contains an SQL injection vulnerability in its PostgreSQL backend that allows attackers to inject SQL through unescaped tenant schema names. Attackers who can choose or influence a schema name can supply quote characters that are interpolated into SET search_path and CREATE, DROP or ALTER SCHEMA statements, letting them read other tenants' data or run SQL as the application's database user.",
+    "tags": [],
+    "title": "CVE-2026-130082 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130082"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-105739",
+    "published": "2026-11-17T05:18:29.513",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to execute arbitrary JavaScript in the browser of users viewing a wiki page due to improper sanitization of user input.",
+    "tags": [],
+    "title": "CVE-2026-105739 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105739"
+  },
+  {
+    "category": "high",
+    "cvss": 8.7,
+    "id": "CVE-2026-108153",
+    "published": "2026-11-17T05:18:30.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.1 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to execute arbitrary JavaScript in the browser of users viewing Error Tracking pages due to improper sanitization of user input.",
+    "tags": [],
+    "title": "CVE-2026-108153 (CVSS 8.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108153"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-121684",
+    "published": "2026-11-17T05:18:33.697",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Soledad theme for WordPress is vulnerable to unauthenticated Remote Code Execution in versions up to, and including, 8.7.7 The public penci_more_post_ajax AJAX action feeds infeedads[ads_code] (base64+urldecoded) to penci_safe_shortcode(), whose allowlist regex inspects only the hyphen-truncated outer shortcode name (e.g. 'adinserter') and never the nested [elementor-element k=.. data=..] tag, so do_shortcode() renders an attacker-chosen Elementor element. The rendered penci-featured-sliders widget passes its unsanitized 'style' setting to include dirname(__FILE__).\"/{$style}.php\", a path-traversal local file inclusion.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-121684 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121684"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-18241",
+    "published": "2026-11-17T05:18:36.843",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 9.3 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to access protected CI/CD variables and resources due to a race condition in pipeline job authorization.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18241 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18241"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-107493",
+    "published": "2026-11-17T09:17:25.870",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Issue summary: When an application passes a stack to\nPEM_X509_INFO_read_bio_ex() to add entries to, and reading fails,\nOpenSSL frees every entry in the stack, both the old ones and any new\nones, but leaves them in the stack.\n\nImpact summary: An application that passes an existing stack to\nPEM_X509_INFO_read_bio_ex() and keeps using it after a failed read may\nuse memory that was already freed. This can cause a crash or, in\nprinciple, memory corruption. Malformed PEM data can make the read fail,\nbut only applications that pass an existing stack are affected, and\nOpenSSL itself does not do this.\n\nCWE: CWE-416: Use After Free\n\nDescription: PEM_X509_INFO_read_bio_ex() reads certificates, CRLs and\nprivate keys from PEM data and adds them to a stack of X509_INFO\nstructures. If the application passes a stack that is not NULL, the\nfunction adds the new entries to it and must leave the entries that are\nalready there unchanged.\n\nIf reading fails, the function frees every entry in the stack. This\nincludes the entries that were there before the call, and the entries\nadded by the call. It does not remove these entries from the stack, so\nthe stack keeps pointers to freed memory. The failure can happen at any\npoint, even before any entry was added. A PEM item with invalid content\nis enough.  This also happens if the stack was empty: entries added\nbefore the failure are freed but stay in the stack.\n\nAn application that then reads or frees the stack will use memory that\nwas already freed. This",
+    "tags": [],
+    "title": "CVE-2026-107493 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107493"
+  },
+  {
+    "category": "high",
+    "cvss": 8.5,
+    "id": "CVE-2026-121864",
+    "published": "2026-11-17T09:17:26.857",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "In nanobot, when sandboxed exec is enabled, the shell executable used to run commands can be selected by the caller and is launched before the sandbox is applied. An attacker who can induce the agent to create an executable in the workspace and select it as the shell can cause that executable to run outside the sandbox (e.g. Linux bubblewrap), with the operating-system permissions of the nanobot process.\n\nThis issue affects nanobot (nanobot-ai) from 0.2.1 before 0.4.1.",
+    "tags": [],
+    "title": "CVE-2026-121864 (CVSS 8.5)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121864"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-124709",
+    "published": "2026-11-17T09:17:27.227",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Issue summary: A QUIC server that rejects a stream opened by the peer may\nretain that stream's state for the lifetime of the connection if the peer\nresets the stream before the rejection is signalled, even though the peer's\nstream credit is returned.\n\nImpact summary: A remote client that completes a QUIC handshake can repeatedly\nopen and reset streams, causing server memory to grow without bound until the\nprocess runs out of memory and every connection on it is lost. This is a\nDenial of Service.\n\nCWE: CWE-401: Missing Release of Memory after Effective Lifetime\n\nDescription: QUIC servers track each stream the peer opens. When the incoming\nstream policy rejects a stream, OpenSSL schedules a STOP_SENDING frame, marks\nthe stream deleted and returns the peer's stream credit. A deleted stream is\ncollected only once its receive part is fully drained, which for a rejected\nstream means the STOP_SENDING has been acknowledged. If the peer sends\nRESET_STREAM first, the reset cancels the pending STOP_SENDING, so it is never\nsent or acknowledged and the stream is never collected.\n\nThe default configuration reaches this path. Once a connection has a default\nstream, meaning the application has read from or written to the connection as\nthe tutorial server does, the effective incoming stream policy rejects streams\nthe application does not accept. Applications that set the REJECT policy\nexplicitly are affected too.\n\nEach retained stream costs about 300 bytes, and the peer's stream credit\nwindow",
+    "tags": [],
+    "title": "CVE-2026-124709 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-124709"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-35190",
+    "published": "2026-11-17T09:17:27.560",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Issue summary: A server configured with the Suite B certificate flag through\nSSL_CTX_set_cert_flags() and with TLS 1.3 enabled may read past the end of a\nfixed group list when it processes a ClientHello whose supported_groups and\nkey_share contain no Suite B group.\n\nImpact summary: A remote client can send a ClientHello that makes the server\nread past the end of a static array. The values read are never returned to the\nclient, so no memory is disclosed; on builds with sanitizers or hardened\nallocators the read may crash the process, causing Denial of Service.\n\nCWE: CWE-125: Out-of-bounds Read\n\nDescription: When the Suite B certificate flag is set, OpenSSL restricts the\naccepted groups to P-256 and P-384 by substituting a fixed two-element list\nfor the configured group list. The tuple machinery used for key-share\nselection was not updated for this substitution: tls1_get_group_tuples() still\nreturns the configured tuples, which by default describe eight groups. The\nserver-side walk in tls_parse_ctos_key_share() then advances through the\ntwo-element list using those tuple counts without checking the cumulative\noffset against the number of groups present.\n\nOnly applications that call SSL_CTX_set_cert_flags() with\nSSL_CERT_FLAG_SUITEB_128_LOS and leave TLS 1.3 enabled are affected. The\nopenssl s_server -suiteB_128 option sets an X.509 verification parameter\ninstead, so the stock command line server is not vulnerable. Default\nconfigurations do not reach this code.\n\nA client that of",
+    "tags": [],
+    "title": "CVE-2026-35190 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35190"
+  },
+  {
+    "category": "high",
+    "cvss": 6.8,
+    "id": "CVE-2026-118497",
+    "published": "2026-11-17T10:17:21.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The affected products do not sufficiently validate CODESYS Automation Server TLS certificates when a user starts the certificate enrollment. An unauthenticated remote attacker performing a man-in-the-middle attack can exploit this vulnerability by supplying an untrusted certificate that is accepted as trusted. Successful exploitation may allow an attacker to intercept and manipulate communications between the CODESYS Automation Server and the PLC network.",
+    "tags": [
+      "AI",
+      "RCE"
+    ],
+    "title": "CVE-2026-118497 (CVSS 6.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118497"
+  },
+  {
+    "category": "high",
+    "cvss": null,
+    "id": "CVE-2026-129281",
+    "published": "2026-11-17T11:17:27.317",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "N-able N-central before 2026.4.1 HF3 checks only a view permission for ServerII2 operations that write device execution configuration. An authenticated user with view-only access to a device can set configuration that the Windows agent on that device acts on.",
+    "tags": [],
+    "title": "CVE-2026-129281 (CVSS N/A)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129281"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-12239",
+    "published": "2026-11-17T13:17:34.240",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Abstracts plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.7.6. This is due to a missing capability check on the wpabs_save_regform AJAX action and the use of a static, frontend-exposed nonce that allows any authenticated user to persist attacker-controlled form schemas with arbitrary wpSync mappings that are later used as user meta keys in the wpabstracts_sync_wpfields function. This makes it possible for authenticated attackers, with subscriber-level access and above, to elevate their privileges to administrator.",
+    "tags": [],
+    "title": "CVE-2026-12239 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12239"
+  },
+  {
+    "category": "high",
+    "cvss": 8.3,
+    "id": "CVE-2026-130584",
+    "published": "2026-11-17T14:17:45.013",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Xibo CMS before 4.5.3 contains an insecure direct object reference vulnerability that allows authenticated users to access other DataSets' RSS feeds by pairing their own DataSet id with a foreign RSS id. Attackers with dataset.modify permission can read, edit, or delete feeds and steal PSKs, then use the unauthenticated /rss/{psk} endpoint to exfiltrate victim DataSet rows.",
+    "tags": [],
+    "title": "CVE-2026-130584 (CVSS 8.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130584"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-130589",
+    "published": "2026-11-17T14:17:45.653",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Emitter through 3.1 contains a privilege escalation vulnerability that allows any channel key holder to forge a master key because channel keys use bare XOR Salsa20 encryption without a MAC or signature. Attackers can flip the permissions byte to the master value and present the forged key to the keygen service to mint keys with arbitrary permissions on every channel of the contract.",
+    "tags": [],
+    "title": "CVE-2026-130589 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130589"
+  },
+  {
+    "category": "high",
+    "cvss": 5.9,
+    "id": "CVE-2026-130595",
+    "published": "2026-11-17T14:17:46.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SQLBot 1.10.0 through 1.10.3 fails to apply its PostgreSQL dangerous-function denylist because DS_SPECIFIC_DANGEROUS_FUNCTIONS uses 'postgresql' while lookups use the 'pg' type. Authenticated users can steer LLM-generated SQL past check_sql_read() using pg_read_file, pg_write_file, lo_import or lo_export to read or write files on the database host.",
+    "tags": [
+      "AI"
+    ],
+    "title": "CVE-2026-130595 (CVSS 5.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130595"
+  },
+  {
+    "author": "",
+    "category": "critical",
+    "id": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72311",
+    "published": "2026-11-17T00:00:00+00:00",
+    "severity": "info",
+    "source": "KISA 보안공지 (보호나라)",
+    "summary": "",
+    "tags": [],
+    "title": "Check Point 제품 보안 업데이트 권고",
+    "url": "https://www.boho.or.kr/kr/bbs/view.do?searchCnd=&bbsId=B0000133&searchWrd=&menuNo=205020&pageIndex=1&categoryCode=&nttId=72311"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209577",
+    "published": "2026-11-17T22:19:07+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "영남대학교의 도서관 전자책(e-book) 홈페이지와 취업 홈페이지가 해킹 공격을 받아 학생 등 이용자의 개인정보가 유출되는 사고가 발생했다. 최근 국내 대학을 겨냥한 사이버 공격이 잇따르는 가운데 연구행정시스템뿐 아니라 학생들이 일상적으로 이용하는 대학 서비스까지 침해 대상이 되고 있다.영남대학교는 11월 17일 오후 5시 32분 공식 홈페이지에 ‘도서관 ebook 및 취업 홈페이지 해킹 관련 개인정보 유출 안내 및 사과문’을 게시하고 개인정보 유출 사실을 인정했다.대학 측에 따르면 이번 사고는 11월 16일 오전 10시부터 낮 1",
+    "tags": [
+      "금융"
+    ],
+    "title": "영남대학교 도서관·취업 홈페이지 해킹…학생 개인정보 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209577"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209576",
+    "published": "2026-11-17T17:09:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "구글 위협 인텔리전스 그룹(GTIG)이 지난 9월 발표 이후 최신 AI 위협 동향을 분석한 'AI 위협 추적 보고서(AI Threat Tracker)'를 공개했다고 17일 밝혔다.이번 보고서에서 GTIG와 Mandiant(맨디언트)는 사이버 범죄, 첩보, 정보작전(IO) 영역의 공격자들이 생성형 AI를 활용해 공격 시간을 줄이고 작전 규모를 키우며 기계 속도로 다단계 침투를 수행하는 양상을 분석했다. 공격 기법이 단순 프롬프트 입력을 넘어 자율형 멀티 에이전트 프레임워크와 자동화된 취약점 악용 파이프라인, 새로운 수익화 모델로 이동",
+    "tags": [
+      "AI"
+    ],
+    "title": "구글 위협 인텔리전스 그룹, 'AI 위협 추적 보고서' 발표...사람 개입 없는 자율 공격 현실화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209576"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209574",
+    "published": "2026-11-17T17:02:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "SM솔루션즈(대표 김상모)가 운영 서버의 소프트웨어 구성과 보안 취약점을 실시간으로 관리하는 '센티온 서버실드(SentiON ServerShield)'를 출시하고 GS인증 1등급 획득과 조달청 나라장터 디지털서비스몰 등록을 마쳤다고 17일 밝혔다.센티온 서버실드는 실제 서비스가 가동되는 서버별로 소프트웨어 설치와 실행 현황, 알려진 취약점(CVE), 보안 패치 적용 여부를 상시 점검하는 운영 단계 공급망 보안 솔루션이다. 이상 징후가 발생하면 담당자에게 알림을 보내고 조치 현황 리포트를 제공한다.기존 개발 단계 소프트웨어 구성요소",
+    "tags": [],
+    "title": "SM솔루션즈, 운영서버 취약점 실시간 관리 솔루션 '센티온 서버실드' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209574"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209575",
+    "published": "2026-11-17T17:02:41+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "씨라이프(SEA LIFE) 부산 아쿠아리움의 입장객 예약시스템 운영사가 해킹 공격을 받아 일부 고객의 개인정보가 외부에 노출되는 사고가 발생했다. 앞서 레고랜드 코리아에서도 동일한 티켓팅 시스템 운영사의 침해사고로 고객정보 유출 가능성이 확인된 만큼 국내 관광·레저시설로 피해가 확대될 가능성에 관심이 집중되고 있다.씨라이프 부산 아쿠아리움은 공식 홈페이지에 ‘고객 개인정보 유출 가능성 안내’를 게시하고, 지난 11월 14일 입장객 예약시스템 운영사인 액세소(Accesso)의 티켓팅 시스템에서 보안 침해사고가 발생해 일부 고객정보가",
+    "tags": [
+      "금융"
+    ],
+    "title": "씨라이프 부산 아쿠아리움 고객정보 유출…예약시스템 운영사 해킹",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209575"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209573",
+    "published": "2026-11-17T16:55:51+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "델 테크놀로지스(Dell Technologies)가 기업의 에이전틱 AI 도입과 확장을 지원하는 '엔비디아 기반 델 AI 팩토리(Dell AI Factory with NVIDIA)' 포트폴리오를 강화했다고 17일 밝혔다.이번 발표는 대규모 데이터 준비, 인프라 관리 효율화, 검증된 풀스택 솔루션 제공을 통해 개념검증(PoC) 단계의 AI를 실제 운영 환경으로 전환하는 데 초점을 맞췄다. 델은 해당 플랫폼 출시 이후 데이터, 컴퓨팅, 네트워킹 등 전 영역에서 420개 이상의 제품을 선보였으며 현재 6,500개 이상의 고객을 확보했다.",
+    "tags": [],
+    "title": "데이터 오케스트레이션부터 수랭식 스토리지까지...델 테크놀로지스, AI 인프라 포트폴리오 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209573"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209572",
+    "published": "2026-11-17T16:46:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "AI 플랫폼 기업 데이터이쿠(Dataiku)가 자연어 에이전트 인터페이스 '데이터이쿠 코빌드(Dataiku Cobuild)'를 개발자 전용 코딩 도구에 통합한 '데이터이쿠 헤드리스(Dataiku Headless)'를 선보였다고 17일 밝혔다.Claude Code, Codex 같은 코딩 에이전트가 널리 쓰이면서 아이디어를 실행 가능한 스크립트로 구현하는 속도는 빨라졌다. 하지만 개발자 외에 결과물을 이해하고 검토해 실제 업무에 적용할 인력이 부족해 조직 전체로 성과를 확산하기 어려웠다.데이터이쿠 헤드리스는 개발자가 기존 코딩 에이전트",
+    "tags": [
+      "금융"
+    ],
+    "title": "데이터이쿠, 코딩 에이전트에 데이터·AI 거버넌스 지원하는 '데이터이쿠 헤드리스' 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209572"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209571",
+    "published": "2026-11-17T15:01:16+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아르고스 아이덴티티(ARGOS Identity, 대표 이원규)가 오는 25일부터 27일까지 서울 양재 aT센터에서 열리는 '코리아 핀테크 위크 2026'에 참가해 개인 신원 인증과 기업 심사를 단일 플랫폼으로 묶은 'CaaS(Compliance as a Service)'를 공개한다고 17일 밝혔다.금융위원회가 주최하고 한국핀테크지원센터가 주관하는 이번 행사는 '다음 금융은 이미 시작됐다(Beyond Finance, Into the Future)'를 주제로 열리며 120여 개 기업과 기관이 참여한다.비대면 금융 거래가 확산하면서 금융",
+    "tags": [
+      "금융"
+    ],
+    "title": "아르고스 아이덴티티, 코리아 핀테크 위크 2026서 개인-기업 통합 인증 'CaaS' 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209571"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209570",
+    "published": "2026-11-17T14:53:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "메가MGC커피 고객센터 운영을 맡은 외부 위탁업체가 해킹 공격을 받아 고객 휴대전화번호 30건이 유출된 사실이 확인됐다. 고객센터 통화기록에 남아 있는 전화번호와 홈페이지를 통해 창업을 문의한 고객의 휴대전화번호, 이메일 주소도 유출됐을 가능성이 있어 추가 조사가 진행 중이다.메가MGC커피는 개인정보 유출 안내문을 통해 고객센터 시스템 운영 위탁업체인 메타엠의 서버가 외부 해킹 공격을 받았으며, 일부 고객정보가 유출됐다고 밝혔다.회사 측에 따르면 공격자는 지난 11월 12일 오전 2시 18분부터 3시 50분 사이 메타엠 서버를 통해",
+    "tags": [
+      "금융"
+    ],
+    "title": "메가MGC커피 고객센터 해킹…휴대전화번호 30건 유출, 추가 개인정보 유출 가능성 조사",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209570"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209569",
+    "published": "2026-11-17T14:38:47+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "체크멀(CheckMAL)이 오는 19일 서울 세종대학교 광개토관에서 열리는 '2026 병원의료정보보호 컨퍼런스(KHISC 2026)'에 참가해 안티랜섬웨어 솔루션 앱체크 프로(AppCheck Pro)를 선보인다고 17일 밝혔다.대한병원협회, 한국사회보장정보원, 디지털헬스보안협회가 공동 주최하고 병원신문이 주관하는 이번 행사는 1,200명 이상의 병원 관계자가 참석해 정보보안 및 개인정보보호 기술과 대응 방안을 공유하는 자리다.체크멀은 현장에서 전시 부스를 운영하며 의료기관 관계자를 대상으로 제품 기능을 소개하고 도입 상담을 진행한다",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "체크멀, '2026 병원의료정보보호 컨퍼런스' 참가...의료기관 랜섬웨어 대응 솔루션 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209569"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209568",
+    "published": "2026-11-17T14:29:04+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "레고랜드 코리아 리조트의 입장객 예약시스템 운영사가 해킹 공격을 받아 일부 연간이용권 고객의 개인정보가 외부에 노출되는 사고가 발생했다. 유출된 것으로 파악된 정보에는 고객 이름과 주소, 전화번호뿐 아니라 연간이용권 바코드 번호까지 포함됐다.레고랜드 코리아는 11월 16일 공식 홈페이지에 ‘고객 개인정보 유출 가능성 안내’를 게시하고, 지난 14일 입장객 예약시스템 운영사인 액세소(Accesso)의 티켓팅 시스템에서 보안 침해사고가 발생했다고 밝혔다.회사 측에 따르면 외부 공격자가 액세소의 티켓팅 시스템에 무단 접속해 일부 연간이용",
+    "tags": [
+      "금융"
+    ],
+    "title": "레고랜드 코리아 고객정보 유출…예약시스템 운영사 해킹으로 연간이용권 정보 노출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209568"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209567",
+    "published": "2026-11-17T14:23:20+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국정보보호산업협회(회장 김진수, 이하 KISIA)가 과학기술정보통신부(부총리 겸 과기정통부 장관 배경훈)와 함께 온라인 교육 우수 수료생 10명을 국내로 초청해 일주일간 오프라인 교육 프로그램을 운영했다고 17일 밝혔다.이번 교육은 국내 정보보호 기업의 해외 사업 경쟁력을 높이고 현지 인력 활용 기반을 다지기 위해 마련됐다. KISIA는 2023년부터 국내 기업이 인도네시아 시장에 진출할 때 현지 전문인력을 활용할 수 있도록 인재 발굴 및 인력풀(DB) 구축 사업을 이어오고 있다.올해는 인도네시아 현지 교육생 100명을 대상으로",
+    "tags": [],
+    "title": "KISIA, 인도네시아 현지 인력 양성 프로그램 운영",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209567"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209565",
+    "published": "2026-11-17T14:14:20+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "라온시큐어(대표 이순형·이정아)가 구글의 '디바이스 트러스트(Device Trust from Android Enterprise)'를 핵심 인증 및 기기 관리 솔루션에 연동하고 안드로이드 엔터프라이즈 파트너로 참여한다고 17일 밝혔다.구글 디바이스 트러스트는 업무용 안드로이드 단말기의 보안 상태를 지속적으로 확인해 기업의 접근통제 정책에 반영하는 제로트러스트 기반 보안 체계다. 사내 시스템에 접속하는 사용자의 신원뿐만 아니라 단말기의 보안 상태까지 함께 검증해 신뢰할 수 없는 기기의 접근을 차단한다.구글은 안드로이드 엔터프라이즈 검증",
+    "tags": [],
+    "title": "라온시큐어, 구글 '디바이스 트러스트' 연동...사용자·기기 통합 제로트러스트 구현",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209565"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209566",
+    "published": "2026-11-17T14:13:22+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "동의대학교 산학협력단의 연구비관리시스템 관련 서버가 외부 해킹 공격을 받아 개인정보 530명분이 유출된 것으로 확인됐다. 최근 여러 대학의 연구행정시스템에서 침해사고가 잇따르는 가운데 동의대학교에서도 개인정보 유출 사실이 공식 발표됐다.동의대학교는 11월 17일 공식 홈페이지에 ‘개인정보 유출 사실 안내 및 사과문’을 게시하고 관련 사실을 공개했다.대학이 안내한 유출 규모는 530명이며, 유출 항목은 직번, 이름, 소속 부서, 직위, 직책, 재직 여부, 생년월일 등이다.동의대는 개인정보보호법 제34조에 따라 유출 사실을 공지하고,",
+    "tags": [
+      "금융"
+    ],
+    "title": "동의대학교 연구비관리시스템 해킹…개인정보 530명 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209566"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209564",
+    "published": "2026-11-17T13:32:06+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "체크포인트 소프트웨어 테크놀로지스(Check Point Software Technologies)가 데이터센터와 소버린 AI 환경의 암호화 트래픽을 성능 저하 없이 검사하는 차세대 'Maestro Hyperscale Orchestrator(MHO) 200'을 출시했다고 17일 밝혔다.AI 학습과 추론 워크로드가 늘어나면서 데이터센터 내부의 동-서(East-West) 트래픽과 경계 트래픽이 빠르게 증가하고 있다. 대다수 기업이 처리 속도를 유지하기 위해 보안 검사 기능을 끄거나 예비 장비를 과도하게 구축하는 문제를 해결하기 위해 이번",
+    "tags": [],
+    "title": "체크포인트, 차세대 오케스트레이터 공개...급증하는 AI 데이터센터 암호화 트래픽 실시간 검사",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209564"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+    "published": "2026-11-17T12:25:06+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy, a widely used open-source security scanner, planted malicious code that looked like it came from GitHub's official checkout tool. They even labeled it a",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+    "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html",
+    "published": "2026-11-17T12:14:36+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A now-patched flaw in Apple's audio service let apps on iPhones and iPads record audio even after the user tapped \"Don't Allow\" on the microphone prompt. The first security updates with the fix came out on August 17. Neither Apple nor the two researchers who found the flaw report that it was used in attacks. Nik Tsytsarkin of Meta Red Team X published the technical details last week. Mustafa",
+    "tags": [],
+    "title": "Researchers Detail iPhone Flaw That Let Apps Record Audio Despite Denied Microphone Permission",
+    "url": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
+    "published": "2026-11-17T11:20:18+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Government sectors in Asia and Africa have been targeted by an active cyber intrusion campaign that delivers to previously undocumented backdoors that leverage legitimate services like Microsoft SharePoint and GitHub for command‑and‑control (C2). The activity has been codenamed Operation ShadowCloud by Kaspersky. The Russian cybersecurity company said it identified the campaign in early 2026.",
+    "tags": [],
+    "title": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+    "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/apple-tightens-macos-app-permissions-to.html",
+    "published": "2026-11-17T11:07:31+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Apple on Monday introduced new controls that allow Mac users to give more granular access to data they give to apps, including those that use artificial intelligence (AI) agents. The changes, currently previewed in macOS 27.3 beta 2, relate to increased transparency and more options for two of its APIs: Device Control and Data Access, and Full Disk Access. \"Before granting an app such",
+    "tags": [],
+    "title": "Apple Tightens macOS App Permissions to Limit Data Access Amid AI Agent Security Risks",
+    "url": "https://thehackernews.com/2026/11/apple-tightens-macos-app-permissions-to.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+    "published": "2026-11-17T07:12:13+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "An attacker exploited a flaw in Optimizely Web Experimentation to plant malicious code in some of the scripts that customers' websites load from the service, Optimizely said early today. Visitors to sites run by at least 178 organizations, including CNN, the BBC and Zoom, received the code yesterday, according to Report URI, a firm that monitors the scripts websites run. The code was built to",
+    "tags": [],
+    "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+    "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+    "published": "2026-11-17T06:29:27+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "ConnectWise on Monday said it completed its investigation into unauthorized access targeting partner ScreenConnect environments, and recommended customers to ensure that the technician client is running version 26.6.5 or later. The company said additional activity targeting on-premises environments continues to be reported where the identified third-party extensions remain enabled, and",
+    "tags": [],
+    "title": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
+    "url": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+    "published": "2026-11-17T05:00:34+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "N-able has released a new security update to address additional critical security flaws impacting N-central. Describing N-central 2026.4 Hotfix 3 as a critical security update, the company said it includes a number of security patches and fixes that enhance the security of the Remote Monitoring and Management (RMM) and Unified Endpoint Management (UEM) platform. \"HF3 builds on the",
+    "tags": [],
+    "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
+    "url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
+    "published": "2026-11-17T11:19:51+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Microsoft is testing a new feature that lets enterprise IT administrators remotely lock stolen or lost Windows devices without wiping them. [...]",
+    "tags": [],
+    "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/",
+    "published": "2026-11-17T09:44:22+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "US District Judge Jessica Clarke has acquitted two brothers accused of stealing $25 million in cryptocurrency in about 12 seconds through a scheme that exploited a bug in the Ethereum blockchain. [...]",
+    "tags": [],
+    "title": "Court clears brothers of $25 million Ethereum crypto heist charges",
+    "url": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+    "published": "2026-11-17T08:35:42+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Ride-hailing company Uber is notifying nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October. [...]",
+    "tags": [],
+    "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+    "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/"
+  },
+  {
+    "author": "Sergiu Gatlan",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/",
+    "published": "2026-11-17T07:25:44+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A Kazakh national has been extradited from Italy to face charges alleging he targeted US schools, hospitals, and healthcare entities in ransomware attacks. [...]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "Ransomware affiliate suspect extradited to US, faces 27 years in prison",
+    "url": "https://www.bleepingcomputer.com/news/security/alleged-inc-lynx-ransomware-affiliate-extradited-to-us-faces-27-years-in-prison/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak",
+    "published": "2026-11-17T14:09:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Now 21, Artion Kurtaj pleaded guilty to a 2022 spree that included leaking clips of Grand Theft Auto VI while it was still years away from release.",
+    "tags": [],
+    "title": "Autistic teen hacker pleads guilty to leak of Grand Theft Auto VI footage",
+    "url": "https://therecord.media/autistic-teen-hacker-guilty-plea-britain-gta6-leak"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203309",
+    "published": "2026-11-17T10:54:35+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "A breach at an Infoblox supplier exposed customer network snapshots and employee data, highlighting the risks of trusted third-party access. Infoblox, one of the major players in cybersecurity and network infrastructure, is investigating a data breach after attackers gained access to internal company information through a compromised third-party provider. The incident is more serious than […]",
+    "tags": [],
+    "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
+    "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203289",
+    "published": "2026-11-17T09:38:44+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "OPTIMJACK: Attackers hijacked Optimizely scripts on 178 organizations’ websites, spreading malware to steal crypto, payment card data and target iPhones. Visitors to 178 organizations received malicious JavaScript through Optimizely Web Experimentation, a service sites use to test page changes. Report URI researchers found it in 188 of the 1,611 snippets they checked, on sites including […]",
+    "tags": [],
+    "title": "OPTIMJACK: BBC, CNN and Zoom Among Targets of Optimizely Script Hijacking",
+    "url": "https://securityaffairs.com/203289/malware/optimjack-bbc-cnn-and-zoom-among-targets-of-optimizely-script-hijacking.html"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203279",
+    "published": "2026-11-17T08:20:03+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "Greiz hospital reopens its emergency room after an extortion attack. Investigators are probing the case, but no state links have emerged. The Greiz-Ronneburg district hospital in Thuringia reported its system failure on Saturday evening, 14 November. By Sunday morning the emergency room was out of service. On Monday evening, 16 November, it started to reopen […]",
+    "tags": [],
+    "title": "Germany: Greiz Hospital Reopens Emergency Room After Ransom Attack",
+    "url": "https://securityaffairs.com/203279/cyber-crime/germany-greiz-hospital-reopens-emergency-room-after-ransom-attack.html"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/96569/",
+    "published": "2026-11-16T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Purpose and Scope In October 2026, state-sponsored threat actors expanded their attacks beyond their traditional spear phishing-centric activities to directly target development environments, cloud services, virtual asset infrastructure, and network equipment. There has been an increase in cases where legitimate platforms such as GitHub, GitLab, OneDrive, Terraform, and Visual Studio are being exploited as attack […]",
+    "tags": [
+      "APT",
+      "피싱"
+    ],
+    "title": "October 2026: Major APT Group Trends",
+    "url": "https://asec.ahnlab.com/en/96569/"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/96574/",
+    "published": "2026-11-12T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Note In October 2026, widespread instances of database leaks, the sale of accounts and credentials, and the disclosure of source code were observed on dark web and deep web forums. The government, public sector, defense, finance, healthcare, telecommunications, distribution, Education sector, manufacturing, energy, and IT sectors were the primary targets; however, due to the nature […]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "October 2026 Dark Web Breach Incident Trend Report",
+    "url": "https://asec.ahnlab.com/en/96574/"
+  },
+  {
+    "author": "Saurabh Sharma, Noushin Shabab",
+    "category": "research",
+    "id": "https://kasperskycontenthub.com/securelist/?p=122005",
+    "published": "2026-11-17T08:00:43+00:00",
+    "severity": "info",
+    "source": "Kaspersky Securelist",
+    "summary": "In part 2 of our analysis of the recently uncovered Operation ShadowCloud, we discuss the GraphDoor backdoor, additional plug-ins, and technical attribution.",
+    "tags": [],
+    "title": "Operation ShadowCloud: cloud service–based backdoors targeting government networks in Asia and Africa. Part 2",
+    "url": "https://securelist.com/operation-shadowcloud-graphdoor/122005/"
+  },
+  {
+    "author": "Mandiant",
+    "category": "research",
+    "id": "https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/",
+    "published": "2026-08-18T14:00:00+00:00",
+    "severity": "info",
+    "source": "Google Threat Intelligence",
+    "summary": "Written by: Alex Tselevich, Michael Maturi Introduction Adversarial misuse of AI has increased the risk of data theft and extortion events, because when proprietary source code is exposed, defenders must scramble to identify and patch vulnerabilities while attackers deploy machine-speed AI tools against them. By structuring the analysis process, enforcing skeptical validation steps, and injecting domain-specific human expertise directly into the pipeline, we’ve achieved a leap in efficacy. Combining AI models with a deeply structured, human expert-driven orchestration layer to tip the scales so that defenders can beat adversaries to the punch. Today, we use the Agentic Vulnerability Discovery Harness (AVDH) to rapidly analyze code and find exploit paths during proactive reviews, penetration tests, red team operations, and incident response engagements. By combining multi-agent orchestration with our frontline subject-matter expertise, this framework helps to augment the discovery and validation of routine vulnerabilities, enabling humans to focus their impact. To help defenders implement similar approaches for their own environments, we are sharing the details of this internal, point-in-time architecture for the first time. AVDH can also be used alongside CodeMender’s ongoing scanning to create a two-layered defense strategy. Real-World Results In the 10 months that we’ve been using AVDH, we’ve seen it have a significant impact. During a recent incident response investigation",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Staying Ahead of Adversarial AI Through Agentic Source Code Review",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33526",
+    "published": "2026-11-17T10:56:38+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "I&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x99;ve mentioned before in some of my diaries that it can be instructive to look at what appear to be &#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9c;generic&#;x26;#;xe2;&#;x26;#;x80;&#;x26;#;x9d; phishing messages in detail from time to time, since some of them might prove not to be as generic as they initially appear. I came across a good example of this while going over phishing messages delivered to our handler inbox over the past few weeks, when a message that, at first glance, appeared to be a fairly ordinary attempt at stealing e-mail credentials turned out to lead to a page interested in collecting a little more information than just the victim&#;x26;#;39;s password.",
+    "tags": [
+      "피싱"
+    ],
+    "title": "A phishing page interested in MX records, (Tue, Nov 17th)",
+    "url": "https://isc.sans.edu/diary/rss/33526"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMioAFBVV95cUxObXBjY2tpYklsRl9BbTVMalZPeUVFQUFwZUx2czl4dlEtaDlNaG9qZE41eVdEaFI0Z0d1elVoN3VlMFF6VURTQVJkMGN0R1Uyb2czM044ZXREb1NYdWpRUG05V3phOG05ZVNDM0xMZWNPdG9yWWl5X0lOX1ZWT3VBSVNGZ3gyVGR0R3NDejkyNnhqTHZQX1ZVQ2hwbVg2REFM",
+    "published": "2026-11-17T05:13:31+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI는 자사의 AI 모델을 35초 안에 멈추게 하는 비상 제동 시스템을 갖추고 있습니다.",
+    "tags": [],
+    "title": "OpenAI는 자사의 AI 모델을 35초 안에 멈추게 하는 비상 제동 시스템을 갖추고 있습니다.",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObXBjY2tpYklsRl9BbTVMalZPeUVFQUFwZUx2czl4dlEtaDlNaG9qZE41eVdEaFI0Z0d1elVoN3VlMFF6VURTQVJkMGN0R1Uyb2czM044ZXREb1NYdWpRUG05V3phOG05ZVNDM0xMZWNPdG9yWWl5X0lOX1ZWT3VBSVNGZ3gyVGR0R3NDejkyNnhqTHZQX1ZVQ2hwbVg2REFM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTE9vOHJIT05FNVgxN2FoS2dXTlVQS0xZUDloTzk1OHZtLWtlUWN5RU0yemhlQzktNklEMk0wY2RHSVFFd05IT3ptdXdCQ21SSVhGeXVKRVh3",
+    "published": "2026-11-17T07:08:06+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "AI 해킹 수법 계속 바뀌는데…금융사 홈페이지 보안 점검 기준은 ‘그대로’",
+    "tags": [
+      "금융"
+    ],
+    "title": "AI 해킹 수법 계속 바뀌는데…금융사 홈페이지 보안 점검 기준은 ‘그대로’",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9vOHJIT05FNVgxN2FoS2dXTlVQS0xZUDloTzk1OHZtLWtlUWN5RU0yemhlQzktNklEMk0wY2RHSVFFd05IT3ptdXdCQ21SSVhGeXVKRVh3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNcl9hR1hJekxRZXpHQjBFNWc2MGRfRU5GMllhWFZEbTJoX0NqbDdWRUpvZ244eXptajNJdjdkVFFrN2Z0VDlCVmg0UmY2THowLURFQl9MNWFMMnJGY3p1UVJCQ2llanRPb09iMmVOY0hUUTRzb2VYYV9EQ0ZOVFpwQQ",
+    "published": "2026-11-17T04:53:28+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "“금융보안원까지 뚫렸다”… 시민단체 “금융사, 2차피해까지 책임져야”",
+    "tags": [
+      "금융"
+    ],
+    "title": "“금융보안원까지 뚫렸다”… 시민단체 “금융사, 2차피해까지 책임져야”",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcl9hR1hJekxRZXpHQjBFNWc2MGRfRU5GMllhWFZEbTJoX0NqbDdWRUpvZ244eXptajNJdjdkVFFrN2Z0VDlCVmg0UmY2THowLURFQl9MNWFMMnJGY3p1UVJCQ2llanRPb09iMmVOY0hUUTRzb2VYYV9EQ0ZOVFpwQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5tNGNVWjloblZ1T0hlNVF4SFNuWHdYTTVuZEhOeGNDTGJ1SHZBMGN1NFZoVU1Idk1RSlliMUE1bExZMGRWQ2VPQ3FtRWQ1ZVpHbldJY1ZGTkdDdDhGRmRYWUZ2RTVIN2JwWmNN",
+    "published": "2026-11-17T07:29:13+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 해킹 잇따르는데 보안점검은 과도기…과징금 기준은 완화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 해킹 잇따르는데 보안점검은 과도기…과징금 기준은 완화",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5tNGNVWjloblZ1T0hlNVF4SFNuWHdYTTVuZEhOeGNDTGJ1SHZBMGN1NFZoVU1Idk1RSlliMUE1bExZMGRWQ2VPQ3FtRWQ1ZVpHbldJY1ZGTkdDdDhGRmRYWUZ2RTVIN2JwWmNN?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249890",
+    "published": "2026-11-17T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "회계부정, 안심하고 신고하세요. 국민권익위원회-금융감독원, 신고자 보호 강화를 위한 업무협약 체결",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249890&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249888",
+    "published": "2026-11-17T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융감독원, 금융권 침해사고 관련 대부업권 설명회 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249888&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE50cTdlMU5DVFZJN1lFbC1JRGtEVUo4bF9ObTM4TTE4U29GYnRMVG1uaHFtcEYyMGE2WXBuWU5BR1QzRVY4SkFQSl9mQzJyYjRGXzFOc21ia3JwcGRMNEE3ZWNPdW9hVVg1N1llQTV30gFyQVVfeXFMUFd5UTB1Yk1mallIT1dsd3VtSmFrUFlOLVl0MVZRTlM4NXJsbnVQc2wxSi1ZNW5JVFVVdVRGS2huSGF2c242Z09aUW13QVFyUkdXYWtFOEZZV0VPaWxvUUFGcEtTbkR6WlBFa3pWb01MV3Vn",
+    "published": "2026-11-17T11:30:55+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“식별 목적 없는 데이터 활용, 규제 완화해야”",
+    "tags": [],
+    "title": "“식별 목적 없는 데이터 활용, 규제 완화해야”",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE50cTdlMU5DVFZJN1lFbC1JRGtEVUo4bF9ObTM4TTE4U29GYnRMVG1uaHFtcEYyMGE2WXBuWU5BR1QzRVY4SkFQSl9mQzJyYjRGXzFOc21ia3JwcGRMNEE3ZWNPdW9hVVg1N1llQTV30gFyQVVfeXFMUFd5UTB1Yk1mallIT1dsd3VtSmFrUFlOLVl0MVZRTlM4NXJsbnVQc2wxSi1ZNW5JVFVVdVRGS2huSGF2c242Z09aUW13QVFyUkdXYWtFOEZZV0VPaWxvUUFGcEtTbkR6WlBFa3pWb01MV3Vn?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE5zTGs1Z2x4cEVFYks2QUlJc1BxNmpNQzMteWQ2anBhb3VtRTdqR1NRLWI2OUZoVWdSUmxfUEVMQjl2eWJzY3kxSUhsOUd4bkdOTWhlMDlaUnNTeWVEWnRxbUhzckpBa3Myd0ktTlNQTlA",
+    "published": "2026-11-17T06:49:07+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "과징금 받으면 뭐하나…메가커피, 또 고객 30명 개인정보 유출",
+    "tags": [],
+    "title": "과징금 받으면 뭐하나…메가커피, 또 고객 30명 개인정보 유출",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zTGs1Z2x4cEVFYks2QUlJc1BxNmpNQzMteWQ2anBhb3VtRTdqR1NRLWI2OUZoVWdSUmxfUEVMQjl2eWJzY3kxSUhsOUd4bkdOTWhlMDlaUnNTeWVEWnRxbUhzckpBa3Myd0ktTlNQTlA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiggFBVV95cUxPbG41RUdSLWo4VnNYUkJzbk5DN2JTSFZzTVpaSkUzSHhtak04OXQ4YktLdG51djEzbzBaWjFpZnN5OHNHMVRmeFlVVlZWb1R0b2FMVXJmWGpsSkgyQXFrVzRjQTRxOXNkMHZPZ1kwWXQ4NEp5Y0tmd2M3dXdnYi1mNXpR0gGWAUFVX3lxTFBYQkFkTlU1aEJMeUZkeENlTldkNm02VUNmN0xhTF9GRER2U3dPcmc1NzZXVHVMR0NBbU5TTWxVbnEyV0FiR3FfTzJlMzVHbDZKamtsWEdwNktNbHZ0TTR3TmpRMXNOOFAwRGJwbFB6S2lib05sbERkZFF2SnhyQl9hcERsRmVCU1I4Z2p3c2pZdU5pSTh2UQ",
+    "published": "2026-11-16T07:12:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 브라질과 개인정보 보호 협력 업무 협약 체결",
+    "tags": [],
+    "title": "개인정보위, 브라질과 개인정보 보호 협력 업무 협약 체결",
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbG41RUdSLWo4VnNYUkJzbk5DN2JTSFZzTVpaSkUzSHhtak04OXQ4YktLdG51djEzbzBaWjFpZnN5OHNHMVRmeFlVVlZWb1R0b2FMVXJmWGpsSkgyQXFrVzRjQTRxOXNkMHZPZ1kwWXQ4NEp5Y0tmd2M3dXdnYi1mNXpR0gGWAUFVX3lxTFBYQkFkTlU1aEJMeUZkeENlTldkNm02VUNmN0xhTF9GRER2U3dPcmc1NzZXVHVMR0NBbU5TTWxVbnEyV0FiR3FfTzJlMzVHbDZKamtsWEdwNktNbHZ0TTR3TmpRMXNOOFAwRGJwbFB6S2lib05sbERkZFF2SnhyQl9hcERsRmVCU1I4Z2p3c2pZdU5pSTh2UQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE5HeE1ldU5UYjMxaF9abnJ4aGtQTXNYZVN2SF81c29KVTBTU0JpMUd3OThkUXh6Sk1OWF9ISG16ZnVuYmpCOHJ4LUhxcFpta3ZMdjE4aFo3R3dfazI3VFE",
+    "published": "2026-11-17T08:04:14+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "'잊힐 권리' 법제화… 개인정보위, 사망자 정보 기준 만든다",
+    "tags": [],
+    "title": "'잊힐 권리' 법제화… 개인정보위, 사망자 정보 기준 만든다",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5HeE1ldU5UYjMxaF9abnJ4aGtQTXNYZVN2SF81c29KVTBTU0JpMUd3OThkUXh6Sk1OWF9ISG16ZnVuYmpCOHJ4LUhxcFpta3ZMdjE4aFo3R3dfazI3VFE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE96VHhCak9xcTgzR0JjbjlpaDZzUG1JUVVHX3dHVG13OHhCUFJ5S1V5QUlWVWdRQ0x4RmNUdlVNM3paa2R1QlJMTEZQNzN2V2dENUotbDN6VXRaNC1WekE",
+    "published": "2026-11-17T08:25:32+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "연령 확인에 유족 정보까지…플랫폼 업계 부담",
+    "tags": [],
+    "title": "연령 확인에 유족 정보까지…플랫폼 업계 부담",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE96VHhCak9xcTgzR0JjbjlpaDZzUG1JUVVHX3dHVG13OHhCUFJ5S1V5QUlWVWdRQ0x4RmNUdlVNM3paa2R1QlJMTEZQNzN2V2dENUotbDN6VXRaNC1WekE?oc=5"
   }
 ]
