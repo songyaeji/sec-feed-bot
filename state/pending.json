@@ -1864,5 +1864,482 @@
     "tags": [],
     "title": "토스, 통신 마이데이터 지정…최적 요금제 찾아준다",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE15NUo2YWNJa3dQaHJpWW9yX0gtdGdYVDlWX2lBeDNaVXZGZkJ6a3Z4Z2N1emZEN0dCOXJKWnI1TXRBaVN3QTZYcTI1Wi1lbzBaR1pV0gFYQVVfeXFMTnJXeEVGSmE2ZDVLa0JqSXY4Q1FXRG9MWmhaMFdibF9ha0VDcE9JNmdDLVRkakxNYVBWbVlGSHdWOEhyN2NiVFBqbW1RaWktZ1NvQTBHLURfTg?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-130320",
+    "published": "2026-11-16T23:17:15.177",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI mishandles nameArg and userid bounds checking, possibly leading to arbitrary code execution via crafted messages.",
+    "tags": [],
+    "title": "CVE-2026-130320 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130320"
+  },
+  {
+    "category": "high",
+    "cvss": 9.3,
+    "id": "CVE-2026-130327",
+    "published": "2026-11-16T23:17:15.313",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "In Open Object Rexx (ooRexx) before 5.2.0, RXAPI relies on a world-writable /tmp file unless XDG_RUNTIME_DIR is set, or localhost TCP port 10010, allowing RXAPI communication by any local user, e.g., for injection of a macro that will be executed by a REXX script.",
+    "tags": [],
+    "title": "CVE-2026-130327 (CVSS 9.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130327"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-79614",
+    "published": "2026-11-17T02:17:22.743",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An out-of-bounds write vulnerability in “libclinkc.so” in Zyxel DX3301-T0/EX3301-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an unauthenticated attacker to elevate privileges and potentially execute arbitrary commands by sending a crafted HTTP request. WAN access is disabled by default on these devices.",
+    "tags": [],
+    "title": "CVE-2026-79614 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-79614"
+  },
+  {
+    "category": "high",
+    "cvss": 4.7,
+    "id": "CVE-2026-18909",
+    "published": "2026-08-06T05:16:40.937",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A stack-based buffer overflow vulnerability exists in ELAN Microelectronics Corp. ELAN Smart-Pad on Windows (ETD.sys and ETDSMBus.sys). During Intel SMBus recovery, ETDSMBus.sys does not enforce an upper-bound check on the hardware-derived report count, allowing an out-of-range value to be forwarded to ETD.sys where it is used as a loop counter for a stack buffer copy without destination size validation. A local attacker with standard user privileges can trigger a kernel bugcheck (BSOD 0xF7 DRIVER_OVERRAN_STACK_BUFFER), resulting in denial of service. This issue affects ELAN Smart-Pad through ETD24.21.52.3.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-18909 (CVSS 4.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18909"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-125423",
+    "published": "2026-11-15T21:16:54.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A repository created with auto-init accepted pushes before its initialization had finished, and the initial commit was built in a checkout of whatever the repository already contained. A user who is allowed to create repositories could push a crafted tree during that window so that writing the README followed a symbolic link and overwrote a server-side git hook, which runs commands as the Gitea system user. The initial commit is now built in a freshly initialized directory, and a new repository only becomes ready, and accepts pushes, once its initialization is complete.",
+    "tags": [],
+    "title": "CVE-2026-125423 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125423"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-118389",
+    "published": "2026-11-15T22:17:17.350",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The RubyGems package registry accepted gems whose platform, dependency names or dependency version requirements contain newline characters. Because the compact index served to clients is line-based, a user who can publish a gem to an owner's registry could forge index entries, such as packages that do not exist or additional versions of an existing gem with dependencies of their choice. Clients that resolve gems from that registry could then be led to install attacker-chosen dependencies. Gems with such metadata are now rejected.",
+    "tags": [],
+    "title": "CVE-2026-118389 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118389"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-130361",
+    "published": "2026-11-17T02:17:18.690",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AdminNeo before 5.9.1 contains a parameter injection vulnerability in its ClickHouse driver that allows attackers to inject ClickHouse HTTP query parameters through an unencoded db GET parameter. Attackers can lure a logged-in victim into opening a crafted GET link that injects a query parameter, bypassing the POST-only CSRF token. ClickHouse then executes attacker-chosen SQL under the victim's credentials to read, modify, or drop data.",
+    "tags": [],
+    "title": "CVE-2026-130361 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130361"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-130366",
+    "published": "2026-11-17T02:17:19.593",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AdminNeo before 5.9.1 contains an authentication bypass vulnerability in the ClickHouse driver that allows remote attackers to log in to passwordless accounts without the configured defaultPasswordHash password. Attackers who know the name of a ClickHouse no_password account can submit any non-empty password, because connect() skips openPasswordless(), and obtain a session with that account's rights.",
+    "tags": [],
+    "title": "CVE-2026-130366 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130366"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-130369",
+    "published": "2026-11-17T02:17:20.130",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authorization bypass vulnerability in multisite deployments that allows attackers to overwrite passkeys of accounts on other tenants via a shared PHP session store. Attackers can run WebAuthn prepare() for a login on one tenant, then replay the session against /api/webauthn/register on another tenant or the master to replace that user's passkeys and log in as admin.",
+    "tags": [],
+    "title": "CVE-2026-130369 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130369"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-130371",
+    "published": "2026-11-17T02:17:20.490",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authentication bypass vulnerability because the web installer ignores the legacy config/database.php during 3.x upgrades. Unauthenticated attackers can reinstall the site against an attacker-controlled database and create their own administrator account to take over the application.",
+    "tags": [],
+    "title": "CVE-2026-130371 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130371"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-130380",
+    "published": "2026-11-17T02:17:22.037",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AdminNeo before 5.9.1 contains an authentication bypass vulnerability in the sqlsrv-based MS SQL driver that allows unauthenticated attackers to log in by submitting an empty username. Attackers can supply any non-empty password, triggering Windows integrated authentication that grants a full session with the web server identity's SQL Server privileges.",
+    "tags": [],
+    "title": "CVE-2026-130380 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130380"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-130382",
+    "published": "2026-11-17T02:17:22.380",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AdminNeo before 5.9.1 contains an authentication bypass vulnerability in OtpLoginPlugin that allows attackers knowing the database password to skip TOTP verification by abusing the permanent-login cookie. Attackers can submit a login with a wrong OTP and permanent=1 to obtain a neo_permanent cookie, then replay it to gain full authenticated database access.",
+    "tags": [],
+    "title": "CVE-2026-130382 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130382"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209563",
+    "published": "2026-11-17T13:23:38+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "모니터랩(대표 이광후)이 지난 12일 서울 여의도 콘래드 서울에서 열린 금융정보보호 컨퍼런스 'FISCON 2026'에 참여해 제로트러스트와 AI 기반 보안 전략을 발표했다.올해 20회를 맞은 이번 행사는 'Now for Next Finance'를 주제로 디지털 금융 환경에 적합한 AI 기반 보안체계 전환을 논의하기 위해 마련됐다.현장에서 모니터랩은 CASB, GenAI Security, RBI, ZTNA 등 제로트러스트 솔루션과 웹 보안 솔루션 WAAP, 파일 무해화 솔루션 CDR을 아우르는 통합 포트폴리오를 공개했다. 발표와 전",
+    "tags": [
+      "금융"
+    ],
+    "title": "모니터랩, 'FISCON 2026' 참가...금융권 특화 제로트러스트·AI 보안 해법 제시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209563"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209562",
+    "published": "2026-11-17T12:56:14+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "파수 AI(대표 조규곤)는 17일 오전 서울 강남구 웨스틴 서울 파르나스에서 'FDI 서밋 2026(Fasoo Digital Intelligence Summit 2026)-하반기'를 개최하고 안전한 AI 가치 극대화 전략을 공유했다.기업 및 기관의 CIO, CISO, CAIO를 대상으로 열린 이번 행사는 '안전한 AI 가치 극대화 전략(Maximizing Value from AI Securely)'을 주제로 진행됐다. 행사에는 금융, 유통, 제조, 법률 등 주요 산업군의 보안 및 AX 리더 50여 명이 참석해 최신 기술 동향과 대응",
+    "tags": [
+      "금융"
+    ],
+    "title": "파수 AI, 'FDI 서밋 2026' 개최...안전한 AI 가치 극대화 전략 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209562"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209561",
+    "published": "2026-11-17T12:51:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "코헤시티(Cohesity)는 제약·헬스케어 기업 안국약품과 자동차 전장 솔루션 기업 모트렉스가 'Cohesity FortKnox for NetBackup'을 도입해 전사 통합 데이터 보호 체계를 구축했다고 17일 밝혔다.이번 도입은 두 기업이 주요 업무 시스템과 핵심 사업 데이터를 안전하게 보호하고, 글로벌 시장 진출에 필요한 데이터 복구 역량을 높이기 위해 진행됐다.안국약품은 의약품 제조와 품질관리 환경에서 요구되는 데이터 무결성과 복구 역량을 높이기 위해 본사, 연구소, 생산본부의 백업 데이터를 관리하는 체계를 마련했다. 이를",
+    "tags": [],
+    "title": "코헤시티, 안국약품·모트렉스에 통합 데이터 보호 체계 구축",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209561"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209560",
+    "published": "2026-11-17T12:41:40+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "실리콘밸리 기반 기업 워크사인(대표 김만수)이 보안 컨테이너 기술을 적용한 기업 맞춤형 AI 솔루션 '워크사인'을 국내 시장에 출시한다고 17일 밝혔다.워크사인은 기업이 설정한 권한 범위 내에서 AI가 업무 초안을 준비하고 담당자가 이를 검토 및 승인하는 방식의 서비스다. 직원이 업무 목표와 범위를 지정하면 AI가 사내 자료를 검색 및 정리해 보고서나 고객 제안서, 회의록 등의 초안을 작성한다. 이후 담당자가 내용과 수신자 등을 확인하고 최종 발송이나 실행을 승인한다.기업마다 사용하는 내부 시스템과 데이터, 승인 절차가 다르다는 점",
+    "tags": [],
+    "title": "분리된 보안 환경서 자료 검색부터 승인까지...워크사인, 한국 시장 공략",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209560"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209559",
+    "published": "2026-11-17T10:55:21+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국립한국해양대학교 산학협력단의 연구행정통합시스템(rERP)이 외부 해킹 공격을 받아 개인정보 1,359건이 유출된 사실이 확인됐다. 대학은 시스템에서 해킹 화면을 발견하고 긴급 접속 차단에 나섰으며, 다음 날 유지보수업체로부터 개인정보 유출 사실을 통보받았다.국립한국해양대학교 산학협력단은 11월 16일 공식 홈페이지에 ‘연구행정통합시스템(rERP) 침해사고 발생 및 개인정보 유출 안내’를 게시하고 사고 경위와 피해 규모를 공개했다.대학 측에 따르면 지난 11월 14일 연구행정통합시스템에서 해킹 화면을 확인하고 접속 차단 등 긴급 대",
+    "tags": [
+      "금융"
+    ],
+    "title": "국립한국해양대 연구행정시스템 해킹…개인정보 1,359건 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209559"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209558",
+    "published": "2026-11-17T07:42:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한성대학교 종합정보시스템이 외부 해킹 공격을 받아 대학 구성원의 웹메일 계정 정보 약 2만5천 건이 유출되는 사고가 발생했다. 유출 정보에는 이름과 학번, 이메일 주소뿐 아니라 암호화된 비밀번호와 접속 IP, 로그인 기록 등이 포함돼 추가적인 계정 탈취 위험에 대한 조사가 필요한 상황이다.한성대학교는 11월 16일 공식 홈페이지에 ‘개인정보 유출 사실 안내 및 사과문’을 게시하고 해킹 사고 경위와 대응 조치를 공개했다.대학 측에 따르면 공격자는 11월 16일 오전 0시 55분부터 오전 2시 55분까지 약 2시간 동안 종합정보시스템",
+    "tags": [
+      "금융"
+    ],
+    "title": "한성대학교 해킹으로 웹메일 계정 2만5천 건 유출…암호화된 비밀번호까지 노출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209558"
+  },
+  {
+    "author": "Tom Fakterman",
+    "category": "research",
+    "id": "https://unit42.paloaltonetworks.com/?p=189752",
+    "published": "2026-11-16T23:00:55+00:00",
+    "severity": "info",
+    "source": "Unit 42",
+    "summary": "We uncover a Southeast Asian cyberespionage campaign deploying PerfectPioneer RAT, modular KUKURAT and stealth HTTP/3 C2 communication channels. The post QUIC and Covert: Novel HTTP/3-Powered RATs Target Southeast Asian Governments appeared first on Unit 42 .",
+    "tags": [],
+    "title": "QUIC and Covert: Novel HTTP/3-Powered RATs Target Southeast Asian Governments",
+    "url": "https://unit42.paloaltonetworks.com/custom-rats-target-southeast-asia-governments/"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
+    "published": "2026-11-17T02:12:17+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A suspected supply chain attack targeting Optimizely has led to malicious JavaScript being loaded on numerous popular websites, including Zoom, CNN, Fox News, BBC, Salesforce, and GitLab, exposing visitors to scripts designed to steal cryptocurrency and payment information and exploit vulnerabilities in iOS devices. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware",
+    "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/",
+    "published": "2026-11-16T22:54:00+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "Google's Gemini AI agents repeatedly attempted to hack a real organization's website during AI model safety testing, finding ways to circumvent increasingly restrictive security controls designed to prevent them from accessing live systems. [...]",
+    "tags": [],
+    "title": "Gemini AI agents repeatedly bypassed safeguards to attack real website",
+    "url": "https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/uber-says-150000-impacted-third-party-breach",
+    "published": "2026-11-18T01:20:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "In breach notification letters, the rideshare company said it was notified by a third party service provider on October 9 that internal credentials were stolen and used to access Uber’s account.",
+    "tags": [],
+    "title": "Uber says nearly 150,000 impacted by third-party breach",
+    "url": "https://therecord.media/uber-says-150000-impacted-third-party-breach"
+  },
+  {
+    "author": "Shreya Kale",
+    "category": "research",
+    "id": "https://www.microsoft.com/en-us/security/blog/?p=151048",
+    "published": "2026-11-17T00:08:41+00:00",
+    "severity": "info",
+    "source": "Microsoft Security Blog",
+    "summary": "Microsoft Threat Intelligence observed a high-volume phishing campaign using Microsoft 365 outage-themed lures to target organizations across multiple sectors worldwide. The post High volume phishing campaign uses Microsoft 365 outage lures to target multiple industry sectors appeared first on Microsoft Security Blog .",
+    "tags": [
+      "피싱"
+    ],
+    "title": "High volume phishing campaign uses Microsoft 365 outage lures to target multiple industry sectors",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/16/high-volume-phishing-campaign-uses-microsoft-365-outage-lures-target-multiple-industry-sectors-2/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33524",
+    "published": "2026-11-17T02:05:15+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Tuesday, November 17th, 2026 https://isc.sans.edu/podcastdetail/10182, (Tue, Nov 17th)",
+    "url": "https://isc.sans.edu/diary/rss/33524"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiU0FVX3lxTE9sYVVsVl9COTB3S2xvbDVDeElVZ1R3NlVEd3lud000MHNSTklSMXVBbElkUXJSelBPMHpzNWg5bGJ6SV9vYkVkYWJQM1BYbDNjdGVj0gFYQVVfeXFMTUxubllveU9OclpGSDRNbnhtbE9oYTdwTkFMZHBjRm50MUczQk83dEMtYlVHSThQWTE5ZFZwNXVhNHpZRDIyMEM0TElCczVHcFdUekJlejhkNg",
+    "published": "2026-11-16T02:24:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 오늘부터 특정감사…금감원, 업권별 보안점검 확대",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 오늘부터 특정감사…금감원, 업권별 보안점검 확대",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9sYVVsVl9COTB3S2xvbDVDeElVZ1R3NlVEd3lud000MHNSTklSMXVBbElkUXJSelBPMHpzNWg5bGJ6SV9vYkVkYWJQM1BYbDNjdGVj0gFYQVVfeXFMTUxubllveU9OclpGSDRNbnhtbE9oYTdwTkFMZHBjRm50MUczQk83dEMtYlVHSThQWTE5ZFZwNXVhNHpZRDIyMEM0TElCczVHcFdUekJlejhkNg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE85TXJvV2tuYV9ULVZzTi1xZ093UmJyY3d2TzhFLTZwOW82cER4S2ZKQVM4cWZWTmFjUzh1dzE3amdJTnlRWTQ0dFg3N2Y2dnRoVWEtOTQ0Y3UwaUFxMnc",
+    "published": "2026-11-17T02:50:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "野 잇단 개인정보 유출에 ‘정부 책임론’…“보안체계 무너져”",
+    "tags": [],
+    "title": "野 잇단 개인정보 유출에 ‘정부 책임론’…“보안체계 무너져”",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE85TXJvV2tuYV9ULVZzTi1xZ093UmJyY3d2TzhFLTZwOW82cER4S2ZKQVM4cWZWTmFjUzh1dzE3amdJTnlRWTQ0dFg3N2Y2dnRoVWEtOTQ0Y3UwaUFxMnc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE5Qd25GSTg5T2hER0xfbTFBQWZjSUJ3VFd6VndYMWhhY1Z5bWx5V0VUeWV2MWJZYzZiNjhVcXNja01ORlhQOWhseFNwa3pGdjBXT1VoU3NYd3J1djF4ZXdPMjltbzZ1eFBsUklNSE1YYW9RSVk",
+    "published": "2026-11-16T22:30:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[핀테크핫이슈] 금융지주 지배구조 개편 본격화…해킹 당한 금융보안원",
+    "tags": [
+      "금융"
+    ],
+    "title": "[핀테크핫이슈] 금융지주 지배구조 개편 본격화…해킹 당한 금융보안원",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5Qd25GSTg5T2hER0xfbTFBQWZjSUJ3VFd6VndYMWhhY1Z5bWx5V0VUeWV2MWJZYzZiNjhVcXNja01ORlhQOWhseFNwa3pGdjBXT1VoU3NYd3J1djF4ZXdPMjltbzZ1eFBsUklNSE1YYW9RSVk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE8xd09xdEhMdHBDeFdLeEMxSDlXeGdtN2hBMnh3bnRtOTVJeDkyTjB0ZFEwWXFiVWZzWi1wM1BqdlVSa3gwc013QjJZZFJWMTZUaW9fTUdoVktMMHFrd0NvdFlzWU1QYnpO",
+    "published": "2026-11-17T04:20:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융사 해킹 조사하는 금융보안원도 공격받아…금융위 소비자 피해 방지 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융사 해킹 조사하는 금융보안원도 공격받아…금융위 소비자 피해 방지 주문",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8xd09xdEhMdHBDeFdLeEMxSDlXeGdtN2hBMnh3bnRtOTVJeDkyTjB0ZFEwWXFiVWZzWi1wM1BqdlVSa3gwc013QjJZZFJWMTZUaW9fTUdoVktMMHFrd0NvdFlzWU1QYnpO?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9fZm5ESlhpREU5RHFydkJEMkpXWEpMeUNZdWVXQWFiSlB3MTR6WU1WaDFSR1FwbTNZb0xGcktBZ0Vvc1V3em1UV2ZIeV9EbEFPaWhZbHJ6RWFlbEZlOUFfQm5zcnJOd24xbHc",
+    "published": "2026-11-16T22:54:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[기자수첩] 금융보안원마저 해킹…\"흔들린 금융권 신뢰\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "[기자수첩] 금융보안원마저 해킹…\"흔들린 금융권 신뢰\"",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9fZm5ESlhpREU5RHFydkJEMkpXWEpMeUNZdWVXQWFiSlB3MTR6WU1WaDFSR1FwbTNZb0xGcktBZ0Vvc1V3em1UV2ZIeV9EbEFPaWhZbHJ6RWFlbEZlOUFfQm5zcnJOd24xbHc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE9KSTN1ZDhfXzR4Yk9DNzBxNUw0SzN4OGp4b0dBMjVZUUE3RXhHd3A4VWpDMEdISUd3TnFWdjJfdWx5MFhQcTVMUmtvT1MyZUtEdE4xYUVnS1MzQ3lXQWxQc3dvRlp4V2l3VTQ1U3Yydmw",
+    "published": "2026-11-16T23:44:41+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원도 해킹당했다…금융위, 사고 원인 전면 조사·재발방지 쇄신 주문",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원도 해킹당했다…금융위, 사고 원인 전면 조사·재발방지 쇄신 주문",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9KSTN1ZDhfXzR4Yk9DNzBxNUw0SzN4OGp4b0dBMjVZUUE3RXhHd3A4VWpDMEdISUd3TnFWdjJfdWx5MFhQcTVMUmtvT1MyZUtEdE4xYUVnS1MzQ3lXQWxQc3dvRlp4V2l3VTQ1U3Yydmw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE1MdFhXS3NCWlNzT0wybjRYRW9JSnFmQmloQTdXVGREczByX1RDOVRfRnlfYUotYTNwUlRzR0RpV2FtdTc3RUlHWlJ3bmFXdEtHZlRFQnc3OVJIY2J5V2VxQ2I1SGplSjE0",
+    "published": "2026-11-17T01:34:16+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[정책포커스] 금융위, 가상자산사업자에 대한 규제 고도화...금융보안원 침해사고 대책 마련 지시",
+    "tags": [
+      "금융"
+    ],
+    "title": "[정책포커스] 금융위, 가상자산사업자에 대한 규제 고도화...금융보안원 침해사고 대책 마련 지시",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1MdFhXS3NCWlNzT0wybjRYRW9JSnFmQmloQTdXVGREczByX1RDOVRfRnlfYUotYTNwUlRzR0RpV2FtdTc3RUlHWlJ3bmFXdEtHZlRFQnc3OVJIY2J5V2VxQ2I1SGplSjE0?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE1mNm5BQ3pNUjQyT0JwTFJqWHJTbTJPaHJsZDQxZjB5MFdYeTBKLWVsYndDX1kyVzFFX09qblF6MFJWaFZCQWdaS1ZIN1JPMklIZkdiSWc1Z3M0Yi1COW1lWWZYQ1hfSFRuWVE",
+    "published": "2026-11-17T00:30:37+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원, AI사업 대신 내부 보안 강화에 집중",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원, AI사업 대신 내부 보안 강화에 집중",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1mNm5BQ3pNUjQyT0JwTFJqWHJTbTJPaHJsZDQxZjB5MFdYeTBKLWVsYndDX1kyVzFFX09qblF6MFJWaFZCQWdaS1ZIN1JPMklIZkdiSWc1Z3M0Yi1COW1lWWZYQ1hfSFRuWVE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE9uQkJkcVJPVjFlQ1Zlb0ZLVC1YbTdZZVBCOGpIMHhUbnZKcVQ0bW9EUFVGQU0yelpISlNPTUpSeDlxU0FyN2o2NTFTQkhnRk1HYmdpd2JHRXUzV0tYeUQ2NnNsejE3M0E",
+    "published": "2026-11-17T02:02:50+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "박상원 금융보안원장, 해킹 사고에 금융위 질책…\"조직·업무·IT 전면 쇄신하라\"",
+    "tags": [
+      "금융"
+    ],
+    "title": "박상원 금융보안원장, 해킹 사고에 금융위 질책…\"조직·업무·IT 전면 쇄신하라\"",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9uQkJkcVJPVjFlQ1Zlb0ZLVC1YbTdZZVBCOGpIMHhUbnZKcVQ0bW9EUFVGQU0yelpISlNPTUpSeDlxU0FyN2o2NTFTQkhnRk1HYmdpd2JHRXUzV0tYeUQ2NnNsejE3M0E?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE1BSmxEUV9jdkRoNEh6UXJjaVJ6Y2dxRTFCSkQxeXQ5OThLWko4Y2h4czNiQUpJeWhxQ2R2NkE2dmlBR05vbm9GSmxhSQ",
+    "published": "2026-11-17T02:21:06+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "구호 외치는 금융정의연대, 금융권 개인정보 유출 사태 규탄 및 대책 촉구",
+    "tags": [
+      "금융"
+    ],
+    "title": "구호 외치는 금융정의연대, 금융권 개인정보 유출 사태 규탄 및 대책 촉구",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1BSmxEUV9jdkRoNEh6UXJjaVJ6Y2dxRTFCSkQxeXQ5OThLWko4Y2h4czNiQUpJeWhxQ2R2NkE2dmlBR05vbm9GSmxhSQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE9Bb1pYOGtIaVdkcWlFc2dRVEU3elViY21HNW03U1dzWmRTcDNEOWprdkxuZEl0d01XQ0JWMGVFYjRBMERfMTZ6SlRvQUhsaURiM3pZNEdfMHVuclljb014dw",
+    "published": "2026-11-16T23:34:16+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융·대학 이어 정부 이메일까지 뚫렸다.. 해킹 도미노에 합동점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융·대학 이어 정부 이메일까지 뚫렸다.. 해킹 도미노에 합동점검",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Bb1pYOGtIaVdkcWlFc2dRVEU3elViY21HNW03U1dzWmRTcDNEOWprdkxuZEl0d01XQ0JWMGVFYjRBMERfMTZ6SlRvQUhsaURiM3pZNEdfMHVuclljb014dw?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249883",
+    "published": "2026-11-17T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "전금업자, 온투업자 침해사고 대응 관련 간담회 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249883&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTFA1aGZnUHFSbFd6Znp6RWM3cjg5XzRaOGplSGFoS1JLd3NIY3NQMF9xREZ1TnRUQlEyNVp3WnpBUWZaZ01IQnprSDFvRnBjTXhyZ1ZIM1BB",
+    "published": "2026-11-16T13:54:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개보위, 중남미 첫 브라질 개인정보 감독기구와 협약",
+    "tags": [],
+    "title": "개보위, 중남미 첫 브라질 개인정보 감독기구와 협약",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA1aGZnUHFSbFd6Znp6RWM3cjg5XzRaOGplSGFoS1JLd3NIY3NQMF9xREZ1TnRUQlEyNVp3WnpBUWZaZ01IQnprSDFvRnBjTXhyZ1ZIM1BB?oc=5"
   }
 ]
