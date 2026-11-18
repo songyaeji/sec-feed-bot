@@ -2316,5 +2316,1021 @@
     "tags": [],
     "title": "개보위원장, GPA·CoE 총회 참석… 감독기구 역량 강화 방안 등 논의",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBWX0F4S0l3aEEydzJwMDJSQW9GT1JiMXcyRHZUVkV4UDRhY0lGVEcwMC1BT3JhMTBFa1NFZkVfd2dCc19HZXBMX25FVjY3VUpzTjlRQ3A0dlVnUQ?oc=5"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2022-43931",
+    "published": "2023-01-03T04:15:09.470",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Out-of-bounds write vulnerability in Remote Desktop Functionality in Synology VPN Plus Server before 1.4.3-0534 and 1.4.4-0635 allows remote attackers to execute arbitrary commands via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2022-43931 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-43931"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2024-29241",
+    "published": "2024-03-28T07:16:12.177",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Missing authorization vulnerability in System webapi component in Synology Surveillance Station before 9.2.0-9289 and 9.2.0-11289 allows remote authenticated users to obtain non-sensitive information, write sensitive configurations in DSM, and reboot or shutdown NAS via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2024-29241 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29241"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2024-10443",
+    "published": "2024-11-15T11:15:09.750",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability in Task Manager component in Synology BeePhotos before 1.0.2-10026 and 1.1.0-10053 and Synology Photos before 1.6.2-0720 and 1.7.0-0795 allows remote attackers to execute arbitrary code via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2024-10443 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10443"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2024-13242",
+    "published": "2025-01-09T19:15:18.033",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Exposed Dangerous Method or Function vulnerability in Drupal Swift Mailer allows Resource Location Spoofing.\n\nThis issue affects Swift Mailer: *.*.",
+    "tags": [
+      "금융",
+      "RCE"
+    ],
+    "title": "CVE-2024-13242 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13242"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2024-10442",
+    "published": "2025-03-19T03:15:11.790",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Off-by-one error vulnerability in the transmission component in Synology Replication Service before 1.0.12-0066, 1.2.2-0353 and 1.3.0-0423 and Synology Unified Controller (DSMUC) before 3.1.4-23079 allows remote attackers to execute arbitrary code, potentially leading to a broader impact across the system via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2024-10442 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-10442"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2025-67484",
+    "published": "2026-02-03T02:16:09.593",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Vulnerability in Wikimedia Foundation MediaWiki. This vulnerability is associated with program files includes/Api/ApiFormatXml.Php.\n\nThis issue affects MediaWiki: from * before 1.39.16, 1.43.6, 1.44.3, 1.45.1.",
+    "tags": [],
+    "title": "CVE-2025-67484 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67484"
+  },
+  {
+    "category": "high",
+    "cvss": 9.0,
+    "id": "CVE-2026-40541",
+    "published": "2026-08-28T08:16:40.713",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "An improper neutralization of input during web page generation ('Cross-site Scripting') vulnerability in extract domain in Synology Chat Server before 2.4.5-22148 allows remote authenticated users, via a UI interaction, to read or write arbitrary files and conduct denial-of-service attacks in DSM.",
+    "tags": [],
+    "title": "CVE-2026-40541 (CVSS 9.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40541"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-80143",
+    "published": "2026-09-22T16:17:57.543",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000/SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers to execute arbitrary shell commands as root by exploiting an undocumented mfc eeprom read command that passes unsanitized user input to a system() call. Attackers can authenticate as any user to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "tags": [],
+    "title": "CVE-2026-80143 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80143"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-80144",
+    "published": "2026-09-22T16:17:59.303",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000/SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers to execute arbitrary shell commands as root by exploiting an undocumented mfc eeprom write command that passes unsanitized user input to a system() call. Attackers can authenticate as any user to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "tags": [],
+    "title": "CVE-2026-80144 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80144"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-80145",
+    "published": "2026-09-22T16:18:00.570",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000/SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers with the services permission to execute arbitrary shell commands as root by exploiting the set cifs password command that passes unsanitized user input to a system() call. Attackers with the services permission can authenticate to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "tags": [],
+    "title": "CVE-2026-80145 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80145"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-80146",
+    "published": "2026-09-22T16:18:00.720",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000/SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a stack-based buffer overflow vulnerability that allows authenticated attackers to potentially execute arbitrary code by exploiting an undocumented mfc eeprom read command that copies unbounded user input into a bounded stack buffer before passing it to a system() call. Attackers can authenticate as any user to the terminal or CLI interface and supply an oversized input to trigger the overflow, potentially achieving complete loss of confidentiality, integrity, and availability on the affected device and impacting downstream serial-attached devices.",
+    "tags": [],
+    "title": "CVE-2026-80146 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80146"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-80147",
+    "published": "2026-09-22T16:18:00.863",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000/SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a stack-based buffer overflow vulnerability that allows authenticated attackers to potentially execute arbitrary code by exploiting an undocumented mfc eeprom write command that copies unbounded user input into a bounded stack buffer before passing it to a system() call. Attackers can authenticate as any user to the terminal or CLI interface and supply an oversized input to trigger the overflow, potentially achieving complete loss of confidentiality, integrity, and availability on the affected device and impacting downstream serial-attached devices.",
+    "tags": [],
+    "title": "CVE-2026-80147 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80147"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-80151",
+    "published": "2026-09-22T16:18:01.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000 before firmware v9.7.0.3, SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers with the services permission to execute arbitrary shell commands as root by exploiting the set nfs download command that passes unsanitized user input to a system() call. Attackers with the services permission can authenticate to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "tags": [],
+    "title": "CVE-2026-80151 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80151"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-80152",
+    "published": "2026-09-22T16:18:01.607",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000 before firmware v9.7.0.3, SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a command injection vulnerability that allows authenticated attackers with the services permission to execute arbitrary shell commands as root by exploiting the set script schedule command that passes unsanitized user input to a system() call. Attackers with the services permission can authenticate to the terminal or CLI interface and inject malicious commands through the unsanitized parameter to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-attached devices.",
+    "tags": [],
+    "title": "CVE-2026-80152 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80152"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-80154",
+    "published": "2026-09-22T16:18:01.767",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "All firmware versions of Lantronix SLC8000, SLC9000, EMG8500, EMG7500, SLB882, SLCx-03, and SLCx-02 contain an authentication bypass vulnerability in the web management portal that allows unauthenticated attackers to derive valid session tokens of logged-in users and bypass source IP and User-Agent validation. Session tokens are generated deterministically from the device model and the current time at one-second resolution, resulting in a small enumerable set of possible active tokens. Attackers can construct a crafted URI that exploits file extension handling in the web server path routing to bypass per-session source-address validation, then use a derived token from a different source address to gain elevated privileges on the affected device and potentially impact downstream serial-attached devices.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-80154 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80154"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-80155",
+    "published": "2026-09-22T16:18:01.917",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000 before firmware v9.7.0.5, SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain an authentication bypass vulnerability in the web management portal upload endpoint that allows unauthenticated attackers to read sensitive configuration files and upload files to arbitrary filesystem locations, leading to remote code execution. The web configuration server constructs the session cookie file path using snprintf with a fixed-size buffer; by supplying a cookie value of a specific length an attacker causes the path to truncate at the required delimiter and leverages path traversal to redirect authentication validation to an arbitrary on-disk file such as the local user database, bypassing all session checks. Attackers can use this vulnerability to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-connected devices.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-80155 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80155"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-80156",
+    "published": "2026-09-22T16:18:02.083",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000 before firmware v9.7.0.5, SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882/SLCx-03/SLCx-02 contain a path traversal vulnerability in the web management portal upload endpoint that allows authenticated attackers to write arbitrary data to any location on the device's filesystem, leading to remote code execution. The upload filename validation strips backslash characters but does not subsequently check for forward slashes when a backslash is detected; by supplying a filename containing both characters an attacker writes outside the intended upload directory to any writable path. Attackers can use this vulnerability to achieve complete loss of confidentiality, integrity, and availability on the affected device and potentially impact downstream serial-connected devices.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-80156 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80156"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-100240",
+    "published": "2026-09-29T17:17:01.000",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Missing Authorization vulnerability in Wikimedia Foundation Mediawiki - TemplateSandbox Extension allows Accessing Functionality Not Properly Constrained by ACLs.\n\nThis issue affects Mediawiki - TemplateSandbox Extension: from * before 1.46.1, 1.45.5, 1.43.10.",
+    "tags": [],
+    "title": "CVE-2026-100240 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-100240"
+  },
+  {
+    "category": "high",
+    "cvss": 9.1,
+    "id": "CVE-2026-126969",
+    "published": "2026-11-18T00:18:37.280",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "SmarterTools SmarterMail Insufficient Entropy Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of SmarterTools SmarterMail. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the generation of Application Passwords. The issue results from using insufficient entropy in the generation of credentials. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-33568.",
+    "tags": [],
+    "title": "CVE-2026-126969 (CVSS 9.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126969"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-131852",
+    "published": "2026-11-18T00:18:43.127",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OwnTracks Recorder before 1.0.5 contains a format string vulnerability in json_response() and related output functions that allows unauthenticated attackers to execute code by storing a malicious tid value. Attackers can publish locations via POST /pub or MQTT with printf specifiers in tid, then read them back through GET /api/0/last to leak addresses and write memory.",
+    "tags": [],
+    "title": "CVE-2026-131852 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131852"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2022-49038",
+    "published": "2024-09-26T04:15:04.940",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Inclusion of functionality from untrusted control sphere vulnerability in OpenSSL DLL component in Synology Drive Client before 3.3.0-15082 allows local users to execute arbitrary code via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2022-49038 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-49038"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2023-52946",
+    "published": "2024-09-26T04:15:05.863",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Buffer copy without checking size of input ('Classic Buffer Overflow') vulnerability in vss service component in Synology Drive Client before 3.5.0-16084 allows remote attackers to overwrite trivial buffers and crash the client via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2023-52946 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-52946"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2025-67478",
+    "published": "2026-02-03T02:16:08.840",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Vulnerability in Wikimedia Foundation CheckUser. This vulnerability is associated with program files includes/Mail/UserMailer.Php.\n\nThis issue affects CheckUser: from * before 1.39.14, 1.43.4, 1.44.1.",
+    "tags": [],
+    "title": "CVE-2025-67478 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67478"
+  },
+  {
+    "category": "high",
+    "cvss": 8.4,
+    "id": "CVE-2026-27182",
+    "published": "2026-02-18T22:16:26.517",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Saturn Remote Mouse Server contains a command injection vulnerability that allows unauthenticated attackers to execute arbitrary commands by sending specially crafted UDP JSON frames to port 27000. Attackers on the local network can send malformed packets with unsanitized command data that the service forwards directly to OS execution functions, enabling remote code execution under the service account.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-27182 (CVSS 8.4)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27182"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2021-47961",
+    "published": "2026-04-10T10:16:03.913",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A plaintext storage of a password vulnerability in Synology SSL VPN Client before 1.4.5-0684 allows remote attackers to access or influence the user's PIN code due to insecure storage. This may lead to unauthorized VPN configuration and potential interception of subsequent VPN traffic when combined with user interaction.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2021-47961 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-47961"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-24425",
+    "published": "2026-05-20T14:16:38.917",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Twig versions 2.16.x and 3.9.0 through 3.25.x contain a sandbox bypass vulnerability when using a SourcePolicyInterface that allows attackers with template rendering capabilities to pass arbitrary PHP callables to sort, filter, map, and reduce filters. Attackers can exploit the runtime check that fails to use the current template source to bypass sandbox restrictions and execute arbitrary code when the sandbox is enabled through a source policy rather than globally.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-24425 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24425"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2023-52945",
+    "published": "2026-05-27T09:16:24.777",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Uncontrolled search path element vulnerability in OpenSSL DLL component in Synology BeeDrive for desktop before 1.3.2-13814 allows local users to execute arbitrary code via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2023-52945 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-52945"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2025-30028",
+    "published": "2026-05-27T09:16:27.370",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A vulnerability in Active Backup for Business allows unauthorized remote attackers to read arbitrary files.",
+    "tags": [],
+    "title": "CVE-2025-30028 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30028"
+  },
+  {
+    "category": "high",
+    "cvss": 7.8,
+    "id": "CVE-2022-49036",
+    "published": "2026-06-03T14:16:24.997",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An inclusion of functionality from untrusted control sphere vulnerability in OpenSSL configuration in Synology Active Backup for Business Recovery Media Creator before 2.5.0-2081 allows local users to execute arbitrary code via unspecified vectors.",
+    "tags": [],
+    "title": "CVE-2022-49036 (CVSS 7.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-49036"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-80148",
+    "published": "2026-09-22T16:18:01.013",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000 before firmware v9.7.0.3, SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882 contain a server-side request forgery vulnerability in the WebSSH/WebTelnet listener that allows unauthenticated attackers to cause the affected device to establish SSH connections to attacker-controlled endpoints. The custom shellinaboxd builds its SSH connection target using a snprintf call with user-supplied input; by supplying an overlong username string an attacker causes the device IP suffix to be truncated, redirecting the resulting connection to an arbitrary host. Attackers can use this capability to enumerate or communicate with internal network endpoints that would otherwise be inaccessible.",
+    "tags": [],
+    "title": "CVE-2026-80148 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80148"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-80149",
+    "published": "2026-09-22T16:18:01.160",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Lantronix SLC8000 before firmware v9.7.0.3, SLC9000 before firmware v9.7.0.2, EMG8500/EMG7500 before firmware v9.7.0.1, and all firmware versions of SLB882 contain a server-side request forgery vulnerability in the WebSSH/WebTelnet listener that allows unauthenticated attackers to cause the affected device to establish SSH connections to attacker-controlled endpoints. The custom shellinaboxd uses the rooturl parameter from the web connection to determine its own IP address; by modifying this parameter an attacker redirects the SSH terminal connection to an arbitrary host or IP. Attackers can use this capability to enumerate or communicate with internal network endpoints that would otherwise be inaccessible.",
+    "tags": [],
+    "title": "CVE-2026-80149 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80149"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-130976",
+    "published": "2026-11-17T21:17:54.037",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Use after free in PDFium in Google Chrome prior to 158.0.8127.36 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted PDF file. (Chromium security severity: Medium)",
+    "tags": [],
+    "title": "CVE-2026-130976 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130976"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-129025",
+    "published": "2026-11-17T23:17:48.237",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Cross-Site Request Forgery (CSRF) vulnerability in Brainstorm Force ZIP AI zip-ai allows Cross Site Request Forgery.This issue affects ZIP AI: from n/a through 0.0.19.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-129025 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129025"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-118630",
+    "published": "2026-11-18T00:18:36.207",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Winmate HotTab Exposed Dangerous Function Local Privilege Escalation Vulnerability. This vulnerability allows local attackers to escalate privileges on affected installations of Winmate devices. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.\n\nThe specific flaw exists within the HotTab driver. The issue results from an exposed dangerous function. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of the kernel. Was ZDI-CAN-29948.",
+    "tags": [],
+    "title": "CVE-2026-118630 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118630"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-126962",
+    "published": "2026-11-18T00:18:36.357",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "open62541 Subscription Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of open62541. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the handling of subscriptions. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-30231.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-126962 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126962"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-126966",
+    "published": "2026-11-18T00:18:36.867",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SmarterTools SmarterMail Missing Authorization Privilege Escalation Vulnerability. This vulnerability allows remote attackers to escalate privileges on affected installations of SmarterTools SmarterMail. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the svcDomainAdmin.asmx endpoint. The issue results from the lack of authorization prior to allowing access to functionality. An attacker can leverage this vulnerability to escalate privileges to resources normally protected from the user. Was ZDI-CAN-33566.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-126966 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126966"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-126967",
+    "published": "2026-11-18T00:18:36.993",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "SmarterTools SmarterMail File Edit API Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of SmarterTools SmarterMail. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the FileStorageController class. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of SYSTEM. Was ZDI-CAN-30742.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-126967 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126967"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-126977",
+    "published": "2026-11-18T00:18:38.347",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Philips Hue Bridge HomeKit Pair-Setup Default Password Authentication Bypass Vulnerability. This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the HomeKit Authentication service, which listens on TCP port 8080 by default. Crafted data in a pairing request can cause the device to allow authentication using a blank password. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-28323.",
+    "tags": [],
+    "title": "CVE-2026-126977 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126977"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-126978",
+    "published": "2026-11-18T00:18:38.467",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Philips Hue Bridge hap_pair_setup_handler Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the HomeKit Accessory Protocol service, which listens on TCP port 8080 by default. When parsing pairing requests, the process does not properly validate the length of user-supplied data prior to copying it to a fixed-length, heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the device. Was ZDI-CAN-28434.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-126978 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126978"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-126979",
+    "published": "2026-11-18T00:18:38.590",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Philips Hue Bridge HomeKit Accessory Protocol chacha20_decrypt Integer Underflow Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Philips Hue Bridge. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the HomeKit Accessory Protocol service, which listens on TCP port 8080 by default. When parsing pairing requests, the process does not properly validate user-supplied data, which can result in an integer underflow before writing to memory. An attacker can leverage this vulnerability to execute code in the context of the device. Was ZDI-CAN-28332.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-126979 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126979"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-131851",
+    "published": "2026-11-18T00:18:42.930",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ILIAS before 9.25, 10.13, and 11.6 contains an SQL injection vulnerability in ilPRGAssignmentFilter::toConditions() that allows authenticated users to inject SQL through the StudyProgramme members list Name and Status filters. Attackers holding only the OrgUnit permission to view members can break out of LIKE literals and execute stacked statements, such as overwriting the root password hash to gain administrative control.",
+    "tags": [],
+    "title": "CVE-2026-131851 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131851"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-92182",
+    "published": "2026-11-18T00:18:49.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Netgate pfSense CE XMLRPC Incorrect Authorization Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Netgate pfSense. Authentication is required to exploit this vulnerability.\n\nThe specific flaw exists within the XMLRPC endpoint. The issue results from incorrect authorization prior to allowing access to functionality. An attacker can leverage this vulnerability to execute code within the context of the root. Was ZDI-CAN-32353.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-92182 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-92182"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-105929",
+    "published": "2026-11-18T02:17:38.693",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A path traversal vulnerability (CWE-22) was found in ansible-core's ansible-galaxy role installation. An explicit role \"name\" taken from a role's meta/requirements.yml is used to construct the on-disk installation path without validating that the resulting destination stays within the selected roles directory. A name containing \"../\" escapes that directory, and an absolute name replaces it entirely. Because ansible-galaxy processes transitive dependencies from an installed role's meta/requirements.yml, a malicious role publisher can cause attacker-supplied files to be written outside the operator's chosen roles directory when the operator installs the role, and, when --force is used, can cause an existing role directory outside that path to be removed and replaced. The impact is bounded by the invoking user's filesystem permissions and requires the operator to install the attacker-influenced content.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-105929 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105929"
+  },
+  {
+    "category": "high",
+    "cvss": 8.2,
+    "id": "CVE-2026-107950",
+    "published": "2026-11-18T03:17:40.153",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An XML External Entity (XXE) vulnerability affects a Storefront REST API in HCL Commerce versions 8, 9.0.1 and 9.1.x.  A remote attacker, using a specially crafted XML, could potentially view internal files or consume memory resources.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-107950 (CVSS 8.2)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107950"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-131875",
+    "published": "2026-11-18T03:17:42.230",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "fqterm before 0.9.11 contains a heap out-of-bounds write vulnerability in FQTermDecode that allows malicious servers to corrupt memory by sending CSI sequences with unbounded parameter indexes. Attackers controlling a telnet or SSH server, or intercepting cleartext telnet, can send over 30 semicolon-separated CSI parameters to write chosen 32-bit values past the decoder object on the heap.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-131875 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-131875"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-130644",
+    "published": "2026-11-18T04:17:14.710",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A path traversal flaw was found in ansible-core. When installing a collection with ansible-galaxy collection install, the install destination directory is derived from the namespace and name fields declared inside the collection artifact's own metadata, which are not validated as well-formed collection identifiers or checked for path containment. A malicious collection artifact -- delivered as a local file, a remote URL, a source directory, a git repository, or as a dependency -- can use a crafted name value to redirect the install destination outside the configured collections path, causing ansible-galaxy to delete an existing directory writable by the invoking user and then write attacker-controlled files to that location.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-130644 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130644"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209589",
+    "published": "2026-11-18T13:14:36+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "애플의 주요 서비스와 미국 국가안보국(NSA) 내부 시스템에서 11월 17일(현지시간) 장애가 발생했다. 같은 날 노르웨이 에너지 기업 에퀴노르(Equinor)는 일부 IT 시스템을 겨냥한 사이버 공격을 공개했다. 다만 각 기관이 밝힌 원인과 피해 상황은 다르며, 이들을 하나의 공격으로 연결할 근거는 확인되지 않았다.애플에서는 아이클라우드 계정 로그인과 앱스토어, 애플 뮤직, 기기 내 애플케어 등 여러 서비스에 문제가 발생했다. 계정 인증과 콘텐츠 이용 등 서로 다른 기능이 영향을 받으면서 이용자들이 불편을 겪었다. 애플은 언론에",
+    "tags": [],
+    "title": "애플·NSA 잇단 시스템 장애…에퀴노르는 사이버 공격 확인",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209589"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209586",
+    "published": "2026-11-18T12:39:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "S2W가 최근 세무사 시험 수석 합격자 자수로 불거진 인공지능(AI) 악용 부정행위와 관련해 사이버 우범지대 내 관련 장비와 수법의 유통 실태 분석 결과를 18일 공개했다.S2W는 지난 16일부터 이틀간 자사 사이버범죄 인텔리전스 플랫폼 '자비스(XARVIS)'의 수사 특화 자율형 AI 에이전트 'DRI'를 활용해 다크웹, 텔레그램, 온라인 커뮤니티에 게시된 AI 부정행위 자료를 분석했다. DRI는 자연어 질의만으로 방대한 데이터에서 필요한 정보를 선별하고 탐지·분석 도구를 조합해 맥락 기반의 심층 분석 결과를 도출한다.조사 결과",
+    "tags": [
+      "AI"
+    ],
+    "title": "S2W, 텔레그램·다크웹 내 AI 시험 부정행위 불법 거래 실태 포착",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209586"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209585",
+    "published": "2026-11-18T12:33:48+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "엔키화이트햇(대표 이성권)이 정보보안 경영시스템 국제 표준인 'ISO 27001' 전환 심사를 마치고, 클라우드 서비스 보안 국제 표준인 'ISO 27017' 인증을 신규 획득했다.이번 인증은 엔키화이트햇의 전반적인 정보보안 관리체계와 클라우드 서비스 운영 환경을 대상으로 진행됐다. 두 인증 모두 최신 개정판 규격으로 심사를 통과했다.ISO 27001은 조직의 보안 정책 수립, 위험 관리, 접근 통제 등 정보 자산 보호를 위한 관리 체계를 종합 평가하는 국제 표준이다. 함께 취득한 ISO 27017은 ISO 27001을 바탕으로 클",
+    "tags": [],
+    "title": "엔키화이트햇, 국제 표준 ISO 27001·27017 인증 획득",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209585"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209584",
+    "published": "2026-11-18T09:54:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인공지능(AI)이 기업의 소프트웨어 개발과 클라우드 운영 전반에 빠르게 확산되고 있지만, 이를 통제하고 보호하는 보안체계는 기술 발전 속도를 따라가지 못하고 있는 것으로 나타났다. 기업들은 AI 에이전트에 코드 수정과 시스템 변경 권한까지 부여하고 있지만, 상당수는 AI가 실제로 어떤 작업을 수행했는지 확인하거나 문제가 발생했을 때 신속하게 차단할 수 있는 역량을 갖추지 못한 것으로 조사됐다.팔로알토 네트웍스(Palo Alto Networks)가 발표한 ’2026 클라우드 보안 현황 보고서(State of Cloud Security",
+    "tags": [
+      "AI"
+    ],
+    "title": "AI 에이전트 확산에 클라우드 보안 비상…기업 40% “AI 행동 추적 불가능”, 보안 취약점 수정에 평균 18.4일",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209584"
+  },
+  {
+    "author": "BrianKrebs",
+    "category": "research",
+    "id": "https://krebsonsecurity.com/?p=74672",
+    "published": "2026-11-18T02:52:04+00:00",
+    "severity": "info",
+    "source": "Krebs on Security",
+    "summary": "At least 178 top web destinations unwittingly served a variety of malware exploits against visitors over the past 24 hours thanks to a security vulnerability involving Optimizely, a company that helps websites customize user experiences and test out new features. Experts say the incident, which saw data-stealing malicious software silently injected into sites like the BBC, CNN, Equifax, Ledger and Zoom, was exacerbated by the reality that few popular websites enforce strict rules on the sources of third-party content.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Attackers Used Optimizely to A/B Test Malware on Top Websites",
+    "url": "https://krebsonsecurity.com/2026/11/attackers-used-optimizely-to-a-b-test-malware-on-top-websites/"
+  },
+  {
+    "author": "Lawrence Abrams",
+    "category": "high",
+    "id": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/",
+    "published": "2026-11-17T23:04:21+00:00",
+    "severity": "info",
+    "source": "BleepingComputer",
+    "summary": "A critical vulnerability dubbed Java4Shell in OpenJDK, the open-source implementation of Java, can allow unauthenticated attackers to remotely execute code on popular enterprise applications, including Jenkins, Atlassian Jira, Confluence, and Keycloak. [...]",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Critical Java4Shell flaw allows RCE attacks on major Java applications",
+    "url": "https://www.bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications/"
+  },
+  {
+    "author": "Genians",
+    "category": "research",
+    "id": "https://www.genians.co.kr/blog/fiscon2026",
+    "published": "2026-11-18T00:41:22+00:00",
+    "severity": "info",
+    "source": "지니언스 위협인텔",
+    "summary": "안녕하세요, 지니언스입니다.",
+    "tags": [
+      "금융"
+    ],
+    "title": "[FISCON 2026] 지니언스, 금융정보보호 컨퍼런스 참가 후기",
+    "url": "https://www.genians.co.kr/blog/fiscon2026"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33528",
+    "published": "2026-11-18T02:00:03+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Wednesday, November 18th, 2026 https://isc.sans.edu/podcastdetail/10184, (Wed, Nov 18th)",
+    "url": "https://isc.sans.edu/diary/rss/33528"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxPOThYSmVrUUhBZmdqUkpTeUExTDBoVTZXT19ZUTdlV3JhVTM1X3J3Uzg2UnRHRGpaNU1ndExvRm5qMnQySUV2cjl5Z2R1bFJZem5EcVNxenA1MlpBRnV5eHlWSHdQaWRIN1NoS0RwakpyYjRyM1lRQ0ExSThHU2ZmQtIBlAFBVV95cUxORlE5bkVGTWRncy1pd1hSTmhDTC0zQjExNkhrLTZBOHdWdXM5ODZDWXI4MEdzelpfb29MUmZoV25JNVo1TVd4UUtPdkVZa2lHZWR1TmdKTjVPOW0wQ1o5LXNfQ240YU0tdzQ2OWpZamRCX3dTZHZRektVcnFINVl3T01aS2Z3akRBbTFDQjJrNFFTVnY1",
+    "published": "2026-11-18T02:00:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "“비용 부담에 보안 장담 못해”… 저축銀 75% 금융보안원 미가입",
+    "tags": [
+      "금융"
+    ],
+    "title": "“비용 부담에 보안 장담 못해”… 저축銀 75% 금융보안원 미가입",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPOThYSmVrUUhBZmdqUkpTeUExTDBoVTZXT19ZUTdlV3JhVTM1X3J3Uzg2UnRHRGpaNU1ndExvRm5qMnQySUV2cjl5Z2R1bFJZem5EcVNxenA1MlpBRnV5eHlWSHdQaWRIN1NoS0RwakpyYjRyM1lRQ0ExSThHU2ZmQtIBlAFBVV95cUxORlE5bkVGTWRncy1pd1hSTmhDTC0zQjExNkhrLTZBOHdWdXM5ODZDWXI4MEdzelpfb29MUmZoV25JNVo1TVd4UUtPdkVZa2lHZWR1TmdKTjVPOW0wQ1o5LXNfQ240YU0tdzQ2OWpZamRCX3dTZHZRektVcnFINVl3T01aS2Z3akRBbTFDQjJrNFFTVnY1?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE9NQ2gwazYwSzBmWFlKdWd1TkViQU1ncDRhdVhYWlpKMTZIN3ZLTEpEQ1E2VWpFeHBqV1JCSGE5dWM5dWtEQTIzZHl2dll5cHAwMmlFZ3B2RDE4R3pwMkMyZ3hpb3VWQ3Bsb2NF",
+    "published": "2026-11-18T00:58:03+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융당국, 금융권에 '자바 보안 취약점' 패치·점검 지시",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국, 금융권에 '자바 보안 취약점' 패치·점검 지시",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9NQ2gwazYwSzBmWFlKdWd1TkViQU1ncDRhdVhYWlpKMTZIN3ZLTEpEQ1E2VWpFeHBqV1JCSGE5dWM5dWtEQTIzZHl2dll5cHAwMmlFZ3B2RDE4R3pwMkMyZ3hpb3VWQ3Bsb2NF?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE9UODViczBQc0xMMzcyU1ktSUpvYlIyOHRGTzRXZzZpV1puY2cwMmFidTVyU3pqUEZCalhaa0Z2U0JyaHRUak5mQU5PRjc2UmlVblExTW1QVnE3M3lZSV90Y1ZrTVpOQ00",
+    "published": "2026-11-18T00:05:24+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "내 개인정보 은행도 금융보안원도 뚫렸다",
+    "tags": [
+      "금융"
+    ],
+    "title": "내 개인정보 은행도 금융보안원도 뚫렸다",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9UODViczBQc0xMMzcyU1ktSUpvYlIyOHRGTzRXZzZpV1puY2cwMmFidTVyU3pqUEZCalhaa0Z2U0JyaHRUak5mQU5PRjc2UmlVblExTW1QVnE3M3lZSV90Y1ZrTVpOQ00?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMijgFBVV95cUxNaU44RnllOG1jMUpHQVRnZXBra3B3R04tRTJKdjdTTkdPNmtyVU02cXZIS0xVQ1ZjOFYxaEhMQ3dES0ZlV0ZDWUhSazFZVVNpb3RjbEJTU3B5eHRldC1GTUhidnY3TWlrNk1IY29IUUpfQUVoQTZyUm9wM2t4Z3ZyRldibHA0VkNfUVFsWVRR",
+    "published": "2026-11-17T23:31:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "대형 금융사 보안 점검 연 1회서 2회로…해킹 취약한 주변 시스템까지 의무 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "대형 금융사 보안 점검 연 1회서 2회로…해킹 취약한 주변 시스템까지 의무 점검",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNaU44RnllOG1jMUpHQVRnZXBra3B3R04tRTJKdjdTTkdPNmtyVU02cXZIS0xVQ1ZjOFYxaEhMQ3dES0ZlV0ZDWUhSazFZVVNpb3RjbEJTU3B5eHRldC1GTUhidnY3TWlrNk1IY29IUUpfQUVoQTZyUm9wM2t4Z3ZyRldibHA0VkNfUVFsWVRR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE1fUUdUMUhEZUNKSVhiSFBwU25IdzJpNE1JcVJvNUtXTE00Z1JVNFp1eFBaa1NUdjRqZ1Z6N29OZ2N0Z1hpMHN6cEpvX1pacXRVcER5M2QwWHZtWFU2b1JmYl9EekR4QXE2M3NnM0U3QdIBc0FVX3lxTE55LUhDdmhoUEMwNHJJVWJJU0NkM1NZNElhSHdQU3NhUHhTb042X0U4eUZQMVF1TWFNZWJqUEQ2ci1oOEk2aXZHbm9jTzhVVE1zNVltNFNDVURJQzBHdkRXbE1qUnFpVzVfS21WYWk4SlBvRXc",
+    "published": "2026-11-18T00:06:19+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "'해킹 사각지대 차단' 금융권 보안점검 강화",
+    "tags": [
+      "금융"
+    ],
+    "title": "'해킹 사각지대 차단' 금융권 보안점검 강화",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fUUdUMUhEZUNKSVhiSFBwU25IdzJpNE1JcVJvNUtXTE00Z1JVNFp1eFBaa1NUdjRqZ1Z6N29OZ2N0Z1hpMHN6cEpvX1pacXRVcER5M2QwWHZtWFU2b1JmYl9EekR4QXE2M3NnM0U3QdIBc0FVX3lxTE55LUhDdmhoUEMwNHJJVWJJU0NkM1NZNElhSHdQU3NhUHhTb042X0U4eUZQMVF1TWFNZWJqUEQ2ci1oOEk2aXZHbm9jTzhVVE1zNVltNFNDVURJQzBHdkRXbE1qUnFpVzVfS21WYWk4SlBvRXc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTFB5NXVOeVhZNXRfWkw3YzlHbjU3MnBpVG5WYnZjR1MzT0U0QmJ5X0NybUtCQWctUnFuLU1MVUFuOEwtdktiTU5aemVocktfNm5TVktfZTVDbDRjMUw2MFgwZTc5QlhxZWxiSldSUQ",
+    "published": "2026-11-18T02:21:32+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 보안관리 전면 강화…IT자산 관리 의무화",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 보안관리 전면 강화…IT자산 관리 의무화",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5NXVOeVhZNXRfWkw3YzlHbjU3MnBpVG5WYnZjR1MzT0U0QmJ5X0NybUtCQWctUnFuLU1MVUFuOEwtdktiTU5aemVocktfNm5TVktfZTVDbDRjMUw2MFgwZTc5QlhxZWxiSldSUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE1JSzdMSzEtNnNKeFY0SG45anJ3S1ZDR2FHRzdPOUc1LVhVZU5UTkxGSFZDMjZFcXZmSmRhcnh4eHFUNUJHVWRfNU4xZlBZcEZXLTctTFNuelZyNHEycFE",
+    "published": "2026-11-16T01:26:00+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융보안원 침해사고에 금융위 '엄중 경고'…전면 쇄신 요구",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융보안원 침해사고에 금융위 '엄중 경고'…전면 쇄신 요구",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1JSzdMSzEtNnNKeFY0SG45anJ3S1ZDR2FHRzdPOUc1LVhVZU5UTkxGSFZDMjZFcXZmSmRhcnh4eHFUNUJHVWRfNU4xZlBZcEZXLTctTFNuelZyNHEycFE?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249905",
+    "published": "2026-11-18T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "전동킥보드로 사고 내고 음주운전 차량 표적 사고 유발까지... 자동차 보험사기, 이렇게 예방하세요",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249905&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249903",
+    "published": "2026-11-18T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "자산운용사 침해사고 대응 관련 릴레이간담회 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249903&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249902",
+    "published": "2026-11-18T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "26.9월말 국내은행의 원화대출 연체율 현황(잠정)",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249902&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBQRUJDTDhmOXZad3l3QTFEeUF0REpSOHN2Uld4SWlrYWlnQzNIMkpPcG5kNHl3c3hvRjBKN2Yyek16cHpSTjg2LVZ6b0NadUljcTgxZUkzRTNsck5ZYlJVRQ",
+    "published": "2026-11-17T22:47:00+00:00",
+    "severity": "info",
+    "source": "국가사이버안보센터",
+    "summary": "국정원 ‘사이버 권한 확대’ 우려…“국가안보 영역 명확히 해야”",
+    "tags": [],
+    "title": "국정원 ‘사이버 권한 확대’ 우려…“국가안보 영역 명확히 해야”",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBQRUJDTDhmOXZad3l3QTFEeUF0REpSOHN2Uld4SWlrYWlnQzNIMkpPcG5kNHl3c3hvRjBKN2Yyek16cHpSTjg2LVZ6b0NadUljcTgxZUkzRTNsck5ZYlJVRQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiVkFVX3lxTFB1Q2l3dDlXWkNodXA3a0VUNGtqSGdnbktNLWVLVVRoWjc3NWdaS0NoSGE0NEpkbnNzZDd3Ui1yMUk1N1BfMDZzX3U5V0R6djU4VlBrd1ln",
+    "published": "2026-11-18T00:41:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "민주당 정보통신특위 19일 출범...AI 해킹·부정행위 대응 논의",
+    "tags": [],
+    "title": "민주당 정보통신특위 19일 출범...AI 해킹·부정행위 대응 논의",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB1Q2l3dDlXWkNodXA3a0VUNGtqSGdnbktNLWVLVVRoWjc3NWdaS0NoSGE0NEpkbnNzZDd3Ui1yMUk1N1BfMDZzX3U5V0R6djU4VlBrd1ln?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE1iNzRhc2dEajY0NUFUNWtmMklneWlNX28tUUlMZEhDd1FSX2tyRk1adDV3dWNibmRzcFNKX2gybzR1VXRqZXlEU3padGxKUUc5Sy02Q2l5RFhhZDjSAWBBVV95cUxQTzFYaXVnU2htOEQ3aHhzclBRZ3VHczZrdUpyUTYtS1p5UDA3ODladWRQYWcxbVk1WmFxTVExcGhnYkZPM0RyTGdRdFNOTjB1QUlGTEN5X0ZfUmFkYlVYd2Y",
+    "published": "2026-11-18T02:50:11+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "노란우산 개인정보 유출 36만2천명 달해…당초보다 16만명 늘어(종합)",
+    "tags": [],
+    "title": "노란우산 개인정보 유출 36만2천명 달해…당초보다 16만명 늘어(종합)",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iNzRhc2dEajY0NUFUNWtmMklneWlNX28tUUlMZEhDd1FSX2tyRk1adDV3dWNibmRzcFNKX2gybzR1VXRqZXlEU3padGxKUUc5Sy02Q2l5RFhhZDjSAWBBVV95cUxQTzFYaXVnU2htOEQ3aHhzclBRZ3VHczZrdUpyUTYtS1p5UDA3ODladWRQYWcxbVk1WmFxTVExcGhnYkZPM0RyTGdRdFNOTjB1QUlGTEN5X0ZfUmFkYlVYd2Y?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE1fbU9SVHpjdXFuQk9OTVdNa3BhOVdsQXZJMENGRVBhVjVkbnMybmJNZUZObk5mb2lBZjFSVWR2WGVqTGdfdXIyclpPcUc2VDRqRGlnY0QycVdPdDB1MnJnTGJYMEVjUVRmRFE",
+    "published": "2026-11-18T01:57:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "예수병원, 개인정보보호 자체점검 캠페인 실시",
+    "tags": [],
+    "title": "예수병원, 개인정보보호 자체점검 캠페인 실시",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1fbU9SVHpjdXFuQk9OTVdNa3BhOVdsQXZJMENGRVBhVjVkbnMybmJNZUZObk5mb2lBZjFSVWR2WGVqTGdfdXIyclpPcUc2VDRqRGlnY0QycVdPdDB1MnJnTGJYMEVjUVRmRFE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE9HM01RcnlqUnktZHktZHZXLXhfa2dUS2c2MUliWG5Eb1VEaG9tQWFGLW95OWlMQTZDb0ZRTTV2YjNrd05jY0VUWFFtUkJGYUZrZVN5OEJ0UmctNlpjTmJhbWQtY2NmQ21MMFE",
+    "published": "2026-11-18T00:24:10+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "미래에셋생명, 개인정보 유출 1만명 돌파",
+    "tags": [],
+    "title": "미래에셋생명, 개인정보 유출 1만명 돌파",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9HM01RcnlqUnktZHktZHZXLXhfa2dUS2c2MUliWG5Eb1VEaG9tQWFGLW95OWlMQTZDb0ZRTTV2YjNrd05jY0VUWFFtUkJGYUZrZVN5OEJ0UmctNlpjTmJhbWQtY2NmQ21MMFE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTFBGWXVoU293MGtPS0ZseTRPU1JGQkJBcDVqWXpiRjdZWkJxR2ZRVzZ2WWF0SWV5SGZ3N0xOeF92cjRIMUhvd0NWbENoNDdiU2VTdk5GZjY2cko3LURtb3FRZFdNQTMyREYz0gFsQVVfeXFMT2U0WlZSTVczSzZLX0FmOHktekZJNjJMR3llU3RtZGYwQnZqbURIMTRlN0xtUnRLUDEybkN6QzZOakJSOFBYNTcxVWRULTQyRU1tVmZyY1lPOGRCSWx2dHBTN2JXeU8xams2M19W",
+    "published": "2026-11-18T01:08:41+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "인크로스, ISMS-P 인증 획득…광고·커머스 정보보호 역량 강화",
+    "tags": [],
+    "title": "인크로스, ISMS-P 인증 획득…광고·커머스 정보보호 역량 강화",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBGWXVoU293MGtPS0ZseTRPU1JGQkJBcDVqWXpiRjdZWkJxR2ZRVzZ2WWF0SWV5SGZ3N0xOeF92cjRIMUhvd0NWbENoNDdiU2VTdk5GZjY2cko3LURtb3FRZFdNQTMyREYz0gFsQVVfeXFMT2U0WlZSTVczSzZLX0FmOHktekZJNjJMR3llU3RtZGYwQnZqbURIMTRlN0xtUnRLUDEybkN6QzZOakJSOFBYNTcxVWRULTQyRU1tVmZyY1lPOGRCSWx2dHBTN2JXeU8xams2M19W?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE1fMlY2ZTZmQUVMRTRMTDVyVXBwQlhVdFNPaUZ6MUFWRUhPYTExLXF5M3FzWXRXTXdyWHVraVVkLTdyS19qQWl4X3NNQUVkX2t2RGNLNnRDdkZUNkU5S2J3bEtZRVhueDNpZ09kQk85aklKMUk",
+    "published": "2026-11-18T02:54:06+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "노란우산 개인정보 유출 36만여명 확인…당초보다 16만명 늘어",
+    "tags": [],
+    "title": "노란우산 개인정보 유출 36만여명 확인…당초보다 16만명 늘어",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fMlY2ZTZmQUVMRTRMTDVyVXBwQlhVdFNPaUZ6MUFWRUhPYTExLXF5M3FzWXRXTXdyWHVraVVkLTdyS19qQWl4X3NNQUVkX2t2RGNLNnRDdkZUNkU5S2J3bEtZRVhueDNpZ09kQk85aklKMUk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiakFVX3lxTE85N3NYelNDTDZkVnZMVXpVcFFmZjR1aGhJUDFRMmtoVm1iRzFxNlRINjllU2FLekNIOWt0cmxpd3VhZE1FNjg2clBFVHZWdjRuMVptODJHOE02SHNVLUh6bDFscXc2dll4RWc",
+    "published": "2026-11-18T03:33:21+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "노란우산 개인정보 유출 의심 36만명으로 확대…소상공인 5명 중 1명꼴",
+    "tags": [],
+    "title": "노란우산 개인정보 유출 의심 36만명으로 확대…소상공인 5명 중 1명꼴",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE85N3NYelNDTDZkVnZMVXpVcFFmZjR1aGhJUDFRMmtoVm1iRzFxNlRINjllU2FLekNIOWt0cmxpd3VhZE1FNjg2clBFVHZWdjRuMVptODJHOE02SHNVLUh6bDFscXc2dll4RWc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE4tMHRKZ0NtcE1ydmNBazFuTnZvajFxenRKOF9IeGRRV0dlTWtYY24yUC1iWGh5RzVlM3B2N1lOM25TQXFibVY0dlI3dDBJc29QYUppWkduNXZSZ3d1SHhIStIBeEFVX3lxTE1RMXBleUVQNUxDeTZneFdOcVhhM2VhTHU3WFhiZmJZRlkwcEdxZWh5dmlHeHltWVFxUGpRcVA3MmRsbzNHRkdXb2pzTEJTcGg2YkNLb3dpNWZVTXJxUTBRUFZqeWtVWWpZMFJSLWJnVjEwYVA5UlBuZA",
+    "published": "2026-11-18T01:39:06+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "인크로스, 온라인 광고·커머스 위탁 운영 서비스 대상 ISMS-P 인증",
+    "tags": [],
+    "title": "인크로스, 온라인 광고·커머스 위탁 운영 서비스 대상 ISMS-P 인증",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4tMHRKZ0NtcE1ydmNBazFuTnZvajFxenRKOF9IeGRRV0dlTWtYY24yUC1iWGh5RzVlM3B2N1lOM25TQXFibVY0dlI3dDBJc29QYUppWkduNXZSZ3d1SHhIStIBeEFVX3lxTE1RMXBleUVQNUxDeTZneFdOcVhhM2VhTHU3WFhiZmJZRlkwcEdxZWh5dmlHeHltWVFxUGpRcVA3MmRsbzNHRkdXb2pzTEJTcGg2YkNLb3dpNWZVTXJxUTBRUFZqeWtVWWpZMFJSLWJnVjEwYVA5UlBuZA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMidEFVX3lxTFBmX3BvVldxRDBJVXJUNkoxX0M3a3VwcWY0NXRDTUtGd280cF92UE5veE1aUWkzcHViSGNYbGdRY0ZGUU12M0x6MF9ybWpNa3l6dWw1eHVWUXJuXzVDdTZhZDlXTXlzb3I0bWpmUzhfbFF0cjhD",
+    "published": "2026-11-18T04:03:59+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "미래에셋생명 해킹 피해 1만 명 넘어…고팍스 2천명으로 늘어",
+    "tags": [],
+    "title": "미래에셋생명 해킹 피해 1만 명 넘어…고팍스 2천명으로 늘어",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBmX3BvVldxRDBJVXJUNkoxX0M3a3VwcWY0NXRDTUtGd280cF92UE5veE1aUWkzcHViSGNYbGdRY0ZGUU12M0x6MF9ybWpNa3l6dWw1eHVWUXJuXzVDdTZhZDlXTXlzb3I0bWpmUzhfbFF0cjhD?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE9yOXpSQjZaSDhtWkd5WWp5bXNHNXl6RHkwOGNtNTh4b3hfTDRWS2J5MTlWUmFzWkNWdlFCdHJUdlFJQWE2VzNnNkJsY1AwbG5SYXMyX3AxcVMwNkHSAWBBVV95cUxOMTQxYVcybm5jeVlOZkRGS0NvdExoSnY1elZkRS1oSnNYY2FfRGtncGFIN0xYZEY4T3dRbW9yNFJmdDFqWDkwTmlZbWtjNm1qY0xtcDgzWm9LMXNLM01VTEk",
+    "published": "2026-11-18T01:16:20+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "노란우산 개인정보 유출 20만5천명 규모…가입자 10명 중 1명꼴",
+    "tags": [],
+    "title": "노란우산 개인정보 유출 20만5천명 규모…가입자 10명 중 1명꼴",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9yOXpSQjZaSDhtWkd5WWp5bXNHNXl6RHkwOGNtNTh4b3hfTDRWS2J5MTlWUmFzWkNWdlFCdHJUdlFJQWE2VzNnNkJsY1AwbG5SYXMyX3AxcVMwNkHSAWBBVV95cUxOMTQxYVcybm5jeVlOZkRGS0NvdExoSnY1elZkRS1oSnNYY2FfRGtncGFIN0xYZEY4T3dRbW9yNFJmdDFqWDkwTmlZbWtjNm1qY0xtcDgzWm9LMXNLM01VTEk?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE9OTHZPakJVTjJnZXNLQW5XbEFkdXgwRzZ4bXBoalp4VlI4cXprX3NBVTNmTTRqVkVVRkVqNEY4aXJtdE1Ra3N3RDNLbnpkaFlXNFNjWUZZOVg2N29JbThON2tSM2I",
+    "published": "2026-11-18T02:58:34+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "노란우산 20.5만명 개인정보 유출 정황..가입자 10명 중 1명",
+    "tags": [],
+    "title": "노란우산 20.5만명 개인정보 유출 정황..가입자 10명 중 1명",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9OTHZPakJVTjJnZXNLQW5XbEFkdXgwRzZ4bXBoalp4VlI4cXprX3NBVTNmTTRqVkVVRkVqNEY4aXJtdE1Ra3N3RDNLbnpkaFlXNFNjWUZZOVg2N29JbThON2tSM2I?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE1WVUYxQVB4bFFEeE8yTUZoNW9QT0FLQUVVcEZyd0dkeFhRYWdwLXZKZmhOU0FzSFpRMFBUU3dYQUFrWjRwcl9hRjhtS1Q0Ql8tM0xZOWlHQnRiM2VlRi16bnZFT1A0bVNWSmVDUEhB",
+    "published": "2026-11-18T01:52:09+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 대형 금융사 보안점검 연 2회로 강화…연결 시스템까지 전수 점검",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 대형 금융사 보안점검 연 2회로 강화…연결 시스템까지 전수 점검",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1WVUYxQVB4bFFEeE8yTUZoNW9QT0FLQUVVcEZyd0dkeFhRYWdwLXZKZmhOU0FzSFpRMFBUU3dYQUFrWjRwcl9hRjhtS1Q0Ql8tM0xZOWlHQnRiM2VlRi16bnZFT1A0bVNWSmVDUEhB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE1rUndoR2hOYTZTc3lUSm5ZQVE2d0Zib1lqVEFhd1JKMGwtQkM5SXFLZUJoSENUdUxCc3hsajZ3MWVJcjIxMjFCeEpiTzJxemh5NWRnV3duc2JOaEluWHZRb1ViMFBHRkduWVlvc2g3X0fSAXRBVV95cUxOdTlGLUI5cTBualpqNE9VQlAzdGtyS1E4NWZkMExlV05ERjVRcUdxeGUyR0RZV1BRR2pNREwzaXVtdXlzWmZreV9BY25FcVpjNElDSlZVbzhtRW1qYWZKbVZfeGplQ2RnUmRmS0o2MHJGRmt1Rg",
+    "published": "2026-11-18T00:16:50+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 전 금융권 IT자산 관리 의무화 칼 빼들었다…대형사 보안점검 연 2회로 확대",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 전 금융권 IT자산 관리 의무화 칼 빼들었다…대형사 보안점검 연 2회로 확대",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1rUndoR2hOYTZTc3lUSm5ZQVE2d0Zib1lqVEFhd1JKMGwtQkM5SXFLZUJoSENUdUxCc3hsajZ3MWVJcjIxMjFCeEpiTzJxemh5NWRnV3duc2JOaEluWHZRb1ViMFBHRkduWVlvc2g3X0fSAXRBVV95cUxOdTlGLUI5cTBualpqNE9VQlAzdGtyS1E4NWZkMExlV05ERjVRcUdxeGUyR0RZV1BRR2pNREwzaXVtdXlzWmZreV9BY25FcVpjNElDSlZVbzhtRW1qYWZKbVZfeGplQ2RnUmRmS0o2MHJGRmt1Rg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibEFVX3lxTE9CekNRejFSTXdoRk1IWlpscTI5Q0VZeUZOQTRYdW1GRHhaYlVBUjlpOFNwV2NoUGxlRmVCb2JlV2VPQnY3c1VJeGdwMnVsNnJ2eTNIZVR5VEZjRWRaM1NCeExoaGl6Sl9iZ1FuTg",
+    "published": "2026-11-18T01:22:57+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융위, 금융권 보안관리 강화···대형사 보안점검 연 2회로 확대",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융위, 금융권 보안관리 강화···대형사 보안점검 연 2회로 확대",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CekNRejFSTXdoRk1IWlpscTI5Q0VZeUZOQTRYdW1GRHhaYlVBUjlpOFNwV2NoUGxlRmVCb2JlV2VPQnY3c1VJeGdwMnVsNnJ2eTNIZVR5VEZjRWRaM1NCeExoaGl6Sl9iZ1FuTg?oc=5"
   }
 ]
