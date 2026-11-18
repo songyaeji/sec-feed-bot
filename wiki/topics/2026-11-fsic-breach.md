@@ -28,6 +28,7 @@ cves: []
 - 2026-11-16 [금융보안원](https://news.google.com/rss/articles/CBMia0FVX3lxTFB1SkdQWlExbkp1UDlqZXNNdVdyRWNZeXh5TzVLVzYxTVpsUHJjVzlBX0d3bDM3UENXRnJ6QjRtOUJ5elNJSFdoVTBFaER3VjlHN2NuSHUydHZNQnNCbXRkNWlIVkV6ZVJtYkJr?oc=5) — 금융당국 580개 금융사 보안 전수점검 본격화, 연말 CEO 서명 제출 예정
 - 2026-11-16 [금융보안원](https://news.google.com/rss/articles/CBMiZEFVX3lxTE5Ydnc5SDNBQ1FBV2FDbWN6Y0tfY0R2aHhJbVE4R3JWOUR4cE0yVEdXUXc4V1ZpT1NfMEN5aTF3NFZCUTc0cXBpWWN4Y0V3RXBLa2xfX3Bzdm1QTUx4UDMwNEpxWks?oc=5) — 금융보안원 감사 본격화, 각 금융사 대책 마련 초읽기
 - 2026-11-16 [뉴스](https://news.google.com/rss/articles/CBMiVEFVX3lxTE1ZRGtMdUNnVGZCT1Fldmt4UW9ZME9yN2pxX2U2Rm9aWlRvQWhQTTUxandYSS1iTmI5bjlpT0haTFNOWXlNUk5MREtKdENWY3dMNzlPNQ?oc=5) — 금융사 정보보호 평가 중단으로 580개 금융사 복구 시점 미정
+- 2026-11-18 [금융위원회](https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fMVQtM0RsR2h3YTBVcm80R1Jldm9ZZ0VNdmdSVnYzbXRKTXVMYzZTWVVLOHcwWlhmaTVkMTZ2R21NdlIxbHR0d3dsaHljWEFlbHNxSVpR?oc=5) — 금융보안원 원장 모집 공고에서 보안 전문성 요건 미포함으로 비판
 
 ## 관련
 

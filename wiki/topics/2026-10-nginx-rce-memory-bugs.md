@@ -11,5 +11,6 @@ cves: []
 
 - 2026-10-14 [F5/NGINX](https://nginx.org/en/) — NGINX 1.30.6, 1.31.7 5개 취약점 보안 패치 발표
 - 2026-10-15 [The Hacker News](https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html) — RCE, TLS 우회 포함 취약점 분석
+- 2026-11-19 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209609) — Theori 보안 연구팀 Xint가 NGINX 취약점 5건 상세 공개, 로그인 없이 root 권한 획득 가능한 공격 기법 'NGINX2Root' 발표
 
 ## 관련
