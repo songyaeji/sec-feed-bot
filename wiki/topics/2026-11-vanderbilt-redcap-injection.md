@@ -10,3 +10,4 @@ Vanderbilt 대학의 Research Electronic Data Capture(REDCap) 플랫폼에 코�
 ## 타임라인
 
 - 2026-11-18 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2026-90817) — CVE-2026-90817 공개, 미인증 코드 인젝션 RCE
+- 2026-11-19 [The Hacker News](https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html) — CISA Known Exploited Vulnerabilities(KEV) 목록에 공식 추가, 실제 악용 중 확인

@@ -10,5 +10,6 @@ cves: [CVE-2026-33387, CVE-2026-33388, CVE-2026-33389, CVE-2026-33391, CVE-2026-
 ## 타임라인
 
 - 2026-10-22 [CISA](https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18) — RUGGEDCOM APE1808 5개 취약점 (CVE-2026-33387/33388/33389/33391/33920) 발표, 고객 지원팀 연락 권고
+- 2026-11-17 [CISA](https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-07) — Fortinet FortiOS Double Free 취약점(CVE-2026-106175)이 RUGGEDCOM APE1808에도 영향, Fortigate NGFW V7.6.9 이상으로 업그레이드 권고
 
 ## 관련

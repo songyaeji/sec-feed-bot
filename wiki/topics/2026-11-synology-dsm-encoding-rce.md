@@ -10,3 +10,4 @@ Synology DiskStation Manager(DSM)의 BeeStation OS 시스템 플러그인 데몬
 ## 타임라인
 
 - 2026-11-18 [CISA KEV](https://nvd.nist.gov/vuln/detail/CVE-2024-10441) — CVE-2024-10441 공개
+- 2026-11-19 [The Hacker News](https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html) — CISA, 실제 악용 중인 취약점으로 공식 지정. 랜섬웨어·암호화폐 채굴 공격에 활용 확인

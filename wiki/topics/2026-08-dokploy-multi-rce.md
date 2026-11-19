@@ -16,3 +16,7 @@ cves: [CVE-2026-72733, CVE-2026-72735, CVE-2026-72736, CVE-2026-72738, CVE-2026-
 - 2026-08-10 [NVD CVE-2026-72740](https://nvd.nist.gov/vuln/detail/CVE-2026-72740) — Dokploy customGitUrl SSH 키 설정 ssh-keyscan 명령 인젝션 CVSS 9.9 (모두 0.29.13에서 패치)
 - 2026-08-10 [NVD CVE-2026-72868](https://nvd.nist.gov/vuln/detail/CVE-2026-72868) — Dokploy destination.testConnection에서 rclone 명령 보간 명령 인젝션 CVSS 9.9 저권한 조직 멤버 호스트 Docker 소켓 접근 권한 RCE
 - 2026-11-14 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-129433) — CVE-2026-129433 (CVSS 9.9) getComposeContainerCommand serviceName 파라미터 명령 인젝션, 인증된 조직 멤버 호스트 Docker 소켓 접근
+- 2026-11-18 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-129316) — CVE-2026-129316 (CVSS 9.9) Docker terminal·container-log·monitoring WebSocket 미검증 인증, 저권한 멤버 임의 컨테이너 접근·root 쉘·테넌트 로그 유출·호스트 Docker 소켓 악용 (0.31.0 패치)
+- 2026-11-18 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-129986) — CVE-2026-129986 (CVSS 9.9) mount.deleteFileMount 미검증 경로 주입·로컬 rm -rf 쉘 실행 명령 인젝션, 인증된 멤버 파일마운트 삭제 시 호스트 명령 실행 (0.31.1 패치)
+- 2026-11-18 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-129989) — CVE-2026-129989 (CVSS 9.9) publishDirectory Nixpacks 빌드 메타문자 미검증·docker cp 명령 인젝션, 인증된 사용자 Nixpacks 배포 시 호스트 root 명령 실행 (0.31.1 패치)
+- 2026-11-18 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-129991) — CVE-2026-129991 (CVSS 9.9) backup prefix 필드 메타문자 미검증·normalizeS3Path rclone 명령 보간, 인증된 조직 멤버 백업 실행·스케줄·정리 시 호스트·원격 서버 root 명령 실행 (0.31.1 패치)

@@ -10,5 +10,6 @@ cves: []
 ## 타임라인
 
 - 2026-08-11 [The Hacker News](https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html) — 한국·미국 보안 기관 경고: **Gunra** 랜섬웨어 **Fortinet**·**Schneider Electric** 취약점 악용, 의료·금융·정부·비영리 표적
+- 2026-10-28 [KISA 보고서](https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000127&nttId=72242) — KISA Gunra 랜섬웨어 분석 보고서 발표
 
 ## 관련
