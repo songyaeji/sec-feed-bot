@@ -193,6 +193,12 @@ jobs:
         run: python main.py
 
       - name: Commit updated state
+        # Run collector가 실패·timeout이어도 커밋한다. 카드 발송 직후
+        # main.py가 last_digest_date·원장·pending 소진을 먼저 저장하므로,
+        # 그 뒤에서 끊긴 run의 상태가 버려지면 다음 run이 같은 카드를
+        # 재발행한다(2026-10-07 실측: 발송 직후 33분 timeout, commit skipped).
+        # 취소(cancelled)만 제외 — 사람이 멈춘 run은 남기지 않는다
+        if: ${{ !cancelled() }}
         run: |
           # seen.json (dedup ledger), pending.json (queued non-urgent
           # backlog), and wiki/ (librarian's topic pages -- possibly new,

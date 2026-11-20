@@ -676,6 +676,15 @@ def main() -> None:
                     published_ledger.save(published_ledger.record(
                         ledger, to_send_news, cve_lane, today_kst))
                     had_backlog = True
+                    # 발송 확정 상태를 트렌드 선정(LLM 최대 120초) 전에 디스크에
+                    # 먼저 남긴다. 이 뒤에서 step timeout으로 끊겨도 commit 단계
+                    # (if: !cancelled())가 last_digest_date·원장·pending 소진을
+                    # 커밋해 다음 run의 재발행을 막는다(2026-10-07 실측: 발송
+                    # 직후 timeout, commit skipped). 아래 정상 경로가 끝에서
+                    # 같은 내용을 다시 저장한다(멱등)
+                    _save_digest_queue(retained, merged)
+                    _mark_seen(state, new_items, unsent_trend_ids)
+                    save_state(state)
                     # 트렌드 픽은 아침 브리핑 직후 1회 — 발행이 확정된 이
                     # 지점에서만 나간다(카드뉴스가 안 나간 날은 트렌드도
                     # 없다). 성공해야 후보를 seen으로 소진하고, 실패하면
@@ -685,17 +694,7 @@ def main() -> None:
                         unsent_trend_ids = set()
             # 이월(retained) = 사서 예산 초과 등으로 판정 못 받은 신선 뉴스만.
             # 그 외(발송분·위키 전용·논문·미선발 CVE·TTL 초과분)는 전부 소진.
-            retained_ids = {it["id"] for it in retained}
-            save_pending(retained)
-            # digest가 소진한 id 마커 — commit step의 merge_state.py가
-            # origin pending과 union할 때 이 id들을 부활시키지 않게 한다.
-            # (2026-07-12 발견: digest 20분 사이 realtime 커밋이 끼면 union이
-            # flush를 매번 무효화해 pending 566건 누적, 사서 예산 초과)
-            # 커밋되지 않는 러너 로컬 파일 — 같은 job 안에서만 쓰인다.
-            with open(os.path.join(STATE_DIR, ".digest_consumed.json"),
-                      "w", encoding="utf-8") as f:
-                json.dump(
-                    [it["id"] for it in merged if it["id"] not in retained_ids], f)
+            _save_digest_queue(retained, merged)
         else:
             pending_before = len(pending)
             new_pending = append_pending(pending, non_urgent_items)
@@ -706,21 +705,39 @@ def main() -> None:
         if not had_backlog:
             print("[main] no new items to notify", file=sys.stderr)
 
-    now_iso = datetime.now(timezone.utc).isoformat()
-    for item in new_items:
-        # 보류된 트렌드는 seen에 남기지 않는다 — 다음 run이 같은 항목을
-        # 다시 가져와 스로틀 해제 시점에 발송할 수 있게(대기열 대체 설계)
-        if item["id"] in unsent_trend_ids:
-            continue
-        state["seen"][item["id"]] = now_iso
-    state["seen"] = prune_seen(state["seen"])
-    dedup_lib.prune_dedup_state(state)
-    state["last_run"] = now_iso
+    _mark_seen(state, new_items, unsent_trend_ids)
 
     if not dry_run:
         save_state(state)
     else:
         print("[main] DRY_RUN=1: not persisting state/seen.json or state/pending.json")
+
+
+def _save_digest_queue(retained: list[dict], merged: list[dict]) -> None:
+    """digest 이월분 저장 + 소진 id 마커.
+
+    소진 마커는 commit step의 merge_state.py가 origin pending과 union할 때
+    이 id들을 부활시키지 않게 한다(2026-07-12 발견: digest 20분 사이
+    realtime 커밋이 끼면 union이 flush를 매번 무효화해 pending 566건 누적,
+    사서 예산 초과). 커밋되지 않는 러너 로컬 파일 — 같은 job 안에서만 쓰인다."""
+    retained_ids = {it["id"] for it in retained}
+    save_pending(retained)
+    with open(os.path.join(STATE_DIR, ".digest_consumed.json"),
+              "w", encoding="utf-8") as f:
+        json.dump([it["id"] for it in merged if it["id"] not in retained_ids], f)
+
+
+def _mark_seen(state: dict, new_items: list[dict], skip_ids: set[str]) -> None:
+    """이번 run 수집분을 seen에 기록. 보류된 트렌드(skip_ids)는 남기지 않는다
+    — 다음 run이 같은 항목을 다시 가져와 발송할 수 있게(대기열 대체 설계)."""
+    now_iso = datetime.now(timezone.utc).isoformat()
+    for item in new_items:
+        if item["id"] in skip_ids:
+            continue
+        state["seen"][item["id"]] = now_iso
+    state["seen"] = prune_seen(state["seen"])
+    dedup_lib.prune_dedup_state(state)
+    state["last_run"] = now_iso
 
 
 if __name__ == "__main__":
