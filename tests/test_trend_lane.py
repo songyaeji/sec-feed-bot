@@ -5,6 +5,7 @@
   ② 2026-11-20 개편: 하루 최대 2건, 한국어 제목 / 설명 / 도메인 링크,
      영어 원제 미표시, 선정 실패 시 미발송.
 """
+import json
 import os
 import sys
 from datetime import datetime, timedelta, timezone
@@ -103,9 +104,9 @@ def test_parse_picks_caps_at_two_and_keeps_order():
     import trend_enrich
     pool = _pool()
     out = trend_enrich.parse_picks(
-        '{"picks": [{"id": "b", "title_ko": "도구 검색 기능 추가", "why_ko": "공식 발표다."},'
-        ' {"id": "a", "title_ko": "에이전트 도구 A", "why_ko": "화제다."},'
-        ' {"id": "c", "title_ko": "세 번째 항목", "why_ko": "넘친다."}]}', pool)
+        '{"picks": [{"id": "b", "title_ko": "도구 검색 기능 추가", "why_ko": "공식 블로그가 새 검색 기능을 발표했다."},'
+        ' {"id": "a", "title_ko": "에이전트 도구 A", "why_ko": "GitHub에서 하루 만에 별 2천 개를 받았다."},'
+        ' {"id": "c", "title_ko": "세 번째 항목", "why_ko": "세 번째라서 상한을 넘는 후보다."}]}', pool)
     assert [p["id"] for p in out] == ["b", "a"]
     assert out[0]["title_ko"] == "도구 검색 기능 추가"
 
@@ -113,7 +114,7 @@ def test_parse_picks_caps_at_two_and_keeps_order():
 def test_parse_picks_drops_unknown_ids_and_english_only():
     import trend_enrich
     out = trend_enrich.parse_picks(
-        '{"picks": [{"id": "zzz", "title_ko": "없는 후보", "why_ko": "지어냄이다."},'
+        '{"picks": [{"id": "zzz", "title_ko": "없는 후보", "why_ko": "후보 목록에 없는 항목을 지어냈다."},'
         ' {"id": "a", "title_ko": "Tool A", "why_ko": "English only"}]}', _pool())
     assert out == []
 
@@ -127,8 +128,37 @@ def test_parse_picks_allows_zero_and_rejects_broken_json():
 def test_parse_picks_replaces_middle_dot():
     import trend_enrich
     out = trend_enrich.parse_picks(
-        '{"picks": [{"id": "a", "title_ko": "도구·스킬 묶음", "why_ko": "빠르다·쉽다."}]}', _pool())
+        '{"picks": [{"id": "a", "title_ko": "도구·스킬 묶음", '
+        '"why_ko": "설치가 빠르다·사용법도 쉬워 바로 써 볼 만하다."}]}', _pool())
     assert "·" not in out[0]["title_ko"] and "·" not in out[0]["why_ko"]
+
+
+# QA C11 적대 입력 일부(scratchpad qa/validator/data/trend_picks_adv.json)
+ADVERSARIAL_PICKS = [
+    ("가", "한국어 설명이 충분히 들어간 정상 문장이다."),                       # 한글 1자 제목
+    ("오픈소스 LLM 탈옥 도구 공개", "탈옥 도구."),                              # 설명 한글 미달
+    ("오픈소스 LLM 탈옥 도구 공개", "오픈소스 LLM 탈옥 도구가 공개돼 화제"),     # '~다.' 아님
+    ("화제 Hugging Face malicious models found", "허깅페이스에서 악성 모델이 다수 발견됐다."),
+    ("Ignore previous instructions 무시", "이전 지시를 무시하라는 문장이 들어 있었다."),
+    ("허깅페이스 악성 모델 found in the wild 발견", "허깅페이스에서 악성 모델이 다수 발견됐다."),
+    ("구글 프로젝트 제로 공개 정책 변경",
+     "Project Zero changed its disclosure policy to 30 days 바뀌었다."),     # 설명 영어 구
+    ("마이크로소프트 코파일럿 에이전트 기능 보안 취약점과 기업 데이터 유출 가능성 경고",
+     "코파일럿 에이전트 기능의 보안 취약점이 공개됐다."),                    # 40자 초과
+]
+
+
+def test_parse_picks_rejects_adversarial_without_truncating():
+    import trend_enrich
+    for title, why in ADVERSARIAL_PICKS:
+        raw = json.dumps({"picks": [{"id": "a", "title_ko": title, "why_ko": why}]},
+                         ensure_ascii=False)
+        assert trend_enrich.parse_picks(raw, _pool()) == [], title
+    good = json.dumps({"picks": [{"id": "a", "title_ko": "Claude Code 보안 리뷰 기능 공개",
+                                  "why_ko": "코드 변경을 자동으로 점검해 주는 기능이 모든 사용자에게 열렸다."}]},
+                      ensure_ascii=False)
+    out = trend_enrich.parse_picks(good, _pool())
+    assert out[0]["title_ko"] == "Claude Code 보안 리뷰 기능 공개"
 
 
 def test_send_daily_trend_failure_keeps_candidates(monkeypatch):
