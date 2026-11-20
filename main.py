@@ -434,13 +434,20 @@ def main() -> None:
                             # 사서가 정식 판정하게 한다(카드에 원문으로 싣지 않는다)
                             continue
                         item_verdict = verdict["verdicts"][item["id"]]
+                        # LLM 출력 타입 가드 — 판정이 dict가 아니거나 action·kind가
+                        # 리스트면 아래 dict·set 조회에서 TypeError로 digest 런
+                        # 전체가 죽는다(2026-11-20 QA). 문자열이 아닌 값은 버린다
+                        if not isinstance(item_verdict, dict):
+                            continue
                         action = item_verdict.get("action")
+                        if not isinstance(action, str):
+                            action = None
                         recency = item_verdict.get("recency")
                         # 사서의 한국어 문안 — 카드 재작성 단계의 초안이자
                         # 재작성 실패 시의 대체 문안(card_editor가 검증한다)
                         for key in ("title_ko", "summary_ko", "why_ko", "term_ko"):
                             value = item_verdict.get(key)
-                            if value:
+                            if value and isinstance(value, str):
                                 # **볼드**는 summary_ko 전용 — 제목·용어에 흘린
                                 # 마커는 병합 시점에 걷는다(2026-07-23 실측)
                                 if key in ("title_ko", "term_ko"):
@@ -455,7 +462,7 @@ def main() -> None:
                             if cleaned:
                                 item["tags_ko"] = cleaned
                         kind = item_verdict.get("kind")
-                        if kind not in KNOWN_KINDS:
+                        if not isinstance(kind, str) or kind not in KNOWN_KINDS:
                             kind = None
                         if _is_vuln_source(item, config):
                             # 취약점 권고 전용 소스는 사서 판정과 무관하게

@@ -102,3 +102,31 @@ def test_merge_state_unions_published_ledger(tmp_path, monkeypatch):
     merged = json.loads(pub.read_text(encoding="utf-8"))
     assert sorted(e["title_ko"] for e in merged) == ["로컬", "원격"]
     assert pub.read_text(encoding="utf-8").endswith("\n")
+
+
+# --- LLM 출력 타입 가드: digest 런 중단 방지 ---------------------------------
+
+def test_librarian_chunk_drops_non_dict_verdicts(monkeypatch):
+    from types import SimpleNamespace
+    import librarian
+    payload = json.dumps({"result": json.dumps({"verdicts": {
+        "a": "garbage", "b": {"action": "new", "kind": ["incident"]}}})})
+    monkeypatch.setattr(librarian, "_write_input", lambda chunk: None)
+    monkeypatch.setattr(librarian, "_run_claude_json",
+                        lambda *a, **k: SimpleNamespace(returncode=0, stdout=payload, stderr=""))
+    assert librarian._run_chunk([], "p") == {"b": {"action": "new", "kind": ["incident"]}}
+    payload = json.dumps({"result": json.dumps({"verdicts": ["x"]})})
+    monkeypatch.setattr(librarian, "_run_claude_json",
+                        lambda *a, **k: SimpleNamespace(returncode=0, stdout=payload, stderr=""))
+    assert librarian._run_chunk([], "p") is None
+
+
+def test_wiki_guard_list_kind_does_not_crash(tmp_path, monkeypatch):
+    import wiki_guard
+    (tmp_path / "topics").mkdir()
+    monkeypatch.setattr(wiki_guard, "TOPICS_DIR", str(tmp_path / "topics"))
+    monkeypatch.setattr(wiki_guard, "WIKI_DIR", str(tmp_path))
+    item = {"id": "a", "title": "x", "title_ko": "사건 제목", "url": "https://x/a"}
+    stats = wiki_guard.ensure_recorded(
+        [item], {"a": {"action": "new", "kind": ["incident"], "topic": "some-event"}}, "2026-11-21")
+    assert stats["created"] == 1

@@ -55,9 +55,9 @@ jobs:
     runs-on: ubuntu-latest
     # hang이 concurrency 그룹(group: collect)을 GitHub 6h 상한까지 점유해
     # 이후 모든 run을 동결시키는 사고 방지(2026-07-10 digest 1h23m hang).
-    # digest 정상 소요는 수 분 — 30분이면 충분한 여유. librarian 전역
-    # 예산(DEADLINE_SECONDS)과 이중 방어.
-    timeout-minutes: 38
+    # librarian 전역 예산(DEADLINE_SECONDS)과 이중 방어. Run collector
+    # step 제한 + 후속 step 5분 여유(2026-11-20 개편으로 step 45분).
+    timeout-minutes: 50
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -169,9 +169,10 @@ jobs:
       - name: Run collector
         # step 단위 timeout — job timeout(30분)으로 죽으면 job이 cancelled로
         # 끝나 아래 failure() 알림이 못 돈다. step 초과는 step failure라
-        # 알림이 실행된다. librarian 전역 예산(1500s)+청크 300s 최악 ≈ 30분
-        # 이므로 33분이면 정상 경로를 절대 안 자른다.
-        timeout-minutes: 33
+        # 알림이 실행된다. 2026-11-20 실측 digest 소요 1266~1611s에 개편이
+        # 추가한 LLM 단계 최악 약 600s(원장 판정 180, 재작성 300, 기사 fetch,
+        # 트렌드 선정)를 더하면 33분을 넘을 수 있어 45분으로 올렸다.
+        timeout-minutes: 45
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           # 트렌드 픽 전용 웹훅 — 미등록이면 notify.send_trend가 본 채널로 폴백

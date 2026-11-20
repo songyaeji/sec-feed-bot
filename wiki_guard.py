@@ -158,6 +158,8 @@ def ensure_recorded(items: list[dict], verdicts: dict, day: str) -> dict:
         if not isinstance(v, dict) or v.get("action") not in ("new", "update"):
             continue
         kind = v.get("kind")
+        if not isinstance(kind, str):
+            kind = None  # 리스트 등 이상값은 미분류 취급 — set 조회 TypeError 방지
         if kind is not None and kind not in WIKI_KINDS:
             continue
         stats["checked"] += 1

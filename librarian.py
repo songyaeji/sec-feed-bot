@@ -191,11 +191,14 @@ def _run_chunk(chunk: list[dict], prompt: str) -> dict | None:
         print(f"[librarian] 응답 파싱 실패: {exc}", file=sys.stderr)
         return None
 
-    if "verdicts" not in parsed:
-        print("[librarian] 응답에 'verdicts' 키 없음", file=sys.stderr)
+    verdicts = parsed.get("verdicts") if isinstance(parsed, dict) else None
+    if not isinstance(verdicts, dict):
+        print("[librarian] 응답에 'verdicts' dict 없음", file=sys.stderr)
         return None
 
-    return parsed["verdicts"]
+    # 판정 하나가 dict가 아니면 _fix_styles와 main의 .get에서 digest 런
+    # 전체가 죽는다(2026-11-20 QA) — 그 항목만 무판정으로 버린다
+    return {vid: v for vid, v in verdicts.items() if isinstance(v, dict)}
 
 
 def _fix_styles(verdicts: dict, model: str, timeout: int) -> None:
@@ -206,7 +209,7 @@ def _fix_styles(verdicts: dict, model: str, timeout: int) -> None:
         fields = {
             key: v[key]
             for key in ("summary_ko", "why_ko")
-            if v.get(key) and not _style_ok(v[key])
+            if isinstance(v.get(key), str) and v[key] and not _style_ok(v[key])
         }
         if fields:
             bad[vid] = fields
