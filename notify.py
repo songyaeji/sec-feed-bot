@@ -156,8 +156,7 @@ def send_digest(
 
 MESSAGE_CONTENT_MAX = 2000  # Discord 일반 메시지 content 상한
 
-TREND_COLOR = 0xF39C12  # 주황 — 긴급(빨강)·헤더(파랑)와 구분되는 화제성 톤
-TREND_TITLE_MAX = 120  # 링크 라벨 절단폭 — 5건이 4096자 한도를 못 넘게
+TREND_TITLE_MAX = 120  # 제목 절단폭(방어용 — trend_enrich가 40자로 이미 자른다)
 
 
 def _link_domain(url: str) -> str:
@@ -172,14 +171,27 @@ def _link_domain(url: str) -> str:
     return host.replace("[", "\\[").replace("]", "\\]") or "원문"
 
 
+def _escape_md(text: str) -> str:
+    # LLM 문안도 신뢰 불가 피드에서 나왔다 — 강조/링크/코드 문자가 서식을
+    # 무너뜨리거나 가짜 링크를 만들지 못하게 이스케이프한다
+    for ch in ("\\", "[", "]", "*", "`", "_", "<", ">"):
+        text = text.replace(ch, "\\" + ch)
+    return text
+
+
 def send_trend(items: list[dict], discord_cfg: dict) -> None:
     """트렌드 픽 알림 — 아침 카드뉴스와 무관한 독립 embed 1건.
 
-    핫한 AI 툴·skills·MCP·영상·글 링크 모음. 채널 '분리'는
-    DISCORD_TREND_WEBHOOK_URL을 설정했을 때만 참 — 미설정이면 본 채널
-    웹훅으로 폴백한다(채널만 다를 뿐 데이터 경로는 카드뉴스와 무관).
-    발송 시점·빈도는 호출 측(trend_lane.send_daily_trend)이 정한다
-    — 하루 1회, 아침 카드뉴스 발행 직후. 여기서는 형식만 책임진다."""
+    2026-11-20 개편(사용자 선택 시안 A): 하루 최대 2건, 한국어 우선,
+    이모지 없음. 항목당 3행:
+      1행 굵은 한국어 제목(title_ko)
+      2행 subtext 한 줄 설명(why_ko)
+      3행 도메인 링크 — 내용을 읽고 난 뒤 누르는 순서
+    영어 원제는 싣지 않는다. title_ko가 없는 항목은 렌더하지 않는다.
+
+    채널 '분리'는 DISCORD_TREND_WEBHOOK_URL을 설정했을 때만 참 — 미설정이면
+    본 채널 웹훅으로 폴백한다. 발송 시점·선정은 호출 측
+    (trend_lane.send_daily_trend, trend_enrich.pick)이 정한다."""
     webhook_url = (os.environ.get("DISCORD_TREND_WEBHOOK_URL")
                    or os.environ.get("DISCORD_WEBHOOK_URL"))
     if not webhook_url:
@@ -187,51 +199,32 @@ def send_trend(items: list[dict], discord_cfg: dict) -> None:
 
     lines = []
     for item in items:
-        # 대괄호 이스케이프는 cardgen.build_link_lines와 동일 규칙 —
-        # 제목 속 [ ]가 마크다운 링크를 조기 종료시키는 것 방지.
-        # URL <> 감싸기 = 링크 미리보기(embed 자동 생성) 억제
-        label = " ".join((item.get("title") or "").split())[:TREND_TITLE_MAX]
-        # 제목은 신뢰할 수 없는 피드 입력 — 이제 링크 텍스트가 아니라 굵은
-        # 본문으로 나가므로 대괄호 외에 강조/코드 문자도 이스케이프한다
-        # (제목 속 ** 나 ` 하나가 이후 항목 전체의 서식을 무너뜨린다)
-        for ch in ("[", "]", "*", "`", "_"):
-            label = label.replace(ch, "\\" + ch)
-        # 내용 우선 레이아웃(2026-08-13 사용자 피드백: 링크가 먼저 나오면
-        # 무슨 글인지 모른 채 넘기게 된다) — 3행 고정:
-        #   1행 유형 이모지 + 굵은 제목(무엇인지)
-        #   2행 subtext: 화제성 지표 · 왜 핫한지
-        #   3행 링크(도메인 라벨) — 내용을 읽고 난 뒤 누르는 순서
-        badge = item.get("kind_emoji") or "📄"
+        title = " ".join((item.get("title_ko") or "").split())[:TREND_TITLE_MAX]
+        why = " ".join((item.get("why_ko") or "").split())
         url = item.get("url", "")
         # <> 감싸기를 조기 종료시키는 문자(공백·'>')가 든 url은 마크다운
         # 브레이크아웃(가짜 링크 텍스트 주입) 여지가 있다 — 항목 자체를 스킵
-        if not url.startswith(("http://", "https://")) or any(
+        if not title or not url.startswith(("http://", "https://")) or any(
                 c in url for c in (" ", ">", "<")):
             continue
-        lines.append(f"{badge} **{label}**")
-        # ↳ 들여쓰기 subtext — 지표와 이유는 '·'로만 구분(— 연결 금지,
-        # 2026-07-24 사용자 피드백)
-        sub = " · ".join(
-            p for p in (item.get("trend_note") or item.get("source"),
-                        item.get("why_ko")) if p)
-        if sub:
-            lines.append(f"-# ↳ {sub}")
-        # 링크 라벨은 도메인 — 제목을 1행에서 이미 읽었으므로 여기서는
-        # '어디로 가는지'만 알려주면 된다(제목 반복은 시각적 소음)
-        lines.append(f"[🔗 {_link_domain(url)}](<{url}>)")
+        lines.append(f"**{_escape_md(title)}**")
+        if why:
+            lines.append(f"-# {_escape_md(why)}")
+        # URL <> 감싸기 = 링크 미리보기(embed 자동 생성) 억제
+        lines.append(f"[{_link_domain(url)}](<{url}>)")
         lines.append("")  # 항목 사이 여백
     while lines and not lines[-1]:
         lines.pop()
 
     if not lines:
-        # 전 항목이 url 검증에서 탈락 — 빈 embed를 보내느니 실패로 올려
-        # 호출자(main)가 보류(다음 창 재도전) 처리하게 한다
+        # 전 항목이 검증에서 탈락 — 빈 embed를 보내느니 실패로 올려
+        # 호출자(main)가 보류(다음 날 재도전) 처리하게 한다
         raise RuntimeError("트렌드 픽 렌더 가능 항목 0건")
 
+    today = datetime.now(KST)
     embed = {
-        "title": "🔥 트렌드 픽",
+        "title": f"트렌드 픽 {today.month:02d}.{today.day:02d}",
         "description": "\n".join(lines)[:EMBED_DESCRIPTION_MAX],
-        "color": TREND_COLOR,
     }
     _post_with_retry(webhook_url, {
         "embeds": [embed],

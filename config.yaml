@@ -314,6 +314,29 @@ sources:
     # 구글뉴스 쿼리는 대량·노이즈라 첫 실행 백로그 홍수 방지용 최근분 제한
     max_age_days: 5
 
+  # 2026-11-20 추가(실fetch 검증: 개인정보보호법·정보통신망법 개정, 금융권
+  # 보안체계 혁신방안 기사 확인) — 보안 관련 법 개정·시행 축. 공식 입법예고 RSS
+  # (opinion.lawmaking.go.kr)와 개인정보위 RSS는 404라 구글뉴스 쿼리로 잡는다
+  - name: "보안 법령 개정"
+    type: rss
+    url: "https://news.google.com/rss/search?q=%28%22%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95%22%20OR%20%22%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%A7%9D%EB%B2%95%22%20OR%20%22%EC%A0%84%EC%9E%90%EA%B8%88%EC%9C%B5%EA%B1%B0%EB%9E%98%EB%B2%95%22%20OR%20%22%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EC%82%B0%EC%97%85%EB%B2%95%22%20OR%20%22%EC%82%AC%EC%9D%B4%EB%B2%84%EB%B3%B4%EC%95%88%EA%B8%B0%EB%B3%B8%EB%B2%95%22%29%20%28%EA%B0%9C%EC%A0%95%20OR%20%EC%8B%9C%ED%96%89%20OR%20%EC%9E%85%EB%B2%95%EC%98%88%EA%B3%A0%20OR%20%EA%B5%AD%ED%9A%8C%20%ED%86%B5%EA%B3%BC%29%20when%3A14d&hl=ko&gl=KR&ceid=KR:ko"
+    category: "news"
+    region: "국내"
+    # 법 개정 기사는 매일 나오지 않는다 — 쿼리에 when:14d를 걸어 최근 2주분을
+    # 날짜순 가깝게 받고(실fetch 17건), 신선도 게이트도 전역 기본 14일을 쓴다
+    max_age_days: 14
+
+  # 2026-11-20 추가(실fetch 검증: rss.do?bbsSeqNo=94 = 보도자료 50건) —
+  # 정보보호 주무부처 원문. 보도자료 대부분이 보안과 무관해 키워드로 거른다
+  # (예: 11-18 "자바(Java) 보안 취약점 관련 긴급 점검 및 보안조치 당부")
+  - name: "과기정통부 보도자료"
+    type: rss
+    url: "https://www.msit.go.kr/user/rss/rss.do?bbsSeqNo=94"
+    category: "news"
+    region: "국내"
+    keywords: ["보안", "해킹", "침해", "개인정보", "사이버", "취약점", "랜섬웨어",
+               "정보보호", "유출", "디도스", "악성코드"]
+
   # ---- 속보 소스 (breaking: true) — 즉시 발송 판정(judge) 전용 ----
   # 대형 사건은 언론 기사보다 HN/레딧에 먼저 뜬다. 이 소스들은 아침
   # 다이제스트/카드뉴스에 실리지 않고, judge가 긴급 판정한 것만 즉시
@@ -350,11 +373,11 @@ sources:
 
   # ── 트렌드 소스 (2026-07-24 추가, 전건 실fetch 검증) ──────────────
   # category: trend는 카드·위키·사서·judge를 타지 않는 별도 선별 레인 —
-  # 핫한 AI 툴·skills·MCP·영상·글이 잡히면 '🔥 트렌드 픽' embed 1건으로
+  # 핫한 AI 툴·skills·MCP·영상·글 후보를 모아 '트렌드 픽' embed 1건으로
   # 발송한다(notify.send_trend). 발송 시점만 아침 카드뉴스 발행 직후로
   # 묶여 하루 1회다(2026-08-13, trend_lane._should_send_trend).
-  # 빈도 제어: 하루 1회 게이트 + 총 trend_max_links건 상한(라운드로빈).
-  # 선별 기준 = 커뮤니티 화제성(업보트·points 순위)이 이미 필터.
+  # 빈도 제어: 하루 1회 게이트 + LLM이 후보 풀에서 최대 2건 선정
+  # (2026-11-20, trend_enrich.pick). 커뮤니티 화제성은 선정 참고 지표다.
 
   # 멀티레딧 top?t=day 한 요청(개별 요청은 429 — 기존 소스 교훈).
   # Reddit 트렌드 대체(2026-08-18). 보안·기술 커뮤니티가 실제로 공유
@@ -423,7 +446,7 @@ sources:
   # AI 벤더 공식 블로그 — 새 모델·기능 릴리스 원문(2026-07-24 실fetch 검증).
   # Anthropic은 공식 RSS가 없다(뉴스·엔지니어링 블로그 모두 404) — HN
   # 트렌드 쿼리(anthropic·claude)와 아래 AI 업계 뉴스가 대신 잡는다.
-  # trend_group vendor: 벤더발 소식이 라운드로빈 1자리를 공유
+  # trend_group vendor: 벤더발 소식을 후보 풀에서 한 그룹으로 묶는다
   - name: "OpenAI Blog"
     type: rss
     url: "https://openai.com/blog/rss.xml"
@@ -453,8 +476,8 @@ sources:
     region: "해외"
 
   # 유튜브 보안 채널 — 채널 RSS(API 키 불필요), 채널 ID 실fetch 검증.
-  # trend_group: 4채널이 라운드로빈 슬롯을 각각 차지해 링크 섹션을
-  # 독식하지 않게 한 묶음으로 취급(main.collect_all → _select_trend)
+  # trend_group: 4채널이 후보 풀 자리를 각각 차지하지 않게 한 묶음으로
+  # 취급(main.collect_all → _select_trend)
   - name: "John Hammond"
     type: rss
     url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw"
@@ -531,23 +554,47 @@ deprioritize_authors:
 # (env MAX_ITEMS_PER_RUN overrides this)
 max_items_per_run: 25
 
-# 아침 다이제스트 카드·링크에 싣는 항목 상한 — 나머지는 위키에만 적립된다.
-# 선별은 순위 채움(rank-fill): 사서 importance(1~5) 내림차순, 동점은
-# heuristic_score로 갈라 뉴스·CVE 각각의 상한까지 항상 채운다. 하드 게이트
-# (구 digest_min_importance)는 폐기 — 조용한 날 카드가 1~2장으로 쪼그라드는
-# 문제를 막고 매일 뉴스 7건을 보장한다(recap 제외로 후보가 모자라면 있는 만큼).
-# 뉴스 7 = 표지1+뉴스7+CVE목록1 = 총 9장(사용자 결정, 첨부 상한 10 이내),
-# CVE 10 = '오늘의 CVE' 목록 카드 1장의 행 상한(LIST_ROWS)과 동일
+# 아침 다이제스트 뉴스 카드 상한 — 가변 장수(사용자 결정 2026-11-20).
+# 사서 판정(사고·법제도·기관 발표, importance >= min_card_importance)을 받고
+# 발행 원장·중복 게이트·문안 재작성 검증을 통과한 항목만 싣는다. 못 채우면
+# 그날은 적게 낸다 — 원문 그대로 채우던 백필은 폐지됐다. 뉴스 0건이면
+# 발행하지 않는다(시간창 안 다음 트리거가 재시도).
 max_news_items: 7
 
-# '🔥 트렌드 픽' 알림 1건당 링크 상한 — 소스(그룹)별 라운드로빈으로
-# 채운다. 노이즈로 본편 알림을 가리지 않게 한 자릿수 유지(사용자 요구:
-# 너무 자주·너무 많이 금지)
-trend_max_links: 5
+# 뉴스 카드에 오르는 기사 성격(사서 kind) — 사고·법제도·기관 발표.
+# vuln(단순 취약점 권고)은 '오늘의 CVE' 코너, other(홍보·실적·칼럼)는 제외
+card_news_kinds: [incident, policy, institution]
+min_card_importance: 3
 
-# 라운드로빈 큐 우선순위(그룹 키 = trend_group 또는 소스명) — 그룹 수가
-# 링크 상한보다 많을 때 슬롯 배분 순서. 사용자 관심축(툴·skills·릴리스)
-# 우선, 범용 커뮤니티는 뒤
+# 취약점 권고 전용 소스 — 사서 판정과 무관하게 뉴스 카드에 오르지 않고
+# '오늘의 CVE' 코너로만 간다(사용자 결정 2026-11-20: 11-20 Siemens·Elecbrakes
+# ICS 권고가 뉴스 카드를 차지한 사례)
+vuln_advisory_sources:
+  - "CISA Advisories"
+  - "KISA 보안공지 (보호나라)"
+
+# 사서 입력 컷(librarian_news_cap)·카드 동점 정렬용 소스 가중치 — 휴리스틱
+# 점수(AI +120, KEV +100, 금융 +70, critical +40 …)에 더한다. 보안 동향
+# 축(법제도·기관 발표)을 올리고 취약점 권고를 내린다
+source_weights:
+  "보안 법령 개정": 60
+  "과기정통부 보도자료": 50
+  "개인정보보호위원회": 50
+  "국가사이버안보센터": 50
+  "KISA 보고서/가이드": 40
+  "금융위원회": 30
+  "금융보안원": 30
+  "금융감독원": 30
+  "CISA Advisories": -80
+  "KISA 보안공지 (보호나라)": -80
+
+# 트렌드 픽 — 하루 최대 2건(사용자 결정 2026-11-20). 그룹별 상위 이 건수만
+# 후보 풀에 넣고, 발송 직전 trend_enrich.pick이 풀 전체에서 최대 2건을 골라
+# 한국어 제목·설명을 쓴다. 볼 만한 게 1건이면 1건, 없으면 보내지 않는다
+trend_pool_per_group: 8
+
+# 후보 풀 나열 순서(그룹 키 = trend_group 또는 소스명) — 사용자 관심축
+# (툴·skills·릴리스) 우선, 범용 커뮤니티는 뒤. 선정 가중치는 아니다
 trend_priority:
   - "GitHub 급상승"
   - "vendor"

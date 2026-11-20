@@ -38,10 +38,21 @@ non-urgent items are dropped, not queued.
   `state/pending.json` instead of being sent.
 - **digest** (daily cron, KST 07:00): non-urgent items from this run are
   merged with everything queued in `pending.json`, run through the wiki
-  librarian (importance 1-5 rating + wiki ingest), and sent as the
-  "Trend of Security" card-news carousel (importance >= 4 items as PNG
-  cards, capped at 7 news + 1 CVE-list card) plus source links; then
-  `pending.json` is emptied.
+  librarian (kind + importance 1-5 rating + wiki ingest), and sent as the
+  "Trend of Security" card-news carousel plus source links; then
+  `pending.json` is emptied except unjudged items carried over.
+  - News cards: incidents, law/policy changes and institution reports only
+    (librarian `kind` incident/policy/institution, importance >= 3), at most
+    7. The count varies by day: there is no backfill with raw feed items,
+    so a slow day ships fewer cards (decision 2026-11-20).
+  - Plain vulnerability advisories (librarian `kind` vuln, and the
+    `vuln_advisory_sources` in `config.yaml`) go to the "오늘의 CVE" card,
+    never to news cards.
+  - Every card's Korean title, summary, SO WHAT line, term and tags are
+    rewritten from the article body by `card_editor.py` and validated in
+    code (Korean ratio, sentence style, term must be a security term and
+    not a company or agency name, tags must be backed by the article).
+    Items that fail validation are dropped, not sent in English.
 
 `RUN_MODE` (env var, default `realtime`) selects the mode; the workflow
 sets it automatically based on which cron fired (or the `workflow_dispatch`
@@ -49,7 +60,7 @@ input).
 
 ## Duplicate suppression
 
-Two layers sit in front of notification, on top of the id-based dedup
+Three layers sit in front of notification, on top of the id-based dedup
 against `state/seen.json`:
 
 1. **Cross-source heuristic dedup** (`dedup.py`, always on) — catches the
@@ -60,17 +71,38 @@ against `state/seen.json`:
    and `recent_titles` (7-day TTL) fields.
 2. **LLM wiki librarian** (`librarian.py`, digest mode only) — a headless
    Claude Code call that maintains `wiki/` (see `wiki/CLAUDE.md` for the
-   page format) and flags items that are already covered there so they're
-   dropped from the digest. This layer is a nice-to-have: any failure
-   (missing `CLAUDE_CODE_OAUTH_TOKEN`, timeout, bad output) fails **open**
-   — the digest still sends everything, it just skips the wiki dedup pass.
+   page format) and flags in-batch and already-covered duplicates. Any
+   failure (missing `CLAUDE_CODE_OAUTH_TOKEN`, timeout, bad output) does not
+   stop the digest: candidates go straight to the rewrite and validation
+   step.
+3. **Published ledger** (`published_ledger.py`, `state/published.json`) —
+   every card actually sent is recorded for 30 days. Before a digest, each
+   news candidate is compared with the ledger: same event with no new fact
+   is dropped, same event with a new fact is labelled 후속 (follow-up).
+   URL matches are dropped deterministically; the rest is judged by an LLM
+   call, and if that call fails, anything similar to a ledger entry is
+   dropped (fail-closed). The CVE card drops URLs and CVE ids already sent.
 
 ## Wiki
 
-`wiki/INDEX.md` lists every topic the librarian has created, each linking
-to a page under `wiki/topics/`. Pages are auto-maintained by
-`librarian.py` during digest runs; see `wiki/CLAUDE.md` for the
-frontmatter/timeline format if editing by hand.
+The wiki is an event archive (incidents, law/policy, institution
+reports). Pages under `wiki/topics/` are written by `librarian.py`;
+`wiki_guard.py` then checks every new/update verdict has its page and a
+timeline line with the item URL (and writes a minimal one if the librarian
+did not), deletes stray files the run created outside the page format,
+and rewrites `[[slug]]` links to `[[file-name]]` so the folder opens as an
+Obsidian vault. `wiki/INDEX.md` (last 60 days) and `wiki/INDEX-archive.md`
+are regenerated from the pages by `wiki_index.py` on every digest; see
+`wiki/CLAUDE.md` for the frontmatter/timeline format if editing by hand.
+
+## Trend pick
+
+`category: trend` sources feed a separate daily message sent right after
+the card news. `trend_lane._select_trend` builds a candidate pool and
+`trend_enrich.pick` (one LLM call) chooses at most 2 items worth reading
+that day, writing a Korean title and a one-line Korean reason. If the call
+fails nothing is sent and the candidates are retried the next morning;
+English titles are never shown.
 
 Requires the `CLAUDE_CODE_OAUTH_TOKEN` repo secret (see Setup below).
 That token is valid for 1 year — re-issue it around 2027-07 or the

@@ -1,8 +1,9 @@
-"""트렌드 픽 하루 1회 게이트 + 내용 우선 레이아웃 회귀 테스트.
+"""트렌드 픽 회귀 테스트.
 
-2026-08-13 변경 두 건을 고정한다:
+고정하는 것:
   ① 발송은 카드뉴스 발행 run(digest)에서 하루 1회만 — realtime run은 보류.
-  ② Discord 렌더 순서는 제목 → 설명 → 링크(구: 링크 → 설명).
+  ② 2026-11-20 개편: 하루 최대 2건, 한국어 제목 / 설명 / 도메인 링크,
+     영어 원제 미표시, 선정 실패 시 미발송.
 """
 import os
 import sys
@@ -34,45 +35,131 @@ def test_digest_run_sends_once_per_day():
     assert trend_lane._should_send_trend(state, next_day, "digest")
 
 
-def test_layout_puts_content_before_link(monkeypatch):
-    """항목당 3행: 제목 / 설명 subtext / 링크. 링크가 제목보다 뒤여야 한다."""
+def _capture(monkeypatch):
     sent = {}
     monkeypatch.setenv("DISCORD_TREND_WEBHOOK_URL", "https://example.invalid/hook")
     monkeypatch.setattr(notify, "_post_with_retry",
                         lambda url, payload: sent.update(payload))
+    return sent
 
+
+def test_layout_is_korean_title_then_reason_then_link(monkeypatch):
+    """시안 A(2026-11-20 사용자 선택): 굵은 한국어 제목 / subtext 설명 /
+    도메인 링크. 영어 원제·이모지·가운뎃점 없음."""
+    sent = _capture(monkeypatch)
     notify.send_trend([{
-        "title": "Claude Skills 실전 활용법",
-        "url": "https://www.youtube.com/watch?v=abc",
-        "kind_emoji": "🎬",
-        "trend_note": "YouTube",
-        "why_ko": "스킬 자동 로딩 구조를 데모로 설명",
+        "title": "obra/superpowers: An agentic skills framework",
+        "title_ko": "에이전트 개발 방법론 프레임워크 superpowers",
+        "why_ko": "GitHub에서 하루 만에 별 2천 개를 받은 스킬 묶음이다.",
+        "url": "https://www.github.com/obra/superpowers",
     }], {})
 
-    lines = sent["embeds"][0]["description"].split("\n")
-    assert lines[0] == "🎬 **Claude Skills 실전 활용법**"
-    assert lines[1] == "-# ↳ YouTube · 스킬 자동 로딩 구조를 데모로 설명"
-    # 링크는 마지막 — 도메인 라벨, <>로 미리보기 억제, www 제거
-    assert lines[2] == "[🔗 youtube.com](<https://www.youtube.com/watch?v=abc>)"
+    embed = sent["embeds"][0]
+    assert embed["title"].startswith("트렌드 픽 ")
+    lines = embed["description"].split("\n")
+    assert lines[0] == "**에이전트 개발 방법론 프레임워크 superpowers**"
+    assert lines[1] == "-# GitHub에서 하루 만에 별 2천 개를 받은 스킬 묶음이다."
+    assert lines[2] == "[github.com](<https://www.github.com/obra/superpowers>)"
+    assert "agentic" not in embed["description"]
+    assert "color" not in embed
 
 
-def test_untrusted_title_cannot_break_markdown(monkeypatch):
-    """피드 제목은 신뢰 불가 입력 — 강조/링크 문자가 서식을 깨면 안 된다."""
-    sent = {}
-    monkeypatch.setenv("DISCORD_TREND_WEBHOOK_URL", "https://example.invalid/hook")
-    monkeypatch.setattr(notify, "_post_with_retry",
-                        lambda url, payload: sent.update(payload))
+def test_item_without_korean_title_is_not_rendered(monkeypatch):
+    _capture(monkeypatch)
+    import pytest
+    with pytest.raises(RuntimeError):
+        notify.send_trend([{"title": "English only", "url": "https://e.com/x"}], {})
 
+
+def test_untrusted_text_cannot_break_markdown(monkeypatch):
+    """LLM 문안도 신뢰 불가 피드에서 나왔다 — 강조/링크 문자가 서식을 깨면 안 된다."""
+    sent = _capture(monkeypatch)
     notify.send_trend([{
-        "title": "**bold** [link](evil) `code`",
+        "title_ko": "**굵게** [링크](evil) `코드`",
+        "why_ko": "[가짜](https://evil.example) 설명이다.",
         "url": "https://example.com/x",
     }], {})
+    first, second = sent["embeds"][0]["description"].split("\n")[:2]
+    assert "\\[링크\\]" in first
+    assert first.startswith("**\\*\\*굵게")
+    assert "\\`코드\\`" in first
+    assert "\\[가짜\\]" in second
 
-    first = sent["embeds"][0]["description"].split("\n")[0]
-    # 대괄호가 이스케이프돼 있으면 [text](url) 링크로 파싱되지 않는다
-    assert "\\[link\\]" in first
-    assert first.startswith("📄 **\\*\\*bold\\*\\*")
-    assert "\\`code\\`" in first
+
+# --- 선정(trend_enrich.parse_picks) -------------------------------------------
+
+POOL = [
+    {"id": "a", "title": "Tool A", "url": "https://github.com/a"},
+    {"id": "b", "title": "Release B", "url": "https://blog.google/b"},
+    {"id": "c", "title": "Random C", "url": "https://c.example"},
+]
+
+
+def _pool():
+    return [dict(it) for it in POOL]
+
+
+def test_parse_picks_caps_at_two_and_keeps_order():
+    import trend_enrich
+    pool = _pool()
+    out = trend_enrich.parse_picks(
+        '{"picks": [{"id": "b", "title_ko": "도구 검색 기능 추가", "why_ko": "공식 발표다."},'
+        ' {"id": "a", "title_ko": "에이전트 도구 A", "why_ko": "화제다."},'
+        ' {"id": "c", "title_ko": "세 번째 항목", "why_ko": "넘친다."}]}', pool)
+    assert [p["id"] for p in out] == ["b", "a"]
+    assert out[0]["title_ko"] == "도구 검색 기능 추가"
+
+
+def test_parse_picks_drops_unknown_ids_and_english_only():
+    import trend_enrich
+    out = trend_enrich.parse_picks(
+        '{"picks": [{"id": "zzz", "title_ko": "없는 후보", "why_ko": "지어냄이다."},'
+        ' {"id": "a", "title_ko": "Tool A", "why_ko": "English only"}]}', _pool())
+    assert out == []
+
+
+def test_parse_picks_allows_zero_and_rejects_broken_json():
+    import trend_enrich
+    assert trend_enrich.parse_picks('{"picks": []}', _pool()) == []
+    assert trend_enrich.parse_picks("not json", _pool()) is None
+
+
+def test_parse_picks_replaces_middle_dot():
+    import trend_enrich
+    out = trend_enrich.parse_picks(
+        '{"picks": [{"id": "a", "title_ko": "도구·스킬 묶음", "why_ko": "빠르다·쉽다."}]}', _pool())
+    assert "·" not in out[0]["title_ko"] and "·" not in out[0]["why_ko"]
+
+
+def test_send_daily_trend_failure_keeps_candidates(monkeypatch):
+    """선정 실패(None)면 아무것도 안 보내고 False — 내일 재도전."""
+    import trend_enrich
+    monkeypatch.setattr(trend_enrich, "pick", lambda pool: None)
+    called = []
+    monkeypatch.setattr(notify, "send_trend", lambda *a: called.append(a))
+    state = {}
+    assert not trend_lane.send_daily_trend(_pool(), {}, state, "2026-11-21")
+    assert not called and "last_trend_date" not in state
+
+
+def test_send_daily_trend_nothing_worth_sending(monkeypatch):
+    """볼 만한 게 0건이면 안 보내되 처리 완료(True) — 후보 소진."""
+    import trend_enrich
+    monkeypatch.setattr(trend_enrich, "pick", lambda pool: [])
+    called = []
+    monkeypatch.setattr(notify, "send_trend", lambda *a: called.append(a))
+    state = {}
+    assert trend_lane.send_daily_trend(_pool(), {}, state, "2026-11-21")
+    assert not called and state["last_trend_date"] == "2026-11-21"
+
+
+def test_select_trend_returns_pool_per_group():
+    items = [{"id": f"g{i}", "title": f"github project number {i} unique{i}",
+              "url": f"https://github.com/x/{i}", "source": "GitHub 급상승", "score": i}
+             for i in range(12)]
+    pool = trend_lane._select_trend(items, {"trend_pool_per_group": 8})
+    assert len(pool) == 8
+    assert pool[0]["id"] == "g11"  # score 내림차순
 
 
 def test_merge_state_preserves_daily_guard():

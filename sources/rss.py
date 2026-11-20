@@ -141,7 +141,20 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
     return items
 
 
+_DOTTED_DATE_RE = re.compile(r"^\s*(\d{4})\.(\d{1,2})\.(\d{1,2})\.?\s*$")
+
+
 def _parse_published(entry) -> str:
+    # 국내 관공서 RSS(과기정통부 등)는 pubDate를 "2026.11.18"로 준다 —
+    # feedparser가 이를 2026-11-01로 잘못 읽어 신선도 게이트에서 전량
+    # 탈락했다(2026-11-20 실측). 이 형식은 먼저 직접 읽는다
+    m = _DOTTED_DATE_RE.match(str(entry.get("published") or ""))
+    if m:
+        try:
+            return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)),
+                            tzinfo=timezone.utc).isoformat()
+        except ValueError:
+            pass
     parsed = entry.get("published_parsed") or entry.get("updated_parsed")
     if parsed:
         try:

@@ -1,9 +1,8 @@
 """카드 최종 중복 게이트 — LLM 출력 정규화(librarian)와 적용 로직
 (digest_select) 테스트. LLM 호출은 전부 모킹(오프라인 안전).
 
-이 게이트가 막는 것: 백필 경로로 들어온 항목은 사서 판정이 없어 topic
-slug 가드(_dedup_by_topic)를 아예 우회하고, 제목 토큰이 갈리면
-_dedup_similar도 놓친다(NO.19 중복 카드). 발송 직전 마지막 겹.
+이 게이트가 막는 것: 제목 토큰이 갈리면 _dedup_similar가 놓치는 같은 날
+교차 소스 중복(NO.19 중복 카드). 날짜를 넘는 중복은 published_ledger가 맡는다.
 """
 import os
 import sys
@@ -116,38 +115,33 @@ def test_apply_does_not_mutate_input():
     assert [it["id"] for it in items] == ["a", "b"]
 
 
-# --- _backfill_news: 슬롯 재충전 --------------------------------------------
+# --- 순위 점수·취약점 권고 소스 (2026-11-20, 백필 폐지와 함께 도입) --------
 
-def test_backfill_fills_to_cap_from_unjudged():
-    selected = [_item("a", "완전히 다른 사건 하나")]
-    ranked = selected + [_item("x", "국내 보험사 개인정보 유출"),
-                         _item("y", "커널 드라이버 권한상승 취약점")]
-    got = digest_select._backfill_news(selected, ranked, {"a"}, 3)
-    assert [it["id"] for it in got] == ["a", "x", "y"]
+CFG = {
+    "source_weights": {"개인정보보호위원회": 50, "CISA Advisories": -80},
+    "vuln_advisory_sources": ["CISA Advisories"],
+}
 
 
-def test_backfill_respects_excluded_ids():
-    """게이트가 지운 항목이 백필로 되돌아오면 게이트가 무의미해진다."""
-    selected = [_item("a", "완전히 다른 사건 하나")]
-    ranked = selected + [_item("x", "국내 보험사 개인정보 유출")]
-    got = digest_select._backfill_news(
-        selected, ranked, set(), 3, excluded_ids={"x"})
-    assert [it["id"] for it in got] == ["a"]
+def test_rank_score_applies_source_weight():
+    policy = {"source": "개인정보보호위원회", "category": "news"}
+    advisory = {"source": "CISA Advisories", "category": "critical"}
+    # critical +40 휴리스틱이 있어도 가중치로 정책 소스보다 아래로 간다
+    assert digest_select._rank_score(policy, CFG) > digest_select._rank_score(advisory, CFG)
 
 
-def test_backfill_skips_judged_and_uninformative():
-    selected = [_item("a", "완전히 다른 사건 하나")]
-    # j = 사서가 이미 판정(위키 전용으로 탈락한 것) — 백필 자격 없음
-    # s = 요약이 제목과 같은 껍데기(구글뉴스류) — '제목=본문' 카드 방지
-    shell = _item("s", "껍데기 제목")
-    shell["summary"] = "껍데기 제목"
-    ranked = selected + [_item("j", "판정된 뉴스"), shell]
-    got = digest_select._backfill_news(selected, ranked, {"a", "j"}, 5)
-    assert [it["id"] for it in got] == ["a"]
+def test_rank_score_ignores_bad_weight():
+    cfg = {"source_weights": {"X": "많이"}}
+    assert digest_select._rank_score({"source": "X"}, cfg) == 0
 
 
-def test_backfill_does_not_mutate_input():
-    selected = [_item("a", "완전히 다른 사건 하나")]
-    ranked = selected + [_item("x", "국내 보험사 개인정보 유출")]
-    digest_select._backfill_news(selected, ranked, set(), 3)
-    assert len(selected) == 1
+def test_vuln_source_detection():
+    assert digest_select._is_vuln_source({"source": "CISA Advisories"}, CFG)
+    assert not digest_select._is_vuln_source({"source": "보안뉴스"}, CFG)
+    assert not digest_select._is_vuln_source({"source": "CISA Advisories"}, {})
+
+
+def test_backfill_is_gone():
+    """원문 그대로 카드를 채우던 백필은 폐지됐다 — 되살아나면 영어·원문
+    카드가 다시 나간다(2026-11-20 사용자 보고 4·6번)."""
+    assert not hasattr(digest_select, "_backfill_news")
