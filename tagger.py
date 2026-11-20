@@ -5,32 +5,16 @@ item can carry multiple tags (e.g. a ransomware story about a bank is both
 '금융' and '랜섬웨어'), so this does simple keyword matching against
 title+summary rather than picking one bucket.
 
-2026-11-20: 영문 키워드는 단어 경계로만 맞춘다. 구 방식은 부분 문자열이라
-"rce"가 source·resource·force에, "apt"가 chapter·capture·adapt에 걸려 기사와
-무관한 태그가 붙었다(사용자 보고: 태그가 기사 내용과 불일치). 한글 키워드는
-조사가 붙어 쓰이므로(랜섬웨어가, 금융권) 부분 문자열 그대로 둔다.
-뒤에 숫자는 허용한다 — APT29, APT41 같은 그룹명이 apt에 걸려야 한다.
+2026-11-20 QA C10: 매처는 text_rules.keyword_matcher 하나다. card_editor의
+태그 근거 검사와 같은 매처라 판정이 어긋나지 않는다. 하이픈과 공백 동치,
+복수형(zero-days, LLMs), 전부 대문자 키워드는 대소문자 구분(apt-get 제외),
+한글 충돌어 제외(페이지, 딥페이크의 '페이')는 그 함수 설명에 있다.
 """
-import re
-
-_ASCII_RE = re.compile(r"^[\x00-\x7f]+$")
-
-
-def _matcher(keyword: str):
-    kw = keyword.lower()
-    if _ASCII_RE.match(kw):
-        pattern = re.compile(rf"(?<![a-z0-9]){re.escape(kw)}(?![a-z])")
-        return lambda text: bool(pattern.search(text))
-    return lambda text: kw in text
+import text_rules
 
 
 def tag_item(item: dict, rules: dict) -> dict:
-    haystack = f"{item.get('title', '')} {item.get('summary', '')}".lower()
-
-    matched = []
-    for tag_name, keywords in rules.items():
-        if any(_matcher(kw)(haystack) for kw in keywords):
-            matched.append(tag_name)
-
-    item["tags"] = matched
+    haystack = f"{item.get('title', '')} {item.get('summary', '')}"
+    item["tags"] = [tag_name for tag_name, keywords in rules.items()
+                    if text_rules.any_keyword(keywords, haystack)]
     return item

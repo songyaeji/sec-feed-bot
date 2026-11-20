@@ -11,10 +11,13 @@ import merge_state  # noqa: E402
 import preflight  # noqa: E402
 import tagger  # noqa: E402
 
-RULES = {"RCE": ["rce", "remote code execution"], "APT": ["apt"], "랜섬웨어": ["랜섬웨어"]}
+# config.yaml tags 표기: 전부 대문자 약어는 대소문자 구분
+RULES = {"RCE": ["RCE", "remote code execution", "원격 코드"], "APT": ["APT"], "랜섬웨어": ["랜섬웨어"],
+         "제로데이": ["zero-day", "0-day", "in the wild"], "AI": ["LLM", "deepfake"],
+         "금융": ["페이", "ATM"]}
 
 
-# --- tagger: 영문 키워드 단어 경계 -----------------------------------------
+# --- tagger: 공용 매처(text_rules.keyword_matcher) ----------------------------
 
 def test_english_keyword_does_not_match_inside_words():
     item = tagger.tag_item({"title": "Open source resource exhausts force", "summary": "chapter capture adapt"}, RULES)
@@ -25,7 +28,80 @@ def test_english_keyword_matches_whole_word_and_korean_substring():
     item = tagger.tag_item({"title": "Critical RCE in router", "summary": "랜섬웨어가 확산"}, RULES)
     assert item["tags"] == ["RCE", "랜섬웨어"]
     assert tagger.tag_item({"title": "APT29 campaign"}, RULES)["tags"] == ["APT"]  # 그룹명 번호 허용
-    assert tagger.tag_item({"title": "apt-group linked"}, RULES)["tags"] == ["APT"]
+    assert tagger.tag_item({"title": "APT-group linked"}, RULES)["tags"] == ["APT"]
+
+
+# QA C10 경계 사례 (키워드, 텍스트, 기대). 실측 26/27, 남은 1건은 소문자 llm-based
+MATCHER_CASES = [
+    ("LLM", "Attackers abused LLMs to write malware", True),
+    ("zero-day", "Google fixes two zero-days in Chrome", True),
+    ("zero-day", "a zero day in Chrome", True),
+    ("0-day", "two 0-days chained", True),
+    ("deepfake", "deepfakes used in CEO fraud", True),
+    ("APT", "APT41 targeted telecoms", True),
+    ("APT", "run apt-get install openssl", False),
+    ("APT", "sudo apt install curl to patch", False),
+    ("RCE", "open source resource exhaustion", False),
+    ("RCE", "two RCEs fixed in Patch Tuesday", True),
+    ("prompt injection", "prompt-injection attack on Copilot", True),
+    ("phishing", "spear-phishing emails", True),
+    ("ATM", "ATMs hit by jackpotting", True),
+    ("ATM", "atm_tc_enqueue null deref", False),
+    ("C2", "C2C marketplace for goods", False),
+    ("C2", "beacon to C2 server", True),
+    ("in the wild", "in-the-wild exploitation confirmed", True),
+    ("페이", "웹 페이지 변조 공격", False),
+    ("페이", "딥페이크 영상과 인터페이스 결함", False),
+    ("페이", "카카오페이 정보 유출", True),
+    ("원격 코드", "치명적 원격코드실행 위험", True),
+    ("제로데이", "제로 데이터 이동", False),
+]
+
+
+def test_shared_matcher_boundary_cases():
+    import text_rules
+    for kw, text, expected in MATCHER_CASES:
+        assert text_rules.keyword_matcher(kw)(text) is expected, (kw, text)
+
+
+def test_tagger_uses_shared_matcher():
+    assert tagger.tag_item({"title": "홈페이지 변조, 딥페이크 피해"}, RULES)["tags"] == []
+    assert tagger.tag_item({"title": "Zero-Days exploited", "summary": "LLMs abused"},
+                           RULES)["tags"] == ["제로데이", "AI"]
+
+
+def test_config_tag_keywords_use_uppercase_acronyms():
+    import yaml
+    with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                           "config.yaml"), encoding="utf-8") as f:
+        tags = yaml.safe_load(f)["tags"]
+    for kw in ("LLM", "RCE", "APT", "SWIFT", "ATM"):
+        assert any(kw in kws for kws in tags.values()), kw
+    assert not any(k in kws for kws in tags.values() for k in ("llm", "rce", "apt", "swift", "atm"))
+
+
+# --- cardgen: 뉴스 카드 pill (QA C2 태그 폴백 금지, D6 사건지) ---------------
+
+def _news_html(item, regions=None):
+    return cardgen._build_news(cardgen._load_fragments(), item, "2026.11.20", n=2,
+                               regions=regions or {}, dots="")
+
+
+def test_news_card_has_no_rule_tag_fallback():
+    item = {"title_ko": "관광공사 개인정보 유출", "summary_ko": "요약이다.", "source": "보안뉴스",
+            "tags": ["금융"]}
+    assert "금융" not in _news_html(item)
+    item["tags_ko"] = ["개인정보유출"]
+    assert "개인정보유출" in _news_html(item)
+
+
+def test_news_card_region_pill_comes_from_item_not_source_map():
+    item = {"title_ko": "중국 해킹 그룹 외교부 표적", "summary_ko": "요약이다.", "source": "보안뉴스"}
+    html_text = _news_html(item, regions={"보안뉴스": "국내"})
+    assert "국내" not in html_text and "해외" not in html_text  # 사건지 없으면 생략
+    item["region"] = "해외"
+    html_text = _news_html(item, regions={"보안뉴스": "국내"})
+    assert "해외" in html_text and "국내" not in html_text
 
 
 # --- preflight: 전면 한국어 fatal --------------------------------------------

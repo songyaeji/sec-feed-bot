@@ -460,13 +460,15 @@ def _build_news(
     # 카테고리 pill의 라임 스타일(pill_cat)을 물려받아 시각 앵커가 된다.
     # 개수는 유동 — 태그 없으면 국내/해외·실악용만 남아도 그대로 둔다.
     pills = []
-    # 사서 구체 키워드(tags_ko) 우선, 없으면 규칙 태그 폴백 (fail-open)
-    tags = list(item.get("tags_ko") or item.get("tags") or [])[:MAX_TAG_PILLS]
+    # 2026-11-20 QA C2: 검증 통과한 tags_ko만. 0개면 태그 pill 없음.
+    # 규칙 태그(item["tags"]) 폴백 금지, 근거 없는 '금융'이 카드에 실렸다
+    tags = list(item.get("tags_ko") or [])[:MAX_TAG_PILLS]
     if tags:
         pills.append(_fill(fragments["pill_cat"], TEXT=html.escape(tags[0])))
-    # v7: 국내/해외 표기 — 태그와 같은 아웃라인 pill
-    region = regions.get(item.get("source", ""))
-    if region:
+    # QA D6: 국내/해외는 재작성이 기사 내용으로 정한 사건지(item["region"]).
+    # 소스 설정 지역(regions)은 사건지와 반대로 찍혀 쓰지 않는다. 없으면 생략
+    region = item.get("region")
+    if region in ("국내", "해외"):
         pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(region)))
     # 2026-11-20: 이미 카드로 나간 사건의 새 사실(발행 원장 판정) — 독자가
     # 처음 터진 사건으로 오해하지 않게 '후속'을 표기한다(사용자 결정)

@@ -17,9 +17,11 @@ judge.py와 같은 보안 원칙: 피드 제목·요약은 신뢰할 수 없는 
 """
 import json
 import os
-import re
 import subprocess
 import sys
+
+import librarian
+import text_rules
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # 선정 품질이 곧 이 레인의 가치라 판단력 있는 모델을 쓴다(하루 1콜)
@@ -31,8 +33,9 @@ TIMEOUT_SECONDS = 120
 MAX_PICKS = 2
 TITLE_MAX_CHARS = 40
 WHY_MAX_CHARS = 80
-
-_HANGUL_RE = re.compile(r"[가-힣]")
+# 2026-11-20 QA C11: 한글 1자 문안이 통과했다. 하한과 영어 구 규칙, 문체 검사
+TITLE_MIN_HANGUL = 4
+WHY_MIN_HANGUL = 10
 
 _PROMPT_HEADER = """\
 너는 보안·AI 실무자에게 오늘의 화제 콘텐츠를 골라 주는 편집자다.
@@ -118,12 +121,27 @@ def _clean(text) -> str:
     return " ".join(text.replace("·", ", ").replace("**", "").split())
 
 
+def _reject_reason(title: str, why: str) -> str | None:
+    """문안 검사. 길이 초과는 자르지 않고 거부한다(자르면 문장이 끊긴 채 나간다)."""
+    if not (title and why):
+        return "빈 문안"
+    if len(title) > TITLE_MAX_CHARS or len(why) > WHY_MAX_CHARS:
+        return "길이 초과"
+    if (text_rules.hangul_count(title) < TITLE_MIN_HANGUL
+            or text_rules.english_leak_title(title)):
+        return "제목 한국어 미달"
+    if (text_rules.hangul_count(why) < WHY_MIN_HANGUL
+            or text_rules.english_leak_prose(why) or not librarian._style_ok(why)):
+        return "설명 한국어 미달"
+    return None
+
+
 def parse_picks(result_text: str, items: list[dict]) -> list[dict] | None:
     """LLM 출력 → 선정 항목 리스트(최대 MAX_PICKS). 형식이 깨졌으면 None.
 
-    후보에 없는 id·한글 없는 제목·빈 설명은 버린다 — 영어 원제가 화면에
-    나가는 경로를 코드에서 막는다. 반환 항목은 입력 dict에 title_ko·why_ko를
-    채운 원본 객체다(호출 측이 id로 소진 처리)."""
+    후보에 없는 id와 _reject_reason에 걸린 문안은 버린다. 영어 원제가
+    화면에 나가는 경로를 코드에서 막는다. 반환 항목은 입력 dict에
+    title_ko와 why_ko를 채운 원본 객체다(호출 측이 id로 소진 처리)."""
     try:
         start, end = result_text.find("{"), result_text.rfind("}")
         parsed = json.loads(result_text[start:end + 1])
@@ -141,12 +159,11 @@ def parse_picks(result_text: str, items: list[dict]) -> list[dict] | None:
         item = by_id.get(entry.get("id"))
         if item is None or item in picks:
             continue
-        title = _clean(entry.get("title_ko"))[:TITLE_MAX_CHARS]
-        why = _clean(entry.get("why_ko"))[:WHY_MAX_CHARS]
-        if not (title and why and _HANGUL_RE.search(title)
-                and _HANGUL_RE.search(why)):
-            print(f"[trend] 한국어 문안 미달 제외: {entry.get('id')}",
-                  file=sys.stderr)
+        title = _clean(entry.get("title_ko"))
+        why = _clean(entry.get("why_ko"))
+        reason = _reject_reason(title, why)
+        if reason:
+            print(f"[trend] {reason} 제외: {entry.get('id')}", file=sys.stderr)
             continue
         item["title_ko"] = title
         item["why_ko"] = why
