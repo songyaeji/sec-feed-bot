@@ -1,0 +1,86 @@
+# QA 전용 실제 LLM digest 실행 — 2026-11-20 개편 QA용 임시 workflow.
+# Discord 비밀값을 넘기지 않고, 커밋하지 않고, 결과는 artifact로만 남긴다.
+# qa/ 브랜치에 커밋 메시지 [qa-llm]이 든 push가 있을 때만 돈다.
+# QA가 끝나면 이 파일과 qa/llm_run.py를 지운다.
+name: QA LLM
+
+on:
+  push:
+    branches: ['qa/**']
+
+concurrency:
+  group: qa-llm
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  qa-llm:
+    if: contains(github.event.head_commit.message, '[qa-llm]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      # 코드는 QA 브랜치, 상태와 위키는 운영 main 최신본 — 실제 내일 digest와
+      # 같은 입력으로 돌린다
+      - name: Use latest production state
+        run: |
+          git fetch --depth 1 origin main
+          git checkout FETCH_HEAD -- state/ wiki/
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Install Playwright chromium
+        run: playwright install --with-deps chromium
+
+      - name: Set up Claude auth
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -z "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            echo "token secret 없음"
+            exit 1
+          fi
+          mkdir -p ~/.claude
+          python3 - <<'PY'
+          import json, os, time
+          cred = {"claudeAiOauth": {
+              "accessToken": os.environ["CLAUDE_CODE_OAUTH_TOKEN"],
+              "expiresAt": int(time.time() * 1000) + 300 * 86400 * 1000,
+              "scopes": ["user:inference", "user:profile"],
+              "subscriptionType": "pro"}}
+          path = os.path.expanduser("~/.claude/.credentials.json")
+          with open(path, "w") as f:
+              json.dump(cred, f)
+          os.chmod(path, 0o600)
+          PY
+
+      - name: Run QA digest (no send)
+        timeout-minutes: 50
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: python qa/llm_run.py out/qa
+
+      - name: Upload QA output
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-llm-${{ github.sha }}
+          path: out/qa
+          retention-days: 7
