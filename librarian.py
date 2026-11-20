@@ -1,29 +1,36 @@
 """2nd-layer LLM wiki librarian (digest mode only).
 
-Calls a headless Claude Code subprocess that reads wiki/CLAUDE.md, updates
-wiki/topics/*.md and wiki/INDEX.md, and returns a verdict per item so
-main.py can drop items that are already covered in the wiki
-(action == "skip_duplicate") from the digest.
+Calls a headless Claude Code subprocess that reads wiki/CLAUDE.md and
+wiki/INDEX.md, updates wiki/topics/*.md (INDEX is rebuilt by code), and
+returns a verdict per item so main.py can drop items that are already
+covered in the wiki (action == "skip_duplicate") from the digest.
 
 This is a nice-to-have layered on top of dedup.py's heuristic filter, never
 a hard dependency: total failure (subprocess error, timeout, unparsable
 output, missing token) returns None so main.py can fail-open with its own
 heuristic top-N -- a wiki-sync problem must never suppress a real alert.
+
+모든 claude 호출은 _run_claude_json 하나로 나간다. 기본은 글 전용(도구 전부
+차단)이고, 사서만 격리 작업 폴더를 넘겨 위키 도구를 받는다.
 """
 import json
 import os
 import re
+import shutil
 import signal
 import subprocess
 import sys
+import tempfile
 import time
 
 import dedup
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATE_DIR = os.path.join(BASE_DIR, "state")
-LIBRARIAN_INPUT_PATH = os.path.join(STATE_DIR, "librarian_input.json")
+WIKI_DIR = os.path.join(BASE_DIR, "wiki")
+TOPICS_DIR = os.path.join(WIKI_DIR, "topics")
 LIBRARIAN_PROMPT_PATH = os.path.join(BASE_DIR, "librarian_prompt.md")
+# 사서 프롬프트가 읽는 입력 파일의 작업 폴더 기준 경로
+INPUT_REL_PATH = os.path.join("state", "librarian_input.json")
 
 TIMEOUT_SECONDS = 300  # 청크당
 # 전역 시간예산 — 배치가 아무리 많아도(255건=13배치) 이 벽에서 멈추고
@@ -35,22 +42,108 @@ DEADLINE_SECONDS = 1500  # 25분 — 900s는 배치 3~4개(60~80건)에서 바�
 # 통과 + 청크 300s ≈ 30분 → workflow step timeout 33분 안에 끝난다
 MODEL = "claude-haiku-4-5-20251001"
 
+# --- claude 호출 권한 ------------------------------------------------------
+# 근거: Claude Code 공식 문서 CLI reference, permissions, headless.
+# --allowedTools는 묻지 않고 실행할 도구를 정할 뿐 사용 가능한 도구를 줄이지
+# 않는다. 줄이는 것은 --tools다("" = 내장 도구 전부 끔). 묻지 않고 도는
+# 동작(작업 폴더 안 파일 읽기, cat 같은 읽기 전용 Bash, 서브에이전트 Agent)은
+# 허용 목록과 무관하게 실행된다. 그래서 피드 본문을 다루는 호출은 --tools로
+# 도구 자체를 없앤다. MCP 도구는 --tools 영향을 받지 않아 --strict-mcp-config로
+# 설정 파일의 서버를 싣지 않고 mcp__*를 거부한다. dontAsk는 승인이 필요한
+# 호출을 전부 거부한다(-p 기본 모드에 기대지 않고 명시).
+_TOOL_FLAGS = {"--tools", "--allowedTools", "--allowed-tools", "--disallowedTools",
+               "--disallowed-tools", "--permission-mode", "--dangerously-skip-permissions",
+               "--add-dir", "--mcp-config", "--settings"}
+# 글 전용 호출: --tools ""가 주 차단이고 아래 거부 목록은 겹 방어다.
+# Agent는 서브에이전트 도구의 현재 이름, Task는 옛 이름
+TEXT_ONLY_DENY = ("Read,Bash,Write,Edit,Glob,Grep,WebFetch,WebSearch,"
+                  "Task,Agent,NotebookEdit,mcp__*")
+# 사서: 읽기는 작업 폴더(위키 사본과 입력 파일) 안에서만 승인 없이 된다.
+# 쓰기는 wiki/topics 아래만 허용 규칙으로 승인되고 나머지는 dontAsk가 거부한다.
+# Write(path) 규칙은 경로와 매칭되지 않아 Edit(path)로 쓴다(Edit 규칙이 Write도
+# 덮는다). Glob, Grep은 Linux 기본 도구 목록에 없어 --tools에 이름을 적어야 생긴다
+LIBRARIAN_TOOLS = "Read,Glob,Grep,Write,Edit"
+LIBRARIAN_ALLOW = "Edit(wiki/topics/**)"
+LIBRARIAN_DENY = ("Bash,PowerShell,WebFetch,WebSearch,Task,Agent,NotebookEdit,"
+                  "mcp__*,Read(.git/**)")
 
-def _run_claude_json(extra_args: list[str], prompt: str, timeout: int):
-    """`claude -p ... --output-format json` 을 새 프로세스그룹으로 띄워
+# claude에 넘길 환경변수 허용 목록. Discord 웹훅, NVD, Reddit, Instagram 같은
+# 다른 비밀값은 넘기지 않는다. 인증은 ~/.claude/.credentials.json(HOME 필요)과
+# CLAUDE_CODE_OAUTH_TOKEN으로 붙는다
+_ENV_KEEP = {
+    "PATH", "HOME", "USER", "LOGNAME", "SHELL", "LANG", "LANGUAGE", "TERM", "TZ",
+    "TMPDIR", "TMP", "TEMP",
+    "HTTP_PROXY", "HTTPS_PROXY", "NO_PROXY", "http_proxy", "https_proxy", "no_proxy",
+    "SSL_CERT_FILE", "SSL_CERT_DIR", "NODE_EXTRA_CA_CERTS",
+    # Windows 로컬 실행용
+    "SYSTEMROOT", "WINDIR", "COMSPEC", "PATHEXT", "USERPROFILE", "USERNAME",
+    "APPDATA", "LOCALAPPDATA", "PROGRAMDATA", "PROGRAMFILES", "HOMEDRIVE", "HOMEPATH",
+}
+_ENV_KEEP_PREFIXES = ("LC_", "XDG_", "CLAUDE_", "ANTHROPIC_")
+
+
+def _claude_env() -> dict:
+    env = {k: v for k, v in os.environ.items()
+           if k in _ENV_KEEP or k.startswith(_ENV_KEEP_PREFIXES)}
+    # claude가 띄우는 하위 프로세스(Bash, hook, MCP) 환경에서 자격증명 제거.
+    # 도구를 막아 둬서 겹 방어다
+    env["CLAUDE_CODE_SUBPROCESS_ENV_SCRUB"] = "1"
+    return env
+
+
+def _claude_cmd(extra_args: list[str], workspace: str | None) -> list[str]:
+    bad = _TOOL_FLAGS.intersection(extra_args)
+    if bad:
+        raise ValueError(f"도구 권한 플래그는 _run_claude_json만 정한다: {sorted(bad)}")
+    if workspace is None:
+        tool_args = ["--tools", "", "--disallowedTools", TEXT_ONLY_DENY]
+    else:
+        tool_args = ["--tools", LIBRARIAN_TOOLS,
+                     "--allowedTools", LIBRARIAN_ALLOW,
+                     "--disallowedTools", LIBRARIAN_DENY]
+    # 프롬프트는 stdin으로 넘긴다. argv 한 인자는 Linux에서 131072바이트가
+    # 상한이라 긴 프롬프트가 기동 단계에서 실패한다
+    return ["claude", "-p", *extra_args, *tool_args,
+            "--permission-mode", "dontAsk", "--strict-mcp-config",
+            "--output-format", "json"]
+
+
+def _kill_tree(proc) -> None:
+    killpg = getattr(os, "killpg", None)
+    if killpg is not None:
+        try:
+            killpg(os.getpgid(proc.pid), signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            pass
+    else:  # Windows: 프로세스그룹이 없다
+        proc.kill()
+    proc.wait()
+
+
+def _run_claude_json(extra_args: list[str], prompt: str, timeout: int,
+                     *, workspace: str | None = None):
+    """`claude -p ... --output-format json`을 새 프로세스그룹으로 띄워
     timeout 시 그룹째 SIGKILL 한다. subprocess.run(timeout=)은 직속 자식만
     죽여서, claude CLI가 남긴 node 손자프로세스가 stdout 파이프를 붙들면
     communicate()가 timeout을 넘겨 무한 블록한다(2026-07-10 digest 1h23m
     hang의 실제 원인). start_new_session으로 프로세스그룹을 분리하고
     killpg로 손자까지 회수해 timeout을 실효화한다.
+
+    workspace가 None이면 글 전용 호출이다. 도구를 전부 끄고 저장소 루트에서
+    돈다. 사서만 _make_workspace()의 격리 폴더를 넘겨 위키 도구를 받는다.
     반환: CompletedProcess, 또는 timeout/OSError 시 None."""
+    cmd = _claude_cmd(extra_args, workspace)
     try:
         proc = subprocess.Popen(
-            ["claude", "-p", prompt, *extra_args, "--output-format", "json"],
-            cwd=BASE_DIR,
+            cmd,
+            cwd=workspace or BASE_DIR,
+            env=_claude_env(),
+            stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             start_new_session=True,
         )
     except OSError as exc:
@@ -58,20 +151,68 @@ def _run_claude_json(extra_args: list[str], prompt: str, timeout: int):
         return None
 
     try:
-        stdout, stderr = proc.communicate(timeout=timeout)
+        stdout, stderr = proc.communicate(input=prompt, timeout=timeout)
     except subprocess.TimeoutExpired:
-        try:
-            os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
-        except (ProcessLookupError, PermissionError):
-            pass
-        proc.wait()
+        _kill_tree(proc)
         print(f"[librarian] claude 타임아웃 {timeout}s — 프로세스그룹 kill", file=sys.stderr)
         return None
     except OSError as exc:
+        _kill_tree(proc)
         print(f"[librarian] claude 통신 실패: {exc}", file=sys.stderr)
         return None
 
     return subprocess.CompletedProcess(proc.args, proc.returncode, stdout, stderr)
+
+
+# --- 사서 격리 작업 폴더 ----------------------------------------------------
+# 승인 없이 되는 읽기는 작업 폴더 안으로 한정된다(permissions 문서). Read
+# 거부 규칙은 Grep, Glob에 최선 노력으로만 적용되므로 저장소 루트를 작업
+# 폴더로 주면 .git이나 다른 파일을 읽힐 수 있다. 그래서 위키 사본과 입력
+# 파일만 든 임시 폴더에서 돌리고, 끝나면 wiki/topics/*.md 변경분만 되돌려
+# 쓴다. CLAUDE.md, INDEX 같은 다른 파일은 사서가 고쳐도 반영되지 않는다.
+
+def _skip_links(directory: str, names: list[str]) -> list[str]:
+    return [n for n in names if os.path.islink(os.path.join(directory, n))]
+
+
+def _make_workspace() -> str:
+    workspace = tempfile.mkdtemp(prefix="librarian-")
+    try:
+        shutil.copytree(WIKI_DIR, os.path.join(workspace, "wiki"), ignore=_skip_links)
+        os.makedirs(os.path.join(workspace, "state"))
+    except OSError:
+        shutil.rmtree(workspace, ignore_errors=True)
+        raise
+    return workspace
+
+
+def _sync_topics(workspace: str) -> int:
+    """작업 폴더의 wiki/topics/*.md 중 새로 생기거나 바뀐 파일만 저장소로 복사."""
+    src_dir = os.path.join(workspace, "wiki", "topics")
+    try:
+        names = sorted(os.listdir(src_dir))
+    except OSError as exc:
+        print(f"[librarian] 작업 폴더 위키 읽기 실패: {exc}", file=sys.stderr)
+        return 0
+    os.makedirs(TOPICS_DIR, exist_ok=True)
+    changed = 0
+    for name in names:
+        src = os.path.join(src_dir, name)
+        if not name.endswith(".md") or os.path.islink(src) or not os.path.isfile(src):
+            continue
+        with open(src, "rb") as f:
+            data = f.read()
+        dst = os.path.join(TOPICS_DIR, name)
+        try:
+            with open(dst, "rb") as f:
+                if f.read() == data:
+                    continue
+        except FileNotFoundError:
+            pass
+        with open(dst, "wb") as f:
+            f.write(data)
+        changed += 1
+    return changed
 
 
 # 276건을 한 번에 넣으면 모델이 최종 JSON을 못 뱉고 무너진다(실측) —
@@ -97,10 +238,10 @@ def _item_to_input(item: dict) -> dict:
     }
 
 
-def _write_input(items: list[dict]) -> None:
-    os.makedirs(STATE_DIR, exist_ok=True)
+def _write_input(items: list[dict], path: str) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     payload = [_item_to_input(item) for item in items]
-    with open(LIBRARIAN_INPUT_PATH, "w", encoding="utf-8") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
@@ -145,32 +286,31 @@ def _extract_json_object(text: str):
     return json.loads(text[start:end + 1])
 
 
-def _run_chunk(chunk: list[dict], prompt: str) -> dict | None:
+def _run_chunk(chunk: list[dict], prompt: str, workspace: str) -> dict | None:
     """청크 하나를 subprocess로 처리해 해당 청크의 verdicts dict를 돌려준다.
-    어떤 실패든 None — 호출자(run_librarian)가 그 청크만 스킵하고 계속한다."""
+    어떤 실패든 None — 호출자(run_librarian)가 그 청크만 스킵하고 계속한다.
+    사서가 작업 폴더에서 고친 토픽 페이지는 성패와 무관하게 저장소로 옮긴다
+    (예전에 저장소 위키를 직접 고치던 때와 같은 결과)."""
     try:
-        _write_input(chunk)
+        _write_input(chunk, os.path.join(workspace, INPUT_REL_PATH))
     except OSError as exc:
         print(f"[librarian] 입력 준비 실패: {exc}", file=sys.stderr)
         return None
 
-    proc = _run_claude_json(
-        [
-            # --bare는 credentials 파일까지 스킵해 CI에서 "Not logged in"이 됨 (2.1.201 실측)
-            "--model", MODEL,
-            # 피드 본문은 신뢰할 수 없는 입력 — 경로 무제한 Read/Write는
-            # 프롬프트 인젝션 시 자격증명 파일을 읽어 wiki 페이지(커밋되어
-            # 공개 repo로 push됨)에 쓰는 유출 경로가 된다. 도구를 위키와
-            # 입력 파일로 스코프하고, 경로 무관 자동승인이라 allowlist를
-            # 무력화하는 acceptEdits 모드는 제거(비대화형 -p에서 allowlist
-            # 밖 도구 호출은 자동 거부된다)
-            "--allowedTools",
-            "Read(wiki/**),Read(state/librarian_input.json),"
-            "Write(wiki/**),Edit(wiki/**),Glob(wiki/**),Grep(wiki/**)",
-        ],
-        prompt,
-        TIMEOUT_SECONDS,
-    )
+    try:
+        # --bare는 credentials 파일까지 스킵해 CI에서 "Not logged in"이 됨 (2.1.201 실측).
+        # 피드 본문은 신뢰할 수 없는 입력이다. 도구와 경로 제한은
+        # _run_claude_json이 workspace 기준으로 건다
+        proc = _run_claude_json(["--model", MODEL], prompt, TIMEOUT_SECONDS,
+                                workspace=workspace)
+    finally:
+        try:
+            synced = _sync_topics(workspace)
+        except OSError as exc:
+            print(f"[librarian] 위키 반영 실패: {exc}", file=sys.stderr)
+        else:
+            if synced:
+                print(f"[librarian] 토픽 페이지 {synced}개 반영", file=sys.stderr)
     if proc is None:
         return None
 
@@ -278,6 +418,18 @@ def run_librarian(items: list[dict]) -> dict | None:
         print(f"[librarian] 프롬프트 읽기 실패: {exc}", file=sys.stderr)
         return None
 
+    try:
+        workspace = _make_workspace()
+    except OSError as exc:
+        print(f"[librarian] 작업 폴더 준비 실패: {exc}", file=sys.stderr)
+        return None
+    try:
+        return _run_batches(items, prompt, workspace)
+    finally:
+        shutil.rmtree(workspace, ignore_errors=True)
+
+
+def _run_batches(items: list[dict], prompt: str, workspace: str) -> dict | None:
     chunks = [items[i:i + BATCH_SIZE] for i in range(0, len(items), BATCH_SIZE)]
     merged_verdicts: dict = {}
     lost = 0
@@ -296,7 +448,7 @@ def run_librarian(items: list[dict]) -> dict | None:
             )
             break
         print(f"[librarian] 배치 {i}/{len(chunks)}: {len(chunk)}건", file=sys.stderr)
-        chunk_verdicts = _run_chunk(chunk, prompt)
+        chunk_verdicts = _run_chunk(chunk, prompt, workspace)
         if chunk_verdicts is None:
             # 실패 배치는 반으로 쪼개 각 1회 재시도 — 타임아웃 원인 대부분이
             # 배치 크기라서 절반이면 제한 내 완료 확률이 크게 오른다.
@@ -322,7 +474,7 @@ def run_librarian(items: list[dict]) -> dict | None:
                         file=sys.stderr,
                     )
                     continue
-                half_verdicts = _run_chunk(half, prompt)
+                half_verdicts = _run_chunk(half, prompt, workspace)
                 if half_verdicts is None:
                     lost += len(half)
                     print(
@@ -349,8 +501,8 @@ def summarize(items: list[dict]) -> dict | None:
     반환: {"briefing": str, "keywords": [str, ...]} — 어떤 실패든 None
     (fail-open: 표지는 briefing 없이도, 키워드는 태그 폴백으로 나간다).
 
-    위키 편집이 필요 없는 순수 텍스트 요약이라 파일 입출력·도구 없이
-    프롬프트에 항목을 직접 넣는다."""
+    위키 편집이 필요 없는 순수 텍스트 요약이라 파일 입출력 없이
+    프롬프트에 항목을 직접 넣는다. 도구는 _run_claude_json이 전부 끈다."""
     if not items:
         return None
 
@@ -386,7 +538,7 @@ def summarize(items: list[dict]) -> dict | None:
         "오늘의 항목:\n" + "\n".join(lines)
     )
 
-    # 파일 편집이 필요 없으므로 --allowedTools 없이(도구 불필요)
+    # 글 전용 호출. 결과가 공개 사이트와 인스타로 나가므로 도구를 전부 끈다
     proc = _run_claude_json(["--model", MODEL], prompt, 120)
     if proc is None:
         print("[librarian] 총평 실행 실패", file=sys.stderr)
@@ -459,7 +611,7 @@ def dedup_gate(items: list[dict]) -> list[list[int]] | None:
         "항목:\n" + "\n".join(lines)
     )
 
-    # 순수 텍스트 판정 — 도구 없이(위키 편집 불필요, 인젝션 표면 최소화)
+    # 글 전용 판정. _run_claude_json이 도구를 전부 끈다(인젝션 표면 최소화)
     proc = _run_claude_json(["--model", DEDUP_MODEL], prompt, DEDUP_TIMEOUT)
     if proc is None:
         print("[librarian] 중복 게이트 실행 실패", file=sys.stderr)

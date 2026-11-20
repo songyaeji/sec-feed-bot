@@ -24,6 +24,8 @@ from datetime import datetime, timedelta, timezone
 
 import requests
 
+import netguard
+
 BATCH_SIZE = 10
 
 # username 필드는 보내지 않는다 — 채널별 웹훅에 설정된 이름/아바타
@@ -202,10 +204,10 @@ def send_trend(items: list[dict], discord_cfg: dict) -> None:
         title = " ".join((item.get("title_ko") or "").split())[:TREND_TITLE_MAX]
         why = " ".join((item.get("why_ko") or "").split())
         url = item.get("url", "")
-        # <> 감싸기를 조기 종료시키는 문자(공백·'>')가 든 url은 마크다운
-        # 브레이크아웃(가짜 링크 텍스트 주입) 여지가 있다 — 항목 자체를 스킵
-        if not title or not url.startswith(("http://", "https://")) or any(
-                c in url for c in (" ", ">", "<")):
+        # <> 감싸기를 조기 종료시키는 문자(공백, '<', '>', 제어 문자)가 든 url은
+        # 마크다운 브레이크아웃(가짜 링크 텍스트 주입) 여지가 있다. 항목 자체를
+        # 스킵한다. 검사는 cardgen.build_link_lines와 같은 함수
+        if not title or not netguard.is_safe_link_url(url):
             continue
         lines.append(f"**{_escape_md(title)}**")
         if why:
@@ -491,8 +493,13 @@ def _build_digest_embed(category: str, group_items: list[dict], colors: dict) ->
             title = title[:DIGEST_TITLE_MAX] + "…"
         title = title.replace("[", "\\[").replace("]", "\\]")
         # URL 속 ')'가 마크다운 링크를 조기 종료시킨다(QA F3) — <>로 감싸
-        # cardgen.build_link_lines와 처리 통일
-        lines.append(f"{emoji} **[{title}](<{item['url']}>)**")
+        # cardgen.build_link_lines와 처리 통일. <> 감싸기를 끊는 URL은 링크 없이
+        # 제목만 싣는다(같은 netguard.is_safe_link_url 검사)
+        url = item.get("url", "")
+        if netguard.is_safe_link_url(url):
+            lines.append(f"{emoji} **[{title}](<{url}>)**")
+        else:
+            lines.append(f"{emoji} **{title}**")
         lines.append(_chip_line(item["source"], item.get("tags_ko") or item.get("tags") or []))
         lines.append("")  # blank line between items
 

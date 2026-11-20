@@ -276,15 +276,22 @@ def build_link_lines(top_items: list[dict], cve_rest: list[dict],
     동일하게 뉴스 → 그 밖의 소식 → 오늘의 CVE(맨 마지막) 순으로 나열한다.
     URL을 <>로 감싸 Discord 링크 미리보기(embed 자동 생성)를 억제한다.
     라벨 속 대괄호는 [label](url) 마크다운을 조기 종료시키므로 \\ 이스케이프
-    (QA 2026-07-23 — "[일부] 검거"류 제목이 링크를 파손)."""
-    return [
-        "{}. [{}](<{}>)".format(
-            i,
-            link_label(item).replace("[", "\\[").replace("]", "\\]"),
-            item["url"],
-        )
-        for i, item in enumerate(top_items + other_rest + cve_rest, start=1)
-    ]
+    (QA 2026-07-23 — "[일부] 검거"류 제목이 링크를 파손).
+
+    URL은 notify.send_trend와 같은 netguard.is_safe_link_url로 검사한다.
+    '>'나 공백이 든 URL은 <> 감싸기를 끊어 가짜 링크를 만든다. 검사에 걸린
+    항목은 번호와 라벨만 남겨 카드 번호 1:1을 지키고, preflight가 링크 없는
+    줄로 잡아 카드뉴스 발송을 막는다."""
+    import netguard
+    lines = []
+    for i, item in enumerate(top_items + other_rest + cve_rest, start=1):
+        label = link_label(item).replace("[", "\\[").replace("]", "\\]")
+        url = item.get("url", "")
+        if netguard.is_safe_link_url(url):
+            lines.append(f"{i}. [{label}](<{url}>)")
+        else:
+            lines.append(f"{i}. {label}")
+    return lines
 
 
 def build_cards(

@@ -87,19 +87,13 @@ def _call_llm(prompt: str):
         print("[trend] CLAUDE_CODE_OAUTH_TOKEN 미설정 — 트렌드 선정 스킵",
               file=sys.stderr)
         return None
-    try:
-        proc = subprocess.run(
-            # --bare 금지: credentials 파일까지 스킵해 CI에서 인증이 깨진다
-            ["claude", "-p", prompt, "--model", MODEL,
-             "--disallowedTools", _DENIED_TOOLS,
-             "--output-format", "json"],
-            cwd=BASE_DIR,
-            capture_output=True,
-            text=True,
-            timeout=TIMEOUT_SECONDS,
-        )
-    except (subprocess.TimeoutExpired, OSError) as exc:
-        print(f"[trend] LLM 선정 실패: {exc}", file=sys.stderr)
+    # 글 전용 호출. librarian._run_claude_json이 --tools ""로 도구를 전부 끄고
+    # 프롬프트를 stdin으로 넘긴다. --bare 금지: credentials 파일까지 스킵해
+    # CI에서 인증이 깨진다
+    import librarian
+    proc = librarian._run_claude_json(["--model", MODEL], prompt, TIMEOUT_SECONDS)
+    if proc is None:
+        print("[trend] LLM 선정 실패", file=sys.stderr)
         return None
     if proc.returncode != 0:
         print(f"[trend] LLM 비정상 종료: {proc.stderr[:200]}", file=sys.stderr)
