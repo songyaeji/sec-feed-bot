@@ -268,7 +268,7 @@ def link_label(item: dict) -> str:
     CVE 항목은 CVE ID, CVE 번호 없는 권고는 권고 번호 + _card_title,
     그 외는 _card_title(title_ko 우선 + 분류 접두어 제거).
     개행은 목록 줄이 깨지지 않게 공백으로 접는다."""
-    title =" ".join(_card_title(item).split())
+    title = " ".join(_card_title(item).split())
     if is_cve_lane(item):
         # CVE 코너 항목은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
         # (사용자 결정)
