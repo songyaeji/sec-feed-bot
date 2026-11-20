@@ -10,6 +10,7 @@ state file has append-only, union semantics:
                     last_run            : iso                  (moves forward)
   pending.json      list of items keyed by "id"               (union by id)
   urgent_history    list of {date, title, ...}                (union by tuple)
+  published.json    list of {date, url, ...} 발행 원장          (union by (date, url), 30일 prune)
 
 so the merge is deterministic at the data level. Union alone would undo
 main.py's TTL prune, though: main prunes its local copy, then this script
@@ -36,6 +37,7 @@ import sys
 from datetime import datetime
 
 import dedup
+import published_ledger
 from state_store import prune_seen
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -44,6 +46,7 @@ STATE_DIR = os.path.join(BASE_DIR, "state")
 SEEN_PATH = os.path.join(STATE_DIR, "seen.json")
 PENDING_PATH = os.path.join(STATE_DIR, "pending.json")
 URGENT_PATH = os.path.join(STATE_DIR, "urgent_history.json")
+PUBLISHED_PATH = os.path.join(STATE_DIR, "published.json")
 
 
 def _load_local(path: str, default):
@@ -272,6 +275,20 @@ def main(ref: str) -> None:
             ensure_ascii=False,
             indent=1,
             trailing_newline=False,
+        )
+
+    # published.json(발행 원장)은 digest run만 쓰지만, 같은 시각 다른 작성자가
+    # 원장을 갖고 있으면 잃지 않게 합친다. match published_ledger.save:
+    # indent=1, ensure_ascii=False, no sort_keys, trailing newline
+    local_pub = _load_local(PUBLISHED_PATH, None)
+    remote_pub = _load_ref(ref, "state/published.json", None)
+    if local_pub is not None or remote_pub is not None:
+        _write(
+            PUBLISHED_PATH,
+            published_ledger.merge(local_pub or [], remote_pub or []),
+            sort_keys=False,
+            ensure_ascii=False,
+            indent=1,
         )
 
 

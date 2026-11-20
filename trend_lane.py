@@ -32,13 +32,15 @@ def _normalize_trend_url(url: str) -> str:
 
 
 def _select_trend(items: list[dict], config: dict) -> list[dict]:
-    """'오늘의 트렌드' 링크 선별 — 카드·위키·사서를 타지 않는 결정적 경로.
+    """트렌드 선정 후보 풀 — 카드·위키·사서를 타지 않는 결정적 경로.
 
-    소스별로 (score 내림차순 → published 내림차순) 정렬 후 라운드로빈으로
-    상한까지 뽑는다 — 한 소스(예: HN 검색)가 섹션을 독식하지 않게 하는
-    다양성 장치. 점수 체계가 소스마다 달라(HN points vs 레딧 무점수 RSS)
-    전역 정렬은 의미가 없다. URL 정규화 중복은 먼저 접는다."""
-    cap = int(config.get("trend_max_links", 6))
+    2026-11-20 개편: 이 함수는 더 이상 발송 목록을 확정하지 않는다. 그룹별
+    상위 trend_pool_per_group건씩 모은 후보 풀을 돌려주고, 최종 최대 2건은
+    발송 직전 trend_enrich.pick이 풀 전체를 보고 고른다(구 라운드로빈은
+    출처를 골고루 채울 뿐 중요한 것을 고르지 못했다). 정렬 기준은 그대로:
+    그룹 안에서 score 내림차순, 같은 소식이면 공식 원문 우선. URL 정규화
+    중복과 같은 사건 중복은 풀 단계에서 먼저 접는다."""
+    per_group = int(config.get("trend_pool_per_group", 8))
     seen_urls: set[str] = set()
     by_source: dict[str, list[dict]] = {}
     for item in items:
@@ -61,33 +63,24 @@ def _select_trend(items: list[dict], config: dict) -> list[dict]:
         group.sort(key=lambda it: "news.google.com" in (it.get("url") or ""))
         group.sort(key=lambda it: -(it.get("score") or 0))
 
-    selected: list[dict] = []
-    # 큐 우선순위 = 사용자 관심축(QA2: 관심축 가중치) — 상한(cap)보다
-    # 그룹이 많을 때 어떤 그룹이 슬롯을 얻는지 결정한다. 미등재 그룹은 뒤
+    pool: list[dict] = []
+    # 풀 나열 순서 = 사용자 관심축(trend_priority). LLM 선정에 순서 가중은
+    # 없지만 프롬프트에서 관심축 후보가 앞에 오게 한다. 미등재 그룹은 뒤
     priority = {g: i for i, g in enumerate(config.get("trend_priority", []))}
-    queues = [g for _, g in sorted(
-        ((priority.get(k, len(priority)), g)
-         for k, g in by_source.items() if g),
-        key=lambda pair: pair[0],
-    )]
-    while queues and len(selected) < cap:
-        next_queues = []
-        for group in queues:
-            if len(selected) >= cap:
+    ordered = sorted(by_source.items(),
+                     key=lambda kv: priority.get(kv[0], len(priority)))
+    for _, group in ordered:
+        taken = 0
+        for cand in group:
+            if taken >= per_group:
                 break
-            while group:
-                cand = group.pop(0)
-                # 이미 뽑힌 항목과 같은 사건/소식(제목 토큰·CVE 유사도)이면
-                # 건너뛰고 그룹의 다음 후보로 — 구글뉴스 재보도 vs 공식
-                # 원문이 다른 그룹에서 둘 다 뽑히는 것 방지
-                if any(dedup_lib.is_similar_event(cand, s) for s in selected):
-                    continue
-                selected.append(cand)
-                break
-            if group:
-                next_queues.append(group)
-        queues = next_queues
-    return selected
+            # 이미 풀에 든 항목과 같은 사건/소식이면 건너뛴다 — 구글뉴스
+            # 재보도와 공식 원문이 다른 그룹에서 둘 다 들어오는 것 방지
+            if any(dedup_lib.is_similar_event(cand, s) for s in pool):
+                continue
+            pool.append(cand)
+            taken += 1
+    return pool
 
 
 def _should_send_trend(state: dict, now_kst: datetime, run_mode: str) -> bool:
@@ -116,39 +109,34 @@ def _should_send_trend(state: dict, now_kst: datetime, run_mode: str) -> bool:
 
 
 def send_daily_trend(
-    picks: list[dict],
+    pool: list[dict],
     discord_cfg: dict,
     state: dict,
     today_kst: str,
 ) -> bool:
-    """카드뉴스 발행 확정 직후의 트렌드 픽 1일 1회 발송. 성공 시 True.
+    """카드뉴스 발행 확정 직후의 트렌드 픽 1일 1회 발송. 처리 완료 시 True.
 
-    호출 시점이 발행 성공 이후라 실패해도 브리핑 본편은 이미 나갔다 —
-    어떤 예외도 삼키고 False를 돌려주면 호출 측(main)이 후보를 seen에
-    남기지 않아 다음 날 아침에 자연 재도전한다.
+    pool(_select_trend 후보 풀)에서 trend_enrich.pick이 최대 2건을 고르고
+    한국어 제목·설명을 쓴다. 볼 만한 게 0건이면 아무것도 보내지 않고
+    True(후보 소진) — 다음 날 같은 후보가 다시 올라오지 않게 한다.
 
-    last_trend_date는 발송 성공 뒤에만 기록한다: digest 자체가 하루 1회
+    선정 LLM 실패·발송 예외는 False: 호출 측(main)이 후보를 seen에 남기지
+    않아 다음 날 아침 자연 재도전한다. 영어 원제로 폴백 발송하지 않는다.
+
+    last_trend_date는 처리 완료 뒤에만 기록한다: digest 자체가 하루 1회
     가드(last_digest_date)를 이미 통과한 run이라 같은 날 재진입이 없어
     중복 발송 위험이 없고, 선기록하면 실패한 날의 트렌드가 통째로
     사라진다."""
     try:
-        # 발송 확정 시에만 주석(LLM 포함) — 보류 run은 비용 0.
-        # 주석 실패가 발송까지 막으면 안 되므로(QA3) 격리 — 실패 시
-        # 배지 폴백만으로 나간다
-        try:
-            trend_enrich.annotate(picks)
-        except Exception as exc:
-            print(f"[main] 트렌드 주석 실패(폴백 발송): {_safe_exc_str(exc)}",
+        picks = trend_enrich.pick(pool)
+        if picks is None:
+            print("[main] 트렌드 선정 실패 — 오늘은 보내지 않음(내일 재도전)",
                   file=sys.stderr)
-        # 같은 사건의 교차 보도/반응은 대표만(LLM dup_of, QA2:
-        # 5픽 중 2픽이 같은 사건이던 사례) — 접힌 만큼 줄어든 채 발송
-        folded = [p for p in picks if not p.get("dup_of")]
-        if len(folded) < len(picks):
-            print(f"[main] 트렌드 동일 사건 {len(picks) - len(folded)}건 접음",
-                  file=sys.stderr)
-        notify.send_trend(folded, discord_cfg)
+            return False
+        if picks:
+            notify.send_trend(picks, discord_cfg)
         state["last_trend_date"] = today_kst
-        print(f"[main] 트렌드 픽 발송(하루 1회): {len(folded)}건")
+        print(f"[main] 트렌드 픽(하루 1회): 후보 {len(pool)}건 중 {len(picks)}건 발송")
         return True
     except Exception as exc:
         print(f"[main] 트렌드 발송 실패(내일 아침 재도전): {_safe_exc_str(exc)}",

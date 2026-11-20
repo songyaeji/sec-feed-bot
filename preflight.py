@@ -5,7 +5,8 @@ digest 카드뉴스가 실제로 나가기 전에, 운영 가이드라인 준수
 
 점검 근거가 되는 가이드라인:
 - 카드·링크는 정말 중요한 것만 소수 (config max_news_items + max_cve_items 상한)
-- 카드는 전면 한국어 (사서가 title_ko/summary_ko 생성)
+- 카드는 전면 한국어 (card_editor가 title_ko/summary_ko 재작성·검증)
+- 뉴스 장수는 가변 — 못 채우면 그날은 적게(2026-11-20 사용자 결정)
 - Discord 웹훅 제약: 메시지당 첨부 10개, 파일 8MB
   (출처: Discord Developer Docs — Uploading Files / message limits)
 - 비밀정보(웹훅 URL 등) 유출 금지
@@ -30,15 +31,11 @@ _WEBHOOK_PATTERN = "discord.com/api/webhooks"
 _HANGUL_RE = re.compile(r"[가-힣]")
 _URL_RE = re.compile(r"https?://")
 
-# 정상 카드 구성은 표지 1 + 뉴스 0~7 + 목록 0~2 = 2~10장 (v16: 뉴스 7 +
-# '오늘의 CVE' 1 = 9장이 정상 상한이나, 과도기 구성 여지로 10까지 허용).
+# 정상 카드 구성은 표지 1 + 뉴스 1~7 + 목록 0~1 + '오늘의 CVE' 1 = 3~10장
+# (2026-11-20 가변 장수 — 뉴스가 적은 날은 장수가 줄어든다).
 # 이 범위를 벗어나면 렌더 로직 이상 신호로 보고 경고만 남긴다
 _EXPECTED_PNG_MIN = 2
 _EXPECTED_PNG_MAX = 10
-
-# 한국어화 미흡 판정 임계 — 소수 누락은 cardgen 원문 폴백으로 흡수되지만
-# 30%를 넘으면 사서(librarian) 자체가 오동작한 날로 본다
-_KO_MISSING_RATIO = 0.30
 
 _SENT_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
 
@@ -128,47 +125,27 @@ def check_card_news(
             f"원문 링크 없는 줄 {len(no_url)}개(번호 {no_url}) — http/https URL이 없어 원문 추적 불가"
         )
 
-    # --- WARNING: 한국어화(사서 title_ko/summary_ko) 상태 ---------------
-    total = len(items)
-    if total:
-        no_title_ko = sum(1 for it in items if not it.get("title_ko"))
-        if no_title_ko / total > _KO_MISSING_RATIO:
-            warnings.append(
-                f"사서 한국어화 미흡 {no_title_ko}/{total} — title_ko 없는 항목이 30% 초과(원문 제목 폴백 예정)"
-            )
-
-        bad_ko = sum(
-            1 for it in items
-            if it.get("title_ko") and not _HANGUL_RE.search(it["title_ko"])
-        )
-        if bad_ko:
-            warnings.append(
-                f"title_ko에 한글이 전혀 없는 항목 {bad_ko}건 — 번역 실패 의심"
-            )
-
-        no_summary_ko = sum(1 for it in items if not it.get("summary_ko"))
-        if no_summary_ko / total > _KO_MISSING_RATIO:
-            warnings.append(
-                f"summary_ko 없는 항목 {no_summary_ko}/{total} — 요약 한국어화가 30% 넘게 누락"
-            )
-
-    # --- WARNING: 제목=본문 껍데기 카드 — 사서 요약 없이 폴백된 항목의
-    # 피드 요약이 제목과 동일하면 본문이 비거나 제목이 두 번 찍힌다
-    # (2026-07-24 NO.17 실측 2장: 구글뉴스 RSS는 description이 제목 그대로)
-    hollow = [
+    # --- FATAL: 전면 한국어 -----------------------------------------------
+    # 2026-11-20: 원문 백필이 폐지돼 모든 카드 항목은 card_editor 검증을
+    # 통과한 한국어 문안을 가져야 한다. 여기 걸리면 선별·재작성 경로에
+    # 원문이 새는 버그다 — 영어 원문 카드를 내보내느니 발송을 막는다
+    no_ko = [
         it.get("id") for it in items
-        if not cardgen.is_cve_item(it)
-        and not cardgen.has_informative_summary(it)
+        if not (it.get("title_ko") and _HANGUL_RE.search(it["title_ko"]))
     ]
-    if hollow:
-        warnings.append(
-            f"제목=본문 껍데기 카드 {len(hollow)}건 — 사서 요약 없음 + 피드 요약이 제목과 동일: {hollow}"
-        )
+    if no_ko:
+        fatal.append(f"한국어 제목 없는 항목 {len(no_ko)}건: {no_ko}")
+    no_summary = [
+        it.get("id") for it in items
+        if not cardgen.is_cve_lane(it) and not it.get("summary_ko")
+    ]
+    if no_summary:
+        fatal.append(f"한국어 요약 없는 뉴스 {len(no_summary)}건: {no_summary}")
 
     # --- WARNING: 개조식(명사형 종결) 요약 — 뉴스 카드 본문은 완결형 문장이어야 한다
     bad_style_ids = [
         it.get("id") for it in items
-        if not it.get("kev") and "cvss" not in it
+        if not cardgen.is_cve_lane(it)
         and it.get("summary_ko") and _noun_ending_count(it["summary_ko"])
     ]
     if bad_style_ids:
@@ -185,14 +162,4 @@ def check_card_news(
         warnings.append(
             f"카드 PNG {len(pngs)}장 — 예상 범위({_EXPECTED_PNG_MIN}~{_EXPECTED_PNG_MAX}장) 밖(렌더 구성 이상 의심)"
         )
-    # --- WARNING: 뉴스 카드 목표 미달 ------------------------------------
-    # 표지1+뉴스7+CVE1=9장이 사용자가 정한 정상 구성 — 뉴스가 7건 미만이면
-    # 선별 파이프라인(사서 유실·후보 부족)이 조용히 무너진 신호다
-    max_news = config.get("max_news_items", 7)
-    news_count = sum(1 for it in items if not (it.get("kev") or "cvss" in it))
-    if news_count < max_news:
-        warnings.append(
-            f"뉴스 항목 {news_count}건 — 목표 {max_news}건 미달(후보 부족 또는 선별 유실 의심)"
-        )
-
     return fatal, warnings

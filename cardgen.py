@@ -169,14 +169,11 @@ def pick_top(items: list[dict], limit: int = MAX_ISSUE_CARDS) -> list[dict]:
     1~5) 우선 정렬 — 가산점(AI·금융 등 heuristic_score)은 동점 시 보조
     기준으로 강등한다(사용자 결정: 금융 +70이 importance 5짜리 대형
     사고를 밀어내던 문제의 수정). sorted는 안정 정렬이므로 동점은 입력
-    순서(=심각도 정렬 순)를 유지."""
-    # _recap(main의 백필 표식)은 중요도보다 앞선 1순위 — 9장을 채우려고
-    # 실린 재탕이 신선한 속보를 카드 상단에서 밀어내지 않게 한다.
-    # reverse=True이므로 신선(True)이 recap(False)보다 먼저 온다.
+    순서(=main의 선별 순)를 유지. recap(재조명)은 2026-11-20부터 카드
+    후보에 오르지 않으므로 별도 티어가 없다."""
     return sorted(
         items,
         key=lambda it: (
-            not it.get("_recap", False),
             (it.get("importance") or 0),
             heuristic_score(it),
         ),
@@ -194,6 +191,26 @@ def is_cve_item(item: dict) -> bool:
     return bool(item.get("kev")) or "cvss" in item
 
 
+def is_cve_lane(item: dict) -> bool:
+    """'오늘의 CVE' 코너에 실리는 항목 — 구조적 CVE 엔트리(is_cve_item) +
+    main이 lane="cve"로 보낸 취약점 기사(사용자 결정 2026-11-20: 단순
+    취약점 권고는 뉴스 카드가 아니라 CVE 코너로)."""
+    return item.get("lane") == "cve" or is_cve_item(item)
+
+
+# CVE 번호가 없는 권고(CISA ICS 등)의 행 라벨 — URL·제목의 권고 번호
+_ADVISORY_ID_RE = re.compile(r"\b(ICSA-\d{2}-\d{3}-\d{2}|ICSMA-\d{2}-\d{3}-\d{2}|"
+                             r"AA\d{2}-\d{3}[A-Z]?|KVE-\d{4}-\d{4,})\b", re.IGNORECASE)
+
+
+def _row_id(item: dict) -> str:
+    cve = _cve_id(item)
+    if cve:
+        return cve
+    m = _ADVISORY_ID_RE.search(f"{item.get('url', '')} {item.get('title', '')}")
+    return m.group(1).upper() if m else "CVE 미지정"
+
+
 def plan_cards(items: list[dict]):
     """카드 구성 순서를 한 곳에서 결정 — build_cards와 build_link_lines가
     같은 순서를 쓰게 한다. 반환: (news_top, cve_rest, other_rest).
@@ -207,13 +224,14 @@ def plan_cards(items: list[dict]):
     강제 — 고정 2장(표지+CVE) + 뉴스 + 목록(있을 때 1)이 넘치면
     뉴스 최하위부터 목록 카드 맨 앞으로 강등한다. build_link_lines가
     이 반환값 순서를 그대로 쓰므로 트리밍은 반드시 여기서 끝낸다."""
-    cve_items = [it for it in items if is_cve_item(it)]
-    other_items = [it for it in items if not is_cve_item(it)]
+    cve_items = [it for it in items if is_cve_lane(it)]
+    other_items = [it for it in items if not is_cve_lane(it)]
 
     top = pick_top(other_items)
     top_ids = {id(it) for it in top}
 
-    cve_rest = pick_top(cve_items, limit=len(cve_items))  # 중요도순 정렬만
+    # CVE 코너는 main이 정한 순서(취약점 기사 중요도순 → KEV 우선 CVE)를 유지
+    cve_rest = list(cve_items)
     other_rest = [it for it in other_items if id(it) not in top_ids]
     while 2 + len(top) + (1 if other_rest else 0) > 10:
         other_rest.insert(0, top.pop())
@@ -245,9 +263,9 @@ def link_label(item: dict) -> str:
     Discord(build_link_lines)와 github.io meta.json이 공유하는 단일 규칙:
     CVE 항목은 CVE ID, 그 외는 _card_title(title_ko 우선 + 분류 접두어 제거).
     개행은 목록 줄이 깨지지 않게 공백으로 접는다."""
-    if is_cve_item(item):
-        # CVE 항목(KEV·NVD 등)은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
-        # (사용자 결정). id 추출 실패 시에만 제목으로 폴백
+    if is_cve_lane(item):
+        # CVE 코너 항목은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
+        # (사용자 결정). CVE 번호가 없는 권고는 한국어 설명으로 폴백
         return _cve_id(item) or " ".join(_card_title(item).split())
     return " ".join(_card_title(item).split())
 
@@ -450,6 +468,10 @@ def _build_news(
     region = regions.get(item.get("source", ""))
     if region:
         pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(region)))
+    # 2026-11-20: 이미 카드로 나간 사건의 새 사실(발행 원장 판정) — 독자가
+    # 처음 터진 사건으로 오해하지 않게 '후속'을 표기한다(사용자 결정)
+    if item.get("followup"):
+        pills.append(_fill(fragments["pill_tag"], TEXT="후속"))
     # v8: KEV(실악용 확인)만 — "긴급" 라벨은 즉시 발송 채널 전용
     if item.get("kev"):
         pills.append(fragments["pill_urgent"])
@@ -570,7 +592,7 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
 
     rows = []
     for item, title in zip(shown, shown_titles):
-        cve = _cve_id(item)
+        cve = _row_id(item)
         cvss = item.get("cvss")
         # 피드가 cvss를 ""·"N/A" 문자열로 주면 float()가 렌더 전체를
         # 죽인다(QA 2026-07-23) — 숫자만 점수로, 그 외는 "—"
@@ -605,7 +627,8 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
         COUNT=str(len(rest)),
         SUBHEAD=subhead,
         ROWS="".join(rows),
-        FOOT=html.escape("출처: NVD · 원문 링크는 아래 메시지에"),
+        # 2026-11-20: CISA·KISA 권고와 취약점 기사도 실려 출처가 NVD만이 아니다
+        FOOT=html.escape("원문 링크는 아래 메시지에"),
         DOTS=dots,
         # CVE 목록은 항상 맨 마지막 장 — 다음 장 화살표 없이 도트만
         ARROW="",

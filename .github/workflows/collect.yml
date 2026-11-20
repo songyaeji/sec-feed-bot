@@ -204,6 +204,10 @@ jobs:
           if [ -f state/urgent_history.json ]; then
             git add state/urgent_history.json
           fi
+          # 발행 원장(날짜를 넘는 카드 중복 판정 근거) — 첫 digest 전엔 없다
+          if [ -f state/published.json ]; then
+            git add state/published.json
+          fi
           if git diff --cached --quiet; then
             echo "No state changes, skipping commit."
             exit 0
@@ -229,11 +233,14 @@ jobs:
             if [ -f state/urgent_history.json ]; then
               git add state/urgent_history.json
             fi
+            if [ -f state/published.json ]; then
+              git add state/published.json
+            fi
             if git diff --cached --quiet; then
               echo "No net state changes after merge, skipping commit."
               exit 0
             fi
-            git commit -m "chore: update seen.json/pending.json/wiki [skip ci]"
+            git commit -m "chore: update seen.json/pending.json/published.json/wiki [skip ci]"
             if git push; then
               exit 0
             fi

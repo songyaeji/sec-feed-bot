@@ -45,8 +45,8 @@ def collect_all(config: dict, state: dict) -> list[dict]:
             if source_cfg.get("breaking"):
                 for item in items:
                     item["breaking"] = True
-            # 트렌드 라운드로빈 묶음 키 — 유튜브 채널 4개가 각각 소스로
-            # 잡혀 링크 섹션을 독식하는 것 방지(_select_trend가 본다)
+            # 트렌드 후보 풀 묶음 키 — 유튜브 채널 4개가 각각 소스로
+            # 잡혀 후보 풀을 독식하는 것 방지(_select_trend가 본다)
             if source_cfg.get("trend_group"):
                 for item in items:
                     item["trend_group"] = source_cfg["trend_group"]

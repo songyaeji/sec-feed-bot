@@ -1,5 +1,7 @@
-"""digest 카드 선별 로직 — 중복 제거 3겹 중 결정적 2겹(_dedup_by_topic,
-_dedup_similar)·신선도(_split_fresh)·감점(_author_penalty)·회차(_issue_no)."""
+"""digest 카드 선별 로직 — 오늘 후보끼리의 결정적 중복 제거 2겹
+(_dedup_by_topic, _dedup_similar)·신선도(_split_fresh)·감점(_author_penalty)·
+회차(_issue_no)·순위 점수(_rank_score)·취약점 권고 소스 판별(_is_vuln_source).
+날짜를 넘는 중복은 published_ledger가 맡는다."""
 import sys
 from datetime import datetime, timedelta, timezone
 
@@ -146,35 +148,32 @@ def _issue_no(config: dict, now_kst: datetime) -> int:
     return (now_kst.date() - epoch).days + 1
 
 
-def _backfill_news(to_send_news: list[dict], news_ranked: list[dict],
-                   judged_id_set: set, max_news: int,
-                   excluded_ids: frozenset | set = frozenset()) -> list[dict]:
-    """뉴스 상한이 안 차면 무판정 뉴스 상위로 채운 **새 리스트**를 돌려준다.
+# 사서가 매기는 기사 성격(kind) — librarian_prompt.md와 같은 목록.
+# 뉴스 카드 = 사고·법제도·기관 발표(config card_news_kinds), 취약점은
+# 오늘의 CVE 코너, 기타(홍보·실적·행사·칼럼)는 카드에서 제외
+KNOWN_KINDS = {"incident", "policy", "institution", "vuln", "other"}
 
-    사서 부분 실패·중복 게이트 삭제로 슬롯이 비는 두 경로에서 공용으로
-    쓴다. 표지1+뉴스7+CVE1=9장 유지가 사용자 결정.
-    excluded_ids: 이번 발행에서 이미 탈락한 항목(게이트가 지운 중복) —
-    다시 채우면 게이트가 무의미해진다."""
-    filled = list(to_send_news)
-    selected_ids = {it["id"] for it in filled}
-    for cand in news_ranked:
-        if len(filled) >= max_news:
-            break
-        if cand["id"] in selected_ids or cand["id"] in judged_id_set:
-            continue
-        if cand["id"] in excluded_ids:
-            continue
-        if any(dedup_lib.is_similar_event(cand, s) for s in filled):
-            continue
-        # 백필은 사서 요약 없이 원문 폴백으로 실린다 — 피드 요약이 제목과
-        # 동일한 껍데기(구글뉴스류)는 '제목=본문' 카드가 되므로 제외
-        # (2026-07-24 NO.17 실측 2장). 해당 항목은 이월돼 다음 digest에서
-        # 사서 판정을 다시 받는다.
-        if not cardgen.has_informative_summary(cand):
-            continue
-        filled.append(cand)
-        selected_ids.add(cand["id"])
-    return filled
+
+def _is_vuln_source(item: dict, config: dict) -> bool:
+    """취약점 권고 전용 소스(config vuln_advisory_sources) 여부 — 이 소스
+    항목은 사서 판정과 무관하게 뉴스 카드에 오르지 않는다(사용자 결정
+    2026-11-20: 단순 취약점 권고는 오늘의 CVE 코너로)."""
+    return item.get("source") in set(config.get("vuln_advisory_sources") or [])
+
+
+def _rank_score(item: dict, config: dict) -> float:
+    """사서 입력 컷·카드 동점 정렬용 순위 점수 = 휴리스틱 + 소스 가중치.
+
+    config source_weights로 사고·법제도·기관 발표 소스를 올리고 취약점
+    권고 소스를 내린다 — 구 휴리스틱은 category critical(+40)인 CISA
+    Advisories가 사서 입력 상위를 차지해 ICS 권고가 뉴스 카드에 올랐다
+    (2026-11-20 Siemens·Elecbrakes)."""
+    weights = config.get("source_weights") or {}
+    try:
+        bonus = float(weights.get(item.get("source", ""), 0))
+    except (TypeError, ValueError):
+        bonus = 0.0
+    return cardgen.heuristic_score(item) + bonus
 
 
 def _apply_dedup_groups(items: list[dict], groups: list[list[int]]) -> list[dict]:
