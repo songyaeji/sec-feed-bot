@@ -465,6 +465,16 @@ def _build_cover(
     )
 
 
+_FOLLOWUP_DATE_RE = re.compile(r"\d{4}-(\d{2})-(\d{2})")
+
+
+def _followup_label(item: dict) -> str:
+    """후속 pill 문구 — 첫 보도 날짜(followup_of.date, ISO)가 있으면
+    "후속 11.16", 없거나 형식이 다르면 "후속"만."""
+    m = _FOLLOWUP_DATE_RE.match(str((item.get("followup_of") or {}).get("date") or ""))
+    return f"후속 {m.group(1)}.{m.group(2)}" if m else "후속"
+
+
 def _build_news(
     fragments: dict, item: dict, date_short: str, n: int,
     regions: dict[str, str], dots: str,
@@ -474,6 +484,11 @@ def _build_news(
     # 카테고리 pill의 라임 스타일(pill_cat)을 물려받아 시각 앵커가 된다.
     # 개수는 유동 — 태그 없으면 국내/해외·실악용만 남아도 그대로 둔다.
     pills = []
+    # 2026-11-20: 이미 카드로 나간 사건의 새 사실(발행 원장 판정) — 독자가
+    # 처음 터진 사건으로 오해하지 않게 '후속'을 표기한다(사용자 결정).
+    # 사용자 선택 시안 g2_a: 줄 맨 앞 흰 채움 pill + 첫 보도 날짜(MM.DD)
+    if item.get("followup"):
+        pills.append(_fill(fragments["pill_follow"], TEXT=html.escape(_followup_label(item))))
     # 사서 구체 키워드(tags_ko) 우선, 없으면 규칙 태그 폴백 (fail-open)
     tags = list(item.get("tags_ko") or item.get("tags") or [])[:MAX_TAG_PILLS]
     if tags:
@@ -482,10 +497,6 @@ def _build_news(
     region = regions.get(item.get("source", ""))
     if region:
         pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(region)))
-    # 2026-11-20: 이미 카드로 나간 사건의 새 사실(발행 원장 판정) — 독자가
-    # 처음 터진 사건으로 오해하지 않게 '후속'을 표기한다(사용자 결정)
-    if item.get("followup"):
-        pills.append(_fill(fragments["pill_tag"], TEXT="후속"))
     # v8: KEV(실악용 확인)만 — "긴급" 라벨은 즉시 발송 채널 전용
     if item.get("kev"):
         pills.append(fragments["pill_urgent"])
@@ -579,6 +590,10 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
     상한 8(2단 행 높이 예산), 초과분은 "…외 N건". 같은 제품 일괄 공개
     (제목 "제품명 — 설명" 접두가 80% 이상 동일)면 서브헤드로 묶고 행의
     중복 접두를 걷어내 잘림을 막는다."""
+    # 2026-11-20 사용자 선택(시안 g4_a): 카드 안에서 KEV(실제 악용 확인)
+    # 행을 먼저 — 6행 상한에 KEV가 "…외 N건"으로 숨지 않게. 안정 정렬이라
+    # 같은 그룹 안에서는 main이 정한 순서를 유지한다
+    rest = sorted(rest, key=lambda it: not it.get("kev"))
     titles = [_card_title(it) for it in rest]
 
     prefix = ""
@@ -626,6 +641,7 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
             desc = _clean_text(_strip_html(item.get("summary", "")))
         rows.append(_fill(
             fragments["cve_row"],
+            KEV=fragments["cve_kev"] if item.get("kev") else "",
             ID=html.escape(cve),
             SCORE=html.escape(score),
             DESC=html.escape(desc),

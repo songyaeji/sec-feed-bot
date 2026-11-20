@@ -151,3 +151,50 @@ def test_empty_footer_keeps_same_height(browser, tmp_path, monkeypatch):
         c.querySelector('.bar-foot').getBoundingClientRect().top - c.getBoundingClientRect().top)""")
     page.close()
     assert len(set(tops)) == 1, tops
+
+
+# --- 후속 pill(시안 g2_a), KEV 행(시안 g4_a), "실제 악용" 문구 -----------------
+
+def _pills(item):
+    frags = cardgen._load_fragments()
+    card = cardgen._build_news(frags, item, "2026.11.20", n=1, regions={"보안뉴스": "국내"}, dots="")
+    return re.findall(r'<span class="mono pill ([\w-]+)">(.*?)</span>', card)
+
+
+def test_followup_pill_first_with_first_report_date_and_no_old_pill():
+    pills = _pills({"title_ko": "제목", "summary_ko": "요약이다.", "source": "보안뉴스",
+                    "tags_ko": ["랜섬웨어", "의료기관"], "followup": True, "kev": True,
+                    "followup_of": {"date": "2026-11-16", "title_ko": "첫 보도"}})
+    assert pills[0] == ("pill-follow", "후속 11.16")
+    assert sum(1 for _, t in pills if t.startswith("후속")) == 1
+    assert ("pill-urgent", "실제 악용") in pills
+
+
+@pytest.mark.parametrize("of", [None, {"date": None}, {"date": "어제"}])
+def test_followup_pill_without_date_is_plain(of):
+    pills = _pills({"title_ko": "제목", "summary_ko": "요약이다.", "followup": True, "followup_of": of})
+    assert pills[0] == ("pill-follow", "후속")
+
+
+def test_no_followup_pill_when_not_followup():
+    assert all(cls != "pill-follow" for cls, _ in _pills({"title_ko": "제목", "summary_ko": "요약이다."}))
+
+
+def test_cve_card_sorts_kev_first_with_red_label_and_keeps_six_rows():
+    frags = cardgen._load_fragments()
+    rest = [{"title": f"CVE-2026-{1000 + i}", "cvss": 7.0, "title_ko": f"취약점 {i}", "kev": i in (6, 8)}
+            for i in range(10)]
+    card = cardgen._build_cve_list(frags, rest, "2026.11.20", n=1, dots="")
+    heads = re.findall(r'<span class="mono cve-id">(.*?)</span><span class="mono cve-score">', card)
+    assert len(heads) == 6 and "…외 4건" in card
+    assert heads[0] == '<span class="cve-kev">실제 악용</span>CVE-2026-1006'
+    assert heads[1] == '<span class="cve-kev">실제 악용</span>CVE-2026-1008'
+    assert heads[2] == "CVE-2026-1000"
+    assert card.count('class="cve-kev"') == 2
+
+
+def test_template_has_no_old_kev_wording_on_screen():
+    raw = open(cardgen.TEMPLATE_PATH, encoding="utf-8").read()
+    visible = re.sub(r"/\*.*?\*/|<!--.*?-->", "", raw, flags=re.S)
+    assert "실악용" not in visible
+    assert ".cve-kev { color: #E74C3C;" in raw

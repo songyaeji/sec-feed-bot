@@ -144,6 +144,9 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 .pill-cat { background: #C6FF33; color: #0A0A0A; font-weight: 600; }
 .pill-urgent { border: 2px solid #C6FF33; color: #C6FF33; padding: 8px 20px; }
 .pill-tag { border: 2px solid #8A8A84; color: #8A8A84; padding: 8px 20px; }
+/* 2026-11-20 사용자 선택(시안 g2_a): 후속 표시는 pill 줄 맨 앞 흰 채움 pill.
+   라임 주제 pill, 회색 테두리 태그 pill과 겹치지 않는 팔레트 주 텍스트색 */
+.pill-follow { background: #F2F2EF; color: #0A0A0A; font-weight: 600; }
 /* v6: 말줄임(…) 금지 — clamp 대신 줄 수 예산(max-height)만 걸고,
    fit 스크립트가 제목은 폰트 축소로, 본문은 문장 경계 절단으로 맞춘다 */
 .news-headline {
@@ -275,6 +278,9 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 .cve-row-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
 .cve-id { font-size: 24px; color: #8A8A84; }
 .cve-score { font-size: 24px; color: #C6FF33; flex: none; }
+/* 2026-11-20 사용자 선택(시안 g4_a): KEV 행 ID 앞 빨간 라벨. 빨강은 위협
+   강조 전용으로 이 라벨에만 쓴다 (config.yaml colors.critical과 같은 값) */
+.cve-kev { color: #E74C3C; font-weight: 600; margin-right: 18px; }
 .cve-desc {
   margin-top: 4px;
   font-size: 32px;
@@ -457,8 +463,12 @@ function fitAllCards() {
 <!-- END pill_cat -->
 
 <!-- BEGIN pill_urgent -->
-<span class="mono pill pill-urgent">실악용</span>
+<span class="mono pill pill-urgent">실제 악용</span>
 <!-- END pill_urgent -->
+
+<!-- BEGIN pill_follow -->
+<span class="mono pill pill-follow">{{TEXT}}</span>
+<!-- END pill_follow -->
 
 <!-- BEGIN pill_tag -->
 <span class="mono pill pill-tag">{{TEXT}}</span>
@@ -492,10 +502,14 @@ function fitAllCards() {
 
 <!-- BEGIN cve_row -->
 <div class="cve-row">
-  <div class="cve-row-head"><span class="mono cve-id">{{ID}}</span><span class="mono cve-score">CVSS {{SCORE}}</span></div>
+  <div class="cve-row-head"><span class="mono cve-id">{{KEV}}{{ID}}</span><span class="mono cve-score">CVSS {{SCORE}}</span></div>
   <div class="cve-desc">{{DESC}}</div>
 </div>
 <!-- END cve_row -->
+
+<!-- BEGIN cve_kev -->
+<span class="cve-kev">실제 악용</span>
+<!-- END cve_kev -->
 
 <!-- BEGIN list_row -->
 <div class="list-row"><span class="row-bullet"></span><span class="row-title">{{TITLE}}</span><span class="mono row-source">{{SOURCE}}</span></div>
