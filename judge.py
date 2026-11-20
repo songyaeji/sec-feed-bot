@@ -187,28 +187,16 @@ def select_urgent(items: list[dict], config: dict, allow_llm: bool = True) -> li
         + _judge_input(candidates)
         + _PROMPT_FOOTER
     )
-    try:
-        proc = subprocess.run(
-            [
-                # --bare 금지: credentials 파일까지 스킵해 CI에서 인증이 깨진다
-                "claude", "-p", prompt,
-                "--model", MODEL,
-                # 도구 일절 미허용 — 피드 본문은 신뢰할 수 없는 입력이라
-                # Read가 있으면 프롬프트 인젝션으로 러너의 자격증명 파일을
-                # 읽혀 판정 사유(공개 Discord/로그)로 유출될 수 있다.
-                # 명시 목록으로 강제 — 단독 "*"는 미차단(2026-07-24 실측)
-                "--disallowedTools",
-                "Read,Bash,Write,Edit,Glob,Grep,WebFetch,WebSearch,"
-                "Task,NotebookEdit",
-                "--output-format", "json",
-            ],
-            cwd=BASE_DIR,
-            capture_output=True,
-            text=True,
-            timeout=TIMEOUT_SECONDS,
-        )
-    except (subprocess.TimeoutExpired, OSError) as exc:
-        print(f"[judge] 실행 실패(다이제스트로): {exc}", file=sys.stderr)
+    # 도구 일절 미허용. 피드 본문은 신뢰할 수 없는 입력이라 Read나 Bash가
+    # 있으면 프롬프트 인젝션으로 러너의 자격증명을 읽혀 판정 사유(공개
+    # Discord와 로그)로 유출될 수 있다. librarian._run_claude_json이 글 전용
+    # 호출로 --tools ""와 거부 목록을 걸고, 프롬프트는 stdin으로 넘기고,
+    # 환경변수를 줄이고, 타임아웃 때 프로세스그룹째 끝낸다.
+    # --bare 금지: credentials 파일까지 스킵해 CI에서 인증이 깨진다
+    import librarian
+    proc = librarian._run_claude_json(["--model", MODEL], prompt, TIMEOUT_SECONDS)
+    if proc is None:
+        print("[judge] 실행 실패(다이제스트로)", file=sys.stderr)
         return []
 
     if proc.returncode != 0:

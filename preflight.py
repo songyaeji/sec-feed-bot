@@ -24,9 +24,27 @@ import cardgen
 DISCORD_MAX_ATTACHMENTS = 10
 DISCORD_MAX_FILE_BYTES = 8 * 1024 * 1024
 
-# 웹훅 URL은 경로에 bearer 토큰을 품는다 — 이 패턴이 사용자에게 보이는
-# 텍스트(링크 줄·브리핑)에 섞이면 곧 자격증명 유출이다
-_WEBHOOK_PATTERN = "discord.com/api/webhooks"
+# 송출 텍스트(링크 줄, 브리핑, 카드 문안)에 섞이면 곧 자격증명 유출인 형태.
+# 웹훅 URL은 경로에 토큰을 품는다. GitHub 토큰 접두어는 GitHub 문서 기준
+# (ghp_ gho_ ghu_ ghs_ ghr_ github_pat_). sk-ant-는 Anthropic API 키와
+# setup-token OAuth 토큰의 접두어다
+_SECRET_PATTERNS = (
+    ("Discord 웹훅", re.compile(r"discord(?:app)?\.com/api/(?:v\d+/)?webhooks/", re.I)),
+    ("GitHub 토큰", re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})")),
+    ("Anthropic 토큰", re.compile(r"\bsk-ant-[A-Za-z0-9_\-]{16,}")),
+    ("Bearer 토큰", re.compile(r"\bbearer\s+[A-Za-z0-9\-._~+/]{20,}=*", re.I)),
+    ("Authorization 헤더", re.compile(r"\bauthorization\s*:\s*\S+\s+[A-Za-z0-9\-._~+/]{16,}=*", re.I)),
+)
+# 실제 비밀값 대조용 환경변수. 값이 짧으면 오탐이 나 12자 이상만 본다
+_SECRET_ENV_VARS = (
+    "DISCORD_WEBHOOK_URL", "DISCORD_TREND_WEBHOOK_URL", "CLAUDE_CODE_OAUTH_TOKEN",
+    "ANTHROPIC_API_KEY", "NVD_API_KEY", "REDDIT_CLIENT_ID", "REDDIT_CLIENT_SECRET",
+    "IG_ACCESS_TOKEN", "GITHUB_TOKEN", "GH_TOKEN", "PORTFOLIO_DEPLOY_KEY",
+)
+_SECRET_MIN_LEN = 12
+# 카드에 그려지는 항목 필드(cardgen이 쓰는 문안과 출처, 링크)
+_CARD_TEXT_FIELDS = ("title_ko", "title", "summary_ko", "summary", "why_ko", "term_ko",
+                     "tags_ko", "tags", "source", "url")
 
 _HANGUL_RE = re.compile(r"[가-힣]")
 _URL_RE = re.compile(r"https?://")
@@ -56,6 +74,36 @@ def _noun_ending_count(text: str) -> int:
         if sent and not sent.endswith("다"):
             n += 1
     return n
+
+
+def _outgoing_texts(link_lines: list[str], items: list[dict], briefing: str | None) -> list[str]:
+    texts = [t for t in link_lines if isinstance(t, str)]
+    if isinstance(briefing, str):
+        texts.append(briefing)
+    for it in items:
+        for key in _CARD_TEXT_FIELDS:
+            value = it.get(key)
+            if isinstance(value, str):
+                texts.append(value)
+            elif isinstance(value, (list, tuple)):
+                texts.extend(v for v in value if isinstance(v, str))
+    return texts
+
+
+def find_secrets(texts) -> list[str]:
+    """비밀값으로 보이는 것의 종류 목록. 값 자체는 돌려주지 않는다(로그 유출 방지)."""
+    env_values = [v for v in (os.environ.get(name) for name in _SECRET_ENV_VARS)
+                  if v and len(v) >= _SECRET_MIN_LEN]
+    found: list[str] = []
+    for text in texts:
+        if not isinstance(text, str) or not text:
+            continue
+        for label, pattern in _SECRET_PATTERNS:
+            if label not in found and pattern.search(text):
+                found.append(label)
+        if "환경변수 비밀값" not in found and any(v in text for v in env_values):
+            found.append("환경변수 비밀값")
+    return found
 
 
 def check_card_news(
@@ -105,17 +153,12 @@ def check_card_news(
             f"링크 줄 {len(link_lines)}개 ≠ 항목 {len(items)}건 — 카드 번호와 원문 링크가 어긋남"
         )
 
-    # --- FATAL: 비밀정보(웹훅 URL) 유출 방어 ---------------------------
-    # env가 있으면 실제 값까지 대조하고, 없으면 URL 패턴만으로 방어한다
-    webhook_urls = [u for u in (os.environ.get("DISCORD_WEBHOOK_URL"),
-                                os.environ.get("DISCORD_TREND_WEBHOOK_URL")) if u]
-    leaked = 0
-    for text in list(link_lines) + ([briefing] if briefing else []):
-        if _WEBHOOK_PATTERN in text or any(u in text for u in webhook_urls):
-            leaked += 1
-    if leaked:
+    # --- FATAL: 비밀값 유출 방어 -------------------------------------------
+    # 링크 줄, 브리핑, 카드 문안 전부를 토큰 형태와 실제 비밀값으로 대조한다
+    found = find_secrets(_outgoing_texts(link_lines, items, briefing))
+    if found:
         fatal.append(
-            f"웹훅 URL 노출 의심 {leaked}건 — 링크 줄/브리핑에 discord 웹훅 패턴 포함(자격증명 유출 차단)"
+            f"비밀값 노출 의심 {len(found)}종({', '.join(found)}) — 송출 텍스트에 자격증명 형태 포함"
         )
 
     # --- FATAL: 링크 없는 링크 줄 ---------------------------------------

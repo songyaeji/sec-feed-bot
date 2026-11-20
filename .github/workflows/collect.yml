@@ -59,8 +59,13 @@ jobs:
     # step 제한 + 후속 step 5분 여유(2026-11-20 개편으로 step 45분).
     timeout-minutes: 50
     steps:
+      # 토큰을 .git/config에 남기지 않는다. 남기면 Run collector 동안 피드
+      # 입력을 다루는 LLM 호출이 읽을 수 있는 자리에 놓인다. 공개 repo라
+      # fetch는 무인증으로 되고, push하는 Commit 단계만 그 단계 env로 헤더를 건다
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -199,6 +204,8 @@ jobs:
         # 재발행한다(2026-10-07 실측: 발송 직후 33분 timeout, commit skipped).
         # 취소(cancelled)만 제외 — 사람이 멈춘 run은 남기지 않는다
         if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           # seen.json (dedup ledger), pending.json (queued non-urgent
           # backlog), and wiki/ (librarian's topic pages -- possibly new,
@@ -219,24 +226,45 @@ jobs:
             echo "No state changes, skipping commit."
             exit 0
           fi
+          # 이번 run이 바꾼 위키 파일 목록(추가, 수정, 삭제). 아래 reset 뒤에는
+          # 이 파일만 다시 add한다. wiki/ 전체를 다시 add하면 run 도중 origin에
+          # 올라온 위키 수정이 이 run의 checkout 시점 내용으로 되돌아간다
+          WIKI_CHANGED="$RUNNER_TEMP/wiki_changed.list"
+          git diff --cached --name-only --no-renames -z -- wiki/ > "$WIKI_CHANGED"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # push 인증. checkout이 토큰을 남기지 않으므로 이 단계 프로세스
+          # env(GIT_CONFIG_*)로만 헤더를 준다. 파일에는 남지 않는다
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          echo "::add-mask::$AUTH"
+          export GIT_CONFIG_COUNT=1
+          export GIT_CONFIG_KEY_0="http.https://github.com/.extraheader"
+          export GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $AUTH"
 
           # A concurrent writer (an overlapping cron run or a direct local
           # push) may have advanced origin/main. git's line-based rebase can't
           # auto-merge the JSON state files and aborts with a CONFLICT, so
           # instead of `pull --rebase` we re-base our changes onto the latest
           # origin/main without a textual replay: `git reset --mixed` moves
-          # HEAD and the index to origin/main (so unrelated files that advanced
-          # on main are kept, not reverted) while leaving this run's state/wiki
-          # edits in the working tree, then merge_state.py union-merges the JSON
-          # state files at the data level -- guaranteeing no seen id / pending
-          # item from either writer is lost.
+          # HEAD and the index to origin/main while leaving this run's
+          # state/wiki edits in the working tree, then merge_state.py
+          # union-merges the JSON state files at the data level --
+          # guaranteeing no seen id / pending item from either writer is lost.
+          # Only the wiki files listed above are re-staged, so wiki pages that
+          # advanced on main and this run did not touch keep origin's version.
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --mixed origin/main
             python merge_state.py origin/main
-            git add state/seen.json state/pending.json wiki/
+            git add state/seen.json state/pending.json
+            # 파일명의 *, ?, [ 를 glob으로 보지 않게 literal pathspec
+            while IFS= read -r -d '' path; do
+              if [ -e "$path" ]; then
+                git --literal-pathspecs add -- "$path"
+              else
+                git --literal-pathspecs rm --cached --quiet --ignore-unmatch -- "$path"
+              fi
+            done < "$WIKI_CHANGED"
             if [ -f state/urgent_history.json ]; then
               git add state/urgent_history.json
             fi

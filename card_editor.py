@@ -109,20 +109,21 @@ def fetch_article(url: str) -> str:
     """기사 본문 텍스트(최대 5000자). 실패·구글뉴스 리다이렉트는 빈 문자열.
 
     구글뉴스 RSS 링크는 JS 리다이렉트라 본문을 못 얻는다 — 피드 요약으로
-    대신한다(호출 측이 summary를 함께 넘긴다)."""
+    대신한다(호출 측이 summary를 함께 넘긴다).
+
+    fetch는 netguard.fetch_html이 한다. 기사당 전체 마감 15초, 소켓 연산당
+    FETCH_TIMEOUT초, 리다이렉트 5회, hop마다 내부 주소 차단, 본문
+    FETCH_MAX_BYTES 상한, charset 없는 한국어 페이지 인코딩 추정."""
     if not url.startswith(("http://", "https://")) or "news.google.com" in url:
         return ""
+    import netguard
     try:
-        resp = requests.get(url, headers={"User-Agent": _UA}, timeout=FETCH_TIMEOUT,
-                            stream=True)
-        if resp.status_code != 200 or "html" not in resp.headers.get("Content-Type", ""):
-            return ""
-        raw = resp.raw.read(FETCH_MAX_BYTES, decode_content=True)
-        enc = resp.encoding or resp.apparent_encoding or "utf-8"
-        return extract_paragraphs(raw.decode(enc, errors="replace"))
-    except Exception as exc:  # 네트워크·디코딩 실패는 본문 없이 진행
+        html_text = netguard.fetch_html(url, user_agent=_UA, op_timeout=FETCH_TIMEOUT,
+                                        max_bytes=FETCH_MAX_BYTES)
+    except Exception as exc:  # 차단, 마감, 네트워크, 디코딩 실패는 본문 없이 진행
         print(f"[editor] 본문 가져오기 실패: {type(exc).__name__}", file=sys.stderr)
         return ""
+    return extract_paragraphs(html_text) if html_text else ""
 
 
 # ------------------------------------------------------------ 검증
@@ -314,10 +315,7 @@ def _call(prompt: str):
         print("[editor] CLAUDE_CODE_OAUTH_TOKEN 미설정 — 사서 문안 검증만",
               file=sys.stderr)
         return None
-    proc = librarian._run_claude_json(
-        ["--model", MODEL, "--disallowedTools",
-         "Read,Bash,Write,Edit,Glob,Grep,WebFetch,WebSearch,Task,NotebookEdit"],
-        prompt, TIMEOUT_SECONDS)
+    proc = librarian._run_claude_json(["--model", MODEL], prompt, TIMEOUT_SECONDS)
     if proc is None or proc.returncode != 0:
         print("[editor] 재작성 실행 실패 — 사서 문안 검증만", file=sys.stderr)
         return None

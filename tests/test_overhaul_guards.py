@@ -182,19 +182,20 @@ def test_merge_state_unions_published_ledger(tmp_path, monkeypatch):
 
 # --- LLM 출력 타입 가드: digest 런 중단 방지 ---------------------------------
 
-def test_librarian_chunk_drops_non_dict_verdicts(monkeypatch):
+def test_librarian_chunk_drops_non_dict_verdicts(monkeypatch, tmp_path):
     from types import SimpleNamespace
     import librarian
     payload = json.dumps({"result": json.dumps({"verdicts": {
         "a": "garbage", "b": {"action": "new", "kind": ["incident"]}}})})
-    monkeypatch.setattr(librarian, "_write_input", lambda chunk: None)
+    monkeypatch.setattr(librarian, "_write_input", lambda chunk, path: None)
     monkeypatch.setattr(librarian, "_run_claude_json",
                         lambda *a, **k: SimpleNamespace(returncode=0, stdout=payload, stderr=""))
-    assert librarian._run_chunk([], "p") == {"b": {"action": "new", "kind": ["incident"]}}
+    ws = str(tmp_path)
+    assert librarian._run_chunk([], "p", ws) == {"b": {"action": "new", "kind": ["incident"]}}
     payload = json.dumps({"result": json.dumps({"verdicts": ["x"]})})
     monkeypatch.setattr(librarian, "_run_claude_json",
                         lambda *a, **k: SimpleNamespace(returncode=0, stdout=payload, stderr=""))
-    assert librarian._run_chunk([], "p") is None
+    assert librarian._run_chunk([], "p", ws) is None
 
 
 def test_wiki_guard_list_kind_does_not_crash(tmp_path, monkeypatch):
