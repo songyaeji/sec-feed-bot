@@ -203,12 +203,16 @@ _ADVISORY_ID_RE = re.compile(r"\b(ICSA-\d{2}-\d{3}-\d{2}|ICSMA-\d{2}-\d{3}-\d{2}
                              r"AA\d{2}-\d{3}[A-Z]?|KVE-\d{4}-\d{4,})\b", re.IGNORECASE)
 
 
+# CVE 번호도 권고 번호도 없는 CVE 코너 행의 라벨
+NO_ROW_ID = "CVE 미지정"
+
+
 def _row_id(item: dict) -> str:
     cve = _cve_id(item)
     if cve:
         return cve
     m = _ADVISORY_ID_RE.search(f"{item.get('url', '')} {item.get('title', '')}")
-    return m.group(1).upper() if m else "CVE 미지정"
+    return m.group(1).upper() if m else NO_ROW_ID
 
 
 def plan_cards(items: list[dict]):
@@ -261,13 +265,23 @@ def has_informative_summary(item: dict) -> bool:
 def link_label(item: dict) -> str:
     """링크 목록용 라벨 — 카드 본문 제목과 글자 그대로 일치해야 한다.
     Discord(build_link_lines)와 github.io meta.json이 공유하는 단일 규칙:
-    CVE 항목은 CVE ID, 그 외는 _card_title(title_ko 우선 + 분류 접두어 제거).
+    CVE 항목은 CVE ID, CVE 번호 없는 권고는 권고 번호 + _card_title,
+    그 외는 _card_title(title_ko 우선 + 분류 접두어 제거).
     개행은 목록 줄이 깨지지 않게 공백으로 접는다."""
+    title =" ".join(_card_title(item).split())
     if is_cve_lane(item):
         # CVE 코너 항목은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
-        # (사용자 결정). CVE 번호가 없는 권고는 한국어 설명으로 폴백
-        return _cve_id(item) or " ".join(_card_title(item).split())
-    return " ".join(_card_title(item).split())
+        # (사용자 결정)
+        cve = _cve_id(item)
+        if cve:
+            return cve
+        # 2026-11-20 QA G3: CVE 번호 없는 권고는 카드 행에 권고 번호
+        # (ICSA-26-321-08 등)가 찍히는데 링크 목록엔 한국어 설명만 있어
+        # 짝을 찾기 어려웠다. 카드 행과 같은 번호를 앞에 붙인다
+        row_id = _row_id(item)
+        if row_id != NO_ROW_ID and not title.upper().startswith(row_id):
+            return f"{row_id} {title}".strip()
+    return title
 
 
 def build_link_lines(top_items: list[dict], cve_rest: list[dict],
