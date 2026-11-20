@@ -4,8 +4,8 @@ import sys
 
 from common import _safe_exc_str
 from sources import (
-    dblp, fsec, fss, github_trend, hackernews, kev, mastodon, nvd, reddit,
-    rss)
+    dblp, fsec, fss, github_trend, hackernews, kev, mastodon, nvd, pipc,
+    reddit, rss)
 
 FETCHERS = {
     "kev": kev.fetch,
@@ -13,6 +13,7 @@ FETCHERS = {
     "rss": rss.fetch,
     "fsec": fsec.fetch,
     "fss": fss.fetch,
+    "pipc": pipc.fetch,
     "dblp": dblp.fetch,
     "hn": hackernews.fetch,
     "reddit": reddit.fetch,
@@ -35,7 +36,7 @@ def collect_all(config: dict, state: dict) -> list[dict]:
         try:
             if source_type == "nvd":
                 items = fetcher(source_cfg, state, config)
-            elif source_type in ("rss", "fsec", "fss"):
+            elif source_type in ("rss", "fsec", "fss", "pipc"):
                 items = fetcher(source_cfg, state, config)
             else:
                 items = fetcher(source_cfg)

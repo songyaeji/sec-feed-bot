@@ -2,6 +2,7 @@
 import html
 import re
 from datetime import datetime, timedelta, timezone
+from urllib.parse import urlparse
 
 import feedparser
 import requests
@@ -60,6 +61,10 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
     url = source_cfg["url"]
     category = source_cfg.get("category", "research")
     keywords = [k.lower() for k in source_cfg.get("keywords", [])]
+    # body_unavailable: 상세 페이지에 본문이 없는 피드(과기정통부 보도자료)
+    # https_links: 피드가 http 링크를 주지만 https가 열리는 사이트(KISA)
+    body_unavailable = bool(source_cfg.get("body_unavailable"))
+    https_links = bool(source_cfg.get("https_links"))
     # 신선도 게이트: 소스에 max_age_days가 있으면 그 값이 우선, 없으면 전역
     # default_max_age_days를 쓴다(오래된 재게시·역주행 원문 차단). false/0/None은
     # 필터 해제 — 릴리스/논문 atom처럼 오래돼도 유효한 피드용 탈출구.
@@ -96,11 +101,22 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
 
         title = entry.get("title", "")
         summary = _strip_html(entry.get("summary", ""))
+        if body_unavailable:
+            # 관공서 피드 부제에는 이중 인코딩 엔티티(&amp;nbsp;)가 남는다
+            summary = _strip_html(summary)
+
+        link = str(entry.get("link", ""))
+        if https_links and link.startswith("http://"):
+            link = "https://" + link[len("http://"):]
 
         # Google News 피드는 entry에 <source>매체명</source>이 붙는다.
         # 제목·요약 끝의 매체명("… - 네이트")이 카드 제목까지 흘러가는 것 차단
+        # 떼어 낸 매체명은 outlet으로 남겨 카드 출처에 쓴다. source는 설정
+        # 이름 그대로 둔다(가중치와 설정 조회용)
         src_tag = entry.get("source")
         news_source = (src_tag.get("title", "") if src_tag else "").strip()
+        if not news_source and _is_google_news(link):
+            news_source = _outlet_from_title(title)
         if news_source:
             title = _strip_source_suffix(title, news_source)
             if summary.endswith(news_source):
@@ -119,16 +135,14 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             except ValueError:
                 pass  # 파싱 불가 날짜는 버리지 않고 통과시킨다
 
-        items.append({
+        item = {
             "id": entry_id,
             "source": source_cfg.get("name", url),
             "category": category,
             "title": title,
             # 비 http(s) 스킴(javascript: 등)은 meta.json 경유로 github.io에
             # 노출될 수 있다(QA F2) — 경계에서 드롭
-            "url": (entry.get("link", "")
-                    if str(entry.get("link", "")).startswith(
-                        ("http://", "https://")) else ""),
+            "url": link if link.startswith(("http://", "https://")) else "",
             # 1500자: 300자 절단은 계보·공격체인 같은 뒷부분 세부를 사서가
             # 못 보게 해 요약 정보 밀도를 깎았다 (사용자 피드백 — GodDamn 사례)
             "summary": summary[:1500],
@@ -137,8 +151,33 @@ def fetch(source_cfg: dict, state: dict = None, global_cfg: dict = None) -> list
             # 바이라인(예: "[지진솔기자 (email)]") — deprioritize_authors 매칭용.
             # 피드에 없으면 빈 문자열
             "author": entry.get("author", "") or "",
-        })
+        }
+        if news_source:
+            # 구글뉴스 기사의 실제 매체명. 카드 출처 표기용
+            item["outlet"] = news_source
+        if body_unavailable:
+            # 상세 페이지에 본문이 없다(첨부 hwpx뿐). summary(부제)가 쓸 수
+            # 있는 원문 전부다. card_editor는 본문 fetch를 건너뛴다
+            item["body_unavailable"] = True
+        items.append(item)
     return items
+
+
+def _is_google_news(link: str) -> bool:
+    try:
+        return (urlparse(link).hostname or "") == "news.google.com"
+    except ValueError:
+        return False
+
+
+def _outlet_from_title(title: str) -> str:
+    """<source> 태그가 빠진 구글뉴스 항목의 매체명. 제목 끝 " - 매체명"을
+    읽는다. 매체명은 짧고 섹션 구분자(" | ")가 없다. 못 찾으면 빈 문자열."""
+    head, sep, tail = title.rpartition(" - ")
+    tail = tail.strip()
+    if sep and head.strip() and tail and len(tail) <= 30 and " | " not in tail:
+        return tail
+    return ""
 
 
 _DOTTED_DATE_RE = re.compile(r"^\s*(\d{4})\.(\d{1,2})\.(\d{1,2})\.?\s*$")
