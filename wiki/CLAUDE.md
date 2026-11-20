@@ -10,13 +10,16 @@
   읽는 주체(사서 role의 Claude)는 토픽 페이지만 쓰고 고친다. `wiki/INDEX.md`는
   읽기만 한다. 저장소의 다른 파일(main.py, state/, config.yaml 등)은 절대
   건드리지 않는다. 실행 중 새로 생긴 규약 밖 파일은 코드(wiki_guard)가 지운다.
+  `wiki/CLAUDE.md`, `wiki/INDEX.md`, `wiki/INDEX-archive.md`를 고쳐도 실행 뒤
+  코드가 원래 내용으로 되돌린다.
 - 위키의 역할은 사건 기록 보관이다. 카드뉴스의 날짜를 넘는 중복 판정은
   위키가 아니라 발행 원장(`state/published.json`)이 맡는다(2026-11-20).
 
 ## 토픽 페이지
 
 - 경로: `wiki/topics/YYYY-MM-topic-slug.md` (YYYY-MM은 사건을 처음 인지한
-  달, slug는 영문 소문자·숫자·하이픈으로 사건을 짧게 표현).
+  달, slug는 영문 소문자·숫자·하이픈으로 사건을 짧게 표현). 대문자는 쓰지
+  않는다. 이미 있는 slug를 다른 사건에 다시 쓰지 않는다.
 - frontmatter:
   ```yaml
   ---
@@ -26,6 +29,10 @@
   cves: [CVE-YYYY-NNNNN]
   ---
   ```
+- tags는 Obsidian 태그 규칙을 따른다. 글자, 숫자, `_`, `-`, `/`만 쓰고
+  공백, 마침표, `+`, 가운뎃점은 쓰지 않는다(`Linux kernel` → `Linuxkernel`,
+  `Node.js` → `Nodejs`). 숫자만인 태그는 쓰지 않는다. 어긋난 태그는 코드가
+  고친다.
 - 본문 구조:
   1. 3줄 이내 요약 (사건이 무엇인지, 왜 중요한지).
   2. `## 타임라인` — 시간순으로 한 줄씩:
@@ -34,6 +41,9 @@
      기존 사실의 반복이면 새 줄을 추가하지 않는다(=`skip_duplicate`).
   3. `## 관련` — 연관 토픽이 있으면 `[[YYYY-MM-topic-slug]]`처럼 확장자 없는
      **파일명**으로 링크한다. Obsidian은 파일명으로만 링크를 연다.
+     링크하기 전에 Glob으로 `wiki/topics/그파일명.md`가 실제로 있는지
+     확인한다. 없는 페이지(분류 허브, 주제 묶음 등)는 링크하지 않는다.
+     없는 파일을 가리키는 링크는 코드가 글자로 풀어 버린다.
 - 사서가 new·update로 판정한 항목은 반드시 페이지와 타임라인 줄을 남긴다.
   빠지면 코드(wiki_guard.ensure_recorded)가 최소 페이지·줄을 보충한다.
 
