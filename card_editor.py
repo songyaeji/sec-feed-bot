@@ -19,7 +19,6 @@ import re
 import sys
 from html.parser import HTMLParser
 
-import requests
 
 import librarian
 import text_rules
@@ -341,6 +340,11 @@ def rewrite(news: list[dict], cve: list[dict], allow_llm: bool = True,
     """최종 후보를 재작성·검증한 (news, cve) 새 리스트. 검증 실패 항목은 빠진다."""
     if fetch:
         for it in news:
+            # 본문을 못 받는 소스(과기정통부 첨부 문서형, QA D4)는 받지 않고
+            # 피드 요약을 원문으로 쓴다
+            if it.get("body_unavailable"):
+                it["_article"] = it.get("summary") or ""
+                continue
             it["_article"] = fetch_article(it.get("url", ""))
 
     payload = ([_news_payload(i, it) for i, it in enumerate(news, start=1)]

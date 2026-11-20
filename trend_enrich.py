@@ -17,7 +17,6 @@ judge.py와 같은 보안 원칙: 피드 제목·요약은 신뢰할 수 없는 
 """
 import json
 import os
-import subprocess
 import sys
 
 import librarian
@@ -26,9 +25,6 @@ import text_rules
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # 선정 품질이 곧 이 레인의 가치라 판단력 있는 모델을 쓴다(하루 1콜)
 MODEL = "claude-sonnet-5"
-# 도구 차단은 명시 목록이어야 한다 — 단독 "*"는 미차단(2026-07-24 실측)
-_DENIED_TOOLS = ("Read,Bash,Write,Edit,Glob,Grep,WebFetch,WebSearch,"
-                 "Task,NotebookEdit")
 TIMEOUT_SECONDS = 120
 MAX_PICKS = 2
 TITLE_MAX_CHARS = 40

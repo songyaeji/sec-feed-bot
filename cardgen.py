@@ -438,8 +438,8 @@ def _build_cover(
     tags_block = ""
     keywords: list[str] = []
     for it in top:
-        # 사서 구체 키워드(tags_ko) 우선 — 규칙 태그(금융/피싱류)는 폴백
-        tag = ((it.get("tags_ko") or it.get("tags")) or [None])[0]
+        # 검증 통과한 tags_ko만 (QA C2: 규칙 태그 폴백 금지)
+        tag = (it.get("tags_ko") or [None])[0]
         if tag and tag not in keywords:
             keywords.append(tag)
     keywords = keywords[:5]
@@ -544,7 +544,7 @@ def _build_news(
         SUMMARY=_summary_chunks(item.get("summary_ko")
                                 or (_strip_html(item.get("summary", ""))
                                     if has_informative_summary(item) else "")),
-        SOURCE=html.escape(item.get("source", "")),
+        SOURCE=html.escape(item.get("outlet") or item.get("source", "")),
         DOTS=dots,
     )
 
@@ -585,7 +585,7 @@ def _build_list(fragments: dict, rest: list[dict], date_short: str, n: int,
         return _fill(
             fragments["list_row"],
             TITLE=html.escape(_card_title(item)),
-            SOURCE=html.escape(item.get("source", "")),
+            SOURCE=html.escape(item.get("outlet") or item.get("source", "")),
         )
     return _list_card(fragments, "그 밖의 소식", rest, row, date_short, n,
                       dots, foot="원문 링크는 아래 메시지에")

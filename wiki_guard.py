@@ -861,7 +861,7 @@ def _fallback_slug(item: dict) -> str:
 
 
 def _timeline_line(item: dict, day: str, fact: str) -> str:
-    source = (item.get("source") or "출처").replace("[", "").replace("]", "")
+    source = (item.get("outlet") or item.get("source") or "출처").replace("[", "").replace("]", "")
     return f"- {day} [{source}]({item.get('url', '')}) — {fact}"
 
 

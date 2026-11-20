@@ -15,6 +15,7 @@ trend_lane(트렌드 픽). main()은 흐름 조립만 맡는다.
 import json
 import os
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 
 import card_editor
@@ -29,9 +30,10 @@ import tagger
 from collect import collect_all, dedup, max_items_per_run
 from common import STATE_DIR, _safe_exc_str
 from digest_select import (
-    KNOWN_KINDS, _apply_dedup_groups, _author_penalty, _dedup_by_topic,
+    _apply_dedup_groups, _author_penalty, _dedup_by_topic,
     _dedup_similar, _fallback_keywords, _is_vuln_source, _issue_no,
-    _rank_score, _source_regions, _split_fresh)
+    _rank_score, _source_regions, _split_fresh, classify_kind_fallback,
+    librarian_cut)
 from state_store import (append_pending, load_config, load_pending,
                          load_state, prune_seen, save_pending, save_state)
 from trend_lane import (_publish_trend, _select_trend, _should_send_trend,
@@ -112,6 +114,7 @@ def _save_preview_cards(
 
 
 def main() -> None:
+    run_start = time.monotonic()
     config = load_config()
     state = load_state()
 
@@ -312,6 +315,10 @@ def main() -> None:
             # 발송 성공분만 이력에 — judge가 다음 런에서 같은 사건의
             # 후속 보도를 긴급으로 재판정하지 않게 하는 컨텍스트
             judge.record_history(card_items)
+            # 2026-11-20 사용자 결정: 긴급 카드도 발행 원장에 남겨 다음
+            # digest가 같은 사건을 다시 싣지 않게 한다
+            published_ledger.save(published_ledger.record_urgent(
+                published_ledger.load(), card_items, today_kst))
             had_backlog = True
 
         if run_mode == "digest":
@@ -372,11 +379,13 @@ def main() -> None:
                 #    내려 사서 입력 슬롯을 보안 동향 쪽에 쓴다)
                 news_ranked = sorted(
                     news_pool, key=lambda it: -_rank_score(it, config))
-                lib_input = news_ranked[:news_cap] + cve_selected
-                retained = news_ranked[news_cap:]
+                # 2026-11-20 QA D1: 같은 사건 묶기와 소스당 상한으로 한 소스
+                # (구글뉴스 대리 소스)가 사서 입력을 독점하지 못하게 자른다
+                lib_news, retained = librarian_cut(news_ranked, config)
+                lib_input = lib_news + cve_selected
                 print(
                     f"[main] digest 선별: 후보 {len(merged)}건 → 사서 입력 "
-                    f"{len(lib_input)}건(뉴스 {min(len(news_ranked), news_cap)}"
+                    f"{len(lib_input)}건(뉴스 {len(lib_news)}"
                     f"+CVE {len(cve_selected)}), 이월 {len(retained)}건",
                     file=sys.stderr,
                 )
@@ -387,21 +396,23 @@ def main() -> None:
                 # 사서 실행 전에 INDEX 재생성 — 최근 갱신 토픽만 남겨 배치
                 # 입력 토큰을 상수로 유지(사서는 INDEX를 읽기만 한다)
                 index_days = config.get("wiki_index_max_age_days", 60)
-                # [[slug]] 링크를 Obsidian에서 열리는 [[파일명]]으로 — 멱등이라
-                # 매번 돌려도 바뀔 것이 없으면 아무것도 쓰지 않는다
-                migrated = wiki_guard.migrate_links()
-                if migrated:
-                    print(f"[wiki] 링크 형식 정리 {migrated}개 페이지", file=sys.stderr)
+                # 위키 정비(2026-11-20 QA E3~E8): 중복 병합, 소문자화, 원장
+                # 소급 기록, 태그와 링크 정리. 멱등이라 바뀔 것이 없으면
+                # 아무것도 쓰지 않는다. 원장은 prune 전 전체를 넘긴다
+                wiki_guard.maintenance(published_ledger.load())
                 rebuild_index(index_days)
+                # 사서가 지키는 파일(CLAUDE.md, INDEX)은 실행 전후로 대조해
+                # 바뀌었으면 되돌린다(QA F3)
+                protected = wiki_guard.snapshot_protected()
                 wiki_before = wiki_guard.snapshot()
                 verdict = librarian.run_librarian(lib_input)
-                # 사서 기록 검증 — new·update인데 페이지·타임라인 줄이 없으면
-                # 코드가 보충하고, 규약 밖 새 파일은 지운 뒤 INDEX를 다시 만든다
+                restored = wiki_guard.restore_protected(protected)
+                if restored:
+                    print(f"[wiki] 사서가 바꾼 보호 파일 되돌림: {restored}", file=sys.stderr)
+                # 규약 밖 새 파일은 지운다. 기록 보충(ensure_recorded)은 사서
+                # 문안을 항목에 병합한 뒤에 한다(QA E1: 병합 전에 돌면 영어
+                # 원제로 페이지가 생겼다)
                 wiki_guard.remove_stray(wiki_before)
-                if verdict is not None:
-                    wiki_guard.ensure_recorded(
-                        lib_input, verdict.get("verdicts", {}), today_kst)
-                rebuild_index(index_days)
                 briefing = None
                 wiki_new = None
                 brief = None
@@ -416,9 +427,19 @@ def main() -> None:
                     # 순위 상위 후보를 재작성·검증 단계로만 보내 통과한 것만
                     # 싣고, 못 실은 뉴스는 이월해 다음 digest 사서가 재도전한다.
                     # 취약점 권고 소스는 판정 없이도 뉴스 카드에서 뺀다
-                    news_candidates = [
-                        it for it in news_ranked[:max_news + 5]
-                        if not _is_vuln_source(it, config)]
+                    # QA D5: 규칙 분류로 카드 성격(사고, 법제도, 기관 발표)인
+                    # 것만 후보로 둔다. 취약점과 무관 기사는 카드에 오르지 않는다
+                    news_candidates = []
+                    for it in lib_news:
+                        if _is_vuln_source(it, config):
+                            continue
+                        kind = classify_kind_fallback(it, config)
+                        if kind not in news_kinds:
+                            continue
+                        it["kind"] = kind
+                        news_candidates.append(it)
+                        if len(news_candidates) >= max_news + 5:
+                            break
                     # 사서 판정을 하나도 못 받았으므로 전량 이월 후보 —
                     # 실제 발송분은 아래 sent_ids가 빼낸다(TTL이 꼬리 청소)
                     retained = list(news_ranked)
@@ -461,9 +482,9 @@ def main() -> None:
                             ]
                             if cleaned:
                                 item["tags_ko"] = cleaned
-                        kind = item_verdict.get("kind")
-                        if not isinstance(kind, str) or kind not in KNOWN_KINDS:
-                            kind = None
+                        # 위키 기록과 같은 정규화를 쓴다(QA E2) — 목록 밖이나
+                        # 문자열이 아닌 값은 None
+                        kind = wiki_guard.normalize_kind(item_verdict.get("kind"))
                         if _is_vuln_source(item, config):
                             # 취약점 권고 전용 소스는 사서 판정과 무관하게
                             # 취약점 기사 — 뉴스 카드에 오르지 않는다(사용자 결정)
@@ -516,6 +537,11 @@ def main() -> None:
                         if item["importance"] < min_importance:
                             continue
                         news_candidates.append(item)
+                    # 사서 기록 검증 — new·update인데 페이지·타임라인 줄이 없으면
+                    # 코드가 보충한다. 한국어 문안 병합이 끝난 뒤라 페이지가
+                    # 영어 원제로 생기지 않는다(QA E1)
+                    wiki_guard.ensure_recorded(
+                        lib_input, verdict.get("verdicts", {}), today_kst)
                     wiki_new = action_counts["new"]
                     print(
                         f"[main] 위키 사서: 신규 {action_counts['new']}건, "
@@ -526,7 +552,7 @@ def main() -> None:
                     # 사서 예산 소진·청크 실패로 판정 못 받은 뉴스는 이월 —
                     # 다음 digest가 재도전한다(2026-07-12 유실 재발 방지)
                     unjudged_news = [
-                        it for it in news_ranked[:news_cap]
+                        it for it in lib_news
                         if it["id"] not in judged_id_set
                     ]
                     if unjudged_news:
@@ -552,21 +578,59 @@ def main() -> None:
                 # 게이트가 본다 — 게이트를 예비 후보까지 넓게 걸어, 지운
                 # 자리를 재검사 없이 다시 채우던 구 백필 구멍(11-16 SCKit
                 # 같은 날 2장)을 없앤다
+                # QA A2: 사서 뒤 LLM 단계도 job 제한시간 안에 끝나야 한다.
+                # 남은 예산이 모자라면 해당 단계는 LLM 없이 결정적으로 간다
+                budget = float(config.get("digest_llm_budget_seconds", 2400))
+
+                def _time_left() -> float:
+                    return budget - (time.monotonic() - run_start)
+
+                # QA A4: 원장과 게이트를 모든 후보에 건 뒤 자른다. 앞에서
+                # 자르면 뒤 후보는 검토 없이 소진됐다.
+                # FORCE_DIGEST(같은 날 재발행)는 오늘 몫을 대조에서 뺀다
+                # (사용자 결정: 오늘 날짜 제외)
                 ledger = published_ledger.prune(published_ledger.load())
                 pool = published_ledger.filter_news(
-                    news_candidates[:max_news + 5], ledger)
-                groups = librarian.dedup_gate(pool)
-                if groups:
-                    before = len(pool)
-                    pool = _apply_dedup_groups(pool, groups)
-                    print(f"[main] 최종 중복 게이트: {before - len(pool)}건 제외")
+                    news_candidates, ledger,
+                    allow_llm=_time_left() > 600,
+                    exclude_date=today_kst if force_digest else None,
+                    today=today_kst)
+                pool_ids = {it["id"] for it in pool}
+                # 원장 판정을 못 받은 항목(ledger_deferred)은 소진하지 않고 이월
+                deferred = [it for it in news_candidates
+                            if it["id"] not in pool_ids and it.get("ledger_deferred")]
+                if deferred:
+                    print(f"[main] 원장 판정 보류 {len(deferred)}건 이월", file=sys.stderr)
+                    retained = deferred + retained
+                pool = pool[:max_news + 5]
+                groups = librarian.dedup_gate(pool) if _time_left() > 500 else None
+                # QA F4: 게이트 한 번이 후보 절반 넘게 지우면 주입이나 오판으로
+                # 보고 버린다. 게이트가 실패했을 때와 같이 결정적 판정으로 간다
+                if groups and pool:
+                    after = _apply_dedup_groups(pool, groups)
+                    removed = len(pool) - len(after)
+                    if removed > max(2, len(pool) // 2):
+                        print(f"[main] 중복 게이트가 {len(pool)}건 중 {removed}건 제외 — "
+                              "비율 초과로 무시, 결정적 판정 사용", file=sys.stderr)
+                        groups = None
+                    else:
+                        pool = after
+                        print(f"[main] 최종 중복 게이트: {removed}건 제외")
+                if groups is None:
+                    pool, _dropped = dedup_lib.dedup_today(pool)
 
                 # 오늘의 CVE 코너 = 취약점 기사(사서 판정, 중요도순) + 구조적
-                # CVE 엔트리(KEV 우선). 이미 실린 URL·CVE는 원장으로 제외
+                # CVE 엔트리. 이미 실린 URL·CVE는 원장으로 제외.
+                # 같은 날 같은 취약점을 다룬 기사 여러 건은 하나만 남긴다
+                # (2026-11-20 QA 실행: FastUnlock 기사 2건이 함께 실렸다)
                 vuln_news.sort(key=lambda it: (-it.get("importance", 3),
                                                -_rank_score(it, config)))
+                vuln_news, _dropped = dedup_lib.dedup_today(vuln_news)
                 cve_lane = published_ledger.filter_cve_lane(
-                    vuln_news + cve_selected, ledger)[:max_cve + 3]
+                    vuln_news + cve_selected, ledger,
+                    exclude_date=today_kst if force_digest else None)
+                # QA A5: 자르기 전에 KEV(실제 악용)를 앞으로. 그룹 안 순서는 유지
+                cve_lane = sorted(cve_lane, key=lambda it: not it.get("kev"))[:max_cve + 3]
                 for it in cve_lane:
                     it["lane"] = "cve"
 
@@ -574,7 +638,7 @@ def main() -> None:
                 # 검증 실패 항목은 빠진다(원문 그대로 싣는 경로 없음).
                 # 예비 2건까지 재작성해 탈락분을 메운다
                 to_send_news, cve_lane = card_editor.rewrite(
-                    pool[:max_news + 2], cve_lane)
+                    pool[:max_news + 2], cve_lane, allow_llm=_time_left() > 420)
                 to_send_news = to_send_news[:max_news]
                 cve_lane = cve_lane[:max_cve]
 
@@ -589,10 +653,12 @@ def main() -> None:
                     file=sys.stderr,
                 )
                 # 표지 총평·키워드는 실제 실리는 항목 기준으로 별도 생성(fail-open)
-                if to_send:
+                if to_send_news and _time_left() > 300:
                     brief = librarian.summarize(to_send)
                     if brief:
                         briefing = brief.get("briefing")
+                elif to_send_news:
+                    print("[main] 시간 예산 부족 — 표지 총평 생략", file=sys.stderr)
                 # v20: 텍스트 온리 전환 — og:image·figure(SVG) 단계 폐기(사용자 결정)
                 if not to_send_news:
                     # 뉴스 카드 0건 — 표지+CVE뿐인 껍데기 발행은 하지 않는다
@@ -604,6 +670,14 @@ def main() -> None:
                         "[main] 뉴스 카드 0건 — digest 발행 스킵(다음 트리거가 재시도)",
                         file=sys.stderr,
                     )
+                    # QA A3: 소진하지 않고 이월한다. 재작성 단계까지 간 후보도
+                    # 다음 트리거가 다시 보게 남긴다
+                    kept_ids = {it["id"] for it in retained}
+                    retained += [it for it in pool if it["id"] not in kept_ids]
+                    # Actions 요약에 남겨 무알림 미발행을 사람이 알아채게 한다
+                    reason = ("사서 전체 실패" if verdict is None
+                              else f"사서 판정 {len(news_candidates)}건, 원장과 게이트 통과 {len(pool)}건")
+                    print(f"::warning::digest 뉴스 카드 0건으로 발행 스킵 ({reason})")
                 else:
                     # stats line on the digest header embed; wiki_new is left
                     # out entirely (not shown as 0) when the librarian failed
@@ -628,6 +702,7 @@ def main() -> None:
                     # 아침 다이제스트는 카드뉴스 이미지로 전송하고, 렌더/전송
                     # 실패 시에만 기존 텍스트 다이제스트로 fail-open 폴백 —
                     # 어떤 경우에도 아침 브리핑 자체가 사라지면 안 된다
+                    secret_block = False
                     try:
                         # 링크 목록은 카드 표시 순서(뉴스→그 외→오늘의 CVE)와
                         # 동일하게 맞춰야 번호가 카드와 1:1로 대응한다
@@ -649,6 +724,9 @@ def main() -> None:
                         if fatal:
                             for f_msg in fatal:
                                 print(f"[preflight] 차단: {f_msg}", file=sys.stderr)
+                            # 비밀값 노출 의심은 텍스트 폴백도 같은 문안을 보내므로
+                            # 폴백까지 막는다(QA F8)
+                            secret_block = any("비밀값" in f_msg for f_msg in fatal)
                             raise RuntimeError(
                                 f"preflight 실패 {len(fatal)}건 — 카드뉴스 발송 차단")
                         notify.send_card_news(pngs, link_lines)
@@ -663,6 +741,9 @@ def main() -> None:
                         # 스텝(crosspost.py)이 담당 — Pages 배포 완료 후
                         # github.io JPEG URL로 발행해야 하기 때문
                     except Exception as exc:
+                        if secret_block:
+                            print("::error::송출 문안에 비밀값 노출 의심 — 카드뉴스와 텍스트 폴백 모두 차단")
+                            raise
                         print(
                             f"[main] 카드뉴스 렌더 실패 — 텍스트 다이제스트 폴백: {_safe_exc_str(exc)}",
                             file=sys.stderr,
@@ -675,6 +756,15 @@ def main() -> None:
                     # 근거가 된다(실제 나간 것만 기록, 30일 보관)
                     published_ledger.save(published_ledger.record(
                         ledger, to_send_news, cve_lane, today_kst))
+                    # 실제로 나간 뉴스 카드는 판정 유무와 상관없이 위키에 남긴다
+                    # (QA E2: 사서 실패나 목록 밖 kind면 카드만 나가고 기록이 없었다)
+                    try:
+                        wiki_guard.ensure_recorded(
+                            to_send_news, (verdict or {}).get("verdicts", {}),
+                            today_kst, sent=True)
+                        rebuild_index(index_days)
+                    except Exception as exc:  # noqa: BLE001 — 위키 문제가 발행을 되돌리지 않는다
+                        print(f"[wiki] 발송분 기록 실패(무시): {_safe_exc_str(exc)}", file=sys.stderr)
                     had_backlog = True
                     # 발송 확정 상태를 트렌드 선정(LLM 최대 120초) 전에 디스크에
                     # 먼저 남긴다. 이 뒤에서 step timeout으로 끊겨도 commit 단계
@@ -689,7 +779,9 @@ def main() -> None:
                     # 지점에서만 나간다(카드뉴스가 안 나간 날은 트렌드도
                     # 없다). 성공해야 후보를 seen으로 소진하고, 실패하면
                     # 미소진으로 남겨 다음 날 아침 재도전한다.
-                    if trend_pool and send_daily_trend(
+                    if trend_pool and _time_left() <= 200:
+                        print("[main] 시간 예산 부족 — 트렌드 픽 내일로", file=sys.stderr)
+                    elif trend_pool and send_daily_trend(
                             trend_pool, discord_cfg, state, today_kst):
                         unsent_trend_ids = set()
             # 이월(retained) = 사서 예산 초과 등으로 판정 못 받은 신선 뉴스만.

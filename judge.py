@@ -22,7 +22,6 @@ v22: "긴급" = 쿠팡·SKT 해킹급, 국가적/글로벌 파장 사건·사고
 import datetime
 import json
 import os
-import subprocess
 import sys
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

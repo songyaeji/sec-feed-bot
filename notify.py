@@ -391,7 +391,7 @@ def _build_individual_embed(item: dict, colors: dict) -> dict:
         # 사유가 첫 줄에 blockquote로 크게 보이게 — "왜 지금 봐야 하는지"
         desc_lines.append(f"> ❗ **왜 긴급:** {urgent_reason}")
     # 표시용은 사서 구체 키워드(tags_ko) 우선 — 로직 판단은 규칙 태그 유지
-    desc_lines.append(_chip_line(item["source"], item.get("tags_ko") or item.get("tags") or []))
+    desc_lines.append(_chip_line(item.get("outlet") or item["source"], item.get("tags_ko") or []))
 
     if item.get("kev"):
         if urgent_reason:
@@ -407,7 +407,7 @@ def _build_individual_embed(item: dict, colors: dict) -> dict:
         "url": item["url"],
         "description": "\n".join(desc_lines)[:EMBED_DESCRIPTION_MAX],
         "color": color,
-        "footer": {"text": item["source"]},
+        "footer": {"text": item.get("outlet") or item["source"]},
         "timestamp": item["published"],
     }
 
@@ -500,7 +500,7 @@ def _build_digest_embed(category: str, group_items: list[dict], colors: dict) ->
             lines.append(f"{emoji} **[{title}](<{url}>)**")
         else:
             lines.append(f"{emoji} **{title}**")
-        lines.append(_chip_line(item["source"], item.get("tags_ko") or item.get("tags") or []))
+        lines.append(_chip_line(item.get("outlet") or item["source"], item.get("tags_ko") or []))
         lines.append("")  # blank line between items
 
     if total > DIGEST_MAX_LINES:

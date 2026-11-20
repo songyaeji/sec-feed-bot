@@ -277,7 +277,8 @@ def main(ref: str) -> None:
             trailing_newline=False,
         )
 
-    # published.json(발행 원장)은 digest run만 쓰지만, 같은 시각 다른 작성자가
+    # published.json(발행 원장)은 digest run과 긴급 카드를 보낸 realtime run이
+    # 쓴다. 같은 시각 다른 작성자가
     # 원장을 갖고 있으면 잃지 않게 합친다. match published_ledger.save:
     # indent=1, ensure_ascii=False, no sort_keys, trailing newline
     local_pub = _load_local(PUBLISHED_PATH, None)
