@@ -115,6 +115,10 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
    온전히 쓴다(중앙 도트는 긴 출처명("Google Security Blog")을 두 줄로
    꺾던 문제). 도트도 내지에선 소형 */
 .foot-left { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; }
+/* 2026-11-20 QA G5: 좌측 글자가 없는 footer(CVE 0건 카드, 회차 없는 표지)는
+   높이가 도트 높이로 줄어 하단선이 다른 카드보다 25~27px 내려갔다.
+   빈 칸에 공백 한 줄을 세워 모든 카드의 footer 높이를 같게 한다 */
+.foot-left:empty::before { content: "\00a0"; }
 .foot-group { flex: none; display: flex; align-items: center; gap: 28px; }
 .card:not(.cover) .dot { width: 10px; height: 10px; }
 .card:not(.cover) .dot.active { width: 36px; }
@@ -140,6 +144,9 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 .pill-cat { background: #C6FF33; color: #0A0A0A; font-weight: 600; }
 .pill-urgent { border: 2px solid #C6FF33; color: #C6FF33; padding: 8px 20px; }
 .pill-tag { border: 2px solid #8A8A84; color: #8A8A84; padding: 8px 20px; }
+/* 2026-11-20 사용자 선택(시안 g2_a): 후속 표시는 pill 줄 맨 앞 흰 채움 pill.
+   라임 주제 pill, 회색 테두리 태그 pill과 겹치지 않는 팔레트 주 텍스트색 */
+.pill-follow { background: #F2F2EF; color: #0A0A0A; font-weight: 600; }
 /* v6: 말줄임(…) 금지 — clamp 대신 줄 수 예산(max-height)만 걸고,
    fit 스크립트가 제목은 폰트 축소로, 본문은 문장 경계 절단으로 맞춘다 */
 .news-headline {
@@ -271,6 +278,9 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
 .cve-row-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
 .cve-id { font-size: 24px; color: #8A8A84; }
 .cve-score { font-size: 24px; color: #C6FF33; flex: none; }
+/* 2026-11-20 사용자 선택(시안 g4_a): KEV 행 ID 앞 빨간 라벨. 빨강은 위협
+   강조 전용으로 이 라벨에만 쓴다 (config.yaml colors.critical과 같은 값) */
+.cve-kev { color: #E74C3C; font-weight: 600; margin-right: 18px; }
 .cve-desc {
   margin-top: 4px;
   font-size: 32px;
@@ -288,6 +298,7 @@ body { background: #1C1C1A; font-family: "Pretendard", sans-serif; }
    - 제목: 폰트를 4px씩 줄여 전문을 살린다 (하한 44px)
    - 본문: 뒤 문장부터 통째로 덜어내 완결된 문장으로 끝낸다.
      한 문장만 남아도 넘치면 그때만 폰트를 줄인다 (하한 30px)
+     하한에서도 넘치면 용어 줄, WHY 줄 순으로 빼서 첫 문장을 지킨다
    본문은 innerHTML 단위로 다룬다 — 키워드 강조 <b class="kw">를 보존하기
    위해서다. 문장 경계(종결어미+공백)는 태그 내부에 나타나지 않는다는
    전제(키워드는 명사구, 태그 속성에 종결어미 없음). */
@@ -307,29 +318,9 @@ function fitAllCards() {
       el.style.fontSize = size + "px";
     }
   });
-  document.querySelectorAll(".news-text").forEach((el) => {
-    /* v21.2: 청크 통째 삭제는 과절단 — 오버플로 246px에 문장 다섯 줄을
-       버리는 실측(QA 2026-07-23). 맨 끝 문장부터 하나씩 덜어내고, 마지막
-       청크가 비면 그때 <p>째 제거. 완결형 문장 경계만 자르는 원칙 동일 */
-    while (el.scrollHeight > el.clientHeight + 2) {
-      const ps = el.querySelectorAll("p");
-      const last = ps[ps.length - 1] || el;
-      const sentences = last.innerHTML.trim().split(SENT);
-      if (sentences.length > 1) {
-        sentences.pop();
-        last.innerHTML = sentences.join(" ");
-      } else if (ps.length > 1) {
-        last.remove();
-      } else {
-        break;  /* 문장 하나뿐 — 아래 폰트 축소로 전환 */
-      }
-    }
-    let size = parseFloat(getComputedStyle(el).fontSize);
-    while (el.scrollHeight > el.clientHeight + 2 && size > 30) {
-      size -= 2;
-      el.style.fontSize = size + "px";
-    }
-  });
+  /* 2026-11-20: WHY와 용어를 본문보다 먼저 맞춘다. 본문(flex: 1)의 높이
+     예산은 두 블록의 최종 높이로 정해지는데, 예전 순서는 축소 전 높이로
+     본문을 잘라 문장을 더 버리거나 용어를 쓸데없이 생략할 수 있었다 */
   /* v21.1: WHY 한 줄 맞춤 — 폰트 축소(하한 28px)로 한 줄을 노리고,
      그래도 안 되면 두 줄 수용(말줄임 없음 — 문장 정보 보존이 우선) */
   document.querySelectorAll(".why-text").forEach((el) => {
@@ -347,6 +338,48 @@ function fitAllCards() {
     while (el.scrollHeight > lineH() * 2 + 2 && size > 20) {
       size -= 1;
       el.style.fontSize = size + "px";
+    }
+  });
+  /* 폰트 축소와 줄 생략은 1px 넘침도 허용하지 않는다. 문장 덜어내기만
+     예전 허용치(+2px)를 유지해 문장이 남는 기준은 그대로 둔다 */
+  const textFits = (el) => el.scrollHeight <= el.clientHeight;
+  /* 본문 폰트를 스타일시트 기본값(44px)부터 2px씩 줄인다 (하한 30px) */
+  const shrinkText = (el) => {
+    el.style.fontSize = "";
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while (!textFits(el) && size > 30) {
+      size -= 2;
+      el.style.fontSize = size + "px";
+    }
+  };
+  document.querySelectorAll(".news-text").forEach((el) => {
+    /* v21.2: 청크 통째 삭제는 과절단 — 오버플로 246px에 문장 다섯 줄을
+       버리는 실측(QA 2026-07-23). 맨 끝 문장부터 하나씩 덜어내고, 마지막
+       청크가 비면 그때 <p>째 제거. 완결형 문장 경계만 자르는 원칙 동일 */
+    while (el.scrollHeight > el.clientHeight + 2) {
+      const ps = el.querySelectorAll("p");
+      const last = ps[ps.length - 1] || el;
+      const sentences = last.innerHTML.trim().split(SENT);
+      if (sentences.length > 1) {
+        sentences.pop();
+        last.innerHTML = sentences.join(" ");
+      } else if (ps.length > 1) {
+        last.remove();
+      } else {
+        break;  /* 문장 하나뿐 — 아래 폰트 축소로 전환 */
+      }
+    }
+    shrinkText(el);
+    /* 2026-11-20 QA G1: 첫 문장 170자 이상이면 30px에서도 넘쳐 마지막 줄이
+       글자 중간에서 잘렸다. 첫 문장은 카드의 핵심 사실이라 끝까지 보여야
+       한다. 용어 줄을 먼저 빼고, 그래도 넘치면 WHY 줄을 뺀다. 뺄 때마다
+       늘어난 높이에 맞춰 폰트를 다시 고른다 */
+    for (const sel of [".term", ".why"]) {
+      if (textFits(el)) break;
+      const extra = el.parentElement.querySelector(sel);
+      if (!extra) continue;
+      extra.remove();
+      shrinkText(el);
     }
   });
   /* v21: CVE 설명 한 줄 맞춤 — 폰트 축소(하한 24px), 그래도 넘치면 말줄임 */
@@ -430,8 +463,12 @@ function fitAllCards() {
 <!-- END pill_cat -->
 
 <!-- BEGIN pill_urgent -->
-<span class="mono pill pill-urgent">실악용</span>
+<span class="mono pill pill-urgent">실제 악용</span>
 <!-- END pill_urgent -->
+
+<!-- BEGIN pill_follow -->
+<span class="mono pill pill-follow">{{TEXT}}</span>
+<!-- END pill_follow -->
 
 <!-- BEGIN pill_tag -->
 <span class="mono pill pill-tag">{{TEXT}}</span>
@@ -465,10 +502,14 @@ function fitAllCards() {
 
 <!-- BEGIN cve_row -->
 <div class="cve-row">
-  <div class="cve-row-head"><span class="mono cve-id">{{ID}}</span><span class="mono cve-score">CVSS {{SCORE}}</span></div>
+  <div class="cve-row-head"><span class="mono cve-id">{{KEV}}{{ID}}</span><span class="mono cve-score">CVSS {{SCORE}}</span></div>
   <div class="cve-desc">{{DESC}}</div>
 </div>
 <!-- END cve_row -->
+
+<!-- BEGIN cve_kev -->
+<span class="cve-kev">실제 악용</span>
+<!-- END cve_kev -->
 
 <!-- BEGIN list_row -->
 <div class="list-row"><span class="row-bullet"></span><span class="row-title">{{TITLE}}</span><span class="mono row-source">{{SOURCE}}</span></div>

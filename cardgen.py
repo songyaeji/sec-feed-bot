@@ -203,12 +203,16 @@ _ADVISORY_ID_RE = re.compile(r"\b(ICSA-\d{2}-\d{3}-\d{2}|ICSMA-\d{2}-\d{3}-\d{2}
                              r"AA\d{2}-\d{3}[A-Z]?|KVE-\d{4}-\d{4,})\b", re.IGNORECASE)
 
 
+# CVE 번호도 권고 번호도 없는 CVE 코너 행의 라벨
+NO_ROW_ID = "CVE 미지정"
+
+
 def _row_id(item: dict) -> str:
     cve = _cve_id(item)
     if cve:
         return cve
     m = _ADVISORY_ID_RE.search(f"{item.get('url', '')} {item.get('title', '')}")
-    return m.group(1).upper() if m else "CVE 미지정"
+    return m.group(1).upper() if m else NO_ROW_ID
 
 
 def plan_cards(items: list[dict]):
@@ -261,13 +265,23 @@ def has_informative_summary(item: dict) -> bool:
 def link_label(item: dict) -> str:
     """링크 목록용 라벨 — 카드 본문 제목과 글자 그대로 일치해야 한다.
     Discord(build_link_lines)와 github.io meta.json이 공유하는 단일 규칙:
-    CVE 항목은 CVE ID, 그 외는 _card_title(title_ko 우선 + 분류 접두어 제거).
+    CVE 항목은 CVE ID, CVE 번호 없는 권고는 권고 번호 + _card_title,
+    그 외는 _card_title(title_ko 우선 + 분류 접두어 제거).
     개행은 목록 줄이 깨지지 않게 공백으로 접는다."""
+    title = " ".join(_card_title(item).split())
     if is_cve_lane(item):
         # CVE 코너 항목은 카드 'CVE 행'처럼 CVE ID를 라벨로 건다
-        # (사용자 결정). CVE 번호가 없는 권고는 한국어 설명으로 폴백
-        return _cve_id(item) or " ".join(_card_title(item).split())
-    return " ".join(_card_title(item).split())
+        # (사용자 결정)
+        cve = _cve_id(item)
+        if cve:
+            return cve
+        # 2026-11-20 QA G3: CVE 번호 없는 권고는 카드 행에 권고 번호
+        # (ICSA-26-321-08 등)가 찍히는데 링크 목록엔 한국어 설명만 있어
+        # 짝을 찾기 어려웠다. 카드 행과 같은 번호를 앞에 붙인다
+        row_id = _row_id(item)
+        if row_id != NO_ROW_ID and not title.upper().startswith(row_id):
+            return f"{row_id} {title}".strip()
+    return title
 
 
 def build_link_lines(top_items: list[dict], cve_rest: list[dict],
@@ -458,6 +472,16 @@ def _build_cover(
     )
 
 
+_FOLLOWUP_DATE_RE = re.compile(r"\d{4}-(\d{2})-(\d{2})")
+
+
+def _followup_label(item: dict) -> str:
+    """후속 pill 문구 — 첫 보도 날짜(followup_of.date, ISO)가 있으면
+    "후속 11.16", 없거나 형식이 다르면 "후속"만."""
+    m = _FOLLOWUP_DATE_RE.match(str((item.get("followup_of") or {}).get("date") or ""))
+    return f"후속 {m.group(1)}.{m.group(2)}" if m else "후속"
+
+
 def _build_news(
     fragments: dict, item: dict, date_short: str, n: int,
     regions: dict[str, str], dots: str,
@@ -467,6 +491,11 @@ def _build_news(
     # 카테고리 pill의 라임 스타일(pill_cat)을 물려받아 시각 앵커가 된다.
     # 개수는 유동 — 태그 없으면 국내/해외·실악용만 남아도 그대로 둔다.
     pills = []
+    # 2026-11-20: 이미 카드로 나간 사건의 새 사실(발행 원장 판정) — 독자가
+    # 처음 터진 사건으로 오해하지 않게 '후속'을 표기한다(사용자 결정).
+    # 사용자 선택 시안 g2_a: 줄 맨 앞 흰 채움 pill + 첫 보도 날짜(MM.DD)
+    if item.get("followup"):
+        pills.append(_fill(fragments["pill_follow"], TEXT=html.escape(_followup_label(item))))
     # 2026-11-20 QA C2: 검증 통과한 tags_ko만. 0개면 태그 pill 없음.
     # 규칙 태그(item["tags"]) 폴백 금지, 근거 없는 '금융'이 카드에 실렸다
     tags = list(item.get("tags_ko") or [])[:MAX_TAG_PILLS]
@@ -477,10 +506,6 @@ def _build_news(
     region = item.get("region")
     if region in ("국내", "해외"):
         pills.append(_fill(fragments["pill_tag"], TEXT=html.escape(region)))
-    # 2026-11-20: 이미 카드로 나간 사건의 새 사실(발행 원장 판정) — 독자가
-    # 처음 터진 사건으로 오해하지 않게 '후속'을 표기한다(사용자 결정)
-    if item.get("followup"):
-        pills.append(_fill(fragments["pill_tag"], TEXT="후속"))
     # v8: KEV(실악용 확인)만 — "긴급" 라벨은 즉시 발송 채널 전용
     if item.get("kev"):
         pills.append(fragments["pill_urgent"])
@@ -574,6 +599,10 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
     상한 8(2단 행 높이 예산), 초과분은 "…외 N건". 같은 제품 일괄 공개
     (제목 "제품명 — 설명" 접두가 80% 이상 동일)면 서브헤드로 묶고 행의
     중복 접두를 걷어내 잘림을 막는다."""
+    # 2026-11-20 사용자 선택(시안 g4_a): 카드 안에서 KEV(실제 악용 확인)
+    # 행을 먼저 — 6행 상한에 KEV가 "…외 N건"으로 숨지 않게. 안정 정렬이라
+    # 같은 그룹 안에서는 main이 정한 순서를 유지한다
+    rest = sorted(rest, key=lambda it: not it.get("kev"))
     titles = [_card_title(it) for it in rest]
 
     prefix = ""
@@ -621,6 +650,7 @@ def _build_cve_list(fragments: dict, rest: list[dict], date_short: str, n: int,
             desc = _clean_text(_strip_html(item.get("summary", "")))
         rows.append(_fill(
             fragments["cve_row"],
+            KEV=fragments["cve_kev"] if item.get("kev") else "",
             ID=html.escape(cve),
             SCORE=html.escape(score),
             DESC=html.escape(desc),
