@@ -2300,5 +2300,274 @@
     "tags": [],
     "title": "West Virginia Legislature hit with cyber incident affecting IT systems",
     "url": "https://therecord.media/west-virginia-legislature-cyberattack"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-120539",
+    "published": "2026-11-21T06:16:33.227",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.5.4 This is due to the plugin splicing the attacker-controlled request URI into a PHP expression inside a double-quoted string and evaluating it with eval(). Because PHP interpolates double-quoted strings, a payload of the form {${...}} in the URL path is executed during interpolation, so no quote breakout is required and WordPress' slashing does not mitigate it. This makes it possible for unauthenticated attackers to execute arbitrary code on the server with a single GET request. The affected conditions ship enabled by default and are evaluated before any logged-in check, so no plugin configuration is needed; the site must have BuddyPress and Paid Memberships Pro active alongside this plugin.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-120539 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120539"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-128668",
+    "published": "2026-11-18T20:18:59.280",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An Unrestricted File Upload vulnerability in the admin panel of PHPGurukul News Portal Project V4.1 allows authenticated attackers to upload files with arbitrary content by bypassing weak filename extension validation in add-post.php and change-image.php. Although files are renamed with an image extension upon storage, the lack of MIME type and content validation enables content spoofing, storage of malicious markup, and creates a vector for Remote Code Execution (RCE) with server misconfigurations or secondary Local File Inclusion.",
+    "tags": [
+      "RCE"
+    ],
+    "title": "CVE-2026-128668 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-128668"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-19793",
+    "published": "2026-11-21T04:17:20.800",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The WP Import Export Lite plugin for WordPress is vulnerable to Limited Code Injection in all versions up to, and including, 3.9.32 via the 'comment' parameter. This is due to a two-stage shortcode check that evaluates the raw mapping placeholder before data substitution, causing the neutralizer to be skipped when attacker-controlled comment content containing a malicious [wpie_function] shortcode is substituted at runtime. This makes it possible for unauthenticated attackers to inject arbitrary PHP callables on the server. Exploitation requires an Administrator to perform the standard Export With Settings For Import followed by a New Import migration workflow, which is a routine operational task; the attacker themselves requires no account or authentication, needing only the ability to submit a pending comment on any comments-open post.",
+    "tags": [],
+    "title": "CVE-2026-19793 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19793"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-123086",
+    "published": "2026-11-21T07:16:39.647",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The PublishPress Revisions: Duplicate Posts, Submit, Approve and Schedule Content Changes plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.3.4 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with contributor-level access and above, to permanently force-delete arbitrary trashed posts, pages, and revisions owned by any user, including higher-privileged users. The required nonce is trivially harvested by any Contributor-level user because the static 'revisions-deleted' nonce action is emitted in a redirect header on the init hook before WordPress enforces edit.php's capability check, and once obtained it authorizes deletion of any trashed post or revision on the site.",
+    "tags": [],
+    "title": "CVE-2026-123086 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123086"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-129220",
+    "published": "2026-11-21T07:16:41.030",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Everest Forms – Contact Form, Payment Form, Quiz, Survey & Custom Form Builder with AI plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 3.6.4 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with everest_forms_create_forms capabilities, to activate any already-installed inactive plugin on the server by supplying an arbitrary slug, triggering its activation hooks and escalating privileges up to administrator level. Exploitation requires that a site administrator has delegated the everest_forms_create_forms capability to a lower-privileged role via the plugin's Role & Permission feature, and that at least one inactive installed plugin whose main file follows the slug/slug.php naming convention exists on the server.",
+    "tags": [],
+    "title": "CVE-2026-129220 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129220"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-118049",
+    "published": "2026-11-21T10:16:50.300",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.2.0 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to permanently delete any comment they authored anywhere on the site — including regular post comments and lesson comments — along with all replies to those comments authored by any other user, including Administrators and Instructors.",
+    "tags": [],
+    "title": "CVE-2026-118049 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118049"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209648",
+    "published": "2026-11-21T17:26:25+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "금융회사의 업무지원 시스템이 중계 서버를 통해 전자금융기반시설과 연결돼 있다면, 앞으로는 이 업무지원 시스템도 취약점 평가에 포함된다. 대형 금융회사와 전자금융업자는 전자금융기반시설의 취약점을 6개월에 한 번 이상 점검해야 한다. 금융위원회가 점검 주기를 앞당기면서, 그동안 평가에서 빠지기 쉬웠던 주변 시스템까지 살피도록 규정을 바꾸기로 했다.금융위는 지난 18일 이 같은 내용의 ‘전자금융감독규정’ 일부개정안을 예고했다. 지난 5일 발표한 ‘전 금융권 보안체계 혁신방안’의 후속 조치다. 금융위는 인공지능(AI)을 활용한 해킹이 고도",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "[전자금융감독규정 일부 개정안] 금융위, 대형 금융사 보안점검 ‘반기 1회’로…업무지원 시스템도 살핀다",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209648"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209647",
+    "published": "2026-11-21T14:06:14+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아웃도어 브랜드 블랙다이아몬드 코리아가 주문·배송 업무에 사용하는 외부 통합 ERP(전사적자원관리) 서비스사 서버에서 침해사고 정황이 발견돼 고객 개인정보 유출 가능성을 공지했다. 실제 개인정보가 외부로 유출됐는지는 아직 확인되지 않았지만, 외부 시스템에 대한 비정상적인 접근 기록이 발견됨에 따라 고객들에게 선제적으로 안내한 것이다.블랙다이아몬드 코리아는 11월 20일 오후 2시 25분 공식 홈페이지에 ‘외주 주문 시스템 침해사고에 따른 개인정보 유출 가능성 안내’를 게시하고, 외부 통합 ERP 서비스사 서버에서 제3자의 비정상적인",
+    "tags": [
+      "금융"
+    ],
+    "title": "블랙다이아몬드 코리아, 외주 ERP 서버 침해사고…고객 개인정보 유출 가능성 공지",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209647"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209646",
+    "published": "2026-11-21T11:52:56+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "랜섬웨어 조직 에베레스트(Everest)가 국내 이중항체 신약 개발 기업 에이비엘바이오(ABL Bio)를 공격했다고 주장했다.조직은 다크웹 사이트에 회사명과 공식 홈페이지 도메인을 올리고 데이터베이스와 파일 공개를 각각 예고했다. 21일 기준 에이비엘바이오 공식 홈페이지 공지사항과 공개 공시 검색에서 이번 주장에 대한 회사의 공식 입장은 확인되지 않았다. 실제 시스템 침입이나 데이터 반출 여부도 확인되지 않았다. ‘홈페이지 DB’와 ‘파일’ 공개 시점 따로 표시데일리시큐가 확인한 제보 화면에는 에이비엘바이오 관련 게시물 2건이 올라",
+    "tags": [
+      "금융",
+      "랜섬웨어"
+    ],
+    "title": "[단독] 랜섬웨어 조직 에베레스트, 에이비엘바이오 해킹 주장…실제 유출 여부 조사해야",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209646"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
+    "published": "2026-11-21T08:49:20+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Signal has announced that it will restrict screenshots by default to stop artificial intelligence (AI) agents from reading private chats on Android and iOS devices, but conceded that the protection is \"incomplete.\" The feature applies to agentic systems built into iOS 27 and on Android versions where the encrypted messaging platform can detect an AI assistant attempting to read the Signal",
+    "tags": [],
+    "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
+    "url": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMikAFBVV95cUxQcndHQ3g1UXRpVGd3ajJOYjFNQnI2NnRqYThZcTZDY3U2TVFidmxVblk0emo5WFdPUTNneFhZY0NleWpnVHd3bnhoM3RYUkdzNGpWUElOaHlXVzkxMFpVd3lCa1ZMNmtTSXhab0pzaWZNS1N5UEgxd2NPdGRYYXJLR0RYNTR2ZkpPRVpJNGFwalM",
+    "published": "2026-11-20T23:14:00+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "Zscaler, Anthropic 등 기업과 AI 보안 협력에 주가 급등",
+    "tags": [],
+    "title": "Zscaler, Anthropic 등 기업과 AI 보안 협력에 주가 급등",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcndHQ3g1UXRpVGd3ajJOYjFNQnI2NnRqYThZcTZDY3U2TVFidmxVblk0emo5WFdPUTNneFhZY0NleWpnVHd3bnhoM3RYUkdzNGpWUElOaHlXVzkxMFpVd3lCa1ZMNmtTSXhab0pzaWZNS1N5UEgxd2NPdGRYYXJLR0RYNTR2ZkpPRVpJNGFwalM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMizAFBVV95cUxNcDdaRWkwR2VwRjJxd2k1ZXJlMzQ5eGp1allKRjF4d3ZoRV9mYjFCMTNVYURZRWJ1eHpNVEJvUDA1NTRIU3NobnVvMl9ITXYwRFl4eWJjM2YzbkMwNzZLZXdjNkN4NGUzeUtiWnhOS1JJVHJlLVRzc2FReFVESHNCcFR1aFZpV3NQMXBGWUdCWDhENDdPd2lOYVI2WUlPbzRJM0FUT3JkYzFVUEVrY0I1bmx4QlZRc1A4TDgtMGFGSHRFZFZ0bWVsYmFJblg",
+    "published": "2026-11-20T08:12:58+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OpenAI, GPT-6 Astra 출시: 컴퓨터 제어 및 사이버 보안의 획기적인 도약 | Phonegram",
+    "tags": [],
+    "title": "OpenAI, GPT-6 Astra 출시: 컴퓨터 제어 및 사이버 보안의 획기적인 도약 | Phonegram",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcDdaRWkwR2VwRjJxd2k1ZXJlMzQ5eGp1allKRjF4d3ZoRV9mYjFCMTNVYURZRWJ1eHpNVEJvUDA1NTRIU3NobnVvMl9ITXYwRFl4eWJjM2YzbkMwNzZLZXdjNkN4NGUzeUtiWnhOS1JJVHJlLVRzc2FReFVESHNCcFR1aFZpV3NQMXBGWUdCWDhENDdPd2lOYVI2WUlPbzRJM0FUT3JkYzFVUEVrY0I1bmx4QlZRc1A4TDgtMGFGSHRFZFZ0bWVsYmFJblg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMivgFBVV95cUxOajFGVldiN213MFljX2g2VmZWS0pOemducFAyWm9mZFNtQ21xMmc0T0g3Q1JRTW1XVENQRUdBUWJtekhqYktGb19xak1QaW9ZSzFfOVlQQjZMMU1jU3d2Uk0xUXo2dnpZLWdBNlNRaFd4QThpWUJhMTVqN0dTN3RFallSVEl4T2RRSG1oZnl5ZVdxQmZHcENYTFdrVlhqX1hfellVUzZsN1VUV3JOZE1RNXRKd3Nzc0VROEdiNGtB",
+    "published": "2026-11-19T15:56:13+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "애플은 왜 OpenAI의 거대한 보안 제휴를 외면했을까요? | Phonegram",
+    "tags": [],
+    "title": "애플은 왜 OpenAI의 거대한 보안 제휴를 외면했을까요? | Phonegram",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOajFGVldiN213MFljX2g2VmZWS0pOemducFAyWm9mZFNtQ21xMmc0T0g3Q1JRTW1XVENQRUdBUWJtekhqYktGb19xak1QaW9ZSzFfOVlQQjZMMU1jU3d2Uk0xUXo2dnpZLWdBNlNRaFd4QThpWUJhMTVqN0dTN3RFallSVEl4T2RRSG1oZnl5ZVdxQmZHcENYTFdrVlhqX1hfellVUzZsN1VUV3JOZE1RNXRKd3Nzc0VROEdiNGtB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMikgFBVV95cUxQOS1kOW5VQ29RTHRtbWNwTk5kWTVYMlFjQ0p6bUtMMWF0X3YwcUNNSVFJbVdVU0ZMTl8wLXRfNXNja3lwTGhpWl8xWG1WZmpkazhFYVhkbl9Va29JYm9ITTZmZWdMeXBkOTV1T1lWTm9ZZXoxdG5GTHhrY3BVSnFlc3RmejhtMGdBa01HekxkWmZpdw",
+    "published": "2026-11-17T10:43:02+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "OPM 정보기술실, Carahsoft를 통해 Anthropic 소프트웨어 주문에 자금 지원",
+    "tags": [],
+    "title": "OPM 정보기술실, Carahsoft를 통해 Anthropic 소프트웨어 주문에 자금 지원",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQOS1kOW5VQ29RTHRtbWNwTk5kWTVYMlFjQ0p6bUtMMWF0X3YwcUNNSVFJbVdVU0ZMTl8wLXRfNXNja3lwTGhpWl8xWG1WZmpkazhFYVhkbl9Va29JYm9ITTZmZWdMeXBkOTV1T1lWTm9ZZXoxdG5GTHhrY3BVSnFlc3RmejhtMGdBa01HekxkWmZpdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMigwFBVV95cUxOV194Tzc5UEZHaWkyMTJaVXVDc1RfUW9aYm9xRVJ3TzFJYnpJaXBvOU13MFRoQWRCbmxFcllGNWJETzNkTm9PSFRaWV80eGQ1Z3BIam5MaUlrSERqczVMZy04VzdGT2JwaW81ZXl0elh6c0pZZ3RUalF2cml0WG1FQUp6Yw",
+    "published": "2026-11-17T17:41:11+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "캘리포니아주는 사이버 보안 위반 혐의로 오픈AI를 고소했습니다.",
+    "tags": [],
+    "title": "캘리포니아주는 사이버 보안 위반 혐의로 오픈AI를 고소했습니다.",
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOV194Tzc5UEZHaWkyMTJaVXVDc1RfUW9aYm9xRVJ3TzFJYnpJaXBvOU13MFRoQWRCbmxFcllGNWJETzNkTm9PSFRaWV80eGQ1Z3BIam5MaUlrSERqczVMZy04VzdGT2JwaW81ZXl0elh6c0pZZ3RUalF2cml0WG1FQUp6Yw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "ai",
+    "id": "CBMijgFBVV95cUxNam0yRHoyNlMyU1Q1SVVlcFRJZGxYZlZhTGpObkxNakZOQmpldGNQelQ5N2gwXzl3VDlFMkFZakNVSVFEMlBmUHotelRsaUxwY2EtVXhRZ3VuenYwMFZ4SzNwY2I1Z2xNazdkb3BXZ1o4VEk5cHp5aG90b09mUnl3MlFnaVFvUWZQMjM2X1hR",
+    "published": "2026-11-17T09:09:20+00:00",
+    "severity": "info",
+    "source": "AI 벤더 보안뉴스",
+    "summary": "미국: 캘리포니아 주, 사이버 보안 위반으로 오픈AI를 고소.",
+    "tags": [],
+    "title": "미국: 캘리포니아 주, 사이버 보안 위반으로 오픈AI를 고소.",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNam0yRHoyNlMyU1Q1SVVlcFRJZGxYZlZhTGpObkxNakZOQmpldGNQelQ5N2gwXzl3VDlFMkFZakNVSVFEMlBmUHotelRsaUxwY2EtVXhRZ3VuenYwMFZ4SzNwY2I1Z2xNazdkb3BXZ1o4VEk5cHp5aG90b09mUnl3MlFnaVFvUWZQMjM2X1hR?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE1tQlFoZGZUZGFQT3hEYVlqR0xsQS05dEZfMXRmWGZsOVpWa29DTEhHbmZiS21FRVhqdm9EMDhmZUNncDBlVnN2NndOWQ",
+    "published": "2026-11-21T01:01:17+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "불 꺼진 AI 안경 논란…개인정보위 가이드라인 추진 : 테크/과학",
+    "tags": [],
+    "title": "불 꺼진 AI 안경 논란…개인정보위 가이드라인 추진 : 테크/과학",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1tQlFoZGZUZGFQT3hEYVlqR0xsQS05dEZfMXRmWGZsOVpWa29DTEhHbmZiS21FRVhqdm9EMDhmZUNncDBlVnN2NndOWQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFAtTHFhSkUzWDdqaVlWamk4cXhiOE9tMHZzUTRMSUtDZlJOQXJ1R0R3OWJZWFZxdFo2ZjI5emVxWU9sWnFLMWdrWXFGSjhtMnIzbXItVFVaazEzTk9rdWFQQV9BUVFhMW92ak1R",
+    "published": "2026-11-21T02:33:21+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "서민금융진흥원, ‘인공지능 보안 및 윤리 강령’ 선포",
+    "tags": [
+      "금융",
+      "AI"
+    ],
+    "title": "서민금융진흥원, ‘인공지능 보안 및 윤리 강령’ 선포",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAtTHFhSkUzWDdqaVlWamk4cXhiOE9tMHZzUTRMSUtDZlJOQXJ1R0R3OWJZWFZxdFo2ZjI5emVxWU9sWnFLMWdrWXFGSjhtMnIzbXItVFVaazEzTk9rdWFQQV9BUVFhMW92ak1R?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTFBkQjlXQ3A1cEdfWjU4YmNqaFEzZ05rdWZBQXNBLXY4R29OSUg1cWRXZ3l1Ri13U2RLMjRfTlpNa1N1TGlxSE0tYi1ZU0UzSEFuT0dvRG5PdWF4VjDSAWBBVV95cUxQMFVDMTBTc2duaHlFQk5ia1ZnQW82bmpFRDljbHZHNjZsQkw3eE04ajhRTUdhQ1pSOXRaTm5LUUNULXE3MklVNE9kSW5IcVBTbFV5UHExakQyOXR4MXFMNTM",
+    "published": "2026-11-17T21:00:03+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "주변부 시스템까지 전수 보안점검…대형사 평가 연 1회→2회",
+    "tags": [],
+    "title": "주변부 시스템까지 전수 보안점검…대형사 평가 연 1회→2회",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBkQjlXQ3A1cEdfWjU4YmNqaFEzZ05rdWZBQXNBLXY4R29OSUg1cWRXZ3l1Ri13U2RLMjRfTlpNa1N1TGlxSE0tYi1ZU0UzSEFuT0dvRG5PdWF4VjDSAWBBVV95cUxQMFVDMTBTc2duaHlFQk5ia1ZnQW82bmpFRDljbHZHNjZsQkw3eE04ajhRTUdhQ1pSOXRaTm5LUUNULXE3MklVNE9kSW5IcVBTbFV5UHExakQyOXR4MXFMNTM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTFBJVndTVWZRalJsTmctcXZRY2hmOW1fSXRnUHZQbWMwZnpoOXBicHRlRGIwUHE2WHZZdExhRGJLbmxYX01QemhsZTZmWXozWXN6SG1CckxvemVCbmozRlVvcDJ3QjdWVFVPNFNr",
+    "published": "2026-11-19T23:00:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융권 IT자산 관리 의무 강화되나…대형 금융사 보안 사각지대 줄인다",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 IT자산 관리 의무 강화되나…대형 금융사 보안 사각지대 줄인다",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBJVndTVWZRalJsTmctcXZRY2hmOW1fSXRnUHZQbWMwZnpoOXBicHRlRGIwUHE2WHZZdExhRGJLbmxYX01QemhsZTZmWXozWXN6SG1CckxvemVCbmozRlVvcDJ3QjdWVFVPNFNr?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMid0FVX3lxTE5wXzVJdllieWRXdEhjQmlHNDVyTkZBTjBXX0N2dGpJWmltVXgxM2lPdm1jRjgwMWNQNTJ4U0lETlQ4X2FYSmJrakVjZzBkTU1BbGRmYTlDS2IzaGg1X1JFZWRwZnFZY0JKNjNZZGxYSk1mMklJMy1r0gFmQVVfeXFMTVBhckZOMWJtLXIybXhYUF9sa0E3djV6VXhDelhpbHZYMi1KV09mWjBiOVBpS3duWkUwMXlaMjBaMk1UalkzVVVUMmdjbGV0Umd6R2FYZ244TVhud2E0NUkxX3BQYUx3",
+    "published": "2026-11-18T02:36:00+00:00",
+    "severity": "info",
+    "source": "보안 법령 개정",
+    "summary": "주진우 ‘입틀막법’ 집단 헌법소송 제기…“8만6934명 동참”",
+    "tags": [],
+    "title": "주진우 ‘입틀막법’ 집단 헌법소송 제기…“8만6934명 동참”",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5wXzVJdllieWRXdEhjQmlHNDVyTkZBTjBXX0N2dGpJWmltVXgxM2lPdm1jRjgwMWNQNTJ4U0lETlQ4X2FYSmJrakVjZzBkTU1BbGRmYTlDS2IzaGg1X1JFZWRwZnFZY0JKNjNZZGxYSk1mMklJMy1r0gFmQVVfeXFMTVBhckZOMWJtLXIybXhYUF9sa0E3djV6VXhDelhpbHZYMi1KV09mWjBiOVBpS3duWkUwMXlaMjBaMk1UalkzVVVUMmdjbGV0Umd6R2FYZ244TVhud2E0NUkxX3BQYUx3?oc=5"
   }
 ]
