@@ -9,8 +9,9 @@ cves: []
 
 ## 타임라인
 
-- 2026-11-14 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209521) — 11월 11일 해킹으로 고객 주민등록번호 앞 7자리·휴대전화번호·자택 주소 조회 의심, 유출 여부 조사
+- 2026-11-19 [개인정보보호위원회](https://news.google.com/rss/articles/CBMibkFVX3lxTE1vZ2hEWFVxSWQwNW9iWXV4eFZMSmFqcUxENVBHaW8welBTYjFZemJiYnFoTFEwbko4MHVFZDhjbjg0c1lnc1c2OUR4MExDRWFTZXpuNTdkR1dVcGpPRW5OTTJoa0NHOUl3djdsVGZB?oc=5) — 개인정보 유출 고객 20만5천명 확인
 - 2026-11-18 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iNzRhc2dEajY0NUFUNWtmMklneWlNX28tUUlMZEhDd1FSX2tyRk1adDV3dWNibmRzcFNKX2gybzR1VXRqZXlEU3padGxKUUc5Sy02Q2l5RFhhZDjSAWBBVV95cUxQTzFYaXVnU2htOEQ3aHhzclBRZ3VHczZrdUpyUTYtS1p5UDA3ODladWRQYWcxbVk1WmFxTVExcGhnYkZPM0RyTGdRdFNOTjB1QUlGTEN5X0ZfUmFkYlVYd2Y?oc=5) — 개인정보 유출 고객 36만2천명 확인, 당초(11월 14일) 20만2천명 대비 16만명 추가 증가
+- 2026-11-14 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209521) — 11월 11일 해킹으로 고객 주민등록번호 앞 7자리·휴대전화번호·자택 주소 조회 의심, 유출 여부 조사
 
 ## 관련
 

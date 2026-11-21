@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[kisa-ai-red-teaming-guide]]
+- [[2026-07-kisa-ai-red-teaming-guide]]

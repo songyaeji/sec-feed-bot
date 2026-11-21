@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-12 [금융위원회](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9EazdZUE96a3lUeG5zU1VZZEYzYy1JWTJ4LWg1Z3ljRU04RC1mY1hIOUNhdV9vRUM4WVA5U3JDVGt6M3d6d2ltSHNaQklXN1EySXQ2RDc1X295QWhhM0VZVWtWUEc?oc=5) — 가상자산 거래소·수탁기관 해킹 의심 시 긴급 입출금 차단 허용
+- 2026-11-18 [금융위원회](https://news.google.com/rss/articles/CBMiREFVX3lxTE5LZXd3RjVpSzNBYnRXTzJLVUJLajFtWm90djlnMDl1RjdPTlN6SDhFc2FUeUpocjZLSXVueGxBMUZFcFhV?oc=5) — 가상자산사업자 대상 최고 수준 보안강화 조치 발표, 이용자 자산·정보 보호 강화
 
 ## 관련
 

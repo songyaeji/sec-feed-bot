@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[kisa-ai-threat-response-manual]]
+- [[2026-07-kisa-ai-threat-response-manual]]

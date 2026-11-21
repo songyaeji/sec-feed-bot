@@ -12,6 +12,7 @@ cves: []
 - 2026-11-12 [금융위원회](https://news.google.com/rss/articles/CBMibkFVX3lxTE1RN0dGamlDU2s3dU5qSHhta181eGJ3U3ZsYTBzVUtscWFLcHlFdHVvbGRpa3ZrV2dVSElRbHJXeEZLLXN6NUdzT2pGclo3WThKanhsQk5aMmROaUpMajdobXZjd1p5cGNKNUhOYThn0gFyQVVfeXFMTmRVeTA3QXkyVmYzelM5WE1BMkJycFk1RWkxN3lVc3pxZG81Q0tkYjBTTUszVjUzblkwVlBnODFUS1YzOU5mcDBiVjhyUUhwQTF3S1pNc29Sd0NURTRCWFNTekMtdGRYMmtPVHNkeGNvZlhB?oc=5) — AI 시대 금융권 보안체계 혁신방안 발표, 580개사 외부접점·내부통제 전수점검·망분리 규제 전면해제 계획
 - 2026-11-18 [금융위원회](https://news.google.com/rss/articles/CBMibEFVX3lxTE9CekNRezFSTXdoRk1IWlpscTI5Q0VZeUZOQTRYdW1GRHhaYlVBUjlpOFNwV2NoUGxlRmVCb2JlV2VPQnY3c1VJeGdwMnVsNnJ2eTNIZVR5VEZjRWRaM1NCeExoaGl6Sl9iZ1FuTg) — 금융권 보안관리 강화 발표, 대형사 보안점검을 연 2회로 의무화
 - 2026-11-18 [금융위원회](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9LQVFlVDM0bGZuV1V0YWFqUkE5WjRvSHprRzFxMHM4Y3FlOGFEX3FtU3kyU2l0bWZlUW42YmtqZ2NGNWF1TTZDQl9NaUxZNUxrcmRUN0x1RW9TbnRIT09pOGZmSjVzNHc) — IT자산 식별·관리 의무화 등 보안체계 혁신방안 마련
+- 2026-11-21 [금융위원회](https://www.dailysecu.com/news/articleView.html?idxno=209648) — 전자금융감독규정 개정안 예고, 대형 금융사·전자금융업자 취약점 평가 반기 1회 이상 의무화, 업무지원 시스템도 평가 대상 포함
 
 ## 관련
 

@@ -9,6 +9,7 @@ cves: []
 
 ## 타임라인
 
+- 2026-11-19 [개인정보보호위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTE5iSm4xSWE4bkxDeHVOaU9rZi0wZUpGUHpIbHp3VlV5Ql93ckRteFBzLVkzNzAzZjRyY1NRelI4Z2RmbHc1ZWExdHBtM05reVRpSllFU3UyQ1dGNU1DMkxUVm0zLVZoUjFZMkhr?oc=5) — 국회 차원 진상규명 및 관리감독 강화 추진
 - 2026-11-18 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209608) — 전주대 'AHA' 해킹으로 약 18만 건 개인정보 유출, 주민등록번호 2.5만 건 포함 확인
 
 ## 관련
