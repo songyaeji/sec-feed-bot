@@ -15,4 +15,4 @@ Broadcom이 VMware ESXi의 가상머신 탈출(VM escape) 취약점을 포함한
 
 ## 관련
 
-[[vmware-avi-auth-bypass]] — VMware 인증 우회 취약점
+[[2026-07-vmware-avi-auth-bypass]] — VMware 인증 우회 취약점

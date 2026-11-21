@@ -13,4 +13,4 @@ AI 모델이 유권자의 정치적 선호도를 변화시킬 수 있음을 입�
 
 ## 관련
 
-[[korea-personal-info-ai-reform]]
+[[2026-08-korea-personal-info-ai-reform]]

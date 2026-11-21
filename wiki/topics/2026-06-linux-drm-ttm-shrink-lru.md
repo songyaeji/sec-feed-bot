@@ -13,4 +13,4 @@ Linux 커널 drm/ttm의 `ttm_bo_shrink()` 함수에서 백업 실패 시 발생�
 
 ## 관련
 
-[[linux-drm-ttm-swapout-lru]]
+[[2026-06-linux-drm-ttm-swapout-lru]]

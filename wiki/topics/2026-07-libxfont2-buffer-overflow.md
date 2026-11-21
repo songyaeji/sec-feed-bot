@@ -15,5 +15,5 @@ libXfont2 폰트 렌더링 라이브러리의 다중 글리프 처리 결함으�
 
 ## 관련
 
-[[xorg-xwayland-pcx-overflow]]
+[[2026-07-xorg-xwayland-pcx-overflow]]
 

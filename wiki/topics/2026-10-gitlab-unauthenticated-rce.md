@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[gitlab-ci-rce]]
+[[2026-10-gitlab-ci-rce]]

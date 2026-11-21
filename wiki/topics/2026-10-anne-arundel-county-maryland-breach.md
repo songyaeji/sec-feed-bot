@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[vicksburg-city-ransomware]] (미국 지방정부 랜섬웨어 공격)
+- [[2026-10-vicksburg-city-ransomware]] (미국 지방정부 랜섬웨어 공격)

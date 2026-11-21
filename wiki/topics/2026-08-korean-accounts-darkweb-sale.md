@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[korea-personal-info-ai-reform]]
+- [[2026-08-korea-personal-info-ai-reform]]

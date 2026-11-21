@@ -13,4 +13,4 @@ cves: [CVE-2026-123039]
 
 ## 관련
 
-[[check-point-management-server-rce]]
+[[2026-09-check-point-management-server-rce]]

@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-- [[korea-financial-customer-data-illegal-sale]] 은행 고객정보 불법 판매와 같은 금융정보 유출 위협 맥락
+- [[2026-10-korea-financial-customer-data-illegal-sale]] 은행 고객정보 불법 판매와 같은 금융정보 유출 위협 맥락

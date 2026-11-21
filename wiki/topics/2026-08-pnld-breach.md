@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[lgu-plus-breach-investigation]] — LG유플러스 정보유출 해킹 수사
+[[2026-07-lgu-plus-breach-investigation]] — LG유플러스 정보유출 해킹 수사

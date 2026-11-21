@@ -13,6 +13,6 @@ cves: []
 
 ## 관련
 
-- [[gyeongil-univ-breach]] 경일대 전자문서시스템 해킹
-- [[daegu-oriental-med-univ-breach]] 대구한의대 연구행정시스템 해킹
-- [[seoul-univ-breach]] 서울시립대 홈페이지 해킹
+- [[2026-11-gyeongil-univ-breach]] 경일대 전자문서시스템 해킹
+- [[2026-11-daegu-oriental-med-univ-breach]] 대구한의대 연구행정시스템 해킹
+- [[2026-11-seoul-univ-breach]] 서울시립대 홈페이지 해킹

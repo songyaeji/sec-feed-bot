@@ -15,4 +15,4 @@ Oracle Fusion Middleware의 **Platform Security for Java** 컴포넌트에서 �
 - Oracle Platform Security for Java 14.1.2.0.0
 
 ## 관련
-[[oracle-ebusiness-privilege-mgmt]]
+[[2026-07-oracle-ebusiness-privilege-mgmt]]

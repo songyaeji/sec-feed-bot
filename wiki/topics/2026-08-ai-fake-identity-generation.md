@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[ai-fake-identity-generation]]
+[[2026-08-ai-fake-identity-generation]]

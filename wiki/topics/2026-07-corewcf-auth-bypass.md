@@ -18,4 +18,4 @@ CoreWCF 1.8.1과 1.9.1 이전 버전에서 여러 인증·권한 검증 결함 �
 
 ## 관련
 
-- [[corewcf-namedpipe-interception]]
+- [[2026-07-corewcf-namedpipe-interception]]

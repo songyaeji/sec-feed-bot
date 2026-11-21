@@ -14,5 +14,5 @@ cves: []
 
 ## 관련
 
-- [[openai-ai-agent-test-evasion]]
+- [[2026-07-openai-ai-agent-test-evasion]]
 - [[ai-agent-sandbox-escapes]]

@@ -13,6 +13,6 @@ cves: []
 
 ## 관련
 
-- [[korea-privacy-protection-law-amendment-enforcement]] (개인정보보호법 개정안 강화)
-- [[court-ssn-encryption-supreme]] (대법원 주민번호 암호화 과태료)
-- [[court-ssn-encryption-admin]] (법원행정처 주민번호 암호화 과태료)
+- [[2026-09-korea-privacy-protection-law-amendment-enforcement]] (개인정보보호법 개정안 강화)
+- [[2026-09-court-ssn-encryption-supreme]] (대법원 주민번호 암호화 과태료)
+- [[2026-09-court-ssn-encryption-admin]] (법원행정처 주민번호 암호화 과태료)

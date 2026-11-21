@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[skillcloak-evade]]
+[[2026-07-skillcloak-evade]]
 

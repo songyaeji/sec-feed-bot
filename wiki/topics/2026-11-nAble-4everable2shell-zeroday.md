@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[nAble-n-central-auth-bypass|N-able N-central 인증 우회 취약점]]
+- [[2026-11-nAble-n-central-auth-bypass|N-able N-central 인증 우회 취약점]]

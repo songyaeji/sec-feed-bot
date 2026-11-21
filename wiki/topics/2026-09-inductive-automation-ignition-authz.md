@@ -13,4 +13,4 @@ Inductive Automation **Ignition** 플랫폼의 권한 검증 취약점으로 인
 
 ## 관련
 
-[[rockwell-controllogix-multi-vuln]]
+[[2026-09-rockwell-controllogix-multi-vuln]]

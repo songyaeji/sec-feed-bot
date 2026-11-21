@@ -16,4 +16,4 @@ cPanel의 LiteSpeed Web Server Enterprise에 치명적 취약점이 발견되었
 
 ## 관련
 
-[[cpanel-domain-addon-rce]]
+[[2026-08-cpanel-domain-addon-rce]]

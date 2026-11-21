@@ -13,5 +13,5 @@ Linux 커널 drivers/iommu/vt-d에서 PASID(Process Address Space ID) 테이블 
 
 ## 관련
 
-[[linux-iommu-domain-nofail]]
-[[linux-iommu-vt-d-oops]]
+[[2026-06-linux-iommu-domain-nofail]]
+[[2026-06-linux-iommu-vt-d-oops]]

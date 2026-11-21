@@ -13,4 +13,4 @@ Linux 커널 fs/ceph의 `__ceph_setxattr()` 함수에서 메모리 누수 취약
 
 ## 관련
 
-[[linux-ceph-xattr-blob-bug]]
+[[2026-06-linux-ceph-xattr-blob-bug]]

@@ -16,4 +16,4 @@ Flink 서비스 계정 권한 **RCE**를 달성할 수 있다. CVSS 9.8.
 
 ## 관련
 
-[[fastjson-rce-zero-day]]
+[[2026-07-fastjson-rce-zero-day]]

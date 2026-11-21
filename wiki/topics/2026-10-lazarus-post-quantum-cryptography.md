@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[lazarus-operation-flashhole]]
+[[2026-10-lazarus-operation-flashhole]]

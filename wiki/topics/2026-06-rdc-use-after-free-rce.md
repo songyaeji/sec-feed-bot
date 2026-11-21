@@ -15,5 +15,5 @@ Windows Remote Desktop Client(원격 데스크톱 클라이언트)의 메모리 
 
 ## 관련
 
-- [[upnp-type-confusion-rce]] (동일 월의 Windows 네트워크 RCE)
-- [[hyperv-type-confusion-rce]] (동일 월의 Windows 타입 혼동 RCE)
+- [[2026-06-upnp-type-confusion-rce]] (동일 월의 Windows 네트워크 RCE)
+- [[2026-06-hyperv-type-confusion-rce]] (동일 월의 Windows 타입 혼동 RCE)

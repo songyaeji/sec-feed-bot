@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[zimbra-stored-xss]]
+[[2026-07-zimbra-stored-xss]]

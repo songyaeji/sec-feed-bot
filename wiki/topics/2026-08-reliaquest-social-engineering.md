@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[shinyhunters-oauth-saas]]
+- [[2026-07-shinyhunters-oauth-saas]]

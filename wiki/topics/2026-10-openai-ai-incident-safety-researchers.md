@@ -13,5 +13,5 @@ OpenAI가 AI 사고로 인해 안전 연구 팀의 연구원 3명을 해고했�
 
 ## 관련
 
-[[openai-cso-resignation]]
-[[openai-insider-safety-concerns]]
+[[2026-10-openai-cso-resignation]]
+[[2026-10-openai-insider-safety-concerns]]

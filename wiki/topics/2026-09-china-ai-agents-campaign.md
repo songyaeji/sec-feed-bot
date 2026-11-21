@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[ai-assisted-cyber-attack]]
+[[2026-09-ai-assisted-cyber-attack]]

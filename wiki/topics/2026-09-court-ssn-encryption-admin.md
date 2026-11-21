@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-- [[court-ssn-encryption-supreme]] (대법원 주민번호 암호화 과태료)
-- [[korea-financial-ssn-policy-reform]] (금융권 주민번호 규제)
+- [[2026-09-court-ssn-encryption-supreme]] (대법원 주민번호 암호화 과태료)
+- [[2026-08-korea-financial-ssn-policy-reform]] (금융권 주민번호 규제)

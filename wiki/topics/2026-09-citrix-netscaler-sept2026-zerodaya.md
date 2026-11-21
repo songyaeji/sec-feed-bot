@@ -17,4 +17,4 @@ cves: [CVE-2026-88771, CVE-2026-88772, CVE-2026-88773, CVE-2026-88774, CVE-2026-
 
 ## 관련
 
-[[citrix-netscaler-auth-bypass]] [[citrix-netscaler-rce-active-exploit]]
+[[2026-08-citrix-netscaler-auth-bypass]] [[2026-08-citrix-netscaler-rce-active-exploit]]

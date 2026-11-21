@@ -13,5 +13,5 @@ Oracle WebLogic Server Proxy Plug-in (15.1.1.0.0) 타사 웹 서버 플러그인
 
 ## 관련
 
-[[oracle-access-manager-critical]]
-[[oracle-sdp-critical]]
+[[2026-07-oracle-access-manager-critical]]
+[[2026-07-oracle-sdp-critical]]

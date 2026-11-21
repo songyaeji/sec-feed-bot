@@ -16,4 +16,4 @@ cves: [CVE-2026-44774]
 
 ## 관련
 
-[[traefik-multi-auth-bypass]]
+[[2026-04-traefik-multi-auth-bypass]]

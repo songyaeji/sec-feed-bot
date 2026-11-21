@@ -16,4 +16,4 @@ KT와 LGU+가 개인정보 침해 사건 조사 과정에서 해킹 증거(로�
 
 ## 관련
 
-[[lgu-plus-breach-investigation]]
+[[2026-07-lgu-plus-breach-investigation]]

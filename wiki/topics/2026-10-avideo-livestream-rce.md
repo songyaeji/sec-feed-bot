@@ -13,4 +13,4 @@ AVideo 8.1.0 이전 버전의 `/view/videosListToLive.php` 라이브 스트리�
 
 ## 관련
 
-[[avideo-installation-rce]]
+[[2026-10-avideo-installation-rce]]

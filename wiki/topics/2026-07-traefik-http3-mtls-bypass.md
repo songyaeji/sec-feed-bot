@@ -13,4 +13,4 @@ cves: [CVE-2026-53622]
 
 ## 관련
 
-[[traefik-k8s-gateway-filter]]
+[[2026-07-traefik-k8s-gateway-filter]]

@@ -15,4 +15,4 @@ LiteLLM Python 패키지 1.107.0 버전이 공급망 공격으로 손상되어 �
 
 ## 관련
 
-[[malicious-litellm-pypi-supply-chain]]
+[[2026-08-malicious-litellm-pypi-supply-chain]]

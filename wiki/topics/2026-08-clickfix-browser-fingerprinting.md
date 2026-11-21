@@ -14,4 +14,4 @@ macOS 대상 ClickFix 피싱 캠페인이 250개 이상의 프론트엔드 도�
 
 ## 관련
 
-[[doublecup-clickfix-loader]] — PNG 스테그노그래피 기반 ClickFix 로더
+[[2026-08-doublecup-clickfix-loader]] — PNG 스테그노그래피 기반 ClickFix 로더

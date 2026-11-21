@@ -18,4 +18,4 @@ cves: [CVE-2026-69083, CVE-2026-69084, CVE-2026-69085, CVE-2026-72811]
 
 ## 관련
 
-[[siyuan-mcp-rce]] — SiYuan MCP 미인증 원격명령실행
+[[2026-07-siyuan-mcp-rce]] — SiYuan MCP 미인증 원격명령실행

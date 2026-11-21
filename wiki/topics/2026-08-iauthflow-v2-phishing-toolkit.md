@@ -15,4 +15,4 @@ Abnormal Security가 분석한 고급 피싱 툴킷 iAuthFlow v2가 러시아 �
 
 ## 관련
 
-[[passkey-validation-gap]]
+[[2026-08-passkey-validation-gap]]

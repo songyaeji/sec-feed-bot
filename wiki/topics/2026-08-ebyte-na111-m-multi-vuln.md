@@ -13,4 +13,4 @@ cves: [CVE-2026-69658, CVE-2026-71187, CVE-2026-73125, CVE-2026-73809, CVE-2026-
 
 ## 관련
 
-[[ebyte-ne2-d11-auth-bypass]]
+[[2026-08-ebyte-ne2-d11-auth-bypass]]

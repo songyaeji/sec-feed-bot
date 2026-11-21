@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[california-ag-openai-investigation]]
-[[openai-congress-ai-safety-mandate]]
+[[2026-10-california-ag-openai-investigation]]
+[[2026-09-openai-congress-ai-safety-mandate]]

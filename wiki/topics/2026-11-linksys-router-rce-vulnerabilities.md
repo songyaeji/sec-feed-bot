@@ -16,4 +16,4 @@ Linksys 공유기 제품군에서 다중 보안 취약점이 발견됐다. E8450
 
 ## 관련
 
-[[wavlink-iot-vulnerabilities]]
+[[2026-10-wavlink-iot-vulnerabilities]]

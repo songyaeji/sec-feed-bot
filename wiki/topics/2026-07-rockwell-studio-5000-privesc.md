@@ -13,4 +13,4 @@ cves: [CVE-2026-9108, CVE-2026-9127, CVE-2026-9128]
 
 ## 관련
 
-[[rockwell-arena-rce]]
+[[2026-07-rockwell-arena-rce]]

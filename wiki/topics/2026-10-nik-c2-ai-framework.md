@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[ai-assisted-cybercrime-threat-actor]]
+[[2026-10-ai-assisted-cybercrime-threat-actor]]

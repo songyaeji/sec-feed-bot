@@ -13,5 +13,5 @@ Oracle REST Data Services (24.2.0-26.1.0)의 극중대 취약점. 미인증 공�
 
 ## 관련
 
-[[oracle-data-integrator-critical]]
-[[oracle-access-manager-critical]]
+[[2026-07-oracle-data-integrator-critical]]
+[[2026-07-oracle-access-manager-critical]]

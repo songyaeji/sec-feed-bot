@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[fairlife-ransomware-supply-chain]] — Coca-Cola Fairlife 랜섬웨어 공급망 공격
+[[2026-07-fairlife-ransomware-supply-chain]] — Coca-Cola Fairlife 랜섬웨어 공급망 공격

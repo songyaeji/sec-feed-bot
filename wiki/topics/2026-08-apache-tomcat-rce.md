@@ -13,5 +13,5 @@ Apache Tomcat이 미지의 원격코드실행(RCE) 취약점에 노출되어 있
 
 ## 관련
 
-[[langflow-vulnerability]] — Langflow 동시 다중 취약점
-[[n-central-auth-bypass]] — N-central 인증 우회
+[[2026-07-langflow-vulnerability]] — Langflow 동시 다중 취약점
+[[2026-08-n-central-auth-bypass]] — N-central 인증 우회

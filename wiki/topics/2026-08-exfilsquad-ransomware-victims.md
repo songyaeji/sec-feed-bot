@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[wesco-data-breach]] — ExfilSquad의 첫 확인 피해자
+[[2026-08-wesco-data-breach]] — ExfilSquad의 첫 확인 피해자

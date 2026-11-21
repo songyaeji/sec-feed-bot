@@ -16,4 +16,4 @@ cves: []
 
 ## 관련
 
-- [[lotte-card-breach]] — 롯데카드 침해 사건, 이 정책의 배경
+- [[2026-07-lotte-card-breach]] — 롯데카드 침해 사건, 이 정책의 배경

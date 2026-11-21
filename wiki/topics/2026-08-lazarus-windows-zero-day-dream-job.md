@@ -12,4 +12,4 @@ cves: []
 - 2026-08-12 [The Hacker News](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html) — **Lazarus Group** Windows 제로데이 악용 미공개 백도어 배포, 방위·항공우주 기업 표적 (프랑스, 독일, 브라질, 인도)
 
 ## 관련
-- [[microsoft-patch-tuesday-august]]
+- [[2026-08-microsoft-patch-tuesday-august]]

@@ -15,5 +15,5 @@ cves: []
 
 ## 관련
 
-[[shinhan-bank-auth-bypass]]
-[[finance-ministry-cyber-breach-statistics]]
+[[2026-10-shinhan-bank-auth-bypass]]
+[[2026-10-finance-ministry-cyber-breach-statistics]]

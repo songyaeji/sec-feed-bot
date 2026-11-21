@@ -13,4 +13,4 @@ cves: [CVE-2026-124833]
 
 ## 관련
 
-[[advance-guest-post-wordpress-rce]]
+[[2026-11-advance-guest-post-wordpress-rce]]

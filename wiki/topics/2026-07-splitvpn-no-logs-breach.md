@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[android-vpn-apps-vulnerabilities]] — 281개 Android VPN 앱 개인정보 유출 위험
+[[2026-07-android-vpn-apps-vulnerabilities]] — 281개 Android VPN 앱 개인정보 유출 위험

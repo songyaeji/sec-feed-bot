@@ -17,5 +17,5 @@ NSA·CISA·FBI 공동 권고: 중국 AI 회사들이 미국 프론티어 AI 모�
 
 ## 관련
 
-[[openai-google-vulnerability-ai-system]]
-[[ai-infrastructure-litellm-attack-campaign]]
+[[2026-09-openai-google-vulnerability-ai-system]]
+[[2026-08-ai-infrastructure-litellm-attack-campaign]]

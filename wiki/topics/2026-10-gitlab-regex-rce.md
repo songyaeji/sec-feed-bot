@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[gitlab-unauthenticated-rce]]
+[[2026-10-gitlab-unauthenticated-rce]]

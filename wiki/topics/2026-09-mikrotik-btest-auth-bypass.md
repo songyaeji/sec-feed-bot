@@ -13,4 +13,4 @@ MikroTik RouterOS의 btest 서비스에 인증 검증 부재 취약점(CVE-2026-
 
 ## 관련
 
-- [[mikrotik-ssh-zerodday]] — MikroTik SSH 제로데이(별건)
+- [[2026-09-mikrotik-ssh-zerodday]] — MikroTik SSH 제로데이(별건)

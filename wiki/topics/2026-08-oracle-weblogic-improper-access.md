@@ -13,4 +13,4 @@ Oracle HTTP Server와 Oracle Weblogic Server Proxy Plug-in의 부적절한 접�
 
 ## 관련
 
-[[oracle-weblogic-proxy-critical]]
+[[2026-07-oracle-weblogic-proxy-critical]]

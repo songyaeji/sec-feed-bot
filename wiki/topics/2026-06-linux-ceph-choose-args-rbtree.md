@@ -13,4 +13,4 @@ Linux 커널 net/ceph의 `decode_choose_args()` 함수에서 CRUSH 맵 choose_ar
 
 ## 관련
 
-[[linux-ceph-choose-args-null]]
+[[2026-06-linux-ceph-choose-args-null]]

@@ -13,5 +13,5 @@ Oracle Access Manager (12.2.1.4.0, 14.1.2.1.0) 인증 엔진의 극중대 취약
 
 ## 관련
 
-[[oracle-unified-directory-critical]]
-[[oracle-coherence-critical]]
+[[2026-07-oracle-unified-directory-critical]]
+[[2026-07-oracle-coherence-critical]]

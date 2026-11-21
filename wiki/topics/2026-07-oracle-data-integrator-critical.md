@@ -13,5 +13,5 @@ Oracle Data Integrator (12.2.1.4.0, 14.1.2.0.0) REST 서비스의 극중대 취�
 
 ## 관련
 
-[[oracle-rest-data-services-critical]]
-[[oracle-coherence-critical]]
+[[2026-07-oracle-rest-data-services-critical]]
+[[2026-07-oracle-coherence-critical]]

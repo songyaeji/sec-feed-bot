@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[github-actions-packagist-supply-chain]] — GitHub Actions 악용한 공급망 공격
+[[2026-07-github-actions-packagist-supply-chain]] — GitHub Actions 악용한 공급망 공격

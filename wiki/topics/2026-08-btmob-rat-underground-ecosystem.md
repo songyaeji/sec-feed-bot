@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[flying-eagle-android-rat]] — Flying Eagle Android RAT 캠페인
-[[okobot-malware-framework]] — OkoBot 악성코드 프레임워크
+[[2026-07-flying-eagle-android-rat]] — Flying Eagle Android RAT 캠페인
+[[2026-07-okobot-malware-framework]] — OkoBot 악성코드 프레임워크

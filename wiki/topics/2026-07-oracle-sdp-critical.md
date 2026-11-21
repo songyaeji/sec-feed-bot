@@ -14,5 +14,5 @@ Oracle Service Delivery Platform (12.2.1.4.0, 14.1.2.0.0) 메시징 활성화 �
 
 ## 관련
 
-[[oracle-weblogic-proxy-critical]]
-[[oracle-webcenter-content-critical]]
+[[2026-07-oracle-weblogic-proxy-critical]]
+[[2026-07-oracle-webcenter-content-critical]]

@@ -13,4 +13,4 @@ Pyramid Solutions **NetStaX EtherNet/IP Stack** v5.6.1 이전 버전의 버퍼 �
 
 ## 관련
 
-[[rockwell-controllogix-multi-vuln]]
+[[2026-09-rockwell-controllogix-multi-vuln]]

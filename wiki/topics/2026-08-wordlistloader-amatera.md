@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-- [[acr-stealer-clickfix-campaign]]
-- [[synkloader-teams-phishing]]
+- [[2026-07-acr-stealer-clickfix-campaign]]
+- [[2026-08-synkloader-teams-phishing]]

@@ -13,4 +13,4 @@ Tycon Systems **TPDIN-Monitor-WEB3**의 다중 취약점으로 공격자가 중�
 
 ## 관련
 
-[[tycon-tpdin-auth-bypass]]
+[[2026-07-tycon-tpdin-auth-bypass]]

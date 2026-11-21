@@ -13,4 +13,4 @@ GCHQ와 국제 파트너들이 러시아 국가지원 정보탈취 집단 LAUNDR
 
 ## 관련
 
-- [[laundry-bear-zimbra-zerodday]]
+- [[2026-07-laundry-bear-zimbra-zerodday]]

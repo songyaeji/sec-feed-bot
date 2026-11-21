@@ -15,4 +15,4 @@ Google Threat Intelligence Group(GTIG)이 러시아 정보기관 배경으로 �
 
 ## 관련
 
-- [[silkparasite-espionage]] — 중앙아시아 정부 표적 신규 RAT 5종
+- [[2026-08-silkparasite-espionage]] — 중앙아시아 정부 표적 신규 RAT 5종

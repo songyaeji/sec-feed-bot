@@ -15,4 +15,4 @@ scopeRequired로 보호되는 도구를 직접 호출할 수 있다. CVSS 9.8 �
 
 ## 관련
 
-[[ai-tool-sandbox-escapes]]
+[[2026-07-ai-tool-sandbox-escapes]]

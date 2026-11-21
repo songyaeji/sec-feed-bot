@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[xmrig-coinminer-linux-ssh]] — Linux SSH 대상 XMRig 캠페인
+[[2026-07-xmrig-coinminer-linux-ssh]] — Linux SSH 대상 XMRig 캠페인

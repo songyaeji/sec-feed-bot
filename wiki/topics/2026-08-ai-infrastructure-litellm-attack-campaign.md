@@ -14,4 +14,4 @@ Microsoft Threat Intelligence가 공격자들의 노출된 AI 게이트웨이(�
 
 ## 관련
 
-[[malicious-litellm-pypi-supply-chain]]
+[[2026-08-malicious-litellm-pypi-supply-chain]]

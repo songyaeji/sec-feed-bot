@@ -13,5 +13,5 @@ Microsoft Threat Intelligence가 관찰한 침입 캠페인에서 공격자들�
 
 ## 관련
 
-[[spring-ring-voice-phishing]]
-[[synkloader-teams-phishing]]
+[[2026-08-spring-ring-voice-phishing]]
+[[2026-08-synkloader-teams-phishing]]

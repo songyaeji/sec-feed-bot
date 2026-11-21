@@ -13,4 +13,4 @@ Cisco Secure Firewall Management Center(FMC) 웹 인터페이스의 부적절한
 
 ## 관련
 
-[[cisco-fmc-hardcoded-password]]
+[[2026-07-cisco-fmc-hardcoded-password]]

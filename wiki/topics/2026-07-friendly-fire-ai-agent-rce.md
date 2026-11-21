@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[ghostapproval-ai-agent-symlink]]
-[[crowdstrike-prompt-injection-techniques]]
+[[2026-07-ghostapproval-ai-agent-symlink]]
+[[2026-07-crowdstrike-prompt-injection-techniques]]

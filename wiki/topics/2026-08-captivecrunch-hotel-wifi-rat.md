@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-- [[hotel-wifi-dns-hijacking]]
+- [[2026-07-hotel-wifi-dns-hijacking]]

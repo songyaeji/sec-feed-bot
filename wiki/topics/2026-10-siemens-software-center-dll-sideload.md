@@ -13,5 +13,5 @@ cves: [CVE-2026-110936]
 
 ## 관련
 
-[[clickfix-google-visualization-c2]]
-[[legionloader-clickfix-malware]]
+[[2026-09-clickfix-google-visualization-c2]]
+[[2026-09-legionloader-clickfix-malware]]

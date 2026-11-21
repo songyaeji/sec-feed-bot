@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-[[gpt-6-astra-cybersecurity]]
+[[2026-09-gpt-6-astra-cybersecurity]]

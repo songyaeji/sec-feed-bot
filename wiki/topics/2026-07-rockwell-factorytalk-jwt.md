@@ -13,4 +13,4 @@ cves: [CVE-2026-10714]
 
 ## 관련
 
-[[rockwell-arena-rce]]
+[[2026-07-rockwell-arena-rce]]

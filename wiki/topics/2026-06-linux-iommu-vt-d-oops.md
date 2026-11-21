@@ -13,4 +13,4 @@ Linux 커널 drivers/iommu/vt-d의 `domain_remove_dev_pasid()` 함수에서 범�
 
 ## 관련
 
-[[linux-iommu-domain-nofail]]
+[[2026-06-linux-iommu-domain-nofail]]

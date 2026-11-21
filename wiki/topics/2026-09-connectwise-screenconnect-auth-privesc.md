@@ -13,4 +13,4 @@ cves: [CVE-2026-84869]
 
 ## 관련
 
-- [[rogue-screenconnect-vbscript]] — ScreenConnect 악용 멀웨어 활동
+- [[2026-09-rogue-screenconnect-vbscript]] — ScreenConnect 악용 멀웨어 활동

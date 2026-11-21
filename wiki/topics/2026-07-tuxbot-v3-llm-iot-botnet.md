@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-- [[mycelium-ai-botnet-framework]] — Mycelium 크로스플랫폼 AI 보트넷 프레임워크
+- [[2026-07-mycelium-ai-botnet-framework]] — Mycelium 크로스플랫폼 AI 보트넷 프레임워크

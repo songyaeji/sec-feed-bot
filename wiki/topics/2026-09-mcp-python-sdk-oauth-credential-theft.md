@@ -13,4 +13,4 @@ Anthropic의 공식 **MCP(Model Context Protocol) Python SDK**에 취약점이 �
 
 ## 관련
 
-[[mcp-server-ai-exfiltration]]
+[[2026-08-mcp-server-ai-exfiltration]]

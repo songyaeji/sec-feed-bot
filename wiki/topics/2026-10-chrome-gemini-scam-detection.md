@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[legionloader-clickfix-malware]]
+[[2026-09-legionloader-clickfix-malware]]

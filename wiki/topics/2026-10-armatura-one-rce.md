@@ -13,4 +13,4 @@ Armatura LLC 물리 접근제어 시스템 Armatura One에서 원격코드실행
 
 ## 관련
 
-[[johnson-controls-easyio-neo-vulnerabilities]]
+[[2026-10-johnson-controls-easyio-neo-vulnerabilities]]

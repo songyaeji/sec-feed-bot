@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[china-ai-distillation-campaign]]
-[[anthropic-aligned-ai-cyber-incident]]
+[[2026-09-china-ai-distillation-campaign]]
+[[2026-09-anthropic-aligned-ai-cyber-incident]]

@@ -13,4 +13,4 @@ cves: [CVE-2026-95102, CVE-2026-97363, CVE-2026-97212, CVE-2026-93474]
 
 ## 관련
 
-[[johnson-controls-easyio-neo-vulnerabilities]]
+[[2026-10-johnson-controls-easyio-neo-vulnerabilities]]

@@ -14,4 +14,4 @@ KT가 개인정보보호위원회의 개인정보 과징금 처분을 둘러싼 
 
 ## 관련
 
-[[skt-usim-breach-legal-battle]]
+[[2026-09-skt-usim-breach-legal-battle]]

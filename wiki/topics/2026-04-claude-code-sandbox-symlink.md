@@ -13,4 +13,4 @@ Claude Code v2.1.64 이전 버전에서 샌드박스 프로세스가 워크스�
 
 ## 관련
 
-[[ghostapproval-ai-agent-symlink]]
+[[2026-07-ghostapproval-ai-agent-symlink]]

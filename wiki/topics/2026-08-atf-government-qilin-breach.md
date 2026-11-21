@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[qilin-panos-exploit]]
+[[2026-07-qilin-panos-exploit]]

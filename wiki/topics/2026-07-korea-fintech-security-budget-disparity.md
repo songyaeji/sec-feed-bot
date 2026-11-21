@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[korea-govt-emergency-patch-liability]] — 한국 정부 긴급 보안 패치 책임 면제 정책
+[[2026-07-korea-govt-emergency-patch-liability]] — 한국 정부 긴급 보안 패치 책임 면제 정책

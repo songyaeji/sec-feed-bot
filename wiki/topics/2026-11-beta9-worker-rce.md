@@ -14,4 +14,4 @@ cves: [CVE-2026-120306, CVE-2026-120307]
 
 ## 관련
 
-[[vm2-sandbox-breakout]]
+[[2026-05-vm2-sandbox-breakout]]

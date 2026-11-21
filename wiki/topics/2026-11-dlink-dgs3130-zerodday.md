@@ -13,4 +13,4 @@ D-Link가 DGS-3130 시리즈 관리형 스위치의 다수 미패치 보안 결�
 
 ## 관련
 
-[[dlink-router-tftp-vulnerabilities]] [[zyxel-gs1900-zero-day]]
+[[2026-11-dlink-router-tftp-vulnerabilities]] [[2026-11-zyxel-gs1900-zero-day]]

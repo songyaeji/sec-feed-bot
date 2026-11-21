@@ -14,4 +14,4 @@ cves: [CVE-2026-123965]
 
 ## 관련
 
-[[llmjacking]]
+[[2026-11-llmjacking]]

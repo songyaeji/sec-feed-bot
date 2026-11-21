@@ -17,4 +17,4 @@ cves: [CVE-2026-104935, CVE-2026-111357, CVE-2026-118527]
 
 ## 관련
 
-[[ivanti-sentry-os-command-injection]]
+[[2026-06-ivanti-sentry-os-command-injection]]

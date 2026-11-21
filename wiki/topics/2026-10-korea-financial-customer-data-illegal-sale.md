@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[yekarambank-personal-data-breach]]
-[[korea-breach-rapid-investigation-system]]
+[[2026-10-yekarambank-personal-data-breach]]
+[[2026-10-korea-breach-rapid-investigation-system]]

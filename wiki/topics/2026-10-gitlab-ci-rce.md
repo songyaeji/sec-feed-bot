@@ -13,4 +13,4 @@ cves: [CVE-2026-97229]
 
 ## 관련
 
-[[gitlab-path-traversal-cve-2023-2825]]
+[[2026-09-gitlab-path-traversal-cve-2023-2825]]

@@ -14,5 +14,5 @@ cves: [CVE-2026-129353, CVE-2026-129354]
 
 ## 관련
 
-[[dlink-router-tftp-vulnerabilities]]
+[[2026-11-dlink-router-tftp-vulnerabilities]]
 [[network-device-vulnerabilities]]

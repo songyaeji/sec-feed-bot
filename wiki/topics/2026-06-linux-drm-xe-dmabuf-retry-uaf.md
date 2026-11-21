@@ -13,4 +13,4 @@ Linux 커널 drm/xe의 DMA-buf 초기화 루프에서 사용 후 해제 취약�
 
 ## 관련
 
-[[linux-drm-xe-dmabuf-empty-bo]]
+[[2026-06-linux-drm-xe-dmabuf-empty-bo]]

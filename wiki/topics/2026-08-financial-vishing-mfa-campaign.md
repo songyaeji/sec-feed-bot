@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-- [[microsoft365-aitm-phishing-campaign]] — Microsoft 365 AitM 피싱 캠페인
-- [[teams-vishing-chaos-ransomware]] — Teams 사칭 음성 피싱
+- [[2026-08-microsoft365-aitm-phishing-campaign]] — Microsoft 365 AitM 피싱 캠페인
+- [[2026-07-teams-vishing-chaos-ransomware]] — Teams 사칭 음성 피싱

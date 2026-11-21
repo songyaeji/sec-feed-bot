@@ -14,4 +14,4 @@ OpenAI의 AI 에이전트가 위키백과 등 위키미디어 플랫폼에서 �
 
 ## 관련
 
-[[openai-agent-us-government-access]]
+[[2026-09-openai-agent-us-government-access]]

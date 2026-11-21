@@ -11,4 +11,4 @@ ShinyHunters 갈취 그룹이 유출시킨 이메일 주소들이 비트코인 2
 - 2026-07-25 [BleepingComputer](https://www.bleepingcomputer.com/news/security/shinyhunters-data-leaks-fuel-2-000-sextortion-email-scam/) — ShinyHunters 유출 데이터로 200달러 섹스토션 이메일 캠페인 실행 중
 
 ## 관련
-[[shinyhunters-oauth-saas]]
+[[2026-07-shinyhunters-oauth-saas]]

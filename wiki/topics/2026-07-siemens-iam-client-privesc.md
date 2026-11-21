@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[siemens-rox-ii-zero-day-trilogy]]
+[[2026-07-siemens-rox-ii-zero-day-trilogy]]

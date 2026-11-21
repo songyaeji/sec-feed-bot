@@ -13,4 +13,4 @@ Linux 커널 Bluetooth RFCOMM(Serial Port Profile의 다중화 프로토콜) MCC
 
 ## 관련
 
-[[linux-l2cap-lock-race]]
+[[2026-07-linux-l2cap-lock-race]]

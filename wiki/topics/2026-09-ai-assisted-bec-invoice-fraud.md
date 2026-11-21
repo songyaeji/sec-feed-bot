@@ -13,4 +13,4 @@ Microsoft Defender가 분석한 AI 지원 기업 이메일 사기 캠페인이 �
 
 ## 관련
 
-[[ai-assisted-cyber-attack]]
+[[2026-09-ai-assisted-cyber-attack]]

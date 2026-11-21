@@ -13,4 +13,4 @@ Linux 커널 drivers/iommu의 `__iommu_group_set_domain_nofail()` 함수에서 �
 
 ## 관련
 
-[[linux-iommu-vt-d-oops]]
+[[2026-06-linux-iommu-vt-d-oops]]

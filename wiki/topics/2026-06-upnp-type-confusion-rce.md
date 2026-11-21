@@ -15,5 +15,5 @@ Windows 범용 플러그 앤 플레이(UPnP) 드라이버의 타입 혼동 결�
 
 ## 관련
 
-- [[hyperv-type-confusion-rce]] (동일 월의 Windows 타입 혼동 RCE)
-- [[rdc-use-after-free-rce]] (Windows 클라이언트 RCE)
+- [[2026-06-hyperv-type-confusion-rce]] (동일 월의 Windows 타입 혼동 RCE)
+- [[2026-06-rdc-use-after-free-rce]] (Windows 클라이언트 RCE)

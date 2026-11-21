@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[korea-financial-ssn-policy-reform]]
+[[2026-08-korea-financial-ssn-policy-reform]]

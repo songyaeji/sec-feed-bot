@@ -13,4 +13,4 @@ npm 생태계의 **@joyfill** 네임스페이스 패키지 2개가 침해되어 
 
 ## 관련
 
-[[asyncapi-npm-packages-compromise]] — @asyncapi npm 패키지 침해
+[[2026-07-asyncapi-npm-packages-compromise]] — @asyncapi npm 패키지 침해

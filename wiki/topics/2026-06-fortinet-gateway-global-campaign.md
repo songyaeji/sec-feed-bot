@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[fortinet-fortimail-path-traversal]]
+[[2026-10-fortinet-fortimail-path-traversal]]

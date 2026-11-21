@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[medusahvnc-hvnc-rat]] — HVNC를 활용한 RAT
+[[2026-07-medusahvnc-hvnc-rat]] — HVNC를 활용한 RAT

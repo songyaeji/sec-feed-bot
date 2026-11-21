@@ -22,4 +22,4 @@ cves: []
 
 ## 관련
 
-- [[ai-agent-data-injection-attack]] — AI 에이전트 데이터 주입 공격
+- [[2026-07-ai-agent-data-injection-attack]] — AI 에이전트 데이터 주입 공격

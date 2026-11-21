@@ -13,4 +13,4 @@ cves: [CVE-2026-120338]
 
 ## 관련
 
-[[wasmtime-sandbox-escape]]
+[[2026-10-wasmtime-sandbox-escape]]

@@ -13,4 +13,4 @@ cves: [CVE-2026-55971]
 
 ## 관련
 
-- [[apache-thrift-oob-read]]
+- [[2026-04-apache-thrift-oob-read]]

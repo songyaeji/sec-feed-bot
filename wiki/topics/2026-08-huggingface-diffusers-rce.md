@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[fakegit-smartloader]] — GitHub 저장소 악용 공급망 공격
-[[google-opensource-supply-chain-guidance]] — 공개소스 공급망 공격 방어 지침
+[[2026-07-fakegit-smartloader]] — GitHub 저장소 악용 공급망 공격
+[[2026-07-google-opensource-supply-chain-guidance]] — 공개소스 공급망 공격 방어 지침

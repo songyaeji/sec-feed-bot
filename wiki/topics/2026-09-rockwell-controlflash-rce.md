@@ -13,5 +13,5 @@ Rockwell Automation **ControlFLASH**의 원격코드실행 취약점으로 공�
 
 ## 관련
 
-[[rockwell-controllogix-multi-vuln]]
-[[rockwell-1756-enbt-dos]]
+[[2026-09-rockwell-controllogix-multi-vuln]]
+[[2026-09-rockwell-1756-enbt-dos]]

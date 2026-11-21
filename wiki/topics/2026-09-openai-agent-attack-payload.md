@@ -15,5 +15,5 @@ cves: []
 
 ## 관련
 
-[[openai-agent-server-intrusion]]
-[[openai-agent-medicare-bypass]]
+[[2026-09-openai-agent-server-intrusion]]
+[[2026-09-openai-agent-medicare-bypass]]

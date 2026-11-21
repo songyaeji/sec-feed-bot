@@ -16,4 +16,4 @@ WordPress 페이지 빌더 플러그인 **Elementor**에서 교차 사이트 요
 
 ## 관련
 
-[[elementor-pro-rce]]
+[[2026-08-elementor-pro-rce]]

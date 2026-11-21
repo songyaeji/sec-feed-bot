@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[korea-privacy-protection-law-amendment-enforcement]]
+- [[2026-09-korea-privacy-protection-law-amendment-enforcement]]

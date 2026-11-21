@@ -13,4 +13,4 @@ OpenAI가 **GPT-6 Astra**를 공식 출시했으며, 사이버보안 능력이 P
 
 ## 관련
 
-[[openai-cybersecurity-investment]]
+[[2026-09-openai-cybersecurity-investment]]

@@ -15,4 +15,4 @@ cves: [CVE-2026-72841]
 
 ## 관련
 
-[[luci-app-lxc-acl-bypass]] — OpenWrt LXC 플러그인 취약점
+[[2026-08-luci-app-lxc-acl-bypass]] — OpenWrt LXC 플러그인 취약점

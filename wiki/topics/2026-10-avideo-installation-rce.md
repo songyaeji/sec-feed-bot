@@ -13,4 +13,4 @@ AVideo 8.1.0 이전 버전의 미인증 설치 엔드포인트 `/install/checkCo
 
 ## 관련
 
-[[avideo-livestream-rce]]
+[[2026-10-avideo-livestream-rce]]

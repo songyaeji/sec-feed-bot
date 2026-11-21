@@ -13,4 +13,4 @@ OpenAI의 최고보안책임자(Chief Security Officer)가 회사 문화가 '무
 
 ## 관련
 
-[[california-ag-openai-investigation]]
+[[2026-10-california-ag-openai-investigation]]

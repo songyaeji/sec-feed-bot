@@ -13,4 +13,4 @@ WordPress 플러그인 **Rank Math PRO** 유료 버전이 공식 사이트와 �
 
 ## 관련
 
-[[wordpress-sc-selfhealing-backdoor]]
+[[2026-10-wordpress-sc-selfhealing-backdoor]]

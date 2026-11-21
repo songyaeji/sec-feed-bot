@@ -13,4 +13,4 @@ SOCFortress CoPilot의 GCP 보고서 생성 API에서 업로드된 파일명을 
 
 ## 관련
 
-[[socfortress-copilot-stored-xss]]
+[[2026-10-socfortress-copilot-stored-xss]]

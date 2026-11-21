@@ -15,4 +15,4 @@ cves: [CVE-2026-72842]
 
 ## 관련
 
-[[luci-app-openvpn-path-traversal]] — OpenWrt OpenVPN 플러그인 취약점
+[[2026-08-luci-app-openvpn-path-traversal]] — OpenWrt OpenVPN 플러그인 취약점

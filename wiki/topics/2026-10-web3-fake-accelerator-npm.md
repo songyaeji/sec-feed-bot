@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[npm-phantomsub-whatsapp-campaign]]
+[[2026-09-npm-phantomsub-whatsapp-campaign]]

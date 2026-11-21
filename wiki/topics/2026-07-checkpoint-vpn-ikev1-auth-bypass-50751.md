@@ -13,4 +13,4 @@ Check Point **Remote Access VPN** 제품의 IKEv1 **인증 우회** 취약점 CV
 
 ## 관련
 
-[[check-point-vpn-certificate-rce]]
+[[2026-09-check-point-vpn-certificate-rce]]

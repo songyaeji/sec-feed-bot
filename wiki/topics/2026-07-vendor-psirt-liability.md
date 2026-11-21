@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[korea-govt-emergency-patch-liability]]
+- [[2026-07-korea-govt-emergency-patch-liability]]

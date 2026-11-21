@@ -13,5 +13,5 @@ Rockwell Automation **1756-ENBT 모듈**(ControlLogix EtherNet/IP 브릿지)의 
 
 ## 관련
 
-[[rockwell-controllogix-multi-vuln]]
-[[rockwell-1756-en-dos]]
+[[2026-09-rockwell-controllogix-multi-vuln]]
+[[2026-07-rockwell-1756-en-dos]]

@@ -13,4 +13,4 @@ Duo 서비스에서 발생한 개인정보 유출 사건의 법적 절차 진행
 
 ## 관련
 
-- [[korea-personal-info-settlement-failure]]
+- [[2026-08-korea-personal-info-settlement-failure]]

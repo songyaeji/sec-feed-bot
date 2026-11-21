@@ -15,5 +15,5 @@ Windows Hyper-V 가상머신 기능의 타입 혼동 결함으로 인해 인가�
 
 ## 관련
 
-- [[upnp-type-confusion-rce]] (동일 월의 Windows 타입 혼동 RCE)
-- [[rdc-use-after-free-rce]] (Windows 클라이언트 RCE)
+- [[2026-06-upnp-type-confusion-rce]] (동일 월의 Windows 타입 혼동 RCE)
+- [[2026-06-rdc-use-after-free-rce]] (Windows 클라이언트 RCE)

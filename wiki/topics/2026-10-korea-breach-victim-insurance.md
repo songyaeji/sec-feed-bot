@@ -14,5 +14,5 @@ cves: []
 
 ## 관련
 
-[[korea-hacking-penalty-victim-compensation]]
-[[korea-privacy-protection-law-amendment-enforcement]]
+[[2026-09-korea-hacking-penalty-victim-compensation]]
+[[2026-09-korea-privacy-protection-law-amendment-enforcement]]

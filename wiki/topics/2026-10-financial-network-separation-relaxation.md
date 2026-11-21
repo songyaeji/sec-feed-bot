@@ -18,5 +18,5 @@ cves: []
 
 ## 관련
 
-[[shinhan-bank-auth-bypass]]
-[[financial-ai-agent-security-guidance]]
+[[2026-10-shinhan-bank-auth-bypass]]
+[[2026-10-financial-ai-agent-security-guidance]]

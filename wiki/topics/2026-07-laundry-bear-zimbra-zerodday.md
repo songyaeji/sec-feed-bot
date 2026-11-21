@@ -14,5 +14,5 @@ cves: [CVE-2025-66376]
 
 ## 관련
 
-- [[zimbra-snmp-command-injection]]
-- [[zimbra-stored-xss]]
+- [[2026-07-zimbra-snmp-command-injection]]
+- [[2026-07-zimbra-stored-xss]]

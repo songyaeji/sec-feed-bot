@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-- [[unc5142-etherhiding]]
+- [[2025-10-unc5142-etherhiding]]

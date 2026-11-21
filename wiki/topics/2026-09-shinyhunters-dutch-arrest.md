@@ -17,5 +17,5 @@ cves: []
 
 ## 관련
 
-[[shinyhunters-fbi-peoplesoft]]
-[[adapthealth-breach]]
+[[2026-09-shinyhunters-fbi-peoplesoft]]
+[[2026-09-adapthealth-breach]]

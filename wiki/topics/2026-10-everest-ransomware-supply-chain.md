@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[korea-finance-breach-16]] [[shinhan-bank-auth-bypass]]
+[[2026-10-korea-finance-breach-16]] [[2026-10-shinhan-bank-auth-bypass]]

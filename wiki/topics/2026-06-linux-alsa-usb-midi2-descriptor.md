@@ -13,4 +13,4 @@ Linux 커널 sound/usb의 USB MIDI 2.0 엔드포인트 파서에서 설명자 �
 
 ## 관련
 
-[[linux-alsa-usb-midi-descriptor]]
+[[2026-06-linux-alsa-usb-midi-descriptor]]

@@ -13,5 +13,5 @@ Tycon Systems TPDIN-Monitor-WEB2 2.3.9의 웹 관리 인터페이스가 서버�
 
 ## 관련
 
-[[sonicwall-sma1000-vulnerabilities]]
-[[rockwell-automation-ethernetip-adapter]]
+[[2026-07-sonicwall-sma1000-vulnerabilities]]
+[[2026-07-rockwell-automation-ethernetip-adapter]]

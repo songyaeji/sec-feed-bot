@@ -13,4 +13,4 @@ Google이 DRAM 메모리 생태계 보안을 강화하기 위해 **Rowhammer** �
 
 ## 관련
 
-[[bad-epoll-linux]]
+[[2026-07-bad-epoll-linux]]

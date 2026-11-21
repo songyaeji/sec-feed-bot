@@ -13,4 +13,4 @@ Google GenAI 보안팀이 LLM 기반 시스템을 겨냥한 **프롬프트 인�
 
 ## 관련
 
-[[hidden-prompt-ai-agent]]
+[[2026-07-hidden-prompt-ai-agent]]

@@ -15,4 +15,4 @@ cves: [CVE-2026-73061]
 
 ## 관련
 
-[[scriban-cache-member-filter-bypass]] — Scriban 캐시 정책 우회 접근 제어 탈취
+[[2026-08-scriban-cache-member-filter-bypass]] — Scriban 캐시 정책 우회 접근 제어 탈취

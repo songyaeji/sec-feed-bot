@@ -14,4 +14,4 @@ jackson-databind에서 클래스명 타입 ID의 외부 클래스는 검증하�
 
 ## 관련
 
-[[jackson-databind-array-bypass]]
+[[2026-06-jackson-databind-array-bypass]]

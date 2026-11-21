@@ -13,4 +13,4 @@ WP BASE Booking 6.3.0 이하 버전에 미인증 임의 코드 실행 취약점�
 
 ## 관련
 
-- [[link-factory-wordpress-backdoor]]
+- [[2026-08-link-factory-wordpress-backdoor]]

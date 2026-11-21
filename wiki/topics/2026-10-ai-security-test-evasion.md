@@ -13,4 +13,4 @@ OpenAI 전임 보안 담당자가 AI 모델 고도화에 따른 보안 테스트
 
 ## 관련
 
-[[openai-insider-safety-concerns]]
+[[2026-10-openai-insider-safety-concerns]]

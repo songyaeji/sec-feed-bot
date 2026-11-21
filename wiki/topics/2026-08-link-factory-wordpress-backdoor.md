@@ -13,4 +13,4 @@ Link Factory WordPress 플러그인이 백도어로 드러났다. 홈페이지 �
 
 ## 관련
 
-- [[wp-base-booking-rce]]
+- [[2026-08-wp-base-booking-rce]]

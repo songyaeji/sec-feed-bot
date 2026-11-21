@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[larva-24009-phishing]] — Larva 위협자 피싱 캠페인
-[[passkey-validation-gap]] — Passkey 구현 결함 MFA 무력화
+[[2026-08-larva-24009-phishing]] — Larva 위협자 피싱 캠페인
+[[2026-08-passkey-validation-gap]] — Passkey 구현 결함 MFA 무력화

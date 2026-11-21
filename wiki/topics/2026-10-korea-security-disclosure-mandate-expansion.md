@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[korea-financial-security-investment-shortage]]
+[[2026-10-korea-financial-security-investment-shortage]]

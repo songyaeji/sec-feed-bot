@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[ai-tool-sandbox-escapes]]
+[[2026-07-ai-tool-sandbox-escapes]]

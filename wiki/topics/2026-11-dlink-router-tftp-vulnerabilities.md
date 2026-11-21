@@ -13,4 +13,4 @@ D-Link DIR-505 라우터의 TFTP 파일 업로드 핸들러에서 스택 버퍼�
 
 ## 관련
 
-[[wavlink-iot-vulnerabilities]]
+[[2026-10-wavlink-iot-vulnerabilities]]

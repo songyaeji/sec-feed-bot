@@ -13,5 +13,5 @@ OpenAI의 내부자가 AI 안전 문제를 이유로 퇴사했다. "이건 말�
 
 ## 관련
 
-[[openai-cso-resignation]]
-[[openai-ai-incident-safety-researchers]]
+[[2026-10-openai-cso-resignation]]
+[[2026-10-openai-ai-incident-safety-researchers]]

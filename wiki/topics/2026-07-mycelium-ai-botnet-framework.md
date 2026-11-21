@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[armored-likho-apt]]
+[[2026-07-armored-likho-apt]]

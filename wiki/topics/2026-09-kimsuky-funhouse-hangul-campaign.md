@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[kimsuky-offline-ai-stack]]
+[[2026-08-kimsuky-offline-ai-stack]]

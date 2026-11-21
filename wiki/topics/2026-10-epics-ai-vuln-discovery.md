@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[ai-pentesting-otp-bypass]]
+[[2026-10-ai-pentesting-otp-bypass]]

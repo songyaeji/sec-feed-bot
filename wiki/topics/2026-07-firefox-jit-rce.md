@@ -14,4 +14,4 @@ Firefox의 JIT 컴파일 취약점이 151.0.3에서 패치되었다. 사용자�
 
 ## 관련
 
-[[firefox-148-sandbox-escapes]] — Firefox 샌드박스 탈출 취약점
+[[2026-07-firefox-148-sandbox-escapes]] — Firefox 샌드박스 탈출 취약점

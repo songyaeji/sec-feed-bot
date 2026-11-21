@@ -16,4 +16,4 @@ cves: []
 
 ## 관련
 
-- [[dprk-etherhiding]]
+- [[2025-10-dprk-etherhiding]]

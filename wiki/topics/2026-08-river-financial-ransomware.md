@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[assuranceamerica-breach]] — 미국 보험사 침해
+- [[2026-07-assuranceamerica-breach]] — 미국 보험사 침해

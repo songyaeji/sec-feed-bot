@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[shinyhunters-clop-leak-site]]
+[[2026-09-shinyhunters-clop-leak-site]]

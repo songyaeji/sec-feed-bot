@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-[[connectwise-screenconnect-auth-privesc]]
+[[2026-09-connectwise-screenconnect-auth-privesc]]

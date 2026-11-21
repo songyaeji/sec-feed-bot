@@ -14,4 +14,4 @@ cves: [CVE-2026-34234]
 설치 프로그램(`public/installer/index.php`)이 `install.lock` 파일 검증을 하기 전에 폼 핸들러 파일을 포함 및 실행하므로 설치 완료된 서버에서도 설치 엔드포인트에 접근 가능하다. 핸들러가 사용자 입력을 적절히 검증하지 않아 셸 명령에 직접 전달되므로 공격자가 임의 명령을 실행할 수 있다.
 
 ## 관련
-[[microsoft-july-patch-tuesday]]
+[[2026-07-microsoft-july-patch-tuesday]]

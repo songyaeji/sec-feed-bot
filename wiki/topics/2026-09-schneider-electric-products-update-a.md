@@ -13,4 +13,4 @@ Schneider Electric의 **Easergy**(보호/제어 릴레이), **EcoStruxture**(전
 
 ## 관련
 
-[[rockwell-controllogix-multi-vuln]]
+[[2026-09-rockwell-controllogix-multi-vuln]]

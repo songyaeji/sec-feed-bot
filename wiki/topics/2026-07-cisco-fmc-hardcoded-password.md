@@ -13,4 +13,4 @@ Cisco Secure Firewall Management Center(FMC)에 하드코드된 패스워드 취
 
 ## 관련
 
-[[cisco-fmc-auth-bypass-rce]]
+[[2026-03-cisco-fmc-auth-bypass-rce]]

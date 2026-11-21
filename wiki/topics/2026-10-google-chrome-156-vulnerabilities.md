@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[epics-ai-vuln-discovery]]
+[[2026-10-epics-ai-vuln-discovery]]

@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[north-korea-ottercookie]] — 북한 가짜 채용공고로 정보탈취 악성코드 배포
+[[2026-07-north-korea-ottercookie]] — 북한 가짜 채용공고로 정보탈취 악성코드 배포

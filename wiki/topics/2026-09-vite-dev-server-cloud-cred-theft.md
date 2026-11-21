@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-[[chainveil-vite-npm]]
+[[2026-07-chainveil-vite-npm]]

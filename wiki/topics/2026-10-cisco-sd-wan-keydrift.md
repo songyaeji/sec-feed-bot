@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-- [[cisco-catalyst-sd-wan-manager-rce]] 다른 SD-WAN 취약점
+- [[2026-09-cisco-catalyst-sd-wan-manager-rce]] 다른 SD-WAN 취약점

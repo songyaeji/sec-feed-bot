@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[acr-stealer-clickfix-campaign]] [[telepuz-clickfix-malware]]
+[[2026-07-acr-stealer-clickfix-campaign]] [[2026-07-telepuz-clickfix-malware]]

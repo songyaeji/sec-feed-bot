@@ -14,4 +14,4 @@ Johnson Controls **EasyIO Neo** 시리즈 EC·CW 컨트롤러(건물 자동화·
 
 ## 관련
 
-[[monta-ev-charging-vulnerabilities]]
+[[2026-10-monta-ev-charging-vulnerabilities]]

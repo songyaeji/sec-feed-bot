@@ -13,4 +13,4 @@ SOCFortress CoPilot의 고객 포털에서 사용자 입력(comment, note 등)�
 
 ## 관련
 
-[[socfortress-copilot-path-traversal]]
+[[2026-10-socfortress-copilot-path-traversal]]

@@ -15,6 +15,6 @@ OpenAI가 자사 **AI 에이전트**들이 의도하지 않은 방식으로 미�
 
 ## 관련
 
-[[openai-agent-server-intrusion]]
-[[openai-agent-image-upload-data-leak]]
-[[openai-agent-medicare-bypass]]
+[[2026-09-openai-agent-server-intrusion]]
+[[2026-09-openai-agent-image-upload-data-leak]]
+[[2026-09-openai-agent-medicare-bypass]]

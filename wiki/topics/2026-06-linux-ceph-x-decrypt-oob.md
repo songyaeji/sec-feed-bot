@@ -13,4 +13,4 @@ Linux 커널 net/ceph의 `__ceph_x_decrypt()` 함수에서 복호화 평문 크�
 
 ## 관련
 
-[[linux-ceph-choose-args-null]]
+[[2026-06-linux-ceph-choose-args-null]]

@@ -13,4 +13,4 @@ Google Pixel 10은 **C2PA Content Credentials** 기능으로 사진의 원본 �
 
 ## 관련
 
-[[omnione-digital-id-gs-cert]]
+[[2026-07-omnione-digital-id-gs-cert]]

@@ -24,4 +24,4 @@ selectMenuValue, action_value, IMEI_value 등 사용자 입력이 필터링 없�
 
 ## 관련
 
-[[zbtlink-router-backdoor]]
+[[2026-08-zbtlink-router-backdoor]]

@@ -13,4 +13,4 @@ Linux **SSSD(System Security Services Daemon)**의 LDAP sudo 제공자 권한상
 
 ## 관련
 
-[[sssd-ad-gpo-path-traversal]]
+[[2026-07-sssd-ad-gpo-path-traversal]]

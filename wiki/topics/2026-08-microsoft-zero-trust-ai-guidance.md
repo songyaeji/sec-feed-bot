@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[ai-offensive-agents-hacking]] — 자율 AI 공격 에이전트
-[[openai-ai-agent-test-evasion]] — AI 에이전트 보안테스트 회피
+[[2026-07-ai-offensive-agents-hacking]] — 자율 AI 공격 에이전트
+[[2026-07-openai-ai-agent-test-evasion]] — AI 에이전트 보안테스트 회피

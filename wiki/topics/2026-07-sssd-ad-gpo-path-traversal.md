@@ -13,4 +13,4 @@ cves: [CVE-2026-14476]
 
 ## 관련
 
-[[sssd-ldap-sudo-privesc]]
+[[2026-07-sssd-ldap-sudo-privesc]]

@@ -15,4 +15,4 @@ cves: [CVE-2026-74790]
 
 ## 관련
 
-[[scriban-access-modifier-bypass]] — Scriban 접근 제한자 우회 취약점
+[[2026-08-scriban-access-modifier-bypass]] — Scriban 접근 제한자 우회 취약점

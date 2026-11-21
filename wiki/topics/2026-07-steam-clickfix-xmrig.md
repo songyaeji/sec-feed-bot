@@ -11,4 +11,4 @@ Steam 게임 포럼이 ClickFix 피싱 공격의 소재가 되고 있는 사건.
 - 2026-07-25 [BleepingComputer](https://www.bleepingcomputer.com/news/security/steam-forum-clickfix-attacks-infect-gamers-with-xmrig-cryptominers/) — Steam 포럼에서 ClickFix 공격으로 XMRig 감염 확산
 
 ## 관련
-[[acr-stealer-clickfix-campaign]]
+[[2026-07-acr-stealer-clickfix-campaign]]

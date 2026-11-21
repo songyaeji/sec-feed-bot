@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[apt28-nato-naval-breach]]
+[[2026-10-apt28-nato-naval-breach]]

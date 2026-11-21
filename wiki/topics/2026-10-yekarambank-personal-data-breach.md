@@ -14,5 +14,5 @@ cves: []
 
 ## 관련
 
-[[shinhan-bank-auth-bypass]]
-[[korea-breach-rapid-investigation-system]]
+[[2026-10-shinhan-bank-auth-bypass]]
+[[2026-10-korea-breach-rapid-investigation-system]]

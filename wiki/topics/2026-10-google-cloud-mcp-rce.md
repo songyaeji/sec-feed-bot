@@ -13,4 +13,4 @@ Google Cloud의 AI 데이터 연결 도구 MCP 툴박스에서 외부 공격자�
 
 ## 관련
 
-[[opencode-mcp-rce]]
+[[2026-10-opencode-mcp-rce]]

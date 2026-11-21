@@ -15,5 +15,5 @@ cves: []
 
 ## 관련
 
-[[givewp-wordpress-rce]]
-[[wordpress-apt-booking-plugin-rce]]
+[[2026-08-givewp-wordpress-rce]]
+[[2026-07-wordpress-apt-booking-plugin-rce]]

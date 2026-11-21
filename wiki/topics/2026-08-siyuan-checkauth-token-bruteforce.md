@@ -15,4 +15,4 @@ cves: [CVE-2026-73056]
 
 ## 관련
 
-[[siyuan-sql-injection]] — SiYuan 다중 SQL Injection 취약점
+[[2026-08-siyuan-sql-injection]] — SiYuan 다중 SQL Injection 취약점

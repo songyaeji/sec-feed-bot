@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[korea-fintech-breach-wave]] 국내 금융회사·가상자산거래소 37곳 연쇄 침해
+- [[2026-11-korea-fintech-breach-wave]] 국내 금융회사·가상자산거래소 37곳 연쇄 침해

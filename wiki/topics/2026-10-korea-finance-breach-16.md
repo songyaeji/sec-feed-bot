@@ -28,4 +28,4 @@ cves: []
 
 ## 관련
 
-[[shinhan-bank-auth-bypass]] [[financial-network-separation-relaxation]]
+[[2026-10-shinhan-bank-auth-bypass]] [[2026-10-financial-network-separation-relaxation]]

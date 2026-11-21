@@ -16,4 +16,4 @@ Wavlink IP 카메라 및 무선 제품에서 CVSS 10.0의 다중 취약점이 �
 
 ## 관련
 
-[[wavlink-buffer-overflow]]
+[[2026-08-wavlink-buffer-overflow]]

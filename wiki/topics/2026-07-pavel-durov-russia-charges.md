@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[tiktok-apple-data-collection]] — 플랫폼 규제 및 정보수집 문제
+[[2026-07-tiktok-apple-data-collection]] — 플랫폼 규제 및 정보수집 문제

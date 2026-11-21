@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[cisco-seg-rce-cves]]
+[[2026-10-cisco-seg-rce-cves]]

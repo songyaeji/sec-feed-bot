@@ -13,4 +13,4 @@ Rockwell Automation **ArmorStart LT**의 취약점으로 공격자가 웹서버 
 
 ## 관련
 
-[[rockwell-factorytalk-activation-privesc]]
+[[2026-09-rockwell-factorytalk-activation-privesc]]

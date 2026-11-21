@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-[[givewp-wordpress-rce]]
+[[2026-08-givewp-wordpress-rce]]

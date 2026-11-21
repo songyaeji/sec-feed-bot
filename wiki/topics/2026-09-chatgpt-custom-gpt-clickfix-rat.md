@@ -16,4 +16,4 @@ cves: []
 
 ## 관련
 
-[[clickfix-google-visualization-c2]]
+[[2026-09-clickfix-google-visualization-c2]]

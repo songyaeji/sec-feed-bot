@@ -15,5 +15,5 @@ cves: []
 
 ## 관련
 
-[[openai-agent-attack-payload]]
-[[openai-agent-server-intrusion]]
+[[2026-09-openai-agent-attack-payload]]
+[[2026-09-openai-agent-server-intrusion]]

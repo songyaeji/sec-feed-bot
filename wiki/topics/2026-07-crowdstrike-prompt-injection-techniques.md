@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[genai-prompt-injection]]
-[[hidden-prompt-ai-agent]]
+[[2026-07-genai-prompt-injection]]
+[[2026-07-hidden-prompt-ai-agent]]

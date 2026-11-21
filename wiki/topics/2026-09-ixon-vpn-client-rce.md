@@ -13,4 +13,4 @@ IXON VPN Client의 미인증 원격코드실행 취약점으로 공격자가 클
 
 ## 관련
 
-[[pyramid-netstack-buffer-overflow]]
+[[2026-09-pyramid-netstack-buffer-overflow]]

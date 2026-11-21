@@ -15,4 +15,4 @@ cves: [CVE-2026-73678]
 
 ## 관련
 
-[[mcp-server-ai-exfiltration]] — AI 에이전트 정보탈취
+[[2026-08-mcp-server-ai-exfiltration]] — AI 에이전트 정보탈취

@@ -30,4 +30,4 @@ cves: []
 
 ## 관련
 
-[[north-korea-financial-ip-attacks]]
+[[2026-10-north-korea-financial-ip-attacks]]

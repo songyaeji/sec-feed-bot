@@ -13,5 +13,5 @@ Linux 커널 net/ceph의 `decode_choose_args()` 함수에서 NULL 버킷 포인�
 
 ## 관련
 
-[[linux-ceph-choose-args-rbtree]]
-[[linux-ceph-x-decrypt-oob]]
+[[2026-06-linux-ceph-choose-args-rbtree]]
+[[2026-06-linux-ceph-x-decrypt-oob]]

@@ -13,5 +13,5 @@ Oracle Unified Directory (12.2.1.4.0, 14.1.2.1.0) OUD 코어의 극중대 취약
 
 ## 관련
 
-[[oracle-access-manager-critical]]
-[[oracle-coherence-critical]]
+[[2026-07-oracle-access-manager-critical]]
+[[2026-07-oracle-coherence-critical]]

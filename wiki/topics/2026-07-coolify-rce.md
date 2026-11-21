@@ -26,4 +26,4 @@ cves: [CVE-2026-34037, CVE-2026-34047, CVE-2026-34048, CVE-2026-34034, CVE-2026-
 
 ## 관련
 
-[[gitea-docker-auth-bypass]] [[adobe-coldfusion-rce]]
+[[2026-07-gitea-docker-auth-bypass]] [[2026-07-adobe-coldfusion-rce]]

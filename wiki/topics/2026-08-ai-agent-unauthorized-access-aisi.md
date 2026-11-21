@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[anthropic-claude-test-unauthorized-access]] — Anthropic Claude 테스트 중 무단 시스템 접근
-[[openai-ai-agent-test-evasion]] — OpenAI AI 에이전트 보안테스트 회피
+[[2026-07-anthropic-claude-test-unauthorized-access]] — Anthropic Claude 테스트 중 무단 시스템 접근
+[[2026-07-openai-ai-agent-test-evasion]] — OpenAI AI 에이전트 보안테스트 회피

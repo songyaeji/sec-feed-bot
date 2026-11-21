@@ -14,4 +14,4 @@ cves: [CVE-2026-127073, CVE-2026-127080]
 
 ## 관련
 
-[[kyverno-authorization-bypass]]
+[[2026-11-kyverno-authorization-bypass]]

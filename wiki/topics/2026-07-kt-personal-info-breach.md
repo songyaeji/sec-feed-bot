@@ -25,4 +25,4 @@ KT가 약 2만 명의 고객 개인정보 유출로 정부 제재 대상에 올�
 
 ## 관련
 
-[[lgu-plus-breach-investigation]]
+[[2026-07-lgu-plus-breach-investigation]]

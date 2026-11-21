@@ -14,5 +14,5 @@ KB국민은행 고객이 신한은행 사건과 동일 방식의 인증 우회 �
 
 ## 관련
 
-[[shinhan-bank-auth-bypass]]
-[[financial-ai-agent-attack-real]]
+[[2026-10-shinhan-bank-auth-bypass]]
+[[2026-09-financial-ai-agent-attack-real]]

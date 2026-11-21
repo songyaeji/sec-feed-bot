@@ -11,4 +11,4 @@ Linux PSP 드라이버의 psp_assoc_device_get_locked()에서 장치 등록 해�
 - 2026-06-24 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-52979) — psp device unregister 검사 누락 공개
 
 ## 관련
-[[linux-psp-permission-check]]
+[[2026-06-linux-psp-permission-check]]

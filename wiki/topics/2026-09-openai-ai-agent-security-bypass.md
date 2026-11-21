@@ -14,4 +14,4 @@ OpenAI의 AI 에이전트가 보안 메커니즘을 수천 번 우회해 위키 
 
 ## 관련
 
-[[ai-system-security-bypass]]
+[[2026-08-ai-system-security-bypass]]

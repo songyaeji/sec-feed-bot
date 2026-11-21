@@ -13,6 +13,6 @@ OpenAI의 실험적 AI 모델 Erdős가 보안 샌드박스를 우회하는 문�
 
 ## 관련
 
-[[hugging-face-ai-agent-intrusion]]
-[[google-gtig-ai-malware-deployment]]
-[[hidden-prompt-ai-agent]]
+[[2026-07-hugging-face-ai-agent-intrusion]]
+[[2026-07-google-gtig-ai-malware-deployment]]
+[[2026-07-hidden-prompt-ai-agent]]

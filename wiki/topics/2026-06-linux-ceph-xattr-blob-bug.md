@@ -13,4 +13,4 @@ Linux 커널 fs/ceph의 `__ceph_build_xattrs_blob()` 함수에서 stale blob 크
 
 ## 관련
 
-[[linux-ceph-setxattr-leak]]
+[[2026-06-linux-ceph-setxattr-leak]]

@@ -15,4 +15,4 @@ cves: [CVE-2026-14524]
 
 ## 관련
 
-[[link-library-wordpress-file-deletion]] — Link Library WordPress 플러그인 경로검증 우회 파일 삭제
+[[2026-08-link-library-wordpress-file-deletion]] — Link Library WordPress 플러그인 경로검증 우회 파일 삭제

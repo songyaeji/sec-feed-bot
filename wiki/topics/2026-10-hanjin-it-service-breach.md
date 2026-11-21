@@ -15,4 +15,4 @@ cves: []
 
 ## 관련
 
-[[everest-ransomware-supply-chain]]
+[[2026-10-everest-ransomware-supply-chain]]

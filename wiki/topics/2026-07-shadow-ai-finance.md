@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[hidden-prompt-ai-agent]]
+[[2026-07-hidden-prompt-ai-agent]]

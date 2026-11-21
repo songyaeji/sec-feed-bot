@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-- [[woori-bank-nft-data-leak]]
+- [[2026-07-woori-bank-nft-data-leak]]

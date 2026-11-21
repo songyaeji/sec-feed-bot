@@ -14,5 +14,5 @@ cves: []
 
 ## 관련
 
-[[financial-ai-agent-security-guidance]]
-[[korea-financial-security-ai-mobile-audit]]
+[[2026-10-financial-ai-agent-security-guidance]]
+[[2026-10-korea-financial-security-ai-mobile-audit]]

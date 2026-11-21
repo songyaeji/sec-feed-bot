@@ -13,4 +13,4 @@ Linux 커널 drm/xe의 DMA-buf 첨부 단계가 bo 초기화 전에 시작되어
 
 ## 관련
 
-[[linux-drm-xe-dmabuf-retry-uaf]]
+[[2026-06-linux-drm-xe-dmabuf-retry-uaf]]

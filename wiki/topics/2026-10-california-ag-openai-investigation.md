@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[openai-congress-ai-safety-mandate]]
+[[2026-09-openai-congress-ai-safety-mandate]]

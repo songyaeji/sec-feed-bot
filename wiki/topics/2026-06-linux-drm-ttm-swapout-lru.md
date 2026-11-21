@@ -13,4 +13,4 @@ Linux 커널 drm/ttm의 `ttm_bo_swapout()` 함수에서 스왑아웃 실패 후 
 
 ## 관련
 
-[[linux-drm-ttm-shrink-lru]]
+[[2026-06-linux-drm-ttm-shrink-lru]]

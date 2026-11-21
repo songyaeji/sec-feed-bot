@@ -13,4 +13,4 @@ OPCFoundation **OPC UA LocalDiscoveryServer**(LDS) 설치 중 권한 상향 취�
 
 ## 관련
 
-[[ixon-vpn-client-rce]]
+[[2026-09-ixon-vpn-client-rce]]

@@ -13,5 +13,5 @@ Oracle WebCenter Content (12.2.1.4.0, 14.1.2.0.0) 웹 콘텐츠 관리 컴포넌
 
 ## 관련
 
-[[oracle-sdp-critical]]
-[[oracle-rest-data-services-critical]]
+[[2026-07-oracle-sdp-critical]]
+[[2026-07-oracle-rest-data-services-critical]]

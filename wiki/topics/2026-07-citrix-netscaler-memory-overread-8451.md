@@ -13,4 +13,4 @@ Citrix **NetScaler** 로드밸런서의 **메모리 오버리드**(over-read) �
 
 ## 관련
 
-[[citrix-netscaler-auth-bypass]] [[citrix-netscaler-rce-active-exploit]] [[citrix-netscaler-sept2026-zerodaya]]
+[[2026-08-citrix-netscaler-auth-bypass]] [[2026-08-citrix-netscaler-rce-active-exploit]] [[2026-09-citrix-netscaler-sept2026-zerodaya]]

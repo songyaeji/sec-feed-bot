@@ -13,5 +13,5 @@ Oracle Coherence (12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0, 15.1.1.0.0) 코어 컴포�
 
 ## 관련
 
-[[oracle-data-integrator-critical]]
-[[oracle-access-manager-critical]]
+[[2026-07-oracle-data-integrator-critical]]
+[[2026-07-oracle-access-manager-critical]]

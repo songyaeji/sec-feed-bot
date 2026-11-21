@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[financial-ai-agent-attack-real]]
+[[2026-09-financial-ai-agent-attack-real]]

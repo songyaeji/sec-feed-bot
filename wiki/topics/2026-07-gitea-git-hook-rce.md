@@ -14,4 +14,4 @@ cves:
 
 ## 관련
 
-[[gitlab-jupyter-rce]] — Git 플랫폼 RCE 취약점
+[[2026-07-gitlab-jupyter-rce]] — Git 플랫폼 RCE 취약점

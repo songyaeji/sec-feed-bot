@@ -13,4 +13,4 @@ Linux 커널 sound/usb의 `snd_usbmidi_get_ms_info()` 함수에서 MIDI 엔드�
 
 ## 관련
 
-[[linux-alsa-usb-midi2-descriptor]]
+[[2026-06-linux-alsa-usb-midi2-descriptor]]

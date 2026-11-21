@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[chaotic-eclipse-kaspersky-hardbreacher]] [[chaotic-eclipse-avast-prettprague]]
+[[2026-09-chaotic-eclipse-kaspersky-hardbreacher]] [[2026-09-chaotic-eclipse-avast-prettprague]]

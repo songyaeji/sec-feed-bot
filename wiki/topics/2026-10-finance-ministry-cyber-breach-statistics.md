@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[shinhan-bank-auth-bypass]]
+[[2026-10-shinhan-bank-auth-bypass]]

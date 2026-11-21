@@ -13,5 +13,5 @@ Adobe, **Netflix**, 코카콜라, **OpenAI** 등 글로벌 대형 기업의 채�
 
 ## 관련
 
-[[fifa-phishing-scam]]
-[[microsoft-oauth-device-flow-phishing]]
+[[2026-07-fifa-phishing-scam]]
+[[2026-07-microsoft-oauth-device-flow-phishing]]

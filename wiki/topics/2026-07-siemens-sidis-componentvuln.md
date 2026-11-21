@@ -13,4 +13,4 @@ Siemens SIDIS Secured SmartPlug V7.26.0310 이전 버전이 OpenSSL, OpenSSH 등
 
 ## 관련
 
-[[siemens-rox-ii-zero-day-trilogy]]
+[[2026-07-siemens-rox-ii-zero-day-trilogy]]

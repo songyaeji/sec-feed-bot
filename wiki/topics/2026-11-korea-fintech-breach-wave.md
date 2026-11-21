@@ -17,5 +17,5 @@ cves: []
 
 ## 관련
 
-- [[fsic-breach]] 금융보안원 침해 수사 진행 중
-- [[north-korea-financial-ip-attacks]] 북한 IP 대규모 금융권 접근 포착
+- [[2026-11-fsic-breach]] 금융보안원 침해 수사 진행 중
+- [[2026-10-north-korea-financial-ip-attacks]] 북한 IP 대규모 금융권 접근 포착

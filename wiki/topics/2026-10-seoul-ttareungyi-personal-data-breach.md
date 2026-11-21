@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-- [[korea-breach-victim-insurance]] (개인정보 피해자 보험 부실)
-- [[korea-public-cybersecurity]] (공공부문 정보유출 책임 강화)
+- [[2026-10-korea-breach-victim-insurance]] (개인정보 피해자 보험 부실)
+- [[2026-10-korea-public-cybersecurity]] (공공부문 정보유출 책임 강화)

@@ -13,4 +13,4 @@ cves: []
 - 2026-08-17 [BleepingComputer](https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/) — Microsoft 패치 개발 중, CVE-2026-69414 추적
 
 ## 관련
-- [[microsoft-patch-tuesday-august]]
+- [[2026-08-microsoft-patch-tuesday-august]]

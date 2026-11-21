@@ -16,5 +16,5 @@ cves: []
 
 ## 관련
 
-[[china-ai-agent-taiwan-government-breach]]
-[[talos-ai-weaponization-analysis]]
+[[2026-08-china-ai-agent-taiwan-government-breach]]
+[[2026-08-talos-ai-weaponization-analysis]]

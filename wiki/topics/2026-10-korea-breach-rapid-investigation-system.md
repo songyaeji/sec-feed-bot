@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[korea-breach-victim-insurance]]
+[[2026-10-korea-breach-victim-insurance]]

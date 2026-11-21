@@ -13,4 +13,4 @@ cves: []
 
 ## 관련
 
-[[friendly-fire-ai-agent-rce]]
+[[2026-07-friendly-fire-ai-agent-rce]]

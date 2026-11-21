@@ -14,4 +14,4 @@ cves: []
 
 ## 관련
 
-[[ai-agent-data-injection-attack]]
+[[2026-07-ai-agent-data-injection-attack]]

@@ -13,4 +13,4 @@ Royal Plugins **SiteVault** 백업·복원·마이그레이션 플러그인의 �
 
 ## 관련
 
-[[bricksforge-wordpress-rce]]
+[[2026-10-bricksforge-wordpress-rce]]

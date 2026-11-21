@@ -13,5 +13,5 @@ Unit 42가 보도한 분석에서 라틴아메리카 대상 공격자들이 **AI
 
 ## 관련
 
-[[ai-assisted-cyber-attack]]
-[[malicious-llm-endpoint-agent-trap]]
+[[2026-09-ai-assisted-cyber-attack]]
+[[2026-08-malicious-llm-endpoint-agent-trap]]

@@ -13,4 +13,4 @@ Linux 커널 Bluetooth RFCOMM 구현의 `rfcomm_connect_ind()` 함수에서 `rfc
 
 ## 관련
 
-[[linux-l2cap-lock-race]]
+[[2026-07-linux-l2cap-lock-race]]

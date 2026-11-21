@@ -16,4 +16,4 @@ cves: [CVE-2026-18577]
 
 ## 관련
 
-[[citrixbleed2-dragonforce-ransomware]] — Citrix RCE를 통한 MFA 탈취 및 랜섬웨어 배포
+[[2026-07-citrixbleed2-dragonforce-ransomware]] — Citrix RCE를 통한 MFA 탈취 및 랜섬웨어 배포

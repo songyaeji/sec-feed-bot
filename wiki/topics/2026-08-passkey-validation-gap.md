@@ -15,4 +15,4 @@ Palo Alto Networks Unit 42가 **Passkey** 구현의 보안 결함을 분석했�
 
 ## 관련
 
-[[ai-voice-clone-finance-auth-bypass]] — AI 음성 복제로 금융 거래 승인 우회
+[[2026-08-ai-voice-clone-finance-auth-bypass]] — AI 음성 복제로 금융 거래 승인 우회

@@ -13,5 +13,5 @@ ESET의 2026년 상반기 위협 동향 분석에서 **Quishing** 공격의 기�
 
 ## 관련
 
-- [[ai-offensive-agents-hacking]]
-- [[steam-clickfix-xmrig]]
+- [[2026-07-ai-offensive-agents-hacking]]
+- [[2026-07-steam-clickfix-xmrig]]

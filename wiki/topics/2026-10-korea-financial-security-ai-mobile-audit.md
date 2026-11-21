@@ -13,5 +13,5 @@ cves: []
 
 ## 관련
 
-[[financial-ai-agent-security-guidance]]
-[[korea-banking-vulnerability-management]]
+[[2026-10-financial-ai-agent-security-guidance]]
+[[2026-10-korea-banking-vulnerability-management]]
