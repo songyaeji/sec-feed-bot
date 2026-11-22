@@ -1221,5 +1221,287 @@
     "tags": [],
     "title": "Cyberattack on Austrian Foreign Ministry Exposes Diplomatic Staff Data",
     "url": "https://securityaffairs.com/203680/hacking/cyberattack-on-austrian-foreign-ministry-exposes-diplomatic-staff-data.html"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-15560",
+    "published": "2026-08-11T09:17:12.823",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "when EAP runs with -secmgr, the openjdk-orb's JDKBridge honours attacker-supplied CDR codebase URLs during object unmarshalling on :3528, allowing an unauthenticated attacker to load and instantiate arbitrary classes from a remote URL in the server JVM before EJB security interceptors run.",
+    "tags": [],
+    "title": "CVE-2026-15560 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15560"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-134654",
+    "published": "2026-11-22T02:17:00.790",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "Mailflare before 48957fb contains a host header injection vulnerability in the password-reset request handler that allows unauthenticated attackers to poison reset links when APP_URL is unset. Attackers can submit a reset request for a victim's email with a malicious Host header, capturing the single-use token when the victim clicks the link to take over the account.",
+    "tags": [],
+    "title": "CVE-2026-134654 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134654"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-134656",
+    "published": "2026-11-22T02:17:01.147",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenAirInterface CN5G SMF through 2.2.2 contains a missing resource release vulnerability in handle_pdu_session_release_sm_context_request() that fails to delete N7 SM policy associations at the PCF. Authenticated UEs can repeatedly establish and release PDU sessions through the AMF-initiated Release SM Context path to accumulate stale associations and exhaust PCF memory.",
+    "tags": [],
+    "title": "CVE-2026-134656 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134656"
+  },
+  {
+    "category": "high",
+    "cvss": 4.3,
+    "id": "CVE-2026-134657",
+    "published": "2026-11-22T02:17:01.307",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenAirInterface CN5G PCF through 2.2.2 contains a memory leak vulnerability in pcf_smpc::delete_sm_policy_handler() that leaves stale UE IPv4, SUPI and DNN index entries after association deletion. Attackers can trigger repeated SM policy create and delete cycles over N7 via PDU session establishment and release to grow PCF memory without bound and break association lookups.",
+    "tags": [],
+    "title": "CVE-2026-134657 (CVSS 4.3)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134657"
+  },
+  {
+    "category": "high",
+    "cvss": 3.1,
+    "id": "CVE-2026-134659",
+    "published": "2026-11-22T02:17:01.633",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "OpenAirInterface CN5G AMF before 2.2.2 contains a missing resource release vulnerability in amf_sbi::handle_itti_message() that leaves stale PDU session contexts when NRF lookup or SMF selection fails. Authenticated UEs can request PDU sessions while no SMF is selectable, causing deregistration to wait on SMF release timeouts and stall shared NAS processing for other UEs.",
+    "tags": [],
+    "title": "CVE-2026-134659 (CVSS 3.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134659"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209656",
+    "published": "2026-11-22T15:32:49+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "CJ대한통운이 배송 조회 서비스인 오네(O-NE) 챗봇에서 비정상적인 자동화 대량 접근 정황을 확인하고 18일 개인정보 유출 가능성을 공지했다.CJ대한통운은 지난 11월 16일경 챗봇 서버 로그와 일부 데이터베이스(DB)를 분석하는 과정에서 비정상 접근 사실을 확인했다.조회됐을 가능성이 있는 정보는 택배 인수인 이름과 ‘동’ 단위의 주소 정보다. 주민등록번호 등 고유식별정보와 연계정보(CI), 휴대전화번호, 상세주소는 포함되지 않은 것으로 파악됐다.다만 실제 개인정보 유출 여부와 피해 규모, 대상자는 아직 확정되지 않았다. 회사 측",
+    "tags": [],
+    "title": "CJ대한통운, 오네 챗봇 비정상 대량 접근 확인…개인정보 유출 가능성 조사",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209656"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209655",
+    "published": "2026-11-22T15:13:04+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "데일리시큐가 최초 보도한 포항공과대학교(POSTECH)의 정보시스템 해킹 피해 규모가 확대됐다. 대학 측은 지난 19일 개인정보 유출 사실을 처음 공지한 데 이어 20일 2차 공지를 통해 대학통합포털(Podium)에서 개인정보 2만5,551건이 추가로 유출된 사실을 확인했다고 밝혔다. 현재까지 확인된 개인정보 유출 규모는 총 4만5,529건이다.시스템별 유출 정보는 ▲연구장비지원포털 대학 통합계정(ID)과 암호화된 비밀번호 1만9,500건 ▲IT서비스포털 통합계정(ID), 이메일 주소, 대학 소속정보 478건 ▲대학업무포털 이름,",
+    "tags": [],
+    "title": "[단독] 포항공대 해킹 피해 확대…개인정보 2만5,551건 추가 유출, 총 4만5,529건",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209655"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209654",
+    "published": "2026-11-22T14:25:45+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "기업 보안담당자들이 가장 우려하는 AI 기반 사이버 위협은 ‘취약점 탐색과 공격 자동화’로 나타났다. 공격자가 AI를 활용해 보안 약점을 빠르게 찾아내고 공격까지 자동화하는 상황을 가장 큰 위험으로 보고 있는 것이다. 반면 임직원의 생성형 AI 사용에 따른 정보 유출 위험에 대해서는 응답자의 절반 가까이가 관리 기준을 마련 중이거나 별도 조치를 시행하지 않고 있다고 답했다.데일리시큐는 11월 20일 ‘AI 시대 사이버 위협 동향과 대응방안’을 주제로 온라인 웨비나를 개최했다. 보안담당자 300명이 참석했으며, 웨비나 영상은 제공된",
+    "tags": [
+      "AI"
+    ],
+    "title": "[보안 설문] 보안담당자 82.1% “AI 취약점 탐색·공격 자동화 가장 우려”…생성형 AI 관리도 과제",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209654"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209653",
+    "published": "2026-11-22T13:48:59+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "협력사 조회 포털, 직원용 업무 시스템, 개발 과정에서 열어둔 서버. 기업이 일상적으로 사용하는 이런 시스템이 AI 공격의 침투 경로가 될 수 있다. 한준형 아카마이(Akamai) 상무는 AI 공격에 대응하려면 외부에 노출된 자산을 정확히 파악하고, 정상적인 접속처럼 보이는 요청에서도 권한과 행위를 검증해야 한다고 강조했다.데일리시큐는 11월 20일 ‘AI 시대 사이버 위협 동향과 대응방안’을 주제로 온라인 웨비나를 개최했다. 보안담당자 300여 명이 참석했으며, 웨비나 조회수는 1,200회를 기록했다. 한 상무는 이날 ‘제로데이",
+    "tags": [
+      "제로데이"
+    ],
+    "title": "[데일리시큐 웨비나] 한준형 아카마이 상무 \"AI가 노리는 ‘옆문’…숨은 API·협력사 접점부터 점검해야\"",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209653"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209652",
+    "published": "2026-11-22T13:31:18+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "인공지능(AI)을 활용한 사이버공격이 정찰과 취약점 탐색을 넘어 내부 침투와 복구 방해로 확대되고 있다. 기업은 침입을 막는 노력과 함께 이상 징후를 얼마나 빨리 발견하고, 피해 확산을 차단하며, 업무를 복구할 수 있는지 점검해야 한다.김도원 한국인터넷진흥원(KISA) AI종합분석팀장은 11월 20일 데일리시큐가 개최한 ‘AI시대 사이버 위협 동향과 대응방안’ 웨비나에서 이 같은 대응 방향을 설명했다. 이날 오후 2시부터 3시까지 진행된 웨비나에는 300여 명의 보안팀 실무자들이 시청했으며 김 팀장과 아카마이 한준형 상무가 연사로",
+    "tags": [
+      "AI"
+    ],
+    "title": "[데일리시큐 웨비나] 김도원 KISA 팀장 \"공격자는 AI로 동시다발 침투…기업은 계정·권한 통제부터 점검해야\"",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209652"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+    "published": "2026-11-22T05:06:55+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week. Some of the stolen requests were flagged as Zero Data Retention, the setting that is supposed to mean a prompt is never stored. OpenRouter, a gateway that routes customers' AI requests to a pool of",
+    "tags": [],
+    "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+    "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+    "published": "2026-11-22T05:03:41+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A now-patched flaw in Ghostscript allows a crafted file to escape the program's security sandbox and run commands on the server that processes it. Ghostscript is the interpreter that many Linux servers use to convert uploaded PDFs, PostScript files, and images into other formats, often without the application calling it directly. Security firm pwn.ai showed this week that ordinary upload,",
+    "tags": [
+      "RCE"
+    ],
+    "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+    "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249944",
+    "published": "2026-11-22T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "불법 사채 무력화 속도전, 무효 확인에 AI 투입",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249944&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249945",
+    "published": "2026-11-22T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "카카오페이,토스,네이버페이에서도 '주민등록증 진위확인' 가능... 전자금융거래 안전성 강화",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249945&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE9Ca2lFV1g5Vm9DVDdDSjhiUnB2NmJrV3l2NGtMYWZNU3VnclRvZXhUaEdhWllralRORFVfYk1kN3JyMmdBRnEyQVZ1VUFsT3RFa25fVlNuX3hyM0ZzZmlDVmpGSEw5OGdBTlhlV0JRVdIBb0FVX3lxTE9Ca2lFV1g5Vm9DVDdDSjhiUnB2NmJrV3l2NGtMYWZNU3VnclRvZXhUaEdhWllralRORFVfYk1kN3JyMmdBRnEyQVZ1VUFsT3RFa25fVlNuX3hyM0ZzZmlDVmpGSEw5OGdBTlhlV0JRVQ",
+    "published": "2026-11-22T03:00:00+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "카카오페이·토스서도 주민등록증 진위확인…23일부터 시행 - 머니투데이",
+    "tags": [
+      "금융"
+    ],
+    "title": "카카오페이·토스서도 주민등록증 진위확인…23일부터 시행 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Ca2lFV1g5Vm9DVDdDSjhiUnB2NmJrV3l2NGtMYWZNU3VnclRvZXhUaEdhWllralRORFVfYk1kN3JyMmdBRnEyQVZ1VUFsT3RFa25fVlNuX3hyM0ZzZmlDVmpGSEw5OGdBTlhlV0JRVdIBb0FVX3lxTE9Ca2lFV1g5Vm9DVDdDSjhiUnB2NmJrV3l2NGtMYWZNU3VnclRvZXhUaEdhWllralRORFVfYk1kN3JyMmdBRnEyQVZ1VUFsT3RFa25fVlNuX3hyM0ZzZmlDVmpGSEw5OGdBTlhlV0JRVQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTE55WVdPbnFMYXF6SGxESmlxdWpUZWxjQlI5QzdGMDlIRlhobTVoeFlCVXdBdzcxNXlVM1dTRTFlU3lPRm8tQmtsUzZ2TkZoRzM1U1g3R3Naek54YmxFSTczNtIBYEFVX3lxTE55WVdPbnFMYXF6SGxESmlxdWpUZWxjQlI5QzdGMDlIRlhobTVoeFlCVXdBdzcxNXlVM1dTRTFlU3lPRm8tQmtsUzZ2TkZoRzM1U1g3R3Naek54YmxFSTczNg",
+    "published": "2026-11-22T03:00:10+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "내일부터 카카오페이·토스서 주민등록증 진위확인 가능",
+    "tags": [
+      "금융"
+    ],
+    "title": "내일부터 카카오페이·토스서 주민등록증 진위확인 가능",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE55WVdPbnFMYXF6SGxESmlxdWpUZWxjQlI5QzdGMDlIRlhobTVoeFlCVXdBdzcxNXlVM1dTRTFlU3lPRm8tQmtsUzZ2TkZoRzM1U1g3R3Naek54YmxFSTczNtIBYEFVX3lxTE55WVdPbnFMYXF6SGxESmlxdWpUZWxjQlI5QzdGMDlIRlhobTVoeFlCVXdBdzcxNXlVM1dTRTFlU3lPRm8tQmtsUzZ2TkZoRzM1U1g3R3Naek54YmxFSTczNg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTE50eGNuaXBtNzAtVGh1My1fRjZiT1VqdkNBLVpZYjc1RERVU1A2cmtDZU9iMWxod2VsTXVQSDBQLXp5anJMMnByeW1Zc1hJd19td0hoWExYYm5OMmcxWTNseUhtcFFjemZVOUFJN09vNNIBc0FVX3lxTFBwZUxmVWY3SURvZkdxSGpuemMtZU1nM2dneDctaGhTQ2hoYlJCNTdxT2pMODNKdzFaM1J6WHdkaHlqVDh5T2VDZWVSRU56eGNZNVVSYU1JQnNiX0dGNVVicGdLaERjQXAtRkdQbnN6NUZrTTA",
+    "published": "2026-11-20T01:00:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금감원, 가상자산사업자 28곳 보안점검 주문…\"취약점 방치 시 엄정 책임\"",
+    "tags": [],
+    "title": "금감원, 가상자산사업자 28곳 보안점검 주문…\"취약점 방치 시 엄정 책임\"",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50eGNuaXBtNzAtVGh1My1fRjZiT1VqdkNBLVpZYjc1RERVU1A2cmtDZU9iMWxod2VsTXVQSDBQLXp5anJMMnByeW1Zc1hJd19td0hoWExYYm5OMmcxWTNseUhtcFFjemZVOUFJN09vNNIBc0FVX3lxTFBwZUxmVWY3SURvZkdxSGpuemMtZU1nM2dneDctaGhTQ2hoYlJCNTdxT2pMODNKdzFaM1J6WHdkaHlqVDh5T2VDZWVSRU56eGNZNVVSYU1JQnNiX0dGNVVicGdLaERjQXAtRkdQbnN6NUZrTTA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE1FSGtTajJjd3FtaHQ4Y0pSTndDSWpoS1lzTmlMdkFaZ21aMDhlcWVUVWo4Zk8wMHJfLWlzM3pDcjJmOVhiQ2JqdHk5Q0J1Qk1QeDJYdXlDYlhKVGNLVjhOb1JQMDJVWVFtUy13b0ExZGlRNTg",
+    "published": "2026-11-18T01:31:06+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "파수AI 주가 장중 22%대 상승, 금융당국 보안점검 강화에 정보보안주 강세",
+    "tags": [
+      "금융"
+    ],
+    "title": "파수AI 주가 장중 22%대 상승, 금융당국 보안점검 강화에 정보보안주 강세",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1FSGtTajJjd3FtaHQ4Y0pSTndDSWpoS1lzTmlMdkFaZ21aMDhlcWVUVWo4Zk8wMHJfLWlzM3pDcjJmOVhiQ2JqdHk5Q0J1Qk1QeDJYdXlDYlhKVGNLVjhOb1JQMDJVWVFtUy13b0ExZGlRNTg?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFBDYm91RGdoMDFldTJSRDJDM0twUktPa3cyWEhkMnB6cUIzNS1nbmZFemJ3QW1Bb3Z6dnFxN3lwM1d6dHVKQ0FfbUNDUF92VDRiRTc5eTVDVmhWQ3Y0MUU0bWZUdUlOc2JBekJ6emV3",
+    "published": "2026-11-20T11:33:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "서금원, AI 보안·윤리 강령 선포…6대 원칙·68개 점검항목",
+    "tags": [],
+    "title": "서금원, AI 보안·윤리 강령 선포…6대 원칙·68개 점검항목",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBDYm91RGdoMDFldTJSRDJDM0twUktPa3cyWEhkMnB6cUIzNS1nbmZFemJ3QW1Bb3Z6dnFxN3lwM1d6dHVKQ0FfbUNDUF92VDRiRTc5eTVDVmhWQ3Y0MUU0bWZUdUlOc2JBekJ6emV3?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE9Qd1J0ZnljeEZMVHYtZHBtdE92NFZROU1iTkRjcmMyeXFNLXhpZlV2enlZdDdwRUw5SlY3eDJnQjBSenJyYWwwcV9oS0VjVUJJMUh6T2dVYkRQTHRwM19STE15eGJ2ZEl1TnNZSjVHajQyTkE",
+    "published": "2026-11-18T07:41:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융사 보안 의무 어겨 정보 새면 ‘매출 3%’ 과징금…처리 주목",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융사 보안 의무 어겨 정보 새면 ‘매출 3%’ 과징금…처리 주목",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9Qd1J0ZnljeEZMVHYtZHBtdE92NFZROU1iTkRjcmMyeXFNLXhpZlV2enlZdDdwRUw5SlY3eDJnQjBSenJyYWwwcV9oS0VjVUJJMUh6T2dVYkRQTHRwM19STE15eGJ2ZEl1TnNZSjVHajQyTkE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMieEFVX3lxTE5oN3Atam5xd3JyaXYxZ0JHM01JYmNYSlBoNHZDN3BFZl9sN0hiY1ZpRllhUE80eWJwY2dXWFI4cmVQUWFwcGV2TXg2VTRCdEpEel9ROGs1bWNBU0N3cG5IQlBPUHd5YlhxT2ItSDhpMl9PTzY1MFJzVNIBfkFVX3lxTE04UWZHdWdiOW12N2hncFI2bll1dG01cl9yaWtCT09WMTU2bUdHUXV2eGwtU1BBemJFT1M5VEFXcEhUalQ0amtaRnpBbEdmSVhmVEVoRjU1S2JuZ0xDaDhuVkFPa3p4b3dRVG0zeUgyMDljTlJncUY1cWRLN0NXdw",
+    "published": "2026-11-20T08:18:45+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "서민금융 AI 시대 열린다… 서금원, 6대 안전 원칙 마련 - 머니투데이",
+    "tags": [
+      "금융"
+    ],
+    "title": "서민금융 AI 시대 열린다… 서금원, 6대 안전 원칙 마련 - 머니투데이",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5oN3Atam5xd3JyaXYxZ0JHM01JYmNYSlBoNHZDN3BFZl9sN0hiY1ZpRllhUE80eWJwY2dXWFI4cmVQUWFwcGV2TXg2VTRCdEpEel9ROGs1bWNBU0N3cG5IQlBPUHd5YlhxT2ItSDhpMl9PTzY1MFJzVNIBfkFVX3lxTE04UWZHdWdiOW12N2hncFI2bll1dG01cl9yaWtCT09WMTU2bUdHUXV2eGwtU1BBemJFT1M5VEFXcEhUalQ0amtaRnpBbEdmSVhmVEVoRjU1S2JuZ0xDaDhuVkFPa3p4b3dRVG0zeUgyMDljTlJncUY1cWRLN0NXdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE1wU2lKWjREa0sxaURrQmpzN0ZDdWh3RHVBbWdYWlBIa0Rva2szZXJwOFdUOHJTMXpKNkE4SGM0aWk4NWFTc21WN2diZ29JU2xQWi04dHhUbHhNbGxHVXltNzlMOGNuYTJNdC1WekJ1cUzSAXRBVV95cUxOY2NodFQzT0I0Ulk2Rl96UGgxZU50bVVXNVRCOVhjQkdIejFLMGdtTVoweExlV0RPXzVQcmR6bXNsRDlIZUVqV2dBSFgzSDFDSnlHclZMRDRISWpRNFdFSmluYTdqTGgxNWtZdUlaNGwtRWNPNA",
+    "published": "2026-11-20T02:03:34+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금감원, 가상자산사업자에 보안 강화 주문… “취약점 방치 엄정 대응”",
+    "tags": [],
+    "title": "금감원, 가상자산사업자에 보안 강화 주문… “취약점 방치 엄정 대응”",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1wU2lKWjREa0sxaURrQmpzN0ZDdWh3RHVBbWdYWlBIa0Rva2szZXJwOFdUOHJTMXpKNkE4SGM0aWk4NWFTc21WN2diZ29JU2xQWi04dHhUbHhNbGxHVXltNzlMOGNuYTJNdC1WekJ1cUzSAXRBVV95cUxOY2NodFQzT0I0Ulk2Rl96UGgxZU50bVVXNVRCOVhjQkdIejFLMGdtTVoweExlV0RPXzVQcmR6bXNsRDlIZUVqV2dBSFgzSDFDSnlHclZMRDRISWpRNFdFSmluYTdqTGgxNWtZdUlaNGwtRWNPNA?oc=5"
   }
 ]
