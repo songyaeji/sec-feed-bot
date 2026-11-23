@@ -17,6 +17,7 @@ import json
 import os
 import re
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from html.parser import HTMLParser
 
 
@@ -24,7 +25,9 @@ import librarian
 import text_rules
 
 MODEL = "claude-sonnet-5"
-TIMEOUT_SECONDS = 300
+TIMEOUT_SECONDS = 240
+NEWS_CHUNK = 3     # 재작성 호출 한 번에 넣는 뉴스 수(본문 포함)
+MAX_PARALLEL = 4   # 동시에 돌리는 재작성 호출 수
 ARTICLE_MAX_CHARS = 5000
 FETCH_TIMEOUT = 10
 FETCH_MAX_BYTES = 3_000_000
@@ -173,9 +176,26 @@ def validate_term(term, term_type=None) -> str | None:
     if declared and declared != "보안용어":
         return None
     name, desc = (x.strip() for x in t.split(" — ", 1))
+    # 2026-11-20 QA 실행: "공급망 공격 (Supply Chain Attack)"처럼 영어 원어를
+    # 괄호로 덧붙였다. 카드에 영어를 싣지 않으므로 라틴 문자 괄호는 걷는다
+    name = " ".join(_LATIN_PAREN_RE.sub(" ", name).split())
     if not name or not desc or text_rules.term_entity_reason(name, desc):
         return None
-    return t
+    return f"{name} — {desc}"
+
+
+# 라틴 문자가 든 괄호 덧말. "(Supply Chain Attack)", "(RCE)"
+_LATIN_PAREN_RE = re.compile(r"\s*[(（][^()（）]*[A-Za-z][^()（）]*[)）]")
+
+
+def term_in_card(term: str | None, title: str, summary: str) -> bool:
+    """용어 이름이 카드 제목이나 본문에 나오는지. 공백은 무시한다.
+    2026-11-20 QA 실행: 본문에 없는 '복원력'을 풀이했다"""
+    if not term:
+        return False
+    name = "".join(term.split(" — ", 1)[0].split())
+    text = "".join((title + summary).replace("**", "").split())
+    return bool(name) and name in text
 
 
 def validate_tags(tags, kind: str | None, evidence_text: str) -> list[str]:
@@ -224,7 +244,8 @@ def apply_news_fields(item: dict, fields: dict) -> bool:
     item["title_ko"] = title
     item["summary_ko"] = summary
     item["why_ko"] = validate_why(fields.get("why_ko"))
-    item["term_ko"] = validate_term(fields.get("term_ko"), fields.get("term_type"))
+    term = validate_term(fields.get("term_ko"), fields.get("term_type"))
+    item["term_ko"] = term if term_in_card(term, title, summary) else None
     tags = validate_tags(fields.get("tags_ko"), item.get("kind"), _evidence(item))
     if tags:
         item["tags_ko"] = tags
@@ -347,11 +368,26 @@ def rewrite(news: list[dict], cve: list[dict], allow_llm: bool = True,
                 continue
             it["_article"] = fetch_article(it.get("url", ""))
 
-    payload = ([_news_payload(i, it) for i, it in enumerate(news, start=1)]
-               + [_cve_payload(len(news) + j, it) for j, it in enumerate(cve, start=1)])
+    # 2026-11-20 QA 실행: 뉴스 9건 본문과 CVE 13건을 한 번에 넣어 300초
+    # 타임아웃, 재작성 전체 실패. 뉴스는 NEWS_CHUNK건씩, CVE는 따로 묶어
+    # 동시에 돌린다. 번호는 전체 기준이라 묶음이 달라도 결과를 합칠 수 있다
+    news_payload = [_news_payload(i, it) for i, it in enumerate(news, start=1)]
+    cve_payload = [_cve_payload(len(news) + j, it) for j, it in enumerate(cve, start=1)]
+    chunks = [news_payload[i:i + NEWS_CHUNK] for i in range(0, len(news_payload), NEWS_CHUNK)]
+    if cve_payload:
+        chunks.append(cve_payload)
     result = None
-    if allow_llm and payload:
-        result = _call(_NEWS_RULES + json.dumps(payload, ensure_ascii=False, indent=1))
+    if allow_llm and chunks:
+        prompts = [_NEWS_RULES + json.dumps(c, ensure_ascii=False, indent=1) for c in chunks]
+        with ThreadPoolExecutor(max_workers=MAX_PARALLEL) as pool:
+            parts = list(pool.map(_call, prompts))
+        result = {}
+        for part in parts:
+            result.update(part or {})
+        failed = sum(1 for part in parts if part is None)
+        if failed:
+            print(f"[editor] 재작성 묶음 {len(parts)}개 중 {failed}개 실패 — 그 항목은 사서 문안 검증만",
+                  file=sys.stderr)
 
     kept_news = []
     for i, it in enumerate(news, start=1):

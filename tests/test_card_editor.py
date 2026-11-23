@@ -18,7 +18,7 @@ import librarian  # noqa: E402
 
 GOOD = {
     "title_ko": "노란우산 개인정보 36만건 유출",
-    "summary_ko": "**노란우산** 홈페이지가 해킹돼 가입자 36만명의 정보가 유출됐다. 중소벤처기업부는 경찰에 수사를 의뢰했다.",
+    "summary_ko": "**노란우산** 홈페이지가 크리덴셜 스터핑 공격을 받아 가입자 36만명의 정보가 유출됐다. 중소벤처기업부는 경찰에 수사를 의뢰했다.",
     "why_ko": "공제 가입자 대상 2차 피싱 위험이 크다.",
     "term_ko": "크리덴셜 스터핑 — 유출된 계정정보를 다른 사이트에 대입하는 공격",
     "term_type": "보안용어",
@@ -259,3 +259,38 @@ def test_google_news_headline_list_is_not_a_valid_summary():
     raw = ("금융위, '해킹 사고' 금융보안원 현장 점검 MBC 뉴스 '해킹사고' 금융보안원 찾은 "
            "신진창 부위원장 머니투데이 금융위, 금융보안원 침해사고에 유감 표명 Chosunbiz")
     assert ce.validate_summary(raw) is None
+
+
+# --- 2026-11-20 QA 실행 뒤 보강 ----------------------------------------------
+
+def test_term_latin_gloss_in_parentheses_is_stripped():
+    t = ce.validate_term("공급망 공격 (Supply Chain Attack) — 신뢰된 제3자를 통해 최종 대상을 공격")
+    assert t == "공급망 공격 — 신뢰된 제3자를 통해 최종 대상을 공격"
+
+
+def test_term_must_appear_in_card_text():
+    assert ce.term_in_card("공급망 공격 — 정의", "제목", "**공급망공격**으로 피해가 났다.")
+    assert not ce.term_in_card("복원력 — 공격 뒤 서비스를 복구하는 능력",
+                               "영국 금융당국 사이버보안 책임 명확화",
+                               "금융기관의 사이버 위험 관리를 경영 책임으로 정했다.")
+
+
+def test_rewrite_splits_news_into_chunks_and_merges(monkeypatch):
+    monkeypatch.setenv("CLAUDE_CODE_OAUTH_TOKEN", "x")
+    prompts = []
+
+    def fake_run(args, prompt, timeout):
+        prompts.append(prompt)
+        start = prompt.index("항목:\n") + len("항목:\n")
+        nums = [p["n"] for p in json.loads(prompt[start:])]
+        items = {str(n): dict(GOOD) for n in nums}
+        return SimpleNamespace(returncode=0, stdout=json.dumps(
+            {"result": json.dumps({"items": items})}))
+
+    monkeypatch.setattr(librarian, "_run_claude_json", fake_run)
+    news = [{"id": str(i), "title": "Yellow umbrella breach", "summary": GOOD_SOURCE,
+             "kind": "incident", "url": f"u{i}"} for i in range(7)]
+    kept, _ = ce.rewrite(news, [], fetch=False)
+    assert len(prompts) == 3          # 7건을 3건씩 나눠 세 번
+    assert len(kept) == 7
+    assert all(k["region"] == "국내" for k in kept)

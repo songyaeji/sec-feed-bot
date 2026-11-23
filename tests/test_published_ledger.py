@@ -396,3 +396,16 @@ def test_merge_union_by_date_url():
     merged = pl.merge(a, b)
     assert len(merged) == 2
     assert any(e.get("title_ko") == "로컬" for e in merged)
+
+
+def test_llm_followup_without_shared_subject_is_not_labelled(monkeypatch):
+    # 2026-11-20 QA 실행: 다른 사건(정부 냉동 유통망 권고 vs 유럽 슈퍼마켓 냉동
+    # 시스템 이란 귀속)을 후속으로 판정했다. 겹치는 CVE나 이름이 없으면 새 기사
+    _fake_llm(monkeypatch, {
+        "1": {"verdict": "followup", "of": 2, "new_fact": "점검 권고가 나왔다."},
+    })
+    cand = _cand("1", "Government urges cold chain security checks",
+                 "정부, 냉장 냉동 유통망 보안 위험 점검 권고")
+    kept = pl.filter_news([cand], LEDGER)
+    assert [k["id"] for k in kept] == ["1"]
+    assert not kept[0].get("followup")

@@ -398,6 +398,14 @@ def filter_news(candidates: list[dict], entries: list[dict],
             _say("같은 내용 재보도 제외", it, entry)
             continue
         if verdict == "followup":
+            # 2026-11-20 QA 실행: '정부 냉동 유통망 점검 권고'를 '유럽 슈퍼마켓
+            # 냉동 시스템 이란 귀속'의 후속으로 판정했다. 같은 사건이면 CVE나
+            # 고유 이름 하나는 겹친다. 겹치는 것이 없으면 후속 표기 없이 새 기사로
+            ta, tb = tokens(it), tokens(entry)
+            if not (ta["cves"] & tb["cves"] or ta["names"] & tb["names"]):
+                _say("후속 판정 근거 없음, 새 기사로", it, entry)
+                kept.append(it)
+                continue
             it["followup"] = True
             it["followup_of"] = {"date": entry.get("date"), "title_ko": _label(entry)}
             it["followup_fact"] = fact[:120]
