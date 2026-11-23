@@ -32,7 +32,7 @@ uaf ssti rag mcp nfc rfid gps ota usb id url ip http https html pdf qr sms os db
 gpu ssh ftp smtp ldap ad ntlm yara osint
 tcp udp mptcp quic ipsec ike wpa wpa2 wpa3 wifi ble lte 5g ss7 sip voip imap snmp ntp dhcp
 arp icmp vlan nat cdn ca crl ocsp hsts csp cors aslr cfi rop tee sgx vm ueba mssp grc
-isac cert csirt psirt itsm
+isac cert csirt psirt itsm rat vdp
 """.split())
 
 
@@ -542,6 +542,35 @@ def _korean_supported(seg: str, evidence: str) -> tuple[bool, bool]:
                 return False, False
             specific = True
     return True, specific
+
+
+# 태그에서만 보는 회사명 꼬리. 용어 쪽 KO_ORG_SUFFIXES에 넣으면 '스마트카드'
+# 같은 용어까지 막혀서 따로 둔다. 앞에 일반어가 오면 회사명이 아니다
+_TAG_COMPANY_TAILS = ("카드", "캐피탈", "손해보험", "화재", "건설", "뱅크", "페이")
+_TAG_GENERIC_HEADS = ("신용", "체크", "스마트", "교통", "선불", "간편", "모바일", "인터넷")
+
+
+def tag_entity_reason(tag: str) -> str | None:
+    """태그가 기관, 기업, 제품 같은 실체 이름이면 거부 사유. 주제어면 None.
+    2026-11-23 QA 실행: NCIC, NSANet, 롯데카드가 태그 pill로 나갔다.
+    라틴 조각은 보안 약어 목록에 있어야 한다. 한글은 용어 칸과 같은 고유명
+    목록과 기관 접미사, 태그 전용 회사명 꼬리로 본다."""
+    t = "".join(tag.split())
+    for part in _TERM_LATIN_RE.findall(t):
+        if not _latin_token_ok(part):
+            return f"라틴 고유명사 {part}"
+    ko = re.sub(r"[^가-힣]", "", t)
+    if not ko:
+        return None
+    if any(ko.startswith(e) for e in KO_PROPER_NOUNS):
+        return "한글 고유명사"
+    if any(ko.endswith(s) for s in KO_ORG_SUFFIXES):
+        return "기관 접미사"
+    for tail in _TAG_COMPANY_TAILS:
+        head = ko[:-len(tail)]
+        if ko.endswith(tail) and len(head) >= 2 and not head.endswith(_TAG_GENERIC_HEADS):
+            return f"회사명 꼬리 {tail}"
+    return None
 
 
 def tag_has_evidence(tag: str, evidence: str) -> bool:

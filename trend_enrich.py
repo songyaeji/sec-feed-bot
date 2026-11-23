@@ -17,6 +17,7 @@ judge.py와 같은 보안 원칙: 피드 제목·요약은 신뢰할 수 없는 
 """
 import json
 import os
+import re
 import sys
 
 import librarian
@@ -38,8 +39,9 @@ _PROMPT_HEADER = """\
 아래 JSON 후보 중 **오늘 꼭 열어 볼 가치가 있는 것만 최대 2건** 고른다.
 
 선정 기준:
-- 보안 또는 AI 실무와 직접 관련된 것(새 도구·기능·모델 발표, 업계를 흔드는 사건,
-  실무에 바로 쓸 기법). 일반 IT 뉴스·정치·사회 이슈는 고르지 않는다.
+- 보안과 직접 관련된 것만 고른다(보안 도구와 기능 발표, 공격과 방어 기법, 업계를
+  흔드는 보안 사건, AI 보안). AI 일반 도구, 주가와 투자, 일반 IT 뉴스, 정치와 사회
+  이슈는 보안 내용이 없으면 고르지 않는다.
 - 화제성 지표(note)는 참고만 한다. 숫자가 커도 실무 가치가 없으면 고르지 않는다.
 - 같은 소식을 다룬 후보가 여럿이면 가장 공식적인 원문 하나만 고른다.
 - 볼 만한 것이 1건뿐이면 1건, 없으면 빈 목록. 억지로 채우지 않는다.
@@ -111,6 +113,24 @@ def _clean(text) -> str:
     return " ".join(text.replace("·", ", ").replace("**", "").split())
 
 
+# 후보 원문(제목, 요약, 화제성 메모)에 이것 중 하나는 있어야 보안 트렌드다.
+# 2026-11-23 QA 실행: AI 영상 편집 도구(AutoClip)가 트렌드로 뽑혔다.
+# 영문은 어간 부분 일치, 한글은 부분 일치
+_SECURITY_HINT_RE = re.compile(
+    r"secur|vulnerab|exploit|malware|attack|breach|hack|cve-|phish|ransom|threat|"
+    r"backdoor|injection|zero-day|0-day|credential|leak|privilege|sandbox|pentest|"
+    r"fuzz|dangerous|vuln scan|security scan|bug bount|cyber|defens|harden|audit|"
+    r"supply.chain|\bsast\b|\bdast\b|"
+    r"red team|forensic|firewall|encrypt|authenticat|secret|spyware|botnet|"
+    r"보안|취약|해킹|공격|악성|유출|침해|피싱|랜섬|위협|백도어|제로데이|인증|암호",
+    re.IGNORECASE)
+
+
+def is_security_related(item: dict) -> bool:
+    text = " ".join(str(item.get(k) or "") for k in ("title", "summary", "trend_note"))
+    return bool(_SECURITY_HINT_RE.search(text))
+
+
 def _reject_reason(title: str, why: str) -> str | None:
     """문안 검사. 길이 초과는 자르지 않고 거부한다(자르면 문장이 끊긴 채 나간다)."""
     if not (title and why):
@@ -151,7 +171,8 @@ def parse_picks(result_text: str, items: list[dict]) -> list[dict] | None:
             continue
         title = _clean(entry.get("title_ko"))
         why = _clean(entry.get("why_ko"))
-        reason = _reject_reason(title, why)
+        reason = _reject_reason(title, why) or (
+            None if is_security_related(item) else "보안 무관")
         if reason:
             print(f"[trend] {reason} 제외: {entry.get('id')}", file=sys.stderr)
             continue

@@ -90,9 +90,9 @@ def test_untrusted_text_cannot_break_markdown(monkeypatch):
 # --- 선정(trend_enrich.parse_picks) -------------------------------------------
 
 POOL = [
-    {"id": "a", "title": "Tool A", "url": "https://github.com/a"},
-    {"id": "b", "title": "Release B", "url": "https://blog.google/b"},
-    {"id": "c", "title": "Random C", "url": "https://c.example"},
+    {"id": "a", "title": "Tool A security scanner", "url": "https://github.com/a"},
+    {"id": "b", "title": "Release B vulnerability fix", "url": "https://blog.google/b"},
+    {"id": "c", "title": "Random C exploit", "url": "https://c.example"},
 ]
 
 
@@ -205,3 +205,20 @@ def test_merge_state_preserves_daily_guard():
     # 구 스로틀 키는 화이트리스트 밖 — merge를 거치며 자연 소거된다
     assert "last_trend_sent" not in merge_state.merge_seen(
         {"seen": {}, "last_trend_sent": "2026-08-18T05:03:00+00:00"}, {"seen": {}})
+
+
+# --- 2026-11-23 QA 실행 뒤 보강: 보안 무관 픽 거부 ----------------------------
+
+def test_non_security_pick_is_rejected():
+    import trend_enrich as te
+    items = [
+        {"id": "a", "title": "zhouxiaoka/autoclip — 开源 AI 视频剪辑桌面工具", "summary": ""},
+        {"id": "b", "title": "De-fanging dangerous triggers in GitHub Actions across an organization",
+         "summary": ""},
+    ]
+    raw = json.dumps({"picks": [
+        {"id": "a", "title_ko": "영상 자동 숏폼 편집 오픈소스", "why_ko": "긴 영상을 짧은 영상으로 자동 편집하는 도구다."},
+        {"id": "b", "title_ko": "GitHub Actions 위험 트리거 방어", "why_ko": "조직 전체 워크플로의 위험한 트리거를 막는 방법이다."},
+    ]})
+    picks = te.parse_picks(raw, items)
+    assert [p["id"] for p in picks] == ["b"]

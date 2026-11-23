@@ -212,6 +212,8 @@ def validate_tags(tags, kind: str | None, evidence_text: str) -> list[str]:
             continue
         if kind != "incident" and any(w in t for w in _INCIDENT_WORDS):
             continue
+        if text_rules.tag_entity_reason(t):
+            continue
         if not text_rules.tag_has_evidence(t, evidence_text):
             continue
         out.append(t)

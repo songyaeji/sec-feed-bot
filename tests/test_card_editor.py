@@ -164,8 +164,9 @@ def test_korean_and_mixed_tags_need_source_evidence():
                             "CVE-2026-9999 lets attackers reach a C2 server") == [
         "C2서버", "CVE-2026-9999"]
     ko = "노란우산공제회 홈페이지가 해킹돼 개인정보가 유출됐다."
+    # 노란우산은 근거는 있지만 기관명이라 태그에서 빠진다(2026-11-23 QA)
     assert ce.validate_tags(["개인정보유출", "노란우산", "제로데이"], "incident", ko) == [
-        "개인정보유출", "노란우산"]
+        "개인정보유출"]
     # 본문 공백을 메워 다른 낱말에서 근거를 찾지 않는다('제로 데이터')
     assert ce.validate_tags(["제로데이", "망분리"], "other", "제로 데이터 이동 망분리 환경") == ["망분리"]
 
@@ -294,3 +295,11 @@ def test_rewrite_splits_news_into_chunks_and_merges(monkeypatch):
     assert len(prompts) == 3          # 7건을 3건씩 나눠 세 번
     assert len(kept) == 7
     assert all(k["region"] == "국내" for k in kept)
+
+
+def test_entity_tags_are_dropped():
+    # 2026-11-23 QA 실행: NCIC, NSANet, 롯데카드가 태그 pill로 나갔다
+    ev = "NCIC NSANet 롯데카드 개인정보 유출 사고 과징금 프롬프트 인젝션"
+    assert ce.validate_tags(["NCIC", "개인정보유출"], "incident", ev) == ["개인정보유출"]
+    assert ce.validate_tags(["NSANet"], "incident", ev) == []
+    assert ce.validate_tags(["롯데카드", "과징금"], "policy", ev) == ["과징금"]
