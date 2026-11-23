@@ -2,6 +2,23 @@
 
 최종갱신일이 오래돼 INDEX.md에서 빠진 토픽 목록(자동 생성 — wiki_index.rebuild_index).
 
+- [ubuntu-kernel-unix-socket-escape](topics/2026-09-ubuntu-kernel-unix-socket-escape.md) Ubuntu 리눅스 커널 AF_UNIX 소켓 컨테이너 탈출 CVE-2026-80521 (최종갱신일: 2026-09-23)
+- [threat-actors-ai-platforms-attack-surface](topics/2026-09-threat-actors-ai-platforms-attack-surface.md) 위협 행위자 Claude Artifacts·AI 검색 중독·ClickFix로 AI 플랫폼 악용 (최종갱신일: 2026-09-23)
+- [terraform-malware-hashicorp-registry](topics/2026-09-terraform-malware-hashicorp-registry.md) HashiCorp 레지스트리 — Go 악성코드 공급망 공격 (최종갱신일: 2026-09-23)
+- [shinyhunters-fbi-peoplesoft](topics/2026-09-shinyhunters-fbi-peoplesoft.md) ShinyHunters FBI PeopleSoft 제로데이 채용시스템 침해 (최종갱신일: 2026-09-23)
+- [remcontrol-android-banking-malware](topics/2026-09-remcontrol-android-banking-malware.md) RemControl 안드로이드 뱅킹 MaaS 유럽·캐나다 표적 (최종갱신일: 2026-09-23)
+- [openai-ukraine-daybreak-support](topics/2026-09-openai-ukraine-daybreak-support.md) OpenAI 우크라이나 민간 사이버 방어 지원 Daybreak 권한 제공 (최종갱신일: 2026-09-23)
+- [openai-anthropic-un-ai-risk](topics/2026-09-openai-anthropic-un-ai-risk.md) OpenAI·Anthropic CEO UN 안보리 AI 위험 브리핑 (최종갱신일: 2026-09-23)
+- [nextjs-imageresponse-svg-rce](topics/2026-09-nextjs-imageresponse-svg-rce.md) Next.js ImageResponse SVG 입력 원격코드실행 취약점 (최종갱신일: 2026-09-23)
+- [memtensor-supply-chain-npm-pypi](topics/2026-09-memtensor-supply-chain-npm-pypi.md) npm·PyPI 손상된 MemTensor 패키지 sckit 자격증명 탈취 (최종갱신일: 2026-09-23)
+- [malicious-ai-agents-credit-card-skimmer](topics/2026-09-malicious-ai-agents-credit-card-skimmer.md) AI 에이전트 온라인 소매 스키머 60만 신용카드 탈취 (최종갱신일: 2026-09-23)
+- [korea-financial-vuln-response-platform](topics/2026-09-korea-financial-vuln-response-platform.md) 금융권 취약점 공동 대응 성과 3.1배 증가 (최종갱신일: 2026-09-23)
+- [korea-financial-holiday-response](topics/2026-09-korea-financial-holiday-response.md) 금융보안원 추석 연휴 사이버 위협 대응 강화 '주의' 비상태세 (최종갱신일: 2026-09-23)
+- [korea-darkweb-financial-data-sale](topics/2026-09-korea-darkweb-financial-data-sale.md) 9월 다크웹 국내 금융·중고차 금융 고객정보 판매 JB오토리스·MSI·NR캐피탈 (최종갱신일: 2026-09-23)
+- [gitlab-issue-email-credential](topics/2026-09-gitlab-issue-email-credential.md) GitLab — 이슈 이메일 주소 권한 상향 우회 (최종갱신일: 2026-09-23)
+- [gcp-kubernetes-confused-deputy](topics/2026-09-gcp-kubernetes-confused-deputy.md) Google Cloud 쿠버네티스 설정 YAML로 조직 제어 권한상향 (최종갱신일: 2026-09-23)
+- [fake-lastpass-authenticator-malware](topics/2026-09-fake-lastpass-authenticator-malware.md) 가짜 LastPass 145개 백신·EDR 무력화 Microsoft 서명 드라이버 (최종갱신일: 2026-09-23)
+- [cpanel-caldav-carddav-rce](topics/2026-09-cpanel-caldav-carddav-rce.md) cPanel CalDAV·CardDAV 루트 RCE WP Toolkit 데이터베이스 조작 (최종갱신일: 2026-09-23)
 - [zyxel-gs1900-active-exploitation](topics/2026-09-zyxel-gs1900-active-exploitation.md) Zyxel GS1900 스위치 고심각도 취약점 활발한 악용 중 CISA 긴급 패치 명령 (최종갱신일: 2026-09-22)
 - [wordpress-cve-2026-87902-unauthenticated-rce](topics/2026-09-wordpress-cve-2026-87902-unauthenticated-rce.md) WordPress 미인증 원격코드실행 CVE-2026-87902 (최종갱신일: 2026-09-22)
 - [wordpress-comment2shell-xss-rce](topics/2026-09-wordpress-comment2shell-xss-rce.md) WordPress Comment2Shell 댓글 XSS→RCE 관리자 권한 탈취 CVE-2026-93485 (최종갱신일: 2026-09-22)

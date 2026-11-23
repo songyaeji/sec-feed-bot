@@ -15,5 +15,7 @@ cves: []
 - 2026-11-06 [Security Affairs](https://securityaffairs.com/202528/security/enisa-warns-of-cyberattacks-targeting-refrigeration-systems-across-europe.html) — ENISA 유럽 냉동 체계 사이버공격 조정 경고, 10월 시작 11월 1일 새 물결
 - 2026-11-09 [BleepingComputer](https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/) — 프랑스 정부 10월 슈퍼마켓·소매점 700개 냉동 시스템 침해를 **이란 국가행위자**에 귀속, 식품 손실·최소 15건 화재 발생
 - 2026-11-17 [Security Affairs](https://securityaffairs.com/203324/security/fridge-controller-attacks-researchers-find-six-zero-days-in-an-hour.html) — Midnight Blue 연구자 Danfoss AK-SM800A·Copeland 냉동고 컨트롤러 1시간 내 6개 미패치 제로데이 발견, 대수억 유로 식품 손실
+- 2026-11-11 [과기정통부](https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187953) — 과기정통부, 유럽 냉장·냉동설비 제어시스템 해킹 사고를 계기로 국내 사물인터넷 제품 보안관리 중요성 강조
+- 2026-11-11 [과기정통부](https://www.msit.go.kr/bbs/view.do?sCode=user&bbsSeqNo=94&nttSeqNo=3187954) — 과기정통부, 유럽 저온 유통 체계 해킹사고에 따른 국내 실태 점검 및 긴급조치 권고
 
 ## 관련

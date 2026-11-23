@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-12 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209525) — 메타엠 고객상담시스템 해킹으로 개인정보 유출, 한국인터넷진흥원(KISA) 신고
+- 2026-11-20 [개인정보보호위원회](https://news.google.com/rss/articles/CBMitwJBVV95cUxQbm1XRjh5SUR0ZzNMWDVkT3VjRjZHaFdJU2ZJTjFVTmVJcC1nd0xkTkNqRFEzT0dYN2UxeGFYYjQ3ZDlET3Z5VnRqVmJBekY3RWs3alVLSTcxUWhVWGtTLW1ZSmRPamZ3UXgwRzBlSVQwQVhiSDN6RHVYMTduN0xIdUk3aUdDTk5MZ1hVOThjd0FTVUZRR0hOaUtPN0hCMm5QYnU0MUhXTFJ0d24wY1d1d3VCSFkzVWxvekJ0VGgzeEt2c1FSSl93dmhoZDVSb3g0ZGdDbkgyUFFBVHZBRlUyN0lDZjZ5NFJJOE01QVRGRDlidUpqRnl4RkE3OWR0a1pGTTAxRVZSbFhEaVV3RS02UG9nVC1IbENwb05wa0k0ZVAzYzB6X2VFQUtWTGtZUmRxYklNSE1Vdw?oc=5) — 메타엠 고객사 10여곳 신고, 삼성SDS 자회사에서도 7만명 개인정보 추가 유출 확인
 
 ## 관련
 

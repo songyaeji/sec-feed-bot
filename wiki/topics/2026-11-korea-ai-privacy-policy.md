@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-18 [보안 법령 개정](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBsT0FDcTZyNVo4RzloOVprS29fS2Zwcm5CUUxSX3ZxWVdTYkRKZ0dRaDVYWDRxeGg5aG8xb2Nra0g1R2NFV1phQVNGaDd3RTJxM0N1Sg?oc=5) — 개인정보 AI 개발 활용 배포 전 노출 위험 검증 의무 추진
+- 2026-11-23 [개인정보보호위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTE43YlJfMmtYRTJ6UmJBY1hlRWVJdzB4alYwMUdFZlVDVDR1cC1JdnZjLS1FU1Yyb1Z0ZkdEWDZsaU8zS21QTmJFTkZyN1RJYXdDVTIyTXBXaFhOOTRacGZJTW40YlQ5WWdHQlZN0gFUQVVfeXFMT1Q2THNyWXMxcXF4dGxQeHIybEpYYnh3cDNpVWVrOTdwZXZjb1BkWjNQY2ZPbm5zYjBqTlJDclVxbUFyZzMtVnJEQnBTVW5vTXpTMV9j?oc=5) — AI 개발 시 개인정보 책임자 지정 및 불필요 정보 파기 의무화
 
 ## 관련
 
