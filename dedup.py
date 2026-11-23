@@ -470,6 +470,15 @@ def story_overlap(ta: dict, tb: dict, same_day: bool = False) -> str | None:
     return None
 
 
+def shares_subject(ta: dict, tb: dict) -> bool:
+    """후속 판정 확인용. CVE, 고유 이름, 같은 수치 중 하나라도 겹치는지.
+    story_overlap보다 느슨하다. LLM이 후속이라 한 것을 뒷받침만 한다"""
+    if ta["cves"] & tb["cves"] or ta["names"] & tb["names"]:
+        return True
+    return any(cls == cls_b and any(_same_figure(a, b) for a in values for b in values_b)
+               for cls, values in ta["qty"] for cls_b, values_b in tb["qty"])
+
+
 def is_same_story(a: dict, b: dict, same_day: bool = False) -> bool:
     return story_overlap(story_tokens(a), story_tokens(b), same_day) is not None
 

@@ -409,3 +409,18 @@ def test_llm_followup_without_shared_subject_is_not_labelled(monkeypatch):
     kept = pl.filter_news([cand], LEDGER)
     assert [k["id"] for k in kept] == ["1"]
     assert not kept[0].get("followup")
+
+
+def test_llm_followup_with_shared_figure_is_labelled(monkeypatch):
+    # 2026-11-23 QA 실행: '금융기관 16곳 해킹 조사 완료'가 '금융권 16곳 해킹'과
+    # 이름은 안 겹치고 수치만 겹쳐 후속 표기를 잃었다
+    ledger = [{"date": "2026-11-06", "lane": "news", "url": "https://e.com/16",
+               "title": "금융권 16곳 해킹", "title_ko": "금융권 16곳 해킹, 망분리 규제 재설계",
+               "summary": "", "cves": []}]
+    _fake_llm(monkeypatch, {
+        "1": {"verdict": "followup", "of": 1, "new_fact": "경찰이 조사를 마쳤다."},
+    })
+    cand = _cand("1", "Police finish probe into 16 financial firms hack",
+                 "경찰, 금융기관 16곳 해킹 조사 완료")
+    kept = pl.filter_news([cand], ledger, today="2026-11-20")
+    assert kept and kept[0].get("followup") is True

@@ -399,10 +399,10 @@ def filter_news(candidates: list[dict], entries: list[dict],
             continue
         if verdict == "followup":
             # 2026-11-20 QA 실행: '정부 냉동 유통망 점검 권고'를 '유럽 슈퍼마켓
-            # 냉동 시스템 이란 귀속'의 후속으로 판정했다. 같은 사건이면 CVE나
-            # 고유 이름 하나는 겹친다. 겹치는 것이 없으면 후속 표기 없이 새 기사로
-            ta, tb = tokens(it), tokens(entry)
-            if not (ta["cves"] & tb["cves"] or ta["names"] & tb["names"]):
+            # 냉동 시스템 이란 귀속'의 후속으로 판정했다. 같은 사건이면 CVE,
+            # 고유 이름, 수치(금융기관 16곳 등) 중 하나는 겹친다. 겹치는 것이
+            # 없으면 후속 표기 없이 새 기사로
+            if not dedup_lib.shares_subject(tokens(it), tokens(entry)):
                 _say("후속 판정 근거 없음, 새 기사로", it, entry)
                 kept.append(it)
                 continue
