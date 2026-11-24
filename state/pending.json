@@ -1467,5 +1467,975 @@
     "tags": [],
     "title": "Norway says hackers exploited Microsoft security flaw to attack energy firms Equinor, Skagerak Energi",
     "url": "https://therecord.media/norway-microsoft-cyberattack-equinor"
+  },
+  {
+    "category": "critical",
+    "id": "CVE-2026-60004",
+    "kev": true,
+    "published": "2026-08-25T00:00:00+00:00",
+    "severity": "critical",
+    "source": "CISA KEV",
+    "summary": "Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.",
+    "tags": [],
+    "title": "CVE-2026-60004: Gitea Code Injection Vulnerability (Gitea Gitea)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-60004"
+  },
+  {
+    "category": "high",
+    "cvss": 10.0,
+    "id": "CVE-2026-77312",
+    "published": "2026-11-19T22:18:44.013",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, the earlier CVE-2026-67429 remediation applied validate_path_with_env_config() to only a hand-picked set of file-writing modules, leaving data.csv.write in src/core/modules/atomic/data/csv_write.py, data.json_to_csv in src/core/modules/atomic/data/json_to_csv.py, file.copy in src/core/modules/atomic/file/copy.py, and file.move in src/core/modules/atomic/file/move.py outside the FLYTO_SANDBOX_DIR confinement boundary. The advisory also identifies unguarded modules across the broader data.*, file.*, and report-writer families. data.csv.write relies on a .. substring denylist that does not reject absolute paths, while the other named modules accept caller-controlled output or destination paths without the canonical guard. A caller able to execute modules or recipes can therefore write attacker-controlled content outside the configured sandbox, potentially overwriting application code, recipes, startup files, scheduled-task files, or authorization files and gaining code execution on the host. This issue is fixed in version 2.26.8.",
+    "tags": [],
+    "title": "CVE-2026-77312 (CVSS 10.0)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77312"
+  },
+  {
+    "category": "high",
+    "cvss": 9.6,
+    "id": "CVE-2026-134401",
+    "published": "2026-11-24T00:17:30.460",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Improper input validation in Variations in Google Chrome prior to 158.0.8127.88 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)",
+    "tags": [],
+    "title": "CVE-2026-134401 (CVSS 9.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134401"
+  },
+  {
+    "category": "high",
+    "cvss": 9.9,
+    "id": "CVE-2026-18530",
+    "published": "2026-11-24T02:17:47.313",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "OS command injection in the a3cli restricted shell in Lantronix S2220 Series 2 allows an authenticated attacker to bypass shell restrictions and execute arbitrary operating system commands via unsanitized command substitution metacharacters, including backticks and $(), in parameters of permitted commands over SSH. This vulnerability is fixed in firmware version 1.3.37.",
+    "tags": [],
+    "title": "CVE-2026-18530 (CVSS 9.9)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18530"
+  },
+  {
+    "category": "high",
+    "cvss": 9.8,
+    "id": "CVE-2026-135202",
+    "published": "2026-11-24T06:17:08.080",
+    "severity": "critical",
+    "source": "NVD",
+    "summary": "Several plugins for WordPress published by WP connect (Orders Sync to Airtable for WooCommerce, Add-On for Contact Form 7 to Notion, WP Sync for Notion – Notion to WordPress, Add-On for Contact Form 7 to Airtable, Add-on Brevo for Gravity Forms, and Air WP Sync – Airtable to WordPress) contain embedded malicious code (a backdoor) in the versions listed. The affected releases unconditionally load a backdoor module (includes/airwp-online.php) that runs on every request via the 'init' hook and on a half-hourly WP-Cron event, sends site information (site URL, PHP, WordPress and OS versions, and the server user) to a remote command-and-control server at tascredit-pay.com with TLS certificate verification disabled, and executes the PHP code returned by that server via eval(). The module also accepts queued commands that run shell commands, read, write and delete arbitrary files, query arbitrary database tables, dump the users table including password hashes, drop a webshell into the uploads directory, and install persistent hourly code execution. This makes it possible for unauthenticated attackers in control of the remote server, or able to intercept its traffic, to execute arbitrary code on the server and fully compromise affected sites. All affected plugins have been closed on WordPress.org and no patched versions are available; we strongly recommend uninstalling them and running a complete malware scan.",
+    "tags": [],
+    "title": "CVE-2026-135202 (CVSS 9.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135202"
+  },
+  {
+    "category": "high",
+    "cvss": 6.8,
+    "id": "CVE-2024-0565",
+    "published": "2024-01-15T20:15:43.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "An out-of-bounds memory read flaw was found in receive_encrypted_standard in fs/smb/client/smb2ops.c in the SMB Client sub-component in the Linux Kernel. This issue occurs due to integer underflow on the memcpy length, leading to a denial of service.",
+    "tags": [],
+    "title": "CVE-2024-0565 (CVSS 6.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0565"
+  },
+  {
+    "category": "high",
+    "cvss": 6.7,
+    "id": "CVE-2024-0775",
+    "published": "2024-01-22T13:15:25.137",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "A use-after-free flaw was found in the __ext4_remount in fs/ext4/super.c in ext4 in the Linux kernel. This flaw allows a local user to cause an information leak problem while freeing the old quota file names before a potential failure, leading to a use-after-free.",
+    "tags": [],
+    "title": "CVE-2024-0775 (CVSS 6.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0775"
+  },
+  {
+    "category": "high",
+    "cvss": 7.7,
+    "id": "CVE-2026-130178",
+    "published": "2026-11-24T02:17:46.780",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.7.1 through 0.8.4, an incomplete IPv6 blocklist in AutoGPT's outbound SSRF protection allows authenticated users to reach local or private network services. Specifically, _is_ip_blocked and BLOCKED_IP_NETWORKS in autogpt_platform/backend/backend/util/request.py fail to reject the IPv6 unspecified address :: (which connects to ::1 on Linux) as well as 6to4, NAT64, Teredo, and deprecated IPv4-compatible IPv6 encodings. An attacker can pass :: directly to blocks/sql_query_block.py or blocks/email_block.py, or point URL-fetching blocks, web fetch, MCP servers, webhooks, or OAuth at a hostname whose AAAA record resolves to ::. On backends run directly on a host, this exposes unauthenticated internal RPC services and databases listening on ::1, though the default Docker Compose and single-container deployments bind internal services to IPv4 only. This issue is fixed in version 0.9.0.",
+    "tags": [],
+    "title": "CVE-2026-130178 (CVSS 7.7)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130178"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-135736",
+    "published": "2026-11-24T04:17:32.500",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a 'deband coupling 1' command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code.",
+    "tags": [],
+    "title": "CVE-2026-135736 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135736"
+  },
+  {
+    "category": "high",
+    "cvss": 8.1,
+    "id": "CVE-2026-135743",
+    "published": "2026-11-24T04:17:33.657",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "FFmpeg 4.3 before 9.1 contains a heap out-of-bounds read and write vulnerability in the dynaudnorm filter because cqueue_resize() miscalculates gain history queue element counts when gausssize changes at runtime. Attackers can send gausssize commands via asendcmd scripts or an unauthenticated azmq filter to corrupt heap memory, crashing the process or potentially executing code.",
+    "tags": [],
+    "title": "CVE-2026-135743 (CVSS 8.1)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-135743"
+  },
+  {
+    "category": "high",
+    "cvss": 8.6,
+    "id": "CVE-2026-105304",
+    "published": "2026-11-24T06:17:06.630",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "ACME challenge routing logic of Zoraxy fails to validate request URIs properly, that allows an attacker to send an arbitrary request to a service on the internal network.",
+    "tags": [],
+    "title": "CVE-2026-105304 (CVSS 8.6)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105304"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-121016",
+    "published": "2026-11-24T08:17:05.363",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The affected products insufficiently restrict runtime-supplied visualization data, allowing local program execution on the engineering workstation, if a user is both logged in to a CODESYS Control runtime and operates a visualization. An unauthenticated remote attacker controlling a malicious runtime and tricking a user to trust it, or performing a man-in-the-middle attack on the communication between the CODESYS Control runtime and the engineering workstation, may cause arbitrary code execution on the engineering workstation.",
+    "tags": [],
+    "title": "CVE-2026-121016 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121016"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-121017",
+    "published": "2026-11-24T08:17:05.513",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The affected products insufficiently restrict runtime-supplied visualization data, allowing to invoke local COM/ActiveX functionality on the engineering workstation, if a user is both logged in to a CODESYS Control runtime and operates a visualization. An unauthenticated remote attacker controlling a malicious runtime and tricking a user to trust it, or performing a man-in-the-middle attack on the communication between the CODESYS Control runtime and the engineering workstation, may cause arbitrary code execution on the engineering workstation.",
+    "tags": [],
+    "title": "CVE-2026-121017 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121017"
+  },
+  {
+    "category": "high",
+    "cvss": 8.8,
+    "id": "CVE-2026-121018",
+    "published": "2026-11-24T08:17:05.643",
+    "severity": "high",
+    "source": "NVD",
+    "summary": "The affected products insufficiently restrict runtime-supplied visualization commands, allowing local functionality on the engineering workstation to be invoked, if a user is both logged in to a CODESYS Control runtime and operates a visualization. An unauthenticated remote attacker controlling a malicious runtime and tricking a user to trust it, or performing a man-in-the-middle attack on the communication between the CODESYS Control runtime and the engineering workstation, may cause arbitrary code execution on the engineering workstation.",
+    "tags": [],
+    "title": "CVE-2026-121018 (CVSS 8.8)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121018"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209699",
+    "published": "2026-11-24T16:50:37+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "“한국 사이트를 계속 해킹할 생각인가.”“그렇다.”데일리시큐와의 첫 인터뷰(관련 기사: 클릭 )에서 공격을 멈출 의사가 없다고 했던 해커가 후속 대화에서는 개인정보 판매를 주장했다. 11월 22일 오후 11시 2분, 해커는 텔레그램으로 “오늘 돈을 많이 벌었다”고 먼저 말을 꺼냈다. 무엇을 팔았느냐고 묻자 “학생들의 개인정보”라고 답했다.이날 데일리시큐와 대화를 진행한 해커는 최근 국내 대학 28곳을 해킹했다고 주장하는 KrrK팀의 일원 ‘사만다 세이지(Samantha Sage·대화명)’다. 대학과 교육기관의 자료를 공개해 온 텔레",
+    "tags": [],
+    "title": "[해커 단독 인터뷰-2] “학생정보 팔았다”…KrrK 팀원, 추가 해킹 주장 대학 사이트 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209699"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209701",
+    "published": "2026-11-24T16:30:58+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "파이오링크(대표 조영철)가 베트남 사이버보안 기업 VSEC(Vietnam Security Network JSC, 대표 쩐 타잉 롱)과 사이버보안 시장 개척 및 기술 협력을 위한 업무협약(MOU)을 체결했다고 24일 밝혔다.협약식은 이날 베트남 하노이에서 열렸다. 양사는 한국과 베트남 시장의 사업 기회 발굴, 사이버보안 솔루션 공동 연구·개발·테스트, 시장 정보·기술 동향·운영 경험 공유 등 세 가지 분야를 중심으로 협력한다.VSEC은 2003년 설립된 베트남 매니지드 보안 서비스 사업자(MSSP)로 모의해킹부터 24시간 보안관제(S",
+    "tags": [],
+    "title": "파이오링크, 베트남 MSSP 기업 VSEC과 업무협약 체결",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209701"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209700",
+    "published": "2026-11-24T16:25:42+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "델 테크놀로지스(Dell Technologies)가 AMD와 협력해 단일 서버 규모에서 랙스케일까지 아우르는 AI 인프라 구축 옵션을 확대한다고 24일 밝혔다. 소규모로 AI 인프라를 시작해 빠르게 확장하고 안정적으로 운영할 수 있도록 선택지를 넓히는 것이 핵심이다.AI 구축 규모가 개별 서버에서 전체 랙 단위의 클러스터로 커지면서 적합한 인프라 스택을 조달하고 통합·운영하는 과정이 복잡해지고 있다. 인프라 통합 부담이 커지면 실제 비즈니스 가치를 만들어내기까지 걸리는 시간도 길어질 수밖에 없다.델 테크놀로지스는 기존 운영 환경을",
+    "tags": [],
+    "title": "델 테크놀로지스, AMD와 손잡고 단일 서버부터 랙스케일까지 AI 인프라 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209700"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209698",
+    "published": "2026-11-24T16:19:24+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오케스트로(대표 김범재, 김영광)가 11월 24일 오후 2시 '검증된 VMware 대안, 왜 콘트라베이스인가'를 주제로 온라인 웨비나를 연다고 밝혔다.VMware의 라이선스 정책 변화로 탈VMware가 기업의 주요 과제로 떠오른 가운데, 가상화 인프라는 핵심 업무 시스템과 직결돼 전환 과정에서 서비스 연속성과 운영 안정성을 확보하는 것이 중요하다.오케스트로는 이번 웨비나에서 기업 규모와 운영 환경에 맞는 가상화 전환 방안을 제시한다. 콘트라베이스의 핵심 기능과 실제 고객 운영 사례를 소개하고, 새로 출시한 'CONTRABASS Li",
+    "tags": [],
+    "title": "오케스트로, 가상화 전환 웨비나 개최...'CONTRABASS Lite' 공개",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209698"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209697",
+    "published": "2026-11-24T15:58:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "HPE가 24일 서울 삼성동 웨스틴 서울 파르나스에서 연례 콘퍼런스 'HPE 디스커버 모어 서울 2026(HPE Discover More Seoul 2026)'을 열었다.'네트워킹, 클라우드, AI의 새로운 미래를 발견하다'를 주제로 열린 행사에는 산업계·학계·연구계 인사와 고객사·파트너사 관계자 900명 이상이 참석해 AI를 실험 단계에서 전사적 도입으로 넓히는 데 필요한 기술 기반을 살폈다. 전문가 토론과 고객 사례, 기술 시연을 통해 보안과 거버넌스, 운영 레질리언스를 강화하면서 AI 활용을 확대하는 방안도 논의했다.기조연설에",
+    "tags": [],
+    "title": "HPE, 연례 콘퍼런스서 AI·네트워킹·하이브리드 클라우드 통합 방안 제시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209697"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209696",
+    "published": "2026-11-24T15:33:42+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "솔트웨어(대표 이정근)가 비영리 오픈소스 재단인 아파치 소프트웨어 재단(ASF)의 공식 후원사인 브론즈 스폰서로 등재됐다고 24일 밝혔다. 솔트웨어는 ASF 공식 홈페이지 후원사 명단에 이름을 올렸으며, 이번 후원을 계기로 개방형 기술 기반의 AI 데이터 플랫폼 사업을 넓힐 계획이다.ASF는 전 세계 개발자와 기업이 참여해 데이터 처리와 분석, 분산 컴퓨팅 분야의 오픈소스 프로젝트를 지원하는 재단이다. 데이터 플랫폼 구축에 쓰이는 Apache Iceberg, Apache Spark, Apache Kafka, Apache Flink",
+    "tags": [
+      "금융"
+    ],
+    "title": "솔트웨어, ASF 브론즈 스폰서 합류...'Sapie-ADP' 중심 오픈소스 연계 확대",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209696"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209695",
+    "published": "2026-11-24T15:27:10+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국 Domino 사용자 그룹(KDUG)이 HCLSoftware, 유니포인트 및 주요 파트너사와 함께 지난 19일 서울 위워크 삼성역2호점에서 '2026 KDUG Domino 밋업'을 열었다고 20일 밝혔다. 지난해에 이어 열린 이번 행사에는 고객사와 협력사 관계자들이 참석해 글로벌 기술 로드맵과 현장 활용 경험을 나눴다.행사에서는 협업 인프라를 넘어 기업의 AI 활용을 지원하는 플랫폼으로 확장하는 Domino의 기술 로드맵이 소개됐다. 기업 내부 데이터를 활용하는 AI 기능 Domino IQ, 통합 협업 환경 Domino Work",
+    "tags": [],
+    "title": "한국 Domino 사용자 그룹, '2026 KDUG Domino 밋업' 개최...AI·보안 로드맵 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209695"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209694",
+    "published": "2026-11-24T15:20:26+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "더존비즈온(공동대표 이강수·지용구)이 안랩(대표 강석균)과 사이버보안 역량 강화를 위한 기술·사업 협력 업무협약(MOU)을 체결했다고 24일 밝혔다.양사는 이번 협약을 바탕으로 ERP 등 더존비즈온 주요 솔루션과 서비스의 사이버보안 역량을 높이기 위해 공동 연구와 기술 협력, 보안 솔루션 연계 방안 검토를 추진한다. 각 사가 보유한 기술과 전문성을 결합해 협력 과제를 구체화한다는 계획이다.협약에 따라 양사는 ERP 등 주요 솔루션·서비스의 사이버보안 역량과 정보보호 체계를 강화하는 데 협력한다. 사이버 위협 대응과 보안 기술 고도화",
+    "tags": [],
+    "title": "더존비즈온-안랩, ERP 등 솔루션 보안 강화 위한 업무협약 체결",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209694"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209693",
+    "published": "2026-11-24T14:55:08+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "아르고스 아이덴티티(ARGOS Identity, 대표 이원규)가 기업 고객 확인(KYB)과 자금세탁방지(AML) 심사 업무를 자동화하는 AI 에이전트 'Omni'를 고도화했다고 24일 밝혔다.이번 고도화에는 파일과 폴더를 끌어다 놓는 것만으로 심사를 시작할 수 있는 '손쉬운 업로드' 기능이 새로 추가됐다.금융회사와 핀테크 기업은 법인 고객과 거래하기 전 사업자등록증, 법인 등기, 통장 사본 등을 확인하고 공적 기록과 일치하는지 검증해야 한다. 그동안 이 과정은 담당자가 서류를 일일이 대조하고 별도 조회 시스템에 접속해 결과를 기록하",
+    "tags": [
+      "금융"
+    ],
+    "title": "아르고스 아이덴티티, KYB·AML 자동화 AI 에이전트 'Omni' 기능 강화",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209693"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209692",
+    "published": "2026-11-24T14:45:35+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "이글루코퍼레이션(대표 이득춘)은 지난 11일 서울 송파구 본사에서 제3회 개발자 콘퍼런스 'IDC 2026(IGLOO Developer Conference 2026)'을 열었다고 24일 밝혔다.이번 행사는 실무 개발자들이 현장에서 쌓은 기술 노하우를 나누고, 자율형 보안운영센터(SOC) 구현을 위한 에이전틱 SOC 로드맵을 점검하기 위해 마련됐다.이글루 개발자 콘퍼런스는 임직원이 연구개발 과정에서 축적한 기술과 문제 해결 경험을 공유하는 사내 기술 행사다. 올해 슬로건은 'Green Signal, Tune in Together -",
+    "tags": [],
+    "title": "이글루코퍼레이션, 제3회 개발자 콘퍼런스 열어 자율형 SOC 개발 경험 공유",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209692"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209691",
+    "published": "2026-11-24T14:40:20+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "글로벌 결제 기술 기업 비자(Visa)가 금융기관의 사이버 위협 탐지와 부정거래 대응을 지원하는 위협 인텔리전스 플랫폼 VTIP(Visa Threat Intelligence Platform)를 아시아태평양 지역에 출시한다고 24일 밝혔다.VTIP는 사이버 인텔리전스와 결제 인텔리전스를 결합한 솔루션으로, 비자가 글로벌 결제 네트워크를 보호하는 데 활용하는 보안 역량을 바탕으로 설계됐다.부정거래는 실제 결제가 발생하기 전 단계인 데이터 유출, 계정 및 자격증명 탈취, 시스템 취약점 악용 같은 선행 사이버 공격에서 비롯되는 경우가 많다",
+    "tags": [
+      "금융"
+    ],
+    "title": "비자, 사이버·결제 위협 통합 탐지 플랫폼 'VTIP' 아태지역 출시",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209691"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209690",
+    "published": "2026-11-24T14:15:50+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "위협기반 제3자 위험 관리(TPRM) 기업 시큐리티스코어카드(SecurityScorecard, 지사장 우청하)는 자체 위협 인텔리전스 조직 스트라이크(STRIKE) 팀이 양자내성 X.509 인증서의 생성 소프트웨어를 식별하는 지문 분석 기술 GFMX를 개발했다고 24일 밝혔다.GFMX는 웹사이트와 소프트웨어가 신원을 증명할 때 쓰는 X.509 디지털 인증서의 생성 소프트웨어를 분석해 인증서 간 연관성을 찾는 기술이다. 공격자는 새 인증서를 수 초 만에 만들 수 있지만 생성 소프트웨어까지 매번 바꾸는 경우는 드물다. GFMX는 인증서",
+    "tags": [],
+    "title": "시큐리티스코어카드, 인증서 생성 도구 추적하는 지문 분석 기술 'GFMX' 개발",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209690"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209689",
+    "published": "2026-11-24T14:01:24+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "오픈랩스(대표 임명규)는 20일 조은아이앤에스(대표 김창윤·정형수)와 인공지능(AI) 개발 자동화 솔루션 ‘누비다(nuvida)’의 공공기관 독점 판매 협약을 체결했다고 밝혔다. 양사는 소스코드와 설계 정보를 외부로 보낼 수 없는 공공기관을 대상으로, 내부 서버에서 AI를 활용해 소프트웨어를 개발하는 환경을 공급한다.공공 정보화 사업에서도 AI를 개발에 활용하려는 움직임이 구체화되고 있다. 행정안전부는 총사업비 2,857억 원 규모의 차세대 지방행정공통시스템 구축 사업에 ‘AI 코딩 개발체계’를 도입한다. 지난 13일에는 상용 소프",
+    "tags": [
+      "AI"
+    ],
+    "title": "오픈랩스, 폐쇄망 AI 개발 솔루션 ‘누비다’ 공공시장 진출…조은아이앤에스에 독점 판매권",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209689"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209688",
+    "published": "2026-11-24T13:45:23+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "LG유플러스가 데이터독(Datadog)과 손잡고 AI 통화 에이전트 서비스 익시오(ixi-O)의 품질과 안정성을 높인다.LG유플러스는 AI를 활용해 익시오에서 발생하는 고객 불편과 장애에 빠르게 대응하고, 서비스 이상 신호를 미리 찾아내는 체계를 강화한다고 24일 밝혔다.데이터독은 기업의 IT 시스템 전반을 통합 모니터링하고 분석하는 옵저버빌리티 및 보안 플랫폼을 제공하는 기업이다. 데이터독의 Bits AI는 서비스 운영 과정에서 발생하는 데이터를 AI로 분석해 이상 징후를 찾아내고, 문제 원인과 영향 범위를 파악하도록 돕는다.LG",
+    "tags": [],
+    "title": "LG유플러스, 데이터독 'Bits AI' 적용해 익시오 장애 대응 시간 85% 단축",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209688"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209687",
+    "published": "2026-11-24T13:29:32+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "지란지교소프트(대표 박승애, 유병완)의 개인정보 보호 솔루션 PC필터가 일본 'ASPIC AI 클라우드 어워드 2026'에서 선진기술상을 받았다.이번 수상은 클라우드 서비스 부문 가운데 기업의 핵심 업무용 SaaS를 심사하는 기간업무계 부문에서 이뤄졌다. 시상식은 지난 18일 일본 도쿄 게이단렌회관에서 열렸다. 일본클라우드산업협회(ASPIC)가 주최하고 일본 총무성 등이 후원하는 이 행사는 올해로 19회째를 맞았다. 일본에서 사회에 유익한 AI와 클라우드 서비스를 선정해 표창하며, 올해는 생성형 AI 서비스를 다루는 AI 클라우드",
+    "tags": [
+      "AI"
+    ],
+    "title": "지란지교소프트 'PC필터', 일본 ASPIC AI 클라우드 어워드 선진기술상 수상",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209687"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209686",
+    "published": "2026-11-24T12:16:13+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "삼성SDS는 11월 24일자로 부사장 4명, 상무 6명 등 총 10명에 대한 2027년 정기 임원 인사를 실시하였다.삼성SDS는 AX전환이 가속화되는 시장 변화에 본격적으로 대응하고 사업 경쟁력 강화 및 지속 성장을 이끌기 위해각 분야에서 탁월한 성과와 핵심 역량을 보유한 인재들을 중용하여 세대교체를 추진하였다.특히, 여성 리더 3명을 비롯해 기업향 AI 트랜스포메이션(AX), 클라우드 및 솔루션 기반 서비스, 디지털 물류 등 다양한 사업 분야에서 고객가치 제고에 기여한 리더들을 두루 발탁해 현장 중심의 리더십을 한층 강화하였다.삼",
+    "tags": [],
+    "title": "[인사] 삼성SDS, 2027년 정기 임원 인사 발표",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209686"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209684",
+    "published": "2026-11-24T12:00:39+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "엔키화이트햇이 인공지능(AI) 기반 오펜시브 보안 플랫폼 ‘오펜(OFFen)’을 앞세워 코스닥 상장을 추진한다. 공격자 관점에서 기업의 취약점과 실제 침투 가능성을 검증하는 기술을 기반으로 내부망 보안, 사이버 방산, 해외 시장으로 사업을 확대한다는 계획이다.엔키화이트햇(대표 이성권)은 24일 서울 여의도에서 기업공개(IPO) 기자간담회를 열고 핵심 경쟁력과 상장 이후 성장전략을 발표했다.공모 주식 수는 170만 주이며 희망 공모가 범위는 주당 1만3000~1만6500원이다. 이에 따른 공모 예정 금액은 221억~280억5000만원",
+    "tags": [
+      "AI"
+    ],
+    "title": "엔키화이트햇, 코스닥 상장 추진…“AI 공격형 보안 플랫폼으로 글로벌 도약”",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209684"
+  },
+  {
+    "author": "우진영 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209683",
+    "published": "2026-11-24T11:42:43+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "한국 축구 국가대표 이강인 선수가 뛰는 스페인 라리가(LALIGA)의 디지털 서비스 플랫폼이 해킹돼 여러 구단 팬의 개인정보가 유출됐다. 피해 구단 중 한 곳인 CD테네리페는 11월 23일 공식 공지를 통해 팬들이 서비스에 가입할 때 제공한 식별 정보와 연락처 정보가 외부로 반출됐다고 밝혔다. 전체 피해 인원과 세부 유출 항목은 조사 중이다. 이번 공지에서 확인된 유출 대상은 디지털 서비스에 가입한 팬의 정보다. 이강인 소속 구단인 아틀레티코 마드리드 팬이 피해 범위에 포함됐는지는 CD테네리페 공지에서 확인되지 않았다. CD테네리페",
+    "tags": [],
+    "title": "이강인 뛰는 스페인 라리가, 디지털 플랫폼 해킹…여러 구단 팬 개인정보 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209683"
+  },
+  {
+    "author": "길민권 기자",
+    "category": "news",
+    "id": "https://www.dailysecu.com/news/articleView.html?idxno=209682",
+    "published": "2026-11-24T11:28:38+00:00",
+    "severity": "info",
+    "source": "데일리시큐",
+    "summary": "국내 전자지급결제대행(PG) 업계에서 개인정보 유출 사고가 잇따르고 있다. 웰컴페이먼츠가 결제서비스 이용자 1,326명의 개인정보 유출 사실을 공식 통지한 가운데 NHN KCP와 KIS정보통신에서도 개인정보 유출 사고가 발생한 것으로 파악돼 전자결제업계 전반의 보안관리 실태에 대한 우려가 커지고 있다.PG사는 온라인 쇼핑몰 등 가맹점과 카드사 사이에서 결제 업무를 처리하는 핵심 금융 인프라다. 다수의 가맹점과 연결돼 있고 고객 개인정보와 결제정보를 취급한다는 점에서 침해사고 발생 시 피해가 여러 기업과 소비자에게 확산될 수 있다.■",
+    "tags": [
+      "금융"
+    ],
+    "title": "국내 PG사 잇단 해킹 사고…웰컴페이먼츠와 NHN KCP·KIS정보통신 등 개인정보 유출",
+    "url": "https://www.dailysecu.com/news/articleView.html?idxno=209682"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
+    "published": "2026-11-24T10:44:49+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "Norway's National Security Authority (NSM) has disclosed that it became aware of a security vulnerability in Microsoft's Azure API Management (APIM) that has affected multiple businesses in the country, including energy companies Equinor and Skagerak Energi. \"An unknown actor has been actively looking for access tokens, secrets, and named values ​​in APIM,\" NSM said. \"It is still uncertain how",
+    "tags": [],
+    "title": "Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets",
+    "url": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
+    "published": "2026-11-24T08:34:20+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "A flaw in WHMCS's shopping cart, the billing and automation platform many web hosting companies use to run their businesses, could allow anyone on the internet to retrieve customer records and administrator password hashes from an installation's database. No login is needed. The company disclosed the SQL injection yesterday along with two other flaws that need a logged-in client, and released",
+    "tags": [],
+    "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
+    "url": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html"
+  },
+  {
+    "author": "info@thehackernews.com (The Hacker News)",
+    "category": "high",
+    "id": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+    "published": "2026-11-24T06:02:57+00:00",
+    "severity": "info",
+    "source": "The Hacker News",
+    "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. \"It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches,\" OpenAI said in a post on X. The AI upstart called the initiative a",
+    "tags": [],
+    "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+    "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident",
+    "published": "2026-11-24T00:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "Spain’s professional soccer league LaLiga said Monday hackers stole personal information belonging to fans in a cyberattack affecting its digital services and those of several Spanish clubs.",
+    "tags": [],
+    "title": "LaLiga hacked: Spain’s top football league confirms theft of fans’ personal data",
+    "url": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://therecord.media/gta-vi-hacker-arion-kurtaj-released-on-license",
+    "published": "2026-11-24T00:00:00+00:00",
+    "severity": "info",
+    "source": "The Record",
+    "summary": "A British cybercriminal who hacked Rockstar Games and leaked footage of Grand Theft Auto VI was sentenced Monday to seven years in prison, and then released on license because of time served.",
+    "tags": [],
+    "title": "‘Grand Theft Auto VI’ hacker sentenced to seven years, released the same day",
+    "url": "https://therecord.media/gta-vi-hacker-arion-kurtaj-released-on-license"
+  },
+  {
+    "author": "Pierluigi Paganini",
+    "category": "high",
+    "id": "https://securityaffairs.com/?p=203865",
+    "published": "2026-11-24T07:05:05+00:00",
+    "severity": "info",
+    "source": "Security Affairs",
+    "summary": "FBI investigates an apparent breach of its NCIC criminal database, raising concerns over sensitive law enforcement data and security. The FBI is investigating a possible breach of a database that police use to check arrest warrants and access criminal records. According to the BBC, US media reported the incident, citing two people familiar with the […]",
+    "tags": [],
+    "title": "Hackers May Have Breached FBI Database Used by Police Nationwide",
+    "url": "https://securityaffairs.com/203865/cyber-crime/hackers-may-have-breached-fbi-database-used-by-police-nationwide.html"
+  },
+  {
+    "author": "ATCP",
+    "category": "research",
+    "id": "https://asec.ahnlab.com/96734/",
+    "published": "2026-11-12T15:00:00+00:00",
+    "severity": "info",
+    "source": "AhnLab ASEC",
+    "summary": "Purpose and Scope This report summarizes the quantity of new ransomware samples collected, the number of affected systems, and statistics on targeted businesses during the month of October 2026, as well as major Korean & Global ransomware issues. The statistics were compiled based on AhnLab detection names and publicly available information from DLS (Dedicated Leaks […]",
+    "tags": [
+      "랜섬웨어"
+    ],
+    "title": "October 2026 Threat Trend Report on Ransomware",
+    "url": "https://asec.ahnlab.com/en/96734/"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33550",
+    "published": "2026-11-24T02:32:00+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "This subnet is assigned to a web hosting and virtual private server (VPS) provider BANATSYNC SRL with AS198364, located in Timisoara, Romania. This graph shows the DShield sensor activity over the past 90 days for this subnet and it is still ongoing as of this writing.",
+    "tags": [],
+    "title": "Scanning from Subnet 109.160.32.0/24, (Mon, Nov 23rd)",
+    "url": "https://isc.sans.edu/diary/rss/33550"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "https://isc.sans.edu/diary/rss/33552",
+    "published": "2026-11-24T02:00:04+00:00",
+    "severity": "info",
+    "source": "SANS ISC",
+    "summary": "(c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+    "tags": [],
+    "title": "ISC Stormcast For Tuesday, November 24th, 2026 https://isc.sans.edu/podcastdetail/10192, (Tue, Nov 24th)",
+    "url": "https://isc.sans.edu/diary/rss/33552"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiaEFVX3lxTE9OS29DbGowU3lpZ2NOYVdnQ1FFQWhKZ2F5bWdybXd6dkc1Vkl3RTVuSG9JQzBvZFpFQmhLT1BtSUxKN0FBZlVqTEpYQWhJV1IzX2tqeDRWS1RRLV9pTHAzOU0wNlpJa2Fh",
+    "published": "2026-11-24T04:57:26+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "금융권 보안 여전히 '빨간불'...예별손보도 주민등록번호 포함 개인정보 유출",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융권 보안 여전히 '빨간불'...예별손보도 주민등록번호 포함 개인정보 유출",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OS29DbGowU3lpZ2NOYVdnQ1FFQWhKZ2F5bWdybXd6dkc1Vkl3RTVuSG9JQzBvZFpFQmhLT1BtSUxKN0FBZlVqTEpYQWhJV1IzX2tqeDRWS1RRLV9pTHAzOU0wNlpJa2Fh?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTFBRZWlZVmk2T2hyUW45OVlka3FJRlY1QjEteXhzLXFha2JyeE93VTduOEE1cThhQ3E0VW9sTFRXRmtNS2xsZ0JEc3NmYlZubGlkd0NDcFVOaGtzMUNady10R1I1aUNiTkRJWElRd21oX2F4UQ",
+    "published": "2026-11-23T14:23:27+00:00",
+    "severity": "info",
+    "source": "금융보안원",
+    "summary": "[보험] 한화손보, 금융 AI 공모전 대상…롯데손보, 3분기 순손실 937억원",
+    "tags": [
+      "금융"
+    ],
+    "title": "[보험] 한화손보, 금융 AI 공모전 대상…롯데손보, 3분기 순손실 937억원",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBRZWlZVmk2T2hyUW45OVlka3FJRlY1QjEteXhzLXFha2JyeE93VTduOEE1cThhQ3E0VW9sTFRXRmtNS2xsZ0JEc3NmYlZubGlkd0NDcFVOaGtzMUNady10R1I1aUNiTkRJWElRd21oX2F4UQ?oc=5"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249967",
+    "published": "2026-11-24T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융감독원, 건전한 시장질서 확립 및 투자자 보호를 위한 증권사 랩어카운트 담당 임원 간담회 개최",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249967&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249968",
+    "published": "2026-11-24T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "「디지털자산업의 혁신과 이용자 보호에 관한 법률」 제정안 입법 추진",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249968&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249965",
+    "published": "2026-11-24T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [],
+    "title": "불법공매도 합동점검TF 운영 개시",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249965&menuNo=200218"
+  },
+  {
+    "category": "news",
+    "id": "fss:200218:249964",
+    "published": "2026-11-24T00:00:00+00:00",
+    "severity": "info",
+    "source": "금융감독원",
+    "summary": "",
+    "tags": [
+      "금융"
+    ],
+    "title": "보험업법 시행령, 금융기관검사및제재에관한규정 개정안 입법예고(’26.11.25.~’27.1.4.) 실시",
+    "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=249964&menuNo=200218"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTFA1cFA2SlBXeHRhVEpNNk1kS0prV1p5bnJwYXdBZHFha3BNczlFa25FTUlvbmotbS1GV3VPVXNUTHB6Z1lXNUhDZmVYT3poUmZEZnVHWlFUREFPVFU",
+    "published": "2026-11-24T06:21:00+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "NIPA·금융결제원, 국산 AI반도체 금융권 실증 확대 KBS 뉴스 NIPA, 금융결제원과 맞손…“금융결제 현장서 AI 반도체 실증” 전자신문 NIPA, 금융결제원과 국산 AI 반도체 금융권 실증 확대한다 지디넷코리아 국산 AI 반도체, 금융결제 현장서 검증…NIPA·금융결제원 맞손 파이낸셜뉴스 국산 NPU 금융권서 성능 검증…NIPA, 금융결제원과 실증 확대 매일경제 NIPA, 금융결제 현장서 국산 AI 반도체 실증 나선다 뉴스1 NIPA-금융결제원, 금융권 내 국산 AI 반도체 기반 서비스 실증 협업 데일리한국 금융결제원, 국산 AI 반도체 금융결제 적용 실증 확대 전자신문",
+    "tags": [
+      "금융"
+    ],
+    "title": "NIPA·금융결제원, 국산 AI반도체 금융권 실증 확대",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA1cFA2SlBXeHRhVEpNNk1kS0prV1p5bnJwYXdBZHFha3BNczlFa25FTUlvbmotbS1GV3VPVXNUTHB6Z1lXNUhDZmVYT3poUmZEZnVHWlFUREFPVFU?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE9jQWNxSXREREhsQUV2S2E5SVpCR01KdkhpOXNSc2EyZzZnLWtNbWdBQVpkWFJzaUVmU1BRYmtSYThrZ09rM1Q1d3Z6eV9qamZaQm1oUWRWNXExZVlDT3NGem93UURhQ2xGMFhN",
+    "published": "2026-11-24T04:59:31+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원, 결제망 이상거래 탐지 '국산 AI 반도체로 실증'",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원, 결제망 이상거래 탐지 '국산 AI 반도체로 실증'",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9jQWNxSXREREhsQUV2S2E5SVpCR01KdkhpOXNSc2EyZzZnLWtNbWdBQVpkWFJzaUVmU1BRYmtSYThrZ09rM1Q1d3Z6eV9qamZaQm1oUWRWNXExZVlDT3NGem93UURhQ2xGMFhN?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMicEFVX3lxTE5oQTU4eG1RTzBRT3h0NVdPMy1LVG1zTUNNMlVJM0lxSUYyMGZheXZnSFhnWUxHRnhId3RqZWVmVjY1SmdoazdhaUJ1anpNbzBOQ25oT2ZTdjBLX3k4a1N1cEpGSnMta0pTdXdlcXZhUjY",
+    "published": "2026-11-24T02:00:17+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "금융결제원, 국산 AI 반도체 금융권 확산 추진...금융 거래 이상 탐지",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융결제원, 국산 AI 반도체 금융권 확산 추진...금융 거래 이상 탐지",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5oQTU4eG1RTzBRT3h0NVdPMy1LVG1zTUNNMlVJM0lxSUYyMGZheXZnSFhnWUxHRnhId3RqZWVmVjY1SmdoazdhaUJ1anpNbzBOQ25oT2ZTdjBLX3k4a1N1cEpGSnMta0pTdXdlcXZhUjY?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE9JWnhkbWF3VC15RlMxbUw3NlROZkFnSW9mOGFGbU01REZYU0J3S1lBLXpCNnlqSjk5cklpdm94U2pOMXd5dV81RnZTR2h3VzB6eGwtM2pyZEZ6dVdaZXhobVBjVzBrMFczY3JXMTlJal9VUmM",
+    "published": "2026-11-24T01:14:22+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "NIPA, 국산 AI 반도체 금융권 확산 추진…금융결제원과 협약",
+    "tags": [
+      "금융"
+    ],
+    "title": "NIPA, 국산 AI 반도체 금융권 확산 추진…금융결제원과 협약",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9JWnhkbWF3VC15RlMxbUw3NlROZkFnSW9mOGFGbU01REZYU0J3S1lBLXpCNnlqSjk5cklpdm94U2pOMXd5dV81RnZTR2h3VzB6eGwtM2pyZEZ6dVdaZXhobVBjVzBrMFczY3JXMTlJal9VUmM?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE02QVkxR3VWSE91a3hXTUNGcjFIQnA2QXJxR2M4WW9Tb0hHaXJKTmQ0WGdlU00zdnF5RV9nVklMN01mb2t5X2l2WEdIMA",
+    "published": "2026-11-24T03:00:47+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "NIPA·금융결제원 협약…국산 AI반도체 금융 실증 확대 : 기업·산업",
+    "tags": [
+      "금융"
+    ],
+    "title": "NIPA·금융결제원 협약…국산 AI반도체 금융 실증 확대 : 기업·산업",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE02QVkxR3VWSE91a3hXTUNGcjFIQnA2QXJxR2M4WW9Tb0hHaXJKTmQ0WGdlU00zdnF5RV9nVklMN01mb2t5X2l2WEdIMA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFB4MThKZmNKOENnUVFwY0QtdWxDUnhrR1FoaHg2MjFqMHpPMlFtUmlseV9BNDd2dDJ3Sm1IcEV6ZWhCdVN6OE5oNldwZEt0U01Vel9CYlFXWGNMaGVEb0xDLdIBeEFVX3lxTFBJSGpfdUQ3VWxEQW1ERVhCWW9BWVBMZ2prMHJLZk9kLVJOTmRSV21KcUF4SEo3MTJ6WUQtcEd6ZVVET3dhenZsT1owdFBQMkpsN2hnd0RaclZEY2IybWpRRzNRX2VOR3R4SjVNTUY5eTBHUkNEa2laVw",
+    "published": "2026-11-24T02:19:29+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "NIPA, 국산 AI 반도체 금융 서비스로 적용 확대…실제 업무서 성능 검증",
+    "tags": [
+      "금융"
+    ],
+    "title": "NIPA, 국산 AI 반도체 금융 서비스로 적용 확대…실제 업무서 성능 검증",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB4MThKZmNKOENnUVFwY0QtdWxDUnhrR1FoaHg2MjFqMHpPMlFtUmlseV9BNDd2dDJ3Sm1IcEV6ZWhCdVN6OE5oNldwZEt0U01Vel9CYlFXWGNMaGVEb0xDLdIBeEFVX3lxTFBJSGpfdUQ3VWxEQW1ERVhCWW9BWVBMZ2prMHJLZk9kLVJOTmRSV21KcUF4SEo3MTJ6WUQtcEd6ZVVET3dhenZsT1owdFBQMkpsN2hnd0RaclZEY2IybWpRRzNRX2VOR3R4SjVNTUY5eTBHUkNEa2laVw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxNcHdUVDc4YlVudmw3VTBnV0JhdmxRYndiV2JRQXhIbGxJb2UxcW13cnI1YTBlbTJ6LXJOMC1yZ2FGbFBZTnh1SnlYUVp0eTV3NktFejY3S2o1cWRJQlE1VUt2SXRmZkt3ZVFQMFpmNjBNVVc5dkFUQmpFdkQ1eGhtOA",
+    "published": "2026-11-24T06:21:56+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "국산 AI 반도체, 은행권 이상거래 탐지로 성능 검증",
+    "tags": [
+      "금융"
+    ],
+    "title": "국산 AI 반도체, 은행권 이상거래 탐지로 성능 검증",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcHdUVDc4YlVudmw3VTBnV0JhdmxRYndiV2JRQXhIbGxJb2UxcW13cnI1YTBlbTJ6LXJOMC1yZ2FGbFBZTnh1SnlYUVp0eTV3NktFejY3S2o1cWRJQlE1VUt2SXRmZkt3ZVFQMFpmNjBNVVc5dkFUQmpFdkQ1eGhtOA?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYkFVX3lxTFBMZ29zWmRVUDFhRkdwZWJuT19ZY000bHFabkVrdlcwZnFVOHZ4b2h4MkJfTWl0cGcwa1I3bXZ0SEVxTlR6MWRxbjB6RHlxUFNGbko3aDFvZmFmdE5OdjllQ2FB",
+    "published": "2026-11-24T05:08:01+00:00",
+    "severity": "info",
+    "source": "금융결제원",
+    "summary": "국산 AI 반도체, 금융거래 감시에도 쓰인다…현장 실증 추진",
+    "tags": [
+      "금융"
+    ],
+    "title": "국산 AI 반도체, 금융거래 감시에도 쓰인다…현장 실증 추진",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBMZ29zWmRVUDFhRkdwZWJuT19ZY000bHFabkVrdlcwZnFVOHZ4b2h4MkJfTWl0cGcwa1I3bXZ0SEVxTlR6MWRxbjB6RHlxUFNGbko3aDFvZmFmdE5OdjllQ2FB?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiYEFVX3lxTFBKSXJ5YTF1QWlXc1htUm04Z2tmNzFadGhvQlh3RzkxSnljbFQxeHBVcDdoYmpkTTBXUkRCaUg5cEw3SjdXVTgyV3VON2lFdGY4QmNwajVLekFQNGZjakltY9IBeEFVX3lxTE90eWl2WFpFUm9WMldkUEhRc3RnenduNk9KaUdUcEtyRFdOdFhuZU9yOGx3ZXp6RjQzMUhDejhKcXJMVmZyMXZXdEwxNHdxVUFzRENnQ2llX1gya2hsanJ5eXF1eEJ5bWFZa3VaT1BuTlp0Y09sODhlQQ",
+    "published": "2026-11-24T08:28:27+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"개인정보 유출됐으니 확인하세요\"…개인정보위 사칭 악성메일 주의보",
+    "tags": [],
+    "title": "\"개인정보 유출됐으니 확인하세요\"…개인정보위 사칭 악성메일 주의보",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBKSXJ5YTF1QWlXc1htUm04Z2tmNzFadGhvQlh3RzkxSnljbFQxeHBVcDdoYmpkTTBXUkRCaUg5cEw3SjdXVTgyV3VON2lFdGY4QmNwajVLekFQNGZjakltY9IBeEFVX3lxTE90eWl2WFpFUm9WMldkUEhRc3RnenduNk9KaUdUcEtyRFdOdFhuZU9yOGx3ZXp6RjQzMUhDejhKcXJMVmZyMXZXdEwxNHdxVUFzRENnQ2llX1gya2hsanJ5eXF1eEJ5bWFZa3VaT1BuTlp0Y09sODhlQQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE5kUnV5dHlEcld3a3kwbU92T195Rkg3YzV4OVFfVVh6cUJZVE5tb0g2b3dqVWxjbWhTMXZVT2tCcHlpc2I2emJHT084cVdtd2RNTThBcjl1Tm1xQy1LMUh6MzA2ZXE",
+    "published": "2026-11-24T09:03:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"개인정보 유출 통지\" 사칭 메일 주의보…피해예방 기본은 `의심`",
+    "tags": [],
+    "title": "\"개인정보 유출 통지\" 사칭 메일 주의보…피해예방 기본은 `의심`",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5kUnV5dHlEcld3a3kwbU92T195Rkg3YzV4OVFfVVh6cUJZVE5tb0g2b3dqVWxjbWhTMXZVT2tCcHlpc2I2emJHT084cVdtd2RNTThBcjl1Tm1xQy1LMUh6MzA2ZXE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFBsRnkwYTFlWEUxVndabFRNWC1lS0JURHBGZ0hwR0tITEt2dE5lc2trMHMzTG9rRFE5VXRxVWlBNGtLRlgzVWtGWU80ejVWUHFZaWtyZC10MVRHb1cyMUVOS0dOaXVLMjQ",
+    "published": "2026-11-24T08:36:57+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"개인정보 유출됐습니다\"…개인정보위 사칭 악성메일 주의",
+    "tags": [],
+    "title": "\"개인정보 유출됐습니다\"…개인정보위 사칭 악성메일 주의",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBsRnkwYTFlWEUxVndabFRNWC1lS0JURHBGZ0hwR0tITEt2dE5lc2trMHMzTG9rRFE5VXRxVWlBNGtLRlgzVWtGWU80ejVWUHFZaWtyZC10MVRHb1cyMUVOS0dOaXVLMjQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMigAFBVV95cUxPRjhmMlZWY0NlWTJMUXB2NnR4QjB1R1NIRk9tcTNwWHZFN19EcTJiS0NtZGt3ME1jQ0R0VTBXREloN1l6cEhYZUdGeFVfN1o1OFFLa1NUeU9qU3hPYVppMVYzM0Fsb0Q5aktWajZPZC1jUHFDNkJJeGpqNjdzZkxWOQ",
+    "published": "2026-11-24T08:24:06+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "\"정보 유출 통지\" 개인정보위 통지 메일, 알고보니 '피싱'",
+    "tags": [
+      "피싱"
+    ],
+    "title": "\"정보 유출 통지\" 개인정보위 통지 메일, 알고보니 '피싱'",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRjhmMlZWY0NlWTJMUXB2NnR4QjB1R1NIRk9tcTNwWHZFN19EcTJiS0NtZGt3ME1jQ0R0VTBXREloN1l6cEhYZUdGeFVfN1o1OFFLa1NUeU9qU3hPYVppMVYzM0Fsb0Q5aktWajZPZC1jUHFDNkJJeGpqNjdzZkxWOQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE1KSXRzYnJBc3FheWxyRmYtUHBjTzZGaVJpalNSNks4OWp3a3hyZHlmdlZvQ0FwcXFZZmZrcDZHLU91R2RGLTZRMjZnTTRfV0pzSFJDcVRmdm82aEp0MGVWbFpCNGUzNkR1U0NZQ1Fwclhadw",
+    "published": "2026-11-24T10:08:01+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보 유출 사칭 악성메일 주의보…개인정보위 \"첨부파일 실행 금지\"",
+    "tags": [],
+    "title": "개인정보 유출 사칭 악성메일 주의보…개인정보위 \"첨부파일 실행 금지\"",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1KSXRzYnJBc3FheWxyRmYtUHBjTzZGaVJpalNSNks4OWp3a3hyZHlmdlZvQ0FwcXFZZmZrcDZHLU91R2RGLTZRMjZnTTRfV0pzSFJDcVRmdm82aEp0MGVWbFpCNGUzNkR1U0NZQ1Fwclhadw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiWEFVX3lxTFB4S0laSVJpQnhIYW1xMmZGM1E1WTV1ODdudnJydkdmLUtiam1paVA4NkZlNTQ1T2VQcTJ4emVxVml1Q25KMHlJWFBmNWhvRG5VaTQxT1JPNDLSAVRBVV95cUxOdmxXM0FYZUJPczh4anQ1NUJUTXRQdklSQXBZQjFJMTZEaW9Ob0o3UFFCQ0NtZzY2WF9lWTRNMzFJYXZ1Z2NGSGs5by1JQ2RkYV9fUnc",
+    "published": "2026-11-23T21:00:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "AI 개발에 개인정보 활용 길 열려… 개인정보위, 개정 시행령 입법 예고",
+    "tags": [],
+    "title": "AI 개발에 개인정보 활용 길 열려… 개인정보위, 개정 시행령 입법 예고",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB4S0laSVJpQnhIYW1xMmZGM1E1WTV1ODdudnJydkdmLUtiam1paVA4NkZlNTQ1T2VQcTJ4emVxVml1Q25KMHlJWFBmNWhvRG5VaTQxT1JPNDLSAVRBVV95cUxOdmxXM0FYZUJPczh4anQ1NUJUTXRQdklSQXBZQjFJMTZEaW9Ob0o3UFFCQ0NtZzY2WF9lWTRNMzFJYXZ1Z2NGSGs5by1JQ2RkYV9fUnc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZkFVX3lxTE5DSzZZVDNXWXd4ekNaOXB6RXZJMkxiNnJQdVNUUndrWnNBUG5kZUE4Y184RFVPeE1qcG5hUklKSkJSNUVya3h5M3cxa0dHcW9ZUEZKa0pqSnJEMmRQZHB2UE9aWUxfUQ",
+    "published": "2026-11-24T09:10:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“개인정보 유출됐습니다” 가짜 통지 메일 주의…악성코드 감염 유도",
+    "tags": [],
+    "title": "“개인정보 유출됐습니다” 가짜 통지 메일 주의…악성코드 감염 유도",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5DSzZZVDNXWXd4ekNaOXB6RXZJMkxiNnJQdVNUUndrWnNBUG5kZUE4Y184RFVPeE1qcG5hUklKSkJSNUVya3h5M3cxa0dHcW9ZUEZKa0pqSnJEMmRQZHB2UE9aWUxfUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiW0FVX3lxTE5oRzNKYmNfdXZFWmtudF9EbmZndWFfaXgtYmpGbTk1R3dDQzR6dXAtaUZWQzBfaTgxV3hOaTdCcnhieW01U1FUdU9CaG5SYnhnUlBnaGV0R185WE3SAWBBVV95cUxNV1gxOWlGelVkNnR0WEFuWjZieDFfcGgxS0FfM0U0TVRTT2xwaXl1Z25FZ2JOaUdFOUNqR0RlcUJqSVV5dEhVNTVZRGRraWVnZHZfZ0pTR3ViZzExcy1SV00",
+    "published": "2026-11-24T08:21:09+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 직원 사칭 악성메일 유포…\"첨부파일 열지 마세요\"",
+    "tags": [],
+    "title": "개인정보위 직원 사칭 악성메일 유포…\"첨부파일 열지 마세요\"",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5oRzNKYmNfdXZFWmtudF9EbmZndWFfaXgtYmpGbTk1R3dDQzR6dXAtaUZWQzBfaTgxV3hOaTdCcnhieW01U1FUdU9CaG5SYnhnUlBnaGV0R185WE3SAWBBVV95cUxNV1gxOWlGelVkNnR0WEFuWjZieDFfcGgxS0FfM0U0TVRTT2xwaXl1Z25FZ2JOaUdFOUNqR0RlcUJqSVV5dEhVNTVZRGRraWVnZHZfZ0pTR3ViZzExcy1SV00?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMic0FVX3lxTE9ZRllsOWhseEpRbi1JcXo1Z2xxVVlnTG9YSW5XN0RZS3lCdUVqTXVpczZaSFF5b3IzaG9ZR01Rc2pGejdfYkRaRWFvcUFRSXZVYldIZnpiYURmNC1Xc01HOHp4YkVqQy0xQi05azVBeE9XcW8",
+    "published": "2026-11-24T08:59:18+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 직원 사칭 개인정보 유출 통지 악성메일 주의보",
+    "tags": [],
+    "title": "개인정보위 직원 사칭 개인정보 유출 통지 악성메일 주의보",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ZRllsOWhseEpRbi1JcXo1Z2xxVVlnTG9YSW5XN0RZS3lCdUVqTXVpczZaSFF5b3IzaG9ZR01Rc2pGejdfYkRaRWFvcUFRSXZVYldIZnpiYURmNC1Xc01HOHp4YkVqQy0xQi05azVBeE9XcW8?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTE8taDV4dEYtRmVvSDNIZ01qc3ZpZzZLWnVxaVI0aTlPcHFZV3M1dE41T0psNVNUeXpsNXRvOUYwS3BUUUwtU2pzTG0zRV9aOTZDZUhDZ0ZIVzlvQ3BmY1pRUXZLa1d6YUFabjN0Qk9B",
+    "published": "2026-11-24T09:38:34+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "‘개인정보 유출 통지’ 사칭 악성메일 주의",
+    "tags": [],
+    "title": "‘개인정보 유출 통지’ 사칭 악성메일 주의",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8taDV4dEYtRmVvSDNIZ01qc3ZpZzZLWnVxaVI0aTlPcHFZV3M1dE41T0psNVNUeXpsNXRvOUYwS3BUUUwtU2pzTG0zRV9aOTZDZUhDZ0ZIVzlvQ3BmY1pRUXZLa1d6YUFabjN0Qk9B?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTFBWdVNudk5fTkItWjhsRW5ya09zTmIyN0hfcG1WejJ2YUNrOHhIeHdieFRfR0VIUVgzMWFaSXVESVNPVk9sdEV4dWVtclN5LWw2a2Q0cGNQZDNlZ3dlMHI0RVAzYmhMMzTSAWtBVV95cUxPZGdFS0VHbGQzZUZZMTJGQUlCNUMxUFNNamJ2VWJzODU1emEyWUxKZUdlQmd1c1hnbk5rdzdhV1J6amRfTmtBdEZLLUpQU05WQ2dPWlcwbE5vWVU2YTZ1N0VOMFM4UVRnSTVJdw",
+    "published": "2026-11-24T01:24:32+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "김동철 한국전력 사장, 해킹 유출에 개인정보위 조사 착수…해커 협박 메일도",
+    "tags": [],
+    "title": "김동철 한국전력 사장, 해킹 유출에 개인정보위 조사 착수…해커 협박 메일도",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBWdVNudk5fTkItWjhsRW5ya09zTmIyN0hfcG1WejJ2YUNrOHhIeHdieFRfR0VIUVgzMWFaSXVESVNPVk9sdEV4dWVtclN5LWw2a2Q0cGNQZDNlZ3dlMHI0RVAzYmhMMzTSAWtBVV95cUxPZGdFS0VHbGQzZUZZMTJGQUlCNUMxUFNNamJ2VWJzODU1emEyWUxKZUdlQmd1c1hnbk5rdzdhV1J6amRfTmtBdEZLLUpQU05WQ2dPWlcwbE5vWVU2YTZ1N0VOMFM4UVRnSTVJdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZ0FVX3lxTE1ZejZ0TExMbFNLMl9JLXZacXdnZVdzNlB6QXl0ZkhMdEd0c2NORWpKdU9pR191TVptWTZIWHA3ZVZwLWlqY2k3M1BtTEhYaEJ5eDFmdUZacFhmNEhfOXp0V1pBU21IZ0U",
+    "published": "2026-11-24T07:01:21+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "한전, 개인정보 152만명 신고…전자조달 이용자 87만명 통지 적절성 도마",
+    "tags": [],
+    "title": "한전, 개인정보 152만명 신고…전자조달 이용자 87만명 통지 적절성 도마",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ZejZ0TExMbFNLMl9JLXZacXdnZVdzNlB6QXl0ZkhMdEd0c2NORWpKdU9pR191TVptWTZIWHA3ZVZwLWlqY2k3M1BtTEhYaEJ5eDFmdUZacFhmNEhfOXp0V1pBU21IZ0U?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE0wbjM4c2ZEX3BDOVRWQ2owQlp6eEc4a2duY1R2VjAtQ282V0p1OU51aEt5akl3YkdSeVBJWkVXcG1hdDM1YTZTXzgwcE9taDZYcGk3MmE5cjVFRkFlUDF3bE56U2NkZ0pPaWxR0gFvQVVfeXFMT3BLZWVHb1J5QnRvWVNmNEV4TGhXV1g1QVNGUG9MQWlkbkdmTnVRZjlmZmhiSFZtTk0tcGdSMlppS1pZR1NDTC0wM2xoamtHbkpHeXh1WUYyYlVsWXlaZVhfa2RHOWxheGNiZ0Z0VE5z",
+    "published": "2026-11-24T08:04:00+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "MG손보 가교보험사 예별손보서 개인정보 유출...KISA·개인정보위 신고",
+    "tags": [
+      "금융"
+    ],
+    "title": "MG손보 가교보험사 예별손보서 개인정보 유출...KISA·개인정보위 신고",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0wbjM4c2ZEX3BDOVRWQ2owQlp6eEc4a2duY1R2VjAtQ282V0p1OU51aEt5akl3YkdSeVBJWkVXcG1hdDM1YTZTXzgwcE9taDZYcGk3MmE5cjVFRkFlUDF3bE56U2NkZ0pPaWxR0gFvQVVfeXFMT3BLZWVHb1J5QnRvWVNmNEV4TGhXV1g1QVNGUG9MQWlkbkdmTnVRZjlmZmhiSFZtTk0tcGdSMlppS1pZR1NDTC0wM2xoamtHbkpHeXh1WUYyYlVsWXlaZVhfa2RHOWxheGNiZ0Z0VE5z?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiS0FVX3lxTE1Dd1Y5dmttTTBfQ2FHcXFnd0dxQlMzRFc5QzNQRVNXUndFZGRoVGo1cklQNEU3bUh0OXZKbzBCNzBoYTA1T2Y0cXhjdw",
+    "published": "2026-11-24T08:31:05+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "“개인정보 유출됐다” 속인 악성메일…개인정보위 사칭 주의 : 테크/과학",
+    "tags": [],
+    "title": "“개인정보 유출됐다” 속인 악성메일…개인정보위 사칭 주의 : 테크/과학",
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1Dd1Y5dmttTTBfQ2FHcXFnd0dxQlMzRFc5QzNQRVNXUndFZGRoVGo1cklQNEU3bUh0OXZKbzBCNzBoYTA1T2Y0cXhjdw?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMia0FVX3lxTE5ZWDAyN01ld2ZXdVlPakRsMjhhOC1IYlhPUEpFTEdyTUJqWndiQkRLNS0ySVpkeW1KSUxjLXR3OTV3YThUWllINHR0S1pCZ0YweXAxY2NIcGdRdlVRWHprUHpSZWRYTFFmOE1B0gFuQVVfeXFMTjBIclo5QVE4enBIQ1FpSkZlRk9BQW8tdkd6MVBZY3dSWUl4alY0RURTeGZHaWxFNjdTdWxHeXFZdDVoLS1ocG5PZk1ON2NIQ0M4QzN5bGg5RXBIenhCUzdJYUwxZ0RoZE9veExUVmc",
+    "published": "2026-11-23T08:07:15+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위, 한전 개인정보 유출 현장점검 실시",
+    "tags": [],
+    "title": "개인정보위, 한전 개인정보 유출 현장점검 실시",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ZWDAyN01ld2ZXdVlPakRsMjhhOC1IYlhPUEpFTEdyTUJqWndiQkRLNS0ySVpkeW1KSUxjLXR3OTV3YThUWllINHR0S1pCZ0YweXAxY2NIcGdRdlVRWHprUHpSZWRYTFFmOE1B0gFuQVVfeXFMTjBIclo5QVE4enBIQ1FpSkZlRk9BQW8tdkd6MVBZY3dSWUl4alY0RURTeGZHaWxFNjdTdWxHeXFZdDVoLS1ocG5PZk1ON2NIQ0M4QzN5bGg5RXBIenhCUzdJYUwxZ0RoZE9veExUVmc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiX0FVX3lxTE1HWWV2d2o4eVBmNGJpNGRUdXkzRVlqNXhyMkl0V0FLRXZ3VXV5LVdmdTB4VGxPM05oSjZMTERpTi1YVi1CSkp1WFdSODZWVXRpSUZoZldpZzNOVFN3NHpF",
+    "published": "2026-11-24T08:57:02+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "잇단 개인정보 유출에 불안감 노렸다...개인정보위 사칭 메일까지 등장",
+    "tags": [],
+    "title": "잇단 개인정보 유출에 불안감 노렸다...개인정보위 사칭 메일까지 등장",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1HWWV2d2o4eVBmNGJpNGRUdXkzRVlqNXhyMkl0V0FLRXZ3VXV5LVdmdTB4VGxPM05oSjZMTERpTi1YVi1CSkp1WFdSODZWVXRpSUZoZldpZzNOVFN3NHpF?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMibkFVX3lxTFBHd0ZfOC1odGZMNXVEdjBNM0diVkZRcDR4WWdqUXlnVTkyVHI2enRnanV5ejlZWmYzbUkxVXQ0Tll5WDdjbVBCMktULTg5a1BNT1FhdUVHakFjQWttbFJycXhsM0Z6ejlqRE1ZZ29R",
+    "published": "2026-11-24T08:51:22+00:00",
+    "severity": "info",
+    "source": "개인정보보호위원회",
+    "summary": "개인정보위 사칭 ‘유출 통지’ 메일 주의…악성 첨부파일 실행 유도",
+    "tags": [],
+    "title": "개인정보위 사칭 ‘유출 통지’ 메일 주의…악성 첨부파일 실행 유도",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBHd0ZfOC1odGZMNXVEdjBNM0diVkZRcDR4WWdqUXlnVTkyVHI2enRnanV5ejlZWmYzbUkxVXQ0Tll5WDdjbVBCMktULTg5a1BNT1FhdUVHakFjQWttbFJycXhsM0Z6ejlqRE1ZZ29R?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiXkFVX3lxTE90TWstenJOZWpMN1I5Uk9mYUlFNml4bExhRUc4QU05alpkRWM1QU9oRktTcUI3R214THBIMWs0UlBJOEkwZ3JMbU9hSmFjVTBtNmZLNG85LUV6eWRFWGc",
+    "published": "2026-11-24T05:02:00+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "결제대행·VAN업계 개인정보 연쇄 유출…빌링키·사번까지 새나가",
+    "tags": [
+      "금융"
+    ],
+    "title": "결제대행·VAN업계 개인정보 연쇄 유출…빌링키·사번까지 새나가",
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE90TWstenJOZWpMN1I5Uk9mYUlFNml4bExhRUc4QU05alpkRWM1QU9oRktTcUI3R214THBIMWs0UlBJOEkwZ3JMbU9hSmFjVTBtNmZLNG85LUV6eWRFWGc?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMiZEFVX3lxTE8tZG4wM3g4MTF0dEpQTFQxbFVyY2hrMTAxWS1Bb0xVeGkyejJ0aVRaRHVsNHp4V2kwWE81WGd3MTl3N1UzeXhLQ2FqdFJKcS1oOGRJdFlfczNaakFyOW00VWZmZXE",
+    "published": "2026-11-24T05:21:35+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "웰컴페이먼츠서 고객 1326명 개인정보 유출 … 11일 지나서야 인지",
+    "tags": [
+      "금융"
+    ],
+    "title": "웰컴페이먼츠서 고객 1326명 개인정보 유출 … 11일 지나서야 인지",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8tZG4wM3g4MTF0dEpQTFQxbFVyY2hrMTAxWS1Bb0xVeGkyejJ0aVRaRHVsNHp4V2kwWE81WGd3MTl3N1UzeXhLQ2FqdFJKcS1oOGRJdFlfczNaakFyOW00VWZmZXE?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMickFVX3lxTE1vWFNDTEdXYnl5amhuVi1IQVVWWWVZVUpVRGVBbXZyTzZPcUNNUGhUNmpGT21TcDRDWnhia2REMldSN2NkMWVVUjVxTDkyNG5DSTBwVGNGRGE0MGgxMGVBZHpBclFkaGt4Y2tka2VIZ3VQUQ",
+    "published": "2026-11-24T01:01:08+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "금융당국, 해킹 의심 가상자산 12시간 입출금 차단 허용",
+    "tags": [
+      "금융"
+    ],
+    "title": "금융당국, 해킹 의심 가상자산 12시간 입출금 차단 허용",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1vWFNDTEdXYnl5amhuVi1IQVVWWWVZVUpVRGVBbXZyTzZPcUNNUGhUNmpGT21TcDRDWnhia2REMldSN2NkMWVVUjVxTDkyNG5DSTBwVGNGRGE0MGgxMGVBZHpBclFkaGt4Y2tka2VIZ3VQUQ?oc=5"
+  },
+  {
+    "author": "",
+    "category": "news",
+    "id": "CBMib0FVX3lxTFBfSkR0NXpScTN1Z0hyN2NjUkVEM1djTmdyODliVnFDdmlVRF92RUJzbkJJVnNQZjdtOFJRZnZCX0hGT3pGN2RtdVcwQWtIWWNFa3ZoNmtObkluTXhVR0lyakg2NmZUZGdmUXhvNWJLUdIBc0FVX3lxTE5ZeEJwajZNTWFDQzNOTlNBQ0dGQndraG5oSFVmRU84ODhsWkhENHNwanp2MGZHY2poMFNyVlNjTHVGMHhLdlpiSHhmclJXZGZDeVZoNDFOVFJSNmdKbnMwWTJmU2hVVThScUNDNmZCS3V1bkk",
+    "published": "2026-11-24T03:13:22+00:00",
+    "severity": "info",
+    "source": "금융위원회",
+    "summary": "롯데카드 정보 유출 위험 공시 미흡…10억원대 과징금",
+    "tags": [],
+    "title": "롯데카드 정보 유출 위험 공시 미흡…10억원대 과징금",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBfSkR0NXpScTN1Z0hyN2NjUkVEM1djTmdyODliVnFDdmlVRF92RUJzbkJJVnNQZjdtOFJRZnZCX0hGT3pGN2RtdVcwQWtIWWNFa3ZoNmtObkluTXhVR0lyakg2NmZUZGdmUXhvNWJLUdIBc0FVX3lxTE5ZeEJwajZNTWFDQzNOTlNBQ0dGQndraG5oSFVmRU84ODhsWkhENHNwanp2MGZHY2poMFNyVlNjTHVGMHhLdlpiSHhmclJXZGZDeVZoNDFOVFJSNmdKbnMwWTJmU2hVVThScUNDNmZCS3V1bkk?oc=5"
   }
 ]
