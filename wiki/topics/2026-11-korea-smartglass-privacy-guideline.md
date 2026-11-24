@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-21 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiS0FVX3lxTE1tQlFoZGZUZGFQT3hEYVlqR0xsQS05dEZfMXRmWGZsOVpWa29DTEhHbmZiS21FRVhqdm9EMDhmZUNncDBlVnN2NndOWQ?oc=5) — AI 스마트글래스 개인정보 보호 가이드라인 추진
+- 2026-11-23 [보안 법령 개정](https://news.google.com/rss/articles/CBMiZEFVX3lxTE9GV2VmNU5QSEROVnhfUVJ1Um5wQ1IwTDVTMTdTSi1IQUZqWlJvWC15c2NtVjJVeEFDcklxdmVPT0J6VGk3OHpjbG92X1RjVmNhTElNMTJiM0hnRTdUd1ZCX2VVVlbSAWhBVV95cUxPS0RTZzFLQXpUdTl4QW1weHcxU0lYSFFqWHFwOFlJeHNPbkFraFJHWmpJUkpnY0FjTm9iWGxmTnNwTmJKNGxpalZITHNhWHkxT0k1cWp3bFU3Q0JTRmtxX3lWa3VabnhuNQ?oc=5) — AI안경 몰래 촬영 과태료 1000만원 입법 추진
 
 ## 관련
 

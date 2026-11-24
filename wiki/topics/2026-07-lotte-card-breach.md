@@ -9,6 +9,7 @@ cves: []
 
 ## 타임라인
 
+- 2026-11-23 [금융위원회](https://news.google.com/rss/articles/CBMie0FVX3lxTE5rUU52bkY3Q002RXU1dHB6bi1wSEsyZ05TLXdGMUN3QXN4b2FjN1liX01va202bUNGX0dDZGdjbzNEV1F4MWh6dTRpMHBCQ2lYWlQ4MFBEZVkyaHNxMjYwckpiVUJOMUtxdl9Ra0xHbmFXM3VaOU9ITUEyMNIBgAFBVV95cUxPckZjRDh3T2loRWs1VDFVSFdfOWFwdGpJclFxS1hvcE92MkxDSmFqamhEejc5WFpFWW1BeEJpOGhxeF9sVnpQV3pablpwbHlkTXFRRmlGTXpnU1VRME1SUU5uQTAzdzZaZE1PbG1ETVFjUUxsRERGN0xKdjVqTU9xUQ?oc=5) — 정보유출 위험 공시 미흡으로 추가 과징금 10억2000만원 부과
 - 2026-09-15 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=208473) — 1.5개월 업무정지 처분 15일 종료, 보안체계 개선이 다음 시험대
 - 2026-08-27 [개인정보보호위원회](https://news.google.com/rss/articles/CBMiVkFVX3lxTFBCSVd0MTdiMDJfU20xT3FlMlJMSnZDTEN1OTZBQi1tMXJDUEwtTDVDeHpvUjZaT1hPWEV6d290cUVfNjFza242am9keGd2ckE3ZGlNNmh3?oc=5) — 롯데카드 침해 계기로 금융권 불필요한 주민번호 수집 규제 강화 추진
 - 2026-08-06 [보안뉴스](http://www.boannews.com/media/view.asp?idx=145052&kind=&sub_kind=) — 금감원, 롯데카드 전현직 CISO에게 정직 3개월 등 중징계 부과

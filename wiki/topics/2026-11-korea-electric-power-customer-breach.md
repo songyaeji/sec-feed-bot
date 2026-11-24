@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-22 [개인정보보호위원회](https://news.google.com/rss/articles/CBMic0FVX3lxTE4zeXcxV2xUUWI1VS0zVUVkOWJqRF8yQnMtX2szTDl0ZzdreERWOVoyQkxvUXVRbzFERkFNR3l6eDYtMDhWNTlhZVRhblBjcWk5dmJYZkhNcVVCQTBscDlHM0RLc1EzRUV4dHVWUUJ4d0tEdHM?oc=5) — 한국전력 고객·계약자 개인정보 152만건 유출 공시
+- 2026-11-23 [개인정보보호위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTE1JbWVfOUNQZmo3TWd4SGJJRkxVQ09XcFNqdUlIalZYc0MxeVVPam5sTzh4ZmpSRWxMeEJZcmNIWVQ3UG9ManY2SVBuc05IWTJBal8tWklUb1dBTHpndjFfLW0tY1ZsODdMaG1B?oc=5) — 개인정보위 초동대응반 현장점검 착수
 
 ## 관련
 
