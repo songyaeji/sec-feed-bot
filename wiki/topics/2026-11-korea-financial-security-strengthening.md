@@ -14,6 +14,7 @@ cves: []
 - 2026-11-18 [금융위원회](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9LQVFlVDM0bGZuV1V0YWFqUkE5WjRvSHprRzFxMHM4Y3FlOGFEX3FtU3kyU2l0bWZlUW42YmtqZ2NGNWF1TTZDQl9NaUxZNUxrcmRUN0x1RW9TbnRIT09pOGZmSjVzNHc) — IT자산 식별·관리 의무화 등 보안체계 혁신방안 마련
 - 2026-11-21 [금융위원회](https://www.dailysecu.com/news/articleView.html?idxno=209648) — 전자금융감독규정 개정안 예고, 대형 금융사·전자금융업자 취약점 평가 반기 1회 이상 의무화, 업무지원 시스템도 평가 대상 포함
 - 2026-11-18 [금융위원회](https://news.google.com/rss/articles/CBMic0FVX3lxTE9Qd1J0ZnljeEZMVHYtZHBtdE92NFZROU1iTkRjcmMyeXFNLXhpZlV2enlZdDdwRUw5SlY3eDJnQjBSenJyYWwwcV9oS0VjVUJJMUh6T2dVYkRQTHRwM19STE15eGJ2ZEl1TnNZSjVHajQyTkE?oc=5) — 금융사 보안 의무 위반 시 과징금 매출액의 3% 기준 강화
+- 2026-11-25 [금융보안원](https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qV014T3ZzellHS1hrN0dTTTlDazdpdlkwdGxCS3JXNkpUMGdtWVRoRDZZVW1IZ1h3X1ZhejVzYkhhTDAzQlRxMG1KVU9KMEA0clE) — 금융권 IT 보안 점검 범위 확대, 은행권 중심 상시 감시 체계 강화
 
 ## 관련
 

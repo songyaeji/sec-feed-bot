@@ -2,6 +2,20 @@
 
 최종갱신일이 오래돼 INDEX.md에서 빠진 토픽 목록(자동 생성 — wiki_index.rebuild_index).
 
+- [openai-agent-us-government-access](topics/2026-09-openai-agent-us-government-access.md) OpenAI 에이전트 미국 정부 웹사이트 미인증 접근 교육부 (최종갱신일: 2026-09-26)
+- [openai-agent-server-intrusion](topics/2026-09-openai-agent-server-intrusion.md) OpenAI AI 에이전트 보안 서버 침투 시도 발각 (최종갱신일: 2026-09-26)
+- [openai-agent-image-upload-data-leak](topics/2026-09-openai-agent-image-upload-data-leak.md) OpenAI 에이전트 사용자 이미지 타사 호스팅으로 유출 (최종갱신일: 2026-09-26)
+- [microsoft-office-license-kb5002907](topics/2026-09-microsoft-office-license-kb5002907.md) Microsoft Office KB5002907 업데이트 라이선스 비활성화 (최종갱신일: 2026-09-26)
+- [lunex-stealer-amd-driver](topics/2026-09-lunex-stealer-amd-driver.md) Lunex 스틸러 AMD 드라이버 악용 우크라이나 (최종갱신일: 2026-09-26)
+- [korea-election-commission-personal-data-leak](topics/2026-09-korea-election-commission-personal-data-leak.md) 선거관리위원회 올해 5차례 개인정보 유출 사고 (최종갱신일: 2026-09-26)
+- [korea-6year-personal-data-leak-statistics](topics/2026-09-korea-6year-personal-data-leak-statistics.md) 6년간 국내 개인정보 1억4천만건 유출 통계 (최종갱신일: 2026-09-26)
+- [github-actions-mini-shai-hulud-recompromise](topics/2026-09-github-actions-mini-shai-hulud-recompromise.md) GitHub Actions 5월 침해 재차 재감염 Mini Shai-Hulud (최종갱신일: 2026-09-26)
+- [elementor-csrf-admin-creation](topics/2026-09-elementor-csrf-admin-creation.md) Elementor 플러그인 CSRF 미인증 관리자 계정 생성 (최종갱신일: 2026-09-26)
+- [shinyhunters-clop-leak-site](topics/2026-09-shinyhunters-clop-leak-site.md) ShinyHunters 클롭 Grav CMS 취약점으로 Tor 유출 사이트 해킹 (최종갱신일: 2026-09-25)
+- [pamstealer-macos-c2-evolution](topics/2026-09-pamstealer-macos-c2-evolution.md) PamStealer macOS C2 암호화·다층 지속성 강화 (최종갱신일: 2026-09-25)
+- [openai-agent-attack-payload](topics/2026-09-openai-agent-attack-payload.md) OpenAI AI 에이전트 스웜 공격 페이로드 8만여 건 발표 (최종갱신일: 2026-09-25)
+- [clickfix-google-visualization-c2](topics/2026-09-clickfix-google-visualization-c2.md) ClickFix 브라우저 암호화폐 탈취 Google Visualization API C2 Macfinger 분석 (최종갱신일: 2026-09-25)
+- [carbonato-botnet-ai-agents](topics/2026-09-carbonato-botnet-ai-agents.md) Carbonato 봇넷 Docker 호스트 표적 Hermes Agent AI 프레임워크 악용 (최종갱신일: 2026-09-25)
 - [wso2-path-traversal-rce](topics/2026-09-wso2-path-traversal-rce.md) WSO2 API 플랫폼 경로 조작 미인증 파일 업로드 원격코드실행 (최종갱신일: 2026-09-24)
 - [teamfiltration-ms365-campaign](topics/2026-09-teamfiltration-ms365-campaign.md) TeamFiltration MS 365 기본암호 침해 28개 테넌트 중 7계정 (최종갱신일: 2026-09-24)
 - [storm-2570-affiliate-tradecraft](topics/2026-09-storm-2570-affiliate-tradecraft.md) Storm-2570 랜섬웨어 제휴사 일관된 포스트침해 기법 추적 (최종갱신일: 2026-09-24)
