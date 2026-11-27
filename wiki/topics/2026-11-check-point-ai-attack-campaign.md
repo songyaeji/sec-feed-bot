@@ -10,6 +10,7 @@ cves: []
 ## 타임라인
 
 - 2026-11-25 [The Hacker News](https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html) — GreyNoise Threat 13(GT13) AI 보조 Check Point Management Server 침해 캠페인 공개, 24개 서버·22개 기관 영향
+- 2026-11-25 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209720) — 한국 소재 조직도 포함된 최소 22개 조직 영향 확인
 
 ## 관련
 

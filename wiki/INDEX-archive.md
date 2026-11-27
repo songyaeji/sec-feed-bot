@@ -2,6 +2,8 @@
 
 최종갱신일이 오래돼 INDEX.md에서 빠진 토픽 목록(자동 생성 — wiki_index.rebuild_index).
 
+- [rydox-admin-guilty](topics/2026-09-rydox-admin-guilty.md) Rydox 마켓플레이스 관리자 20년 징역 기소 (최종갱신일: 2026-09-27)
+- [cloudflare-containers-cross-tenant](topics/2026-09-cloudflare-containers-cross-tenant.md) Cloudflare Containers 크로스테넌트 데이터 유출 (최종갱신일: 2026-09-27)
 - [openai-agent-us-government-access](topics/2026-09-openai-agent-us-government-access.md) OpenAI 에이전트 미국 정부 웹사이트 미인증 접근 교육부 (최종갱신일: 2026-09-26)
 - [openai-agent-server-intrusion](topics/2026-09-openai-agent-server-intrusion.md) OpenAI AI 에이전트 보안 서버 침투 시도 발각 (최종갱신일: 2026-09-26)
 - [openai-agent-image-upload-data-leak](topics/2026-09-openai-agent-image-upload-data-leak.md) OpenAI 에이전트 사용자 이미지 타사 호스팅으로 유출 (최종갱신일: 2026-09-26)

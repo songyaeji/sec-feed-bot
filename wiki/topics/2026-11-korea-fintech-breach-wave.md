@@ -19,6 +19,8 @@ cves: []
 - 2026-11-24 [금융위원회](https://news.google.com/rss/articles/CBMiZEFVX3lxTE8tZG4wM3g4MTF0dEpQTFQxbFVyY2hrMTAxWS1Bb0xVeGkyejJ0aVRaRHVsNHp4V2kwWE81WGd3MTl3N1UzeXhLQ2FqdFJKcS1oOGRJdFlfczNaakFyOW00VWZmZXE?oc=5) — NHN KCP 등 웰컴페이먼츠서 고객 1326명 개인정보 유출, 11일 지나서야 인지
 - 2026-11-24 [개인정보보호위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTFBxRy1ubVVUXzdrMEhobFlDeDdXUzVYZFdKbHRqNU1YMjc4YUR1OEtFSXphY0xPM0NvMlBiX2hXSXFTeEFTOEF0YS1wTkU4d1o2YUlnMHpTc2dHUVZRZXJfYWpZTnVqb1ZYaXhr?oc=5) — MG손보 가교보험사 예별손보에서 개인정보 유출
 - 2026-11-26 [개인정보보호위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTE0wbjM4c2ZEX3BDOVRWQ2owQlp6eEc4a2duY1R2VjAtQ282V0p1OU51aEt5akl3YkdSeVBJWkVXcG1hdDM1YTZTXzgwcE9taDZYcGk3MmE5cjVFRkFlUDF3bE56U2NkZ0pPaWxR0gFvQVVfeXFMT3BLZWVHb1J5QnRvWVNmNEV4TGhXV1g1QVNGUG9MQWlkbkdmTnVRZjlmZmhiSFZtTk0tcGdSMlppS1pZR1NDTC0wM2xoamtHbkpHeXh1WUYyYlVsWXlaZVhfa2RHOWxheGNiZ0Z0VE5z?oc=5) — MG손보 가교보험사 예별손보서 개인정보 유출...KISA·개인정보위 신고
+- 2026-11-27 [금융위원회](https://news.google.com/rss/articles/CBMickFVX3lxTE5XRl9GSEZpQXdkV09BNENqaWw5RU5DelM3Q2MtX1NMZWtZZkFBX0lOVVNKdVltc0xzTnJveG11aTZISnBaQXNPR3dqQ1hHUEN6dGdrWGoxTU1manViQjVuNy1sX1lnblVtZjBvdU90aUFaQQ?oc=5) — 국가안보실 긴급회의 개최, 금융권 AI 보안 강화 주문 및 인증·차단 조치 강화
+- 2026-11-25 [금융위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTFBsTDNOV29PMWxvLXBTd0c4bWUtUHplTGt3M2xCdmpoRE9EVVpjVjYyV1dRc0xQN0tMNDYxMmp2YzJqZ1ViV3RnTkdDaE9NX25FcU5FUmhicnJadkdhMnlkN0xqT3JXSlRFcEUw?oc=5) — AI 보조 공격 확인·금융시스템 위협 심화
 
 ## 관련
 
