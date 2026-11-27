@@ -2,6 +2,18 @@
 
 최종갱신일이 오래돼 INDEX.md에서 빠진 토픽 목록(자동 생성 — wiki_index.rebuild_index).
 
+- [apache-roller-xmlrpc-auth](topics/2026-11-apache-roller-xmlrpc-auth.md) Apache Roller XML-RPC API 권한 검사 미흡 콘텐츠 무단 변조 CVSS 9.9 (최종갱신일: 2026-09-28)
+- [us-soldier-extortion-conviction](topics/2026-09-us-soldier-extortion-conviction.md) 미군 전역 병사 기업 협박 70개월 징역 2023~2024년 (최종갱신일: 2026-09-28)
+- [times-car-data-breach](topics/2026-09-times-car-data-breach.md) Times Car 일본 카셰어링 660만 계정 침해 (최종갱신일: 2026-09-28)
+- [supabase-misconfigured-databases](topics/2026-09-supabase-misconfigured-databases.md) 16,000개 설정오류 데이터베이스 개인정보 대규모 노출 (최종갱신일: 2026-09-28)
+- [rathat-android-adb-malware](topics/2026-09-rathat-android-adb-malware.md) RatHat 안드로이드 멀웨어 Gemini로 고가치 피해자 자동 식별 (최종갱신일: 2026-09-28)
+- [needymantis-post-compromise-malware](topics/2026-09-needymantis-post-compromise-malware.md) NeedyMantis 포스트침해 모듈식 멀웨어 프레임워크 (최종갱신일: 2026-09-28)
+- [deepfake-voice-phishing-enterprise](topics/2026-09-deepfake-voice-phishing-enterprise.md) 생성형 AI 음성 피싱 기업 CISO 41% 경험 (최종갱신일: 2026-09-28)
+- [dc-medicaid-personal-data-leak](topics/2026-09-dc-medicaid-personal-data-leak.md) 워싱턴DC Medicaid 39.8만 명 개인정보 유출 공개 웹사이트 (최종갱신일: 2026-09-28)
+- [bitget-north-korea-crypto-theft](topics/2026-09-bitget-north-korea-crypto-theft.md) Bitget 암호화폐 거래소 북한 연계 해킹 3억51억원 탈취 (최종갱신일: 2026-09-28)
+- [apple-coregraphics-cve-2026-86950](topics/2026-09-apple-coregraphics-cve-2026-86950.md) Apple CoreGraphics 제로데이 원격코드실행 표적공격 악용 (최종갱신일: 2026-09-28)
+- [ai-credentials-infostealer-sprawl](topics/2026-09-ai-credentials-infostealer-sprawl.md) 정보탈취 로그 80,000개 기업 AI 자격증명 노출 LLMjacking 위험 (최종갱신일: 2026-09-28)
+- [jadepuffer-ai-ransomware](topics/2026-07-jadepuffer-ai-ransomware.md) JadePuffer AI 에이전트 완전 자동화 랜섬웨어, EncForge로 AI 모델 파일 암호화 (최종갱신일: 2026-09-28)
 - [rydox-admin-guilty](topics/2026-09-rydox-admin-guilty.md) Rydox 마켓플레이스 관리자 20년 징역 기소 (최종갱신일: 2026-09-27)
 - [cloudflare-containers-cross-tenant](topics/2026-09-cloudflare-containers-cross-tenant.md) Cloudflare Containers 크로스테넌트 데이터 유출 (최종갱신일: 2026-09-27)
 - [openai-agent-us-government-access](topics/2026-09-openai-agent-us-government-access.md) OpenAI 에이전트 미국 정부 웹사이트 미인증 접근 교육부 (최종갱신일: 2026-09-26)

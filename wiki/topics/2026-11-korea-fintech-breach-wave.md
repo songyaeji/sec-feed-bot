@@ -21,6 +21,10 @@ cves: []
 - 2026-11-26 [개인정보보호위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTE0wbjM4c2ZEX3BDOVRWQ2owQlp6eEc4a2duY1R2VjAtQ282V0p1OU51aEt5akl3YkdSeVBJWkVXcG1hdDM1YTZTXzgwcE9taDZYcGk3MmE5cjVFRkFlUDF3bE56U2NkZ0pPaWxR0gFvQVVfeXFMT3BLZWVHb1J5QnRvWVNmNEV4TGhXV1g1QVNGUG9MQWlkbkdmTnVRZjlmZmhiSFZtTk0tcGdSMlppS1pZR1NDTC0wM2xoamtHbkpHeXh1WUYyYlVsWXlaZVhfa2RHOWxheGNiZ0Z0VE5z?oc=5) — MG손보 가교보험사 예별손보서 개인정보 유출...KISA·개인정보위 신고
 - 2026-11-27 [금융위원회](https://news.google.com/rss/articles/CBMickFVX3lxTE5XRl9GSEZpQXdkV09BNENqaWw5RU5DelM3Q2MtX1NMZWtZZkFBX0lOVVNKdVltc0xzTnJveG11aTZISnBaQXNPR3dqQ1hHUEN6dGdrWGoxTU1manViQjVuNy1sX1lnblVtZjBvdU90aUFaQQ?oc=5) — 국가안보실 긴급회의 개최, 금융권 AI 보안 강화 주문 및 인증·차단 조치 강화
 - 2026-11-25 [금융위원회](https://news.google.com/rss/articles/CBMia0FVX3lxTFBsTDNOV29PMWxvLXBTd0c4bWUtUHplTGt3M2xCdmpoRE9EVVpjVjYyV1dRc0xQN0tMNDYxMmp2YzJqZ1ViV3RnTkdDaE9NX25FcU5FUmhicnJadkdhMnlkN0xqT3JXSlRFcEUw?oc=5) — AI 보조 공격 확인·금융시스템 위협 심화
+- 2026-11-27 [금융위원회](https://news.google.com/rss/articles/CBMibEFVX3lxTE9SZFUxb2ZMYm9kb0Y1R1ZpUldqS0FDb3ZJWnhLLW1LcW01NDhCcjRvRUpPN25VSHFWNEVuQWo3Sy1MTE9sT2pteGl5QjVDVjJDbkJEZEpjdnRTd2pYc3F1cm9rNG1nUEs4NUhOQg?oc=5) — 전북은행 해킹 고객·직원 467명 정보 유출
+- 2026-11-27 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209789) — 수협은행 고객정보 유출, 54명 개인정보 외부 비인가 접근
+- 2026-11-27 [국가안보실](https://news.google.com/rss/articles/CBMigAFBVV95cUxPLUJCMGh1OHNGSS1pLUVMQjZrRWMzX2dFRGlnX2Z5MXRueTBka3RqTmhuWkw1SGRYMzJYM0VKbU03bVBoeU5mYzVJUVd5YV9CdTJzTnhELWloSkgwQnp2NDJwV2Zwamt1aG9oZF9vYkd0cVhzY0JrUFYxbVFtcXpRNA?oc=5) — 긴급회의 개최, 2차 피해 점검·금융권 보안 강화 주문
+- 2026-11-26 [웰컴페이먼츠](https://www.dailysecu.com/news/articleView.html?idxno=209773) — 유출 규모 1,327명으로 최종 확정, 빌링키·거래내역 등 금융거래정보 포함
 
 ## 관련
 

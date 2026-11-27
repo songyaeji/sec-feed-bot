@@ -18,5 +18,6 @@ cves: []
 - 2026-11-04 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209308) — 광주여성가족재단, 더존비즈온 APO 백업서버 침해로 주민번호·계좌번호·소득정보 유출 가능성 공지
 - 2026-11-04 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209307) — 서울시육아종합지원센터, 더존비즈온 백업서버 침해로 전·현직 직원과 강사 개인정보 유출 가능성 공지, 2026년 9월 30일 서비스 이용 종료했으나 데이터 삭제 미흡
 - 2026-11-25 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209711) — 담양군문화재단, 더존비즈온 APO 백업서비스 침해로 개인정보 유출 가능성 공지
+- 2026-11-26 [데일리시큐](https://www.dailysecu.com/news/articleView.html?idxno=209780) — 알약 개발사 이스트시큐리티, 더존 백업서버 침해로 고객·파트너사·퇴직자 개인정보 유출 가능성 공지
 
 ## 관련
